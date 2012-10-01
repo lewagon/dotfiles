@@ -13,3 +13,10 @@ for name in *; do
     fi
   fi
 done
+
+# Setup a machine for Sublime Text 2
+SUBLIME_USER_DIR=~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+SUBLIME_PREFERENCES_FILE=Preferences.sublime-settings
+set -x
+mv "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE" "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE.backup"
+ln -s "$PWD/sublime2/$SUBLIME_PREFERENCES_FILE" "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE"
