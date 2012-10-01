@@ -1,0 +1,17 @@
+[color]
+  ui = true
+[core]
+  editor = vim
+[alias]
+  co = checkout
+  st = status
+  br = branch
+[user]
+  name = Sébastien Saunier
+  mail = sebastien.saunier@applidget.com
+[difftool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[diff]
+  tool = Kaleidoscope
