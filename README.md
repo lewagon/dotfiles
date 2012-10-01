@@ -1,7 +1,8 @@
 Install
 -------
 
-[fork this repo](https://github.com/ssaunier/dotfiles#fork_box) on Github.
+Your dotfiles are personal. [Fork this repo](https://github.com/ssaunier/dotfiles/fork_select) on Github.
+And then get it on your computer.
 
     git clone git@github.com:#{you}/dotfiles.git
     cd dotfiles
