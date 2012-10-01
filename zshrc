@@ -32,5 +32,5 @@ plugins=(git osx ruby bundler rails3 rvm sublime zsh-syntax-highlighting zsh-his
 
 source $ZSH/oh-my-zsh.sh
 export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11/bin:~/bin'
-
+[[ -s '~/.rvm/scripts/rvm' ]] && source '~/.rvm/scripts/rvm'
 unsetopt correct_all  
