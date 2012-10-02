@@ -26,10 +26,11 @@ You will want to customize your environment. We suggest making changes in files 
 
 For example, to customize your `zsh` config, make your changes in `~/.zshenv`:
 
-    # RVM
-    [[ -s '/Users/ssaunier/.rvm/scripts/rvm' ]] && source '/Users/ssaunier/.rvm/scripts/rvm'
+    # Me
+    export EMAIL=__________________
 
-    # recommended by brew doctor
-    export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+    # Amazon credentials
+    export AMAZON_ACCESS_KEY=________________________
+    export AMAZON_SECRET_KEY=_______________________
 
 Readme based on https://raw.github.com/thoughtbot/dotfiles/master/README.md
