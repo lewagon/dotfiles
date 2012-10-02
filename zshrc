@@ -33,6 +33,8 @@ plugins=(git osx ruby rails3 rvm sublime zsh-syntax-highlighting zsh-history-sub
 source $ZSH/oh-my-zsh.sh
 export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11/bin:~/bin'
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
 # Disable zsh correction
 unsetopt correct_all
 
