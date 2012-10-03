@@ -28,3 +28,28 @@ fi
 if [ ! -L "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE" ]; then
   ln -s "$PWD/sublime2/$SUBLIME_PREFERENCES_FILE" "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE"
 fi
+
+# zsh plugins
+CURRENT_DIR=`pwd`
+ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
+mkdir -p "$ZSH_PLUGINS_DIR" && cd "$ZSH_PLUGINS_DIR"
+if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
+  echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+fi
+if [ ! -d "$ZSH_PLUGINS_DIR/zsh-history-substring-search" ]; then
+  echo "-----> Installing zsh plugin 'zsh-history-substring-search'..."
+  git clone git://github.com/zsh-users/zsh-history-substring-search.git
+fi
+cd "$CURRENT_DIR"
+
+# zshenv
+if [ ! -e "$HOME/.zshenv" ]; then
+  touch "$HOME/.zshenv"
+fi
+echo "-----> You should now open your ~/.zshenv and add custom env variables."
+echo "       You can start with:"
+echo "       export EMAIL=#{your_email}"
+
+echo ""
+echo "-----> Don't forget to source your ~/.zshrc when you are done."

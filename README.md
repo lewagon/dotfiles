@@ -22,17 +22,11 @@ There is configuration for `zsh` so switch your shell from the default `bash` to
 
     chsh -s /bin/zsh
 
-Oh-my-zsh plugins used:
-
-    mkdir -p ~/.oh-my-zsh/custom/plugins && cd ~/.oh-my-zsh/custom/plugins
-    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-    git clone git://github.com/zsh-users/zsh-history-substring-search.git
-
 
 Customization
 -------------
 
-You will want to customize your environment. We suggest making changes in files that are not in thoughtbot's files.
+You will want to customize your environment.
 
 For example, to customize your `zsh` config, make your changes in `~/.zshenv`:
 
