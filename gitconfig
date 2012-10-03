@@ -8,7 +8,7 @@
   br = branch
 [user]
   name = Sébastien Saunier
-  mail = sebastien.saunier@applidget.com
+  mail = sebastien.saunier@gmail.com
 [difftool "Kaleidoscope"]
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]

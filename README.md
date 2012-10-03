@@ -6,6 +6,16 @@ And then get it on your computer.
 
     git clone git@github.com:#{you}/dotfiles.git
     cd dotfiles
+
+Then edit the ```gitconfig``` and other files with your own preferences. Then when you're done,
+save these config (that's why you forked the repo).
+
+    git commit -am "My identity in the gitconfig"
+    git push origin master
+
+Now you can run the install script. It will not override existing config files, just
+rename them as ```#{file}.backup```.
+
     ./install.sh
 
 There is configuration for `zsh` so switch your shell from the default `bash` to `zsh` on OS X:
