@@ -43,13 +43,27 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-history-substring-search" ]; then
 fi
 cd "$CURRENT_DIR"
 
+REGULAR="\\033[0;39m"
+YELLOW="\\033[1;33m"
+GREEN="\\033[1;32m"
+
 # zshenv
 if [ ! -e "$HOME/.zshenv" ]; then
   touch "$HOME/.zshenv"
 fi
-echo "-----> You should now open your ~/.zshenv and add custom env variables."
+echo "-----> You should now open your ${GREEN}~/.zshenv${REGULAR} and add custom env variables."
 echo "       You can start with:"
-echo "       export EMAIL=#{your_email}"
+echo "       ${YELLOW}export EMAIL=#{your_email}${REGULAR}"
+
+# zshenv
+if [ ! -e "$HOME/.aliases" ]; then
+  touch "$HOME/.aliases"
+fi
+echo ""
+echo "-----> Then you can open your ${GREEN}~/.aliases${REGULAR} and add powerful aliases, such as"
+echo "       ${YELLOW}alias be=bundle exec${REGULAR}"
+echo "       ${YELLOW}alias bi=bundle install${REGULAR}"
+echo "       ${YELLOW}alias rtest=be rake test && be rspec spec --color && open coverage/index.html${REGULAR}"
 
 echo ""
-echo "-----> Don't forget to source your ~/.zshrc when you are done."
+echo "-----> Don't forget to source your \\033[1;32m~/.zshrc\\033[0;39m when you are done."
