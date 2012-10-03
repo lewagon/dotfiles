@@ -17,6 +17,10 @@ for name in *; do
   fi
 done
 
+REGULAR="\\033[0;39m"
+YELLOW="\\033[1;33m"
+GREEN="\\033[1;32m"
+
 # Setup a machine for Sublime Text 2
 SUBLIME_USER_DIR=~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 SUBLIME_PREFERENCES_FILE=Preferences.sublime-settings
@@ -28,6 +32,10 @@ fi
 if [ ! -L "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE" ]; then
   ln -s "$PWD/sublime2/$SUBLIME_PREFERENCES_FILE" "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE"
 fi
+
+echo "-----> For a nice Sublime Text 2 icon, run the following:"
+echo "       ${YELLOW}curl \"https://raw.github.com/dmatarazzo/Sublime-Text-2-Icon/master/Sublime%20Text%202.icns\" > /Applications/Sublime\ Text\ 2.app/Contents/Resources/Sublime\ Text\ 2.icns${REGULAR}"
+echo ""
 
 # zsh plugins
 CURRENT_DIR=`pwd`
@@ -42,10 +50,6 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-history-substring-search" ]; then
   git clone git://github.com/zsh-users/zsh-history-substring-search.git
 fi
 cd "$CURRENT_DIR"
-
-REGULAR="\\033[0;39m"
-YELLOW="\\033[1;33m"
-GREEN="\\033[1;32m"
 
 # zshenv
 if [ ! -e "$HOME/.zshenv" ]; then
