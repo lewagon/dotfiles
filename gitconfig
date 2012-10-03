@@ -1,17 +1,42 @@
+[user]
+  name = Sébastien Saunier
+  mail = sebastien.saunier@gmail.com
+
 [color]
-  ui = true
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[color "branch"]
+  current = green
+  remote = yellow
+
 [core]
   editor = vim
+
 [alias]
   co = checkout
   st = status
   br = branch
-[user]
-  name = Sébastien Saunier
-  mail = sebastien.saunier@gmail.com
+  ci = commit
+
+  # http://www.jukie.net/bart/blog/pimping-out-git-log
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+  m = checkout master
+
 [difftool "Kaleidoscope"]
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
 [difftool]
   prompt = false
+
 [diff]
   tool = Kaleidoscope
