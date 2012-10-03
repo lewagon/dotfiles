@@ -1,8 +1,7 @@
 Install
 -------
 
-Your dotfiles are personal. [Fork this repo](https://github.com/ssaunier/dotfiles/fork_select) on Github.
-And then get it on your computer.
+Your dotfiles are personal. Fork this repo on Github, and then get it on your computer.
 
     git clone git@github.com:#{you}/dotfiles.git
     cd dotfiles
@@ -37,4 +36,21 @@ For example, to customize your `zsh` config, make your changes in `~/.zshenv`:
     export AMAZON_ACCESS_KEY=________________________
     export AMAZON_SECRET_KEY=_______________________
 
+
+Staying up to date
+------------------
+
+You can add this repo as a remote if you want to keep your fork synchronized
+with [ssaunier/dotfiles](https://github.com/ssaunier/dotfiles)'s changes.
+
+    git remote add upstream git@github.com:ssaunier/dotfiles.git
+
+Once your remote is there and you want to get all the last stuff, run
+
+    git fetch upstream
+    git checkout master
+    git merge upstream/master
+    git push origin master
+
 Readme based on https://raw.github.com/thoughtbot/dotfiles/master/README.md
+
