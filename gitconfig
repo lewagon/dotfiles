@@ -31,6 +31,10 @@
   # http://www.jukie.net/bart/blog/pimping-out-git-log
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
+  # Serve local repo. http://coderwall.com/p/eybtga
+  # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
+  serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+
   m = checkout master
 
 [difftool "Kaleidoscope"]
