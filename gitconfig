@@ -1,6 +1,6 @@
 [user]
-  name = Sébastien Saunier
-  mail = sebastien.saunier@gmail.com
+  name = Sébastien Saunier            # TODO: change this to your name
+  mail = sebastien.saunier@gmail.com  # TODO: change this to your email
 
 [color]
   branch = auto
@@ -8,11 +8,6 @@
   interactive = auto
   status = auto
   ui = auto
-
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
 
 [color "branch"]
   current = green
@@ -37,7 +32,7 @@
 
   m = checkout master
 
-[difftool "Kaleidoscope"]
+[difftool "Kaleidoscope"]  # Very nice diff tool for mac: http://www.kaleidoscopeapp.com
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 
 [difftool]

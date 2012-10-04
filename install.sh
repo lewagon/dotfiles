@@ -24,18 +24,18 @@ GREEN="\\033[1;32m"
 # Setup a machine for Sublime Text 2
 SUBLIME_USER_DIR=~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 SUBLIME_PREFERENCES_FILE=Preferences.sublime-settings
-if [ ! -e "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE.backup" ]; then
-  mv "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE" "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE.backup"
-  echo "-----> Old sublime preferences file backuped to $SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE.backup"
-fi
+if [ -d "$SUBLIME_USER_DIR" ]; then
+  if [ ! -e "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE.backup" ]; then
+    mv "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE" "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE.backup"
+    echo "-----> Old sublime preferences file backuped to $SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE.backup"
+  fi
 
-if [ ! -L "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE" ]; then
-  ln -s "$PWD/sublime2/$SUBLIME_PREFERENCES_FILE" "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE"
+  if [ ! -L "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE" ]; then
+    ln -s "$PWD/sublime2/$SUBLIME_PREFERENCES_FILE" "$SUBLIME_USER_DIR/$SUBLIME_PREFERENCES_FILE"
+  fi
+else
+  echo "You ${YELLOW}do not have${REGULAR} Sublime Text 2 installed."
 fi
-
-echo "-----> For a nice Sublime Text 2 icon, run the following:"
-echo "       ${YELLOW}curl \"https://raw.github.com/dmatarazzo/Sublime-Text-2-Icon/master/Sublime%20Text%202.icns\" > /Applications/Sublime\ Text\ 2.app/Contents/Resources/Sublime\ Text\ 2.icns${REGULAR}"
-echo ""
 
 # zsh plugins
 CURRENT_DIR=`pwd`
