@@ -36,6 +36,14 @@ For example, to customize your `zsh` config, make your changes in `~/.zshenv`:
     export AMAZON_ACCESS_KEY=________________________
     export AMAZON_SECRET_KEY=_______________________
 
+You can set up your aliases in `~/.aliases`, they will be loaded up automatically.
+For example:
+
+    alias rtest='bundle exec rake test && bundle exec rake spec && open coverage/index.html'
+
+    alias bi='bundle install'
+    alias be='bundle exec'
+
 
 Staying up to date
 ------------------

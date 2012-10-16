@@ -1,6 +1,10 @@
 [user]
-  name = Sébastien Saunier            # TODO: change this to your name
-  mail = sebastien.saunier@gmail.com  # TODO: change this to your email
+  name = Sébastien Saunier             # TODO: change this to your name
+  mail = sebastien.saunier@gmail.com   # TODO: change this to your email
+  email = sebastien.saunier@gmail.com  # TODO: change this to your email
+
+[github]
+  user = ssaunier                      # TODO: change this to your github username
 
 [color]
   branch = auto
@@ -22,6 +26,8 @@
   br = branch
   ci = commit
   d  = difftool
+  fo = fetch origin
+  mom = merge origin master
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
