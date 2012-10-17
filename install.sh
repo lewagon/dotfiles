@@ -65,9 +65,9 @@ if [ ! -e "$HOME/.aliases" ]; then
 fi
 echo ""
 echo "-----> Then you can open your ${GREEN}~/.aliases${REGULAR} and add powerful aliases, such as"
-echo "       ${YELLOW}alias be=bundle exec${REGULAR}"
-echo "       ${YELLOW}alias bi=bundle install${REGULAR}"
-echo "       ${YELLOW}alias rtest=be rake test && be rspec spec --color && open coverage/index.html${REGULAR}"
+echo "       ${YELLOW}alias be='bundle exec'${REGULAR}"
+echo "       ${YELLOW}alias bi='bundle install'${REGULAR}"
+echo "       ${YELLOW}alias rtest='be rake test && be rspec spec --color && open coverage/index.html'${REGULAR}"
 
 echo ""
 echo "-----> Don't forget to source your ${GREEN}~/.zshrc${REGULAR} when you are done."
