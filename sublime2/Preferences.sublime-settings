@@ -49,6 +49,7 @@
 	],
 	"show_minimap": false,
 	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
 	"todo":
 	{
 		"folder_exclude_patterns":
