@@ -19,6 +19,7 @@
 
 [core]
   editor = vim
+  pager = cat
 
 [alias]
   co = checkout
