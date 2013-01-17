@@ -33,7 +33,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git osx ruby rails3 rvm sublime zsh-syntax-highlighting zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:~/bin'
+export PATH='/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:~/bin'
 
 # Disable zsh correction
 unsetopt correct_all

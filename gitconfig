@@ -19,16 +19,17 @@
 
 [core]
   editor = vim
-  pager = cat
 
 [alias]
   co = checkout
   st = status
   br = branch
   ci = commit
-  d  = difftool
   fo = fetch origin
   mom = merge origin master
+  d = !git --no-pager diff
+  dt  = difftool
+  stat = !git --no-pager diff --stat
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
