@@ -36,6 +36,7 @@
 	],
 	"font_size": 11.0,
 	"highlight_modified_tabs": true,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -43,6 +44,7 @@
 	"matchBracketsAngle": true,
 	"matchBracketsBraces": true,
 	"matchBracketsSquare": true,
+	"remember_open_files": false,
 	"rulers":
 	[
 		80
