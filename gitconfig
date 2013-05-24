@@ -1,7 +1,7 @@
 [user]
   name = Sébastien Saunier             # TODO: change this to your name
-  mail = sebastien.saunier@gmail.com   # TODO: change this to your email
-  email = sebastien.saunier@gmail.com  # TODO: change this to your email
+  mail = seb@saunier.me                # TODO: change this to your email
+  email = seb@saunier.me               # TODO: change this to your email
 
 [github]
   user = ssaunier                      # TODO: change this to your github username
