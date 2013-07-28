@@ -32,7 +32,8 @@
 		".svn",
 		".git",
 		".hg",
-		"CVS"
+		"CVS",
+		"_site"
 	],
 	"font_size": 11.0,
 	"highlight_modified_tabs": true,
@@ -69,5 +70,6 @@
 	},
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"use_tab_stops": true
+	"use_tab_stops": true,
+	"wordWrap": false
 }
