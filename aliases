@@ -1,0 +1,14 @@
+# Get External IP / local IPs
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# Quickly serve the current directory as HTTP
+alias serve='python -m SimpleHTTPServer'
+
+# Rails bundler shorter
+alias be='bundle exec'
+alias bi='bundle install'
+
+# MobiCheckin
+alias rtest='be rake test && be rspec && open coverage/index.html'
+alias mobi='cd ~/code/ror/mobicheckin-server'
