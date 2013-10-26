@@ -10,6 +10,9 @@ alias serve='python -m SimpleHTTPServer'
 alias be='bundle exec'
 alias bi='bundle install'
 
+# Bower
+alias bower='noglob bower'
+
 # MobiCheckin
 alias rtest='be rake test && be rspec && open coverage/index.html'
 alias mobi='cd ~/code/ror/mobicheckin-server'
