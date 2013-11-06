@@ -1,6 +1,7 @@
 {
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"detect_indentation": false,
-	"drawWhiteSpace": true,
+	"draw_white_space": true,
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -34,7 +35,9 @@
 		".git",
 		".hg",
 		"CVS",
-		"_site"
+		"_site",
+    ".idea",
+    ".bundle"
 	],
 	"font_size": 11.0,
 	"highlight_modified_tabs": true,
