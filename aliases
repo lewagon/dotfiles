@@ -9,7 +9,7 @@ alias tunnel='~/code/python/sshuttle/sshuttle --dns \
 alias tunnelx='[[ -f /tmp/sshuttle.pid ]] && kill $(cat /tmp/sshuttle.pid) && echo "Disconnected."'
 
 # Quickly serve the current directory as HTTP
-alias serve='python -m SimpleHTTPServer'
+alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 
 # Rails bundler shorter
 alias be='bundle exec'
