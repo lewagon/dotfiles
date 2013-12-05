@@ -36,8 +36,13 @@
 		".hg",
 		"CVS",
 		"_site",
-    ".idea",
-    ".bundle"
+		".idea",
+		".bundle",
+		".tmp",
+		".sass-cache",
+		"dist",
+		"bower_components",
+		".grunt"
 	],
 	"font_size": 11.0,
 	"highlight_modified_tabs": true,
