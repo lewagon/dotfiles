@@ -15,6 +15,11 @@ alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 alias be='bundle exec'
 alias bi='bundle install -j4'
 
+# Github Awesomeness
+alias org-pr='hub pull-request -h \
+  `git remote -v | grep -oE -m1 "github.com:([^/]*)" \
+  | sed "s/github.com://"`:`git rev-parse --abbrev-ref HEAD`'
+
 # Bower
 alias bower='noglob bower'
 
