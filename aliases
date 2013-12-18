@@ -23,6 +23,9 @@ alias org-pr='hub pull-request -h \
 # Bower
 alias bower='noglob bower'
 
+# Cat with syntax highlighting
+alias ccat='highlight -O ansi'
+
 # MobiCheckin
 alias rtest='be rake test && be rspec && open coverage/index.html'
 alias mobi='cd ~/code/ror/mobicheckin-server'
