@@ -13,7 +13,7 @@ alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 
 # Rails bundler shorter
 alias be='bundle exec'
-alias bi='bundle install -j4'
+alias bi='bundle install'
 
 # Github Awesomeness
 alias org-pr='hub pull-request -h \
@@ -22,10 +22,3 @@ alias org-pr='hub pull-request -h \
 
 # Bower
 alias bower='noglob bower'
-
-# Cat with syntax highlighting
-alias ccat='highlight -O ansi'
-
-# MobiCheckin
-alias rtest='be rake test && be rspec && open coverage/index.html'
-alias mobi='cd ~/code/ror/mobicheckin-server'
