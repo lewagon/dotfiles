@@ -39,3 +39,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Gather handy aliases
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
+
+# Enhance history
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
