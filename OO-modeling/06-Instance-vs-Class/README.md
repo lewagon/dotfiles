@@ -29,7 +29,7 @@ end
 ```
 
 ### Your turn
-* Write a `Restaurant` class with appropriate attributes (`name`, `address`, `rating`, `type_of_food`...) and associated getters and setters if necessary. Your only constraint is to have a `@rating` attribute.
+* Write a `Restaurant` class with appropriate attributes (`name`, `address`, `rating`, `type_of_food`) and associated getters and setters if necessary. Your only constraint is to have a `@rating` attribute.
 
 * Define an instance method `rate(rating)` enabling to rate a Restaurant object. This method should re-compute the restaurant average rating `@avg_rating` every time it's called with a new rating. This average rating should be accessible. 
 

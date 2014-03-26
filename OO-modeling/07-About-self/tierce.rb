@@ -18,11 +18,11 @@ module DemoModule
 
 end
 
-def get_the_tierce
+def has_tierce?
   first = DemoModule::introduce
   second = DemoModule::DemoClass.introduce      
   third = DemoModule::DemoClass.new.introduce
-  [first, second, third]
+  [first, second, third] == [1, 2, 3]
 end
 
-p get_the_tierce == [1, 2, 3] # => true
+p has_tierce? # => true
