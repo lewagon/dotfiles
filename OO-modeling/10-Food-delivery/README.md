@@ -54,7 +54,7 @@ $ ruby restaurant.rb
 > - list_customers
 > - add_customer
 > - view_orders <customer_id>
-> - add_order <customer_id>
+> - add_order <customer_id>, <employee_id_>
 > - remove_order <order_id>
 > - list_employees
 > - add_employee
