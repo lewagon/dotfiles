@@ -1,0 +1,67 @@
+You will code a CookBook application that manages recipes.
+
+The idea is quite simple: you just got a new oven and want to remember all the recipes you are going to try out with it.
+Here comes your cookbook! It'll keep a list of your future culinary successes, allow you to review them, add some recipes and delete others.
+
+## Expected outcome
+
+You'll create a `cookbook.rb` script that can be run with `ruby cookbook.rb`.
+Recipes must be stored in a CSV file in the same directory than the script file.
+
+When ran, the script will display the following choices:
+
+```
+-- My CookBook --
+
+What do you wanna do?
+
+- List all recipes [list]
+- Add a recipe [add]
+- Delete a recipe [del <recipe_id>]
+- Exit [Esc.]
+```
+
+## Available choices
+
+### List all recipes
+* Display a numbered list of all the recipes in your CookBook reading them from you CSV file
+* The order of the list should always be the same
+
+Sample output:
+```
+-- Here are all your recipes --
+
+1. Crumpets
+2. Beans & Bacon breakfast
+3. Plum pudding
+4. Apple pie
+5. Christmas crumble
+```
+
+### Add a recipe
+* Ask for the recipe's name
+* Add the recipe to the end of your CookBook (and update CSV file)
+
+
+### Delete a recipe
+* Ask for a recipe's index (its number in the displayed list of all recipes)
+* Delete that recipe from your CookBook (and update CSV file)
+
+
+### Exit
+Well... Exit. Maybe you can say goodbye, be polite!
+
+## Objectives
+This application has all the moving parts of an MVC application: user input, display code, and data persistence. It's important to think about what responsibilities this application has to fulfill. This project must be the opportunity for you to apply what you've learned with the previous exercises. Keep the main OOP principles in mind: [Single Responsibility Principle](http://en.wikipedia.org/wiki/Single_responsibility_principle) & [Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns)
+
+Identify the main responsibilities of your application and how you can organize those responsibilities in concrete units of Ruby code. Here is a list of very high-level responsibilities you'll have to take care of:
+
+* Present and manage choices (the "UI")
+* Manage a recipes list (addition, deletion, list)
+* Read recipes from a file
+* Write recipes to a file
+
+Each of these responsibilities hides many more. List them, and figure out an object model that will correctly articulate all of them.
+
+## For starters
+We provide you with a skeleton script that you should complete with your own classes for the whole program to work.
