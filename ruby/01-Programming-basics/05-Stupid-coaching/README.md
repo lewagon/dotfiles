@@ -31,9 +31,11 @@ The objectives of this challenge are :
 
 ## Specs
 ### coach_answer.rb
-Implement the coach answer's logic in `#coach_answer`
-- **enhancement**: You can invent new rules and code a enhanced version in `#coach_answer_enhanced`. For instance 
-* if you shout at your coach, he will always add "I can feel your motivation son !" before the normal answer. How would you model someone shouting ? the ruby `upcase` method may give you a hint :)
+- implement the coach answer's logic in `#coach_answer`
+
+- **enhancement**: You can invent new rules and code a enhanced version in `#coach_answer_enhanced`. For instance:
+
+  * if you shout at your coach, he will always add "I can feel your motivation son !" before the normal answer. How would you model someone shouting ? the ruby `upcase` method may give you a hint :)
 
 ### interface.rb
 - Write the code for the interface that makes you discuss with your coach through the terminal
