@@ -10,6 +10,7 @@
 
 ## Learning Badges
 Are you able to answer the following questions ? If not, you're not ready to move on !
+
 * Suppose you add a new file in your local code repo, what's the instruction to tell git to track this new file ?
 * Once this file is tracked, how do you commit new changes you make to its content ?
 * Suppose you have renamed or deleted a file which was already tracked by git. What are the steps to commit these changes ?
@@ -18,8 +19,8 @@ Are you able to answer the following questions ? If not, you're not ready to mov
 * Finally, what's the command to push your code on Github ?
 
 ## Tips & Resources
-* git cheat sheet => http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf
-* interactive cheat sheet => http://www.ndpsoftware.com/git-cheatsheet.html
+* [git cheat sheet](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
+* [interactive cheat sheet](http://www.ndpsoftware.com/git-cheatsheet.html)
 * if you have 15 minutes watch [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) on how to use git/Github for usual projects (non-dev)
 
 
