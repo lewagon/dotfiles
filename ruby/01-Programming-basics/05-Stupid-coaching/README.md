@@ -25,6 +25,7 @@ Let's make a comparison between the **real world** and the **code world** on thi
 
 
 The objectives of this challenge are :
+
 - Understand the flow of a program and learn how to "read" through your code, line by line
 - Learn about conditional statements
 - Learn about coding structures that modify your program flow: `if/unless..else..end`, `while/until..end`,.. We speak of [control structures](http://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le)
