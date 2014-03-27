@@ -3,11 +3,11 @@
 - Understand IN-DEPTH the concepts of [variables](http://en.wikipedia.org/wiki/Program_variable), methods, variable assignation, method definition and method call.
 
 ## Specs
-### **age_in_days.rb**
+### Compute the age
 - Complete the method `age_in_days(day, month, year)` that returns your age in days, given your day, month, and year of birth. 
 - **Constraint**: The method should return an object of the `Fixnum` class.
 
-### interface.rb
+### Build the interface
 - Complete the code in `lib/interface.rb` that starts a simple terminal interface to test your program. To launch this code, you just have to run the following commands (changing the path with **your** Github username) :
 
 ```
@@ -46,7 +46,7 @@ some_number = some_number * 2
 ## Tips & Resources
 * You may want to use the [Date class](http://www.ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html), that we load in our file with the line `require 'date'`
 * Use the interactive ruby console (IRB) to make "live" experiments. Especially to test the type of objects that tested methods return.
-* To read a user input from the terminal you should use <a href="http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html" target="_blank">gets</a>. You will also need to <a href="http://ruby-doc.org/core-2.0.0/String.html#method-i-chomp" target="_blank">chomp</a> the resulting string, and convert it to integer.
+* To read a user input from the terminal you should use [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). You will also need to [chomp](http://ruby-doc.org/core-2.0.0/String.html#method-i-chomp) the resulting string, and convert it to integer.
 * As you see from code canvas, ruby uses the `puts` method to output values on the terminal.
 
 
