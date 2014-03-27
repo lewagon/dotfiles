@@ -3,7 +3,7 @@
 - Understand IN-DEPTH the concepts of [variables](http://en.wikipedia.org/wiki/Program_variable), methods, variable assignation, method definition and method call.
 
 ## Specs
-### *age_in_days.rb*
+### **age_in_days.rb**
 - Complete the method `age_in_days(day, month, year)` that returns your age in days, given your day, month, and year of birth. 
 - **Constraint**: The method should return an object of the `Fixnum` class.
 
