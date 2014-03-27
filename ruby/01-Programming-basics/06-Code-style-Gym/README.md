@@ -1,5 +1,6 @@
 ## Background and Objectives
 This challenge is here to make you write clean code, with good indentation, naming. Especially, focus on these points :
+
 * naming conventions for variables, constants, class & method names
 * indent and inline rules when defining methods and classes
 * use of parentheses and spaces
