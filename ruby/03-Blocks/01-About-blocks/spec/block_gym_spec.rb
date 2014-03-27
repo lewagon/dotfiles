@@ -11,7 +11,7 @@ describe "#tag" do
         end
       end
     end
-    html_string.must_equal "<div class='kitt-container'><a href='http://kitt.lewagon.org'>KITT<h2></h2></a></div>"
+    html_string.must_equal "<div class='kitt-container'><a href='http://kitt.lewagon.org'><h2>KITT</h2></a></div>"
   end
 end
 
