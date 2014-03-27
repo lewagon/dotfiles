@@ -16,6 +16,7 @@ The interface that you have to complete should work this way :
 * it asks for your last name and let you write it in the terminal
 
 Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `"Hello, Boris Alexandre Papillard !"`. 
+
 * **constraint**: to build the `custom_message` string, you must use string concatenation this time, with the `+` operator.
 * **enhancement**: your `custom_message` could also ìnform you about the number of characters in your name (for instance, "Boris Alexandre Papillard" has got 24 characters, including spaces), or other very important details...
 
