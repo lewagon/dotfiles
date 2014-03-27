@@ -66,8 +66,9 @@ describe "#random_subset" do
   array = ('a'..'z').to_a
   response = random_subset(('a'..'z').to_a, 4)
 
-  it "should return subset of correct size" do
-    response.size.must_equal 4
+  it "should return array of correct size" do
+    response.must_be_instance_of Array
+    response.size.must_equal 4 if response.is_a? Array
   end
   
   it "should return random elements" do
@@ -76,7 +77,7 @@ describe "#random_subset" do
   end
 
   it "should return elements present in the initial array" do
-    (response - array).must_be_empty
+    (response - array).must_be_empty if response.is_a? Array
   end
   
 end
@@ -91,8 +92,9 @@ describe "#randomize" do
     response.wont_equal other_response
   end
 
-  it "should return random version of the initial array" do
-    response.sort.must_equal array.sort
+  it "should return random copy of the initial array" do
+    response.must_be_instance_of Array
+    response.sort.must_equal array.sort if response.is_a? Array
   end
   
 end
