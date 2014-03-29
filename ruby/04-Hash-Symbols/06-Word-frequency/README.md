@@ -1,15 +1,24 @@
-Write a program that takes a filename and a parameter n and prints the n most common words in the file, and the count of their occurrences, in descending order. This should work this way (taking the bible in input as an example):
+## Background & Objectives
+- Work with a text file
+- Build a text analyzer using Hash
+
+### Reading a file in ruby
+You can read a file, line by line, with
+```ruby 
+File.open("my/file/path", "r").each_line do |line|
+  puts line
+end
+
+## Specs 
+- Implement `most_common_words` that enables to get the number of occurrences of most frequent words in a text file. For instance, consider we take the bible as source text.
 
 ```ruby
-most_common_words('source-text.txt', 3)  # prints => 
-> 'lord': 8722 occurrences
-> 'God': 7380 occurrences
-> 'Jesus': 2617 occurrences
+most_common_words('source-text.txt', 3)  
+> {'lord' => 8722, 'God' => 7380, 'Jesus' => 2617 }
 ```
 
-## Get rid of the noise
-Add a filter to your method to get rid of common words as ("a", "the", "is", ...). Here is some help:
-* such common words are called stop-words. [Here](http://en.wikipedia.org/wiki/Stop_words) you can find some lists of English stop-words, which you can use to build a stop-words array that you will use in your program.
+### Get rid of the noise
+Add a filter to your method to get rid of [stop words](http://en.wikipedia.org/wiki/Stop_words) as ("a", "the", "is", ...). We give you a text file "stop_words.txt" containing english stop words. You should use this file in your program.
 
-## Be creative
-Run your program on some original text (political speech, fairy tale, etc...)
+### Be creative
+Copy/Paste any text you want in the source file to experiment your program (political speech, fairy tale, etc...)
