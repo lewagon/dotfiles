@@ -16,10 +16,3 @@ def tell_mum_with_proc(message_blk)
   #TODO: return message addressed to your mum
   # => Should call #tell_with_proc of course
 end
-
-
-#Testing you code 
-love_block = Proc.new {"I love you"}
-
-p tell_mum {"I love you"} # => "mum, I love you !"
-p tell_mum_with_proc(love_block) # => "mum, I love you !"
