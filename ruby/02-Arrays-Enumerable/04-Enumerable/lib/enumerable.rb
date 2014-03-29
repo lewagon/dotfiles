@@ -28,25 +28,9 @@ def product(array)
   #       You should use of Enumerable#reduce
 end
  
-def sorted_triples(array)
-  # TODO: Reorganize an Array of the elements into groups of 3, and then sort each group alphabetically.
+def sorted_pairs(array)
+  # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
   #       You should make use of Enumerable#each_slice
 end
 
 
-# Manually Testing your code
-puts sum_odd_indexed([4, 7, 6, 8, 10]) == 15
- 
-puts even_numbers([3, 4, 7, 9, 10, 16]) == [4, 10, 16]
- 
-puts short_words(["you", "are", "my", "playground", "love"], 4) == ["you", "are", "my", "love"]
-
-puts first_under([13, 21, 7, 0, 11, 106], 10) == 7
- 
-puts add_bang(["yi", "ha"]) == ["yi!", "ha!"]
- 
-puts product([1, 1, 2, 3, 5]) == 30
- 
-words = %w(say my name say my name)
-puts sorted_triples(words) == [["my", "name", "say"],
-                               ["my", "name", "say"]]
