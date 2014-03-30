@@ -27,8 +27,8 @@ describe "#sum_recursive" do
     response.must_equal 5050
   end
 
-  #it "should call itself as recursive method" do
-  # ????
-  #end
+  it "should handle gracefully the case where min > max" do
+    lambda { sum_recursive(101, 100) }.must_raise ArgumentError
+  end
 
 end
