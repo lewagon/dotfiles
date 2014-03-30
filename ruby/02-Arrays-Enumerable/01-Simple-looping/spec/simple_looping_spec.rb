@@ -20,13 +20,13 @@ describe "#sum_with_for" do
 
 end
 
-describe "#sum_iterative" do
+describe "#sum_recursive" do
 
   it "should return the correct sum" do
-    response = sum_iterative(1, 100)
+    response = sum_recursive(1, 100)
     response.must_equal 5050
   end
-  
+
   #it "should call itself as recursive method" do
   # ????
   #end
