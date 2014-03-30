@@ -1,7 +1,7 @@
 To read in a csv file and extract its data you can use the csv package that comes with ruby standard library.
 
 ## Ruby Standard Library
-The [Ruby standard library](http://www.ruby-doc.org/stdlib-2.0.0/) includes all the convenient packages that come with your ruby installation. For instance the [cmath](http://www.ruby-doc.org/stdlib-2.0.0/libdoc/cmath/rdoc/index.html) package, if included in your ruby program, enables you to make computations on complex numbers. You include a package with `require` and then you can use its function
+The [Ruby standard library](http://www.ruby-doc.org/stdlib-2.0.0/) includes all the convenient packages that come with your ruby installation. For instance the [cmath](http://www.ruby-doc.org/stdlib-2.0.0/libdoc/cmath/rdoc/index.html) package, if included in your ruby program, enables you to make computations on complex numbers. You include a package with `require` and then you can use its methods and classes.
 
 ```ruby
 require "cmath"
