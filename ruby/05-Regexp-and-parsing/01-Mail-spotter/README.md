@@ -4,7 +4,7 @@ Can you judge someone's computer skills only looking at their email address
 Well, The Oatmeal [thinks so](http://theoatmeal.com/comics/email_address)!
 
 Emails are the lifeblood of any SaaS service, so it is very important to
-know how to manipulate here.
+know how to manipulate them.
 
 ## Specs
 
@@ -20,7 +20,7 @@ It must `raise` an
 [`ArgumentError`](http://www.ruby-doc.org/core-2.1.0/ArgumentError.html) if the
 first argument passed is not a string.
 
-It must handle correctly email with domaines it does not know about.
+It must handle correctly email with domains it does not know about.
 
 The `spec/mail_joke_spec.rb` requires you to implement three jokes, feel
 free to add more and use your imagination!
