@@ -3,8 +3,9 @@ Destructive methods are methods who modify their receiver. They are dangerous in
 
 ## Specs
 - Implement `#pmu_format!` that modifies the array it takes as argument to make it more friendly for the PMU anchorman
-- **constraint**: The method should reverse the array, prepend the horse position, and add a bang at the en of the horse name string. Ex: `["Abricot du Laudot", "Black Caviar", "Brigadier Gerard"]` should become exaclty `["3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]` after formating.
-- **constraint**: The method should return `nil`. Its purpose is not to return the modified array, but just to modify it !
+- **constraint**: The method should reverse the array, prepend the horse position, and add a bang at the end of the horse name string. Ex: `["Abricot du Laudot", "Black Caviar", "Brigadier Gerard"]` should become exaclty `["3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]` after formating. That's the only format the anchorman can understand !
+
+Remember that the method should modifify the array object given in input, not simply return a modified copy of this array.
 
 ## Tips & Resources
 - Of course, you should use destructive iterators within the method :)

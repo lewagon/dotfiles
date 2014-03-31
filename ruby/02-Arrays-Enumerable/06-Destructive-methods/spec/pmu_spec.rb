@@ -17,8 +17,4 @@ describe "#pmu_format!" do
     horse_race.must_equal ["4-Coup de Folie!", "3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]
   end
 
-  it "should return nil" do
-    pmu_format!(["un cheval"]).must_equal nil
-  end
-
 end
