@@ -1,19 +1,33 @@
-Read this [joke](http://theoatmeal.com/comics/email_address) and write a simple function `parse_mail` which parses an input email and gives you a custom message depending on your mail provider. For instance :
+## Background & Objectives
+
+Can you judge someone's computer skills only looking at their email address
+Well, The Oatmeal [thinks so](http://theoatmeal.com/comics/email_address)!
+
+Emails are the lifeblood of any SaaS service, so it is very important to
+know how to manipulate them.
+
+## Specs
+
+Write a function `mail_joke` taking one argument (the email to judge), and
+returning the judging sentence. For instance:
 
 ```ruby
-parse_mail("boris@lewagon.org") 
-=> "Well done boris, you're skilled and capable"
-parse_mail("jean-louis.alarue@yahoo.fr") 
-=> "Salut jean-louis alarue, tu m'as l'air a la rue.."
+mail_joke("boris@lewagon.org")
+# Returns "Well done boris, you're skilled and capable"
 ```
 
-## Specs 
-of course you can invent your own jokes (the ones from the post are not very funny). Your program should :
-* Detect first name, last name and providers respecting this syntax `first_name.last_name@provider.com``
-* If the mail does not respect this structure, your program will just consider the first part of the mail (before the `@` character) as the user's global name.
-* if the mail does not look like a mail, as `not_a@mail.at@all.com` your program should just return `"invalid input buddy"`
+It must `raise` an
+[`ArgumentError`](http://www.ruby-doc.org/core-2.1.0/ArgumentError.html) if the
+first argument passed is not a string.
 
-## Tips 
-* Your jokes by provider will be given once and for all. They will not change. What kind of variable should you use to store them ?
-* Which data structure is the more adequate to model these jokes ? a String ? an Array ? a Hash ?
+It must handle correctly email with domains it does not know about.
 
+The `spec/mail_joke_spec.rb` requires you to implement three jokes, feel
+free to add more and use your imagination!
+
+## Tips & Resources
+
+- How will you store the list of jokes?
+- You need to *extract* the first name and last name from the email
+- You may need a [`Regexp`](http://www.ruby-doc.org/core-2.1.0/Regexp.html)
+- Have you heard of [Rubular](http://rubular.com/). Great in-browser regex sandbox
