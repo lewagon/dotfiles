@@ -11,8 +11,7 @@
 - Complete the code in `lib/interface.rb` that starts a simple terminal interface to test your program. To launch and try this code, you just have to run the following commands (changing the path with **your** Github username) :
 
 ```
-cd ~/code/username/kitt/ruby/Wagon-0
-ruby 03-Age-in-days/lib/interface.rb
+ruby lib/interface.rb
 ```
 
 - **Enhancement** : Are there some repetitive lines of code in `#age_from_terminal` ? Could you refactor those lines and make your code DRY ?
