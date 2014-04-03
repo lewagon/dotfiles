@@ -4,7 +4,7 @@ require "spec_helper"
 require "array_to_hash"
 
 describe "#array_to_hash" do
-  array = ["a", "b", "c"]
+  let(:array) {["a", "b", "c"]}  
   
   it "should build hash with index keys when called without block" do
     array_to_hash(array).must_equal({ 0 => "a", 1 => "b", 2 => "c" }) 
