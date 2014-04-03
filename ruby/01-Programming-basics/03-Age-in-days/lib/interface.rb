@@ -1,17 +1,24 @@
-require_relative "age_in_days"
-  
-puts "What's your year of birth ?"
-#TODO: get the user's year of birth, store it in a variable with right name
+# This "require_relative" line loads your own "age_in_days.rb" file. Notice the
+# "_relative" suffix: the given path is relative to the location of the file
+# from which "require_relative" is called
+require_relative './age_in_days'
 
-puts "What's your month of birth ?"
-#TODO: get the user's month of birth, store it in a variable with right name
+### Talking with the user ###
+puts 'What\'s your year of birth ?'
+birth_year = gets.chomp.to_i
 
-puts "What's your day of birth ?"
-#TODO: get the user's day of birth, store it in a variable with right name
+puts 'What\'s your month of birth ?'
+birth_month = gets.chomp.to_i
 
-puts "Computing your age (with most complicated algorithms)........"
+puts 'What\'s your day of birth ?'
+birth_day = gets.chomp.to_i
+#############################
 
-number_of_days = age_in_days(your_day, your_month, your_year)
+puts 'Computing your age (with the most complicated algorithms)........'
 
-puts "You now have #{number_of_days} days... pffiou"
+# TODO: This is probably where you'd like to use your brand new function!
+calculated_age = 0
 
+
+# Ask the user about his birth date and print his age in days:
+puts "You are #{calculated_age} days old... phew!"
