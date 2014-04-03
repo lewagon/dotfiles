@@ -18,8 +18,8 @@ end
 
 describe "#convert_symbol_to_string" do
   it "should return the stringified version" do
-    convert_string_to_symbol(:foo).must_equal "foo"
-    convert_string_to_symbol(:bar).must_equal "bar"
+    convert_symbol_to_string(:foo).must_equal "foo"
+    convert_symbol_to_string(:bar).must_equal "bar"
   end
 end
 
@@ -28,7 +28,7 @@ describe "#me" do
 
   it "should tell your age" do
     me_hash.must_be_instance_of Hash
-    me_hash[:age].wont_be_empty
+    me_hash[:age].must_be_kind_of Numeric
   end
 
   it "should tell your name" do
