@@ -19,7 +19,7 @@ You have very usefull ruby packages in the standard library to
 
 ## Specs
 - implement `#most_successfull` that returns the nth movies published prior to a given year, and with maximum earnings.
-- **constraint**: read `spec/box_office_spec` to understand the format we want for the returned list of movies.
+- **constraint**: the returned list should be an array of movies. Each movie should be represented by a hash with keys `name`, `year` and `earnings`. Ex: `{:name=>"L'exorciste", :year=>1973, :earnings=>204565000}`
 
 ## Tips & Resources
 - Make sure you specify the good `encoding` options for reading the CSV. Movies titles are given in French with special characters :) 
