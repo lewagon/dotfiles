@@ -8,7 +8,7 @@
 - **Constraint**: The method should return an object of the `Fixnum` class.
 
 ### Complete the interface
-- Complete the code in `lib/interface.rb` that starts a simple terminal interface to test your program. To launch and try this code, you just have to run the following commands (changing the path with **your** Github username) :
+- Complete the code in `lib/interface.rb` that starts a simple terminal interface to test your program. To launch and try this code, you just have to run the following command:
 
 ```
 ruby lib/interface.rb

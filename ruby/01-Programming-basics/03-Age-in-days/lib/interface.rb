@@ -20,5 +20,5 @@ puts 'Computing your age (with the most complicated algorithms)........'
 calculated_age = 0
 
 
-# Ask the user about his birth date and print his age in days:
+# Finally, print user's age in days:
 puts "You are #{calculated_age} days old... phew!"
