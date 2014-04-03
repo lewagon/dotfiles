@@ -1,39 +1,56 @@
+## Background & Objectives
+- Get familiar with parsing JSON format
+- Learn how to separate responsabilities of your gaming program in several sub-methods
+
+
+## Specs
 I am sure you have already watched "Des chiffres et des lettres". The goal of this challenge is to write a simplified version of this game from the terminal where :
 
 * you are given a random word-grid.
 * you have to enter the longest english word you can find using only letters of this grid.
-* after typing your best shot, you get your score altogether with the french definition of the word you picked up.
+* after typing your best shot, you get your score altogether with the time you took, the french definition of the word you picked up, and eventually some message explaining why you failed.
 
-Here is how this should work
+
+Here is how this should work, when running `ruby lib/interface.rb`
 
 ```
-******** Welcome to the longest word-game !!********
+******** Welcome to the longest word-game !********
 Here is your grid :
-Q E F G A J P S N
+["Q", "F", "M", "R", "K", "L", "I", "T", "P"]
 *****************************************************
 What's your best shot ?
-gaps
-*****************************************************
-You took 11.010275 seconds to answer !
-Your word 'gaps' means: trou
-4 Points
-*****************************************************
+lift
+******** Now your results ********
+Your word: lift
+Time Taken to answer: 12.07916
+Translation: soulever
+Your score: 3.194722666666667
+Message: well done
 ```
 
-This challenge will let you access a web-API, and parse JSON data returned by this API !! Pas mal de fun en perspective :)
+This challenge will let you access a web-API, and parse JSON data returned by this API ! Pas mal de fun en perspective :) 
 
-## Tools !
+**Constraints**:
+
+- For your code to pass the tests, you should consider the first translation among the principal translations given by the API. Look at the [apple JSON translations](http://api.wordreference.com/0.8/80143/json/enfr/apple) to get an example
+- Your grid should be a real random grid, hence possibly embed same characters multiple times.
+- Make sure you check if the word is an english word, i.e. has a translation, and if it is well included in the grid.
+- If the word is not valid or is not in the grid, the score will be 0 and you should build a custom message to explain it to the player.
+- Your score should depend on the time you take to answer, and of the length of the word you found. The longer word the user finds and the quicker he answers, the better score he gets. Saying that, feel free to invent your own penalty rules!
+
+## Learning Badges
+- What's a json file ? How is it close from the structure of a ruby hash ?
+- How could you refactor your code to separate the responsabilities of each method ?
+
+## Tips & Resources
 This challenge is deliberately not guided. Here are some elements that will help you
-* Write the pseudo code to figure out how to proceed before diving into the code
-* You should use the [word-reference](http://www.wordreference.com/docs/api.aspx) api to get word french translation, in JSON format. In our code canvas, we give you our API key but you can also create your own key very easily !
-* You should use the `open-uri` package from ruby standard library to make requests to this API and get the JSON result
-* You should use the `json` package to parse returned JSON files.
-* You should use the `rand` method or the array `shuffle` method to generate a random grid
 
-## Make it funnier and more robust
-* How do you deal with wrong user entries ? or non-english words ?
-* What about making a funnier game with several rounds ?
-* What about adding a time penalty ? Which rules to choose for this penalty ?
+* Write the pseudo code to figure out how to proceed before diving into the code
+* Read [word-reference documentation](http://www.wordreference.com/docs/api.aspx) to understand how this very simple api works and get a key for using it.
+* Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get the JSON result. Use the `json` package to parse returned JSON files.
+* For testing the grid inclusion, make use of `Enumerable#all?`
+
+
 
 
 
