@@ -16,8 +16,10 @@ describe "#tag" do
 end
 
 describe "#timer_for" do
-  block_time = timer_for do 
-    "quick one"
+  let(:block_time) do
+    timer_for do
+      "quick one"
+    end
   end
   
   it "should compute a Float" do
