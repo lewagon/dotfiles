@@ -7,11 +7,11 @@
 # irb> "foo".object_id
 # irb> "foo".object_id
 
-def are_identitical_symbols_same_objects?
+def are_identical_symbols_same_objects?
   # TODO: true or false?
 end
 
-def are_identitical_strings_same_objects?
+def are_identical_strings_same_objects?
   # TODO: true or false?
 end
 

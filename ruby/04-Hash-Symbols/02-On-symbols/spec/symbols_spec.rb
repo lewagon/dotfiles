@@ -3,8 +3,8 @@ require "spec_helper"
 
 describe "quizz" do
   it "answers are not all correct" do
-    all_answers = are_identitical_symbols_same_objects? &&
-                  !are_identitical_strings_same_objects?
+    all_answers = are_identical_symbols_same_objects? &&
+                  !are_identical_strings_same_objects?
     all_answers.must_equal true
   end
 end
