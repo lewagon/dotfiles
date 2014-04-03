@@ -1,55 +1,25 @@
+## Background & Objectives
+- Use package of the standard library
+- Work with CSV file input
+
 To read in a csv file and extract its data you can use the csv package that comes with ruby standard library.
 
-## Ruby Standard Library
-The [Ruby standard library](http://www.ruby-doc.org/stdlib-2.0.0/) includes all the convenient packages that come with your ruby installation. For instance the [cmath](http://www.ruby-doc.org/stdlib-2.0.0/libdoc/cmath/rdoc/index.html) package, if included in your ruby program, enables you to make computations on complex numbers. You include a package with `require` and then you can use its function
+#### Ruby Standard Library
+The [Ruby standard library](http://www.ruby-doc.org/stdlib-2.0.0/) includes all the convenient packages that come with your ruby installation. For instance the [date](http://www.ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/index.html) package, if included in your ruby program, enables you to manipulate dates easily. A package is loaded at the beginning of your ruby file with
 
 ```ruby
-require "cmath"
-CMath.sqrt(-9)  #=> 0+3.0i
+require "date"
 ```
+
 You have very usefull ruby packages in the standard library to
 * read/write/parse files of different format (JSON, XML, CSV,...)
 * use custom and convenient data stucture as YAML
 * build HTTP server (webrick library)
 * and so on..
 
-## Back to our cookbook
-Write a program that takes the recipe file as input and works this way :
-```
-> ruby cookbookpro.rb
-We have recipes for : 
-- Entree
-- Plat Principal
-- Dessert
-- Sauce
+## Specs
+- implement `#most_successfull` that returns the nth movies published prior to a given year, and with maximum earnings.
+- **constraint**: the returned list should be an array of movies. Each movie should be represented by a hash with keys `name`, `year` and `earnings`. Ex: `{:name=>"L'exorciste", :year=>1973, :earnings=>204565000}`
 
-Which category are you interested in ?
-
-> Plat Principal
-
-Here are the recipes of the category : Plat Principal
-- Poule au pot
-- Lotte a l'armoricaine
-- Bar roti
-- Boeuf bourguignon
-- Poulet basquaise
-- Pot-au-feu
-- Couteaux a la plancha
-
-Now which recipe ?
-
-> Pot-au-feu
-Pot-au-feu
-************************************
-difficulty : difficile
-preparation : 20 min
-cooking : 3h
-************************************
-```
-
-## What if ?
-How will you handle the case of the user entering a wrong category/recipe (either typo, or category/recipe not existing..) ?
-
-
-
-
+## Tips & Resources
+- Make sure you specify the good `encoding` options for reading the CSV. Movies titles are given in French with special characters :) 
