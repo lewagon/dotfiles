@@ -1,19 +1,27 @@
-## Objectives
+## Background & Objectives
 
-An exercise to learn how to use regular expressions in ruby. First learn more about [regular expressions](http://en.wikipedia.org/wiki/Regular_expression)
+Let's dive into regular expressions, this time focusing on numbers.
+More precisely, we'll learn how to handle phone numbers in your app.
 
+## Specs
 
-Write a program that checks if a phone number is a valid french number.
-* A french phone number should contain 10 numbers starting with 0, or 12 numbers starting with +33
-* Also you can accept phone number with delimiters between numbers (space, or "-" ).
+Write a method that takes a string as parameter and returns a boolean,
+`true` when the phone number is a valid French phone number:
+
+- It is valid when starting with a `0` and containing 10 digits
+- It is valid when starging with `+33` and containing 11 digits
+
+The method should ignore space or dashes between digits.
 
 ```ruby
-is_valid_phone_number("0665363636")
+french_phone_number?("0665363636")
 => true
 
-is_valid_phone_number("06 65 36 36")
+french_phone_number?("06 65 36 36")
 => false
 ```
 
-## Help
-[http://rubular.com/](http://rubular.com/)
+## Tips
+
+Here is a great resource to tests your regex before writing code:
+[Rubular](http://rubular.com/)
