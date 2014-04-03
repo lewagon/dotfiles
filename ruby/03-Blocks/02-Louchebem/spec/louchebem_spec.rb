@@ -5,10 +5,10 @@ require "louchebem"
 
 describe "#louchebemize" do
 
-  suffixes = %w(em é ji oc ic uche ès)
-  fou_translations = %w(loufem loufé loufji loufoc loufic loufuche loufès)
-  chat_translations = %w(latchem latché latchji latchoc latchic latchuche latchès)
-  translations_pairs = chat_translations.product(fou_translations)
+  let(:suffixes) { %w(em é ji oc ic uche ès) }  
+  let(:fou_translations) { %w(loufem loufé loufji loufoc loufic loufuche loufès) }
+  let(:chat_translations) { %w(latchem latché latchji latchoc latchic latchuche latchès) }
+  let(:translations_pairs) { chat_translations.product(fou_translations) }  
   
   it "final suffix should be in (em é ji oc ic uche ès)" do
     fou_translations.must_include louchebemize("fou")
