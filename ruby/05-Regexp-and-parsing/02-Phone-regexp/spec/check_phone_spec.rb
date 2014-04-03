@@ -9,7 +9,8 @@ describe "#french_phone_number?" do
     "+33 6 65 36 36 36" => true,
     "06 65 36 36" => false,
     "2336653636" => false,
-    "+3366536361" => false
+    "+3366536361" => false,
+    "0065363636" => false
   }
 
   FIXTURES.each do |phone_number, result|
