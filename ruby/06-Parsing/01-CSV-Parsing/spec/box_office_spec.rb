@@ -20,7 +20,7 @@ describe "#most_successfull" do
   end
   
   it "should only keep movies where (year < max year)" do
-    movies_list.all?{ |movie| movie[:year] <= 1990}.must_equal true
+    movies_list.all?{ |movie| movie[:year] < 1975}.must_equal true
   end
   
   it "should pick movies with maximum earnings" do
