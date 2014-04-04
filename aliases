@@ -22,3 +22,5 @@ alias org-pr='hub pull-request -h \
 
 # Bower
 alias bower='noglob bower'
+
+export W=~/code/lewagon

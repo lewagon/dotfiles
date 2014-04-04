@@ -43,3 +43,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Enhance history
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
+
