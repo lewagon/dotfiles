@@ -1,5 +1,5 @@
 def palindrome?(a_string)
-  # return true if a_string is a palindrome / false otherwise 
+  #TODO: check if a_string is a palindrome
 end
 
   

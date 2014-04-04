@@ -1,4 +1,4 @@
-$strings = {
+STRINGS = {
  home: {
    intro: {
      en: 'Welcome on Le Wagon',
@@ -24,7 +24,6 @@ def getTranslation(a_string, a_language)
 end
 
 # testing your program 
-
 getTranslation('home.intro', 'fr') == 'Bienvenue sur Le Wagon' # => true
 getTranslation('home.intro', 'es') == 'Welcome on Le Wagon' # => true
 getTranslation('home.content.goodbye') == 'Goodbye' # => true
