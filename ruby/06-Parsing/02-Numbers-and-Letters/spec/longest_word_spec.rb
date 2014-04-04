@@ -34,8 +34,8 @@ describe "#run_game" do
       not_english[:score].must_equal 0
     end
     
-    it "should return 'invalid' translation for invalid word" do
-      not_english[:translation].must_equal "invalid"
+    it "should return nil translation for invalid word" do
+      not_english[:translation].must_equal nil
     end
     
     it "should build custom messages for invalid word" do
