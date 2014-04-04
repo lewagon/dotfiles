@@ -11,10 +11,13 @@ Pseudocode is primarily used to communicate the essence of an algorithm without 
 * Start small with a program that can only translate a single french word in louchebem
 * Then try to extend it to sentences.
 
-Did you know that popular expressions like "larfeuille", "loufiah", "loucedé", or "loufoque" are louchébem expressions !
+Did you know that popular expressions like "larfeuille", "loufiah", "loucedé", or "loufoque" are louchébem expressions!
 
 ## Specs  
 - **constraint**: you should pick your final random suffix in `["em", "é", "ji", "oc", "ic", "uche", "ès"]`
+- **constraint**: one-letter word like "a" or "l" should not be translated
+- **constraint**: word beginning with a vowel should be translated differently. Ex: "atout" may give "latoutoc"
+- **enhancement**: ideally your program should be able to translate any complicated sentence, eventually embedding special characters like "!", or "'".
 
 ## Tips & Resouces
 - You pseudo code should follow [these principles](http://www.cs.cornell.edu/Courses/cs482/2003su/handouts/pseudocode.pdf)
