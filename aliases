@@ -3,24 +3,11 @@ alias ip="curl ipinfo.io/ip"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 
-# Quick Tunnel (For unprotected Wifi)
-alias tunnel='~/code/python/sshuttle/sshuttle --dns \
-              --daemon --pidfile=/tmp/sshuttle.pid --remote=chaton 0/0'
-alias tunnelx='[[ -f /tmp/sshuttle.pid ]] && kill $(cat /tmp/sshuttle.pid) && echo "Disconnected."'
-
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 
 # Rails bundler shorter
 alias be='bundle exec'
 alias bi='bundle install'
-
-# Github Awesomeness
-alias org-pr='hub pull-request -h \
-  `git remote -v | grep -oE -m1 "github.com:([^/]*)" \
-  | sed "s/github.com://"`:`git rev-parse --abbrev-ref HEAD`'
-
-# Bower
-alias bower='noglob bower'
 
 export W=~/code/lewagon

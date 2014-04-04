@@ -1,10 +1,6 @@
 [user]
-  name = Sebastien Saunier             # TODO: change this to your name
-  mail = seb@saunier.me                # TODO: change this to your email
-  email = seb@saunier.me               # TODO: change this to your email
-
-[github]
-  user = ssaunier                      # TODO: change this to your github username
+  name =  "TODO: PUT YOUR NAME HERE WITHOUT ACCENTS"
+  email = "TODO: PUT YOUR GITHUB ACCOUNT EMAIL HERE"
 
 [color]
   branch = auto
@@ -27,7 +23,6 @@
   br = branch
   ci = commit
   fo = fetch origin
-  mom = merge origin master
   d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
@@ -44,13 +39,5 @@
 
   m = checkout master
 
-[difftool "Kaleidoscope"]  # Very nice diff tool for mac: http://www.kaleidoscopeapp.com
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-
-[difftool]
-  prompt = false
-
-[diff]
-  tool = Kaleidoscope
 [push]
 	default = simple
