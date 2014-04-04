@@ -41,6 +41,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
 # Enhance history
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
+bindkey '^[OA' history-substring-search-up
+bindkey '^[OB' history-substring-search-down
