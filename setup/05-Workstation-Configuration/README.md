@@ -9,19 +9,17 @@ Go to [this page](https://github.com/lewagon/dotfiles/fork) and for the reposito
 Then open your terminal, and run:
 
 ```shell
-USER=<type_your_github_username>
-
-mkdir -p ~/code/$USER && cd $_
-git clone git@github.com:${USER}/dotfiles.git
+mkdir -p ~/code/<user.github_nickname> && cd $_
+git clone git@github.com:<user.github_nickname>/dotfiles.git
 cd dotfiles
 ```
 
-We now need to configure the `gitconfig` with your own identity. Open it in Sublime Text, and update line 2 and 3:
+We now need to configure the `gitconfig` with your own identity. Open it in Sublime Text, and update line 2 and 3 with:
 
 ```
 [user]
-  name =  "TODO: PUT YOUR NAME HERE WITHOUT ACCENTS"
-  email = "TODO: PUT YOUR GITHUB ACCOUNT EMAIL HERE"
+  name =  "<user.name>"
+  email = "<user.email>"
 ```
 
 You should commit this change:
