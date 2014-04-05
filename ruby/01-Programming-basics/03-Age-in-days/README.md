@@ -28,10 +28,12 @@ The following questions may seem obvious to most of you, **but make 100% sure yo
 - Can we use a variable that has not been defined?
 - Can we assign a new value to a variable already defined? How?
 - Are you able to describe with the right words what we **exactly** do in these two lines of code below?
+
 ```ruby
 some_number = 1
 some_number = some_number * 2
 ```
+
 - What are the good conventions for naming variables in ruby (you can google the answer)?
 
 ### On methods
