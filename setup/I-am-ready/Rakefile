@@ -1,0 +1,3 @@
+task :default do
+  puts "1 tests, 1 assertions, 0 failures, 0 errors, 0 skips"
+end

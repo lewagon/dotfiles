@@ -159,3 +159,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 ```
 
 You can have a look at [this](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) and run whichever command you see fit.
+
+## I am ready!
+
+Are you ready? If so click on the "I am ready" tab on the left and follow instructions :)
