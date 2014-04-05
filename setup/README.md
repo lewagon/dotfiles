@@ -47,7 +47,7 @@ Go to `Preferences > Settings - Users` and edit the file to have at least this c
 
 When launching your terminal, you are running a shell, which is waiting for your commands, such as:
 
-```shell
+```
 ls
 ```
 
@@ -55,7 +55,7 @@ which list the files of the current directory.
 
 We will use the shell named `zsh` instead of `bash`, the default one. Open your terminal and run:
 
-```shell
+```
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
 
@@ -65,19 +65,19 @@ On Mac, open Terminal -> Preferences and set the "Pro" theme as default. Quit an
 
 If you are running Ubuntu, just run,
 
-```shell
+```
 apt-get install git
 ```
 
 On Mac, you need to install [Homebrew](http://brew.sh/). To do so, open your terminal and run:
 
-```shell
+```
 ruby <(curl -fsS https://raw.github.com/Homebrew/homebrew/go/install)
 ```
 
 Then install some useful software:
 
-```shell
+```
 brew install vim git node
 ```
 
@@ -91,7 +91,7 @@ Go to [this page](https://github.com/lewagon/dotfiles/fork) and for the reposito
 
 Then open your terminal, and run:
 
-```shell
+```
 mkdir -p ~/code/<user.github_nickname> && cd $_
 git clone git@github.com:<user.github_nickname>/dotfiles.git
 cd dotfiles
@@ -107,7 +107,7 @@ We now need to configure the `gitconfig` with your own identity. Open it in Subl
 
 You should commit this change:
 
-```shell
+```
 git add gitconfig
 git commit --message "Added my identity to the gitconfig"
 git push origin master
@@ -115,7 +115,7 @@ git push origin master
 
 Time to install this default configuration, just run:
 
-```shell
+```
 ./install.sh
 ```
 
@@ -127,19 +127,19 @@ You may already have installed ruby, but we are going to do it again using `rben
 
 Open a terminal, and run:
 
-```shell
+```
 curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
 ```
 
 If you are using Ubuntu, run:
 
-```shell
+```
 rbenv bootstrap-ubuntu-12-04
 ```
 
 Now, you are ready to install the latest ruby version, and set it as the default version.
 
-```shell
+```
 rbenv install 2.1.1
 rbenv global 2.1.1
 ruby -v
@@ -153,7 +153,7 @@ If you are running Ubuntu, you can skip this step.
 
 You want a fast keyboard, so run this in your terminal:
 
-```shell
+```
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 ```
