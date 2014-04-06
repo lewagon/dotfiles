@@ -40,5 +40,4 @@ if [ ! -e "$HOME/.zshenv" ]; then
   touch "$HOME/.zshenv"
 fi
 
-source ~/.zshrc
-
+echo "You should quit and relaunch your terminal!"
