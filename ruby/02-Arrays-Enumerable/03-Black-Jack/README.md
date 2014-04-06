@@ -40,13 +40,13 @@ $ You beat the bank! You win.
 
 - For each game, a new bank score is randomly picked in `16..21`.
 - Each turn the user is asked if he wants to pick a card or not
-  - /!\ The user isn't asked to pick a new card if his score gets above 21 (he will loose in that case)
   - If he wants to pick a card, you add the picked card's value to his score. Afterwards the `#state_of_the_game` should be displayed, telling him what his score is and what's the bank value.
   - Else the game stops and the outcome message is printed
 
 - Implement the `#state_of_the_game` method, which will return the string : `Your score is 16, bank is 17!` with the correct values.
 
 - Implement the `#asking_for_card?` method, which should ask the user if he wants to pick a card and return true or false (true if he answers 'Y' or 'yes', false otherwise)
+   - /!\ The user isn't asked to pick a new card if his score gets above 21 (he will loose in that case)
 
 - Implement the `#build_message_for` method which analyze the outcome of the black jack game and returns a custom string. This method takes an array as an argument containing : `[bank, score]`.
 - **constraint**: the `#build_message_for` method should return one of the following strings, depending on the game outcome :
