@@ -6,6 +6,7 @@ and then clone it on your computer.
 
 ```bash
 $ GITHUB_USERNAME=<put_your_github_username_here>
+$ mkdir -p ~/code/${GITHUB_USERNAME} && cd $_
 $ git clone git@github.com:${GITHUB_USERNAME}/dotfiles.git
 $ cd dotfiles
 ```
