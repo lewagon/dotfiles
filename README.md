@@ -1,32 +1,44 @@
 Install
 -------
 
-Your dotfiles are personal. Fork this repo on Github, and then get it on your computer.
+Your dotfiles are personal. [Fork this repo](https://github.com/lewagon/dotfiles/fork) on Github,
+and then clone it on your computer.
 
-    git clone git@github.com:#{you}/dotfiles.git
-    cd dotfiles
+```bash
+$ GITHUB_USERNAME=<put_your_github_username_here>
+$ git clone git@github.com:${GITHUB_USERNAME}/dotfiles.git
+$ cd dotfiles
+```
 
-Then edit the ```gitconfig``` and other files with your own preferences. When you're done,
-save these config (that's why you forked the repo).
+Open and edit the ```gitconfig``` and other files with your own preferences. When you're done, save these config (that's why you forked the repo).
 
-    git commit -am "My identity in the gitconfig"
-    git push origin master
+```bash
+$ git add gitconfig
+$ git commit m "My identity in the gitconfig"
+$ git push origin master
+```
 
 Now you can run the install script. It will not override existing config files, just
-rename them as ```#{file}.backup```. Assumption: you have `oh-my-zsh` already installed.
+rename them as ```#{file}.backup```.
+Assumption: you have [`oh-my-zsh`](http://ohmyz.sh/) is already installed.
 
-    ./install.sh
+```bash
+$ ./install.sh
+```
 
 Customization
 -------------
 
-You will want to customize your environment.
+You can open `~/.aliases` and add your own shortcuts
 
-For example, to customize your `zsh` config, make your changes in `~/.zshenv`:
+You will want to customize your environment, just open `~/.zshenv` and
+stick all the variables you need:
 
-    # Me
-    export EMAIL=__________________
+```bash
+# Me
+export EMAIL=__________________
 
-    # Amazon credentials
-    export AMAZON_ACCESS_KEY=________________________
-    export AMAZON_SECRET_KEY=_______________________
+# Amazon credentials
+export AMAZON_ACCESS_KEY=________________________
+export AMAZON_SECRET_KEY=_______________________
+```
