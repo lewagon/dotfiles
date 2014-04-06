@@ -36,9 +36,6 @@ You will want to customize your environment, just open `~/.zshenv` and
 stick all the variables you need:
 
 ```bash
-# Me
-export EMAIL=__________________
-
 # Amazon credentials
 export AMAZON_ACCESS_KEY=________________________
 export AMAZON_SECRET_KEY=_______________________
