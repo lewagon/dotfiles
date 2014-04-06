@@ -35,7 +35,7 @@ In our simplified version of the Black Jack, here is how a game goes :
 - Implement `#game_outcome` which will return an array containing the bank score and the user score
   - **constraint**: the `#game_outcome` should return the outcome of a black jack game, which we impose to be an array containing the bank's score and the player's score. Ex: bank gets 17, you get 19, the method should return `[17, 19]`.
 
-### interface.rb
+### croupier.rb
 
 - Implement the `#play_game` method which runs a Black Jack game from the terminal. It should work this way :
 
