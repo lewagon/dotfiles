@@ -1,3 +1,3 @@
-require_relative 'interface'
+require_relative 'croupier'
 
 play_game

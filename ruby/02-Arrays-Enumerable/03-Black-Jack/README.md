@@ -1,16 +1,32 @@
 ## Background and Objectives
 This exercise is a synthesis which validates the core concepts you have seen so far, common to most programming languages:
 
+### Objectives
+
 - Getting user input
 - Variables and methods
 - Program flow and control structures
 - Manipulation of strings and arrays
 
+### Black Jack Rules
+In our simplified version of the Black Jack, here is how a game goes :
+
+- The player starts with no card and thus a score of 0
+- The bank starts with a score between 16 and 21
+
+- Each turn the player can:
+  - Shuffle a card which will give him a number between 1 and 11. This number will be added to his score.
+  - Pass, and finish the game.
+
+- If the player passes his turn or reaches a score > to 21, the game is over.
+
+- From there we have 4 scenarios :
+  - If the player score is 21, he pulled a "Black Jack" and has won.
+  - If the player score is > to the bank he has won.
+  - If the player score is < to the bank he has lost.
+  - If the player score is > to 21, he has lost.
+
 ## Specs
-
-### run.rb
-
-- Simply calls the `interface.rb` `#play_game` method
 
 ### black_jack.rb
 
@@ -56,6 +72,14 @@ $ You beat the bank! You win.
  - `"Bank beats you! You loose."` if the user gets a worse score than the bank.
 
 - **enhancement (optional)**: If you want to enhance your program to be closer to the real rules, here's some help :) http://fr.wikipedia.org/wiki/Blackjack_(jeu)
+
+
+### Run your code :
+
+- You can run the game by typing :
+```bash
+$ ruby run.rb
+```
 
 ## Learning badges
 

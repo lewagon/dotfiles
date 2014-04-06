@@ -1,6 +1,6 @@
 # Encoding: utf-8
 require "spec_helper"
-require "interface"
+require "croupier"
 
 describe "#state_of_the_game" do
   it 'returns a String' do
