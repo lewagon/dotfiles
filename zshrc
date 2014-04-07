@@ -2,8 +2,8 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="gallois"
+# Look at https://github.com/robbyrussell/oh-my-zsh/wiki/themes for alternatives
+ZSH_THEME="robbyrussell"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
