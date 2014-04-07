@@ -1,3 +1,4 @@
+#!/bin/bash
 for name in *; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
