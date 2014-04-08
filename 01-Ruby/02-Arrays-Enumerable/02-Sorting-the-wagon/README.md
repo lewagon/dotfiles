@@ -34,6 +34,7 @@ Congratulations! Your Wagon has 3 students:
 ## Learning Badges
 
 Get familiar with array basic operations. You should know the syntax used to:
+
 - create an array
 - append a new element to the array
 - access the nth element
