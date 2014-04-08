@@ -5,7 +5,7 @@ def play_game
 end
 
 def state_of_the_game(score, bank)
-  # TODO: Returns the current score and the bank
+  # TODO: Returns custom message with player's score and bank's score
 end
 
 def asking_for_card?(score)
