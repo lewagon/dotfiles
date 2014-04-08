@@ -75,6 +75,7 @@ $ You beat the bank! You win.
 ### Run your code :
 
 - You can run the game by typing :
+
 ```bash
 $ ruby run.rb
 ```
