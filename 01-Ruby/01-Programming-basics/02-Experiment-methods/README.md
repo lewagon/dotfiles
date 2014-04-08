@@ -18,12 +18,9 @@ IRB is a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loo
 "A string object".upcase
 "A string object".dowcase
 [1, 2, 3].shuffle
-[1, 2, 3].methods     
 ```
 
-In ruby, everything (a text, an integer, a floating number, an array..) is an object, i.e. an instance of a class. We can call methods on these objects. Such methods are called **instance methods** since they can be called only on instances of the class.
-
-How does this **method call** work exactly when we plunge into ruby code ? The object on which we call the method is called the **receiver**.
+In ruby, everything (a text, an integer, a floating number, an array..) is an object, i.e. an instance of a class. We can call methods on these objects. Such methods are called **instance methods** since they can be called only on instances of the class. The object on which we call the method is called the **receiver**.
 
 ## Specs
 Find the right ruby methods of the [String class](http://ruby-doc.org/core-2.1.0/String.html), the [Fixnum class](http://www.ruby-doc.org/core-2.1.0/Fixnum.html), and the [Array class](http://ruby-doc.org/core-2.1.0/Array.html) to put in the canvas and make the tests pass.
@@ -33,12 +30,12 @@ Code is all about being smart and knowing how and where to look for the info you
 * Google and [Stack Overflow](http://stackoverflow.com/)
 * [The ruby doc](http://ruby-doc.org) when you have some intuition on the name of the method you are looking for.
 
-When you think you have found the method you are looking for, and you think you know how to use it, use IRB to test this method on a personal example and make this method yours! Experimenting on IRB is a crucial step for beginners.
+When you think you have found the method you are looking for, and you think you know how to use it, use IRB to test this method on some personal example and make it yours! Experimenting on IRB is a crucial step for beginners.
 
 ## Learning Badges
 Are you able to answer the following questions ? If not, you're not ready to move on !
 
 - How many built-in ruby classes do you know ? Which ones ?
-- What's the syntax to call a method on an object ?
-- What should be the immediate step when you are looking to perform a rather standard operation on a standard ruby object (of class String, Fixnum, Array,..) ?
-- What's the second step, to make sure you understand how to call the method you have found before polluting your source code ?
+- What's the syntax to call a method on an object of these classes ?
+- What should be the immediate 1st step when you are looking to perform a standard operation (sorting an array, upcasing a word, etc..) ?
+- What's the second step, to make sure you really understand the method you found ?
