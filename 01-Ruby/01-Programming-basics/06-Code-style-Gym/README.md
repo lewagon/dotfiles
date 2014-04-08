@@ -6,7 +6,7 @@ This challenge is here to make you write clean code, with good indentation, nami
 * use of parentheses and spaces
 
 ## Spec 
-Re-write the code in "codestyle_gym.rb" in good ruby.
+Re-write the code in `codestyle_gym.rb` in good ruby.
 
 ## Tips & Resources
 - The [Ruby Style Guide](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md) is a good starting point to learn how to write clean ruby code.
