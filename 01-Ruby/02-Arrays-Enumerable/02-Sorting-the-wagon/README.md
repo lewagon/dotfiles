@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-The [Array class](http://www.ruby-doc.org/core-2.1.1/Array.html) is one of the two main structures used to store and access data in ruby (the other being [Hash](http://www.ruby-doc.org/core-2.1.1/Hash.html). It's very important to know, how to create an array, and modify or access its content. An array, unlike a hash, is ordered, and each element can be accessed by its index.
+The [Array class](http://www.ruby-doc.org/core-2.1.1/Array.html) is one of the two main structures used to store and access data in ruby (the other being [Hash](http://www.ruby-doc.org/core-2.1.1/Hash.html)). It's very important to know how to create an array, and modify or access its content. An array, unlike a hash, is ordered, and each element can be accessed by its index.
 
 * Work with array to store and access data.
 * Learn about [sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm).
