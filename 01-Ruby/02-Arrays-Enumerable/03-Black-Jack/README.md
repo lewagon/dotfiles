@@ -1,7 +1,5 @@
 ## Background and Objectives
-This exercise is a synthesis which validates the core concepts you have seen so far, common to most programming languages:
-
-### Objectives
+This exercise is a synthesis to validate the core concepts you have seen so far, common to most programming languages:
 
 - Getting user input
 - Variables and methods
@@ -14,24 +12,24 @@ In our simplified version of the Black Jack, here is how a game goes :
 - The player starts with no card and thus a score of 0
 - The bank starts with a score between 16 and 21
 
-- Each turn the player can:
-  - Shuffle a card which will give him a number between 1 and 11. This number will be added to his score.
+- For each round, the player can:
+  - Shuffle a random card with value between 1 and 11. This number will be added to his score.
   - Pass, and finish the game.
 
 - If the player passes his turn or reaches a score > to 21, the game is over.
 
 - From there we have 4 scenarios :
-  - If the player score is 21, he pulled a "Black Jack" and has won.
-  - If the player score is > to the bank he has won.
-  - If the player score is < to the bank he has lost.
-  - If the player score is > to 21, he has lost.
+  - If the player score is 21, he pulls a "Black Jack" and wins.
+  - If the player score is > to the bank, he wins.
+  - If the player score is < to the bank, he looses.
+  - If the player score is > to 21, he looses.
 
 ## Specs
 
 ### black_jack.rb
 
-- Implement `#bank_score` which will return a random number between 16 and 21.
-- Implement `#pick_card` which will return a random number between 1 and 11.
+- Implement `#bank_score` which will return a random bank score between 16 and 21.
+- Implement `#pick_card` which will return a random card value between 1 and 11.
 - Implement `#game_outcome` which will return an array containing the bank score and the user score
   - **constraint**: the `#game_outcome` should return the outcome of a black jack game, which we impose to be an array containing the bank's score and the player's score. Ex: bank gets 17, you get 19, the method should return `[17, 19]`.
 
@@ -55,8 +53,8 @@ $ You beat the bank! You win.
 ```
 
 - For each game, a new bank score is randomly picked in `16..21`.
-- Each turn the user is asked if he wants to pick a card or not
-  - If he wants to pick a card, you add the picked card's value to his score. Afterwards the `#state_of_the_game` should be displayed, telling him what his score is and what's the bank value.
+- For each round, the user is asked if he wants to pick a card or not
+  - If he wants a new card, you add the picked card's value to his score. Afterwards the `#state_of_the_game` should be displayed, telling him what his score is and what's the bank value.
   - Else the game stops and the outcome message is printed
 
 - Implement the `#state_of_the_game` method, which will return the string : `Your score is 16, bank is 17!` with the correct values.
@@ -84,14 +82,10 @@ $ ruby run.rb
 ## Learning badges
 
 - How do you get an user input from the terminal ? What is the `chomp` method used for ?
-
 - What is a loop ?
 - What are the different ways of looping ?
-
 - What are the different conditional structures available ?
-
 - What is string interpolation ?
-
 - What is an array, how do you access it's elements ?
 
 ## Tips & Resources
