@@ -8,16 +8,16 @@ The [Array class](http://www.ruby-doc.org/core-2.1.1/Array.html) is one of the t
 
 ## Specs
 
-## Core
 - Implement a `wagon_sort` method which should take as argument an array of student names and return a copy sorted alphabetically.
 - The method should be case insensitive, e.g. put `brice` before `Felix`.
 - The method should keep the original spelling of names.
 
 ### Interactive command
+
 Open the `interface.rb` file and make sure to use the
 `wagon_sort` method. It should work like this:
 
-```shell
+```bash
 $ ruby lib/interface.rb
 Type a student name:
 felix
@@ -33,12 +33,12 @@ Congratulations! Your Wagon has 3 students:
 
 ## Learning Badges
 
-- Get familiar with array basic operations. You should know the syntax used to:
-  - create an array
-  - append a new element to the array
-  - access the nth element
-  - update an element
-  - delete a value at a given index
+Get familiar with array basic operations. You should know the syntax used to:
+- create an array
+- append a new element to the array
+- access the nth element
+- update an element
+- delete a value at a given index
 
 ## Tips & Resources
 
