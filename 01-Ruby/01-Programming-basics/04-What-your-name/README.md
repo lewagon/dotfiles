@@ -11,6 +11,7 @@
 
 ### interface.rb
 The interface that you have to complete should work this way :
+
 * it asks for your first name and let you write it in the terminal
 * it asks for your middle name and let you write it in the terminal
 * it asks for your last name and let you write it in the terminal
