@@ -21,9 +21,7 @@ ruby lib/interface.rb
 The following questions may seem obvious to most of you, **but make 100% sure you can answer precisely all of them**. Because variables and methods are the cornerstones of programming, and you should have an in-depth understanding of these concepts.
 
 ### On variables
-- What is a variable? What are the different variables in the "age_in_days.rb" and "interface.rb" files?
-- Why do we use variables?
-- Suppose we have a very long program that uses 10000 times the value `1985` for the year of birth... Now suppose we made a mistake and that this year should be `1986`. What's the interest of defining and using a variable `year = 1985` instead of the raw value `1985`?
+- What is a variable? What are the different variables in your program?
 - What does "defining a variable" mean? What's the syntax to define a variable?
 - Can we use a variable that has not been defined?
 - Can we assign a new value to a variable already defined? How?
@@ -41,7 +39,6 @@ some_number = some_number * 2
 - What's the difference between defining a method and calling a method?
 - Where do we define methods in this program? Where do we call them?
 - What's the return value of a method?
-- Does a method always return something?
 - What is the simple ruby convention for a method's return?
 
 ### Extra
@@ -51,7 +48,7 @@ some_number = some_number * 2
 
 ## Tips & Resources
 * You may want to use the [Date class](http://www.ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html), that we load in our file with the line `require 'date'`
-* Use the interactive ruby console (IRB) to make "live" experiments. Especially to check the type of objects that tested methods return.
+* Use the interactive ruby console (IRB) to make "live" experiments. 
 * As you can see from the given code canvas, ruby uses the `puts` method to output values on the terminal.
 
 
