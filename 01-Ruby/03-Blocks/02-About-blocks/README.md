@@ -8,19 +8,28 @@ Although we can be store them in `Proc` objects and pass them to a method as sta
 
 
 ## Specs
-- Implement the `#tag` method that builds the HTML tags around the content we give it in the block. Ex:
+- Implement the `#tag` method that builds the HTML tags around the content we give it in the block. For instance:
+
 ```ruby
-tag("h1") { "Some Title" } #=> "<h1>Some Title</h1>" 
+tag("h1") { "Some Title" }
+# => "<h1>Some Title</h1>"
 ```
-- This method accepts a second optional parameter, enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`. 
+
+- This method accepts a second optional parameter,
+enabling to pass an array with one HTML attribute name and its value,
+like `["href", "www.google.com"]`.
+
 ```ruby
-tag("h1", ["id", "title"]) { "Some Title" } #=> "<h1 id='title'>Some Title</h1>" 
+tag("h1", ["id", "title"]) { "Some Title" }
+# => "<h1 id='title'>Some Title</h1>"
 ```
+
 - **notice**: if you used Rails helpers already, that's exactly what they do, they are here to write HTML for us :)
 
 - implement a block-timer in `#timer_for` than enables to track the duration (in seconds) of execution of any given block. It should work this way.
+
 ```ruby
-timer_for do 
+timer_for do
   (1..100).each { |i| (1..100000).to_a.shuffle.sort }
 end
 # => 3.39051
@@ -31,7 +40,7 @@ end
 ## Learning Badges
 You should be able to answer these questions on a sheet of paper without computer-assistance :)
 
-- What's a block ? How do you call a method with an implicit block ? 
+- What's a block ? How do you call a method with an implicit block ?
 - What's the syntax of if this block has only 1 ruby instruction in it ? several ?
 - Re-consider all the iterators you used `#each_with_index`, `#select`, `#find`... Is it 100% clear that most of them are methods called with blocks ?
 - (optional) Could you figure out approximately how the `map` iterator is coded for instance ?
