@@ -1,10 +1,11 @@
 ## Background & Objectives
 There are two main ways to receive blocks in a method in Ruby : the first is to use the `yield` keyword as we seen. Sometimes, however we need to **store** the block in an object, either because we want to call it later or because the method that takes the block as an argument delegates to another method and needs to transfer the block to this sub-called method.
 
-Hopefully we can store blocks of ruby code in `Proc` objects. 
+Hopefully we can store blocks of ruby code in `Proc` objects.
 
 ## Ampersand block argument
 When prefixing the last argument in a method signature with an ampersand, it creates a `Proc` object from any block passed in. This object can then be executed with the `call` method like so:
+
 ```ruby
 def speak(&block)
   puts block.call
@@ -18,6 +19,7 @@ speak { puts "Hello" }
 
 ## Creating Proc objects
 You may also want to create your `Proc` objects by yourself and pass them to the method as normal parameters like so:
+
 ```ruby
 def speak(block)
   puts block.call
