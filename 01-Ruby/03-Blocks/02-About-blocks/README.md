@@ -20,7 +20,9 @@ enabling to pass an array with one HTML attribute name and its value,
 like `["href", "www.google.com"]`.
 
 ```ruby
-tag("h1", ["id", "title"]) { "Some Title" }
+tag("h1", ["id", "title"]) do
+  "Some Title"
+end
 # => "<h1 id='title'>Some Title</h1>"
 ```
 
@@ -32,7 +34,7 @@ tag("h1", ["id", "title"]) { "Some Title" }
 timer_for do
   (1..100).each { |i| (1..100000).to_a.shuffle.sort }
 end
-# => 3.39051
+# => 3.39051 seconds elapsed
 ```
 
 - implement `#transform` just to get familiar with how to pass parameter to a block
