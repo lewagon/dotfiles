@@ -24,5 +24,3 @@ def has_tierce?
   third = DemoModule::DemoClass.new.introduce
   [first, second, third] == [1, 2, 3]
 end
-
-p has_tierce? # => true
