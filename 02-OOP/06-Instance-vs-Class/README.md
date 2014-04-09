@@ -17,7 +17,7 @@ a_time_object.hour
 Do you distinguish clearly 2 categories of methods in these examples? Make sure you detect these 2 categories.
 
 
-### Specs
+## Specs
 - Write a `Restaurant` class with attributes of your choice (`name`, `address`, `type_of_food`...), and associated getters and setters if necessary (if you want a funnier class).
 - **constraint:** your Restaurant class must have an `@average_rating` instance variable!
 - Define an instance method `#rate(rating)` enabling to rate a restaurant object. This method should re-compute the restaurant average rating `@average_rating` every time it's called with a new rating. This average rating should be accessible. 
