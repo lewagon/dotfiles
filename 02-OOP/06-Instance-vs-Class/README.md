@@ -5,16 +5,14 @@
 When using a gem or a module of the standard library, you will often have to use class methods, which are **CALLED DIRECTLY ON THE CLASS**, not on instances of the class. Consider the following lines in IRB
 
 ```bash
-require 'date'
 "this is a string object".upcase
 ["this", "is", "an", "array", "object"].shuffle
-Date.today
 Time.now
 a_time_object = Time.now
 a_time_object.hour
 ```
 
-Do you distinguish clearly 2 categories of methods in these examples? Make sure you detect these 2 categories.
+Do you clearly distinguish one method that differs from the others in this example? Make sure you do!
 
 
 ## Specs
