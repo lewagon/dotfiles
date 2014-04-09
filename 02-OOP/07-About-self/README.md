@@ -16,5 +16,4 @@ The rule is simple. Used inside an instance method, self will point to an object
 * Look at the following code with nested module, class and methods. Implement the return of each method, so that you get the winning tierce! when you are sure you have it, run the test to check it out!
 
 ### Chaining with self [OPTIONAL]
-In **chaining_with_self.rb**, we gave you a program which does not run without errors. In fact, we tried to implement method chaining but we failed miserably.. There is a **very** small fix to make our program work ! try to figure it out .
-**Tips** : of course this fix involves using `self`. This exercice is not completely out of the point :)
+In **animal.rb**, we gave you a program which does not run without errors. In fact, we tried to implement method chaining on an Animal class but we failed miserably.. There is a **very** small fix to make our program work ! try to figure it out. **Tips** : of course this fix involves using `self`. This exercice is not completely out of the point :)
