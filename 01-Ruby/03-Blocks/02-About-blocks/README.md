@@ -48,4 +48,4 @@ You should be able to answer these questions on a sheet of paper without compute
 - (optional) Could you figure out approximately how the `map` iterator is coded for instance ?
 
 ## Resources & Tips
-- http://www.tutorialspoint.com/ruby/ruby_blocks.htm
+- [http://www.tutorialspoint.com/ruby/ruby_blocks.htm](http://www.tutorialspoint.com/ruby/ruby_blocks.htm)
