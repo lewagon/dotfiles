@@ -32,6 +32,6 @@ Are you able to answer the following questions?
 
 - Among `#rate` and `#categories`, which one is an instance method? Which one is a class method?
 
-- For each of the following methods, is it an instance method or a class method? `Date#today`, `Twitter::REST::Client#follow`, `String#upcase`, `Nokogiri::HTML::Document#parse` (see [nokogiri doc](http://nokogiri.org/Nokogiri/HTML/Document.html)), `Array#shuffle`.
+- For each of the following methods, is it an instance method or a class method? `Date#today`, `Twitter::REST::Client#follow` (see [twitter gem doc](https://github.com/sferik/twitter)), `String#upcase`, `Nokogiri::HTML::Document#parse` (see [nokogiri doc](http://nokogiri.org/Nokogiri/HTML/Document.html)), `Array#shuffle`.
 
 - **optional:** Between the `new` and `initialize` methods. Which one is an instance method? Which one is a class method? How do they articulate together? Which one is sub-calling the other?
