@@ -34,7 +34,7 @@ describe "#timer_for" do
   end
 end
 
-describe "#timer_for" do
+describe "#transform" do
   it "should apply the block to yielded param" do
     double = transform(5) do |el|
       el * 2
