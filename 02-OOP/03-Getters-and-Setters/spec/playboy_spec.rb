@@ -5,6 +5,10 @@ require "playboy"
 
 describe Playboy do
   
+  attr_reader :nationality 
+  attr_reader :conquests
+  attr_writer :hair_length
+  
   let(:casanova) { Playboy.new("Giacomo Casanova", "Italian") }
   
   describe "#nationality" do 
@@ -34,19 +38,19 @@ describe Playboy do
     
   end
   
-  describe "#status=" do 
-    it "you should be able to change casanova's status to warn other ladies" do
-      casanova.must_respond_to :status=
+  describe "#hair_length=" do 
+    it "casanova may have his haircut" do
+      casanova.must_respond_to :hair_length=
     end
   end
   
-  describe "#status" do 
-    it "you should be able to see casanova's marital status" do
-      casanova.must_respond_to :status
+  describe "#hair_length" do 
+    it "casanova does not hide his hair_length" do
+      casanova.must_respond_to :hair_length
     end
-    it "asking casanova for his status should return his current marital status" do
-      casanova.status.must_equal "single"
+    it "casanova does not lie on his hair_length" do
+      casanova.hair_length.must_equal 20
     end
-  end
-
+  end  
+  
 end
