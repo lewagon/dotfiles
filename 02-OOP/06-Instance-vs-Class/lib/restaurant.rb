@@ -1,10 +1,11 @@
 class Restaurant
   
-  CATEGORIES = %w(thai french japanese bistrot)
+  #TODO add relevant accessors if necessary
   
-  def self.friendly_categories
-    #TODO: print nice categories formatted for your website :)
+  def initialize(city, name)
+    #TODO: implement constructor with relevant instance variables
   end
   
+  #TODO: implement #filter_by_city and #rate methods
   
 end
