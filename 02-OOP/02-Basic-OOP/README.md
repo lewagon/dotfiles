@@ -1,7 +1,8 @@
 ### What's a class ?
+
 In the first "ruby beginners" block, you have written many ruby programs that manipulate strings, integers, arrays, hashes, blocks, etc... All of these objects were realizations of built-in ruby classes like `String`, `Fixnum`, `Array`, `Hash`. For instance `"this text"` is a realization of the `String` class. Many instance methods like `sort`, `upcase` are defined for this `String` class and can be called on its objects, for instance running `"this text".upcase`.
 
-**Now it's the time to code your own ruby classes, having their own methods !** A class is a generic structure for similar objects. 
+**Now it's the time to code your own ruby classes, having their own methods !** A class is a generic structure for similar objects.
 
 Let's take an example. Every restaurant has an address and a name.. so maybe it could make sense to create a class `Restaurant` that will model this generic structure. Then a precise restaurant as "la tour d'argent" would just be one of all the possible realizations of this class, where the name is set to "la tour d'argent" and the address to "15 Quai de la Tournelle, 75005 Paris". `@name` and `@address` are called instance variable as these variables are defined only for `Restaurant` objects, i.e. realizations of the class. The values of the instance variables represent the state of the object !
 
@@ -13,7 +14,7 @@ Code an `OrangeTree` class that models an orange tree (its birth, life cycle and
 
 * You should be able to measure the tree thanks to the `measure_height` method
 
-* The method `one_year_passes` contains the main class logic. It ages the tree one year when called. Each year, the tree grows taller (you will have to decide of how much) and after some number of years (again, your call) the tree should die. 
+* The method `one_year_passes` contains the main class logic. It ages the tree one year when called. Each year, the tree grows taller (you will have to decide of how much) and after some number of years (again, your call) the tree should die.
 
 * For the first few years, it should not produce fruit, but after a while it should, and I guess older trees produce more each year than younger trees.. Whatever you think makes the more sense.
 
@@ -52,7 +53,7 @@ puts(orange_tree.pick_an_orange)
 ## Instance variables
 * What are the instance variables of the `OrangeTree` class, i.e. the variable representing the state of any OrangeTree object? (or in English, the variables representing the characteristics of an orange tree)
 
-* How would you set these variables in the constructor `initialize` ? 
+* How would you set these variables in the constructor `initialize` ?
 
 ## Refactor / Rename
 * Which methods, when called, modify the object there are called on ? How should you rename these methods (remember [destructive methods on Array](http://www.lewagonlab.org/challenges/85), the concept is the same here) ?
