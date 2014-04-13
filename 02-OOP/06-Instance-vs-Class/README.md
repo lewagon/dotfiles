@@ -29,12 +29,12 @@ Are you able to answer the following questions (go into the doc if necessary)?
 
 - For each of the following methods, is it an instance method or a class method? 
 
-```ruby 
-Date#today
-Twitter::REST::Client#follow #see https://github.com/sferik/twitter
-String#upcase
-Nokogiri::HTML::Document#parse #see http://nokogiri.org/Nokogiri/HTML/Document.html
-Array#shuffle
+```
+- Date#today
+- Twitter::REST::Client#follow (see https://github.com/sferik/twitter)
+- String#upcase
+- Nokogiri::HTML::Document#parse (http://nokogiri.org/Nokogiri/HTML/Document.html)
+- Array#shuffle
 ```
 
 - **optional:** Between the `new` and `initialize` methods. Which one is an instance method? Which one is a class method? How do they articulate together? Which one is sub-calling the other?
