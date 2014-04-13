@@ -1,24 +1,13 @@
-class Dessert
+# Encoding: utf-8
 
-  def initialize(name, calories)
-  end 
-  
-  def healthy?
-  end
-  
-  def delicious?
-  end
-  
-end
+require "spec_helper"
+require "challenge"
 
-class JellyBean < Dessert
+describe "#method" do
 
-  def initialize(name, calories, flavor)
+  it "should do smthing'" do
   end
-  
-  def delicious?
-  end
-  
+
 end
 
 # Testing your code 

@@ -1,40 +1,21 @@
-Inheritance is a core concept of OO programming. It enables to define subclasses that inherit from superclasses (we speak of children and parents) and to transfer methods from the parent class to its children. For instance you may want to code a generic class `Parser` which have some elementary features (reading the file, printing a welcome message, storing the file's content in a string). Then you may code many children class like `XmlParser` or `JsonParser` for parsing specific formats. By making these classes children of the `Parser` class, they will inherit basic methods from this superclass. Of course, they will also have their own specific methods. For instance, they are likely not to analyze the string built from the file in the same way, depending whether it's an XML file or a CSV, etc... 
+## Background & Objectives
+Inheritance is a core concept of OO programming. It enables to "transfer" methods by defining subclasses that inherit from superclasses (we also speak of children and parents). A child class will inherit from its parents' methods. Example: you want to code a generic `Parser` with elementary features (able to read a file, store its content, etc..). After a while, you decide you want more specific parsers like an `XmlParser` or a `JsonParser` to handle specific formats. By making these new classes children of the `Parser` class, they will inherit from its basic methods (we also speak of its public interface). Of course, they will extend this interface with their own specific methods. For instance, they are likely to have specific parsing methods to treat a file differently whether it's an XML file, a CSV, a JSON, etc... 
 
 Read more about inheritance in [ruby learning](http://rubylearning.com/satishtalim/ruby_inheritance.html).
 
-### Dessert inheritance
+## Specs
 
-* Create a class `Dessert` with getters and setters for name and calories. Define instance methods `healthy?`, which returns true if a dessert has less than 200 calories, and `delicious?`, which returns true for all desserts.
+#### Dessert inheritance
 
-* Create a class `JellyBean` that extends `Dessert`, and add a getter and setter for `flavor`. Modify `delicious?` to return false if the flavor is "black licorice" (but delicious? should still return true for all other flavors and for all non-JellyBean desserts).
+Complete the class `Dessert` :
+- add getters and setters for name and calories. 
+- instance methods `Dessert#healthy?` should return `true` if a dessert has less than 200 calories
+- `Dessert#delicious?` should return `true` for all desserts :)
 
-Here is the framework (you may define additional helper methods) :
 
-```ruby
-class Dessert
-  def initialize(name, calories)
-    # your code goes here
-  end
-
-  def healthy?
-    # your code goes here
-  end
-
-  def delicious?
-    # your code goes here
-  end
-end
-
-class JellyBean < Dessert
-  def initialize(name, calories, flavor)
-    # your code goes here
-  end
-
-  def delicious?
-    # your code goes here
-  end
-end
-```
+Complete `JellyBean` which extends `Dessert`
+- add a getter and setter for `flavor`. 
+- Modify `delicious?` to return false if the flavor is `"black licorice"` (but `delicious?` should still return true for all other flavors and for all non-JellyBean desserts).
 
 ### Use super to call for superclass method
 * Study the bycicle example below to understand what super does
