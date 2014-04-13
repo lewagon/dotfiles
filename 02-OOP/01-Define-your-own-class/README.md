@@ -6,7 +6,7 @@ Grasp the basics of object-oriented programming while writing your very first cl
 
 Choose something from the real world you want to model. Restaurants, vehicles, users, games, recipes.. *It's your call !*
 
-Once chose, create a file in the `lib` directory which has the name of your object.
+Once chosen, create a file in the `lib` directory which has the name of your object.
 For instance, if you chose to model Restaurants, create the `restaurant.rb` file:
 
 ```bash
