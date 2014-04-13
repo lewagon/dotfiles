@@ -15,31 +15,17 @@ class Tandem < Bicycle
 end
 
 def quizz
-  questions = []
+  answers = []
+  
   b = Bicycle.new
   t = Tandem.new(4)  
   
+  answers << (t.gears == "?")
+  answers << (t.wheels == "?")
+  answers << (t.seats == "?")
+  answers << (b.gears == "?")
+  answers << (b.wheels == "?")
+  answers << (b.seats == "?")
   
-  questions << t.gears == "?"
-  questions << t.wheels == "?"
-  questions << t.seats == "?"
-  questions << b.gears == "?"
-  questions << b.wheels == "?"
-  questions << b.seats == "?"
-  
-  questions.reduce
-  
+  answers.inject(true) {|result, answer| result and answer}
 end
-
-
-# our Bicycle object
-b = Bicycle.new
-puts "#{b}-gears: #{b.gears}"  
-puts "#{b}-wheels: #{b.wheels}"  
-puts "#{b}-seats: #{b.seats}" 
-
-# our Tandem object inheriting from bicycle
-t = Tandem.new(2)  
-puts "#{t}-gears: #{t.gears}"  
-puts "#{t}-wheels: #{t.wheels}"  
-puts "#{t}-seats: #{t.seats}" 
