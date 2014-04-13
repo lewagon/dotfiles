@@ -21,6 +21,6 @@ $ ruby lib/meeting_casanova.rb
 
 ## Learning Badges
 
-- What is a getter ? a setter ?
-- How do we define them manually ?
-- What are the shortcut-methods to define all the accessors in a more concise way ?
+- What is a getter? a setter?
+- How do we define them manually?
+- What are the shortcut-methods to define all the accessors in a more concise way?
