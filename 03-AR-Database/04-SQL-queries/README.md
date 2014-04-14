@@ -16,8 +16,8 @@ Complete the code in `join_queries.rb`. The methods in this file should enable t
 ```ruby
 {
   category: "Rock",
-	number_of_songs: 1297,
-	avg_length: 4.7
+  number_of_songs: 1297,
+  avg_length: 4.7
 }
 ```
 
