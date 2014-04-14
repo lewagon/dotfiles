@@ -1,0 +1,20 @@
+## Background & Objectives
+Now it is time to perform more complex SQL queries and especially `join` queries to read data from multiple tables with join criteria. To be an expert in `join` queries, [here it is](http://www.w3schools.com/sql/sql_join.asp)
+
+## Specs 
+
+Complete the code in `join_queries.rb`. The methods in this file should enable to:
+
+1. Get all the tracks with the corresponding artist and album. Your output should be an array of arrays: `[["track name 1", "artist name 1", "album name 1"], ["track name 2", "artist name 2", "album name 2"]]`. **Tip**: you have to use two `join` sql statements.
+2. For each genre of music, find the stats, i.e. the number of tracks and the average song length (in minutes). **Tip**: you have to use a `group by` statement with aggregate 	functions ``count`` and ``avg``. Example: 
+	
+	```ruby
+{
+  category: Rock,
+	number_of_songs: 1297,
+	avg_length: 4.7
+}
+	```
+
+3. Find the top 5 artists, that made the most rock songs. **Tip**: you have to use multiple `join` statements, and aggregate `count`, `group by`, `order by` and `limit` statements.
+
