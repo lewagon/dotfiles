@@ -1,43 +1,64 @@
-### Choose something generic to model
-Restaurants, vehicles, users, games, recipes.. **It's your call !**
+## Background & Objectives
 
-### What are the instance variables of your objects ?
-What are the characteristics of a restaurant ? of a user ? of a game ? 
-Choose some characteristics of your class you want to model. They will be your class instance variables, the `@things`.
+Grasp the basics of object-oriented programming while writing your very first class.
+
+## Specs
+
+Choose something from the real world you want to model. Restaurants, vehicles, users, games, recipes.. *It's your call !*
+
+Once chosen, create a file in the `lib` directory which has the name of your object.
+For instance, if you chose to model Restaurants, create the `restaurant.rb` file:
+
+```bash
+$ touch lib/restaurant.rb
+```
+
+### What are the inner properties of your objects?
+
+What are the characteristics of a restaurant? of a user? of a game?
+Choose some characteristics of your class you want to model. They will be your **instance variables**, the `@properties`.
 
 ### Define the constructor
-`initialize` is the instance method called when instantiating a new object. For example :
+
+`initialize` is the instance method called when calling `new` on your class. For instance:
 
 ```ruby
 class Car
-  # Instance method called when creating objects
-  def initialize(model, brand, kilometers) 
+  def initialize(model, brand, kilometers)
     @model = model
     @brand = brand
     @kilometers = kilometers
   end
 end
 
-second_hand_panda = Car.new("Panda 4x4", "Renault", 30000) # What happened ?
-# 1. Car#new creates a new object
-# 2. Then calls the initialize instance method on it !
-# 3. This method defines @model, @brand and @kilometers instance variables
+second_hand_panda = Car.new("Panda 4x4", "Renault", 30_000)
 
-new_testarossa = Car.new("Testarossa", "Ferrari", 0) 
-# Same principles on a new Car object 
+new_testarossa    = Car.new("Testarossa", "Ferrari", 0)
 ```
 
-Now define the `initialize` method on the class you chose !
+Now define the `initialize` method on the class you chose!
 
 ### Define accessors to your instance variables
-Define setters and getters for your instance variables and test them in your main program
 
-### Objectives
+Define setters and getters for your instance variables and test them inside `irb`.
+For instance:
 
-**DON'T GO TO THE NEXT STEP BEFORE SHOWING YOUR PROGRAM TO A COACH :)**
+```bash
+$ irb
+irb> require_relative "lib/restaurant.rb"
+irb> restaurant = Restaurant.new("La Palmeraie")
+irb> restaurant.name
+```
 
-It will ensure your understand sufficiently the **concepts and syntax** of :
+## Learning Badges
+
+Show your code to a teacher. He will ensure your understand sufficiently the **concepts and syntax** of:
+
 - class and objects
-- instance variables and instance methods !
+- instance variables and instance methods!
 - the `initialize` constructor
 - getters and setters methods
+
+## Tips & Resources
+
+You can have a look at this [beginner's guide](http://docs.ruby-doc.com/docs/beginner-fr/xhtml/ch04s02.html) in French.

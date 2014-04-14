@@ -1,43 +1,40 @@
-### An example of class method : the fake parser
-Class methods may be used in association with blocks to define "launcher" methods as `run`, `start`, `begin`, etc...
-* Try to understand our `FakeParser` example and guess what the output of this program will be
-* Then test it and compare the result with your expectation !
+## Background & Objectives
+
+- understand the difference between a class method and an instance method. 
+
+When using a gem or a module of the standard library, you will often have to use class methods, which are **CALLED DIRECTLY ON THE CLASS**, not on instances of the class. Consider the following lines in IRB
 
 ```ruby
-class FakeParser
-  
-  def self.start(text_file, &block)
-    block.call(FakeParser.new(text))
-  end
-
-  def initialize(text_file)
-    @text_file = text_file 
-  end
-   
-  def parse
-    puts "Parsing beginning...."
-    10.times {puts "Fake parsing of '#{@text_file}' in course.."}
-    puts "End of Parsing :)"
-    return nil
-  end
-  
-end
-  
-FakeParser.start("some_text.txt") do |fp|
-  fp.parse
-end
+"this is a string object".upcase
+["this", "is", "an", "array", "object"].shuffle
+Time.now
+a_time_object = Time.now
+a_time_object.hour
 ```
 
-### Your turn
-* Write a `Restaurant` class with appropriate attributes (`name`, `address`, `rating`, `type_of_food`) and associated getters and setters if necessary. Your only constraint is to have a `@rating` attribute.
+Do you clearly distinguish one method that differs from the others in the examples above? Make sure you can find the intruse!
 
-* Define an instance method `rate(rating)` enabling to rate a Restaurant object. This method should re-compute the restaurant average rating `@avg_rating` every time it's called with a new rating. This average rating should be accessible. 
+## Specs
+- Write a `Restaurant` class with attributes of your choice (`name`, `address`, `type_of_food`...), and associated getters and setters if necessary (if you want a funnier class).
+- **constraint:** your Restaurant class must have at least `@average_rating` and `@city` as instance variables.
+- Define an instance method `#rate` enabling to rate a restaurant object. This method should re-compute the restaurant average rating `@average_rating` every time it's called with a new rating. This average rating should be accessible. 
 
-* Enhance the `rate(rating)` method so that it also updates the total number of ratings **for all restaurants** (which could be useful info to print, to show to the world how much your resto app is used !!). Which kind of variable will you use to store the number of ratings ? 
+- Define a **class** method `#filter_by_city` that returns all the restaurants in a given city (this return should be an array of restaurant objects). 
 
-* Code a **class** getter method `number_of_ratings` which returns the total number of ratings. How would you re-code this method using the `attr_reader` keyword?
+## Learning Badges
 
-* Do not forget to write tests in the driver code for each method you implement !
+Are you able to answer the following questions (go into the doc if necessary)?
 
-#### Digression: about the `new` and `initialize` methods.
-Which one is an instance method ? Which one is a class method ? How do they articulate together ? Which one is sub-calling the other ?
+- Among `#rate` and `#filter_by_city`, which one is an instance method? Which one is a class method?
+
+- For each of the following methods, is it an instance method or a class method? 
+
+```
+- Date#today
+- Twitter::REST::Client#follow (see https://github.com/sferik/twitter)
+- String#upcase
+- Nokogiri::HTML::Document#parse (http://nokogiri.org/Nokogiri/HTML/Document.html)
+- Array#shuffle
+```
+
+- **optional:** Between the `new` and `initialize` methods. Which one is an instance method? Which one is a class method? How do they articulate together? Which one is sub-calling the other?

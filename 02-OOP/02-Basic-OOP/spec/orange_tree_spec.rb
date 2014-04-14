@@ -6,7 +6,7 @@ describe OrangeTree do
 
   it "should be measurable" do
     orange_tree.must_respond_to :height
-    orange_tree.height.class.must_equal Fixnum
+    orange_tree.height.must_be_instance_of Fixnum
   end
 
   it "should measure 0 meter when 0 years old" do
