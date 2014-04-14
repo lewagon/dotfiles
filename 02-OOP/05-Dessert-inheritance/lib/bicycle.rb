@@ -20,12 +20,15 @@ def quizz
   b = Bicycle.new
   t = Tandem.new(4)  
   
-  answers << (t.gears == "?")
-  answers << (t.wheels == "?")
-  answers << (t.seats == "?")
-  answers << (b.gears == "?")
-  answers << (b.wheels == "?")
-  answers << (b.seats == "?")
+  #TODO: replace "?" by the correct fixnum !
+  
+  answers << (b.gears == "")
+  answers << (b.wheels == "")
+  answers << (b.seats == "")
+  
+  answers << (t.gears == "")
+  answers << (t.wheels == "")
+  answers << (t.seats == "")
   
   answers.inject(true) {|result, answer| result and answer}
 end
