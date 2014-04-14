@@ -22,13 +22,13 @@ def quizz
   
   #TODO: replace "?" by the correct fixnum !
   
-  answers << (b.gears == "")
-  answers << (b.wheels == "")
-  answers << (b.seats == "")
+  answers << (b.gears == "?")
+  answers << (b.wheels == "?")
+  answers << (b.seats == "?")
   
-  answers << (t.gears == "")
-  answers << (t.wheels == "")
-  answers << (t.seats == "")
+  answers << (t.gears == "?")
+  answers << (t.wheels == "?")
+  answers << (t.seats == "?")
   
   answers.inject(true) {|result, answer| result and answer}
 end
