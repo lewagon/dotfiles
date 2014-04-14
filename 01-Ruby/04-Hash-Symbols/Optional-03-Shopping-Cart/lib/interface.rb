@@ -13,7 +13,7 @@ while true
   product = gets.chomp.downcase
 
   # break loop if product is empty
-  break if product == ""
+  break if product == ''
 
   if is_product_in_store?(product)
     add_to_cart(cart, product)
