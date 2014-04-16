@@ -3,11 +3,11 @@ require "cookbook"
 require "csv"
 
 class Helper
-  def self.readCSV(file)
+  def self.read_csv(file)
     CSV.read(file).flatten
   end
 
-  def self.writeCSV(file, data)
+  def self.write_csv(file, data)
     CSV.open(file, 'w') do |csv|
       data.each do |d|
         csv.puts([d])
@@ -22,7 +22,7 @@ describe Cookbook do
 
   # On setup reset csv file with recipes
   before do
-    Helper.writeCSV(csv_path, recipes)
+    Helper.write_csv(csv_path, recipes)
     @cookbook = Cookbook.new(csv_path)
   end
 
@@ -32,7 +32,7 @@ describe Cookbook do
     end
 
     it 'stores the recipes in an instance variable containing an Array' do
-      @cookbook.instance_variable_get(:@recipes).must_be_instance_of Array
+      @cookbook.instance_variable_get(:@recipes).length.must_equal recipes.length
     end
   end # when initialized
 
@@ -59,7 +59,7 @@ describe Cookbook do
 
       it 'adds the recipe to the CSV file' do
         @cookbook.create("Cake")
-        Helper.readCSV(csv_path).must_equal recipes + ["Cake"]
+        Helper.read_csv(csv_path).must_equal recipes + ["Cake"]
       end
 
     end # create
@@ -72,7 +72,7 @@ describe Cookbook do
 
       it 'removes the recipe from the CSV file' do
         @cookbook.destroy(4)
-        Helper.readCSV(csv_path).last.must_equal recipes[3]
+        Helper.read_csv(csv_path).last.must_equal recipes[3]
       end
     end
 

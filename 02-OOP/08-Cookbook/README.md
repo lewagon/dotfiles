@@ -125,4 +125,6 @@ Goodbye, my dear friend.
 
 The `lib/app.rb` file puts all the pieces together, bootstraps the applications (instanciates the Controller and the UI and run them)
 
+You can use `ruby lib/app.rb` to run the program.
+
 ## Tips & Resources

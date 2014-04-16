@@ -59,7 +59,7 @@ class UI
   end
 
   # The dispatch method takes a String or a Symbol as an argument
-  # and calls the method with this name.
+  # and calls the method with the same name.
   #
   #  Examples:
   #
