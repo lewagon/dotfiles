@@ -1,13 +1,13 @@
 classes = []
 
+require "spec_helper"
+
 Dir.glob("lib/*.rb").each do |file|
   filename = file.split("lib/").last
   class_name = filename.split(".rb").first
   require filename
-  classes <<  Object.const_get(class_name.capitalize)
+  classes <<  Object.const_get(camelize(class_name))
 end
-
-require "spec_helper"
 
 describe "lib folder" do
   it "should have at least one file defining one class" do
