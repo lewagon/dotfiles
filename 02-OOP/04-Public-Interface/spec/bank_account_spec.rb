@@ -61,7 +61,7 @@ describe BankAccount do
     end
 
     it 'returns a message containing the deposit amount' do
-      account.withdraw(150).match /150/
+      account.deposit(150).match /150/
     end
   end
 

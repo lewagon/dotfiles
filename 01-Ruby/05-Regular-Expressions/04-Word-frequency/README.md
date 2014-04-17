@@ -4,10 +4,12 @@
 
 ### Reading a file in ruby
 You can read a file, line by line, with
+
 ```ruby 
 File.open("my/file/path", "r").each_line do |line|
   puts line
 end
+```
 
 ## Specs 
 - Implement `most_common_words` that enables to get the number of occurrences of most frequent words in a text file. For instance, consider we take the bible as source text.
