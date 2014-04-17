@@ -20,7 +20,7 @@ describe Restaurant do
     it "should update average restaurant rating" do
       bocuse.rate(10)
       bocuse.rate(20)
-      bocuse.average_ratings.must_equal "15.0"
+      bocuse.average_rating.must_equal 15.0
     end
   end
   

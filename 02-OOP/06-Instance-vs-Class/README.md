@@ -19,7 +19,15 @@ Do you clearly distinguish one method that differs from the others in the exampl
 - **constraint:** your Restaurant class must have at least `@average_rating` and `@city` as instance variables.
 - Define an instance method `#rate` enabling to rate a restaurant object. This method should re-compute the restaurant average rating `@average_rating` every time it's called with a new rating. This average rating should be accessible. 
 
-- Define a **class** method `#filter_by_city` that returns all the restaurants in a given city (this return should be an array of restaurant objects). 
+- Define a **class** method `#filter_by_city(restaurants, city)` that returns all the restaurants in a given city (this return should be an array of restaurant objects). For instance:
+
+```ruby
+jules_verne = Restaurant.new("paris", "Jules Verne") 
+tour_d_argent = Restaurant.new("paris", "Tour d'argent") 
+bocuse = Restaurant.new("lyon", "Paul Bocuse") 
+restos = [jules_verne, tour_d_argent, bocuse] 
+Restaurant.filter_by_city(restos,"lyon") # => [bocuse]
+```
 
 ## Learning Badges
 
