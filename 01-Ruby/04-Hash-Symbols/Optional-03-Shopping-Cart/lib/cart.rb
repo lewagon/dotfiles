@@ -2,7 +2,7 @@
 # You should complete it according to the instructions in the TODO comments
 
 def add_to_cart(cart, product)
-  # TODO: you get a cart and a product. Add the product to the basket!
+  # TODO: you get a cart and a product. Add the product to the cart!
 end
 
 def cart_to_s(cart)
