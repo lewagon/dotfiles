@@ -4,7 +4,7 @@
 
 def store_items
   # Here's what you should have in store:
-  #   yoghurts : 2€
+  #   yogurts : 2€
   #   meat : 7€
   #   vegetables: 5€
   #   potatoes : 2€
@@ -21,8 +21,12 @@ def is_product_in_store?(product)
   # TODO: Check whether product is present in the store items
 end
 
+def price_of_product(product)
+  # TODO: Return the price of the given product, if it's in store. nil otherwise
+end
+
 def store_items_to_s
-  # TODO: Return a String with all store items in a form like:
+  # TODO: Return a String with all store items in the following form:
   # - Meat: 7€
   # - Vegetables: 5€
   # ...
