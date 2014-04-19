@@ -1,7 +1,8 @@
 ## Background & Objectives 
-The goal of this first challenge is to become familiar with database design.
+The goal of this first challenge is to become familiar with database design, THE crucial skill to make your backend maintainable, flexible and efficient.
 
 ## Specs
+
 #### Survey database design
 
 There are many ways to build a survey database, but let's start by building a basic system with users, questions, responses and votes.
@@ -15,11 +16,12 @@ Here are the requirements of our system:
 
 #### Design the schema
 
-Design a database schema for a survey app that meets the requirements. For that, your are going to use [SQL Designer](http://ondras.zarovi.cz/sql/demo/). To submit your solution, copy/paste the XML code of your schema in `survey.xml`.  
+Design a database schema for a survey app that meets the requirements. For that, your are going to use [SQL Designer](http://ondras.zarovi.cz/sql/demo/). To submit your solution, copy/paste the XML code of your schema in `survey.xml` and push it on Github.  
 
 ## Learning Badges
+
 - Do you understand what's a database scheme? 
 - What's a relation between tables? 
-- What are the kind of existing relations? (one-to-many, many-to-many, etc..)
-- Can you guess the database scheme behind facebook? airbnb? any we service?
+- Which kinds of relation do you know? (one-to-many, many-to-many, etc..)
+- Can you guess the database scheme behind facebook? airbnb? any web service you pick? Try to draw it on a sheet of paper.
  

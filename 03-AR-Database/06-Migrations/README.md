@@ -1,18 +1,31 @@
 ## Background & Objectives
-You will learn how to execute `migrations` on your database. For that, you will use `Rake`.
 
-Migrations are tasks that create or/and update your database schema. As you know, a relational database has a schema (the architecture of your database) and it is very important to keep control of this schema.
+- Understand what is an ORM, such as `ActiveRecord`.
+- Understand the concept of migration and the distinction between a model and a migration.
+- Learn how to execute `migrations` on your database running `rake` tasks.
+
+Migrations are tasks that create and/or update your database scheme. As you know, a relational database has a scheme (the architecture of your database) and it is very important to keep control of this scheme.
+
+#### Migrations
+Imagine you want to add a new column in your table, but you do not want to remove the table and create a new one (because you don't want to delete your data), so you need a migration for that! Migrations are classes here to perform actions on your database scheme. As you know, a relational database has a scheme (the architecture of your database) and it is very important to keep control of this scheme.
+
+VERY IMPORTANT: 
+
+- The model **REPRESENTS** your data in ruby => it models your data, that's why it's called a model. 
+- The migration ACTS ON the database scheme. 
+
+These are two separate roles.
 
 #### Rake
-Rake [http://rake.rubyforge.org/](http://rake.rubyforge.org/) is a ruby program that helps you create tasks.
+Rake [http://rake.rubyforge.org/](http://rake.rubyforge.org/) is a ruby program that helps you run tasks from the command line. These tasks are defined in a Rakefile. Note that you have been using `rake` from the beginning to test your challenges. 
 
-#### Examples of rake tasks
+Here we have a new Rakefile in `/lib`, in which we defines tasks on the DB. **Examples of rake tasks**
+
 * `db:create`: Task that creates the database
 * `db:delete` : Task that deletes the database
 * `db:migrate` : Task that runs the database migrations
 
-#### Migrations
-Imagine you want to add a new column in your table, but you do not want to remove the table and create a new one (because you don't want to delete your data), so you need a migration task!
+As you will see, Rails will automatically create similar rake tasks for you. 
 
 ## Specs 
 
