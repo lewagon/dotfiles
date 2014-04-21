@@ -2,7 +2,8 @@ require_relative 'store'
 require_relative 'cart'
 
 # TODO: find the correct data structure to hold the content of your shopping cart
-# cart =
+# instead of using nil below
+cart = nil
 
 puts 'Here are the available products:'
 puts store_items_to_s

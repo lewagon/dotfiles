@@ -1,6 +1,6 @@
 require 'spec_helper'
-require_relative '../lib/store'
 require 'data'
+require 'store'
 
 # Here's what you should have in store:
 #   yogurts : 2€

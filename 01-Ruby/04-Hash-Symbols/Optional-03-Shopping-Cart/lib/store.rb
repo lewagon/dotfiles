@@ -9,10 +9,10 @@ def store_items
   #   vegetables: 5€
   #   potatoes : 2€
   #   rice : 1€
-  #
-  # TODO: find the correct data structure to hold the shopping store items
-  # store =
 
+  # TODO: find the correct data structure to hold the shopping store items
+  # instead of using nil below
+  store = nil
 
   return store
 end
