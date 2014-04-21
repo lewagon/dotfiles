@@ -18,6 +18,11 @@ Write the code that will create a new restaurant object. What types of attribute
 
 For example, you'll definitely need a name for the restaurant. You can also add its location, phone number, number of employees, and number of customers.
 
+#### What's on the menu?
+You restaurant sells food, so you must store somewhere the meals that can be ordered.
+A meal typically has a name and a price.
+
+
 #### Customers and Orders
 Your customers will be stored in the restaurant's "database".
 Don't worry about creating a real database though - just create an Array instance when your program starts and you'll push your customers there.
@@ -98,6 +103,7 @@ you all aim to the same feature set.
 * For each "parameter" of the menu items (eg. 'order_id' in `complete_order <order_id>`), you can proceed in several steps in order to perform the requested action (ie. when 'complete_order' is entered, ask then for the order id)
 * You'll only have two types of employees: one manager and delivery guys.
 * You are not expected to code the interface to add or remove employees. Just create some at startup of your program in an `app.rb` kind of file.
+* Likewise, available meals can be hard coded into your main ruby file and added to your restaurant inventory from there.
 * Orders must be assigned to a specific delivery guy when created by a manager
 * This restaurant would make your accountant cry: they do not keep an history of orders! So when an order is delivered, simply delete it.
 
@@ -105,7 +111,7 @@ you all aim to the same feature set.
 
 * Make your accountant a happier man: keep a log of all delivered orders!
 * Improve your menu so that a command can be entered in a single step: entering 'complete_order 42' should mark the order #42 as completed.
-
+* Improve your code to make it so that a meal has a type ('starter', 'main', 'drink' and 'dessert'), and that a customer orders as many menus as he wants, one menu being composed of one starter, one main meal, one drink and one dessert.
 
 ## Learning badges
 
