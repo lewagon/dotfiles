@@ -1,7 +1,8 @@
 require_relative 'store'
 require_relative 'cart'
 
-cart = # TODO: find the correct data structure to hold the content of your shopping cart
+# TODO: find the correct data structure to hold the content of your shopping cart
+# cart =
 
 puts 'Here are the available products:'
 puts store_items_to_s

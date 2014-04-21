@@ -11,7 +11,7 @@ def store_items
   #   rice : 1€
   #
   # TODO: find the correct data structure to hold the shopping store items
-  store =
+  # store =
 
 
   return store
