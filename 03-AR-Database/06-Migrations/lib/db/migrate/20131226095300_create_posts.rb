@@ -1,5 +1,5 @@
-class CreateRecipes < ActiveRecord::Migration
+class CreatePosts < ActiveRecord::Migration
   def up
-    # your code here to create the Recipes table
+    #TODO: your code here to create the Posts table
   end
 end
