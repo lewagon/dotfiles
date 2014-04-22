@@ -1,37 +1,29 @@
-If you're used to using raw SQL to find database records, then you will generally find that there are better ways to carry out the same operations in Ruby/Rails. [Active Record](http://guides.rubyonrails.org/active_record_querying.html) insulates you from the need to use SQL in most cases.
+## Background & Objectives
 
-You are going to rebuild the `Cookbook` program using [Active Record](http://guides.rubyonrails.org/active_record_querying.html).
+Now it's time to **unleash the kraken** :) You will use the Active Record ORM to make queries to your DB but manipulating friendly ruby objects directly instead of performing SQL queries and handling manually the mapping to these ruby objects (which is a pain in the ass..).
 
-## Reminder
+Before you starts, read the [Active Record documentation](http://guides.rubyonrails.org/active_record_basics.html).
 
-* The cookbook database contains Recipes
-* A Recipe has:
-	* name:string 
-	* description:string 
-	* length:integer (minutes) 
-	* difficulty:integer 
+## Specs
 
+Use Active Record to make the Hackernews program. To help you started, we already prepared a skeleton app for you! With Active Record, each post is now an Active Record object mapped to its corresponding row in the posts table. As you see in `models/post.rb` we defined the Post class ass
 
-## To do
-
-Use Active Record to make the Cookbook program.
-
-To help you started, we already prepared a skeleton app for you! 
-
-With Active Record, a Recipe is now an Active Record model.
-As you will see, in `/models/recipe.rb` we defined a Class Recipe that inherits from `ActiveRecord::Base`
-
-````
-class Recipe < ActiveRecord::Base
+```
+class Post < ActiveRecord::Base
 end
-````
+```
 
-1. In `/config/application.rb` folder write the code to create the database schema. To create a database schema, we use `ActiveRecord::Schema.define`. You can follow this [link](http://www.elfsternberg.com/2008/06/07/using-activerecordschema-to-create-databases-without-rails/) to help.
-		
+This simple `ActiveRecord::Base` inheritance automatically maps the `Post` model to the `posts` table. Notice that all the magic of Active Record mapping relies on this simple convention (**CONVENTION OVER CONFIGURATION**).
 
-2. In `cookbook.rb` write code to execute the program flow, especially use the [Active Record](http://guides.rubyonrails.org/active_record_querying.html) functions to create, update, delete and read Active Record objects. 
+* The model in singular form with capital first letter (like `Post`)
+* table all downcase in plural form (like `posts`)
+* To sum up: `models` (db side) <=> `Model` (ruby side)
 
+TODO:
 
-## Resources
+- In `interface.rb` use the [Active Record](http://guides.rubyonrails.org/active_record_basics.html) basics methods to create, update, delete and read Active Record objects. 
 
-[http://guides.rubyonrails.org/active_record_querying.html](http://guides.rubyonrails.org/active_record_querying.html)
+## Learning Badges
+
+- What's an ORM? How does it simplify your life?
+- On which naming convention relies Active Record mapping? Where does the magic comes from?

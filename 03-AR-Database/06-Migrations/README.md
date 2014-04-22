@@ -4,7 +4,6 @@
 - Understand the concept of migration and the distinction between a model and a migration.
 - Learn how to execute `migrations` on your database running `rake` tasks.
 
-
 #### Migrations
 Imagine you want to add a new column in your table, but you do not want to remove the table and create a new one (because you don't want to delete your data), so you need a migration for that! Migrations are classes that can perform actions on your database scheme. As you know, a relational database has a scheme (the architecture of your database) and it is very important to keep control of this scheme.
 
@@ -28,9 +27,9 @@ As you will see, Rails will automatically create similar rake tasks for you.
 
 ## Specs 
 
-In `/db/migrate` we created a `20131226095300_create_recipes.rb` file, containing an Active Record migration class. Migration files are always in the following format `yyyymmddhhmmss_migration_task_name.rb`, for rake to keep track of the migrations that have already been executed.
+In `/db/migrate` we created a `20131226095300_create_posts.rb` file, containing an Active Record migration class. Migration files are always in the following format `yyyymmddhhmmss_migration_task_name.rb`. It enables rake to keep track of the current state of the migrations already executed.
 
-1. Write code in `20131226095300_create_recipes.rb` to create the Recipes table. You have to read the documentation of Active Record Migrations [here](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). First create your posts table with the following columns:
+1. Write code in `20131226095300_create_posts.rb` to create the Recipes table. You have to read the documentation of Active Record Migrations [here](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). Your `posts` table should have the following columns:
 
 	* name:string 
 	* source_url:string
@@ -38,11 +37,9 @@ In `/db/migrate` we created a `20131226095300_create_recipes.rb` file, containin
 
 2. Run this migration running `rake db:migrate`
 
-3. Create a new migration file to add a new column `rating:integer` to the posts table. You need another file for that with the good format embedding timestamps. Then run your new migration with `rake db:migrate`.
+3. Create a new migration to add a new column `rating:integer` to the posts table. You need a new file for that (with good naming conventions) . Then run this new migration with `rake db:migrate`.
 
-4. 
-
-Note: you can also have a look at `Rakefile` to see the different tasks available in details.
+4. Finally, pimp the existing interface to print nicely the results from database queries and enable other tasks.
 
 ## Learning Badges
 

@@ -1,12 +1,10 @@
-require './models/recipe'
-
-# Seed you database with recipe data from marmiton
+require_relative "../models/post"
+require_relative "../models/user"
+# Seed you database with post data from hacker news
+# And fake users using Faker gem
 
 puts "Seeding database..."
 
-# Here is a sample of ingredients (you are free to add some !)
-ingredients = ["curry", "crevettes", "agneau", "pomme", "orange", "café", "asperges", "celeri", "dorade"]
-
-# Your code goes here 
-# 1. Scrape recipes data from marmiton for these ingredients
-# 2. Create associated recipe records in the DB
+#TODO: Your code goes here 
+# 1. create fake users
+# 2. Scrape news from https://news.ycombinator.com/ and associate posts to your existing users

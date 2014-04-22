@@ -2,6 +2,9 @@ A database full of data is much more fun, right?
 
 So in this exercice, you will feed the cookbook database with data collected from [http://www.marmiton.org/](http://www.marmiton.org/)
 
+6. Feed the database with recipes and users. To create users, you can use the gem [Faker](https://github.com/stympy/faker). You can write your code in `db/seed.rb`
+
+
 ## To do 
 
 We added a new Rake task in the `Rakefile`
