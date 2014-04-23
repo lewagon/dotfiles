@@ -26,7 +26,7 @@ Write an interactive program that can create, update, read and delete posts.
 
 At least your program should have these tasks:
 
-```bash
+```
 Hey you, what do you want to do ?
 1. add a piece of news.
 2. delete all news.
