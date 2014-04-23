@@ -3,6 +3,7 @@
 Now, it's time to add `users` to your database and to link users and posts.
 
 ## Specs
+
 A `User` has the following attributes:
 
 * name:String
@@ -18,7 +19,7 @@ Again, you have to undersand that your db comes first, it is the physical repres
 
 * Add a new migration to create the `users` table.
 * Add a new migration to add the `user_id` foreign key to your `posts` table
-* Run your migrations with the adequete `rake` task
+* Run your migrations with the adequate `rake` task
 * Specify the Active Record associations for your models `Post` and `User`. For more information about Active Record associations, read [this](http://guides.rubyonrails.org/association_basics.html)
 
 ## Learning Badges
