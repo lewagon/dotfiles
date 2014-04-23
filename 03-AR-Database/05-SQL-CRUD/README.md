@@ -15,8 +15,8 @@ Let's start with a simple model:
 	
 Notice we added a `Gemfile` to our project. This file can be executed with [bunlder](http://bundler.io/). Get used to it, we will systematically use a Gemfile from now on! Why?
 	
-	- it keeps track of the gems used by your project and of their version
-	- anyone can get all these gems installed on his machine (with specified versions), running the `bundle` command on terminal, which is very convenient when working in a team! 
+- it keeps track of the gems used by your project and of their version
+- anyone can get all these gems installed on his machine (with specified versions), running the `bundle` command on terminal, which is very convenient when working in a team! 
 
 ## Specs
 Write an interactive program that can create, update, read and delete posts. 
@@ -26,12 +26,12 @@ Write an interactive program that can create, update, read and delete posts.
 
 At least your program should have these tasks:
 
-````
-	Hey you, what do you want to do ?
-	1. add a piece of news.
-	2. delete all news.
-	3. read my news. 
-````
+```bash
+Hey you, what do you want to do ?
+1. add a piece of news.
+2. delete all news.
+3. read my news. 
+```
 
 We prepared a skeleton of the app for you.
 
