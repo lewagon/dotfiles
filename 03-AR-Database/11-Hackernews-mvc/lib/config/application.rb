@@ -1,28 +1,20 @@
-require 'pathname'
 require 'sqlite3'
 require 'active_record'
-require 'logger'
-require 'open-uri'
-require 'Nokogiri'
+require 'pathname'
+require 'nokogiri'
 require 'faker'
+require 'open-uri'
 
+# gets root of current directory
 APP_ROOT = Pathname.new(File.expand_path(File.join(File.dirname(__FILE__), '..')))
 
-APP_NAME = APP_ROOT.basename.to_s
+# loads the yml database config file
+DB_CONFIG = YAML::load(IO.read(File.join(File.dirname(__FILE__),'database.yml')))
 
-DB_PATH  = APP_ROOT.join('db', "cookbook.sqlite3").to_s
+# gets the path of the database
+DB_PATH =  APP_ROOT.join(DB_CONFIG["development"]["database"])
 
-# Automatically load every file in APP_ROOT/app/models/*.rb, e.g.,
-# autoload "Person", 'app/models/person.rb'
-#
-# See http://www.rubyinside.com/ruby-techniques-revealed-autoload-1652.html
-
-Dir[APP_ROOT.join('app', 'models', '*.rb')].each do |model_file|
-  filename = File.basename(model_file).gsub('.rb', '')
-  autoload ActiveSupport::Inflector.camelize(filename), model_file
-end
-
-
-ActiveRecord::Base.logger = Logger.new(STDOUT)
-ActiveRecord::Base.configurations = YAML::load(IO.read(File.join(File.dirname(__FILE__),'database.yml')))
+ActiveRecord::Base.configurations = DB_CONFIG
 ActiveRecord::Base.establish_connection('development')
+
+
