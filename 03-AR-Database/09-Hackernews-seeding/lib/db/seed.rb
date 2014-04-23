@@ -1,5 +1,7 @@
+require_relative "../config/application"
 require_relative "../models/post"
 require_relative "../models/user"
+
 # Seed you database with post data from hacker news
 # And fake users using Faker gem
 

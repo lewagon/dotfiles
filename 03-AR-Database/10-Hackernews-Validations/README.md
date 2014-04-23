@@ -1,3 +1,4 @@
+
 You will add database `validations` for your Cookbook.
 
 What is a database validation ?
