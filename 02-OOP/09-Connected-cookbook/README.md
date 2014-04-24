@@ -28,6 +28,7 @@ end
 ```
 
 Try to enhance this small program to extract more recipe's info from the HTML file as :
+
 * the cooking and preparation lengths (as 2 integers representing the number of minutes respectively for cooking and preparing)
 * the description summary : a string of, let's say, the first 150 characters of the given description
 * the number of votes on which the rating is based
@@ -67,11 +68,13 @@ Importing recipe data from marmiton for 'fraise'...
 ```
 
 This new task should
+
 * add the recipes extracted from marmiton on you CSV data file 
 * also add them to your cookbook.
 
 #### New features
 Add features to 
+
 * mark recipes as tested in your CookBook 
 * print a recipe's details
 
