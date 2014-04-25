@@ -1,30 +1,24 @@
-A database full of data is much more fun, right?
+## Background & Objectives
 
-So in this exercice, you will feed the cookbook database with data collected from [http://www.marmiton.org/](http://www.marmiton.org/)
+A database full of data is much funnier, right? In this challenge, you are going to populate your database.
 
-## To do 
+## Specs
 
-We added a new Rake task in the `Rakefile`
+- To feed your `posts` table, collect the data from [Hackernews](https://news.ycombinator.com/)
+- For the users you can use the [Faker gem](https://github.com/stympy/faker). 
+- Write your code in `db/seed.rb`
+- Do not forget to associate each post you create with a user.
 
-````
-desc "populate the test database with sample data"
+When you are done with your ruby script that feeds the db:
+
+- run `cd lib` to get to the lib folder
+- run `rake db:seed`, which launch a very simple task, just loading your `seed.rb` file. See the task's details below, we are sure you understand the ruby behind.
+ 
+```
+desc "populate the database with sample data"
 task "db:seed" do
   require APP_ROOT.join('db', 'seed.rb')
 end
-````
+```
 
-This rake task will execute the code in `db/seed.rb`
-
-
-1. Write code in  `db/seed.rb` that collects recipes from [http://www.marmiton.org/](http://www.marmiton.org/) and store them in the database. The recipes must use at least one of the following ingredients: `boeuf, veau, thon, tomates, fraises, bar, merlu, pomme de terre, thon, epinard`
-
-2. Execute this code with `rake db:seed`
-
-3. To check that your data migration worked, write a query in `cookbook.rb` to get the 10 most difficult recipes.
-
-4. Feed the database from `CSV`. For that write another program `csv_seed.rb` that reads the recipes of `db/recipes.csv` and store them in the database.
-
-
-## Resources
-
-CSV parser [http://ruby-doc.org/stdlib-1.9.3/libdoc/csv/rdoc/CSV.html](http://ruby-doc.org/stdlib-1.9.3/libdoc/csv/rdoc/CSV.html)
+- complete the `interface.rb`, to enable any fake user (yo have just generated) to login with his email and then consult his hacker news. 

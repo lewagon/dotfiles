@@ -1,33 +1,32 @@
-# method to create your db
-def create_db
-  # %q allows for multiline string in ruby 
-  # this string sql should contain SQL code to create your db
+require 'sqlite3'
+
+def create_scheme(db)
+  #TODO: create your db scheme
   sql = %q{ 
-  }
+  }  # %q allows for multiline string in ruby 
   db.execute(sql)
 end
 
-# method to create a post
-def create_post(db, name, source_url, date, rating)
-  # your code here
+def create_post(db, post)
+  #TODO: add a new post to your db
 end
 
-# method to delete a post
-def delete_post(db, id)
-  # your code here
+def get_posts(db)
+   #TODO: list all posts
 end
 
-# method to update a post
-def update_post(db, id, description)
-  # your code here
+def get_post(db, id)
+  #TODO: get a specific post
 end
 
-# method to delete all posts
+def update_post(db, id, name)
+	#TODO: update a post's name in your db
+end
+
 def delete_posts(db)
-  # your code here
+  #TODO: delete a post in your db
 end
 
-# method to get all posts
-def posts(db)
-  # your code here
+def delete_post(db, id)
+  #TODO: delete a specific post in your db
 end

@@ -1,27 +1,29 @@
-Now, it's time to add `Users` to your `Cookbook` database.
+## Background & Objectives
+
+Now, it's time to add `users` to your database and to link users and posts.
+
+## Specs
 
 A `User` has the following attributes:
 
-* Name:String
-* Email:String
+* name:String
+* email:String
 	
-A user can have multiple recipes. To model this relationship (`association`), the Recipes table must have another field : `user_id` which is the `id` of the `User`
+A user can have multiple posts. A post belongs to one user. To model this one-to-many relationships, two steps are necessary:
 
-## To do
+1. Modify your database scheme, adding a foreign key in the relevant table. For that, you will use a migration.
+2. Translate this mapping in the Active Record world, through [associations](http://guides.rubyonrails.org/association_basics.html)
 
-1. Create a `create_users.rb` migration task.
-2. Create a `add_user_id_to_recipes.rb` migration task.
-3. Run the migrations with `rake db:migrate`
-4. Define the User Class in `models/user.rb` 
-5. Specify the Active Record associations for your models `Recipe` and `User`. For more information about Active Record associations, read [this](http://guides.rubyonrails.org/association_basics.html)
-6. Feed the database with recipes and users. To create users, you can use the gem [Faker](https://github.com/stympy/faker). You can write your code in `db/seed.rb`
-7. Write queries in `cookbook.rb` to answer the following questions:
-	* How many users are there in your Cookbook ?
-	* What is the average number of recipes per user ?
-	* Get the user with the most recipes, with all his recipes.
-Read the documentation about [associations](http://guides.rubyonrails.org/association_basics.html) to query associated models.
-	
+Again, you have to undersand that your db comes first, it is the physical representation of your data. Active Record comes second and represent your db in the ruby world.
 
-## Resources
 
-[Faker](https://github.com/stympy/faker)
+* Add a new migration to create the `users` table.
+* Add a new migration to add the `user_id` foreign key to your `posts` table
+* Run your migrations with the adequate `rake` task
+* Specify the Active Record associations for your models `Post` and `User`. For more information about Active Record associations, read [this](http://guides.rubyonrails.org/association_basics.html)
+
+## Learning Badges
+
+- Which kinds of relations between table do you know?
+- How does Active Record models these DB relations in the ruby world?
+- Whichs kinds of Active Record associations do you know (for every type of relationships between tables)?

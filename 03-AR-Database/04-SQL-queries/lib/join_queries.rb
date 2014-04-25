@@ -1,8 +1,8 @@
 require 'sqlite3'
 
 # opens the database
-database_path = "db/jukebox.sqlite"
-db = SQLite3::Database.new(database_path)
+DATABASE_PATH = "db/jukebox.sqlite"
+db = SQLite3::Database.new(DATABASE_PATH)
 
 def detailed_tracks(db)
   # TODO: return the list of tracks with their album and artist

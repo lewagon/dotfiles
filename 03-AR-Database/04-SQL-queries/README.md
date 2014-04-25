@@ -5,10 +5,10 @@ Now it is time to perform more complex SQL queries and especially `join` queries
 
 Complete the code in `join_queries.rb`. The methods in this file should enable to:
 
-- Get all the tracks with the corresponding artist and album. Your output should be an array of arrays. **Tip**: you have to use two `join` sql statements.
+- Get all the tracks with the corresponding artist and album. Your output should be an array of arrays. **Tip**: you have to use two `join` sql statements. Ex:
 
 ```ruby
-[["track name 1", "artist name 1", "album name 1"], ["track name 2", "artist name 2", "album name 2"]]
+[["Demain c'est loin", "IAM", "L'école du micro d'argent"], ["Back dans les Backs", "NTM", "Supreme NTM"]]
 ```
 
 - For each genre of music, find the stats, i.e. the number of tracks and the average song length (in minutes). **Tip**: you have to use a `group by` statement with aggregate 	functions ``count`` and ``avg``. Example: 
