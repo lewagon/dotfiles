@@ -6,6 +6,7 @@ and then clone it on your computer.
 
 ```bash
 $ GITHUB_USERNAME=<put_your_github_username_here>
+# Then execute the following without changing anything
 $ mkdir -p ~/code/${GITHUB_USERNAME} && cd $_
 $ git clone git@github.com:${GITHUB_USERNAME}/dotfiles.git
 $ cd dotfiles
@@ -15,7 +16,7 @@ Open and edit the ```gitconfig``` and other files with your own preferences. Whe
 
 ```bash
 $ git add gitconfig
-$ git commit m "My identity in the gitconfig"
+$ git commit --message "My identity in the gitconfig"
 $ git push origin master
 ```
 
