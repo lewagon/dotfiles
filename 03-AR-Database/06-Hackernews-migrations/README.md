@@ -29,7 +29,7 @@ As you will see, Rails will automatically create similar rake tasks for you.
 
 In `/db/migrate` we created a `20131226095300_create_posts.rb` file, containing an Active Record migration class. Migration files are always in the following format `yyyymmddhhmmss_migration_task_name.rb`. It enables rake to keep track of the current state of the migrations already executed.
 
-1. Write code in `20131226095300_create_posts.rb` to create the Recipes table. You have to read the documentation of Active Record Migrations [here](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). Your `posts` table should have the following columns:
+1. Write code in `20131226095300_create_posts.rb` to create the `posts` table. You have to read the documentation of Active Record Migrations [here](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). Your `posts` table should have the following columns:
 
 	* name:string 
 	* source_url:string
