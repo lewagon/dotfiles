@@ -1,5 +1,4 @@
 require 'rake'
-require 'yaml'
 
 require_relative 'config/application'
 

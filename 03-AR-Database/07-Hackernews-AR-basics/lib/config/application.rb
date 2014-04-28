@@ -1,6 +1,7 @@
 require 'sqlite3'
 require 'active_record'
 require 'pathname'
+require 'yaml'
 
 # gets root of current directory
 APP_ROOT = Pathname.new(File.expand_path(File.join(File.dirname(__FILE__), '..')))
