@@ -1,5 +1,12 @@
 ## Background & Objectives
 
+Note: you can launch a local webserver serving your current
+folder when launching this command: It has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7).
+
+```bash
+$ serve
+```
+
 Learn about :
 #### HTML Skeleton tags
 
@@ -7,7 +14,7 @@ Learn about :
 * `<head>`, `<title>`, `<meta>`
 * `<body>`
 
-#### Content tags  
+#### Content tags
 
 * Text tags (h1, p, ul/ol/li, em, strong)
 * Link tag
@@ -23,7 +30,7 @@ Learn about :
 
 Each page MUST have a header with your blog title and a footer with informations and links.
 
-#### blog.html 
+#### blog.html
 
 Write a `blog.html` which contains multiple blog posts filled with sports results, or tv show casts (Game of Thrones, ...) or whatever topic you like which involves enough data to work with.
 
