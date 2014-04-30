@@ -1,0 +1,40 @@
+.container {
+  margin: 0 auto;  
+  width: 940px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header ul
+{
+	list-style-type:none;
+	margin: 0;  
+	padding:0;
+	text-align: center;
+}
+
+header a
+{
+	display:block;
+	width:100px;
+}
+
+header li
+{
+	display:inline-block;
+}
+
+header{
+	border-bottom: 1px dotted grey;
+	padding: 10px;
+}
+
+footer{
+	border-top: 1px dotted grey;
+	padding: 10px;
+}
+
+h1{
+	text-align: center;
+	font-size: 50px;
+}
+
