@@ -18,6 +18,6 @@ Change the CSS (and the CSS only) to reproduce [this design](http://lewagon.gith
 ## Tips & Resources 
 
 * Use the developer tool ! You must **absolutely** use your browser developer tool in this challenge 
-* http://www.brucelawson.co.uk/2010/html5-articles-and-sections-whats-the-difference/
-* http://www.w3schools.com/css/css_navbar.asp 
-* http://jsfiddle.net/ is a good tool to make live experiments on HTML/CSS/JS 
+* [articles and sections]([http://www.brucelawson.co.uk/2010/html5-articles-and-sections-whats-the-difference/)
+* [css navbar](http://www.w3schools.com/css/css_navbar.asp)
+* [JS Fiddle](http://jsfiddle.net/) is a good tool to make live experiments on HTML/CSS/JS 

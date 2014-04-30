@@ -13,5 +13,5 @@ Change the CSS (and the CSS only) to reproduce [this design](http://lewagon.gith
 ![Design](https://dl.dropboxusercontent.com/u/29947758/sidebar.png)
 
 ### Tips & Resources
-* http://www.456bereastreet.com/lab/developing_with_web_standards/csslayout/2-col/
+* [2-columns layout](http://www.456bereastreet.com/lab/developing_with_web_standards/csslayout/2-col/)
 
