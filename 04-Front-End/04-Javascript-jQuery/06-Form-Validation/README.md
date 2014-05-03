@@ -18,7 +18,7 @@ logic and bind it when the DOM is ready.
 
 ## Tips
 
-Look at the [blur](https://api.jquery.com/blur/) and
+Look at the [focusout](https://api.jquery.com/focusout/) and
 [keyup](http://api.jquery.com/keyup/) events.
 
 Use [bootstrap validation state classes](http://getbootstrap.com/css/#forms-control-validation)
