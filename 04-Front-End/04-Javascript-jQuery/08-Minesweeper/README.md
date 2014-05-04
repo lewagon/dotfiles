@@ -17,3 +17,13 @@ Take some times to think of the rules of the game. How would you start?
 - What is behind each `unopened` tile? How do you store this information?
 - What happens when we left-click on a tile? right-click?
 - When do we win? When do we lose?
+
+### Going further
+
+If you are done with the basics, you could:
+
+- Change the images
+- Add a frame and a little yellow smiley at the top, which puts on sunglasses
+  when the game is won, or which restarts a new game when clicked on.
+- Add a timer
+- Flappy minesweeper?
