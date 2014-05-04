@@ -9,12 +9,12 @@ Example : http://kylefox.ca/jquery-modal/examples/
 You have a simple html page with an image :
 
 ```html
-  `<img src="xxx.jpg" data-display="800_600">`
+  `<img src="xxx.jpg" data-modal-height="800" data-modal-width="600">`
 ```
 
 - Clicking on the image appends to the <body> a full screen `div` with black background (opacity 0.5).
   Then it displays an other div (the modal) on top of this, containing the image.
-  The modal must be vertically and horizontally centered with a fixed size 800*600px (the size depends on the data-display attribute).
+  The modal must be vertically and horizontally centered with a fixed size 800*600px (the size depends on the data-modal-height & data-modal-width attributes).
 - Clicking on the black background comes back to normal page.
 - It would be nice if the image came with a little animation (eg. fade, stretch or slide)
 
