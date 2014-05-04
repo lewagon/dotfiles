@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <h1>Shipping address</h1>
+
+        <form role="form">
+          <div class="form-group">
+            <label for="first_name">First name</label>
+            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last name</label>
+            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Doe">
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" name="address" id="address" rows="2" placeholder="1, Infinite Loop"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" name="country" id="country" value="France" readonly>
+          </div>
+          <div class="form-group">
+            <label for="zip_code">Zip code</label>
+            <input type="text" class="form-control" name="zip_code" id="zip_code" placeholder="75001">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" name="city" id="city" placeholder="Paris">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="john@doe.com">
+          </div>
+          <div class="form-group">
+            <label for="mobile_phone">Mobile Phone</label>
+            <input type="text" class="form-control" name="mobile_phone" id="mobile_phone" placeholder="0601020304">
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="tos" id="tos">
+              I agree with the <a href="#">terms of service</a>.
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary" disabled>
+            Please fill all fields
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <footer style="height: 7em"></footer>
+
+  <!-- Including jQuery from the Google CDN -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!-- Including your code -->
+  <script src="form_validation.js"></script>
+</body>
+</html>
