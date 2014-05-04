@@ -17,7 +17,7 @@ function run_challenges() {
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
-  // The text should be made bold using a <b> tag
+  //       The text should be emphasized using a <strong> tag
 
 
   // Ex 4. Add the .blue CSS class to the table header cells (th elements)
@@ -38,11 +38,13 @@ function run_challenges() {
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
 
 
+
   // Ex 8. Change the background color of all table header cells to #DDF4FF
 
 
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
+
 
 
   // Ex 10. Remove the "Email:" label from the DOM
@@ -52,7 +54,7 @@ function run_challenges() {
   // Checking exercise answers. DO NOT MODIFY BELOW
   assert_equal(email, "boris@lewagon.org");
   assert_not_equal(document.getElementById("email").value, "boris@lewagon.org");
-  assert_equal($('b', document.getElementById("email-hint")).html(), "This is my email now");
+  assert_equal($('strong', document.getElementById("email-hint")).html(), "This is my email now");
   assert_equal($('th:eq(0)').css('color'), 'rgb(0, 0, 255)');
   assert_equal(team_count, 14);
   assert_equal($('tbody > tr').length, 15);
