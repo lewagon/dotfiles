@@ -1,7 +1,7 @@
 // INSTRUCTIONS - PLEASE READ!!
 // Here are some challenges. Solve them from top to bottom
 
-// **Each time** you time you complete a challenge, please commit and push!
+// **Each time** you complete a challenge, please commit and push!
 // This is a good practise. Each time you make some progress in software
 // development, you want to save a snapshot.
 
