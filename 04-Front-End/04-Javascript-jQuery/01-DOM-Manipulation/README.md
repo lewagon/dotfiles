@@ -5,13 +5,13 @@ is to re-use what you have learned throughout the CSS module about
 selectors, to dynamically manipulate the web page.
 
 We say that we manipulate the [Document Object Model](http://en.wikipedia.org/wiki/Document_Object_Model) (DOM), which is
-the in-memory representation of the HTML built by the browse. It is
+the in-memory representation of the HTML built by the browser. It is
 a tree (root node, with children, and grand-children, etc.), and
 you can:
 
 - Traverse it to read a specific node
-- Remove some node
-- Add some node
+- Remove some nodes
+- Add some nodes
 
 Doing so will change what the page looks like, instantaneously, without
 hitting "Refresh".
