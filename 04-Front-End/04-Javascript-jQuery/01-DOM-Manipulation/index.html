@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ex 1. - DOM Manipulation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="application.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <!-- This is the data given to you for the exercise, do not remove! -->
+      <div id="data" class="col-sm-7">
+        <h2>Data</h2>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" name="email" id="email" value="boris@lewagon.org" autocomplete="off">
+          <span id="email-hint">This is not my email!</span>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Rang</th>
+              <th>Équipe</th>
+              <th>Points</th>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Rugby Club Toulonnais</td><td>77</td></tr>
+            <tr><td>2</td><td>Montpellier Hérault Rugby</td><td>76</td></tr>
+            <tr><td>3</td><td>ASM Clermont </td><td>73</td></tr>
+            <tr><td>4</td><td>Stade Toulousain </td><td>69</td></tr>
+            <tr><td>5</td><td>Racing Métro 92</td><td>69</td></tr>
+            <tr><td>6</td><td>Castres Olympique</td><td>66</td></tr>
+            <tr><td>7</td><td>Stade Français </td><td>65</td></tr>
+            <tr><td>8</td><td>Union Bordeaux-Bègles</td><td>64</td></tr>
+            <tr><td>9</td><td>CA Brive-Corrèze </td><td>61</td></tr>
+            <tr><td>10</td><td>Aviron Bayonnais </td><td>54</td></tr>
+            <tr><td>11</td><td>Grenoble </td><td>53</td></tr>
+            <tr><td>12</td><td>Oyonnax</td><td>51</td></tr>
+            <tr><td>13</td><td>Perpignan</td><td>51</td></tr>
+            <tr><td>14</td><td>Biarritz Olympique </td><td>30</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- This div is used to output the JS tests, do not remove! -->
+      <div class="col-sm-5">
+        <h2>Results</h2>
+        <p>Hit <code>F5</code> to check your code again.</p>
+        <div id="results-wrapper">
+          <ul id="results" class="list-unstyled"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Including jQuery from the Google CDN -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!-- Including your code -->
+  <script src="application.js"></script>
+
+  <!-- Examiner :) -->
+  <script src="examiner.js"></script>
+</body>
+</html>
