@@ -60,6 +60,8 @@ function run_challenges() {
   assert_equal($('tbody > tr').length, 15);
   assert_equal(sum, 859)
   assert_equal($('th:eq(0)').css('background-color'), 'rgb(221, 244, 255)');
-  assert_equal($('ul:eq(0)').position().top, 20);
-  assert_equal(document.getElementsByTagName('label').length, 0);
+  setTimeout(function() {
+    assert_equal($('ul:eq(0)').position().top, 20);
+    assert_equal(document.getElementsByTagName('label').length, 0);
+  }, 1000);
 }
