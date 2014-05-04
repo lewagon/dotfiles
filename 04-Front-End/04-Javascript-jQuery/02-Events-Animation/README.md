@@ -24,6 +24,9 @@ Extra:
 
 * To better catch the eye of the visitor, wait for half a second before sliding
 the message down on page load!
+* We've designed the message box in a kind of special way... see if you can improve
+your code so that the message slides down again when the mouse is somewhere up around
+the top of the page, and slides up to hide itself when the mouse goes away :)
 
 
 
