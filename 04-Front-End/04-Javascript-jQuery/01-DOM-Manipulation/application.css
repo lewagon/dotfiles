@@ -15,3 +15,7 @@
 .success {
   background-color: lightgreen;
 }
+
+#results-wrapper, #results-wrapper #results  {
+  position: relative;
+}
