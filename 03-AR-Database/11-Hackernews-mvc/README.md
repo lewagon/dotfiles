@@ -40,4 +40,4 @@ Example:
  
 **Warning**: you should be careful to database validations and return correct messages when database validations fail. For example, if someone registers with an email that already exists, you have to return the correct error message.
 
-Try to separate responsibilities with different controllers (e.g. to handle sessions or posts) and corresponding views. This exercise is
+Try to separate responsibilities with different controllers (e.g. to handle sessions or posts) and corresponding views. 
