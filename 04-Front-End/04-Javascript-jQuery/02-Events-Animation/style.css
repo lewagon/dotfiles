@@ -1,0 +1,59 @@
+body {
+  background: url(http://upload.wikimedia.org/wikipedia/commons/2/2d/Bokeh_all_over.jpg);
+  background-size: cover;
+}
+
+
+#message-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+}
+
+#message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 10px 10px 5px;
+
+  background: rgba(220, 214, 124, 0.80);
+
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 1px 15px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 1px 15px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 1px 15px;
+
+  cursor: pointer;
+}
+
+
+.center{
+	text-align: center;
+}
+
+.wrapper{
+	margin-top: -20px;
+}
+
+
+#sign-in-section{
+	position: absolute;
+	left: 200px;
+	top: 30%;
+
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 40px 10px;
+  border-radius: 30px;
+  border: 1px solid white;
+}
+
+circle {
+  opacity: 0.8;
+}
+
+
+
