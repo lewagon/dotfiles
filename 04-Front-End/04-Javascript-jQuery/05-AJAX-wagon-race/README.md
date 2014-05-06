@@ -3,10 +3,10 @@
 We will take our last exercise Wagon-race and make it a little bit more interesting by adding a way to register the games we play on a server and store the results, through an API.
 
 For the API :
-See https://github.com/lewagon/wagon-race-api
-(YOU NEED TO READ THE README, it explains how the API works)
 
-The API URL is : http://wagon-race-api.herokuapp.com/
+- [Here's the documentation](https://github.com/lewagon/wagon-race-api). **YOU NEED TO READ THE README**, it explains how the API works.
+
+- The API URL is : http://wagon-race-api.herokuapp.com/
 
 ## Specs
 
