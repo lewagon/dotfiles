@@ -9,7 +9,7 @@ Example : [jQuery modal](http://kylefox.ca/jquery-modal/examples/)
 You have a simple html page with an image :
 
 ```html
-  <img src="xxx.jpg" data-modal-height="800" data-modal-width="600">
+<img src="xxx.jpg" data-modal-height="800" data-modal-width="600">
 ```
 
 - Clicking on the image appends to the <body> a full screen `div` with black background (opacity 0.5).
