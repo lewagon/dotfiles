@@ -13,7 +13,8 @@ The objectives of this challenge are :
 
 Change the CSS (and the CSS only) to reproduce [this design](http://lewagon.github.io/showroom/Layouts/header/blog.html) :
 
-![Design](https://dl.dropboxusercontent.com/u/29947758/header.png)
+
+<img src="https://dl.dropboxusercontent.com/u/29947758/header.png" width="100%">
 
 ## Tips & Resources 
 
