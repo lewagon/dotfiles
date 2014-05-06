@@ -1,4 +1,4 @@
-## Objectives & Background
+## Background & Objectives
 
 We will create a JavaScript game : the wagon-race.
 It's a simple game where you must use your keyboard to make a Wagon go forward.
@@ -13,7 +13,7 @@ Before you start, you should read about [jQuery](http://learn.jquery.com/about-j
 
 You will start by building a simple two-player board.  This will be rendered via HTML. There are a few ways you could do it, e.g., a table that looks like:
 
-### HTML
+#### HTML
 
 ```html
 <table class="racer_table">
@@ -52,7 +52,7 @@ You will then update a player's position by adding the `active` class to the app
 
 Make sure you're able to "manually" produce all the board layouts you might care about before you jump into the JavaScript.  Whatever way you choose, it should be easy for jQuery/JavaScript to manipulate, so keep that in mind.
 
-### Javascript
+#### Javascript
 
 We need some way for JavaScript to update the board state. Create simple JavaScript functions that can update a particular player's position.  You give the functions a player position as input and they update the underlying HTML to reflect the new position.
 
@@ -64,7 +64,7 @@ update_player_position('player1', 10);
 
 Store this JavaScript in a separate file and use the JavaScript console to debug it and pass in values manually.
 
-#### Binding to Key Presses
+##### Binding to Key Presses
 
 Now we'll make the game interactive!  Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key.  We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key, whereas the keyup event doesn't.
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
 });
 ```
 
-#### Starting and Winning
+##### Starting and Winning
 
 You must provide a way to restart the game, and tell who won the race.
 
