@@ -11,7 +11,7 @@ In the HTML of the canvas, we already put the good tags. **All you need to do is
 
 Change the **HTML**, and the HTML ONLY, to reproduce [this design](http://lewagon.github.io/showroom/Layouts/header-better/blog.html) :
 
-![Design](https://dl.dropboxusercontent.com/u/29947758/header-bootstrap.png)
+<img src="https://dl.dropboxusercontent.com/u/29947758/header-bootstrap.png" width="100%">
 
 ## Optional
 
