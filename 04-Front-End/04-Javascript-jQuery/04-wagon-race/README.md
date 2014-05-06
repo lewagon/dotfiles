@@ -83,6 +83,6 @@ $(document).ready(function() {
 
 You must provide a way to restart the game, and tell who won the race.
 
-## If this is too simple for you
+**If this is too simple for you**
 
 Do the same but instead of mere functions, use Javascript object and prototypal inheritance (the Javascript way of creating Classes.)
