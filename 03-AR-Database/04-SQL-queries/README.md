@@ -10,8 +10,7 @@ Complete the code in `join_queries.rb`. The methods in this file should enable t
 
 ```ruby
 [
-["Demain c'est loin",
-  "IAM", "L'école du micro d'argent"],
+  ["Demain c'est loin", "IAM", "L'école du micro d'argent"],
   ["Back dans les Backs", "NTM", "Supreme NTM"]
 ]
 ```
