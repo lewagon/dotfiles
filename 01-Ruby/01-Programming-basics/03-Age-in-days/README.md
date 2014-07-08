@@ -14,7 +14,7 @@
 ruby lib/interface.rb
 ```
 
-- **Enhancement** : Are there some repetitive lines of code in `#age_from_terminal` ? Could you refactor those lines and make your code DRY ?
+- **Enhancement** : Are there some repetitive lines of code in `interface.rb` ? Could you refactor those lines and make your code DRY ?
 
 
 ## Learning Badges
@@ -48,7 +48,7 @@ some_number = some_number * 2
 
 ## Tips & Resources
 * You may want to use the [Date class](http://www.ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html), that we load in our file with the line `require 'date'`
-* Use the interactive ruby console (IRB) to make "live" experiments. 
+* Use the interactive ruby console (IRB) to make "live" experiments.
 * As you can see from the given code canvas, ruby uses the `puts` method to output values on the terminal.
 
 
