@@ -2,7 +2,7 @@
 A very simple exercise to learn how to loop in ruby using different iterative structures, or using a recursive algorithm.
 
 ## Specs
-- Write a method in ruby that computes the sum of the integers between a min value and a max value. Ex: what is the sum of the integers between 1 and 100 ?
+- Write a method in ruby that computes the sum of the integers between a min value and a max value (min and max included). Ex: what is the sum of the integers between 1 and 100 ?
 - You should at least implement the two simple versions, using `for..end` and `while..end` structures
 - **enhancement (optional)**: Try to implement the recursive version => http://en.wikipedia.org/wiki/Recursion_(computer_science)
 
