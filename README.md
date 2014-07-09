@@ -15,18 +15,20 @@ $ cd dotfiles
 
 Open and edit the `[user]`'s section of the `gitconfig` file. When you're done, save these config (that's why you forked the repo) and pushed it on GitHub.
 
-```bash
-$ git add gitconfig
-$ git commit --message "My identity in the gitconfig"
-$ git push origin master
-```
-
 Now you can run the install script. It will not override existing config files, just
 rename them as ```#{file}.backup```.
 Assumption: you have [`oh-my-zsh`](http://ohmyz.sh/) is already installed.
 
 ```bash
 $ ./install.sh
+```
+
+Save your identity configuration
+
+```bash
+$ git add gitconfig
+$ git commit --message "My identity in the gitconfig"
+$ git push origin master
 ```
 
 Customization
