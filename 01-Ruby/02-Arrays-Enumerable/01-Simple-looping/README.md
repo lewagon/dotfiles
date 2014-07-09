@@ -7,7 +7,7 @@ A very simple exercise to learn how to loop in ruby using different iterative st
 - **enhancement (optional)**: Try to implement the recursive version => http://en.wikipedia.org/wiki/Recursion_(computer_science)
 
 ## Tips & Resources
-- [ruby loops](http://www.tutorialspoint.com/ruby/ruby_loops.html)
+- [ruby loops](http://www.tutorialspoint.com/ruby/ruby_loops.htm)
 - In ruby, using an `each` iterator is considered more idiomatic than a `for` loop when you want to iterate through a collection.
 
 ## Learning Badges
