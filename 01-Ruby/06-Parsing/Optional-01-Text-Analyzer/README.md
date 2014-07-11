@@ -1,6 +1,6 @@
 You are going to develop a text analyzer. Your ruby program will read a text supplied in a separate file, analyze it for varous patterns and statistics, and print out the result for the user. It's not a fancy 3D application but text processing programs are the bread and butter of most application development.
 
-Ruby is well suited for text and document analysis with its regular expression features along with the eas of use of `scan` and `split`. You'll use these heavily in your application.
+Ruby is well suited for text and document analysis with its regular expression features along with the ease of use of `scan` and `split`. You'll use these heavily in your application.
 
 ### Required features
 * character count (including **and** excluding spaces)
