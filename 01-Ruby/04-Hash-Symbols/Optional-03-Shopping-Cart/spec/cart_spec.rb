@@ -7,9 +7,7 @@ require 'store'
 
 describe 'cart methods' do
 
-  before :each do
-    let(:cart) { PRODUCTS.dup.clear }
-  end
+  let(:cart) { PRODUCTS.dup.clear }
 
   describe 'add_to_cart' do
     it 'adds any product to the cart' do
