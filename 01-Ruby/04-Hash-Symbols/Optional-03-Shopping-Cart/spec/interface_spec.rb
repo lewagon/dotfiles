@@ -20,12 +20,12 @@ describe 'Shopping cart interface' do
       result = o.read
     end
 
-    result = 'Total price: 45€'
     total_regex = /Total price: (\d+)€/
     result.must_match(total_regex)
 
     m = result.match(total_regex)
-    total = m.captures[0]
+    total = m.captures[0].to_i
+
     [0, 2, 4].each { |idx| total -= PRICES[idx] }
 
     total.must_equal(0)

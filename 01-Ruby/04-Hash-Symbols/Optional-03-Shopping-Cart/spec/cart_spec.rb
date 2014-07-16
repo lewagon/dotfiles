@@ -16,7 +16,7 @@ describe 'cart methods' do
       add_to_cart(cart, PRODUCTS[3])
       add_to_cart(cart, 'whatever')
 
-      cart.must_be_same_as [PRODUCTS.select { |p| [0, 2, 3].include?(PRODUCTS.index(p)) }, 'whatever'].flatten
+      cart.must_equal [PRODUCTS.select { |p| [0, 2, 3].include?(PRODUCTS.index(p)) }, 'whatever'].flatten
     end
 
   end

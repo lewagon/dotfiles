@@ -65,7 +65,7 @@ describe 'store_items_to_s method' do
 
       m = line.match(regex)
       products << m.captures[0]
-      prices << m.captures[1]
+      prices << m.captures[1].to_i
     end
 
     products.each_with_index do |p, idx|
