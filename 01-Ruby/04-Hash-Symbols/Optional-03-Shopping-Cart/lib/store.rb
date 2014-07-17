@@ -1,7 +1,6 @@
 # This file contains methods related to your store and its supplies.
 # You should complete it according to the instructions in the TODO comments
 
-
 def store_items
   # Here's what you should have in store:
   #   yogurts : 2€
