@@ -1,29 +1,38 @@
 require "spec_helper"
-require "controller"
+begin
+  require "controller"
+rescue LoadError
+  class Controller; end
+end
 
 describe Controller do
   let(:csv_path) { "spec/recipes.csv" }
-  let(:controller) { Controller.new(csv_path) }
+  let(:cookbook) { Cookbook.new(csv_path) }
+  let(:controller) { Controller.new(cookbook) }
 
-  describe 'when initialized' do
-    it 'stores the Cookbook model in an instance variable' do
+  describe '#initialize' do
+    it 'stores the Cookbook in an instance variable' do
       controller
         .instance_variable_get(:@cookbook)
         .must_be_instance_of Cookbook
     end
   end
 
-  describe 'model interactions' do
-    it 'has a list method' do
+  describe '#list' do
+    it 'should implements a method to list cookbook recipes' do
       controller.must_respond_to :list
     end
+  end
 
-    it 'has a add method' do
-      controller.must_respond_to :add
+  describe '#create' do
+    it 'should implements a method to create a cookbook recipe' do
+      controller.must_respond_to :create
     end
+  end
 
-    it 'has a delete method' do
-      controller.must_respond_to :delete
+  describe '#destroy' do
+    it 'should implements a method to destroy a cookbook recipe' do
+      controller.must_respond_to :destroy
     end
   end
 end

@@ -1,7 +1,9 @@
-require_relative 'ui'
-require_relative 'controller'
+require_relative 'cookbook'    # You need to create this file!
+require_relative 'controller'  # You need to create this file!
+require_relative 'router'
 
-cookbook_controller = Controller.new('lib/recipes.csv')
-cookbook_ui = UI.new(cookbook_controller)
+CSV_FILE = File.join(File.dirname(__FILE__), 'recipes.csv')
+cookbook = Cookbook.new(CSV_FILE)
+controller = Controller.new(cookbook)
 
-cookbook_ui.display
+Router.new(controller).run

@@ -1,130 +1,57 @@
 ## Background and Objectives
 
-You will code a CookBook application that manages recipes.
+You will code a Cookbook application that manages recipes.
 
-The idea is quite simple: you just got a new oven and want to remember all the recipes you are going to try out with it.
-Here comes your cookbook! It'll keep a list of your future culinary successes, allow you to review them, add some recipes and delete others.
+The idea is quite simple: you just got a new oven and want to remember all the recipes you are going to try out with it. Here comes your cookbook! It'll keep a list of your future culinary successes, allow you to review them, add some recipes and delete others.
 
-This application has all the moving parts of an MVC application: user input, display code, and data persistence. It's important to think about what responsibilities this application has to fulfill. This project must be the opportunity for you to apply what you've learned with the previous exercises. Keep the main OOP principles in mind: [Single Responsibility Principle](http://en.wikipedia.org/wiki/Single_responsibility_principle) & [Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns)
+You will build this app using the MVC **pattern**, also use in Rails:
 
-Identify the main responsibilities of your application and how you can organize those responsibilities in concrete units of Ruby code. Here is a list of very high-level responsibilities you'll have to partly take care of:
+- Model: what is the basic object you want to manipulate?
+- View: it is here to display data to the user (`puts`) and ask data to the user (`gets`)
+- Controller: it will fetch and store data of the Model, and tell the view to show or gather data to and from the user.
 
-* Present and manage choices (the "UI")
-* Manage a recipes list (addition, deletion, list)
-* Read recipes from the CSV file
-* Write recipes to the CSV file
+The following concepts are also important in Software Architecture:
 
-Each of these responsibilities hides many more. List them, and figure out an object model that will correctly articulate all of them.
+- [Single Responsibility Principle](http://en.wikipedia.org/wiki/Single_responsibility_principle)
+- [Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns)
+
+Please start with a paper and pen, identify your components and their responsibilities.
 
 ## Specs
 
-* All files *must* reside in your `lib/` directory.
+### Model
 
-### cookbook.rb
+You should always start with your model. The most important thing in your app is your data, and models are here to represent your data. So create a new file `recipe.rb` to define a `Recipe` class. It should have two instance variables, `@name` and `@description`.
 
-You'll work with the `Cookbook` class in the `lib/cookbook.rb`.
-This `Cookbook` class is your model, it represents the idea of a cookbook.
+### Database
 
-Recipes must be stored in a CSV file in the same directory than the `coobook.rb` file.
+We also need another class which will act as a database. We don't have a database yet, so we will use a class acting as it (like in the lecture). Moreover, we want to store our recipes, and don't want to lose them when exiting the program. We need to store them on the hard drive, so we'll use a CSV file.
 
-Here are the core functionalities your `Cookbook` class should provide :
+Please implement a `Cookbook` class which will act as fake database. It should implement 3 methods:
 
-##### List all recipes
-* Returns an ordered list of all the recipes in your CookBook reading them from your CSV file
+- `initialize(csv_file)` which loads existing `Recipe` from the CSV
+- `add_recipe(recipe)` which adds a new recipe to the cookbook
+- `remove_recipe(recipe_id)` which removes a recipe from the cookbook.
 
-##### Add a recipe
-* Add the recipe to the end of your CookBook (and update CSV file)
+## Controller
 
-##### Delete a recipe
-* Delete that recipe from your CookBook (and update CSV file)
+The controller will gather data from the cookbook to hand them over to the view. It will also ask the view for information to create new recipes. Here are the methods to implement:
 
-### controller.rb
+- `initialize(cookbook)` takes as argument an instance of the `Cookbook` (fake database).
+- `list` all the recipes
+- `create` a new recipe
+- `destroy` an existing recipe
 
-The `Controller` class role is to get the data from your `Cookbook` class and pass it onto your `UI` class.
-The controller will handle "requests" from your UI class.
+### View
 
-For instance :
+The view is responsible for all the `puts` and `gets` of your code.
 
-* The UI asks the Controller to get all the recipes, the controller then asks the `Cookbook` model to provide him the needed data and hands them back to the UI.
-* The UI asks the Controller to delete a specific recipe, the controller asks the `Cookbook` model to delete the recipe from the cookbook and reports back to the UI.
+### Tying all together
 
-### ui.rb
-
-The User Interface (_UI_) role is to display data and handle user inputs. The `UI` must call the correct `Controller` method when according to the user's choices.
-
-You must tweak the `lib/ui.rb` to use your Cookbook class and display the following :
+When you are ready, you can test your program with:
 
 ```bash
--- Welcome to the CookBook --
-
-What do you wanna do?
-
-- List all recipes [list]
-- Add a new recipe [add]
-- Delete a recipe [del]
-- Exit [Esc.]
+$ ruby lib/app.rb
 ```
 
-#### Available choices
-
-##### List all recipes
-* Displays a numbered list of all the recipes in your CookBook
-* The order of the list should always be the same
-
-Sample output:
-
-```bash
--- Here are all your recipes --
-
-1. Crumpets
-2. Beans & Bacon breakfast
-3. Plum pudding
-4. Apple pie
-5. Christmas crumble
-```
-
-##### Add a recipe
-* Ask for the recipe's name
-* Ask the Controller to add it to the CookBook
-
-Sample output:
-
-```bash
--- Enter a new recipe name --
-
-> Carbonara
-
-Your Carbonara recipe has been added successfully !
-```
-
-##### Delete a recipe
-* Ask for a recipe's index (its number in the displayed list of all recipes)
-* Ask the Controller to remove this recipe from to CookBook
-
-Sample output:
-
-```bash
--- Delete a recipe by specifying it's number --
-
-> 1
-
-Your Crumpets recipe has been successfully deleted !
-```
-
-##### Exit
-* Well... Exit. Maybe you can say goodbye, be polite!
-
-Sample output:
-
-```bash
-Goodbye, my dear friend.
-```
-
-### app.rb
-* This file is provided, you don't need to modify anything.
-
-The `lib/app.rb` file puts all the pieces together, bootstraps the applications (instanciates the Controller and the UI and run them)
-
-You can use `ruby lib/app.rb` to run the program.
-
-## Tips & Resources
+We give you the `app.rb` which requires the code, instantiate a `Cookbook`, `Controller` and starts the app. The infinite loop is given in the `Router` because this is not part of MVC. In fact, when you'll work with Rails, it will be something taken as granted as well.
