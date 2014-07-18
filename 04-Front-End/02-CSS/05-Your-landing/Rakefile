@@ -1,0 +1,13 @@
+require 'rake'
+require 'rake/testtask'
+
+require 'minitest/autorun'
+require 'minitest/pride'
+
+task :default do
+  describe "Exercise" do
+    it "should have at least one index.html file created" do
+      Dir.glob("*.html").wont_be_empty
+    end
+  end
+end
