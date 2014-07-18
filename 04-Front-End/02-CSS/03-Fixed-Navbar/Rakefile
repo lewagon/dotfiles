@@ -1,0 +1,13 @@
+require 'rake'
+require 'rake/testtask'
+
+require 'minitest/autorun'
+require 'minitest/pride'
+
+task :default do
+  describe "main.css" do
+    it "should have your custom code (more than 5 lines!)" do
+      (File.open("blog/main.css","r").readlines.size > 5).must_equal true
+    end
+  end
+end
