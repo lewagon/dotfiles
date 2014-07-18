@@ -1,0 +1,13 @@
+require 'rake'
+require 'rake/testtask'
+
+require 'minitest/autorun'
+require 'minitest/pride'
+
+task :default do
+  describe "form.html" do
+    it "should changed some HTML" do
+      (File.open("blog/blog.html","r").readlines.size == 65).must_equal false
+    end
+  end
+end
