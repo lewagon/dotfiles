@@ -1,4 +1,4 @@
-## Background & Objectives 
+## Background & Objectives
 The goal of this first challenge is to become familiar with database design, THE crucial skill to make your backend maintainable, flexible and efficient.
 
 ## Specs
@@ -16,12 +16,11 @@ Here are the requirements of our system:
 
 #### Design the schema
 
-Design a database schema for a survey app that meets the requirements. For that, your are going to use [SQL Designer](http://ondras.zarovi.cz/sql/demo/). To submit your solution, copy/paste the XML code of your schema in `survey.xml` and push it on Github.  
+Design a database schema for a survey app that meets the requirements. For that, your are going to use [SQL Designer](http://db.lewagon.org). To submit your solution, copy/paste the XML code of your schema in `survey.xml` and push it on Github.
 
 ## Learning Badges
 
-- Do you understand what's a database scheme? 
-- What's a relation between tables? 
+- Do you understand what's a database scheme?
+- What's a relation between tables?
 - Which kinds of relation do you know? (one-to-many, many-to-many, etc..)
 - Can you guess the database scheme behind facebook? airbnb? any web service you pick? Try to draw it on a sheet of paper.
- 
