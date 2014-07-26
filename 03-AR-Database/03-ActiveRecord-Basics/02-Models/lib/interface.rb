@@ -1,34 +1,49 @@
 require_relative 'config/application'
 require_relative 'models/post'
 
-def ask_and_get(param)
-  puts "What is the #{param} of your piece of news?"
-  gets.chomp
+def ask(prompt)
+  print "#{prompt} "
+  gets.to_s.chomp
+end
+
+def create_post
+  name = ask('Name:')
+  source_url = ask('Source url:')
+  rating = ask('Rating:')
+  created_at = Time.now
+
+  # TODO: use your model to create a new Post
+end
+
+def get_posts
+  # TODO: use your model to get all posts
+  posts = ??
+
+  puts '-' * 50
+  puts '%-3s %-15s %-16s %s' % %w[# Name Source\ URL Rating]
+
+  posts.each do |post|
+    puts '%-3d %-15s %-16s %d' % [post.id, post.name, post.source_url, post.rating]
+  end
+
+  puts '-' * 50
+end
+
+def delete_posts
+  # TODO: use your model to remove all posts
 end
 
 while true
+  puts 'Hey you, what do you want to do today? Enter <task_id>'
+  puts '1. Create a post'
+  puts '2. Read your posts'
+  puts '3. Delete all posts'
+  puts '4. Exit'
 
-  puts "Hey you, what do you want to do today? Enter <task_id>"
-  puts "1. Create a post"
-  puts "2. Read your posts"
-  puts "3. Delete all posts"
-  puts "4. Exit"
-  
-	choice =  gets.chomp.to_i
-	
-	case choice
-  when 1
-    name = ask_and_get("name")
-    source_url = ask_and_get("source url")
-    rating = ask_and_get("rating")
-    post = { name: name, source_url: source_url, date: Time.now, rating: rating }
-    #TODO: use ActiveRecord to add a new entry to the DB
-  when 2
-    #TODO: use ActiveRecord to get all entries from the DB
-  when 3
-    #TODO: use ActiveRecord to delete all entries from the DB
-  when 4 
-    break
-	end 
-	
+  case ask('>').to_i
+  when 1 then create_post
+  when 2 then get_posts
+  when 3 then delete_posts
+  when 4 then break
+  end
 end
