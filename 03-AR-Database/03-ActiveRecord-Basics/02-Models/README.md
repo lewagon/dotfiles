@@ -1,27 +1,26 @@
 ## Background & Objectives
 
-Now it's time to **unleash the kraken** :) You will use the Active Record ORM to make queries to your DB but manipulating friendly ruby objects directly instead of performing SQL queries and handling manually the mapping to these ruby objects (which is a pain in the ass..).
+Now it's time to **unleash the kraken** :) You will use the ActiveRecord ORM to make queries to your DB but manipulating friendly Ruby objects directly instead of performing SQL queries and handling manually the mapping to these Ruby objects (which is a pain in the ass...).
 
-Before you starts, read the [Active Record documentation](http://guides.rubyonrails.org/active_record_basics.html).
+Before you start, read the [Active Record documentation](http://guides.rubyonrails.org/active_record_basics.html).
 
 ## Specs
 
-Use Active Record to make the Hackernews program. To help you started, we already prepared a skeleton app for you! With Active Record, each post is now an Active Record object mapped to its corresponding row in the posts table. As you see in `models/post.rb` we defined the Post class ass
+Use ActiveRecord to make the Hackernews program. To help you started, we already prepared a skeleton app! With ActiveRecord, each post is now an `Post` object mapped to its corresponding row in the `posts` table. As you see in `models/post.rb` we defined the `Post` class as
 
-```
+``` ruby
 class Post < ActiveRecord::Base
 end
 ```
 
-This simple `ActiveRecord::Base` inheritance automatically maps the `Post` model to the `posts` table. Notice that all the magic of Active Record mapping relies on this simple convention (**CONVENTION OVER CONFIGURATION**).
+This simple `ActiveRecord::Base` inheritance automatically maps the `Post` model to the `posts` table. Notice that all the magic of ActiveRecord mapping relies on this simple convention (**CONVENTION** over **CONFIGURATION**):
 
-* The model in singular form with capital first letter (like `Post`)
-* table all downcase in plural form (like `posts`)
-* To sum up: `models` (db side) <=> `Model` (ruby side)
+* the _model_ is __singular__ and __camel-cased__ (ex: `Post` or `PostAuthor`)
+* the _table_ is __plural__ and __snake-cased__ (ex: `posts` or `post_authors`)
 
-TODO:
+### TODO
 
-- In `interface.rb` use the [Active Record](http://guides.rubyonrails.org/active_record_basics.html) basics methods to create, update, delete and read Active Record objects. 
+- In `interface.rb` use the [ActiveRecord](http://guides.rubyonrails.org/active_record_basics.html) basic methods to create, read, update and delete your posts.
 
 ## Learning Badges
 

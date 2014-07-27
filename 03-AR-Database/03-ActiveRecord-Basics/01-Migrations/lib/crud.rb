@@ -1,23 +1,13 @@
-def create_post(db, post)
-  db.execute("INSERT INTO posts (name, source_url, date, rating) VALUES ('#{post[:name]}', '#{post[:source_url]}', '#{post[:date]}', '#{post[:rating]}')")
+DB = ActiveRecord::Base.connection
+
+def db_create_post(post)
+  DB.execute("INSERT INTO posts (name, source_url, created_at, rating) VALUES ('#{post[:name]}', '#{post[:source_url]}', '#{post[:created_at]}', '#{post[:rating]}')")
 end
 
-def get_posts(db)
-  db.execute("SELECT * FROM posts")
+def db_get_posts
+  DB.execute('SELECT * FROM posts')
 end
 
-def get_post(db, id)
-  db.execute("SELECT * FROM posts where id = #{id}")
-end
-
-def update_post(db, id, name)
-	db.execute("UPDATE posts SET name = '#{name}' WHERE id = #{id}")
-end
-
-def delete_posts(db)
-  db.execute("DELETE FROM posts")
-end
-
-def delete_post(db, id)
-  db.execute("DELETE FROM posts WHERE Id = #{id}")
+def db_delete_posts
+  DB.execute('DELETE FROM posts')
 end

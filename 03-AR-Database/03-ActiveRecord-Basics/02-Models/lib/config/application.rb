@@ -1,16 +1,7 @@
-require 'sqlite3'
 require 'active_record'
-require 'pathname'
-require 'yaml'
+require 'sqlite3'
 
-# gets root of current directory
-APP_ROOT = Pathname.new(File.expand_path(File.join(File.dirname(__FILE__), '..')))
+DB_PATH = File.expand_path("#{__dir__}/../db/news.sqlite3")
+ENV['DATABASE_URL'] = "sqlite3:#{DB_PATH}"
 
-# loads the yml database config file
-DB_CONFIG = YAML::load(IO.read(File.join(File.dirname(__FILE__),'database.yml')))
-
-# gets the path of the database
-DB_PATH =  APP_ROOT.join(DB_CONFIG["development"]["database"])
-
-ActiveRecord::Base.configurations = DB_CONFIG
-ActiveRecord::Base.establish_connection('development')
+ActiveRecord::Base.establish_connection
