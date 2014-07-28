@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activerecord'
-gem 'sqlite3'
-gem 'nokogiri'
 gem 'faker'
+gem 'nokogiri'
+gem 'rake'
+gem 'sqlite3'

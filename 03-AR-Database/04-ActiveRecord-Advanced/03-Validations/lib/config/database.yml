@@ -1,5 +1,0 @@
-development:
-  adapter: sqlite3
-  database: db/news.sqlite3
-  pool: 5
-  timeout: 5000
