@@ -14,12 +14,12 @@
   remote = yellow
 
 [core]
-  editor = vim
-  pager = cat
+  editor = nano
+  pager = less -FRSX
 
 [alias]
   co = checkout
-  st = status
+  st = status -sb
   br = branch
   ci = commit
   fo = fetch origin
@@ -31,13 +31,19 @@
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --all --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)%an%Creset %C(yellow)%d%Creset'
 
   # Serve local repo. http://coderwall.com/p/eybtga
   # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 
   m = checkout master
+
+  # Removes a file from the index
+  unstage = reset HEAD --
+
+[help]
+  autocorrect = 1
 
 [push]
 	default = simple
