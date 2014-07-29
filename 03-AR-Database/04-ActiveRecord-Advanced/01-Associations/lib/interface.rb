@@ -2,6 +2,8 @@ require_relative 'config/application'
 require_relative 'models/post'
 require_relative 'models/user'
 
+User.where(name: 'toto', email: 'toto@toto.com').first_or_create
+
 def ask(prompt)
   print "#{prompt} "
   gets.to_s.chomp
