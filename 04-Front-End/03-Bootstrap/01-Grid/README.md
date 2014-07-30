@@ -1,6 +1,7 @@
 ## Background & Objectives 
 
 The objectives of this challenge are :
+
 * Embrace the [Bootstrap CSS](http://getbootstrap.com/) library, it will be your best friend for the rest of your life!
 * This challenge focus on the [Bootstrap fluid grid system](http://getbootstrap.com/css/#grid), you will not need to use other components of Bootstrap here. But the grid system is the hardest part of Boostrap, all the rest is just a matter of copy & paste!
 * Embed [Fontawesome](http://fontawesome.io/) icons, which behave as texts as you will realize (this is VERY convenient).
