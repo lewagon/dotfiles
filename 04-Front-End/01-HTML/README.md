@@ -1,13 +1,17 @@
 ## Background & Objectives
 
-Note: you can launch a local webserver serving your current
-folder when launching this command: It has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7).
+Note: You can start a local webserver by typing the following command in your terminal (just make sure you are in the exercises folder):
 
 ```bash
 $ serve
 ```
 
+(it has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7))
+
+You can now visit your files on http://localhost:8000
+
 Learn about :
+
 #### HTML Skeleton tags
 
 * `<!DOCTYPE html>`
