@@ -8,7 +8,7 @@ $ serve
 
 (it has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7))
 
-You can now visit your files on http://localhost:8000
+You can now visit your files on [http://localhost:8000](http://localhost:8000)
 
 Learn about :
 
