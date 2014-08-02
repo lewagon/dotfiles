@@ -1,0 +1,16 @@
+require 'rake'
+require 'rake/testtask'
+
+require 'minitest/autorun'
+require 'minitest/pride'
+
+task :default do
+  describe "Exercise" do
+    it "should have a index.html file" do
+      File.exists?("index.html").must_equal true
+    end
+    it "should have a about.html file" do
+      File.exists?("about.html").must_equal true
+    end
+  end
+end

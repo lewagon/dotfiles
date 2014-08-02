@@ -9,11 +9,8 @@ task :default do
     it "should have a index.html file" do
       File.exists?("index.html").must_equal true
     end
-    it "should have a login.html file" do
-      File.exists?("login.html").must_equal true
-    end
-    it "should have a landing.html file" do
-      File.exists?("landing.html").must_equal true
+    it "should have a about.html file" do
+      File.exists?("about.html").must_equal true
     end
   end
 end
