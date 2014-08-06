@@ -6,26 +6,19 @@ Time to re-implement your "Longest-word game" with a cool web-interface. You can
 
 Herebelow is how your game should work. We only give you the routing structure. Your call to generate the relevant controller, actions and views.
 
-- `GET '/game/new'`: render the page with a new random grid of words, and the HTML form to write your guess below.
+- `GET '/game'`: render the page with a new random grid of words, and the HTML form to write your guess just below the word-grid.
 
-- `POST '/attempt'` should post your attempt. An attempt means 2 parameters: your guess e.g "horse" and the initial word-grid e.g. "ossghreui".
-
-- `GET '/result'` should display your result.
+- `GET '/score'` should compute and display your score..
 
 ## Tips
 
-- If you want your form to hit a POST request when submitted you have to add the `method` attribute to your form. Ex:
+- To submit a parameter though a form without displaying the corresponding input, you can use a hidden input field `<input type="hidden">`!
 
-```html
-<form action="/some/url" method="post">
-  <!--your form body-->
-</form>
-```
 
-- To post a parameter though a form without displaying the corresponding input field (like for the initial grid in this challenge), you can use a hidden input field `<input type="hidden">`!
+## Extra (optionnal)
 
-## Extra
+Everytime a new HTTP request hit your Rails app, it generate a new instance of the controller. Hence, you cannot store values cross-request, except if you use Rails session or flash. Rails session is persisted between all requests of the user's session, whereas Rails [flash](http://guides.rubyonrails.org/action_controller_overview.html#the-flash) is just stored for the next request.
 
-Use [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the number of games you have played, your average score, this can of information you want to store cross-requests.
+Here you can use [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the number of games you have played, your average score, this kind of information.
 
 
