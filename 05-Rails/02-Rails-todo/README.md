@@ -27,19 +27,21 @@ You will have to create a `TasksController` with 7 actions related to this 7 rou
 
 Before working on the routing, the controller, and the views, generate your model:
 
-- Use rails model generator to create the model and associated migration all at the same time.
-- If you forget a field in your model, you can use Rail migration generator to automatically create a new migration.
-- You still have to use the `rake db:tasks` to execute your migrations.
-- Play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
+- Use `rails generate model <ModelName> <attr1>:<type> <attr2>:<type> ..` to create the model and associated migration all at the same time.
+- If you forget a field in your model, you can use `rails generate migration <MigrationName>` to automatically create a new migration .
+- You still have to run the good `rake db:tasks` to execute your migrations.
+- Once that's done, play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
 
 ### What's in the views ?
 
-- your index view should display all the tasks and for each task
-  - a link to its show view (use a `link_to` helper with the right routing helper)
-  - a link to its update view
-  - a link to its delete action. Tips: a standard link does not allow to perform `DELETE` request, so here you should add a `method: :delete` option to your `link_to` helper.
+Here are some guidelines to build your views
 
-- your task show view should display infos about the task, and a back-link to your index page.
+- The index view should display a list of all tasks and, for each task:
+  - a link to its show view (use a `link_to` helper)
+  - a link to its edit view
+  - a link to its delete action. **Tips**: a standard link does not allow to perform `DELETE` request, so here you should add a `method: :delete` option to your `link_to` helper.
+
+- A precise task show view should display the task's details (content, date of creation, etc.) and a back-link to the index page.
 
 - Notice that creating (as well as updating) a task is a **2-requests** process:
   - A first GET request is here to display the HTML form
