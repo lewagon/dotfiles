@@ -55,6 +55,7 @@ Some guidelines to build your views
 #### Important
 
 Notice that creating (as well as updating) a task is a **2-requests** process:
+
 1. A first GET request is here to display the HTML form
 1. A second POST or PATCH request enables to actually create or update the tasks using the parameters submitted in the form.
 
