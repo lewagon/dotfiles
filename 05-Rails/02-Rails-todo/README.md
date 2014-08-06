@@ -59,14 +59,12 @@ Notice that creating (as well as updating) a task is a **2-requests** process:
 1. A first GET request is here to display the HTML form
 1. A second POST or PATCH request enables to actually create or update the tasks using the parameters submitted in the form.
 
-An action is not necessarily associated with a view. For instance, the create/update/detroy action are not associated to any views. They are just here to perform operation and then `redirect_to` another URL.
+An action is not necessarily associated with a view. For instance, the create/update/destroy actions are not associated with any views. They are just here to perform operations on the DB and then `redirect_to` another URL.
 
 #### When you are done
 
-When you are done with the exercise, which means you have a functionnal todolist web-app, refactor your code:
+When you are done with the exercise, which means you have a functionnal todo-app, refactor your code:
 
-- use a [partial](http://guides.rubyonrails.org/layouts_and_rendering.html) to factor for the new and edit forms.
-- use the `form_for` rails helper to build you new/edit form.
-- refactor your routes with the `resources` routing method.
-
-
+- Use a [partial](http://guides.rubyonrails.org/layouts_and_rendering.html) to factor the new and edit HTML forms.
+- Use the `form_for` helper to build you new/edit form.
+- Refactor your routes with the `resources` routing method.
