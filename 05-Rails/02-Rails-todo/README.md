@@ -30,7 +30,7 @@ You will have to create a `TasksController` with 7 actions related to this 7 rou
 Before starting to build your routes, your controller and views, generate your model:
 
 - Use `rails generate model <ModelName> <attr1>:<type> <attr2>:<type> ..` to create the model and associated migration all at the same time.
-- If you forget a field in your model, you can use `rails generate migration <MigrationName>` to automatically create a new migration file with good timestamps.
+- If you forget a field in your model, you can use `rails generate migration <MigrationName>` to automatically create a new migration file  with good timestamps.
 - You still have to run the good `rake db:tasks` to execute your migrations.
 - Once that's done, play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
 
@@ -55,8 +55,8 @@ Some guidelines to build your views
 #### Important
 
 Notice that creating (as well as updating) a task is a **2-requests** process:
-- A first GET request is here to display the HTML form
-- A second POST or PATCH request enable to actually create or update the tasks using the `params` submitted in the form.
+1. A first GET request is here to display the HTML form
+1. A second POST or PATCH request enables to actually create or update the tasks using the parameters submitted in the form.
 
 An action is not necessarily associated with a view. For instance, the create/update/detroy action are not associated to any views. They are just here to perform operation and then `redirect_to` another URL.
 
