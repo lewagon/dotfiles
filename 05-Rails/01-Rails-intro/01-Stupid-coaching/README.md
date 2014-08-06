@@ -25,7 +25,7 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 Once you have created your new coaching app, add it a new `CoachingController`, using the adequate rails generator on the command line. This controller will have two actions, `CoachingController#answer` and `CoachingController#ask`
 
 
-### You coach answer logic
+### Your coach answer logic
 
 First implement your coach answer logic in `CoachingController#answer`. We give you some URL stucture you should respect. You will have to make a GET request on `/answer`, and you should use a parameter named `:query`. Ex: GET `/answer?query=hello` or GET `/answer?query=what+should+i+do?`.
 
