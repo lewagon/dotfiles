@@ -1,0 +1,46 @@
+## Background & Objectives
+In this challenge, you will meet again your old friend **Active Record**, which is Rails' ORM.
+
+## Specs
+
+Build a Rails todolist application. Your todo-app should have 7 entry points in the routing:
+
+1. `GET '/tasks'`: get all the tasks of your DB.
+1. `GET '/tasks/:id'`: get a precise task, e.g `GET '/tasks/33'` get task with id=3
+1. `GET '/tasks/new'`: get the form to create a new task
+1. `POST '/tasks'`: post a new task
+1. `GET '/tasks/:id/edit'`: get the form to edit an existing task
+1. `PATCH '/tasks/:id'`: update an existing task
+1. `DELETE '/tasks/:id'`: delete an existing task
+
+You will have to create a `TasksController` with 7 actions related to this 7 routes. For the names of these actions, use Rails naming convention.
+
+1. index
+1. show
+1. new
+1. create
+1. edit
+1. update
+1. destroy
+
+### Your model first
+
+Before working on the routing, the controller, and the views, generate your model:
+
+- Use rails model generator to create the model and associated migration all at the same time.
+- If you forget a field in your model, you can use Rail migration generator to automatically create a new migration.
+- You still have to use the `rake db:tasks` to execute your migrations.
+- Play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
+
+### What's in the views ?
+
+- your index view should display all the tasks and for each task
+  - a link to its show view (use a `link_to` helper with the right routing helper)
+  - a link to its update view
+  - a link to its delete action. Tips: a standard link does not allow to perform `DELETE` request, so here you should add a `method: :delete` option to your `link_to` helper.
+
+- your task show view should display infos about the task, and a back-link to your index page.
+
+- Notice that creating (as well as updating) a task is a **2-requests** process:
+  - A first GET request is here to display the HTML form
+  - A second POST or PATCH request enable to actually create or update the tasks using the `params` submitted in the form.
