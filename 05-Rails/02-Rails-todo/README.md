@@ -3,6 +3,8 @@ In this challenge, you will meet again your old friend **Active Record**, which 
 
 ## Specs
 
+### Routing
+
 Build a Rails todolist application. Your todo-app should have 7 entry points in the routing:
 
 1. `GET '/tasks'`: get all the tasks of your DB.
@@ -25,24 +27,45 @@ You will have to create a `TasksController` with 7 actions related to this 7 rou
 
 ### Your model first
 
-Before working on the routing, the controller, and the views, generate your model:
+Before starting to build your routes, your controller and views, generate your model:
 
 - Use `rails generate model <ModelName> <attr1>:<type> <attr2>:<type> ..` to create the model and associated migration all at the same time.
 - If you forget a field in your model, you can use `rails generate migration <MigrationName>` to automatically create a new migration .
 - You still have to run the good `rake db:tasks` to execute your migrations.
 - Once that's done, play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
 
-### What's in the views ?
+### Guidelines on Views
 
-Here are some guidelines to build your views
+Some guidelines to build your views
 
-- The index view should display a list of all tasks and, for each task:
+`index.html.erb`
+- Should display a list of all tasks and, for each task:
   - a link to its show view (use a `link_to` helper)
   - a link to its edit view
   - a link to its delete action. **Tips**: a standard link does not allow to perform `DELETE` request, so here you should add a `method: :delete` option to your `link_to` helper.
+- Should include a link to the new view to create a new task
 
-- A precise task show view should display the task's details (content, date of creation, etc.) and a back-link to the index page.
+`show.html.erb`
+- Should display the task's details (content, date of creation, etc.) and a back-link to the index page.
 
-- Notice that creating (as well as updating) a task is a **2-requests** process:
-  - A first GET request is here to display the HTML form
-  - A second POST or PATCH request enable to actually create or update the tasks using the `params` submitted in the form.
+`new.html.erb` and `edit.html.erb`
+- Should include a form to create or update a task.
+
+
+#### Important
+
+Notice that creating (as well as updating) a task is a **2-requests** process:
+- A first GET request is here to display the HTML form
+- A second POST or PATCH request enable to actually create or update the tasks using the `params` submitted in the form.
+
+An action is not necessarily associated with a view. For instance, the create/update/detroy action are not associated to any views. They are just here to perform operation and then `redirect_to` another URL.
+
+#### When you are done
+
+When you are done with the exercise, which means you have a functionnal todolist web-app, refactor your code:
+
+- use a [partial](http://guides.rubyonrails.org/layouts_and_rendering.html) to factor for the new and edit forms.
+- use the `form_for` rails helper to build you new/edit form.
+- refactor your routes with the `resources` routing method.
+
+
