@@ -9,7 +9,7 @@ Now it's time to make a 3-model app. Mister Cocktail, yeah!
 
 - A cocktail has a name (e.g. "Mint Julep", "Whiskey Sour", "Mojito")
 - An ingredient has a name (e.g. "lemon", "ice cubes", "mint leaves")
-- A dose refers to a cocktail, an ingredient, and has an amount. E.g: the mint Julep has a dose of 3 mont leaves.
+- A dose refers to a cocktail, an ingredient, and has an amount. E.g: the mint Julep has a dose of 3 mint leaves.
 
 #### Associations
 
