@@ -61,7 +61,9 @@ When using Rails helper like `link_to` or `form_for`, you can pass a hash of HTM
 
 ```html
 <%= link_to "See details", @restaurant, class: "btn btn-primary"%>
-# => <a href="/restaurants/3" class="btn btn-primary">See details</a>
+<!--
+<a href="/restaurants/3" class="btn btn-primary">See details</a>
+-->
 ```
 
 or, you can also pass the HTML content of the link in a block:
@@ -70,9 +72,11 @@ or, you can also pass the HTML content of the link in a block:
 <%= link_to @restaurant, class: "image-link" do %>
   <%= image_tag @restaurant.picture %>
 <% end %>
-# => <a href="/restaurants/3" class="image-link">
-# =>   <img src="assets/...">
-# => </a">
+<!--
+<a href="/restaurants/3" class="image-link">
+  <img src="assets/...">
+</a">
+-->
 ```
 
 #### [form_for](http://guides.rubyonrails.org/form_helpers.html)
