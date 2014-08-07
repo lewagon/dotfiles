@@ -8,7 +8,7 @@ The objective of this challenge is to build a 2-models Rails app with restaurant
 
 #### Attributes
 - A restaurant has a name, an address, a phone number, and a category (chinese, italian)
-- A review has a content and a starring (between 0 and 5)
+- A review has a content and a rating (between 0 and 5)
 
 #### Associations
 - A restaurant has many reviews
@@ -16,8 +16,8 @@ The objective of this challenge is to build a 2-models Rails app with restaurant
 - When you delete a restaurant in the DB, it should delete all related reviews (see the `dependent: :destroy` option of the `has_many` association)
 
 #### Validation
-- A restaurant must have at least a name and an address. The category should belongs to a fixed list `[:chinese, :italian, :japonese, :french, :belgian]`
-- A review must have a content and a starring. The starring should be a number between 0 and 5.
+- A restaurant must have at least a name and an address. The category should belong to a fixed list `[:chinese, :italian, :japonese, :french, :belgian]`
+- A review must have a content and a rating. The rating should be a number between 0 and 5.
 
 ### Routing
 Asking yourself what routes you need is an important step. It depends on what features you want for your app. Let's define our minimal product:
