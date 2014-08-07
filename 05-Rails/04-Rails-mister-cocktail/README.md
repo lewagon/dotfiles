@@ -69,7 +69,7 @@ Create a Procfile, in the app folder (same level as Gemfile), which includes thi
 ```ruby
 # Procfile
 web: bundle exec rails s -p $PORT
-```
+``
 
 ### Deploy continuously from the beginning
 Once you have a Heroku account, you can create a Heroku app and push your code to this app.
@@ -91,7 +91,7 @@ You can push your changes on heroku directly with
 
     $ git push heroku master
 
-Exactly the same process than with Github.
+Exactly the same process as with Github.
 
 
 ### Collaborate on Github
