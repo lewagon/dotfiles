@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-The objective of this challenge is to build a 2-models Rails app with restaurant and anonymous reviews. You can refer to [Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) to see a similar example on articles and comments.
+The objective of this challenge is to build a 2-model Rails app with restaurant and anonymous reviews. You can refer to [Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) to see a similar example on articles and comments.
 
 ## Specs
 
@@ -16,7 +16,7 @@ The objective of this challenge is to build a 2-models Rails app with restaurant
 - When you delete a restaurant in the DB, it should delete all related reviews (see the `dependent: :destroy` option of the `has_many` association)
 
 #### Validation
-- A restaurant must have at least a name and an address. The category should belong to a fixed list `[:chinese, :italian, :japonese, :french, :belgian]`
+- A restaurant must have at least a name and an address. The category should belong to a fixed list `["chinese", "italian", "japonese", "french", "belgian"]`
 - A review must have a content and a rating. The rating should be a number between 0 and 5.
 
 ### Routing
@@ -28,7 +28,7 @@ Asking yourself what routes you need is an important step. It depends on what fe
 - He can add a new review to a restaurant, from the restaurant's show view.
 - And that's it!
 
-A user cannot update / delete any restaurant or review. That will be the role of the admin (i.e. **you**) to make some curation for restaurant and reviwes from his rails console.
+A user cannot update / delete any restaurant or review. That will be the role of the admin (i.e. **you**) to make some curation for restaurant and reviwes from the rails console.
 
 We know that it's a pretty poor first version. However, the goal is to force you to think about your routes, and not create 7 CRUD routes for any resources of your app!
 
