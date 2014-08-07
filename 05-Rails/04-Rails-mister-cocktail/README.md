@@ -69,7 +69,7 @@ Create a Procfile, in the app folder (same level as Gemfile), which includes thi
 ```ruby
 # Procfile
 web: bundle exec rails s -p $PORT
-``
+```
 
 ### Deploy continuously from the beginning
 Once you have a Heroku account, you can create a Heroku app and push your code to this app.
