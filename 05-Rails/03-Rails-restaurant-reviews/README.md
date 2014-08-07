@@ -33,7 +33,7 @@ We know that it's a pretty poor first version. However, the goal is to force you
 
 List all the routes you need to build this product, and check the list with a teacher.
 
-## Seeding
+### Seeding
 You can seed your restaurant database in `db/seeds.rb`. Ex:
 
 ```ruby
