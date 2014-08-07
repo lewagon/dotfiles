@@ -7,8 +7,8 @@ Now it's time to make a 3-model app. Mister Cocktail, yeah!
 
 #### Attributes
 
-- A cocktail has a name (e.g. "Mint Julep", "Whiskey Sour", "Mojito") and a picture
-- A ingredient has a name (e.g. "lemon", "ice cubes", "mint leaves")
+- A cocktail has a name (e.g. "Mint Julep", "Whiskey Sour", "Mojito")
+- An ingredient has a name (e.g. "lemon", "ice cubes", "mint leaves")
 - A dose refers to a cocktail, an ingredient, and has an amount. E.g: the mint Julep has a dose of 3 mont leaves.
 
 #### Associations
