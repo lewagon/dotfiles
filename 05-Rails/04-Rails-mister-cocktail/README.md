@@ -29,7 +29,7 @@ As you have guessed, the `doses` table is the join table between cocktails and i
 #### Validation
 
 - A cocktail must have a name
-- A ingredient must have a name
+- An ingredient must have a name
 - A dose must have an amount
 
 ### Routing
@@ -38,9 +38,9 @@ Once again, you must have a precise idea of the features of your app in order to
 
 - a user can see the list of all cocktails
 - a user can see the details of a precise cocktail, with the table of ingredients and doses
-- a user can create a cocktail
-- a user can add a new dose (ingredient/amount pair) on a cocktail
-- a user can delete an existing cocktail dose
+- a user can create a new cocktail with its name.
+- a user can add a new dose (ingredient/amount pair) on an existing cocktail
+- a user can delete a dose on an existing cocktail
 
 ### Prepare for Deployment
 
