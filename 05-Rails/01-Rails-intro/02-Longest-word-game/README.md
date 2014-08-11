@@ -17,8 +17,8 @@ Herebelow is how your game should work. We only give you the routing structure. 
 
 ## Extra (optional)
 
-Everytime a new HTTP request hits your Rails app, it generate a new instance of the controller. Hence, you cannot store values cross-request, except if you use Rails session or flash. Rails session is persisted between all requests of the user's session, whereas Rails [flash](http://guides.rubyonrails.org/action_controller_overview.html#the-flash) is just stored for the next request.
+Everytime a new HTTP request hits your Rails app, it generate a new instance of the controller. Hence, you cannot store values cross-request, except if you use Rails session. Rails session is persisted between all requests of the user's session.
 
-Here you can use [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the number of games you have played, your average score, this kind of information.
+Here you can use [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the total number of games you have played, your average score, this kind of general information.
 
 
