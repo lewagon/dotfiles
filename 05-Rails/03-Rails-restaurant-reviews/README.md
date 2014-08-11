@@ -59,31 +59,34 @@ When using Rails helper like `link_to` or `form_for`, you can pass a hash of HTM
 
 #### [link_to](http://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to)
 
-```html
+```erb
 <%= link_to "See details", @restaurant, class: "btn btn-primary"%>
-<!--
+```
+Will generate  this HTML 
+
+```html
 <a href="/restaurants/3" class="btn btn-primary">See details</a>
--->
 ```
 
 or, you can also pass the HTML content of the link in a block:
 
-```html
+```erb
 <%= link_to @restaurant, class: "image-link" do %>
   <%= image_tag @restaurant.picture %>
 <% end %>
-<!--
+```
+will generate this HTML
+```html
 <a href="/restaurants/3" class="image-link">
   <img src="assets/...">
-</a">
--->
+</a>
 ```
 
 #### [form_for](http://guides.rubyonrails.org/form_helpers.html)
 
 Here is an example of how you would generate a Bootstrap inline-form using the Rails `form_for` helper.
 
-```html
+```erb
 <%= form_for @user, html: {class: "form-inline"} do |f| %>
   <div class="form-group">
     <%= f.label :name %>
