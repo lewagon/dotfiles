@@ -15,9 +15,9 @@ Herebelow is how your game should work. We only give you the routing structure. 
 - To submit a parameter though a form without displaying the corresponding input, you can use a hidden input field `<input type="hidden">`!
 
 
-## Extra (optionnal)
+## Extra (optional)
 
-Everytime a new HTTP request hit your Rails app, it generate a new instance of the controller. Hence, you cannot store values cross-request, except if you use Rails session or flash. Rails session is persisted between all requests of the user's session, whereas Rails [flash](http://guides.rubyonrails.org/action_controller_overview.html#the-flash) is just stored for the next request.
+Everytime a new HTTP request hits your Rails app, it generate a new instance of the controller. Hence, you cannot store values cross-request, except if you use Rails session or flash. Rails session is persisted between all requests of the user's session, whereas Rails [flash](http://guides.rubyonrails.org/action_controller_overview.html#the-flash) is just stored for the next request.
 
 Here you can use [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the number of games you have played, your average score, this kind of information.
 

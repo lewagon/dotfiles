@@ -50,7 +50,7 @@ When creating your new rails cocktail-app, do it properly setting the database t
 
     $ cd ~/code/your_github_username
     $ rails new mistercocktail --database=postgresql
-    $ cd mistercocktail #
+    $ cd mistercocktail
     $ git init
     $ git add . && git commit -m "rails new"
     $ rake db:create

@@ -15,7 +15,7 @@ Build a Rails todolist application. Your todo-app should have 7 entry points in 
 1. `PATCH '/tasks/:id'`: update an existing task
 1. `DELETE '/tasks/:id'`: delete an existing task
 
-You will have to create a `TasksController` with 7 actions related to this 7 routes. For the names of these actions, use Rails naming convention.
+You will have to create a `TasksController` with 7 actions related to those 7 routes. For the names of these actions, use Rails naming convention.
 
 1. index
 1. show
@@ -31,7 +31,7 @@ Before starting to build your routes, your controller and views, generate your m
 
 - Use `rails generate model <ModelName> <attr1>:<type> <attr2>:<type> ..` to create the model and associated migration all at the same time.
 - If you forget a field in your model, you can use `rails generate migration <MigrationName>` to automatically create a new migration file  with good timestamps.
-- You still have to run the good `rake db:tasks` to execute your migrations.
+- You still have to run the good `rake db:migrate` to execute your migrations.
 - Once that's done, play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
 
 ### Guidelines on Views

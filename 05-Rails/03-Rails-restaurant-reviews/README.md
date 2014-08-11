@@ -16,19 +16,19 @@ The objective of this challenge is to build a 2-model Rails app with restaurant 
 - When you delete a restaurant in the DB, it should delete all related reviews (see the `dependent: :destroy` option of the `has_many` association)
 
 #### Validation
-- A restaurant must have at least a name and an address. The category should belong to a fixed list `["chinese", "italian", "japonese", "french", "belgian"]`
+- A restaurant must have at least a name and an address. The category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`
 - A review must have a content and a rating. The rating should be a number between 0 and 5.
 
 ### Routing
 Asking yourself what routes you need is an important step. It depends on what features you want for your app. Let's define our minimal product:
 
-- A user can see the list of all restaurant.
+- A user can see the list of all restaurants.
 - He can add a new restaurant.
 - He can see the details of a restaurant, with all reviews related to the restaurant.
 - He can add a new review to a restaurant, from the restaurant's show view.
 - And that's it!
 
-A user cannot update / delete any restaurant or review. That will be the role of the admin (i.e. **you**) to make some curation for restaurant and reviwes from the rails console.
+A user cannot update / delete any restaurant or review. That will be the role of the admin (i.e. **you**) to make some curation for restaurant and reviews from the rails console.
 
 We know that it's a pretty poor first version. However, the goal is to force you to think about your routes, and not create 7 CRUD routes for any resources of your app!
 
