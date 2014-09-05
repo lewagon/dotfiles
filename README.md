@@ -13,7 +13,7 @@ $ git clone git@github.com:${GITHUB_USERNAME}/dotfiles.git
 $ cd dotfiles
 ```
 
-Open and edit the `[user]`'s section of the `gitconfig` file. When you're done, save these config (that's why you forked the repo) and pushed it on GitHub.
+Open and edit the `[user]`'s section of the `gitconfig` file. When you're done, save these config (that's why you forked the repo) and push it on GitHub.
 
 ```bash
 $ git add gitconfig
