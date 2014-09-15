@@ -16,6 +16,7 @@
 [core]
   editor = vim
   pager = cat
+  mergeoptions = --no-edit
 
 [alias]
   co = checkout
