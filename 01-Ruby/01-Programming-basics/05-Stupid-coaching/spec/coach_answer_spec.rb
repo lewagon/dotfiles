@@ -32,6 +32,6 @@ describe "The method coach_answer_enhanced" do
   end
 
   it 'does not answer back when you tell him you are going to work' do
-    expect( coach_answer_enhanced( "I AM GOING TO WORK NOW!" ) ).to eq ""
+    expect( coach_answer_enhanced( "I AM GOING TO WORK RIGHT NOW!" ) ).to eq ""
   end
 end
