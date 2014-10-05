@@ -1,0 +1,9 @@
+StringLiterals:
+  Enabled: false
+TrailingBlankLines:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - '**/Rakefile'
+    - '**/spec/**'
