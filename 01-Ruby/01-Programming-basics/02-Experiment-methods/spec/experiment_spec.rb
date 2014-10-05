@@ -40,14 +40,14 @@ describe "#exactly_divide" do
 
 end
 
-describe "#is_divisible_by_two" do
+describe "#divisible_by_two?" do
 
   it "should return true if number is even" do
-    expect( is_divisible_by_two(6) ).to eq true
+    expect( divisible_by_two?(6) ).to eq true
   end
 
   it "should return false if number is odd" do
-    expect( is_divisible_by_two(7) ).to eq false
+    expect( divisible_by_two?(7) ).to eq false
   end
 
 

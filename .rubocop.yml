@@ -2,6 +2,10 @@ StringLiterals:
   Enabled: false
 TrailingBlankLines:
   Enabled: false
+LineLength:
+  Max: 120
+UnusedMethodArgument:
+  Enabled: false
 
 AllCops:
   Exclude:
