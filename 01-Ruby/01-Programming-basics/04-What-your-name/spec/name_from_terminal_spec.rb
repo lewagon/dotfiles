@@ -1,5 +1,4 @@
 # Encoding: utf-8
-require 'spec_helper'
 require 'open3'
 require 'compute_name'
 
@@ -20,7 +19,6 @@ describe '#name_from_terminal' do
         result = o.read
       end
 
-    name = compute_name("Jean", "Michel", "Sardou")
-    result.must_match /(?:\w|\s)#{name}/
+    expect( result ).to match(/Jean Michel Sardou/)
   end
 end

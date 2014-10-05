@@ -1,5 +1,4 @@
 # Encoding: utf-8
-require 'spec_helper'
 require 'open3'
 require 'age_in_days'
 
@@ -22,7 +21,7 @@ describe '#age_from_terminal' do
     end
 
     age = age_in_days(d, m, y)
-    result.must_match /You are #{age.to_s} days old/
+    expect(result).to match(/You are #{age.to_s} days old/)
   end
 
 end
