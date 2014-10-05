@@ -6,6 +6,8 @@ LineLength:
   Max: 120
 UnusedMethodArgument:
   Enabled: false
+EmptyLines:
+  Enabled: false
 
 AllCops:
   Exclude:
