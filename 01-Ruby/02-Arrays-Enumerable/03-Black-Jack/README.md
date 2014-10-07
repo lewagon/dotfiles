@@ -36,7 +36,7 @@ We will implement a *simplified* version of Black Jack:
 - Implement the main `#play_game` method which runs a Black Jack game from the terminal. It should work this way:
 
 ```bash
-$ ruby lib/croupier.rb
+$ ruby lib/run_game.rb
 Card ? (type 'y' or 'yes' for a new card)
 > yes
 Your score is 6, bank is 17!

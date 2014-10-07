@@ -13,9 +13,3 @@ def play_game
   # TODO: make the user play from terminal in a while loop that will stop
   #       when the user will not be asking for  a new card
 end
-
-
-
-
-# We call the play_game method to start.
-play_game
