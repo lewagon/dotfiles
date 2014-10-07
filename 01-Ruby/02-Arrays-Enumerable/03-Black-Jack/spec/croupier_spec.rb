@@ -3,7 +3,7 @@ require "croupier"
 
 describe "#state_of_the_game" do
   it 'returns a String' do
-    state_of_the_game(1, 2).must_be_instance_of String
+    expect(state_of_the_game(1, 2)).to be_a String
   end
 
   it 'returns an interpolated String' do
