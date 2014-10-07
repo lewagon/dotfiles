@@ -28,6 +28,6 @@ describe "#timer_for" do
     long_block_time = timer_for do
       (1..100).each { |i| (1..100000).to_a.shuffle.sort }
     end
-    expect(block_time < long_block_time).to be_true
+    expect(block_time < long_block_time).to eq true
   end
 end
