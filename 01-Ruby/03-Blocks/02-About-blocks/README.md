@@ -1,4 +1,5 @@
 ## Background & Objectives
+
 Blocks are chunks of code enclosed between `{}` (for 1-line blocks) or between `do..end` (for muli-line blocks).
 Although we can be store them in `Proc` objects and pass them to a method as standard arguments, **many methods can just be called with an implicit block given after the list of arguments**. In fact, that's exactly what you did with all these iterators ! This implicit block is executed any time the keyword `yield` appears in the method definition. Use the resources to learn more on blocks. The objectives are :
 
@@ -37,15 +38,12 @@ end
 # => 3.39051 seconds elapsed
 ```
 
-- implement `#transform` just to get familiar with how to pass parameter to a block
 
 ## Learning Badges
+
 You should be able to answer these questions on a sheet of paper without computer-assistance :)
 
 - What's a block ? How do you call a method with an implicit block ?
 - What's the syntax of if this block has only 1 ruby instruction in it ? several ?
 - Re-consider all the iterators you used `#each_with_index`, `#select`, `#find`... Is it 100% clear that most of them are methods called with blocks ?
 - (optional) Could you figure out approximately how the `map` iterator is coded for instance ?
-
-## Resources & Tips
-- [http://www.tutorialspoint.com/ruby/ruby_blocks.htm](http://www.tutorialspoint.com/ruby/ruby_blocks.htm)
