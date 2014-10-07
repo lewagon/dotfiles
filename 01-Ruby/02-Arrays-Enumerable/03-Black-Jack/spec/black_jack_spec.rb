@@ -1,49 +1,34 @@
 # Encoding: utf-8
-require "spec_helper"
 require "black_jack"
 
-describe "#bank_score" do
+describe "#pick_bank_score" do
   it "returns a number" do
-    bank_score.must_be_kind_of Numeric
+    expect(pick_bank_score).to be_a Numeric
   end
 
-  it "is between 16 and 21" do
+  it "draws a number between 16 and 21" do
     scores = []
-    1000.times do
-      score = bank_score
-      unless (16..21).include?(score)
-        scores << score
-      end
+    100.times do
+      score = pick_bank_score
+      scores << score if (16..21).include?(score)
     end
 
-    scores.must_equal []
+    expect(scores.size).to eq(100)
   end
 end
 
-describe "#pick_card" do
+describe "#pick_player_card" do
   it "returns a number" do
-    pick_card.must_be_kind_of Numeric
+    expect(pick_player_card).to be_a Numeric
   end
 
-  it "is between 1 and 11" do
+  it "draws a number between 1 and 11" do
     scores = []
-    1000.times do
-      score = pick_card
-      unless (1..11).include?(score)
-        scores << score
-      end
+    100.times do
+      score = pick_player_card
+      scores << score if (1..11).include?(score)
     end
 
-    scores.must_equal []
-  end
-end
-
-describe "#game_outcome" do
-  it "returns an Array" do
-    game_outcome(1, 2).must_be_instance_of Array
-  end
-
-  it "returns an Array containing the parameters" do
-    game_outcome(1, 2).must_equal [1, 2]
+    expect(scores.size).to eq(100)
   end
 end
