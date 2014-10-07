@@ -1,3 +1,3 @@
 def shuffle(array)
-  #TODO: shuffle array manually
+  # TODO: shuffle the array manually
 end
