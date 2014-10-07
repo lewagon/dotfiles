@@ -9,7 +9,7 @@ describe '#shuffle' do
     a = [1, 2, 3, 4]
     b = shuffle(a)
     expect(b).not_to be_nil
-    b.length.must_equal a.length
+    expect(b.length).to eq a.length
     expect(a).not_to eq b
   end
 end
