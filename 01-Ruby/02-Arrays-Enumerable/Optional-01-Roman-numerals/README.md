@@ -21,6 +21,6 @@ For reference, these are the values of the letters used:
 
 ### Modern-style
 
-Eventually someone thought it would be terribly clever if putting a small number before a larger one meant you had to subtract the smaller one. As a result of this development, you must now suffer. Rewrite your previous method to return the new-style Roman numeral so when someone calls  `roman_numeral(4)` , it should return 'IV'.
+Eventually someone thought it would be terribly clever if putting a small number before a larger one meant you had to subtract the smaller one. As a result of this development, you must now suffer. Rewrite your previous method to return the new-style Roman numeral so when someone calls  `new_roman_numeral(4)` , it should return 'IV'.
 
 You can also look at this [table](http://loudexpose.files.wordpress.com/2011/02/roman-numerals.jpg) to get the concept.

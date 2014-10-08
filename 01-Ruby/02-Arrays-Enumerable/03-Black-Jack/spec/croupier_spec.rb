@@ -1,37 +1,35 @@
 # Encoding: utf-8
-require "spec_helper"
 require "croupier"
 
 describe "#state_of_the_game" do
   it 'returns a String' do
-    state_of_the_game(1, 2).must_be_instance_of String
+    expect(state_of_the_game(1, 2)).to be_a String
   end
 
   it 'returns an interpolated String' do
-    state_of_the_game(1, 2).must_equal "Your score is 1, bank is 2!"
+    expect(state_of_the_game(1, 2)).to match /score is 1/i
+    expect(state_of_the_game(1, 2)).to match /bank is 2/i
   end
 end
 
-describe "#build_message_for" do
+describe "#end_game_message" do
   it 'returns a String' do
-    build_message_for([1, 2]).must_be_instance_of String
+    expect(end_game_message(2, 16)).to be_a String
   end
 
-  it 'returns the fact that you lost when over 21' do
-    build_message_for([1, 22]).must_equal "You are over 21... you loose."
+  it 'returns the fact that you lose when over 21' do
+    expect(end_game_message(22, 16)).to match /lose/i
   end
 
-  it 'returns the fact that you won when doing 21' do
-    build_message_for([1, 21]).must_equal "Black Jack!"
+  it 'returns the fact that you win when doing 21' do
+    expect(end_game_message(21, 16)).to match /black jack/i
   end
 
   it 'returns the fact that you won when doing more than the bank' do
-    build_message_for([18, 20]).must_equal "You beat the bank! You win."
+    expect(end_game_message(20, 18)).to match /win/i
   end
 
   it 'returns the fact that you lost when doing less than the bank' do
-    build_message_for([20, 17]).must_equal "Bank beats you! You loose."
+    expect(end_game_message(17, 20)).to match /lose/i
   end
-
-
 end

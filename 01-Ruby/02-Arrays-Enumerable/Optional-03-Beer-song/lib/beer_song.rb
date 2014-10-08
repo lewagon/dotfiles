@@ -1,3 +1,3 @@
-def beersong(nb_at_start)
-  #TODO: sing the song
+def beer_song(beer_start_count)
+  # TODO: sing the song
 end
