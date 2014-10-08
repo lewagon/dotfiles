@@ -6,7 +6,7 @@ describe "#hop_hop_hop" do
     expect(result).to eq <<-END.gsub(/^ +/, '')
       Welcome felix, you are the first here!
       Welcome estelle, join your 1 friend
-      Welcome estelle, join your 2 friends
+      Welcome cedric, join your 2 friends
       Welcome fred, join your 3 friends
     END
   end
