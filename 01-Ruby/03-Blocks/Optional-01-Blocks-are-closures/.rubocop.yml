@@ -1,0 +1,11 @@
+inherit_from:
+  - ../../../.rubocop.yml
+
+UnusedBlockArgument:
+  Enabled: false
+
+UselessAssignment:
+  Enabled: false
+
+Proc:
+  Enabled: false
