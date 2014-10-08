@@ -29,16 +29,18 @@ Any Ruby program you write runs inside another piece of software: the Ruby inter
 One way is via the ARGV constant which comes pre-defined in every Ruby program. It is an Array of Strings representing the command line arguments. Consider this simple program
 
 **testing_argv.rb**
+
 ```ruby
 puts "*** Command line arguments ***"
 puts ARGV.inspect
 ````
 Now run it in the terminal this ways
+
 ```
-~ $ ruby testing_argv.rb un deux trois
+$ ruby testing_argv.rb un deux trois
 *** Command line arguments ***
 ["un", "deux", "trois"]
-~ $ ruby testing_argv.rb "un et deux" trois
+$ ruby testing_argv.rb "un et deux" trois
 *** Command line arguments ***
 ["un et deux", "trois"]
 ```
