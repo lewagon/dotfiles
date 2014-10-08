@@ -1,14 +1,11 @@
 require_relative "wagon_sort"
 
-students = []
+# TODO: Ask the user about students to add to the Wagon.
+#       Remember, to read an input from the command line, use:
+#       - `gets`:  http://www.ruby-doc.org/core-2.1.2/Kernel.html#method-i-gets
+#       - `chomp`: http://www.ruby-doc.org/core-2.1.2/String.html#method-i-chomp
 
-begin
-  puts students.empty? ? "Type a student name:" : "Type another student name (or press enter to finish):"
-  name = gets
-  name.chomp! if name
 
-  # TODO: Add the name we just gotto the students array
 
-end while name != ""
-
-# TODO: Call `wagon_sort` method and display the sorted student list
+# TODO: Then call `wagon_sort` method defined in the wagon_sort.rb
+#       file and display the sorted student list

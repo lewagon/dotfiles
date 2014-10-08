@@ -1,5 +1,5 @@
 def bugged_concatenate(array)
-  array.inject("") { |output, element| output + element }.upcase
+  array.reduce("") { |a, e| a + e }.upcase
 end
 
 def build_1984_title

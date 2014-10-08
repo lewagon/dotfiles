@@ -1,14 +1,13 @@
 require 'open3'
-require "spec_helper"
 
 describe "Interface" do
 
   let(:result) do
     result = ""
     Open3.popen2('ruby ./lib/interface.rb') do |i, o, th|
-      i.puts "ALICE"
-      i.puts "CHARLIE"
-      i.puts "BOB"
+      i.puts "Alice"
+      i.puts "charlie"
+      i.puts "Bob"
       i.puts ""
       i.close
 
@@ -18,10 +17,10 @@ describe "Interface" do
   end
 
   it "should display the number of students" do
-    result.must_match(/3 students/)
+    expect(result).to match(/3 students/)
   end
 
   it "should display the student list" do
-    result.must_match(/ALICE, BOB and CHARLIE/)
+    expect(result).to match(/Alice, Bob and charlie/)
   end
 end
