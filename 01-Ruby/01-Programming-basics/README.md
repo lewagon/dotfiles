@@ -13,7 +13,7 @@ When you want to accomplish some basic operation, there's often a perfect ruby m
 1. Finally, when you know how to implement your solution, write it in your ruby file.
 
 
-#### `04-What-your-name
+#### `04-What-your-name`
 
 A simple challenge to make you manipulate variables, methods, and string interpolation.
 
