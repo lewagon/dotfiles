@@ -10,6 +10,8 @@ EmptyLines:
   Enabled: false
 RedundantReturn:
   Enabled: false
+SelfAssignment:
+  Enabled: false
 
 AllCops:
   Exclude:
