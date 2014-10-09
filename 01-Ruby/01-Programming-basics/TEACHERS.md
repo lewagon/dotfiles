@@ -1,6 +1,6 @@
 ## Guidelines
 
-## Morning lecture
+### Morning lecture
 
 **Built-in objects**
 
@@ -43,7 +43,7 @@ number = double(number - 22)
 ```
 
 
-## Day challenges
+### Day challenges
 - Before starting the challenges, ensure every student has a clean git status, and that he has pulled upstream, in case the challenges have been changed by the teachers. Otherwise students may work on old versions of the challenges :).
 
 ```
@@ -54,9 +54,9 @@ $ git pull --no-edit upstream master
 
 - Make a brief overview of the roadmap of the day with the class, explaining the idea behind each challenge.
 
-## Live-code
+### Live-code
 
-### General guidelines
+#### General guidelines
 - The live-code should be made **from scratch**. No specs, no boilerplate. The student has to `mkdir` a new folder, `touch` its ruby file, and start coding in it. Help him on the setup. Make him code **a solution that works** in one ruby file before refactoring the code (separating the logic from the interface in 2 files, DRYing the repetitive code chunks, etc..)
 
 - Announce, **before the live-code**, which challenges they are going to live-code and who are the coders of the day. It will make them stay tensed and focused! Tell them they have to speak loud and explain their approach while they are live-coding. That's the best exercise to improve their skills!
@@ -64,7 +64,7 @@ $ git pull --no-edit upstream master
 - At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
 
 
-### Live-code details
+#### Live-code details
 
 1. `02-Experiment-methods`: just pick up some of the methods to live-code by a students, not all of them!
 1. `03-What-your-name`: Pick another student. Do not make thim read the challenge README, but make him explain in his own words what his program should accomplish and what he is trying to do (no matter if it differs from the original README). If he gets a hard time writing some code, help him write some pseudo code in english in his ruby file. That's of great help with beginners. Spend time on this live-code proposing some refacto and enhancement of the program.
