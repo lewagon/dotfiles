@@ -9,15 +9,17 @@ Although we can store them in `Proc` objects and pass them to a method as standa
 
 
 ## Specs
-- Implement the `#tag` method that builds the HTML tags around the content we give it in the block. For instance:
+
+### HTML generator method
+
+Implement the `#tag` method that builds the HTML tags around the content we give it in the block. For instance:
 
 ```ruby
 tag("h1") { "Some Title" }
 # => "<h1>Some Title</h1>"
 ```
 
-- This method accepts a second optional parameter,
-enabling to pass an array with one HTML attribute name and its value,
+This method accepts a second optional parameter, enabling to pass an array with one HTML attribute name and its value,
 like `["href", "www.google.com"]`.
 
 ```ruby
@@ -27,9 +29,29 @@ end
 # => "<h1 id='title'>Some Title</h1>"
 ```
 
-- **notice**: if you used Rails helpers already, that's exactly what they do, they are here to write HTML for us :)
+#### Arguments with default value
 
-- implement a block-timer in `#timer_for` than enables to track the duration (in seconds) of execution of any given block. It should work this way.
+In ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
+
+```ruby
+def sum(a, b = 0)
+  a + b
+end
+
+sum(3, 6) # => 9
+sum(4)    # => 4
+```
+
+Here, the second argument is worth `0` if we call `sum` with only one argument.
+
+#### Link with Rails
+
+When you will discover Rails helper methods, you will see that they do exatly the same as your home-made `#tag` method. They write HTML for you :)
+
+
+### Timer method
+
+Implement a block-timer in `#timer_for` than enables to track the duration (in seconds) of execution of any given block. It should work this way.
 
 ```ruby
 timer_for do
@@ -37,7 +59,6 @@ timer_for do
 end
 # => 3.39051 seconds elapsed
 ```
-
 
 ## Learning Badges
 
