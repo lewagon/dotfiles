@@ -2,23 +2,31 @@
 
 #### `01-Simple-looping`
 
-Simple challenge to sum integers using `while` and `for` loops
+- A simple challenge to sum integers using `while` and `for` loops.
 
-**Important**: don't spend too much time on the recursive solution (the 3rd one which is tricky) and go on to the next challenges even if your tests are not 100% green on this.
+- **Important**: don't spend too much time on the recursive solution (the 3rd) because it's tricky. Go on to the next challenges even if your tests failed on the recursion.
 
 
 #### `02-Sorting-the-wagon`
 
-A challenge on basic arrays manipulation, where you have to define an array, append element to this array and then sort it. Try to implement a basic solution first that **does the job**, even if it does not handle special case, or does not display the exact message. That's how developpers work. They build a first solution that works, and **after only they refactor and enhance!**
+A challenge on basic array manipulation, where you'll have to:
+
+1. Define an array
+1. Append elements to it
+1. Sort it
+
+Start by implementing a basic solution **that does the job**, even if it does not handle special cases, or does not display the exact message we ask you.
+
+That's how a dev works. **He builds a code that works, and then he refactors and enhances his solution**
 
 
 #### `03-Black-Jack`
 
-A more advanced challenge where you have to build a Black Jack game. It will make you use conditional and looping structures in-depth!
+A more advanced challenge to build a Black Jack game. You'll have to make a in-depth use of conditional and looping structures.
 
 #### `04-Debug-gym`
 
-Some error make this code buggy. Here, do not try to detect it in you source code. Run your ruby script and **READ THE ERROR MESSAGE**. Beginners often don't try to read their errors, but it's a major dev skill!
+Don't try to detect the bugs directly. Run your ruby file and **READ THE ERROR MESSAGE**. Beginners often don't try to read their errors, but **reading errors is a major dev skill**
 
 #### `05-Destructive-method`
 
