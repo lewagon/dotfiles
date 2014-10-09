@@ -8,6 +8,8 @@ UnusedMethodArgument:
   Enabled: false
 EmptyLines:
   Enabled: false
+RedundantReturn:
+  Enabled: false
 
 AllCops:
   Exclude:
