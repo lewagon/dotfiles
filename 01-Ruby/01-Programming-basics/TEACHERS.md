@@ -38,8 +38,8 @@ def double(x)
   2 * x
 end
 number = 3
-number = double(add(double(add(number, 2)), double(number)))
-number = double(number - 22)
+number = double(add(double(add(number, 2)), double(number))) # replace step-by-step each part by its value
+number = double(number - 22) # idem
 ```
 
 
