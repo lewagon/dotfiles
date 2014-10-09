@@ -10,7 +10,7 @@
 **How to run your code?**
 
 - The main message to give is the following: IRB is the playground to make experiments, your ruby file is your source code! So play with IRB and **then** write your solution in your file, not the other way around.
-- Show how to launch IRB (you have just used it before), how to quit it, and explain its outputs.
+- Show how to launch IRB (you've just used it to demo built-in objects), how to quit it, and explain its outputs.
 - Then show how to run a ruby script from the terminal and how to display results with `puts`. Make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on!)
 
 **Variables**
