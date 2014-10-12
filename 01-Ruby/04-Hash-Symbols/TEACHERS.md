@@ -62,7 +62,7 @@ irb(main):002:0> user_2.object_id
 Open your ruby file and ask them the difference between:
 
 ```ruby
-« name »
+"name"
 :name
 name
 ```
