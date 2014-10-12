@@ -6,7 +6,7 @@
 
 #### `02-About-blocks`
 
-A difficult challenge where you have to code a method that generates HTML strings. This method is different from the ones you've already coded as it can be passed a block of code. We've added extra difficuty in the challenge introducing a  default value for the second argument `tag(tag_name, attr = nil)`.Don't panic with this syntax and read all the challenge carefully.
+A difficult challenge where you have to code a method that generates HTML strings. This method is different from the ones you've already coded as it can be passed a block of code. We've added extra difficuty in the challenge introducing a  default value for the second argument `tag(tag_name, attr = nil)`. Don't panic with this syntax and read all the challenge carefully.
 
 
 #### `03-Beautify-my-code` and `04-Cleaning-your-mess`
