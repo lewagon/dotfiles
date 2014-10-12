@@ -181,8 +181,10 @@ def average(grades)
 end
 ```
 
-For these students, the misunderstanding is deeper. Take this example. On the first hand:
+For these students, the misunderstanding is deeper. You should take a new example and spend time on this with them.
 
+
+##### Good implementation
 ```ruby
 def mult(a, b)
   return a * b
@@ -192,8 +194,8 @@ prod = mult(2, 3)
 
 #What is prod wort at this stage of the program?
 ```
-And on the second hand
 
+##### Bad implementation
 ```ruby
 
 def mult(a, b)
