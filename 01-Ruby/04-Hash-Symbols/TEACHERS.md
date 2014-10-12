@@ -209,7 +209,7 @@ prod = mult(2, 3)
 
 Show them that their `mult` method is completely useless in the second case as we cannot store its result. Ask them how they should check their result on the terminal in the first case. They should tell you `puts prod` as the last line.
 
-Some students may be confused with `p`, `print`, and `puts`. Explain the differences between these methods, and that `p` is just the geek way of display on the terminal :)
+Some students may be confused with `p`, `print`, and `puts`. Explain the differences between these methods, and that `p` is just the geek way to display results on the terminal :)
 
 
 
