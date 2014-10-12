@@ -1,24 +1,19 @@
-## Roadmap of the day
-
-- normalement pas 10 lignes par méthode .. trouver le bon choix
-- 2nd plus costaud
-- 2 d’apres => améliorer la lisibilité == refacto (réfléchir a ce que la personne a fait)
-
 #### `01-Enumerable`
 
-- The important challenge of the day. It may take you nearly all morning.
-- The idea is a bit the same as your first challenge "Experiment methods". **Here you have to find the right iterator to perform some treatment on an array, and learn how this iterator works**, each one is different. If each of your methods has 10 lines of code, that means there's something wrong!
+- The important challenge of the day. It may take you the all morning.
+- The objective here is similar as in your first challenge "Experiment methods". **You have to find the right iterator to perform the right operation on an array, and learn how this iterator works**. Tips: if you pick the right method, no need to write 10 lines of code for each solution!
+
 
 #### `02-About-blocks`
 
-A difficult challenge where you have to code a method using a block that generates HTML strings. Don't panic with the syntax of the method we give you with the default argument `tag(tag_name, attr = nil)`. Read all the challenge to understand what this syntax means (it's not complicated).
+A difficult challenge where you have to code a method that generates HTML strings. This method is different from the ones you've already coded as it can be passed a block of code. We've added extra difficuty in the challenge introducing a  default value for the second argument `tag(tag_name, attr = nil)`.Don't panic with this syntax and read all the challenge carefully.
 
 
 #### `03-Beautify-my-code` and `04-Cleaning-your-mess`
 
-The first challenge is here to teach you that **readibility** matters. Try to make your code **readable** to others. Pick good names for your variables, use intermediate variables when it makes your code more understandable. The second challenge is here to make you refactor some bad code (inherited from a poor developper). Enhance it, DRY it, make it readable and beautiful!
+The first challenge is here to teach you that **readibility** matters. Try to make your code **readable** to others. Pick good names for your variables & methods, use intermediate variables when it makes your code more readable. The second challenge is here to make you refactor some bad code (that some poor developper gave you). Enhance it, DRY it, make it readable and beautiful!
 
 
 #### `05-Louchebem`
 
-Code a Louchebem translator (it's an French slang). Go step-by-step, start simply with a word translator. And then try to handle longer texts and enhance your translator.
+Code a Louchebem translator (the Louchebem is a French slang). Go step-by-step, start simply with a word translator and then try to handle longer texts and enhance your translator.
