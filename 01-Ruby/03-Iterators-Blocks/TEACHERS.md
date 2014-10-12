@@ -10,8 +10,8 @@
   - These powerfull methods (`map`, `count`, `select`,..) are **just methods** as the ones we've used on strings (`downcase`, `split`,..). They just have a different syntax and apply complex treatments on arrays.
 
   - `each`? `each_with_index`? `select`? `map`? How to choose? Ask yourself
-  1. What do elements of the array do I need for my treatment? Just the cell value? The value + index?
-  1. Which treatment am I trying to accomplish? Which value do I want to get in return? A number? A modified array? a string?
+    1. What do elements of the array do I need for my treatment? Just the cell value? The value + index?
+    1. Which treatment am I trying to accomplish? Which value do I want to get in return? A number? A modified array? a string?
 
 - Finish this first chapter showing quickly the slides up to the **Blocks** chapter. They should have no questions on them since you've just shown all of this in the live-code.
 
