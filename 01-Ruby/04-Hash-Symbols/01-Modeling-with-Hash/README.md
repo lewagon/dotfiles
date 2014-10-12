@@ -25,9 +25,11 @@ Now let's say you want to enhance your calories counter, so that he can accepts 
 * "Best Of Royal Cheese" : "Royal Cheese", "Potatoes", "Sprite"
 - enhance your method `#calories_counter` so that you can calculate calories running `calories_counter("French fries", "Happy Meal", "Sprite")`
 
+For the second method `calories_counter(*orders)`, you should read [this article](http://endofline.wordpress.com/2011/01/21/the-strange-ruby-splat/) on ruby splat to understand the strange syntax for the parameter `*orders`.
+
 ## Learning Badges
 - What's a hash ? When do you use them ?
 - Can you figure out how you would have done to code your calories counter using arrays ? painfull, no ?
 
 ## Tips & Resources
-- Document yourself on the [splat operator](http://endofline.wordpress.com/2011/01/21/the-strange-ruby-splat/) used by the enhanced method `#calories_counter` 
+- Document yourself on the [splat operator](http://endofline.wordpress.com/2011/01/21/the-strange-ruby-splat/) used by the enhanced method `#calories_counter`
