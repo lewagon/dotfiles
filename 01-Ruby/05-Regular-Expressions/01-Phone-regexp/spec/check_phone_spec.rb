@@ -1,5 +1,4 @@
 require "check_phone"
-require "spec_helper"
 
 describe "#french_phone_number?" do
   FIXTURES = {
@@ -15,7 +14,7 @@ describe "#french_phone_number?" do
 
   FIXTURES.each do |phone_number, result|
     it "should #{result ? 'accept' : 'reject'} #{phone_number}" do
-      french_phone_number?(phone_number).must_equal result
+      expect(french_phone_number?(phone_number)).to eq result
     end
   end
 end
