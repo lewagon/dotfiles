@@ -1,6 +1,5 @@
 ## Roadmap of the day
 
-
 - normalement pas 10 lignes par méthode .. trouver le bon choix
 - 2nd plus costaud
 - 2 d’apres => améliorer la lisibilité == refacto (réfléchir a ce que la personne a fait)
@@ -16,8 +15,10 @@ A difficult challenge where you have to code a method using a block that generat
 
 
 #### `03-Beautify-my-code` and `04-Cleaning-your-mess`
+
 The first challenge is here to teach you that **readibility** matters. Try to make your code **readable** to others. Pick good names for your variables, use intermediate variables when it makes your code more understandable. The second challenge is here to make you refactor some bad code (inherited from a poor developper). Enhance it, DRY it, make it readable and beautiful!
 
 
 #### `05-Louchebem`
+
 Code a Louchebem translator (it's an French slang). Go step-by-step, start simply with a word translator. And then try to handle longer texts and enhance your translator.
