@@ -2,7 +2,7 @@
 
 ### Morning lecture
 
-**Iterators**
+#### Iterators
 
 Begin with a live-code on the examples given in the slides (on musicians). Start with a `for` loop to print each musician, then each musician with its index.. Then introduce the iterators (`each`, `each_with_index`) as the more "semantic way" of doing these treatments in ruby. Continue your live-code with examples on `map`, `count`, `select`, answering students questions
 
@@ -16,7 +16,7 @@ Begin with a live-code on the examples given in the slides (on musicians). Start
 
 Present quickly all the slides up to the **Blocks** chapter. They should have no questions since you've just live-coded all these concepts.
 
-**Blocks**
+#### Blocks
 
 Start with the theoretical slides this time!
 
