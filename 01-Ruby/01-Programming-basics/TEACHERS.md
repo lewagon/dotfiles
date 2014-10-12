@@ -4,24 +4,24 @@
 
 That's one of the most important lectures. Don't underestimate how hard it is for beginners to understand simple concepts: variable assignation, method definition vs method call, etc.. Above all, **avoid digressions**, even if an some guy asks you a very cool questions on `Proc` :). Stay in the scope and keep it simple, spending more time answering questions on simpler but more crucial questions.
 
-**Built-in objects**
+#### Built-in objects
 
 - Spend some time (but not too much) on the slides.
 - Then switch on IRB to live-code some examples of simple statements on built-in objects (try to make it interactive and ask questions to the students)
 
-**How to run your code?**
+#### How to run your code?
 
 - The main message to give is the following: IRB is the playground to make experiments, your ruby file is your source code! So play with IRB and **then** write your solution in your file, not the other way around.
 - Show how to launch IRB (you've just used it to demo built-in objects), how to quit it, and explain its outputs.
 - Then show how to run a ruby script from the terminal and how to display results with `puts`. Make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on!)
 
-**Variables**
+#### Variables
 
 - **Spend time on this!**. Start with the slides then go to the white board to make "shoes box" drawings. A variable is like a **named** shoes box containing a value. When we assign it, we put something in the shoes box. When we use it, we use its content. When we re-assign it, we change our shoes, etc..
 
 - Take your time on assignment and re-assignment coding 2 or 3 different examples on a ruby file. Ask them questions to ensure they get it! Hammer on the fact that a **variable is not a string**, it has no `""`!
 
-**Methods**
+#### Methods
 
 - Again **go slowly**, and live-code different examples to ensure they  really understand the difference between defining and calling a method, and the difference between parameters and arguments !
 

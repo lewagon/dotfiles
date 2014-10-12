@@ -2,7 +2,7 @@
 
 ### Morning lecture
 
-**Controlling the flow**
+#### Controlling the flow
 
 - Start with a live code, not with the slides!
 - Present the standard way ruby instuction ar read in a file, line-by-line, from top to bottom
@@ -10,7 +10,7 @@
 - Introduce one-by-one the others structure on some personal examples you pick: `if..end`, `if !..end` `if..else..end`, `for..end`, `while/untill..end`
 - Once you've finished your demo and anwsered questions, scroll quickly on the slides to show the students they have all the syntax elements written on the slides.
 
-**Arrays**
+#### Arrays
 
 - Again, start with a live-code. You can take the same example as the one used in the slides on the "Beatles". If you do so, students won't feel lost reading the slides after your talk.
 - Your live-code should explain basic operations on array: how to define an array (eventually empty), get the value of a cell, change this value, append an new element, get the array size,..
