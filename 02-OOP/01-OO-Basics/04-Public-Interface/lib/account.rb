@@ -3,7 +3,6 @@ class DepositError < StandardError
 end
 
 class BankAccount
-
   # Contract for the BankAccount class
   # - you can access full owner's name and position, but partial IBAN
   # - you cannot access full IBAN
@@ -15,7 +14,7 @@ class BankAccount
   MIN_DEPOSIT =  100
 
   def initialize(name, iban, initial_deposit, password)
-    raise DepositError, "Insufficient deposit" unless initial_deposit > MIN_DEPOSIT
+    fail DepositError, "Insufficient deposit" unless initial_deposit > MIN_DEPOSIT
     @password = password
     @transactions = []
     @position = 0
@@ -54,5 +53,4 @@ class BankAccount
     # TODO: add the amount in the transactions array
     # TODO: update the current position (which represents the balance of the account)
   end
-
 end
