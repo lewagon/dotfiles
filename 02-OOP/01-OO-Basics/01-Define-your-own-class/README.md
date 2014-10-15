@@ -13,6 +13,13 @@ For instance, if you chose to model Restaurants, create the `restaurant.rb` file
 $ touch lib/restaurant.rb
 ```
 
+## Convention
+
+**Be very careful** to your class file and your class name. Remember, lower_snake_case for file name,
+UpperCamelCase for class name in the class definition. Also, if you want to model restaurants, you'll
+use a `Restaurant` class, not `Restaurants`! Remember, the class is the mold to produce
+several restaurants (with `new`), so it should be singular!
+
 ### What are the inner properties of your objects?
 
 What are the characteristics of a restaurant? of a user? of a game?

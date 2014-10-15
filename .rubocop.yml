@@ -10,6 +10,10 @@ EmptyLines:
   Enabled: false
 RedundantReturn:
   Enabled: false
+SelfAssignment:
+  Enabled: false
+Documentation:
+    Enabled: false
 
 AllCops:
   Exclude:

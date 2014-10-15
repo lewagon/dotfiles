@@ -1,4 +1,5 @@
 ## Background & Objectives
+
 - Get familiar with parsing JSON format
 - Learn how to separate responsabilities of your gaming program in several sub-methods
 
@@ -28,7 +29,7 @@ Your score: 3.194722666666667
 Message: well done
 ```
 
-This challenge will let you access a web-API, and parse JSON data returned by this API ! Pas mal de fun en perspective :) 
+This challenge will let you access a web-API, and parse JSON data returned by this API ! Pas mal de fun en perspective :)
 
 **Constraints**:
 

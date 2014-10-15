@@ -1,6 +1,5 @@
 class Playboy
-
-  #TODO: implement necessary getters or setters to run meeting_casanova.rb
+  # TODO: implement necessary getters or setters to run meeting_casanova.rb
 
   INITIAL_HAIR_LENGTH = 20  # beautiful long playboy hair
 
@@ -13,5 +12,4 @@ class Playboy
   def meets(lady)
     @conquests << lady unless @married
   end
-
 end

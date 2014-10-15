@@ -1,27 +1,26 @@
 require "orange_tree"
-require "spec_helper"
 
 describe OrangeTree do
   let(:orange_tree) { OrangeTree.new }
 
   it "should be measurable" do
-    orange_tree.must_respond_to :height
-    orange_tree.height.must_be_instance_of Fixnum
+    expect(orange_tree).to respond_to :height
+    expect(orange_tree.height).to be_a Fixnum
   end
 
   it "should measure 0 meter when 0 years old" do
-    orange_tree.height.must_equal 0
+    expect(orange_tree.height).to eq 0
   end
 
   it "should age each year" do
-    orange_tree.must_respond_to :one_year_passes!
+    expect(orange_tree).to respond_to :one_year_passes!
   end
 
   it "should be alive until 50 years old" do
-    orange_tree.dead?.must_equal false
+    expect(orange_tree.dead?).to eq false
     50.times do
       orange_tree.one_year_passes!
-      orange_tree.dead?.must_equal false
+      expect(orange_tree.dead?).to eq false
     end
   end
 
@@ -30,7 +29,7 @@ describe OrangeTree do
       orange_tree.one_year_passes!
     end
 
-    orange_tree.height.must_equal 10
+    expect(orange_tree.height).to eq 10
   end
 
   it "should still measure 10 meters when 20 years old" do
@@ -38,7 +37,7 @@ describe OrangeTree do
       orange_tree.one_year_passes!
     end
 
-    orange_tree.height.must_equal 10
+    expect(orange_tree.height).to eq 10
   end
 
   it "should be dead after 100 years" do
@@ -46,7 +45,7 @@ describe OrangeTree do
       orange_tree.one_year_passes!
     end
 
-    orange_tree.dead?.must_equal true
+    expect(orange_tree.dead?).to eq true
   end
 
   it "should be probable for it to die between 50 and 99 years" do
@@ -60,13 +59,13 @@ describe OrangeTree do
       found_dead = found_dead || orange_tree.dead?
     end
 
-    found_dead.must_equal true
+    expect(found_dead).to eq true
   end
 
   it "should not produce fruits until it is 5 years old" do
     5.times do
       orange_tree.one_year_passes!
-      orange_tree.fruits.must_equal 0
+      expect(orange_tree.fruits).to eq 0
     end
   end
 
@@ -76,7 +75,7 @@ describe OrangeTree do
     end
     5.times do
       orange_tree.one_year_passes!
-      orange_tree.fruits.must_equal 100
+      expect(orange_tree.fruits).to eq 100
     end
   end
 
@@ -86,7 +85,7 @@ describe OrangeTree do
     end
     5.times do
       orange_tree.one_year_passes!
-      orange_tree.fruits.must_equal 200
+      expect(orange_tree.fruits).to eq 200
     end
   end
 
@@ -95,7 +94,7 @@ describe OrangeTree do
       orange_tree.one_year_passes!
     end
 
-    orange_tree.fruits.must_equal 0
+    expect(orange_tree.fruits).to eq 0
   end
 
   it "should be able to let people pick an orange" do
@@ -105,7 +104,7 @@ describe OrangeTree do
 
     fruit_count = orange_tree.fruits
     orange_tree.pick_a_fruit!
-    orange_tree.fruits.must_equal (fruit_count - 1)
+    expect(orange_tree.fruits).to eq (fruit_count - 1)
   end
 
 end

@@ -5,7 +5,9 @@ puts casanova.nationality
 
 casanova.meets("Giullia")
 casanova.meets("Louisia")
-casanova.conquests.each_with_index {|conquest, index| puts "conquest #{index + 1} : #{conquest}"}
+casanova.conquests.each_with_index do |conquest, index|
+  puts "conquest #{index + 1} : #{conquest}"
+end
 
 10.times { casanova.hair_length += 1 }
 casanova.hair_length =  0 # Casanova gets shaved
