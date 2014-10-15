@@ -1,15 +1,15 @@
 class Dessert
   def initialize(name, calories)
-  end 
-  
+  end
+
   def healthy?
   end
-  
+
   def delicious?
   end
 end
 
-class JellyBean < Dessert  
+class JellyBean < Dessert
   def initialize(name, calories, flavor)
   end
 end
