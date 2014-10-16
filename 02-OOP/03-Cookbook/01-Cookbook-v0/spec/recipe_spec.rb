@@ -1,5 +1,3 @@
-require "spec_helper"
-
 begin
   require 'recipe_factory'
 rescue
@@ -10,21 +8,21 @@ describe Recipe do
 
   describe '#name' do
     it 'should return the name of recipe' do
-      recipe.must_respond_to :name
+      expect(recipe).to respond_to :name
     end
   end
 
   describe '#description' do
     it 'should return the description of recipe' do
-      recipe.must_respond_to :description
+      expect(recipe).to respond_to :description
     end
   end
 
   describe '#initialize' do
     it 'should create a recipe with a list of attributes' do
       recipe = RecipeFactory.build('Brownie', 'Delicious chocolate cake')
-      recipe.name.must_equal 'Brownie'
-      recipe.description.must_equal 'Delicious chocolate cake'
+      expect(recipe.name).to eq 'Brownie'
+      expect(recipe.description).to eq 'Delicious chocolate cake'
     end
   end
 end

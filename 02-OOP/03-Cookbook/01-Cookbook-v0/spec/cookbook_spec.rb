@@ -1,4 +1,3 @@
-require "spec_helper"
 require "csv"
 require 'recipe_factory'
 
@@ -38,14 +37,14 @@ describe Cookbook do
 
   describe '#initialize' do
     it 'should have loading existing recipies in spec/recipies.csv' do
-      @cookbook.recipes.length.must_equal recipes.length
+      expect(@cookbook.recipes.length).to eq recipes.length
     end
   end
 
   describe '#recipes' do
     it "should give access to all recipes" do
-      @cookbook.must_respond_to :recipes
-      @cookbook.recipes.must_be_instance_of Array
+      expect(@cookbook).to respond_to :recipes
+      expect(@cookbook.recipes).to be_a Array
     end
   end
 
@@ -53,7 +52,7 @@ describe Cookbook do
     it 'should add a recipe to the cookbook' do
       size_before = @cookbook.recipes.length
       @cookbook.add_recipe(RecipeFactory.build("Risotto", "Good stuff"))
-      @cookbook.recipes.length.must_equal (size_before + 1)
+      expect(@cookbook.recipes.length).to eq (size_before + 1)
     end
 
     it 'should store the new recipe in CSV' do
@@ -62,7 +61,7 @@ describe Cookbook do
 
       # Reload from CSV
       new_cookbook = Cookbook.new(csv_path)
-      new_cookbook.recipes.length.must_equal (size_before + 1)
+      expect(new_cookbook.recipes.length).to eq (size_before + 1)
     end
   end
 
@@ -70,7 +69,7 @@ describe Cookbook do
     it 'should remove a recipe from the cookbook' do
       size_before = @cookbook.recipes.length
       @cookbook.remove_recipe(0)
-      @cookbook.recipes.length.must_equal (size_before - 1)
+      expect(@cookbook.recipes.length).to eq (size_before - 1)
     end
 
     it 'should remove the recipe from the CSV' do
@@ -79,7 +78,7 @@ describe Cookbook do
 
       # Reload from CSV
       new_cookbook = Cookbook.new(csv_path)
-      new_cookbook.recipes.length.must_equal (size_before - 1)
+      expect(new_cookbook.recipes.length).to eq (size_before - 1)
     end
   end
 

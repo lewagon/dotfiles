@@ -6,4 +6,7 @@ CSV_FILE = File.join(File.dirname(__FILE__), 'recipes.csv')
 cookbook = Cookbook.new(CSV_FILE)
 controller = Controller.new(cookbook)
 
-Router.new(controller).run
+router = Router.new(controller)
+
+# Start the app
+router.run
