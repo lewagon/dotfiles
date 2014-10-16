@@ -3,7 +3,7 @@
 ### Morning lecture
 - No special guidelines. Live-code all the regexps you like :). Give examples of codes both validating strings against regexps and matching data to extract infos from texts.
 
-- In case you've haven't used regexp for a long time, remember the difference between `match` and `scan`
+- In case you haven't used regexp for a long time, remember the difference between `match` and `scan`
 
 - You may also demo a small scraping like [LeBonCoin scraping](https://gist.github.com/Papillard/10654300) and use regexps to extract prices and other usefull infos from the texts parsed from HTML. It can be cool to show them their first gem.
 
