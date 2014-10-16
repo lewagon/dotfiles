@@ -5,30 +5,47 @@ Your dotfiles are personal. [Fork this repo](https://github.com/lewagon/dotfiles
 and then clone it on your computer.
 
 ```bash
+# Create a global variable storing
+# You need to replace what's *after* the equal sign by your own github username (case sensitive)
+#
+# e.g.: GITHUB_USERNAME=ssaunier
+#
 $ GITHUB_USERNAME=<put_your_github_username_here>
 
 # Then execute the 3 following lines without changing anything
-$ mkdir -p ~/code/${GITHUB_USERNAME} && cd $_
-$ git clone git@github.com:${GITHUB_USERNAME}/dotfiles.git
+$ mkdir -p ~/code/$GITHUB_USERNAME && cd $_
+$ git clone git@github.com:$GITHUB_USERNAME/dotfiles.git
 $ cd dotfiles
 ```
 
-Open and edit the `[user]`'s section of the `gitconfig` file. When you're done, save these config (that's why you forked the repo) and push it on GitHub.
+Open the `gitconfig` file with Sublime Text. You can run the
+following to open your Finder:
 
-Now you can run the install script. It will not override existing config files, just
-rename them as ```#{file}.backup```.
+```bash
+$ open .
+```
+
+Edit & save the `[user]`'s section of the `gitconfig` file.
+
+Save your identity configuration, and push it to GitHub.
+
+```bash
+$ git add gitconfig
+$ git commit --message "My identity for @lewagon in the gitconfig"
+$ git push origin master
+```
+
+You can review your changes here:
+
+```bash
+$ open https://github.com/$GITHUB_USERNAME/dotfiles
+```
+
+Now you can run the install script. It will not override existing config files, just rename them as ```#{file}.backup```.
 Assumption: you have [`oh-my-zsh`](http://ohmyz.sh/) is already installed.
 
 ```bash
 $ ./install.sh
-```
-
-Save your identity configuration
-
-```bash
-$ git add gitconfig
-$ git commit --message "My identity in the gitconfig"
-$ git push origin master
 ```
 
 Customization
