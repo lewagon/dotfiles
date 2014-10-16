@@ -1,4 +1,3 @@
-require "spec_helper"
 begin
   require "controller"
 rescue LoadError
@@ -12,27 +11,27 @@ describe Controller do
 
   describe '#initialize' do
     it 'stores the Cookbook in an instance variable' do
-      controller
-        .instance_variable_get(:@cookbook)
-        .must_be_instance_of Cookbook
+      expect(controller
+        .instance_variable_get(:@cookbook))
+        .to be_a Cookbook
     end
   end
 
   describe '#list' do
     it 'should implements a method to list cookbook recipes' do
-      controller.must_respond_to :list
+      expect(controller).to respond_to :list
     end
   end
 
   describe '#create' do
     it 'should implements a method to create a cookbook recipe' do
-      controller.must_respond_to :create
+      expect(controller).to respond_to :create
     end
   end
 
   describe '#destroy' do
     it 'should implements a method to destroy a cookbook recipe' do
-      controller.must_respond_to :destroy
+      expect(controller).to respond_to :destroy
     end
   end
 end

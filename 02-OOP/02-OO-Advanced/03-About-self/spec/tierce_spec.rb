@@ -1,10 +1,9 @@
 # Encoding: utf-8
 
-require "spec_helper"
 require "tierce"
 
-describe "#has_tierce?" do
+describe "#tierce?" do
   it "should get the tierce" do
-    has_tierce?.must_equal true
+    expect(tierce?).to eq true
   end
 end
