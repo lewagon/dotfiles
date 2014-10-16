@@ -36,15 +36,9 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-history-substring-search" ]; then
 fi
 cd "$CURRENT_DIR"
 
-# zshenv
-if [ ! -e "$HOME/.zshenv" ]; then
-  touch "$HOME/.zshenv"
-fi
-
 source ~/.zshrc
 
 # Setting Sublime Text as main editor and git editor
 subl_path=`alias subl | grep -o '\(/[a-zA-Z0-9. ]\+\)\+'`
 git config --global core.editor "'$subl_path' -n -w"
 
-echo "You should quit and relaunch your terminal!"

@@ -19,7 +19,7 @@ export PATH='~/.rbenv/shims:/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/s
 unsetopt correct_all
 
 # To use Homebrew's directories rather than ~/.rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
+export RBENV_ROOT=$HOME/.rbenv
 export PATH="${RBENV_ROOT}/bin:${PATH}"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
