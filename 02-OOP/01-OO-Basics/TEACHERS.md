@@ -3,7 +3,7 @@
 ### Morning lecture
 
 #### Introduction
-Software are not one-file programs. They are made of classes connected together. From the beginning of the bootcamp, you've been manipulating classes without knowing it, `String`, 'Array', etc... They're the built-in classes. Now you'll see how to define your own classes !
+Software are not one-file programs. They are made of different files and different classes communicating with each other. From day-one @Le Wagon, you've been manipulating classes without knowing it, `String`, 'Array', etc... They're the built-in classes. Now you'll see how to define your own classes !
 
 
 Explain that a class includes 1) data / state (instance variables) and 2) behavior (instance methods). Example: a string is made of data = the chain of characters + behavior = all the methods that can be called (`downcase`, `split`, etc.).
