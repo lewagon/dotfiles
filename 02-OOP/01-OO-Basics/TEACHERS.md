@@ -10,63 +10,95 @@ Explain that a class includes 1) data / state (instance variables) and 2) behavi
 
 Spend time on the "cake pan" metaphora to explain the difference between the class and its objects. "The cake pan is the class, the cakes created with the cake pan are the instances", repeat it again and again, as much as needed!
 
-
 #### My first class
 
-Here the best option is to live-code all the concepts directly and discuss them with the class. Spend some time on the file name convention:
+Here the best option is to live-code all the concepts directly and discuss them with the class. Spend some time on the filename convention:
+
 - `Car` => `car.rb`
 - `SportCar` => `sport_car.rb`
 
-Make the live-code interactive. Ask them: what are the caracteristics of a car? How do you describe its state ?
+Make the live-code interactive. Ask them:
+
+- What are the characteristics of a car? How do you describe its state?
+- What are the characteristics of a car "at inception", when we create it? The brand? The color? The number of kilometers? live-code the corresponding constructor `#initialize` with relevant arguments.
 
 
-- coder #initialize avec un argument
-- new appelle initialize, le montrer !
-
+```ruby
+# example
 def initialize(color)
-     p « initialize called with #{color} »
-     @color = color
+  p "initialize called with #{color}"
+  @color = color
+  @engine_started = false
+end
+```
+
+- Show we can have several several parameters `initalize(color, brand)`. A good way to explain the constructor "it gives the state of the object at t=0".
+
+#### Instance variables
+
+What are these strange notations `@engine_started`, `@color`, `@brand`? These are instance variables, variables that represent the internal state of **each instance** and that are accessible in every instance method.
+
+#### Instance methods
+
+Let's add some behavior to start our car => instance methods
+
+Go to the white-board and make a drawing
+
+```ruby
+class Car
+  def initialize(color, brand)
+    @color = color
+    @brand = brand
+    @engine_started = false
+  end
+  def start_engine
+    @engine_started = true
+  end
 end
 
-- on peut avoir plusieurs arguments initalize(color, brand)
-qu’est ce que @color ?
+ferrari = Car.new("red", "ferrari")
+# --------------------------
+#| @color => "red"          |
+#| @brand => "ferrari"      |
+#| @engine_started => false |
+# --------------------------
 
-@engine_started = false
+peugeot = Car.new("blue", "peugeot")
+# --------------------------
+#| @color => "blue"         |
+#| @brand => "peugeot"      |
+#| @engine_started => false |
+# --------------------------
 
-stocker des données propres à chaque instance
-
-BEHAVIOR
-
-def engine_started?..end
-def start_engine..end
-
-diff: - pas dans le fichier comme ce qu’on a codé, mais DANS la classe
-idem String => upcase/downcase
-
-dessiner des boites ac des instances de voitures, ce qu’elle a dans le ventre… une peugeot rouge, une renaut verte.
-
-
-le initialize = m’état de mon objet à t=0 sa data à ce moment
-
-ACCESSEUR
-comment printer le nombre de kilometre ?
-p my_car.kms
-regarder le message d’erreur
-
-attr: imaginez vous avez 5 variables d’instance (marque, couleur, prix, kilométrage, etc..) et qu’on a envie d’y accéder en lecture et en écriture => 2 x 3 x 5 = 30 lignes de code …relou !!! 2 lignes de code avec les attr !
+ferrari.start_engine
+# --------------------------
+#| @color => "red"          |
+#| @brand => "ferrari"      |
+#| @engine_started => true  |
+# --------------------------
+```
 
 
-attr_accessor sur tout ??
-non @engine_started on ne veut pas que qq puisse intervenir sur le moteur directement…
-méthode de démarrage = interface
-démarrer avec les fils => t’as pas envie
-exposer des méthodes de démarrage (avec la clef!!)
+Explain that it differs from what they'v done from the beginning. Now they define their methods **in the class**, not in the main program, and they call them **on the instances**
 
+### Accessors
 
+Can they think of the most elementary instance methods? How do we print some car's color? its number of kilometers?
 
+```ruby
+# example
+p my_car.kms`
 
+# Make them read the error message when the getter is not defined !!
+```
 
+Then code some setter `color=(color)`
 
+**Good pedagogical insights on accessors:**
+
+- imagine you have 5 instance methods you want to access (in read / write mode) => it makes 2 x 3 x 5 = 30 lines of code to code all the getters and setters. What a pollution of your class.
+
+- Do we need accessors on all instance variables? Nope, think of your car. You wan't to start the engine by turning the key, not by getting your hands in the engine. The same way `@engine_started`should not be exposed but manipulated through the class interface `start_engine` or `turn_key_on`.
 
 ### Day challenges
 
@@ -95,4 +127,5 @@ $ git pull --no-edit upstream master
 
 
 #### Live-code details
+- For this live code, it can be fun to improvise on a class proposed by one of the student. Be sure it's fun firts ! Then ask them to progressively add cool data and behavior to their class. It can be a `Restaurant` with reviews, a `Girlfriend` that can be dated ;) anything makes them enthusiastic!
 
