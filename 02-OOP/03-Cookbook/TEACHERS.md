@@ -24,12 +24,14 @@ Start with the slides
 There are other classical structures we use a lot in programming
 
 **Stack ("pile" in french)**
+
 - LIFO stucture: "Last In First Out"
 - `push` => append element at the end of the array
 - `pop` => delete **last** elements and return it
 - Well, `Array` is already a LIFO.
 
 **Queue**
+
 - FIFO structure: "First In First Out"
 - `push` => append element at the end of the array
 - `pop` => delete **first** elements and return it
