@@ -91,7 +91,7 @@ Can they think of the most elementary instance methods? How do we print some car
 
 ```ruby
 # example
-p my_car.kms`
+p my_car.kms
 
 # Make them read the error message when the getter is not defined !!
 ```
