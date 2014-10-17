@@ -4,15 +4,13 @@
 
 #### Reminder
 
-Spend 30 minutes on a simple class and ask them questions step-by-step to code it:
+Spend 20 minutes to rehearse core concepts on a simple `Cat` class (or another example) and ask them questions step-by-step to code it:
 
-- how do I define the class for my cat? what's the name convention?
-- what are the caracteristics of a cat? which kind of variables do you use?
-- where do I find the value to instantiate color and name? (code the `initialize` without argument at 1st step)
-- how do I access my cat name? define the reader manually with them then use `attr_reader`?
-- to change my color? We don't use a writer? Try not to use writer or accessor code your own methods for writing values and keep only the readers. Example here, by having our own method to change color, we can add intelligence (e.g. store color history for my cat), without changing the API.
-
-**Rule of thumb:** No `attr_writer` or `attr_accessor`, code your own writer methods.
+- How do I define the class for my cat? What's the convention for a class name?
+- What are the caracteristics of a cat? which kind of variables do you use to store this data?
+- Where do I find the value to instantiate color and name? start coding the `initialize` without arguments 
+- How do I access my cat name? define the reader manually with them then use `attr_reader`?
+- How do I change my color? **Rule of thumb:** No `attr_writer` or `attr_accessor`, code your own writer methods. It enables to add intelligence (in our case store cat's color history) without changing you class API.
 
 <script src="https://gist.github.com/ssaunier/f95ac9e983032bcbe396.js"></script>
 
