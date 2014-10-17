@@ -19,9 +19,9 @@ Spend 20 minutes to rehearse core concepts on a simple `Cat` class (or another e
 Start with the slides
 
 - Real-life objects: direct way to see classes (ex: car, recipe)
-- Data structures: which data structures do you know already? Array, Hash
+- Data structures: which data structures do you know already? `Array`, `Hash`
 
-There are other classicals structures we use a lot in programming
+There are other classical structures we use a lot in programming
 
 **Stack ("pile" in french)**
 - LIFO stucture: "Last In First Out"
@@ -34,19 +34,20 @@ There are other classicals structures we use a lot in programming
 - `push` => append element at the end of the array
 - `pop` => delete **first** elements and return it
 
-There are **queues** everywhere in programs. A gives tasks to do to B, well they will use a intermediate queue. A will push tasks and B will pop them progressively.
+There are **queues** everywhere in programs. If **A** wants to transfer tasks to **B**, he will use an intermediate queue to store tasks. **A** will push tasks and **B** will pop them progressively.
 
 #### TODO manager
-We'll code this software together and interactively. **Here we give you a good way to articulate the live-code and discussion with the class**
+We'll code this software together and interactively. **Herebelow we describe a good way to articulate the live-code and discussion with the class**
 
-What classes do we need for this program (**whiteboard brainstorm**)?
+##### Whiteboard Brainstorm
+
+What classes do we need for this program ?
 - task, list, file (**data**)
 - **display** tasks
 - how do you make data & display communicate? **controller** => chief orchestra who has methods for the app logic, add / delete / mark tasks.
 
-
 ##### Data
-What do we start with? display, interface, controller? Let's start with data it's the heart of our app
+What do we start with? display, interface, controller? Let's start with data. It's the heart of our todo-app.
 
 ```ruby
 # task.rb
@@ -58,7 +59,7 @@ class Task
   end
 end
 ```
-Well, where is the real data? We need a DB, that we'll see next week. Let's create a repository class to mimic a DB.
+Where is the real data stored? We need a database (that we'll see next week). For the moment, let's create a repository class to mimic a database.
 
 ```ruby
 # task_repository.rb
@@ -75,7 +76,7 @@ end
 ```
 
 ##### Controller
-The controller is the chief orchestra, he will get user input from interface and then manipulate tasks, and update the repository.
+The controller is the chief conductor ("chef d'orchestre"). He will get user input through the display, update tasks in the repository, and output results through the display. He needs to manipulate both the display and the repository.
 
 ```ruby
 # controller.rb
@@ -91,9 +92,7 @@ class Controller
   end
 end
 ```
-
-How do we deal with 1)? No `gets.chomp` in the controller this is interface !
-
+How do we deal with 1)? No `gets.chomp` in the controller! this is interface responsibility.
 
 ##### Display
 ```ruby
@@ -107,7 +106,7 @@ class Dipslay
 end
 ```
 
-Now we can complete 1) in controller
+Now we can complete 1) in the controller
 
 ```
 # controller.rb
@@ -152,7 +151,7 @@ end
 
 ##### The Glue
 
-Let's code the `app.rb` file that we will launch from terminal
+Let's code the `app.rb` file that we will launch from terminal to start our todo-app.
 
 ```ruby
 require_relative "task_repository"
@@ -182,10 +181,9 @@ while true
 end
 ```
 
-Read the error message! the controller needs the task class. Add `require_relative "task"` in the controller. If we are not satisfied by the display, we know we need to change the `Display` class only !! yeah, that's what is great with separating responsibilities.
+Read the error message! the controller needs the task class. Add `require_relative "task"` in the controller. If we are not satisfied by the display, we know we need to change the `Display` class only :) yeah, that's what is great with separating responsibilities.
 
-Finish the live-code adding the feature of marking tasks as done.
-
+Finish the live-code adding the possibility of marking tasks as done.
 
 ### Day challenges
 Before starting the challenges
@@ -214,3 +212,4 @@ The
 - At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
 
 #### Live-code details
+No live-code, we will correct to Cookbook on Monday evening.
