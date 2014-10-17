@@ -21,7 +21,7 @@ Regular expressions are advanced structures. Don't work on the Regexp challenges
 - hash manipulation
 - strings and symbols
 
-If these concepts are not clear for you, join the "ReBoot" group, who will work on new challenges to rehearse the core notions. For the others, here is the roadmap of the day.
+If these concepts are not clear for you, **join the "ReBoot" group, who will work during 2 days on new challenges to rehearse core notions**. For the others, here is the roadmap of the day.
 
 #### `01-Phone-regexp`
 A simple challenge on regexp to detect phone patterns.
