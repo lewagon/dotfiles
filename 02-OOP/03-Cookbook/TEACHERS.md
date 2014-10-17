@@ -97,6 +97,7 @@ end
 How do we deal with 1)? No `gets.chomp` in the controller! this is interface responsibility.
 
 #### Display
+
 ```ruby
 # display.rb
 class Dipslay
@@ -110,7 +111,7 @@ end
 
 Now we can complete 1) in the controller
 
-```
+```ruby
 # controller.rb
 class Controller
   def initialize(task_repository, display)
