@@ -2,7 +2,7 @@
 
 ### Morning lecture
 
-**Reminder**
+#### Reminder
 
 Spend 30 minutes on a simple class and ask them questions step-by-step to code it:
 
@@ -16,18 +16,14 @@ Spend 30 minutes on a simple class and ask them questions step-by-step to code i
 
 <script src="https://gist.github.com/ssaunier/f95ac9e983032bcbe396.js"></script>
 
-**Building Software**
+#### Building Software
 
-Start with the slide
+Start with the slides
 
-#### Real-life objects
-Direct way to see classes (ex: car, recipe)
+- Real-life objects: direct way to see classes (ex: car, recipe)
+- Data structures: which data structures do you know already? Array, Hash
 
-#### Data structure
-
-Which data structures do you know already? Array, Hash
-
-There are other classicals structures we like in programming
+There are other classicals structures we use a lot in programming
 
 **Stack ("pile" in french)**
 - LIFO stucture: "Last In First Out"
@@ -188,7 +184,9 @@ while true
 end
 ```
 
-Read the error message! the controller needs the task class. Add `require_relative "task"` in the controller. If we are not satisfied by the display, we know we need to change the `Display` class only !! yeah, that's what is great with separating responsibilities. Finish the live-code with them
+Read the error message! the controller needs the task class. Add `require_relative "task"` in the controller. If we are not satisfied by the display, we know we need to change the `Display` class only !! yeah, that's what is great with separating responsibilities.
+
+Finish the live-code adding the feature of marking tasks as done.
 
 
 ### Day challenges
@@ -205,6 +203,8 @@ $ git pull --no-edit upstream master
 - Ensure they're connected on the class Slack
 
 - Make a brief overview of the roadmap of the day with them, explaining the general idea behind each challenge.
+
+The
 
 ### Live-code
 
