@@ -1,4 +1,4 @@
-### Background & Objectives
+## Background & Objectives
 
 You'll be building an interface for a delivery-restaurant. The main components are: the actual restaurant, its employees (manager, delivery guys), and its customers.
 
@@ -13,17 +13,20 @@ As you are coding, ask yourself...
 * Does this attribute need to be private or public?
 * Are my methods and variables well named?
 
-#### Create the Restaurant
+### Create the Restaurant
+
 Write the code that will create a new restaurant object. What types of attributes or accessors will be needed?
 
 For example, you'll definitely need a name for the restaurant. You can also add its location, phone number, number of employees, and number of customers.
 
-#### What's on the menu?
+### What's on the menu?
+
 You restaurant sells food, so you must store somewhere the meals that can be ordered.
 A meal typically has a name and a price.
 
 
-#### Customers and Orders
+### Customers and Orders
+
 Your customers will be stored in the restaurant's "database".
 Don't worry about creating a real database though - just create an Array instance when your program starts and you'll push your customers there.
 
@@ -34,12 +37,12 @@ Customers will order food and you will have to record these orders.
 * How do you know if an order is complete or pending?
 
 
-#### Create the Employees
+### Create the Employees
 There are multiple types of employees.
 
 A few obvious examples are: manager, and delivery guys. What attributes and methods might they all share? What will be different for each?
 
-#### Build an interface with authentication
+### Build an interface with authentication
 Now imagine you're delivering this software and it's going to run as a Ruby file in Terminal.
 
 You're going to create a single manager who can add customers, and only this manager is allowed to create these objects in the system.
