@@ -4,6 +4,10 @@ Install
 Your dotfiles are personal. [Fork this repo](https://github.com/lewagon/dotfiles/fork) on Github,
 and then clone it on your computer.
 
+
+**Disclaimer**: replace `<put_your_github_username_here>` by your Github username **without the `< >`**
+
+
 ```bash
 # Create a global variable storing
 # You need to replace what's *after* the equal sign by your own github username (case sensitive)
@@ -17,6 +21,7 @@ $ mkdir -p ~/code/$GITHUB_USERNAME && cd $_
 $ git clone git@github.com:$GITHUB_USERNAME/dotfiles.git
 $ cd dotfiles
 ```
+
 
 Open the `gitconfig` file with Sublime Text. You can run the
 following to open your Finder:
