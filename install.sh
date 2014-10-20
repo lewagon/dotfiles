@@ -39,6 +39,6 @@ cd "$CURRENT_DIR"
 source ~/.zshrc
 
 # Setting Sublime Text as main editor and git editor
-subl_path=`alias subl | grep -o '\(/[a-zA-Z0-9. ]\+\)\+'`
-git config --global core.editor "'$subl_path' -n -w"
+# subl_path=`alias subl | grep -o '\(/[a-zA-Z0-9. ]\+\)\+'`
+# git config --global core.editor "'$subl_path' -n -w"
 
