@@ -71,8 +71,8 @@ $ git pull --no-edit upstream master
 
 #### Live-code details
 
-1. `02-Experiment-methods`: just pick up some of the methods to live-code by a students, not all of them!
+1. `01-Experiment-methods`: just pick up some of the methods to live-code by a students, not all of them!
 1. `03-What-your-name`: Pick another student. Do not make thim read the challenge README, but make him explain in his own words what his program should accomplish and what he is trying to do (no matter if it differs from the original README). If he gets a hard time writing some code, help him write some pseudo code in english in his ruby file. That's of great help with beginners. Spend time on this live-code proposing some refacto and enhancement of the program.
-1. `05-Stupid-coaching`: you may be short on time for this one. Hencen choose a more advanced student so that he'll code faster and explain more clearly his methodology.
+1. `04-Stupid-coaching`: you may be short on time for this one. Hencen choose a more advanced student so that he'll code faster and explain more clearly his methodology.
 
 
