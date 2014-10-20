@@ -46,7 +46,7 @@ You can review your changes here:
 $ open https://github.com/$GITHUB_USERNAME/dotfiles
 ```
 
-Now you can run the install script. It will not override existing config files, just rename them as ```#{file}.backup```.
+Now you can run the install script. It will not override existing config files.
 Assumption: you have [`oh-my-zsh`](http://ohmyz.sh/) is already installed.
 
 ```bash
