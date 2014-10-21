@@ -43,11 +43,11 @@ For the Marmiton page you dumped, you can use the following boilerplate code to 
 
 ```ruby
 require 'nokogiri'
-doc = Nokogiri::HTML(File.open('marmiton.html'))
+doc = Nokogiri::HTML(File.open('marmiton.html'), nil, 'utf-8')
 
-doc.search('.m_search_result').each do |element|
-  puts "#{element.search('.m_search_titre_recette > a').inner_text}"
-  puts "Rating : #{element.search('.etoile1').size} / 5}"
+doc.css('.m_contenu_resultat').each do |element|
+  puts element.search('.m_titre_resultat > a').inner_text
+  puts "Rating : #{element.search('.m_recette_note1').size} / 5"
 end
 ```
 
