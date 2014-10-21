@@ -3,7 +3,7 @@
 - Get familiar with IRB to experiment new methods and make them yours.
 
 IRB is a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) for ruby. Basically, it works this way
- 
+
 1. It **R**-eads the expression written by the user, which can be any valid ruby expression like `"Hello"`, `2+2`, `"hello".upcase`,...
 2. It **E**-valuates the result of this expression.
 3. It **P**-rints this result.
@@ -16,7 +16,7 @@ IRB is a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loo
 19.class
 [1, 2, 3].class
 "A string object".upcase
-"A string object".dowcase
+"A string object".downcase
 [1, 2, 3].shuffle
 ```
 
