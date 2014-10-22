@@ -16,7 +16,7 @@ end
 describe "num_to_ip" do
   ips.each do |ip_address, number|
     it "returns '#{ip_address}' when given the number #{number}" do
-      expect(ip_to_num(number)).to eq ip_address
+      expect(num_to_ip(number)).to eq ip_address
     end
   end
 end
