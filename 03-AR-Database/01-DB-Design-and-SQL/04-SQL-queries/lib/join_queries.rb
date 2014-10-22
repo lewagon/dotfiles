@@ -9,9 +9,9 @@ def detailed_tracks(db)
 end
 
 def stats_on(db, category)
-  #TODO: For the given category of music, return the number of tracks and the average song length (as a stats hash)
+  # TODO: For the given category of music, return the number of tracks and the average song length (as a stats hash)
 end
 
 def top_five_rock_artists(db)
-  #TODO: return list of top 5 rock artists
+  # TODO: return list of top 5 rock artists
 end

@@ -1,5 +1,4 @@
 # Encoding: utf-8
-require 'spec_helper'
 
 require 'queries'
 
@@ -14,7 +13,7 @@ describe 'Queries methods' do
   describe 'number_of_rows' do
 
     it 'returns a Fixnum' do
-      number_of_rows(db, 'Track').must_be_instance_of(Fixnum)
+      expect(number_of_rows(db, 'Track')).to be_a Fixnum
     end
 
     it 'returns the number of records for a given table' do
@@ -25,7 +24,7 @@ describe 'Queries methods' do
       }
 
       rows_count.each do |table, count|
-        number_of_rows(db, table).must_equal(count)
+        expect(number_of_rows(db, table)).to eq(count)
       end
     end
 
@@ -39,8 +38,8 @@ describe 'Queries methods' do
 
       result.length.must_equal(artists.length)
       artists.each_with_index do |a, idx|
-        result.must_include(a)
-        result.index(a).must_equal(idx)
+        expect(result).to include(a)
+        expect(result.index(a)).to eq(idx)
       end
     end
 
@@ -168,8 +167,8 @@ describe 'Queries methods' do
                                       ]
       result = love_tracks(db)
 
-      result.length.must_equal(tracks.length)
-      tracks.each { |t| result.must_include(t) }
+      expect(result.length).to eq(tracks.length)
+      tracks.each { |t| expect(result).to include(t) }
     end
 
   end
@@ -213,8 +212,8 @@ describe 'Queries methods' do
                                       ]
 
       result = long_tracks(db, 45)
-      result.length.must_equal(tracks.length)
-      tracks.each { |t| result.must_include(t) }
+      expect(result.length).to eq(tracks.length)
+      tracks.each { |t| expect(result).to include(t) }
     end
 
   end
