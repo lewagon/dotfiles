@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now it is time to perform more complex SQL queries and especially `join` queries to read data from multiple tables with join criteria. To be an expert in `join` queries, [here it is](http://www.w3schools.com/sql/sql_join.asp)
+Now it is time to perform more complex SQL queries and especially `join` queries to read data from multiple tables with join criteria. To be an expert in `join` queries, [read this](http://sql.sh/cours/jointures)
 
 ## Specs
 
