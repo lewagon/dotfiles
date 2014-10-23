@@ -2,7 +2,7 @@
 
 ### Morning lecture
 
-That's one of the most important lectures. Don't underestimate how hard it is for beginners to understand simple concepts: variable assignation, method definition vs method call, etc.. Above all, **avoid digressions**, even if an some guy asks you a very cool questions on `Proc` :). Stay in the scope and keep it simple, spending more time answering questions on simpler but more crucial questions.
+That's one of the most important lectures. Don't underestimate how hard it is for beginners to understand simple concepts: variable assignation, method definition vs method call, etc.. Above all, **avoid digressions**, even if some smart guy asks you a very cool questions on `Proc` :). Stay in the scope and keep it simple, spending more time answering questions on simpler but more crucial questions.
 
 #### Built-in objects
 
