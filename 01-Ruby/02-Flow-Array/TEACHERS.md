@@ -11,7 +11,7 @@
 
 #### Arrays
 
-Here you can make a very basic live-code (with our Beatles example or some other cool one of your choice). Define an empty array, append it few elements, access elements with their index, compute the array size, change some cell value. Keep it very simple andask them questions to see if they get it.
+Here you can make a very basic live-code (with the "Beatles example" in the slide or some other one you pick). Define an empty array, append it few elements, access elements with their index, compute the array size, change some cell value. Keep it very elementary and ask them questions to see if they get it.
 
 Go quickly on the slide after the live-code. The students should understand them at a glance if your live-code was good :)
 
