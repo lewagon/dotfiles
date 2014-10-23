@@ -6,7 +6,7 @@
 
 - A cool way to start is to explain the standard way ruby instuctions are read in a file => **line-by-line, top to bottom**, at least at this point of their ruby career :)
 - Show how a simple method breaks the flow yo! Follow the flow with them on simple examples.
-- Introduce one-by-one the other structure modifying the flow: `if..end`, `if !..end` `if..else..end`, `for..end`, `while/untill..end`. For each, you can code some cool & simple example of your choice.
+- Introduce one-by-one the other structure modifying the flow: `if..end`, `if !..end` `if..else..end`, `for..end`, `while/untill..end`. For each structure, pick some cool & simple example of your choice.
 - Once you've finished these demos and anwsered questions, scroll quickly on the slides to show them they can retrieve the syntax there. 
 
 #### Arrays
