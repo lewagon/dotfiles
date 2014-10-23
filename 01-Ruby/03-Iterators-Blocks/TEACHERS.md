@@ -4,9 +4,13 @@
 
 #### Iterators
 
-Begin with a live-code on the examples given in the slides (on musicians). Start with a `for` loop to print each musician, then each musician with its index.. Then introduce the iterators (`each`, `each_with_index`) as the more "semantic way" of doing these treatments in ruby. Continue your live-code with examples on `map`, `count`, `select`, answering students questions
+A good way to introduce iterators is to start from a simple `for` on an array (like the musicians array in the slides). Make the iteration using `for` with the class (students should guide you on this). Then show the `each` syntax and how it works. Then ask them how to get the elements + its index (position) in our `for` loop. Grrr.. how ugly it us for a rubyist!! Time to introduce `each_with_index` to show them how cool iterators are.
+
+After this teasing on `each` and `each_with_index`, go along different treatments on your musician array with `map`, `select`, `count`.. Each time, **let the students guess how they would naturally write the code**. They often get it good because iterators are so semantic :)
+
 
 **Important messages to convey**:
+
 - These powerfull methods (`map`, `count`, `select`,..) are **just methods** as the ones they have already used on strings (`downcase`, `split`,..). They just have a different syntax and operate complex treatments on arrays.
 
 - `each`? `each_with_index`? `select`? `map`? How to choose? Ask yourself
@@ -18,19 +22,19 @@ Present quickly all the slides up to the **Blocks** chapter. They should have no
 
 #### Blocks
 
-Start with the theoretical slides this time!
+Maybe it's more convenient to start with the slide for the block syntax (not much to demo..).
 
-**Important message to convey**:
-- Block == piece of code that can be passed as a method as a standard argument. You are used to String or Fixnum arguments, just see a block as a new kind of argument with a new syntax!
+You can present blocks as pieces of code that can be passed as a method as a standard argument. They are used to String or Fixnum arguments. Well that's a new kind of argument with a new syntax.
 
-Live-code a `each` with a the two syntaxes `{}` and `do..end`, to show that they are the same.
 
 **Define methods using blocks?**
 
 WWhy defining methods using blocks?
 
-- **Good story to tell them**: Back in the day, imagine Matz wants to code a method that counts odd numbers in an array. Then a new one to count even numbers. Then a new one to count strings beginning with a "J".. etc.. etc.. He'll have to define an infinite number of methods for an infinite number of conditons.. That's where blocks come into play! They enable to have only one `count`method and to make it generic passing the condition as a block of code. Yeah baby!!
-- **Disclaimer** It's important to make this disclaimer to the class, otherwise some students will feel depressed :) They won't have to use the `yield` keyword every day in their ruby career. We mention it to make them understand the inner mechanics. However, they will have to **use** a lot of methods using blocks (like iterators) so they should get used to the `{}` and `do..end` syntaxes. 
+**Good story to tell them**: Back in the day, imagine Matz wants to code a method that counts odd numbers in an array. Then a new one to count even numbers. Then a new one to count strings beginning with a "J".. etc.. etc.. He'll have to define an infinite number of methods for an infinite number of conditons.. That's where blocks come into play! They enable to have only one `count`method and to make it generic passing the condition as a block of code. Yeah baby!!
+
+
+**Disclaimer** It's important to make this disclaimer to the class, otherwise some students will feel depressed :) They won't have to use the `yield` keyword every day in their ruby career. We mention it to make them understand the inner mechanics. However, they will have to **use** a lot of methods using blocks (like iterators) so they should get used to the `{}` and `do..end` syntaxes. 
 
 
 To explain the `yield` keyword a good example is better than long speeches. When coding this example, start with a simple block without argument, then add one block argument. Finally mix method argument with block argument. Every time, follow the flow of the program with them and substitute `yield` arguments by their value explicitely to make them understand the mechanics.
