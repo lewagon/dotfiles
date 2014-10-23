@@ -30,10 +30,9 @@ Spend time on the notion of **return**. A good way of explaining a method is to 
 
 
 ```ruby
-# My PhD friend definition
+# My PhD friend defining his method
 def coolest_algo_ever(number)
   # 50 000 lines of cool code manipulating the number :"
-  
   return "Oups I just forgot how return is important :)"
 end
 
