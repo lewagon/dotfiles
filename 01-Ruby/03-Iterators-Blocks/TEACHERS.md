@@ -104,7 +104,7 @@ def fake_complexity()
   return result
 end
 
-sum = fake_complexity(6) do |num, factor|
+sum = fake_complexity(6) do
    1 + 1
 end
 
