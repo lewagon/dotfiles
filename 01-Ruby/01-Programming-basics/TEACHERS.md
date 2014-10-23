@@ -42,7 +42,7 @@ coolest_result = coolest_algo_ever(3)
 puts coolest_result + 10 # oups... it does not work :)
 ```
 
-- Hammer on the difference between `puts` and a method return, sometimes there's lot of confusion on this! **Force them to use the keyword `return` EXPLICITELY during the first week**
+Hammer on the difference between `puts` and a method return, sometimes there's lot of confusion on this! **Force them to use the keyword `return` EXPLICITELY during the first week**
 
 
 ### Day challenges
