@@ -3,6 +3,10 @@ class PostsController
     @view = PostView.new
   end
 
+  ################################################################
+  # BEWARE: you MUST not use the global variable DB in this file #
+  ################################################################
+
   def index
     # TODO: implement listing all posts
   end

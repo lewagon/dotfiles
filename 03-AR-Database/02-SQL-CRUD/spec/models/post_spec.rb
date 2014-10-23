@@ -54,9 +54,7 @@ describe Post do
   describe "upvote" do
     it "should increment the number of votes" do
       post = Post.new({})
-      expect(post.votes).to eq 0
-      5.times { post.upvote }
-      expect(post.votes).to eq 5
+      expect { 5.times { post.upvote } }.to change { post.votes } .from(0).to(5)
     end
   end
 
