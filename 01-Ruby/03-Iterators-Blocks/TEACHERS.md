@@ -30,44 +30,130 @@ Live-code a `each` with a the two syntaxes `{}` and `do..end`, to show that they
 Code the `timer` method and some variations (cf. code below) of this example to make them understand `yield`. Here are some pedagogical tips:
 - Use substitution method and **replace explicitely the `yield` keyword by the block passed to the method** to show them how it works.
 - **Good story to tell them**: Back in the day, imagine Matz wants to code a method that counts odd numbers in an array. Then a new one to count even numbers. Then a new one to count strings beginning with a "J".. etc.. etc.. He'll have to define an infinite number of methods for an infinite number of conditons.. That's where blocks come into play! They enable to have only one `count`method and to make it generic passing the condition as a block of code. Yeah baby!!
-- **Disclaimer** It's important to make this disclaimer to the class, otherwise some students will feel depressed :) They won't have to use the `yield` keyword every day in their ruby career. We mention it to make them understand the inner mechanics. However, they will have to **use** a lot of methods using blocks (like iterators) so they should get used to the `{}` and `do..end` syntaxes.
+- **Disclaimer** It's important to make this disclaimer to the class, otherwise some students will feel depressed :) They won't have to use the `yield` keyword every day in their ruby career. We mention it to make them understand the inner mechanics. However, they will have to **use** a lot of methods using blocks (like iterators) so they should get used to the `{}` and `do..end` syntaxes. 
 
+
+To explain the `yield` keyword a good example is better than long speeches. When coding this example, start with a simple block without argument, then add it 1, then 2 arguments to go step by step. Here are some example you can pick.
+
+
+**A timer**
 
 ```ruby
-def first_timer
+# version without block argument
+
+def timer
   start_time
   yield
   Time.now - start
 end
 
-first_timer do
+timer do
   puts "Hello"
   sleep(3)
 end
 
-def second_timer
+# adding a block argument
+
+def timer
   start_time
-  yield(« Hello »)
+  yield("Hello")
   Time.now - start
 end
 
-second_timer do |word|
+timer do |word|
   puts word
   sleep(3)
 end
 
-def third_timer(str)
+# mixing method arguments with block arguments
+
+def timer(str)
   start_time
   yield(str)
   Time.now - start
 end
 
-third_timer("Hello") do |word|
+timer("Hello") do |word|
   puts word
   sleep(3)
 end
 
 ```
+
+**A "complexity-faker"**
+
+```ruby
+# version without block argument
+
+def fake_complexity()
+  puts "Launching very smart computation with the most clever algorithm...."
+  sleep(1)
+  puts ".."
+  sleep(1)
+  puts "...."
+  sleep(1)
+  puts "......."
+
+  result = yield
+
+  puts "Pfiou... That was some hard maths.."
+  return result
+end
+
+sum = fake_complexity(6) do |num, factor|
+   1 + 1
+end
+
+puts sum
+
+# adding a block argument 
+
+def fake_complexity()
+  puts "Launching very smart computation with the most clever algorithm...."
+  sleep(1)
+  puts ".."
+  sleep(1)
+  puts "...."
+  sleep(1)
+  puts "......."
+
+  result = yield(3)
+
+  puts "Pfiou... That was some hard maths.."
+  return result
+end
+
+sum = fake_complexity(6) do |num|
+   2 * num
+end
+
+puts sum
+
+# mixing block and method arguments
+
+def fake_complexity(num)
+  puts "Launching very smart computation with the most clever algorithm...."
+  sleep(1)
+  puts ".."
+  sleep(1)
+  puts "...."
+  sleep(1)
+  puts "......."
+
+  result = yield(num, 3)
+
+  puts "Pfiou... That was some hard maths.."
+  return result
+end
+
+sum = fake_complexity(6) do |num, factor|
+   num * factor
+end
+
+puts sum
+
+```
+
 
 ### Day challenges
 Before starting the challenges
