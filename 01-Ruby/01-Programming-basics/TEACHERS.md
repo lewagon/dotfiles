@@ -2,23 +2,23 @@
 
 ### Morning lecture
 
-That's one of the most important lectures. Don't underestimate how hard it is for beginners to understand simple concepts: variable assignation, method definition vs method call, etc.. Above all, **avoid digressions**, even if some smart guy asks you a very cool questions on `Proc` :). Stay in the scope and keep it simple, spending more time answering questions on simple but crucial concepts.
+That's one of the most important lectures. It's very difficult for beginners to understand simple concepts: variable assignation, method definition vs method call, etc.. **Try to avoid digressions**, even if some smart guy asks you a very cool questions on `Proc` :). Stay in the scope and keep it simple, spending more time answering questions on simple (but crucial) concepts.
 
 #### Built-in objects
 
-- Spend some time on the slides.
-- You may switch on IRB to live-code examples of small operations on built-in objects.
+Spend some time on the slides. You may switch on IRB to live-code examples of small operations on built-in objects.
 
 #### How to run your code?
 
-- **Main message**: IRB is the **playground to make experiments**, your ruby file is your source code. So play with IRB and **then** write your solution in your file, not the other way around. A cool thing to do  is to ask the class to suggest a simple treatment (capitalize word, count letters, etc..) and find the good method on Google/StackOverflow/ruby doc with them to show them the approach. And then to show them how to test the method in IRB.
+- **Main message**: IRB is the **playground to make experiments**, your ruby file is your source code. So play with IRB and **then** write your solution in your file, not the other way around. 
 - Show how to launch IRB, how to quit it, and explain its outputs.
+- A cool thing to do is to ask the class a simple treatment (capitalize word, count letters, etc..) and then show them the good methodology => **Google/StackOverflow/ruby doc/IRB to experiment**.
 - Show how to run a ruby script from the terminal and how to display results with `puts`. 
 - **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on). 
 
 #### Variables
 
-- **Spend time on this!**. Go along the slides. Go to the white board to make "shoes box" drawings. Whatever it takes to make them understand. Here is some way of explaining it: a variable is like a **named** shoes box containing a value. When we define it, we put a value in the shoes box. When we use it, we use this value. When we re-assign it, we change this value, etc, etc..
+- **Spend time on this**. Go along the slides. Go to the white board to make "shoes box" drawings. Whatever it takes to make them understand. Here is some way of explaining it: a variable is like a **named** shoes box containing a value. When we define it, we put a value in the shoes box. When we use it, we use this value. When we re-assign it, we change this value, etc, etc..
 
 - Take your time on assignment and re-assignment coding 2 or 3 different examples of you choice in a ruby file. Ask them questions to ensure they get it! Hammer on the fact that a **variable is not a string**, it has no `""` :)
 
