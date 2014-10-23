@@ -10,23 +10,23 @@ Spend some time on the slides. You may switch on IRB to live-code examples of sm
 
 #### How to run your code?
 
-- **Main message**: IRB is the **playground to make experiments**, your ruby file is your source code. So play with IRB and **then** write your solution in your file, not the other way around. 
-- Show how to launch IRB, how to quit it, and explain its outputs.
-- A cool thing to do is to ask the class a simple treatment (capitalize word, count letters, etc..) and then show them the good methodology => **Google/StackOverflow/ruby doc/IRB to experiment**.
-- Show how to run a ruby script from the terminal and how to display results with `puts`. 
-- **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on). 
+Explain that IRB is the **playground to make experiments**, your ruby file is your source code. So play with IRB and **then** write your solution in your file, not the other way around. Show them how to launch IRB, how to quit it, and explain its outputs.
+
+A cool thing to do is to ask the class a simple treatment (capitalize word, count letters, etc..) and then show them the overall methodology to find the answer => **Google/StackOverflow/ruby doc/IRB to experiment**.
+
+Now show them how to run a ruby script from the terminal and how to display results with `puts`. **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on). 
 
 #### Variables
 
-- **Spend time on this**. Go along the slides. Go to the white board to make "shoes box" drawings. Whatever it takes to make them understand. Here is some way of explaining it: a variable is like a **named** shoes box containing a value. When we define it, we put a value in the shoes box. When we use it, we use this value. When we re-assign it, we change this value, etc, etc..
+**Spend time on this**. Go along the slides. Go to the white board to make "shoes box" drawings. Whatever it takes to make them understand. Here is some way of explaining it: a variable is like a **named** shoes box containing a value. When we define it, we put a value in the shoes box. When we use it, we use this value. When we re-assign it, we change this value, etc, etc..
 
-- Take your time on assignment and re-assignment coding 2 or 3 different examples of you choice in a ruby file. Ask them questions to ensure they get it! Hammer on the fact that a **variable is not a string**, it has no `""` :)
+Take your time on assignment and re-assignment coding 2 or 3 different examples of you choice in a ruby file. Ask them questions to ensure they get it! Hammer on the fact that a **variable is not a string**, it has no `""` :)
 
 #### Methods
 
-- Again **go slowly**, and live-code different examples to ensure they  really understand the difference between defining and calling a method, and the difference between parameters and arguments. 
+Again **go slowly**, and live-code different examples to ensure they  really understand the difference between defining and calling a method, and the difference between parameters and arguments. 
 
-- Spend time on the notion of **return**. A good way of explaining a method is to see it as "black box" or a "factory". You feed it with values in input (the arguments) and then it outputs a result (the return). Here is a useful story to make them understand: "A smart ass phD has given you the coolest machine learning method ever, with 50 000 lines of code. Unfortunately, he forgot about the return of his method... Now you can't use it! What a shame!".
+Spend time on the notion of **return**. A good way of explaining a method is to see it as "black box" or a "factory". You feed it with values in input (the arguments) and then it outputs a result (the return). Here is a useful story to make them understand: "A smart ass phD has given you the coolest machine learning method ever, with 50 000 lines of code. Unfortunately, he forgot about the return of his method... Now you can't use it! What a shame!".
 
 
 ```ruby
