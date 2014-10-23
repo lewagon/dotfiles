@@ -9,7 +9,7 @@ Before starting the last lecture of the week, make a small question/answer sessi
 
 A cool way to introduce hashes is to start with a 2-arrays example and explain how painfull it is to handle index matching.
 
-E.g ask them how they would write a program printing student with their age using two arrays. Code this example with them and explain how inconvenient this solution is. What if we want to delete a student? Add a new one? Change one student's age? How painfull. There should be a better object for that right? Yep ! Hashed :)
+For example, ask them how they would write a program printing students with their age using two arrays. Code this example with them and explain how inconvenient this solution is. What if we want to delete a student? Add a new one? Change one student's age? How painfull. There should be a better object for that right? Yep ! Hashed :)
 
 Show basic operations on hashes. How to define hash (empty or not), add key-value, read value, modify value, Etc.. Keep it simple!
 
