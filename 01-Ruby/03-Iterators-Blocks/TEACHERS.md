@@ -33,7 +33,7 @@ Code the `timer` method and some variations (cf. code below) of this example to 
 - **Disclaimer** It's important to make this disclaimer to the class, otherwise some students will feel depressed :) They won't have to use the `yield` keyword every day in their ruby career. We mention it to make them understand the inner mechanics. However, they will have to **use** a lot of methods using blocks (like iterators) so they should get used to the `{}` and `do..end` syntaxes. 
 
 
-To explain the `yield` keyword a good example is better than long speeches. When coding this example, start with a simple block without argument, then add it 1, then 2 arguments to go step by step. Here are some example you can pick.
+To explain the `yield` keyword a good example is better than long speeches. When coding this example, start with a simple block without argument, then add one block argument. Finally mix method argument with block argument. Every time, follow the flow of the program with them and replace chunks of code by their value.
 
 
 **A timer**
