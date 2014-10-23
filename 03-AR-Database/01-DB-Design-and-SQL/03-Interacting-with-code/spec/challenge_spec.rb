@@ -1,5 +1,4 @@
 # Encoding: utf-8
-require 'spec_helper'
 
 require 'queries'
 
@@ -14,18 +13,18 @@ describe 'Queries methods' do
   describe 'number_of_rows' do
 
     it 'returns a Fixnum' do
-      number_of_rows(db, 'Track').must_be_instance_of(Fixnum)
+      expect(number_of_rows(db, 'tracks')).to be_a Fixnum
     end
 
     it 'returns the number of records for a given table' do
       rows_count = {
-          Track: 3503,
-          Album: 347,
-          Artist: 275
+          tracks: 3503,
+          albums: 347,
+          artists: 275
       }
 
       rows_count.each do |table, count|
-        number_of_rows(db, table).must_equal(count)
+        expect(number_of_rows(db, table)).to eq(count)
       end
     end
 
@@ -37,10 +36,10 @@ describe 'Queries methods' do
       artists = ["A Cor Do Som", "AC/DC", "Aaron Copland & London Symphony Orchestra", "Aaron Goldberg", "Academy of St. Martin in the Fields & Sir Neville Marriner", "Academy of St. Martin in the Fields Chamber Ensemble & Sir Neville Marriner", "Academy of St. Martin in the Fields, John Birch, Sir Neville Marriner & Sylvia McNair", "Academy of St. Martin in the Fields, Sir Neville Marriner & Thurston Dart", "Academy of St. Martin in the Fields, Sir Neville Marriner & William Bennett", "Accept", "Adrian Leaper & Doreen de Feis", "Aerosmith", "Aerosmith & Sierra Leone's Refugee Allstars", "Aisha Duo", "Alanis Morissette", "Alberto Turco & Nova Schola Gregoriana", "Alice In Chains", "Amy Winehouse", "Anne-Sophie Mutter, Herbert Von Karajan & Wiener Philharmoniker", "Antal Doráti & London Symphony Orchestra", "Antônio Carlos Jobim", "Apocalyptica", "Aquaman", "Audioslave", "Avril Lavigne", "Azymuth", "Baby Consuelo", "BackBeat", "Banda Black Rio", "Barry Wordsworth & BBC Concert Orchestra", "Barão Vermelho", "Battlestar Galactica", "Battlestar Galactica (Classic)", "Bebel Gilberto", "Ben Harper", "Berliner Philharmoniker & Hans Rosbaud", "Berliner Philharmoniker & Herbert Von Karajan", "Berliner Philharmoniker, Claudio Abbado & Sabine Meyer", "Big & Rich", "Billy Cobham", "Black Eyed Peas", "Black Label Society", "Black Sabbath", "Body Count", "Boston Symphony Orchestra & Seiji Ozawa", "Britten Sinfonia, Ivor Bolton & Lesley Garrett", "Bruce Dickinson", "Buddy Guy", "C. Monteverdi, Nigel Rogers - Chiaroscuro; London Baroque; London Cornett & Sackbu", "Caetano Veloso", "Cake", "Calexico", "Charles Dutoit & L'Orchestre Symphonique de Montréal", "Charlie Brown Jr.", "Chicago Symphony Chorus, Chicago Symphony Orchestra & Sir Georg Solti", "Chicago Symphony Orchestra & Fritz Reiner", "Chico Buarque", "Chico Science & Nação Zumbi", "Choir Of Westminster Abbey & Simon Preston", "Chor der Wiener Staatsoper, Herbert Von Karajan & Wiener Philharmoniker", "Chris Cornell", "Christina Aguilera featuring BigElf", "Christopher O'Riley", "Cidade Negra", "Cláudio Zoli", "Corinne Bailey Rae", "Creedence Clearwater Revival", "Cássia Eller", "DJ Dolores & Orchestra Santa Massa", "David Coverdale", "Deep Purple", "Def Leppard", "Dennis Chambers", "Dhani Harrison & Jakob Dylan", "Djavan", "Dread Zeppelin", "Ed Motta", "Edo de Waart & San Francisco Symphony", "Edson, DJ Marky & DJ Patife Featuring Fernanda Porto", "Elis Regina", "Emanuel Ax, Eugene Ormandy & Philadelphia Orchestra", "Emerson String Quartet", "English Concert & Trevor Pinnock", "Equale Brass Ensemble, John Eliot Gardiner & Munich Monteverdi Orchestra and Choir", "Eric Clapton", "Eugene Ormandy", "Faith No More", "Falamansa", "Felix Schmidt, London Symphony Orchestra & Rafael Frühbeck de Burgos", "Fernanda Porto", "Foo Fighters", "Frank Sinatra", "Frank Zappa & Captain Beefheart", "Fretwork", "Funk Como Le Gusta", "Gene Krupa", "Gerald Moore", "Gilberto Gil", "Godsmack", "Gonzaguinha", "Green Day", "Guns N' Roses", "Gustav Mahler", "Gustavo & Andres Veiga & Salazar", "Göteborgs Symfoniker & Neeme Järvi", "Habib Koité and Bamada", "Herbert Von Karajan, Mirella Freni & Wiener Philharmoniker", "Hermeto Pascoal", "Heroes", "Hilary Hahn, Jeffrey Kahane, Los Angeles Chamber Orchestra & Margaret Batjer", "House Of Pain", "Incognito", "Instituto", "Iron Maiden", "Itzhak Perlman", "JET", "Jack Johnson", "Jack's Mannequin & Mick Fleetwood", "Jackson Browne", "Jaguares", "James Brown", "James Levine", "Jamiroquai", "Jimi Hendrix", "Joe Satriani", "Jorge Ben", "Jorge Vercilo", "Jota Quest", "João Gilberto", "João Suplicy", "Judas Priest", "Julian Bream", "Karsh Kale", "Kent Nagano and Orchestre de l'Opéra de Lyon", "Kid Abelha", "Kiss", "Led Zeppelin", "Legião Urbana", "Lenny Kravitz", "Leonard Bernstein & New York Philharmonic", "Les Arts Florissants & William Christie", "London Symphony Orchestra & Sir Charles Mackerras", "Los Hermanos", "Los Lonely Boys", "Lost", "Luciana Souza/Romero Lubambo", "Luciano Pavarotti", "Luiz Melodia", "Lulu Santos", "Marcos Valle", "Marillion", "Marisa Monte", "Martin Roscoe", "Marvin Gaye", "Matisyahu", "Maurizio Pollini", "Mela Tenenbaum, Pro Musica Prague & Richard Kapp", "Men At Work", "Metallica", "Michael Tilson Thomas & San Francisco Symphony", "Michele Campanella", "Miles Davis", "Milton Nascimento", "Milton Nascimento & Bebeto", "Motörhead", "Motörhead & Girlschool", "Mundo Livre S/A", "Mônica Marianno", "Mötley Crüe", "Nando Reis", "Nash Ensemble", "Nação Zumbi", "Nega Gizza", "Ney Matogrosso", "Nicolaus Esterhazy Sinfonia", "Nirvana", "O Rappa", "O Terço", "Olodum", "Orchestra of The Age of Enlightenment", "Orchestre Révolutionnaire et Romantique & John Eliot Gardiner", "Os Cariocas", "Os Mutantes", "Os Paralamas Do Sucesso", "Otto", "Otto Klemperer & Philharmonia Orchestra", "Ozzy Osbourne", "Page & Plant", "Passengers", "Paul D'Ianno", "Pearl Jam", "Pedro Luís & A Parede", "Pedro Luís E A Parede", "Peter Tosh", "Philharmonia Orchestra & Sir Neville Marriner", "Philip Glass Ensemble", "Pink Floyd", "Planet Hemp", "Queen", "R.E.M.", "R.E.M. Feat. KRS-One", "R.E.M. Feat. Kate Pearson", "Raimundos", "Raul Seixas", "Red Hot Chili Peppers", "Regina Spektor", "Richard Marlow & The Choir of Trinity College, Cambridge", "Rodox", "Roger Norrington, London Classical Players", "Royal Philharmonic Orchestra & Sir Thomas Beecham", "Rush", "Sabotage E Instituto", "Sandra De Sá", "Santana", "Santana Feat. Dave Matthews", "Santana Feat. Eagle-Eye Cherry", "Santana Feat. Eric Clapton", "Santana Feat. Everlast", "Santana Feat. Lauryn Hill & Cee-Lo", "Santana Feat. Maná", "Santana Feat. Rob Thomas", "Santana Feat. The Project G&B", "Scholars Baroque Ensemble", "Scorpions", "Sergei Prokofiev & Yuri Temirkanov", "Seu Jorge", "Simply Red", "Sir Georg Solti & Wiener Philharmoniker", "Sir Georg Solti, Sumi Jo & Wiener Philharmoniker", "Skank", "Smashing Pumpkins", "Snow Patrol", "Soundgarden", "Spyro Gyra", "Stereo Maracana", "Stevie Ray Vaughan & Double Trouble", "Stone Temple Pilots", "System Of A Down", "Temple of the Dog", "Terry Bozzio, Tony Levin & Steve Stevens", "The 12 Cellists of The Berlin Philharmonic", "The Black Crowes", "The Clash", "The Cult", "The Doors", "The Flaming Lips", "The King's Singers", "The Office", "The Police", "The Posies", "The Postal Service", "The Rolling Stones", "The Tea Party", "The Who", "Tim Maia", "Titãs", "Ton Koopman", "Toquinho & Vinícius", "U2", "UB40", "Van Halen", "Various Artists", "Velvet Revolver", "Vinicius, Toquinho & Quarteto Em Cy", "Vinícius De Moraes", "Vinícius De Moraes & Baden Powell", "Vinícius E Odette Lara", "Vinícius E Qurteto Em Cy", "Whitesnake", "Wilhelm Kempff", "Xis", "Yehudi Menuhin", "Yo-Yo Ma", "Youssou N'Dour", "Zeca Pagodinho"]
       result = sorted_artists(db)
 
-      result.length.must_equal(artists.length)
+      expect(result.length).to eq(artists.length)
       artists.each_with_index do |a, idx|
-        result.must_include(a)
-        result.index(a).must_equal(idx)
+        expect(result).to include(a)
+        expect(result.index(a)).to eq(idx)
       end
     end
 
@@ -168,8 +167,8 @@ describe 'Queries methods' do
                                       ]
       result = love_tracks(db)
 
-      result.length.must_equal(tracks.length)
-      tracks.each { |t| result.must_include(t) }
+      expect(result.length).to eq(tracks.length)
+      tracks.each { |t| expect(result).to include(t) }
     end
 
   end
@@ -213,8 +212,8 @@ describe 'Queries methods' do
                                       ]
 
       result = long_tracks(db, 45)
-      result.length.must_equal(tracks.length)
-      tracks.each { |t| result.must_include(t) }
+      expect(result.length).to eq(tracks.length)
+      tracks.each { |t| expect(result).to include(t) }
     end
 
   end
