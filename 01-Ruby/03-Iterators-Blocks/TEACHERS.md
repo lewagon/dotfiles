@@ -27,13 +27,13 @@ Live-code a `each` with a the two syntaxes `{}` and `do..end`, to show that they
 
 **Define methods using blocks?**
 
-Code the `timer` method and some variations (cf. code below) of this example to make them understand `yield`. Here are some pedagogical tips:
-- Use substitution method and **replace explicitely the `yield` keyword by the block passed to the method** to show them how it works.
+WWhy defining methods using blocks?
+
 - **Good story to tell them**: Back in the day, imagine Matz wants to code a method that counts odd numbers in an array. Then a new one to count even numbers. Then a new one to count strings beginning with a "J".. etc.. etc.. He'll have to define an infinite number of methods for an infinite number of conditons.. That's where blocks come into play! They enable to have only one `count`method and to make it generic passing the condition as a block of code. Yeah baby!!
 - **Disclaimer** It's important to make this disclaimer to the class, otherwise some students will feel depressed :) They won't have to use the `yield` keyword every day in their ruby career. We mention it to make them understand the inner mechanics. However, they will have to **use** a lot of methods using blocks (like iterators) so they should get used to the `{}` and `do..end` syntaxes. 
 
 
-To explain the `yield` keyword a good example is better than long speeches. When coding this example, start with a simple block without argument, then add one block argument. Finally mix method argument with block argument. Every time, follow the flow of the program with them and replace chunks of code by their value.
+To explain the `yield` keyword a good example is better than long speeches. When coding this example, start with a simple block without argument, then add one block argument. Finally mix method argument with block argument. Every time, follow the flow of the program with them and substitute `yield` arguments by their value explicitely to make them understand the mechanics.
 
 
 **A timer**
