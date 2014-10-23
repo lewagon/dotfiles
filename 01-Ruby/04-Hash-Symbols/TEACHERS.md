@@ -46,7 +46,7 @@ irb(main):003:0> user_2.object_id
 => 70208594906000
 ```
 
-Sometimes however, you need "tags", "identifiers" in your code. **These tags do not feel like data, user input**. We do not want to change them in the future as a string. For this use, there is a new ruby object => Symbol.
+Sometimes however, you need "tags"in your code. **These tags do not feel like data, user input**. We do not want to change them in the future like strings. For this special use, there are more adapted ruby objects => Symbol.
 
 ```
 $ irb
