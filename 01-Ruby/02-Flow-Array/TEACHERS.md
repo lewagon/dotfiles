@@ -4,16 +4,15 @@
 
 #### Controlling the flow
 
-- A cool way to start is to explain the standard way ruby instuctions are read in a file => **line-by-line, top to bottom**, at least at this point of their ruby career :)
-- Show how a simple method breaks the flow yo! Follow the flow with them on simple examples.
-- Introduce one-by-one the other structure modifying the flow: `if..end`, `if !..end` `if..else..end`, `for..end`, `while/untill..end`. For each structure, pick some cool & simple example of your choice.
-- Once you've finished these demos and anwsered questions, scroll quickly on the slides to show them they can retrieve the syntax there. 
+A cool way to start is to explain the standard way ruby instuctions are read in a file => **line-by-line, top to bottom**, at least at this point of their ruby career :)
+
+Show them how a simple method breaks the flow yo! Follow the flow with them on simple examples.
+
+Then introduce one-by-one the other structure modifying the flow: `if..end`, `if !..end` `if..else..end`, `for..end`, `while/untill..end`. For each structure, pick some cool & simple example of your choice. Once you've finished these demos and anwsered questions, scroll quickly on the slides to show them they can retrieve the syntax there. 
 
 #### Arrays
 
-Here you can make a very basic live-code (with the "Beatles example" in the slide or some other one you pick). Define an empty array, append it few elements, access elements with their index, compute the array size, change some cell value. Keep it very elementary and ask them questions to see if they get it.
-
-Go quickly on the slide after the live-code. The students should understand them at a glance if your live-code was good :)
+Here you can make a very basic live-code (with the "Beatles example" in the slides or some other one you choose). Define an empty array, append it few elements, access elements with their index, compute the array size, change some cell value. Keep it very basic and ask them questions to see if they get it. Go quickly on the slide after the live-code. The students should understand them at a glance if your live-code was good :)
 
 ### Day challenges
 Before starting the challenges
