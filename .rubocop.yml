@@ -18,4 +18,4 @@ Documentation:
 AllCops:
   Exclude:
     - '**/Rakefile'
-    - '**/spec/**'
+    - '**/spec/**/*'

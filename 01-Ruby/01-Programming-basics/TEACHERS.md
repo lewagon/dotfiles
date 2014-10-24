@@ -2,47 +2,48 @@
 
 ### Morning lecture
 
-That's one of the most important lectures. Don't underestimate how hard it is for beginners to understand simple concepts: variable assignation, method definition vs method call, etc.. Above all, **avoid digressions**, even if an some guy asks you a very cool questions on `Proc` :). Stay in the scope and keep it simple, spending more time answering questions on simpler but more crucial questions.
+That's one of the most important lectures. It's very difficult for beginners to understand simple concepts: variable assignation, method definition vs method call, etc.. **Try to avoid digressions**, even if some smart guy asks you a very cool questions on `Proc` :). Stay in the scope and keep it simple, spending more time answering questions on simple (but crucial) concepts.
 
 #### Built-in objects
 
-- Spend some time (but not too much) on the slides.
-- Then switch on IRB to live-code some examples of simple statements on built-in objects (try to make it interactive and ask questions to the students)
+Spend some time on the slides. You may switch on IRB to live-code examples of small operations on built-in objects.
 
 #### How to run your code?
 
-- The main message to give is the following: IRB is the playground to make experiments, your ruby file is your source code! So play with IRB and **then** write your solution in your file, not the other way around.
-- Show how to launch IRB (you've just used it to demo built-in objects), how to quit it, and explain its outputs.
-- Then show how to run a ruby script from the terminal and how to display results with `puts`. Make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on!)
+Explain that IRB is the **playground to make experiments**, your ruby file is your source code. So play with IRB and **then** write your solution in your file, not the other way around. Show them how to launch IRB, how to quit it, and explain its outputs.
+
+A cool thing to do is to ask the class a simple treatment (capitalize word, count letters, etc..) and then show them the overall methodology to find the answer => **Google/StackOverflow/ruby doc/IRB to experiment**.
+
+Now show them how to run a ruby script from the terminal and how to display results with `puts`. **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on). 
 
 #### Variables
 
-- **Spend time on this!**. Start with the slides then go to the white board to make "shoes box" drawings. A variable is like a **named** shoes box containing a value. When we assign it, we put something in the shoes box. When we use it, we use its content. When we re-assign it, we change our shoes, etc..
+**Spend time on this**. Go along the slides. Go to the white board to make "shoes box" drawings. Whatever it takes to make them understand. Here is some way of explaining it: a variable is like a **named** shoes box containing a value. When we define it, we put a value in the shoes box. When we use it, we use this value. When we re-assign it, we change this value, etc, etc..
 
-- Take your time on assignment and re-assignment coding 2 or 3 different examples on a ruby file. Ask them questions to ensure they get it! Hammer on the fact that a **variable is not a string**, it has no `""`!
+Take your time on assignment and re-assignment coding 2 or 3 different examples of you choice in a ruby file. Ask them questions to ensure they get it! Hammer on the fact that a **variable is not a string**, it has no `""` :)
 
 #### Methods
 
-- Again **go slowly**, and live-code different examples to ensure they  really understand the difference between defining and calling a method, and the difference between parameters and arguments !
+Again **go slowly**, and live-code different examples to ensure they  really understand the difference between defining and calling a method, and the difference between parameters and arguments. 
 
-- Also spend time on the notion of **return**. Make them understand that a method is like a "black box" or a "factory". You feed it with values in input (the arguments) and then it outputs a result (the return). Here is a useful story to make them understand: "A smart ass phD has given you the coolest machine learning method ever with 50 000 lines of code. Unfortunately, he forgot about the return of his method... Now you can't use it! What a shame!".
+Spend time on the notion of **return**. A good way of explaining a method is to see it as "black box" or a "factory". You feed it with values in input (the arguments) and then it outputs a result (the return). Here is a useful story to make them understand: "A smart ass phD has given you the coolest machine learning method ever, with 50 000 lines of code. Unfortunately, he forgot about the return of his method... Now you can't use it! What a shame!".
 
-- Hammer on the difference between `puts` and a method return, sometimes there's lot of confusion on this! **Force them to use the keyword `return`EXPLICITELY during the first week**
-
-- substitution methodology: on the last slide, copy-paste the example in a ruby file (cf. below) and progressively replace nested values with their result to make them understand how we proceed (from right to left, form more nested to less nested, replacing a variable or method call by its value or return)
 
 ```ruby
-def add(x, y)
-  x + y
+# My PhD friend defining his method
+def coolest_algo_ever(number)
+  # 50 000 lines of cool code manipulating the number"
+  return "Oups I just forgot how return is important :)"
 end
 
-def double(x)
-  2 * x
-end
-number = 3
-number = double(add(double(add(number, 2)), double(number))) # replace step-by-step each part by its value
-number = double(number - 22) # idem
+# Now me using his method :)
+coolest_result = coolest_algo_ever(3)
+
+puts coolest_result + 10 # oups... it does not work :)
 ```
+
+Hammer on the difference between `puts` and a method return, sometimes there's lot of confusion on this! **Force them to use the keyword `return` EXPLICITELY during the first week**
+
 
 ### Day challenges
 Before starting the challenges

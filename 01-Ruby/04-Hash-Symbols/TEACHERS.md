@@ -6,11 +6,12 @@
 Before starting the last lecture of the week, make a small question/answer session to discuss simple concepts with the class (variable, methods, arguments, return vs. puts). It's quite normal if some of the students still don't get it perfectly. So that's good occasion to code some very simple methods and re-explain things.
 
 #### From array to hash
-Start with the live code described in the slides. Make it interactive.
 
-- How can we do to map student names and ages? Ok, so let's give us two arrays to store students'names and ages. Now how do we print associated values for one student? For all students ? Now what if we have to add some new records, is it convenient? Is there a more adapted data stucture for representing this data?
-- Yep there is! Let's introduce the name/age hash
-- Show elementary operations on hashes? Define hash (empty or not)? add key-value? Read value? Modify value? Etc..
+A cool way to introduce hashes is to start with a 2-arrays example and explain how painfull it is to handle index matching.
+
+For example, ask them how they would write a program printing students with their age using two arrays. Code this example with them and explain how inconvenient this solution is. What if we want to delete a student? Add a new one? Change one student's age? How painfull. There should be a better object for that right? Yep ! Hash :)
+
+Show basic operations on hashes. How to define hash (empty or not), add key-value, read value, modify value, Etc.. Keep it simple!
 
 
 ##### Why using hash?
@@ -45,15 +46,15 @@ irb(main):003:0> user_2.object_id
 => 70208594906000
 ```
 
-Sometimes however, you need "tags", "identifiers" in your code. **These tags do not feel like data, user input**. We do not want to change them in the future as a string. For this use, there is a new ruby object => Symbol.
+Sometimes however, you need "tags" in your code. **These tags do not feel like data, user input**. We do not want to change them in the future like strings. For this special use, there are more adapted ruby objects => Symbol.
 
 ```
 $ irb
-irb(main):001:0> user_1 = :bob
-irb(main):002:0> user_2 = :bob
-irb(main):002:0> user_1.object_id
+irb(main):001:0> key_1 = :email
+irb(main):002:0> key_2 = :email
+irb(main):002:0> key_1.object_id
 => 538888
-irb(main):002:0> user_2.object_id
+irb(main):002:0> key_2.object_id
 => 538888
 ```
 
