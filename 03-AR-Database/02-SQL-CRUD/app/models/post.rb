@@ -4,8 +4,8 @@
 class Post
   # TODO: implement some reader and/or writers
 
-  def initialize(options = {})
-    # TODO: initialize instance variables from the hash options.
+  def initialize(attributes = {})
+    # TODO: initialize instance variables from the hash attributes.
   end
 
   # TODO: implement all the class methods and instance methods
