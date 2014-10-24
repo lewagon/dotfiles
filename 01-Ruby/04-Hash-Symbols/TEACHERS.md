@@ -46,15 +46,15 @@ irb(main):003:0> user_2.object_id
 => 70208594906000
 ```
 
-Sometimes however, you need "tags"in your code. **These tags do not feel like data, user input**. We do not want to change them in the future like strings. For this special use, there are more adapted ruby objects => Symbol.
+Sometimes however, you need "tags" in your code. **These tags do not feel like data, user input**. We do not want to change them in the future like strings. For this special use, there are more adapted ruby objects => Symbol.
 
 ```
 $ irb
-irb(main):001:0> user_1 = :bob
-irb(main):002:0> user_2 = :bob
-irb(main):002:0> user_1.object_id
+irb(main):001:0> key_1 = :email
+irb(main):002:0> key_2 = :email
+irb(main):002:0> key_1.object_id
 => 538888
-irb(main):002:0> user_2.object_id
+irb(main):002:0> key_2.object_id
 => 538888
 ```
 
