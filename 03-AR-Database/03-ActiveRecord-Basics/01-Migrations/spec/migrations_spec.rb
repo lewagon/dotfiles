@@ -1,28 +1,9 @@
-require_relative "../config/application.rb"
-ActiveRecord::Base.logger = nil
-
-
-def migrate(version = nil)
-  ActiveRecord::Migration.verbose = false
-  ActiveRecord::Migrator.migrations_paths << File.expand_path(File.dirname(__FILE__), '../db/migrate')
-  ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths, version)
-end
+require_relative "spec_helper"
 
 describe "Migration" do
-  DB_PATH = ActiveRecord::Base.configurations["test"]["database"]
-
-  before(:each) do
-    `rm -rf #{DB_PATH}`
-    ActiveRecord::Base.establish_connection(:test)
-  end
-
-  let(:db) do
-    ActiveRecord::Base.connection
-  end
-
-  after(:each) do
-    `rm -rf #{DB_PATH}`
-  end
+  before(:each) { create_db }
+  let(:db) { ActiveRecord::Base.connection }
+  after(:each) { drop_db }
 
   describe "to create the `posts` table" do
     it "should have actually created the table, with the right columns" do

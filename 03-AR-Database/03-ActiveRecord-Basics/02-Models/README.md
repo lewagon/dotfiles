@@ -1,78 +1,51 @@
 ## Background & Objectives
 
-Now it's time to **unleash the kraken** :) You will use the ActiveRecord ORM to make queries to your DB but manipulating friendly Ruby objects directly instead of performing SQL queries and handling manually the mapping to these Ruby objects (which is a pain in the ass...).
+Now that you have understood that migrations help you to update the database schema,
+let's use our database to insert some rows, and query them. We'll still work with our
+Hacker News clone.
 
-Before you start, read the [Active Record documentation](http://guides.rubyonrails.org/active_record_basics.html).
+Before starting this exercise, make sure you read the [Active Record starting duie](http://guides.rubyonrails.org/active_record_basics.html).
 
-## Getting started (READ THIS!)
+## Setup
 
-Before starting the exercices, be sure to follow the following steps:
+As we changed exercise, we need to create a new database in the `db` folder:
 
-* Go to the exercice directory
-* Install the bundler gem with `gem install bundler`
-* Install the exercice dependencies with `bundle install`
+```bash
+$ rake db:create
+$ rake db:migrate
+```
 
-**ATTENTION:** this is not the same exercice directory, you need to run `rake db:migrate` to run the migration before getting started.
+We gave you the migration file (see the `db/migrate` file), it should be the same
+as the one you built from scratch in the previous exercise!
 
-## The database
+Ensure the schema is in place by openning the DB with `sqlite3`:
 
-To do this exercice you don't need to know where the database comes from.
-
-### Rake
-
-You need to be in the `lib` folder for rake tasks to work.
+```bash
+$ sqlite3 db/development.sqlite3
+sqlite> .schema
+```
 
 ## Specs
 
-Based on the previous exercice, we've added a `Post` model defined as follows:
+### 1. Create the model class
 
-``` ruby
-class Post < ActiveRecord::Base
-end
+Add a class model for your `posts` table in the `app/models` folder.
+
+### 2. Use the model to execute queries
+
+We gave you the same app skeleton than last Friday. You can launch it with:
+
+```bash
+$ ruby app.rb
 ```
 
-This simple `ActiveRecord::Base` inheritance automatically maps the `Post` model to the `posts` table. Notice that all the magic of ActiveRecord mapping relies on this simple convention (**CONVENTION** over **CONFIGURATION**):
-
-* the _model_ is __singular__ and __camel-cased__ (ex: `Post` or `PostAuthor`)
-* the _table_ is __plural__ and __snake-cased__ (ex: `posts` or `post_authors`)
-
-### 1. Use the model to execute queries
-
-Open `interface.rb`, it's roughtly the same than before except now you'll have to replace the `# TODO` marker with `Post` calls.
-
-Use [ActiveRecord](http://guides.rubyonrails.org/active_record_basics.html) basic methods to create, read, update and delete your posts.
+Open the `app/controllers/posts_controller.rb` and implement the methods. You
+should **not** write SQL, but only use ActiveRecord methods with your class model.
+There's no `rake` to test this second part of the exercise, but test your app
+by launching it in the terminal.
 
 ## Learning Badges
 
 * What's an ORM? How does it simplify your life?
 * On which naming convention relies Active Record mapping? Where does the magic comes from?
-
-## Troubleshooting
-
-Here are common error messages you might stumble upon during this exercice:
-
-    rake aborted!
-    Don't know how to build task 'db:migrate'
-
-Check that you're in the `lib` folder.
-
-    rake aborted!
-    LoadError: cannot load such file -- active_record
-
-You probably forgot to run `bundle install` or it generated an error you didn't read.
-
-    `initialize': SQLite3::SQLException: no such table: posts:
-    INSERT INTO posts (name, source_url, rating, date)
-    VALUES(...)
-
-Are you sure you ran `rake db:migrate` ?
-
-    interface.rb:16:in `create_post': undefined local variable or method `created_at' for main:Object (NameError)
-
-Check your code again, are you sur you've a `created_at` variable?
-
-    `initialize': SQLite3::SQLException: table posts has no column named date:
-    INSERT INTO posts (name, source_url, rating, date)
-    VALUES(...)
-
-Is the datetime attribute called `date` ? You sure? Really sure? Really?...
+* See how it's easier with ActiveRecord than having to write all this SQL yourself?

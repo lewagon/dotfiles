@@ -1,1 +1,0 @@
-# TODO: create a class model for your `posts` table.
