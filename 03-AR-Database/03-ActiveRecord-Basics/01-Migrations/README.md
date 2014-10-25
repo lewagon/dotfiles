@@ -4,13 +4,13 @@
 - Understand the concept of migration and the distinction between a model and a migration.
 - Learn how to execute `migrations` on your database running `rake` tasks.
 
-## Getting started (READ THIS!)
+## Setup
 
-Before starting the exercices, be sure to follow the following steps:
+Don't forget to run in your terminal:
 
-* Go to the exercice directory
-* Install the bundler gem with `gem install bundler`
-* Install the exercice dependencies with `bundle install`
+```bash
+$ gem install activerecord
+```
 
 ## The database
 
@@ -84,32 +84,4 @@ Open `interface.rb`. You'll find several places indicated with a `'TODO ...'` ma
 [http://api.rubyonrails.org/classes/ActiveRecord/Migration.html](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html)
 [http://rake.rubyforge.org/doc/rakefile_rdoc.html](http://rake.rubyforge.org/doc/rakefile_rdoc.html)
 
-## Troubleshooting
 
-Here are common error messages you might stumble upon during this exercice:
-
-    rake aborted!
-    Don't know how to build task 'db:migrate'
-
-Check that you're in the `lib` folder.
-
-    rake aborted!
-    LoadError: cannot load such file -- active_record
-
-You probably forgot to run `bundle install` or it generated an error you didn't read.
-
-    `initialize': SQLite3::SQLException: no such table: posts:
-    INSERT INTO posts (name, source_url, rating, date)
-    VALUES(...)
-
-Are you sure you ran `rake db:migrate` ?
-
-    interface.rb:16:in `create_post': undefined local variable or method `created_at' for main:Object (NameError)
-
-Check your code again, are you sur you've a `created_at` variable?
-
-    `initialize': SQLite3::SQLException: table posts has no column named date:
-    INSERT INTO posts (name, source_url, rating, date)
-    VALUES(...)
-
-Is the datetime attribute called `date` ? You sure? Really sure? Really?...
