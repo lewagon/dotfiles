@@ -10,7 +10,7 @@ ActiveRecord::Base.establish_connection(:development)
 
 # Set a logger so that you can view the SQL actually performed by ActiveRecord
 logger = Logger.new(STDOUT)
-logger.formatter = proc do |severity, datetime, progname, msg|
-   "#{msg}\n"
+logger.formatter = proc do |_severity, _datetime, _progname, msg|
+  "#{msg}\n"
 end
 ActiveRecord::Base.logger = logger
