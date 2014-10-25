@@ -23,7 +23,7 @@ We need a `posts` table storing posts (with a title and a URL).
 In `db/migrate` we created a `20141025152200_create_posts.rb` file, containing an Active Record migration class. Migration files are always in the following format `yyyymmddhhmmss_migration_task_name.rb`. The timestamp in the file is really important for `rake db:migrate` to know which migrations
 it has not run yet.
 
-### Migration to create a table
+### 1. Migration to create a table
 
 Write code in `20141025152200_create_posts.rb` to create the `posts` table.
 
