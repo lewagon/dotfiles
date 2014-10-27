@@ -30,3 +30,29 @@ $ rake db:migrate
 - A post should have a name, url (in the right format!) and user
 - A post name should be at least 5 characters long
 - Posts should have unique names (case insensitive)
+
+### Callbacks
+
+We did not talk about this subject in the lecture, but you need to know that
+callbacks exist in ActiveRecord. A callback is a piece of code that is called
+when an event is fired. We will heavily use this notion when programming
+with jQuery.
+
+Example: when a user instance is about to be validated, call some code to do
+some cleanup. For instance, we may want to put the `username` in lower case.
+We can do that with the following code:
+
+```ruby
+class User
+  before_validation :lower_username
+
+  private
+
+  def lower_username
+    self.username = username.downcase unless username.nil?
+  end
+end
+```
+
+Read the [Active Record Callbacks guide](http://guides.rubyonrails.org/active_record_callbacks.html)
+to answer the last facultative question.

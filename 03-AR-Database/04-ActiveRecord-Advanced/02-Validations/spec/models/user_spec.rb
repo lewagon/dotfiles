@@ -36,4 +36,10 @@ describe "User" do
     expect(user_two.errors.messages[:username]).to include "has already been taken"
   end
 
+  it "should strip leading and trailing spaces from email before saving to DB" do
+    user = User.new(username: "bob", email: "   bob@leponge.me   ")
+    user.save
+    expect(User.last.email).to eq "bob@leponge.me"
+  end
+
 end
