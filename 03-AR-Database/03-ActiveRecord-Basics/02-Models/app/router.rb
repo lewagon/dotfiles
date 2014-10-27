@@ -1,4 +1,3 @@
-Dir["#{__dir__}/models/*.rb"].each { |file| require file }
 require_relative "controllers/posts_controller"
 
 class Router
