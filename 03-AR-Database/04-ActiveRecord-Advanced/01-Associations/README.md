@@ -30,3 +30,7 @@ Write a migration to create a one-to-may reference between `User` and `Post`.
 Make sure you add the code in your models to access posts from a user instance,
 and the user from a given instance.
 
+### Seed with user and posts
+
+Write a seed that populate your database with 5 users and between 5 and 10 posts
+per user. Feel free to use any strategy you want (faker or API).

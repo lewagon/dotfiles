@@ -1,4 +1,5 @@
 require_relative "../spec_helper"
+require_relative "../../app/models/post"
 begin
   require_relative "../../app/models/user"
 rescue LoadError
@@ -14,16 +15,6 @@ describe "User" do
 
   it "class should exist. If not, you haven't defined your model class yet" do
     expect(defined?(User)).to eq "constant"
-  end
-
-  it "should allow to retrieve all posts from the database" do
-    if defined?(User)
-      posts = nil
-      expect { users = User.all }.not_to raise_error, "Missing something in your class declaration maybe? Tip: inheritance"
-      expect(posts).to eq []
-    else
-      raise "Fix the first test before paying attention to this one"
-    end
   end
 
   it "has many posts" do
