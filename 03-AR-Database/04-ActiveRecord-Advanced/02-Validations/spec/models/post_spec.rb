@@ -39,7 +39,7 @@ describe "Post" do
 
   it "is valid if the URL is valid" do
     if Post.new(name: "aaaaaa", url: "invalid_url", user: valid_user).valid?
-      fail NotImplementedError, "Please implement a format validation on url colmn"
+      fail NotImplementedError, "Please implement a format validation on url column"
     end
     post = Post.new(name: "Le Wagon", url: "http://www.lewagon.org", user: valid_user)
     expect(post.valid?).to eq true
