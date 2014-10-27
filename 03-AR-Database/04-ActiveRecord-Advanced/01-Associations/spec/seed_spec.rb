@@ -14,7 +14,7 @@ describe "Seed" do
   after(:each) { drop_db }
 
   def seed
-    require "#{__dir__}/../db/seeds.rb"
+    load "#{__dir__}/../db/seeds.rb"
   end
 
   it "should insert 5 users and between 5 and 10 posts per user" do
