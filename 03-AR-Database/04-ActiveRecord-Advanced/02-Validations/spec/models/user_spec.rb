@@ -37,7 +37,7 @@ describe "User" do
   end
 
   it "should strip leading and trailing spaces from email before saving to DB" do
-    if User.new(name: "bob", email: "NOT_A_VALID_EMAIL").valid?
+    if User.new(username: "bob", email: "NOT_A_VALID_EMAIL").valid?
       fail NotImplementedError, "Please implement a format validation on email column"
     end
     user = User.new(username: "bob", email: "   bob@leponge.me   ")
