@@ -21,7 +21,7 @@ Take one down, pass it around, no more bottles of beer on the wall!"
   it "should sing the beer song for two beers" do
     result = run_beer_song(2)
     expect(result).to eq "2 bottles of beer on the wall, 2 bottles of beer!
-Take one down, pass it around, 1 bottles of beer on the wall!
+Take one down, pass it around, 1 bottle of beer on the wall!
 1 bottle of beer on the wall, 1 bottle of beer!
 Take one down, pass it around, no more bottles of beer on the wall!"
   end
