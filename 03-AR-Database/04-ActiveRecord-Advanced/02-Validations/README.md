@@ -5,7 +5,7 @@ to add some validation to our models to make sure we don't store
 inconsistent data in the Database. Before juming head first into the
 exercises, take 15 minutes and read this really good guide:
 
-[guides.rubyonrails.org/active_record_validations.html](http://guides.rubyonrails.org/activerecordvalidations.html)
+[guides.rubyonrails.org/active_record_validations.html](http://edgeguides.rubyonrails.org/active_record_validations.html)
 
 
 ## Setup
