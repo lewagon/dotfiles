@@ -8,10 +8,7 @@ The objectives of this challenge are :
 
 ## Specs
 
-Change the CSS (and the CSS only) to reproduce [this design](http://lewagon.github.io/showroom/Layouts/navbar-fixed/blog.html) :
-
-<img src="https://dl.dropboxusercontent.com/u/29947758/fixed-navbar.png" width="100%">
-
+Change the CSS (and the CSS only) to reproduce [this design](http://lewagon.github.io/showroom/Layouts/navbar-fixed/blog.html)
 
 ## Tips & Resources
 
