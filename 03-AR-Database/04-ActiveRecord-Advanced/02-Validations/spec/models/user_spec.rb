@@ -29,7 +29,7 @@ describe "User" do
 
   it "should be invalid if another user already took this username" do
     user_one = User.new(username: "bob", email: "bob@leponge.me")
-    user_one.save
+    user_one.save!
 
     user_two = User.new(username: "bob", email: "anotherbob@leponge.me")
     expect(user_two.valid?).to eq false
@@ -41,7 +41,8 @@ describe "User" do
       fail NotImplementedError, "Please implement a format validation on email column"
     end
     user = User.new(username: "bob", email: "   bob@leponge.me   ")
-    expect(user.valid?).to eq true
+    expect(user.valid?).to eq(true)
+    expect(user.email).to eq("bob@leponge.me"), message: "You should have a `before_validation` callback to strip whitespaces"
   end
 
 end
