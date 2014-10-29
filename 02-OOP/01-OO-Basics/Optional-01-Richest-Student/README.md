@@ -1,0 +1,15 @@
+## Background & Objectives
+
+Congrats for reaching the first optional exercices of the first OOP day.
+We will now work on an exercise to mix sorting and comparable methods with
+objects.
+
+Suppose you have students (defined by the class `Student`) who own bills
+of five, ten and twenty euros. We want to be able to compare them based
+on their wealth.
+
+### Specs
+
+- When initializing a `Student`, you should pass 3 arguments representing the number of bills they own (fives, tens and twenties)
+- Implement a `wealth` instance method on `Student`
+- Implement [`Comparable`](http://www.ruby-doc.org/core-2.1.3/Comparable.html) on this method so that it's possible to compare 2 students, and to sort an `Array` of students
