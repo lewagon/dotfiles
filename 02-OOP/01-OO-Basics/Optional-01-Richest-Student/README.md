@@ -10,6 +10,6 @@ on their wealth.
 
 ### Specs
 
-- When initializing a `Student`, you should pass 3 arguments representing the number of bills they own (fives, tens and twenties)
+- When initializing a `Student`, you should pass 4 arguments representing the student name and the number of bills they own (fives, tens and twenties)
 - Implement a `wealth` instance method on `Student`
 - Implement [`Comparable`](http://www.ruby-doc.org/core-2.1.3/Comparable.html) on this method so that it's possible to compare 2 students, and to sort an `Array` of students
