@@ -10,6 +10,17 @@ Using built-in classes is good, but creating your *own* classes is even better!
 
 Implement an `OrangeTree` class that models an orange tree (its birth, life cycle and death)
 
+To simulate time passing, you will need to implement the following **instance** method:
+
+```ruby
+def one_year_passes!
+  # TODO: age the tree of one year
+  # TODO: check if the tree has survived
+  # TODO: if so, make the tree height grow
+  # TODO: if so, make the tree grow fruits
+end
+```
+
 - You should be able to measure the tree
 - Each year, the tree should age (it becomes older and taller, and eventually dies).
 - A tree grows 1 meter per year until 10 years old. Then it stops.
