@@ -8,7 +8,7 @@ Spend 20 minutes to rehearse core concepts on a simple `Cat` class (or another e
 
 - How do I define the class for my cat? What's the convention for a class name?
 - What are the caracteristics of a cat? which kind of variables do you use to store this data?
-- Where do I find the value to instantiate color and name? start coding the `initialize` without arguments 
+- Where do I find the value to instantiate color and name? start coding the `initialize` without arguments
 - How do I access my cat name? define the reader manually with them then use `attr_reader`?
 - How do I change my color? **Rule of thumb:** No `attr_writer` or `attr_accessor`, code your own writer methods. It enables to add intelligence (in our case store cat's color history) without changing you class API.
 
@@ -194,7 +194,7 @@ Before starting the challenges
 - Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
 
 ```
-$ cd ~/code/${GITHUB_USERNAME}/promo-4-challenges/
+$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
 $ git status #everything should be ok!
 $ git pull --no-edit upstream master
 ```

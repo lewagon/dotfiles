@@ -14,7 +14,7 @@ Explain that IRB is the **playground to make experiments**, your ruby file is yo
 
 A cool thing to do is to ask the class a simple treatment (capitalize word, count letters, etc..) and then show them the overall methodology to find the answer => **Google/StackOverflow/ruby doc/IRB to experiment**.
 
-Now show them how to run a ruby script from the terminal and how to display results with `puts`. **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on). 
+Now show them how to run a ruby script from the terminal and how to display results with `puts`. **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on).
 
 #### Variables
 
@@ -24,7 +24,7 @@ Take your time on assignment and re-assignment coding 2 or 3 different examples 
 
 #### Methods
 
-Again **go slowly**, and live-code different examples to ensure they  really understand the difference between defining and calling a method, and the difference between parameters and arguments. 
+Again **go slowly**, and live-code different examples to ensure they  really understand the difference between defining and calling a method, and the difference between parameters and arguments.
 
 Spend time on the notion of **return**. A good way of explaining a method is to see it as "black box" or a "factory". You feed it with values in input (the arguments) and then it outputs a result (the return). Here is a useful story to make them understand: "A smart ass phD has given you the coolest machine learning method ever, with 50 000 lines of code. Unfortunately, he forgot about the return of his method... Now you can't use it! What a shame!".
 
@@ -51,7 +51,7 @@ Before starting the challenges
 - Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
 
 ```
-$ cd ~/code/${GITHUB_USERNAME}/promo-4-challenges/
+$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
 $ git status #everything should be ok!
 $ git pull --no-edit upstream master
 ```

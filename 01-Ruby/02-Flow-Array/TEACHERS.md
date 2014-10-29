@@ -8,7 +8,7 @@ A cool way to start is to explain the standard way ruby instuctions are read in 
 
 Show them how a simple method breaks the flow yo! Follow the flow with them on simple examples.
 
-Then introduce one-by-one the other structure modifying the flow: `if..end`, `if !..end` `if..else..end`, `for..end`, `while/untill..end`. For each structure, pick some cool & simple example of your choice. Once you've finished these demos and anwsered questions, scroll quickly on the slides to show them they can retrieve the syntax there. 
+Then introduce one-by-one the other structure modifying the flow: `if..end`, `if !..end` `if..else..end`, `for..end`, `while/untill..end`. For each structure, pick some cool & simple example of your choice. Once you've finished these demos and anwsered questions, scroll quickly on the slides to show them they can retrieve the syntax there.
 
 #### Arrays
 
@@ -20,7 +20,7 @@ Before starting the challenges
 - Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
 
 ```
-$ cd ~/code/${GITHUB_USERNAME}/promo-4-challenges/
+$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
 $ git status #everything should be ok!
 $ git pull --no-edit upstream master
 ```

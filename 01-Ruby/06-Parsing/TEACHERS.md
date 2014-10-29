@@ -26,7 +26,7 @@ Before starting the challenges
 - Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
 
 ```
-$ cd ~/code/${GITHUB_USERNAME}/promo-4-challenges/
+$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
 $ git status #everything should be ok!
 $ git pull --no-edit upstream master
 ```

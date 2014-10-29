@@ -10,7 +10,7 @@ Software are not one-file programs. They are made of different files and differe
 Explain to the students that a class includes:
 
 1. **data / state** => through instance variables
-2. **behavior**  => through instance methods. 
+2. **behavior**  => through instance methods.
 
 **Example**: a string is made of data (= the chain of characters itself) + behavior (= all the methods that can be called like `downcase`, `split`, etc.).
 
@@ -110,7 +110,7 @@ Before starting the challenges
 - Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
 
 ```
-$ cd ~/code/${GITHUB_USERNAME}/promo-4-challenges/
+$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
 $ git status #everything should be ok!
 $ git pull --no-edit upstream master
 ```

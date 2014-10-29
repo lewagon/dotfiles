@@ -4,7 +4,7 @@
 
 #### Iterators
 
-A good way to introduce iterators is to start from a simple `for` loop on an array of your choice (like the musicians array in the slides). Ask them to help you code the `for` loop to print musicians names (they should know how to do it). Then introduce the `each` syntax and explain how it works. 
+A good way to introduce iterators is to start from a simple `for` loop on an array of your choice (like the musicians array in the slides). Ask them to help you code the `for` loop to print musicians names (they should know how to do it). Then introduce the `each` syntax and explain how it works.
 
 As a next step, you can ask them how to they would print the musicianc + its position in the `for` loop. Grrr.. how ugly it us for a rubyist !! It's time for you to show them `each_with_index` and spread the world on how cool iterators are.
 
@@ -37,12 +37,12 @@ WWhy defining methods using blocks?
 **Good story to tell them**: Back in the day, imagine Matz wants to code a method that counts odd numbers in an array. Then a new one to count even numbers. Then a new one to count strings beginning with a "J".. etc.. etc.. He'll have to define an infinite number of methods for an infinite number of conditons.. That's where blocks come into play! They enable to have only one `count`method and to make it generic passing the condition as a block of code. Yeah baby!!
 
 
-**Disclaimer** It's important to make this disclaimer to the class, otherwise some students will feel depressed :) They won't have to use the `yield` keyword every day in their ruby career. We mention it to make them understand the inner mechanics. However, they will have to **use** a lot of methods using blocks (like iterators) so they should get used to the `{}` and `do..end` syntaxes. 
+**Disclaimer** It's important to make this disclaimer to the class, otherwise some students will feel depressed :) They won't have to use the `yield` keyword every day in their ruby career. We mention it to make them understand the inner mechanics. However, they will have to **use** a lot of methods using blocks (like iterators) so they should get used to the `{}` and `do..end` syntaxes.
 
 
 To explain the `yield` keyword a good example is worth long speeches. In your live-code, start with a simple version without block argument, then add one block argument. Finally mix method arguments with block arguments. Every time, follow the flow of the program with the class and substitute `yield` arguments with their values explicitely.
 
-Here are 2 cool examples that work pretty well. Feel free to pick one of them! 
+Here are 2 cool examples that work pretty well. Feel free to pick one of them!
 
 **A timer**
 
@@ -114,7 +114,7 @@ end
 
 puts sum
 
-# adding a block argument 
+# adding a block argument
 
 def fake_complexity()
   puts "Launching very smart computation with the most clever algorithm...."
@@ -169,7 +169,7 @@ Before starting the challenges
 - Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
 
 ```
-$ cd ~/code/${GITHUB_USERNAME}/promo-4-challenges/
+$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
 $ git status #everything should be ok!
 $ git pull --no-edit upstream master
 ```
