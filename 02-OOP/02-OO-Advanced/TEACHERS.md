@@ -2,7 +2,29 @@
 
 ### Morning lecture
 
-Start by reviewing core notions (class, instance variables, instance methods, accessors)
+Start by reviewing core notions (class, instance variables, instance methods, accessors). You can use this:
+
+```ruby
+class ChocolateBar
+  attr_reader :name, :calories
+
+  def initialize(name, calories)
+    @name = name
+    @calories = calories
+    @size = 10
+  end
+
+  def eat_chunks
+    if @size > 0
+      @size -= 1
+    else
+      raise Exception.new("No more chunks")
+    end
+  end
+end
+```
+
+Then when introducing the inheritance later in the lecture, you can add `Mars` and `Snickers` classes.
 
 #### class vs. instance
 
