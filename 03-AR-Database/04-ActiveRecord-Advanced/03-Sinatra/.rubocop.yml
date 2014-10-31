@@ -1,0 +1,9 @@
+inherit_from:
+  - ../../../.rubocop.yml
+
+Style/RegexpLiteral:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - db/**/*.rb

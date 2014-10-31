@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-It's time to give your website the final touch to reach this [objective](http://lewagon.github.io/karr-examples-frontend-02/).
+It's time to give your website the final touch to reach this [objective](http://lewagon.github.io/karr-frontend-02/).
 
 Here are some guidelines:
 

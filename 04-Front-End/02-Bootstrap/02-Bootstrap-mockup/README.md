@@ -1,15 +1,15 @@
 ## Background & Objectives
 
-The goal of the two next challenges is to reproduce [this website](http://lewagon.github.io/karr-examples-frontend-02/), which has the following characteristics :
+The goal of the two next challenges is to reproduce [this website](http://lewagon.github.io/karr-frontend-02/), which has the following characteristics :
 
-- it has a [home page](http://lewagon.github.io/karr-examples-frontend-02/) with
+- it has a [home page](http://lewagon.github.io/karr-frontend-02/) with
   - a bootstrap navbar with links to the about page and to social networks
   - a nice banner with a background image
   - a responsive list of 4 features
   - a nice footer
   - an form in a bootstrap modal to order an icecream toggled when you click on the banner button
 
-- it also has a [about page](http://lewagon.github.io/karr-examples-frontend-02/about.html)
+- it also has a [about page](http://lewagon.github.io/karr-frontend-02/about.html)
 
 ## Specs
 

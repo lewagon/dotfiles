@@ -1,13 +1,7 @@
-.container {
-  margin: 0 auto;  
-  width: 940px;
-	font-family: 'Open Sans', sans-serif;
-}
-
 header ul
 {
 	list-style-type:none;
-	margin: 0;  
+	margin: 0;
 	padding:0;
 	text-align: center;
 }
