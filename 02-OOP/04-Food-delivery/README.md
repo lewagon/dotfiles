@@ -54,7 +54,7 @@ You also want to allow the employees to be able to login and access customers an
 
 An example of how this interface might look (this is just an idea - you are welcome to implement this feature however you think is best):
 
-```shell
+```bash
 $ ruby restaurant.rb
 Welcome to CORBA SALONU
 -------------------------------
@@ -78,7 +78,7 @@ Options:
 
 
 
-```shell
+```bash
 $ ruby restaurant.rb
 Welcome to CORBA SALONU
 -------------------------------
