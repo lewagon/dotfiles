@@ -54,46 +54,46 @@ You also want to allow the employees to be able to login and access customers an
 
 An example of how this interface might look (this is just an idea - you are welcome to implement this feature however you think is best):
 
-```ruby
+```shell
 $ ruby restaurant.rb
-> Welcome to CORBA SALONU
-> -------------------------------
-> Please enter your username:
-> john_doe
-> Please enter your password:
-> ********
-> -------------------------------
-> Welcome, john_doe.  Your access level is : MANAGER
-> -------------------------------
-> What would you like to do?
-> Options:
-> 1. List customers
-> 2. Add customer
-> 3. View orders <customer_id>
-> 4. Add order <customer_id>, <employee_id_>
-> 5. Remove order <order_id>
-> 6. List employees
-> 7. Log out
+Welcome to CORBA SALONU
+-------------------------------
+Please enter your username:
+john_doe
+Please enter your password:
+********
+-------------------------------
+Welcome, john_doe.  Your access level is : MANAGER
+-------------------------------
+What would you like to do?
+Options:
+1. List customers
+2. Add customer
+3. View orders <customer_id>
+4. Add order <customer_id>, <employee_id_>
+5. Remove order <order_id>
+6. List employees
+7. Log out
 ```
 
 
 
-```ruby
+```shell
 $ ruby restaurant.rb
-> Welcome to CORBA SALONU
-> -------------------------------
-> Please enter your username:
-> jimmy_boy
-> Please enter your password:
-> ********
-> -------------------------------
-> Welcome, jimmy_boy.  Your access level is : DELIVERY GUY
-> -------------------------------
-> What would you like to do?
-> Options:
-> 1. View orders
-> 2. Complete order <order_id>
-> 3. Log out
+Welcome to CORBA SALONU
+-------------------------------
+Please enter your username:
+jimmy_boy
+Please enter your password:
+********
+-------------------------------
+Welcome, jimmy_boy.  Your access level is : DELIVERY GUY
+-------------------------------
+What would you like to do?
+Options:
+1. View orders
+2. Complete order <order_id>
+3. Log out
 ```
 
 ## Specs
