@@ -13,7 +13,6 @@ describe Post do
       `id`  INTEGER PRIMARY KEY AUTOINCREMENT,
       `title` TEXT,
       `url` TEXT,
-      `date`  INTEGER,
       `votes`  INTEGER
     );"
     DB.execute(create_statement)
@@ -23,16 +22,8 @@ describe Post do
     expect(Post.new(id: 1).id).to eq 1
   end
 
-  it "should expose its date and have Time.now as the default date" do
-    expect(Post.new({}).date.day).to eq Time.now.day
-  end
-
   it "should not allow the external world to change its id" do
     expect { Post.new({}).id = 2 }.to raise_error NoMethodError
-  end
-
-  it "should not allow the external world to change its date" do
-    expect { Post.new({}).date = Time.now }.to raise_error NoMethodError
   end
 
   it "should not allow the external world to directly change the number of votes" do
@@ -51,6 +42,47 @@ describe Post do
     expect(post.url).to eq "http://www.google.com"
   end
 
+  describe "self.find (class method)" do
+    before do
+      DB.execute("INSERT INTO `posts` (title) VALUES ('Hello world')")
+    end
+
+    it "should return nil if post not found in database" do
+      expect(Post.find(42)).to be_nil
+    end
+
+    it "should load a post from the database" do
+      post = Post.find(1)
+      expect(post).to_not be_nil
+      expect(post).to be_a Post
+      expect(post.id).to eq 1
+      expect(post.title).to eq 'Hello world'
+    end
+
+    it "should resist SQL injections" do
+      id = '(DROP TABLE IF EXISTS `posts`;)'
+      post = Post.find(id)  # Inject SQL to delete the posts table...
+      expect { Post.find(1) }.not_to raise_error
+      expect(Post.find(1).title).to eq 'Hello world'
+    end
+  end
+
+  describe "self.all (class method)" do
+    before do
+      DB.execute("INSERT INTO `posts` (title) VALUES ('Article 1')")
+      DB.execute("INSERT INTO `posts` (title) VALUES ('Article 2')")
+    end
+
+    it "should load a post from the database" do
+      posts = Post.all
+      expect(posts.length).to eq 2
+      expect(posts).to be_a Array
+      expect(posts.first).to be_a Post
+      expect(posts.first.title).to eq 'Article 1'
+      expect(posts.last.title).to eq 'Article 2'
+    end
+  end
+
   describe "upvote" do
     it "should increment the number of votes" do
       post = Post.new({})
@@ -59,7 +91,7 @@ describe Post do
   end
 
   describe "save" do
-    it "should insert the post if it has just been instantiated (Post.new)" do
+    it "should *insert* the post if it has just been instantiated (Post.new)" do
       post = Post.new(title: "Article 1")
       post.save
       post = Post.find(1)
@@ -68,8 +100,8 @@ describe Post do
       expect(post.title).to eq "Article 1"
     end
 
-    it "should update the post if it already exists in the DB" do
-      DB.execute("INSERT INTO `posts` (title, date) VALUES ('Article 1', 1)")
+    it "should *update* the post if it already exists in the DB" do
+      DB.execute("INSERT INTO `posts` (title) VALUES ('Article 1')")
       post = Post.find(1)
       post.title = "Article 1 updated"
       post.save
@@ -91,49 +123,6 @@ describe Post do
       expect(Post.find(1)).not_to be_nil
       post.destroy
       expect(Post.find(1)).to be_nil
-    end
-  end
-
-  describe "self.find (class method)" do
-    before do
-      DB.execute("INSERT INTO `posts` (title, date) VALUES ('Hello world', 1)")
-    end
-
-    it "should return nil if post not found in database" do
-      expect(Post.find(42)).to be_nil
-    end
-
-    it "should load a post from the database" do
-      post = Post.find(1)
-      expect(post).to_not be_nil
-      expect(post).to be_a Post
-      expect(post.id).to eq 1
-      expect(post.title).to eq 'Hello world'
-    end
-
-    it "should resist SQL injections" do
-      id = '1; DROP TABLE IF EXISTS `posts`;'
-      post = Post.find(id)  # Inject SQL to delete the posts table...
-      expect { Post.find(1) }.not_to raise_error
-      expect(Post.find(1).title).to eq 'Hello world'
-    end
-  end
-
-  describe "self.all (class method)" do
-    before do
-      DB.execute("INSERT INTO `posts` (title, date) VALUES ('Article 1', 1)")
-      DB.execute("INSERT INTO `posts` (title, date) VALUES ('Article 2', 2)")
-    end
-
-    it "should load a post from the database" do
-      posts = Post.all
-      expect(posts.length).to eq 2
-      expect(posts).to be_a Array
-      expect(posts.first).to be_a Post
-      expect(posts.first.title).to eq 'Article 1'
-      expect(posts.last.title).to eq 'Article 2'
-      expect(posts.first.date).to eq Time.at(1)
-      expect(posts.last.date).to eq Time.at(2)
     end
   end
 

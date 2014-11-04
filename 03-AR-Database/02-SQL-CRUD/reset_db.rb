@@ -9,7 +9,6 @@ CREATE TABLE `posts` (
   `id`  INTEGER PRIMARY KEY AUTOINCREMENT,
   `title` TEXT,
   `url` TEXT,
-  `date`  INTEGER,
   `votes`  INTEGER
 );"
 db.execute(create_statement)
