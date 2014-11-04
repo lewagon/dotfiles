@@ -64,7 +64,7 @@ update_player_position('player1', 10);
 
 Store this JavaScript in a separate file and use the JavaScript console to debug it and pass in values manually.
 
-##### Binding to Key Presses
+#### Binding to Key Presses
 
 Now we'll make the game interactive!  Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key.  We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key, whereas the keyup event doesn't.
 
