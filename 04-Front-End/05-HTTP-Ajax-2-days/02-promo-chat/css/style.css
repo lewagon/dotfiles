@@ -1,0 +1,14 @@
+body{
+  background: #F0F1F5;
+  padding-top: 50px;
+}
+
+#chatroom{
+  padding: 30px;
+  border: 1px solid lightgrey;
+  background: white;
+}
+
+.date{
+  color: #b3b3b3;
+}
