@@ -1,7 +1,7 @@
 ## Background & Objectives
 
 Again, assume that your `Post` class has access to a global `DB`
-variable defiend as this:
+variable defined as this:
 
 ```ruby
 DB = SQLite3::Database.new("a_file.db")
