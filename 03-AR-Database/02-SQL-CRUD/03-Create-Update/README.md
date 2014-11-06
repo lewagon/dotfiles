@@ -33,4 +33,4 @@ post.title = "Awesome article, updated"
 post.save   # TODO: should update the record in the database
 ```
 
-You may need to use [last_insert_row_id](http://zetcode.com/db/sqliteruby/connect/).
+You may need to use [last\_insert\_row\_id](http://zetcode.com/db/sqliteruby/connect/).
