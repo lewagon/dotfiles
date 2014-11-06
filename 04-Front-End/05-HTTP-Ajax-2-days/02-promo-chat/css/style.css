@@ -12,3 +12,9 @@ body{
 .date{
   color: #b3b3b3;
 }
+
+#messages{
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid lightgrey;
+}

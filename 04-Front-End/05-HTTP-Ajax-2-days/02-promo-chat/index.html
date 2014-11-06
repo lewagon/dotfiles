@@ -27,19 +27,25 @@
             <h1>CHAT-ROOM</h1>
 
             <form action="#" id="comment-form">
+
               <div class="form-group">
-                <label for="your-message"></label>
-                <textarea type="text" name="content" id="your-message" class="form-control" placeholder="here is my message.."></textarea>
+                <label for="your-message">Your comment</label>
+                <textarea type="text" name="content" id="your-message" class="form-control" placeholder="Here is my message.."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="your-name">From</label>
+                <input type="text" name="content" id="your-name" class="form-control" placeholder="Bob">
               </div>
               <input type="submit" value="Send" class="btn btn-primary">
             </form>
 
-            <hr>
-
             <div id="messages">
               <ul class="list unstyle">
-                <li>A sample message (posted <span class="date">10 minutes ago</span>)</li>
+                <li>A sample message (posted <span class="date">10 minutes ago</span>) by John</li>
               </ul>
+
+              <button class="btn btn-danger" id="refresh">Refresh Chat</button>
             </div>
 
           </div>
@@ -50,5 +56,6 @@
     <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
