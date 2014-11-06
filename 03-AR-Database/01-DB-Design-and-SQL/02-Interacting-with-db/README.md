@@ -14,7 +14,9 @@ First test if you have sqlite3 installed on your computer:
 $ sqlite3 --version
 ```
 
-If you don't have it, you can `brew install sqlite` or `sudo apt-get install sqlite libsqlite3-dev` it.
+If you don't have it, you can install it by running:
+- Mac: `brew install sqlite`
+- Ubuntu: `sudo apt-get install sqlite libsqlite3-dev`
 
 You can open the database we provide you to make some queries on it with:
 
