@@ -1,6 +1,6 @@
 ## Notes
 
-It's hard for the students to understand that in:
+In exercice 3 : Interacting with code, it's hard for the students to understand that in:
 
 ```
 def number_of_rows(db, table_name)
@@ -8,7 +8,7 @@ def number_of_rows(db, table_name)
 end
 ```
 
-the syntax 
+the syntax is
 
 ```
 def number_of_rows(db, table_name)
@@ -17,4 +17,7 @@ def number_of_rows(db, table_name)
 end
 ```
 
-is expected. Where does `db` comes from?
+- Where does `db` comes from?
+- What does execute do?
+
+They maybe should be more guided toward this.
