@@ -15,6 +15,7 @@ $ sqlite3 --version
 ```
 
 If you don't have it, you can install it by running:
+
 - Mac: `brew install sqlite`
 - Ubuntu: `sudo apt-get install sqlite libsqlite3-dev`
 
