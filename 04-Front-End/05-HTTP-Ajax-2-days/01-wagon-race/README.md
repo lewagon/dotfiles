@@ -54,21 +54,19 @@ Make sure you're able to "manually" produce all the board layouts you might care
 
 #### Javascript
 
-We need some way for JavaScript to update the board state. Create simple JavaScript functions that can update a particular player's position.  You give the functions a player position as input and they update the underlying HTML to reflect the new position.
+We need some way for JavaScript to update the board state. Create simple JavaScript functions that can update a particular player's position. You can have several animation strategies for that purpose, for instance:
 
-It could look something like:
+- remove the `active` class on the current player's `td` and add this class to the following `td`.
+- keep track of the "index" of each player in the table and increase this index.
 
-```javascript
-update_player_position('player1', 10);
-```
+Hint: depending of your choice, the [next](http://api.jquery.com/next/) and [index](http://api.jquery.com/index/) jQuery functions may be usefull!
 
-Store this JavaScript in a separate file and use the JavaScript console to debug it and pass in values manually.
 
 ##### Binding to Key Presses
 
-Now we'll make the game interactive!  Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key.  We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key, whereas the keyup event doesn't.
+Now we'll make the game interactive!  Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key.  We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key (hence players could cheat by just keeping a key pressed), whereas the keyup event doesn't.
 
-It'd be a boring game if you could just hold the key and go.  You want to bind to the `document`, like so:
+You want to bind to the `document`, like so:
 
 ```javascript
 $(document).ready(function() {
