@@ -5,7 +5,7 @@ In this challenge, you will play with your first API: the **wagon-chat** API. Th
 
 Read the [API documentation](http://github.com/lewagon/wagon-chat-api/README.md) carefully before starting.
 
-## Dynamically insert new comments
+## Dynamically insert your comments
 
 In the `index.html` file of the challenge, you'll find an HTML form `#comment-form` with two inputs (`#your-message` and `#your-name`). Start by coding a simple jQuery script to dynamically insert a new comment submitted with the form on the top of the comments' list, without reloading the all HTML.
 
