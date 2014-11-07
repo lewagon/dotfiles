@@ -11,6 +11,9 @@ In the `index.html` file of the challenge, you'll find an HTML form `#comment-fo
 
 This is a basic jQuery animation that should be easy as pie for you! **Hint**: You'll have to prevent the default behavior of the form submission in jQuery (using the `preventDefault()` method).
 
+
+Code your javascript in `js/app.js`.
+
 ## Make it persistent
 
 That's cool to add new comments dynamically without reloading the all HTML. But try refreshing your page.. oups.. The comments are gone!
