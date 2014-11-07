@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 # This file contains methods related to your shopping cart.
 # You should complete it according to the instructions in the TODO comments
 

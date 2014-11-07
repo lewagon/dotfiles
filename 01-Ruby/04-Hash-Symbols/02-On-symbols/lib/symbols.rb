@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 # NOTE: Read about BasicObject#object_id
 # http://www.ruby-doc.org/core-2.1.1/BasicObject.html#method-i-__id__
 

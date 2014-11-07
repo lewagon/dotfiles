@@ -1,4 +1,5 @@
-require 'spec_helper'
+# encoding: UTF-8
+
 require 'data'
 
 require 'cart'
@@ -16,7 +17,7 @@ describe 'cart methods' do
       add_to_cart(cart, PRODUCTS[3])
       add_to_cart(cart, 'whatever')
 
-      cart.must_equal [PRODUCTS.select { |p| [0, 2, 3].include?(PRODUCTS.index(p)) }, 'whatever'].flatten
+      expect(cart).to eq([PRODUCTS.select { |p| [0, 2, 3].include?(PRODUCTS.index(p)) }, 'whatever'].flatten)
     end
 
   end
@@ -29,7 +30,7 @@ describe 'cart methods' do
 
       str = cart_to_s(cart)
       str.split(',').each_with_index do |p, idx|
-        p.strip.must_equal(PRODUCTS[idx * 2])
+        expect(p.strip).to eq(PRODUCTS[idx * 2])
       end
     end
   end
@@ -43,7 +44,7 @@ describe 'cart methods' do
 
       total = cart_total_price(cart, store_items)
       [0, 2, 4].each { |idx| total -= PRICES[idx] }
-      total.must_equal(0)
+      expect(total).to eq(0)
     end
   end
 end

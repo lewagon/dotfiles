@@ -1,4 +1,5 @@
-require 'spec_helper'
+# encoding: UTF-8
+
 require 'data'
 require 'open3'
 
@@ -28,6 +29,6 @@ describe 'Shopping cart interface' do
 
     [0, 2, 4].each { |idx| total -= PRICES[idx] }
 
-    total.must_equal(0)
+    expect(total).to eq(0)
   end
 end
