@@ -27,12 +27,12 @@ describe "#me" do
 
   it "should tell your age" do
     expect(me_hash).to be_instance_of(Hash)
-    expect(me_hash[:age]).to be_instance_of(Numeric)
+    expect(me_hash[:age]).to be_instance_of(Fixnum)
   end
 
   it "should tell your name" do
     expect(me_hash).to  be_instance_of(Hash)
-    expect(me_hash[:name]).to exist
+    expect(me_hash[:name]).not_to be_nil
   end
 end
 
