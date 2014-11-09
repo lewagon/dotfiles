@@ -10,7 +10,9 @@ describe "#group_anagrams" do
   end
 
   it "should group anagrams together" do
-    expect(group_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams', 'scream']).sort).to
+    output = group_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams', 'scream'])
+    ouput = output.nil? ? nil : output.sort
+    expect(output).to \
       eq([["cars", "racs", "scar"], ["creams", "scream"], ["for"], ["four"], ["potatoes"]])
   end
 
