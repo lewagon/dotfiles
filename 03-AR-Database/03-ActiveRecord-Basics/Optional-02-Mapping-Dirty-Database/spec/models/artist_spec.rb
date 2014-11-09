@@ -1,6 +1,11 @@
 require "spec_helper"
 
 describe "Artist" do
+  it "has a primary key" do
+    artist = Artist.first
+    expect(artist.id).to eq 1
+  end
+
   it "has a name" do
     artist = Artist.first
     expect(artist.name).to eq "AC/DC"
