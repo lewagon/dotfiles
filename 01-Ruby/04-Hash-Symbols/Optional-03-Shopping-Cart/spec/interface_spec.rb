@@ -22,7 +22,7 @@ describe 'Shopping cart interface' do
     end
 
     total_regex = /Total price: (\d+)€/
-    result.must_match(total_regex)
+    expect(result).to match(total_regex)
 
     m = result.match(total_regex)
     total = m.captures[0].to_i

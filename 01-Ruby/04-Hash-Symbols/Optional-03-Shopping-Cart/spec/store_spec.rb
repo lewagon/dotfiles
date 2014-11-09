@@ -54,7 +54,7 @@ describe '#store_items_to_s' do
   it 'returns a list of all products as a string' do
 
     list = store_items_to_s
-    list.must_be_kind_of(String)
+    expect(list).to be_a(String)
 
     regex = /^[^ ]+ ([^:]+): ?([0-9]+) ?€$/
 
