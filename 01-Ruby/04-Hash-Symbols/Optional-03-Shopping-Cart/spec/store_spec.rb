@@ -36,7 +36,7 @@ describe '#price_of_product' do
 
   it 'returns nil for a product that is not in store' do
     NOT_PRODUCTS.each do |p|
-      expect(price_of_product(p)).to_be_nil
+      expect(price_of_product(p)).to be_nil
     end
   end
 
