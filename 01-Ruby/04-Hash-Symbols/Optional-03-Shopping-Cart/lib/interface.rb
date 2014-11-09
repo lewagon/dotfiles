@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require_relative 'store'
 require_relative 'cart'
 
@@ -17,7 +19,7 @@ while true
   # break loop if product is empty
   break if product == ''
 
-  if is_product_in_store?(product)
+  if product_in_store?(product)
     add_to_cart(cart, product)
   else
     # otherwise show error

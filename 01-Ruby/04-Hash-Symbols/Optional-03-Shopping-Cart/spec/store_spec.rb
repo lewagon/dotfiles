@@ -1,4 +1,5 @@
-require 'spec_helper'
+# encoding: UTF-8
+
 require 'data'
 require 'store'
 
@@ -9,39 +10,39 @@ require 'store'
 #   potatoes : 2€
 #   rice : 1€
 
-describe 'is_product_in_store? method' do
+describe '#product_in_store?' do
 
   it 'returns true for all products in store' do
     PRODUCTS.each do |p|
-      is_product_in_store?(p).must_equal(true)
+      expect(product_in_store?(p)).to be true
     end
   end
 
   it 'returns false for any product not in store' do
     NOT_PRODUCTS.each do |p|
-      is_product_in_store?(p).must_equal(false)
+      expect(product_in_store?(p)).to be false
     end
   end
 
 end
 
-describe 'price_of_product method' do
+describe '#price_of_product' do
 
   it 'returns the correct price for a product in store' do
     PRODUCTS.each_with_index do |p, idx|
-      price_of_product(p).must_equal(PRICES[idx])
+      expect(price_of_product(p)).to eq(PRICES[idx])
     end
   end
 
   it 'returns nil for a product that is not in store' do
     NOT_PRODUCTS.each do |p|
-      price_of_product(p).must_be_nil
+      expect(price_of_product(p)).to_be_nil
     end
   end
 
 end
 
-describe 'store_items_to_s method' do
+describe '#store_items_to_s' do
 
   # TODO: Return a String with all store items in the following form:
   # - Meat: 7€
@@ -61,7 +62,7 @@ describe 'store_items_to_s method' do
     prices = []
 
     list.each_line do |line|
-      line.must_match(regex)
+      expect(line).to match(regex)
 
       m = line.match(regex)
       products << m.captures[0]
@@ -70,7 +71,7 @@ describe 'store_items_to_s method' do
 
     products.each_with_index do |p, idx|
       if PRODUCTS.include?(p.downcase)
-        prices[idx].must_equal(PRICES[PRODUCTS.index(p)])
+        expect(prices[idx]).to eq(PRICES[PRODUCTS.index(p)])
       end
     end
 
