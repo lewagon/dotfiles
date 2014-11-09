@@ -1,0 +1,7 @@
+development:
+  adapter: sqlite3
+  database: db/dirty_jukebox.db
+
+test:
+  adapter: sqlite3
+  database: db/dirty_jukebox.db
