@@ -29,9 +29,9 @@ Once you have created your new coaching app, add it a new `CoachingController`, 
 
 First implement your coach answer logic in `CoachingController#answer`. We give you some URL stucture you should respect. You will have to make a GET request on `/answer`, and you should use a parameter named `:query`. Ex: GET `/answer?query=hello` or GET `/answer?query=what+should+i+do?`.
 
-![Coach answer to question](images/coach-answer-2.png)
+![Coach answer to question](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-2.png)
 
-![Coach answer to assertion](images/coach-answer-1.png)
+![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-1.png)
 
 ### Ask a question using a form
 
@@ -52,7 +52,7 @@ Notice the important HTML attributes in the form:
 
 You should know what to put instead of the `???`
 
-![Coach answer to assertion](https://dl.dropboxusercontent.com/u/29947758/coach-ask.png)
+![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
 
 
 ### Add a backlink in `answer.html.erb`
@@ -61,4 +61,4 @@ You should know what to put instead of the `???`
 
 - Add a link to `/ask` on the `answer.html.erb` view using the `link_to` Rails helper.
 
-![Coach answer to assertion](https://dl.dropboxusercontent.com/u/29947758/coach-adding-link.png)
+![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-adding-link.png)
