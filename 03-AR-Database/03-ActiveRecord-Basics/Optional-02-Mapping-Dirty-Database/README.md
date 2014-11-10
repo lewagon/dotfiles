@@ -16,5 +16,5 @@ does not follow the convention. You'll have to manually override it.
 
 ## Tips
 
-- Read how to [override the naming conventions](guides.rubyonrails.org/active_record_basics.html)
+- Read how to [override the naming conventions](http://guides.rubyonrails.org/active_record_basics.html)
 - Look for [`foreign_key` usages](http://guides.rubyonrails.org/association_basics.html)
