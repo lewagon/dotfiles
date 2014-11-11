@@ -14,6 +14,13 @@ Herebelow is how your game should work. We only give you the routing structure. 
 
 - To submit a parameter though a form without displaying the corresponding input, you can use a hidden input field `<input type="hidden">`!
 
+/!\ Remember /!\
+For the forms to work you will need to remove the following line :
+```ruby
+  protect_from_forgery with: :exception
+```
+In the `app/controllers/application_controller.rb` file.
+This will be explain in more details during the next days, but you can learn more about it [here](http://guides.rubyonrails.org/security.html)
 
 ## Extra (optional)
 
