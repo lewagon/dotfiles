@@ -50,7 +50,7 @@ This challenge is deliberately not guided. Here are some elements that will help
 * Read [word-reference documentation](http://www.wordreference.com/docs/api.aspx) to understand how this very simple api works and get a key for using it.
 * Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get the JSON result. Use the `json` package to parse returned JSON files.
 * For testing the grid inclusion, make use of `Enumerable#all?`
-
+* The API key we are going to use is `80143`. Hence the URL to query word reference database is: `"http://api.wordreference.com/0.8/80143/json/enfr/#{search_term}";`
 
 
 
