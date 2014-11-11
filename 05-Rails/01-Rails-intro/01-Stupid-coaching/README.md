@@ -56,10 +56,10 @@ You should know what to put instead of the `???`
 
 
 ### Add a backlink in `answer.html.erb`
-
-- Add a routing helper on `/ask`, using `:as` see [Rails routing doc](http://guides.rubyonrails.org/routing.html)
-
 - Add a link to `/ask` on the `answer.html.erb` view using the `link_to` Rails helper.
 
 ![Coach answer to assertion](https://dl.dropboxusercontent.com/u/29947758/coach-adding-link.png)
+
+- Learn more on rails routing [here](http://guides.rubyonrails.org/routing.html)
+
 
