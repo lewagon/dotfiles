@@ -6,7 +6,11 @@ The objectives of this challenge are :
 * This challenge focus on the [Bootstrap grid system](http://getbootstrap.com/css/#grid), you will not need to use other components of Bootstrap here. But the grid system is the hardest part of Boostrap, all the rest is just a matter of copy & paste!
 * Embed [Fontawesome](http://fontawesome.io/) icons, which behave as texts as you will realize (this is VERY convenient).
 
-In the HTML of the canvas, we already put the good tags. **All you need to do is add the adequate bootstrap classes to some of these tags**. You should not add any additional tags that the ones we gave you!
+In the HTML of the canvas, we give you raw blogposts. **You need to insert these blogposts in a well-structured Bootstrap grid**. Remember:
+
+- A good grid should include **an immediate succession of `.container > .row > .col`**. Don't insert any `<div>` between a `.container` and a `.row` or between a `.row` and a `.col`. 
+- If you want a grid with responsive behavior, start with the smallest class (`.col-xs`) and then add additional classes if you want a change in your grid for larger devices (`.col-sm`, `.col-md`, `.col-lg`) 
+- You're are not obliged to write all the classes(`.col-xs`, `.col-sm`, `.col-md`, `.col-lg`). If not specified, the last class will apply. E.g `<div class="col-xs-12 col-sm-6">` will occupy six columns on tablets (`sm`) **AND on larger devices** (`md` and `lg`).  
 
 ## Specs
 
