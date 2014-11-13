@@ -7,7 +7,7 @@ The goal of the two next challenges is to reproduce [this website](http://lewago
   - a nice banner with a background image
   - a responsive list of 4 features
   - a nice footer
-  - an form in a bootstrap modal to order an icecream toggled when you click on the banner button
+  - a form in a bootstrap modal to order an icecream toggled when you click on the banner button
 
 - it also has a [about page](http://lewagon.github.io/karr-frontend-02/about.html)
 
