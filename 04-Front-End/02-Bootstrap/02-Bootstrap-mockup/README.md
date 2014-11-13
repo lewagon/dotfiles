@@ -13,7 +13,7 @@ The goal of the two next challenges is to reproduce [this website](http://lewago
 
 ## Specs
 
-Your project should have a `index.html` file for the home page and a `about.html` file for the about page. Start with a clean Bootstrap mockup **without custom design** with all the good components (navbar, buttons, grids, modal). **You will add your own design as a second step** (to change the navbar color, the fonts, etc..), once you have a good mockup with all the elements in place.
+Your project should have a `index.html` file for the home page and a `about.html` file for the about page. Start with a clean Bootstrap mockup **without custom design** but with all the components in the right place (navbar, buttons, grids, modal). **You will add your own design as a second step** (to change the navbar color, the fonts, etc..), once you have a clean mockup to work with. This is how good front-end developpers are working: bootstrap mockup first, custom design second.
 
 ## Tips
 
