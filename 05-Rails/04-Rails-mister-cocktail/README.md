@@ -59,7 +59,7 @@ Add to your Gemfile
 
 ```ruby
 # Gemfile
-ruby '2.1.1'
+ruby '2.1.2'
 gem 'rails_12factor', group: :production
 ```
 
@@ -77,7 +77,7 @@ Once you have a Heroku account, you can create a Heroku app and push your code t
 
 Create the app on Heroku (the app name might be taken already..), with the addons flag heroku postgresql
 
-    heroku create mistercoctail -region eu
+    heroku create --region eu
 
 Now if you list your remote repos, you can see the heroku repo linked to your local repo.
 
