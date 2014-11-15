@@ -62,7 +62,7 @@ When using Rails helper like `link_to` or `form_for`, you can pass a hash of HTM
 ```erb
 <%= link_to "See details", @restaurant, class: "btn btn-primary"%>
 ```
-Will generate  this HTML 
+Will generate  this HTML
 
 ```html
 <a href="/restaurants/3" class="btn btn-primary">See details</a>
@@ -75,10 +75,12 @@ or, you can also pass the HTML content of the link in a block:
   <%= image_tag @restaurant.picture %>
 <% end %>
 ```
+
 will generate this HTML
+
 ```html
 <a href="/restaurants/3" class="image-link">
-  <img src="assets/...">
+  <img src="/assets/...">
 </a>
 ```
 

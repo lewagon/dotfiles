@@ -48,49 +48,53 @@ Once again, you must have a precise idea of the features of your app in order to
 When creating your new rails cocktail-app, do it properly setting the database to Postgres from the beginning, and tracking you project with git.
 
 
-    $ cd ~/code/your_github_username
-    $ rails new mistercocktail --database=postgresql
-    $ cd mistercocktail
-    $ git init
-    $ git add . && git commit -m "rails new"
-    $ rake db:create
+```bash
+$ cd ~/code/$YOUR_GITHUB_USERNAME
+$ rails new mistercocktail --database=postgresql
+$ cd mistercocktail
+$ git init
+$ git add . && git commit -m "rails new"
+$ rake db:create
+```
 
 Add to your Gemfile
+
 ```ruby
 # Gemfile
-ruby '2.1.1'
-gem 'thin'
+ruby '2.1.2'
 gem 'rails_12factor', group: :production
 ```
 
-And run `bundle install`
-
-Create a Procfile, in the app folder (same level as Gemfile), which includes this code
-
-```ruby
-# Procfile
-web: bundle exec rails s -p $PORT
-```
+And run `bundle install`.
 
 ### Deploy continuously from the beginning
+
 Once you have a Heroku account, you can create a Heroku app and push your code to this app.
 
 Create the app on Heroku (the app name might be taken already..), with the addons flag heroku postgresql
 
-    heroku create mistercoctail --addons heroku-postgresql --region eu
+```bash
+$ heroku create --region eu
+```
 
 Now if you list your remote repos, you can see the heroku repo linked to your local repo.
 
-    $ git remote -v
+```bash
+$ git remote -v
+```
 
 Every time you make a new commit, for example
 
-    $ git add .
-    $ git commit -m "some changes on my web-app"
+```bash
+$ git add .
+$ git commit -m "some meaningful message on what I did"
+```
 
 You can push your changes on heroku directly with
 
-    $ git push heroku master
+```bash
+$ git push heroku master
+```
 
 Exactly the same process as with Github.
 
@@ -104,5 +108,7 @@ To host your code and collaborate on your project, Heroku will not be of any hel
 
 Hence you can push independently on these 2 repositories with
 
-    $ git push origin master # push on Github
-    $ git push heroku master # push to production on Heroku
+```bash
+$ git push origin master # push on Github
+$ git push heroku master # push to production on Heroku
+```
