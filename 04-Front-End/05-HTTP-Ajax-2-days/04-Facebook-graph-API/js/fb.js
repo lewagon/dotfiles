@@ -21,7 +21,7 @@ $(function() {
 
     // Your turn:
     // Play with the graph explorer to see which data you want to inject (friends, education, whatever you like!)
-    // Inject this data in the #advanced-infos div
+    // Inject this data in the .advanced infos div
 
   });
 
