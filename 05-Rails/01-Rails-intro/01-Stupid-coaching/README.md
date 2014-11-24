@@ -54,16 +54,6 @@ You should know what to put instead of the `???`
 
 ![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
 
-### Important
-
-For this form to work you will need to remove the following line
-```ruby
-  protect_from_forgery with: :exception
-```
-In the `app/controllers/application_controller.rb` file.
-This will be explain in more details during the next days, but you can learn more about it [here](http://guides.rubyonrails.org/security.html)
-
-
 ### Add a backlink in `answer.html.erb`
 - Add a link to `/ask` on the `answer.html.erb` view using the `link_to` Rails helper.
 
