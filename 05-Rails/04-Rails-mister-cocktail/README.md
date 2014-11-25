@@ -19,7 +19,6 @@ Now it's time to make a 3-model app. Mister Cocktail, yeah!
 - An ingredient has many cocktails through doses
 - A dose belongs to an ingredient
 - A dose belongs to a cocktail
-
 - When you delete an ingredient, it should delete the related doses.
 - When you delete a cocktail, you should delete associated doses (you will not destroy the ingredients as they can be linked to other cocktails).
 
