@@ -33,82 +33,58 @@ As you have guessed, the `doses` table is the join table between cocktails and i
 - An ingredient must have a name
 - A dose must have an amount
 
+## Seed your ingredients
+
+Our cocktails app will not allow users to create ingredients. This is a cocktail app, not an ingredient app :) Instead, we will generate a static seed for ingredients. Write this seed, for example
+
+```ruby
+# db/seeds.rb
+Ingredient.create("lemon")
+Ingredient.create("ice cubes")
+Ingredient.create("mint leaves")
+```
+
+And launch it with `rake db:seed`.
+
 ### Routing
 
 Once again, you must have a precise idea of the features of your app in order to build your routes. Here is the list of features:
 
 - a user can see the list of all cocktails
+
+```
+GET "cocktails"
+```
+
 - a user can see the details of a precise cocktail, with the table of ingredients and doses
-- a user can create a new cocktail with its name.
+
+```
+GET "cocktails/42"
+```
+
+- a user can create a new cocktail.
+
+```
+GET "cocktails/new"
+POST "cocktails"
+```
+
 - a user can add a new dose (ingredient/amount pair) on an existing cocktail
+
+```
+GET "cocktails/42/doses/new"
+POST "cocktails/42/doses"
+```
+
 - a user can delete a dose on an existing cocktail
 
-### Prepare for Deployment
-
-When creating your new rails cocktail-app, do it properly setting the database to Postgres from the beginning, and tracking you project with git.
-
-
-```bash
-$ cd ~/code/$YOUR_GITHUB_USERNAME
-$ rails new mistercocktail --database=postgresql
-$ cd mistercocktail
-$ git init
-$ git add . && git commit -m "rails new"
-$ rake db:create
+```
+DELETE "doses/25"
 ```
 
-Add to your Gemfile
+## Developper Workflow
 
-```ruby
-# Gemfile
-ruby '2.1.2'
-gem 'rails_12factor', group: :production
-```
+Don't forget to start your project the good way:
 
-And run `bundle install`.
-
-### Deploy continuously from the beginning
-
-Once you have a Heroku account, you can create a Heroku app and push your code to this app.
-
-Create the app on Heroku (the app name might be taken already..), with the addons flag heroku postgresql
-
-```bash
-$ heroku create --region eu
-```
-
-Now if you list your remote repos, you can see the heroku repo linked to your local repo.
-
-```bash
-$ git remote -v
-```
-
-Every time you make a new commit, for example
-
-```bash
-$ git add .
-$ git commit -m "some meaningful message on what I did"
-```
-
-You can push your changes on heroku directly with
-
-```bash
-$ git push heroku master
-```
-
-Exactly the same process as with Github.
-
-
-### Collaborate on Github
-
-To host your code and collaborate on your project, Heroku will not be of any help.. So you still have to create a new Github repository and link it to your local repo. Your local cocktail-app now has 2 remote repositories (which you can check with `git remote -v`)
-
-1. heroku = Production repo on Heroku
-1. origin = Github repo to collaborate on your code
-
-Hence you can push independently on these 2 repositories with
-
-```bash
-$ git push origin master # push on Github
-$ git push heroku master # push to production on Heroku
-```
+- Connecting it to a **Github repository**
+- Pushing your app on **Heroku** from the beginning
