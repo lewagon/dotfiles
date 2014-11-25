@@ -23,16 +23,40 @@ The objective of this challenge is to build a 2-model Rails app with restaurant 
 Asking yourself what routes you need is an important step. It depends on what features you want for your app. Let's define our minimal product:
 
 - A user can see the list of all restaurants.
+
+```
+GET "restaurants"
+```
 - He can add a new restaurant.
+
+```
+GET "restaurants/new"
+POST "restaurants"
+```
+
 - He can see the details of a restaurant, with all reviews related to the restaurant.
-- He can add a new review to a restaurant, from the restaurant's show view.
+
+```
+GET "restaurants/38"
+```
+
+- He can add a new review to a restaurant
+
+```
+GET "restaurants/38/reviews/new"
+POST "restaurants/38/reviews"
+```
+
 - And that's it!
 
 A user cannot update / delete any restaurant or review. That will be the role of the admin (i.e. **you**) to make some curation for restaurant and reviews from the rails console.
 
 We know that it's a pretty poor first version. However, the goal is to force you to think about your routes, and not create 7 CRUD routes for any resources of your app!
 
-List all the routes you need to build this product, and check the list with a teacher.
+Implement all the routes you need to build this product
+
+**Hint:** to handle the route `GET "restaurants/38/reviews/new"`, you will have to use nested resources.
+
 
 ### Seeding
 You can seed your restaurant database in `db/seeds.rb`. Ex:
@@ -102,3 +126,17 @@ Here is an example of how you would generate a Bootstrap inline-form using the R
   <%= f.submit "Log in", class: "btn btn-primary"%>
 <% end %>
 ```
+
+### Improve your app
+
+**Once you have finished the first version of this app**, try to improve it by embedding your review form inside each restaurant's show view. In that case your new routes will be:
+
+```
+GET "restaurants"
+GET "restaurants/new"
+GET "restaurants/38"
+POST "restaurants"
+POST "restaurants/38/reviews"
+```
+
+Notice that we got rid of the route `GET "restaurants/38/reviews/new"` since the review form is **now embedded in the `restaurants/show.html.erb` view**.
