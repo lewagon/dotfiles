@@ -49,14 +49,13 @@ POST "restaurants/38/reviews"
 
 - And that's it!
 
-A user cannot update / delete any restaurant or review. That will be the role of the admin (i.e. **you**) to make some curation for restaurant and reviews from the rails console.
+A user cannot update / delete any restaurant or review. That will be the role of the admin (i.e. **you**) to make some curation for restaurants and reviews from the rails console.
 
-We know that it's a pretty poor first version. However, the goal is to force you to think about your routes, and not create 7 CRUD routes for any resources of your app!
+We know that it's a pretty poor first version of the app. However, the goal is to force you to think about your routing and **to consider each route as a traduction of a real user-story or your product**, not to stupidly write 7 CRUD routes for any model of your app :)
 
 Implement all the routes you need to build this product
 
-**Hint:** to handle the route `GET "restaurants/38/reviews/new"`, you will have to use nested resources.
-
+**Hint:** to handle the route `GET "restaurants/38/reviews/new"`, you will have to use [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
 ### Seeding
 You can seed your restaurant database in `db/seeds.rb`. Ex:
@@ -110,7 +109,7 @@ will generate this HTML
 
 #### [form_for](http://guides.rubyonrails.org/form_helpers.html)
 
-Be carefull, now your reviews URLs are all nested in `/restaurants/:restaurant_id` so that you cannot use `form_for` the same way you did yesterday.
+Be carefull, your reviews URLs are now nested in `/restaurants/:restaurant_id`. Hence, you cannot use `form_for` the same way you did with a non-nested resource. If you write:
 
 ```erb
 <%= form_for(@review) do |f| %>
@@ -118,7 +117,7 @@ Be carefull, now your reviews URLs are all nested in `/restaurants/:restaurant_i
 <% end %>
 ```
 
-will generate
+It will generate this HTML
 
 ```html
 <form action="/reviews">
@@ -126,7 +125,7 @@ will generate
 <% end %>
 ```
 
-That's not what we want bacause **we have no route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
+That's not what we want bacause **we haven't any route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
 
 ```erb
 <%= form_for([@restaurant, @review]) do |f| %>
@@ -134,7 +133,7 @@ That's not what we want bacause **we have no route for `POST "reviews"`**. Inste
 <% end %>
 ```
 
-will generate
+This will will generate the following HTML form:
 
 ```html
 <form action="/restaurants/42/reviews">
@@ -142,8 +141,7 @@ will generate
 <% end %>
 ```
 
-You have this route `POST "restaurants/:restaurant_id/reviews"` in your routing, yeah! You can read [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources) for more insights.
-
+This URL is consistent with the route `POST "restaurants/:restaurant_id/reviews"` you have defined in `routes.rb`. Yeah! For more insights, you can read [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
 
 
 ### Improve your app
