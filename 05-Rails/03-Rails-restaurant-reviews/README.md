@@ -110,26 +110,45 @@ will generate this HTML
 
 #### [form_for](http://guides.rubyonrails.org/form_helpers.html)
 
-Here is an example of how you would generate a Bootstrap inline-form using the Rails `form_for` helper.
+Be carefull, now your reviews URLs are all nested in `/restaurants/:restaurant_id` so that you cannot use `form_for` the same way you did yesterday.
 
 ```erb
-<%= form_for @user, html: {class: "form-inline"} do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control", placeholder: "bob"%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :email %>
-    <%= f.email_field :email, class: "form-control", placeholder: "bob@gmail.com"%>
-  </div>
-  <%= f.submit "Log in", class: "btn btn-primary"%>
+<%= form_for(@review) do |f| %>
+  <!-- [...] -->
 <% end %>
 ```
 
+will generate
+
+```html
+<form action="/reviews">
+  <!-- [...] -->
+<% end %>
+```
+
+That's not what we want bacause **we have no route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
+
+```erb
+<%= form_for([@restaurant, @review]) do |f| %>
+  <!-- [...] -->
+<% end %>
+```
+
+will generate
+
+```html
+<form action="/restaurants/42/reviews">
+  <!-- [...] -->
+<% end %>
+```
+
+You have this route `POST "restaurants/:restaurant_id/reviews"` in your routing, yeah! You can read [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources) for more insights.
+
+
+
 ### Improve your app
 
-**Once you have finished the first version of this app**, try to improve it by embedding your review form inside each restaurant's show view. In that case your new routes will be:
+**Once you have finished the first version of your resto-review app**, try to improve it by embedding your review form inside each restaurant's show view. In that case your new routing will be:
 
 ```
 GET "restaurants"
