@@ -38,9 +38,9 @@ Our cocktails app will not allow users to create ingredients. This is a cocktail
 
 ```ruby
 # db/seeds.rb
-Ingredient.create("lemon")
-Ingredient.create("ice cubes")
-Ingredient.create("mint leaves")
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice cubes")
+Ingredient.create(name: "mint leaves")
 ```
 
 And launch it with `rake db:seed`.
