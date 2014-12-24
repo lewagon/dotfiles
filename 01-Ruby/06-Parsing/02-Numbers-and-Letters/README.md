@@ -33,7 +33,7 @@ This challenge will let you access a web-API, and parse JSON data returned by th
 
 **Constraints**:
 
-- For your code to pass the tests, you should consider the first translation among the principal translations given by the API. Look at the [apple JSON translations](http://api.wordreference.com/0.8/80143/json/enfr/apple) to get an example
+- For your code to pass the tests, you should consider the first translation among the principal translations given by the API. Look at the [apple JSON translations](http://api.wordreference.com/0.8/80143/json/enfr/apple) to get an example.
 - Your grid should be a real random grid, hence possibly embed same characters multiple times.
 - Make sure you check if the word is an english word, i.e. has a translation, and if it is well included in the grid.
 - If the word is not valid or is not in the grid, the score will be 0 and you should build a custom message to explain it to the player.
@@ -44,10 +44,11 @@ This challenge will let you access a web-API, and parse JSON data returned by th
 - How could you refactor your code to separate the responsabilities of each method ?
 
 ## Tips & Resources
+
 This challenge is deliberately not guided. Here are some elements that will help you
 
 * Write the pseudo code to figure out how to proceed before diving into the code
-* Read [word-reference documentation](http://www.wordreference.com/docs/api.aspx) to understand how this very simple api works and get a key for using it.
+* You can install the extension JSONView for [Chrome](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) or [Firefox](https://addons.mozilla.org/fr/firefox/addon/jsonview/) to help you read a JSON rendered by an API.
 * Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get the JSON result. Use the `json` package to parse returned JSON files.
 * For testing the grid inclusion, make use of `Enumerable#all?`
 * The API key we are going to use is `80143`. Hence the URL to query word reference database is: `"http://api.wordreference.com/0.8/80143/json/enfr/#{search_term}";`
