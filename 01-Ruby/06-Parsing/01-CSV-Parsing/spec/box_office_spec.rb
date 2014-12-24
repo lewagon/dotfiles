@@ -23,9 +23,9 @@ describe "#most_successfull" do
 
   it "should pick movies with maximum earnings" do
     target = [
-            {:name=>"L'exorciste", :year=>1973, :earnings=>204565000},
-            {:name=>"Autant en emporte le vent", :year=>1939, :earnings=>198655278},
-            {:name=>"Blanche Neige et les sept nains", :year=>1937, :earnings=>184925485}
+            { name: "Avatar", year: 2009, earnings: 760505847 },
+            { name: "Titanic", year: 1997, earnings: 658672302 },
+            { name: "The Avengers", year: 2012, earnings: 623279547 }
           ]
     expect(movies_list).to eq target
   end

@@ -4,6 +4,7 @@
 - Work with CSV file input
 
 In order to read a CSV file and extract its data you can use the `csv` package that comes with ruby standard library.
+The CSV given as an example in `lib/movies.csv` has been created from [IMDB](http://www.imdb.com/boxoffice/alltimegross).
 
 #### Ruby Standard Library
 
@@ -22,7 +23,7 @@ You have very usefull ruby packages in the standard library to
 ## Specs
 
 - implement `#most_successfull` that returns the nth movies published prior to a given year, and with maximum earnings.
-- **constraint**: the returned list should be an array of movies. Each movie should be represented by a hash with keys `name`, `year` and `earnings`. Ex: `{:name=>"L'exorciste", :year=>1973, :earnings=>204565000}`
+- **constraint**: the returned list should be an array of movies. Each movie should be represented by a hash with keys `name`, `year` and `earnings`. Ex: `{ name: "Avatar", year: 2009, earnings: 760505847 }`
 
 ## Tips & Resources
 
