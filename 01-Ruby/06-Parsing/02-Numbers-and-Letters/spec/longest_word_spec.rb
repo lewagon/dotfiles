@@ -53,6 +53,15 @@ describe "#run_game" do
     end
   end
 
+  context "the given word has all letters but not in sufficient number" do
+    let(:not_enough_letters) { run_game("spell", %w(S P E L O O O O), Time.now, Time.now + 1.0) }
+
+    it "should tell it's not in the grid" do
+      expect(not_enough_letters[:score]).to eq 0
+      expect(not_enough_letters[:message]).to eq "not in the grid"
+    end
+  end
+
   it "should compute higher score for longer word" do
     expect(perfect[:score] > quick[:score]).to eq true
   end
