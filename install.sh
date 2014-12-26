@@ -1,4 +1,4 @@
-#!/bin/bash
+#!
 for name in *; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
@@ -36,7 +36,16 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-history-substring-search" ]; then
 fi
 cd "$CURRENT_DIR"
 
-source ~/.zshrc
+
+echo "Type in your full name (no accent / special chars):"
+read full_name
+echo "Type in your email address (the one used for your GitHub account):"
+read email
+git config --global user.email $email
+git config --global user.name $full_name
+
+
+zsh ~/.zshrc
 
 # Setting Sublime Text as main editor and git editor
 # subl_path=`alias subl | grep -o '\(/[a-zA-Z0-9. ]\+\)\+'`
