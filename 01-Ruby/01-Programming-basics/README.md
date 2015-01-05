@@ -18,5 +18,5 @@ A simple challenge to make you manipulate variables, methods, and string interpo
 
 #### `04-Stupid-coaching`
 
-A more advanced challenge, where you will have to you use notions not covered yet (conditional and looping structures). Don't panic, **we'll see these concepts tomorrow**. Try to go step-by-step and ask yourself what you are trying to accomplish in your program before writing some code.
+A more advanced challenge, where you will have to use notions not covered yet (conditional and looping structures). Don't panic, **we'll see these concepts tomorrow**. Try to go step-by-step and ask yourself what you are trying to accomplish in your program before writing some code.
 
