@@ -23,8 +23,8 @@ def add_bang(array)
   #       You should use Enumerable#map
 end
 
-def product(array)
-  # TODO: Calculate the product of an array of numbers.
+def concatenate(array)
+  # TODO: Concatenate all strings given in the array.
   #       You should use of Enumerable#reduce
 end
 

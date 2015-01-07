@@ -40,10 +40,10 @@ describe "#add_bang" do
 
 end
 
-describe "#product" do
+describe "#concatenate" do
 
-  it "should compute product of given numbers" do
-    expect(product([1, 1, 2, 3, 5])).to eq 30
+  it "should concatenate all the given strings" do
+    expect(concatenate(["hello", " ", "guys", ",", " ", "how", " ", "are", " ", "you", "?"])).to eq "hello guys, how are you?"
   end
 
 end
