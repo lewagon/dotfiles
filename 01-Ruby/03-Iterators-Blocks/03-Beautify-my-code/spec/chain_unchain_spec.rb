@@ -17,7 +17,7 @@ end
 describe "#quote_prime_numbers" do
   it "should still work" do
     output = quote_prime_numbers(10)
-    expected = [2, 3, 5, 7, 11].map { |n| "#{n} is prime" }
+    expected = [2, 3, 5, 7].map { |n| "#{n} is prime" }
     expect(output).to eq expected
   end
 end
