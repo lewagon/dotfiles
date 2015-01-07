@@ -9,7 +9,7 @@ describe "#tag" do
   end
 
   it "should return the correct html for an example with one attribute" do
-    html-string = tag("h1", ["style", "color: red"]) do
+    html_string = tag("h1", ["style", "color: red"]) do
       "Hello world"
     end
     expect(html_string).to eq '<h1 style="color: red">Hello world</h1>'

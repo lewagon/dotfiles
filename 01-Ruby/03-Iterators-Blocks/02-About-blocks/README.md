@@ -30,6 +30,9 @@ end
 # => '<a href="www.google.com">Google it</a>'
 ```
 
+You may need to know that to include a `"` symbol inside a string delimited by double quotes,
+you need to **escape** this character with an antislash: `\"`.
+
 ### Arguments with default value
 
 In ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
