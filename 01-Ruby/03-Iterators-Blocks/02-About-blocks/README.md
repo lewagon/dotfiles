@@ -15,21 +15,22 @@ Although we can store them in `Proc` objects and pass them to a method as standa
 Implement the `#tag` method that builds the HTML tags around the content we give it in the block. For instance:
 
 ```ruby
-tag("h1") { "Some Title" }
+tag("h1") do
+  "Some Title"
+end
 # => "<h1>Some Title</h1>"
 ```
 
-This method accepts a second optional parameter, enabling to pass an array with one HTML attribute name and its value,
-like `["href", "www.google.com"]`.
+This method accepts a second optional parameter, enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`.
 
 ```ruby
-tag("h1", ["id", "title"]) do
-  "Some Title"
+tag("a", ["href", "www.google.com"]) do
+  "Google it"
 end
-# => "<h1 id='title'>Some Title</h1>"
+# => '<a href="www.google.com">Google it</a>'
 ```
 
-#### Arguments with default value
+### Arguments with default value
 
 In ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
 
@@ -44,10 +45,9 @@ sum(4)    # => 4
 
 Here, the second argument is worth `0` if we call `sum` with only one argument.
 
-#### Link with Rails
+### Link with Rails
 
 When you will discover Rails helper methods, you will see that they do exatly the same as your home-made `#tag` method. They write HTML for you :)
-
 
 ### Timer method
 
@@ -62,9 +62,7 @@ end
 
 ## Learning Badges
 
-You should be able to answer these questions on a sheet of paper without computer-assistance :)
-
-- What's a block ? How do you call a method with an implicit block ?
-- What's the syntax of if this block has only 1 ruby instruction in it ? several ?
-- Re-consider all the iterators you used `#each_with_index`, `#select`, `#find`... Is it 100% clear that most of them are methods called with blocks ?
-- (optional) Could you figure out approximately how the `map` iterator is coded for instance ?
+- What's a block?
+- What's the syntax of if this block has only 1 ruby instruction in it? several?
+- Re-consider all the iterators you used `#each_with_index`, `#select`, `#find`... Is it 100% clear that most of them are methods called with blocks?
+- Could you figure out approximately how the `map` iterator is coded for instance?

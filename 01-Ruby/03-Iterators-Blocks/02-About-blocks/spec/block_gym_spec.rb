@@ -1,7 +1,21 @@
 require "block_gym"
 
 describe "#tag" do
-  it "should return the correct html string" do
+  it "should return the correct html for an example without any attribute" do
+    html_string = tag("h1") do
+      "Hello world"
+    end
+    expect(html_string).to eq "<h1>Hello world</h1>"
+  end
+
+  it "should return the correct html for an example with one attribute" do
+    html-string = tag("h1", ["style", "color: red"]) do
+      "Hello world"
+    end
+    expect(html_string).to eq '<h1 style="color: red">Hello world</h1>'
+  end
+
+  it "should return the correct html string for a nested configuration" do
     html_string = tag("div", ["class", "kitt-container"]) do
       tag("a", ["href", "http://kitt.lewagon.org"]) do
         tag("h2") do
@@ -9,7 +23,7 @@ describe "#tag" do
         end
       end
     end
-    expect(html_string).to eq "<div class='kitt-container'><a href='http://kitt.lewagon.org'><h2>KITT</h2></a></div>"
+    expect(html_string).to eq '<div class="kitt-container"><a href="http://kitt.lewagon.org"><h2>KITT</h2></a></div>'
   end
 end
 
@@ -29,5 +43,15 @@ describe "#timer_for" do
       (1..100).each { |i| (1..100000).to_a.shuffle.sort }
     end
     expect(block_time < long_block_time).to eq true
+  end
+end
+
+describe "#my_map" do
+  it "should upcase all elements of an array" do
+    array = ['a', 'b', 'c']
+    new_array = my_map(array) do |element|
+      element.upcase
+    end
+    expect(new_array).to eq(['A', 'B', 'C'])
   end
 end
