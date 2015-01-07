@@ -16,7 +16,7 @@ We will implement a *simplified* version of Black Jack:
 - For each round, the player can:
   - Draw a card with a random value between 1 and 11. This number will be added to his score.
   - Pass, and finish the game.
-- In the end, there is 4 possibilities:
+- In the end, there are 4 possibilities:
   - If the player score is > to 21, he looses.
   - If the player score is 21, he pulls a "Black Jack" and wins.
   - If the player score is > to the bank, he wins.
@@ -32,7 +32,7 @@ We will implement a *simplified* version of Black Jack:
 ### `croupier.rb`
 
 - Implement the `#state_of_the_game` method which builds a message containing the bank and player' scores.
-- Implement the `#end_game_message` method to be called at the end of the, containing the game outcome (win/lost)
+- Implement the `#end_game_message` method to be called at the end of the game, containing the game outcome (win/lost)
 - Implement the main `#play_game` method which runs a Black Jack game from the terminal. It should work this way:
 
 ```bash
