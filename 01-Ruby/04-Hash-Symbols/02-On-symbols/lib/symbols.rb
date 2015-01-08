@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 # NOTE: Read about BasicObject#object_id
-# http://www.ruby-doc.org/core-2.1.1/BasicObject.html#method-i-__id__
+# http://www.ruby-doc.org/core-2.0.0/BasicObject.html#method-i-__id__
 
 # You can try launching `irb` to test some values
 # irb> :foo.object_id
@@ -19,8 +19,8 @@ end
 
 
 # Remember, RTFM! Your doc is your friend
-# - http://www.ruby-doc.org/core-2.1.1/String.html
-# - http://www.ruby-doc.org/core-2.1.1/Symbol.html
+# - http://www.ruby-doc.org/core-2.0.0/String.html
+# - http://www.ruby-doc.org/core-2.0.0/Symbol.html
 
 def convert_string_to_symbol(a_string)
   # TODO: return the symbol version of "a_string"
