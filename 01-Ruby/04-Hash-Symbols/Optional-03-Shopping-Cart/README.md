@@ -21,12 +21,13 @@ and enumerating them!
 Take the time to think about the data structures that will best describe a store
 inventory and a shopping cart. Then:
 
-* implement all functions in `store.rb` and `cart.rb`
-* don't forget to initialize the `cart` variable in `interface.rb`!
-* check that all tests pass
+- implement all functions in `store.rb` and `cart.rb`
+- don't forget to initialize the `cart` variable in `interface.rb`!
+- check that all tests pass
 
 As an extra:
-* Improve the `cart_to_s` method so that instead of returning something like
+
+- Improve the `cart_to_s` method so that instead of returning something like
 "meat, vegetables, vegetables, meat, yoghurts, vegetables", you'd return
 "meat x 2, vegetables x 3, yoghurts".
 
