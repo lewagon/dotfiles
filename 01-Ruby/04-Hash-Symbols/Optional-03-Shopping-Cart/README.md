@@ -40,4 +40,4 @@ Could you have used something else?
 
 ## Tips & Resources
 
-* Have a look at the methods from [`Enumerable`](http://ruby-doc.org/core-2.1.1/Enumerable.html)!
+* Have a look at the methods from [`Enumerable`](http://ruby-doc.org/core-2.2.0/Enumerable.html)!
