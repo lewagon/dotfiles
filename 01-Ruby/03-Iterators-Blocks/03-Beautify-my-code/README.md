@@ -9,4 +9,5 @@ Here is a rule of thumb:
 
 ## Specs
 
-- Refactor `#shuffle_word` and `quote_prime_numbers` to make these methods efficient and readable. You can focus on what rubocop tells you to guide you.
+- Refactor `#shuffle_word` and `quote_prime_numbers` to make these methods efficient and readable. You can focus on what rubocop tells you to guide you. There is an error
+with the `quote_prime_numbers` method, find it and fix it!
