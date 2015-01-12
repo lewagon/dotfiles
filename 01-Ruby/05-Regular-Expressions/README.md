@@ -27,7 +27,10 @@ If these concepts are not clear for you, **join the "ReBoot" group, who will wor
 A simple challenge on regexp to detect phone patterns.
 
 #### `02-Anagrams`
-This challenge make use of Regexp to detect "non-word" characters but this is nor a pure regexp-challenge. You will learn about the time-complexity and try to enhance an algorithm enabling to detect anagrams.
+This challenge makes a small use of Regexp to detect "non-word" characters but this is not a pure "regexp challenge". You will mainly learn about the notion of time-complexity and try to enhance a program detecting anagrams.
 
 #### `03-Mail-spotter`
 A simple challenge on email Regexp, very usefull in web apps.
+
+#### `04-Word-frequency`
+A challenge using Regexp to extract data from a text and compute the most frequent words in a given text (the Bible, Obama's inaugural address, etc..). You will have to filter stop-words like ("a", "the", "is"..) who will spoil your algorithm otherwise.
