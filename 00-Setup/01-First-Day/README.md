@@ -1,0 +1,10 @@
+Welcome to Le Wagon!
+
+Congratulations for setting up your workstation, you know have
+all the tools needed to perform during these 9 weeks. Remember,
+your toolbox is now:
+
+- **Sublime Text**, where you'll write Ruby code (and more!)
+- The **Terminal**, also called a shell, where you'll type commands. When you see a `$` in the exercises, it means that you'll have to type that command
+
+Glad you are here, now start with the first exercise, **Submit your code**!
