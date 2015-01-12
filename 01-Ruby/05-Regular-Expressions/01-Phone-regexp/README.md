@@ -17,6 +17,9 @@ The method should ignore space or dashes between digits.
 french_phone_number?("0665363636")
 #=> true
 
+french_phone_number?("06 65 36 36 36")
+#=> true
+
 french_phone_number?("06 65 36 36")
 #=> false
 ```
