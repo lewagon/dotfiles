@@ -213,4 +213,4 @@ $ git pull --no-edit upstream master
 - At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
 
 #### Live-code details
-No live-code on Friday, we will correct to Cookbook on Monday evening.
+No live-code on Friday, we will correct the Cookbook on Monday evening.
