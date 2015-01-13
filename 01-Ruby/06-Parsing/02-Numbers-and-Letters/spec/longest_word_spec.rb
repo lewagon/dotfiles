@@ -13,10 +13,9 @@ describe "#generate_grid" do
   end
 
   it "should allow for repetitive letters" do
-    long_grid = generate_grid(26)
-    expect(long_grid.uniq.length).not_to eq long_grid.length # hoping not to compute a perfect permutation :)
+    long_grid = generate_grid(27)
+    expect(long_grid.uniq.length).not_to eq long_grid.length
   end
-
 end
 
 describe "#run_game" do
