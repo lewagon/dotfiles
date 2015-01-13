@@ -14,6 +14,8 @@ Explain that IRB is the **playground to make experiments**, your ruby file is yo
 
 A cool thing to do is to ask the class a simple treatment (capitalize word, count letters, etc..) and then show them the overall methodology to find the answer => **Google/StackOverflow/ruby doc/IRB to experiment**.
 
+Mention the fact that a search on Google should be in **english** and should **start with** `ruby` (eg. "ruby convert string into integer").
+
 Now show them how to run a ruby script from the terminal and how to display results with `puts`. **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on).
 
 #### Variables
@@ -44,6 +46,27 @@ puts coolest_result + 10 # oups... it does not work :)
 
 Hammer on the difference between `puts` and a method return, sometimes there's lot of confusion on this! **Force them to use the keyword `return` EXPLICITELY during the first week**
 
+Note that it's possible to create a method with no parameter.
+
+```ruby
+def hello_message
+  return 'Hey there!'
+end
+```
+
+
+#### Naming
+
+Explain that we can't use a reserved keyword to name a variable or a method. Else they may encounter unexpected behaviors.
+
+```ruby
+def return(number)
+  number * 2
+end
+
+> return(42)
+# => LocalJumpError: unexpected return
+```
 
 ### Day challenges
 Before starting the challenges
