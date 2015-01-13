@@ -80,12 +80,12 @@ $ git pull --no-edit upstream master
 ```
 
 - Ensure they're connected on the class Slack
-
 - Make a brief overview of the roadmap of the day with them, explaining the general idea behind each challenge.
 
 ### Live-code
 
 #### General guidelines
+
 - The live-code should be made **from scratch**. No specs, no boilerplate. The student has to `mkdir` a new folder, `touch` its ruby file, and start coding in it. Help him on the setup. Make him code **a solution that works** in one ruby file before refactoring the code (separating the logic from the interface in 2 files, DRYing the repetitive code chunks, etc..)
 
 - Announce, **before the live-code**, which challenges they are going to live-code and who are the coders of the day. It will make them stay tensed and focused! Tell them they have to speak loud and explain their approach while they are live-coding. That's the best exercise to improve their skills!
@@ -93,10 +93,35 @@ $ git pull --no-edit upstream master
 - At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
 
 
-#### Live-code details
+#### Live-Code
 
-1. `01-Experiment-methods`: just pick up some of the methods to live-code by a students, not all of them!
-1. `03-What-your-name`: Pick another student. Do not make thim read the challenge README, but make him explain in his own words what his program should accomplish and what he is trying to do (no matter if it differs from the original README). If he gets a hard time writing some code, help him write some pseudo code in english in his ruby file. That's of great help with beginners. Spend time on this live-code proposing some refacto and enhancement of the program.
-1. `04-Stupid-coaching`: you may be short on time for this one. Hencen choose a more advanced student so that he'll code faster and explain more clearly his methodology.
+You can write them on the board.
 
+**Question 1**: Write a method which **returns** the number of days since last Xmas.
 
+You can role play. Say you are a client and you want this method. If they manage
+to have a first version working for the current year, say you're not happy as
+the next year your method does not work anymore :(. Then again, say you're not happy
+because 7 days a year it does not work (after X-mas)
+
+Possible solution:
+
+```ruby
+require 'date'
+
+def days_since_christmas
+  today = Date.today
+  if today.month == 12 && today.day >= 25
+    (Date.today - Date.new(today.year, 12, 25)).to_i
+  else
+    (Date.today - Date.new(today.year - 1, 12, 25)).to_i
+  end
+end
+```
+
+**Question 2**:
+
+Write a game. The computes picks a number between 1 and 10. Then the user guesses
+until he/she finds the correct answer. When the program is done, ask the student
+to pick between 1 and 100, and for each wrong guess, indicate to the user if his/her
+guess is bigger or smaller than the computer's pick.
