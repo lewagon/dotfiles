@@ -8,7 +8,7 @@ The CSV given as an example in `lib/movies.csv` has been created from [IMDB](htt
 
 #### Ruby Standard Library
 
-The Ruby standard library includes all the convenient packages that come with your ruby installation. For instance the [date](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/date/rdoc/Date.html) package, if included in your ruby program, enables you to manipulate dates easily. A package is loaded at the beginning of your ruby file with
+The Ruby standard library includes all the convenient packages that come with your ruby installation. For instance the [date](http://www.ruby-doc.org/stdlib-2.2.0/libdoc/date/rdoc/Date.html) package, if included in your ruby program, enables you to manipulate dates easily. A package is loaded at the beginning of your ruby file with
 
 ```ruby
 require "date"

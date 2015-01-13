@@ -1,12 +1,12 @@
 ## Background & Objectives
 
-The [`Array` class](http://www.ruby-doc.org/core-2.1.2/Array.html) is one of the two main structures used to store and access data in ruby (the other being [Hash](http://www.ruby-doc.org/core-2.1.2/Hash.html), which we'll see tomorrow).
+The [`Array` class](http://www.ruby-doc.org/core-2.2.0/Array.html) is one of the two main structures used to store and access data in ruby (the other being [Hash](http://www.ruby-doc.org/core-2.2.0/Hash.html), which we'll see tomorrow).
 
 An array is ordered and each element can be accessed by its **index**. This exercise will help you
 understand how to create an array, store data in it then retrieve data using the index.
 Remember, the array indexes start at `0`, not `1`.
 
-Programmers are often asked to sort things, that's why you should read about some [sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm). Hopefully, the Ruby doc will gives you several way of sorting an [Enumerable](http://ruby-doc.org/core-2.1.2/Enumerable.html). `Array` is a form of `Enumerable`, so you can use all methods referenced on the `Enumerable` doc page while using an `Array`, because `Array` **includes** the module `Enumerable`.
+Programmers are often asked to sort things, that's why you should read about some [sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm). Hopefully, the Ruby doc will gives you several way of sorting an [Enumerable](http://ruby-doc.org/core-2.2.0/Enumerable.html). `Array` is a form of `Enumerable`, so you can use all methods referenced on the `Enumerable` doc page while using an `Array`, because `Array` **includes** the module `Enumerable`.
 
 ## Specs
 

@@ -2,8 +2,8 @@ require_relative "wagon_sort"
 
 # TODO: Ask the user about students to add to the Wagon.
 #       Remember, to read an input from the command line, use:
-#       - `gets`:  http://www.ruby-doc.org/core-2.1.2/Kernel.html#method-i-gets
-#       - `chomp`: http://www.ruby-doc.org/core-2.1.2/String.html#method-i-chomp
+#       - `gets`:  http://www.ruby-doc.org/core-2.2.0/Kernel.html#method-i-gets
+#       - `chomp`: http://www.ruby-doc.org/core-2.2.0/String.html#method-i-chomp
 
 
 

@@ -23,7 +23,7 @@ IRB is a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loo
 In ruby, everything (a text, an integer, a floating number, an array..) is an object, i.e. an instance of a class. We can call methods on these objects. Such methods are called **instance methods** since they can be called only on instances of the class. The object on which we call the method is called the **receiver**.
 
 ## Specs
-Find the right ruby methods of the [String class](http://ruby-doc.org/core-2.1.0/String.html), the [Fixnum class](http://www.ruby-doc.org/core-2.1.0/Fixnum.html), and the [Array class](http://ruby-doc.org/core-2.1.0/Array.html) to put in the canvas and make the tests pass.
+Find the right ruby methods of the [String class](http://ruby-doc.org/core-2.2.0/String.html), the [Fixnum class](http://www.ruby-doc.org/core-2.2.0/Fixnum.html), and the [Array class](http://ruby-doc.org/core-2.2.0/Array.html) to put in the canvas and make the tests pass.
 
 Code is all about being smart and knowing how and where to look for the info you need ! The most difficult step is often to ask google the adequate question. To find the methods you need in this challenge, use:
 

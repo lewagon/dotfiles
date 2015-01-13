@@ -18,4 +18,4 @@ Implement the 2 methods `#anagrams?(a_string, another_string)` and `#anagrams_on
 
 - First learn more about what [time complexity](http://en.wikipedia.org/wiki/Time_complexity) means
 - Try to google the time-complexity of ruby native `sort` method
-- Learn more about [Hash](http://www.ruby-doc.org/core-2.1.2/Hash.html) as a data structure. How would you model the number of occurences of each character of a String using a ruby Hash? What's the link with the anagrams problem?
+- Learn more about [Hash](http://www.ruby-doc.org/core-2.2.0/Hash.html) as a data structure. How would you model the number of occurences of each character of a String using a ruby Hash? What's the link with the anagrams problem?

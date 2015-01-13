@@ -15,7 +15,7 @@ which methods your `Browser` class should expose. We want to **only print** web 
 
 ## Tips
 
-You may consider using [OpenURI](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/open-uri/rdoc/OpenURI.html) and [Nokogiri](http://www.rubydoc.info/github/sparklemotion/nokogiri). To make sure this gem is installed, just run:
+You may consider using [OpenURI](http://www.ruby-doc.org/stdlib-2.2.0/libdoc/open-uri/rdoc/OpenURI.html) and [Nokogiri](http://www.rubydoc.info/github/sparklemotion/nokogiri). To make sure this gem is installed, just run:
 
 ```bash
 $ gem install nokogiri
