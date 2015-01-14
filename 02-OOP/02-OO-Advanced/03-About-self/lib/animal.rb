@@ -1,22 +1,22 @@
 class Animal
   def name(name)
     @name = name
-    # TODO: find good instruction
+    # TODO: what should this method return?
   end
 
   def specie(specie)
     @specie = specie
-    # TODO: find good instruction
+    # TODO: what should this method return?
   end
 
   def color(color)
     @color = color
-    # TODO: find good instruction
+    # TODO: what should this method return?
   end
 
   def natural_habitat(natural_habitat)
     @natural_habitat = natural_habitat
-    # TODO: find good instruction
+    # TODO: what should this method return?
   end
 
   def to_s
