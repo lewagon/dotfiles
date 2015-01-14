@@ -3,3 +3,5 @@ inherit_from:
 
 MethodLength:
   Enabled: false
+AbcSize:
+  Enabled: false
