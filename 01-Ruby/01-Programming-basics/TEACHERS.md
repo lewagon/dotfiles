@@ -99,10 +99,11 @@ You can write them on the board.
 
 **Question 1**: Write a method which **returns** the number of days since last Xmas.
 
-You can role play. Say you are a client and you want this method. If they manage
-to have a first version working for the current year, say you're not happy as
-the next year your method does not work anymore :(. Then again, say you're not happy
-because 7 days a year it does not work (after X-mas)
+You can role play. Say you are a client and you want this method.
+
+If they manage to have a first version working for the current year, say you're not happy as the next year your method does not work anymore :(
+
+Then again, say you're not happy because 7 days a year it does not work (after X-mas).
 
 Possible solution:
 
@@ -121,7 +122,6 @@ end
 
 **Question 2**:
 
-Write a game. The computes picks a number between 1 and 10. Then the user guesses
-until he/she finds the correct answer. When the program is done, ask the student
-to pick between 1 and 100, and for each wrong guess, indicate to the user if his/her
-guess is bigger or smaller than the computer's pick.
+Write a game. The computer picks a number between 1 and 10. Then the user guesses until he/she finds the correct answer.
+
+When the program is done, ask the student to pick between 1 and 100, and for each wrong guess, indicate to the user if his/her guess is bigger or smaller than the computer's pick.
