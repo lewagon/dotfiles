@@ -45,7 +45,7 @@ Again, ask yourself these questions and make sure you can answer all of them:
 
 
 ## Tips & Resources
-* to get a user input from the terminal you should use <a href="http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html" target="_blank">gets</a>. You will also need to <a href="http://ruby-doc.org/core-2.0.0/String.html#method-i-chomp" target="_blank">chomp</a> the resulting string.
-* to print question in the terminal, you should use <a href="http://www.ruby-doc.org/core-2.0.0/IO.html#method-i-puts" target="_blank">puts</a>
+* to get a user input from the terminal you should use <a href="http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html" target="_blank">gets</a>. You will also need to <a href="http://ruby-doc.org/core-2.2.0/String.html#method-i-chomp" target="_blank">chomp</a> the resulting string.
+* to print question in the terminal, you should use <a href="http://www.ruby-doc.org/core-2.2.0/IO.html#method-i-puts" target="_blank">puts</a>
 
 

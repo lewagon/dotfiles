@@ -60,7 +60,7 @@ Try to enhance this small program to extract more recipe's info from the HTML fi
 
 ### Get response HTML data using open-uri
 
-Now that you know how to parse this HTML document the way you want, it's time to automate the first responsibility (requesting marmiton and getting returned HTML page). Use the [open-uri](http://www.ruby-doc.org/stdlib-2.1.2/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI. You just open a URL:
+Now that you know how to parse this HTML document the way you want, it's time to automate the first responsibility (requesting marmiton and getting returned HTML page). Use the [open-uri](http://www.ruby-doc.org/stdlib-2.2.0/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI. You just open a URL:
 
 ```ruby
 require 'open-uri'

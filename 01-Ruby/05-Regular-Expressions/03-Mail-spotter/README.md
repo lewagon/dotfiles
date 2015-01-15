@@ -17,7 +17,7 @@ mail_joke("boris@lewagon.org")
 ```
 
 It must `raise` an
-[`ArgumentError`](http://www.ruby-doc.org/core-2.1.2/ArgumentError.html) if the
+[`ArgumentError`](http://www.ruby-doc.org/core-2.2.0/ArgumentError.html) if the
 first argument passed is not a string.
 
 It must handle correctly email with domains it does not know about.
@@ -29,5 +29,5 @@ free to add more and use your imagination!
 
 - How will you store the list of jokes?
 - You need to *extract* the first name and last name from the email
-- You may need a [`Regexp`](http://www.ruby-doc.org/core-2.1.2/Regexp.html)
+- You may need a [`Regexp`](http://www.ruby-doc.org/core-2.2.0/Regexp.html)
 - Have you heard of [Rubular](http://rubular.com/). Great in-browser regex sandbox
