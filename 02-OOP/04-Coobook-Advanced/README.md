@@ -11,7 +11,7 @@ Let's summarize the different tasks our program should take care of :
 You will add your HTML scraper feature to your already existing cookbook app (from previous challenge). You can grab your old code with this command:
 
 ```bash
-$ cp -r ../03-Cookbook-v0/lib lib
+$ cp -r ../03-Cookbook-v0/lib .
 ```
 
 It will add a lib folder with your previous code from which you can start.
