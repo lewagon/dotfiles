@@ -6,12 +6,9 @@ model names to tables, or foreign keys to `has_many` / `belongs_to` associations
 
 ## Specs
 
-- Open the `db/dirty_jukebox.db` database with the `sqlite3` binary and creates all
-the necessary models in `app/models` by browsing the `.schema`. This time, you'll
-need extra effort to correctly map the models to the right tables.
+- Open the `db/dirty_jukebox.db` database with the `sqlite3` binary and create all the necessary models in `app/models` by browsing the `.schema`. This time, you'll need extra effort to correctly map the models to the right tables.
 
-- For some `has_many` / `belongs_to` relation, the foreign key in the database
-does not follow the convention. You'll have to manually override it.
+- For some `has_many` / `belongs_to` relations, the foreign key in the database does not follow the convention. You'll have to manually override it.
 
 
 ## Tips

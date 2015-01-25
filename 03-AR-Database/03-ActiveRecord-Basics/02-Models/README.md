@@ -4,7 +4,7 @@ Now that you have understood that migrations help you to update the database sch
 let's use our database to insert some rows, and query them. We'll still work with our
 Hacker News clone.
 
-Before starting this exercise, make sure you read the [Active Record starting duie](http://guides.rubyonrails.org/active_record_basics.html).
+Before starting this exercise, make sure you read the [Active Record starting guide](http://guides.rubyonrails.org/active_record_basics.html).
 
 ## Setup
 
