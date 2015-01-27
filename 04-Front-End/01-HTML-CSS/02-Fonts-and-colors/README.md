@@ -8,7 +8,7 @@ Add simple CSS rules to design fonts and colors of your profile page.
 
 
 ### Body
-- Pick a nice background color, font family/color/size and line-height for the `<body>`. Setting font properties at the body-level will apply it on all basic texts (`<p>`, `<li>`, etc...).
+- Pick a nice background color, font family/color/size and line-height for the `<body>`. Setting font rules at the body-level will apply them on all basic texts (`<p>`, `<li>`, etc...).
 
 ### Headers
 - Choose a nice color and font-family for headers (`<h1>`, `<h2>`, `<h3>`)
