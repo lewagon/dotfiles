@@ -3,7 +3,7 @@ class InitWorld < ActiveRecord::Migration
     create_table :users do |t|
       t.string :username
       t.string :email
-      t.timestamps
+      t.timestamps null: false
     end
 
     create_table :posts do |t|
@@ -11,7 +11,7 @@ class InitWorld < ActiveRecord::Migration
       t.string :url
       t.integer :votes
       t.references :user
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
