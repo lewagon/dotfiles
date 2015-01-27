@@ -80,7 +80,7 @@ This exercise is quite open, here are a few things you can start with:
 
 - Display all posts on the homepage of the site
 - Posts should be clickable, open a new tab and go to the website
-- Display posts in descending vote order (see [`default_scope`](http://stackoverflow.com/questions/3393687/default-sort-order-for-a-rails-model))
+- Display posts in descending vote order (see [`scopes`](http://guides.rubyonrails.org/active_record_querying.html#scopes))
 - [Hard] Add a form at the top to submit a new post (hint: use a `post` route in `app.rb`)
 - [Very Hard] Add a way to vote on a post
 
