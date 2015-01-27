@@ -8,4 +8,4 @@ textareas, etc... as much form components as possible.
 ## Specs
 
 - Update the `form.html` and add your `<form>` in here. Remember, HTML is for semantic
-- Add some CSS rules in `main.css` to make your form look nicer
+- Add some CSS rules in `style.css` to make your form look nicer
