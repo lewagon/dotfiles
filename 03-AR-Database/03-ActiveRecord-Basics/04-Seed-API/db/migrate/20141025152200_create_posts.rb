@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.integer :votes
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
