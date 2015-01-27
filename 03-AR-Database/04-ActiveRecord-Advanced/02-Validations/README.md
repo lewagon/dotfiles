@@ -2,11 +2,10 @@
 
 Now that associations are in place between `Post` and `User`, we want
 to add some validation to our models to make sure we don't store
-inconsistent data in the Database. Before juming head first into the
+inconsistent data in the Database. Before jumping head first into the
 exercises, take 15 minutes and read this really good guide:
 
 [guides.rubyonrails.org/active_record_validations.html](http://edgeguides.rubyonrails.org/active_record_validations.html)
-
 
 ## Setup
 
@@ -22,7 +21,7 @@ $ rake db:migrate
 ### Add some validations to the `User` model
 
 - A user should have a username
-- A user should have an email, and a valid one
+- A user should have an email and a valid one
 - Users should have unique usernames
 
 ### Add some validations to the `Post` model
@@ -54,5 +53,4 @@ class User
 end
 ```
 
-Read the [Active Record Callbacks guide](http://guides.rubyonrails.org/active_record_callbacks.html)
-to answer the last facultative question.
+Read the [Active Record Callbacks guide](http://guides.rubyonrails.org/active_record_callbacks.html) to answer the last facultative question.
