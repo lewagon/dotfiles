@@ -16,9 +16,7 @@ Here is [the objective](http://lewagon.github.io/html-css-challenges/06-profile-
   <div id="left"></div>
   <div id="right"></div>
   <div class="clear"></div>
-  <div id="footer">
-    <ul class="list-inline"></ul>
-  </div>
+  <div id="footer"></div>
 </div>
 ```
 

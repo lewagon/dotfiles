@@ -6,9 +6,9 @@ Use advanced selectors (id, class, grouping, descendant selectors) to fine-tune 
 
 Here is [your objective](http://lewagon.github.io/html-css-challenges/04-advanced-selectors/). Any time you want to **name** an element of your page, ask yourself:
 
-- Should I use a `class` or an `id`? Is is unique or re-usable?
+- Should I use a `class` or an `id`? Is it unique or re-usable?
 - What name should I pick for my class?
-- Should I split this design into different classes
+- Should I split this design into different classes?
 
 Herebelow is an example of **very poor** CSS choices:
 
