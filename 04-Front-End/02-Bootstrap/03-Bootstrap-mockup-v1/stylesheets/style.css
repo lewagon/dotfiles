@@ -1,0 +1,7 @@
+@import url("banner.css");
+@import url("footer.css");
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #141414;
+}

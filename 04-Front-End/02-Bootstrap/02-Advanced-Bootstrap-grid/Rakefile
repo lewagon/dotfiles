@@ -6,8 +6,8 @@ require 'minitest/pride'
 
 task :default do
   describe "index.html" do
-    it "should have your own profile HTML code" do
-      (File.open("profile/index.html","r").readlines.size > 20).must_equal true
+    it "should changed some HTML" do
+      (File.open("index.html","r").readlines.size == 53).must_equal false
     end
   end
 end

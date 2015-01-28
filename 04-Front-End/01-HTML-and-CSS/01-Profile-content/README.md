@@ -26,7 +26,8 @@ A picture is worth a thousand words, [here is what you should build in this chal
 
 ## Tips & Resources
 
+- Prepare your image files (1 profile picture + 3 movie pictures) before starting to code. Ensure your profile image is square (crop it if it's not the case) and ensure your movies pictures are all the same width in pixels.
 - Don't forget the basic skeleton tags `<html>`, `<body>`, `<head>`.
 - Don't forget the page `<title>` in the `<head>` section, and other important metatags like `<meta charset="utf-8">`.
 - You can use [Font Awesome](http://fortawesome.github.io/Font-Awesome/) to find nice icons (e.g. for social networks). It is a very convenient library since it is a **font** of icons (hence it will be very easy to resize these icons, change their color, and add animations on them!)
-- You can use the `_target="blank"` attribute on your links to open them on new tabs once clicked.
+- You can use the `target="_blank"` attribute on your links to open them on new tabs once clicked.

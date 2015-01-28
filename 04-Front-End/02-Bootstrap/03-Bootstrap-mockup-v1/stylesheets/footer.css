@@ -1,0 +1,20 @@
+#footer {
+  background: #141414;
+  padding: 30px 0;
+  color: gainsboro;
+}
+#footer p {
+  margin-top: 17px;
+}
+#footer ul {
+  margin-top: 10px;
+}
+#footer a {
+  color: gainsboro;
+  font-size: 30px;
+  letter-spacing: 20px;
+  transition: color 0.5s ease;
+}
+#footer a:hover {
+  color: red;
+}
