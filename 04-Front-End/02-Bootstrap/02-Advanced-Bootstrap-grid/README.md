@@ -9,9 +9,9 @@ Now that you are Bootstrap-grid experts, learn more advanced but very usefull te
 - You need a **full-screen** background around your grid.
 - You need to insert some kind of **inner "cards"** inside your grid.
 
-You should never change the width, border, and lateral paddings of the grid components (`.container`, `.row` or `.col`). Because if you do so, **you will break the grid**.
+But here is the problem. You cannot change directly width, border, and lateral paddings of grid components (`.container`, `.row` or `.col`). Otherwise **you will break the grid**.
 
-**So here is how you can do:**
+So how can you do? **Read what follows** to figure out :)
 
 ### Full-screen background
 
