@@ -11,7 +11,7 @@ Now that you are Bootstrap-grid experts, learn more advanced but very usefull te
 
 But here is the problem. You cannot change directly width, border, and lateral paddings of grid components (`.container`, `.row` or `.col`). Otherwise **you will break the grid**.
 
-So how can you do? **Read what follows** to figure out :)
+So how can you do? Read what follows to figure out :)
 
 ### Full-screen background
 
