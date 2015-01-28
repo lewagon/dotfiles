@@ -36,7 +36,7 @@ Place a full-screen background div **around** the grid.
 
 ### Inner "cards"
 
-Place your designed divs **inside the col**
+Place your designed divs **inside each col**
 
 ```html
 <div class="container">
