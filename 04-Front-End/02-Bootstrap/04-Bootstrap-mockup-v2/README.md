@@ -8,7 +8,7 @@ Improve your previous page using Bootstrap grid to get [this final result](http:
 
 ## Tips & Resources
 
-- Alway start coding your grid **without content**, and insert your content in the `.col` **as a second step**.
+It's always simpler to start coding grid **without content**, and insert content in the `.col` **as a second step**.
 
 ```html
 <!-- Example of pure grid code without content -->
