@@ -1,6 +1,6 @@
 #### `01-Content-migration`
 
-The objective of this challenge is to migrate your poor HTML website into a nice Middleman project with templates and SASS. Start with a fork/clone of our [middleman boilerplate](https://github.com/lewagon/middleman-boilerplate)
+The objective of this challenge is to migrate your poor HTML website into a nice Middleman project with templates and SASS.
 
 #### `02-Style-migration`
 
