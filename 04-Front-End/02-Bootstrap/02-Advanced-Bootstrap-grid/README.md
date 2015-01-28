@@ -7,11 +7,15 @@ Now that you are Bootstrap-grid experts, learn more advanced but very usefull te
 99% of the time you face two issues using the grid:
 
 - You need a **full-screen** background around your grid.
-- You need to insert some kind of **inner "cards"** into your grid.
+- You need to insert some kind of **inner "cards"** inside your grid.
 
-You should never change the width, border, and lateral paddings of the grid components (`.container`, `.row` or `.col`). Because if you do so, **you will break the grid**. So here is how you can do:
+You should never change the width, border, and lateral paddings of the grid components (`.container`, `.row` or `.col`). Because if you do so, **you will break the grid**.
 
-- **full-screen** background: place a background div **around** the grid.
+**So here is how you can do:**
+
+### Full-screen background
+
+Place a background div **around** the grid.
 
 ```html
 <div class="bg-blue">
@@ -30,7 +34,9 @@ You should never change the width, border, and lateral paddings of the grid comp
 }
 ```
 
-- **inner "cards"**: place nice divs **inside the col**
+### Inner "cards"
+
+Place your designed divs **inside the col**
 
 ```html
 <div class="container">
@@ -59,7 +65,7 @@ You should never change the width, border, and lateral paddings of the grid comp
 }
 ```
 
-With these two techniques, you can put as much padding, border, margin as you want and you will never break the grid, since you never touch directly at grid components (`container/row/col`).
+With these two techniques, you can put as much padding, border, margin as you want and you will never crash the grid, since **you don't touch directly at grid components** (`container/row/col`).
 
 ### Your turn
 
