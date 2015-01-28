@@ -1,10 +1,15 @@
-## Background & Objectives
+### `01-middleman-content-migration`
 
-It's time to give your website the final touch to reach this [objective](http://lewagon.github.io/karr-frontend-02/).
+The objective of this challenge is to migrate your poor HTML website into a nice Middleman project with templates and SASS. Start with a fork/clone of our [middleman boilerplate](https://github.com/lewagon/middleman-boilerplate)
 
-Here are some guidelines:
+### `02-middleman-style-migration`
 
-- Over-ride the bootstrap navbar with the code snippet we gave you.
-- Over-ride the buttons' colors. Choose nice colors using kuler or colorzilla.
-- Change your fonts using Google fonts (reminder: Open-Sans is a good choice for texts)
-- Choose your own features' icons on nounproject. Maybe you will have to resize them using sketch or another tool, to give them the same height, the same width, and harmonious respective proportions.
+In this challenge, you will adopt a very clean organization of our styleheets, and you will use SASS variables, chaining and nesting to have a concise but efficient design.
+
+### `03-middleman-local-data`
+
+Add a new page to your site connected to a text-database of your choice. Once you know this technique, you can easily add new content and maintain your website.
+
+### `04-building-sass-modules`
+
+This challenge makes you write your first SASS modules. Once written, you can re-use them in all your future projects. That rocks!
