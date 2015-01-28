@@ -65,7 +65,7 @@ Place your designed divs **inside each col**
 }
 ```
 
-With these two techniques, you can put as much padding, border, margin as you want without crashing the grid. Indeed, **you don't touch directly at grid components** (`container/row/col`) but you only design divs wrapping the grid or injected into the grid.
+With these two techniques, you can put as much padding, border, margin as you want without crashing the grid. Indeed, **you don't touch directly at grid components** (`container/row/col`). You only design divs placed around or inside the grid. You can feel safe!
 
 ### Your turn
 
