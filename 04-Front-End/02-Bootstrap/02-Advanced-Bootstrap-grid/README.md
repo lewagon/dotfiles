@@ -15,7 +15,7 @@ So how can you do? Read what follows to figure out :)
 
 ### Full-screen background
 
-Place a background div **around** the grid.
+Place a full-screen background div **around** the grid.
 
 ```html
 <div class="bg-blue">
