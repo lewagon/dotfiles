@@ -2,16 +2,25 @@
 
 The objective of this challenge is to migrate your Bootstrap landing page **content** into Middleman and start using templates and SASS. For migrating your CSS, wait for the next challenge.
 
-- Fork our [middleman boilerplate](https://github.com/lewagon/middleman-boilerplate). Be carefull
-- Rename the Github repo in the settings. Choose the name of your startup (like Stylus in our case).
-- Then clone this repo locally on your computer. Be carefull, don't clone it in **`fullstack-challenges`**. It's a new separated project with its own versionning. Clone it in `code/your_user_name/` at the same level as `fullstack-challenges`
+- Fork our [middleman boilerplate](https://github.com/lewagon/middleman-boilerplate).
+- You can rename the Github repo in the settings, because `middleman-boilerplate` is not very glam.
+- After forking the project clone the repo locally on your computer. Be carefull, don't clone it in **`fullstack-challenges`**. It's a new separated project with its own versionning. Clone it in `code/your_user_name/` at the same level as `fullstack-challenges`.
 
-## Start and deploy scripts
+```
+$ cd ~/code/username
+$ git clone git@github.com:username/repo_name.git
+```
 
-In this boilerplate, we provide you two scripts (for Mac and for Windows)
+Then to launch Middleman server
 
-- **`osx_start.command`** (resp. **`windows_start.command`**) will start a local server to run your website and listen for change in your code. Just double-click this file to launch the server.
-- **`osx_deploy.command`** (resp. **`windows_deploy.command`**) enables to deploy you website on [Github Pages](https://pages.github.com/), a very cool sub-service of Github.
+```
+$ cd repo_name
+$ middleman server
+```
+
+## Deploy scripts
+
+In this boilerplate, we provide you a deploy script (for Mac and for Windows). **`osx_deploy.command`** (resp. **`windows_deploy.command`**) enables to deploy your website on [Github Pages](https://pages.github.com/), a very cool sub-service of Github.
 
 ## Specs
 
