@@ -6,10 +6,10 @@ This challenge makes you write your first SASS modules. Once written, you can re
 
 ### Button module
 
-Personal button classes are very powerfull to improve your site design, since buttons are everywhere. Code you **`components/button.css.scss`** module with the class of your choice. Here is an example of button module.
+Personal button classes are very powerfull to improve your site design, since buttons are everywhere. Code you **`components/_button.css.scss`** module with the class of your choice. Here is an example of button module.
 
-```scss
-.btn-rounded{
+```css
+.btn-rounded {
   border-radius: 50px;
   padding: 0.3em 1.5em;
 }
