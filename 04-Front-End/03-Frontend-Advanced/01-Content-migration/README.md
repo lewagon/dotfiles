@@ -3,8 +3,8 @@
 The objective of this challenge is to migrate your Bootstrap landing page **content** into Middleman and start using templates and SASS. For migrating your CSS, wait for the next challenge.
 
 - Fork our [middleman boilerplate](https://github.com/lewagon/middleman-boilerplate).
-- You can rename the Github repo in the settings, because `middleman-boilerplate` is not very glam.
-- After forking the project clone the repo locally on your computer. Be carefull, don't clone it in **`fullstack-challenges`**. It's a new separated project with its own versionning. Clone it in `code/your_user_name/` at the same level as `fullstack-challenges`.
+- Then rename your Github repo in the settings (since `middleman-boilerplate` is not a very glam name).
+- Finally clone this renamed repo locally on your computer. Be carefull, don't clone it in **`fullstack-challenges`**. It's a new separated project with its own versionning. Clone it in `code/your_user_name/` at the same level as `fullstack-challenges`.
 
 ```
 $ cd ~/code/username
@@ -18,10 +18,6 @@ $ cd repo_name
 $ middleman server
 ```
 
-## Deploy scripts
-
-In this boilerplate, we provide you a deploy script (for Mac and for Windows). **`osx_deploy.command`** (resp. **`windows_deploy.command`**) enables to deploy your website on [Github Pages](https://pages.github.com/), a very cool sub-service of Github.
-
 ## Specs
 
 In this challenge, you have to:
@@ -29,12 +25,13 @@ In this challenge, you have to:
 1. Migrate your home page **content** into the `index.html.erb` Middleman page
 1. Create a new `contact.html.erb` page with team and contact infos
 1. Put all common HTML parts (navbar / footer) in the `layout.html.erb`
-1. Promises are made to be kept, here is our [home-made navbar template](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html) you can use in the layout.
+1. Promises are made to be kept, here is our [home-made navbar template](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html) that we have already included in the layout.
 1. Don't forget to replace **all** `<a>` tags and `<img>` tags with the **correct helpers** (`image_tag`, `link_to`, `image-url`) to get rid of URL dependency in HTML and CSS files.
 
-Before coding, **start your server** with the start script. Once you've finished this challenge.
 
-- Commit and publish you change using on github.
+## Commit and deploy
+
+Once you have finished your content migration, commit your work:
 
 ```
 $ git add .
@@ -42,6 +39,10 @@ $ git commit -m "finish content migration in Middleman"
 $ git push
 ```
 
-- Deploy your site on Github page by double-clicking on the deploy script.
+Then deploy your site on Github-pages.
 
-- You can then visit your masterpiece on `http://GITHUB_USERNAME.github.io/GITHUB_REPO_NAME`. In our case, have a look at http://lewagon.github.io/stylus to discover the final version of stylus.
+```
+$ middleman deploy
+```
+
+This will work only of you have no error in your source code. If that's the case, you can normally visit your masterpiece on `http://GITHUB_USERNAME.github.io/GITHUB_REPO_NAME`. In our case, have a look at http://lewagon.github.io/stylus to discover our final version of Styl.us.
