@@ -1,0 +1,35 @@
+@keyframes fadeInAndSlideDown {
+  0% {
+    /* start CSS properties */
+  }
+
+  100% {
+    /* end CSS properties */
+  }
+}
+
+@-webkit-keyframes fadeInHome {
+  0% {
+    /* start CSS properties */
+  }
+
+  100% {
+    /* end CSS properties */
+  }
+}
+
+@-moz-keyframes fadeInHome {
+  0% {
+    /* start CSS properties */
+  }
+
+  100% {
+    /* end CSS properties */
+  }
+}
+
+.fadeInAndSlideDown {
+  animation: fadeInAndSlideDown 1s 0.5s ease forwards;
+  -webkit-animation: fadeInHome 1s 0.5s ease forwards;
+  -moz-animation: fadeInHome 1s 0.5s ease forwards;
+}
