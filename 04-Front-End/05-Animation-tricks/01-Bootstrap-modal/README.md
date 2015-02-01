@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In this challenge, learn to insert Bootstrap modals playing on a sign-up modal. Don't spend too much time on this challenge, this is more like a copy/paste exercise. Just understand how the button and form are linked though `data-target` and `id` HTML attributes and move on to the next challenge
+In this challenge, learn to insert Bootstrap modals on a sign-up example. Don't spend too much time on this challenge, this is pretty much a copy/paste exercise. Just understand how the button and form are linked though `data-target` and `id` HTML attributes, then move on to the next challenge.
 
 ## Specs
 
@@ -21,7 +21,9 @@ In this challenge, learn to insert Bootstrap modals playing on a sign-up modal. 
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
         <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
       </div>
       <div class="modal-body">

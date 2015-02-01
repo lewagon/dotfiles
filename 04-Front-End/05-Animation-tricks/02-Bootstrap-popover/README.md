@@ -1,5 +1,5 @@
 ## Background & Objectives
-A challenge to play with very nice Bootstrap components: [popovers](http://getbootstrap.com/javascript/#popovers).
+A challenge to play with nice Bootstrap components: [popovers](http://getbootstrap.com/javascript/#popovers).
 
 ## Specs
 
@@ -29,7 +29,7 @@ $(document).ready(function(){
 - The `placement` js option allows you to give a direction to the popover (top/right/bottom/left) while the `html: true` option allows you to write the popover content right into the HTML in a `data-content` attribute on each image. Example:
 
 ```html
-<img src="images/ringo.png" alt="Ringo" class="img-circle img-responsive img-popover" data-content="<img src='images/ringo.png' class='img-circle img-responsive'><h4>Ringo</h4><p class='text-muted'>Ringo Starr</p>">
+<img src="images/ringo.png" alt="Ringo" class="img-popover" data-content="<img src='images/ringo.png' class='img-circle img-responsive'><h4>Ringo</h4><p class='text-muted'>Ringo Starr</p>">
 ```
 
 - Cherry on the cake, popover divs inserted by Bootstrap all have a `class="popover"` so that you can even re-design your popover div as you wish in `popover.css`. Example:
