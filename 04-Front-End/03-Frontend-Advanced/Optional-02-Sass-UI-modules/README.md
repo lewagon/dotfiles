@@ -17,4 +17,4 @@ Personal button classes are very powerfull to improve your site design, since bu
 
 ## Tips & Resources
 
-Don't hesitate to create your own generic classes with the design and effect you like. A good tip is to look for inspiring example on http://codepen.io and then modify these example to create your own classes.
+Don't hesitate to create your own generic classes with the design and effect you like. A good tip is to look for inspiring example on [Codepen](http://codepen.io) and then modify these example to create your own classes. You can look at the [top pens '14](http://codepen.io/2014/popular/) to find inspiration.
