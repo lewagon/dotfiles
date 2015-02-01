@@ -23,4 +23,4 @@ Add simple CSS rules to design fonts and colors of your profile page.
 
 - Use Colorzilla plugin to pick nice colors from other websites. You can find inspiration [here](http://www.flatuicolorpicker.com/).
 - Pick your fonts on [google fonts](https://www.google.com/fonts)
-- On Google fonts, **Open Sans** is the standard choice for core texts. **Varela** & **Montserrat** are elegant candidates for headers. We already made these choices for you (look at the `<head>`), but feel free to change it!
+- On Google fonts, **Open Sans** is the standard choice for core texts. **Varela**, **Montserrat**, **Raleway**, **Roboto** are elegant candidates for headers. We already made these choices for you (look at the `<head>`), but feel free to change it!

@@ -1,0 +1,24 @@
+@import url("popover.css");
+
+body{
+  font-family: Roboto;
+  font-weight: 100;
+  padding-top: 80px;
+}
+
+a, a:hover {
+  color: #4b4b4b;
+}
+
+.track {
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 10px 5px 15px 5px;
+}
+.track:hover{
+  background: #FAFAFA;
+}
+.track img {
+  margin-top: 10px;
+}
