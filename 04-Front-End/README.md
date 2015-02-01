@@ -15,3 +15,6 @@ Focus on animations. Start coding cool effects using only CSS animations. Then a
 
 #### `HTTP & AJAX`
 Discover how the web works and what's behind HTTP! Learn how to make HTTP requests in javascript using AJAX and use your new skills to connect to APIs.
+
+#### `Javascript Advanced`
+Improve your JS skills on more complicated challenges.
