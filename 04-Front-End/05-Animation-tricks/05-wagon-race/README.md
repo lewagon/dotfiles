@@ -1,19 +1,14 @@
 ## Background & Objectives
 
-We will create a JavaScript game : the wagon-race.
-It's a simple game where you must use your keyboard to make a Wagon go forward.
-
-Each player will advance their "wagon" by smashing some key.  For example, player 1 might be the "q" key and player 2 might be the "p" key.
+Let's create a JavaScript game: the wagon-race. It's a simple game where you must use your keyboard to make a Wagon go forward. Each player will move his "wagon" by smashing some key (e.g. "q" for player one, "p" for player two)
 
 The goal here is to learn more about JavaScript, jQuery, the DOM, and asynchronous event handling.
 
-Before you start, you should read about [jQuery](http://learn.jquery.com/about-jquery/).  In particular, you should understand event handling and callback functions.
-
 ## Specs
 
-You will start by building a simple two-player board.  This will be rendered via HTML. There are a few ways you could do it, e.g., a table that looks like:
-
 #### HTML
+
+You will start by building a simple two-player board in HTML. There are a few ways you could do it, e.g. a table that looks like:
 
 ```html
 <table class="racer_table">
@@ -34,37 +29,45 @@ You will start by building a simple two-player board.  This will be rendered via
 </table>
 ```
 
-Then, using CSS, you can provide styles like:
+
+#### CSS
+
+Then switch to CSS and implement your board static design. Example:
 
 ```css
 .racer_table td {
-  background-color: white;
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
 }
-
 .racer_table td.active {
-  background-color: black;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#player1_race td.active {
+  background-image: url("images/player_1.png");
+}
+#player2_race td.active {
+  background-image: url("images/player_2.png");
 }
 ```
 
-You will then update a player's position by adding the `active` class to the appropriate `td`.  There are many other ways to achieve a sensible board output; this is just one suggestion.
+You will update a player's position by moving the `active` class from one `td` to the next one. Of course, there are other solutions to implement this game. Using a table and a CSS class is one option. Make sure you're able to "manually" produce all the board views you might care about.
 
-Make sure you're able to "manually" produce all the board layouts you might care about before you jump into the JavaScript.  Whatever way you choose, it should be easy for jQuery/JavaScript to manipulate, so keep that in mind.
+This is always a good idea to do as much work as possible using smart HTML markup and CSS classes before jumping into JavaScript. Bad front-end developers spend time writing long javascript code that change CSS values, instead of short scripts that play nicely combined with CSS classes.
 
 #### Javascript
 
-We need some way for JavaScript to update the board state. Create simple JavaScript functions that can update a particular player's position. You can have several animation strategies for that purpose, for instance:
+Write all your code in `game.js`. We need a way for JavaScript to update the board state. Create simple JavaScript functions that can update a particular player's position. You can have several animation strategies for that purpose, for instance:
 
-- remove the `active` class on the current player's `td` and add this class to the following `td`.
-- keep track of the "index" of each player in the table and increase this index.
+- Remove the `active` class on the current player's `td` and add this class to the following `td`.
+- Keep track of the "index" of each player in the table and increase this index.
 
-Hint: depending of your choice, the [next](http://api.jquery.com/next/) and [index](http://api.jquery.com/index/) jQuery functions may be usefull!
+**Hint**: depending of your choice, the [next](http://api.jquery.com/next/) and [index](http://api.jquery.com/index/) jQuery functions may be usefull!
 
 
 #### Binding to Key Presses
 
-Now we'll make the game interactive!  Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key.  We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key (hence players could cheat by just keeping a key pressed), whereas the keyup event doesn't.
+Now we'll make the game interactive! Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key. We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key (hence players could cheat by just keeping a key pressed), whereas the keyup event doesn't.
 
 You want to bind to the `document`, like so:
 
