@@ -6,4 +6,4 @@ When people are filling your form, it's best to give them the feedback as quick 
 
 #### `02-Minesweeper`
 A less classical use of JS: build a minesweeper game!
-We're back in good old day, yeah!
+We're back in good old day, yo!
