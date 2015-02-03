@@ -90,19 +90,17 @@ class API < Sinatra::Base
   end
 
   post '/sessions/:id/games', provides: [:json] do
-    json_params = JSON.parse(request.env['rack.input'].read)
     session = Session[params[:id]]
     @game = session.add_game(Game.new)
-    player1 = @game.add_player(name: json_params['players'][0]['name'])
-    player2 = @game.add_player(name: json_params['players'][1]['name'])
+    player1 = @game.add_player(name: params["player1"])
+    player2 = @game.add_player(name: params["player2"])
     rabl :'games/game'
   end
 
   patch '/games/:id/finish', provides: [:json] do
-    json_params = JSON.parse(request.env['rack.input'].read)
     @game = Game[params[:id]]
-    @game.update(winner: json_params['winner'],
-                 elapsed_time: json_params['elapsed_time'],
+    @game.update(winner: params['winner'],
+                 elapsed_time: params['elapsed_time'],
                  status: 'completed')
     @game.save
     rabl :'games/game'

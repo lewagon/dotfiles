@@ -23,10 +23,8 @@ A JSON Object (~ Hash) containing the `id` of the session.
 ### Expected POST data
 
     {
-      "players": [
-        { "name": "Johnny" },
-        { "name": "Boris" }
-      ]
+      "player1": "Johnny",
+      "player2": "Boris"
     }
 
 Replace `Johnny` and `Boris` with the real information from your form.

@@ -4,12 +4,15 @@ We will take our last exercise Wagon-race and make it a little bit more interest
 
 **Before anything else:**
 
-* Go to the exercise folder
-* Run `bundle install`
+Go to the exercise folder
+
+```bash
+$ bundle install
+```
 
 **For the API:**
 
-* You can read the API documentation in the `API.md` file in the exercise folder
+* You can read the [API documentation](/04-Front-End/06-HTTP-and-Ajax/Optional-01-AJAX-wagon-race/API.md)
 * Start the API by calling the `rake api` command in the exercise forlder
 * The API will be accessible on http://localhost:4567
 
