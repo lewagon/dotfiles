@@ -61,8 +61,7 @@ end
 
 class API < Sinatra::Base
   get '/' do
-    content_type :text
-    'API ready!'
+    redirect '/index.html'
   end
 
   post '/sessions', provides: [:json] do
