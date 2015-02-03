@@ -11,26 +11,30 @@ Rabl.configure do |config|
   config.include_child_root = false
 end
 
-DB = Sequel.sqlite
+DB = Sequel.sqlite('sessions.sqlite3')
 
-DB.create_table :sessions do
-  primary_key :id
-  column :created_at, :datetime
-  column :updated_at, :datetime
-end
+begin
+  DB.create_table :sessions do
+    primary_key :id
+    column :created_at, :datetime
+    column :updated_at, :datetime
+  end
 
-DB.create_table :games do
-  primary_key :id
-  column :session_id,   :integer
-  column :winner,       :integer
-  column :status,       :string, default: 'started'
-  column :elapsed_time, :integer
-end
+  DB.create_table :games do
+    primary_key :id
+    column :session_id,   :integer
+    column :winner,       :integer
+    column :status,       :string, default: 'started'
+    column :elapsed_time, :integer
+  end
 
-DB.create_table :players do
-  primary_key :id
-  column :game_id, :integer
-  column :name,    :string
+  DB.create_table :players do
+    primary_key :id
+    column :game_id, :integer
+    column :name,    :string
+  end
+rescue
+
 end
 
 class Session < Sequel::Model
@@ -56,24 +60,37 @@ class Player < Sequel::Model
 end
 
 class API < Sinatra::Base
-  get('/') { redirect '/index.html' }
+  get '/' do
+    content_type :text
+    'API ready!'
+  end
 
-  get '/session/create', provides: [:json] do
+  post '/sessions', provides: [:json] do
     @session = Session.create
     rabl :'sessions/create'
   end
 
-  get '/session/:id/games', provides: [:json] do
+  get '/sessions/:id/games', provides: [:json] do
     @session = Session[params[:id]]
-    rabl :'sessions/games'
+    if @session
+      rabl :'sessions/games'
+    else
+      status 404
+      { error: 'Session not found' }.to_json
+    end
   end
 
-  get '/game/:id/results', provides: [:json] do
+  get '/games/:id/results', provides: [:json] do
     @game = Game[params[:id]]
-    rabl :'games/game'
+    if @game
+      rabl :'games/game'
+    else
+      status 404
+      { error: 'Game not found' }.to_json
+    end
   end
 
-  post '/session/:id/game/create', provides: [:json] do
+  post '/sessions/:id/games', provides: [:json] do
     json_params = JSON.parse(request.env['rack.input'].read)
     session = Session[params[:id]]
     @game = session.add_game(Game.new)
@@ -82,7 +99,7 @@ class API < Sinatra::Base
     rabl :'games/game'
   end
 
-  post '/game/:id/finish', provides: [:json] do
+  patch '/games/:id/finish', provides: [:json] do
     json_params = JSON.parse(request.env['rack.input'].read)
     @game = Game[params[:id]]
     @game.update(winner: json_params['winner'],

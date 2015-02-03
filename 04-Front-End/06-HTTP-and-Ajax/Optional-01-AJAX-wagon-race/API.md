@@ -2,7 +2,7 @@
 
 ## Create a new Game Session
 
-`GET /session/create`
+`POST /sessions`
 
 ### Returns
 
@@ -18,7 +18,7 @@ A JSON Object (~ Hash) containing the `id` of the session.
 
 ## Create a new Game
 
-`POST /session/:session_id/game/create`
+`POST /sessions/:session_id/game`
 
 ### Expected POST data
 
@@ -57,7 +57,7 @@ A Hash of informations containing the id of the game and the players like:
 
 ## Finish a Game
 
-`POST /game/:game_id/finish`
+`PATCH /games/:game_id/finish`
 
 ### Expected POST data
 
@@ -94,7 +94,7 @@ A Hash of informations about the Game like:
 
 ## Get the results of a Game
 
-`GET /game/:game_id/results`
+`GET /games/:game_id/results`
 
 ### Returns
 
@@ -122,7 +122,7 @@ It returns an Hash of informations about the Game like:
 
 ## Get the list of the Games for a Session
 
-`GET session/:session_id/games`
+`GET /sessions/:session_id/games`
 
 ### Returns
 
