@@ -18,7 +18,7 @@ A JSON Object (~ Hash) containing the `id` of the session.
 
 ## Create a new Game
 
-`POST /sessions/:session_id/game`
+`POST /sessions/:session_id/games`
 
 ### Expected POST data
 
