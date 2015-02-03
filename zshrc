@@ -13,14 +13,14 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git sublime zsh-syntax-highlighting zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-export PATH='~/.rbenv/shims:/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/usr/texbin:~/bin'
+export PATH='/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/usr/texbin:~/bin'
 
 # Disable zsh correction
 unsetopt correct_all
 
 # To use Homebrew's directories rather than ~/.rbenv
 export RBENV_ROOT=$HOME/.rbenv
-export PATH="${RBENV_ROOT}/bin:${PATH}"
+export PATH="./bin:${RBENV_ROOT}/shims:${RBENV_ROOT}/bin:${PATH}"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Gather handy aliases
