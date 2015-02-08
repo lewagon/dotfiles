@@ -59,7 +59,7 @@ Test your validations on Rails console before moving on.
 Again, the `dependent: :destroy` option for associations will help.
 As you have guessed, the `doses` table is the join table between cocktails and ingredients.
 
-Test your associations on Rails console before moving on. Example:
+Again, test your associations on Rails console before moving on. Example:
 
 ```
 $ mojito = Cocktail.create(name: "Mojito")

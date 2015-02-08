@@ -17,7 +17,7 @@ The objective of this challenge is to build a 2-model Rails app with restaurant 
 **Before you go on**, test carefully **all** your validations on the Rails console, trying to save valid or invalid records. Example:
 
 ```
-$ bristol = Restaurant.new(name: "Epicure", catagory: "french")
+$ bristol = Restaurant.new(name: "Epicure", category: "french")
 $ bristol.valid?  # Should return false
 $ bristol.address = "75008 Paris"
 $ bristol.valid?  # Should return true
