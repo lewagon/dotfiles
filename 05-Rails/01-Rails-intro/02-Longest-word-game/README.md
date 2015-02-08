@@ -12,7 +12,7 @@ Herebelow is how your game should work. We only give you the routing structure. 
 
 ## Tips
 
-- To submit a parameter though a form without displaying the corresponding input, you can use a hidden input field `<input type="hidden">`!
+- To submit a parameter through a form without displaying the corresponding input, you can use a hidden input field `<input type="hidden">`!
 
 - Remember: for the forms to work you will need to remove the following line :
 ```ruby
