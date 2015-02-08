@@ -21,7 +21,7 @@ $ bristol = Restaurant.new(name: "Epicure", catagory: "french")
 $ bristol.valid?  # Should return false
 $ bristol.address = "75008 Paris"
 $ bristol.valid?  # Should return true
-``
+```
 
 #### Associations
 - A restaurant has many reviews
