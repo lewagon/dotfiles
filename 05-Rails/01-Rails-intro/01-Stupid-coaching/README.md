@@ -1,13 +1,11 @@
 ## Background & Objectives
 
-The goal of the next two challenges is to re-implement some of your ruby challenges in Rails. What does it mean?
+The goal of the next two challenges is to re-implement some of your ruby scripts in Rails. That means:
 
-- Your program interface won't be the terminal. It will be your browser!
-
-- The only way to communicate with your program thanks to your browser is through HTTP.
+- Your program interface isn't the terminal anymore, it is your browser now.
+- The only way to communicate with your Rails app is through HTTP requests.
 
 Re-implement the stupid coaching challenge (01-Ruby/01-Programming-basics/05-Stupid-coaching) in Rails.
-
 
 
 ## Specs
@@ -27,7 +25,9 @@ Once you have created your new coaching app, add it a new `CoachingController`, 
 
 ### Your coach answer logic
 
-First implement your coach answer logic in `CoachingController#answer`. We give you some URL stucture you should respect. You will have to make a GET request on `/answer`, and you should use a parameter named `:query`. Ex: GET `/answer?query=hello` or GET `/answer?query=what+should+i+do?`.
+Implement a first route `GET '/answer'` to your `CoachingController#answer` action. The `answer.html.erb` will display the question you ask your coach as well as his answer.
+
+Your question to your coach should be given as a parameter named `:query`. Ex: GET `/answer?query=hello` or GET `/answer?query=what+should+i+do?`.
 
 ![Coach answer to question](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-2.png)
 
@@ -50,7 +50,7 @@ Notice the important HTML attributes in the form:
 - `action` specifies the URL that will be used when submitting the form
 - `name` enables you to name each parameter corresponding to each input of the form.
 
-You should know what to put instead of the `???`
+Replace the `???` so that your form send a request to `CoachingController#answer` with good parameter name.
 
 ![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
 

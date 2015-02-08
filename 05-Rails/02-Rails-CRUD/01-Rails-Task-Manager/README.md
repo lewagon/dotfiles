@@ -39,6 +39,7 @@ Before starting to build your routes, your controller and views, generate your m
 Some guidelines to build your views
 
 `index.html.erb`
+
 - Should display a list of all tasks and, for each task:
   - a link to its show view (use a `link_to` helper)
   - a link to its edit view
@@ -46,9 +47,11 @@ Some guidelines to build your views
 - Should include a link to the new view to create a new task
 
 `show.html.erb`
+
 - Should display the task's details (content, date of creation, etc.) and a back-link to the index page.
 
 `new.html.erb` and `edit.html.erb`
+
 - Should include a form to create or update a task.
 
 
@@ -57,7 +60,7 @@ Some guidelines to build your views
 Notice that creating (as well as updating) a task is a **2-requests** process:
 
 1. A first GET request is here to display the HTML form
-1. A second POST or PATCH request enables to actually create or update the tasks using the parameters submitted in the form.
+1. A second POST or PATCH request enables to actually create or update the task using the parameters submitted in the form.
 
 An action is not necessarily associated with a view. For instance, the create/update/destroy actions are not associated with any views. They are just here to perform operations on the DB and then `redirect_to` another URL.
 

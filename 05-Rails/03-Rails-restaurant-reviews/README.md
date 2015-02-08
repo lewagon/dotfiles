@@ -7,22 +7,47 @@ The objective of this challenge is to build a 2-model Rails app with restaurant 
 ### Active Record Models
 
 #### Attributes
-- A restaurant has a name, an address, a phone number, and a category (chinese, italian)
+- A restaurant has a name, an address, a phone number, and a category (chinese, italian..)
 - A review has a content and a rating (between 0 and 5)
+
+#### Validation
+- A restaurant must have at least a name and an address. The category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`
+- A review must have a content and a rating. The rating should be a number between 0 and 5.
+
+**Before you go on**, test carefully **all** your validations on the Rails console, trying to save valid or invalid records. Example:
+
+```
+$ bristol = Restaurant.new(name: "Epicure", catagory: "french")
+$ bristol.valid?  # Should return false
+$ bristol.address = "75008 Paris"
+$ bristol.valid?  # Should return true
+``
 
 #### Associations
 - A restaurant has many reviews
 - A review belongs to a restaurant
 - When you delete a restaurant in the DB, it should delete all related reviews (see the `dependent: :destroy` option of the `has_many` association)
 
-#### Validation
-- A restaurant must have at least a name and an address. The category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`
-- A review must have a content and a rating. The rating should be a number between 0 and 5.
+**Before you go on**, test carefully **all** your associations on the Rails console. Example:
+
+```
+$ bristol = Restaurant.create(name: "Epicure", address: "75008 Paris", category: "french")
+$ yummy = Review.new(content: "yummy yummy", rating: 4)
+$ yummy.restaurant = bristol
+$ yummy.save
+$ bristol.reviews   # Should contain the yummy review
+$ yummy.restaurant  # Should return the bristol restaurant
+```
+
+#### Seed
+
+- Seed your restaurant database in `db/seeds.rb` with at least 5 valid restaurant records.
+- Run `rake db:seed` to launch the seeding script.
 
 ### Routing
-Asking yourself what routes you need is an important step. It depends on what features you want for your app. Let's define our minimal product:
+Asking yourself what routes you need is a very important step in your web-app building process. **Routes should exactly mirror your product's user stories**. So let's define our minimal product here:
 
-- A user can see the list of all restaurants.
+- A visitor can see the list of all restaurants.
 
 ```
 GET "restaurants"
@@ -49,38 +74,33 @@ POST "restaurants/38/reviews"
 
 - And that's it!
 
-A user cannot update / delete any restaurant or review. That will be the role of the admin (i.e. **you**) to make some curation for restaurants and reviews from the rails console.
+In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) who will have to make some curation from his rails console.
 
-We know that it's a pretty poor first version of the app. However, the goal is to force you to think about your routing and **to consider each route as a traduction of a real user-story or your product**, not to stupidly write 7 CRUD routes for any model of your app :)
+We know it's a pretty poor MVP. However, we want you to understand that **each route is a traduction of a user-story or your product**. Don't write stupidly 7 CRUD routes for any model of your app. It's the best way to get lost and to forget what your MVP really is.
 
 Implement all the routes you need to build this product
 
 **Hint:** to handle the route `GET "restaurants/38/reviews/new"`, you will have to use [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
-### Seeding
-You can seed your restaurant database in `db/seeds.rb`. Ex:
 
-```ruby
-# db/seeds.rb
+### Rails front-end
 
-Restaurant.create(name: "Epicure, Bristol", address: "112 r. Fg St-Honoré 75008", phone: "01 53 43 43 40")
-Restaurant.create(name: "L'atelier de Joel Robuchon", address: "133 av. des Champs-Élysées 75008", phone: "01 47 23 75 75")
+Let's care about our front-end, because that is what our users see! Follow [this guide](https://github.com/lewagon/stylesheets/blob/master/README.md) to setup your Rails frontend.
 
-# etc.
-```
 
-You will have to run `rake db:seed` to launch the seeding ruby script.
+#### Layout / partials
 
-### Layout / Partial
 Remember to refactor your views using layouts and partials. For example:
 
 - The applicaton layout can include a Bootstrap navbar with links to the list of restaurants and to the restaurant creation form.
 
 - Forms can be placed in partial, to make your HTML more readable.
 
-When using Rails helper like `link_to` or `form_for`, you can pass a hash of HTML attributes. This allows you to add Bootstrap CSS class to your components. Herebelow some example.
+#### Helpers
 
-#### [link_to](http://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to)
+When using Rails helper like `link_to`, you can pass a hash of HTML attributes. This allows you to add Bootstrap CSS class to your links. Herebelow some example.
+
+##### [link_to](http://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to)
 
 ```erb
 <%= link_to "See details", @restaurant, class: "btn btn-primary"%>
@@ -107,7 +127,7 @@ will generate this HTML
 </a>
 ```
 
-#### [form_for](http://guides.rubyonrails.org/form_helpers.html)
+##### [form_for](http://guides.rubyonrails.org/form_helpers.html)
 
 Be carefull, your reviews URLs are now nested in `/restaurants/:restaurant_id`. Hence, you cannot use `form_for` the same way you did with a non-nested resource. If you write:
 
@@ -125,10 +145,10 @@ It will generate this HTML
 <% end %>
 ```
 
-That's not what we want bacause **we haven't any route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
+That's not what we want because **we haven't any route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
 
 ```erb
-<%= form_for([@restaurant, @review]) do |f| %>
+<%= form_for @review, url: restaurant_reviews_path(@restaurant) do |f| %>
   <!-- [...] -->
 <% end %>
 ```
@@ -143,6 +163,7 @@ This will will generate the following HTML form:
 
 This URL is consistent with the route `POST "restaurants/:restaurant_id/reviews"` you have defined in `routes.rb`. Yeah! For more insights, you can read [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
 
+**Tips:** If you use `bootstrap_form` gem, you can replace `form_for` by `bootstrap_form_for` in your views to get all Bootstrap CSS classes on generated HTML forms.
 
 ### Improve your app
 
