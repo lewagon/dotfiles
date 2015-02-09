@@ -81,6 +81,14 @@ to start from a good CSS architecture.
 Go to [db.lewagon.org](http://db.lewago.org) and draw the schema with your buddy. The tables
 we need are `cocktails`, `ingredients` and `doses`.
 
+Validate all models tests before moving to the routing layer. You can use this command:
+
+```bash
+$ bin/rspec spec/models
+```
+
+to selectively run tests in the `spec/models` folder.
+
 #### Attributes
 
 - A **cocktail** has a name (e.g. `"Mint Julep"`, `"Whiskey Sour"`, `"Mojito"`)
@@ -93,8 +101,6 @@ we need are `cocktails`, `ingredients` and `doses`.
 - An ingredient must have a name, and names should be unique
 - A dose must have a description, a cocktail and an ingredient, and [cocktail, ingredient] couples should be unique.
 
-Test your validations with `rake` and with the `rails console` before moving on.
-
 #### Associations
 
 - A cocktail has many doses
@@ -102,7 +108,7 @@ Test your validations with `rake` and with the `rails console` before moving on.
 - An ingredient has many doses
 - A dose belongs to an ingredient
 - A dose belongs to a cocktail
-- When you delete an ingredient, it should delete the associated doses.
+- You can't delete an ingredient if it used by at least one cocktail.
 - When you delete a cocktail, you should delete associated doses (but not the ingredients as they can be linked to other cocktails).
 
 ### Seed the ingredients

@@ -50,7 +50,13 @@ $ rake
 - A review must have a content and a rating. The rating should be a number between 0 and 5.
 - When a restaurant is destroyed, all reviews should be destroyed as well.
 
-Before you go on, make sure that **all** the model specs are green.
+Validate all models tests before moving to the routing layer. You can use this command:
+
+```bash
+$ bin/rspec spec/models
+```
+
+to selectively run tests in the `spec/models` folder.
 
 You can also manually test your code with the `rails console`. Do not forget to `reload!` between each code change!
 
