@@ -3,11 +3,23 @@
 The objective of this challenge is to build a 2-model Rails app with restaurant and anonymous reviews.
 You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) to see a similar example on articles and comments.
 
+## Rails app generation
+
+You are going to use external specs wrote by the teachers to test your rails app. Here
+is the setup you need:
+
+```bash
+$ cd ~/code/<user.github_nickname>
+$ rails new -T lacuillere
+$ cd lacuillere
+$ # TODO
+```
+
 ## Specs
 
-### Active Record Models
+### Models
 
-#### Attributes
+#### Schema
 
 - A restaurant has a name, an address, a phone number, and a category (chinese, italian..)
 - A review has a content and a rating (between 0 and 5)
