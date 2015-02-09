@@ -19,12 +19,12 @@ Herebelow is how your game should work. We only give you the routing structure. 
   protect_from_forgery with: :exception
 ```
 In the `app/controllers/application_controller.rb` file.
-This will be explain in more details during the next days, but you can learn more about it [here](http://guides.rubyonrails.org/security.html)
+This will be explained in more details during the next days, but you can learn more about it [here](http://guides.rubyonrails.org/security.html).
 
 ## Extra (optional)
 
-Everytime a new HTTP request hits your Rails app, it generate a new instance of the controller. Hence, you cannot store values cross-request, except if you use Rails session. Rails session is persisted between all requests of the user's session.
+Everytime a new HTTP request hits your Rails app, it generates a new instance of the controller. Hence, you cannot store values across requests, except if you use Rails session. Rails session is persisted between all requests of the user's session.
 
-Here you can use [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the total number of games you have played, your average score, this kind of general information.
+Here you can use [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the total number of games you have played, your average score and other kind of general information.
 
 
