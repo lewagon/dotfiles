@@ -1,26 +1,33 @@
 ## Background & Objectives
 
-The objective of this challenge is to build a 2-model Rails app with restaurant and anonymous reviews. You can refer to [Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) to see a similar example on articles and comments.
+The objective of this challenge is to build a 2-model Rails app with restaurant and anonymous reviews.
+You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) to see a similar example on articles and comments.
 
 ## Specs
 
 ### Active Record Models
 
 #### Attributes
+
 - A restaurant has a name, an address, a phone number, and a category (chinese, italian..)
 - A review has a content and a rating (between 0 and 5)
 
 #### Validation
-- A restaurant must have at least a name and an address. The category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`
+
+- A restaurant must have at least a name and an address.
+- The restaurant category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`.
+- A review must have a parent restaurant.
 - A review must have a content and a rating. The rating should be a number between 0 and 5.
+- When a restaurant is destroyed, all reviews should be destroyed as well.
 
-**Before you go on**, test carefully **all** your validations on the Rails console, trying to save valid or invalid records. Example:
+**Before you go on**, test carefully **all** your validations on the rails console, trying to save valid or invalid records. Example:
 
-```
-$ bristol = Restaurant.new(name: "Epicure", category: "french")
-$ bristol.valid?  # Should return false
-$ bristol.address = "75008 Paris"
-$ bristol.valid?  # Should return true
+```bash
+$ rails c
+> bristol = Restaurant.new(name: "Epicure", category: "french")
+> bristol.valid?  # Should return false
+> bristol.address = "75008 Paris"
+> bristol.valid?  # Should return true
 ```
 
 #### Associations
