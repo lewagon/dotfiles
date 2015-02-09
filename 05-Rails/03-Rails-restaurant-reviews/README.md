@@ -27,8 +27,7 @@ $ git commit -m "Prepare rails app with external specs"
 Then you'll be able to test your code:
 
 ```bash
-$ RAILS_ENV=test rake db:migrate
-$ git submodule foreach git pull origin master
+$ bin/rake db:migrate RAILS_ENV=test  # If you added a migration
 $ rake
 ```
 

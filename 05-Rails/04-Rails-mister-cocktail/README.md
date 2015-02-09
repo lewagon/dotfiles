@@ -1,7 +1,8 @@
 ## Background & Objectives
 
 Now it's time to make a 3-model app. And you guessed it, we'll introduce
-a `n:n` (many to many) relation.
+a `n:n` (many to many) relation. So what is it about? Well, it's a cocktail
+manager. We want to store our best recipes of cocktails.
 
 ## Rails app generation
 
@@ -36,9 +37,17 @@ Let's import the teacher's spec to be able to `rake` our progress.
 ```bash
 $ echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 $ bundle install
+$ rake db:test:prepare
 $ git submodule add git@github.com:lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
 $ git add .
 $ git commit -m "Prepare rails app with external specs"
+```
+
+You'll be able to test your code with:
+
+```bash
+$ bin/rake db:migrate RAILS_ENV=test  # If you added a migration
+$ rake
 ```
 
 ## Heroku deployment
@@ -67,62 +76,47 @@ to start from a good CSS architecture.
 
 ## Specs
 
-### Active Record Models
+### Models
+
+Go to [db.lewagon.org](http://db.lewago.org) and draw the schema with your buddy. The tables
+we need are `cocktails`, `ingredients` and `doses`.
 
 #### Attributes
 
-- A cocktail has a name (e.g. "Mint Julep", "Whiskey Sour", "Mojito")
-- An ingredient has a name (e.g. "lemon", "ice cubes", "mint leaves")
-- A dose refers to a cocktail, an ingredient, and has an amount. E.g: the mint Julep has a dose of 3 mint leaves.
+- A **cocktail** has a name (e.g. `"Mint Julep"`, `"Whiskey Sour"`, `"Mojito"`)
+- An **ingredient** has a name (e.g. `"lemon"`, `"ice"`, `"mint leaves"`)
+- A **dose** references a cocktail, an ingredient and has a description. (e.g. the Mojito cocktail needs **6cl** of lemon)
 
 #### Validation
 
-- A cocktail must have a name
-- An ingredient must have a name
-- A dose must have an amount
+- A cocktail must have a name, and names should be unique
+- An ingredient must have a name, and names should be unique
+- A dose must have a description, a cocktail and an ingredient, and [cocktail, ingredient] couples should be unique.
 
-Test your validations on Rails console before moving on.
+Test your validations with `rake` and with the `rails console` before moving on.
 
 #### Associations
 
 - A cocktail has many doses
 - A cocktail has many ingredients through doses
 - An ingredient has many doses
-- An ingredient has many cocktails through doses
 - A dose belongs to an ingredient
 - A dose belongs to a cocktail
-- When you delete an ingredient, it should delete the related doses.
-- When you delete a cocktail, you should delete associated doses (you will not destroy the ingredients as they can be linked to other cocktails).
+- When you delete an ingredient, it should delete the associated doses.
+- When you delete a cocktail, you should delete associated doses (but not the ingredients as they can be linked to other cocktails).
 
-Again, the `dependent: :destroy` option for associations will help.
-As you have guessed, the `doses` table is the join table between cocktails and ingredients.
+### Seed the ingredients
 
-Again, test your associations on Rails console before moving on. Example:
-
-```
-$ mojito = Cocktail.create(name: "Mojito")
-$ mint = Ingredient.create(name: "mint leaves")
-$ dose = Dose.new()
-$ dose.cocktail = mojito
-$ dose.ingredient = mint
-$ dose.amount = 3
-$ dose.save
-$ mojito.ingredients  # Should contain mint
-$ mint.cocktails      # Should contain mojito
-```
-
-## Seed your ingredients
-
-Our cocktails app will not allow users to create ingredients. This is a cocktail app, not an ingredient app. Instead, we will generate a static seed for ingredients. Write this seed, for example
+**Our app will not allow users to create ingredients**.
+Instead, we will generate a static seed of ingredients.
+Write this seed, for example
 
 ```ruby
 # db/seeds.rb
 Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice cubes")
+Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 ```
-
-run it with `rake db:seed`.
 
 ### Routing
 
