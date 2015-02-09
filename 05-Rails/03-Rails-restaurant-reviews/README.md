@@ -25,7 +25,7 @@ $ git commit -m "Prepare rails app with external specs"
 
 ### Testing your code
 
-Whenever you add migrations to your app (e.g. after a `rails g model ...`), don't forget to also run these migrations **on the test database** we use in our specs:
+Whenever you add migrations to your app (e.g. after a `rails g model ...`), don't forget to also run the migrations **on the test database** we use in our specs:
 
 ```bash
 $ bin/rake db:migrate RAILS_ENV=test  # If you added a migration
