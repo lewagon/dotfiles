@@ -1,33 +1,51 @@
 ## Background & Objectives
-Now it's time to make a 3-model app. Mister Cocktail, yeah!
 
-## Specs
+Now it's time to make a 3-model app. And you guessed it, we'll introduce
+a `n:n` (many to many) relation.
 
-### Rails project kick-off
+## Rails app generation
 
-Everything is faster with a good setup, so here is your roadmap:
-
-- Create your new Rails project with a good Postgres config
-
-```
-$ rails new mister_cocktail -T --database=postgresql
-$ cd mister_cocktail
+```bash
+$ cd ~/code/<user.github_nickname>
+$ rails new mister-cocktail -T --database=postgresql
+$ cd mister-cocktail
+$ rake db:create
 $ git init
 $ git add .
 $ git commit -m "rails new"
-```
-
-- Connect your project to a **Github repository**
-
-```
 $ hub create
-$ git push -u origin master
+$ git push origin master
+$ echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+$ bundle install
+$ git submodule add git@github.com:lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
+$ git add .
+$ git commit -m "Prepare rails app with external specs"
 ```
 
-- Deploy your app on Heroku **from t=0** (continuous deployment) by following this morning lecture.
+## Heroku deployment
 
-- Setup your [Rails front-end](https://github.com/lewagon/stylesheets) to work with nice style from the beginning.
+Follow [the lectures's instructions](http://karr.lewagon.org/lectures/rails/04-hosting-deployment/#/1/12).
 
+Then, in your terminal, create the app...
+
+```bash
+$ heroku create <user.github_nickname>-mister-cocktail --region eu
+```
+
+...and make your first deployment:
+
+```bash
+$ git push heroku master && heroku run rake db:migrate
+```
+
+## Style
+
+Don't forget to use [lewagon/stylesheets](https://github.com/lewagon/stylesheets)
+to start from a good CSS architecture.
+
+(commit and deploy this. You know the drill. **continuous deployment**)
+
+## Specs
 
 ### Active Record Models
 
