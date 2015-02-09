@@ -73,7 +73,7 @@ $ rails c
 - Seed your restaurant database in `db/seeds.rb` with at least 5 valid restaurant records.
 - Run `rake db:seed` to launch the seeding script.
 
-### Routing
+### Routing / Controllers
 
 Asking yourself what routes you need is a very important step in your web-app building process. **Routes should exactly mirror your product's user stories**. So let's define our minimal product here:
 
@@ -113,7 +113,7 @@ Implement all the routes you need to build this product
 **Hint:** to handle the route `GET "restaurants/38/reviews/new"`, you will have to use [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
 
-### Rails front-end
+### Views
 
 Let's care about our front-end, because that is what our users see! Follow [this guide](https://github.com/lewagon/stylesheets/blob/master/README.md) to setup your Rails frontend.
 
@@ -141,22 +141,6 @@ Will generate  this HTML
 <a href="/restaurants/3" class="btn btn-primary">See details</a>
 ```
 
-or, you can also pass the HTML content of the link in a block:
-
-```erb
-<%= link_to @restaurant, class: "image-link" do %>
-  <%= image_tag @restaurant.picture %>
-<% end %>
-```
-
-will generate this HTML
-
-```html
-<a href="/restaurants/3" class="image-link">
-  <img src="/assets/...">
-</a>
-```
-
 ##### [form_for](http://guides.rubyonrails.org/form_helpers.html)
 
 Be carefull, your reviews URLs are now nested in `/restaurants/:restaurant_id`. Hence, you cannot use `form_for` the same way you did with a non-nested resource. If you write:
@@ -178,7 +162,7 @@ It will generate this HTML
 That's not what we want because **we haven't any route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
 
 ```erb
-<%= form_for @review, url: restaurant_reviews_path(@restaurant) do |f| %>
+<%= form_for [@restaurant, @review] do |f| %>
   <!-- [...] -->
 <% end %>
 ```
