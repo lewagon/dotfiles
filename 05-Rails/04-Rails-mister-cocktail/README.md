@@ -128,34 +128,45 @@ Ingredient.create(name: "mint leaves")
 
 Once again, you must have a precise idea of the features of your app in order to build your routes. Here is the list of features:
 
-- a user can see the list of all cocktails
+- A user can see the list of all cocktails
 
 ```
 GET "cocktails"
 ```
 
-- a user can see the details of a precise cocktail, with the table of ingredients and doses
+- A user can see the details of a given cocktail, with the ingredient list
 
 ```
 GET "cocktails/42"
 ```
 
-- a user can create a new cocktail.
+- A user can create a new cocktail.
 
 ```
 GET "cocktails/new"
 POST "cocktails"
 ```
 
-- a user can add a new dose (ingredient/amount pair) on an existing cocktail
+- A user can add a new dose (ingredient/description pair) on an existing cocktail.
 
 ```
 GET "cocktails/42/doses/new"
 POST "cocktails/42/doses"
 ```
 
-- a user can delete a dose on an existing cocktail
+- A user can delete a dose on an existing cocktail
 
 ```
 DELETE "doses/25"
 ```
+
+And now think. Do we need an `IngredientsController`?
+
+
+### Views
+
+Now put a nice looking front-end on top of that :)
+
+### Going further (Harder)
+
+Try to put the "New dose form" on the cocktail page, not on a separate page.
