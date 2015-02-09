@@ -5,16 +5,35 @@ a `n:n` (many to many) relation.
 
 ## Rails app generation
 
+**Note**: You should be able to run those steps without this cheat sheet.
+
+First let's create a new Rails app using PostgreSQL
+
 ```bash
 $ cd ~/code/<user.github_nickname>
 $ rails new mister-cocktail -T --database=postgresql
 $ cd mister-cocktail
+```
+
+We then need to locally create the database for this new rails app.
+
+```bash
 $ rake db:create
+```
+
+Let's set up git, create a repo on GitHub and push our skeleton.
+
+```bash
 $ git init
 $ git add .
 $ git commit -m "rails new"
 $ hub create
 $ git push origin master
+```
+
+Let's import the teacher's spec to be able to `rake` our progress.
+
+```bash
 $ echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 $ bundle install
 $ git submodule add git@github.com:lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
@@ -24,7 +43,8 @@ $ git commit -m "Prepare rails app with external specs"
 
 ## Heroku deployment
 
-Follow [the lectures's instructions](http://karr.lewagon.org/lectures/rails/04-hosting-deployment/#/1/12).
+Follow [the lecture's instructions](http://karr.lewagon.org/lectures/rails/04-hosting-deployment/#/1/12) about
+preparing your app for being hosted on Heroku.
 
 Then, in your terminal, create the app...
 
