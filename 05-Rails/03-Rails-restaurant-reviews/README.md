@@ -12,7 +12,24 @@ is the setup you need:
 $ cd ~/code/<user.github_nickname>
 $ rails new -T lacuillere
 $ cd lacuillere
-$ # TODO
+$ git init
+$ git add .
+$ git commit -m "rails new"
+$ hub create
+$ git push origin master
+$ echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+$ bundle install
+$ git submodule add git@github.com:lewagon/fullstack-challenges-03-Rails-restaurant-reviews-specs.git spec
+$ git add .
+$ git commit -m "Prepare rails app with external specs"
+```
+
+Then you'll be able to test your code:
+
+```bash
+$ RAILS_ENV=test rake db:migrate
+$ git submodule foreach git pull origin master
+$ rake
 ```
 
 ## Specs
@@ -21,8 +38,10 @@ $ # TODO
 
 #### Schema
 
-- A restaurant has a name, an address, a phone number, and a category (chinese, italian..)
-- A review has a content and a rating (between 0 and 5)
+- A restaurant has a name, an address, a phone number, a category (chinese, italian...) and many reviews
+- A review has a content and a rating (between 0 and 5) and references a restaurant
+
+**Question**: Can you draw this simple schema at [db.lewagon.org](http://db.lewagon.org)? Discuss with your buddy.
 
 #### Validation
 
@@ -32,7 +51,9 @@ $ # TODO
 - A review must have a content and a rating. The rating should be a number between 0 and 5.
 - When a restaurant is destroyed, all reviews should be destroyed as well.
 
-**Before you go on**, test carefully **all** your validations on the rails console, trying to save valid or invalid records. Example:
+Before you go on, make sure that **all** the model specs are green.
+
+You can also manually test your code with the `rails console`. Do not forget to `reload!` between each code change!
 
 ```bash
 $ rails c
@@ -40,30 +61,20 @@ $ rails c
 > bristol.valid?  # Should return false
 > bristol.address = "75008 Paris"
 > bristol.valid?  # Should return true
+> yummy = Review.new(content: "yummy yummy", rating: 4)
+> yummy.restaurant = bristol
+> yummy.save
+> bristol.reviews   # Should contain the yummy review
+> yummy.restaurant  # Should return the bristol restaurant
 ```
 
-#### Associations
-- A restaurant has many reviews
-- A review belongs to a restaurant
-- When you delete a restaurant in the DB, it should delete all related reviews (see the `dependent: :destroy` option of the `has_many` association)
-
-**Before you go on**, test carefully **all** your associations on the Rails console. Example:
-
-```
-$ bristol = Restaurant.create(name: "Epicure", address: "75008 Paris", category: "french")
-$ yummy = Review.new(content: "yummy yummy", rating: 4)
-$ yummy.restaurant = bristol
-$ yummy.save
-$ bristol.reviews   # Should contain the yummy review
-$ yummy.restaurant  # Should return the bristol restaurant
-```
-
-#### Seed
+### Seed
 
 - Seed your restaurant database in `db/seeds.rb` with at least 5 valid restaurant records.
 - Run `rake db:seed` to launch the seeding script.
 
 ### Routing
+
 Asking yourself what routes you need is a very important step in your web-app building process. **Routes should exactly mirror your product's user stories**. So let's define our minimal product here:
 
 - A visitor can see the list of all restaurants.
