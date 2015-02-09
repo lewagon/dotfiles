@@ -5,8 +5,7 @@ You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started
 
 ## Rails app generation
 
-You are going to use external specs wrote by the teachers to test your rails app. Here
-is the setup you need:
+You are going to use external specs wrote by the teachers to test your rails app. Here is the setup you need:
 
 ```bash
 $ cd ~/code/<user.github_nickname>
@@ -24,10 +23,17 @@ $ git add .
 $ git commit -m "Prepare rails app with external specs"
 ```
 
-Then you'll be able to test your code:
+### Testing your code
+
+Whenever you add migrations to your app (e.g. after a `rails g model ...`), don't forget to also run these migrations **on the test database** we use in our specs:
 
 ```bash
 $ bin/rake db:migrate RAILS_ENV=test  # If you added a migration
+```
+
+Then testing your code is as simple as usual (a good old rake):
+
+```bash
 $ rake
 ```
 
