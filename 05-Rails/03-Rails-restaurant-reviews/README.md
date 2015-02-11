@@ -41,7 +41,7 @@ If you want the ability to just run `rake`, sync your dotfiles:
 
 ```bash
 $ cd ~/code/<user.github_nickname>/dotfiles
-$ git pull add upstream git@github.com:lewagon/dotfiles.git
+$ git remote add upstream git@github.com:lewagon/dotfiles.git
 $ git pull --no-edit upstream master
 $ source ~/.zshrc
 $ cd ~/code/<user.github_nickname>/lacuillere
