@@ -105,7 +105,7 @@ Asking yourself what routes you need is a very important step in your web-app bu
 ```
 GET "restaurants"
 ```
-- He can add a new restaurant.
+- He can add a new restaurant, and be redirected to the `show view` of that new restaurant.
 
 ```
 GET "restaurants/new"
