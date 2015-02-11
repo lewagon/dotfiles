@@ -34,7 +34,19 @@ $ bin/rake db:migrate RAILS_ENV=test  # If you added a migration
 Then testing your code is as simple as usual (a good old rake):
 
 ```bash
-$ rake
+$ bin/rake
+```
+
+If you want the ability to just run `rake`, sync your dotfiles:
+
+```bash
+$ cd ~/code/<user.github_nickname>/dotfiles
+$ git pull add upstream git@github.com:lewagon/dotfiles.git
+$ git pull --no-edit upstream master
+$ source ~/.zshrc
+$ cd ~/code/<user.github_nickname>/lacuillere
+$ which rake  # should be `bin/rake`
+$ rake        # should now work
 ```
 
 ## Specs
