@@ -20,8 +20,8 @@ unsetopt correct_all
 
 # To use Homebrew's directories rather than ~/.rbenv
 export RBENV_ROOT=$HOME/.rbenv
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="./bin:${RBENV_ROOT}/shims:${RBENV_ROOT}/bin:${PATH}"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Gather handy aliases
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
