@@ -38,7 +38,7 @@ Let's import the teacher's spec to be able to `rake` our progress.
 $ echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 $ bundle install
 $ rake db:test:prepare
-$ git submodule add git@github.com:lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
+$ git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
 $ git add .
 $ git commit -m "Prepare rails app with external specs"
 ```
