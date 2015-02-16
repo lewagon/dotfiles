@@ -71,17 +71,17 @@ Some of these features are more important than others. It's your role to priorit
 
 **Specify your feature**
 
-When you work on a feature, tell the rest of the team on which files you will work exactly. That will avoid conflicts or quiproquo and **help you clarify what work you have to do precisely**.
+When you work on a feature, tell the rest of the team on which files you will work exactly. That will avoid conflicts or quiproquo and help you clarify what work you have to do precisely.
 
-- **Model**: I will create the `Booking` model and migration, with good associations and validations (crash-tested on rails console).
-- **Routing**: I will add bookings routes in `routes.rb`
-- **Controller**: I will create a new `BookingsController`
-- **New Views**: I will create `views/bookings/new.html.erb` for booking form and `views/bookings/index.html.erb` for listing current user's bookings.
-- **Existing Views**: I will connect the "book it" button of a flat's show view to my booking form and I will connect the "My bookings" link in the navbar to my bookings index view.
+- *Model*: I will create the `Booking` model and migration, with good associations and validations (crash-tested on rails console).
+- *Routing*: I will add bookings routes in `routes.rb`
+- *Controller*: I will create a new `BookingsController`
+- *New Views*: I will create `views/bookings/new.html.erb` for booking form and `views/bookings/index.html.erb` for listing current user's bookings.
+- *Existing Views*: I will connect the "book it" button of a flat's show view to my booking form and I will connect the "My bookings" link in the navbar to my bookings index view.
 
 **Code it perfectly, from model to view**
 
-When you code your feature, make it perfect from the model to **the view**. 
+When you code your feature, make it perfect from the model to the view. 
 
 - Crash test all your model associations and validations on the rails console.
 - Don't neglect the view. If you add a form, make it a nice centered Bootstrap form. If you code a flats list, build a nice Bootstrap grid (for example, with flat picture on the left and flat infos on the right..). 
