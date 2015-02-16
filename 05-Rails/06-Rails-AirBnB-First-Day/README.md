@@ -4,7 +4,9 @@ This week, you will build your first serious Rails app and learn to work with a 
 
 Here is a project roadmap. You can adopt the same organization on any app you will build in the future, as on your final projects.
 
-1. **User-stories**: they will drive your software development and the way you split tasks in your team. Write all the user-stories of your airbnb MVP. Example:
+### 1 - User-stories
+
+They will drive your software development and the way you split tasks in your team. Write all the user-stories of your airbnb MVP. Example:
 
 ```
 - as a visitor, I can search for a flat in a city for given checkin/checkout dates
@@ -15,12 +17,18 @@ Here is a project roadmap. You can adopt the same organization on any app you wi
 - etc..
 ```
 
-2. **Data scheme**: Draw your database scheme  (e.g. using http://db.lewagon.org/) and validate it with a coach. The database scheme is the milestone of your app. If your DB scheme is wrong or too complicated, you are stuck and you cannot code any good app afterwards.
+### 2 - Data scheme 
 
-3. **Mockup**: Draw a basic mockup of your app on a paperbook. First list all the views suggested by your user-stories (home / signin / signup / flats index / flats show / profile / etc.. ). For each view, make a simple drawing, to know what info you will insert in it (owner's picture? Flat's picture? map? Flat's infos?), and what navigation and buttons (button "book this flat", links in the navbar to go back to the search page etc..). No need to be Michelangelo, just think about 1) the infos you want to display 2) the buttons and navigations to make the glue between your different views.
+Draw your database scheme  (e.g. using [our db tool](http://db.lewagon.org/)) and validate it with a coach. The database scheme is the milestone of your app. If your DB scheme is wrong or too complicated, you are stuck and you cannot code any good app afterwards.
+
+### 3 - Mockup
+
+Draw a basic mockup of your app on a paperbook. First list all the views suggested by your user-stories (home / signin / signup / flats index / flats show / profile / etc.. ). For each view, make a simple drawing, to know what info you will insert in it (owner's picture? Flat's picture? map? Flat's infos?), and what navigation and buttons (button "book this flat", links in the navbar to go back to the search page etc..). No need to be Michelangelo, just think about 1) the infos you want to display 2) the buttons and navigations to make the glue between your different views.
 
 
-4. **Setup**: Before splitting the tasks among the team, setup your project. The lead-developper should:
+### 4 - Setup
+
+Before splitting the tasks among the team, setup your project. The lead-developper should:
 
 - Create the Rails project with Postgres config
 - Push the project on Github
@@ -29,8 +37,7 @@ Here is a project roadmap. You can adopt the same organization on any app you wi
 
 From this point you can start splitting the tasks. Spend time on the setup, because everything will be simpler if you do it right from the beginning
 
-
-5. **Project management**:
+### 5 - Software management guidelines
 
 **kick-off**
 
@@ -64,6 +71,5 @@ Some of these features are more important than others. It's your role to priorit
 - I will create a new `BookingsController`
 - I will create `views/bookings/new.html.erb` for the booking form and `views/bookings/index.html.erb` to list current user's  bookings.
 - I will a connect the "book it" button of the flat view to my booking form, and I will connect the "My bookings" link in the navbar to my bookings index view.
-
 - when you code your feature, make it perfect from the routing to **the view**. Don't neglect the view. If add a form, make it a nice centered Bootstrap form. If you code the flats index, build a nice grid (with flat picture on left and flat infos on right..).
 
