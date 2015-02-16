@@ -51,7 +51,7 @@ You will always detect **core models** in your app on which all future features 
 - group #1: `User` with signin, `Flat` listing and creation (from owner's perspective)
 - group #2: Front-end setup, layout with navbar/footer, home page.
 
-Once both groups are done, you can all move on to integrate remaining features.
+Once both groups are done and have merged their work on Github, you can all move on to remaining features.
 
 #### Tasks organization
 
