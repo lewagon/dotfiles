@@ -23,7 +23,10 @@ Draw your database scheme  (e.g. using [our db tool](http://db.lewagon.org/)) an
 
 ### 3 - Mockup
 
-Draw a basic mockup of your app on a paperbook. First list all the views suggested by your user-stories (home / signin / signup / flats index / flats show / profile / etc.. ). For each view, make a simple drawing, to know what info you will insert in it (owner's picture? Flat's picture? map? Flat's infos?), and what navigation and buttons (button "book this flat", links in the navbar to go back to the search page etc..). No need to be Michelangelo, just think about 1) the infos you want to display 2) the buttons and navigations to make the glue between your different views.
+Draw a basic mockup of your app on a paperbook. First list all the views suggested by your user-stories (home / signin / signup / flats index / flats show / profile / etc.. ). For each view, make a simple drawing, to know what info you will insert in it (owner's picture? Flat's picture? map? Flat's infos?), and what navigation and buttons (button "book this flat", links in the navbar to go back to the search page etc..). No need to be Michelangelo, just think about 
+
+1. The infos you want to display 
+2. The buttons and navigations to make the glue between your different views.
 
 
 ### 4 - Setup
