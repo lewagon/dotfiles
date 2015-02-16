@@ -69,7 +69,8 @@ Some of these features are more important than others. It's your role to priorit
 
 - tell the rest of the team on which files you will work exactly. That will avoid conflicts or quiproquo and help you clarify what you have to do:
 
-**Example - bookings integration**:
+#### Example - bookings integration
+
 - I will add bookings routes in `routes.rb`
 - I will create a new `BookingsController`
 - I will create `views/bookings/new.html.erb` for the booking form and `views/bookings/index.html.erb` to list current user's  bookings.
