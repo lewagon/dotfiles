@@ -55,7 +55,7 @@ Once both groups are done and have merged their work on Github, you can all move
 
 #### Tasks organization
 
-Here is a list of different thinks to do
+Here is a list of different things to do on the Airbnb project
 
 - navbar with working links (signin/signout, "My bookings", "Publish an announce", etc..)
 - flat's booking
@@ -63,13 +63,13 @@ Here is a list of different thinks to do
 - add reviews to flat
 - add geocoding to flat and Gmaps in views
 - Facebook connect
-- Automatic mailing between owner / user
+- Mailing between owner / user
 
-Some of these features are more important than others. It's your role to prioritize them to get an MVP at the end of the week! In any case, when you work on a task:
+Some of these features are more important than others. It's your role to prioritize them to get an MVP at the end of the week! 
 
-- tell the rest of the team on which files you will work exactly. That will avoid conflicts or quiproquo and help you clarify what you have to do:
+In any case, when you work on a task, **tell the rest of the team on which files you will work exactly**. That will avoid conflicts or quiproquo and **help you clarify what work you have to do precisely**.
 
-#### Example - bookings integration
+#### Example of task definition - bookings integration
 
 - I will add bookings routes in `routes.rb`
 - I will create a new `BookingsController`
