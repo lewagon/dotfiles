@@ -42,7 +42,7 @@ From this point you can start splitting the tasks. Spend time on the setup, beca
 
 ### 5 - Software management guidelines
 
-**kick-off**
+#### Kick-off
 
 When trying to split work in your team, you'll realize that many tasks depend on other ones.. How to integrate facebook connect if there is no User model? How to implement bookings if there is no Flat model? Here are some guidelines to help you organize your work:
 
@@ -53,7 +53,7 @@ You will always detect **core models** in your app on which all future features 
 
 Once both groups are done, you can all move on to integrate remaining features.
 
-**tasks organization**
+#### Tasks organization
 
 Here is a list of different thinks to do
 
