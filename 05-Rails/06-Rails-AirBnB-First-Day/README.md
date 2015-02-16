@@ -67,13 +67,23 @@ Here is a list of different things to do on the Airbnb project
 
 Some of these features are more important than others. It's your role to prioritize them to get an MVP at the end of the week! 
 
-In any case, when you work on a task, **tell the rest of the team on which files you will work exactly**. That will avoid conflicts or quiproquo and **help you clarify what work you have to do precisely**.
+#### Example of feature - bookings integration
 
-#### Example of task definition - bookings integration
+**Specify your feature**
 
-- I will add bookings routes in `routes.rb`
-- I will create a new `BookingsController`
-- I will create `views/bookings/new.html.erb` for the booking form and `views/bookings/index.html.erb` to list current user's  bookings.
-- I will a connect the "book it" button of the flat view to my booking form, and I will connect the "My bookings" link in the navbar to my bookings index view.
-- when you code your feature, make it perfect from the routing to **the view**. Don't neglect the view. If add a form, make it a nice centered Bootstrap form. If you code the flats index, build a nice grid (with flat picture on left and flat infos on right..).
+When you work on a feature, tell the rest of the team on which files you will work exactly. That will avoid conflicts or quiproquo and **help you clarify what work you have to do precisely**.
+
+- **Model**: I will create the `Booking` model and migration, with good associations and validations (crash-tested on rails console).
+- **Routing**: I will add bookings routes in `routes.rb`
+- **Controller**: I will create a new `BookingsController`
+- **New Views**: I will create `views/bookings/new.html.erb` for booking form and `views/bookings/index.html.erb` for listing current user's bookings.
+- **Existing Views**: I will connect the "book it" button of a flat's show view to my booking form and I will connect the "My bookings" link in the navbar to my bookings index view.
+
+**Code it perfectly, from model to view**
+
+When you code your feature, make it perfect from the model to **the view**. 
+
+- Crash test all your model associations and validations on the rails console.
+- Don't neglect the view. If you add a form, make it a nice centered Bootstrap form. If you code a flats list, build a nice Bootstrap grid (for example, with flat picture on the left and flat infos on the right..). 
+- Use partials to refacto your HTML when you have consistent blocks as a flat's info box for instance.
 
