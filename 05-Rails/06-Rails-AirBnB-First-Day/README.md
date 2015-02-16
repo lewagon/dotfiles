@@ -38,7 +38,7 @@ Before splitting the tasks among the team, setup your project. The lead-developp
 - Add his team mates as collaborators on the Github repo
 - Deploy on heroku
 
-From this point you can start splitting the tasks. Spend time on the setup, because everything will be simpler if you do it right from the beginning
+From this point you can start splitting the tasks. Spend time on the setup, because everything will be simpler if you do it the right way from the beginning.
 
 ### 5 - Software management guidelines
 
