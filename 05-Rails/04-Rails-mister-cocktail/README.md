@@ -69,7 +69,7 @@ $ git push heroku master && heroku run rake db:migrate
 
 ## Style
 
-Don't forget to use [lewagon/stylesheets](https://github.com/lewagon/stylesheets)
+Don't forget to use [lewagon/stylesheets](https://github.com/lewagon/rails-stylesheets)
 to start from a good CSS architecture.
 
 (commit and deploy this. You know the drill. **continuous deployment**)

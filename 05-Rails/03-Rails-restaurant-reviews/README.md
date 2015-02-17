@@ -138,7 +138,7 @@ Implement all the routes you need to build this product
 
 ### Views
 
-Let's care about our front-end, because that is what our users see! Follow [this guide](https://github.com/lewagon/stylesheets/blob/master/README.md) to setup your Rails frontend.
+Let's care about our front-end, because that is what our users see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to setup your Rails frontend.
 
 
 #### Layout / partials
