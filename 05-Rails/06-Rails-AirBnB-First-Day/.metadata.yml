@@ -1,1 +1,8 @@
 instructions: false
+lectures:
+  - rails/07-authentication
+  - rails/06-git-github-workflow
+  - rails/09-fb-connect
+  - rails/08-smtp-mandrill
+  - rails/google-maps-geocoder
+  - rails/10-active-admin

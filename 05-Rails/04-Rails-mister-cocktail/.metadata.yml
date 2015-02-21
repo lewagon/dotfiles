@@ -1,1 +1,3 @@
 instructions: false
+lectures:
+  - rails/04-hosting-deployment

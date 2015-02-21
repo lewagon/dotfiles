@@ -1,1 +1,4 @@
 instructions: false
+lectures:
+  - rails/03-rails-advanced
+  - rails/extra-01-rails-front-end
