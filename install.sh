@@ -37,17 +37,26 @@ fi
 cd "$CURRENT_DIR"
 
 
-echo "Type in your full name (no accent / special chars):"
+echo "Type in your first and last name (no accent or special characters - e.g. 'ç'): "
 read full_name
-echo "Type in your email address (the one used for your GitHub account):"
+echo "Type in your email address (the one used for your GitHub account): "
 read email
 git config --global user.email $email
 git config --global user.name $full_name
 
+setopt nocasematch
+if [[ ! `uname` =~ "darwin" ]]; then
+  git config --global core.editor "subl -n -w"
+fi
+
+git add gitconfig
+git commit --message "My identity for @lewagon in the gitconfig"
+git push origin master
 
 zsh ~/.zshrc
 
-# Setting Sublime Text as main editor and git editor
-# subl_path=`alias subl | grep -o '\(/[a-zA-Z0-9. ]\+\)\+'`
-# git config --global core.editor "'$subl_path' -n -w"
-
+if [[ `uname` =~ "darwin" ]]; then
+  echo "Quit your terminal (⌘ + Q) and restart it."
+else
+  echo "Quit your terminal (Alt + F4) and restart it."
+fi
