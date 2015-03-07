@@ -51,7 +51,6 @@ fi
 
 git add gitconfig
 git commit --message "My identity for @lewagon in the gitconfig"
-git push origin master
 
 zsh ~/.zshrc
 

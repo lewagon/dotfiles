@@ -20,4 +20,10 @@ Run the `dotfiles` installer. It will prompt you for your name and your email.
 $ zsh install.sh
 ```
 
+And now push your updated configuration to your repo:
+
+```bash
+$ git push origin master
+```
+
 You're all set! Go back to [lewagon/setup](https://github.com/lewagon/setup)
