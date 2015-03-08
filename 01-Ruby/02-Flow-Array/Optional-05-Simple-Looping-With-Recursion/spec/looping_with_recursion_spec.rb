@@ -1,4 +1,4 @@
-require "simple_looping"
+require "looping_with_recursion"
 
 describe "#sum_recursive" do
 
