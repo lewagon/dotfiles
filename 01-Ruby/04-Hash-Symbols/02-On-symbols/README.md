@@ -27,7 +27,7 @@ You may find this other syntax:
 fox = { :color => "red", :specie => "mammal" }
 ```
 
-Read [this article](http://www.robertsosinski.com/2009/01/11/the-difference-between-ruby-symbols-and-strings/) to understand more in-depth the subtle difference  between Strings and Symbols. The concept of **mutability** is important here.
+Read [this StackOverflow answer](http://stackoverflow.com/a/8189435/197944/) to understand more in-depth the subtle difference  between Strings and Symbols. The concept of **mutability** is important here.
 
 
 ## Specs
