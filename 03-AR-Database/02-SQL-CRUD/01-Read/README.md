@@ -12,6 +12,11 @@ rows = DB.execute('SELECT * FROM stuff')
 The goal is to implement each one of the `CRUD` operations build a copycat of
 [Hacker News](https://news.ycombinator.com).
 
+**Note**: in this exercise, we **give** you the `DB` global variable, so
+no need to instantiate a new `SQLite3::Database`. Just use `DB.execute` in
+your code, it'll work (have a look at `spec/models/post_spec.rb` to view how
+the `DB` variable is created).
+
 ## Specs
 
 In this first exercise, we focus on **R**ead (the `R` in `CRUD`).
