@@ -50,7 +50,7 @@ puts "Account info\n#{account}"
 # =>  Account info
 #     Owner: Bruce Lee
 #     IBAN: FR14**************606
-#     Current amount: 200 euros```
+#     Current amount: 200 euros
 ```
 
 Implement your `BankAccount#to_s` method, which should call your partial IBAN getter by the way.
