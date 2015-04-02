@@ -1,3 +1,4 @@
+require 'date'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 
@@ -42,6 +43,11 @@ namespace :db do
   task :seed do
     Dir["#{__dir__}/app/models/*.rb"].each {|file| require file }
     require "#{__dir__}/db/seeds.rb"
+  end
+
+  desc 'Gives you a timestamp for your migration file name'
+  task :timestamp do
+    puts DateTime.now.strftime('%Y%m%d%H%M%S')
   end
 
   private
