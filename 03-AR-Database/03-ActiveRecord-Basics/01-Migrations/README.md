@@ -28,6 +28,8 @@ Write code in `20141025152200_create_posts.rb` to create the `posts` table.
 
 Go back to the lecture and read the [ActiveRecord Migrations documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). It explains how to easily generate migrations but right now we are not in Rails so we'll have to create manually our migration files.
 
+Use the task `rake db:timestamp` to get a correct timestamp for your migration file name.
+
 Your `posts` table should have the following columns:
 
 - `name` as a `String`
