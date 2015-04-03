@@ -24,6 +24,7 @@ Then to launch Middleman server
 
 ```
 $ cd repo_name
+$ bundle install
 $ middleman server
 ```
 
