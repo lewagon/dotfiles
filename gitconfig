@@ -12,7 +12,6 @@
   remote = yellow
 
 [core]
-  editor = '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w
   pager = less -FRSX
 
 [alias]

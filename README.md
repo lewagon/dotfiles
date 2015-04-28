@@ -6,11 +6,13 @@ Install
 Your dotfiles are personal. [Fork this repo](https://github.com/lewagon/dotfiles/fork) on Github, and then clone it on your computer.
 
 ```
-# Don't copy paste this line, type it and put *your*
+# Don't blindly copy paste this line, type it and put *your*
 $ GITHUB_USERNAME=my_github_username
+```
 
+```
 # Sure you did not just copy paste the previous line? Sure? OK go on!
-# You can copy paste this line *without changing anything*
+# You can now blinly copy paste this line *without changing anything*
 $ mkdir -p ~/code/$GITHUB_USERNAME && cd $_ && git clone git@github.com:$GITHUB_USERNAME/dotfiles.git && cd dotfiles
 ```
 
@@ -18,12 +20,6 @@ Run the `dotfiles` installer. It will prompt you for your name and your email.
 
 ```bash
 $ zsh install.sh
-```
-
-And now push your updated configuration to your repo:
-
-```bash
-$ git push origin master
 ```
 
 You're all set! Go back to [lewagon/setup](https://github.com/lewagon/setup)
