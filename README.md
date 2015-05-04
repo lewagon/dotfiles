@@ -7,7 +7,7 @@ Your dotfiles are personal. [Fork this repo](https://github.com/lewagon/dotfiles
 
 ```
 # Don't blindly copy paste this line, type it and put *your*
-$ GITHUB_USERNAME=my_github_username
+$ export GITHUB_USERNAME=my_github_username
 ```
 
 ```
