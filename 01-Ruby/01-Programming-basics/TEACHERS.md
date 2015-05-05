@@ -122,6 +122,6 @@ end
 
 **Question 2**:
 
-Write a game. The computer picks a number between 1 and 10. Then the user guesses until he/she finds the correct answer.
+Write a game. The computer picks a number between 1 and 100. Then the user guesses until he/she finds the correct answer.
 
 When the program is done, ask the student to pick between 1 and 100, and for each wrong guess, indicate to the user if his/her guess is bigger or smaller than the computer's pick.
