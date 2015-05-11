@@ -33,3 +33,4 @@ bindkey '^[OB' history-substring-search-down
 # UTF-8 is our default encoding
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1"
