@@ -4,9 +4,6 @@
 
 A simple challenge to sum integers using `while` and `for` loops.
 
-**Important**: don't spend too much time on the recursive solution (the 3rd method) because it's quite tricky. Go on to the next challenges even if your tests failed on the recursion.
-
-
 #### `02-Sorting-the-wagon`
 
 A challenge on basic array manipulation, where you'll have to:
