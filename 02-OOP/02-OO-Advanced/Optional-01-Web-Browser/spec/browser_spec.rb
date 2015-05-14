@@ -10,6 +10,10 @@ describe "Browser" do
   describe "#fetch_content" do
     let(:content) { browser.fetch_content("http://www.perdu.com") }
 
+    it 'should return a String' do
+      expect(content).to be_kind_of(String)
+    end
+
     it "should return a string for http://www.perdu.com" do
       expect(content).to match /Perdu sur l'Internet/
     end
