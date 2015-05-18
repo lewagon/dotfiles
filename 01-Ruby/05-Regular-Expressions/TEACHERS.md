@@ -29,13 +29,18 @@ $ git pull --no-edit upstream master
 
 Today and tomorrow, you should spend some time with the "ReBoot" group and propose them some extra challenges they should do on their own without code canvas (from scratch). First you should go on the white board with them and ask them questions on core notions. Here are some ideas for custom challenge:
 
-1. A simple calculator, first handling only additions, then all operations.
-1. Implement [a shopping cart](https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1), where you can add items with prices in a certain amount in your cart. And then it prints you the bill on the terminal.
+1. A simple calculator, first handling only additions, then all operations (mutliplications, substractions, divisions).
 1. Code a program simulating a horse race, where you enter horses, you run the race (which will shuffle the horses array) and then the command line outputs you the final results. You can make their program much funnier using `say` to simulate the anchorman. That is pretty cool :)
+1. Implement [a shopping cart](https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1), where you can add items with prices in a certain amount in your cart. And then it prints you the bill on the terminal.
 1. A [simple todo](http://youtu.be/vKZ3LiF6GJg?list=UUcOrCE3fuo2dkr5F_n9LalA) handling tasks and priorities
+1. A todo but funnier where you store a wishlist of product and can scrape some inspiration on Etsy: [here is a solution](https://gist.github.com/Papillard/bec7546d2b921808be5f)
 1. A loto game, [here is the interface](https://gist.github.com/Papillard/6e3708596071a3ea0648) you can make them code to start with.
 
-Above all, start with simple questions, ask them to code the interface first, or to simplify the initial probem. **They have to code something that works before refactoring their code**.
+Above all: 
+- Start with simple questions
+- Ask them to code the interface first
+- Ask them to write pseudo-code before going into the ruby syntax
+- Ask them to simplify the initial probem. **They have to code something that works before refactoring their code**.
 
 ### Live-code
 
