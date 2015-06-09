@@ -29,7 +29,9 @@
 }
 
 .fadeInAndSlideDown {
+  /* animation: animation animationName duration delay easing forwards; */
   animation: fadeInAndSlideDown 1s 0.5s ease forwards;
   -webkit-animation: fadeInAndSlideDown 1s 0.5s ease forwards;
   -moz-animation: fadeInAndSlideDown 1s 0.5s ease forwards;
 }
+
