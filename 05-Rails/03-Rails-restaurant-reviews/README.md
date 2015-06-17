@@ -200,7 +200,7 @@ This will will generate the following HTML form:
 
 This URL is consistent with the route `POST "restaurants/:restaurant_id/reviews"` you have defined in `routes.rb`. Yeah! For more insights, you can read [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
 
-**Tips:** If you use `bootstrap_form` gem, you can replace `form_for` by `bootstrap_form_for` in your views to get all Bootstrap CSS classes on generated HTML forms.
+**Tips:** Install the [simple_form](https://github.com/plataformatec/simple_form) gem to have bootstrap-compatible forms with a lighter syntax.
 
 ### Improve your app
 
