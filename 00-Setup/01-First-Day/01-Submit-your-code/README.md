@@ -10,7 +10,7 @@
 Open the `lib/wagon_start.rb` file. That's where you'll need to edit
 
 * Make the `wagon_start` method return `'That's how it starts'`
-* In the terminal, run `rake` and make see if you're 100% green + have a good style.
+* In the terminal, run `rake` and make sure if you're 100% green + have a good style.
 * Commit your changes, and push them.
 * Come back to Kitt, and refresh the page. You should see your solution on the right
 

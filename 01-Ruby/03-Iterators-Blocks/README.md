@@ -13,7 +13,7 @@ A difficult challenge where you have to code a method that generates HTML string
 
 #### `03-Beautify-my-code` and `04-Cleaning-your-mess`
 
-The first challenge is here to teach you that **readibility** matters. Try to make your code **readable** to others. Pick good names for your variables & methods, use intermediate variables when it makes your code more readable. The second challenge is here to make you refactor some bad code (that some poor developper gave you). Enhance it, DRY it, make it readable and beautiful!
+The first challenge is here to teach you that **readibility** matters. Try to make your code **readable** to others. Pick good names for your variables & methods, use intermediate variables when it makes your code more readable. The second challenge is here to make you refactor some bad code (that some poor developer gave you). Enhance it, DRY it, make it readable and beautiful!
 
 
 #### `05-Louchebem`

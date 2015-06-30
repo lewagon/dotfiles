@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now that you are Bootstrap-grid experts, learn more advanced but very usefull techniques with the grid.
+Now that you are Bootstrap-grid experts, learn more advanced but very useful techniques with the grid.
 
 ## Specs
 

@@ -4,7 +4,7 @@ The objective of this challenge is to migrate your Bootstrap landing page **cont
 
 - Fork our [middleman boilerplate](https://github.com/lewagon/middleman-boilerplate).
 - Then rename your Github repo in the settings (since `middleman-boilerplate` is not a very glam name).
-- Finally clone this renamed repo locally on your computer. Be carefull, don't clone it in **`fullstack-challenges`**. It's a new separated project with its own versionning. Clone it in `code/your_user_name/` at the same level as `fullstack-challenges` and `dotfiles`.
+- Finally clone this renamed repo locally on your computer. Be careful, don't clone it in **`fullstack-challenges`**. It's a new separated project with its own versionning. Clone it in `code/your_user_name/` at the same level as `fullstack-challenges` and `dotfiles`.
 
 ```
 $ cd ~/code/username

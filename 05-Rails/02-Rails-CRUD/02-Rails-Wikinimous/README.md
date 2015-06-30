@@ -33,7 +33,7 @@ $ rake db:seed
 Generate your model, and implement all 7 CRUD default actions to
 list, show, create, update and destroy an article.
 
-Once done, you should have a very nice wiki with all basic functionalities.
+Once you're done, you should have a very nice wiki with all basic functionalities.
 
 ## Markdown (Hard)
 

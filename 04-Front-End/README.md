@@ -2,7 +2,7 @@
 Discover most standard HTML tags and CSS properties. Master CSS selectors and positioning techniques. Become a web-designer by learning cool CSS tricks.
 
 #### `Bootstrap`
-Discover Boostrap CSS/JS library. Grasp all the usefull Bootstrap components and CSS classes, and master the responsive grid system.
+Discover Boostrap CSS/JS library. Grasp all the useful Bootstrap components and CSS classes, and master the responsive grid system.
 
 #### `Front-End advanced`
 Discover ERB templating an SASS by playing with a little (but powerful) front-end framework: Middleman. Learn to write elegant, DRY and consistent design with SASS. Prepare yourself for coding killer front-ends in your Rails apps.

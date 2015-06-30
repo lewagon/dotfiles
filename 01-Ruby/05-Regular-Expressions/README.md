@@ -30,7 +30,7 @@ A simple challenge on regexp to detect phone patterns.
 This challenge makes a small use of Regexp to detect "non-word" characters but this is not a pure "regexp challenge". You will mainly learn about the notion of time-complexity and try to enhance a program detecting anagrams.
 
 #### `03-Mail-spotter`
-A simple challenge on email Regexp, very usefull in web apps.
+A simple challenge on email Regexp, very useful in web apps.
 
 #### `04-Word-frequency`
 A challenge using Regexp to extract data from a text and compute the most frequent words in a given text (the Bible, Obama's inaugural address, etc..). You will have to filter stop-words like ("a", "the", "is"..) who will spoil your algorithm otherwise.

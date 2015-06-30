@@ -14,7 +14,7 @@ The Ruby standard library includes all the convenient packages that come with yo
 require "date"
 ```
 
-You have very usefull ruby packages in the standard library to
+You have very useful ruby packages in the standard library to
 
 - read/write/parse files of different format (JSON, XML, CSV,...)
 - use custom and convenient data stucture as YAML

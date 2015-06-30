@@ -5,7 +5,7 @@ You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started
 
 ## Rails app generation
 
-You are going to use external specs wrote by the teachers to test your rails app. Here is the setup you need:
+You are going to use external specs written by the teachers to test your rails app. Here is the setup you need:
 
 ```bash
 $ cd ~/code/<user.github_nickname>
@@ -166,7 +166,7 @@ Will generate  this HTML
 
 ##### [form_for](http://guides.rubyonrails.org/form_helpers.html)
 
-Be carefull, your reviews URLs are now nested in `/restaurants/:restaurant_id`. Hence, you cannot use `form_for` the same way you did with a non-nested resource. If you write:
+Be careful, your reviews URLs are now nested in `/restaurants/:restaurant_id`. Hence, you cannot use `form_for` the same way you did with a non-nested resource. If you write:
 
 ```erb
 <%= form_for(@review) do |f| %>
@@ -182,7 +182,7 @@ It will generate this HTML
 <% end %>
 ```
 
-That's not what we want because **we haven't any route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
+That's not what we want because **we don't have any route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
 
 ```erb
 <%= form_for [@restaurant, @review] do |f| %>

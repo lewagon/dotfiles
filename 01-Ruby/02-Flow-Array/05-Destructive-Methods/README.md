@@ -17,7 +17,7 @@ That's the only format the anchorman can understand !
 
 ## Learning Badges
 
-As you realize, the only purpose of a method is not only ti return the result of some computation.. A method can also be there to perform actions on objects that it will modify. Make sure your are confortable with the following notions before moving on.
+As you realize, the only purpose of a method is not only ti return the result of some computation.. A method can also be there to perform actions on objects that it will modify. Make sure your are comfortable with the following notions before moving on.
 
 - What's an object id? Type `"something".object_id` in IRB to figure it out.
 - What's an object equality? When you use `a==b` in a conditional statement, do you test object equality ? What do you test exactly ?

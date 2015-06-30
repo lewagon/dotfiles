@@ -62,7 +62,7 @@ Write all your code in `game.js`. We need a way for JavaScript to update the boa
 - Remove the `active` class on the current player's `td` and add this class to the following `td`.
 - Keep track of the "index" of each player in the table and increase this index.
 
-**Hint**: depending of your choice, the [next](http://api.jquery.com/next/) and [index](http://api.jquery.com/index/) jQuery functions may be usefull!
+**Hint**: depending of your choice, the [next](http://api.jquery.com/next/) and [index](http://api.jquery.com/index/) jQuery functions may be useful!
 
 
 #### Binding to Key Presses
