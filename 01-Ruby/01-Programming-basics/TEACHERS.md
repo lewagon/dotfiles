@@ -16,7 +16,7 @@ A cool thing to do is to ask the class a simple treatment (capitalize word, coun
 
 Mention the fact that a search on Google should be in **english** and should **start with** `ruby` (eg. "ruby convert string into integer").
 
-Now show them how to run a ruby script from the terminal and how to display results with `puts`. **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on).
+Now show them how to run a ruby script from the terminal and how to display results with `puts`. **Very important**: make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a useful method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on).
 
 #### Variables
 

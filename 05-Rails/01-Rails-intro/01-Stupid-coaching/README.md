@@ -20,7 +20,7 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 
 ### Generate a CoachingController
 
-Once you have created your new coaching app, add it a new `CoachingController`, using the adequate rails generator on the command line. This controller will have two actions, `CoachingController#answer` and `CoachingController#ask`
+Once you have created your new coaching app, add a new `CoachingController`, using the adequate rails generator on the command line. This controller will have two actions, `CoachingController#answer` and `CoachingController#ask`
 
 
 ### Your coach answer logic
@@ -50,7 +50,7 @@ Notice the important HTML attributes in the form:
 - `action` specifies the URL that will be used when submitting the form
 - `name` enables you to name each parameter corresponding to each input of the form.
 
-Replace the `???` so that your form send a request to `CoachingController#answer` with good parameter name.
+Replace the `???` so that your form send a request to `CoachingController#answer` with a good parameter name.
 
 ![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
 

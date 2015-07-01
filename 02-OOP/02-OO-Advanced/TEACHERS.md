@@ -72,7 +72,7 @@ end
 ```
 
 
-Class methods are usefull. Imagine we have to instantiate a new object to have price/square_meter in Dublin, Paris, Lisboa.. How inconvenient!
+Class methods are useful. Imagine we have to instantiate a new object to have price/square_meter in Dublin, Paris, Lisboa.. How inconvenient!
 
 #### class vs. instance
 

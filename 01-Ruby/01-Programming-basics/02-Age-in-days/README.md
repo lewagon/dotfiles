@@ -6,7 +6,7 @@
 ## Specs
 
 ### Compute the age
-- Complete the method `age_in_days` defined in the `lib/age_in_days.rb` file. This methods take 3 arguments (`day`, `month` and `year`) and should return a `Fixnum` which is your age in days (the number of days you have lived until now).
+- Complete the method `age_in_days` defined in the `lib/age_in_days.rb` file. This method takes 3 arguments (`day`, `month` and `year`) and should return a `Fixnum` which is your age in days (the number of days you have lived until now).
 
 ### Interactive Program
 
@@ -28,7 +28,7 @@ You'll see that your program says you are `0 years old`. You must change the cod
 
 ## Learning Badges
 
-The following questions may seem obvious to most of you, **but make 100% sure you can answer precisely all of them**. Variables and methods are the cornerstones of ruby programming, and you should have an in-depth understanding of these concepts.
+The following questions may seem obvious to most of you, **but make 100% sure you can precisely answer all of them**. Variables and methods are the cornerstones of ruby programming, and you should have an in-depth understanding of these concepts.
 
 ### On variables
 

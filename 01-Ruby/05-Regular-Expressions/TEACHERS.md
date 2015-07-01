@@ -5,7 +5,7 @@
 
 - In case you haven't used regexp for a long time, remember the difference between `match` and `scan`
 
-- You may also demo a small scraping like [LeBonCoin scraping](https://gist.github.com/Papillard/10654300) and use regexps to extract prices and other usefull infos from the texts parsed from HTML. It can be cool to show them their first gem.
+- You may also demo a small scraping like [LeBonCoin scraping](https://gist.github.com/Papillard/10654300) and use regexps to extract prices and other useful infos from the texts parsed from HTML. It can be cool to show them their first gem.
 
 - Don't forget to show them [rubular](http://rubular.com/)
 

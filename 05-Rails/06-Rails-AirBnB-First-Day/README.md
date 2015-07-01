@@ -31,7 +31,7 @@ Draw a basic mockup of your app on a paperbook. First list all the views suggest
 
 ### 4 - Setup
 
-Before splitting the tasks among the team, setup your project. The lead-developper should:
+Before splitting the tasks among the team, setup your project. The lead-developer should:
 
 - Create the Rails project with Postgres config
 - Push the project on Github

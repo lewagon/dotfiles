@@ -24,4 +24,4 @@ A challenge to make you parse a CSV file of american movies and find most succes
 A sophisticated challenge. You have to re-code the french game "Des chiffres et des lettres" that gives you a random grid of letters and ask you to find the longest word in this grid. To decide whether a word exists or not, we'll make use of the WordReference API that responds "a JSON file of various translations" for any given word.
 
 #### `Optional-Your-first-scraper`
-A usefull challenge to scrape your first HTML file from etsy.com.
+A useful challenge to scrape your first HTML file from etsy.com.

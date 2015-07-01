@@ -13,7 +13,7 @@ After this teasing on `each` and `each_with_index`, go along different treatment
 
 **Important messages to convey**:
 
-These powerfull methods (`map`, `count`, `select`,..) are **just methods** as the ones they have already used on strings (`downcase`, `split`,..). They just have a different syntax and operate complex treatments on arrays.
+These powerful methods (`map`, `count`, `select`,..) are **just methods** as the ones they have already used on strings (`downcase`, `split`,..). They just have a different syntax and operate complex treatments on arrays.
 
 `each`? `each_with_index`? `select`? `map`? How to choose? Ask yourself
 

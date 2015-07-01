@@ -1,5 +1,5 @@
 ## Background & Objectives
-In this challenge, you will meet again your old friend **Active Record**, which is Rails' ORM.
+In this challenge, you will meet your old friend **Active Record** again, which is Rails' ORM.
 
 ## Specs
 
@@ -66,7 +66,7 @@ An action is not necessarily associated with a view. For instance, the create/up
 
 #### When you are done
 
-When you are done with the exercise, which means you have a functionnal todo-app, refactor your code:
+When you are done with the exercise, which means you have a functional todo-app, refactor your code:
 
 - Use a [partial](http://guides.rubyonrails.org/layouts_and_rendering.html) to factor the new and edit HTML forms.
 - Use the `form_for` helper to build you new/edit form.

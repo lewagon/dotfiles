@@ -4,7 +4,7 @@ We want to enhance our cookbook by finding recipes data from the web. We will us
 Let's summarize the different tasks our program should take care of :
 
 * Requesting marmiton website and getting the HTML response
-* Parsing the HTML document to extract usefull recipe infos
+* Parsing the HTML document to extract useful recipe infos
 * Storing these info in `Recipe` objects of our `Cookbook` object
 * Storing these recipes in our CSV cookbook file
 
