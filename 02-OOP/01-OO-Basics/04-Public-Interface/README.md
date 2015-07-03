@@ -25,7 +25,7 @@ The public interface of the class, i.e. the set of all its public methods, defin
 
 * Access full owner's name and position
 * Access only partial IBAN
-* Print partial account infos in a user-friendly way
+* Print partial account info in a user-friendly way
 * Print transactions history if a password is provided
 * Withdraw or deposit money
 
@@ -85,7 +85,7 @@ account.transactions_history(password: "brucelit") # => [200, 100]
 That is NOT what is expected from the class contract, we only want to add amounts to the transactions array through the `withdraw` and `deposit` methods, which are our chosen interface for making transactions, and not by directly accessing the transactions array !
 
 ## Extra : enhance your transactions
-What about enhancing our bank account, by adding infos about the date of each transactions ? And change our transaction history method so that it prints transactions like
+What about enhancing our bank account, by adding info about the date of each transactions ? And change our transaction history method so that it prints transactions like
 
 ```ruby
 + 200 euros on 22/10/13 at 8:30am
@@ -99,7 +99,7 @@ Read about the [single responsibility principle](http://en.wikipedia.org/wiki/Si
 
 Here comes the time where you might delegate these responsibilities to another `Transaction` class, which would be responsible for :
 - keeping track of the date and amount of the deposit or withdraw
-- printing nicely these infos about itself
+- printing nicely these info about itself
 - you could even think of additional data for this class such as a `@message` instance variable to store the reason of each withdraw/deposit  ("car rent", "pay day", "christmas gifts"...)
 
 After implementing your `Transaction` class, you will have to change your `BankAccount` class so that its transactions arrays stores `Transaction` objects instead of numbers. You will also have to load the *transaction.rb* file in *account.rb* with

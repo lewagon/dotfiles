@@ -23,9 +23,9 @@ Draw your database scheme  (e.g. using [our db tool](http://db.lewagon.org/)) an
 
 ### 3 - Mockup
 
-Draw a basic mockup of your app on a paperbook. First list all the views suggested by your user-stories (home / signin / signup / flats index / flats show / profile / etc.. ). For each view, make a simple drawing, to know what info you will insert in it (owner's picture? Flat's picture? map? Flat's infos?), and what navigation and buttons (button "book this flat", links in the navbar to go back to the search page etc..). No need to be Michelangelo, just think about 
+Draw a basic mockup of your app on a paperbook. First list all the views suggested by your user-stories (home / signin / signup / flats index / flats show / profile / etc.. ). For each view, make a simple drawing, to know what info you will insert in it (owner's picture? Flat's picture? map? Flat's info?), and what navigation and buttons (button "book this flat", links in the navbar to go back to the search page etc..). No need to be Michelangelo, just think about
 
-1. The infos you want to display 
+1. The info you want to display
 2. The buttons and navigations to make the glue between your different views.
 
 
@@ -84,6 +84,6 @@ When you work on a feature, tell the rest of the team on which files you will wo
 When you code your feature, make it perfect from the model to the view. 
 
 - Crash test all your model associations and validations on the rails console.
-- Don't neglect the view. If you add a form, make it a nice centered Bootstrap form. If you code a flats list, build a nice Bootstrap grid (for example, with flat picture on the left and flat infos on the right..). 
+- Don't neglect the view. If you add a form, make it a nice centered Bootstrap form. If you code a flats list, build a nice Bootstrap grid (for example, with flat picture on the left and flat info on the right..).
 - Use partials to refacto your HTML when you have consistent blocks as a flat's info box for instance.
 

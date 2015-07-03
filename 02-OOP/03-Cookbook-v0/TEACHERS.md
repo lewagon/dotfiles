@@ -100,7 +100,7 @@ How do we deal with 1)? No `gets.chomp` in the controller! this is interface res
 
 ```ruby
 # display.rb
-class Dipslay
+class Display
   def ask_user_for_new_task_description
     puts "What do you want to do?"
     print "> "
@@ -136,7 +136,7 @@ Let's enhance our interface
 
 ```ruby
 # display.rb
-class Dipslay
+class Display
   def ask_user_for_new_task_description
     puts "What do you want to do?"
     print "> "
@@ -165,7 +165,7 @@ require_relative "controller"
 task_repo = Task_repository.new
 
 # Create display
-display = Dipslay.new
+display = Display.new
 
 # Create controller
 controller = Controller.new(task_repository, display)

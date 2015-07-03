@@ -49,8 +49,8 @@ You're going to create a single manager who can add customers, and only this man
 
 You also want to allow the employees to be able to login and access customers and orders info. However, the different employees may not have same access. Here are the possible choices :
 
-* The manager will access customer's infos and orders to manage the delivery guys and assign them new orders.
-* Delivery guys just need to access infos about pending orders they get assigned and mark them as completed
+* The manager will access customer's info and orders to manage the delivery guys and assign them new orders.
+* Delivery guys just need to access info about pending orders they get assigned and mark them as completed
 
 An example of how this interface might look (this is just an idea - you are welcome to implement this feature however you think is best):
 

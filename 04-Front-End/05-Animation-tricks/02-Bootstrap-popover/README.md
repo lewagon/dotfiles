@@ -13,7 +13,7 @@ The popover is not the most accessible Bootstrap component. Here is a roadmap:
 <img src="images/ringo.png" alt="Ringo" class="img-popover">
 ```
 
-- Now that these elements have a class, you can define some jQuery event on them using the Bootstrap `popover` function. You can write this code at the bottom of you `index.html` page, in a `<script>` section (we already prepared this section for you).
+- Now that these elements have a class, you can define some jQuery event on them using the Bootstrap `popover` function. You can write this code at the bottom of your `index.html` page, in a `<script>` section (we already prepared this section for you).
 
 
 ```javascript

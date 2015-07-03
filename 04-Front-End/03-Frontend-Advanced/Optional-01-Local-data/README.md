@@ -4,7 +4,7 @@ In this challenge you will add a new page to your site, connected to a mini YAML
 
 ## Specs
 
-1. Create the magic `data` **folder** in the main directory and add it a new `file.yml` of your choice (`products.yml`, `songs.yml`, `tracks.yml`, `recipes.yml`, `whatever.yml`).
+1. Create the magic `data` **folder** in the main directory and add a new `file.yml` of your choice (`products.yml`, `songs.yml`, `tracks.yml`, `recipes.yml`, `whatever.yml`).
 
 ```
 .
@@ -21,7 +21,7 @@ In this challenge you will add a new page to your site, connected to a mini YAML
     └── whatever.yml
 ```
 
-1. Add a new page to your website which will dipslay all the items of your database. This can be a portfolio page `portfolio.html.erb`, a `pricing.html.erb` page, up to you.
+1. Add a new page to your website which will display all the items of your database. This can be a portfolio page `portfolio.html.erb`, a `pricing.html.erb` page, up to you.
 
 Use a loop to repeat a stuctured div on all your items. Herebelow is our Styl.us example to give you the correct syntax.
 

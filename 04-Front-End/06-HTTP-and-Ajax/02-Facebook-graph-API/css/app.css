@@ -2,14 +2,14 @@ body{
   padding-top: 50px;
 }
 
-#my-profile .infos{
+#my-profile .info{
   padding: 50px;
   width: 50%;
   margin: 50px auto;
   border: 1px solid #e6e6e6;
 }
 
-#my-profile .infos img{
+#my-profile .info img{
   margin-right: 10px;
   border-radius: 50%;
 }

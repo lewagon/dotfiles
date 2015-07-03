@@ -40,7 +40,7 @@ td.mine-neighbour-8 {
   background: url('img/8.svg');
 }
 
-/* Positionning the Minesweep table and make sure the cells are square */
+/* Positioning the Minesweep table and make sure the cells are square */
 table#minesweeper {
   margin: auto;
   margin-top: 3em;

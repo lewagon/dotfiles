@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-`Sqlite` is a simple database that rely on a standalone file.
+`Sqlite` is a simple database that relies on a standalone file.
 You can read more on [en.wikipedia.org/wiki/SQLite](http://en.wikipedia.org/wiki/SQLite).
 The goal of this first exercise is to use the command line to read and query
 a sample database called `jukebox.sqlite` that we give you
@@ -19,7 +19,7 @@ If you don't have it, you can install it by running:
 - Mac: `brew install sqlite`
 - Ubuntu: `sudo apt-get install sqlite libsqlite3-dev`
 
-You can open the database we provide you to make some queries on it with:
+You can open the database we provided you to make some queries on it:
 
 ```bash
 $ sqlite3 lib/db/jukebox.sqlite
