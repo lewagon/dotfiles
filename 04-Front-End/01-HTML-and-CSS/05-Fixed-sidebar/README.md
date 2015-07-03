@@ -26,5 +26,5 @@ Sometimes you need internal links, referring to sections of your page, not to ot
 
 Later on, we will add a nice smoothscroll effect on such links. But wait for next week!
 
-You can read [this post](http://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/) about positionning if you have some free time!
+You can read [this post](http://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/) about positioning if you have some free time!
 

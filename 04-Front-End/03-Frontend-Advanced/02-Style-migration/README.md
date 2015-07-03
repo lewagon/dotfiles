@@ -12,7 +12,7 @@ Here is a roadmap of things to do:
 When it's done, it's time to refactor your CSS code into SASS:
 
 1. Clean redundant code using **SASS variables**, selector **nesting** & **chaining**. No more duplication!
-1. Check if all your CSS classes are necessary of if some of them can already be handled in `config/variables.css.scss` or `config/bootstrap_variables.css.scss`. The less code you write, the more maintainable your project is.
+1. Check if all your CSS classes are necessary or if some of them can already be handled in `config/variables.css.scss` or `config/bootstrap_variables.css.scss`. The less code you write, the more maintainable your project is.
 
 ## Commit & Deploy
 

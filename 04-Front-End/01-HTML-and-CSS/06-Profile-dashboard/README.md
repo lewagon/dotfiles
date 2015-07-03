@@ -1,7 +1,7 @@
 ## Background & Objectives
 
-have to use a lot of CSS positionning techniques.
 Create a cool profile dashboard by inserting your info into a nice 2D layout. You'll
+have to use a lot of CSS positioning techniques.
 
 ## Specs
 
