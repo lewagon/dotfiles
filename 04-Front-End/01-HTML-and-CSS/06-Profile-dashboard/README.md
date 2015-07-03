@@ -1,11 +1,11 @@
 ## Background & Objectives
 
-Create a cool profile dashboard by inserting your infos into a nice 2D layout. You'll
 have to use a lot of CSS positionning techniques.
+Create a cool profile dashboard by inserting your info into a nice 2D layout. You'll
 
 ## Specs
 
-Here is [the objective](http://lewagon.github.io/html-css-challenges/06-profile-dashboard/). Before inserting your different profile informations into the layout, start by building this layout step-by-step :
+Here is [the objective](http://lewagon.github.io/html-css-challenges/06-profile-dashboard/). Before inserting your different profile information into the layout, start by building this layout step-by-step :
 
 - Create and center the main container.
 - Add two floating `<div>` into this container. In order to get the main container wrap these two div, you'll have to use a third div with `clear: both;` CSS property after the two floating ones (this is a classic CSS trick).

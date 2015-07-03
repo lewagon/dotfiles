@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Play with the box model (`margin/border/padding/width/height`) by splitting your profile informations into different `<div>`.
+Play with the box model (`margin/border/padding/width/height`) by splitting your profile information into different `<div>`.
 
 ## Specs
 
@@ -18,7 +18,7 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 ```
 
 - The `<div id="container">` is here to center its content so that you don't have a full-screen page (which is very ugly).
-- The `<div class="card"></div>` are here to display nicely each group of infos that fit together.
+- The `<div class="card"></div>` are here to display nicely each group of info that fit together.
 - Add a nice touch to these divs thanks to `background`, `border`, `border-radius` and `box-shadow` CSS properties.
 
 

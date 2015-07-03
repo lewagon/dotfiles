@@ -5,6 +5,6 @@ class Transaction
   end
 
   def to_s
-    # Nicely print transaction infos using Time#strftime.
+    # Nicely print transaction info using Time#strftime.
   end
 end

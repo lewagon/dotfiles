@@ -39,4 +39,4 @@ Your application will work like this:
 4. On form submission you will ask the API to create a new Game based on the players' names
 5. When you get a response, hide the form, display the board (what you've done in the last exercise) and listen for users' input
 6. When the game ends, send a request to the API to _finish_ the game, providing the winner and the time spent on the game (in seconds)
-7. When you get the API response, display the informations on a score board and provide a "Play again!" button.
+7. When you get the API response, display the information on a score board and provide a "Play again!" button.

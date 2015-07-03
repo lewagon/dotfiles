@@ -12,9 +12,9 @@ Sometimes you need internal links, referring to sections of your page, not to ot
 
 ```html
 <!-- In your nav list -->
-<a href="#summary">Infos</a>
+<a href="#summary">Info</a>
 <a href="#favorite-movies">Movies</a>
-<a href="#help">Infos</a>
+<a href="#help">Info</a>
 
 <!-- [...] -->
 

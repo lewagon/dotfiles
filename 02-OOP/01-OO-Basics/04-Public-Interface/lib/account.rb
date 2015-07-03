@@ -6,7 +6,7 @@ class BankAccount
   # Contract for the BankAccount class
   # - you can access full owner's name and position, but partial IBAN
   # - you cannot access full IBAN
-  # - you can print partial account infos
+  # - you can print partial account info
   # - you can print transactions only with a password
   # - you can withdraw or deposit money
   # - You can see the balance of the account (through the position variable)

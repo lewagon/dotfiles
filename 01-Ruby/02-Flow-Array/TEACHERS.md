@@ -41,7 +41,7 @@ $ git pull --no-edit upstream master
 
 #### Live-code details
 
-1. `01-Sorting-the-wagon`: again, let the student improvise a bit and don't force him to respect the specs of the challenge exactly. Just help him go in the right direction and ask himself the good questions. What do you want ? Define an empty array ? Fill this array ? Output some infos ? Which infos ? In which format ? All these answers must be his programming choices.
+1. `01-Sorting-the-wagon`: again, let the student improvise a bit and don't force him to respect the specs of the challenge exactly. Just help him go in the right direction and ask himself the good questions. What do you want ? Define an empty array ? Fill this array ? Output some info ? Which info ? In which format ? All these answers must be his programming choices.
 1. `03-Black-Jack`: Pick some more advanced student for this one, to give a good example to the class. Again, start from scratch with him!
 
 
