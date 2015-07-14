@@ -1,15 +1,15 @@
 ## Background and Objectives
 
 - Validate one more time your understanding of methods and variables.
-- Learn how to use string concatenation and interpolation.
+- Learn how to use string interpolation.
 - Understand the difference between **single** and **double** quotes.
 
 ## Specs
 
 ### Compute name
 
-- Implement the `compute_name` method defined in the `lib/compute_name.rb` file. Given the three arguments, it should return the concatenation of the `first_name`, `middle_name` and `last_name`.
-- **constraint**: You must use **string interpolation** with `#{}`.
+- Implement the `compute_name` method defined in the `lib/compute_name.rb` file. Given the `first_name`, `middle_name` and `last_name`, it should return the full name of the person.
+- **constraint**: You must use **string interpolation** with `#{}` to build this full name.
 
 ### Interactive Program
 
@@ -21,8 +21,8 @@ $ ruby lib/interface.rb
 
 Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `"Hello, Boris Alexandre Papillard !"`.
 
-* **constraint**: to build the `custom_message` string, you must use string concatenation this time, with the `+` operator.
-* **enhancement**: your `custom_message` could also ìnform you about the number of characters in your name (for instance, "Boris Alexandre Papillard" has got 24 characters, including spaces), or other very important details...
+* **constraint**: of course, your `interface.rb` program should use the `compute_name` method defined in the other file.
+* **enhancement**: you can improve your `custom_message` by adding other information like the number of characters in your full name (for instance, "Boris Alexandre Papillard" has got 24 characters, including spaces), or other very important details...
 
 ## Learning Badges
 
