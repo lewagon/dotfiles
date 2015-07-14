@@ -1,5 +1,5 @@
 ## Background & Objectives
-- Learn to look for the right method on the ruby doc.
+- Learn to look for the right method in the ruby doc.
 - Get familiar with IRB to experiment new methods and make them yours.
 
 IRB is a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) for ruby. Basically, it works this way
