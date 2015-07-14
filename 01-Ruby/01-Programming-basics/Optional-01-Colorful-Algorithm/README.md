@@ -10,6 +10,8 @@ true if the number is **colorful**, false otherwise.
 
 A colorful number is a number where all the products of consecutive subsets of digit are different.
 
+For this exercise, just consider numbers with **3** digits only.
+
 Example:
 
 - `263` is a colorful number because (2, 6, 3, 2x6, 6x3, 2x6x3) are all different
