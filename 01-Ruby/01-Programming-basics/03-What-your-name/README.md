@@ -29,18 +29,17 @@ Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard"
 Again, ask yourself these questions and make sure you can answer all of them:
 
 ### on variable
-* What are the variables in my code ?
-* Where do I assign values to these variables and where do I use them ?
-* The 3 variables `first_name`, `middle_name`, and `last_name` are only defined in the `#name_from_terminal` method. Are they available outside this method ?
+* What are the variables in your code ?
+* Where do you assign values to these variables and where do you use them ?
 * What's the scope of a variable ?
 
 ### on methods
-* What are the methods in my program ? Where do I define them ?
-* Where do I call them and with which arguments ?
-* What's the flow of my program when I try to read it line by line ?
+* What is the method of your program ? Where do you define it ?
+* Where do you call this method and with which arguments ?
+* What's the flow of your program when you try to read it line by line ?
 
 ### on strings
-* What's string interpolation ? What's the syntax to "include" some ruby expression in a string ?
+* What's string interpolation ? What's the syntax to "insert" some ruby expression in a string ?
 * What's the difference between single-quotes `''` or double-quotes `""` when using string interpolation ?
 
 
