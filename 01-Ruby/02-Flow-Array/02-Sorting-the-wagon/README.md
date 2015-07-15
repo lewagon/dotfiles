@@ -6,7 +6,7 @@ An array is ordered and each element can be accessed by its **index**. This exer
 understand how to create an array, store data in it then retrieve data using the index.
 Remember, the array indexes start at `0`, not `1`.
 
-Programmers are often asked to sort things, that's why you should read about some [sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm). Hopefully, the Ruby doc will gives you several way of sorting an [Enumerable](http://ruby-doc.org/core-2.2.0/Enumerable.html). `Array` is a form of `Enumerable`, so you can use all methods referenced on the `Enumerable` doc page while using an `Array`, because `Array` **includes** the module `Enumerable`.
+Programmers are often asked to sort things, that's why you should read about some [sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm). Hopefully, the Ruby doc will give you several way of sorting an [Enumerable](http://ruby-doc.org/core-2.2.0/Enumerable.html). `Array` is a form of `Enumerable`, so you can use all methods referenced on the `Enumerable` doc page while using an `Array`, because `Array` **includes** the module `Enumerable`.
 
 ## Specs
 
