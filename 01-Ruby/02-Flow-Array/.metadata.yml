@@ -1,3 +1,6 @@
 lectures:
   - ruby/02-flow-and-array
 video: 133547571
+livecode:
+  video: 133575663
+  gist_url: https://gist.github.com/ssaunier/791c49beccab8cbdf6d1

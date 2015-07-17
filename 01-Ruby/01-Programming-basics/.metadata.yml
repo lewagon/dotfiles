@@ -1,3 +1,6 @@
 lectures:
   - ruby/01-programming-basics
 video: 133469359
+livecode:
+  video: 133471297
+  gist_url: https://gist.github.com/ssaunier/a493ae4849ea39b2d2aa
