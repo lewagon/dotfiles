@@ -60,7 +60,7 @@ Implement a block-timer in `#timer_for` than enables to track the duration (in s
 timer_for do
   (1..100).each { |i| (1..100000).to_a.shuffle.sort }
 end
-# => 3.39051 seconds elapsed
+# => 3.39051
 ```
 
 ## Learning Badges
