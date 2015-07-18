@@ -47,11 +47,19 @@ describe "#timer_for" do
 end
 
 describe "#my_map" do
-  it "should upcase all elements of an array" do
-    array = ['a', 'b', 'c']
+  it "should upcase all elements of an array when passed `upcase` in the block" do
+    array = %w(a b c)
     new_array = my_map(array) do |element|
       element.upcase
     end
-    expect(new_array).to eq(['A', 'B', 'C'])
+    expect(new_array).to eq(%w(A B C))
+  end
+
+  it "should downcase all elements of an array when passed `downcase` in the block" do
+    array = %w(A B C)
+    new_array = my_map(array) do |element|
+      element.downcase
+    end
+    expect(new_array).to eq(%w(a b c))
   end
 end
