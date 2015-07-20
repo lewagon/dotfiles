@@ -34,6 +34,7 @@ Today and tomorrow, you should spend some time with the "ReBoot" group and propo
 1. Implement [a shopping cart](https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1), where you can add items with prices in a certain amount in your cart. And then it prints you the bill on the terminal.
 1. A [simple todo](http://youtu.be/vKZ3LiF6GJg?list=UUcOrCE3fuo2dkr5F_n9LalA) handling tasks and priorities
 1. A todo but funnier where you store a wishlist of product and can scrape some inspiration on Etsy: [here is a solution](https://gist.github.com/Papillard/bec7546d2b921808be5f)
+1. A [gift wishlist](https://gist.github.com/Papillard/24aa78105a741f129e35) connected to Etsy with a small scraping script.  
 1. A loto game, [here is the interface](https://gist.github.com/Papillard/6e3708596071a3ea0648) you can make them code to start with.
 
 Above all: 
