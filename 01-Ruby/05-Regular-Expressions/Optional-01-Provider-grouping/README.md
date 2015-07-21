@@ -29,10 +29,11 @@ group_mails(users)
 # }
 ```
 
-Write a method `provider?(user_array, provider)` which takes a provider name as input, and tells you whether or not you have emails from that provider in your user array. For instance, with our previous array we have this output:
+Write a method `provider?(email, provider)` which returns `true` if an email is from a given provider. For instance, with our previous array we have this output:
 
 ```ruby
-provider?(users, "gmail") # => true
-provider?(users, "lewagon") # => true
-provider?(users, "noos") # => false
+email = "bob@gmail.com"
+provider?(email, "gmail") # => true
+provider?(email, "lewagon") # => false
+provider?(email, "noos") # => false
 ````
