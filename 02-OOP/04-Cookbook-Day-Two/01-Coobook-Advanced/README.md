@@ -8,10 +8,10 @@ Let's summarize the different tasks our program should take care of :
 * Storing these info in `Recipe` objects of our `Cookbook` object
 * Storing these recipes in our CSV cookbook file
 
-You will add your HTML scraper feature to your already existing cookbook app (from previous challenge). You can grab your old code with this command:
+You will add your HTML scraper feature to your already existing cookbook app (from previous challenge). You can copy paste your code from Day one and put it into today's folder with this command:
 
 ```bash
-$ cp -r ../03-Cookbook-v0/lib .
+$ cp -r ../../03-Cookbook-Day-One/01-Cookbook/lib .
 ```
 
 It will add a lib folder with your previous code from which you can start.
