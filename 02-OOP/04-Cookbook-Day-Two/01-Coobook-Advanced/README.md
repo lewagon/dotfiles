@@ -1,7 +1,7 @@
 We want to enhance our cookbook by finding recipes data from the web. We will use
 [Marmiton](http://www.marmiton.org/), because their markup structure is pretty clean (good candidate for parsing).
 
-Let's summarize the different tasks our program should take care of :
+Let's summarize the different tasks our program should take care of:
 
 * Requesting marmiton website and getting the HTML response
 * Parsing the HTML document to extract useful recipe info
@@ -23,6 +23,9 @@ You can save an HTML document on your computer through `curl` command. Get the f
 ```
 curl http://www.marmiton.org/recettes/recherche.aspx?aqt=fraise > marmiton.html
 ````
+
+The reason why we dump the page on our hard drive is that we'll run a Ruby script over it a hundrend times
+to test our code. It will be faster to open the file on disk rather than to make a network call to Marmiton.
 
 ### Parse with Nokogiri
 
@@ -47,34 +50,32 @@ doc = Nokogiri::HTML(File.open('marmiton.html'), nil, 'utf-8')
 
 doc.css('.m_contenu_resultat').each do |element|
   puts element.search('.m_titre_resultat > a').inner_text
-  puts "Rating : #{element.search('.m_recette_note1').size} / 5"
 end
 ```
 
-Try to enhance this small program to extract more recipe's info from the HTML file as:
+Try to extract that information:
 
-* the cooking and preparation lengths (as 2 integers representing the number of minutes respectively for cooking and preparing)
-* the description summary : a string of, let's say, the first 150 characters of the given description
-* the number of votes on which the rating is based
+- The cooking and preparation lengths (as 2 integers representing the number of minutes respectively for cooking and preparing)
+- The description summary: a string of, let's say, the first 150 characters of the given description
+- The number of votes on which the rating is based
 
 
-### Get response HTML data using open-uri
+### Get response HTML data using `open-uri`
 
-Now that you know how to parse this HTML document the way you want, it's time to automate the first responsibility (requesting marmiton and getting returned HTML page). Use the [open-uri](http://www.ruby-doc.org/stdlib-2.2.0/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI. You just open a URL:
+Now that you know how to parse this HTML document the way you want, it's time to automate the first responsibility (requesting marmiton and getting returned HTML page). Use the [open-uri](http://www.ruby-doc.org/stdlib-2.2.2/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI. You just open a URL:
 
 ```ruby
 require 'open-uri'
-response = open("your_url_here")
-puts response.inspect
+response = open("your_url_here").read
 ```
 
 ### Enhance your CookBook
 
-#### Funnier recipes
+#### More advanced recipes
 
-In the previous challenge, your recipe objects were rather simple, with just a single instance variable storing the recipe's name. Now it's the time to make funnier objects. Try to extract as much data as you can from marmiton scraping, and enhance your `Recipe` class adding these extra-attributes to the `Recipe` class
+In the previous challenge, your recipe objects were rather simple, with just a single instance variable storing the recipe's name. Try to extract as much data as you can from the Marmiton scraping, and enhance your `Recipe` class with new instance variables. You'll have some changes to make to the `Cookbook` as well for the CSV serialization/deserialization.
 
-#### Make it connected
+#### Search on Marmiton
 
 Enhance your cookbook adding a task to extract recipes from marmiton's website, after you enter an ingredient name.
 
@@ -83,10 +84,10 @@ Enhance your cookbook adding a task to extract recipes from marmiton's website, 
 
 What do you wanna do?
 
-1. Import recipes from marmiton [web_import]
-2. List all recipes [list]
-3. Add a recipe [add]
-4. Delete a recipe [del <recipe_id>]
+1. Import recipes from marmiton
+2. List all recipes
+3. Add a recipe
+4. Delete a recipe
 5. Exit
 
 > 1
@@ -101,14 +102,9 @@ This new controller method should
 * Extract the Marmiton recipe
 * Add it to your cookbook
 
-#### New features
+#### Mark as tested
 
-Add features to
-
-* mark recipes as tested in your CookBook
-* print a recipe's details
-
-your interface should also be more user-friendly as below
+Once you're done with the "Search", try to add a feature to mark a recipe as tested:
 
 ```
 -- Here are all your recipes --
@@ -118,25 +114,21 @@ your interface should also be more user-friendly as below
 3. [X] Plum pudding (90 min)
 4. [X] Apple pie (60 min)
 5. [ ] Christmas crumble (30 min)
-
-What do you wanna do?
-
-1. Import recipes from marmiton [web_import]
-2. List all recipes [list]
-3. See a recipe details [see <recipe_id>]
-4. Mark a recipe [mark <recipe_id>]
-5. Add a recipe [add]
-6. Delete a recipe [del <recipe_id>]
-7. Exit
 ```
 
-Note that you will have to change you add action, now that your recipe model has more attributes than previously.
+#### Difficulty
 
-#### Extra
+On marmiton, it's possible to make more precise requests picking a difficulty for the recipes (difficulty goes from 1 to 4).
 
-On marmiton, it's possible to make more precise requests picking a difficulty for the recipes (difficulty goes from 1 to 4). Enhance your Cookbook by :
+Enhance your Cookbook by :
 
 * Adding a difficulty attribute to your recipes.
 * Modifying the web-import features so that we can import recipes with a given difficulty (you might want to make this argument optional keeping the old import feature possible).
 * Printing the difficulty when listing your cookbook's recipes.
 * Adding a filter task to print a list of recipes for a given difficulty.
+
+### Sinatra
+
+Once you've done all the above, ask your teacher to form a group to show you the web micro-framework [Sinatra](http://www.sinatrarb.com/) and try to move your Cookbook to the web!
+
+
