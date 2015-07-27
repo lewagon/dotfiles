@@ -66,7 +66,8 @@ Now that you know how to parse this HTML document the way you want, it's time to
 
 ```ruby
 require 'open-uri'
-response = open("your_url_here").read
+response = open("http://your_url_here")
+doc = Nokogiri::HTML(response, nil, 'utf-8')
 ```
 
 ### Enhance your CookBook
