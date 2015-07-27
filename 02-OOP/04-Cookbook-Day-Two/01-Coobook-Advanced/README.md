@@ -77,9 +77,10 @@ In the previous challenge, your recipe objects were rather simple, with just a s
 
 #### Search on Marmiton
 
-Enhance your cookbook adding a task to extract recipes from marmiton's website, after you enter an ingredient name.
+Enhance your cookbook adding a task to extract recipes from marmiton's website.
+The goal is to show the user search results and ask **which result** to import (only one).
 
-```
+```txt
 -- My CookBook --
 
 What do you wanna do?
@@ -93,14 +94,19 @@ What do you wanna do?
 > 1
 Import recipes for which ingredient ?
 > fraise
-Importing recipe data from marmiton for 'fraise'...
+
+Looking for "fraise" on Marmiton...
+10 results found!
+
+1. Tarte aux Fraises
+2. Clafouti aux Fraises
+3. Fraises à la Chantilly
+[...]
+
+Please type a number to choose which recipe to import
+> 2
+Importing "Clafouti aux Fraises"...
 ```
-
-This new controller method should
-
-* Ask the user for a recipe name
-* Extract the Marmiton recipe
-* Add it to your cookbook
 
 #### Mark as tested
 
