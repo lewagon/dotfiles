@@ -9,7 +9,7 @@ The main components are:
 - **Employees** (manager, delivery guys)
 - **Customers** of the Restaurant
 - **Meals** that can be ordered
-- Orders made by customers, and assigned to a given delivery guy
+- **Orders** made by customers, and assigned to a given delivery guy
 
 This is a fairly open-ended challenge. The expectations are loose, so you will be making most of the decisions about how to design and build your program. Talk it out with your pair. Go to the whiteboard. Have fun!
 

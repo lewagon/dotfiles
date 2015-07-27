@@ -80,7 +80,7 @@ In the previous challenge, your recipe objects were rather simple, with just a s
 Enhance your cookbook adding a task to extract recipes from marmiton's website.
 The goal is to show the user search results and ask **which result** to import (only one).
 
-```txt
+```
 -- My CookBook --
 
 What do you wanna do?
