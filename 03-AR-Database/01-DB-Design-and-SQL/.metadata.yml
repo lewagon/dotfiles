@@ -1,3 +1,6 @@
 lectures:
   - db/01-sql-intro
 video: 134940301
+livecode:
+  video: 134959362
+  gist: 1ead0b1c1f14505b74cf
