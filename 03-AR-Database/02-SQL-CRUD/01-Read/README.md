@@ -9,7 +9,7 @@ rows = DB.execute('SELECT * FROM stuff')
 # => rows is an `Array` of row, each row being an `Array` of columns.
 ```
 
-The goal is to implement each one of the `CRUD` operations build a copycat of
+The goal of the day is to implement each one of the `CRUD` operations and build a copycat of
 [Hacker News](https://news.ycombinator.com).
 
 **Note**: in this exercise, we **give** you the `DB` global variable, so
