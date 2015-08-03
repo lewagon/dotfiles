@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Use advanced selectors (id, class, grouping, descendant selectors) to fine-tune your page with a more subtle design.
+Use advanced CSS selectors (id, class, grouping, descendant selectors) to fine-tune your page with a more subtle design.
 
 ## Specs
 
@@ -33,7 +33,7 @@ And here is the **good version** of it
 .text-center{
   text-align: center;
 }
-.card {
+.card-white {
   background: white;
   padding: 30px;
   border: 1px solid lightgrey;
