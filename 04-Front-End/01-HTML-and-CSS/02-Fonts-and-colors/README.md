@@ -8,12 +8,11 @@ Add simple CSS rules to design fonts and colors of your profile page.
 
 
 ### Body
-- Pick a nice background color, font family/color/size and line-height for the `<body>`. Setting font rules at the body-level will apply them on all basic texts (`<p>`, `<li>`, etc...).
+- Pick a nice background color, font family/color/size and line-height for the `<body>`. **Setting these font rules at the body-level will apply them on all basic texts** (`<p>`, `<li>`, etc...). Think DRY.
 
 ### Headers
 - Choose a nice color and font-family for headers (`<h1>`, `<h2>`, `<h3>`)
 - Choose harmonious `font-size` and `line-height` for headers
-- Resize image `width`
 
 ### Links
 - Change links colors & text decoration
@@ -21,6 +20,6 @@ Add simple CSS rules to design fonts and colors of your profile page.
 
 ## Tips & Resources
 
-- Use Colorzilla plugin to pick nice colors from other websites. You can find inspiration [here](http://www.flatuicolorpicker.com/).
+- Use a color picker plugin to pick nice colors from other websites (Sip, Colorzilla, etfc..). You can find inspiration [here](http://coolors.co/).
 - Pick your fonts on [google fonts](https://www.google.com/fonts)
-- On Google fonts, **Open Sans** is the standard choice for core texts. **Varela**, **Montserrat**, **Raleway**, **Roboto** are elegant candidates for headers. We already made these choices for you (look at the `<head>`), but feel free to change it!
+- On Google fonts, **Open Sans** is the standard choice for core texts. **Raleway**, **Varela**, **Montserrat**, **Roboto** are nice candidates for headers. We already made these choices for you (look at the `<head>`), but feel free to change it and be creative!
