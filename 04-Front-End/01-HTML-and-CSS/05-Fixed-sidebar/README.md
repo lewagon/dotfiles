@@ -4,7 +4,7 @@ Build a nice layout with a fixed sidebar and a scrollable page content.
 
 ## Specs
 
-Here is [your objective](http://lewagon.github.io/html-css-challenges/05-fixed-sidebar/). To build such layout, you will have to position the left sidebar as fixed, and add some CSS to get the page content on the right.
+Here is [your objective](http://lewagon.github.io/html-css-challenges/05-fixed-sidebar/). To build such layout, you will have to **position the left sidebar as fixed**, and add some CSS to get the page content on the right.
 
 ## Tips & Resources
 
