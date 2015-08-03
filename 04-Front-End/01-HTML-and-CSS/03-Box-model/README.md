@@ -19,7 +19,7 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 
 - The `<div class="container">` is here to center its content so that you don't have a full-screen page (which is very ugly).
 - The `<div class="card">` are here to display nicely each group of info that fit together.
-- Add a nice touch to these divs thanks to `background`, `border`, `border-radius` and `box-shadow` CSS properties.
+- Add a nice touch to your cards thanks to `background`, `border`, `border-radius` and `box-shadow` CSS properties.
 
 
 ## Tips & Resources
