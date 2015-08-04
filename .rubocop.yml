@@ -13,7 +13,9 @@ RedundantReturn:
 SelfAssignment:
   Enabled: false
 Documentation:
-    Enabled: false
+  Enabled: false
+RegexpLiteral:
+  Enabled: false
 
 AllCops:
   Exclude:

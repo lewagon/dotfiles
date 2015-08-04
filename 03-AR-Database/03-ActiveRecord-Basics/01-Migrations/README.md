@@ -52,7 +52,7 @@ Use the task `rake db:timestamp` to get a correct timestamp for your migration f
 
 Write a new migration, in a new file in `db/migrate/` to add a new column to the `posts` table.
 
-This column will be called `votes` dans will be of type `integer`.
+This column will be called `votes` and will be of type `integer`.
 
 Remember what we said about migration filenames, the format is **really** important.
 
