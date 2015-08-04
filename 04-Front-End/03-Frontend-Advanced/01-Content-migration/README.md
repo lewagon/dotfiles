@@ -35,7 +35,7 @@ In this challenge, you have to:
 1. Migrate your home page **content** into the `index.html.erb` Middleman page
 1. Create a new `contact.html.erb` page with team and contact info
 1. Put all common HTML parts (navbar / footer) in the `layout.html.erb`
-1. Promises are made to be kept, here is our [home-made navbar template](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html) that we have already included in the layout.
+1. Promises are made to be kept, here is our [home-made navbar template](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar_wagon.html) that we have already included in the layout.
 1. Don't forget to replace **all** `<a>` tags and `<img>` tags with the **correct helpers** (`image_tag`, `link_to`, `image-url`) to get rid of URL dependency in HTML and CSS files.
 
 
