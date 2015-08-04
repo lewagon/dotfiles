@@ -24,13 +24,13 @@ You can follow [this tutorial](https://github.com/jlnr/gosu/wiki/Getting-Started
 
 ## Tutorial
 
-Just follow the gosu [tutorial](https://github.com/jlnr/gosu/wiki/Ruby-Tutorial#down-to-business) and copy/paste the code in the `game.rb` file. At any point in the tutorial, you can test your code running:
+Just follow the gosu [tutorial](https://github.com/gosu/gosu/wiki/Ruby-Tutorial) and copy/paste the code in the `game.rb` file. At any point in the tutorial, you can test your code running:
 
 ```
 $ ruby lib/game.rb
 ```
 
-In the end, you should get the full tutorial code as on [the official repo](https://github.com/jlnr/gosu/blob/master/examples/Tutorial.rb), but don't cheat, don't copy paste the whole thing, try to understand how a Gosu game is built. In the tutorial, sometimes there needs to be printed some images, you can take your own or re-use [these ones](https://github.com/jlnr/gosu/tree/master/examples/media).
+In the tutorial, sometimes there needs to be printed some images, you can take your own or re-use [these ones](https://github.com/gosu/gosu/tree/master/examples/media).
 
 ## Going further
 
