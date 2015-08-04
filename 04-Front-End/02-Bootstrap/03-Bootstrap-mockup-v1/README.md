@@ -7,16 +7,16 @@ A challenge to get you familiar with Bootstrap CSS classes:
 
 ## Specs
 
-In this challenge, reproduce [this page](http://lewagon.github.io/bootstrap-challenges/03-bootstrap-mockup-v1/) by using Bootstrap classes as much as possible. Every time you need to style something, look in the Bootstrap documentation if there is a class for that. Here are some instructions to help you in this challenge:
+In this challenge, reproduce [this page](http://lewagon.github.io/bootstrap-challenges/06-Bootstrap-mockup-without-grid/) by using Bootstrap classes as much as possible. Every time you need to style something, look in the Bootstrap documentation if there is a class for that. Here are some instructions to help you in this challenge:
 
-1. For the banner, the features section and the footer, you will have to write a bit of personal CSS. In fact, there is no Bootstrap class for image backgrounds, or for custom color backgrounds.
+1. For the banner, the cards section and the footer, you will have to write a bit of personal CSS. In fact, there is no Bootstrap class for image backgrounds, or for custom color backgrounds.
 1. The [Bootsrap navbar code](http://getbootstrap.com/components/#navbar-default) given in the official documentation is a bit too complicated and not very convenient (e.g. the brand is a text, not an image..). Wait for tomorrow and we will give you a cool home-made navbar template!
 
 ## Tips & Resources
 
-- Start by building your graphical elements (SVG icons, background image) before coding. You can find nice background images on [thestocks](http://thestocks.im/). For SVG icons, [NounProject](http://thenounproject.com/) and [IconMelon](http://iconmelon.com/) are good resources. Don't hesitate to modify a bit the SVG icons with Sketch to add your own flavor. We gave you some images in the `images` folder to start with. Feel free to replace them with your own ones!
+- Start by building your graphical elements (SVG icons, background image) before coding. You can find nice background images on [thestocks](http://thestocks.im/) or use placeholders for [unsplash.it](http://unsplash.it). For SVG icons, [NounProject](http://thenounproject.com/) and [IconMelon](http://iconmelon.com/) are good resources. Don't hesitate to modify a bit the SVG icons with Sketch to add your own flavor. We gave you some images in the `images` folder to start with. Feel free to replace them with your own ones!
 
-- Look at our boilerplate, we force you to split your CSS code into 3 files. `style.css` is responsible for main styling (backgrounds & colors, fonts, headers, links) and also imports the other files `banner.css` and `footer.css`, which are responsible for the banner and footer design. With this `import` mechanism, we only need to link the `style.css` in the `<head>` of the HTML file.
+- Look at our boilerplate, we force you to split your CSS code into several files. `style.css` is responsible for main styling (backgrounds & colors, fonts, headers, links) and also imports the other files `banner.css`, `card.css`, `footer.css`..., which are responsible for the other components design. With this `import` mechanism, we only need to link the `style.css` in the `<head>` of the HTML file.
 
 - For the map section, the code is a bit complicated since it uses a bit of javascript. Here it is:
 
