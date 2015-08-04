@@ -14,9 +14,9 @@ In this challenge, reproduce [this page](http://lewagon.github.io/bootstrap-chal
 
 ## Tips & Resources
 
-- Start by building your graphical elements (SVG icons, background image) before coding. You can find nice background images on [thestocks](http://thestocks.im/) or use placeholders for [unsplash.it](http://unsplash.it). For SVG icons, [NounProject](http://thenounproject.com/) and [IconMelon](http://iconmelon.com/) are good resources. Don't hesitate to modify a bit the SVG icons with Sketch to add your own flavor. We gave you some images in the `images` folder to start with. Feel free to replace them with your own ones!
+- Start by building your background image and logo before coding. You can find nice background images on [thestocks](http://thestocks.im/) or use placeholders for [unsplash.it](http://unsplash.it). For building your logo, find SVG icons on [NounProject](http://thenounproject.com/) or [IconMelon](http://iconmelon.com/). Don't hesitate to pimp these SVG icons with Sketch and add your own flavor.
 
-- Look at our boilerplate, we force you to split your CSS code into several files. `style.css` is responsible for main styling (backgrounds & colors, fonts, headers, links) and also imports the other files `banner.css`, `card.css`, `footer.css`..., which are responsible for the other components design. With this `import` mechanism, we only need to link the `style.css` in the `<head>` of the HTML file.
+- Look at our boilerplate, we force you to split your CSS code into several files. `style.css` is responsible for main styling (body backgrounds & colors, fonts, headers, links) and also imports the other files `banner.css`, `card.css`, `footer.css`, etc... which are responsible of other components' design. With this `import` mechanism, we only need to link the `style.css` in the `<head>` of the HTML file.
 
 - For the map section, the code is a bit complicated since it uses a bit of javascript. Here it is:
 
