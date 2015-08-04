@@ -10,7 +10,6 @@ In this challenge you will add a new page to your site, connected to a mini YAML
 .
 ├── source
 │   ├── index.html.erb
-│   ├── fonts
 │   ├── images
 │   ├── javascripts
 │   ├── layouts
@@ -28,30 +27,25 @@ Use a loop to repeat a stuctured div on all your items. Herebelow is our Styl.us
 **data/products.yml**
 
 ```yaml
-- name: Styl.smart
+- name: Kudoz
   picture: http://placehold.it/150x150
-  summary: The <strong>smartest</strong> Stylus.<br>Write no more typos..
-  price: 199€
-  color: primary
-- name: Styl.speed
+  summary: Tinder for job search
+- name: Krawd
   picture: http://placehold.it/150x150
-  summary: The <strong>quickest</strong> Stylus.<br>Write texts before you do..
-  price: 299€
-  color: warning
+  summary: Market place for brands and designers
 ```
 
-**source/pricing.html**
+**source/products.html**
 
 ```erb
 ---
-title: Find the stylus that suits you
+title: Le Wagon's products
 ---
 
 <div class="container" id="pricing">
   <div class="row">
-    <h1>Styl.you</h1>
+    <h1>Our students' products</h1>
     <% data.products.each do |product| %>
-
       <!-- HTML div that we want to repeat -->
       <div class="col-xs-12 col-sm-6 col-md-3 text-center">
         <div class="row">
@@ -59,15 +53,11 @@ title: Find the stylus that suits you
             <%= image_tag product.picture, class: "img-circle img-responsive" %>
           </div>
           <div class="col-xs-9 col-sm-12">
-            <h2>
-              <%= product.name %>
-              <span class="label label-<%= product.color %>"><%= product.price %></span>
-            </h2>
+            <h2><%= product.name %></h2>
             <p><%= product.summary %></p>
           </div>
         </div>
       </div>
-
     <% end %>
   </div>
 </div>
