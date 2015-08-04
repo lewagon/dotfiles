@@ -1,0 +1,14 @@
+/* Importing all components file */
+@import url("banner.css");
+
+/* General style rules on fonts and colors */
+body {
+  margin: 0;
+  font-family: Open-sans, sans-serif;
+}
+h1, h2, h3 {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+.text-center {
+  text-align: center;
+}
