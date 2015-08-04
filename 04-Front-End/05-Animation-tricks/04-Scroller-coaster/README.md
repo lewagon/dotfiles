@@ -3,7 +3,7 @@ People often like to play with **window scroll event**. In this challenge, you w
 
 ## Specs
 
-Implement all the following animations on the Middleman project you built end of last week. The aim of this challenge is to reproduce the final version of [Stylus](http://lewagon.github.io/stylus).
+Implement all the following animations on the Middleman project you built end of last week. The aim of this challenge is to reproduce the final version of our [Middleman challenge](http://lewagon.github.io/middleman-challenges/).
 
 
 ### Smooth scroll
@@ -11,30 +11,14 @@ Implement all the following animations on the Middleman project you built end of
 Smoothing navigation when you have internal links in a page. Example:
 
 ```html
-<a href="#newsletter">newsletter</a>
+<a href="#map">Find us</a>
 
 <!-- ... -->
 
-<div id="newsletter">
-  Subscribe to our newsletter
-</div>
+<div id="map"></div>
 ```
 
 Here is the [smoothscroll jQuery script](http://css-tricks.com/snippets/jquery/smooth-scrolling/). Notice the advanced CSS selector `a[href*=#]:not([href=#])`, which enables to select internal links only (href starting with `#`) and not standard links.
-
-### Window-height
-
-Sometimes you want divs to exactly fit window height on page load. This can be nice combined with smooth scroll animations like in Stylus home-page. Here is how you can set the height of a div on page load
-
-```javascript
-// Set div height to exact window height on page load
-$(document).ready(function() {
-  $(".window-height").css("height", $(window).height());
-});
-```
-
-Be careful to apply `class="window-height"` on divs with few content. Otherwise content may overflow.
-
 
 ### Navbar scroll
 
@@ -44,31 +28,15 @@ Here we give you two navbar scripts that you should be able to understand at thi
 $(document).ready(function() {
   // navbar transition jQuery script
   $(window).scroll(function(e){
-    if ($(this).scrollTop() > 0) {
+    if ($(this).scrollTop() > 50) {
       $(".navbar").css({
-        "background": "rgba(0, 0, 0, 0.7)",
-        "box-shadow": "0 0 2px black"
+        "margin-top": "-70px"
       });
     }
     else {
       $(".navbar").css({
-        "background": "transparent",
-        "box-shadow": "0 0 0px transparent"
+        "margin-top": "0px"
       });
-    }
-  });
-});
-```
-
-```javascript
-$(document).ready(function() {
-  // navbar transition jQuery script
-  $(window).scroll(function(e){
-    if ($(this).scrollTop() > 200) {
-      $(".navbar").slideUp();
-    }
-    else {
-      $(".navbar").slideDown();
     }
   });
 });
@@ -83,5 +51,3 @@ Many website have elements that nicely appear on scroll. This can be a bit long 
 
 
 Let the scroll be with you!
-
-
