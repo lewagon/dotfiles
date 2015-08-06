@@ -31,7 +31,6 @@ And then you will add different `.col-??-??` depending on each behavior you want
   <div class="row">
     <div class="col-sm-3">
       <!-- No nesting here -->
-      <div class="col-sm-12"></div>
     </div>
     <div class="col-sm-9">
       <!-- Here we nest two rows -->
