@@ -48,4 +48,4 @@ And then you will add different `.col-??-??` depending on each behavior you want
 </div>
 ```
 
-In every `<div class="col-..-..">`, you can insert new rows (`<div class="row">`) that will divide the div in 12 new columns.
+In every `<div class="col-..-..">`, you can insert new rows (`<div class="row">`) that will divide the div in 12 new columns. That's how you can build **nested grids**.
