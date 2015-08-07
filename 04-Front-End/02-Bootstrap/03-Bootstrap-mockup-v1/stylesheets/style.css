@@ -1,5 +1,8 @@
 @import url("banner.css");
 @import url("footer.css");
+@import url("avatar.css");
+@import url("card.css");
+@import url("feature.css");
 
 body {
   font-family: 'Open Sans', sans-serif;
