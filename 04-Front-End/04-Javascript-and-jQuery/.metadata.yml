@@ -1,3 +1,6 @@
 lectures:
   - front/05-javascript-and-jquery
 video: 135859030
+livecode:
+  video: 135951634
+  gist: 4ba5ef9dd46461a2c943
