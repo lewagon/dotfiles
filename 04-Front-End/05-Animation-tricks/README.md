@@ -1,6 +1,6 @@
 #### Disclaimer
 
-There's a small mistake in the video. For the navbar scroll animation, you don't need to log the scroll **event** as done in the video. Instead you can simply call the `scrollTop()` function **on the window itself** to get the number of pixel scrolled from the top of the page.
+There's a small mistake in the video. For the navbar scroll animation, you don't need to log the scroll **event** as done in the video. Instead you can simply call the `scrollTop()` function **on the window itself** to get the number of pixels scrolled from the top of the page.
 
 ```javascript
 $(window).on("scroll", function(e){
