@@ -1,6 +1,8 @@
 lectures:
   - oop/02-advanced-oop
-video: 134299209
+lecture:
+  video: 134299209
+  gist: e1cbdf7da07d25b440cc
 livecode:
   video: 134344890
   gist: 37a894017e2d14fcec26
