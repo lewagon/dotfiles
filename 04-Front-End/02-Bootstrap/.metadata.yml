@@ -1,7 +1,9 @@
 lectures:
   - front/prototyping-ui-design
   - front/02-bootstrap
-video: 135568640
+lecture:
+  video: 135568640
+  gist: e44495ec21243096f374
 livecode:
   video: 135589269
   gist: dd2f8c3860014f34a184
