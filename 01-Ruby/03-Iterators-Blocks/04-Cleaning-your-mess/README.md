@@ -18,7 +18,7 @@ hop! hop! hop! hop! hop! One more time..
 hop! hop! hop! hop! hop! hop! One more time..
 ```
 
-The problem is that this code was written by a poor developer, who started coding without thinking...There are a lot of useless parts
+The problem is that this code was written by a poor developer, who started coding without thinking... There are a lot of useless parts
 
 ## Specs
 
