@@ -2,3 +2,6 @@ instructions: false
 lectures:
   - rails/03-rails-advanced
   - rails/extra-01-rails-front-end
+video: 136725134
+livecode:
+  video: 136743151
