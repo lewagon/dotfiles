@@ -1,3 +1,5 @@
 lectures:
-  - rails/08-smtp-mandrill
+  - rails/google-maps-geocoder
 help: true
+lecture:
+  video: 137361250
