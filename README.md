@@ -1,7 +1,6 @@
 ## Welcome!
 
-Let's start your coding challenges on Kitt. This repo holds all the exercises
-you'll cover during your 9 weeks at [Le Wagon, the French innovative Coding School](http://www.lewagon.org/en)
+This platform holds all the exercises you'll cover during your 9 weeks at [Le Wagon, the French innovative Coding School](http://www.lewagon.org/en), welcome aboard!
 
 ## General overview
 
