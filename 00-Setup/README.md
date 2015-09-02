@@ -6,7 +6,7 @@ Let's set up your workstation
 
 - Once the setup is done, go through lectures #2 and #3 with lead-coach to learn command line basics (navigate in filesystem, create directories & files, launch Sublime Text) + basic git commands (`add`/`commit`/`push`). You'll need to know these commands to submit solutions to our 9-week challenges.
 
-- You can finally login to Kitt and get approved by the staff. Once, that's done, follow the instuction to correctly fork the challenges repo.
+- You can finally login to Kitt and get approved by the staff. Once that's done, follow the instuction to correctly fork the challenges repo.
 
 - Time to push your solution to the first two challenges `01-Submit-your-code` and `02-Buddies`. These challenges are simply sanity checks to ensure you have correctly forked the exercise repo. No real ruby code here. Serious things begin tomorrow, be prepared!
 
