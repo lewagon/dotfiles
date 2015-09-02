@@ -10,7 +10,7 @@ The Ruby module has 6 days. The first 4 days deal with core notions you absolute
 The two last days of the Ruby module deal with more advanced stuff.
 
 - `05-Regular-Expressions`: Play with these new objects representing "string patterns".
-- `04-Parsing`: Learn to read/write standard in data-files such as CSV and JSON, and play with your first API.
+- `04-Parsing`: Learn to read/write in standard data-files such as CSV and JSON, and play with your first API.
 
 The last two days are not mandatory. Every student should at least listen to the morning talk. But after that, the class should split between:
 
