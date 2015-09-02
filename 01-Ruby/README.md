@@ -5,7 +5,7 @@ The Ruby module has 6 days. The first 4 days deal with core notions you absolute
 - `01-Programming-basics`: play with IRB, launch a ruby script from the terminal. Learn about variables, methods and built-in objects.
 - `02-Flow-Array`: Learn about conditional statements and loops, coding structures that modify the flow of your programs. Define and play with arrays.
 - `03-Iterators-Blocks`: Embrace all the cool ruby iterators (`each`, `select`, `map` and more-. Understand what's a ruby block and how a method can call a block with `yield`.
-- `04-Hash-Symbols`: Finally let's introduce hash, a data stucture that works as a dictionary and enables to store key-value pairs. Define and manipulate hashes and iterate on them. Understand symbols, objects a bit similar to strings but more adpated for "keywords" in your code. You'll often see symbols as hash keys, get used to it!
+- `04-Hash-Symbols`: Finally let's introduce hashes, data stuctures designed to store key-value pairs like dictionaries. Define and manipulate your own hashes. Understand symbols, objects a bit similar to strings but more adpated for storing "keywords" of your code. You'll often see symbols as hash keys, so get used to it!
 
 The two last days of the Ruby module deal with more advanced stuff.
 
