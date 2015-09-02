@@ -26,9 +26,9 @@ Our program has 7 modules
 ## Typical day
 
 - **9h00-10h30**: morning lecture by the lead-coach with lots of live-demo to make you understand the concepts on practical examples.
-- **10h30-12h30**: pair-programming on challenges of the kitt platform & pushing your solution to get automatic correction.
-- **14h00-17h30**: finishing your challenges on the platform with your buddy of the day.
--  **17h30-19h00**: "live-code session". Either a teacher or a student will pick one of the challenges of the day (or invent a new one with the teacher) and will code his own solution **from scratch** in front of the class on the giant projector. When doing so he has to explain at loud what he is doing and explain his methodology and the way he builds his program.
+- **10h30-12h30**: pair-programming session, work on the challenges & push your attempts.
+- **14h00-17h30**: finish your challenges of the day with your buddy.
+-  **17h30-19h00**: "live-code session". A teacher (or sometimes a motivated student) chooses an interesting challenge of the day or invent a new one. Then he will code the solution **from scratch** in front of the class on the projector. Doing so, he should interact with the class and ask them what to do. One of the most important moments of the day, don't miss it!
 
 Every day, there's 5 to 10 different challenges with their own test suite, and additional optional exercises for the most rapid of you.
 
