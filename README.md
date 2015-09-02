@@ -6,7 +6,7 @@ This platform holds all the exercises you'll cover during your 9 weeks at [Le Wa
 
 Our program has 7 modules
 
-- `00-Setup`: a small module of 1 day (the firts one) to setup your workstation.
+- `00-Setup`: a small module of 1 day (the first one) to setup your workstation.
 
 - `01-Ruby`: learn fundamental concepts shared by all programming languages: variables, methods, loops, conditional statements, iterators, regular expressions,  file parsing,... Work on cool challenges with your buddies & practice on real-life examples (playing with APIs, scraping HTML, storing data in CSV files).
 
