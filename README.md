@@ -20,7 +20,7 @@ Our program has 7 modules
 
 - `05-Rails`: Time to put all our skills together and move to Rails. No big deal here, we already know most of it. We know DB and ActiveRecord, we are ruby experts and we've played with dozens of gems + we already have good skills in frontend development and we've seen templating and SASS thanks to Middleman. The 1st Rails week will teach you all the core notions of the frameworks (routing, controllers, models, views). During the 2nd week, **you'll code Airbnb from scratch in 5 days**. You'll work in teams and you'll learn to collaborate on Github using pull requests. You'll learn a lot from this experience, your first real professional web-appliction deployed on Heroku.
 
-- `06-Projects`: This is the moment of truth! Let's code your own project during the 2 last week and build an awesome product!
+- `06-Projects`: This is the moment of truth! Let's code your own project during the 2 last weeks and build an awesome product!
 
 
 ## Typical day
