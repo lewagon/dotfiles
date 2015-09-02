@@ -1,5 +1,3 @@
-## Roadmap of the day
-
 Let's set up your workstation
 
 - Go through 1st setup lecture with your lead-coad then follow [Le Wagon's setup carefully](https://github.com/lewagon/setup). It should take you all morning, maybe a bit more for non-Mac students ;)
