@@ -1,6 +1,6 @@
 ## Running your code
 
-To run your ruby code, the easy way it to use IRB (Interactive Ruby). Let's launch irb on our terminal and type basic ruby code.
+To run your ruby code, the easy way it to use IRB (Interactive Ruby). Let's launch it on our terminal and type basic code.
 
 ```
 $ irb
@@ -9,9 +9,9 @@ $ irb
 > exit
 ```
 
-That's an awesome playground to experiment things right? So use it a lot! Cool to have a playground, but real-life is about writing and saving code files. How to run a ruby script from a `.rb` file? Well:
+Cool to have a playground to experiment things, but real-life is about writing and saving code files. How to run a ruby script from a `.rb` file? Well:
 
-``
+```
 $ touch test.rb
 $ ruby path/to/test.rb
 ```
