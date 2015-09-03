@@ -1,3 +1,5 @@
 lectures:
   - rails/background-jobs
 help: true
+lecture:
+  video: 138182297
