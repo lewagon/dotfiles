@@ -1,6 +1,5 @@
-## Ruby Object-Oriented challenges
+## OOP module
 
-- For each core-challenge, check that all the tests pass, and make sure you can answer all the questions of the **Learning badges** section.
-- Do not deal with optional exercises (leave them for the weekend) unless you feel very comfortable with the core ones.
+The OOP module has 6 days.
 
-- **Let's start !**
+-
