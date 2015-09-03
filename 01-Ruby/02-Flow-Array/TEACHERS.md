@@ -1,47 +1,58 @@
-## Guidelines
+## Program flow, if..else and for
 
-### Morning lecture
+Standard ruby instuctions are read **line-by-line, top to bottom**. No some structure will modify this flow such as `if..else..end` or `for..end` structures. Let's play with conditions:
 
-#### Controlling the flow
+```ruby
+puts "Heads or tails?"
+answer = gets.chomp
 
-A cool way to start is to explain the standard way ruby instuctions are read in a file => **line-by-line, top to bottom**, at least at this point of their ruby career :)
+if answer == "heads"
+  puts "you pick heads"
+elsif answer == "tails"
+  puts "you pick tails"
+else
+  puts "wrong choice"
+end
 
-Show them how a simple method breaks the flow yo! Follow the flow with them on simple examples.
-
-Then introduce one-by-one the other structure modifying the flow: `if..end`, `if !..end` `if..else..end`, `for..end`, `while/untill..end`. For each structure, pick some cool & simple example of your choice. Once you've finished these demos and anwsered questions, scroll quickly on the slides to show them they can retrieve the syntax there.
-
-#### Arrays
-
-Here you can make a very basic live-code (with the "Beatles example" in the slides or some other one you choose). Define an empty array, append it few elements, access elements with their index, compute the array size, change some cell value. Keep it very basic and ask them questions to see if they get it. Go quickly on the slide after the live-code. The students should understand them at a glance if your live-code was good :)
-
-### Day challenges
-Before starting the challenges
-
-- Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
-
-```
-$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
-$ git status #everything should be ok!
-$ git pull --no-edit upstream master
+flipped_coin = rand(0..1)
+if flipped_coin == 1
+  "Coin is Heads!"
+else
+  "Coin is Tails!"
+end
 ```
 
-- Ensure they're connected on the class Slack
+Now let's play with `for` loop.
 
-- Make a brief overview of the roadmap of the day with them, explaining the general idea behind each challenge.
+```ruby
+for i in 0..10
+  puts i
+end
+for beatle in ["john", "paul", "ringo", "george"]
+  puts beatle
+end
+```
 
-### Live-code
+## Arrays
 
-#### General guidelines
-- The live-code should be made **from scratch**. No specs, no boilerplate. The student has to `mkdir` a new folder, `touch` its ruby file, and start coding in it. Help him on the setup. Make him code **a solution that works** in one ruby file before refactoring the code (separating the logic from the interface in 2 files, DRYing the repetitive code chunks, etc..)
+Let's play with an array
 
-- Announce, **before the live-code**, which challenges they are going to live-code and who are the coders of the day. It will make them stay tensed and focused! Tell them they have to speak loud and explain their approach while they are live-coding. That's the best exercise to improve their skills!
+```ruby
+beatles = []
+beatles << "jon"
+beatles << "paul"
+beatles << "ringo"
+beatles << "george"
 
-- At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
+puts beatles[0]
+beatles[0] = "John"
+puts beatles[0]
 
+for i in 0...beatles.count
+  beatles[i] = beatles[i].capitalize
+end
 
-#### Live-code details
+p beatles
+```
 
-1. `01-Sorting-the-wagon`: again, let the student improvise a bit and don't force him to respect the specs of the challenge exactly. Just help him go in the right direction and ask himself the good questions. What do you want ? Define an empty array ? Fill this array ? Output some info ? Which info ? In which format ? All these answers must be his programming choices.
-1. `03-Black-Jack`: Pick some more advanced student for this one, to give a good example to the class. Again, start from scratch with him!
-
-
+Tomorrow we'll see very powerfull methods to perform operations on arrays, **iterators**.
