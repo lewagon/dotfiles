@@ -6,7 +6,7 @@ Let's set up your workstation
 
 - You can finally login to Kitt and get approved by the staff. Once that's done, follow kitt instuctions to correctly fork the exercise repo.
 
-- Time to push your solution to the first two challenges `01-Submit-your-code` and `02-Buddies`. These challenges are simply sanity checks to ensure you have correctly forked the exercise repo. No real ruby code here. Serious things begin tomorrow, be prepared!
+- Time to push your solution to the first challenge `01-Submit-your-code`. This challenge is simply a sanity check to ensure you have correctly forked the exercise repo. No real ruby code here. Serious things begin tomorrow, be prepared!
 
 You now have all the tools you need to successfully work your way through the bootcamp during these 9 weeks. Remember, your new toolbox is:
 
