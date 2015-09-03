@@ -2,10 +2,19 @@
 
 The Ruby module has 6 days. The first 4 days deal with core notions you absolutely need to understand.
 
+## Core part
+
 - `01-Programming-basics`: play with IRB, launch a ruby script from the terminal. Learn about variables, methods and built-in objects.
 - `02-Flow-Array`: Learn about conditional statements and loops, coding structures that modify the flow of your programs. Define and play with arrays.
 - `03-Iterators-Blocks`: Embrace all the cool ruby iterators (`each`, `select`, `map` and more-. Understand what's a ruby block and how a method can call a block with `yield`.
 - `04-Hash-Symbols`: Finally let's introduce hashes, data stuctures designed to store key-value pairs like dictionaries. Define and manipulate your own hashes. Understand symbols, objects a bit similar to strings but more adpated for storing "keywords" of your code. You'll often see symbols as hash keys, so get used to it!
+
+### Ruby Quizz
+On Friday afternoon, at 2pm you'll have to answer a paper quizz during 30 min. No computer, no Google, just pencil and paper. It's not highschool and you wont have grades :) But it's very useful to detect and get rid of your misunderstandings on important notions. So take your time and try to answer as precisely as you can.
+
+When quizz are finished, teachers will take you one-by-one during 15-min reviews to go through your answers and try to re-explain things. This interview will help you know what to rehearse during the weekend and whether or not you should join the Reboot group next Monday-Tuesday (see next section).
+
+## Advanced part
 
 The two last days of the Ruby module deal with more advanced stuff.
 
