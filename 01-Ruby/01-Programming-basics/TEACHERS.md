@@ -66,7 +66,7 @@ A variable is like a **named** box containing a value. When we define it, we put
 name = "boris"
 puts name
 
-name = "Sebastient"
+name = "Sebastien"
 puts name
 
 name = name + " Saunier"
@@ -117,4 +117,4 @@ total = add(3, 2)
 puts total # yeah!!
 ```
 
-In the beginning, we'll force you to write `return` keyword explicitely at the end of your methods, in order to make sure **you control what your methods return**. Please understand that `puts` is just a way to test your code outputting stuff on the terminal.
+In the beginning, we'll force you to write `return` keyword explicitely at the end of your methods, in order to make sure **you control what your methods return**. Please understand that `puts` is just a way to test your code outputting stuff on the terminal, nothing more.
