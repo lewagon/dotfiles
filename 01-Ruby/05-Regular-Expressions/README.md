@@ -8,16 +8,40 @@ Regular expressions are advanced structures. Don't work on the Regexp challenges
 - hash manipulation
 - strings and symbols
 
-If these concepts are not clear for you, **join the "ReBoot" group, who will work during 2 days on new challenges to rehearse core notions**. For the others, here is the roadmap of the day.
+If these concepts are not clear for you, **join the "ReBoot" group, who will work during 2 days on new challenges**. Here are the Reboot challenges for today
 
-## `01-Phone-regexp`
+### Reboot challenges
+
+You should work on these challenges from scratch without code canvas or `rake`. Sometimes that's the best way to learn how to "think your code".
+
+1. Build a simple calculator, first handling only additions, then all operations (mutliplications, substractions, divisions).
+1. Code a program simulating a horse race, where you have to enter horse names, you then run the race (which will shuffle the horses array) and then the terminal outputs the race results. You can make your program much funnier using `say` to simulate the anchorman. That is pretty cool :)
+1. Implement [a shopping cart](https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1), where ultimately you can
+  - Add items with prices and amount in your cart.
+  - Then checkout and terminal prints you the total bill with VAT.
+  - Start simple without amount and available stock then improve your program
+  - Here is [one possible solution]((https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1) for the coach. Don't look at it at the beginning!
+
+Above all:
+
+- Start with simple coding strategies
+- Code the interface first
+- **Write pseudo-code** before going into the ruby syntax
+- Simplify the initial probem. **Code something that works before handling exception**.
+
+
+### Advanced challenges
+
+For the others, here is the roadmap of the day.
+
+#### `01-Phone-regexp`
 A simple challenge on regexp to detect phone patterns.
 
-## `02-Anagrams`
+#### `02-Anagrams`
 This challenge makes a small use of Regexp to detect "non-word" characters but this is not a pure "regexp challenge". You will mainly learn about the notion of time-complexity and try to enhance a program detecting anagrams.
 
-## `03-Mail-spotter`
+#### `03-Mail-spotter`
 A simple challenge on email Regexp, very useful in web apps.
 
-## `04-Word-frequency`
+#### `04-Word-frequency`
 A challenge using Regexp to extract data from a text and compute the most frequent words in a given text (the Bible, Obama's inaugural address, etc..). You will have to filter stop-words like ("a", "the", "is"..) who will spoil your algorithm otherwise.
