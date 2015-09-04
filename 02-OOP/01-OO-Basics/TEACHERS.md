@@ -78,7 +78,7 @@ ferrari.start_engine
 ```
 
 
-Now we define methods **in the class**, not in the main program, and these methods ar then called **on an instance** of the class (that's why they're called instance methods)
+You have noticed that from now on, we define methods **in the class** (not in the main program) and then these methods are called **on instances** of the class. That is why they are called instance methods.
 
 ### Accessors
 
@@ -86,7 +86,7 @@ How do we print some car's color?
 
 ```ruby
 p my_car.color
-# Read the error message when the getter is not defined !!
+# Read the error message when the getter is not defined!
 ```
 
 Ok we need a getter
@@ -107,9 +107,7 @@ class Car
 end
 ```
 
-Ok that syntax is far more concise!
-
-Let's do the same for writers on color and brand
+This ruby syntax is far more convenient than righting all methods manually, right? Let's do the same adding writers on `@color` and `@brand`
 
 ```ruby
 class Car
@@ -117,7 +115,8 @@ class Car
 end
 ```
 
-Then finally we can just write
+Finally we can just re-write it:
+
 ```ruby
 class Car
   attr_reader :km, :engine_started
