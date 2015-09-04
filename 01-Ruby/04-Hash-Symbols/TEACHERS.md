@@ -24,6 +24,7 @@ array << "friday"
 
 puts array.first # or puts array[0]
 array[0] = "Friday!!!"
+puts array.first
 ```
 
 ## Hashes
@@ -36,7 +37,7 @@ students =      ["John", "Mathieu", "Jolien", "Wendy", "Anna"]
 students_ages = [22,      24,        22,       39,      36]
 ```
 
-There are two arrays: one with student names and the other with student ages. How do we print student names altogether with their ages ? What we could do is loop over the students with an `each_with_indexÌ, since the students array and the student_ages array have that in common! Let's do that:
+There are two arrays: one with student names and the other with student ages. How do we print student names altogether with their ages ? What we could do is loop over the students with an `each_with_index`, since the `students` array and the `student_ages` array have that in common! Let's do that:
 
 ```ruby
 students.each_with_index do |student, index|
@@ -45,6 +46,7 @@ students.each_with_index do |student, index|
 end
 ```
 Now this works, but there are some potential risks with this:
+
 - what if both of the arrays aren't in the same order?
 - what if you want to delete a student?
 - or add one?
