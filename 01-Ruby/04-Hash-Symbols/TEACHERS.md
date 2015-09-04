@@ -240,13 +240,55 @@ You'll see this a lot in Rails!
 
 ## Data Formats
 ### CSV
-CSV is a file format where the data is comma separated, you can see an example in cities.csv.
+CSV is a file format where the data is comma separated. It's easy to read it in ruby and get each line as a ruby array! Let's play with it. Here is a simple CSV file.
 
-If we want to access the data in a CSV file we can do that very easily. I prepared an example in csv.rb
+```
+# cities.csv
+Paris,2211000,"Tour Eiffel"
+London,8308000,"Big Ben"
+```
 
-You'll see that we'll loop over all the lines in cities.csv and then exectue a block. As you can see in the notation, every line is read as an array.
+And here's the parsing script. How simple!
+
+```ruby
+require "csv"
+CSV.foreach("cities.csv") do |row|
+  # row is an array. For first iteration:
+  # row[0] is "Paris"
+  # row[1] is 2211000, etc.
+end
+```
 
 ### JSON
-While with JSON files (JSON is a format that is often returned when you're using API's). There's a JSON file in cities.json
+While reading JSON files in ruby, you will often obtain a hash or an array of hashes. See this JSON file
 
-In compariso with the CSV, JSON is actually hash based.
+```
+# cities.json
+[
+  {
+    "name": "Paris",
+    "population": 2211000
+  },
+  {
+    "name": "London",
+    "population": 8308000
+  }
+]
+```
+
+Let's parse it in ruby, no big deal here.
+
+
+```ruby
+require "json"
+
+json_string = File.read("#{File.dirname(__FILE__)}/paris.json")
+cities = JSON.parse(json_string)
+# => [{ "name" => "Paris", "population" => 2211000 }, { "name" => "London", "population" => 8308000 }
+
+cities.each do |city|
+  puts "#{city['name']} has #{city['population']} inhabitants"
+end
+```
+
+**Disclaimer:** A JSON is neither a hash nor an array. It's a **structured text file** than can be easily parsed as ruby array or hashe. But it's still a text file, that you can read either in ruby, or in python, or in C++, or in whatever language you like. But it's cooler and simpler in ruby right? ;)
