@@ -1,4 +1,4 @@
-## Setup Monday
+## Setup (Monday)
 
 Let's set up your workstation
 
