@@ -8,7 +8,7 @@ Regular expressions are advanced structures. Don't work on the Regexp challenges
 - hash manipulation
 - strings and symbols
 
-If these concepts are not clear for you, **join the "ReBoot" group, who will work during 2 days on new challenges**. Here are the Reboot challenges for today
+If these concepts are not clear for you, **join the "ReBoot" group, who will work during 2 days on new challenges**.
 
 ### Reboot challenges
 
@@ -16,19 +16,18 @@ You should work on these challenges from scratch without code canvas or `rake`. 
 
 1. Build a simple calculator, first handling only additions, then all operations (mutliplications, substractions, divisions).
 1. Code a program simulating a horse race, where you have to enter horse names, you then run the race (which will shuffle the horses array) and then the terminal outputs the race results. You can make your program much funnier using `say` to simulate the anchorman. That is pretty cool :)
-1. Implement [a shopping cart](https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1), where ultimately you can
+1. Implement a shopping cart, where ultimately you can
   - Add items with prices and amount in your cart.
   - Then checkout and terminal prints you the total bill with VAT.
-  - Start simple without amount and available stock then improve your program
-  - Here is [one possible solution]((https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1) for the coach. Don't look at it at the beginning!
+  - Start with a simple program without handling amounts and available stock then improve it.
+  - Here is [one possible solution](https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1). Be smart, don't look at it at the beginning :)
 
 Above all:
 
-- Start with simple coding strategies
+- Start simple
 - Code the interface first
-- **Write pseudo-code** before going into the ruby syntax
-- Simplify the initial probem. **Code something that works before handling exception**.
-
+- **Write pseudo-code** before translating it into ruby
+- **Code something that works before handling exception**.
 
 ### Advanced challenges
 
