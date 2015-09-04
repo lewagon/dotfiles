@@ -131,6 +131,7 @@ end
 
 ### Recap Hash:
 Play around in `irb`:
+
 ```
 students = {}
 students.class
@@ -141,6 +142,7 @@ students["Wendy"] += 1
 ```
 
 Important to remember
+
 - Keys are unique
 - There is no order
 
