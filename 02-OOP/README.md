@@ -19,21 +19,23 @@ We don't define classes only because it's fun.. But also to structure our code a
 
 #### `04-Cookbook-Day-Two` (Monday)
 
-Let's rehearse the MVC pattern in a morning talk live-code (no slides, just a lead-coach demo), and then finish our cookbook MVC app started last Friday. For those of you who've finished early, try to adapt your cookbook manager as a web-app using the Sinatra gem. Form an advanced group and ask a teacher to give you basic introduction to Sinatra.
+Let's rehearse the MVC pattern in a morning live-code (no slides, just a demo of the lead-coach), and then let's finish our cookbook MVC app started last Friday. For those of you who've finished early, try to adapt your cookbook manager as a web-app using the Sinatra gem. Create an advanced group and ask a teacher to give you a short introduction to Sinatra.
 
 ### Software architecture with data modeling (2 days)
 
-Le cours du jour introduit des notions de gestion de plusieurs modèles dans une application.
+#### `03-Cookbook-Day-One` (Tuesday)
+The morning lecture explains how to deal with several data models in your app. The Food Delivery challenge is a very difficult challenge goign through 2 days.
 
-L'exercice du jour, Food Delivery, est un exercice difficile qui s'étale également sur deux jours.
-
-OOP Jour 6 (Mercredi Semaine 3)
-
-Pas de cours ce jour, les élèves continuent sur le Food Delivery de la veille.
-
-À 14h, le deuxième quiz est donné. Même principe que le premier pour la correction.
+#### `03-Cookbook-Day-One` (Wednesday)
+Let's start on a recap live-code to help you finish the Food Delivery app today. Then it's your turn. We'll give the final correction of the Food Delivery challenge at the end of the day.
 
 #### Quizz
+
+At 2pm, let's shut down our computers and make a paper quizz during 30 minutes to fix our ideas:
+
+- [Quizz in English](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/2-oop-english.pdf)
+- [Quizz in French](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/2-oop-french.pdf)
+
 
 
 
