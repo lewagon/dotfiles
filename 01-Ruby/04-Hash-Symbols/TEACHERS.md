@@ -29,7 +29,7 @@ puts array.first
 
 ## Hashes
 
-Now let's take a look this code
+Now let's take a look at this code
 
 ```ruby
 # index =>      0        1          2          3        4
