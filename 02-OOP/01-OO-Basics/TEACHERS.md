@@ -1,4 +1,6 @@
-Software are not one-file programs. They are made of different files and different classes communicating with each other. From day-one @Le Wagon, you've been manipulating classes without knowing it, `String`, 'Array', etc... They're the built-in classes. Now you'll see how to define your own classes !
+Software are not one-file programs. They are made of different files and different objects communicating with each other.
+
+From day-one @Le Wagon, you've been manipulating classes without knowing it, `String`, `Array`, etc... They're the built-in classes. Now you'll see how to define your own classes !
 
 
 In a class you'll find:
