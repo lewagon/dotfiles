@@ -49,7 +49,7 @@ def capacity
 end
 ```
 
-- As you can see this is really annoying, if we have to do this for our 4 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_ methods`. Let's refacto our class:
+- As you can see this is really annoying, if we have to do this for our 4 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_methods`. Let's refacto our class:
 
 ```ruby
 class Restaurant
@@ -175,6 +175,7 @@ end
 ```
 
 Now how can we make our classes inherit from this? The syntax is pretty simple:
+
 ```ruby
 class SuperClass
 end
@@ -318,11 +319,11 @@ fancy_place.print_clients
 As you see, `super` is making a call to the method with the same name in the Super-Class (other word for Parent Class).
 
 #### Disclaimer
-As with `yield`, not often will you have to define your own parent/child classes, but you need to understand how it works, cause you will often inherit your classes from already coded classes.
+As with `yield`, not often will you have to define your own parent/child classes, but you need to understand how it works, cause you will often inherit your classes from classes already coded by developers.
 
 ### Class Methods
 
-We've seen things like this:
+Last week, we've seen things like this:
 
 ```ruby
 require "nokogiri"
@@ -334,7 +335,7 @@ puts Nokogiri::HTML::Document.parse("<h1>Hello guys</h1>")
 JSON.parse('{ "key": "value", "other_key": "other_value" }')
 ```
 
-These are methods called on the class `Time`, `JSON`, etc.. not on instances of these classes. Methods like this, as you can guess, are called class methods and you can create them too if you want to.
+`now` and `parse` are methods called on the class `Time`, `JSON`, etc.. not on instances of these classes. Methods like this, as you can guess, are called **class methods** and you can create them too if you want to.
 
 ```ruby
 # Defining your own class methods
@@ -409,4 +410,4 @@ puts "He's been cooking for about #{frechont.years} years"
 
 ```
 
-As you see we need `self` in `Restaurant#initialize` in order to build a chief who is aware of the Restaurant he cooks for! Otherwisen it would be a terrible chief..
+As you see, here we need `self` in `Restaurant#initialize` in order to build a chief who is aware of the restaurant he cooks for! Otherwise it would be a terrible chief..
