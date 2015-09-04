@@ -1,177 +1,411 @@
-## Guidelines
+## Recap
 
-### Morning lecture
+So yesterday you've had your first introduction into Object Oriented Programming. These are big steps in your web development career. Before we continue on that path, let's do a recap to make sure you understand the concepts.
 
-Start by reviewing core notions (class, instance variables, instance methods, accessors). You can use this:
+Let's create a Restaurant class:
+
+As a first step I'm going to create the file, now the filename should match the class name: `restaurant.rb`. Now how do we define a class again:
 
 ```ruby
-class ChocolateBar
-  attr_reader :name, :calories
+class Restaurant
+end
+```
 
-  def initialize(name, calories)
+Let's create a method in our Restaurant class, more specificly the 'constructor': this is the method that is going to construct our objects. In Ruby this method is called `initialize`:
+
+```ruby
+def initialize(name, city, capacity, category)
+  @name = name
+  @city = city
+  @capacity = capacity
+  @category = category
+end
+```
+
+Now let's create a new instance of this class:
+
+```ruby
+yaki = Restaurant.new("yaki", "Brussels", 35, "thai")
+```
+
+What if you want to print out the name of yaki, how would you do that? You will have to create a getter for that or otherwise you can't access it:
+
+```ruby
+def name
+  return @name
+end
+```
+
+Now let's say that the capacity changed and you need to change this for your yaki object, then you need a setter. But you should also create a getter to check if we actually changed it
+
+```ruby
+def capacity=(capacity)
+  @capacity = capacity
+end
+
+def capacity
+  return @capacity
+end
+```
+
+As you can see this is really annoying, if we have to do this for our 4 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_ methods`. Let's refacto our class:
+
+```ruby
+class Restaurant
+  attr_reader :name
+  attr_accessor :capacity
+
+  def initialize(name, city, capacity, category)
     @name = name
-    @calories = calories
-    @size = 10
+    @city = city
+    @capacity = capacity
+    @category = category
+  end
+end
+
+yaki = Restaurant.new("yaki", "Brussels", 35, "thai")
+p yaki.name
+p yaki.capacity
+yaki.capacity = 40
+p yaki.capacity
+```
+
+One more thing: let's add cool behaviors on our Restaurant class and play with it.
+
+```ruby
+class Restaurant
+  attr_reader :name, :clients
+  attr_accessor :capacity
+
+  def initialize(name, city, capacity, category)
+    @name = name
+    @city = city
+    @capacity = capacity
+    @category = category
+
+    @clients = []
   end
 
-  def eat_chunks
-    if @size > 0
-      @size -= 1
-    else
-      raise Exception.new("No more chunks")
+  def add_reservation(name)
+    @clients << name
+  end
+
+  def closed?
+    !open?
+  end
+
+  def open?
+   Time.now.hour > 18 and Time.now.hour < 22
+  end
+end
+
+yaki = Restaurant.new("yaki", "Brussels", 35, "thai")
+p yaki.name
+p yaki.capacity
+yaki.capacity = 40
+p yaki.capacity
+
+yaki.add_reservation("lien")
+p yaki.clients
+p yaki.open?
+
+```
+
+## Lecture
+Now let's move on to the real content of the lecture. We'll see three important parts today:
+
+- Inheritance
+- Class methods
+- `self`
+
+### Inheritance
+#### Restaurants
+Let's stay in the food business but be more specific about restaurant kinds (because we're French ;))
+
+```ruby
+class Fastfood
+  attr_reader :name, :city, :preparation_time, :clients
+
+  def initialize(name, city, preparation_time)
+    @name = name
+    @city = city
+    @preparation_time = preparation_time
+    @clients = []
+  end
+
+  def add_reservation(name)
+    @clients << name
+  end
+end
+
+class StarRestaurant
+  attr_reader :name, :city, :stars, :clients
+
+  def initialize(name, city, stars)
+    @name = name
+    @city = city
+    @stars = stars
+    @clients = []
+  end
+
+  def add_reservation(name)
+    @clients << name
+  end
+end
+```
+
+
+Wow, lots of duplicated code here... Let's apply inheritance and put all common parts in the parent class:
+
+```ruby
+class Restaurant
+  attr_reader :name, :city, :clients
+
+  def initialize(name, city)
+    @name = name
+    @city = city
+    @clients = []
+  end
+
+  def add_reservation(name)
+    @clients << name
+  end
+end
+```
+
+Now how can we make our classes inherit from this? The syntax is pretty simple:
+```ruby
+class SuperClass
+end
+
+class SubClass < Superclass
+end
+```
+
+So for us:
+
+```ruby
+class Fastfood < Restaurant
+  attr_reader :preparation_time
+
+  def initialize(name, city, preparation_time)
+    @name = name
+    @city = city
+    @preparation_time = preparation_time
+    @clients = []
+  end
+end
+
+
+class StarRestaurant < Restaurant
+  attr_reader :stars
+
+  def initialize(name, city, stars)
+    @name = name
+    @city = city
+    @stars = stars
+    @clients = []
+  end
+end
+
+mcdonald = Fastfood.new("mcdo", "brussels", 5)
+puts "#{mcdonald.name} takes #{mcdonald.preparation_time} minutes"
+mcdonald.add_reservation("boris")
+```
+
+Let's add some behavior to our classes and play with it.
+
+```ruby
+class Restaurant
+  def print_clients
+    @clients.each_with_index do |client, index|
+      puts "#{index + 1} - #{client}"
     end
   end
 end
+
+class FastFood < Restaurant
+end
+
+class StarRestaurant < Restaurant
+  def print_clients
+    puts "you don't have access to star restaurant clients!"
+  end
+end
+
+mcdonald = Fastfood.new("mcdo", "berlin", 5)
+mcdonald.add_reservation("boris")
+mcdonald.add_reservation("seb")
+mcdonald.add_reservation("romain")
+mcdonald.print_clients
+
+fancy_place = StarRestaurant.new("fancy", "paris", 4)
+fancy_place.add_reservation("boris")
+fancy_place.add_reservation("seb")
+fancy_place.add_reservation("romain")
+fancy_place.print_clients
+
 ```
+Let's comment the outputs. As you see, if you apply an instance method on an object, ruby will first look in the object class if there is a corresponding method, if not it will look for this method in the parent class.
 
-Then when introducing the inheritance later in the lecture, you can add `Mars` and `Snickers` classes.
+#### `super` keyword
 
-#### class vs. instance
-
-- We've defined instance methods, **called on instances**
-- Do you remember `Time.now` or `JSON.parse`? `#now` and `#parse` are called on the class directly, i.e. on the "cake mold", not on the cakes
-
+Now, let's refacto our classes using `super` keyword:
 
 ```ruby
-class House
-  def self.price_per_meter(city)
-    if city == "Paris"
-      8000
-    else
-      2000
+class Restaurant
+  attr_reader :name, :city, :clients
+
+  def initialize(name, city)
+    @name = name
+    @city = city
+    @clients = []
+  end
+
+  def add_reservation(name)
+    @clients << name
+  end
+
+  def print_clients
+    @clients.each_with_index do |client, index|
+      puts "#{index + 1} - #{client}"
     end
   end
 end
 
-p House.price_per_meter("Paris")
-p House.price_per_meter("Dublin")
-```
+class Fastfood < Restaurant
+  attr_reader :preparation_time
 
-**Disclaimer**: you won't define a lots of class methods in your ruby life, but you will use them a lot.
-
-```ruby
-House.floor_area
-# read the error message with them to make them understand it's an instance method
-
-House.new.price_per_meter("Paris")
-# read the error message with them to make them understand it's an class method
-```
-
-How do we get the price of a house.
-
-```ruby
-def price
-  @sq_meters * price_per_meter(@city)
-end
-# oups it will not work => read the error with them
-
-def price
-  @sq_meters * House.price_per_meter(@city)
-end
-# yes indeed !
-```
-
-
-Class methods are useful. Imagine we have to instantiate a new object to have price/square_meter in Dublin, Paris, Lisboa.. How inconvenient!
-
-#### class vs. instance
-
-`self` references the context in which a method is called.. oups.. But what the hell does it mean? Make some puts-debugging with them
-
-```ruby
-class House
-  # ...
-
-  def price
-    p self
-    # ...
+  def initialize(name, city, preparation_time)
+    super(name, city)
+    @preparation_time = preparation_time
   end
 
-  def self.price_per_meter
-    p self
-    # ...
+  def print_clients
+    puts "----#{@name}----"
+    super
+    puts "----------------"
   end
 end
 
-loft = House.new("Loft Montmartre")
-loft.price
+class StarRestaurant < Restaurant
+  attr_reader :stars
 
-flat = House.new("Flat Dublin")
-flat.price
+  def initialize(name, city, stars)
+    super(name, city)
+    @stars = stars
+  end
 
-House.price_per_meter
+  def print_clients
+    puts "you don't have access to star restaurants clients!"
+  end
+end
+
+mcdonald = Fastfood.new("mcdo", "berlin", 5)
+mcdonald.add_reservation("boris")
+mcdonald.add_reservation("seb")
+mcdonald.add_reservation("romain")
+mcdonald.print_clients
+
+fancy_place = StarRestaurant.new("fancy", "paris", 4)
+fancy_place.add_reservation("boris")
+fancy_place.add_reservation("seb")
+fancy_place.add_reservation("romain")
+fancy_place.print_clients
 ```
 
-Explain the outputs for each method call. Explain that self points to the current object on which the method is called. The world `self` speaks to itself.
+As you see, `super` is making a call to the method with the same name in the Super-Class (other word for Parent Class).
 
+#### Disclaimer
+As with `yield`, not often will you have to define your own parent/child classes, but you need to understand how it works, cause you will often inherit your classes from already coded classes.
 
-#### Inheritance
+### Class Methods
 
-Consider houses, skyscrapers, castles.. What do they have in common? Which data? Which behavior?
-
-
-Live-code a naïve implementation duplicating the `floor_area` method in each class. Then explain the inheritance pattern to DRY the code.
-
-A good insight to give. There are **3 use cases**
-
-1. You completely over-ride the method in the child class
-1. You completely inherit the parent method without re-implementing it
-1; You want a mix, you want to extend the method. For that you need to explain `super`
-
-
-You can make them a quizz
-
+We've seen things like this:
 
 ```ruby
-class Building()
-  def who_am_i
-    puts "I am a building"
+require "nokogiri"
+require "json"
+
+# Playing with existing class methods
+puts Time.now # => 2014-07-15 23:19:43 +0200
+puts Nokogiri::HTML::Document.parse("<h1>Hello guys</h1>")
+JSON.parse('{ "key": "value", "other_key": "other_value" }')
+```
+
+These are methods called on the class `Time`, `JSON`, etc.. not on instances of these classes. Methods like this, as you can guess, are called class methods and you can create them too if you want to.
+
+```ruby
+# Defining your own class methods
+
+class Restaurant
+  attr_accessor :name, :city, :clients
+
+  def self.categories
+    return %w(bistrot japanese italian french)
+  end
+  def self.price_for(category)
+    case category
+    when "japanese"
+      price = 13
+    when "italian"
+      price = 20
+    end
+    return price
+  end
+
+  def initialize(name, city)
+    @name, @city = name, city
+    @clients = []
+  end
+
+  def print_clients
+    @clients.each_with_index do |client, index|
+      puts "Client ##{index + 1} => #{client}"
+    end
   end
 end
 
-class House < Building
-  def who_am_i
-    puts "Before all.."
-    super()
-    puts "But more specifically, I am a house"
+puts Restaurant.categories
+puts Restaurant.price_for("italian")
+```
+
+As you see, `self` represent the class itself in this context. But put inside an instance method, `self` represents the instance on which the method is called. Let's see it with a nice example to understand.
+
+### Self keyword
+
+```ruby
+class Chief
+  attr_accessor :name, :years, :restaurant
+  def initialize(name, years, restaurant)
+    @name, @years = name, years
+    @restaurant = restaurant
   end
 end
 
-House.new().who_am_i
+class Restaurant
+  attr_accessor :name, :city, :clients, :chief
+
+  def initialize(name, city, chief_name, chief_years)
+    @name, @city = name, city
+    @clients = []
+    @chief = Chief.new(chief_name, chief_years, self)
+  end
+
+  def print_clients()
+    @clients.each_with_index do |client, index|
+      puts "Client ##{index + 1} => #{client}"
+    end
+  end
+end
+
+bristol = Restaurant.new("Le Bristol", "Paris", "Frechont", 20)
+
+frechont = bristol.chief
+
+puts "#{frechont.restaurant.name}'s chief is #{frechont.name}"
+puts "He's been cooking for about #{frechont.years} years"
+
 ```
 
-Explain that world speak for themselves. `super` stands for "super-class" method.
-
-
-### Day challenges
-
-Before starting the challenges
-
-- Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
-
-```
-$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
-$ git status #everything should be ok!
-$ git pull --no-edit upstream master
-```
-
-- Ensure they're connected on the class Slack
-
-- Make a brief overview of the roadmap of the day with them, explaining the general idea behind each challenge.
-
-### Live-code
-
-#### General guidelines
-
-- The live-code should be made **from scratch**. No specs, no boilerplate. The student has to `mkdir` a new folder, `touch` its ruby file, and start coding in it. Help him on the setup. Make him code **a solution that works** in one ruby file before refactoring the code (separating the logic from the interface in 2 files, DRYing the repetitive code chunks, etc..)
-
-- Announce, **before the live-code**, which challenges they are going to live-code and who are the coders of the day. It will make them stay tensed and focused! Tell them they have to speak loud and explain their approach while they are live-coding. That's the best exercise to improve their skills!
-
-- At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
-
-
-#### Live-code details
-
-- Either you live-code the bank account challenge in `01-OO-Basics`
-- Or you let them play with their ruby gosu games (for the most advanced) and spend more time with people having difficulties from 5h30 pm to 9pm.
-
+As you see we need `self` in `Restaurant#initialize` in order to build a chief who is aware of the Restaurant he cooks for! Otherwisen it would be a terrible chief..

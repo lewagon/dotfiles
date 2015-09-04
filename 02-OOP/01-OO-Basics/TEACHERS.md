@@ -1,52 +1,45 @@
-## Guidelines
-
-### Morning lecture
-
-#### Introduction
-
 Software are not one-file programs. They are made of different files and different classes communicating with each other. From day-one @Le Wagon, you've been manipulating classes without knowing it, `String`, 'Array', etc... They're the built-in classes. Now you'll see how to define your own classes !
 
 
-Explain to the students that a class includes:
+In a class you'll find:
 
-1. **data / state** => through instance variables
-2. **behavior**  => through instance methods.
+1. **data / state** => instance variables
+2. **behavior**  => instance methods.
 
-**Example**: a string is made of data (= the chain of characters itself) + behavior (= all the methods that can be called like `downcase`, `split`, etc.).
+**Example**: a string is made of data (the chain of characters itself) + behavior (all the methods that can be called like `downcase`, `split`, etc.).
 
-**Spend time on the "cake pan" metaphora to explain the difference between the class and the instances**. "The cake pan is the class, the cakes created with the cake pan are the instances", repeat it again and again, as much as needed.
+The class is like a cake pan. The cakes created with the cake pan are the instances of the class. That's a good way to see class and instances.
 
-#### My first class
+## A Car class
 
-Here the best option is to live-code all the concepts directly and discuss them with the class. Spend some time on the filename convention:
-
-- `Car` => `car.rb`
-- `SportCar` => `sport_car.rb`
-
-Make the live-code interactive. Ask them:
-
-- What are the characteristics of a car? How do you describe its state?
-- What are the characteristics of a car "at inception", at **t=0**, when we create it? The brand? The color? The number of kilometers? live-code the corresponding constructor `#initialize` with relevant arguments.
-
+Let's code a `Car` class.
 
 ```ruby
-# example
-def initialize(color)
-  p "initialize called with #{color}"
-  @color = color
-  @engine_started = false
+class Car
 end
 ```
 
-#### Instance variables
+- What are the characteristics of a car? How do you describe it?
+- What are the characteristics of a car "at inception", at **t=0**, when we first create it? The brand? The color? The number of kilometers?
+
+
+```ruby
+class Car
+  def initialize(color, brand)
+    @color = color
+    @brand = brand
+    @engine_started = false
+  end
+end
+```
+
+### Instance variables
 
 What are these strange notations: `@engine_started`, `@color`, `@brand`? These are instance variables, variables that represent the internal state of **each instance** and that are accessible in every instance method of the class.
 
 #### Instance methods
 
-Let's add some behavior to start our car => instance methods
-
-Go to the white-board and make the drawings below to make them understand instance variable (we make our drawings in ruby since we are geeks :)).
+Let's add some behavior to start our car.
 
 ```ruby
 class Car
@@ -83,52 +76,49 @@ ferrari.start_engine
 ```
 
 
-Explain that it differs from what they've done from the beginning. Now they define methods **in the class**, not in the main program, and they call these methods **on the instances**
+Now we define methods **in the class**, not in the main program, and these methods ar then called **on an instance** of the class (that's why they're called instance methods)
 
 ### Accessors
 
-Can they think of the most elementary instance methods? How do we print some car's color? its number of kilometers?
+How do we print some car's color?
 
 ```ruby
-# example
-p my_car.kms
-
-# Make them read the error message when the getter is not defined !!
-```
-Then code some setter `color=(color)`. **Disclaimer**: explain that the good practice is to code our own writers like `paint(new_color)`, but that they still should understand the notation `attr_writer` if they see it.
-
-**Good pedagogical tips on accessors:**
-
-- imagine you have 5 instance methods you want to access in read mode => it makes 3 x 5 = 15 lines of code just to add this poor behavior to you class. What a pollution! That will make them understand `attr_reader`.
-
-- Do we need accessors on all instance variables? Nope! think of your car. You wan't to start the engine by turning the key, not by getting your hands in the engine and connecting some cables like a thief. In the same way `@engine_started` should not be exposed directly but it should be manipulated through the class interface `start_engine` or `turn_key_on`. This is called encapsulation (http://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming).
-
-### Day challenges
-
-Before starting the challenges
-
-- Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
-
-```
-$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
-$ git status #everything should be ok!
-$ git pull --no-edit upstream master
+p my_car.color
+# Read the error message when the getter is not defined !!
 ```
 
-- Ensure they're connected on the class Slack
+Ok we need a getter
 
-- Make a brief overview of the roadmap of the day with them, explaining the general idea behind each challenge.
+```ruby
+class Car
+  def color
+    @color
+  end
+end
+```
 
-### Live-code
+What if we have 10 instance variables (`@color`, `@brand`, `@km`, `@engine_started`, etc..)
 
-#### General guidelines
-- The live-code should be made **from scratch**. No specs, no boilerplate. The student has to `mkdir` a new folder, `touch` its ruby file, and start coding in it. Help him on the setup. Make him code **a solution that works** in one ruby file before refactoring the code (separating the logic from the interface in 2 files, DRYing the repetitive code chunks, etc..)
+```ruby
+class Car
+  attr_reader :color, :brand, :km, :engine_started
+end
+```
 
-- Announce, **before the live-code**, which challenges they are going to live-code and who are the coders of the day. It will make them stay tensed and focused! Tell them they have to speak loud and explain their approach while they are live-coding. That's the best exercise to improve their skills!
+Ok that syntax is far more concise!
 
-- At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
+Let's do the same for writers on color and brand
 
+```ruby
+class Car
+  attr_writer :color, :brand
+end
+```
 
-#### Live-code details
-- For this live code, it can be fun to improvise on a class proposed by one of the student. Be sure it's fun first ! Then ask them to progressively add cool data and behavior to their class. It can be a `Restaurant` with reviews, a `Girlfriend` that can be dated ;) anything that makes them enthusiastic!
-
+Then finally we can just write
+```ruby
+class Car
+  attr_reader :km, :engine_started
+  attr_accessor :color, :brand
+end
+```
