@@ -37,7 +37,9 @@ students =      ["John", "Mathieu", "Jolien", "Wendy", "Anna"]
 students_ages = [22,      24,        22,       39,      36]
 ```
 
-There are two arrays: one with student names and the other with student ages. How do we print student names altogether with their ages ? What we could do is loop over the students with an `each_with_index`, since the `students` array and the `student_ages` array have that in common! Let's do that:
+There are two arrays: one with student names and the other with student ages. How do we print student names altogether with their age?
+
+What we could do is loop over the students with an `each_with_index`, since the `students` array and the `student_ages` array have that in common! Let's do that:
 
 ```ruby
 students.each_with_index do |student, index|
@@ -52,7 +54,7 @@ Now this works, but there are some potential risks with this:
 - or add one?
 - ...
 
-It's clear that this is not good.. and we need something else! It would be nice if we could do something like this: `student_ages["Peter"]`. This is where hashes come in play, let's rewrite our two arrays using one hash:
+It's clear that this is not good.. and we need something else! It would be nice if we could do something like this: `student["Peter"]` and get Peter's age. This is where hashes come in play, let's rewrite our two arrays using one hash:
 
 ```ruby
 students = {
@@ -172,6 +174,7 @@ london = {
 Now we have two hashes in two variables. But imagine you would have 1000 cities, the identifiers `"name"` and `"population"` will be 1000 times saved in our system. In ruby when working with hashes when you're using internal identifiers you should use symbols instead!
 
 Let's rewrite both our hashes to use symbols:
+
 ```ruby
 paris = {
   :name => "Paris",
@@ -182,8 +185,8 @@ london = {
   :name => "London",
   :population => 8308000
 }
-
 ```
+
 The good thing about using symbols is that it is unique and in our memory it will only exist ones, if you have 2 hashes or 1000, it doesn't matter.
 
 Now actually, if you've done codeacademy, you'll have seen a different way of writing these symbols. That is actually the new ruby syntax. But it's important you know both ways, cause in examples online or older projects, you'll see them too. Let's take a look at how to write this in the new syntax:
