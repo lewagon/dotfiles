@@ -4,14 +4,15 @@ So yesterday you've had your first introduction into Object Oriented Programming
 
 Let's create a Restaurant class:
 
-As a first step I'm going to create the file, now the filename should match the class name: `restaurant.rb`. Now how do we define a class again:
+- As a first step we need to create the file, and filename should match class name: `restaurant.rb`:
 
 ```ruby
+# restaurant.rb
 class Restaurant
 end
 ```
 
-Let's create a method in our Restaurant class, more specificly the 'constructor': this is the method that is going to construct our objects. In Ruby this method is called `initialize`:
+- Let's define the "constructor", the method that is going to construct our objects. In ruby this method is called `initialize`:
 
 ```ruby
 def initialize(name, city, capacity, category)
@@ -22,13 +23,13 @@ def initialize(name, city, capacity, category)
 end
 ```
 
-Now let's create a new instance of this class:
+- Now let's create a new instance of this class:
 
 ```ruby
 yaki = Restaurant.new("yaki", "Brussels", 35, "thai")
 ```
 
-What if you want to print out the name of yaki, how would you do that? You will have to create a getter for that or otherwise you can't access it:
+- What if you want to print out the name of yaki, how would you do that? You will have to create a getter for that or otherwise you can't access it:
 
 ```ruby
 def name
@@ -36,7 +37,7 @@ def name
 end
 ```
 
-Now let's say that the capacity changed and you need to change this for your yaki object, then you need a setter. But you should also create a getter to check if we actually changed it
+- Now let's say that the capacity changed and you need to change this for your yaki object, then you need a setter. But you should also create a getter to check if we actually changed it
 
 ```ruby
 def capacity=(capacity)
@@ -48,7 +49,7 @@ def capacity
 end
 ```
 
-As you can see this is really annoying, if we have to do this for our 4 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_ methods`. Let's refacto our class:
+- As you can see this is really annoying, if we have to do this for our 4 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_ methods`. Let's refacto our class:
 
 ```ruby
 class Restaurant
@@ -70,7 +71,7 @@ yaki.capacity = 40
 p yaki.capacity
 ```
 
-One more thing: let's add cool behaviors on our Restaurant class and play with it.
+- One more thing: let's add cool instance methods on our Restaurant class to handle reservations and opening hours.
 
 ```ruby
 class Restaurant
@@ -112,7 +113,7 @@ p yaki.open?
 ```
 
 ## Lecture
-Now let's move on to the real content of the lecture. We'll see three important parts today:
+Now time to move on to the real content of the lecture. We'll see three important parts today:
 
 - Inheritance
 - Class methods
