@@ -37,23 +37,23 @@ Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), u
 
 Don't be shy! Be proud :)
 
-### `06-Airbnb-Day-1`
+### `06-Airbnb-Devise`
 
 2-parts morning lecture:
 
 - Authentication with [Devise](https://github.com/plataformatec/devise) gem.
 - We will then brief you about collaboration techniques with git & Github. You will discover how we work in a dev team using branches and pull requests. You will have to use this workflow within your Airbnb teams. You'll have 5 days to go as far as you can on your Airbnb clone.dans leur clone d'AirBnB.
 
-### `06-Airbnb-Day-2`
+### `06-Airbnb-Facebook-connect`
 In the continuity of Devise course, we will teach you how to customize Devise to build a Facebook connect, you will use [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
 
-### `06-Airbnb-Day-3`
+### `06-Airbnb-SMTP`
 Morning lecture is about sending mail with the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc..). At 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
-### `06-Airbnb-Day-4`
+### `06-Airbnb-Geo`
 Morning talk is about geocoding (with the `geocoder` gem) and Google API to add autocomplete on address form inputs.
 
-### `06-Airbnb-Day-5`
+### `06-Airbnb-ActiveAdmin`
 Morning talk about building an "admin space" using ActiveAdmin gem. Final demos are at 5pm.
 
 You've worked well! Relax during this weekend and take time to think about your projects to save time on Monday's kickoff
