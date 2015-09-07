@@ -2,7 +2,7 @@ The DB & ActiveRecord module has 4 days.
 
 ## `01-DB-Design-and-SQL` (Thursday)
 
-Let's learn about relational database, discover the different relationships between tables (`1..N`, `N..N`) and how to **draw** a database scheme. Then, we'll speak of SQL, this language to make queries to our database structured with keywords (`SELECT`, `FROM`, `WHERE`, `JOIN` etc..). We will start with simple "read queries" (`SELECT`) during this first day.
+Let's learn about relational database, discover the different relationships between tables (`1:n`, `n:n`) and how to **draw** a database scheme. Then, we'll speak of SQL, this language to make queries to our database structured with keywords (`SELECT`, `FROM`, `WHERE`, `JOIN` etc..). We will start with simple "read queries" (`SELECT`) during this first day.
 
 ## `02-SQL-CRUD` (Friday)
 Second day of SQL. You'll discover the concept of CRUD, and you will learn to write in the DB using new SQL keywords (`INSERT`, `UPDATE`, `DELETE`).

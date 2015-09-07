@@ -40,14 +40,15 @@ Don't be shy! Be proud :)
 ### `06-Airbnb-Day-1`
 
 2-parts morning lecture:
-- authentication with Devise gem.
-- we will then brief you about collaboration techniques with git & Github. You will discover how we work in a dev team using branches and pull requests. You will have to use this workflow within your Airbnb teams. You'll have 5 days to go as far as you can on your Airbnb clone.dans leur clone d'AirBnB.
+
+- Authentication with [Devise](https://github.com/plataformatec/devise) gem.
+- We will then brief you about collaboration techniques with git & Github. You will discover how we work in a dev team using branches and pull requests. You will have to use this workflow within your Airbnb teams. You'll have 5 days to go as far as you can on your Airbnb clone.dans leur clone d'AirBnB.
 
 ### `06-Airbnb-Day-2`
-In the continuity of Devise course of yesterday, we will teach you how to customize Devise to build a Facebook connect.
+In the continuity of Devise course, we will teach you how to customize Devise to build a Facebook connect, you will use [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
 
 ### `06-Airbnb-Day-3`
-Morning lecture is about sending mail with the *SMTP* protocol. We will use the *Mandrill* SaaS to make our Rails app send automatic emails (order confirmation, signup confirmation, booking approval, etc..). At 5pm, every group should demo the current version of their Airbnb in front of the class.
+Morning lecture is about sending mail with the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc..). At 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
 ### `06-Airbnb-Day-4`
 Morning talk is about geocoding (with the `geocoder` gem) and Google API to add autocomplete on address form inputs.
