@@ -32,10 +32,10 @@ Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), u
 
 **AirBnB**! For the second week, we'll work as teams of 2 to 4. The goal is to start from scratch and build a MVP of AirBnB.
 
-- First demo on Wednesday 5pm
-- Official demo on Friday 5pm
+- First demo on Wednesday (5pm)
+- Official demo on Friday (5pm)
 
-Don't be shy! Be proud :)
+**No live-code at 5pm for this week.** But you still have morning lecture at 9am on cool topics. So get up early! Here is the lectures' planning.
 
 ### `06-Airbnb-Devise`
 
