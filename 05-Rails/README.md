@@ -26,9 +26,7 @@ Morning talk is about deployment on [Heroku](http://heroku.com/). Then, you'll s
 Tomorrow, we'll speak of image hosting on Amazon S3, and you will add an image upload feature to your cocktails app using Paperclip.
 
 ### `05-Mister-cocktail-final` (Friday)
-Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem.
-
-**Listen carefully if you don't want to loose money because you have a security leak on Github.**
+Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want to loose money because you have a security leak on Github.**
 
 ## Second week - Airbnb
 
