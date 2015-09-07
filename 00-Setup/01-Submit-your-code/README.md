@@ -11,6 +11,64 @@ Before starting a new challenge, **make sure that you explain to each other what
 
 Working in pairs is a common practice of Software Engineering. The idea is that if you work alone and you get stuck, you can loose several hours digging in the issue, whereas a fresh pair of eyes would find the problem within seconds. Don't underestimate that!
 
+## Practicing command lines (Terminal)
+
+Before going further in fullstack-challenges directory, we'll first work on the command lines you've just learned.
+
+The goal of this exercise is to make you heavily use your Terminal and its basic command lines.
+You'll have to list all the commands you typed inside a file (see section `README file`).
+
+NOTE: **You're not allowed to use you file browser!!!**
+
+### Instructions
+
+#### tmp directory
+
+First step, we'll create all our files in a directory named `tmp`.
+
+* Create a directory `tmp` in your home directory (~)
+* Go to the `tmp` directory
+
+#### README file
+
+* Inside `tmp` directory, create a file named `README`
+
+Remember, you have to write down the command lines you're typing.
+
+* Open Sublime Text.
+
+#### Level-1 directory
+
+* Create a `level-1` directory
+* Go to this directory and create a file named `README-level1`
+* Display the path where you are
+
+#### Level-2 directory
+
+* Go back to the parent directory
+* From `tmp` directory, create a directory named `level-2` inside the directory `level-1`
+* Still from 'tmp' directory, create a file named `configuration` inside the directory `level-2` (which is inside `level-1`)
+
+#### Playing with files
+
+Woops! Looks like we forgot (or not!) to present you the `mv` command that you'll use to move/rename folders and files.
+It's time to act like a real developer! Use google to find out how to complete the following instructions.
+
+* Move this configuration file from 'level-2' directory to `level-1` directory
+* Go to `level-1` directory
+* Rename `configuration` file into `config`
+* List all files
+* Remove `level-2` folder
+* Remove `config` file
+
+#### Final words
+
+* Go back to your home directory
+* Clean your terminal window
+* Display content of `README` file that is inside `tmp` folder (you should see all the command lines you should have saved!)
+
+That's all folks! Call a teacher that will review your README file.
+
 ## Specs
 
 ### First exercise
