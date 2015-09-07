@@ -2,13 +2,13 @@ At last, Rails!
 
 ## First week - Rails 101
 
-This is the last "real week" on Kitt with day-by-day challenges. From next week, you'll start working on longer projects, either an Airbnb clone or your own personal project. For now, we will dive into the architecture of a fresh Rails app and try to understand what's going on. **We'll build one rails app per day**.
+This is the last "real week" on Kitt with day-by-day challenges. From next week, you'll start working on longer projects, either an Airbnb clone or your own personal project. For now, we will dive into the architecture of a fresh Rails app and try to understand what's going on. **We'll build one Rails app per day**.
 
 ### `01-Rails-intro` (Monday)
-First day of Rails, introducing Rails flow: `routing > controller > view` without adding the model layer and explaining `params`. During the challenges after morning talk, you'll have to transform ruby challenges of 1st week into Rails apps.
+First day of Rails, introducing Rails flow: `routing > controller > view` without adding the model layer and explaining `params`. During this day, you'll have to transform old ruby challenges of 1st week into Rails apps.
 
 ### `02-Rails-CRUD` (Tuesday)
-Here comes our good old friend Active Record again! One of the most important Rails lectures: your lead-coach will code from scratch the 7 CRUD actions and introduce the `resources` routing.
+Here comes our good old friend Active Record again! One of the most important Rails lectures. Your lead-coach will code from scratch all of the 7 CRUD actions and introduce the `resources` routing. Pay attention!
 
 ### `03-Rails-restaurant-reviews` (Wednesday)
 During this day, you will add a second model to a Rails app by building a 2-model clone of Yelp, with restaurants and reviews. 2 lectures in the morning:
