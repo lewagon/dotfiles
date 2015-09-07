@@ -1,8 +1,8 @@
 At last, Rails!
 
-## First week - Rails kickoff
+## First week - Rails 101
 
-This is the last real week on Kitt with "real challenges". We will dive into the architecture of a fresh Rails app and try to understand what's going on. **We'll build one rails app per day**.
+This is the last "real week" on Kitt with day-by-day challenges. From next week, you'll start working on longer projects, either an Airbnb clone or your own personal project. For now, we will dive into the architecture of a fresh Rails app and try to understand what's going on. **We'll build one rails app per day**.
 
 ### `01-Rails-intro` (Monday)
 1st day of Rails, introducing Rails flow: routing > controller > view without the model layer and explaining Rails `params`. During the challenges, you'll have to transform vanilla ruby challenges of the first week into Rails application.
