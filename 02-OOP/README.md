@@ -16,15 +16,15 @@ We don't define classes only because it's fun.. But also to structure our code a
 
 ### `04-Cookbook-Day-Two` (Monday)
 
-Let's rehearse the MVC pattern during a morning live-code (no slides, just a demo of the lead-coach), and then finish our cookbook app started last Friday. For those of you who've finished early, try to adapt your cookbook manager into a web-app using the Sinatra gem. Ask a teacher to give you a short introduction to Sinatra, so that you have some insights on how to do that.
+Let's rehearse the MVC pattern during a recap live-code (no slides, just a demo of the lead-coach), and then finish our cookbook app started last Friday. For those of you who've finished early, try to adapt your cookbook manager into a web-app using the Sinatra gem. Ask a teacher to give you a short introduction to Sinatra, so that you have some insights on how to do that.
 
 ## Dealing with data models (2 days)
 
 ### `03-Cookbook-Day-One` (Tuesday)
-The morning lecture explains how to deal with several data models in your app. The Food Delivery challenge is a very difficult challenge goign through 2 days.
+The morning lecture explains how to deal with several data models in your app. The Food Delivery challenge is a very difficult challenge going through 2 days.
 
 ### `03-Cookbook-Day-One` (Wednesday)
-Let's start on a recap live-code to help you finish the Food Delivery app today. Then it's your turn. We'll give you the final correction of the Food Delivery challenge at the end of the day.
+Let's start on a recap live-code to help you finish the Food Delivery app today. Then it's your turn. We'll give you the final correction of the Food Delivery challenge at the end of the day at 5pm.
 
 ### Quizz
 
