@@ -11,24 +11,24 @@ First day of Rails, introducing Rails flow: `routing > controller > view` withou
 Here comes our good old friend Active Record again! One of the most important Rails lectures. Your lead-coach will code from scratch all of the 7 CRUD actions and introduce the `resources` routing. Pay attention!
 
 ### `03-Rails-restaurant-reviews` (Wednesday)
-During this day, you will add a second model to a Rails app by building a 2-model clone of Yelp, with restaurants and reviews. 2 lectures in the morning:
+During this day, you will add a second model to a Rails app by building a 2-model clone of Yelp, with restaurants and reviews. Morning lecture is split between two independent parts:
 
-1. Beyond CRUD: discover advanced routing and validations in Rails
-1. Rails frontend: respect our frontend setup to implement Bootstrap SASS + frontend libraries the good way and replace `form_for` by `simple_form_for`
+1. **Beyond CRUD**: discover advanced routing and validations in Rails
+1. **Rails frontend***: respect our setup to implement Bootstrap SASS + frontend libraries the good way, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
 
 ### `04-Rails-mister-cocktail` (Thursday)
-Morning talk is about deployment on Heroku. Then, you'll start working during 2 days on a cocktails app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
+Morning talk is about deployment on [Heroku](http://heroku.com/). Then, you'll start working during 2 days on a cocktails app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
 
 - Create your app with good Postgres config.
-- Follow the frontend setup from the beginning to work on a nice-looking app.
-- Deploy on Heroku ASAP, and try applying continuous deployment.
+- Follow the frontend setup carefully to work on a nice-looking app.
+- Deploy on Heroku from start, and try applying continuous deployment.
 
-Tomorrow, we'll speak of image upload on Amazon S3, and you will add image upload to your cocktails app.
+Tomorrow, we'll speak of image hosting on Amazon S3, and you will add an image upload feature to your cocktails app using Paperclip.
 
 ### `05-Mister-cocktail-final` (Friday)
 Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem.
 
-**Listen carefully if you don't want to loose money because you have pushed your tokens on Github!**
+**Listen carefully if you don't want to loose money because you have a security leak on Github.**
 
 ## Second week - Airbnb
 
