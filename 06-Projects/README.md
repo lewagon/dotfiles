@@ -3,11 +3,9 @@
 We are now entering the two last weeks of the program. It's your turn to shine. Time flies, so make sure you release often in production and have a nice front-end
 as soon as possible! Good luck, here are your milestones:
 
-- First week
-  - Friday (5:30pm): first demo to get feedbacks and organize second week roadmap.
-- Second week
-  - Thursday (7pm): rehearsal for final demo.
-  - Friday (5:30pm): the big day. Every one is here! Press, VCs, your family! Kick it!
+- First week, Friday 5pm: first demo to get feedbacks and organize second week roadmap.
+- Second week Thursday (7pm): rehearsal for final demo.
+- Second week Friday (6pm): the big day. Every one is here! Press, VCs, your family! Kick it!
 
 **Le Wagon Rails Templates**: to save time on all boring configurations of last week, you can use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates). It'll get you up and running faster.
 
