@@ -42,7 +42,7 @@ describe "User" do
     end
     user = User.new(username: "bob", email: "   bob@leponge.me   ")
     expect(user.valid?).to eq(true)
-    expect(user.email).to eq("bob@leponge.me"), message: "You should have a `before_validation` callback to strip whitespaces"
+    expect(user.email).to eq("bob@leponge.me"), "You should have a `before_validation` callback to strip whitespaces"
   end
 
 end
