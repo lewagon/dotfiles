@@ -42,7 +42,7 @@ Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), u
 2-parts morning lecture:
 
 - Authentication with [Devise](https://github.com/plataformatec/devise) gem.
-- We will then brief you about collaboration techniques with git & Github. You will discover how we work in a dev team using branches and pull requests. You will have to use this workflow within your Airbnb teams. You'll have 5 days to go as far as you can on your Airbnb clone.dans leur clone d'AirBnB.
+- Collaboration techniques with git & Github. You will discover how we work in a dev team using branches and pull requests. You will have to use this workflow within your Airbnb teams. You'll have 5 days to go as far as you can on your Airbnb clone.
 
 ### `06-Airbnb-Facebook-connect`
 In the continuity of Devise course, we will teach you how to customize Devise to build a Facebook connect, you will use [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
@@ -54,15 +54,15 @@ Morning lecture is about sending mail with the *SMTP* protocol. We will use the 
 Morning talk is about geocoding (with the `geocoder` gem) and Google API to add autocomplete on address form inputs.
 
 ### `06-Airbnb-ActiveAdmin`
-Morning talk about building an "admin space" using ActiveAdmin gem. Final demos are at 5pm.
+Morning talk about building an "admin space" using [ActiveAdmin](https://github.com/activeadmin/activeadmin) gem. Final demos are at 5pm.
 
-You've worked well! Relax during this weekend and take time to think about your projects to save time on Monday's kickoff
+### Projects prep (weekend)
 
-- Write your user stories.
-- Start drawing mockup of your main views.
-- Start drawing your DB scheme.
-- Start thinking about your routing.
+You've worked well and we are really proud of you! Time to work on your projects. During this weekend, take 3 hours to think about your projects:
 
-That will help you save time on Monday.
+1. Write your user stories (< 15 user stories).
+1. Draw mockups of your main views on a paperbook.
+1. Start building your DB scheme on [db.lewagon.org](http://db.lewagon.org).
+1. Start thinking about your routes.
 
-
+Thanks to this work, you will save a lot of time on Monday to start on your projects.
