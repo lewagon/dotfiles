@@ -22,7 +22,7 @@ We will introduce advanced concepts such as templates, layout, and SASS. For tha
 Middleman may be a bit hard for you at this point as you discover frontend. But trust us, you will be very happy to know it when we come to Rails! Because Rails frontend will work exactly the same way. **Be brave and rehearse your frontend challenges this weekend if you haven't digest all the courses since Wednesday.**
 
 ## `04-Javascript-and-jQuery` (Monday)
-Morning talk is an introduction to Javascript and jQuery. Let's see what's in common between js and ruby, and what's different. Then, we will introduce jQuery,an awesome JS library to play with the DOM, define events and callbacks.
+Morning talk is an introduction to Javascript and jQuery. Let's see what's in common between js and ruby, and what's different. Then, we will introduce jQuery – an awesome JavaScript library – to play with the DOM, define events and callbacks.
 
 ## `05-Animation-tricks` (Tuesday)
 Learn how to include a jQuery plugin **the correct way** in your project, either using a gem or using [Rails-assets](https://rails-assets.org/), and then adding the correct links in your `application.js` and `application.scss` files.
