@@ -1,1 +1,5 @@
 help: true
+lectures:
+  - rails/search
+lecture:
+  video: 138609059
