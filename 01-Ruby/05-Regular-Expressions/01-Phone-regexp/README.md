@@ -9,7 +9,7 @@ Write a method `french_phone_number?` that takes a string as parameter and retur
 `true` when the phone number is a valid French phone number:
 
 - It is valid when starting with a `0` and containing 10 digits
-- It is also valid when starging with `+33` and containing 11 digits
+- It is also valid when starting with `+33` and containing 11 digits
 
 The method should ignore space or dashes between digits.
 
