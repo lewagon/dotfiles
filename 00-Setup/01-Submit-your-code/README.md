@@ -11,7 +11,26 @@ Before starting a new challenge, **make sure that you explain to each other what
 
 Working in pairs is a common practice of Software Engineering. The idea is that if you work alone and you get stuck, you can loose several hours digging in the issue, whereas a fresh pair of eyes would find the problem within seconds. Don't underestimate that!
 
-## Exercise 1: Practicing command lines (Terminal)
+## Exercise 1: Let's `rake`.
+
+When correct, this exercise will give you 1 green test over 3. The next 2 tests will be green when you're done with exercise 2.
+
+Move to the exercise folder with the command at the top of this page.
+
+* Run `rake`. It should be all red (as you have not started coding).
+
+Open the `lib/wagon_start.rb` file in Sublime Text. That's where you'll need to edit the code.
+
+* Make the `wagon_start` method return `"That's how it starts"`
+* In the terminal, run `rake` and make sure if you're 100% green + have a good style.
+* Commit your changes, and push them.
+* Go back to Kitt, and refresh the page. You should see your solution on the right.
+
+## Exercise 2: Once more, with feelings
+
+Open the `lib/buddy.rb`. Make sure that the method `today_my_buddys_github_nickname_is` does **return** (which is different than **puts**!) the github username of your buddy. It should return a `String`! If you don't have any buddy, just return your own github username.
+
+## Exercise 3: Practicing command lines (Terminal)
 
 Before going further in fullstack-challenges directory, we'll first work on the command lines you've just learned.
 
@@ -21,8 +40,9 @@ NOTE: **You're not allowed to use Finder (or your file browser)!**
 
 First step, we'll create all our files in a directory named `tmp`.
 
-* Create a directory `tmp` in your home directory (`~`)
-* Go to the `tmp` directory
+* Go to your home directory (`~`)
+* Create a directory `tmp` in this home directory
+* Go to the `tmp` directory.
 
 ### README file
 
@@ -32,7 +52,7 @@ First step, we'll create all our files in a directory named `tmp`.
 
 ### Level-1 directory
 
-* Create a `level-1` directory
+* Create a `level-1` directory in the `tmp` directory.
 * Go to this directory and create a file named `README-level1`
 * Display the path where you are
 
@@ -59,23 +79,6 @@ It's time to act like a real developer! Use google to find out how to complete t
 * Go back to your home (`~`) directory
 * Destroy the tmp folder
 * Clear the terminal window
-
-## Exercise 2: Let's `rake`.
-
-Move to the exercise folder with the command at the top of this page.
-
-* Run `rake`. It should be all red (as you have not started coding).
-
-Open the `lib/wagon_start.rb` file in Sublime Text. That's where you'll need to edit the code.
-
-* Make the `wagon_start` method return `"That's how it starts"`
-* In the terminal, run `rake` and make sure if you're 100% green + have a good style.
-* Commit your changes, and push them.
-* Go back to Kitt, and refresh the page. You should see your solution on the right.
-
-## Exercise 3: Once more, with feelings
-
-Open the `lib/buddy.rb`. Make sure that the method `today_my_buddys_github_nickname_is` does **return** (which is different than **puts**!) the github username of your buddy. If you don't have any buddy, just return your own github username.
 
 When you're done you can look at the links below.
 
