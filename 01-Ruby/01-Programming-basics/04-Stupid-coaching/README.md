@@ -58,7 +58,7 @@ Now let's implement an enhanced version of the coach, with the method `coach_ans
 ### Interactive Program
 
 - Write the code for the interface that makes you discuss with your coach through the terminal
-- **constraint**: This program should **"loop"**. Your coach should answer to your message and wait for your next one until you decide to get rid of him. In any case this program should exit after the first coach's answer. Use a `while..end` or `until..end` structure for that purpose.
+- **constraint**: This program should **"loop"**. Your coach should answer to your message and wait for your next one until you decide to get rid of him. Use a `while..end` or `until..end` structure for that purpose.
 
 ## Learning Badges
 
