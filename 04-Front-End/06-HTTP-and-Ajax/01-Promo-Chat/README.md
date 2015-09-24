@@ -18,7 +18,7 @@ Code your javascript in `js/app.js`.
 
 ### Make it persistent
 
-That's cool to add new comments dynamically without reloading the all HTML. But try refreshing your page... The comments are gone!
+That's cool to add new comments dynamically without reloading all the HTML. But try refreshing your page... The comments are gone!
 
 All your smart jQuery code is on client-side. It does not post any data on the server for the moment. For that, you have to enhance your javascript code adding the adequate `POST` request and send data to be stored on the API's database. Read [the documentation](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to figure out how to build your request using `$.post()`.
 

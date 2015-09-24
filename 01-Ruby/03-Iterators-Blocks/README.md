@@ -1,5 +1,5 @@
 ## `01-Enumerable`
-- The important challenge of the day. It may take you the all morning.
+- The important challenge of the day. It may take you all morning.
 - **You have to find the right iterator to perform the right operation on an array, and learn how this iterator works**. You'll need to use and read the Ruby docs to finish this challenge succesfully. And if you pick the right method in ruby, no need to write 10 lines of code, 1 is often enough!
 
 ## `02-About-blocks`
