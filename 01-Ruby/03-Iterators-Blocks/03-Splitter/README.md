@@ -12,7 +12,7 @@ The `size_splitter` method should return an array of two arrays, the two groups 
 
 ### (Advanced) Block Splitter
 
-In thep revious exercise, the abritrary rule was fixed. What if we wanted to let the method caller choose which rule to apply? We can do so with the power of blocks and `yield`!
+In the previous exercise, the abritrary rule was fixed. What if we wanted to let the method caller choose which rule to apply? We can do so with the power of blocks and `yield`!
 
 Write a `block_splitter` method so that the following exemple works:
 
