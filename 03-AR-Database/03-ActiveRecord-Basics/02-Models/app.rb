@@ -1,4 +1,4 @@
 require_relative "config/application"
+require_relative "router"
 
-require_relative "app/router"
 Router.new.run
