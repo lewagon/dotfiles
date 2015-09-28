@@ -1,4 +1,4 @@
-require_relative "controllers/posts_controller"
+require_relative "app/controllers/posts_controller"
 
 class Router
   def initialize

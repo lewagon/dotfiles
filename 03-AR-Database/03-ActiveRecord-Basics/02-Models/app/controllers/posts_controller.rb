@@ -1,8 +1,8 @@
-require_relative "../views/post_view.rb"
+require_relative "../views/posts_view.rb"
 
 class PostsController
   def initialize
-    @view = PostView.new
+    @view = PostsView.new
   end
 
   def index
