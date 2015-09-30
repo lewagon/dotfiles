@@ -99,7 +99,25 @@ class Car
 end
 ```
 
-What if we have 10 instance variables (`@color`, `@brand`, `@km`, `@engine_started`, etc..)
+What if we have 10 instance variables (`@color`, `@brand`, `@kms`, `@engine_started`, etc..)
+
+
+```ruby
+class Car
+  def color
+    @color
+  end
+  def brand
+    @brand
+  end
+  def kms
+    @kms
+  end
+  # ...like so boring...
+end
+```
+
+Well there's a shortcut
 
 ```ruby
 class Car
@@ -107,7 +125,7 @@ class Car
 end
 ```
 
-This ruby syntax is far more convenient than righting all methods manually, right? Let's do the same adding writers on `@color` and `@brand`
+This ruby syntax is far more convenient than writing all methods manually, right? Let's do the same adding writers on `@color` and `@brand`
 
 ```ruby
 class Car
