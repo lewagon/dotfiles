@@ -43,7 +43,4 @@ Then, do the same on your projects
 
 - Your turn to list the user stories of your MVP on a sheet of paper.
 - Start drawing the mockup of your different views.
-
-
-
-
+- For the mockup, don't hesitate to use the resources we gave us in frontend lectures to find inspiration. Most of you are not born designers and even great designers have started by copying what works ;)
