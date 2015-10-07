@@ -52,8 +52,6 @@ You beat the bank! You win.
 $
 ```
 
-- **enhancement (optional)**: If you want to enhance your program to be closer to the real rules, here's some help :) http://fr.wikipedia.org/wiki/Blackjack_(jeu)
-
 ## Learning badges
 
 - What are the different ways of looping?
