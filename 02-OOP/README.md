@@ -20,10 +20,10 @@ Let's rehearse the MVC pattern during a recap live-code (no slides, just a demo 
 
 ## Dealing with data models (2 days)
 
-### `03-Cookbook-Day-One` (Tuesday)
+### `05-Food-Delivery-Day-One` (Tuesday)
 The morning lecture explains how to deal with several data models in your app. The Food Delivery challenge is a very difficult challenge going through 2 days.
 
-### `03-Cookbook-Day-One` (Wednesday)
+### `06-Food-Delivery-Day-Two` (Wednesday)
 Let's start on a recap live-code to help you finish the Food Delivery app today. Then it's your turn. We'll give you the final correction of the Food Delivery challenge at the end of the day at 5pm.
 
 ### Quizz
