@@ -1,0 +1,40 @@
+body {
+  background-color: #F9F9F9;
+}
+
+.form-control {
+  border-width: 5px;
+  height: inherit;
+}
+
+.has-success .control-label {
+  color: #4caf50;
+}
+
+.has-success .form-control {
+  border-color: #4caf50;
+}
+
+.has-success .form-control:focus {
+  border-color: #388e3c;
+}
+
+
+
+.has-error .control-label {
+  color: #ff5252;
+}
+
+.has-error .form-control {
+  border-color: #ff5252;
+}
+
+.has-error .form-control:focus {
+  border-color: #DD4747;
+}
+
+
+
+footer {
+  height: 7em;
+}
