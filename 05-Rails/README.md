@@ -28,6 +28,12 @@ Tomorrow, we'll speak of image hosting on Amazon S3, and you will add an image u
 ### `05-Mister-cocktail-final` (Friday)
 Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want to loose money because you have a security leak on Github.**
 
+
+On Friday at 2pm, quizz time! Let's step back and rehearse all the core notions of Rails on a paper quizz.
+
+- [Quizz in English](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/3-rails-english.pdf)
+
+
 ## Second week - Airbnb
 
 **AirBnB**! For the second week, we'll work as teams of 2 to 4. The goal is to start from scratch and build a MVP of AirBnB.
