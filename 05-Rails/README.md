@@ -31,7 +31,7 @@ Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), u
 
 On Friday at 2pm, quizz time! Let's step back and rehearse all the core notions of Rails on a paper quizz.
 
-- [Quizz in English](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/3-rails-english.pdf)
+- [Quizz in English](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/4-rails-english.pdf)
 
 
 ## Second week - Airbnb
