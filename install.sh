@@ -1,14 +1,19 @@
+backup() {
+  target=$1
+  if [ -e "$target" ]; then           # Does the config file already exist?
+    if [ ! -L "$target" ]; then       # as a pure file?
+      mv "$target" "$target.backup"   # Then backup it
+      echo "-----> Moved your old $target config file to $target.backup"
+    fi
+  fi
+}
+
 #!/bin/zsh
 for name in *; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
     if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ]; then
-      if [ -e "$target" ]; then           # Does the config file already exist?
-        if [ ! -L "$target" ]; then       # as a pure file?
-          mv "$target" "$target.backup"   # Then backup it
-          echo "-----> Moved your old $target config file to $target.backup"
-        fi
-      fi
+      backup $target
 
       if [ ! -e "$target" ]; then
         echo "-----> Symlinking your new $target"
@@ -36,34 +41,32 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-history-substring-search" ]; then
 fi
 cd "$CURRENT_DIR"
 
-
-echo "Type in your first and last name (no accent or special characters - e.g. 'ç'): "
-read full_name
-echo "Type in your email address (the one used for your GitHub account): "
-read email
-git config --global user.email $email
-git config --global user.name $full_name
-
 setopt nocasematch
 if [[ ! `uname` =~ "darwin" ]]; then
   git config --global core.editor "subl -n -w $@ >/dev/null 2>&1"
   echo 'export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1"' >> zshrc
 else
-  git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"
-  bundler_editor="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+  git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
+  bundler_editor="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
   echo "export BUNDLER_EDITOR=\"${bundler_editor}\"" >> zshrc
 fi
 
-git add .
-git commit --message "My identity for @lewagon in the gitconfig"
-git push origin master
-
-git remote add upstream git@github.com:lewagon/dotfiles.git
+# Sublime Text
+if [[ ! `uname` =~ "darwin" ]]; then
+  SUBL_PATH=~/.config/sublime-text-3
+else
+  SUBL_PATH=~/Library/Application\ Support/Sublime\ Text\ 3
+fi
+mkdir -p $SUBL_PATH/Packages/User $SUBL_PATH/Installed\ Packages
+backup "$SUBL_PATH/Packages/User/Preferences.sublime-settings"
+curl https://sublime.wbond.net/Package%20Control.sublime-package > $SUBL_PATH/Installed\ Packages/Package\ Control.sublime-package
+ln -s $PWD/Preferences.sublime-settings $SUBL_PATH/Packages/User/Preferences.sublime-settings
+ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
 
 zsh ~/.zshrc
 
 if [[ `uname` =~ "darwin" ]]; then
-  echo "Quit your terminal (⌘ + Q) and restart it."
+  echo "Quit your terminal and restart it (⌘ + Q)."
 else
-  echo "Quit your terminal (Alt + F4) and restart it."
+  echo "Quit your terminal and restart it (Alt + F4)."
 fi

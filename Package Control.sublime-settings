@@ -1,0 +1,20 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ApplySyntax",
+		"BracketHighlighter",
+		"DocBlockr",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"JSX",
+		"Package Control",
+		"Ruby on Rails snippets",
+		"SCSS",
+		"Solarized Color Scheme",
+		"Theme - SoDaReloaded"
+	]
+}
