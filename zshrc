@@ -13,7 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-export PATH='/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/usr/texbin:~/bin'
+export PATH='./bin:/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/usr/texbin:~/bin'
 
 # Disable zsh correction
 unsetopt correct_all
@@ -33,3 +33,5 @@ bindkey '^[OB' history-substring-search-down
 # UTF-8 is our default encoding
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+# Bundle editor
