@@ -35,10 +35,6 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
   echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
   git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 fi
-if [ ! -d "$ZSH_PLUGINS_DIR/zsh-history-substring-search" ]; then
-  echo "-----> Installing zsh plugin 'zsh-history-substring-search'..."
-  git clone git://github.com/zsh-users/zsh-history-substring-search.git
-fi
 cd "$CURRENT_DIR"
 
 setopt nocasematch
