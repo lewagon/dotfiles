@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(gitfast bundler brew rbenv last-working-dir common-aliases sublime history-substring-search zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-export PATH='./bin:/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/usr/texbin:~/bin'
+export PATH='/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/usr/texbin:~/bin'
 
 # Disable zsh correction
 unsetopt correct_all
