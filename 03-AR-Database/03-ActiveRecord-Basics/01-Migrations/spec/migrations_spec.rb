@@ -12,13 +12,13 @@ describe "Migration" do
       now = Time.now.to_i
       expect { db.execute("
         INSERT INTO posts (name, url, created_at, updated_at)
-        VALUES ('Le Wagon', 'http://www.lewagon.org', '#{now}', #{now})
+        VALUES ('Le Wagon', 'http://www.lewagon.com', '#{now}', #{now})
       ") }.not_to raise_error
 
       post = db.execute("SELECT * FROM posts").first
       expect(post[0]).to eq 1  # id
       expect(post[1]).to eq "Le Wagon"
-      expect(post[2]).to eq "http://www.lewagon.org"
+      expect(post[2]).to eq "http://www.lewagon.com"
     end
   end
 
@@ -29,13 +29,13 @@ describe "Migration" do
       now = Time.now.to_i
       expect { db.execute("
         INSERT INTO posts (name, url, created_at, updated_at, votes)
-        VALUES ('Le Wagon', 'http://www.lewagon.org', '#{now}', #{now}, 42)
+        VALUES ('Le Wagon', 'http://www.lewagon.com', '#{now}', #{now}, 42)
       ") }.not_to raise_error
 
       post = db.execute("SELECT * FROM posts").first
       expect(post[0]).to eq 1  # id
       expect(post[1]).to eq "Le Wagon"
-      expect(post[2]).to eq "http://www.lewagon.org"
+      expect(post[2]).to eq "http://www.lewagon.com"
       expect(post[5]).to eq 42
     end
   end

@@ -6,10 +6,10 @@ You might already saw some IPv4 addresses, for instance `192.168.0.1`, or
 `173.194.40.200`. To get an IP address from a domain name, you can use the `host` command. For instance:
 
 ```bash
-$ host www.lewagon.org
+$ host www.lewagon.com
 ```
 
-You'll see that `www.lewagon.org` is aliased to a domain on Heroku, which
+You'll see that `www.lewagon.com` is aliased to a domain on Heroku, which
 is mapped to a specific address.
 
 Now you may want to discover your own IP address? Your computer as a local

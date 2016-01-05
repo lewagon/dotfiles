@@ -1,6 +1,6 @@
 ## Welcome!
 
-This platform holds all the exercises you'll cover during your 9 weeks at [Le Wagon, the French innovative Coding School](http://www.lewagon.org/en), welcome aboard!
+This platform holds all the exercises you'll cover during your 9 weeks at [Le Wagon, the French innovative Coding School](http://www.lewagon.com), welcome aboard!
 
 ## General overview
 
