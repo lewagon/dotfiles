@@ -1,6 +1,6 @@
 ## Re-what? Reboot!
 
-Today, the "ReBoot" group should keep working on simple challenges to master core notions. Don't be disappointed! You'll be able to parse and store data later on in you ruby life.
+Today, the "ReBoot" group should keep working on simple challenges to master core notions. Don't be disappointed! You'll be able to parse and store data later on in your ruby life.
 
 ### Reboot challenges
 
