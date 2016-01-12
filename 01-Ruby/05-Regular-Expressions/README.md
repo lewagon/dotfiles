@@ -20,12 +20,12 @@ You should work on these challenges from scratch without code canvas or `rake`. 
   - Add items with prices and amount in your cart.
   - Then checkout and terminal prints you the total bill with VAT.
   - Start with a simple program without handling amounts and available stock then improve it.
-  - Here is [one possible solution](https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1). Be smart, don't look at it at the beginning :)
+  - Here is [one possible solution](https://gist.github.com/gabriel-dehan/b74a6e92deac876a80e1) and here is [another one](https://gist.github.com/Papillard/6bdf49d9ab63f79cf9cd). Be smart, don't look at these solutions when starting :)
 
 Above all:
 
 - Start simple
-- Code the interface first
+- Start with the interface and then refacto your code with methods
 - **Write pseudo-code** before translating it into ruby
 - **Code something that works before handling exception**.
 
