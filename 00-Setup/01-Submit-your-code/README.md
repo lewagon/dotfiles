@@ -22,7 +22,7 @@ Move to the exercise folder with the command at the top of this page.
 Open the `lib/wagon_start.rb` file in Sublime Text. That's where you'll need to edit the code.
 
 * Make the `wagon_start` method return `"That's how it starts"`
-* In the terminal, run `rake` and make sure if you're 100% green + have a good style.
+* In the terminal, run `rake` and make sure you have a green result for `#wagon_start` and a good style (**no** offenses).
 * Commit your changes, and push them.
 * Go back to Kitt, and refresh the page. You should see your solution on the right.
 
