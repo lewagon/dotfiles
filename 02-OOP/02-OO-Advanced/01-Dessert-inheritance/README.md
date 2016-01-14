@@ -9,13 +9,13 @@ Read more about inheritance in [ruby learning](http://rubylearning.com/satishtal
 
 Complete the class `Dessert`
 
-- add getters and setters for name and calories.
+- add getters and setters for `name` and `calories`
 - instance methods `Dessert#healthy?` should return `true` if a dessert has less than 200 calories
 - `Dessert#delicious?` should return `true` for all desserts :)
 
-Complete `JellyBean` which extends `Dessert`
+Complete `JellyBean` which inherits from `Dessert`
 
-- add a getter for `flavor`.
+- add a getter for `flavor`
 - Modify `delicious?` to return false if the flavor is `"black licorice"` (but `delicious?` should still return true for all other flavors and for all non-JellyBean desserts).
 
 #### Super bicycle
