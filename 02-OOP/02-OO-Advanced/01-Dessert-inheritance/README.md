@@ -7,7 +7,7 @@ Read more about inheritance in [ruby learning](http://rubylearning.com/satishtal
 
 #### Dessert inheritance
 
-Complete the class `Dessert` :
+Complete the class `Dessert`
 
 - add getters and setters for name and calories.
 - instance methods `Dessert#healthy?` should return `true` if a dessert has less than 200 calories
