@@ -4,7 +4,7 @@ Today, the "ReBoot" group should keep working on simple challenges to master cor
 
 ### Reboot challenges
 
-`01-Instacart`: This challenge will take you all da
+`01-Instacart`: This challenge will keep you busy all the day.
 
 1. Build a gift wishlist, where you can:
   - Add a product to your wishlist (e.g. "Jeans", "Socks", etc..)
