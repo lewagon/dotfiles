@@ -4,11 +4,34 @@ Today, the "ReBoot" group should keep working on simple challenges to master cor
 
 ### Reboot challenges
 
+`01-Instacart`: This challenge will take you all da
+
 1. Build a gift wishlist, where you can:
-  - add article you wanna buy
-  - delete article you don't want in your list anymore
-  - mark any article as "checked" when you've bought it
-1. Improve your program with a cool Etsy scraper to find some inspiration on Etsy for your gift list. Again here is a [possible solution](https://gist.github.com/Papillard/24aa78105a741f129e35) but be smart and don't look at it before having worked on the challenge!
+  - Add a product to your wishlist (e.g. "Jeans", "Socks", etc..)
+  - Delete an article you don't want in your list anymore
+  - Mark any article as "checked" when you've bought it
+  - It's like a basic todolist with products instead of tasks.
+1. Improve your program with a search engine based on an Etsy scraper, to find some inspiration for your gift list. It should work like that:
+
+
+```
+What do you search on Etsy?
+> Jeans
+Here are Esty "Jeans" results
+1 - Blue Jeans Levis..
+2 - Vintage Jeans..
+3 - Jeans Pants etc etc..
+4 - White jeans..
+etc..
+
+Pick one to add to your list (give the number)
+> 2
+"Vintage Jeans.." added to your wishlist
+```
+
+
+
+Again here is a [possible solution](https://gist.github.com/Papillard/24aa78105a741f129e35) but be smart and don't look at it before having worked on the challenge!
 
 ### Advanced challenges
 
