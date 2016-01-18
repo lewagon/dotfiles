@@ -16,7 +16,7 @@ Today, the "ReBoot" group should keep working on simple challenges to master cor
 ```bash
 What do you search on Etsy?
 > Jeans
-Here are Esty "Jeans" results
+Here are Etsy results for "Jeans":
 1 - Blue Jeans Levis..
 2 - Vintage Jeans..
 3 - Jeans Pants etc etc..
