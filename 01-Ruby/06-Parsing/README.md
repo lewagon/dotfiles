@@ -13,7 +13,7 @@ Today, the "ReBoot" group should keep working on simple challenges to master cor
   - It's like a basic todolist with products instead of tasks.
 2. Improve your program with a search engine based on an Etsy scraper, to find some inspiration for your gift list. It should work like that:
 
-```
+```bash
 What do you search on Etsy?
 > Jeans
 Here are Esty "Jeans" results
