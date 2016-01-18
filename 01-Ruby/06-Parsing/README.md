@@ -11,8 +11,7 @@ Today, the "ReBoot" group should keep working on simple challenges to master cor
   - Delete an article you don't want in your list anymore
   - Mark any article as "checked" when you've bought it
   - It's like a basic todolist with products instead of tasks.
-1. Improve your program with a search engine based on an Etsy scraper, to find some inspiration for your gift list. It should work like that:
-
+2. Improve your program with a search engine based on an Etsy scraper, to find some inspiration for your gift list. It should work like that:
 
 ```
 What do you search on Etsy?
@@ -29,6 +28,8 @@ Pick one to add to your list (give the number)
 "Vintage Jeans.." added to your wishlist
 ```
 
+3. First start with basic feature (list/add/delete/mark) before working on the search engine
+4. Think about the best ruby structure to model your wishlist (a hash? an array of hashes?). Take user inputs into consideration (product name? product index?) to choose the most adapted stucture.
 
 
 Again here is a [possible solution](https://gist.github.com/Papillard/24aa78105a741f129e35) but be smart and don't look at it before having worked on the challenge!
