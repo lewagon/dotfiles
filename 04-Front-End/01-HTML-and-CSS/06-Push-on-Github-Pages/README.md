@@ -30,10 +30,11 @@ $ hub browse
 
 ### Magic `gh-branch`
 
-Github Pages is based on a magic branch, with the name `gh-pages`. When Github detect this branch, it puts your website online, how cool! Let's create this brancg and push it.
+Github Pages is based on a magic branch, with the name `gh-pages`. When Github detects this branch, it puts your website online, how cool! Let's create this magic branch and push it.
 
 ```
 $ git co -b gh-pages
 $ git push origin gh-pages
 ```
-Now you can look at your masterpiece on the url `http://GITHUB_USERNAME.github.io/profile`
+
+Now you can look at your masterpiece at the url `http://GITHUB_USERNAME.github.io/profile`. Share it on Slack with your buddies!
