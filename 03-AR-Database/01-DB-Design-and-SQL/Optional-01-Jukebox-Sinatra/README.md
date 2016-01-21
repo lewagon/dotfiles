@@ -6,7 +6,7 @@ information from that Jukebox Database.
 First make sure you have those gem installed:
 
 ```
-$ gem install sinatra sinatra-contrib
+$ gem install sinatra sinatra-contrib rack-test
 ```
 
 To launch the Sinatra app, run:
