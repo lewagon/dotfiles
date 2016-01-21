@@ -17,9 +17,9 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 </div>
 ```
 
-- The `<div class="container">` is here to center its content so that you don't have a full-screen page (which is very ugly).
-- The `<div class="card">` are here to display nicely each group of info that fit together.
-- Add a nice touch to your cards thanks to `background`, `border`, `border-radius` and `box-shadow` CSS properties.
+- The `<div class="container">` is here to center its content so that you don't have a full-width content (which is very ugly).
+- The `<div class="card">` are here to display nicely each group of info.
+- Add a nice touch to your cards thanks to `background`, `border`, `border-radius` and `box-shadow` CSS properties. Keep it simple, with white background and subtle radius and shadows (as in the Karr lecture).
 
 
 ## Tips & Resources
@@ -28,9 +28,9 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 
 ```css
 .container {
-  width: 500px;
-  margin: 0 auto; /* you can change 0 if your want top-bottom margin */
+  width: 500px;   /* Set width
+  margin: 0 auto; /* Automatically set left/right margins */
 }
 ```
 
-- From now on, you must **absolutely** use your browser developer tool.
+- From this exercise, you must **absolutely** use your developer tool to play with your CSS in the browser and make live experiments.

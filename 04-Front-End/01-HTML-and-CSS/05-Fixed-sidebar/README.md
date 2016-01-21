@@ -4,21 +4,46 @@ Build a nice layout with a fixed sidebar and a scrollable page content.
 
 ## Specs
 
-Here is [your objective](http://lewagon.github.io/html-css-challenges/05-fixed-sidebar/). To build such layout, you will have to **position the left sidebar as fixed**, and add some CSS to get the page content on the right.
+Here is [your objective](http://lewagon.github.io/html-css-challenges/05-fixed-sidebar/). To build such layout, you will have to **position the left sidebar as fixed**, and add some CSS to get the page content on the right. Your page HTML structure should look like that :
 
-## Tips & Resources
+```html
+<div id="sidebar">
+  ...
+</div>
+<div id="page-content">
+  ...
+</div>
+
+```
+
+And the associated CSS code:
+
+```css
+#sidebar {
+  position: fixed;
+  width: 300px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+#page-content {
+  margin-left: 300px;
+}
+```
+
+## Tips & Resources (internal links)
 
 Sometimes you need internal links, referring to sections of your page, not to other pages of your site. Here is how you do that:
 
 ```html
-<!-- In your nav list -->
+<!-- Here some internal links -->
 <a href="#summary">Info</a>
 <a href="#favorite-movies">Movies</a>
 <a href="#help">Info</a>
 
 <!-- [...] -->
 
-<!-- Now in your page content -->
+<!-- Here the associated sections -->
 <div id="summary">your summary</div>
 <div id="favorite-movies">your favorite movies</div>
 <div id="help">some help section</div>
