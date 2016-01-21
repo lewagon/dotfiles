@@ -10,11 +10,11 @@ describe "GET /" do
 end
 
 describe "GET /artists/110" do
-  it "should display albums of Nirvana, Nevermind and From The Buddy Banks Of The Wishkah [Live]" do
+  it "should display albums of Nirvana, Nevermind and From The Muddy Banks Of The Wishkah [Live]" do
     get '/artists/110'
     expect(last_response).to be_ok
     expect(last_response.body).to include("Nevermind")
-    expect(last_response.body).to include("From The Buddy Banks Of The Wishkah [Live]")
+    expect(last_response.body).to include("From The Muddy Banks Of The Wishkah [Live]")
   end
 end
 
