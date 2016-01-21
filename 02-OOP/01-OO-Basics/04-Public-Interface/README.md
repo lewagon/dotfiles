@@ -105,7 +105,7 @@ Here comes the time where you might delegate these responsibilities to another `
 After implementing your `Transaction` class, you will have to change your `BankAccount` class so that its transactions arrays stores `Transaction` objects instead of numbers. You will also have to load the *transaction.rb* file in *account.rb* with
 
 ```ruby
-require_relative 'transaction'`
+require_relative 'transaction'
 ```
 
 ## Learning badges

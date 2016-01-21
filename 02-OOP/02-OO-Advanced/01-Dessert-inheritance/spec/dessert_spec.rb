@@ -28,7 +28,7 @@ describe JellyBean do
 
   describe "inheritance" do
     it "should only extend Dessert with #flavor and #delicious?" do
-      expect(JellyBean.instance_methods(false)).to eq [:flavor, :delicious?]
+      expect(JellyBean.instance_methods(false).sort).to eq [:delicious?, :flavor]
     end
   end
 

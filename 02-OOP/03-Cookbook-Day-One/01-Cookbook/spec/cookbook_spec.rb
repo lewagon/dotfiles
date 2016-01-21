@@ -45,6 +45,8 @@ describe Cookbook do
     it "should give access to all recipes" do
       expect(@cookbook).to respond_to :recipes
       expect(@cookbook.recipes).to be_a Array
+      first_recipe = @cookbook.recipes.first
+      expect(first_recipe).to be_a(Recipe), lambda { "Cookbook should store Recipe instances, not #{first_recipe.class}" }
     end
   end
 
