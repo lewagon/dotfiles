@@ -1,0 +1,17 @@
+/* Feel free to use your own button CSS code (from previous challenge) */
+/* Here is a sample button design */
+
+.btn-green {
+  color: white;
+  padding: 25px 35px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 20px;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+}
+.btn-green:hover {
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}

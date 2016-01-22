@@ -1,7 +1,6 @@
-/* Importing all components file */
-@import url("banner.css");
+@import url("components/button.css");
+@import url("components/banner.css");
 
-/* General style rules on fonts and colors */
 body {
   margin: 0;
   font-family: Open-sans, sans-serif;
