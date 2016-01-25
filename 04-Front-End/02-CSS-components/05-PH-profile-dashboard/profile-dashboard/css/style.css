@@ -1,8 +1,6 @@
 @import url("components/avatar.css");
-@import url("components/button.css");
-@import url("components/banner.css");
-@import url("components/card.css");
 @import url("components/tabs.css");
+@import url("components/profile_header.css");
 @import url("components/list.css");
 
 body {
