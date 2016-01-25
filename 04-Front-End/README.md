@@ -1,37 +1,51 @@
 The Front-end module has 7 days + 1 project-day to start preparing your final projects.
 
-## `01-HTML-CSS` (Wednesday)
-Very dense morning lecture (**about 2h30 long**) where we'll cover most of HTML & CSS concepts :
+## `01-HTML-and-CSS` (Wednesday)
+You will cover most of HTML & CSS concepts :
 
-- HTML skeleton and basic tags (in `<head>` and `<body>`)
+- HTML skeleton and common tags (in `<head>` and `<body>`)
 - CSS simple and advanced selectors
-- Tools and web-design resources for fonts, colors & icons (google fonts, fontawesome).
-- Classical layout techniques (fixed/relative/absolute positioning, flexbox)
+- Web-design resources for fonts & colors (google fonts, fontawesome).
 
-**Disclaimer: The morning lecture should really be done by a frontend expert.** Plan a break during this lecture in the middle of the 2h30.
+The objective of this day is to build [your profile page](http://lewagon.github.io/html-css-challenges/04-advanced-selectors/) and put it online using [Github Pages](https://pages.github.com/).
 
-## `02-Bootstrap` (Thursday)
-Two lectures in the morning (overall a 2h30 talk like yesterday)
+## `02-CSS-components` (Thursday)
+We will go a bit further and make you code your own CSS component library. The objectives are
 
-- 1st lecture lists design resources, tools and tips to build your graphical assets (pictures, backgrounds, icons, colors, fonts). This lecture also shows you how to play with SVG icons using [Sketch](http://bohemiancoding.com/sketch/) and change shapes and colors. It's a 30-45 minute talk.
-- 2nd lecture is on Bootstrap, this cool CSS/JS library developed by Twitter guys, very powerful to prototype web-applications.
+- Improve your components culture
+- Code your own CSS library
+- Build page re-using components
 
-## `03-Frontend-Advanced` (Friday)
-We will introduce advanced concepts such as templates, layout, and SASS. For that, we will use a nice frontend framework called [Middleman](https://middlemanapp.com) and learn to organize our stylesheets in differents folders (layout/components/pages). Once again a very dense talk in the morning (2h30).
+<br>
 
-Middleman may be a bit hard for you at this point as you discover frontend. But trust us, you will be very happy to know it when we come to Rails! Because Rails frontend will work exactly the same way. **Be brave and rehearse your frontend challenges this weekend if you haven't digest all the courses since Wednesday.**
+- **First goal**: code [this CSS components library](http://lewagon.github.io/ui-components)
+- **Second goal**: build pages like [Airbnb Home](file:///Users/boris/code/lewagon/html-css-challenges/10-homepage-with-cards/index.html) or [Product Hunt dashboard](file:///Users/boris/code/lewagon/html-css-challenges/12-profile-with-products/index.html) using your components.
+- **Take-away**: of course, from this day you can directly use [Le Wagon components library](http://lewagon.github.io/ui-components), but having coded it will make you a lot more efficient.
 
-## `04-Javascript-and-jQuery` (Monday)
+## `03-Bootstrap`
+
+Before speaking of Bootstrap, we will briefly (15 minutes) list design resources, tools and tricks to build your graphical assets (pictures, icons, colors, fonts).
+
+Then, let's move to Bootstrap.
+
+- For custom components, you've built our own CSS library.
+- But for standard ones (list-inline, buttons, forms, etc..), let's not re-invent the wheel and use Bootstrap built-in classes.
+- Also yesterday, we saw how to build small grids with flexbox (e.g. for tabs). Again for a functional responsive grid, we need something more robust: here comes [Bootstrap grid](http://getbootstrap.com/css/#grid).
+
+
+## `04-Frontend-Advanced` (Friday)
+We will introduce advanced concepts such as ERB, layout, and SASS. For that, we will use a nice frontend framework called [Middleman](https://middlemanapp.com) and we will learn to organize our HTML and CSS code in a very DRY way.
+
+It's normal if you struggle a bit with Middleman. The good news is: Rails frontend will be very similar to Middleman. So it's a very good investment to work hard on Middleman!
+
+## `05-Javascript-and-jQuery` (Monday)
 Morning talk is an introduction to Javascript and jQuery. Let's see what's in common between js and ruby, and what's different. Then, we will introduce jQuery – an awesome JavaScript library – to play with the DOM, define events and callbacks.
 
-## `05-Animation-tricks` (Tuesday)
+## `06-jQuery-plugins` (Tuesday)
 Learn how to include a jQuery plugin **the correct way** in your project, either using a gem or using [Rails-assets](https://rails-assets.org/), and then adding the correct links in your `application.js` and `application.scss` files.
 
-## `06-HTTP-Ajax` (Wednesday)
+## `07-HTTP-Ajax` (Wednesday)
 HTTP is **the** protocol on which a website is based and that you absolutely need to know. **So understand it**. Then learn to make HTTP requests in javascript using AJAX. We'll start playing with APIs today, yeah!
-
-## `07-Javascript-Advanced` (Thursday)
-During the morning demo, we'll speak of webhooks, the "opposite of APIs" since you don't call a webhook, it calls you! During the rest of the day, you'll work on more advanced JS challenges such as coding a HTML form validator.
 
 ## `08-Project-Day` (Friday)
 This is a rather special day. **No code, no challenges, no buddy**. The objective is to:
