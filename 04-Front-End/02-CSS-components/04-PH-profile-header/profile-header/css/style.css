@@ -1,0 +1,21 @@
+@import url("components/avatar.css");
+@import url("components/tabs.css");
+@import url("components/profile_header.css");
+
+body {
+  margin: 0;
+  font-family: Open-sans, sans-serif;
+}
+h1, h2, h3 {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
