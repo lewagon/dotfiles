@@ -1,24 +1,25 @@
 ## Background & Objectives
 
-Now that you are Bootstrap-grid experts, learn more advanced but very useful techniques with the grid.
+Now that you are Bootstrap-grid experts, learn 2 advanced techniques very useful.
 
 ## Specs
 
 99% of the time you face two issues using the grid:
 
-- You need a **full-screen** background around your grid.
-- You need to insert some kind of **inner "cards"** inside your grid.
+- You need a **full-screen** wrapper around your grid.
+- You need **inner cards"** inside your grid to play on their border, margin, padding, etc.
 
-But here is the problem. You cannot change directly width, border, and lateral paddings of grid components (`.container`, `.row` or `.col`). Otherwise **you will break the grid**.
 
-So how can you do? Read what follows to figure out :)
+Bootstrap beginners often try to change directly grid components (`.container`, `.row` or `.col`) playing on their border, width, padding, etc... By doing so, **they break the grid**. Indeed, `.col` dimensions are computed automatically by Bootstrap so if you add them border, padding, or margin, you just break them.
 
-### Full-screen background
+Instead, use the 2 following techniques.
 
-Place a full-screen background div **around** the grid.
+## Outside Wrapper
+
+Put a wrapper around the container if you need a special background.
 
 ```html
-<div class="bg-blue">
+<div class="wrapper-blue">
   <div class="container">
     <div class="row">
       <!-- all you cols -->
@@ -27,16 +28,9 @@ Place a full-screen background div **around** the grid.
 </div>
 ```
 
-```css
-.bg-blue {
-  background: #3079AB;
-  color: white;
-}
-```
+### Inside cards
 
-### Inner "cards"
-
-Place your designed divs **inside each col**
+Put cards **inside each col** if you want to play on their border/padding/margin/etc..
 
 ```html
 <div class="container">
@@ -65,8 +59,8 @@ Place your designed divs **inside each col**
 }
 ```
 
-With these two techniques, you can put as much padding, border, margin as you want without crashing the grid. Indeed, **you don't touch directly at grid components** (`container/row/col`). You only design divs placed around or inside the grid. You can feel safe!
+With these techniques, you can play on border, padding, margin without crashing the grid. Indeed, **you don't touch directly at grid components** (`container/row/col`). You can feel safe!
 
 ### Your turn
 
-Apply these two techniques to reproduce [this page](http://lewagon.github.io/bootstrap-challenges/02-Advanced-Bootstrap-grid/), starting with the HTML skeleton we give you. You will have to code a bit of CSS for backgrounds, padding and margin.
+Apply these two techniques to reproduce [this page](http://lewagon.github.io/bootstrap-challenges/02-Advanced-Bootstrap-grid/), starting with the HTML skeleton we give you. You will have to code a bit of CSS for backgrounds, padding and margin. Of course you can combined the two techniques and having **both** a wrapper around your `.container` and cards inside your `.cols`.

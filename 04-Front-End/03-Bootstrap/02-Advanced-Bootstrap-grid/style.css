@@ -3,11 +3,11 @@ body {
   font-size: 16px;
   line-height: 1.4;
 }
-#header {
-  color: #828282;
-  padding: 50px;
-}
 h2 {
   font-weight: 200;
   font-size: 25px;
+}
+#header {
+  color: #828282;
+  padding: 50px;
 }

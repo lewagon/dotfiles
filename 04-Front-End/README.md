@@ -22,7 +22,7 @@ We will go a bit further and make you code your own CSS component library. The o
 - **Second goal**: build pages like [Airbnb Home](file:///Users/boris/code/lewagon/html-css-challenges/10-homepage-with-cards/index.html) or [Product Hunt dashboard](file:///Users/boris/code/lewagon/html-css-challenges/12-profile-with-products/index.html) using your components.
 - **Take-away**: of course, from this day you can directly use [Le Wagon components library](http://lewagon.github.io/ui-components), but having coded it will make you a lot more efficient.
 
-## `03-Bootstrap`
+## `03-Bootstrap` (Friday)
 
 Before speaking of Bootstrap, we will briefly (15 minutes) list design resources, tools and tricks to build your graphical assets (pictures, icons, colors, fonts).
 
@@ -33,18 +33,18 @@ Then, let's move to Bootstrap.
 - Also yesterday, we saw how to build small grids with flexbox (e.g. for tabs). Again for a functional responsive grid, we need something more robust: here comes [Bootstrap grid](http://getbootstrap.com/css/#grid).
 
 
-## `04-Frontend-Advanced` (Friday)
+## `04-Frontend-Advanced` (Monday)
 We will introduce advanced concepts such as ERB, layout, and SASS. For that, we will use a nice frontend framework called [Middleman](https://middlemanapp.com) and we will learn to organize our HTML and CSS code in a very DRY way.
 
 It's normal if you struggle a bit with Middleman. The good news is: Rails frontend will be very similar to Middleman. So it's a very good investment to work hard on Middleman!
 
-## `05-Javascript-and-jQuery` (Monday)
+## `05-Javascript-and-jQuery` (Tuesday)
 Morning talk is an introduction to Javascript and jQuery. Let's see what's in common between js and ruby, and what's different. Then, we will introduce jQuery – an awesome JavaScript library – to play with the DOM, define events and callbacks.
 
-## `06-jQuery-plugins` (Tuesday)
+## `06-jQuery-plugins` (Wednesday)
 Learn how to include a jQuery plugin **the correct way** in your project, either using a gem or using [Rails-assets](https://rails-assets.org/), and then adding the correct links in your `application.js` and `application.scss` files.
 
-## `07-HTTP-Ajax` (Wednesday)
+## `07-HTTP-Ajax` (Thursday)
 HTTP is **the** protocol on which a website is based and that you absolutely need to know. **So understand it**. Then learn to make HTTP requests in javascript using AJAX. We'll start playing with APIs today, yeah!
 
 ## `08-Project-Day` (Friday)
