@@ -7,7 +7,7 @@ require 'minitest/pride'
 task :default do
   describe "Exercise" do
     it "should have a index.html file" do
-      File.exists?("../03-Bootstrap-mockup-v1/index.html").must_equal true
+      File.exists?("index.html").must_equal true
     end
   end
 end
