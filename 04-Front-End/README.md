@@ -13,23 +13,19 @@ The objective of this day is to build [your profile page](http://lewagon.github.
 We will go a bit further and make you code your own CSS component library. The objectives are
 
 - Improve your components culture
-- Code your own CSS library
-- Build page re-using components
+- Re-code your [own CSS library](http://lewagon.github.io/ui-components)
+- Build page re-using components, like [Airbnb Home](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/) or [Product Hunt dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/)
 
-<br>
-
-- **First goal**: code [this CSS components library](http://lewagon.github.io/ui-components)
-- **Second goal**: build pages like [Airbnb Home](file:///Users/boris/code/lewagon/html-css-challenges/10-homepage-with-cards/index.html) or [Product Hunt dashboard](file:///Users/boris/code/lewagon/html-css-challenges/12-profile-with-products/index.html) using your components.
-- **Take-away**: of course, from this day you can directly use [Le Wagon components library](http://lewagon.github.io/ui-components), but having coded it will make you a lot more efficient.
+**Take-away**: of course after this day, you can directly pick HTML/CSS code in [Le Wagon components](http://lewagon.github.io/ui-components).
 
 ## `03-Bootstrap` (Friday)
 
-Before speaking of Bootstrap, we will briefly (15 minutes) list design resources, tools and tricks to build your graphical assets (pictures, icons, colors, fonts).
+Before speaking of Bootstrap, we will briefly (15 minutes) list design resources & tools to build your graphical assets (pictures, icons, colors, fonts).
 
 Then, let's move to Bootstrap.
 
-- For custom components, you've built our own CSS library.
-- But for standard ones (list-inline, buttons, forms, etc..), let's not re-invent the wheel and use Bootstrap built-in classes.
+- For rich components, we've built our own CSS library.
+- For standard ones, let's not re-invent the wheel and use Bootstrap built-in classes.
 - Also yesterday, we saw how to build small grids with flexbox (e.g. for tabs). Again for a functional responsive grid, we need something more robust: here comes [Bootstrap grid](http://getbootstrap.com/css/#grid).
 
 
