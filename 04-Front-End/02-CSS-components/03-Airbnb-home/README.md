@@ -26,7 +26,7 @@ We already defined the container class for you in `style.css`
 ```css
 .container {
   max-width: 700px;
-  margin: 0 auto; /* 0px margin on top/bottom, automatic margin on left/right
+  margin: 0 auto; /* 0px => top/bottom, automatic => left/right */
 }
 ```
 
