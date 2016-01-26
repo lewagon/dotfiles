@@ -10,7 +10,7 @@ Build a responsive login form using Bootstrap
 
 ### Grid offset technique
 
-The trick to make a form responsive is to use a Bootstrap grid like that:
+The trick to make a responsive form is to inject it in a Bootstrap grid:
 
 ```html
 <div class="container">
@@ -26,8 +26,8 @@ The trick to make a form responsive is to use a Bootstrap grid like that:
 </div>
 ```
 
-- This grid is full-size on mobile
-- Then it is centered (thanks to the offset) and takes 33% of the screen for tablet and larger devices.
+- The form will be full-size on mobile
+- On tablet and larger devices, it will be centered (thanks to the offset) and take 33% of the screen.
 
 
 ### Form design
@@ -50,7 +50,7 @@ If you want a more advanced design like [this one](http://lewagon.github.io/boot
 </div>
 ```
 
-And then implement your own `.form-login` class in a `components/form.css` file.
+And then implement your own `.form-login` CSS class in a `components/form.css` file.
 
 
 ### Reminder on forms

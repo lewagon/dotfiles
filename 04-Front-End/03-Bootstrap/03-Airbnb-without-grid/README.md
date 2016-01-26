@@ -11,7 +11,7 @@ A challenge to get familiar with Bootstrap basic classes:
 In this challenge, reproduce [this page](http://lewagon.github.io/bootstrap-challenges/08-Final-airbnb-home-without-grid/) by using Bootstrap classes **as much as possible.**
 
 - Every time you need to design a component, look first in the [Bootstrap documentation](http://getbootstrap.com/) to see if there is a class for that.
-- For the banner and the footer you will have to write your own CSS. For the banner, you can [copy/paste code from Le Wagon library](http://lewagon.github.io/ui-components/#banner) to save time.
+- For the banner and the footer you will have to write your own CSS. For the banner component, pick it in [Le Wagon library](http://lewagon.github.io/ui-components/#banner) and put the CSS code in `banner.css`.
 
 
 Here are some tips to help you.
