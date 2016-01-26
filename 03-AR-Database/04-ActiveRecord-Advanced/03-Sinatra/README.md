@@ -79,3 +79,19 @@ This exercise is quite open, here are a few things you can start with:
 - [Very Hard] Add a way to vote on a post
 
 Have fun!
+
+Don't hesitate to share you work on Slack with [`ngrok`](https://ngrok.com/). First you need to add in your `app.rb`
+the following line (at the top, after all `require` statements).
+
+```
+set :bind, '0.0.0.0'
+```
+
+Then install `ngrok` (with `brew install ngrok` or `sudo apt-get install ngrok-client`), and run it
+in another window.
+
+```
+ngrok 4567
+```
+
+You should get a publicly browsable URL (`*.ngrok.com`) to share with everybody!
