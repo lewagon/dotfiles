@@ -60,7 +60,7 @@ The HTML markup of the tabs component is easy, it should look like
 
 ### First / last child
 
-To make the left-top corner of first tab and right-top corner of last tab rounded, you can use the `:first-child` and `last-child` pseudo-classes:
+To make the left-top corner of first tab and right-top corner of last tab rounded, you can use the `:first-child` and `:last-child` pseudo-classes:
 
 ```css
 .tab:first-child {
@@ -71,4 +71,4 @@ To make the left-top corner of first tab and right-top corner of last tab rounde
 }
 ```
 
-`:first-child` and `last-child` are very useful pseudo-classes!
+`:first-child` and `:last-child` are very useful pseudo-classes!
