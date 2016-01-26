@@ -41,7 +41,7 @@ namespace :db do
 
   desc 'populate the database with sample data'
   task :seed do
-    Dir["#{__dir__}/app/models/*.rb"].each {|file| require file }
+    Dir["#{__dir__}/app/models/*.rb"].each { |file| require file }
     require "#{__dir__}/db/seeds.rb"
   end
 
