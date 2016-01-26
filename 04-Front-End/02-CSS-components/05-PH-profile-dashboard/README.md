@@ -46,9 +46,9 @@ First, you must think carefully about the HTML structure of each product. Bad HT
   </ul>
 </div>
 ```
-#### Flexbox technic
+#### Flexbox grow technique
 
-The `<div class="product">` is the flexbox
+The `.product` div is the main flexbox:
 
 ```css
 .product {
@@ -57,7 +57,7 @@ The `<div class="product">` is the flexbox
 }
 ```
 
-Then you just have to make the `product-body` grow, and that's it !
+Then just make the `.product-body` item grow, and that's it!
 
 ```css
 .product-body {
@@ -65,16 +65,16 @@ Then you just have to make the `product-body` grow, and that's it !
 }
 ```
 
-You can then adjust paddings to fine-tune your flex items.
+Then, you can adjust paddings to fine-tune your flex-items.
 
 
 #### List inline
 
-For the list-inline, we put you the code in `style.css` to make you save time
+For the list-inline, we put you the code in `style.css` to save you time.
 
 #### Product arrow
 
-For the product-arrow, here is the CSS code to draw a triangle (pretty cool technic)
+For the product arrow, here is the CSS code to draw a triangle (pretty cool technique [from this post](https://css-tricks.com/examples/ShapesOfCSS/))
 
 ```css
 .product-arrow {
@@ -91,7 +91,7 @@ For the product-arrow, here is the CSS code to draw a triangle (pretty cool tech
 
 #### Hover effects
 
-If you want nice hover effects with smooth transition, first put CSS transitions on the element concerned:
+If you want hover effects with smooth transition, first add CSS transitions on the element concerned by hover effects:
 
 ```css
 .product {
@@ -105,10 +105,11 @@ If you want nice hover effects with smooth transition, first put CSS transitions
 }
 ```
 
-Then define their hover state, for example:
+Then define their `:hover state, for example:
 
 ```css
-/* 1) Hover effects on product */
+/* 1 - Hover effects on product */
+
 /* Background turns grey + cursor becomes Mickey Mouse's hand*/
 .product:hover {
   background: #f7f7fa;
@@ -119,44 +120,37 @@ Then define their hover state, for example:
   transform: scale(1.2);
 }
 
+/* 2 - Hover effects on product-upvote */
 
-/* 2) Hover effects on product-upvote */
 /* Text color turns blue */
 .product-upvote:hover {
   color: #5898f1;
   cursor: pointer;
 }
-/* Arrow triangle turns blue
+/* Arrow triangle turns also blue */
 .product-upvote:hover .product-arrow {
   border-bottom: 9px solid #5898f1;
 }
 ```
 
-Try to hover things on [the dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/) to see the link with this CSS code.
+Hover products on [our dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/) to see these effects in action.
 
 
-### Optional - More advanced header
+### [Optional] Advanced Design
 
-If you want a more advanced design of the header like [this one](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs-bis/), first you will have to make your HTML structure a bit richer:
+For an advanced design of the header like [this one](http://lewagon.github.io/html-css-challenges/12-profile-with-products-bis/), you should first improve the HTML structure of your `profile-header-infos`:
 
 ```html
-<div class="profile-header-wrapper">
-  <div class="container profile-header-container">
-    <div class="profile-header-infos">
-      <img src="https://avatars0.githubusercontent.com/u/2471555?v=3&s=460" alt="">
-      <div class="profile-header-username">
-        <h1>papillard</h1>
-        <h2>co-founder @LeWagon</h2>
-      </div>
-    </div>
-    <div class="tabs">
-      ...
-    </div>
+<div class="profile-header-infos">
+  <img src="your-picture.png" alt="">
+  <div class="profile-header-username">
+    <h1>papillard</h1>
+    <h2>co-founder @LeWagon</h2>
   </div>
 </div>
 ```
 
-Then you have to <i>flexboxize</i> the new `.profile-header-infos` div, and make the second flex-item grow.
+Then you have to <i>flexboxize</i> the `.profile-header-infos` div, and make the second flex-item grow.
 
 ```css
 .profile-header-infos {
@@ -169,5 +163,5 @@ Then you have to <i>flexboxize</i> the new `.profile-header-infos` div, and make
 }
 ```
 
-Everything is so cool with flexbox :)
+Everything is so easy with flexbox :)
 
