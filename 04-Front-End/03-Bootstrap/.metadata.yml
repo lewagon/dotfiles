@@ -1,6 +1,6 @@
 lectures:
-  - front/prototyping-ui-design
-  - front/02-bootstrap
+  - front/design
+  - front/03-bootstrap
 lecture:
   video: 135568640
   gist: e44495ec21243096f374
