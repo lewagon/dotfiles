@@ -1,22 +1,22 @@
 ## Background & Objectives
 
-Now that you are Bootstrap-grid experts, learn 2 advanced techniques very useful.
+Now that you are Bootstrap-grid experts, learn two advanced techniques very useful.
 
 ## Specs
 
 99% of the time you face two issues using the grid:
 
 - You need a **full-screen** wrapper around your grid.
-- You need **inner cards"** inside your grid to play on their border, margin, padding, etc.
+- You need **inner cards** inside your grid to play with their border, margin, padding, etc.
 
 
-Bootstrap beginners often try to change directly grid components (`.container`, `.row` or `.col`) playing on their border, width, padding, etc... By doing so, **they break the grid**. Indeed, `.col` dimensions are computed automatically by Bootstrap so if you add them border, padding, or margin, you just break them.
+Bootstrap beginners often write CSS directly on grid components (`.container`, `.row` or `.col`) to change their border, width, margin, padding, etc... By doing so **they break the grid**. In fact, grid dimensions are computed automatically by Bootstrap, so playing with grid elements is the best way to break the grid..
 
-Instead, use the 2 following techniques.
+Instead, **you must use the following techniques.**
 
 ## Outside Wrapper
 
-Put a wrapper around the container if you need a special background.
+ If you need a special background, just put a wrapper around the container:
 
 ```html
 <div class="wrapper-blue">
@@ -30,7 +30,7 @@ Put a wrapper around the container if you need a special background.
 
 ### Inside cards
 
-Put cards **inside each col** if you want to play on their border/padding/margin/etc..
+If you want to change border/padding/margin/etc of grid inner elements, just add cards **inside each col**:
 
 ```html
 <div class="container">
@@ -49,7 +49,11 @@ Put cards **inside each col** if you want to play on their border/padding/margin
 </div>
 ```
 
+Then you can write:
+
 ```css
+/* You will not break the grid */
+/* Because cards are not direct grid element (like container/row/col) */
 .card-white {
   background: white;
   padding: 30px;
@@ -59,7 +63,7 @@ Put cards **inside each col** if you want to play on their border/padding/margin
 }
 ```
 
-With these techniques, you can play on border, padding, margin without crashing the grid. Indeed, **you don't touch directly at grid components** (`container/row/col`). You can feel safe!
+With these techniques, you can play on border, padding, margin without breaking the grid. Indeed, **you don't touch directly at grid components** (`container/row/col`). You can feel safe!
 
 ### Your turn
 

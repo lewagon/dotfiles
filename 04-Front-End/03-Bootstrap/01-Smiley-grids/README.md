@@ -4,12 +4,12 @@ Practice the Bootstrap grid. Learn how to build various grids with different res
 
 ## Specs
 
-Here is [the smiley grids](http://lewagon.github.io/bootstrap-challenges/01-Pure-Bootstrap-grid/) you should reproduce in this challenge. Each of these 4 grids has the same starting point:
+Here is [the smiley grids](http://lewagon.github.io/bootstrap-challenges/01-Pure-Bootstrap-grid/) that you must reproduce in this challenge. Each of these 4 grids has the same starting point:
 
 ```html
 <div class="container">
   <div class="row">
-    <!-- Different options depending on your grid -->
+    <!-- Different variants depending on your grid -->
   </div>
 </div>
 ```
@@ -48,4 +48,4 @@ And then you will add different `.col-??-??` depending on each behavior you want
 </div>
 ```
 
-In every `<div class="col-..-..">`, you can insert new rows (`<div class="row">`) that will divide the div in 12 new columns. That's how you can build **nested grids**.
+In every `<div class="col-..-..">`, you can insert new rows (`<div class="row">`) that will be divided into 12 new columns. That's how you build **nested grids**.

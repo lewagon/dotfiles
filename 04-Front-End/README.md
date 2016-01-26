@@ -14,7 +14,7 @@ We will go a bit further and make you code your own CSS component library. The o
 
 - Improve your components culture
 - Re-code your [own CSS library](http://lewagon.github.io/ui-components)
-- Build page re-using components, like [Airbnb Home](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/) or [Product Hunt dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/)
+- Build pages re-using components, like [Airbnb Home](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/) or [Product Hunt dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/)
 
 **Take-away**: of course after this day, you can directly pick HTML/CSS code in [Le Wagon components](http://lewagon.github.io/ui-components).
 
