@@ -12,7 +12,7 @@ Before coding the [tabs component](http://lewagon.github.io/ui-components/#tabs)
 
 ```html
 <div class="profile-header-wrapper">
-  <div class="container profile-header-container">
+  <div class="container">
 
     <!-- Avatar and username -->
     <div class="profile-header-infos">
@@ -27,7 +27,7 @@ Before coding the [tabs component](http://lewagon.github.io/ui-components/#tabs)
 </div>
 ```
 
-Do you understand the role of the `profile-header-wrapper` div or the `profile-header-container` div?
+**Do you understand the role of the `.profile-header-wrapper` div or the `.container` div?**. It's really important that you understand it.
 
 
 ### Tabs with flexbox
@@ -55,17 +55,20 @@ The HTML markup of the tabs component is easy, it should look like
 </div>
 ```
 
-Then the flexbox div with `class="tabs"` should be `display:flex;` and each flex item with class `class="tab"` should be `flex: 0 0 25%;`. And that's it !
+- Flexbox with `class="tabs"` should be `display:flex;`
+- Flex items with `class="tab"` should be `flex: 0 0 25%;`
+
+### First / last child
 
 To make the left-top corner of first tab and right-top corner of last tab rounded, you can use the `:first-child` and `last-child` pseudo-classes:
 
 ```css
 .tab:first-child {
-  border-radius: 10px 0 0 0;
+  border-radius: 10px 0 0 0; /* clockwise starting top-left*/
 }
 .tab:last-child {
   border-radius: 0 10px 0 0;
 }
 ```
 
-Very useful pseudo-classes!
+`:first-child` and `last-child` are very useful pseudo-classes!
