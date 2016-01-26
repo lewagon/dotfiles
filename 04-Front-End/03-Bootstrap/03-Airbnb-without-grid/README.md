@@ -14,19 +14,19 @@ In this challenge, reproduce [this page](http://lewagon.github.io/bootstrap-chal
 - For the banner and the footer you will have to write your own CSS. For the banner, you can [copy/paste code from Le Wagon library](http://lewagon.github.io/ui-components/#banner) to save time.
 
 
-Here is a bit of help to design the newlsetter form.
+Here are some tips to help you.
 
 ## Tips & Resources
 
 ### Icons & pictures
 
-For the banner background image we give you a `background.jpg` image in the images folder. Feel free to pick another one on [thestocks](http://thestocks.im/) or to use a placeholder from [unsplash.it](http://unsplash.it).
+For the banner's background image we give you a `background.jpg` image in the images folder. Feel free to pick another one on [thestocks](http://thestocks.im/) or to use a placeholder from [unsplash.it](http://unsplash.it).
 
-For the icons, we also give your four icons (`globe.png`, `dollar.png`, `heart.png`, `beer.png`) coming from [Nucleo Free Pack](https://nucleoapp.com/). Feel free to pick your own icons in the resources we gave you this morning. Don't spend too much time on it, lots of interesting challenges today!
+For the icons, we also give your 4 icons (`globe.png`, `dollar.png`, `heart.png`, `beer.png`) coming from [Nucleo Free Pack](https://nucleoapp.com/). Feel free to pick your own icons in the resources we gave you ([NounProject](http://thenounproject.com/), [Kameleon](http://www.kameleon.pics/) or [Streamline](http://www.streamlineicons.com/)). Don't spend too much time on it, lots of interesting challenges today!
 
 ### HTML forms
 
-A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Each input may have a `<label>` or not. The button to submit the form is also an input with the `type="submit"`. Here is what a form looks like:
+A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Each input may have an associated `<label>` or not. The button to submit the form is also an input with the `type="submit"`. Here is what a form looks like:
 
 
 ```html
@@ -38,9 +38,9 @@ A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Ea
 ```
 
 
-1. There are different types of input (`type="text"`, `type="email"`, `type="date"`)
+1. There are different types of input (`type="text"`, `type="email"`, `type="date"`, etc...)
 2. The `placeholder` is an indicative text which disappears when the user starts writing.
-3. The label `for="something"` will be linked to the input with `id="something"`.
+3. The label `for="something"` will be linked to the input with `id="something"`. Linking labels and inputs is not just for fun. When you will click on the label, the cursor will jump into the associated input (thus a better UX).
 4. The text of the submit button is given thanks to the `value` attribute.
 
 
@@ -57,11 +57,11 @@ Example of Bootstrap form with labels:
 <form action="#">
   <div class="form-group">
     <label>Your email</label>
-    <input type="email"class="form-control">
+    <input type="email" class="form-control">
   </div>
   <div class="form-group">
     <label>Your password</label>
-    <input type="password"class="form-control">
+    <input type="password" class="form-control">
   </div>
   <input type="submit" value="Sign In" class="btn btn-primary">
 </form>
@@ -87,4 +87,4 @@ Now if you want an horizontal form you can **add the `form-inline` class to the 
 </form>
 ```
 
-Bootstrap forms are a bit complicated for beginners.. **Don't rush and take your time to understand them**. Forms are very important in a website, it's where the user interacts!
+Bootstrap forms are a bit complicated for beginners.. **Don't rush and take time to understand them**. Forms are very important in a website, it's where the user interacts!

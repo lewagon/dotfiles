@@ -1,48 +1,119 @@
 ## Background & Objectives
 
-A challenge to get you familiar with Bootstrap CSS classes:
+Build a responsive login form using Bootstrap
 
-- utilities classes (`.text-center`, `.list-inline`, etc..)
-- UI components classes (`.btn-primary`, `.form-inline`, etc..)
+- Start with this [simple login](http://lewagon.github.io/bootstrap-challenges/10-Login/).
+- Then you will code this [more advanced one](http://lewagon.github.io/bootstrap-challenges/10-Login/login.html).
 
-## Specs
-
-In this challenge, reproduce [this page](http://lewagon.github.io/bootstrap-challenges/06-Bootstrap-mockup-without-grid/) by using Bootstrap classes as much as possible. Every time you need to style something, look in the Bootstrap documentation if there is a class for that. Here are some instructions to help you in this challenge:
-
-1. For the banner, the cards section and the footer, you will have to write a bit of personal CSS. In fact, there is no Bootstrap class for image backgrounds, or for custom card design.
-1. The [Bootsrap navbar code](http://getbootstrap.com/components/#navbar-default) given in the official documentation is a bit too complicated and not very convenient (e.g. the brand is a text, not an image..). Wait for tomorrow and we will give you a cool home-made navbar template!
 
 ## Tips & Resources
 
-- Start by building your background image and logo before coding. You can find nice background images on [thestocks](http://thestocks.im/) or use placeholders for [unsplash.it](http://unsplash.it). For building your logo, find SVG icons on [NounProject](http://thenounproject.com/) or [IconMelon](http://iconmelon.com/). Don't hesitate to pimp these SVG icons with Sketch and add your own flavor.
+### Grid offset technique
 
-- Look at our boilerplate, we force you to split your CSS code into several files. `style.css` is responsible for main styling (body backgrounds & colors, fonts, headers, links) and also imports the other files `banner.css`, `card.css`, `footer.css`, etc... which are responsible of other components' design. With this `import` mechanism, we only need to link the `style.css` in the `<head>` of the HTML file.
-
-- For the map section, the code is a bit complicated since it uses a bit of javascript. Here it is:
+The trick to make a form responsive is to use a Bootstrap grid like that:
 
 ```html
-<div id="map" style="width: 100%; height: 400px;"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+      <form action="">
+        ...
+      </form>
 
-<script type="text/javascript">
-var myLatlng = new google.maps.LatLng(48.852937,2.364178);
-
-var myOptions = {
-  zoom: 16,
-  center: myLatlng,
-  scrollwheel: false,
-  mapTypeId: google.maps.MapTypeId.ROADMAP,
-  styles: [] // TODO: replace [] by array from https://snazzymaps.com/
-};
-
-var map = new google.maps.Map(document.getElementById('map'), myOptions);
-var marker = new google.maps.Marker({
-  position: myLatlng,
-  map: map,
-  title: "You are here!"
-});
-</script>
+    </div>
+  </div>
+</div>
 ```
 
-You can pick a nice map theme on [Snazzy Maps](https://snazzymaps.com/) and replace the `[]` in the code above by the JavaScript Style Array you will copy on Snazzyp Maps.
+- This grid is full-size on mobile
+- Then it is centered (thanks to the offset) and takes 33% of the screen for tablet and larger devices.
+
+
+### Form design
+
+If you want a more advanced design like [this one](http://lewagon.github.io/bootstrap-challenges/10-Login/login.html), you can improve the HTML structure of your form:
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+      <div class="form-login">
+        <form action="">
+          ...
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+```
+
+And then implement your own `.form-login` class in a `components/form.css` file.
+
+
+### Reminder on forms
+
+#### HTML forms
+
+A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Each input may have an associated `<label>` or not. The button to submit the form is also an input with the `type="submit"`. Here is what a form looks like:
+
+
+```html
+<form action="#">
+  <label for="your-email">Your email</label>
+  <input type="email" id="your-email" placeholder="bob@gmail.com">
+  <input type="submit" value="Sign In">
+</form>
+```
+
+
+1. There are different types of input (`type="text"`, `type="email"`, `type="date"`, etc...)
+2. The `placeholder` is an indicative text which disappears when the user starts writing.
+3. The label `for="something"` will be linked to the input with `id="something"`. Linking labels and inputs is not just for fun. When you will click on the label, the cursor will jump into the associated input (thus a better UX).
+4. The text of the submit button is given thanks to the `value` attribute.
+
+
+#### Bootstrap form classes
+
+Now let's speak about Bootstrap form classes:
+
+- `form-control` is here to design every `input` (except the button).
+- `form-group` is here to group each input with its associated label.
+
+Example of Bootstrap form with labels:
+
+```html
+<form action="#">
+  <div class="form-group">
+    <label>Your email</label>
+    <input type="email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Your password</label>
+    <input type="password" class="form-control">
+  </div>
+  <input type="submit" value="Sign In" class="btn btn-primary">
+</form>
+```
+
+Example of Bootstrap form without labels:
+
+```html
+<form action="#">
+  <input type="email" class="form-control">
+  <input type="password" class="form-control">
+  <input type="submit" value="Sign In" class="btn btn-primary">
+</form>
+```
+
+Now if you want an horizontal form you can **add the `form-inline` class to the `<form>`** (same as `list-inline` for a list):
+
+```html
+<form action="#" class="form-inline">
+  <input type="email" class="form-control">
+  <input type="password" class="form-control">
+  <input type="submit" value="Sign In" class="btn btn-primary">
+</form>
+```

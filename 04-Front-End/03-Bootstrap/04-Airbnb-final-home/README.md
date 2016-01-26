@@ -1,27 +1,17 @@
 ## Background & Objectives
 
-A challenge to get you familiar with Bootstrap basic CSS classes:
-
-- Text and list formatting `.text-center`, `.list-inline`)
-- Button classes (`.btn`, `.btn-primary`, `.btn-lg`, etc..)
-- Form classes (`.form-inline`, `form-control`)
+Now time to finalize Airbnb Home by putting features and flats within grids.
 
 ## Specs
 
-In this challenge, reproduce [this page](http://lewagon.github.io/bootstrap-challenges/08-Final-airbnb-home-without-grid/) by using Bootstrap classes as much as possible.
+You must build [this final page](http://lewagon.github.io/bootstrap-challenges/09-Final-airbnb-home/index.html).
 
-- Every time you need to design a component, look first in the [Bootstrap documentation](http://getbootstrap.com/) to see if there is a class for that.
-- For the banner and the footer you will have to write your own CSS. For the banner, you can [pick it in Le Wagon library](http://lewagon.github.io/ui-components/#banner) to save time.
-
-
+- For avatar and card components pick them in [Le Wagon library](http://lewagon.github.io/ui-components/) and put the CSS code in `avatar.css` and `card.css`.
+- Think about the responsive behavior of each grid before coding it. Don't forget to put wrapper around the container and cards inside the col if needed (like in the second challenge of today).
 
 ## Tips & Resources
 
-- We put you a backStart by building your background image and logo before coding. You can find nice background images on [thestocks](http://thestocks.im/) or use placeholders for [unsplash.it](http://unsplash.it). For building your logo, find SVG icons on [NounProject](http://thenounproject.com/) or [IconMelon](http://iconmelon.com/). Don't hesitate to pimp these SVG icons with Sketch and add your own flavor.
-
-- Look at our boilerplate, we force you to split your CSS code into several files. `style.css` is responsible for main styling (body backgrounds & colors, fonts, headers, links) and also imports the other files `banner.css`, `card.css`, `footer.css`, etc... which are responsible of other components' design. With this `import` mechanism, we only need to link the `style.css` in the `<head>` of the HTML file.
-
-- For the map section, the code is a bit complicated since it uses a bit of javascript. Here it is:
+For the map section, the code is a bit complicated since it uses a bit of javascript. Here it is:
 
 ```html
 <div id="map" style="width: 100%; height: 400px;"></div>
