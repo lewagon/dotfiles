@@ -53,7 +53,7 @@ Then you can write:
 
 ```css
 /* You will not break the grid */
-/* Because cards are not direct grid element (like container/row/col) */
+/* Cards are not grid element (container/row/col) */
 .card-white {
   background: white;
   padding: 30px;
