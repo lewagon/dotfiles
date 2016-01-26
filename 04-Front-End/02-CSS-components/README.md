@@ -1,21 +1,17 @@
-## `01-Profile-content`
-A simple challenge to manipulate basic HTML tags and create a profile page with headers/texts/lists/images/tables.
+## `01-Button-sprint`
+A simple challenge to design [3 different buttons](http://lewagon.github.io/html-css-challenges/08-button-sprint/). Buttons are pretty simple components but very important for the swag of your website.
 
-## `02-Fonts-and-colors`
-Add simple CSS rules to design fonts and colors of your profile page.
+## `02-Banner-design`
+Code a [banner component](http://lewagon.github.io/html-css-challenges/09-canonical-banner/) used in 99% of startup home-pages.
 
-## `03-Box-model`
-Play with the box model (`margin/border/padding/width/height`) by splitting your profile information into different `<div>`.
+## `03-Airbnb-home`
+Code a card component, and start building a first version of [Airbnb home](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/)
 
-## `04-Advanced-selectors`
-Use advanced selectors (id, class, grouping, descendant selectors) to fine-tune your page with a more subtle design.
+## `04-PH-profile-header`
+Code a tabs component and use it to build [Product Hunt profile header](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs/)
 
-## `05-Fixed-sidebar`
-Build a nice layout with a fixed sidebar and a scrollable page content.
+## `05-PH-profile-dasboard`
+Code a product component and put it below your profile header to build [Product Hunt user dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/)
 
-## `06-Profile-dashboard`
-Create a cool profile dashboard by inserting your info into a nice 2D layout. You'll
-have to use a lot of CSS positioning techniques.
-
-## `06-Event-form`
-A little challenge to manipulate HTML `<form>` and most standard `<input>`.
+## `06-Take-away`
+A summary of all the components you've coded. From tomorrow, you can now directly copy/paste code from [Le Wagon library](http://lewagon.github.io/ui-components/).

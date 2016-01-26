@@ -16,7 +16,7 @@ We will go a bit further and make you code your own CSS component library. The o
 - Re-code your [own CSS library](http://lewagon.github.io/ui-components)
 - Build page re-using components, like [Airbnb Home](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/) or [Product Hunt dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/)
 
-**Take-away of component day**: of course after this day, you can directly pick HTML/CSS code in [Le Wagon components](http://lewagon.github.io/ui-components).
+**Take-away**: of course after this day, you can directly pick HTML/CSS code in [Le Wagon components](http://lewagon.github.io/ui-components).
 
 ## `03-Bootstrap` (Friday)
 
@@ -24,7 +24,7 @@ Before speaking of Bootstrap, we will briefly (15 minutes) list design resources
 
 Then, let's move to Bootstrap.
 
-- For rich components, you've built our own CSS library.
+- For rich components, we've built our own CSS library.
 - For standard ones, let's not re-invent the wheel and use Bootstrap built-in classes.
 - Also yesterday, we saw how to build small grids with flexbox (e.g. for tabs). Again for a functional responsive grid, we need something more robust: here comes [Bootstrap grid](http://getbootstrap.com/css/#grid).
 
