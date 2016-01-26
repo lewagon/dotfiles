@@ -16,10 +16,17 @@ In this challenge, reproduce [this page](http://lewagon.github.io/bootstrap-chal
 
 Here is a bit of help to design the newlsetter form.
 
+## Tips & Resources
 
-### HTML basics for forms
+### Icons & pictures
 
-A basic HTML `<form>` is made of different `<input>` (= the different fields of the form). Each input may or may not have a corresponding label. The button to submit the form is also an input with the `type="submit"`. Here is a basic form HTML code
+For the banner background image we give you a `background.jpg` image in the images folder. Feel free to pick another one on [thestocks](http://thestocks.im/) or to use a placeholder from [unsplash.it](http://unsplash.it).
+
+For the icons, we also give your four icons (`globe.png`, `dollar.png`, `heart.png`, `beer.png`) coming from [Nucleo Free Pack](https://nucleoapp.com/). Feel free to pick your own icons in the resources we gave you this morning. Don't spend too much time on it, lots of interesting challenges today!
+
+### HTML forms
+
+A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Each input may have a `<label>` or not. The button to submit the form is also an input with the `type="submit"`. Here is what a form looks like:
 
 
 ```html
@@ -31,18 +38,20 @@ A basic HTML `<form>` is made of different `<input>` (= the different fields of 
 ```
 
 
-- There are different types of input (`type="text"`, `type="email"`, `type="date"`)
-- The `placeholder` is an indicative text which disappears when the user starts writing.
-- The label `for="something"` is linked to the input with `id="something"`.
-- The text of the submit button is given in the `value` attribute.
+1. There are different types of input (`type="text"`, `type="email"`, `type="date"`)
+2. The `placeholder` is an indicative text which disappears when the user starts writing.
+3. The label `for="something"` will be linked to the input with `id="something"`.
+4. The text of the submit button is given thanks to the `value` attribute.
 
 
-### Bootstrap form structure
+### Bootstrap form classes
 
-- `form-control` class is here to design all the `input` (except button).
-- `form-group` class is here to group each input with the associated label.
+Now let's speak about Bootstrap form classes:
 
-Examples:
+- `form-control` is here to design every `input` (except the button).
+- `form-group` is here to group each input with its associated label.
+
+Example of Bootstrap form with labels:
 
 ```html
 <form action="#">
@@ -58,7 +67,7 @@ Examples:
 </form>
 ```
 
-Or without labels:
+Example of Bootstrap form without labels:
 
 ```html
 <form action="#">
@@ -68,7 +77,7 @@ Or without labels:
 </form>
 ```
 
-Now if you want an horizontal form you can add the `form-inline` class to the `<form>`:
+Now if you want an horizontal form you can **add the `form-inline` class to the `<form>`** (same as `list-inline` for a list):
 
 ```html
 <form action="#" class="form-inline">
@@ -78,9 +87,4 @@ Now if you want an horizontal form you can add the `form-inline` class to the `<
 </form>
 ```
 
-Bootstrap form markup is complicated for beginners.. **But don't rush and take your time to understand it**. Forms are very important in a website (it's where the user interacts), so **treat them well!**
-
-
-## Tips & Resources
-
-For the banner background image we put you a `background.jpg` image in the images folder. Feel free to pick another one on [thestocks](http://thestocks.im/) or to use a placeholder from [unsplash.it](http://unsplash.it).
+Bootstrap forms are a bit complicated for beginners.. **Don't rush and take your time to understand them**. Forms are very important in a website, it's where the user interacts!
