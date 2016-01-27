@@ -1,6 +1,12 @@
 lectures:
   - front/01-html-css
 video: 135491114
+
 livecode:
-  video: 135481445
-  gist: fd7412d6795a10f9aaa1
+  video: 153264418
+  gist: 06c769db0bd01dedd8f0
+
+# Old:
+# livecode:
+#   video: 135481445
+#   gist: fd7412d6795a10f9aaa1
