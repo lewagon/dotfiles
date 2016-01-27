@@ -1,10 +1,10 @@
 ## Background & Objectives
 
-Grasp the basics of object-oriented programming while writing your very first class.
+Grasp the basic concepts of object-oriented programming while writing your very first class.
 
 ## Specs
 
-Choose something from the real world you want to model. Restaurants, vehicles, users, games, recipes.. *It's your call !*
+Choose something from the real world that you would like to model. Restaurants, vehicles, users, games, recipes.. *It's your call !*
 
 Once chosen, create a file in the `lib` directory which has the name of your object.
 For instance, if you chose to model Restaurants, create the `restaurant.rb` file:
@@ -22,8 +22,8 @@ several restaurants (with `new`), so it should be singular!
 
 ### What are the inner properties of your objects?
 
-What are the characteristics of a restaurant? of a user? of a game?
-Choose some characteristics of your class you want to model. They will be your **instance variables**, the `@properties`.
+What are the characteristics of a restaurant? Of a user? Of a game?
+Choose some characteristics of your class that you want to model. They will be your **instance variables**, or `@properties`.
 
 ### Define the constructor
 
@@ -59,12 +59,12 @@ irb> restaurant.name
 
 ## Learning Badges
 
-Show your code to a teacher. He will ensure your understand sufficiently the **concepts and syntax** of:
+Show your code to a teacher. She/He will ensure that you sufficiently understand the **concepts and syntax** of:
 
 - class and objects
-- instance variables and instance methods!
+- instance variables and instance methods
 - the `initialize` constructor
-- getters and setters methods
+- getter and setter methods
 
 ## Tips & Resources
 
