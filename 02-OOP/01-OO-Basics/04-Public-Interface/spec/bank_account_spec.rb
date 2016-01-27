@@ -40,6 +40,10 @@ describe BankAccount do
     it 'returns data about the account' do
       expect(account.to_s).to match /#{account.name}/
     end
+
+    it 'returns hidden iban' do
+      expect(account.to_s).to match /FR14\*+606/
+    end
   end
 
   describe '#withdraw' do
