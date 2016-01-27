@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Congrats for reaching the first optional exercices of the first OOP day.
+Congrats for reaching the first optional exercice of the first OOP day.
 We will now work on an exercise to mix sorting and comparable methods with
 objects.
 

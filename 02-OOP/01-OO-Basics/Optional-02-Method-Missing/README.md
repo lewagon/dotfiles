@@ -29,7 +29,7 @@ You might think that you just have to put an `attr_accessor :color` on `UberHash
 
 You will need to define a `method_missing` method in your class, and implement it. You can read [this article](http://technicalpickles.com/posts/using-method_missing-and-respond_to-to-create-dynamic-methods/) to get a sense of how ruby calls instance methods.
 
-One other thing you'll need is the ability to call an arbitrary method on an instance. Say we have this simple `Student` class:
+One other thing you will need is the ability to call an arbitrary method on an instance. Say we have this simple `Student` class:
 
 ```ruby
 class Student
@@ -41,7 +41,7 @@ class Student
 end
 ```
 
-Then, both way of retrieving the student's name is equivalent:
+Then, both ways of retrieving the student's name is equivalent:
 
 ```ruby
 student = Student.new("George")
