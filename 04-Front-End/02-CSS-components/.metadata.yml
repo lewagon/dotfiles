@@ -2,6 +2,6 @@ lectures:
   - front/02-css-components-design
 
 video: 153361996
-# livecode:
-#   video: 
-#   gist: 
+livecode:
+  video: 153400603
+  gist: 13c7ce83b79c35498f95
