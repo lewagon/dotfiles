@@ -1,24 +1,19 @@
-require_relative 'controller'
-
 class Router
   def initialize(controller)
     @controller = controller
-    @running = true
+    @running    = true
   end
 
   def run
     puts "Welcome to the Cookbook!"
     puts "           --           "
+
     while @running
       display_tasks
       action = gets.chomp.to_i
       print `clear`
       route_action(action)
     end
-  end
-
-  def stop
-    @running = false
   end
 
   private
@@ -29,8 +24,13 @@ class Router
     when 2 then @controller.create
     when 3 then @controller.destroy
     when 4 then stop
-    else puts "Please press 1, 2, 3 or 4"
+    else
+      puts "Please press 1, 2, 3 or 4"
     end
+  end
+
+  def stop
+    @running = false
   end
 
   def display_tasks
