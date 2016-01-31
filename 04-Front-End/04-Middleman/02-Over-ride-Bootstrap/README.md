@@ -31,7 +31,7 @@ When it's done, it's time to refactor your CSS code into SCSS:
 1. Go through [this guide](http://sass-lang.com/guide) and read more about SCSS. Re-write your code with nesting and chaining, as below:
 
 
-```scss
+```css
 .banner {
   background: $blue;
   color: white;
