@@ -1,13 +1,19 @@
 ## Background & Objectives
 
-The objective of this challenge is to import the HTML of your Bootstrap Airbnb home and refactor the code with ERB.
+In this challenge you must
+
+- Import the HTML of your Bootstrap Airbnb home in your Middleman project.
+- Refactor the HTML code with ERB.
+- Add a new team page to your project.
+
+## Setup
 
 - Fork our [middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate).
-- Rename your Github repo in the settings (`frontend-advanced-boilerplate` is not a very cool name).
-- Then clone this renamed repo on your computer. Be careful, don't clone it in **`fullstack-challenges`** folder but as a new separated project.
+- Rename the Github repo in the settings (`frontend-advanced-boilerplate` is a poor name).
+- Clone the renamed repo on your computer. Be careful, **don't clone it in `fullstack-challenges`** but as a new separated project.
 - Also install all gems listed in the `Gemfile` with `bundle`
 
-```
+```bash
 $ cd ~/code/$GITHUB_USERNAME
 $ git clone git@github.com:$GITHUB_USERNAME/repo_name.git
 $ cd repo_name
