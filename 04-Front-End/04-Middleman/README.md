@@ -1,15 +1,15 @@
-## `01-Content-migration`
+## `01-Playing-with-ERB`
 
-The objective of this challenge is to migrate your poor HTML website into a nice Middleman project with templates and SASS.
+Play with ERB, add a team page to your Middleman project and import your Airbnb home putting common parts in the layout. Replace `<a>` and `<img>` tags with `<%= link_to >` and `<%= image_tag >` helpers.
 
-## `02-Style-migration`
+## `02-Over-ride-Bootstrap`
 
-In this challenge, you will adopt a very clean organization of our styleheets, and you will use SASS variables, chaining and nesting to have a concise but efficient design.
+Define your own graphical variables for fonts and colors in `config/_variables.scss` and use them to over-ride Bootstrap theme. Then import your Airbnb CSS code in your Middleman project and refactor your code in SCSS.
 
-## `Optional-01-Local-data`
+## `03-Flat-dynamic-view`
 
-Add a new page to your site connected to a text-database of your choice. Once you know this technique, you can easily add new content and maintain your website.
+Let's add a dynamic flat template able to display [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html), [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html), [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html), etc..
 
-## `Optional-02-Sass-UI-modules`
+## `Optional-01-Blogging-with-Middleman`
 
-This challenge makes you write your first SASS modules. Once written, you can re-use them in all your future projects. That rocks!
+Use Middleman blog extension to add a blog to your Airbnb.

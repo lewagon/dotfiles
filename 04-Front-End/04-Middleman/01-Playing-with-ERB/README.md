@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-The objective of this challenge is to import the HTML of your Bootstrap Airbnb home and refacto the code with ERB.
+The objective of this challenge is to import the HTML of your Bootstrap Airbnb home and refactor the code with ERB.
 
 - Fork our [middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate).
 - Rename your Github repo in the settings (`frontend-advanced-boilerplate` is not a very cool name).
