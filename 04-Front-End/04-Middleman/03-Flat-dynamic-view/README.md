@@ -1,10 +1,10 @@
 ## Background & Objectives
 
-Add a flat show view in your Airbnb static copycat. You should reproduce [this page](http://lewagon.github.io/middleman-airbnb/flats/seb.html). This template will be dynamic and able to display [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html), [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html) or [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html)
+First create a YAML database for your flats. Then add a dynamic flat template able to display [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html), [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html), [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html), etc..
 
-## Create a user YAML database
+## Create a flats YAML database
 
-In Middleman `data` **folder** add a new `flats.yml`
+In Middleman `data` folder add a new `flats.yml`
 
 ```
 .
@@ -16,7 +16,6 @@ In Middleman `data` **folder** add a new `flats.yml`
 │   └── stylesheets
 └── data
     ├── team.yml
-    ├── products.yml
     └── flats.yml
 ```
 
@@ -43,7 +42,7 @@ romain
   wifi: false
 ```
 
-Be creative and don't hesitate to add cool data to your YAML (flat rating, pictures of different rooms, maximum number of guests, etc..).
+Be creative and **don't hesitate to add extra data to your YAML** (flat rating, pictures of different rooms, maximum number of guests, etc..).
 
 
 ## Loop with ERB
@@ -65,7 +64,7 @@ The content of `flats.yml` is accessible in the ruby hash `data.flats`. You can 
           <p><%= flat.summary %></p>
         </div>
         <%= image_tag flat.owner_picture, class:"card-user avatar avatar-large" %>
-        <%= link_to "", "#", class: "card-link" %>
+        <%= link_to "flats/#{owner}.html", "#", class: "card-link" %>
       </div>
     </div>
     <% end %>
@@ -73,9 +72,11 @@ The content of `flats.yml` is accessible in the ruby hash `data.flats`. You can 
 </div>
 ```
 
-Read more about data files on [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
+**Take time to really understand this code**. Then read more about data files on [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
 
-**Middleman vs. Rails**: in Rails you will have Active Record, so you will replace `data.flats` by `Flat.all` with the `Flat` model connected to your SQL database. I'm sure you see now how frontend and backend will magically connect :)
+## Middleman vs. Rails
+
+In Rails you will have Active Record, so you will replace `data.flats` by `Flat.all` with the `Flat` model connected to your SQL database. Do you see how frontend and backend will magically connect? :)
 
 ## Dynamic page
 
@@ -90,14 +91,18 @@ Then add to `config.rb` something like:
 end
 ```
 
-You have to **restart your server when you change the config** (the config is loaded when you launch the server).
+You must **restart your server when you change the config** (config is only loaded when you launch the server).
 
-Now create the dynamic template `/flats/show.html.erb`. Inside you can use the `owner` parameter which will be dynamic (worth `"romain"`, `"seb"`, `"anne"` depending on the URL) and use it as a key of the `data.flats` hash to access the info of corresponding flat, like below:
+Create the dynamic template `/flats/show.html.erb`. In this ERM template, `owner` will be dynamic and worth `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL. You can then read in the hash `data.flats` to access the info of corresponding flat, like below:
 
 
 ```erb
 <!-- source/flats/show.html.erb -->
+
+<!-- Read flat from data.flats with owner key -->
 <% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
 <%= image_tag flat.owner_picture, class: "img-circle" %>
 <p><%= flat.owner_name %></p>
 <h1><%= flat.description %></h1>
@@ -105,4 +110,10 @@ Now create the dynamic template `/flats/show.html.erb`. Inside you can use the `
 
 ```
 
-You can now access to `http://localhost:4567/flats/anne.html` (`owner = "anne"`) or `http://localhost:4567/flats/seb.html` (`owner = "seb"`). How cool?
+Now you wan access to:
+
+- [http://localhost:4567/flats/anne.html](http://localhost:4567/flats/anne.html) where `owner = "anne"`
+- [http://localhost:4567/flats/seb.html](http://localhost:4567/flats/anne.html) where `owner = "seb"`
+- [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/anne.html) where `owner = "romain"`
+- etc..
+
