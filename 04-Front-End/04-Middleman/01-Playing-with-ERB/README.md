@@ -27,6 +27,10 @@ $ middleman server # launch local server (Ctr + C to kill it)
 $ middleman deploy # build HTML/CSS and push it on Github Pages
 ```
 
+## Initial Bootstrap home
+
+Normally you've coded your Bootstrap airbnb home (last Friday). But if you want, you can also start with [our version](https://github.com/lewagon/bootstrap-challenges/tree/master/11-Airbnb-search-form).
+
 ## Specs
 
 In this challenge, you have to:
@@ -55,6 +59,3 @@ $ middleman deploy
 
 You can now visit your masterpiece on `http://GITHUB_USERNAME.github.io/repo_name`. In our case, have a look at [http://lewagon.github.io/middleman-airbnb](http://lewagon.github.io/middleman-challenges).
 
-## Starting Bootstrap home
-
-You can start with this [Airbnb Bootstrap home](https://github.com/lewagon/bootstrap-challenges/tree/master/11-Airbnb-search-form) if you don't have yours.
