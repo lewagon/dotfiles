@@ -20,7 +20,7 @@ $ bundle install
 Here is what these commands do:
 
 1. `cd` into your personal code folder.
-1. Clone the repo on your computer.
+1. Clone the repo on your computer. Be carefull, **don't clone the repo inside `fullstack-challenges`** but as a separated project in `~/code/$GITHUB_USERNAME`.
 1. Jump into Middleman project and install all gems listed in the `Gemfile` with `bundle install`.
 
 ## Middleman commands
