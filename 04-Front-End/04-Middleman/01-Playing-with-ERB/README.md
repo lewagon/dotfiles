@@ -17,11 +17,11 @@ $ cd repo_name
 $ bundle install
 ```
 
-Here what the above commands do:
+Here is what these commands do:
 
 1. `cd` into your personal code folder.
 1. Clone the repo on your computer.
-1. Jump into Middleman project and install all gems listed in the `Gemfile` with `bundle install` command.
+1. Jump into Middleman project and install all gems listed in the `Gemfile` with `bundle install`.
 
 ## Middleman commands
 
