@@ -57,7 +57,7 @@ The content of `flats.yml` is accessible in the ruby hash `data.flats`. You can 
   <div class="row">
     <% data.flats.each do |owner, flat| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path flat.picture %>');">
+      <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
         <div class="card-category"><%= flat.city %></div>
         <div class="card-description">
           <h2><%= flat.name %></h2>
