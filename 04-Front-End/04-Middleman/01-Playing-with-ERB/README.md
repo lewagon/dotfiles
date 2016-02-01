@@ -25,7 +25,7 @@ Here is what these commands do:
 
 ## Middleman commands
 
-Then you have two important Middleman commands:
+Then you can use two important Middleman commands:
 
 ```bash
 $ middleman server # launch local server (Ctr + C to kill it)
