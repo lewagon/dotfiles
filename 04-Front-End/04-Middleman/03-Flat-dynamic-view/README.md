@@ -24,7 +24,7 @@ This file should look like
 
 ```yaml
 # data/flats.yml
-seb
+seb:
   owner_name: Sebastien Saunier
   picture: http://placehold.it/150x150
   owner_picture: http://placehold.it/150x150
@@ -32,7 +32,7 @@ seb
   summary: Charming room in Montmartre
   city: Paris, France
   wifi: true
-romain
+romain:
   owner_name: Romain Paillard
   picture: http://placehold.it/150x150
   owner_picture: http://placehold.it/150x150
