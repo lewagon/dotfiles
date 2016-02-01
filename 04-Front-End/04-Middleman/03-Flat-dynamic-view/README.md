@@ -93,7 +93,7 @@ end
 
 You must **restart your server when you change the config** (config is only loaded when you launch the server).
 
-Create the dynamic template `/flats/show.html.erb`. In this ERM template, `owner` will be dynamic and worth `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL. You can then read in the hash `data.flats` to access the info of corresponding flat, like below:
+Create the dynamic template `/flats/show.html.erb`. In this ERB template, `owner` will dynamically change to `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL. You can then extract from the hash `data.flats` infos about the owner's flat:
 
 
 ```erb
@@ -110,10 +110,12 @@ Create the dynamic template `/flats/show.html.erb`. In this ERM template, `owner
 
 ```
 
-Now you wan access to:
+Now try to access:
 
-- [http://localhost:4567/flats/anne.html](http://localhost:4567/flats/anne.html) where `owner = "anne"`
-- [http://localhost:4567/flats/seb.html](http://localhost:4567/flats/anne.html) where `owner = "seb"`
-- [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/anne.html) where `owner = "romain"`
-- etc..
+- [http://localhost:4567/flats/anne.html](http://localhost:4567/flats/anne.html) (where `owner = "anne"`)
+- [http://localhost:4567/flats/seb.html](http://localhost:4567/flats/anne.html) (where `owner = "seb"`)
+- [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/anne.html) (where `owner = "romain"`)
+- etc...
 
+
+How cool?
