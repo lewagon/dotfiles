@@ -57,7 +57,7 @@ The content of `flats.yml` is accessible in the ruby hash `data.flats`. You can 
   <div class="row">
     <% data.flats.each do |owner, flat| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path flat.picture %>');">
+      <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
         <div class="card-category"><%= flat.city %></div>
         <div class="card-description">
           <h2><%= flat.name %></h2>
@@ -93,13 +93,13 @@ end
 
 You must **restart your server when you change the config** (config is only loaded when you launch the server).
 
-Create the dynamic template `/flats/show.html.erb`. In this ERM template, `owner` will be dynamic and worth `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL. You can then read in the hash `data.flats` to access the info of corresponding flat, like below:
+Create the dynamic template `/flats/show.html.erb`. In this ERB template, `owner` will dynamically change to `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL. You can then extract from the hash `data.flats` infos about the owner's flat:
 
 
 ```erb
 <!-- source/flats/show.html.erb -->
 
-<!-- Read flat from data.flats with owner key -->
+<!-- Read from data.flats with owner key -->
 <% flat = data.flats[owner] %>
 
 <!-- Inject flat data in template -->
@@ -110,10 +110,12 @@ Create the dynamic template `/flats/show.html.erb`. In this ERM template, `owner
 
 ```
 
-Now you wan access to:
+Now try to access:
 
-- [http://localhost:4567/flats/anne.html](http://localhost:4567/flats/anne.html) where `owner = "anne"`
-- [http://localhost:4567/flats/seb.html](http://localhost:4567/flats/anne.html) where `owner = "seb"`
-- [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/anne.html) where `owner = "romain"`
-- etc..
+- [http://localhost:4567/flats/anne.html](http://localhost:4567/flats/anne.html) (where `owner = "anne"`)
+- [http://localhost:4567/flats/seb.html](http://localhost:4567/flats/anne.html) (where `owner = "seb"`)
+- [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/anne.html) (where `owner = "romain"`)
+- etc...
 
+
+How cool?

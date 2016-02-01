@@ -12,9 +12,7 @@ Here is a roadmap of things to do:
 
 ## Organize your code
 
-1. Import the CSS code of your Bootstrap home in your Middleman project. For each piece of code, ask yourself:
-
-**Where should I write it (`config/_variables.scss`? `layout`? `pages`? `components`?)**
+Import the CSS code of your Bootstrap home in your Middleman project. For each piece of code, ask yourself: where should I write it? in `config/_variables.scss`? `layout`? `pages`? `components`?
 
 Remember:
 

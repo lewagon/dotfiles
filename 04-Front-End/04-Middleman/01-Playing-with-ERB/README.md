@@ -8,10 +8,7 @@ In this challenge you must
 
 ## Setup
 
-- Fork our [middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate).
-- Rename the Github repo in the settings (`frontend-advanced-boilerplate` is a poor name).
-- Clone the renamed repo on your computer. Be careful, **don't clone it in `fullstack-challenges`** but as a new separated project.
-- Also install all gems listed in the `Gemfile` with `bundle`
+Fork our [middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate), rename it in settings. And then:
 
 ```bash
 $ cd ~/code/$GITHUB_USERNAME
@@ -20,7 +17,15 @@ $ cd repo_name
 $ bundle install
 ```
 
-Then you have two important Middleman commands:
+Here is what these commands do:
+
+1. `cd` into your personal code folder.
+1. Clone the repo on your computer.
+1. Jump into Middleman project and install all gems listed in the `Gemfile` with `bundle install`.
+
+## Middleman commands
+
+Then you can use two important Middleman commands:
 
 ```bash
 $ middleman server # launch local server (Ctr + C to kill it)
