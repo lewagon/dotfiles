@@ -35,5 +35,5 @@ function add_error(msg) {
 }
 
 $(document).ready(function() {
-  run_challenges();
+  runChallenges();
 })

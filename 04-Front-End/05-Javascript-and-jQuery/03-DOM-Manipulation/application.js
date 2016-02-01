@@ -5,7 +5,7 @@
 // This is a good practise. Each time you make some progress in software
 // development, you want to save a snapshot.
 
-function run_challenges() {
+function runChallenges() {
 
   // Ex 1. Read the content of the email input
   var email = null;  // TODO: replace null, keep the email variable.
