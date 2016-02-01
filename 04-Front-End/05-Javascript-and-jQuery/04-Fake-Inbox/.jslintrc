@@ -1,0 +1,8 @@
+{
+  "indent": 2,
+  "color": true,
+  "predef": [
+    "$",
+    "document"
+  ]
+}

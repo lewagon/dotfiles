@@ -1,9 +1,6 @@
-## `01-DOM-Manipulation`
-Learn to select elements of the DOM with the jQuery `$()` function, and then to play with them: change their content, their attributes, their class, create new elements and insert them in the page, etc..
+Today's goal is to realize that JavaScript is another **programming language**. You now know
+how to code in Ruby, so picking up a new language (JavaScript) should be easier that your
+very first one.
 
-## `02-Events-Animation`
-Define your first jQuery events and the associated **callbacks**.
-
-
-## `03-Modal`
-Define a cool jQuery plugin (CSS + JS files) for a picture modal (ex: for an artist's portfolio page).
+We'll play with jQuery and DOM manipulation functions. At the end of the day, you should see
+how JavaScript is useful to modify the web page content **after** the first page load.
