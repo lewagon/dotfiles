@@ -99,7 +99,7 @@ Create the dynamic template `/flats/show.html.erb`. In this ERB template, `owner
 ```erb
 <!-- source/flats/show.html.erb -->
 
-<!-- Read flat from data.flats with owner key -->
+<!-- Read from data.flats with owner key -->
 <% flat = data.flats[owner] %>
 
 <!-- Inject flat data in template -->
