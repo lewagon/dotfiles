@@ -1,0 +1,19 @@
+## DNT config file
+## see https://github.com/rvagg/dnt
+
+NODE_VERSIONS="\
+  v0.10.40     \
+  v0.12.7      \
+  v1.8.4       \
+  v2.5.0       \
+  v3.3.0       \
+  v4.2.2       \
+  v5.0.0       \
+"
+OUTPUT_PREFIX="contextify-"
+TEST_CMD="\
+  cd /dnt/ &&                                                    \
+  npm install --nodedir=/usr/src/node &&                         \
+  npm test;                          \
+"
+LOG_OK_CMD="tail -1 | sed 's/.\[1m.\[32mOK: .\[39m.\[22m.* assertions.*/ok/'"
