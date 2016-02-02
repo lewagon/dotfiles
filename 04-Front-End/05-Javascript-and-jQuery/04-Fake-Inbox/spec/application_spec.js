@@ -1,27 +1,18 @@
-  var assert = require('chai').assert;
+var assert = require('chai').assert;
 var expect = require('chai').expect;
-var jsdom = require('jsdom').jsdom;
 
-function createDocument() {
-  const document = jsdom(undefined);
-  const window = document.defaultView;
-  const $ = require('jquery')(window);
-  global.document = document;
-  global.window = window;
-  global.$ = $;
-
-  Object.keys(window).forEach(function(key) {
-    if (!(key in global)) {
-      global[key] = window[key];
+var $ = function(document) {
+  return {
+    ready: function() {
+      // no op
     }
-  });
-
-  return document;
+  }
 }
-
-createDocument();
+global.$ = $;
+global.document = {};
 
 var application = require('../application');
+
 
 describe('hasNewMessage()', function () {
   it('should not return `true` 20% of the time', function() {
