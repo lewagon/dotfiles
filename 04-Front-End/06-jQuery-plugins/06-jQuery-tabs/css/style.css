@@ -1,0 +1,11 @@
+@import url("avatar.css");
+@import url("tabs.css");
+@import url("profile_header.css");
+
+body {
+  margin: 0;
+  font-family: Open-sans, sans-serif;
+}
+h1, h2, h3 {
+  font-family: Raleway, Helvetica, sans-serif;
+}

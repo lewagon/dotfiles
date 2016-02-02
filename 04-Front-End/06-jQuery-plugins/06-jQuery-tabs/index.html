@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dynamic tabs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="profile-header-wrapper">
+      <div class="container profile-header-container text-center">
+        <div class="profile-header-infos">
+          <img src="images/papillard.jpeg" alt="">
+          <h1>papillard</h1>
+          <h2>co-founder @LeWagon</h2>
+        </div>
+        <div class="tabs">
+          <a class="tab active" data-target="#bio">
+            <h3>Bio</h3>
+          </a>
+          <a class="tab" data-target="#projects">
+            <h3>Projects</h3>
+          </a>
+          <a class="tab" data-target="#contact">
+            <h3>Contact</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <div class="tab-content" id="bio">
+        <p>This is my bio.</p>
+      </div>
+      <div class="tab-content hidden" id="projects">
+        <p>Here are my projects.</p>
+      </div>
+      <div class="tab-content hidden" id="contact">
+        <p>Contact me if you want.</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascript/tabs.js"></script>
+  </body>
+</html>
