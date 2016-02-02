@@ -1,3 +1,5 @@
+"use strict";
+
 //Tree traversing
 exports.getFirstChild = function (node) {
   return node.childNodes[0];
@@ -21,7 +23,7 @@ exports.getTagName = function (element) {
 };
 
 exports.getNamespaceURI = function (element) {
-  return element.namespaceURI || 'http://www.w3.org/1999/xhtml';
+  return element.namespaceURI || "http://www.w3.org/1999/xhtml";
 };
 
 exports.getTextNodeContent = function (textNode) {
@@ -46,11 +48,11 @@ exports.getDocumentTypeNodeSystemId = function (doctypeNode) {
 
 //Node types
 exports.isTextNode = function (node) {
-  return node.nodeName === '#text';
+  return node.nodeName === "#text";
 };
 
 exports.isCommentNode = function (node) {
-  return node.nodeName === '#comment';
+  return node.nodeName === "#comment";
 };
 
 exports.isDocumentTypeNode = function (node) {

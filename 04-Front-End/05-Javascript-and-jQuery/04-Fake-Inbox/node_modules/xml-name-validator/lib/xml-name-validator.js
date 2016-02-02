@@ -2,11 +2,16 @@
 var parser = require("./generated-parser.js");
 
 exports.name = function (potentialName) {
-    parser.parse(potentialName, { startRule: "Name" });
+    return mapResult(parser.startWith("Name").exec(potentialName));
 };
 
 exports.qname = function (potentialQname) {
-    parser.parse(potentialQname, { startRule: "QName" });
+    return mapResult(parser.startWith("QName").exec(potentialQname));
 };
 
-exports.SyntaxError = parser.SyntaxError;
+function mapResult(result) {
+    return {
+        success: result.success,
+        error: result.error && parser.getTrace(result.error.message)
+    };
+}

@@ -8,6 +8,6 @@ module.exports = function (core) {
   };
 
   inheritFrom(core.CharacterData, core.Comment, {
-    nodeType: core.Node.COMMENT_NODE, // TODO should be on prototype, not here
+    nodeType: core.Node.COMMENT_NODE // TODO should be on prototype, not here
   });
 };

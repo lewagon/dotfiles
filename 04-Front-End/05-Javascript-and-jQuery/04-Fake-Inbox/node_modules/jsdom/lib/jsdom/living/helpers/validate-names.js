@@ -4,22 +4,20 @@ var xnv = require("xml-name-validator");
 // https://dom.spec.whatwg.org/#validate
 
 exports.name = function (name, core) {
-  try {
-    xnv.name(name);
-  } catch (e) {
+  var result = xnv.name(name);
+  if (!result.success) {
     throw new core.DOMException(core.DOMException.INVALID_CHARACTER_ERR,
-      "\"" + name + "\" did not match the Name production: " + e.message);
+      "\"" + name + "\" did not match the Name production: " + result.error);
   }
 };
 
 exports.qname = function (qname, core) {
   exports.name(qname, core);
 
-  try {
-    xnv.qname(qname);
-  } catch (e) {
+  var result = xnv.qname(qname);
+  if (!result.success) {
     throw new core.DOMException(core.DOMException.NAMESPACE_ERR,
-      "\"" + qname + "\" did not match the QName production: " + e.message);
+      "\"" + qname + "\" did not match the QName production: " + result.error);
   }
 };
 

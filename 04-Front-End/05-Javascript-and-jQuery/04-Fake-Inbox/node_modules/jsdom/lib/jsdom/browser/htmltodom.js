@@ -158,7 +158,14 @@ function setChild(parent, node) {
         var data = node.data.slice(node.name.length + 1, -1);
         newNode = currentDocument.createProcessingInstruction(node.name.substring(1), data);
       } else if (node.name.toLowerCase() === '!doctype') {
-        newNode = parseDocType(currentDocument, '<' + node.data + '>');
+        if (node['x-name'] !== undefined) { // parse5 supports doctypes directly
+          newNode = currentDocument.implementation.createDocumentType(
+            node['x-name'] || '',
+            node['x-publicId'] || '',
+            node['x-systemId'] || '');
+        } else {
+          newNode = parseDocType(currentDocument, '<' + node.data + '>');
+        }
       }
     break;
 

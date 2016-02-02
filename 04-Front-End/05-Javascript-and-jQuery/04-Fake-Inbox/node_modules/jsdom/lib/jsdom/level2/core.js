@@ -17,20 +17,20 @@ core.NamedNodeMap.prototype.getNamedItemNS = function(/* string */ namespaceURI,
 core.NamedNodeMap.prototype.setNamedItemNS = function(/* Node */ arg)
 {
   if (this._readonly) {
-    throw new core.DOMException(core.NO_MODIFICATION_ALLOWED_ERR);
+    throw new core.DOMException(core.DOMException.NO_MODIFICATION_ALLOWED_ERR);
   }
 
   if (this._ownerDocument !== arg.ownerDocument) {
-    throw new core.DOMException(core.WRONG_DOCUMENT_ERR);
+    throw new core.DOMException(core.DOMException.WRONG_DOCUMENT_ERR);
   }
 
   if (arg._ownerElement) {
-    throw new core.DOMException(core.INUSE_ATTRIBUTE_ERR);
+    throw new core.DOMException(core.DOMException.INUSE_ATTRIBUTE_ERR);
   }
 
   // readonly
   if (this._readonly === true) {
-    throw new core.DOMException(core.NO_MODIFICATION_ALLOWED_ERR);
+    throw new core.DOMException(core.DOMException.NO_MODIFICATION_ALLOWED_ERR);
   }
 
 
@@ -54,7 +54,7 @@ core.NamedNodeMap.prototype.removeNamedItemNS = function(/*string */ namespaceUR
 {
 
   if (this.readonly) {
-    throw new core.DOMException(core.NO_MODIFICATION_ALLOWED_ERR);
+    throw new core.DOMException(core.DOMException.NO_MODIFICATION_ALLOWED_ERR);
   }
 
 
@@ -74,7 +74,7 @@ core.NamedNodeMap.prototype.removeNamedItemNS = function(/*string */ namespaceUR
   }
 
   if (!found) {
-    throw new core.DOMException(core.NOT_FOUND_ERR);
+    throw new core.DOMException(core.DOMException.NOT_FOUND_ERR);
   }
 
   return found;
@@ -161,7 +161,7 @@ core.Element.prototype.getAttributeNodeNS = function(/* string */ namespaceURI,
 core.Element.prototype.setAttributeNodeNS = function(/* Attr */ newAttr)
 {
   if (newAttr.ownerElement) {
-    throw new core.DOMException(core.INUSE_ATTRIBUTE_ERR);
+    throw new core.DOMException(core.DOMException.INUSE_ATTRIBUTE_ERR);
   }
 
   return this._attributes.$setNode(newAttr);
@@ -219,7 +219,7 @@ core.Document.prototype.importNode = function(/* Node */ importedNode,
   if (importedNode && importedNode.nodeType) {
     if (importedNode.nodeType === this.DOCUMENT_NODE ||
         importedNode.nodeType === this.DOCUMENT_TYPE_NODE) {
-      throw new core.DOMException(core.NOT_SUPPORTED_ERR);
+      throw new core.DOMException(core.DOMException.NOT_SUPPORTED_ERR);
     }
   }
 

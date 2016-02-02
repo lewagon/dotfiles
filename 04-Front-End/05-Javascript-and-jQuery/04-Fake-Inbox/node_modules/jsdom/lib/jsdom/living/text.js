@@ -34,7 +34,7 @@ module.exports = function (core) {
       return newNode;
 
       // TODO: range stuff
-    },
+    }
 
     // TODO: wholeText property
   });

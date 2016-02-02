@@ -1710,7 +1710,7 @@
       var doc = contextNode.ownerDocument || contextNode;
       if (null != this._doc && this._doc !== doc) {
         throw new core.DOMException(
-            core.WRONG_DOCUMENT_ERR,
+            core.DOMException.WRONG_DOCUMENT_ERR,
             'The document must be the same as the context node\'s document.');
       }
       var evaluator = new Evaluator(doc);
@@ -1729,7 +1729,7 @@
                XPathResult.ANY_UNORDERED_NODE_TYPE !== type &&
                XPathResult.FIRST_ORDERED_NODE_TYPE !== type)
         throw new core.DOMException(
-            core.NOT_SUPPORTED_ERR,
+            core.DOMException.NOT_SUPPORTED_ERR,
             'You must provide an XPath result type (0=any).');
       else if (XPathResult.ANY_TYPE !== type &&
                'object' !== typeof value)
@@ -1824,7 +1824,7 @@
             'You should have asked for a ORDERED_NODE_ITERATOR_TYPE.');
       if (this.invalidIteratorState)
         throw new core.DOMException(
-            core.INVALID_STATE_ERR,
+            core.DOMException.INVALID_STATE_ERR,
             'The document has been mutated since the result was returned');
       return this._value.nodes[this._i++] || null;
     },

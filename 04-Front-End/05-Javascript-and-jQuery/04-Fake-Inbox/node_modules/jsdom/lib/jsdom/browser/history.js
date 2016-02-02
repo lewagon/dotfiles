@@ -77,7 +77,7 @@ History.prototype = {
     this._location._url = URL.parse(resolveHref(this._location._url.href, state.url));
   },
 
-  _signalPopstate: function(state) {
+  _signalPopstate: function (state) {
     if (this._window.document) {
       var ev = this._window.document.createEvent("HTMLEvents");
       ev.initEvent("popstate", false, false);

@@ -9,39 +9,26 @@ var core = require("../level1/core"),
     defineSetter = utils.defineSetter,
     inheritFrom = utils.inheritFrom;
 
-core.EventException = function() {
-    if (arguments.length > 0) {
-        this._code = arguments[0];
-    } else {
-        this._code = 0;
-    }
-    if (arguments.length > 1) {
-        this._message = arguments[1];
-    } else {
-        this._message = "Unspecified event type";
-    }
-    Error.call(this, this._message);
-    if (Error.captureStackTrace) {
-        Error.captureStackTrace(this, core.EventException);
-    }
-};
-inheritFrom(Error, core.EventException, {
-  UNSPECIFIED_EVENT_TYPE_ERR : 0,
-  get code() { return this._code;}
-});
+core.Event = function(eventType, eventInit) {
+    this._type = eventType || null;
 
-core.Event = function(eventType) {
-    this._eventType = eventType;
-    this._type = null;
-    this._bubbles = null;
-    this._cancelable = null;
+    if (eventInit === undefined || eventInit === null) {
+      eventInit = {};
+    }
+    if (typeof eventInit !== "object") {
+      throw new TypeError("cannot convert eventInit argument to a dictionary");
+    }
+    this._bubbles = Boolean(eventInit.bubbles);
+    this._cancelable = Boolean(eventInit.cancelable);
+
     this._target = null;
     this._currentTarget = null;
     this._eventPhase = 0;
     this._timeStamp = null;
-    this._preventDefault = false;
     this._stopPropagation = false;
+    this._canceled = false;
 };
+
 core.Event.prototype = {
     initEvent: function(type, bubbles, cancelable) {
         this._type = type;
@@ -50,7 +37,7 @@ core.Event.prototype = {
     },
     preventDefault: function() {
         if (this._cancelable) {
-            this._preventDefault = true;
+            this._canceled = true;
         }
     },
     stopPropagation: function() {
@@ -60,19 +47,19 @@ core.Event.prototype = {
     CAPTURING_PHASE : 1,
     AT_TARGET       : 2,
     BUBBLING_PHASE  : 3,
-    get eventType() { return this._eventType; },
     get type() { return this._type; },
     get bubbles() { return this._bubbles; },
     get cancelable() { return this._cancelable; },
     get target() { return this._target; },
     get currentTarget() { return this._currentTarget; },
     get eventPhase() { return this._eventPhase; },
-    get timeStamp() { return this._timeStamp; }
+    get timeStamp() { return this._timeStamp; },
+    get defaultPrevented() { return this._canceled; }
 };
 
 
-core.UIEvent = function(eventType) {
-    core.Event.call(this, eventType);
+core.UIEvent = function(eventType, eventInit) {
+    core.Event.call(this, eventType, eventInit);
     this.view = null;
     this.detail = null;
 };
@@ -85,8 +72,8 @@ inheritFrom(core.Event, core.UIEvent, {
 });
 
 
-core.MouseEvent = function(eventType) {
-    core.UIEvent.call(this, eventType);
+core.MouseEvent = function(eventType, eventInit) {
+    core.UIEvent.call(this, eventType, eventInit);
     this.screenX = null;
     this.screenY = null;
     this.clientX = null;
@@ -129,8 +116,8 @@ inheritFrom(core.UIEvent, core.MouseEvent, {
 });
 
 
-core.MutationEvent = function(eventType) {
-    core.Event.call(this, eventType);
+core.MutationEvent = function(eventType, eventInit) {
+    core.Event.call(this, eventType, eventInit);
     this.relatedNode = null;
     this.prevValue = null;
     this.newValue = null;
@@ -158,149 +145,7 @@ inheritFrom(core.Event, core.MutationEvent, {
     REMOVAL      : 3
 });
 
-core.EventTarget = function() {};
-
-function getListeners(target, type, capturing) {
-    var listeners = target._listeners
-            && target._listeners[type]
-            && target._listeners[type][capturing] || [];
-    if (!capturing) {
-        var traditionalHandler = target['on' + type];
-        if (traditionalHandler) {
-            var implementation = (target._ownerDocument ? target._ownerDocument.implementation
-                                                        : target.document.implementation);
-
-            if (implementation._hasFeature('ProcessExternalResources', 'script')) {
-                if (listeners.indexOf(traditionalHandler) < 0) {
-                    listeners.push(traditionalHandler);
-                }
-            }
-        }
-    }
-    return listeners;
-}
-
-function dispatchPhase(event, iterator) {
-    var target = iterator();
-
-    while (target && !event._stopPropagation) {
-        if (event._eventPhase === event.CAPTURING_PHASE || event._eventPhase === event.AT_TARGET) {
-            callListeners(event, target, getListeners(target, event._type, true));
-        }
-        if (event._eventPhase === event.AT_TARGET || event._eventPhase === event.BUBBLING_PHASE) {
-            callListeners(event, target, getListeners(target, event._type, false));
-        }
-        target = iterator();
-    }
-}
-
-function callListeners(event, target, listeners) {
-    var currentListener = listeners.length;
-    while (currentListener--) {
-        event._currentTarget = target;
-        try {
-          listeners[currentListener].call(target, event);
-        } catch (e) {
-          target.raise(
-            'error', "Dispatching event '" + event._type + "' failed",
-            {error: e, event: event}
-          );
-        }
-    }
-}
-
-function forwardIterator(list) {
-  var i = 0, len = list.length;
-  return function iterator() { return i < len ? list[i++] : null };
-}
-
-function backwardIterator(list) {
-  var i = list.length;
-  return function iterator() { return i >=0 ? list[--i] : null };
-}
-
-function singleIterator(obj) {
-  var i = 1;
-  return function iterator() { return i-- ? obj : null };
-}
-
-core.EventTarget.prototype = {
-    addEventListener: function(type, listener, capturing) {
-        this._listeners = this._listeners || {};
-        var listeners = this._listeners[type] || {};
-        capturing = (capturing === true);
-        var capturingListeners = listeners[capturing] || [];
-        for (var i=0; i < capturingListeners.length; i++) {
-            if (capturingListeners[i] === listener) {
-                return;
-            }
-        }
-        capturingListeners.push(listener);
-        listeners[capturing] = capturingListeners;
-        this._listeners[type] = listeners;
-    },
-
-    removeEventListener: function(type, listener, capturing) {
-        var listeners  = this._listeners && this._listeners[type];
-        if (!listeners) return;
-        var capturingListeners = listeners[(capturing === true)];
-        if (!capturingListeners) return;
-        for (var i=0; i < capturingListeners.length; i++) {
-            if (capturingListeners[i] === listener) {
-                capturingListeners.splice(i, 1);
-                return;
-            }
-        }
-    },
-
-    dispatchEvent: function(event) {
-        if (event == null) {
-            throw new core.EventException(0, "Null event");
-        }
-        if (event._type == null || event._type == "") {
-            throw new core.EventException(0, "Uninitialized event");
-        }
-
-        var targetList = [];
-
-        event._target = this;
-
-        //per the spec we gather the list of targets first to ensure
-        //against dom modifications during actual event dispatch
-        var target = this,
-            targetParent = target._parentNode;
-        while (targetParent) {
-            targetList.push(targetParent);
-            target = targetParent;
-            targetParent = target._parentNode;
-        }
-        targetParent = target._parentWindow;
-        if (targetParent) {
-            targetList.push(targetParent);
-        }
-
-        var iterator = backwardIterator(targetList);
-
-        event._eventPhase = event.CAPTURING_PHASE;
-        dispatchPhase(event, iterator);
-
-        iterator = singleIterator(event._target);
-        event._eventPhase = event.AT_TARGET;
-        dispatchPhase(event, iterator);
-
-        if (event._bubbles) {
-            iterator = forwardIterator(targetList);
-            event._eventPhase = event.BUBBLING_PHASE;
-            dispatchPhase(event, iterator);
-        }
-
-        event._currentTarget = null;
-        event._eventPhase = event.NONE;
-
-        return !event._preventDefault;
-    }
-
-};
+core.EventTarget = require('../events/EventTarget');
 
 // Reinherit class heirarchy with EventTarget at its root
 inheritFrom(core.EventTarget, core.Node, core.Node.prototype);
@@ -430,12 +275,34 @@ core.AttributeList.prototype.$setNode = attrNodeInterceptor(core.AttributeList.p
 core.AttributeList.prototype.$set = attrInterceptor(core.AttributeList.prototype.$set, true);
 core.AttributeList.prototype.$setNoNS = attrInterceptor(core.AttributeList.prototype.$setNoNS, false);
 
-core.Document.prototype.createEvent = function(eventType) {
-    switch (eventType) {
-        case "MutationEvents": return new core.MutationEvent(eventType);
-        case "UIEvents": return new core.UIEvent(eventType);
-        case "MouseEvents": return new core.MouseEvent(eventType);
-        case "HTMLEvents": return new core.Event(eventType);
-    }
-    return new core.Event(eventType);
+var interfaceTable = {
+  event: core.Event,
+  events: core.Event,
+  htmlevents: core.Event,
+  mouseevent: core.MouseEvent,
+  mouseevents: core.MouseEvent,
+  uievent: core.UIEvent,
+  uievents: core.UIEvent,
+
+  // alias unimplemented interfaces to Event
+  customevent: core.Event, // CustomEvent
+  keyboardevent: core.Event, // KeyboardEvent
+  keyevents: core.Event, // KeyboardEvent
+  messageevent: core.Event, // MessageEvent
+  touchevent: core.Event, // TouchEvent
+
+  // old, not part of spec anymore
+  mutationevents: core.MutationEvent
+};
+
+core.Document.prototype.createEvent = function (type) {
+  var typeLower = type.toLowerCase();
+  var Constructor = interfaceTable[typeLower] || null;
+
+  if (!Constructor) {
+    throw new core.DOMException(core.DOMException.NOT_SUPPORTED_ERR,
+      "The provided event type (\"" + type + "\") is invalid");
+  }
+
+  return new Constructor("");
 };

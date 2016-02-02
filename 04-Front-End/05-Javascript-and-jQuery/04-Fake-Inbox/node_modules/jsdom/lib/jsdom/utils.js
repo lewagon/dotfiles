@@ -95,6 +95,20 @@ exports.inheritFrom = function inheritFrom(Superclass, Subclass, properties) {
 };
 
 /**
+ * Define a set of properties on an object, by copying the property descriptors
+ * from the original object.
+ *
+ * - `object` {Object} the target object
+ * - `properties` {Object} the source from which to copy property descriptors
+ */
+exports.define = function define(object, properties) {
+  Object.getOwnPropertyNames(properties).forEach(function (name) {
+    var propDesc = Object.getOwnPropertyDescriptor(properties, name);
+    Object.defineProperty(object, name, propDesc);
+  });
+};
+
+/**
  * Define a list of constants on a constructor and its .prototype
  *
  * - `Constructor` {Function} the constructor to define the constants on
@@ -161,9 +175,26 @@ exports.memoizeQuery = function memoizeQuery(fn) {
 * A slightly-more-compliant version of `url.resolve`, taking care of a few Node bugs.
 */
 exports.resolveHref = function resolveHref(baseUrl, href) {
-  // If href is "about:blank", Node tries to be too clever.
-  if (href === "about:blank") {
+  var about = "about:blank";
+
+  // if we're redirecting to another site on about:blank, just let it through
+  if (href.substring(0, about.length) === about) {
     return href;
+  }
+
+  // if we have to resolve from about:blank we need a bit of special logic
+  if (baseUrl.substring(0, about.length) === about) {
+    if (href.search(/^([A-Za-z0-9]+):/) === 0) { // we have an absolute url
+      baseUrl = href;
+      href = "";
+    } else if (href[0] === "#") { // we have a location hash on about:blank
+      return baseUrl.split(/#/)[0] + href;
+    } else if (!href) { // we just have some base url
+      return baseUrl;
+    } else { // must be a file url
+      baseUrl = "file://" + href;
+      href = "";
+    }
   }
 
   if (baseUrl === resolveHref.memoizedUrl && resolveHref.cache && resolveHref.cache[href]) {

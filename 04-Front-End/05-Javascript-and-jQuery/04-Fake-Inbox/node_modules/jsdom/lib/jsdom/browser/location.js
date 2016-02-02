@@ -14,7 +14,7 @@ function Location(urlString, document) {
 Location.prototype = {
   constructor: Location,
   reload: function () {
-    NOT_IMPLEMENTED(this._document, "location.reload")();
+    NOT_IMPLEMENTED("location.reload", this._document)();
   },
   get protocol() { return this._url.protocol || ":"; },
   get host() { return this._url.host || ""; },
@@ -49,7 +49,7 @@ Location.prototype = {
     if (oldProtocol === newProtocol && oldHost === newHost && oldPathname === newPathname && oldHash !== newHash) {
       this._signalHashChange(oldUrl, newUrl);
     } else {
-      NOT_IMPLEMENTED(this._document, "location.href (no reload)")();
+      NOT_IMPLEMENTED("location.href (no reload)", this._document)();
     }
   },
 
@@ -97,7 +97,7 @@ Location.prototype = {
     ev.oldUrl = oldUrl;
     ev.newUrl = newUrl;
     process.nextTick(function () {
-      this._document.parentWindow.dispatchEvent(ev);
+      this._document.defaultView.dispatchEvent(ev);
     }.bind(this));
   }
 };
