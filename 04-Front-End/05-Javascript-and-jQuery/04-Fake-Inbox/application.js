@@ -27,9 +27,13 @@ $(document).ready(function () {
 
 
 // Do not mind this below. Used for `rake` only.
-if (module !== undefined) {
-  module.exports = {
-    hasNewMessage: hasNewMessage,
-    newMessage: newMessage
-  };
+try {
+  if (module) {
+    module.exports = {
+      hasNewMessage: hasNewMessage,
+      newMessage: newMessage
+    };
+  }
+} catch(ReferenceError) {
+  // In-browser
 }
