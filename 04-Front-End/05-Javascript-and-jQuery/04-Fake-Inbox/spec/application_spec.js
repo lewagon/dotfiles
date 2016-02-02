@@ -1,4 +1,4 @@
-var assert = require('chai').assert;
+  var assert = require('chai').assert;
 var expect = require('chai').expect;
 var jsdom = require('jsdom').jsdom;
 
@@ -10,7 +10,7 @@ function createDocument() {
   global.window = window;
   global.$ = $;
 
-  Object.keys(window).forEach((key) => {
+  Object.keys(window).forEach(function(key) {
     if (!(key in global)) {
       global[key] = window[key];
     }
