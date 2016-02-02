@@ -7,6 +7,16 @@ to execute somme JavaScript directly in our terminal.
 
 We'll start with a simple exercise that you already solved a few weeks ago, in Ruby :)
 
+## Setup
+
+**If you are on Ubuntu, make sure you have the `node` commande**. If not, run this:
+
+```bash
+$ sudo ln -s "$(which nodejs)" /usr/bin/node
+```
+
+If you are on Mac OSX, you can ignore this.
+
 ## Specs
 
 In `lib/age_in_days.js`, implement the function `ageInDays(day, month, year)` which will
