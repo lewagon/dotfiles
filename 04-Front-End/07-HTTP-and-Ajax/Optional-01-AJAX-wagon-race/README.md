@@ -12,7 +12,7 @@ $ bundle install
 
 **For the API:**
 
-* You can read the [API documentation](https://github.com/lewagon/fullstack-challenges/blob/master/04-Front-End/06-HTTP-and-Ajax/Optional-01-AJAX-wagon-race/API.md)
+* You can read the [API documentation](https://github.com/lewagon/fullstack-challenges/blob/master/04-Front-End/07-HTTP-and-Ajax/Optional-01-AJAX-wagon-race/API.md)
 * Start the API by calling the `rake api` command in the exercise forlder
 * The API will be accessible on http://localhost:4567
 
