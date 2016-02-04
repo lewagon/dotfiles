@@ -1,8 +1,9 @@
 lectures:
   - front/06-animations
-  
-video: 154044943
 
+video: 154044943
+livecode:
+  video: 154153058
 # video: 135962155
 # livecode:
 #   video: 135988088
