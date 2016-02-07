@@ -47,7 +47,7 @@ In jQuery, you have a convenient `data()` method that you can use to get the val
 ```
 
 ```javascript
-$(function(){
+$(document).ready(function () {
   $(".example").data("temperature"); // => "24"
   $(".example").data("message"); // => "hello"
 });

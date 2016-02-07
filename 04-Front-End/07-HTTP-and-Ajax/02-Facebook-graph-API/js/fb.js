@@ -1,6 +1,6 @@
 var accessToken = "CAu......0vXW"; // copy your access token here
 
-$(function() {
+$(document).ready(function () {
 
   // Listen click from button
   $("#btn-info-from-facebook").on("click", function(e) {
