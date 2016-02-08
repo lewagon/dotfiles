@@ -8,3 +8,7 @@ Congratulations for today, it was a very important day in your CSS career. From 
 ## [Optional] Enhanced profile on Github Pages
 
 For those who have time, let's improve your online profile page (the one you pushed on Github Pages yesterday). You can include the nice profile header you've just coded.
+
+## [Optional] Flexbox froggy
+
+For those who want to practice their flexbox skills, here's a cool [froggy game](http://flexboxfroggy.com/). I love it, because I'm French ;)
