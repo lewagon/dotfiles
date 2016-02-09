@@ -41,6 +41,7 @@ describe "Post" do
     if Post.new(name: "aaaaaa", url: "invalid_url", user: valid_user).valid?
       fail NotImplementedError, "Please implement a format validation on url column"
     end
+
     post = Post.new(name: "Le Wagon", url: "http://www.lewagon.com", user: valid_user)
     expect(post.valid?).to eq true
   end
@@ -53,7 +54,7 @@ describe "Post" do
 
   it "can't have the same name as another Post (case insensitive)" do
     post_one = Post.new(name: "Le Wagon", url: "http://www.lewagon.com/paris", user: valid_user)
-    post_one.save
+    post_one.save!
 
     post_two = Post.new(name: "Le wagon", url: "http://www.lewagon.com/bruxelles", user: valid_user)
     expect(post_two.valid?).to eq false
