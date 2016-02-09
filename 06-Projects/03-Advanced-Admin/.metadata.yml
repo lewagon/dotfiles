@@ -2,4 +2,5 @@ lectures:
   - rails/admin-interfaces
 help: true
 lecture:
-  video: 138100748
+  fr:
+    video: 138100748

@@ -2,4 +2,5 @@ lectures:
   - rails/pundit
 help: true
 lecture:
-  video: 137936149
+  fr:
+    video: 137936149

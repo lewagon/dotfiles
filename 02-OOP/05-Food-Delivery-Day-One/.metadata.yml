@@ -1,5 +1,10 @@
 lectures:
   - oop/04-modeling-data
-video: 134727310
+
+lecture:
+  fr:
+    video: 134727310
+
 livecode:
-  video: 152548274
+  fr:
+    video: 152548274

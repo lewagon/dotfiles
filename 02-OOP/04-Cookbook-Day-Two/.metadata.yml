@@ -1,4 +1,8 @@
-video: 134601189
+lecture:
+  fr:
+    video: 134601189
+
 livecode:
-  video: 134637550
-  gist: 2697a94aa766dea23771
+  fr:
+    video: 134637550
+    gist: 2697a94aa766dea23771

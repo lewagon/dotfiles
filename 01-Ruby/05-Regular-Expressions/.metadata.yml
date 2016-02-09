@@ -1,6 +1,11 @@
 lectures:
   - ruby/05-regexps
-video: 134066043
+
+lecture:
+  fr:
+    video: 134066043
+
 livecode:
-  video: 134074232
-  gist: c92cc8b26d0183c471f5
+  fr:
+    video: 134074232
+    gist: c92cc8b26d0183c471f5

@@ -2,4 +2,5 @@ lectures:
   - rails/ajax-in-rails
 help: true
 lecture:
-  video: 137594327
+  fr:
+    video: 137594327

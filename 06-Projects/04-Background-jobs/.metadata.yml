@@ -2,4 +2,5 @@ lectures:
   - rails/background-jobs
 help: true
 lecture:
-  video: 138182297
+  fr:
+    video: 138182297

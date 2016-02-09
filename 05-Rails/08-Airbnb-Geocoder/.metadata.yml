@@ -2,4 +2,5 @@ lectures:
   - rails/google-maps-geocoder
 help: true
 lecture:
-  video: 137361250
+  fr:
+    video: 137361250

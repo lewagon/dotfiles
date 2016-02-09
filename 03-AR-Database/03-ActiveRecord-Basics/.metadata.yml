@@ -1,6 +1,11 @@
 lectures:
   - db/03-active-record
-video: 135250449
+
+lecture:
+  fr:
+    video: 135250449
+
 livecode:
-  video: 135267500
-  gist: ba0e7e1e59a5774440fb
+  fr:
+    video: 135267500
+    gist: ba0e7e1e59a5774440fb

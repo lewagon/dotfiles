@@ -1,7 +1,11 @@
 instructions: false
 lectures:
   - rails/04-hosting-deployment
-lecture: 
-  video: 137223612
+
+lecture:
+  fr:
+    video: 137223612
+
 livecode:
-  video: 136844098
+  fr:
+    video: 136844098

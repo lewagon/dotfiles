@@ -2,4 +2,5 @@ lectures:
   - rails/mailing
 help: true
 lecture:
-  video: 137603367
+  fr:
+    video: 137603367

@@ -1,6 +1,11 @@
 lectures:
   - oop/03-building-software
-video: 134709296
+
+lecture:
+  fr:
+    video: 134709296
+
 livecode:
-  video: 134423377
-  gist: 520a2790b57bbbe0fd44
+  fr:
+    video: 134423377
+    gist: 520a2790b57bbbe0fd44

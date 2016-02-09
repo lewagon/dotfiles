@@ -1,6 +1,9 @@
 help: true
+
 lectures:
   - rails/07-authentication
   - rails/06-git-github-workflow
+
 lecture:
-  video: 137242820
+  fr:
+    video: 137242820

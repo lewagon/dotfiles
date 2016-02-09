@@ -2,4 +2,5 @@ lectures:
   - rails/i18n
 help: true
 lecture:
-  video: 137944997
+  fr:
+    video: 137944997

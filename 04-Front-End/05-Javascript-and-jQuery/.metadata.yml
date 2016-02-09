@@ -2,10 +2,12 @@ lectures:
   - front/05-javascript-and-jquery
 
 lecture:
-  video: 153946289
+  fr:
+    video: 153946289
 
 livecode:
-  video: 153946826
+  fr:
+    video: 153946826
 
 # #Old:
 # lecture:

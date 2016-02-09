@@ -2,4 +2,5 @@ lectures:
   - rails/stripe
 help: true
 lecture:
-  video: 138511825
+  fr:
+    video: 138511825

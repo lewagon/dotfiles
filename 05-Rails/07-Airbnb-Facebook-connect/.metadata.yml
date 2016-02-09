@@ -1,5 +1,8 @@
+help: true
+
 lectures:
   - rails/09-fb-connect
+
 lecture:
-  video: 137231961
-help: true
+  fr:
+    video: 137231961

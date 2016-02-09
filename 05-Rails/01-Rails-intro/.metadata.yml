@@ -1,5 +1,10 @@
 lectures:
   - rails/01-rails-intro
-video: 136503175
+
+lecture:
+  fr:
+    video: 136503175
+
 livecode:
-  video: 136521446
+  fr:
+    video: 136521446

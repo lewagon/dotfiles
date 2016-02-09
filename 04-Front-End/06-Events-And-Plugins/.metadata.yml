@@ -1,10 +1,16 @@
 lectures:
   - front/06-animations
 
-video: 154044943
+lecture:
+  fr:
+    video: 154044943
+
 livecode:
-  video: 154153058
-  gist: 'b8f959edb89f2b3e895a'
+  fr:
+    video: 154153058
+    gist: 'b8f959edb89f2b3e895a'
+
+# Old
 # video: 135962155
 # livecode:
 #   video: 135988088

@@ -1,9 +1,14 @@
 lectures:
   - front/07-http-ajax
-video: 154308534
+
+lecture:
+  fr:
+    video: 154308534
+
 livecode:
-  video: 136207523
-  gist: 7e6c32b50e574c604c35
+  fr:
+    video: 136207523
+    gist: 7e6c32b50e574c604c35
 
 
 

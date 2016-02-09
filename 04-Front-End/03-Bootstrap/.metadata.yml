@@ -2,7 +2,11 @@ lectures:
   - front/design
   - front/03-bootstrap
 
-video: 153946322
+lecture:
+  fr:
+    video: 153946322
+  en:
+    video: 153909288
 
 # # Old
 # lecture:

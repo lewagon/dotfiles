@@ -2,4 +2,5 @@ lectures:
   - rails/build-an-api
 help: true
 lecture:
-  video: 138300673
+  fr:
+    video: 138300673

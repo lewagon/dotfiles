@@ -1,6 +1,11 @@
 lectures:
   - ruby/06-parsing-storing-data
-video: 134096682
+
+lecture:
+  fr:
+    video: 134096682
+
 livecode:
-  video: 134112848
-  gist: f5ba0f77a7c2fba634c6
+  fr:
+    video: 134112848
+    gist: f5ba0f77a7c2fba634c6
