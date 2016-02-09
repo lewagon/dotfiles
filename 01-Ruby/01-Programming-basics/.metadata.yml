@@ -1,6 +1,11 @@
 lectures:
   - ruby/01-programming-basics
-video: 133469359
+
+lecture:
+  fr:
+    video: 133469359
+
 livecode:
-  video: 133471297
-  gist: 11045934a0c609a81af0
+  fr:
+    video: 133471297
+    gist: 11045934a0c609a81af0
