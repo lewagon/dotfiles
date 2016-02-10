@@ -86,8 +86,9 @@ $ rails c
 > bristol.valid?  # Should return false
 > bristol.address = "75008 Paris"
 > bristol.valid?  # Should return true
+> bristol.save # insert into DB and create id    
 > yummy = Review.new(content: "yummy yummy", rating: 4)
-> yummy.restaurant = bristol
+> yummy.restaurant = bristol # set foreign key restaurant_id 
 > yummy.save
 > bristol.reviews   # Should contain the yummy review
 > yummy.restaurant  # Should return the bristol restaurant
