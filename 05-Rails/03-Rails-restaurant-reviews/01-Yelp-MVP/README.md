@@ -83,15 +83,15 @@ You can also manually test your code with the `rails console`. Do not forget to 
 ```bash
 $ rails c
 > bristol = Restaurant.new(name: "Epicure", category: "french")
-> bristol.valid?  # Should return false
+> bristol.valid?              # Should return false
 > bristol.address = "75008 Paris"
-> bristol.valid?  # Should return true
-> bristol.save # insert into DB and create id    
+> bristol.valid?              # Should return true
+> bristol.save                # Insert into DB and set id    
 > yummy = Review.new(content: "yummy yummy", rating: 4)
-> yummy.restaurant = bristol # set foreign key restaurant_id 
+> yummy.restaurant = bristol  # Set foreign key restaurant_id 
 > yummy.save
-> bristol.reviews   # Should contain the yummy review
-> yummy.restaurant  # Should return the bristol restaurant
+> bristol.reviews             # Should contain the yummy review
+> yummy.restaurant            # Should return the bristol restaurant
 ```
 
 ### Seed
