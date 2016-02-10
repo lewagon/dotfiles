@@ -23,6 +23,8 @@ $ git add .
 $ git commit -m "Prepare rails app with external specs"
 ```
 
+Also before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to be able to use simple form and Bootstrap, and have a cool stylesheets folder.
+
 ### Testing your code
 
 Whenever you add migrations to your app (e.g. after a `rails g model ...`), don't forget to also run the migrations **on the test database** we use in our specs:
