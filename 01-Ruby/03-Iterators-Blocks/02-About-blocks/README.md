@@ -70,6 +70,6 @@ To better understand `yield`, let's try to reimplement the `Enumerable#map` meth
 ## Learning Badges
 
 - What's a block?
-- What's the syntax of if this block has only 1 ruby instruction in it? several?
-- Re-consider all the iterators you used `#each_with_index`, `#select`, `#find`... Is it 100% clear that most of them are methods called with blocks?
+- What's the syntax if the block has only 1 ruby instruction in it? several?
+- Re-consider all the iterators you used `#each_with_index`, `#select`, `#find`... Is it 100% clear that they are methods called with a block?
 - Could you figure out approximately how the `map` iterator is coded for instance?
