@@ -4,7 +4,7 @@ You are having a drink with a french entrepreneur and he tells you "I've some gr
 
 ### A bit of research
 
-* Read [this article](http://fr.wikipedia.org/wiki/Louch%C3%A9bem) to understand what is louchébem, initially spoken by french butchers.
+* Read [this article](https://en.wikipedia.org/wiki/Louch%C3%A9bem) to understand what is louchébem, initially spoken by french butchers.
 * Ask yourself what are the main issues for building your translator (choice of the final suffix, how to handle beginning of words, what are the different scenarios for a given word in input...)
 
 ### Write the pseudo-code
