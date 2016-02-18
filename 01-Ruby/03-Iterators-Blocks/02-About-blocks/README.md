@@ -33,6 +33,19 @@ end
 You may need to know that to include a `"` symbol inside a string delimited by double quotes,
 you need to **escape** this character with an antislash: `\"`.
 
+The cool thing with this method is than you can nest method call
+
+```ruby
+tag("a", ["href", "www.google.com"]) do
+  tag("h1") do
+    "Google it"
+  end
+end
+# => '<a href="www.google.com"><h1>Google it</h1></a>'
+```
+
+How cool?
+
 ### Arguments with default value
 
 In ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
