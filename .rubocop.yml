@@ -16,6 +16,10 @@ Documentation:
   Enabled: false
 RegexpLiteral:
   Enabled: false
+GuardClause:
+  Enabled: false
+WordArray:
+  Enabled: false
 
 AllCops:
   Exclude:
