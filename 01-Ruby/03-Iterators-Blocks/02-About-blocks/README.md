@@ -33,6 +33,19 @@ end
 You may need to know that to include a `"` symbol inside a string delimited by double quotes,
 you need to **escape** this character with an antislash: `\"`.
 
+The cool thing with this method is than you can nest method calls
+
+```ruby
+tag("a", ["href", "www.google.com"]) do
+  tag("h1") do
+    "Google it"
+  end
+end
+# => '<a href="www.google.com"><h1>Google it</h1></a>'
+```
+
+How cool?
+
 ### Arguments with default value
 
 In ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
@@ -70,6 +83,6 @@ To better understand `yield`, let's try to reimplement the `Enumerable#map` meth
 ## Learning Badges
 
 - What's a block?
-- What's the syntax of if this block has only 1 ruby instruction in it? several?
-- Re-consider all the iterators you used `#each_with_index`, `#select`, `#find`... Is it 100% clear that most of them are methods called with blocks?
+- What's the syntax if the block has only 1 ruby instruction in it? several?
+- Re-consider all the iterators you used `#each_with_index`, `#select`, `#find`... Is it 100% clear that they are methods called with a block?
 - Could you figure out approximately how the `map` iterator is coded for instance?
