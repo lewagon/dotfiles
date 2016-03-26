@@ -87,11 +87,11 @@ the following line (at the top, after all `require` statements).
 set :bind, '0.0.0.0'
 ```
 
-Then install `ngrok` (with `brew install ngrok` or `sudo apt-get install ngrok-client`), and run it
+Then install `ngrok` (with `brew cask install ngrok` or [manually for Ubuntu](https://ngrok.com/download)), and run it
 in another window.
 
-```
-ngrok 4567
+```bash
+$ ngrok http 4567
 ```
 
 You should get a publicly browsable URL (`*.ngrok.com`) to share with everybody!

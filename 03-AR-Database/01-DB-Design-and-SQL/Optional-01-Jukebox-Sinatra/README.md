@@ -40,4 +40,8 @@ You should code a `/track/:id` page displaying the track info, and hit the Youtu
 API to get a video of this track. Embed it with an iframe.
 
 In the end, use [`ngrok`](https://ngrok.com/) to showcase your work in Slack (on OSX,
-just run `brew install ngrok` to get it)!
+just run `brew cask install ngrok` to get it):
+
+```bash
+$ ngrok http 4567
+```
