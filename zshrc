@@ -13,3 +13,4 @@ export PATH="./bin:/usr/local/bin:${PATH}"
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
