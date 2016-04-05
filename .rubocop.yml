@@ -20,6 +20,10 @@ GuardClause:
   Enabled: false
 WordArray:
   Enabled: false
+SymbolProc:
+  Enabled: false
+AbcSize:
+  Enabled: false
 
 AllCops:
   Exclude:
