@@ -24,6 +24,8 @@ SymbolProc:
   Enabled: false
 AbcSize:
   Enabled: false
+MutableConstant:
+  Enabled: false
 
 AllCops:
   Exclude:
