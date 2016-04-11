@@ -44,9 +44,9 @@ Tomorrow, you'll see that Bootstrap defines its own `container` class, which is 
 .container {
   margin: 0 auto;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .container {
-    width: 1170px;
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
@@ -54,9 +54,9 @@ Tomorrow, you'll see that Bootstrap defines its own `container` class, which is 
     width: 970px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .container {
-    width: 750px;
+    width: 1170px;
   }
 }
 ```
