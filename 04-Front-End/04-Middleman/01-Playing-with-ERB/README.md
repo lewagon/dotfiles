@@ -8,7 +8,7 @@ In this challenge you must
 
 ## Setup
 
-Fork our [middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate), rename it in settings. And then:
+**First fork our [middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate)**, and rename it in the settings section. And then:
 
 ```bash
 $ cd ~/code/$GITHUB_USERNAME
