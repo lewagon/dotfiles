@@ -26,6 +26,8 @@ AbcSize:
   Enabled: false
 MutableConstant:
   Enabled: false
+SignalException:
+  Enabled: false
 
 AllCops:
   Exclude:
