@@ -7,9 +7,6 @@ ZSH_THEME="robbyrussell"
 # Add ruby version on prompt (float right)
 RPS1='[$(ruby_prompt_info)]$EPS1'
 
-# Store Ruby versions and gems inside the home folder
-export RBENV_ROOT="${HOME}/.rbenv"
-
 # Useful plugins for Rails development with Sublime Text
 plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
 
