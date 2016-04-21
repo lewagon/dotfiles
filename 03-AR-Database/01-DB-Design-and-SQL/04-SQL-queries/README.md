@@ -17,7 +17,7 @@ Your method should return something like this:
 detailed_tracks(db)
 # => [
 #      ["Demain c'est loin", "L'école du micro d'argent", "IAM"],
-#      ["Back dans les Backs", "Supreme NTM", "NTM"]
+#      ["Back dans les bacs", "Supreme NTM", "NTM"]
 #    ]
 ```
 
