@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now time to finalize Airbnb Home by putting features and flats within grids.
+It's time to finalize Airbnb Home by injecting the cards for features and flats within two grids.
 
 ## Specs
 

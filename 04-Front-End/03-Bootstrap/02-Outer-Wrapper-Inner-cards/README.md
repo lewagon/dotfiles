@@ -30,7 +30,7 @@ Instead, **you must use the following techniques.**
 
 ### Inside cards
 
-If you want to change border/padding/margin/etc of grid inner elements, just add cards **inside each col**:
+If you want to change border/padding/margin/etc of grid inner elements, just inject cards **inside each col**:
 
 ```html
 <div class="container">
@@ -67,4 +67,4 @@ With these techniques, you can play on border, padding, margin without breaking 
 
 ### Your turn
 
-Apply these two techniques to reproduce [this page](http://lewagon.github.io/bootstrap-challenges/02-Advanced-Bootstrap-grid/), starting with the HTML skeleton we give you. You will have to code a bit of CSS for backgrounds, padding and margin. Of course you can combined the two techniques and having **both** a wrapper around your `.container` and cards inside your `.cols`.
+Apply these two techniques to reproduce [this page](http://lewagon.github.io/bootstrap-challenges/02-Advanced-Bootstrap-grid/), starting with the HTML skeleton we give you. You will have to code a bit of CSS for backgrounds, padding and margin. Of course you can combine the two techniques and add **both** a wrapper around your `.container` and cards inside your `.cols`.
