@@ -38,7 +38,7 @@ Then in `style.css`
 /* General style rules for fonts and colors */
 body {
   margin: 0;
-  font-family: Open-sans, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3 {
   font-family: Raleway, Helvetica, sans-serif;
