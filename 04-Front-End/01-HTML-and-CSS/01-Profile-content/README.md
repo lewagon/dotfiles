@@ -2,7 +2,7 @@
 
 A simple challenge to manipulate basic HTML tags and create a profile page with headers/texts/lists/images/tables.
 
-Note: You can start a local webserver by typing the following command in your terminal (just make sure you are in the exercises folder):
+Note: You can start a local webserver by typing the following command in your terminal (just make sure you are in the exercise's folder):
 
 ```bash
 $ serve
@@ -10,7 +10,8 @@ $ serve
 
 (it has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7))
 
-You can now visit your files on [http://localhost:8000](http://localhost:8000)
+- You can now visit your files on [http://localhost:8000](http://localhost:8000)
+- Sometimes, you may have to kill the server with **Ctrl + C** and start it again with `serve`.
 
 ## Specs
 
