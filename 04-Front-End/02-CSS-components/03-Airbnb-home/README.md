@@ -3,7 +3,7 @@
 Build Airbnb home page (at least a simple version of it), like [this page](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/)
 
 
-1. First **re-use** your avatar, button and banner CSS code (we put empty files for that in the starting boilerplate).
+1. First **re-use** your avatar, button and banner CSS components (we put empty files for that in the starting boilerplate).
 2. Then implement your card design in `card.css`
 
 
@@ -32,7 +32,7 @@ We already defined the container class for you in `style.css`
 
 ### Relative > Absolute pattern
 
-Don't forget to use the **Relative > Absolute pattern** to design your card (as in Karr lecture). You will have also to put a background image on the card with a gradient filter (same technique as for the banner).
+Don't forget to use the **Relative > Absolute pattern** to design your card (as in Karr lecture). The card itself should be pinned as `position: relative` and each inner element should have `position: absolute` to be placed in the right corner. You also have to put a background image on the card with a gradient filter, using the same technique as for the banner.
 
 
 ### [Optional] Responsive container
@@ -61,7 +61,7 @@ Tomorrow, you'll see that Bootstrap defines its own `container` class, which is 
 }
 ```
 
-Do you understand this code? It's not so complicated. Media queries are just a way "to condition" CSS code depending on screen size. This is how you write responsive design.
+Do you understand this code? It's not so complicated. Media queries are just a way "to condition" CSS code depending on screen size, a bit as a `if..end` in ruby. This is how you write responsive design.
 
 In `style.css`, replace our stupid non-responsive container by this smarter one. Then look how the container changes when you resize your browser. Feel free to change media query breakpoints and container size to play with the responsive behavior.
 
