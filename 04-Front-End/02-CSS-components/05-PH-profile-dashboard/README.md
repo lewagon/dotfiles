@@ -7,7 +7,7 @@ Time to build a full Product Hunt dashboard like [this one](http://lewagon.githu
 
 ### Layout
 
-The layout is pretty easy here
+The layout is pretty easy here since we just re-use profile header from previous challenge:
 
 ```html
 <div class="profile-header-wrapper">
@@ -22,11 +22,13 @@ The layout is pretty easy here
 </div>
 ```
 
-You can of course put a wrapper around the container if you want to have a background color (but in our example we keep a white background for product)
+You can put a wrapper around the products' container if you want to add a background-color (in our example, products' background is white so we don't need any wrapper).
 
 ### Product design
 
-First, you must think carefully about the HTML structure of each product. Bad HTML structure means impossible design.. It should look like this:
+First, you must think carefully about the HTML structure of each product. A bad HTML structure will make you write poor and over-complicated CSS.
+
+The structure of each product should look like this:
 
 ```html
 <div class="product">
@@ -46,7 +48,11 @@ First, you must think carefully about the HTML structure of each product. Bad HT
   </ul>
 </div>
 ```
-#### Flexbox grow technique
+
+- `.product` is the **flex-box**
+- `.product-upvote`, `.product-image`, `.product-body` and `.product-controls` are the **four flex items**
+
+#### Flex-grow technique
 
 The `.product` div is the main flexbox:
 
@@ -57,7 +63,7 @@ The `.product` div is the main flexbox:
 }
 ```
 
-Then just make the `.product-body` item grow, and that's it!
+Then just make the `.product-body` item grow:
 
 ```css
 .product-body {
@@ -65,12 +71,11 @@ Then just make the `.product-body` item grow, and that's it!
 }
 ```
 
-Then, you can adjust paddings to fine-tune your flex-items.
-
+And that's it! Now, you just have to adjust paddings on each flex-item.
 
 #### List inline
 
-For the list-inline, we put you the code in `style.css` to save you time.
+For the list-inline, we give you the code in `style.css` to save you some time.
 
 #### Product arrow
 

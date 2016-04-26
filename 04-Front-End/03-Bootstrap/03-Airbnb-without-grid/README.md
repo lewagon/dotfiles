@@ -77,7 +77,7 @@ Example of Bootstrap form without labels:
 </form>
 ```
 
-Now if you want an horizontal form you can **add the `form-inline` class to the `<form>`** (same as `list-inline` for a list):
+Now if you want an horizontal form you can add the `form-inline` class to the `<form>` (same as `list-inline` for a list):
 
 ```html
 <form action="#" class="form-inline">
@@ -87,4 +87,4 @@ Now if you want an horizontal form you can **add the `form-inline` class to the 
 </form>
 ```
 
-Bootstrap forms are a bit complicated for beginners.. **Don't rush and take time to understand them**. Forms are very important in a website, it's where the user interacts!
+Bootstrap forms are a bit complicated for beginners.. Don't rush and take time to understand them. Forms are very important in a website, it's where the user interacts!

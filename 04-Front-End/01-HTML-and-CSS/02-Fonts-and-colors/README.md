@@ -8,18 +8,20 @@ Add simple CSS rules to design fonts and colors of your profile page.
 
 
 ### Body
-- Pick a nice background color, font family/color/size and line-height for the `<body>`. **Setting these font rules at the body-level will apply them on all basic texts** (`<p>`, `<li>`, etc...).
+
+Pick a nice `background-color`, `font-family` / `color` / `font-size` and `line-height` for the `<body>`. **Setting these font rules at the body-level will apply them on all basic texts** (`<p>`, `<li>`, etc...).
 
 ### Headers
 - Choose a nice color and font-family for headers (`<h1>`, `<h2>`, `<h3>`)
 - Choose harmonious `font-size` and `line-height` for headers
+- Tips: **small headers** are much more subtle. Check any website (Medium, Airbnb, etc.), you'll see that the font-size of their headers is quite small.
 
 ### Links
-- Change links colors & text decoration
+- Change links' `color` & `text-decoration`
 - Add some hover effects on links using the pseudo-class `a:hover`.
 
 ## Tips & Resources
 
-- Use a color picker plugin to pick nice colors from other websites (Sip, Colorzilla, etc..). You can find inspiration [here](http://coolors.co/).
-- Pick your fonts on [google fonts](https://www.google.com/fonts)
-- On Google fonts, **Open Sans** is the standard choice for core texts. **Raleway**, **Varela**, **Montserrat**, **Roboto** are nice candidates for headers. We already made these choices for you (look at the `<head>` of your HTML page), but feel free to change it and be creative!
+- Use a color picker plugin to pick nice colors from other websites (Sip, Colorzilla, etc..). You can find inspiration on [Coolors](http://coolors.co/) or [Color hunt](http://colorhunt.co/).
+- Pick your fonts on [Google fonts](https://www.google.com/fonts)
+- On Google fonts, **Open Sans** is the standard choice for core texts (`body`). **Raleway**, **Varela**, **Montserrat**, **Roboto** are elegant candidates for headers. We already made these choices for you (look at the `<head>` of your HTML page), but feel free to change it and be creative!

@@ -1,4 +1,6 @@
-First let's create a new project for your profile page (you are not going to keep it in the `fullstack-challenges` folder).
+## Create a new project
+
+Let's create a new project for your profile page (you are not going to keep it under in the `fullstack-challenges` folder).
 
 
 ```
@@ -6,35 +8,40 @@ $ cd ~/code/$GITHUB_USERNAME
 $ mkdir profile
 ```
 
-Copy paste your `index.html`, `style.css` files and `images` folder in this new `profile` folder. Then let's install the `hub` gem, which will enable you to create Github repo from your terminal!
+Copy and paste your `index.html`, `style.css` files and `images` folder in this new `profile` folder.
+
+
+## Create the Github repo
+
+Let's install the `hub` gem to create a Github repo from your terminal without opening your browser
 
 ```
 $ gem install hub
 ```
 
-You can now init a git repo, commit changes, and create the associated Github repo.
+Now you can init a git repo, commit your changes, and create the associated Github repo.
 
 ```
-$ cd profile
+$ cd ~/code/$GITHUB_USERNAME/profile
 $ git init
 $ git add .
 $ git commit -m "my profile page"
 $ hub create
 ```
 
-To check the Github repo you can run
+To open the Github repo in your browser you can run:
 
 ```
 $ hub browse
 ```
 
-### Magic `gh-branch`
+## Github Pages
 
-Github Pages is based on a magic branch, with the name `gh-pages`. When Github detects this branch, it puts your website online, how cool! Let's create this magic branch and push it.
+[Github Pages](https://pages.github.com/) is a sub-service of Github, very convenient to deploy any **static website** in 10 seconds (static == not a Rails app). It is based on a "magic" branch, called `gh-pages`. When Github detects this branch, it puts your website online, how cool! Let's create this magic branch and push it.
 
 ```
 $ git co -b gh-pages
 $ git push origin gh-pages
 ```
 
-Now you can look at your masterpiece at the url `http://GITHUB_USERNAME.github.io/profile`. Share it on Slack with your buddies!
+Now you can build the URL `http://GITHUB_USERNAME.github.io/profile` and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
