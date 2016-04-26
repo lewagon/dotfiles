@@ -47,7 +47,7 @@ When you want to build your HTML/CSS code and deploy it with Github Pages, first
 
 ```
 $ git add .
-$ git commit -m "finish content migration in Middleman"
+$ git commit -m "finished some work"
 ```
 
 And when your `git status` is clean, deploy your website:
@@ -70,7 +70,7 @@ Let's get back our Airbnb home-page (built last Friday) and include it in Middle
 The footer should not be only in the `index.html.erb` template. In fact, the footer is on every page of the website.
 
 
-To avoid repeating the footer's code in every template of the project, put it in the `layout.erb` file, which is the common skeleton of all pages:
+To avoid repeating the footer's code in every template of the project, put it in the `layout.erb` file, i.e. the common skeleton of all templates:
 
 ```erb
 <!-- layouts/layout.erb -->
@@ -81,7 +81,7 @@ To avoid repeating the footer's code in every template of the project, put it in
 
 Then add a ERB partial `_footer.html.erb` with your footer code:
 
-```erb
+```html
 <!-- _footer.erb -->
 
 <div id="footer">
@@ -89,13 +89,15 @@ Then add a ERB partial `_footer.html.erb` with your footer code:
 </div>
 ```
 
-- By using a layout, all common parts (navbar, footer, analytics, etc..) are **coded just once**.
+- By using a layout, all common parts (navbar, footer, analytics, etc..) are **coded just once in the layout**.
 - By using ERB partials, HTML code is more concise and easy to read.
 
 
 ## Team Page
 
-Add a second page `team.html.erb` to your website, with your team members like [this one](http://lewagon.github.io/middleman-airbnb/team.html). Put real pictures of you and your buddy of course. Don't forget that you are using ERB now, and you can write **ruby code that will generate HTML code**, like:
+Add a second page `team.html.erb` to your website with your team's members, like [this one](http://lewagon.github.io/middleman-airbnb/team.html).
+
+Put real pictures of you and your buddy of course. Don't forget that you are using ERB now, and you can write **ruby code that will generate HTML code**, like:
 
 
 ```erb
@@ -132,7 +134,7 @@ This ERB code will generate this HTML code:
 
 ## Helpers
 
-Helpers are ruby method that you will use in your templates to generate `<a>`, `<img>`, `<link>`, etc.. Most method can be given an optional hash of attribues (`class` and `id`). For instance:
+Helpers are ruby method that you will use in your templates to generate `<a>`, `<img>`, `<link>`, etc.. Most helper methods can be called with an optional hash of attributes (like `class` and `id`). For instance:
 
 
 ```erb
@@ -145,19 +147,19 @@ Or
 <%= link_to "Meet the team", "team.html", class: "btn btn-primary" %>
 ```
 
-You cal have a look at [Middleman documentation for helpers](https://middlemanapp.com/basics/helper_methods/).
+You can have a look at [Middleman documentation for helpers](https://middlemanapp.com/basics/helper_methods/).
 
-Your turn to replace all your `<a>` and `<img>` using the right helper methods.
+**Your turn to replace all your `<a>` and `<img>` using the right helper methods.**
 
 ## Commit and deploy
 
-You have a working Middleman project with a home and a team page, time to commit your work and deploy:
+Now that you have a working Middleman project with a home and a team page, time to commit your work and deploy:
 
 ```
 $ git add .
-$ git commit -m "finish content migration in Middleman"
+$ git commit -m "finished home and team page"
 $ git push origin master
 $ middleman deploy
 ```
 
-You can now visit your masterpiece on <a href="https://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-static</a>.
+Visit your masterpiece on <a href="https://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-static</a>.
