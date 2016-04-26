@@ -33,7 +33,7 @@ end
 You may need to know that to include a `"` symbol inside a string delimited by double quotes,
 you need to **escape** this character with an antislash: `\"`.
 
-The cool thing with this method is than you can nest method calls
+The cool thing with this method is that you can nest method calls
 
 ```ruby
 tag("a", ["href", "www.google.com"]) do
