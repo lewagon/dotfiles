@@ -20,3 +20,5 @@ Dir["#{__dir__}/../app/models/*.rb"].each { |file| require_relative file }
 
 # Discard warning message for i18n errors
 I18n.enforce_available_locales = false
+
+require_relative "fake_mailer"

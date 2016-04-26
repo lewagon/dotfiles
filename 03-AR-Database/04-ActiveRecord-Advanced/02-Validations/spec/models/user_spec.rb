@@ -45,4 +45,10 @@ describe "User" do
     expect(user.email).to eq("bob@leponge.me"), "You should have a `before_validation` callback to strip whitespaces"
   end
 
+  it "should send a welcome email to Bob on user creation [Bonus]" do
+    FakeMailer.instance.reset
+    expect{User.create(username: "bob", email: "bob@lebonge.me")}.to
+      change{FakeMailer.instance.sent_email}.from(0).to(1)
+  end
+
 end
