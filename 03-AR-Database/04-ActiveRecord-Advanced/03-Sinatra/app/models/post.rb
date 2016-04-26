@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
   belongs_to :user
 
-  # TODO: Add some validation
+  # TODO: Copy-paste your code from previous exercise
 end

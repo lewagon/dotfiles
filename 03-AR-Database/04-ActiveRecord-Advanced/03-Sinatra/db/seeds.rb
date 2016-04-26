@@ -6,5 +6,5 @@ require "faker"
     url: Faker::Internet.url,
     votes: (0..1000).to_a.sample
   )
-  post.save
+  post.save!
 end
