@@ -1,4 +1,4 @@
-class InitWorld < ActiveRecord::Migration[4.2]
+class InitWorld < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :username
