@@ -1,14 +1,16 @@
 ## Background & Objectives
 
-In this challenge you must
+Let's play with [Middleman](https://middlemanapp.com/), a nice tool coded in ruby to build **static websites**. You can use it for your personal website / portfolio or any freelance projects of static website with rich content and design.
 
-- Import the HTML of your Bootstrap Airbnb home in your Middleman project.
-- Refactor the HTML code with ERB.
-- Add a new team page to your project.
+The objective of today is to code a static version of Airbnb with a [home page](http://lewagon.github.io/middleman-airbnb/), a [team page](http://lewagon.github.io/middleman-airbnb/team.html), and a [dynamic flat page](http://lewagon.github.io/middleman-airbnb/flats/seb.html) (change `seb` by `romain` in the URL to see that it's dynamic).
+
+But first let's get started with Middleman.
 
 ## Setup
 
-**First fork our [middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate)**, and rename it in the settings section. And then:
+- [Fork Le Wagon's Middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate/fork)
+- Go to [your repo's setting](https://github.com/&lt;user.github_nickname&gt;/frontend-advanced-boilerplate/settings)
+
 
 ```bash
 $ cd ~/code/$GITHUB_USERNAME
@@ -33,6 +35,12 @@ $ middleman deploy # build HTML/CSS and push it on Github Pages
 ```
 
 ## Initial Bootstrap home
+
+
+- Import the HTML of your Bootstrap Airbnb home in your Middleman project.
+- Refactor the HTML code with ERB.
+- Add a new team page to your project.
+
 
 Normally you've coded your Bootstrap airbnb home (last Friday). But if you want, you can also start with [our version](https://github.com/lewagon/bootstrap-challenges/tree/master/11-Airbnb-search-form).
 
