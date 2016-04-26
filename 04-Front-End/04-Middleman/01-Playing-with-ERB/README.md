@@ -2,63 +2,45 @@
 
 Let's play with [Middleman](https://middlemanapp.com/), a nice tool coded in ruby to build **static websites**. You can use it for your personal website / portfolio or any freelance projects of static website with rich content and design.
 
-The objective of today is to code a static version of Airbnb with a [home page](http://lewagon.github.io/middleman-airbnb/), a [team page](http://lewagon.github.io/middleman-airbnb/team.html), and a [dynamic flat page](http://lewagon.github.io/middleman-airbnb/flats/seb.html) (change `seb` by `romain` in the URL to see that it's dynamic).
+The objective of today is to code a static version of Airbnb with a [home page](http://lewagon.github.io/middleman-airbnb/), a [team page](http://lewagon.github.io/middleman-airbnb/team.html), and a [dynamic flat page](http://lewagon.github.io/middleman-airbnb/flats/seb.html) (change `seb` by `romain` in the URL to see that the flat's page is dynamic).
 
-But first let's get started with Middleman.
+First let's get started with Middleman.
 
-## Setup
+## Middleman setup
 
-- [Fork Le Wagon's Middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate/fork)
+### Fork and clone the boilerplate
+
+<ol>
+  <li>
+    <a href="https://github.com/lewagon/frontend-advanced-boilerplate/fork" target="_blank">Fork Le Wagon's Middleman boilerplate</a>
+  </li>
+  <li>
+    Go to <a href="https://github.com/&lt;user.github_nickname&gt;/frontend-advanced-boilerplate/settings" target="_blank">your repo's setting</a> and change the name to `airbnb-static`
+  </li>
+</ol>
 
 
-<a href="https://github.com/&lt;user.github_nickname&gt;/frontend-advanced-boilerplate/settings" target="_blank">your repo's setting</a>
-
+Let's clone the project locally and install missing gems:
 
 ```bash
 $ cd ~/code/$GITHUB_USERNAME
-$ git clone git@github.com:$GITHUB_USERNAME/repo_name.git
-$ cd repo_name
+$ git clone git@github.com:$GITHUB_USERNAME/airbnb-static.git
+$ cd airbnb-static
 $ bundle install
 ```
 
-Here is what these commands do:
+Note that this is a new independent project, so we don't clone it inside `fullstack-challenges`.
 
-1. `cd` into your personal code folder.
-1. Clone the repo on your computer. Be carefull, **don't clone the repo inside `fullstack-challenges`** but as a separated project in `~/code/$GITHUB_USERNAME`.
-1. Jump into Middleman project and install all gems listed in the `Gemfile` with `bundle install`.
 
-## Middleman commands
+### Middleman commands
 
-Then you can use two important Middleman commands:
+There are two important Middleman commands:
 
 ```bash
 $ middleman server # launch local server (Ctr + C to kill it)
-$ middleman deploy # build HTML/CSS and push it on Github Pages
 ```
 
-## Initial Bootstrap home
-
-
-- Import the HTML of your Bootstrap Airbnb home in your Middleman project.
-- Refactor the HTML code with ERB.
-- Add a new team page to your project.
-
-
-Normally you've coded your Bootstrap airbnb home (last Friday). But if you want, you can also start with [our version](https://github.com/lewagon/bootstrap-challenges/tree/master/11-Airbnb-search-form).
-
-## Specs
-
-In this challenge, you have to:
-
-1. Migrate your home page **content** into the `index.html.erb` Middleman page
-1. Create a new `team.html.erb` page with team members.
-1. Put all common HTML parts (navbar & footer) in the `layout.html.erb`.
-1. Replace **all** `<a>` tags and `<img>` tags with the **correct helpers** (`image_tag`, `link_to`, `image-url`).
-
-
-## Commit and deploy
-
-Once you have finished your content migration, commit your work:
+Then when you want to build your HTML/CSS code and push it online using Github Pages, first commit your work:
 
 ```
 $ git add .
@@ -66,11 +48,98 @@ $ git commit -m "finish content migration in Middleman"
 $ git push origin master
 ```
 
-Then build and push your site on Github Pages.
+And then, when your `git status` is clean, deploy your website:
+
+```bash
+$ middleman deploy # deploy website on Github Pages
+```
+
+
+## Home Page
+
+Let's start by getting back our Bootstrap home-page built last Friday and include it in our Middleman project. We give you this home-page in the exercise's folder in the `home-page-html-css` folder. **Now your job to include it in Middleman**.
+
+- Copy the content in the `index.html.erb` template
+- Add SCSS partials in Middleman `components` stylesheets (`_banner.scss`, `_card.scss`, `_feature.scss`)
+- Add `_footer.scss` in Middleman `layout` stylesheets. The footer can be seen as a components but it's good practice to group all "layout components" in another directory (to organize the code).
+- Don't forget
+
+## Footer & Layout
+
+The footer's HTML code should not be in the `index.html.erb` template only. In fact, the footer is present on every page of the website. Put the footer code in the `layout.erb` file, which is the common skeleton of all the pages:
+
+```erb
+<!-- layouts/layout.erb -->
+<%= partial "navbar" %>   <!-- call _navbar.html.erb partial -->
+<%= yield %>              <!-- Page content is injected here -->
+<%= partial "footer" %>   <!-- call _footer.html.erb partial -->
+```
+
+Then add a ERB partial `_footer.html.erb` with your footer code:
+
+```erb
+<!-- _footer.erb -->
+
+<div id="footer">
+  <!-- Your footer code goes here -->
+</div>
+```
+
+- By using a layout, all common parts (like navbar / footer) are **coded just once**.
+- By using ERB partials, your HTML code is more concise and clear.
+
+
+## Team Page
+
+Add a second page `team.html.erb` to your website, with your team members like [this one](http://lewagon.github.io/middleman-airbnb/team.html). Put real pictures of you and your buddy of course. Don't forget that you are using ERB now, and you can write **ruby code that will generate HTML code**, like:
+
+
+```erb
+<!-- Playing with ERB -->
+<ul class="list-inline text-center">
+  <% ["boris", "seb", "romain"].each do |member| %>
+    <li>
+      <%= image_tag "#{member_image}.png", class: "img-circle" %>
+      <h3><%= member.capitalize %></h3>
+    </li>
+  <% end %>
+</ul>
+```
+
+This ERB code will generate this HTML code:
+```erb
+<!-- HTML output -->
+<ul class="list-inline text-center">
+  <li>
+    <img src="images/boris.png" alt="">
+    <h3>Boris</h3>
+  </li>
+  <li>
+    <img src="images/seb.png" alt="">
+    <h3>Seb</h3>
+  </li>
+  <li>
+    <img src="images/romain.png" alt="">
+    <h3>Romain</h3>
+  </li>
+</ul>
+```
+
+
+## Helpers
+
+You must replace **all** `<a>` tags and `<img>` tags with the [correct helpers method](https://middlemanapp.com/basics/helper_methods/) (`image_tag`, `link_to`, `image-url`).
+
+
+## Commit and deploy
+
+You have a working Middleman project with a home and a team page, time to commit your work and deploy:
 
 ```
+$ git add .
+$ git commit -m "finish content migration in Middleman"
+$ git push origin master
 $ middleman deploy
 ```
 
-You can now visit your masterpiece on `http://GITHUB_USERNAME.github.io/repo_name`. In our case, have a look at [http://lewagon.github.io/middleman-airbnb](http://lewagon.github.io/middleman-challenges).
-
+You can now visit your masterpiece on <a href="https://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-staticg</a>.

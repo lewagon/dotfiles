@@ -1,0 +1,11 @@
+.features img {
+  width: 100px;
+}
+.features h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.features p {
+  font-size: 15px;
+  font-weight: lighter;
+}

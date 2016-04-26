@@ -1,0 +1,20 @@
+#footer {
+  background: #333333;
+  padding: 30px 0;
+  color: #CCCCCC;
+}
+#footer p {
+  margin-top: 17px;
+}
+#footer ul {
+  margin-top: 10px;
+}
+#footer a {
+  color: #CCCCCC;
+  font-size: 30px;
+  letter-spacing: 20px;
+  transition: color 0.5s ease;
+}
+#footer a:hover{
+  color: yellow;
+}
