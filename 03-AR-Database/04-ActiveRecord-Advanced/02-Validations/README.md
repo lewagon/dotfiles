@@ -2,7 +2,7 @@
 
 Now that associations are in place between `Post` and `User`, let's add some validation to the models to make sure we don't store **inconsistent** data in the Database. Before jumping head first into the exercises, take 15 minutes and read this really good guide, top to bottom:
 
-[guides.rubyonrails.org/active_record_validations](http://guides.rubyonrails.org/active_record_validations.html)
+[guides.rubyonrails.org/active\_record\_validations](http://guides.rubyonrails.org/active_record_validations.html)
 
 ## Setup
 
