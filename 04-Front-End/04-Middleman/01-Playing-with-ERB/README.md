@@ -132,8 +132,22 @@ This ERB code will generate this HTML code:
 
 ## Helpers
 
-Don't forget to replace **all** `<a>` tags and `<img>` tags with the [correct helpers method](https://middlemanapp.com/basics/helper_methods/) (`image_tag`, `link_to`, `image-url`).
+Helpers are ruby method that you will use in your templates to generate `<a>`, `<img>`, `<link>`, etc.. Most method can be given an optional hash of attribues (`class` and `id`). For instance:
 
+
+```erb
+<%= image_tag "example.png", class: "img-rounded avatar" %>
+```
+
+Or
+
+```erb
+<%= link_to "Meet the team", "team.html", class: "btn btn-primary" %>
+```
+
+You cal have a look at [Middleman documentation for helpers](https://middlemanapp.com/basics/helper_methods/).
+
+Your turn to replace all your `<a>` and `<img>` using the right helper methods.
 
 ## Commit and deploy
 
