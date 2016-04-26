@@ -9,7 +9,9 @@ But first let's get started with Middleman.
 ## Setup
 
 - [Fork Le Wagon's Middleman boilerplate](https://github.com/lewagon/frontend-advanced-boilerplate/fork)
-- Go to [your repo's setting](https://github.com/&lt;user.github_nickname&gt;/frontend-advanced-boilerplate/settings)
+
+
+<a href="https://github.com/&lt;user.github_nickname&gt;/frontend-advanced-boilerplate/settings" target="_blank">your repo's setting</a>
 
 
 ```bash
