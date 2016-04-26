@@ -20,7 +20,10 @@ But first, let's get started with Middleman!
 </ol>
 
 
-Let's clone the project locally and install missing gems:
+![change repo name](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/settings-rename-repo.png)
+
+
+Now let's clone the project and install missing gems:
 
 ```bash
 $ cd ~/code/$GITHUB_USERNAME
