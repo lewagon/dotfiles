@@ -1,10 +1,10 @@
 ## Background & Objectives
 
-Let's play with [Middleman](https://middlemanapp.com/), a nice tool coded in ruby to build **static websites**. You can use it for your personal website / portfolio or any freelance projects of static website with rich content and design.
+Let's play with [Middleman](https://middlemanapp.com/), a nice tool coded in ruby to build **static websites**. You can use it for your personal website or portfolio, or for any freelance frontend project with rich content and design.
 
 The objective of today is to code a static version of Airbnb with a [home page](http://lewagon.github.io/middleman-airbnb/), a [team page](http://lewagon.github.io/middleman-airbnb/team.html), and a [dynamic flat page](http://lewagon.github.io/middleman-airbnb/flats/seb.html) (change `seb` by `romain` in the URL to see that the flat's page is dynamic).
 
-First let's get started with Middleman.
+But first, let's get started with Middleman!
 
 ## Middleman setup
 
@@ -15,7 +15,7 @@ First let's get started with Middleman.
     <a href="https://github.com/lewagon/frontend-advanced-boilerplate/fork" target="_blank">Fork Le Wagon's Middleman boilerplate</a>
   </li>
   <li>
-    Go to <a href="https://github.com/&lt;user.github_nickname&gt;/frontend-advanced-boilerplate/settings" target="_blank">your repo's setting</a> and change the name to `airbnb-static`
+    Go to <a href="https://github.com/&lt;user.github_nickname&gt;/frontend-advanced-boilerplate/settings" target="_blank">your repo's settings</a> and change the name to <code>airbnb-static</code>
   </li>
 </ol>
 
