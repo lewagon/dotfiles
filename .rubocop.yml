@@ -1,3 +1,5 @@
+ConditionalAssignment:
+  Enabled: false
 StringLiterals:
   Enabled: false
 TrailingBlankLines:
