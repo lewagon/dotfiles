@@ -49,7 +49,9 @@ end
 
 Read the [Active Record Callbacks guide](http://guides.rubyonrails.org/active_record_callbacks.html) to answer the last facultative question.
 
-To make `rake` 100% green, implement a callback triggered after a user has been created to send a **welcome email** to this new user. Read about the [available callbacks](http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks) to figure out which callback to use.
+Implement a callback to strip the email before validation.
+
+Implement a callback triggered after a user has been created to send a **welcome email** to this new user. Read about the [available callbacks](http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks) to figure out which callback to use.
 
 Right now we don't have Rails, not utilities gems like [letter_opener](https://github.com/ryanb/letter_opener), so we'll simulate sending an email with the following method call:
 
