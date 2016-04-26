@@ -19,9 +19,13 @@ Complete `JellyBean` which inherits from `Dessert`
 - Modify `delicious?` to return false if the flavor is `"black licorice"` (but `delicious?` should still return true for all other flavors and for all non-JellyBean desserts).
 
 #### Super bicycle
-* in `bicycle.rb`, replace all the `"?"` in the `#quizz` method by the correct integer. Do you understand what the `super`keyword does? If you get it, you can re-implement `JellyBean#initialize` using the `super` keyword.
+
+* in `bicycle.rb`, replace all the `"?"` in the `#quizz` method by the correct integer.
+
+* Do you understand what the `super` keyword does? If you get it you can use it to rewrite your `JellyBean#initialize`, in `dessert.rb`, using the `super` keyword.
 
 ## Learning Badges
+
 - Why do we make classes inherit from others? What's the point?
 - What's the syntax to do that?
 - What's the keyword to extend the behavior of an inherited method?
