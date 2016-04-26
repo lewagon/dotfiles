@@ -32,26 +32,25 @@ $ cd airbnb-static
 $ bundle install
 ```
 
-Note that this is a new independent project, so we don't clone it inside `fullstack-challenges`.
+This is a new separated project, so **we don't clone it inside `fullstack-challenges`**.
 
 
 ### Middleman commands
 
-There are two important Middleman commands:
+To start a web-server:
 
 ```bash
 $ middleman server # launch local server (Ctr + C to kill it)
 ```
 
-Then when you want to build your HTML/CSS code and push it online using Github Pages, first commit your work:
+When you want to build your HTML/CSS code and deploy it with Github Pages, first commit your work:
 
 ```
 $ git add .
 $ git commit -m "finish content migration in Middleman"
-$ git push origin master
 ```
 
-And then, when your `git status` is clean, deploy your website:
+And when your `git status` is clean, deploy your website:
 
 ```bash
 $ middleman deploy # deploy website on Github Pages
@@ -60,16 +59,18 @@ $ middleman deploy # deploy website on Github Pages
 
 ## Home Page
 
-Let's start by getting back our Bootstrap home-page built last Friday and include it in our Middleman project. We give you this home-page in the exercise's folder in the `home-page-html-css` folder. **Now your job to include it in Middleman**.
+Let's get back our Airbnb home-page (built last Friday) and include it in Middleman. You can find it in the `home-page-html-css` folder of the exercise.
 
-- Copy the content in the `index.html.erb` template
-- Add SCSS partials in Middleman `components` stylesheets (`_banner.scss`, `_card.scss`, `_feature.scss`)
-- Add `_footer.scss` in Middleman `layout` stylesheets. The footer can be seen as a components but it's good practice to group all "layout components" in another directory (to organize the code).
-- Don't forget
+1. Copy the page content in the `index.html.erb` template
+1. Add missing SCSS partials in Middleman `components` stylesheets  (e.g. `_banner.scss`, `_card.scss`, `_feature.scss`)
+1. Add `_footer.scss` in Middleman `layout` stylesheets. Even if the footer is a component, it's a good practice to put all "layout components" in a separated directory (just to organize the code).
 
 ## Footer & Layout
 
-The footer's HTML code should not be in the `index.html.erb` template only. In fact, the footer is present on every page of the website. Put the footer code in the `layout.erb` file, which is the common skeleton of all the pages:
+The footer should not be only in the `index.html.erb` template. In fact, the footer is on every page of the website.
+
+
+To avoid repeating the footer's code in every template of the project, put it in the `layout.erb` file, which is the common skeleton of all pages:
 
 ```erb
 <!-- layouts/layout.erb -->
@@ -88,8 +89,8 @@ Then add a ERB partial `_footer.html.erb` with your footer code:
 </div>
 ```
 
-- By using a layout, all common parts (like navbar / footer) are **coded just once**.
-- By using ERB partials, your HTML code is more concise and clear.
+- By using a layout, all common parts (navbar, footer, analytics, etc..) are **coded just once**.
+- By using ERB partials, HTML code is more concise and easy to read.
 
 
 ## Team Page
@@ -98,11 +99,10 @@ Add a second page `team.html.erb` to your website, with your team members like [
 
 
 ```erb
-<!-- Playing with ERB -->
 <ul class="list-inline text-center">
   <% ["boris", "seb", "romain"].each do |member| %>
     <li>
-      <%= image_tag "#{member_image}.png", class: "img-circle" %>
+      <%= image_tag "#{member}.png", class: "img-circle" %>
       <h3><%= member.capitalize %></h3>
     </li>
   <% end %>
@@ -110,7 +110,8 @@ Add a second page `team.html.erb` to your website, with your team members like [
 ```
 
 This ERB code will generate this HTML code:
-```erb
+
+```html
 <!-- HTML output -->
 <ul class="list-inline text-center">
   <li>
@@ -131,7 +132,7 @@ This ERB code will generate this HTML code:
 
 ## Helpers
 
-You must replace **all** `<a>` tags and `<img>` tags with the [correct helpers method](https://middlemanapp.com/basics/helper_methods/) (`image_tag`, `link_to`, `image-url`).
+Don't forget to replace **all** `<a>` tags and `<img>` tags with the [correct helpers method](https://middlemanapp.com/basics/helper_methods/) (`image_tag`, `link_to`, `image-url`).
 
 
 ## Commit and deploy
