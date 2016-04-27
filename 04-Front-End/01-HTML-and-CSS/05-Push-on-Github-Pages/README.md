@@ -45,3 +45,10 @@ $ git push origin gh-pages
 ```
 
 Now you can build the URL `http://GITHUB_USERNAME.github.io/profile` and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
+
+
+From now and until the end of the day, keep working in your _~/code/$GITHUB_USERNAME/profile_ directory AND on the `gh-pages` branch. Thus, any updates of your profile page could be pushed on `http://GITHUB_USERNAME.github.io/profile` throw the command line
+
+```
+$ git push origin gh-pages
+```
