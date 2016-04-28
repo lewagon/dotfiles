@@ -75,13 +75,15 @@ In Middleman, the content of `flats.yml` is loaded in a ruby hash `data.flats`. 
 </div>
 ```
 
-How cool is that? Now you can add new flats on your home-page just by updating `flats.yml` file. Find more infos on data in [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
+How cool is that? Now you can add new flats on your home-page just by updating `flats.yml`. Find more infos on data in [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
 
 ## Middleman vs. Rails
 
 In Rails, we will have a real DB (not YAML files) and we will use Active Record to connect to this DB. That being said, the ERB template will be very similar. Just replace `data.flats` by `Flat.all` in the code above and that's it!
 
-Do you see how frontend and backend will magically connect? We hope you do :)
+**Do you see how frontend and backend will magically connect?**
+
+We hope you do :)
 
 ## Dynamic page
 
@@ -96,11 +98,11 @@ Then add to `config.rb` something like:
 end
 ```
 
-Don't forget to **restart your server when you change the config** (config is only loaded when you launch the server).
+Don't forget to **restart your server when you change the config**.
 
-Create the dynamic template `/flats/show.html.erb`. In this template, `owner` will dynamically change (to `"romain"`, `"seb"`, `"anne"`, etc..) depending on the URL (`"/flats/romain.html"`, `"/flats/seb.html"`, `"/flats/anne.html"`, etc..).
+Create the dynamic template `/flats/show.html.erb`. In this template, `owner` will dynamically change to `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL.
 
-You can now read in the hash `data.flats` using this key, like that:
+You can now read in the hash `data.flats` using the owner's name as a key, like that:
 
 
 ```erb
@@ -125,4 +127,4 @@ Now try to access:
 - etc...
 
 
-How cool? Your turn to build a dynamic page (a bit more sophisticated) like [this one](http://lewagon.github.io/middleman-airbnb/flats/romain.html))
+How cool? Your turn to build a dynamic page like [this one](http://lewagon.github.io/middleman-airbnb/flats/romain.html).
