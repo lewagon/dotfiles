@@ -4,7 +4,7 @@ Let's create a new project for your profile page (you are not going to keep it u
 
 
 ```
-$ cd ~/code/$GITHUB_USERNAME
+$ cd ~/code/<user.github_nickname>
 $ mkdir profile
 ```
 
@@ -22,7 +22,7 @@ $ gem install hub
 Now you can init a git repo, commit your changes, and create the associated Github repo.
 
 ```
-$ cd ~/code/$GITHUB_USERNAME/profile
+$ cd ~/code/<user.github_nickname>/profile
 $ git init
 $ git add .
 $ git commit -m "my profile page"
@@ -44,4 +44,11 @@ $ git co -b gh-pages
 $ git push origin gh-pages
 ```
 
-Now you can build the URL `http://GITHUB_USERNAME.github.io/profile` and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
+Now you can build the URL `http://<user.github_nickname>.github.io/profile` and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
+
+
+From now and until the end of the day, keep working in your _~/code/<user.github_nickname>/profile_ directory AND on the `gh-pages` branch. Thus, any updates of your profile page could be pushed on `http://<user.github_nickname>.github.io/profile` throw the command line
+
+```
+$ git push origin gh-pages
+```
