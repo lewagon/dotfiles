@@ -26,8 +26,8 @@ But first, let's get started with Middleman!
 Now let's clone the project and install missing gems:
 
 ```bash
-$ cd ~/code/$GITHUB_USERNAME
-$ git clone git@github.com:$GITHUB_USERNAME/airbnb-static.git
+$ cd ~/code/<user.github_nickname>
+$ git clone git@github.com:<user.github_nickname>/airbnb-static.git
 $ cd airbnb-static
 $ bundle install
 ```
@@ -162,4 +162,4 @@ $ git push origin master
 $ middleman deploy
 ```
 
-Visit your masterpiece on <a href="https://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-static</a>.
+Visit your masterpiece on <a href="http://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-static</a>.
