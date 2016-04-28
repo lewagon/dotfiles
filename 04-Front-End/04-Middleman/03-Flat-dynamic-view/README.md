@@ -5,7 +5,7 @@ Let's create a dynamic template for the flat's show view. This template will inj
 
 ## YAML data
 
-In a static website, it's often very convenient to store data in structured text file (like YAML), and then inject this data in the templates. Let's do this for flats' data.
+In a static website, it's often convenient to store some data in a structured text file (like a YAML file), and then use this data in our templates. Let's do this for flats.
 
 In Middleman `data` folder, add a new file `flats.yml`
 
@@ -22,7 +22,7 @@ In Middleman `data` folder, add a new file `flats.yml`
     └── flats.yml
 ```
 
-YAML syntax is based on indentation and keys/values (a bit like JSON but without `{`, `:`, `,`). Your file should look like:
+YAML syntax is based on indentation and keys/values (a bit like JSON but without `{}`). Your YAML file should look like:
 
 
 ```yaml
@@ -45,12 +45,12 @@ romain:
   wifi: false
 ```
 
-Be creative and **add extra data to this YAML** (flat rating, pictures of different rooms, maximum number of guests, etc..).
+Be creative and **add other keys/values to this YAML** (flat's rating, pictures of different rooms, maximum number of guests, etc..).
 
 
 ## Loop with ERB
 
-Middleman makes your life easy. The content of `flats.yml` is loaded in a ruby hash `data.flats`. You can now replace your three static cards in `index.html.erb` by looping on data with `each`.
+In Middleman, the content of `flats.yml` is loaded in a ruby hash `data.flats`. You can now replace your static cards on the home page by looping dynamically on data with `each`:
 
 
 ```erb
@@ -75,7 +75,7 @@ Middleman makes your life easy. The content of `flats.yml` is loaded in a ruby h
 </div>
 ```
 
-How cool is that? Now you can add flats on your home-page just by updating `flats.yml` file. You can find more infos on data in [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
+How cool is that? Now you can add new flats on your home-page just by updating `flats.yml` file. Find more infos on data in [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
 
 ## Middleman vs. Rails
 
