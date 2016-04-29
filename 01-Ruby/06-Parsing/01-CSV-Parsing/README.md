@@ -25,7 +25,7 @@ You have very useful ruby packages in the standard library to
 - implement `#most_successfull` that returns the nth movies published prior to a given year, and with maximum earnings.
 - **constraint**: the returned list should be an array of movies. Each movie should be represented by a hash with keys `name`, `year` and `earnings`. Ex: `{ name: "Avatar", year: 2009, earnings: 760505847 }`
 
-## Tips & Resources
+## Further suggestions & resources
 
 - Make sure you specify the good `encoding` options for reading the CSV.
 Movies titles are given in French with special characters :)

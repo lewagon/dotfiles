@@ -19,7 +19,7 @@ describe "Post" do
   it "should allow to retrieve all posts from the database" do
     if defined?(Post)
       posts = nil
-      expect { posts = Post.all }.not_to raise_error, "Missing something in your class declaration maybe? Tip: inheritance"
+      expect { posts = Post.all }.not_to raise_error, "Missing something in your class declaration maybe? Hint: inheritance"
       expect(posts).to eq []
     else
       raise "Fix the first test before paying attention to this one"

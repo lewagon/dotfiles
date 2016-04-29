@@ -43,7 +43,7 @@ Some guidelines to build your views
 - Should display a list of all tasks and, for each task:
   - a link to its show view (use a `link_to` helper)
   - a link to its edit view
-  - a link to its delete action. **Tips**: a standard link does not allow to perform `DELETE` request, so here you should add a `method: :delete` option to your `link_to` helper.
+  - a link to its delete action. **Hint:** a standard link does not allow to perform `DELETE` request, so here you should add a `method: :delete` option to your `link_to` helper.
 - Should include a link to the new view to create a new task
 
 `show.html.erb`
@@ -53,7 +53,6 @@ Some guidelines to build your views
 `new.html.erb` and `edit.html.erb`
 
 - Should include a form to create or update a task.
-
 
 #### Important
 

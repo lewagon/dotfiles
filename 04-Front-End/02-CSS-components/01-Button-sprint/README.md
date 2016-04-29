@@ -10,7 +10,7 @@ Work on three different button designs (two given by us, one of your choice). He
 
 Your job is now to write the associated CSS in `button.css`
 
-## Tips & Resources
+## Further suggestions & resources
 
 ### Organize your CSS with component files
 

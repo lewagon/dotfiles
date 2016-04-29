@@ -13,7 +13,6 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/05-fixed-s
 <div id="page-content">
   ...
 </div>
-
 ```
 
 And the associated CSS code:
@@ -31,7 +30,7 @@ And the associated CSS code:
 }
 ```
 
-## Tips & Resources (internal links)
+## Further suggestions & resources (internal links)
 
 Sometimes you need internal links, referring to sections of your page, not to other pages of your site. Here is how you do that:
 
@@ -52,4 +51,3 @@ Sometimes you need internal links, referring to sections of your page, not to ot
 Later on, we will add a nice smoothscroll effect on such links. But wait for next week!
 
 You can read [this post](http://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/) about positioning if you have some free time!
-

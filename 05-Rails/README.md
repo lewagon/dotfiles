@@ -5,18 +5,22 @@ At last, Rails!
 This is the last "real week" on Kitt with day-by-day challenges. From next week, you'll start working on longer projects, either an Airbnb clone or your own personal project. For now, we will dive into the architecture of a fresh Rails app and try to understand what's going on. **We'll build one Rails app per day**.
 
 ### `01-Rails-intro` (Monday)
+
 First day of Rails, introducing Rails flow: `routing > controller > view` without adding the model layer and explaining `params`. During this day, you'll have to transform old ruby challenges of 1st week into Rails apps.
 
 ### `02-Rails-CRUD` (Tuesday)
+
 Here comes our good old friend Active Record again! One of the most important Rails lectures. Your lead-coach will code from scratch all of the 7 CRUD actions and introduce the `resources` routing. Pay attention!
 
 ### `03-Rails-restaurant-reviews` (Wednesday)
+
 During this day, you will add a second model to a Rails app by building a 2-model clone of Yelp, with restaurants and reviews. Morning lecture is split between two independent parts:
 
 1. **Beyond CRUD**: discover advanced routing and validations in Rails
 1. **Rails frontend**: respect our setup to implement Bootstrap SASS + frontend libraries the good way, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
 
 ### `04-Rails-mister-cocktail` (Thursday)
+
 Morning talk is about deployment on [Heroku](http://heroku.com/). Then, you'll start working during 2 days on a cocktails app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
 
 - Create your app with good Postgres config.
@@ -26,13 +30,12 @@ Morning talk is about deployment on [Heroku](http://heroku.com/). Then, you'll s
 Tomorrow, we'll speak of image hosting on Amazon S3, and you will add an image upload feature to your cocktails app using Paperclip.
 
 ### `05-Mister-cocktail-final` (Friday)
-Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want to loose money because you have a security leak on Github.**
 
+Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want to loose money because you have a security leak on Github.**
 
 On Friday at 2pm, quizz time! Let's step back and rehearse all the core notions of Rails on a paper quizz.
 
 - [Quizz in English](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/4-rails-english.pdf)
-
 
 ## Second week - Airbnb
 
@@ -51,15 +54,19 @@ On Friday at 2pm, quizz time! Let's step back and rehearse all the core notions 
 - Collaboration techniques with git & Github. You will discover how we work in a dev team using branches and pull requests. You will have to use this workflow within your Airbnb teams. You'll have 5 days to go as far as you can on your Airbnb clone.
 
 ### `06-Airbnb-Facebook-connect`
+
 In the continuity of Devise course, we will teach you how to customize Devise to build a Facebook connect, you will use [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
 
 ### `06-Airbnb-SMTP`
+
 Morning lecture is about sending mail with the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc..). At 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
 ### `06-Airbnb-Geo`
+
 Morning talk is about geocoding (with the `geocoder` gem) and Google API to add autocomplete on address form inputs.
 
 ### `06-Airbnb-ActiveAdmin`
+
 Morning talk about building an "admin space" using [ActiveAdmin](https://github.com/activeadmin/activeadmin) gem. Final demos are at 5pm.
 
 ### Projects prep (weekend)

@@ -57,7 +57,7 @@ irb> restaurant = Restaurant.new("La Palmeraie")
 irb> restaurant.name
 ```
 
-## Learning Badges
+## Key learning points
 
 Show your code to a teacher. She/He will ensure that you sufficiently understand the **concepts and syntax** of:
 
@@ -66,6 +66,6 @@ Show your code to a teacher. She/He will ensure that you sufficiently understand
 - the `initialize` constructor
 - getter and setter methods
 
-## Tips & Resources
+## Further suggestions & resources
 
 You can have a look at this [beginner's guide](http://docs.ruby-doc.com/docs/beginner-fr/xhtml/ch04s02.html) in French.

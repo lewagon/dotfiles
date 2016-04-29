@@ -1,4 +1,5 @@
 ## Background & Objectives
+
 Inheritance is a core concept of OO programming. It enables to "transfer" methods by defining subclasses that inherit from superclasses (we also speak of children and parents). A child class will inherit from its parents' methods. Example: you want to code a generic `Parser` with elementary features (able to read a file, store its content, etc..). After a while, you decide you want more specific parsers like an `XmlParser` or a `JsonParser` to handle specific formats. By making these new classes children of the `Parser` class, they will inherit from its basic methods (we also speak of its public interface). Of course, they will extend this interface with their own specific methods. For instance, they are likely to have specific parsing methods to treat a file differently whether it's an XML file, a CSV, a JSON, etc...
 
 Read more about inheritance in [ruby learning](http://rubylearning.com/satishtalim/ruby_inheritance.html).
@@ -19,9 +20,11 @@ Complete `JellyBean` which inherits from `Dessert`
 - Modify `delicious?` to return false if the flavor is `"black licorice"` (but `delicious?` should still return true for all other flavors and for all non-JellyBean desserts).
 
 #### Super bicycle
+
 * in `bicycle.rb`, replace all the `"?"` in the `#quizz` method by the correct integer. Do you understand what the `super`keyword does? If you get it, you can re-implement `JellyBean#initialize` using the `super` keyword.
 
-## Learning Badges
+## Key learning points
+
 - Why do we make classes inherit from others? What's the point?
 - What's the syntax to do that?
 - What's the keyword to extend the behavior of an inherited method?

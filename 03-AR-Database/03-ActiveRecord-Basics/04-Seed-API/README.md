@@ -37,4 +37,3 @@ to retrieve the details of a post.
 
 As an example, if you want details about the post `8863`, you have to call
 [https://hacker-news.firebaseio.com/v0/item/8863.json](https://hacker-news.firebaseio.com/v0/item/8863.json)
-

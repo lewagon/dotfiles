@@ -52,8 +52,7 @@ orders = ["French fries", "Happy Meal", "Sprite"]
 puts calories_counter(orders)
 ```
 
-
-## Learning Badges
+## Key learning points
 
 - What's a hash ? When do you use them ?
 - Can you figure out how you would have done to code your calories counter using arrays ? painfull, no ?

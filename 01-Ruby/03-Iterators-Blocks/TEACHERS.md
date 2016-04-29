@@ -107,6 +107,7 @@ p capitalized_coaches
 So from now on, whenever you want to transform an array into a new one, just use `map`.
 
 ### Other methods
+
 Now we'll go over some other usefull iterators.
 
 #### `count` method
@@ -230,7 +231,6 @@ Btw: these type of methods are called iterators because they iterate over an Enu
 
 We've used ruby blocks a lot, either with the `do..end` notation or the `{}` for 1-line blocks. Now what exactly are blocks? You can actually see them as methods, but without name, so basically an anonymous method. What's between pipes `||` are the block parameter, such as methods parameters are between `()`.
 
-
 We've been **using** methods that call blocks, but now we're going to define them. A small but important disclaimer: this is advanced coding. So don't panic if this is getting a bit over your head. We're doing this because we want you to be able to understand blocks, you will almost never write your own block-methods in your developer career.
 
 Let's dive into an example so it becomes clear to you:
@@ -268,7 +268,6 @@ execute_with_timer do
   sleep(2)
   puts "I'm done pretending"
 end
-
 ```
 
 So what actually happens is:
@@ -279,7 +278,6 @@ So what actually happens is:
   - sleep
   - puts ..
 - It goes back to `stop = Time.now` and then puts time elapsed
-
 
 ### Yield
 
@@ -311,7 +309,6 @@ end
 dutch_message = say_hello("anne") do |name|
   "#{name}! Goeiemorgen"
 end
-
 
 p french_message
 p dutch_message

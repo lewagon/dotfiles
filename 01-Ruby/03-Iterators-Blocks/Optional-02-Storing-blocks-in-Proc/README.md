@@ -5,6 +5,7 @@ There are two main ways to receive blocks in a method in Ruby : the first is to 
 Hopefully we can store blocks of ruby code in `Proc` objects.
 
 ## Ampersand block argument
+
 When prefixing the last argument in a method signature with an ampersand, it creates a `Proc` object from any block passed in. This object can then be executed with the `call` method like so:
 
 ```ruby
@@ -34,6 +35,5 @@ speak (message_block)
 **The `Proc` object is created once and for all, and can be used several times if we call the method several times.**
 
 ## Specs
+
 - Your turn ! Tell your mum how you love her ! Implement the `#tell`, `#tell_mum`, `#tell_with_proc`, `#tell_mum_with_proc`  methods which use either ampersand block arguments or pass `Proc` objects explicitly.
-
-

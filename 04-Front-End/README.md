@@ -30,20 +30,25 @@ Then, let's move to Bootstrap.
 
 
 ## `04-Frontend-Advanced` (Monday)
+
 We will introduce advanced concepts such as ERB, layout, and SASS. For that, we will use a nice frontend framework called [Middleman](https://middlemanapp.com) and we will learn to organize our HTML and CSS code in a very DRY way.
 
 It's normal if you struggle a bit with Middleman. The good news is: Rails frontend will be very similar to Middleman. So it's a very good investment to work hard on Middleman!
 
 ## `05-Javascript-and-jQuery` (Tuesday)
+
 Morning talk is an introduction to Javascript and jQuery. Let's see what's in common between js and ruby, and what's different. Then, we will introduce jQuery – an awesome JavaScript library – to play with the DOM, define events and callbacks.
 
 ## `06-jQuery-plugins` (Wednesday)
+
 Learn how to include a jQuery plugin **the correct way** in your project, either using a gem or using [Rails-assets](https://rails-assets.org/), and then adding the correct links in your `application.js` and `application.scss` files.
 
 ## `07-HTTP-Ajax` (Thursday)
+
 HTTP is **the** protocol on which a website is based and that you absolutely need to know. **So understand it**. Then learn to make HTTP requests in javascript using AJAX. We'll start playing with APIs today, yeah!
 
 ## `08-Project-Day` (Friday)
+
 This is a rather special day. **No code, no challenges, no buddy**. The objective is to:
 
 - Pitch your idea for the final 2-week projects

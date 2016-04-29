@@ -49,7 +49,7 @@ describe '#store_items_to_s' do
   # - Vegetables: 5€
   # ...
   #
-  # TIP: add line breaks in your String with "\n"
+  # HINT: add line breaks in your String with "\n"
 
   it 'returns a list of all products as a string' do
 

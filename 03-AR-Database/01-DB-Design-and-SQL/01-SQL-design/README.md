@@ -25,7 +25,7 @@ For that, your are going to use [SQL Designer](http://db.lewagon.org).
 To check your solution, click on "Save / Load", then "Save XML", copy/paste the generated XML code
 in `lib/survey.xml`. You can `rake` then to check your solution.
 
-## Learning Badges
+## Key learning points
 
 - Do you understand what's a database scheme?
 - What's the relation between tables?

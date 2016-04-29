@@ -58,5 +58,3 @@ Right now we don't have Rails, not utilities gems like [letter_opener](https://g
 ```ruby
 FakeMailer.instance.mail('boris@lewagon.org', 'Welcome to HN!')
 ```
-
-

@@ -53,4 +53,3 @@ was something like:
 
 We would like to scrape **antiques** listed on [Craiglist](http://www.craiglist.com)
 for a given city. Open the `lib/scraper.rb` and implement the `scrape_craiglist_antiques` method. It should **return** an `Array` of antiques found on the website.
-

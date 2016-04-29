@@ -16,7 +16,7 @@ as quick as possible if some field is badly filled.
 Open the `form_validation.js` file, this is where you'll code the validation
 logic and bind it when the DOM is ready.
 
-## Tips
+## Further suggestions
 
 Look at the [focusout](https://api.jquery.com/focusout/) and
 [keyup](http://api.jquery.com/keyup/) events.

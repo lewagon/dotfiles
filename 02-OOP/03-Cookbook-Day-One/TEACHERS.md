@@ -39,6 +39,7 @@ There are other classical structures we use a lot in programming
 There are **queues** everywhere in programs. If **A** wants to transfer tasks to **B**, he will use an intermediate queue to store tasks. **A** will push tasks and **B** will pop them progressively.
 
 #### TODO manager
+
 We'll code this software together and interactively. **Herebelow we describe a good way to articulate the live-code and discussion with the class**
 
 #### Whiteboard Brainstorm
@@ -78,6 +79,7 @@ end
 ```
 
 #### Controller
+
 The controller is the chief conductor ("chef d'orchestre"). He will get user input through the display, update tasks in the repository, and output results through the display. He needs to manipulate both the display and the repository.
 
 ```ruby
@@ -206,6 +208,7 @@ $ git pull --no-edit upstream master
 ### Live-code
 
 #### General guidelines
+
 - The live-code should be made **from scratch**. No specs, no boilerplate. The student has to `mkdir` a new folder, `touch` its ruby file, and start coding in it. Help him on the setup. Make him code **a solution that works** in one ruby file before refactoring the code (separating the logic from the interface in 2 files, DRYing the repetitive code chunks, etc..)
 
 - Announce, **before the live-code**, which challenges they are going to live-code and who are the coders of the day. It will make them stay tensed and focused! Tell them they have to speak loud and explain their approach while they are live-coding. That's the best exercise to improve their skills!
@@ -213,4 +216,5 @@ $ git pull --no-edit upstream master
 - At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
 
 #### Live-code details
+
 No live-code on Friday, we will correct the Cookbook on Monday evening.

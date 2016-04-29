@@ -25,6 +25,6 @@ Did you know that popular expressions like "larfeuille", "loufiah", "loucedé", 
 - **constraint**: words beginning with a vowel are more straightforward to translate. Ex: "atout" may give "latoutoc"
 - **enhancement**: ideally your program should be able to translate any complicated sentence, eventually embedding special characters like "!", or "'".
 
-## Tips & Resouces
+## Further suggestions & resources
 
 - You pseudo code should follow [these principles](http://www.cs.cornell.edu/Courses/cs482/2003su/handouts/pseudocode.pdf)

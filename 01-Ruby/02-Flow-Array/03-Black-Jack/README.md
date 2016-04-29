@@ -52,13 +52,13 @@ You beat the bank! You win.
 $
 ```
 
-## Learning badges
+## Key learning points
 
 - What are the different ways of looping?
 - What are the different conditional structures available?
 - What is string interpolation?
 
-## Tips & Resources
+## Further suggestions & resources
 
 - You might want to use the [Random class](http://www.ruby-doc.org/core-2.2.0/Random.html).
 - When looping, you need a condition to make your game loop stop at some point.

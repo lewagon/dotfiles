@@ -11,11 +11,11 @@ They are dangerous in a way. Therefore a good **convention** is to name them wit
 Ex: `["Abricot du Laudot", "Black Caviar", "Brigadier Gerard"]` should become `["3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]` after formating.
 That's the only format the anchorman can understand !
 
-## Tips & Resources
+## Further suggestions & resources
 
 - Of course, you should use destructive iterators within the method :)
 
-## Learning Badges
+## Key learning points
 
 As you realize, the only purpose of a method is not only to return the result of some computation.. A method can also be there to perform actions on objects that it will modify. Make sure your are comfortable with the following notions before moving on.
 

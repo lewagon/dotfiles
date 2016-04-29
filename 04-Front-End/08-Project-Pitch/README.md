@@ -12,7 +12,6 @@ Exemple of good product picth from a former student on [Medpics](https://www.med
 - pain: lack of clinical cases
 - value proposition: mobile app to share clinical cases and diagnostics
 
-
 Take 30 min to prepare it, and then, pitch time!
 
 ## Pitch time
@@ -21,7 +20,6 @@ From 10h-11h30, your turn to picth:
 
 - 5 min for each team
 - Before starting open a google spreadsheet listing all projects in pitch order. During picthes, students should vote for the projects they like in the spreadsheet. This will help start negociations and make teams for the final 2 weeks.
-
 
 After the picth, your coaches will give you a feedback
 
@@ -37,7 +35,6 @@ During the afternoon, you will be taught what is a user story. As an example, ch
 - As a user, I can have an estimate of the price with my destination.
 - As a user, I can book a car.
 - As a driver, I can ...
-
 
 Then, do the same on your projects
 

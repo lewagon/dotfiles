@@ -30,6 +30,6 @@ should give back to each individual. In our example it should return:
 }
 ```
 
-## Tips & Resources
+## Further suggestions & resources
 
 To iterate over a JavaScript object, your can use the [Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) method.

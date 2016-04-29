@@ -21,8 +21,7 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 - The `<div class="card">` is here to group some info into a nice white box.
 - Add a cool touch to your cards thanks to `background`, `border`, `border-radius` and `box-shadow` CSS properties. Keep it simple, with white background and subtle radius and shadows (as in the Karr lecture).
 
-
-## Tips & Resources
+## Further suggestions & resources
 
 - Here is the div centering technique for the main container:
 
