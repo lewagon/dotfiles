@@ -1,35 +1,33 @@
 ## Background & Objectives
 
-Define your own graphical variables for fonts and colors in `config/_variables.scss` and use them to over-ride Bootstrap theme. Then import your Airbnb CSS code in your Middleman project respecting the new organization of stylesheets. Finally refactor your code in SCSS.
+When you work on a Middleman project (or even a Rails app), **it's crucial to organize your CSS code**. Otherwise, you will loose an incredible amount of time. Here is Le Wagon's methodology:
 
-## Define your own Bootstrap theme
+- Define your SCSS variables for fonts and colors in `config/_variables.scss`.
+- Use these variables to over-ride your Bootstrap theme in `config/_bootstrap_variables.scss`
+- Code your components in `components` (as you already know).
+- For special layout's components (like `footer`, `navbar`), put them in a separated `layout` folder.
+- Finally, code small page's adjustments in the `pages` folder (with one SCSS file for each page, e.g. `_home.scss`, `_login.scss`, etc..).
+
+## Your own Bootstrap theme
 
 Here is a roadmap of things to do:
 
-1. In **`config/_variables.css.scss`** change the color and font scheme and define your own one.
-1. In **`config/_bootstrap_variables.css.scss`** use **your SCSS variables** to over-ride **Bootstrap SCSS variables**.
-1. Look at all [possible variables](http://getbootstrap.com/customize/#less-variables) that you can over-ride and try to add new ones to your `config/_bootstrap_variables.css.scss` file.
+1. In **`config/_variables.css.scss`** change the color and font scheme.
+1. In **`config/_bootstrap_variables.css.scss`** use your SCSS variables to over-ride **Bootstrap SCSS variables**.
+1. Look at all [Bootstrap variables](http://getbootstrap.com/customize/#less-variables) that can be customized and add new ones to `config/_bootstrap_variables.css.scss`.
 
 ## Organize your code
 
-Import the CSS code of your Bootstrap home in your Middleman project. For each piece of code, ask yourself: where should I write it? in `config/_variables.scss`? `layout`? `pages`? `components`?
-
-Remember:
-
-1. `config/_variables.scss` is in charge of fonts and colors.
-1. The `components` folder represents 90% of your CSS code.
-1. The `layout` folder gathers components present on all pages (e.g. navbar / footer).
-- The `pages` folder has one file per page to handle small CSS adjustments (e.g. some `padding`/`margin` correction)
+If you haven't done it in the previous challenge, import the CSS code of your Airbnb home in your Middleman project. For each piece of code, ask yourself: where should I write it? in `config/_variables.scss`? `layout`? `pages`? `components`? Following Le Wagon's guidelines.
 
 ## Refactor your code
 
-When it's done, it's time to refactor your CSS code into SCSS:
+Time to refactor your CSS code into SCSS:
 
-1. Use your SCSS variables from `config/_variables.scss` (e.g. `$red`) instead of hexadecimal values (e.g. `#D73B3A`). Your design will be more consistent as you will use same colors.
-1. Go through [this guide](http://sass-lang.com/guide) and read more about SCSS. Re-write your code with nesting and chaining, as below:
+1. Replace hexadecimal values like `#D4312D` by SCSS variables like `$red`. Your design will be more consistent since you will use same colors everywhere.
+1. Go through [this guide](http://sass-lang.com/guide) and read more about SCSS. Re-write your code with **nesting** and **chaining**, as below:
 
-
-```css
+```scss
 .banner {
   background: $blue;
   color: white;
@@ -45,18 +43,38 @@ When it's done, it's time to refactor your CSS code into SCSS:
 }
 ```
 
+This SCSS code will generate the following CSS:
+
+```css
+.banner {
+  background: #5E74ED;
+  color: white;
+}
+.banner  h1 {
+  font-size: 50px;
+}
+.banner a {
+  color: #D4312D;
+}
+.banner a:hover {
+  color: #C22F2F;
+}
+```
+
+Assuming that `$red: #D4312D;` and `$blue: #5E74ED;`.
+
 ## Commit & Deploy
 
-Once you're done, commit and publish you changes:
+Once you're done, commit and publish your changes:
 
-```
+```bash
 $ git add .
-$ git commit -m "finish style migration in Middleman"
+$ git commit -m "Add CSS for colors and fonts and over-ride Bootstrap theme"
 $ git push
 ```
 
 Don't forget to deploy your site:
 
-```
+```bash
 $ middleman deploy
 ```

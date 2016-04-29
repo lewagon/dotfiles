@@ -24,7 +24,7 @@ french_phone_number?("06 65 36 36")
 #=> false
 ```
 
-## Tips
+## Further suggestions
 
 Here is a great resource to tests your regex before writing code:
 [Rubular](http://rubular.com/)

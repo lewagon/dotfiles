@@ -7,7 +7,6 @@ Although we can store them in `Proc` objects and pass them to a method as standa
 - Understand what happens when passing a parameter to the block.
 - Implement some basic methods which are using `yield`, to understand the inner mechanics.
 
-
 ## Specs
 
 ### HTML generator method
@@ -33,7 +32,7 @@ end
 You may need to know that to include a `"` symbol inside a string delimited by double quotes,
 you need to **escape** this character with an antislash: `\"`.
 
-The cool thing with this method is than you can nest method calls
+The cool thing with this method is that you can nest method calls
 
 ```ruby
 tag("a", ["href", "www.google.com"]) do
@@ -80,7 +79,7 @@ end
 
 To better understand `yield`, let's try to reimplement the `Enumerable#map` method without actually using it (you can use `Enumerable.each` though!). In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method.
 
-## Learning Badges
+## Key learning points
 
 - What's a block?
 - What's the syntax if the block has only 1 ruby instruction in it? several?

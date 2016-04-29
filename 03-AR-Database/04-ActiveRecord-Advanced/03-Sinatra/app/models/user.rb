@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
   has_many :posts
 
-  # TODO: Add some validation
+  # TODO: Copy-paste your code from previous exercise
 end

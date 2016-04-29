@@ -10,11 +10,11 @@ Implement the 2 methods `#anagrams?(a_string, another_string)` and `#anagrams_on
 - the first method `#anagrams?` should make use the ruby `sort` method.
 - use a ruby `Hash` to improve the time complexity in the second implementation `#anagrams_on_steroids?(a_string, another_string)`, meaning that your second solution should be faster.
 
-## Learning Badges
+## Key learning points
 
 - What's the time complexity of `#anagrams?` and `#anagrams_on_steroids?` ? Which one is best ?
 
-## Tips & Resources
+## Further suggestions & resources
 
 - First learn more about what [time complexity](http://en.wikipedia.org/wiki/Time_complexity) means
 - Try to google the time-complexity of ruby native `sort` method

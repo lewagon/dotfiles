@@ -2,7 +2,6 @@ Software are not one-file programs. They are made of different files and differe
 
 From day-one @Le Wagon, you've been manipulating classes without knowing it, `String`, `Array`, etc... They're the built-in classes. Now you'll see how to define your own classes !
 
-
 In a class you'll find:
 
 1. **data / state** => instance variables
@@ -23,7 +22,6 @@ end
 
 - What are the characteristics of a car? How do you describe it?
 - What are the characteristics of a car "at inception", at **t=0**, when we first create it? The brand? The color? The number of kilometers?
-
 
 ```ruby
 class Car
@@ -77,7 +75,6 @@ ferrari.start_engine
 # --------------------------
 ```
 
-
 You have noticed that from now on, we define methods **in the class** (not in the main program) and then these methods are called **on instances** of the class. That is why they are called instance methods.
 
 ### Accessors
@@ -100,7 +97,6 @@ end
 ```
 
 What if we have 10 instance variables (`@color`, `@brand`, `@kms`, `@engine_started`, etc..)
-
 
 ```ruby
 class Car

@@ -1,3 +1,5 @@
+ConditionalAssignment:
+  Enabled: false
 StringLiterals:
   Enabled: false
 TrailingBlankLines:
@@ -23,6 +25,10 @@ WordArray:
 SymbolProc:
   Enabled: false
 AbcSize:
+  Enabled: false
+MutableConstant:
+  Enabled: false
+SignalException:
   Enabled: false
 
 AllCops:

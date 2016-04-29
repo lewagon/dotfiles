@@ -113,6 +113,7 @@ p yaki.open?
 ```
 
 ## Lecture
+
 Now time to move on to the real content of the lecture. We'll see three important parts today:
 
 - Inheritance
@@ -120,7 +121,9 @@ Now time to move on to the real content of the lecture. We'll see three importan
 - `self`
 
 ### Inheritance
+
 #### Restaurants
+
 Let's stay in the food business but be more specific about restaurant kinds (because we're French ;))
 
 ```ruby
@@ -154,7 +157,6 @@ class StarRestaurant
   end
 end
 ```
-
 
 Wow, lots of duplicated code here... Let's apply inheritance and put all common parts in the parent class:
 
@@ -197,7 +199,6 @@ class Fastfood < Restaurant
     @clients = []
   end
 end
-
 
 class StarRestaurant < Restaurant
   attr_reader :stars
@@ -319,6 +320,7 @@ fancy_place.print_clients
 As you see, `super` is making a call to the method with the same name in the Super-Class (other word for Parent Class).
 
 #### Disclaimer
+
 As with `yield`, not often will you have to define your own parent/child classes, but you need to understand how it works, cause you will often inherit your classes from classes already coded by developers.
 
 ### Class Methods
@@ -407,7 +409,6 @@ frechont = bristol.chief
 
 puts "#{frechont.restaurant.name}'s chief is #{frechont.name}"
 puts "He's been cooking for about #{frechont.years} years"
-
 ```
 
 As you see, here we need `self` in `Restaurant#initialize` in order to build a chief who is aware of the restaurant he cooks for! Otherwise it would be a terrible chief..

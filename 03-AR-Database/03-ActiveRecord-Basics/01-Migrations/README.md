@@ -58,7 +58,7 @@ Remember what we said about migration filenames, the format is **really** import
 
 Then run this migration with `rake db:migrate`
 
-## Learning Badges
+## Key learning points
 
 You should have understood by now that migrations are related to changes in the structure of the schema
 (i.e. what are the tables and their columns).

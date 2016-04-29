@@ -1,10 +1,12 @@
 ## Background & Objectives
 
-First create a YAML database for your flats. Then add a dynamic flat template able to display [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html), [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html), [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html), etc..
+Let's create a dynamic template for the flat's show view. This template will inject different data depending on the URL, see [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html), [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html), [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html).
 
-## Create a flats YAML database
+## YAML data
 
-In Middleman `data` folder add a new `flats.yml`
+In a static website, it's often convenient to store some data in a structured text file (like a YAML file), and then use this data in our templates. Let's do this for flats.
+
+In Middleman `data` folder, add a new file `flats.yml`
 
 ```
 .
@@ -19,7 +21,7 @@ In Middleman `data` folder add a new `flats.yml`
     └── flats.yml
 ```
 
-This file should look like
+YAML syntax is based on indentation and keys/values (a bit like JSON but without `{}`). Your YAML file should look like:
 
 
 ```yaml
@@ -42,13 +44,11 @@ romain:
   wifi: false
 ```
 
-Be creative and **don't hesitate to add extra data to your YAML** (flat rating, pictures of different rooms, maximum number of guests, etc..).
-
+Be creative and **add other keys/values to this YAML** (flat's rating, pictures of different rooms, maximum number of guests, etc..).
 
 ## Loop with ERB
 
-The content of `flats.yml` is accessible in the ruby hash `data.flats`. You can now replace your three static cards in `index.html.erb` by looping on data with `each`.
-
+In Middleman, the content of `flats.yml` is loaded in a ruby hash `data.flats`. You can now replace your static cards on the home page by looping dynamically on data with `each`:
 
 ```erb
 <!-- source/index.html.erb -->
@@ -72,15 +72,19 @@ The content of `flats.yml` is accessible in the ruby hash `data.flats`. You can 
 </div>
 ```
 
-**Take time to really understand this code**. Then read more about data files on [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
+How cool is that? Now you can add new flats on your home-page just by updating `flats.yml`. Find more infos on data in [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
 
 ## Middleman vs. Rails
 
-In Rails you will have Active Record, so you will replace `data.flats` by `Flat.all` with the `Flat` model connected to your SQL database. Do you see how frontend and backend will magically connect? :)
+In Rails, we will have a real DB (not YAML files) and we will use Active Record to connect to this DB. That being said, the ERB template will be very similar. Just replace `data.flats` by `Flat.all` in the code above and that's it!
+
+**Do you see how frontend and backend will magically connect?**
+
+We hope you do :)
 
 ## Dynamic page
 
-Time to generate a dynamic show view for each flat. Start by reading the section about [Middleman dynamic pages](https://middlemanapp.com/advanced/dynamic_pages/).
+Time to generate a dynamic view for each flat. Start by reading the section about [Middleman dynamic pages](https://middlemanapp.com/advanced/dynamic_pages/).
 
 Then add to `config.rb` something like:
 
@@ -91,15 +95,16 @@ Then add to `config.rb` something like:
 end
 ```
 
-You must **restart your server when you change the config** (config is only loaded when you launch the server).
+Don't forget to **restart your server when you change the config**.
 
-Create the dynamic template `/flats/show.html.erb`. In this ERB template, `owner` will dynamically change to `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL. You can then extract from the hash `data.flats` infos about the owner's flat:
+Create the dynamic template `/flats/show.html.erb`. In this template, `owner` will dynamically change to `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL.
 
+You can now read in the hash `data.flats` using the owner's name as a key, like that:
 
 ```erb
 <!-- source/flats/show.html.erb -->
 
-<!-- Read from data.flats with owner key -->
+<!-- Read from data.flats with owner's name as key -->
 <% flat = data.flats[owner] %>
 
 <!-- Inject flat data in template -->
@@ -107,7 +112,6 @@ Create the dynamic template `/flats/show.html.erb`. In this ERB template, `owner
 <p><%= flat.owner_name %></p>
 <h1><%= flat.description %></h1>
 <p><%= flat.city %></p>
-
 ```
 
 Now try to access:
@@ -117,5 +121,4 @@ Now try to access:
 - [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/anne.html) (where `owner = "romain"`)
 - etc...
 
-
-How cool?
+How cool? Your turn to build a dynamic page like [this one](http://lewagon.github.io/middleman-airbnb/flats/romain.html).

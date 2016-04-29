@@ -68,4 +68,3 @@ We did not talk about **deleting** stuff here. What happens if you want to imple
 
 - As a manager, I can delete a meal
 - As a manager, I can delete a customer
-

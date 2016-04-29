@@ -6,7 +6,6 @@ Build dynamic tabs like in [this page](http://lewagon.github.io/animation-challe
 
 Everything starts with a good HTML markup. If your HTML markup is poor, there's nothing you can do to compensate in jQuery. Look at our HTML structure:
 
-
 ```html
 <div class="tabs">
   <a class="tab active" data-target="#bio">
@@ -37,10 +36,9 @@ Everything starts with a good HTML markup. If your HTML markup is poor, there's 
 
 What's the link between a tab and the associated tab-content?
 
-## Tips
+## Further suggestions
 
 In jQuery, you have a convenient `data()` method that you can use to get the value of all the `data-something` attributes in your HTML.
-
 
 ```html
 <p class="example" data-temperature="24" data-message="hello">some example</p>

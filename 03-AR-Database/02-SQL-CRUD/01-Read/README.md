@@ -50,7 +50,7 @@ you to instantiate it and care of the file where it is stored.
 Implement a **class** method `all` on the `Post` class which takes
 no argument and will return an array of `Post` instances.
 
-## Tips
+## Further suggestions
 
 One spec will tell you about SQL injection. It's a type of attack where
 the person using your application won't just pass a regular integer `id`
@@ -61,6 +61,3 @@ You should use [**bind parameters** with the `execute`](http://zetcode.com/db/sq
 method to avoid those injections and correctly **escape** value from the user.
 
 **Never trust user data**!
-
-
-

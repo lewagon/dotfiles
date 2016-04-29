@@ -18,7 +18,9 @@ $ rake db:migrate
 
 ### Add a `User` model
 
-We provided you the basic schema of posts. First write a migration to
+We provide you the basic schema of posts (see existing migration in `db/migrate` folder).
+
+First generate a new migration to
 create the `User` model. The model should have the following fields:
 
 - `username`
@@ -26,7 +28,8 @@ create the `User` model. The model should have the following fields:
 
 ### Migration: a User has many posts
 
-Write a migration to create a one-to-many reference between `User` and `Post`.
+Generate another migration to create a one-to-many reference between `User` and `Post`.
+
 Make sure you add the code in your models to access posts from a user instance,
 and the user from a given post instance.
 

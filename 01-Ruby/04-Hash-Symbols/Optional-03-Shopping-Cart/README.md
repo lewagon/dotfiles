@@ -15,7 +15,6 @@ You can try out your code by running `ruby lib/interface.rb`.
 When you have it working and passing tests, you should feel comfortable with hashes
 and enumerating them!
 
-
 ## Specs
 
 Take the time to think about the data structures that will best describe a store
@@ -31,14 +30,12 @@ As an extra:
 "meat, vegetables, vegetables, meat, yoghurts, vegetables", you'd return
 "meat x 2, vegetables x 3, yoghurts".
 
-
-## Learning Badges
+## Key learning points
 
 * How do you justify the data types you have used for the store and shopping cart?
 Could you have used something else?
 * What are the iterators you have used?
 
-
-## Tips & Resources
+## Further suggestions & resources
 
 * Have a look at the methods from [`Enumerable`](http://ruby-doc.org/core-2.2.0/Enumerable.html)!

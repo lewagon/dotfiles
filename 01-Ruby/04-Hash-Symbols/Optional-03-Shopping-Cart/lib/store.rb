@@ -32,5 +32,5 @@ def store_items_to_s
   # - Vegetables: 5€
   # ...
   #
-  # TIP: add line breaks in your String with "\n"
+  # HINT: add line breaks in your String with "\n"
 end

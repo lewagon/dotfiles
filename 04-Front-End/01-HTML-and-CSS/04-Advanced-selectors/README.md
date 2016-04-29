@@ -7,10 +7,10 @@ Use advanced CSS selectors (id, class, grouping, descendant selectors) to fine-t
 Here is [your objective](http://lewagon.github.io/html-css-challenges/04-advanced-selectors/). Any time you want to **name** an element of your page, ask yourself:
 
 - Should I use a `class` or an `id`? Is it unique or re-usable?
-- What name should I pick for my class? Respect the `component-shape` convention
-- Should I split this design into different classes?
+- What name should I pick for my class? Respect the `component-shape` convention/
+- Should I split this design into several classes instead of one big class?
 
-Herebelow is an example of **very bad** CSS code:
+Here is an example of **bad** CSS code:
 
 ```css
 #home-page-first-image {
@@ -40,11 +40,11 @@ And here is the **good version** of it
 }
 ```
 
-- Making an image circle and centering texts are very common design tasks. They deserve their own re-usable class, not to be mixed in other classes!
+- Making an image circle and centering texts are **very common design tasks**. They deserve their own re-usable class, not to be mixed in other classes or ids!
 
-- Don't repeat yourself. Try to use **generic class names** as much as you can. Consider each CSS class as a nice re-usable design that is not only linked to the current page but that you can also use everywhere on your website. Getting this mindset is often the main difficulty for CSS beginners.
+- Don't repeat yourself and try to use **generic class names**. Consider each CSS class as a re-usable design that you can apply everywhere on your website. Getting this mindset is the main difficulty for CSS beginners.
 
-## Tips & Resources (inlining a list)
+## Further suggestions & resources (inlining a list)
 
 To design your lists of icons, you'll have to change the `block` behavior of list items by **inlining them**. Here is the corresponding CSS rules.
 
@@ -55,7 +55,7 @@ To design your lists of icons, you'll have to change the `block` behavior of lis
 }
 ```
 
-Even inline, a list `ul` still has a left padding that you should kill.
+Even inline, a list `<ul>` has some `padding-left` that you must also kill to perfectly center your list.
 
 ```css
 .list-inline {

@@ -26,7 +26,6 @@ All your smart jQuery code is on client-side. It does not post any data on the s
 
 In the markup, you'll find a `#refresh` button that should reload all the comments for your promotion and make you discover what your mates have posted on the wall! Implement the jQuery code for getting all the comments when clicking on the refresh button. You will have to make a `GET` request to the API in JS using `$.get()`. Again, you have to read the [the documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the response of the API looks like.
 
-
 ### Auto-refresh
 
 Can't you make your app automatically refresh, and get rid of the "Refresh Chat" button?

@@ -3,14 +3,13 @@
 - Get familiar with parsing JSON format
 - Learn how to separate responsabilities of your gaming program in several sub-methods
 
-
 ## Specs
+
 I am sure you have already watched "Des chiffres et des lettres". The goal of this challenge is to write a simplified version of this game from the terminal where :
 
 * you are given a random word-grid.
 * you have to enter the longest english word you can find using only letters of this grid.
 * after typing your best shot, you get your score altogether with the time you took, the french definition of the word you picked up, and eventually some message explaining why you failed.
-
 
 Here is how this should work, when running `ruby lib/interface.rb`
 
@@ -39,11 +38,12 @@ This challenge will let you access a web-API, and parse JSON data returned by th
 - If the word is not valid or is not in the grid, the score will be 0 and you should build a custom message to explain it to the player.
 - Your score should depend on the time you take to answer, and of the length of the word you found. The longer word the user finds and the quicker he answers, the better score he gets. Saying that, feel free to invent your own penalty rules!
 
-## Learning Badges
+## Key learning points
+
 - What's a json file ? How is it close from the structure of a ruby hash ?
 - How could you refactor your code to separate the responsabilities of each method ?
 
-## Tips & Resources
+## Further suggestions & resources
 
 This challenge is deliberately not guided. Here are some elements that will help you
 
@@ -52,7 +52,3 @@ This challenge is deliberately not guided. Here are some elements that will help
 * Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get the JSON result. Use the `json` package to parse returned JSON files.
 * For testing the grid inclusion, make use of `Enumerable#all?`
 * The API key we are going to use is `80143`. Hence the URL to query word reference database is: `"http://api.wordreference.com/0.8/80143/json/enfr/#{search_term}";`
-
-
-
-

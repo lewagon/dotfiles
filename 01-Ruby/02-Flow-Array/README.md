@@ -14,7 +14,6 @@ Start by implementing a basic solution **that does the job**, even if it does no
 
 That's how a dev works. He builds a code that works, and then he refactors and enhances his solution **as a second step**
 
-
 ## `03-Black-Jack`
 
 A more advanced challenge to build a Black Jack game. You'll have to make a in-depth use of conditional and looping structures in this challenge.
@@ -26,7 +25,3 @@ Don't try to detect the bugs directly in the code but run your ruby script and *
 ## `05-Destructive-method`
 
 A small challenge to make you understand the difference between methods returning copies and methods modifying their receiver.
-
-
-
-

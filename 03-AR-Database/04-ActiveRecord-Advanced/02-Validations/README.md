@@ -1,15 +1,12 @@
 ## Background & Objectives
 
-Now that associations are in place between `Post` and `User`, we want
-to add some validation to our models to make sure we don't store
-inconsistent data in the Database. Before jumping head first into the
-exercises, take 15 minutes and read this really good guide:
+Now that associations are in place between `Post` and `User`, let's add some validation to the models to make sure we don't store **inconsistent** data in the Database. Before jumping head first into the exercises, take 15 minutes and read this really good guide, top to bottom:
 
-[guides.rubyonrails.org/active_record_validations.html](http://edgeguides.rubyonrails.org/active_record_validations.html)
+[guides.rubyonrails.org/active\_record\_validations](http://guides.rubyonrails.org/active_record_validations.html)
 
 ## Setup
 
-We gave you a migration to create the `posts` and `users` table.
+There is already a migration to create the `posts` and `users` table (look at the `db/migrate` folder). You can play these migrations with:
 
 ```bash
 $ rake db:create
@@ -20,25 +17,22 @@ $ rake db:migrate
 
 ### Add some validations to the `User` model
 
-- A user should have a username
-- A user should have an email and a valid one
-- Users should have unique usernames
+- A user should have a `username`
+- A user should have an `email`, and a valid one
+- Users should have unique `username`s
 
 ### Add some validations to the `Post` model
 
-- A post should have a name, url (in the right format!) and user
-- A post name should be at least 5 characters long
-- Posts should have unique names (case insensitive)
+- A post should have a `name`, `url` (in the right format!) and a user
+- A post `name` should be at least 5 characters long
+- Posts should have unique `name`s (case insensitive uniqueness)
 
-### Callbacks
+### Bonus: Callbacks
 
-We did not talk about this subject in the lecture, but you need to know that
-callbacks exist in ActiveRecord. A callback is a piece of code that is called
-when an event is fired. We will heavily use this notion when programming
-with jQuery.
+We did not talk about this subject in the lecture, but you need to know that callbacks exist in ActiveRecord. **A callback is a piece of code that is called when an event is fired**. We will heavily use this notion when programming with jQuery later in the bootcamp.
 
-Example: when a user instance is about to be validated, call some code to do
-some cleanup. For instance, we may want to put the `username` in lower case.
+Example: when a user instance is about to be validated, call a method to do some cleanup beforehand. For instance, we may want to put the `username` in lowercase.
+
 We can do that with the following code:
 
 ```ruby
@@ -54,3 +48,13 @@ end
 ```
 
 Read the [Active Record Callbacks guide](http://guides.rubyonrails.org/active_record_callbacks.html) to answer the last facultative question.
+
+Implement a callback to strip the email before validation.
+
+Implement a callback triggered after a user has been created to send a **welcome email** to this new user. Read about the [available callbacks](http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks) to figure out which callback to use.
+
+Right now we don't have Rails, not utilities gems like [letter_opener](https://github.com/ryanb/letter_opener), so we'll simulate sending an email with the following method call:
+
+```ruby
+FakeMailer.instance.mail('boris@lewagon.org', 'Welcome to HN!')
+```

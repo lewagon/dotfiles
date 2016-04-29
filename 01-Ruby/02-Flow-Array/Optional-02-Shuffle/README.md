@@ -13,7 +13,7 @@ An advanced exercise that makes you write a `shuffle` method that takes an array
 
 Once you have written your algorithm all by yourself, rewrite another version with only one line of code, this time using `Array#sort_by`?
 
-## Tips & Resources
+## Further suggestions & resources
 
 - Look at the [Object#clone](http://ruby-doc.org/core-2.2.0/Object.html#method-i-clone) documentation, it might help you.
 - Don't forget the [Array doc](http://www.ruby-doc.org/core-2.2.0/Array.html)

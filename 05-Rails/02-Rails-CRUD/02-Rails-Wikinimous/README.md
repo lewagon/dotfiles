@@ -65,5 +65,3 @@ Devise, a powerful auth system. Still it's nice to know how to do it by hand :)
 What about versionning your articles? Like Wikipedia, we'd like to store a new
 version each time the "Save" button is pressed. Also, we'd like to have a page
 listing all revisions for an article. What about diffs?
-
-

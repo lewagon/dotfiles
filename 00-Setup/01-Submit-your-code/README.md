@@ -67,7 +67,7 @@ First step, we'll create all our files in a directory named `tmp`.
 Let's use the `mv` command that you'll use to move/rename folders and files.
 It's time to act like a real developer! Use google to find out how to complete the following instructions.
 
-* Move this configuration file from 'level-2' directory to `level-1` directory
+* Move this configuration file from `level-2` directory to `level-1` directory
 * Go to `level-1` directory
 * Rename `configuration` file into `config`
 * List all files

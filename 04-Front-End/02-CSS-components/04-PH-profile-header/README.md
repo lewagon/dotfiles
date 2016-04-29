@@ -2,12 +2,11 @@
 
 Build Product Hunt profile header, like [this one](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs/)
 
-
-## Tips & Resources
+## Further suggestions & resources
 
 ### Layout
 
-Before coding the [tabs component](http://lewagon.github.io/ui-components/#tabs) used in the header, take 10 minutes to think about the "div structure" of the [profile header](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs/). In `index.html` we made some choices for you:
+Before coding the [tabs component](http://lewagon.github.io/ui-components/#tabs) used in the header, take 10 minutes to think about the global "div structure" of the [profile header](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs/). In `index.html` we made some choices for you:
 
 
 ```html
@@ -27,8 +26,12 @@ Before coding the [tabs component](http://lewagon.github.io/ui-components/#tabs)
 </div>
 ```
 
-**Do you understand the role of the `.profile-header-wrapper` div or the `.container` div?**. It's really important that you understand it.
+Now answer these questions:
 
+- What's the role of the `.profile-header-wrapper`?
+- What's the role of the `.container`?
+
+`wrapper` and `container` are two elementary blocks used to build your page's layout. Then you just have to insert the right components inside.
 
 ### Tabs with flexbox
 
@@ -55,8 +58,26 @@ The HTML markup of the tabs component is easy, it should look like
 </div>
 ```
 
-- Flexbox with `class="tabs"` should be `display:flex;`
-- Flex items with `class="tab"` should be `flex: 0 0 25%;`
+- `<div class="tabs">` is the **flexbox** and should be `display:flex;`
+- `<div class="tab"> are the **flex item**
+
+You have two options to code the flex items:
+
+```css
+.tab {
+  flex: 0 0 25%;
+}
+```
+
+This solution will work only with 4 items. A more generic solution consists in using the same `flex-grow` of 1 for each item:
+
+```css
+.tab {
+  flex: 1 1 auto;
+}
+```
+
+This will work independently from the number of tabs.
 
 ### First / last child
 
@@ -67,7 +88,7 @@ To make the left-top corner of first tab and right-top corner of last tab rounde
   border-radius: 10px 0 0 0; /* clockwise starting top-left*/
 }
 .tab:last-child {
-  border-radius: 0 10px 0 0;
+  border-radius: 0 10px 0 0; /* clockwise starting top-left*/
 }
 ```
 

@@ -13,7 +13,7 @@ $ ./lib/run.rb
 Study the program we provide you in the `lib/run.rb` to understand
 which methods your `Browser` class should expose. We want to **only print** web pages text, not markup like `<h1>`, `<p>`, etc...
 
-## Tips
+## Further suggestions
 
 You may consider using [OpenURI](http://www.ruby-doc.org/stdlib-2.2.0/libdoc/open-uri/rdoc/OpenURI.html) and [Nokogiri](http://www.rubydoc.info/github/sparklemotion/nokogiri). To make sure this gem is installed, just run:
 

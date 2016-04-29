@@ -31,7 +31,6 @@ Draw a basic mockup of your app on a paperbook. First list all the views suggest
 1. The info you want to display
 2. The buttons and navigations to make the glue between your different views.
 
-
 ### 4 - Setup
 
 Before splitting the tasks among the team, setup your project. The lead-developer should:
@@ -89,4 +88,3 @@ When you code your feature, make it perfect from the model to the view.
 - Crash test all your model associations and validations on the rails console.
 - Don't neglect the view. If you add a form, make it a nice centered Bootstrap form. If you code a flats list, build a nice Bootstrap grid (for example, with flat picture on the left and flat info on the right..).
 - Use partials to refacto your HTML when you have consistent blocks as a flat's info box for instance.
-

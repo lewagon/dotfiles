@@ -1,17 +1,26 @@
-require 'sinatra'
+require "sinatra"
 require "sinatra/reloader" if development?
+require "pry-byebug"
+require "better_errors"
+configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = File.expand_path('..', __FILE__)
+end
+
 require_relative "config/application.rb"
 
 set :views, proc { File.join(root, "app/views") }
-
-
+set :bind, '0.0.0.0'
 
 
 
 get '/' do
-  # TODO: fetch posts from database.
-  #       to pass them to the view, store them in an instance variable
+  # TODO
+  # 1. fetch posts from database.
+  # 2. Store these posts in an instance variable
+  # 3. Use it in the `app/views/posts.erb` view
 
-
-  erb :posts  # The rendered HTML is in app/views/posts.erb
+  erb :posts # Do not remove this line
 end
+
+# TODO: add more routes to your app!

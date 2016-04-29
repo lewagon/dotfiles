@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Design three different buttons (two imposed by us, one invented by you!). Here is [your objective](http://lewagon.github.io/html-css-challenges/08-button-sprint/). We already put the HTML code in `index.html`
+Work on three different button designs (two given by us, one of your choice). Here is [your objective](http://lewagon.github.io/html-css-challenges/08-button-sprint/). We have already put the HTML code in `index.html`
 
 ```html
 <a href="#" class="btn-medium">Write a story</a>
@@ -8,13 +8,13 @@ Design three different buttons (two imposed by us, one invented by you!). Here i
 <a href="#" class="btn-yours">Your call</a>
 ```
 
-Your job to write the associated CSS code in `button.css`
+Your job is now to write the associated CSS in `button.css`
 
-## Tips & Resources
+## Further suggestions & resources
 
 ### Organize your CSS with component files
 
-From this point, you will start organizing your CSS code with **one CSS file for each component**. A button is a standard component, such as an avatar, a card, a list, a navbar, a tab, a form, etc.. All these guys deserve their own CSS file. Your project architecture will look like
+From this point, you will start organizing your CSS code with **one CSS file for each component**. A button is a standard component, such as an avatar, a card, a list, a navbar, a tab, a form, etc.. All these guys deserve their own CSS file. Your project architecture will look like:
 
 ```
 .
@@ -27,7 +27,7 @@ From this point, you will start organizing your CSS code with **one CSS file for
 └── index.html
 ```
 
-Then in `style.css`
+Then in `style.css`:
 
 ```css
 /* Importing all components file */
@@ -38,7 +38,7 @@ Then in `style.css`
 /* General style rules for fonts and colors */
 body {
   margin: 0;
-  font-family: Open-sans, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3 {
   font-family: Raleway, Helvetica, sans-serif;

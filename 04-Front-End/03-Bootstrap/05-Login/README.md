@@ -5,8 +5,7 @@ Build a responsive login form using Bootstrap
 - Start with this [simple login](http://lewagon.github.io/bootstrap-challenges/10-Login/).
 - Then you will code this [more advanced one](http://lewagon.github.io/bootstrap-challenges/10-Login/login.html).
 
-
-## Tips & Resources
+## Further suggestions & resources
 
 ### Grid offset technique
 
@@ -28,7 +27,6 @@ The trick to make a responsive form is to inject it in a Bootstrap grid:
 
 - The form will be full-size on mobile
 - On tablet and larger devices, it will be centered (thanks to the offset) and take 33% of the screen.
-
 
 ### Form design
 
@@ -52,7 +50,6 @@ If you want a more advanced design like [this one](http://lewagon.github.io/boot
 
 And then implement your own `.form-login` CSS class in a `components/form.css` file.
 
-
 ### Reminder on forms
 
 #### HTML forms
@@ -68,12 +65,10 @@ A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Ea
 </form>
 ```
 
-
 1. There are different types of input (`type="text"`, `type="email"`, `type="date"`, etc...)
 2. The `placeholder` is an indicative text which disappears when the user starts writing.
 3. The label `for="something"` will be linked to the input with `id="something"`. Linking labels and inputs is not just for fun. When you will click on the label, the cursor will jump into the associated input (thus a better UX).
 4. The text of the submit button is given thanks to the `value` attribute.
-
 
 #### Bootstrap form classes
 

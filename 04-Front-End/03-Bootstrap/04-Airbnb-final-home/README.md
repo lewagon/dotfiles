@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now time to finalize Airbnb Home by putting features and flats within grids.
+It's time to finalize Airbnb Home by injecting the cards for features and flats within two grids.
 
 ## Specs
 
@@ -9,7 +9,7 @@ You must build [this final page](http://lewagon.github.io/bootstrap-challenges/0
 - For avatar and card components pick them in [Le Wagon library](http://lewagon.github.io/ui-components/) and put the CSS code in `avatar.css` and `card.css`.
 - Think about the responsive behavior of each grid before coding it. Don't forget to put wrapper around the container and cards inside the col if needed (like in the second challenge of today).
 
-## Tips & Resources
+## Further suggestions & resources
 
 For the map section, the code is a bit complicated since it uses a bit of javascript. Here it is:
 
