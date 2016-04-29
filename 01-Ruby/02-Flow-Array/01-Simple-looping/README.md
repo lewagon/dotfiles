@@ -11,11 +11,11 @@ Learn the two ways to "loop" in ruby:
 - If the min value is greather than the max value, it should return -1
 - You should at least implement the two simple versions, using `for..end` and `while..end` structures.
 
-## Tips & Resources
+## Further suggestions & resources
 
 - [ruby loops](http://www.tutorialspoint.com/ruby/ruby_loops.htm)
 - In Ruby, using an `each` iterator is considered more idiomatic than a `for` loop when you want to iterate through a collection. We will see that in the next days.
 
-## Learning Badges
+## Key learning points
 
 - What's the difference between using a `while..end` and `for..end` structures ?

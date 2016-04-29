@@ -2,8 +2,7 @@
 
 Build Product Hunt profile header, like [this one](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs/)
 
-
-## Tips & Resources
+## Further suggestions & resources
 
 ### Layout
 
@@ -33,7 +32,6 @@ Now answer these questions:
 - What's the role of the `.container`?
 
 `wrapper` and `container` are two elementary blocks used to build your page's layout. Then you just have to insert the right components inside.
-
 
 ### Tabs with flexbox
 

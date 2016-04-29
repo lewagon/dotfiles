@@ -19,9 +19,7 @@ But first, let's get started with Middleman!
   </li>
 </ol>
 
-
 ![change repo name](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/settings-rename-repo.png)
-
 
 Now let's clone the project and install missing gems:
 
@@ -33,7 +31,6 @@ $ bundle install
 ```
 
 This is a new separated project, so **we don't clone it inside `fullstack-challenges`**.
-
 
 ### Middleman commands
 
@@ -56,7 +53,6 @@ And when your `git status` is clean, deploy your website:
 $ middleman deploy # deploy website on Github Pages
 ```
 
-
 ## Home Page
 
 Let's get back our Airbnb home-page (built last Friday) and include it in Middleman. You can find it in the `home-page-html-css` folder of the exercise.
@@ -68,7 +64,6 @@ Let's get back our Airbnb home-page (built last Friday) and include it in Middle
 ## Footer & Layout
 
 The footer should not be only in the `index.html.erb` template. In fact, the footer is on every page of the website.
-
 
 To avoid repeating the footer's code in every template of the project, put it in the `layout.erb` file, i.e. the common skeleton of all templates:
 
@@ -92,13 +87,11 @@ Then add a ERB partial `_footer.html.erb` with your footer code:
 - By using a layout, all common parts (navbar, footer, analytics, etc..) are **coded just once in the layout**.
 - By using ERB partials, HTML code is more concise and easy to read.
 
-
 ## Team Page
 
 Add a second page `team.html.erb` to your website with your team's members, like [this one](http://lewagon.github.io/middleman-airbnb/team.html).
 
 Put real pictures of you and your buddy of course. Don't forget that you are using ERB now, and you can write **ruby code that will generate HTML code**, like:
-
 
 ```erb
 <ul class="list-inline text-center">
@@ -131,11 +124,9 @@ This ERB code will generate this HTML code:
 </ul>
 ```
 
-
 ## Helpers
 
 Helpers are ruby method that you will use in your templates to generate `<a>`, `<img>`, `<link>`, etc.. Most helper methods can be called with an optional hash of attributes (like `class` and `id`). For instance:
-
 
 ```erb
 <%= image_tag "example.png", class: "img-rounded avatar" %>

@@ -86,9 +86,9 @@ $ rails c
 > bristol.valid?              # Should return false
 > bristol.address = "75008 Paris"
 > bristol.valid?              # Should return true
-> bristol.save                # Insert into DB and set id    
+> bristol.save                # Insert into DB and set id
 > yummy = Review.new(content: "yummy yummy", rating: 4)
-> yummy.restaurant = bristol  # Set foreign key restaurant_id 
+> yummy.restaurant = bristol  # Set foreign key restaurant_id
 > yummy.save
 > bristol.reviews             # Should contain the yummy review
 > yummy.restaurant            # Should return the bristol restaurant
@@ -138,11 +138,9 @@ Implement all the routes you need to build this product
 
 **Hint:** to handle the route `GET "restaurants/38/reviews/new"`, you will have to use [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
-
 ### Views
 
 Let's care about our front-end, because that is what our users see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to setup your Rails frontend.
-
 
 #### Layout / partials
 
@@ -203,7 +201,7 @@ This will will generate the following HTML form:
 
 This URL is consistent with the route `POST "restaurants/:restaurant_id/reviews"` you have defined in `routes.rb`. Yeah! For more insights, you can read [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
 
-**Tips:** Install the [simple_form](https://github.com/plataformatec/simple_form) gem to have bootstrap-compatible forms with a lighter syntax.
+**Hint:** Install the [simple_form](https://github.com/plataformatec/simple_form) gem to have bootstrap-compatible forms with a lighter syntax.
 
 ### Improve your app
 

@@ -31,12 +31,15 @@ The public interface of the class, i.e. the set of all its public methods, defin
 * Withdraw or deposit money
 
 ##### Which getters ?
+
 Given this class contract, and the code canvas, decide which getters are necessary for the `BankAccount` class.
 
 #### Partial IBAN getter
+
 Code a partial IBAN accessor, which hides the middle of the IBAN, replacing the characters by `*`, as in our example in the test suite.
 
 ##### The `to_s` method
+
 You will probably come across many classes in Ruby that redefine the built-in method `to_s`. This is an easy way to display taylor-made information about an object to the user, and to control which information is printed.
 
 This is the method called when you try to print the object or use string interpolation. Once implemented, it will be called as in the following examples :
@@ -57,9 +60,11 @@ puts "Account info\n#{account}"
 Implement your `BankAccount#to_s` method, which should call your partial IBAN method.
 
 ##### Withdraw and Deposit
+
 Implement `BankAccount#withdraw` and `BankAccount#deposit`. Both of these methods should call the private `BankAccount#add_transaction` method (which is also called in the `BankAccount#initialize`). These methods should return a message like "You've just withdrawn/deposited XXX euros".
 
 ##### Transactions history
+
 Now you have to implement  `BankAccount#transactions_history` method. This method takes a password hash as parameter, which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args={}`). Your transaction history method should
 
 1. print the transactions array if the right password is given.
@@ -67,6 +72,7 @@ Now you have to implement  `BankAccount#transactions_history` method. This metho
 3. print "no password given" if the method is called without arguments.
 
 #### Printing = returning a string, not an object!
+
 Note that your method `transactions_history` should **print** the transactions array but not return it directly, that's what is said in the class contract. Let's imagine you code something like:
 
 ```ruby
@@ -86,6 +92,7 @@ account.transactions_history(password: "brucelit") # => [200, 100]
 That is NOT what is expected from the class contract. We only want to add amounts to the transactions array through the `withdraw` and `deposit` methods which are our chosen interfaces for making transactions, and not by directly accessing the transactions array!
 
 ## Extra : enhance your transactions
+
 What about enhancing our bank account, by adding info about the date of each transactions? And change our transaction history method so that it prints transactions like:
 
 ```ruby
@@ -109,7 +116,7 @@ After implementing your `Transaction` class, you will have to change your `BankA
 require_relative 'transaction'
 ```
 
-## Learning Badges
+## Key learning points
 
 - What is the public interface of a class?
 - What is the difference between a getter and a setter?
@@ -117,6 +124,6 @@ require_relative 'transaction'
 - What is the use of default arguments? How do you use them?
 - In `account.rb` what is happening in lines 2-3 and line 19?
 
-## Tips & Resources
+## Further suggestions & resources
 
 - You could use `Time#strftime` method to format your date in `Transaction#to_s`.**

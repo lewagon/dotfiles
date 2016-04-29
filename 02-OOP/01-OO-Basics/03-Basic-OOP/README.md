@@ -34,7 +34,7 @@ end
 - You should be able to count how many fruit are left hanging on the tree.
 - Every year fruit which are not picked will fall off.
 
-## Learning Badges
+## Key learning points
 
 - What are the instance variables of the `OrangeTree` class?
 - What do we mean by state?

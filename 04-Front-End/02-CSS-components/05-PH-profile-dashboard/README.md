@@ -2,8 +2,7 @@
 
 Time to build a full Product Hunt dashboard like [this one](http://lewagon.github.io/html-css-challenges/12-profile-with-products/)
 
-
-## Tips & Resources
+## Further suggestions & resources
 
 ### Layout
 
@@ -169,4 +168,3 @@ Then you have to <i>flexboxize</i> the `.profile-header-infos` div, and make the
 ```
 
 Everything is so easy with flexbox :)
-

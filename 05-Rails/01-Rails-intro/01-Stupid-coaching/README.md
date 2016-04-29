@@ -7,7 +7,6 @@ The goal of the next two challenges is to re-implement some of your ruby scripts
 
 Re-implement the stupid coaching challenge (01-Ruby/01-Programming-basics/05-Stupid-coaching) in Rails.
 
-
 ## Specs
 
 Get familiar with [Rails command line basics](http://guides.rubyonrails.org/command_line.html#command-line-basics). For this exercise, you should know at least how to:
@@ -17,11 +16,9 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 - generate a new controller from the command line
 - check your routes with the relevant `rake` task
 
-
 ### Generate a CoachingController
 
 Once you have created your new coaching app, add a new `CoachingController`, using the adequate rails generator on the command line. This controller will have two actions, `CoachingController#answer` and `CoachingController#ask`
-
 
 ### Your coach answer logic
 
@@ -55,6 +52,7 @@ Replace the `???` so that your form send a request to `CoachingController#answer
 ![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
 
 ### Add a backlink in `answer.html.erb`
+
 - Add a link to `/ask` on the `answer.html.erb` view using the `link_to` Rails helper.
 
 ![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-adding-link.png)

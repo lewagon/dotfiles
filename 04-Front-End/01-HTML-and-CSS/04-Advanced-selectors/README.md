@@ -44,7 +44,7 @@ And here is the **good version** of it
 
 - Don't repeat yourself and try to use **generic class names**. Consider each CSS class as a re-usable design that you can apply everywhere on your website. Getting this mindset is the main difficulty for CSS beginners.
 
-## Tips & Resources (inlining a list)
+## Further suggestions & resources (inlining a list)
 
 To design your lists of icons, you'll have to change the `block` behavior of list items by **inlining them**. Here is the corresponding CSS rules.
 

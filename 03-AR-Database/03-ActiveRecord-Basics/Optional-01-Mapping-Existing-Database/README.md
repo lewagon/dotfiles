@@ -16,6 +16,6 @@ relations based on the schema foreign keys. The specs would give you too much cl
 - Open the `app/queries.rb` file and fetch the relevant results from database with
 active record queries (no SQL allowed!)
 
-## Tips
+## Further suggestions
 
 Have a deep read of the [Active Record Query Interface](http://guides.rubyonrails.org/active_record_querying.html)

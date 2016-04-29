@@ -26,7 +26,7 @@ We haven't seen AJAX yet, so we'll simulate email fetching. A skeleton is given 
 
 Be careful, only the two first items are tested with `rake`. The two other will be tested manually in your browser.
 
-## Tips & Resources
+## Further suggestions & resources
 
 There are 4 ways to add new content to the DOM. Can you explain the differences?
 
@@ -34,5 +34,3 @@ There are 4 ways to add new content to the DOM. Can you explain the differences?
 - [`$.appendTo()`](http://api.jquery.com/appendTo/)
 - [`$.prepend()`](http://api.jquery.com/prepend/)
 - [`$.prependTo()`](http://api.jquery.com/prependTo/)
-
-

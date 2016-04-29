@@ -25,7 +25,7 @@ Build a simple HTML profile page with the following elements (use the right HTML
 
 A picture is worth a thousand words, [here is what you should build in this challenge](http://lewagon.github.io/html-css-challenges/01-profile-content/)
 
-## Tips & Resources
+## Further suggestions & resources
 
 - Prepare your image files (1 profile picture + 3 movie pictures) before starting to code. Ensure your **profile image is square** (you can crop it to make it square) and ensure **your movies pictures are all the same width**.
 - Don't forget the basic skeleton tags `<html>`, `<body>`, `<head>`.

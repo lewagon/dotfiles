@@ -2,8 +2,7 @@
 
 Replace your banner button by a nice search form like in [this page](http://lewagon.github.io/bootstrap-challenges/11-Airbnb-search-form/)
 
-
-## Tips and resources
+## Further suggestions & resources
 
 The select input **is not** a basic `<input>` element, it is written like this:
 

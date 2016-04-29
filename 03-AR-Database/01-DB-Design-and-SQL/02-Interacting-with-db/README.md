@@ -5,7 +5,6 @@ You can read more on [en.wikipedia.org/wiki/SQLite](http://en.wikipedia.org/wiki
 The goal of this first exercise is to use the command line to read and query
 a sample database called `jukebox.sqlite` that we give you
 
-
 ### Setup
 
 First test if you have sqlite3 installed on your computer:
@@ -42,7 +41,7 @@ Answer the following questions.
 
 Submit your SQL schema in XML format in `jukebox.xml`.
 
-## Resources & Tips
+## Further suggestions & resources
 
 - [http://zetcode.com/db/sqlite/tool/](http://zetcode.com/db/sqlite/tool/)
 

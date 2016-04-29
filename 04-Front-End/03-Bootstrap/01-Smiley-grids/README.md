@@ -16,7 +16,7 @@ Here are [the smiley grids](http://lewagon.github.io/bootstrap-challenges/01-Pur
 
 And then you will add different `.col-??-??` depending on each behavior you want.
 
-## Tips & Resources
+## Further suggestions & resources
 
 - When coding a grid, always start with the `.col` class for the smallest resolution `xs`. Ask yourself which proportion you want on mobile. Full screen (`.col-xs-12`)? Half screen (`.col-xs-6`)? 25%-screen (`.col-xs-3`)?.
 

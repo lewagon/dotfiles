@@ -33,7 +33,7 @@ Congratulations! Your Wagon has 3 students:
 - brice, Cedric and felix
 ```
 
-## Learning Badges
+## Key learning points
 
 Get familiar with array basic operations. You should know the syntax used to:
 
@@ -42,4 +42,3 @@ Get familiar with array basic operations. You should know the syntax used to:
 - access the nth element
 - update an element
 - delete a value at a given index
-

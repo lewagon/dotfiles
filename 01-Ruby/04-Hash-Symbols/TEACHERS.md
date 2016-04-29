@@ -93,6 +93,7 @@ end
 ```
 
 ### Hashes with more information
+
 What if we want to add more information about the student than just the age? We could put an array in the value field, but then we would bounce onto the same problem as earlier again, and get hard time with indexes. What we can do is use a hash again:
 
 ```ruby
@@ -130,6 +131,7 @@ end
 ```
 
 ### Recap Hash:
+
 Play around in `irb`:
 
 ```
@@ -147,6 +149,7 @@ Important to remember
 - There is no order
 
 ### Hash Methods
+
 Yesterday we went over some methods that you can use on Arrays, now lets look on some that you can use on Hashes:
 
 ```ruby
@@ -159,6 +162,7 @@ p students.values
 ```
 
 ### Symbols
+
 Let's go to another example with hashes.
 
 ```ruby
@@ -206,6 +210,7 @@ london = {
 ```
 
 ### Let's play!
+
 Now what if we want to use our london hash to print out something like `"The name is London. The population is 8308000"`
 
 ```ruby
@@ -219,7 +224,9 @@ How do I print out just the name of the city?
 ```ruby
 p london[:name]
 ```
+
 ### Hash as a method parameter
+
 We've seen methods taking arrays as parameters, but you'll also see lots of methods taking a hash of "options" as a parameter. For instance.
 
 ```ruby
@@ -244,7 +251,9 @@ p tag("a", "Le Wagon", { href: "http://lewagon.org", class: "btn" })
 You'll see this a lot in Rails!
 
 ## Data Formats
+
 ### CSV
+
 CSV is a file format where the data is comma separated. It's easy to read it in ruby and get each line as a ruby array! Let's play with it. Here is a simple CSV file.
 
 ```
@@ -265,6 +274,7 @@ end
 ```
 
 ### JSON
+
 While reading JSON files in ruby, you will often obtain a hash or an array of hashes. See this JSON file
 
 ```

@@ -8,6 +8,6 @@ There's a third way to **loop** with a programming language: with [recursion](ht
 - If the min value is greather than the max value, it should return -1
 - You should at least implement the two simple versions, using `for..end` and `while..end` structures.
 
-## Tips & Resources
+## Further suggestions & resources
 
 Notice that `1 + 2 + 3 + 4 == (1 + (2 + (3 + (4))))`

@@ -9,7 +9,7 @@ Now it's time to get familiar with the methods of the [Enumerable](http://ruby-d
 
 - Implement each method in the code canvas `lib/enumerable.rb`. For each method, we tell you which iterator to use, because we are nice :)
 
-## Learning Badges
+## Key learning points
 
 - What is an iterator? Which ones do you know?
 - Can you choose one of them and explain exactly how it works?

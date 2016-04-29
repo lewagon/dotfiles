@@ -18,7 +18,6 @@ $ ruby path/to/test.rb
 
 Easy as pie! Now you know 2 different ways of running ruby code, IRB for experiments, `ruby` command to run your own ruby files.
 
-
 ## Built-in objects
 
 In ruby as in any modern programming language, you have a lot of built-in objects:
@@ -83,7 +82,6 @@ Do you get it?
 #### Methods
 
 Nice to have variable to store values, but we also need methods to compute results depending on different inputs. Here is how we define a method:
-
 
 ```ruby
 def add(x, y)

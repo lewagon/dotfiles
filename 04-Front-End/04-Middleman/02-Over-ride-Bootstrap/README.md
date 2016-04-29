@@ -2,13 +2,11 @@
 
 When you work on a Middleman project (or even a Rails app), **it's crucial to organize your CSS code**. Otherwise, you will loose an incredible amount of time. Here is Le Wagon's methodology:
 
-
 - Define your SCSS variables for fonts and colors in `config/_variables.scss`.
 - Use these variables to over-ride your Bootstrap theme in `config/_bootstrap_variables.scss`
 - Code your components in `components` (as you already know).
 - For special layout's components (like `footer`, `navbar`), put them in a separated `layout` folder.
 - Finally, code small page's adjustments in the `pages` folder (with one SCSS file for each page, e.g. `_home.scss`, `_login.scss`, etc..).
-
 
 ## Your own Bootstrap theme
 
@@ -22,14 +20,12 @@ Here is a roadmap of things to do:
 
 If you haven't done it in the previous challenge, import the CSS code of your Airbnb home in your Middleman project. For each piece of code, ask yourself: where should I write it? in `config/_variables.scss`? `layout`? `pages`? `components`? Following Le Wagon's guidelines.
 
-
 ## Refactor your code
 
 Time to refactor your CSS code into SCSS:
 
 1. Replace hexadecimal values like `#D4312D` by SCSS variables like `$red`. Your design will be more consistent since you will use same colors everywhere.
 1. Go through [this guide](http://sass-lang.com/guide) and read more about SCSS. Re-write your code with **nesting** and **chaining**, as below:
-
 
 ```scss
 .banner {
@@ -48,7 +44,6 @@ Time to refactor your CSS code into SCSS:
 ```
 
 This SCSS code will generate the following CSS:
-
 
 ```css
 .banner {

@@ -19,7 +19,7 @@ $ ruby lib/meeting_casanova.rb
 
 3. Now redefine your accessor methods (getters / setters) in a more concise way using these helper methods.
 
-## Learning Badges
+## Key learning points
 
 - What is a getter? A setter?
 - How do we define them manually?

@@ -29,7 +29,6 @@ You will start by building a simple two-player board in HTML. There are a few wa
 </table>
 ```
 
-
 #### CSS
 
 Then switch to CSS and implement your board static design. Example:
@@ -63,7 +62,6 @@ Write all your code in `game.js`. We need a way for JavaScript to update the boa
 - Keep track of the "index" of each player in the table and increase this index.
 
 **Hint**: depending of your choice, the [next](http://api.jquery.com/next/) and [index](http://api.jquery.com/index/) jQuery functions may be useful!
-
 
 #### Binding to Key Presses
 

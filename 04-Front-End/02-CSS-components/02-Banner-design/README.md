@@ -2,7 +2,7 @@
 
 Let's code Airbnb banner, here is [your objective](http://lewagon.github.io/html-css-challenges/09-canonical-banner/). A banner is an important component, used on most startups' home page.
 
-## Tips & Resources
+## Further suggestions & resources
 
 ### Re-use your button
 
@@ -41,4 +41,3 @@ If you want your banner to take 100% of your screen height:
 ### Centering content with flexbox
 
 Here the `<div class="banner">` is a flexbox with only one item which is `<div class="banner-content">`. Use flexbox properties (`justify-content` and `align-items`) to center the banner's content both horizontally and vertically. Have a look to the Karr lecture if you forgot how flexbox works.
-

@@ -10,7 +10,6 @@ Here is [the objective](http://lewagon.github.io/html-css-challenges/06-profile-
 - Create and center the main container.
 - Add two floating `<div>` into this container. In order to get the main container wrap these two div, you'll have to use a third div with `clear: both;` CSS property after the two floating ones (this is a classic CSS trick).
 
-
 ```html
 <div id="wrapper">
   <div id="left"></div>

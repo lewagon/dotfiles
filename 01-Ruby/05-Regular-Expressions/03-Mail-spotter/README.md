@@ -25,7 +25,7 @@ It must handle correctly email with domains it does not know about.
 The `spec/mail_joke_spec.rb` requires you to implement three jokes, feel
 free to add more and use your imagination!
 
-## Tips & Resources
+## Further suggestions & resources
 
 - How will you store the list of jokes?
 - You need to *extract* the first name and last name from the email

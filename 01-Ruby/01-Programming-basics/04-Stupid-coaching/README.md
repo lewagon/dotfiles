@@ -40,7 +40,6 @@ Let's make a comparison between the **real world** and the **code world** on thi
   </tbody>
 </table>
 
-
 The objectives of this challenge are :
 
 - Understand the **flow** of a program and learn how to "read" through your code, line by line
@@ -60,12 +59,10 @@ Now let's implement an enhanced version of the coach, with the method `coach_ans
 - Write the code for the interface that makes you discuss with your coach through the terminal
 - **constraint**: This program should **"loop"**. Your coach should answer to your message and wait for your next one until you decide to get rid of him. Use a `while..end` or `until..end` structure for that purpose.
 
-## Learning Badges
+## Key learning points
 
 - What's the usual flow of a program ?
 - How do structures like `if..else..end` or `while..end` change this flow ?
 - How do these structures work ?
 - What's a conditional statement ? Which values can it take ? What's the difference between `=` and `==` ?
 - Does a simple method call change the flow of your program ?
-
-

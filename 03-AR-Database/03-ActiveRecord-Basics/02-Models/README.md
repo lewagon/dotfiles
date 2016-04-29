@@ -44,7 +44,7 @@ should **not** write SQL, but only use ActiveRecord methods with your class mode
 There's no `rake` to test this second part of the exercise, but test your app
 by launching it in the terminal.
 
-## Learning Badges
+## Key learning points
 
 * What's an ORM? How does it simplify your life?
 * On which naming convention relies Active Record mapping? Where does the magic comes from?

@@ -137,5 +137,3 @@ Enhance your Cookbook by :
 ### Sinatra
 
 Once you've done all the above, ask your teacher to form a group to show you the web micro-framework [Sinatra](http://www.sinatrarb.com/) and try to move your Cookbook to the web!
-
-

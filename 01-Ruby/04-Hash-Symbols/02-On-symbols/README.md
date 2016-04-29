@@ -29,7 +29,6 @@ fox = { :color => "red", :specie => "mammal" }
 
 Read [this StackOverflow answer](http://stackoverflow.com/a/8189435/197944/) to understand more in-depth the subtle difference  between Strings and Symbols. The concept of **mutability** is important here.
 
-
 ## Specs
 
 Look at the `lib/symbols.rb`, you will find a true/false quizz
@@ -37,8 +36,7 @@ and some methods to exercise your ability to pick symbols over strings.
 
 Instructions are inlined in the file.
 
-
-## Learning Badges
+## Key learning points
 
 For each example, which type should you use?
 

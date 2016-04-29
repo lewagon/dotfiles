@@ -29,10 +29,10 @@ Implement the `Record` method so that it has all the behavior expected from
 a model (`save`, `destroy`, `self.find` and `self.all`).
 
 **Do not** write any code in the `Post` and `User` classes! This constraint
-will make you discover Ruby awesomeness. Link in the Tips section will
+will make you discover Ruby awesomeness. Links in the following section will
 help you.
 
-## Tips
+## Further suggestions & resources
 
 - There is a [`send`](http://stackoverflow.com/questions/3337285/what-does-send-do-in-ruby) method on all classes.
 - You can dynamically set an instance variable with [`instance_variable_set`](http://ruby-doc.org/core-2.2.0/Object.html#method-i-instance_variable_set)
