@@ -1,8 +1,6 @@
 ## Background & Objectives
 
-Think about the Gmail web interface. Do you need to refresh the page for new mail to show up? The answer
-is know, it periodically fetches new emails and add them at the top of the list. It means that some
-content was added to the _DOM_ **after** the first page load.
+Think about the Gmail web interface. Do you need to refresh the page for new mail to show up? The answer is **no**, it periodically fetches new emails and add them at the top of the list. It means that some content was added to the _DOM_ **after** the first page load.
 
 ## Specs
 
