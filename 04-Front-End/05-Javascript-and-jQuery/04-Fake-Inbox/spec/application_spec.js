@@ -15,7 +15,7 @@ var application = require('../application');
 
 
 describe('hasNewMessage()', function () {
-  it('should not return `true` 20% of the time', function() {
+  it('should return `true` 20% of the time', function() {
     var trueCount = 0;
     for(var i = 0; i < 100; i += 1) {
       if (application.hasNewMessage() === true) {
