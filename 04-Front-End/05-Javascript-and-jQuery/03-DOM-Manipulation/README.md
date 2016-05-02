@@ -21,14 +21,12 @@ Here we can't check the code correctness with `rake`, it will happen directly **
 ## Specs
 
 Open the `application.js` file, you will find a list of challenges to
-complete. To test your code, you can launch your local webserver:
+complete. To test your code, open a new terminal and run this command:
 
 ```bash
-$ serve
+serve
 ```
 
-and open `http://localhost:8000`. Hit `Cmd` (or `Ctrl` on Linux) + `Shift` + `R` to force reload if you
-have an old site.
+Then open [`localhost:8000`](http://localhost:8000) in your favorite web browser. Hit `Cmd` (or `Ctrl` on Linux) + `Shift` + `R` to force reload if you have an old site (previous exercise or something else).
 
-You will see that all results are failing. Solve them from top to bottom,
-and hit F5 (Refresh) each time you want to check if you've solved an exercise.
+You will see that all results are failing. Solve them from top to bottom, and hit F5 (Refresh) each time you want to check if you've solved an exercise. That's a **manual** test if you will, no `rake` here.
