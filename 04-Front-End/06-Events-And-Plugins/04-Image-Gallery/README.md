@@ -13,3 +13,4 @@ versions for each image, a small one and a bigger one)
 You should use [swipebox](http://brutaldesign.github.io/swipebox/).
 
 ![](http://g.recordit.co/WVnARCZPBA.gif)
+
