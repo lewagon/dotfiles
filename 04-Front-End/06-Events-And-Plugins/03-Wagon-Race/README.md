@@ -4,6 +4,8 @@ Let's create a JavaScript game: the wagon-race. It's a simple game where you mus
 
 The goal here is to learn more about JavaScript, jQuery, the DOM, and asynchronous event handling.
 
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/wagon_race.gif)
+
 ## Specs
 
 #### HTML
