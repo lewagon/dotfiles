@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-We want to implement a good old [Minesweeper](https://www.google.com/search?tbm=isch&q=minesweeperer+windows), in our browser.
+We want to implement a good old [Minesweeper](https://www.google.com/search?tbm=isch&q=minesweeper+windows), in our browser.
 
 A boilerplate is provided to you so that you can get started faster.
 You get:
@@ -26,4 +26,3 @@ If you are done with the basics, you could:
 - Add a frame and a little yellow smiley at the top, which puts on sunglasses
   when the game is won, or which restarts a new game when clicked on.
 - Add a timer
-- Flappy minesweeper?
