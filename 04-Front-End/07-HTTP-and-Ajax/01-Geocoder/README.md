@@ -21,7 +21,7 @@ Go ahead, add a form to your HTML page. It should contain an input where a user 
 
 In the `success` callback, try to `console.log()` what the API gave you back. It's a big JSON, look at it! Then figure out where the GPS coordinates are and display them on screen.
 
-### Displaying a map
+### [OPTIONAL] Displaying a map
 
 To display a Google Map with a marker at the specified address, we'll use a second API, the [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
 
