@@ -32,6 +32,8 @@ To use it, add to your HTML this line at the bottom of your file, just **before*
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 ```
 
+
+
 To add a map, you'll need an empty supporting HTML element. For instance:
 
 ```html
@@ -57,5 +59,9 @@ var marker = new google.maps.Marker({
   position: { lat: 48.8648482, lng: 2.3798534 }
 });
 ```
+
+If you get the following warning, you can **ignore** it for this exercise.
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/google_maps_api_warning.png)
 
 Happy geocoding!
