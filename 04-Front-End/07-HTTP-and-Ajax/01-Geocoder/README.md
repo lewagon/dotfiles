@@ -12,10 +12,8 @@ In this exercise, we'll write our first AJAX request. Let's start simple with a 
 Read carefully the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro). It boils down to doing a HTTP `GET` request with an address as a query string parameter.
 
 ```
-https://maps.googleapis.com/maps/api/geocode/:output:?:parameters:
+https://maps.googleapis.com/maps/api/geocode/json?address=16%20Villa%20Gaudelet%20Paris
 ```
-
-We'll use `json` for the `:output:`, and `:parameters` would be something like `address=16%20Villa%20Gaudelet%20Paris`.
 
 Go ahead, add a form to your HTML page. It should contain an input where a user can type an address in, and a button to submit the form. Then use the jQuery `submit` event to catch when the form is posted by the user. That's when you'll want to run the AJAX query to the Google Geocoding service with an `$.ajax()` call.
 
