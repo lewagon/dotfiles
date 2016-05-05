@@ -65,17 +65,22 @@ Write all your code in `game.js`. We need a way for JavaScript to update the boa
 
 **Hint**: depending of your choice, the [next](http://api.jquery.com/next/) and [index](http://api.jquery.com/index/) jQuery functions may be useful!
 
-#### Binding to Key Presses
+#### Clicking a button
 
-Now we'll make the game interactive! Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key. We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key (hence players could cheat by just keeping a key pressed), whereas the keyup event doesn't.
+Now we'll make the game interactive! Add 2 buttons to your page. The first one should make the red wagon move forward, and the second button should make the yellow wagon move forward.
+
+
+#### Binding to Keyboard
+
+Clicking a button is not fast enough. And you can't play with someone else! Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key. We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key (hence players could cheat by just keeping a key pressed), whereas the keyup event doesn't.
 
 You want to bind to the `document`, like so:
 
 ```javascript
 $(document).ready(function() {
   $(document).on('keyup', function(event) {
-    // Detect which key was pressed and call the appropriate function
-    // Google "jquery keyup what key was pressed" if you don't know how
+    // Display the ASCII code of the key pressed
+    console.log(event.keyCode);
   });
 });
 ```
@@ -84,6 +89,4 @@ $(document).ready(function() {
 
 You must provide a way to restart the game, and tell who won the race.
 
-**If this is too simple for you**
-
-Do the same but instead of mere functions, use Javascript object and prototypal inheritance (the Javascript way of creating Classes.)
+[Optional] Do the same but instead of mere functions, use Javascript object and prototypal inheritance (the Javascript way of creating Classes.)
