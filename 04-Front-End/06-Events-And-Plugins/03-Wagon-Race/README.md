@@ -85,6 +85,8 @@ $(document).ready(function() {
 });
 ```
 
+Here is a handy website when dealing with keyboard events and `keyCode`: [keycode.info/](http://keycode.info/)
+
 ##### Starting and Winning
 
 You must provide a way to restart the game, and tell who won the race.
