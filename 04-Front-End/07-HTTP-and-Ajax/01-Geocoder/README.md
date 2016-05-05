@@ -35,7 +35,7 @@ To use it, add to your HTML this line at the bottom of your file, just **before*
 To add a map, you'll need an empty supporting HTML element. For instance:
 
 ```html
-<div id="map"></div>
+<div id="map" style="height: 300px"></div>
 ```
 
 Once again, please read at the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript).
