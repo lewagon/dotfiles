@@ -11,10 +11,13 @@ Re-implement the stupid coaching challenge (01-Ruby/01-Programming-basics/05-Stu
 
 Get familiar with [Rails command line basics](http://guides.rubyonrails.org/command_line.html#command-line-basics). For this exercise, you should know at least how to:
 
-- create a new Rails app
-- launch a web server to test your app locally
-- generate a new controller from the command line
-- check your routes with the relevant `rake` task
+- Create a new Rails app
+- Launch a web server to test your app locally
+- Generate a new controller from the command line
+- Check your routes with the relevant `rake` task
+
+**NB**: Go to the `~/code/<user.github_nickname>` folder to launch your `rails new`,
+do not work in `fullstack-challenges`. No `rake` for this exercise.
 
 ### Generate a CoachingController
 

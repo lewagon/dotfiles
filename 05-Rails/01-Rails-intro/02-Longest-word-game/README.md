@@ -2,6 +2,9 @@
 
 Time to re-implement your "Longest-word game" with a cool web-interface. You can use the code in the solution to `01-Ruby/06-Parsing/02-Numbers-and-Letters` as a starting point.
 
+**NB**: Go to the `~/code/<user.github_nickname>` folder to launch your `rails new`,
+do not work in `fullstack-challenges`. No `rake` for this exercise.
+
 ## Specs
 
 Herebelow is how your game should work. We only give you the routing structure. Your call to generate the relevant controller, actions and views.
