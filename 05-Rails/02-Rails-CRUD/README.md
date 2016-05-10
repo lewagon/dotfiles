@@ -4,4 +4,4 @@ One of the most important Rails challenge every developper should master: **reco
 - 7 CRUD actions in your controller
 - Strong parameters
 - Mastering path helpers
-- Refacto of your views using **partials** and of your controller using **filters**
+- Refactoing of views using [**partials**](http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials) and of controllers using [**filters**](http://guides.rubyonrails.org/action_controller_overview.html#filters)

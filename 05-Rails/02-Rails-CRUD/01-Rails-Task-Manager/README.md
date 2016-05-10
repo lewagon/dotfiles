@@ -1,7 +1,31 @@
 ## Background & Objectives
-In this challenge, you will meet your old friend **Active Record** again, which is Rails' ORM.
+
+In this challenge, you will meet your old friend [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) again, which is Rails' ORM.
+
+There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
+
+```bash
+cd ~/code/<user.github_nickname>
+rails new rails-task-manager -T
+cd rails-task-manager
+git init
+git add .
+git commit -m "rails new"
+hub create
+git push origin master
+```
 
 ## Specs
+
+### Your model first
+
+Before starting to build your routes, your controller and views, generate your model:
+
+- Use `rails generate model <ModelName> <attr1>:<type> <attr2>:<type> ..` to create the model and associated migration all at the same time.
+- If you forget a field in your model, you can use `rails generate migration <MigrationName>` to automatically create a new migration file  with good timestamps.
+- You still have to run the good `rake db:migrate` to execute your migrations.
+- Once that's done, play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
+
 
 ### Routing
 
@@ -17,22 +41,13 @@ Build a Rails todolist application. Your todo-app should have 7 entry points in 
 
 You will have to create a `TasksController` with 7 actions related to those 7 routes. For the names of these actions, use Rails naming convention.
 
-1. index
-1. show
-1. new
-1. create
-1. edit
-1. update
-1. destroy
-
-### Your model first
-
-Before starting to build your routes, your controller and views, generate your model:
-
-- Use `rails generate model <ModelName> <attr1>:<type> <attr2>:<type> ..` to create the model and associated migration all at the same time.
-- If you forget a field in your model, you can use `rails generate migration <MigrationName>` to automatically create a new migration file  with good timestamps.
-- You still have to run the good `rake db:migrate` to execute your migrations.
-- Once that's done, play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
+1. `index`
+1. `show`
+1. `new`
+1. `create`
+1. `edit`
+1. `update`
+1. `destroy`
 
 ### Guidelines on Views
 
@@ -68,5 +83,5 @@ An action is not necessarily associated with a view. For instance, the create/up
 When you are done with the exercise, which means you have a functional todo-app, refactor your code:
 
 - Use a [partial](http://guides.rubyonrails.org/layouts_and_rendering.html) to factor the new and edit HTML forms.
-- Use the `form_for` helper to build you new/edit form.
+- Use the `form_for` helper to build you `new`/`edit` form.
 - Refactor your routes with the `resources` routing method.

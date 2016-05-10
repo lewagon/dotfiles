@@ -2,12 +2,23 @@
 
 Time to re-implement your "Longest-word game" with a cool web-interface. You can use the code in the solution to `01-Ruby/06-Parsing/02-Numbers-and-Letters` as a starting point.
 
-**NB**: Go to the `~/code/<user.github_nickname>` folder to launch your `rails new`,
-do not work in `fullstack-challenges`. No `rake` for this exercise.
+
+There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
+
+```bash
+cd ~/code/<user.github_nickname>
+rails new rails-longest-word-game -T
+cd rails-longest-word-game
+git init
+git add .
+git commit -m "rails new"
+hub create
+git push origin master
+```
 
 ## Specs
 
-Herebelow is how your game should work. We only give you the routing structure. Your call to generate the relevant controller, actions and views.
+This is how your game should work: we only give you the routing structurem, that's your call to generate the relevant controller, actions and views.
 
 - `GET '/game'`: render the page with a new random grid of words, and the HTML form to write your guess just below the word-grid.
 
@@ -16,13 +27,6 @@ Herebelow is how your game should work. We only give you the routing structure. 
 ## Further suggestions
 
 - To submit a parameter through a form without displaying the corresponding input, you can use a hidden input field `<input type="hidden">`!
-
-- Remember: for the forms to work you will need to remove the following line :
-```ruby
-  protect_from_forgery with: :exception
-```
-In the `app/controllers/application_controller.rb` file.
-This will be explained in more details during the next days, but you can learn more about it [here](http://guides.rubyonrails.org/security.html).
 
 ## Extra (optional)
 

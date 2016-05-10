@@ -7,6 +7,19 @@ The goal of the next two challenges is to re-implement some of your ruby scripts
 
 Re-implement the stupid coaching challenge (01-Ruby/01-Programming-basics/05-Stupid-coaching) in Rails.
 
+There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
+
+```bash
+cd ~/code/<user.github_nickname>
+rails new rails-stupid-coaching -T
+cd rails-stupid-coaching
+git init
+git add .
+git commit -m "rails new"
+hub create
+git push origin master
+```
+
 ## Specs
 
 Get familiar with [Rails command line basics](http://guides.rubyonrails.org/command_line.html#command-line-basics). For this exercise, you should know at least how to:
@@ -15,9 +28,6 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 - Launch a web server to test your app locally
 - Generate a new controller from the command line
 - Check your routes with the relevant `rake` task
-
-**NB**: Go to the `~/code/<user.github_nickname>` folder to launch your `rails new`,
-do not work in `fullstack-challenges`. No `rake` for this exercise.
 
 ### Generate a CoachingController
 
