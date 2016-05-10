@@ -8,19 +8,19 @@ You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started
 You are going to use external specs written by the teachers to test your rails app. Here is the setup you need:
 
 ```bash
-$ cd ~/code/<user.github_nickname>
-$ rails new -T lacuillere
-$ cd lacuillere
-$ git init
-$ git add .
-$ git commit -m "rails new"
-$ hub create
-$ git push origin master
-$ echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
-$ bundle install
-$ git submodule add git@github.com:lewagon/fullstack-challenges-03-Rails-restaurant-reviews-specs.git spec
-$ git add .
-$ git commit -m "Prepare rails app with external specs"
+cd ~/code/<user.github_nickname>
+rails new -T rails-yelp-mvp
+cd rails-yelp-mvp
+git init
+git add .
+git commit -m "rails new"
+hub create
+git push origin master
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+bundle install
+git submodule add git@github.com:lewagon/fullstack-challenges-03-Rails-restaurant-reviews-specs.git spec
+git add .
+git commit -m "Prepare rails app with external specs"
 ```
 
 Also before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to be able to use simple form and Bootstrap, and have a cool stylesheets folder.
@@ -30,25 +30,13 @@ Also before starting to code your app, follow [our Rails Frontend guide](https:/
 Whenever you add migrations to your app (e.g. after a `rails g model ...`), don't forget to also run the migrations **on the test database** we use in our specs:
 
 ```bash
-$ bin/rake db:migrate RAILS_ENV=test  # If you added a migration
+rake db:migrate RAILS_ENV=test  # If you added a migration
 ```
 
 Then testing your code is as simple as usual (a good old rake):
 
 ```bash
-$ bin/rake
-```
-
-If you want the ability to just run `rake`, sync your dotfiles:
-
-```bash
-$ cd ~/code/<user.github_nickname>/dotfiles
-$ git remote add upstream git@github.com:lewagon/dotfiles.git
-$ git pull --no-edit upstream master
-$ source ~/.zshrc
-$ cd ~/code/<user.github_nickname>/lacuillere
-$ which rake  # should be `bin/rake`
-$ rake        # should now work
+rake spec
 ```
 
 ## Specs
@@ -73,7 +61,7 @@ $ rake        # should now work
 Validate all models tests before moving to the routing layer. You can use this command:
 
 ```bash
-$ bin/rspec spec/models
+rspec spec/models
 ```
 
 to selectively run tests in the `spec/models` folder.
@@ -81,7 +69,7 @@ to selectively run tests in the `spec/models` folder.
 You can also manually test your code with the `rails console`. Do not forget to `reload!` between each code change!
 
 ```bash
-$ rails c
+rails c
 > bristol = Restaurant.new(name: "Epicure", category: "french")
 > bristol.valid?              # Should return false
 > bristol.address = "75008 Paris"
