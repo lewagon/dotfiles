@@ -38,7 +38,7 @@ Let's import the teacher's spec to be able to `rake` our progress.
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 bundle install
 rake db:test:prepare
-git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.t spec
+git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
 git add .
 git commit -m "Prepare rails app with external specs"
 ```
@@ -58,13 +58,13 @@ preparing your app for being hosted on Heroku.
 Then, in your terminal, create the app...
 
 ```bash
-$ heroku create <user.github_nickname>-mister-cocktail --region eu
+heroku create <user.github_nickname>-rails-mister-cocktail --region eu
 ```
 
 ...and make your first deployment:
 
 ```bash
-$ git push heroku master && heroku run rake db:migrate
+git push heroku master && heroku run rake db:migrate
 ```
 
 ## Style
