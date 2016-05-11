@@ -11,48 +11,48 @@ manager. We want to store our best recipes of cocktails.
 First let's create a new Rails app using PostgreSQL
 
 ```bash
-$ cd ~/code/<user.github_nickname>
-$ rails new mister-cocktail -T --database=postgresql
-$ cd mister-cocktail
+cd ~/code/<user.github_nickname>
+rails new rails-mister-cocktail -T --database=postgresql
+cd rails-mister-cocktail
 ```
 
 We then need to locally create the database for this new rails app.
 
 ```bash
-$ rake db:create
+rake db:create
 ```
 
 Let's set up git, create a repo on GitHub and push our skeleton.
 
 ```bash
-$ git init
-$ git add .
-$ git commit -m "rails new"
-$ hub create
-$ git push origin master
+git init
+git add .
+git commit -m "rails new"
+hub create
+git push origin master
 ```
 
 Let's import the teacher's spec to be able to `rake` our progress.
 
 ```bash
-$ echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
-$ bundle install
-$ rake db:test:prepare
-$ git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
-$ git add .
-$ git commit -m "Prepare rails app with external specs"
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+bundle install
+rake db:test:prepare
+git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.t spec
+git add .
+git commit -m "Prepare rails app with external specs"
 ```
 
 You'll be able to test your code with:
 
 ```bash
-$ bin/rake db:migrate RAILS_ENV=test  # If you added a migration
-$ rake
+rake db:migrate RAILS_ENV=test  # If you added a migration
+rake                            # Launch tests
 ```
 
 ## Heroku deployment
 
-Follow [the lecture's instructions](http://karr.lewagon.org/lectures/rails/04-hosting-deployment/#/1/12) about
+Follow [the lecture's instructions](https://karr.lewagon.org/lectures/rails/04-hosting-deployment/#/1/12) about
 preparing your app for being hosted on Heroku.
 
 Then, in your terminal, create the app...
@@ -84,7 +84,7 @@ we need are `cocktails`, `ingredients` and `doses`.
 Validate all models tests before moving to the routing layer. You can use this command:
 
 ```bash
-$ bin/rspec spec/models
+rspec spec/models
 ```
 
 to selectively run tests in the `spec/models` folder.
