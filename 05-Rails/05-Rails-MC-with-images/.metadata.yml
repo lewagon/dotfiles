@@ -1,5 +1,3 @@
-instructions: false
-
 lectures:
   - rails/05-image-upload
   - rails/extra-02-rails-refacto
