@@ -33,12 +33,40 @@ Draw a basic mockup of your app on a paperbook. First list all the views suggest
 
 ### 4 - Setup
 
-Before splitting the tasks among the team, setup your project. The lead-developer should:
+Before splitting the tasks among the team, setup your project. The **lead developer** (and only him/her) should:
 
-- Create the Rails project with Postgres config
-- Push the project on Github
-- Add his team mates as collaborators on the Github repo
-- Deploy on heroku
+#### 1. Create the Rails project with Postgres config
+
+```bash
+rails _4.2.6_ new \
+  -T --database postgresql \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
+  rails-airbnb-clone
+```
+
+_Of course, you can choose another name than `rails-airbnb-clone`..._
+
+#### 2. Push the project on Github
+
+```bash
+cd rails-airbnb-clone
+hub create
+git push origin master
+```
+
+#### 3. Add his team mates as collaborators on the Github repo
+
+Go to [github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration](https://github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration) and add your teammates as **collaborators** to the repo.
+
+#### 4. Deploy on Heroku
+
+Even if it's just a skeleton app, it's important to deploy on Heroku from Day one.
+
+```bash
+heroku create --region=eu rails-airbnb-clone-<user.github_nickname>
+git push heroku master
+heroku run rake db:migrate
+```
 
 From this point you can start splitting the tasks. Spend time on the setup, because everything will be simpler if you do it the right way from the beginning.
 
