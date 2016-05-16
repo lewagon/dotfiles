@@ -2,7 +2,7 @@
 
 Build Airbnb home page (at least a simple version of it), like [this page](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/)
 
-1. First **re-use** your avatar, button and banner CSS components (we put empty files for that in the starting boilerplate).
+1. Write quickly your avatar, button and banner CSS components (we put empty files for that in the starting boilerplate). For button and banner, you can re-use your code from previous challenges.
 2. Then implement your card design in `card.css`
 
 ## Further suggestions & resources
