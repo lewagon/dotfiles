@@ -64,7 +64,7 @@ In Middleman, the content of `flats.yml` is loaded in a ruby hash `data.flats`. 
           <p><%= flat.summary %></p>
         </div>
         <%= image_tag flat.owner_picture, class:"card-user avatar avatar-large" %>
-        <%= link_to "flats/#{owner}.html", "#", class: "card-link" %>
+        <%= link_to "#", "flats/#{owner}.html", class: "card-link" %>
       </div>
     </div>
     <% end %>
