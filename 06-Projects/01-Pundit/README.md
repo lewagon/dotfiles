@@ -10,4 +10,4 @@ to build for the next 2 weeks. The goal of the day is the same as Airbnb - Day 1
 
 For **each step**, ask a teacher to validate it. Do not rush into code!
 
-When starting your rails app, you can use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates). It'll get you up and running faster.
+When starting your rails app, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates). It'll get you up and running faster.
