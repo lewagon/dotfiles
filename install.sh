@@ -55,7 +55,7 @@ else
 fi
 mkdir -p $SUBL_PATH/Packages/User $SUBL_PATH/Installed\ Packages
 backup "$SUBL_PATH/Packages/User/Preferences.sublime-settings"
-curl https://sublime.wbond.net/Package%20Control.sublime-package > $SUBL_PATH/Installed\ Packages/Package\ Control.sublime-package
+curl -k https://sublime.wbond.net/Package%20Control.sublime-package > $SUBL_PATH/Installed\ Packages/Package\ Control.sublime-package
 ln -s $PWD/Preferences.sublime-settings $SUBL_PATH/Packages/User/Preferences.sublime-settings
 ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
 
