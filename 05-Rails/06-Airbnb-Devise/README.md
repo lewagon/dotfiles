@@ -20,7 +20,9 @@ They will drive your software development and the way you split tasks in your te
 - etc..
 ```
 
-### 2 - Data scheme
+Please download and **print** [this template for your User Stories](https://github.com/lewagon/fullstack-images/raw/master/rails/rails-user-stories.pdf) (or ask a teacher!)
+
+### 2 - Database Scheme
 
 Draw your database scheme  (e.g. using [our db tool](http://db.lewagon.org/)) and validate it with a coach. The database scheme is the milestone of your app. If your DB scheme is wrong or too complicated, you are stuck and you cannot code any good app afterwards.
 
