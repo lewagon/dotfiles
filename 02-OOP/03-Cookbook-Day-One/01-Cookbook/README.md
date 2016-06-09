@@ -4,7 +4,7 @@ You will code a Cookbook application that manages recipes.
 
 The idea is quite simple: you just got a new oven and want to remember all the recipes you are going to try out with it. Here comes your cookbook! It'll keep a list of your future culinary successes, allow you to review them, add some recipes and delete others.
 
-You will build this app using the MVC **pattern**, also use in Rails:
+You will build this app using the MVC **pattern**, also used in Rails:
 
 - Model: what is the basic object you want to manipulate?
 - View: it is here to display data to the user (`puts`) and ask data to the user (`gets`)
