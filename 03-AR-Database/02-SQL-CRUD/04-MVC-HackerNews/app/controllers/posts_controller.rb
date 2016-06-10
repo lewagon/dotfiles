@@ -1,6 +1,6 @@
 class PostsController
   def initialize
-    @view = PostView.new
+    @view = PostsView.new
   end
 
   ################################################################
