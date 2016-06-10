@@ -21,18 +21,19 @@ def one_year_passes!
 end
 ```
 
-- You should be able to measure the tree
+- You should be able to measure the tree.
+- You should be able to know if the three is dead.
 - Each year, the tree should age (it becomes older and taller, and eventually dies).
 - A tree grows 1 meter per year until 10 years old. Then it stops growing.
 - Up until 50 years old, the orange tree should not be dead.
 - After 50 years, the probability of dying increases.
-- No tree can live more than 100 years
-- A tree will produce 100 fruit a year once it is older than 5 years.
-- A tree will produce 200 fruit a year when it is between 10 and 15 years old.
-- A tree will not produce any fruits after that.
+- No tree can live more than 100 years.
+- A tree will produce 100 fruits a year once it is older than 5 years.
+- A tree will produce 200 fruits a year when it is between 10 and 15 years old.
+- A tree will not produce any fruit after that.
 - You should be able to pick a fruit from the tree.
-- You should be able to count how many fruit are left hanging on the tree.
-- Every year fruit which are not picked will fall off.
+- You should be able to count how many fruits are left hanging on the tree.
+- Every year fruits which are not picked will fall off.
 
 ## Key learning points
 
