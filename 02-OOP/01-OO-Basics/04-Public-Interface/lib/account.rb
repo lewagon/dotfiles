@@ -11,14 +11,16 @@ class BankAccount
   # - you can withdraw or deposit money
   # - You can see the balance of the account (through the position variable)
 
-  MIN_DEPOSIT =  100
+  MIN_DEPOSIT = 100
 
   def initialize(name, iban, initial_deposit, password)
     fail DepositError, "Insufficient deposit" unless initial_deposit > MIN_DEPOSIT
-    @password = password
+
+    @password     = password
     @transactions = []
-    @position = 0
-    @name, @iban = name, iban
+    @position     = 0
+    @name         = name
+    @iban         = iban
 
     add_transaction(initial_deposit)
   end

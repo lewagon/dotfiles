@@ -10,4 +10,4 @@ casanova.conquests.each_with_index do |conquest, index|
 end
 
 10.times { casanova.hair_length += 1 }
-casanova.hair_length =  0 # Casanova gets shaved
+casanova.hair_length = 0 # Casanova gets shaved
