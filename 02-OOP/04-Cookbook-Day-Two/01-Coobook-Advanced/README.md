@@ -24,12 +24,12 @@ You can save an HTML document on your computer through `curl` command. Get the f
 curl http://www.marmiton.org/recettes/recherche.aspx?aqt=fraise > marmiton.html
 ````
 
-The reason why we dump the page on our hard drive is that we'll run a Ruby script over it a hundrend times
+The reason why we dump the page on our hard drive is that we'll run a Ruby script over it a hundred times
 to test our code. It will be faster to open the file on disk rather than to make a network call to Marmiton.
 
 ### Parse with Nokogiri
 
-Nokogiri is a cool and famous gem to parse HTML documents (not only). Here is how you can use it to parse a document once you know the CSS selectors of the elements you are interested in. CSS seloectors will be explained later, but the gist of it is that you
+Nokogiri is a cool and famous gem to parse HTML documents (not only). Here is how you can use it to parse a document once you know the CSS selectors of the elements you are interested in. CSS selectors will be explained later, but the gist of it is that you
 can select all elements with a given `class` attribute by creating the query `.class`.
 
 For instance, if you want to find all elements with the `student` class in the following HTML, you will use the query `".student"`
@@ -127,7 +127,7 @@ Once you're done with the "Search", try to add a feature to mark a recipe as tes
 
 On marmiton, it's possible to make more precise requests picking a difficulty for the recipes (difficulty goes from 1 to 4).
 
-Enhance your Cookbook by :
+Enhance your Cookbook by:
 
 * Adding a difficulty attribute to your recipes.
 * Modifying the web-import features so that we can import recipes with a given difficulty (you might want to make this argument optional keeping the old import feature possible).
