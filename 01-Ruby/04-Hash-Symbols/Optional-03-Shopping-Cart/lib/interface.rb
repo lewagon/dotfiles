@@ -11,7 +11,7 @@ puts 'Here are the available products:'
 puts store_items_to_s
 
 # loop forever
-while true
+loop do
   # ask which product to buy
   puts 'What do you want to buy?'
   product = gets.chomp.downcase

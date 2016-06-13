@@ -34,7 +34,7 @@ begin
     column :name,    :string
   end
 rescue
-
+  puts 'Oops! Failed to initialize database. Call a teacher!'
 end
 
 class Session < Sequel::Model
@@ -92,8 +92,10 @@ class API < Sinatra::Base
   post '/sessions/:id/games', provides: [:json] do
     session = Session[params[:id]]
     @game = session.add_game(Game.new)
-    player1 = @game.add_player(name: params["player1"])
-    player2 = @game.add_player(name: params["player2"])
+
+    @game.add_player(name: params["player1"])
+    @game.add_player(name: params["player2"])
+
     rabl :'games/game'
   end
 
@@ -107,4 +109,4 @@ class API < Sinatra::Base
   end
 end
 
-API.run! if __FILE__ == $0
+API.run! if __FILE__ == $PROGRAM_NAME
