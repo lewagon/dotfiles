@@ -16,6 +16,11 @@ describe OrangeTree do
     expect(orange_tree).to respond_to :one_year_passes!
   end
 
+  it "should return if it is dead" do
+    expect(orange_tree).to respond_to(:dead?)
+    expect(orange_tree.dead?).to eq(false)
+  end
+
   it "should be alive until 50 years old" do
     expect(orange_tree.dead?).to eq false
     50.times do
