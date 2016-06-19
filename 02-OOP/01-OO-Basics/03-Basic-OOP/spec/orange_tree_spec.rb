@@ -59,12 +59,32 @@ describe OrangeTree do
     end
 
     found_dead = false
+
     49.times do
       orange_tree.one_year_passes!
       found_dead = found_dead || orange_tree.dead?
     end
 
     expect(found_dead).to eq true
+  end
+
+  it "shouldn't return to life if already dead" do
+    50.times do
+      orange_tree.one_year_passes!
+    end
+
+    found_dead     = false
+    death_switches = 0
+
+    49.times do
+      orange_tree.one_year_passes!
+
+      new_death_status = orange_tree.dead?
+      death_switches  += 1 if found_dead != new_death_status
+      found_dead       = new_death_status
+    end
+
+    expect(death_switches).to eq 1
   end
 
   it "should not produce fruits until it is 5 years old" do
@@ -111,5 +131,4 @@ describe OrangeTree do
     orange_tree.pick_a_fruit!
     expect(orange_tree.fruits).to eq (fruit_count - 1)
   end
-
 end
