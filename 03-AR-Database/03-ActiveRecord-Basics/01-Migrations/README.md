@@ -28,7 +28,7 @@ Write code in `20141025152200_create_posts.rb` to create the `posts` table.
 
 Your `posts` table should have the following columns:
 
-- `name` as a `String`
+- `title` as a `String`
 - `url` as a `String`
 - `created_at` and `updated_at` timestamps
 
