@@ -11,7 +11,7 @@ describe "Migration" do
 
       now = Time.now.to_i
       expect { db.execute("
-        INSERT INTO posts (name, url, created_at, updated_at)
+        INSERT INTO posts (title, url, created_at, updated_at)
         VALUES ('Le Wagon', 'http://www.lewagon.com', '#{now}', #{now})
       ") }.not_to raise_error
 
@@ -28,7 +28,7 @@ describe "Migration" do
 
       now = Time.now.to_i
       expect { db.execute("
-        INSERT INTO posts (name, url, created_at, updated_at, votes)
+        INSERT INTO posts (title, url, created_at, updated_at, votes)
         VALUES ('Le Wagon', 'http://www.lewagon.com', '#{now}', #{now}, 42)
       ") }.not_to raise_error
 
