@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now it is time to perform more complex SQL queries and especially `join` queries to read data from multiple tables with join criteria. To be an expert in `join` queries, [read this](http://sql.sh/cours/jointures)
+Now it is time to perform more complex SQL queries and especially `join` queries to read data from multiple tables with join criteria. To be an expert in `join` queries, [read this](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins). If you speak French, you can also [read this one](http://sql.sh/cours/jointures).
 
 ## Specs
 
