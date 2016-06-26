@@ -55,7 +55,7 @@ end
 
 Try to extract that information:
 
-- The cooking and preparation lengths (as 2 integers representing the number of minutes respectively for cooking and preparing)
+- The cooking and preparation lengths, that you can store as strings.
 - The description summary: a string of, let's say, the first 150 characters of the given description
 - The number of votes on which the rating is based
 
