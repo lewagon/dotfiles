@@ -21,7 +21,7 @@ Students' welcoming with pastries and coffee
 
 - Technical accelerator
 - Focus on Web development
-- Tackle in 9 weeks what students learn in a complete year in "regular" coding schools (often in their last year)
+- Tackle in 9 weeks what students learn in 2 years in "regular" coding schools (often in their last year)
 - At the end you'll be able to prototype any Web product
 
 _Ask students who among them wants to be a developer, who wants to found a startup, who has no idea yet?_
@@ -30,8 +30,11 @@ _Ask students who among them wants to be a developer, who wants to found a start
 
 _First 3 weeks_
 
-- The first 3 weeks are **hard**. Only algo / software architecture.
-- The equivalent of an entire year in coding schools.
+- The first 3 weeks are **hard**. Only algo / software architecture
+- The equivalent of an entire year in coding schools
+- You will struggle, you may doubt, wonder where we're heading
+- Just hold on, stay motivated and trust us: 600 former students have experienced the program
+- It works, so at this point, trust us and fight for it!
 
 #### Monday (Week 1)
 - Special day, we'll focus on your machines setup, you'll go home with pimped workstations ready for the next 9 weeks!
@@ -45,8 +48,9 @@ _First 3 weeks_
 - There will be a **reboot** group for those who want to have a second pass on the fundamentals
 
 #### Wednesday (Week 2) -> Wednesday (Week 3)
-- When your program grows, you won't keep 2000 lines in 1 or 2 files, you'll need to **organize** your code
-- Software architecture
+- When your program grows, you won't keep 2000 in one big file, it's impossible to maintain.
+- Instead, you'll need to **organize** your code and split it in different files
+- That's what Software architecture is
 - Also very hard, you'll build entire software in two days, still in the terminal, **hang on :)**
 
 _Database_
