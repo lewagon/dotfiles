@@ -109,7 +109,7 @@ _Two weeks on your Projects_
   - Informal, friendly talk around drinks
 
 ### Typical day
-- **9 AM - 10:30 AM**: Morning lecture in the classroom. Quite intense. Don't be late, the lecture starts at 9 AM **sharp**, with our without you!
+- **9 AM - 10:30 AM**: Morning lecture in the classroom. Quite intense. Don't be late, the lecture starts at 9 AM **sharp**, with or without you!
 - **10:30 AM - 5:30 PM**:
   - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the exercise's README from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
   - Usually everyone takes a lunch break around 1 PM, but you can take it whenever you want (Teaching Assistants often have lunch around 1 PM ;)
