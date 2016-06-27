@@ -5,7 +5,7 @@ Students' welcoming with pastries and coffee
 ### Intro
 **City's driver**
 
-- Gather students in the classroom to present the program
+- Gather students in the classroom for the Kick-Off
 - Introduce the team
 - Spell out basic rules for the place
 
@@ -13,16 +13,15 @@ Students' welcoming with pastries and coffee
 
 - Teacher's background
 - Computer science not sexy at school, very unpopular
-- Here, very different approach mixing many skills and not only 'hard' technical computer science skills
+- Here, very different approach mixing many skills and not only "hard" technical computer science skills
   - Product-oriented vision
   - Engineering
   - Design
   - UX
 
-
 - Technical accelerator
 - Focus on Web development
-- Tackle in 9 weeks what students learn in a complete year in classical coding schools (often in their last year)
+- Tackle in 9 weeks what students learn in a complete year in "regular" coding schools (often in their last year)
 - At the end you'll be able to prototype any Web product
 
 _Ask students who among them wants to be a developer, who wants to found a startup, who has no idea yet?_
@@ -96,25 +95,33 @@ _Two weeks on your Projects_
 - Enjoy yourselves!
 
 ### Typical week
-- Course everyday from Monday to Friday including holidays.
-- _Paris_ 2 yoga lessons with our yoga master Claire on wednesdays (4:30 - 5:30 PM) & fridays (12 PM - 1 PM). Yoga lessons are **strongly recommended** to relax and come back to code with fresh mind. Invite Claire to introduce herself and her lessons.
-- _Paris_ 1 Apero-Talk on Thursday (7 PM) organized by our CM: Edouard. One student run the interview of a guest. Remember this is a part of the training course. Invite Edouard to introduce himself, his role and the progress of an apero-talk.
+- We'll work everyday (from Monday to Friday), **including holidays**.
+- _Paris_ yoga lessons with our yoga teacher **Claire** (let her introduce herself) on Wednesdays (4:30 - 5:30 PM) & Fridays (12 PM - 1 PM)
+  - Yoga lessons are **strongly recommended** to relax from long hours focusing on your screens
+  - You'll come back with a fresh and reloaded mind, and you'll be **more productive**!
+  - Yoga and Code get along pretty well! :)
+- _Paris_ apero-talks on Thursdays (7 PM) organized by our CM: **Edouard** (let him introduce himself)
+  - **You** get to run the interview of a guest (CEOs, actors of the Tech scene, entrepreneurs...)
+  - One "animator" sits next to our guest and leads the interview - prepare an agenda
+  - Other students prepare questions
+  - ~45 minutes "formal" interview
+  - Informal, friendly talk around drinks
 
 ### Typical day
-- **9 AM - 10:30 AM**: Morning magistral lecture by a teacher. Very intense. Don't be late, the lecture starts at 9 AM **sharp**!
+- **9 AM - 10:30 AM**: Morning lecture in the classroom. Quite intense. Don't be late, the lecture starts at 9 AM **sharp**, with our without you!
 - **10:30 AM - 5:30 PM**:
   - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the questions from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
   - Usually everyone takes a lunch break around 1 PM, but you can take it when you want
   - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson) show them restaurants around
 - **5:30 PM - 7 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class, the idea is to have an interactive session where everyone participates.
 - **7:00 PM**:
-  - End of the day, have a beer in the neighborhood, get to know each others!
+  - You reached the end of the day! Have a beer in the neighborhood, get to know each others!
   - Back home, don't code (your brains need to **rest**), but take a few minutes to read next day's lecture (you can also play flashcards, we'll show you later)
 
 ### Any question?
 
 ### First lecture: Setup your computer
-- Go to the lectures' [summary](/00-Setup/README.md) and show how Karr works
+- Go to the lectures' [summary](/00-Setup/README.md) and show briefly how Karr works
 
 ## 10:30 AM - ~ 1 PM
 - At the end of the lecture:
