@@ -61,6 +61,7 @@ _Front-End_
 - What's missing now? A proper interface. We'll replace the terminal by a Web browser
 - Front-end: HTML and CSS, less painful, good way to express your creativity, fresh air for your minds
 - A couple of days on JavaScript at the end
+- At this time you'll have nice static web pages online :)
 
 #### Friday (Week 5)
 - No code
@@ -110,12 +111,12 @@ _Two weeks on your Projects_
 ### Typical day
 - **9 AM - 10:30 AM**: Morning lecture in the classroom. Quite intense. Don't be late, the lecture starts at 9 AM **sharp**, with our without you!
 - **10:30 AM - 5:30 PM**:
-  - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the questions from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
-  - Usually everyone takes a lunch break around 1 PM, but you can take it when you want
-  - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson) show them restaurants around
-- **5:30 PM - 7 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class, the idea is to have an interactive session where everyone participates.
+  - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the exercise's README from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
+  - Usually everyone takes a lunch break around 1 PM, but you can take it whenever you want (Teaching Assistants often have lunch around 1 PM ;)
+  - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson) mention restaurants around
+- **5:30 PM - 7 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class, the idea is to have an interactive session where everyone's involved.
 - **7:00 PM**:
-  - You reached the end of the day! Have a beer in the neighborhood, get to know each others!
+  - You've reached the end of the day! Have a beer in the neighborhood, get to know each others!
   - Back home, don't code (your brains need to **rest**), but take a few minutes to read next day's lecture (you can also play flashcards, we'll show you later)
 
 ### Any question?
