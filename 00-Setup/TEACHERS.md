@@ -25,7 +25,7 @@ _Ask students who among them wants to be a developer, who wants to found a start
 
 Project calendar on the screen to go through the program with the class.
 
-_First 3 weeks_
+#### First 3 weeks - DISCLAIMER
 
 - The first 3 weeks are **hard**. Only algo / software architecture
 - The equivalent of an entire year in coding schools
