@@ -125,6 +125,7 @@ Run the first Karr lecture on [Setup and Tools](https://karr.lewagon.org/lecture
 ### Setup session (students)
 
 At the end of the lecture:
+
 - Tell all students to start [Le Wagon's setup](https://github.com/lewagon/setup)
 - Students on Mac should click on the apple, Linux on the penguin
 - Students on Linux should gather with a dedicated teacher
@@ -159,6 +160,7 @@ At the end of the setup, students will signin on [alumni.lewagon.org](http://alu
   8. Flashcards
 
 ## 3 PM - End of the day
+
 - Students should finish their setup
 - They should complete Kitt's first challenge
 - They can go home when it's done!
