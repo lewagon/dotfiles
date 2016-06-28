@@ -4,27 +4,24 @@ Students' welcoming with pastries and coffee
 ## 9:30 AM - 10:30 AM
 
 ### Staff and basic rules (manager)
-
 - Gather students in the classroom for the Kick-Off
 - Introduce the team
 - Spell out basic rules for the place
 
 ### Program philosophy (teacher)
-
 1. Teacher's background
-1. Computer science not sexy at school, very unpopular
-  - Here, very different approach mixing many skills and not only "hard" technical computer science skills
+1. Computer science = boring. Le Wagon = different approach mixing hard and soft skills:
   - Product-oriented vision
   - Engineering
   - Design
   - UX
-1. Technical accelerator focused on web development
+1. Technical accelerator focused on web development:
   - Tackle in 9 weeks what students learn in 2 years in "regular" CS degree (often in their last year)
   - At the end you'll be able to prototype any Web product
 
 _Ask students who among them wants to be a developer, who wants to found a startup, who has no idea yet?_
 
-### Calendar overview (lear teacher)
+### Calendar overview (teacher)
 
 Project calendar on the screen to go through the program with the class.
 
@@ -53,13 +50,9 @@ _First 3 weeks_
 - That's what Software architecture is.
 - Also very hard, you'll build entire software in two days, still in the terminal, **hang on :)**
 
-_Database_
-
 #### Thursday (Week 3) -> Tuesday (Week 4) - Database
 - Now that you know how to build software, you need to learn how to save **data**.
 - Database, SQL, you'll find it easier, the pace slows down a little at this point.
-
-_Front-End_
 
 #### Wednesday (Week 4) -> Thursday (Week 5) - Frontend
 - What's missing now? A proper interface. We'll replace the terminal by a Web browser.
@@ -67,7 +60,7 @@ _Front-End_
 - A couple of days on JavaScript at the end.
 - At this time you'll have nice static websites online :)
 
-#### Friday (Week 5)
+#### Friday (Week 5) - Project Day
 - No code
 - Product day
 - Pitch your idea
@@ -78,30 +71,26 @@ _Front-End_
 - Team up with people you'll get along with!
 - Choose **above all** a cool and interesting project (not a 10000th market place...). You are here to have fun and learn a maximum.
 
-_Two weeks of Rails_
-
-#### Monday - Friday (Week 6)
+#### Monday - Friday (Week 6) ) Rails basics
 - One Rails app a day!
 - Assemble all the pieces of the puzzle.
 - You'll get the big picture on why we learnt all those blocks.
 - At this time you'll have real websites with a back-end deployed online.
 
-#### Monday - Friday (Week 7)
+#### Monday - Friday (Week 7) - Airbnb week
 - Airbnb clone! (no flats allowed).
 - Team up with your project buddies.
 - Collaborate on Github.
 - Make mistakes you won't make again during the Project's weeks :)
 
-_Two weeks on your Projects_
-
-#### Monday (Week 8) - Friday (Week 9)
+#### Monday (Week 8) - Friday (Week 9) - Project Weeks
 - Projects!
 - Same teams as Airbnb's week
 - Make beautiful products!
 - No marketplaces :)
 - Enjoy yourselves!
 
-### Typical week (teacher)
+### Typical week overview (teacher)
 - We'll work everyday (from Monday to Friday), **including holidays**.
 - _Paris_ yoga lessons with our yoga teacher **Claire** (let her introduce herself) on Wednesdays (4:30 - 5:30 PM) & Fridays (12 PM - 1 PM)
   - Yoga lessons are **strongly recommended** to relax from long hours focusing on your screens
@@ -114,7 +103,7 @@ _Two weeks on your Projects_
   - ~45 minutes "formal" interview
   - Informal, friendly talk around drinks
 
-### Typical day (teacher)
+### Typical day overview (teacher)
 - **9 AM - 10:30 AM**: Morning lecture in the classroom. Quite intense. Don't be late, the lecture starts at 9 AM **sharp**, with or without you!
 - **10:30 AM - 5:30 PM**:
   - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the exercise's README from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
@@ -127,9 +116,7 @@ _Two weeks on your Projects_
 
 ### Any question?
 
-
 ## 10:30 AM - 1 PM: Setup
-
 
 ### Setup lecture (teacher)
 
@@ -161,7 +148,7 @@ At the end of the setup, students will signin on [alumni.lewagon.org](http://alu
 - Introduce Karr (lecture platform) now that they have access to it.
 - Start with [terminal lecture](https://karr.lewagon.org/lectures/setup/2-terminal-101/#/)
 - Then continue with [git and Github lecture](https://karr.lewagon.org/lectures/setup/3-git-101/#/)
-- At the end of the git and Github lecture, make a **demo of Kitt**:
+- At the end of the git and Github lecture, make a **demo of Kitt** and how to submit solution to challenges:
   1. Navigation
   2. Lectures
   3. Videos
