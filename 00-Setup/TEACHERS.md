@@ -2,7 +2,9 @@
 Students' welcoming with pastries and coffee
 
 ## 9:30 AM - 10:30 AM
+
 ### Intro
+
 **City's driver**
 
 - Gather students in the classroom for the Kick-Off
@@ -11,22 +13,22 @@ Students' welcoming with pastries and coffee
 
 **Lead teacher(s)**
 
-- Teacher's background
-- Computer science not sexy at school, very unpopular
-- Here, very different approach mixing many skills and not only "hard" technical computer science skills
+1. Teacher's background
+1. Computer science not sexy at school, very unpopular
+  - Here, very different approach mixing many skills and not only "hard" technical computer science skills
   - Product-oriented vision
   - Engineering
   - Design
   - UX
-
-- Technical accelerator
-- Focus on Web development
-- Tackle in 9 weeks what students learn in 2 years in "regular" coding schools (often in their last year)
-- At the end you'll be able to prototype any Web product
+1. Technical accelerator focused on web development
+  - Tackle in 9 weeks what students learn in 2 years in "regular" CS degree (often in their last year)
+  - At the end you'll be able to prototype any Web product
 
 _Ask students who among them wants to be a developer, who wants to found a startup, who has no idea yet?_
 
 ### Calendar
+
+Project calendar on the screen to go through the program with the class.
 
 _First 3 weeks_
 
@@ -34,38 +36,38 @@ _First 3 weeks_
 - The equivalent of an entire year in coding schools
 - You will struggle, you may doubt, wonder where we're heading
 - Just hold on, stay motivated and trust us: 600 former students have experienced the program
-- It works, so at this point, trust us and fight for it!
+- It works, so at this point, **trust us** and fight for it!
 
-#### Monday (Week 1)
+#### Monday (Week 1) - Setup
 - Special day, we'll focus on your machines setup, you'll go home with pimped workstations ready for the next 9 weeks!
 
-#### Tuesday -> Friday (Week 1)
+#### Tuesday -> Friday (Week 1) - Ruby Core
 - Ruby core program. Fundamentals. Elementary blocks. Scripts in 1 or 2 files, we'll run them in the terminal.
 - Fast pace, a lot of information, you might feel on the verge of exploding
 
-#### Monday -> Tuesday (Week 2)
+#### Monday -> Tuesday (Week 2) - Ruby ReBoot
 - We'll split the class in two groups after the morning lecture.
 - There will be a **reboot** group for those who want to have a second pass on the fundamentals
 
-#### Wednesday (Week 2) -> Wednesday (Week 3)
+#### Wednesday (Week 2) -> Wednesday (Week 3) - Building Softwares
 - When your program grows, you won't keep 2000 in one big file, it's impossible to maintain.
-- Instead, you'll need to **organize** your code and split it in different files
-- That's what Software architecture is
+- Instead, you'll need to **organize** your code and split it in different files.
+- That's what Software architecture is.
 - Also very hard, you'll build entire software in two days, still in the terminal, **hang on :)**
 
 _Database_
 
-#### Thursday (Week 3) -> Tuesday (Week 4)
-- Now that you know how to build software, you need to learn how to save **data**
-- Database, SQL, you'll find it easier, the pace slows down a little at this point
+#### Thursday (Week 3) -> Tuesday (Week 4) - Database
+- Now that you know how to build software, you need to learn how to save **data**.
+- Database, SQL, you'll find it easier, the pace slows down a little at this point.
 
 _Front-End_
 
-#### Wednesday (Week 4) -> Thursday (Week 5)
-- What's missing now? A proper interface. We'll replace the terminal by a Web browser
-- Front-end: HTML and CSS, less painful, good way to express your creativity, fresh air for your minds
-- A couple of days on JavaScript at the end
-- At this time you'll have nice static web pages online :)
+#### Wednesday (Week 4) -> Thursday (Week 5) - Frontend
+- What's missing now? A proper interface. We'll replace the terminal by a Web browser.
+- Front-end: HTML, CSS, Bootstrap, less painful, and more graphical, good way to express your creativity, fresh air for your minds.
+- A couple of days on JavaScript at the end.
+- At this time you'll have nice static websites online :)
 
 #### Friday (Week 5)
 - No code
@@ -73,21 +75,23 @@ _Front-End_
 - Pitch your idea
 - Discuss, constitute 3-member (or 4-member) teams
 - Convince other students to join your team, or join someone else's
-- Focus on the **learning interest** and not the personal illusion to save time
+- Focus on the **learning interest** of the project.
+- After the bootcamp you can build 1, 2, 3, any Rails app. The 2 weeks is not the only opportunity to ship **your** idea.
 - Team up with people you'll get along with!
+- Choose **above all** a cool and interesting project (not a 10000th market place...). You are here to have fun and learn a maximum.
 
 _Two weeks of Rails_
 
 #### Monday - Friday (Week 6)
 - One Rails app a day!
-- Assemble all the pieces of the puzzle
-- You'll get a better idea of why we learnt all those blocks
-- At this time you'll have real websites with a back-end deployed online
+- Assemble all the pieces of the puzzle.
+- You'll get the big picture on why we learnt all those blocks.
+- At this time you'll have real websites with a back-end deployed online.
 
 #### Monday - Friday (Week 7)
-- Airbnb clone! (no flats allowed)
-- Team up with your project buddies
-- Collaborate on Github
+- Airbnb clone! (no flats allowed).
+- Team up with your project buddies.
+- Collaborate on Github.
 - Make mistakes you won't make again during the Project's weeks :)
 
 _Two weeks on your Projects_
@@ -105,7 +109,7 @@ _Two weeks on your Projects_
   - Yoga lessons are **strongly recommended** to relax from long hours focusing on your screens
   - You'll come back with a fresh and reloaded mind, and you'll be **more productive**!
   - Yoga and Code get along pretty well! :)
-- _Paris_ apero-talks on Thursdays (7 PM) organized by our CM: **Edouard** (let him introduce himself)
+- _Paris_ apero-talks on Thursdays (7 PM) organized by our CM: **Edouard** (let him introduce himself and mention coming events)
   - **You** get to run the interview of a guest (CEOs, actors of the Tech scene, entrepreneurs...)
   - One "animator" sits next to our guest and leads the interview - prepare an agenda
   - Other students prepare questions
@@ -118,26 +122,37 @@ _Two weeks on your Projects_
   - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the exercise's README from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
   - Usually everyone takes a lunch break around 1 PM, but you can take it whenever you want (Teaching Assistants often have lunch around 1 PM ;)
   - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson) mention restaurants around
-- **5:30 PM - 7 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class, the idea is to have an interactive session where everyone's involved.
+- **5:30 PM - 7 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class and teacher, the idea is to have an interactive session where everyone's involved.
 - **7:00 PM**:
   - You've reached the end of the day! Have a beer in the neighborhood, get to know each others!
   - Back home, don't code (your brains need to **rest**), but take a few minutes to read next day's lecture (you can also play flashcards, we'll show you later)
 
 ### Any question?
 
-### First lecture: Setup your computer
-- Go to the lectures' [summary](/00-Setup/README.md) and show briefly how Karr works
 
-## 10:30 AM - ~ 1 PM
+## 10:30 AM - 1 PM: Setup
+
+
+### Setup (by teachers)
+
+- Run the first Karr lecture on [Setup and Tools](https://karr.lewagon.org/lectures/setup/1-setup/)
+
 - At the end of the lecture:
-  - students can begin their computer's setups
+  - tell all students to start [Le Wagon's setup](https://github.com/lewagon/setup)
   - students on Mac should click on the apple, Linux on the penguin
-  - students on Linux should gather with a teacher
-  - Useful resources for Linux setups: [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) and [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
+  - students on Linux should gather with a dedicated teacher
+  - if you struggle on Linux setup: first read [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) and [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
 
-- Manager: often refresh [city admin page](http://alumni.lewagon.org/cities/:city_slug) to validate students' onboarding.
+### Student validation
 
-### Lunch time
+At the end of the setup, students will signin on [alumni.lewagon.org](http://alumni.lewagon.org) and complete their profile. Then:
+
+- Staff should approve them on their city admin page (e.g. see [Paris page](http://alumni.lewagon.org/cities/paris) to validate students' onboarding.
+- Staff should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may pick up the worng batch.
+- After this validation, they will receive 2 mails to join Le Wagon on Github and on Slack.
+
+
+### 1 PM - 2 PM: Lunch time
 - Tell students to be back at 2 PM sharp for the first (short) lectures
 
 ## 2 PM - 3 PM
