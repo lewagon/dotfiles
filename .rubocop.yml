@@ -30,6 +30,8 @@ MutableConstant:
   Enabled: false
 SignalException:
   Enabled: false
+Casecmp:
+  Enabled: false
 
 AllCops:
   Exclude:
