@@ -108,7 +108,7 @@ Project calendar on the screen to go through the program with the class.
 - **10:30 AM - 5:30 PM**:
   - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the exercise's README from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
   - Usually everyone takes a lunch break around 1 PM, but you can take it whenever you want (Teaching Assistants often have lunch around 1 PM ;)
-  - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson) mention restaurants around
+  - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson), mention restaurants around
 - **5:30 PM - 7 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class and teacher, the idea is to have an interactive session where everyone's involved.
 - **7:00 PM**:
   - You've reached the end of the day! Have a beer in the neighborhood, get to know each others!
@@ -136,7 +136,7 @@ At the end of the lecture:
 At the end of the setup, students will signin on [alumni.lewagon.org](http://alumni.lewagon.org) and complete their profile. Then:
 
 - Manager should approve them on the city admin page (see for instance [Paris page](http://alumni.lewagon.org/cities/paris) to validate students' onboarding.
-- Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the worng batch.
+- Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the wrong batch.
 - After this validation, they will receive 2 mails to join Le Wagon on Github and on Slack.
 
 ## 1 PM - 2 PM: Lunch time
