@@ -71,7 +71,7 @@ Project calendar on the screen to go through the program with the class.
 - Team up with people you'll get along with!
 - Choose **above all** a cool and interesting project (not a 10000th market place...). You are here to have fun and learn a maximum.
 
-#### Monday - Friday (Week 6) ) Rails basics
+#### Monday - Friday (Week 6) - Rails basics
 - One Rails app a day!
 - Assemble all the pieces of the puzzle.
 - You'll get the big picture on why we learnt all those blocks.
