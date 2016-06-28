@@ -139,7 +139,7 @@ At the end of the setup, students will signin on [alumni.lewagon.org](http://alu
 - Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the worng batch.
 - After this validation, they will receive 2 mails to join Le Wagon on Github and on Slack.
 
-### 1 PM - 2 PM: Lunch time
+## 1 PM - 2 PM: Lunch time
 - Tell students to be back at 2 PM sharp for the first (short) lectures
 
 ## 2 PM - 3 PM
