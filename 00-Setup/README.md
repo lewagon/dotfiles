@@ -6,9 +6,9 @@ Let's set up your workstation
 
 2. At the end of the setup, students will signin on [alumni.lewagon.org](http://alumni.lewagon.org) and complete their profile. Then, staff will approve them and they will receive 2 mails to join Le Wagon on Github and on Slack.
 
-3. Once the setup is done, go through lectures #2 and #3 with lead-coach to learn command line basics (navigate in filesystem, create directories & files, launch Sublime Text) + basic git commands (`add`/`commit`/`push`). You'll need to know these commands to submit attempts to our challenges.
+3. Once the setup is done, go through lectures #2 and #3 with lead-coach to learn command line basics (navigate in filesystem, create directories & files, launch Sublime Text) + basic git commands (`add`/`commit`/`push`). At the end of these two small courses, your teacher will make a demo of the Kitt platform and show you how to push a solution on a demo challenge `00-Setup/00-Demo`.
 
-4. Time to push your attempt to the first challenge `01-Submit-your-code`. This challenge is just a sanity check to ensure you have correctly forked the exercise repo. No real code here, serious things begin tomorrow. Be prepared!
+4. Time to push your attempt to the first challenge `01-Submit-your-code` of the bootcamp. This challenge is just a sanity check to ensure you have correctly forked the exercise repo. No real code here, serious things begin tomorrow. Be prepared!
 
 You now have all the tools you need to successfully work your way through the bootcamp during these 9 weeks. Remember, your new toolbox is:
 
