@@ -3,15 +3,13 @@ Students' welcoming with pastries and coffee
 
 ## 9:30 AM - 10:30 AM
 
-### Intro
-
-**City's driver**
+### Staff and basic rules (manager)
 
 - Gather students in the classroom for the Kick-Off
 - Introduce the team
 - Spell out basic rules for the place
 
-**Lead teacher(s)**
+### Program philosophy (teacher)
 
 1. Teacher's background
 1. Computer science not sexy at school, very unpopular
@@ -26,7 +24,7 @@ Students' welcoming with pastries and coffee
 
 _Ask students who among them wants to be a developer, who wants to found a startup, who has no idea yet?_
 
-### Calendar
+### Calendar overview (lear teacher)
 
 Project calendar on the screen to go through the program with the class.
 
@@ -103,7 +101,7 @@ _Two weeks on your Projects_
 - No marketplaces :)
 - Enjoy yourselves!
 
-### Typical week
+### Typical week (teacher)
 - We'll work everyday (from Monday to Friday), **including holidays**.
 - _Paris_ yoga lessons with our yoga teacher **Claire** (let her introduce herself) on Wednesdays (4:30 - 5:30 PM) & Fridays (12 PM - 1 PM)
   - Yoga lessons are **strongly recommended** to relax from long hours focusing on your screens
@@ -116,7 +114,7 @@ _Two weeks on your Projects_
   - ~45 minutes "formal" interview
   - Informal, friendly talk around drinks
 
-### Typical day
+### Typical day (teacher)
 - **9 AM - 10:30 AM**: Morning lecture in the classroom. Quite intense. Don't be late, the lecture starts at 9 AM **sharp**, with or without you!
 - **10:30 AM - 5:30 PM**:
   - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the exercise's README from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
@@ -133,38 +131,43 @@ _Two weeks on your Projects_
 ## 10:30 AM - 1 PM: Setup
 
 
-### Setup (by teachers)
+### Setup lecture (teacher)
 
-- Run the first Karr lecture on [Setup and Tools](https://karr.lewagon.org/lectures/setup/1-setup/)
+Run the first Karr lecture on [Setup and Tools](https://karr.lewagon.org/lectures/setup/1-setup/)
 
-- At the end of the lecture:
-  - tell all students to start [Le Wagon's setup](https://github.com/lewagon/setup)
-  - students on Mac should click on the apple, Linux on the penguin
-  - students on Linux should gather with a dedicated teacher
-  - if you struggle on Linux setup: first read [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) and [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
+### Setup session (students)
 
-### Student validation
+At the end of the lecture:
+- Tell all students to start [Le Wagon's setup](https://github.com/lewagon/setup)
+- Students on Mac should click on the apple, Linux on the penguin
+- Students on Linux should gather with a dedicated teacher
+- If you struggle on Linux setup: first read [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) and [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
+
+### Student validation (manager)
 
 At the end of the setup, students will signin on [alumni.lewagon.org](http://alumni.lewagon.org) and complete their profile. Then:
 
-- Staff should approve them on their city admin page (e.g. see [Paris page](http://alumni.lewagon.org/cities/paris) to validate students' onboarding.
-- Staff should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may pick up the worng batch.
+- Manager should approve them on the city admin page (see for instance [Paris page](http://alumni.lewagon.org/cities/paris) to validate students' onboarding.
+- Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the worng batch.
 - After this validation, they will receive 2 mails to join Le Wagon on Github and on Slack.
-
 
 ### 1 PM - 2 PM: Lunch time
 - Tell students to be back at 2 PM sharp for the first (short) lectures
 
 ## 2 PM - 3 PM
-### Terminal & Git
-- Karr slides
-- Kitt demo:
+
+### Terminal & Git (teacher)
+
+- Introduce Karr (lecture platform) now that they have access to it.
+- Start with [terminal lecture](https://karr.lewagon.org/lectures/setup/2-terminal-101/#/)
+- Then continue with [git and Github lecture](https://karr.lewagon.org/lectures/setup/3-git-101/#/)
+- At the end of the git and Github lecture, make a **demo of Kitt**:
   1. Navigation
   2. Lectures
   3. Videos
   4. Classmates
   5. Buddies
-  6. Exercises (Solving the new exercise 00-Setup/00-Demo)
+  6. Exercises (Solving the demo exercise 00-Setup/00-Demo)
   7. Tickets
   8. Flashcards
 
