@@ -109,7 +109,7 @@ puts full_name("boris", "paillard")
 puts full_name("sebastien", "saunier")
 ```
 
-## Combining variables and methods
+### Combining variables and methods
 
 ```ruby
 def full_name(first_name, last_name)
@@ -123,7 +123,7 @@ boris_full_name = full_name(boris_first_name, boris_last_name)
 puts boris_full_name
 ```
 
-## Parameters vs. arguments
+### Parameters vs. arguments
 
 
 ```ruby
