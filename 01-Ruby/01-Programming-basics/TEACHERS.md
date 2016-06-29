@@ -1,118 +1,170 @@
-## Running your code
+## How to run your code?
 
-To run your ruby code, the easy way it to use IRB (Interactive Ruby). Let's launch it on our terminal and type basic code.
-
-```
-$ irb
-> 2 + 4
-> puts "Hello"
-> exit
-```
-
-Cool to have a playground to experiment things, but real-life is about writing and saving code files. How to run a ruby script from a `.rb` file? Well:
-
-```
-$ touch test.rb
-$ ruby path/to/test.rb
-```
-
-Easy as pie! Now you know 2 different ways of running ruby code, IRB for experiments, `ruby` command to run your own ruby files.
+1. Experiment with IRB
+2. `touch file.rb` and run it from terminal with `ruby file.rb`
+3. Use puts to output results
 
 ## Built-in objects
 
-In ruby as in any modern programming language, you have a lot of built-in objects:
+1. Go through common objects on IRB
 
-- texts: `String`
-- integers: `Fixnum`
-- floating numbers: `Float`
-- arrays: `Array`
-- etc..
-
-These objects all have operators and methods. Read the [ruby doc](http://ruby-doc.org/core-2.2.3/) to discover these methods! Let's play with these objects on IRB, make basic operations on strings and fixnums, and speak of string interpolation.
-
+```ruby
+"Sponge Bob".class              #=> String
+12.class                        #=> Fixnum
+3.14.class                      #=> Float
+["john", "paul", "ringo"].class #=> Array
+true.class                      #=> TrueClass
+false.class                     #=> FalseClass
+(1..100).class                  #=> Range
 ```
-$ irb
-> "Sponge Bob".class                #=> String
-> 12.class                          #=> Fixnum
-> 3.14.class                        #=> Float
-> ['Huey', 'Dewey', 'Louie'].class  #=> Array
 
-# Playing with operators on integers
-> 3 + 5
-> 3 - 5
-> 3 * 5
+2. Each object has its set of methods, example:
 
-# Playing with operators on strings
-> "Sponge" + " " + "Bob"
-
-# Interpolation and simple/double quotes
-> 'two: #{1 + 1}'
-> "two: #{1 + 1}"
-
-# Cool methods => read the doc
-> "Sponge Bob".upcase
-> "Sponge Bob".split("")
-> ['Huey', 'Dewey', 'Louie'].sort
-
-> exit
+```ruby
+"boris".upcase # => "BORIS"
+12.upcase      # => does not work!
+12.even?       # => true
+"boris".even   # => does not work
 ```
+
+### String
+
+1. Simple or double quotes
+
+```ruby
+"yipi yeah".upcase   #=> "YIPI YEAH"
+"Hello" == 'Hello'   #=> true
+```
+
+2. Interpolation
+
+```ruby
+'two: #{1 + 1}'      #=> "two: #{1 + 1}"
+"two: #{1 + 1}"      #=> "two: 2"
+```
+
+3. Conversion to integer
+
+```ruby
+'1984'.class        #=> String
+'1984'.to_i         #=> 1984
+'1984'.to_i.class   #=> Fixnum
+```
+
+### Fixnum
+
+1. Standard arithmetic
+
+```ruby
+1 + 2      #=> 3
+2 * 4      #=> 8
+```
+
+2. Custom methods
+
+```ruby
+20.even?   #=> true
+20.odd?    #=> false
+```
+
+3. Conversion to string
+
+```ruby
+1984.to_s    #=> "1984"
+```
+
+### Array
+
+1. Let's play 5 seconds (but we'll cover that tomorrow in details)
+
+```ruby
+['Huey', 'Dewey', 'Louie'].size    #=> 3
+['Huey', 'Dewey', 'Louie'].sort    #=> ["Dewey", "Huey", "Louie"]
+[3, 5, 1].sort                     #=> [1, 3, 5]
+```
+
+### Ruby doc is your friend!
+
+1. Go on http://www.ruby-doc.org/core/
+2. Choose a String method (e.g. `split`) with the class and test it in IRB
+
 
 ## Variables
 
-A variable is like a **named** box containing a value. When we define it, we put a value in the box. When we use it, we use this value. When we re-assign it, we change this value. Here's a simple example:
+1. They are the **elementary blocks of programming**.
+2. Why variables? Store values to re-use them
 
 ```ruby
-name = "boris"
-puts name
+age = 17
+puts "You are #{age} years old"
 
-name = "Sebastien"
-puts name
-
-name = name + " Saunier"
-puts name
-
-age = 31
-age += 1
-
-puts "Happy Birthday, #{name}, you now are a big #{age}-old boy"
+puts "Lucky you, it's your birthday"
+age = age + 1
+puts "You are now #{age}"
 ```
 
-Do you get it?
+## Methods
 
-#### Methods
-
-Nice to have variable to store values, but we also need methods to compute results depending on different inputs. Here is how we define a method:
+1. **Factoring** your code
+2. Why methods? **concise** way to call a ruby code
 
 ```ruby
-def add(x, y)
-  return x + y
+def tomorrow
+  tomorrow_date = Date.today + 1
+  return tomorrow_date.strftime("%B %d")
+end
+
+puts tomorrow
+```
+
+3. Apply a ruby code to **dynamic inputs**
+
+```ruby
+def full_name(first_name, last_name)
+  name = first_name.capitalize + " " + last_name.capitalize
+  return name
+end
+
+puts full_name("boris", "paillard")
+puts full_name("sebastien", "saunier")
+```
+
+## Combining variables and methods
+
+```ruby
+def full_name(first_name, last_name)
+  name = first_name.capitalize + " " + last_name.capitalize
+  return name
+end
+
+boris_first_name = "boris"
+boris_last_name = "paillard"
+boris_full_name = full_name(boris_first_name, boris_last_name)
+puts boris_full_name
+```
+
+## Parameters vs. arguments
+
+
+```ruby
+def new_population(population, births)
+  return population + births
 end
 ```
 
-The method is named `add`. It takes two **parameters** `x` and `y` and it `return` their sum. It's cool to define methods because you can re-use code by calling the method and you can call it with different values (the `arguments`):
+- `population` and `births` are **parameters**
 
-```ruby
-add(2, 4)
-add(5, 3)
-add(8, 3)
+```
+puts new_population(2000000, 300)
 ```
 
-Now, let's take some time to understand the difference between `puts` and `return`. Sometimes it's hard to understand for beginners. When you `puts` a value on the terminal, it's just to check your program outputs. But at the end of the day, **what really matters is the method return**! Let's take this example.
+- `2000000` and `300` are **arguments**
+- Arguments are values taken by the parameters
 
-```ruby
-def add(x, y)
-  puts x + y
-end
 
-total = add(3, 2)
-puts total # oups....
+### Conventions
 
-def add(x, y)
-  return x + y
-end
-
-total = add(3, 2)
-puts total # yeah!!
-```
-
-In the beginning, we'll force you to write `return` keyword explicitely at the end of your methods, in order to make sure **you control what your methods return**. Please understand that `puts` is just a way to test your code outputting stuff on the terminal, nothing more.
+1. Methods and variables in **snake_case** (explain what it means)
+2. Without `return` a method returns the **last statement executed**.
+2. methods ending with a `?`
+3. destructive methods ending with a `!`
