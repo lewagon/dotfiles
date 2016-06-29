@@ -2,7 +2,7 @@
 
 1. Experiment with IRB
 2. `touch file.rb` and run it from terminal with `ruby file.rb`
-3. Use puts to output results
+3. Use `puts to output results
 
 
 ## Built-in objects
@@ -86,16 +86,20 @@ puts "You are now #{age}"
 2. Why methods? **concise** way to call a ruby code
 3. Apply a ruby code to **dynamic inputs**
 
+Example **without** parameters
+
 ```ruby
-# Example without parameters
 def tomorrow
   tomorrow_date = Date.today + 1
   return tomorrow_date.strftime("%B %d")
 end
 
 puts tomorrow
+```
 
-# Example with parameters
+Example **with** parameters
+
+```ruby
 def full_name(first_name, last_name)
   name = first_name.capitalize + " " + last_name.capitalize
   return name
