@@ -2,12 +2,12 @@
 
 1. Experiment with IRB
 2. `touch file.rb` and run it from terminal with `ruby file.rb`
-3. Use `puts to output results
+3. Use `puts` to output results
 
 
 ## Built-in objects
 
-1. Go through common objects on IRB
+1. Go through common objects on IRB (String, Fixnum, Float, Array, booleans)
 2. Each object has **its own set of methods**, example:
 
 ```ruby
@@ -19,9 +19,9 @@
 
 ### String
 
-1. Simple or double quotes
-2. Interpolation
-3. Conversion to integer
+1. Explain simple or double quotes syntax
+2. Show interpolation with double quotes
+3. Convert strings to integer with `to_i`
 
 ```ruby
 "yipi yeah".upcase   #=> "YIPI YEAH"
@@ -37,9 +37,9 @@
 
 ### Fixnum
 
-1. Standard arithmetic
-2. Custom methods
-3. Conversion to string
+1. Show standard arithmetic with basic operations
+2. Show one or two custom methods
+3. Convert an integer to string with `to_s`
 
 ```ruby
 1 + 2      #=> 3
