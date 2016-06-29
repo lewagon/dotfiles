@@ -5,8 +5,8 @@
 3. Use puts to output results
 
 
-```
-Teacher's notes and personal examples
+```ruby
+# Teacher's notes and personal examples
 
 
 
