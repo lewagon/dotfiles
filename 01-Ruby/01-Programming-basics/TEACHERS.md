@@ -5,25 +5,6 @@
 3. Use puts to output results
 
 
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
-```
-
 ## Built-in objects
 
 1 Go through common objects on IRB
@@ -45,25 +26,6 @@ false.class                     #=> FalseClass
 12.upcase      # => does not work!
 12.even?       # => true
 "boris".even   # => does not work
-```
-
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
 ```
 
 ### String
@@ -90,25 +52,6 @@ false.class                     #=> FalseClass
 '1984'.to_i.class   #=> Fixnum
 ```
 
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
-```
-
 ### Fixnum
 
 1 - Standard arithmetic
@@ -131,25 +74,6 @@ false.class                     #=> FalseClass
 1984.to_s    #=> "1984"
 ```
 
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
-```
-
 ### Array
 
 1. Let's play 5 seconds (but we'll cover that tomorrow in details)
@@ -165,25 +89,6 @@ false.class                     #=> FalseClass
 1. Go on http://www.ruby-doc.org/core/
 2. Choose a String method (e.g. `split`) with the class and test it in IRB
 
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
-```
-
 ## Variables
 
 1. They are the **elementary blocks of programming**.
@@ -196,25 +101,6 @@ puts "You are #{age} years old"
 puts "Lucky you, it's your birthday"
 age = age + 1
 puts "You are now #{age}"
-```
-
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
 ```
 
 ## Methods
@@ -243,25 +129,6 @@ puts full_name("boris", "paillard")
 puts full_name("sebastien", "saunier")
 ```
 
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
-```
-
 ## Combining variables and methods
 
 ```ruby
@@ -274,25 +141,6 @@ boris_first_name = "boris"
 boris_last_name = "paillard"
 boris_full_name = full_name(boris_first_name, boris_last_name)
 puts boris_full_name
-```
-
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
 ```
 
 ## Parameters vs. arguments
@@ -313,47 +161,9 @@ puts new_population(2000000, 300)
 - `2000000` and `300` are **arguments**
 - Arguments are values taken by the parameters
 
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
-```
-
 ### Conventions
 
 1. Methods and variables in **snake_case** (explain what it means)
 2. Without `return` a method returns the **last statement executed**.
 2. methods ending with a `?`
 3. destructive methods ending with a `!`
-
-```ruby
-# Teacher's notes and/or personal examples
-+-------------------------------------------------------------------------------------+
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-|                                                                                     |
-+-------------------------------------------------------------------------------------+
-```
