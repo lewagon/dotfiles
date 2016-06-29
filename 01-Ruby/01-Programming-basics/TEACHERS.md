@@ -6,7 +6,7 @@
 
 ## Built-in objects
 
-1. Go through common objects on IRB
+1 Go through common objects on IRB
 
 ```ruby
 "Sponge Bob".class              #=> String
@@ -18,7 +18,7 @@ false.class                     #=> FalseClass
 (1..100).class                  #=> Range
 ```
 
-2. Each object has its set of methods, example:
+2 Each object has its set of methods, example:
 
 ```ruby
 "boris".upcase # => "BORIS"
@@ -29,21 +29,21 @@ false.class                     #=> FalseClass
 
 ### String
 
-1. Simple or double quotes
+1 - Simple or double quotes
 
 ```ruby
 "yipi yeah".upcase   #=> "YIPI YEAH"
 "Hello" == 'Hello'   #=> true
 ```
 
-2. Interpolation
+2 - Interpolation
 
 ```ruby
 'two: #{1 + 1}'      #=> "two: #{1 + 1}"
 "two: #{1 + 1}"      #=> "two: 2"
 ```
 
-3. Conversion to integer
+3 - Conversion to integer
 
 ```ruby
 '1984'.class        #=> String
@@ -53,21 +53,21 @@ false.class                     #=> FalseClass
 
 ### Fixnum
 
-1. Standard arithmetic
+1 - Standard arithmetic
 
 ```ruby
 1 + 2      #=> 3
 2 * 4      #=> 8
 ```
 
-2. Custom methods
+2 - Custom methods
 
 ```ruby
 20.even?   #=> true
 20.odd?    #=> false
 ```
 
-3. Conversion to string
+3 - Conversion to string
 
 ```ruby
 1984.to_s    #=> "1984"
@@ -105,8 +105,8 @@ puts "You are now #{age}"
 
 ## Methods
 
-1. **Factoring** your code
-2. Why methods? **concise** way to call a ruby code
+1 - **Factoring** your code
+2 - Why methods? **concise** way to call a ruby code
 
 ```ruby
 def tomorrow
@@ -117,7 +117,7 @@ end
 puts tomorrow
 ```
 
-3. Apply a ruby code to **dynamic inputs**
+3 - Apply a ruby code to **dynamic inputs**
 
 ```ruby
 def full_name(first_name, last_name)
@@ -152,7 +152,7 @@ def new_population(population, births)
 end
 ```
 
-- `population` and `births` are **parameters**
+- Here `population` and `births` are **parameters**
 
 ```
 puts new_population(2000000, 300)
