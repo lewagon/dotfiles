@@ -4,6 +4,17 @@
 2. `touch file.rb` and run it from terminal with `ruby file.rb`
 3. Use puts to output results
 
+
+```
+Teacher's notes and personal examples
+
+
+
+
+
+
+```
+
 ## Built-in objects
 
 1 Go through common objects on IRB
