@@ -7,46 +7,29 @@
 
 ## Built-in objects
 
-1 Go through common objects on IRB
-
-```ruby
-"Sponge Bob".class              #=> String
-12.class                        #=> Fixnum
-3.14.class                      #=> Float
-["john", "paul", "ringo"].class #=> Array
-true.class                      #=> TrueClass
-false.class                     #=> FalseClass
-(1..100).class                  #=> Range
-```
-
-2 Each object has its set of methods, example:
+1. Go through common objects on IRB
+2. Each object has **its own set of methods**, example:
 
 ```ruby
 "boris".upcase # => "BORIS"
 12.upcase      # => does not work!
 12.even?       # => true
-"boris".even   # => does not work
+"boris".even   # => does not work!
 ```
 
 ### String
 
-1 - Simple or double quotes
+1. Simple or double quotes
+2. Interpolation
+3. Conversion to integer
 
 ```ruby
 "yipi yeah".upcase   #=> "YIPI YEAH"
 "Hello" == 'Hello'   #=> true
-```
 
-2 - Interpolation
-
-```ruby
 'two: #{1 + 1}'      #=> "two: #{1 + 1}"
 "two: #{1 + 1}"      #=> "two: 2"
-```
 
-3 - Conversion to integer
-
-```ruby
 '1984'.class        #=> String
 '1984'.to_i         #=> 1984
 '1984'.to_i.class   #=> Fixnum
@@ -54,23 +37,17 @@ false.class                     #=> FalseClass
 
 ### Fixnum
 
-1 - Standard arithmetic
+1. Standard arithmetic
+2. Custom methods
+3. Conversion to string
 
 ```ruby
 1 + 2      #=> 3
 2 * 4      #=> 8
-```
 
-2 - Custom methods
-
-```ruby
 20.even?   #=> true
 20.odd?    #=> false
-```
 
-3 - Conversion to string
-
-```ruby
 1984.to_s    #=> "1984"
 ```
 
@@ -105,21 +82,20 @@ puts "You are now #{age}"
 
 ## Methods
 
-1 - **Factoring** your code
-2 - Why methods? **concise** way to call a ruby code
+1. **Factoring** your code
+2. Why methods? **concise** way to call a ruby code
+3. Apply a ruby code to **dynamic inputs**
 
 ```ruby
+# Example without parameters
 def tomorrow
   tomorrow_date = Date.today + 1
   return tomorrow_date.strftime("%B %d")
 end
 
 puts tomorrow
-```
 
-3 - Apply a ruby code to **dynamic inputs**
-
-```ruby
+# Example with parameters
 def full_name(first_name, last_name)
   name = first_name.capitalize + " " + last_name.capitalize
   return name
@@ -150,14 +126,11 @@ puts boris_full_name
 def new_population(population, births)
   return population + births
 end
-```
 
-- Here `population` and `births` are **parameters**
-
-```
 puts new_population(2000000, 300)
 ```
 
+- Here `population` and `births` are **parameters**
 - `2000000` and `300` are **arguments**
 - Arguments are values taken by the parameters
 
