@@ -1,13 +1,13 @@
 ## Intro
 
 1. Start with our [parsing demo boilerplate](https://github.com/lewagon/parsing-demo)
-1. First part of the lecture describes data files of boilerplate (CSV / XML / JSON)
-1. Second part will read/write from CSV and JSON only (for XML just show the slides)
-1. Last part of the lecture will get data from the web **using an API** or **scraping a website**
+1. First part describes data files (CSV / XML / JSON)
+1. Second part show how to read/write from CSV and JSON
+1. Last part show how to get data from the web **using an API** or **scraping a website**
 
 ## Data formats
 
-1. 3 common data formats: CSV, XML & JSON
+1. There are 3 common data formats: CSV, XML & JSON
 1. Describe each format using the slides + showing the files in the boilerplate.
 1. Explain that all format are heavily used in web services
 
@@ -17,10 +17,11 @@
 1. What's parsing? What's storing?
 1. **Live-code** parsing & storing on `data/beers.csv`
 1. **Live-code** parsing & storing on `data/beers.json`
-1. Skip the XML parsing & storing (just say the code is in the slides)
+1. Skip the XML live-code (just show the code in the slides to the students)
 
 
 ## Data from the Web
 
-1. Using JSON API: make a demo using **Chuck Norris API** or another one of your choice.
-1. Scraping the HTML: make a demo using **Epicurious** or another website with a decent markup.
+1. How can we get data from the web? well, **2 options**
+1. Using **JSON API**: make a demo using **Chuck Norris API** (like in the slides) or another one of your choice.
+1. **Scraping the HTML**: make a demo using **Epicurious** (like in the slides) or another website with a decent markup.
