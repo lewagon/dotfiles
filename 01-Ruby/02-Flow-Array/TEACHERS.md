@@ -4,6 +4,10 @@
 1. First part on **conditions and loops**.
 1. Second part on **arrays**.
 
+## Rehearsal
+
+1. Start with a **5-minutes rehearsal** on data types they know (String, Fixnum, Float, Booleans), and on variables and methods
+
 ## Controlling the flow
 
 1. The flow we know **for the moment** is: top to bottom / line-by-line.
