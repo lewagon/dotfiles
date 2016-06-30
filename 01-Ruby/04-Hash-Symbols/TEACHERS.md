@@ -196,7 +196,7 @@ tag("a", "Le Wagon", { href: "http://lewagon.org", class: "btn" })
 # => <a href='http://lewagon.org' class='btn'>Le Wagon</a>
 ```
 
-## Data Format
+## Extracting data from CSV/JSON files
 
 1. Explain it's easy to extract data as array or hash from standard files like CSV/JSON.
 1. Introduce CSV and JSON with the slides.
