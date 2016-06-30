@@ -1,58 +1,176 @@
-## Program flow, if..else and for
+## Intro
 
-Standard ruby instuctions are read **line-by-line, top to bottom**. No some structure will modify this flow such as `if..else..end` or `for..end` structures. Let's play with conditions:
+1. Two-parts lecture.
+1. First part on conditions and loops.
+1. Second part on arrays.
+
+## Controlling the flow
+
+1. The flow we know (for the moment) is: Top to bottom / line-by-line.
+2. Conditions and loops will **change this flow**.
+
+### if
+
+Introduces a **condition**, let's play with it:
 
 ```ruby
-puts "Heads or tails?"
-answer = gets.chomp
+puts "How old are you?"
+print ">"
+age = gets.chomp.to_i
 
-if answer == "heads"
-  puts "you pick heads"
-elsif answer == "tails"
-  puts "you pick tails"
-else
-  puts "wrong choice"
-end
-
-flipped_coin = rand(0..1)
-if flipped_coin == 1
-  "Coin is Heads!"
-else
-  "Coin is Tails!"
+if age >= 18
+  puts "you can vote!"
 end
 ```
 
-Now let's play with `for` loop.
+### if / else
+
+For several branches, let's enhance our code:
 
 ```ruby
-for i in 0..10
-  puts i
+if age >= 18
+  puts "you can vote!"
+else
+  puts "too young to vote.."
 end
-for beatle in ["john", "paul", "ringo", "george"]
-  puts beatle
+```
+
+
+### Ternary operator
+
+For inline `if..else`, let's flip coins:
+
+```ruby
+puts "heads or tails?"
+choice = gets.chomp
+coin = ["heads", "coitailsn"].sample
+
+result = (choice == coin) ? "winner" : "looser"
+puts "#{result}, that was #{coin}"
+```
+
+### if / elsif / else
+
+- Be careful with **branch order**
+- **More specific** to **less specific**
+
+what's wrong with this program:
+
+```ruby
+hour = Time.now.hour
+
+if hour < 12
+  puts "Good morning!"
+elsif hour > 12
+  puts "Good afternoon!"
+elsif hour >= 20
+  puts "Good night!"
+else
+  puts "Lunch time!"
 end
+```
+
+### case / when / else
+
+If all branches depend on some variable value, like in this old school interface:
+
+```ruby
+puts "Which action? [read|write|exit]"
+action = gets.chomp
+
+case action
+when "read"
+  puts 'You are in READ mode'
+when "write"
+  puts 'You are in WRITE mode'
+when "exit"
+  puts 'Bye Bye'
+else
+  puts 'Wrong action'
+end
+```
+
+
+
+### Multiple conditions
+
+1. Speak of `&&`
+2. Speak of `||`
+3. Live-code on opening hours
+
+
+```ruby
+hour = Time.now.hour
+
+if (hour > 9 && hour < 12) || (hour > 14 && hour < 18)
+  puts "The shop is opened!"
+else
+  puts "Sorry, the shop is closed.."
+end
+```
+
+### Looping with `while`
+
+1. We are done with branch, **let's loop**
+2. Introduce `while` with an example
+3. Then refacto with `until`
+
+```ruby
+price_to_find = rand(5)
+choice = nil
+
+while choice != price_to_find
+  puts "How much (between 0$ and 4$)?"
+  choice = gets.chomp.to_i
+end
+
+puts "You won! Price was #{price_to_find}$"
 ```
 
 ## Arrays
 
-Let's play with an array
+1. Go step by step with the class on every CRUD action on Array
+1. **Define** an array (empty or not)
+1. **Read** in an array
+1. **Modify** an element
+1. **Append** an element
+1. **Delete** an element
+1. Get **array's size**
+1. Loop with `each`
+1. Pick custom methods in the ruby doc with the class and test them
+
 
 ```ruby
-beatles = []
-beatles << "jon"
+#Define an array
+empty_array = []                        # an empty array
+beatles = ["john", "ringo", "seb"]      # array of 3 strings
+
+# Get an element with its index
+beatles[0]  #=> "john"
+beatles[2]  #=> "seb"
+beatles[8]  #=> nil
+
+
+# Modify an element
+beatles[2] = "george"
+p beatles #=> ["john", "ringo", "george"]
+
+# Append an element
 beatles << "paul"
-beatles << "ringo"
-beatles << "george"
+p beatles #=> ["john", "ringo", "george", "paul"]
 
-puts beatles[0]
-beatles[0] = "John"
-puts beatles[0]
+# Delete an element
+# By element:
+beatles.delete("john")
+# By index:
+beatles.delete_at(2)
 
-for i in 0...beatles.count
-  beatles[i] = beatles[i].capitalize
+# Loop on elements
+beatles.each do |beatle|
+ puts "#{beatle} is in the Beatles"
 end
 
-p beatles
-```
 
-Tomorrow we'll see very powerfull methods to perform operations on arrays, **iterators**.
+# Look in the doc with students and test methods
+puts beatles.join(" and ")
+```
