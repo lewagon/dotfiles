@@ -106,18 +106,17 @@ Ask the class which one they prefer?
 
 ```ruby
 cities = [ ["London", "England", "Big Ben"], ["Paris", "France", "Tour Eiffel"]]
+puts cities[1][2]
+```
 
+or:
+
+```ruby
 cities = {
   "London" => { "country" => "England", "monument" => "Big Ben" },
   "Paris" => { "country" => "France", "monument" => "Tour Eiffel" }
 }
-```
-
-Now ask them what's the more intuitive to **use**?
-
-```ruby
-cities[1][2]
-cities["Paris"]["monument"]
+puts cities["Paris"]["monument"]
 ```
 
 
@@ -205,4 +204,4 @@ tag("a", "Le Wagon", { href: "http://lewagon.org", class: "btn" })
 1. You can install [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) to make JSON readable on your browser.
 
 
-Example: [GitHub Api: `/users/ssaunier`](https://api.github.com/users/ssaunier)
+Github API URL for user: https://api.github.com/users/ssaunier
