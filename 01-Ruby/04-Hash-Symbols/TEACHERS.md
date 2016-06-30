@@ -1,309 +1,208 @@
-## Recap
-So today's lecture is about hashes, but before we dive into it, let's take a quick look to the types in Ruby you already know.
+## Intro
+
+1. Rehearsal on data type we know
+1. First part on **Hash**
+1. Second part on **Symbol**
+1. Few words on CSV/JSON files and their easy "translation" to arrays and hashes
+
+## Rehearsal
 
 ```ruby
-# String
-"Hello"
-"Tomorrow you can sleep in!"
-
-# Fixnum
-42
-
-# Float
-3.1415
-
-# Boolean
-true
-false
-
-# Arrays
-[]
-
-array = []
-array << "friday"
-
-puts array.first # or puts array[0]
-array[0] = "Friday!!!"
-puts array.first
+42                          # Fixnum
+1.25                        # Float
+true                        # Boolean
+"hello world"               # String
+[ "a", "e", "i", "o", "u" ] # Array
 ```
 
-## Hashes
 
-Now let's take a look at this code
+## From arrays to hash
+
+Start by taking an example with two arrays
 
 ```ruby
-# index =>      0        1          2          3        4
-students =      ["John", "Mathieu", "Jolien", "Wendy", "Anna"]
-students_ages = [22,      24,        22,       39,      36]
+students =     [ "Peter", "Mary", "George", "Emma" ]
+student_ages = [ 24     , 25    , 22      ,  20    ]
 ```
 
-There are two arrays: one with student names and the other with student ages. How do we print student names altogether with their age?
+1. Write a program to display the list of students with their age with `each_with_index`
+1. Ask the class if it's a good modeling? What if there are **10k students**?
+1. Hard to maintain, we have to do better.
+1. What if we could do `students_age["Peter"]`? We can!
 
-What we could do is loop over the students with an `each_with_index`, since the `students` array and the `student_ages` array have that in common! Let's do that:
-
-```ruby
-students.each_with_index do |student, index|
-  age = students_ages[index]
-  puts "#{student} (#{age})"
-end
-```
-Now this works, but there are some potential risks with this:
-
-- what if both of the arrays aren't in the same order?
-- what if you want to delete a student?
-- or add one?
-- ...
-
-It's clear that this is not good.. and we need something else! It would be nice if we could do something like this: `student["Peter"]` and get Peter's age. This is where hashes come in play, let's rewrite our two arrays using one hash:
 
 ```ruby
-students = {
-  "John" => 22,
-  "Mathieu" => 24,
-  "Jolien" => 22,
-  "Wendy" => 39,
-  "Anna" => 36
+students_age = {
+  "Peter" => 24,
+  "Mary" => 25,
+  "George" => 22,
+  "Emma" => 20
 }
 ```
 
-You can compare a hash to a dictionary, within the dictionary you'll find words and definitions for those words, all the words are unique. There's never the same word twice being defined. A hash is a bit the same:
 
-- Our unique keys in the hash are: `"John"`, `"Mathieu"`... so the names
-- The value associated to each key is the age `22`, `24`...
+## `Hash`
 
-Note that hashes don't have indexes because there is no order in a hash (which you do have with an array). So what if we want to get Anna's age?
+1. Explain that a hash is a **collection of key/value** with **unique keys as in a dictionary**.
+1. Go through basic CRUD operation on `Hash`
+1. Explain how `each` works
+1. Show some custom methods from the doc like `has_key?`
 
-```ruby
-p students["Anna"]
-```
-Now what if we want to print out all the students with their age again? Luckily for us, we can also use the [each](http://ruby-doc.org/core-1.9.3/Hash.html#method-i-each) method. When you look at the docs you'll see that for a hash, `each` works this way:
 
 ```ruby
-# general syntax
-hash.each do |key, value|
-end
-```
-
-Let's write our code to print the students with their age:
-
-```ruby
-students.each do |name, age|
-  puts "#{name} (#{age})"
-end
-```
-
-### Hashes with more information
-
-What if we want to add more information about the student than just the age? We could put an array in the value field, but then we would bounce onto the same problem as earlier again, and get hard time with indexes. What we can do is use a hash again:
-
-```ruby
-students = {
-  "John" => {
-    "age" => 22,
-    "native_language" => "English"
-  },
-  "Mathieu" => {
-    "age" => 24,
-    "native_language" => "French"
-  },
-  "Jolien" => {
-    "age" => 22,
-    "native_language" => "Dutch"
-  },
-  "Wendy" => {
-    "age" => 39,
-    "native_language" => "English"
-  },
-  "Anna" => {
-    "age" => 36,
-    "native_language" => "Dutch"
-  }
+paris = {
+  "country" => "France",
+  "population" => 2211000
 }
-```
 
-So now you can add new fields within every student hash as you wish. Of course, our previous each is not going to work anymore, let's test it. So now it's printing out the entire hash instead of just the age. That's not what we want of course. Let's see how we can fix this!
 
-```ruby
-students.each do |name, student|
-  age = student["age"]
-  puts "#{name} (#{age})"
+# Reading keys
+paris["country"]     # => "France"
+paris["population"]  # => 2211000
+
+# Adding key/value
+paris["star_monument"] = "Tour Eiffel"
+
+# Updating value
+paris["population"] = 2211001
+
+# Deleting key/value
+paris.delete("star_monument")
+
+# each
+city.each do |key, value|
+  puts "The city #{key} is #{value}"
 end
-```
 
-### Recap Hash:
-
-Play around in `irb`:
-
-```
-students = {}
-students.class
-students.length
-students["Peter"] = 30
-students["Wendy"] = 25
-students["Wendy"] += 1
-```
-
-Important to remember
-
-- Keys are unique
-- There is no order
-
-### Hash Methods
-
-Yesterday we went over some methods that you can use on Arrays, now lets look on some that you can use on Hashes:
-
-```ruby
-p students.has_key?("Wendy")
-students.delete("Wendy")
-p students.has_key?("Wendy")
-p students.empty?
+# Custom methods
+p paris.has_key?("country")
+p paris.has_key?("language")
 p students.keys
 p students.values
 ```
 
-### Symbols
 
-Let's go to another example with hashes.
+### Similar to `Array`?
 
 ```ruby
-paris = {
+cities = [ "London", "Paris", "NYC" ]
+city = {
   "name" => "Paris",
   "population" => 2211000
 }
+```
 
-london = {
-  "name" => "London",
-  "population" => 8308000
+`Array` are accessed by **indexes**, `Hash` by **keys**
+
+```ruby
+cities[0]    # => "London"
+city["name"] # => "Paris"
+```
+
+
+### More readable for rich data
+
+
+Ask the class which one they prefer?
+
+```ruby
+cities = [ ["London", "England", "Big Ben"], ["Paris", "France", "Tour Eiffel"]]
+
+cities = {
+  "London" => { "country" => "England", "monument" => "Big Ben" },
+  "Paris" => { "country" => "France", "monument" => "Tour Eiffel" }
 }
 ```
 
-Now we have two hashes in two variables. But imagine you would have 1000 cities, the identifiers `"name"` and `"population"` will be 1000 times saved in our system. In ruby when working with hashes when you're using internal identifiers you should use symbols instead!
-
-Let's rewrite both our hashes to use symbols:
+Now ask them what's the more intuitive to **use**?
 
 ```ruby
+cities[1][2]
+cities["Paris"]["monument"]
+```
+
+
+## `Symbol`
+
+1. Explain that `Symbol` is a cousin of `String` used for **text identifiers**
+1. Start with hash with string keys.
+1. **Refacto with symbols** explaining it's more adapted.
+1. Introduce the new hash syntax when keys are symbols
+
+
+```
+# Not good!
 paris = {
-  :name => "Paris",
+  "country" => "France",
+  "population" => 2211000
+}
+
+# country and population are identifiers, not data, so:
+paris = {
+  :country => "France",
   :population => 2211000
 }
 
-london = {
-  :name => "London",
-  :population => 8308000
-}
-```
-
-The good thing about using symbols is that it is unique and in our memory it will only exist ones, if you have 2 hashes or 1000, it doesn't matter.
-
-Now actually, if you've done codeacademy, you'll have seen a different way of writing these symbols. That is actually the new ruby syntax. But it's important you know both ways, cause in examples online or older projects, you'll see them too. Let's take a look at how to write this in the new syntax:
-
-```ruby
+# refacto with new syntax
 paris = {
-  name: "Paris",
+  country: "France",
   population: 2211000
 }
 
-london = {
-  name: "London",
-  population: 8308000
-}
+p paris[:population] # new syntax does not change how we read a key
 ```
 
-### Let's play!
 
-Now what if we want to use our london hash to print out something like `"The name is London. The population is 8308000"`
+### `Symbol` vs `String`
+
+Tell them strings are for **data**. symbols for **identifiers**.
+
+```
+# Text data => String
+"Sebastien Saunier"
+"seb@lewagon.org"
+"ruby on Rails"
+"Paris"
+
+# Text identifiers => Symbol
+:fullname
+:email
+:skill
+:city
+```
+
+
+## `Hash` as last method argument
+
+
+1. Explain hash are often used as last optional argument
+1. Code with them an **HTML generator**
+1. Tease them saying Rails will use such helper methods
+
 
 ```ruby
-london.each do |key, value|
-  p "The #{key} is #{value}"
+def tag(name, content, attrs = {})
+  flat_attrs = attr.map { |key, val| "#{key}='#{val}'" }.join(" ")
+  "<#{name} #{flat_attr}>#{content}</#{name}>"
 end
-```
 
-How do I print out just the name of the city?
-
-```ruby
-p london[:name]
-```
-
-### Hash as a method parameter
-
-We've seen methods taking arrays as parameters, but you'll also see lots of methods taking a hash of "options" as a parameter. For instance.
-
-```ruby
-def tag(name, content, attributes = {})
-  html_attributes = ""
-  attributes.each do |key, value|
-    html_attributes << " #{key}='#{value}'"
-  end
-  return "<#{name}#{html_attributes}>#{content}</#{name}>"
-end
-
-p tag("h1", "Hello world")
+tag("h1", "Hello world")
 # => <h1>Hello world"</h1>
 
-p tag("h1", "Hello world", { class: "bold" })
-# => <h1 class='bold'>Hello world"</h1>
+tag("h1", "Hello world", { class: "bold" })
+# => <h1 class='bold'>Hello world</h1>
 
-p tag("a", "Le Wagon", { href: "http://lewagon.org", class: "btn" })
+tag("a", "Le Wagon", { href: "http://lewagon.org", class: "btn" })
 # => <a href='http://lewagon.org' class='btn'>Le Wagon</a>
 ```
 
-You'll see this a lot in Rails!
+## Data Format
 
-## Data Formats
-
-### CSV
-
-CSV is a file format where the data is comma separated. It's easy to read it in ruby and get each line as a ruby array! Let's play with it. Here is a simple CSV file.
-
-```
-# cities.csv
-Paris,2211000,"Tour Eiffel"
-London,8308000,"Big Ben"
-```
-
-And here's the parsing script. How simple!
-
-```ruby
-require "csv"
-CSV.foreach("cities.csv") do |row|
-  # row is an array. For first iteration:
-  # row[0] is "Paris"
-  # row[1] is 2211000, etc.
-end
-```
-
-### JSON
-
-While reading JSON files in ruby, you will often obtain a hash or an array of hashes. See this JSON file
-
-```
-# cities.json
-[
-  {
-    "name": "Paris",
-    "population": 2211000
-  },
-  {
-    "name": "London",
-    "population": 8308000
-  }
-]
-```
-
-Let's parse it in ruby, no big deal here.
+1. Tell them it's very easy to extract data as array or hash from standard files like CSV/JSON.
+1. Introduce CSV and JSON and the way we can parse them with the slides.
+1. Tell them there is a full course about Parsing the next Tuesday.
+1. If you have time, play a bit with Github API building an interactive program getting info on a user from the terminal. Of course, show them that the JSON returned by the API is easily transformed into a readable hash.
+1. You can install [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) to make JSON API responses readable on your browser.
 
 
-```ruby
-require "json"
-
-json_string = File.read("#{File.dirname(__FILE__)}/paris.json")
-cities = JSON.parse(json_string)
-# => [{ "name" => "Paris", "population" => 2211000 }, { "name" => "London", "population" => 8308000 }
-
-cities.each do |city|
-  puts "#{city['name']} has #{city['population']} inhabitants"
-end
-```
-
-**Disclaimer:** A JSON is neither a hash nor an array. It's a **structured text file** than can be easily parsed as ruby array or hashe. But it's still a text file, that you can read either in ruby, or in python, or in C++, or in whatever language you like. But it's cooler and simpler in ruby right? ;)
+Example: [GitHub Api: `/users/ssaunier`](https://api.github.com/users/ssaunier)
