@@ -106,7 +106,7 @@ Important to make this disclaimer to the students:
 
 1. `yield` is a Ruby keyword **executing** the block.
 1. **Live-code**: let's code a `timer` method.
-1. Go through the slides with schemes after you make this live-code.
+1. Go through the slides with schemas **AFTER you make this live-code**. To explain the flow of a method call with a block.
 
 
 Example **without block parameters**
