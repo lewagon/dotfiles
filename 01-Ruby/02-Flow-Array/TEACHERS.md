@@ -1,12 +1,12 @@
 ## Intro
 
 1. Two-parts lecture.
-1. First part on conditions and loops.
-1. Second part on arrays.
+1. First part on **conditions and loops**.
+1. Second part on **arrays**.
 
 ## Controlling the flow
 
-1. The flow we know (for the moment) is: Top to bottom / line-by-line.
+1. The flow we know **for the moment** is: top to bottom / line-by-line.
 2. Conditions and loops will **change this flow**.
 
 ### if
@@ -54,7 +54,7 @@ puts "#{result}, that was #{coin}"
 - Be careful with **branch order**
 - **More specific** to **less specific**
 
-what's wrong with this program:
+What's wrong with this program, let's fix it:
 
 ```ruby
 hour = Time.now.hour
@@ -72,7 +72,7 @@ end
 
 ### case / when / else
 
-If all branches depend on some variable value, like in this old school interface:
+When conditions all depend on a variable, ex. an old school UI:
 
 ```ruby
 puts "Which action? [read|write|exit]"
@@ -96,7 +96,7 @@ end
 
 1. Speak of `&&`
 2. Speak of `||`
-3. Live-code on opening hours
+3. Live-code a program giving a shop's opening hours
 
 
 ```ruby
@@ -114,6 +114,7 @@ end
 1. We are done with branch, **let's loop**
 2. Introduce `while` with an example
 3. Then refacto with `until`
+4. Here is ab example you can take
 
 ```ruby
 price_to_find = rand(5)
@@ -141,36 +142,34 @@ puts "You won! Price was #{price_to_find}$"
 
 
 ```ruby
-#Define an array
+# 1. Define an array
 empty_array = []                        # an empty array
 beatles = ["john", "ringo", "seb"]      # array of 3 strings
 
-# Get an element with its index
+# 2. Get an element with its index
 beatles[0]  #=> "john"
 beatles[2]  #=> "seb"
 beatles[8]  #=> nil
 
-
-# Modify an element
+# 3. Modify an element
 beatles[2] = "george"
 p beatles #=> ["john", "ringo", "george"]
 
-# Append an element
+# 4. Append an element
 beatles << "paul"
 p beatles #=> ["john", "ringo", "george", "paul"]
 
-# Delete an element
+# 5. Delete an element
 # By element:
 beatles.delete("john")
 # By index:
 beatles.delete_at(2)
 
-# Loop on elements
+# 6. Loop on elements
 beatles.each do |beatle|
  puts "#{beatle} is in the Beatles"
 end
 
-
-# Look in the doc with students and test methods
+# 7. Look in the doc and test methods with students, example:
 puts beatles.join(" and ")
 ```
