@@ -51,10 +51,9 @@ puts "#{result}, that was #{coin}"
 
 ### if / elsif / else
 
-- Be careful with **branch order**
-- **More specific** to **less specific**
-
-What's wrong with this program, let's fix it:
+1. Be careful with **branch order**
+2. **More specific** to **less specific**
+3. What's wrong with this program? let's fix it!
 
 ```ruby
 hour = Time.now.hour
@@ -72,7 +71,7 @@ end
 
 ### case / when / else
 
-When conditions all depend on a variable, ex. an old school UI:
+When conditions all depend on same variable, example: an old school UI
 
 ```ruby
 puts "Which action? [read|write|exit]"
@@ -90,13 +89,11 @@ else
 end
 ```
 
-
-
 ### Multiple conditions
 
-1. Speak of `&&`
-2. Speak of `||`
-3. Live-code a program giving a shop's opening hours
+1. Explain `&&`
+2. Explain `||`
+3. Live-code a program giving a **shop's opening hours**
 
 
 ```ruby
@@ -114,7 +111,7 @@ end
 1. We are done with branch, **let's loop**
 2. Introduce `while` with an example
 3. Then refacto with `until`
-4. Here is ab example you can take
+4. Here is an example you can take, **The Right Price!**
 
 ```ruby
 price_to_find = rand(5)
