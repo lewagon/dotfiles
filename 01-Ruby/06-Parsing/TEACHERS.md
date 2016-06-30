@@ -1,6 +1,6 @@
 ## Intro
 
-1. Start with our [parsing demo boilerplate](https://github.com/lewagon/parsing-demo)
+1. Before the lecture, **clone our [demo boilerplate](https://github.com/lewagon/parsing-demo)**
 1. First part describes data files (CSV / XML / JSON)
 1. Second part show how to read/write from CSV and JSON
 1. Last part show how to get data from the web **using an API** or **scraping a website**
