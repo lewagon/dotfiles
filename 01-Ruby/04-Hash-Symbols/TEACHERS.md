@@ -1,9 +1,9 @@
 ## Intro
 
-1. Rehearsal on data type we know
-1. First part on **Hash**
+1. We gonna start with quick rehearsal on data type we know
+1. Then first part on **Hash**
 1. Second part on **Symbol**
-1. Few words on CSV/JSON files and their easy "translation" to arrays and hashes
+1. Few words on CSV/JSON files and the way we can extract data as array/hash
 
 ## Rehearsal
 
@@ -26,9 +26,8 @@ student_ages = [ 24     , 25    , 22      ,  20    ]
 ```
 
 1. Write a program to display the list of students with their age with `each_with_index`
-1. Ask the class if it's a good modeling? What if there are **10k students**?
-1. Hard to maintain, we have to do better.
-1. What if we could do `students_age["Peter"]`? We can!
+1. Is it a good modeling? What if there are **10K students**? Hard to maintain, we can do better.
+1. What if we could do `students_age["Peter"]`? We can with Hash. Introduce it:
 
 
 ```ruby
@@ -43,18 +42,20 @@ students_age = {
 
 ## `Hash`
 
-1. Explain that a hash is a **collection of key/value** with **unique keys as in a dictionary**.
+1. Explain that a hash is a **collection of key/value pairs**.
+1. It has **unique keys** as a dictionary.
 1. Go through basic CRUD operation on `Hash`
-1. Explain how `each` works
+1. Explain how `each` works on a hash
 1. Show some custom methods from the doc like `has_key?`
 
 
 ```ruby
+# Defining a hash
+empty_hash = {}
 paris = {
   "country" => "France",
   "population" => 2211000
 }
-
 
 # Reading keys
 paris["country"]     # => "France"
@@ -70,19 +71,21 @@ paris["population"] = 2211001
 paris.delete("star_monument")
 
 # each
-city.each do |key, value|
-  puts "The city #{key} is #{value}"
+paris.each do |key, value|
+  puts "Paris #{key} is #{value}"
 end
 
 # Custom methods
 p paris.has_key?("country")
 p paris.has_key?("language")
-p students.keys
-p students.values
+p paris.keys
+p paris.values
 ```
 
 
 ### Similar to `Array`?
+
+Explain `Array` are accessed by **indexes**, `Hash` by **keys**
 
 ```ruby
 cities = [ "London", "Paris", "NYC" ]
@@ -90,18 +93,14 @@ city = {
   "name" => "Paris",
   "population" => 2211000
 }
-```
 
-`Array` are accessed by **indexes**, `Hash` by **keys**
-
-```ruby
+# Difference between Array and Hash
 cities[0]    # => "London"
 city["name"] # => "Paris"
 ```
 
 
 ### More readable for rich data
-
 
 Ask the class which one they prefer?
 
@@ -125,7 +124,7 @@ cities["Paris"]["monument"]
 ## `Symbol`
 
 1. Explain that `Symbol` is a cousin of `String` used for **text identifiers**
-1. Start with hash with string keys.
+1. Start coding a city hash with string keys.
 1. **Refacto with symbols** explaining it's more adapted.
 1. Introduce the new hash syntax when keys are symbols
 
@@ -143,19 +142,20 @@ paris = {
   :population => 2211000
 }
 
-# refacto with new syntax
+# Refacto with new syntax
 paris = {
   country: "France",
   population: 2211000
 }
 
-p paris[:population] # new syntax does not change how we read a key
+# New syntax does not change the way we read a key
+p paris[:population]
 ```
 
 
 ### `Symbol` vs `String`
 
-Tell them strings are for **data**. symbols for **identifiers**.
+Tell the students strings are for **data**. symbols for **identifiers**.
 
 ```
 # Text data => String
@@ -177,7 +177,7 @@ Tell them strings are for **data**. symbols for **identifiers**.
 
 1. Explain hash are often used as last optional argument
 1. Code with them an **HTML generator**
-1. Tease them saying Rails will use such helper methods
+1. Tease them saying Rails will use similar helper methods generating HTML.
 
 
 ```ruby
@@ -198,11 +198,11 @@ tag("a", "Le Wagon", { href: "http://lewagon.org", class: "btn" })
 
 ## Data Format
 
-1. Tell them it's very easy to extract data as array or hash from standard files like CSV/JSON.
-1. Introduce CSV and JSON and the way we can parse them with the slides.
-1. Tell them there is a full course about Parsing the next Tuesday.
-1. If you have time, play a bit with Github API building an interactive program getting info on a user from the terminal. Of course, show them that the JSON returned by the API is easily transformed into a readable hash.
-1. You can install [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) to make JSON API responses readable on your browser.
+1. Explain it's easy to extract data as array or hash from standard files like CSV/JSON.
+1. Introduce CSV and JSON with the slides.
+1. Don't spend too much time => **full course on Parsing is next Tuesday**.
+1. If you have time, play a bit with Github API building an interactive program getting info on a user from the terminal.
+1. You can install [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) to make JSON readable on your browser.
 
 
 Example: [GitHub Api: `/users/ssaunier`](https://api.github.com/users/ssaunier)
