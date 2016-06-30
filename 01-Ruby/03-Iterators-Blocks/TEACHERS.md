@@ -1,7 +1,7 @@
 ## Intro
 
 1. Two-parts lecture.
-1. First part on **iterators**, these very powerful methods on arrays.
+1. First part on **iterators**, these very powerful methods on array.
 1. Second part on **ruby blocks**, more advanced concepts.
 
 ## Rehearsal
@@ -12,17 +12,17 @@ Start with a quick rehearsal on array and range (5 minutes)
 ### Array
 
 ```ruby
-# Recap on CRUD array actions
+# Recap on array CRUD actions
 musicians = ['Jimmy Page', 'Robert Plant', 'John Paul Jones', 'John Bonham']
-musicians.size                  # => 4
-musicians[1]                    # => "Robert Plant"
-musicians << 'Miles Davis'      # => [..., 'Miles Davis']
+musicians.size
+musicians[1]
+musicians << 'Miles Davis'
 musicians[2] = "Michael Jackson"
 ```
 
 ### Range
 
-Quickly introduce `Range`, collection of **successive** elements:
+Like a collection of **successive** elements:
 
 ```ruby
 0..10         # including upper bound
@@ -38,9 +38,9 @@ Quickly introduce `Range`, collection of **successive** elements:
 
 ### Array iteration
 
-1. Loop with `for` on range's indices
-1. Loop with `for` on array's elements
-1. Say **it's not idiomatic** to introduce iterators.
+1. Code a loop with `for` on range's indices
+1. Code a loop with `for` on array's elements
+1. Conclude that **it's not idiomatic** to introduce iterators.
 
 ```ruby
 # Looping on indices
@@ -65,11 +65,11 @@ end
 1. `#map`: Let's build arrays of **upcased musician names** or **musican first names**.
 1. `#count`: Count musicians starting with "J"
 1. `#select`: Extract musicians starting with "J"
-1.  Many more => http://www.ruby-doc.org/core/Array.html
-1. **Today's first challenge** = pick the right iterators from this documentation
+1.  **Many more**: look at the doc http://www.ruby-doc.org/core/Array.html with the class.
+1. **Today's first challenge** => pick the right iterators from this documentation
 
 
-What the hell was this?
+**Transition to next part** => What the hell was this?
 
 ```ruby
 do |musician|
@@ -77,28 +77,29 @@ do |musician|
 end
 ```
 
-**Transition to next part** => This is a piece of code called a **block**
+This is a piece of code called a **block**!
 
 
 ## Blocks
 
 
-Blocks are pieces of code, a bit as **anonymous** methods.
+Blocks are pieces of code, a bit as **anonymous methods**.
 
 1. Use the slides for this intro
-1. Block Syntax (1-line or multi-line syntax)
-1. Block return, explain **it returns last statement as a method**
-1. Explain the block is just **an additional argument of the method**
+1. Introduce block syntax (1-line or multi-line)
+1. Explain that **block returns last statement as a method**
+1. Explain the block **can be passed as an argument to a method**
 
 
 ## Define methods using blocks
 
-
 ### DISCLAIMER
 
-- Advanced concept, normal if you struggle!
-- You'll probably never have to **define** such methods in your ruby/Rails career.
-- But you will **use** lots of them (like `each`, `map`, etc..)
+Important to make this disclaimer to the students:
+
+- Advanced concept, normal if they struggle!
+- They'll probably never have to **define** such methods in their ruby/Rails career.
+- But they will **use** lots of them (like `each`, `map`, etc..)
 
 
 ### `yield` calls the block
@@ -109,6 +110,7 @@ Blocks are pieces of code, a bit as **anonymous** methods.
 
 
 Example **without block parameters**
+
 ```ruby
 def timer
   start_time = Time.now
@@ -127,7 +129,6 @@ end
 ```
 
 Example **with block parameters**
-
 
 ```ruby
 def greet(name)
