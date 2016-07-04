@@ -168,7 +168,7 @@ beatles.delete_at(2)
 
 # 6. Loop on elements
 beatles.each do |beatle|
- puts "#{beatle} is in the Beatles"
+ puts "#{beatle} is in the Beatles"
 end
 
 # 7. Look in the doc and test methods with students, example:
