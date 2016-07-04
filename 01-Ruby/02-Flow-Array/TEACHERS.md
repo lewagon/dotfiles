@@ -47,7 +47,7 @@ For inline `if..else`, let's flip coins:
 ```ruby
 puts "heads or tails?"
 choice = gets.chomp
-coin = ["heads", "coitailsn"].sample
+coin = ["heads", "tails"].sample
 
 result = (choice == coin) ? "winner" : "looser"
 puts "#{result}, that was #{coin}"
