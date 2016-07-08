@@ -12,10 +12,10 @@ The `size_splitter` method should return an array of two arrays, the two groups 
 
 
 ```ruby
-words = %w(dog cat data ask win deal one two cow beer)
+words = %w(dog data ask win two beer)
 result = size_splitter(words, 3)
 
-# result => [["ask", "cat", "cow, "dog", "one", "two", "win"], ["beer", "data", "deal"]]
+# result => [["ask", "dog", "two", "win"], ["beer", "data"]]
 ```
 
 ### (Advanced) Block Splitter
