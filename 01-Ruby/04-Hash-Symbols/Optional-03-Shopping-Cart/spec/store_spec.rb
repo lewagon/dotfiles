@@ -71,7 +71,7 @@ describe '#store_items_to_s' do
 
     products.each_with_index do |p, idx|
       if PRODUCTS.include?(p.downcase)
-        expect(prices[idx]).to eq(PRICES[PRODUCTS.index(p)])
+        expect(prices[idx]).to eq(PRICES[PRODUCTS.index(p.downcase)])
       end
     end
 
