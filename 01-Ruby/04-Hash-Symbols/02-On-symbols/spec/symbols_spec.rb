@@ -1,7 +1,7 @@
 require "symbols"
 
 describe "quizz" do
-  it "answers are not all correct" do
+  it "should have correct quizz answers" do
     all_answers = are_identical_symbols_same_objects? &&
                   !are_identical_strings_same_objects?
     expect(all_answers).to be true
