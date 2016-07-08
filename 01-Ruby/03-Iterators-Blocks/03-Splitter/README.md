@@ -10,6 +10,14 @@ Implement a first method `size_splitter` which takes two parameters: an array, a
 
 The `size_splitter` method should return an array of two arrays, the two groups defined above.
 
+
+```ruby
+words = %w(dog cat data ask win deal one two cow beer)
+result = size_splitter(words, 3)
+
+# result => [["ask", "cat", "cow, "dog", "one", "two", "win"], ["beer", "data", "deal"]]
+```
+
 ### (Advanced) Block Splitter
 
 In the previous exercise, the abritrary rule was fixed. What if we wanted to let the method caller choose which rule to apply? We can do so with the power of blocks and `yield`!
@@ -20,6 +28,5 @@ Write a `block_splitter` method so that the following exemple works:
 beatles = [ "John", "Paul", "Ringo", "George" ]
 result = block_splitter(beatles) { |beatle| beatle.start_with?("P") }
 
-result
-# => [ [ "Paul" ], [ "John", "Ringo", "George" ] ]
+# result => [ [ "Paul" ], [ "John", "Ringo", "George" ] ]
 ```
