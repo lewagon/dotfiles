@@ -10,6 +10,6 @@ is here the formula:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/area-circle.png)
 
-Open the `lib/circle_area.rb` file and implement it!
+Open the `lib/demo.rb` file and implement it!
 
 There are **4 tests** checked by the `rake` command. Make sure they are all green!
