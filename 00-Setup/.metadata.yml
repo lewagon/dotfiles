@@ -3,3 +3,7 @@ lectures:
   - setup/1-setup
   - setup/2-terminal-101
   - setup/3-git-101
+
+lecture:
+  en:
+    video: 174322292
