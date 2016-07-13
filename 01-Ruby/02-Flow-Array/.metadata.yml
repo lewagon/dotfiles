@@ -4,8 +4,12 @@ lectures:
 lecture:
   fr:
     video: 133547571
-  en: 
-    video: 156882630
+  en:
+    video: 174505542
+  # Boris version in Belgium
+  # en:
+  #   video: 156882630
+
 livecode:
   fr:
     video: 133575663
