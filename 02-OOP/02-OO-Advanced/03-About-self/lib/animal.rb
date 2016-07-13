@@ -4,8 +4,8 @@ class Animal
     # TODO: what should this method return?
   end
 
-  def specie(specie)
-    @specie = specie
+  def species(species)
+    @species = species
     # TODO: what should this method return?
   end
 
@@ -20,6 +20,6 @@ class Animal
   end
 
   def to_s
-    "Name: #{@name}, Specie: #{@specie}, Color: #{@color}, Natural Habitat: #{@natural_habitat}"
+    "Name: #{@name}, Species: #{@species}, Color: #{@color}, Natural Habitat: #{@natural_habitat}"
   end
 end
