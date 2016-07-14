@@ -12,9 +12,9 @@ The rule is simple. Used inside an instance method, self will point to an object
 
 ## Specs
 
-### Get the tierce
+### Get the winning combination
 
-* Look at the following code with nested module, class and methods. Implement the return of each method, so that you get the winning tierce! when you are sure you have it, run the test to check it out!
+* Look at the following code with nested module, class and methods. Implement the return of each method, so that you get the winning combination! when you are sure you have it, run the test to check it out!
 
 ### Chaining with self [OPTIONAL]
 
