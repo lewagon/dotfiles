@@ -1,5 +1,5 @@
 def sum_odd_indexed(array)
-  # TODO: computes the sum of elements at odd indices (1, 3, 5, 7, etc.)
+  # TODO: computes the sum of elements at odd indexes (1, 3, 5, 7, etc.)
   #       You should make use Enumerable#each_with_index
 end
 
