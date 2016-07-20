@@ -8,19 +8,25 @@ gem called `gosu`.
 
 ## Installation
 
-### Mac OS X
-
 Open your terminal and run:
+
+### Mac OS X
 
 ```bash
 brew update
-brew install sdl2 libogg libvorbis
+brew install sdl2
 gem install gosu
 ```
 
 ### Linux
 
-You can follow [this tutorial](https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux)
+```bash
+sudo apt-get update
+sudo apt-get install build-essential libsdl2-dev\
+  libsdl2-ttf-dev libpango1.0-dev libgl1-mesa-dev\
+  libfreeimage-dev libopenal-dev libsndfile-dev
+gem install gosu
+```
 
 ## Tutorial
 
