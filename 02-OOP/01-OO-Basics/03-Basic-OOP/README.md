@@ -28,9 +28,9 @@ end
 - Up until 50 years old, the orange tree should not be dead.
 - After 50 years, the probability of dying increases.
 - No tree can live more than 100 years.
-- A tree will produce 100 fruits a year once it is older than 5 years.
-- A tree will produce 200 fruits a year when it is between 10 and 15 years old.
-- A tree will not produce any fruit after that.
+- A tree will produce 100 fruits a year once it is strictly older than 5 years.
+- A tree will produce 200 fruits a year when it reaches 10 years old.
+- A tree will not produce once it reaches 15 years old.
 - You should be able to pick a fruit from the tree.
 - You should be able to count how many fruits are left hanging on the tree.
 - Every year fruits which are not picked will fall off.
