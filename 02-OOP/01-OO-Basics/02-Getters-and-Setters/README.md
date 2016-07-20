@@ -3,7 +3,7 @@
 Getters and setters are elementary methods to read or write the values of instance variables. Remember, at any given time, an object's instance variables represent the current state (data) of the object.
 
 * Understand getters and setters by reading this [Quora post](http://www.quora.com/Ruby-programming-language/What-are-setters-and-getters-in-Ruby)
-* In your own words, explain it to your pair.
+* In your own words, explain it to your buddy.
 
 ## Specs
 

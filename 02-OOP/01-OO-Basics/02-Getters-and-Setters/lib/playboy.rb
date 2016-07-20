@@ -8,6 +8,7 @@ class Playboy
     @name        = name
     @nationality = nationality
     @hair_length = INITIAL_HAIR_LENGTH
+    @married = false
   end
 
   def meets(lady)
