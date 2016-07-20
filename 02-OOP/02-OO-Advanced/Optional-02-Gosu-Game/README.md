@@ -1,5 +1,3 @@
-https://github.com/jlnr/gosu/wiki/Ruby-Tutorial
-
 ## Background & Objectives
 
 As you know a bit about objects now, you may want to leave the
