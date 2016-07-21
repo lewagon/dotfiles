@@ -26,17 +26,17 @@ the Jukebox. Clicking on an artist name, you should go to the artist page.
 
 ### Artist page
 
-You should code a `/artist/:id` page displaying all albums from this artist.
+You should code a `/artists/:id` page displaying all albums from this artist.
 Clicking on an album name should redirect you to the album page.
 
 ### Album page
 
-You should code a `/album/:id` page displaying the tracks from this album.
+You should code a `/albums/:id` page displaying the tracks from this album.
 Clicking on a track name should redirect you to the track page.
 
 ### Track page
 
-You should code a `/track/:id` page displaying the track info, and hit the Youtube
+You should code a `/tracks/:id` page displaying the track info, and hit the Youtube
 API to get a video of this track. Embed it with an iframe.
 
 In the end, use [`ngrok`](https://ngrok.com/) to showcase your work in Slack (on OSX,
