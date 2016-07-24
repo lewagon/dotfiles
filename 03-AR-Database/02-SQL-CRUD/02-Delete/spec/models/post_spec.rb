@@ -21,13 +21,23 @@ describe Post do
 
   describe "destroy" do
     before do
-      DB.execute("INSERT INTO `posts` (title) VALUES ('Hello world')")
+      DB.execute("INSERT INTO `posts` (title) VALUES ('First post')")
+      DB.execute("INSERT INTO `posts` (title) VALUES ('Second post')")
+      DB.execute("INSERT INTO `posts` (title) VALUES ('Third post')")
     end
 
-    it "should remove the post from the database" do
+    it "should remove the post #1 from the database" do
       post = find(1)
       post.destroy
       expect(find(1)).to be_nil
+    end
+
+    it "should not remove other posts from the database" do
+      before_destroy_post_count = DB.execute("SELECT COUNT(*) FROM `posts`")[0][0]
+      post = find(1)
+      post.destroy
+      after_destroy_post_count = DB.execute("SELECT COUNT(*) FROM `posts`")[0][0]
+      expect(before_destroy_post_count - after_destroy_post_count).to eq(1)
     end
   end
 
