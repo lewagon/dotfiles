@@ -102,6 +102,8 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 
 You can work in a dedicated webfile, `parsing.rb` for instance. Try to extract the recipe names. In the beginning, you can just `puts` the information extracted.
 
+**Resource**: here's a [good starting point for Nokogiri](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
+
 ### Get response HTML data using `open-uri`
 
 Time to use your parsing code on a live URL with different queries (not just `[fraise|strawberry]`). Use the [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI:
