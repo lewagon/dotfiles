@@ -1,5 +1,3 @@
-⚠️ There's **no `rake`** for this exercise.
-
 Let's build a Food Delivery program for a restaurant.
 
 The software will run in **one restaurant** only, so no need to think of a multi-restaurant one (no need for a `Restaurant` model for instance).
