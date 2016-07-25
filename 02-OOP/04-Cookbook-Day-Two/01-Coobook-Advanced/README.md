@@ -1,19 +1,23 @@
 ⚠️ There's **no `rake`** for this exercise.
 
 We want to enhance our cookbook by finding recipes data from the web. We will use
-[🇫🇷 Marmiton](http://www.marmiton.org/) or [🇬🇧 Jamie Oliver's Recipes](http://www.jamieoliver.com/recipes/), because their markup structure is pretty clean (good candidate for parsing).
+[🇫🇷 Marmiton](http://www.marmiton.org/) or [🇬🇧 Jamie Oliver's Recipes](http://www.jamieoliver.com/recipes/), because their markup structure is pretty clean (good candidate for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
-You will add your HTML scraper feature to your already existing app (from Friday). You can copy paste your old and put it into today's folder with this command:
+You will add your HTML scraper feature to your already existing app (from Friday). You can copy paste your old code and put it into today's folder with this command (don't forget to copy the trailing dot!):
 
 ```bash
 $ cp -r ../../03-Cookbook-Day-One/01-Cookbook/lib .
 ```
 
-It will add a lib folder with your previous code from which you can start. You can also take the solution from the livecode (cf Slack).
+It will add fill the lib folder with your previous code from which you can start. You can also take the solution from the livecode (cf. Slack).
 
 Run the cookbook, make sure that the basic user actions (list / add / remove) are working!
+
+```bash
+ruby lib/app.rb
+```
 
 ## 1 - (User action) Import Recipes from the web
 
@@ -23,13 +27,13 @@ Here's how this feature should work:
 -- My CookBook --
 What do you wanna do?
 
-1. Import recipes from [Marmiton|Jamie Oliver]
-2. List all recipes
-3. Add a recipe
-4. Delete a recipe
+1. List all recipes
+2. Add a recipe
+3. Delete a recipe
+4. Import recipes from [Marmiton|Jamie Oliver]
 5. Exit
 
-> 1
+> 4
 Import recipes for which ingredient ?
 > [fraise|strawberry]
 
@@ -96,11 +100,11 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 # Up to you to find the relevant CSS query.
 ```
 
-Try to extract the recipe names.
+You can work in a dedicated webfile, `parsing.rb` for instance. Try to extract the recipe names. In the beginning, you can just `puts` the information extracted.
 
 ### Get response HTML data using `open-uri`
 
-Now that you know how to parse this HTML document the way you want, it's time to automate the first responsibility (requesting marmiton and getting returned HTML page). Use the [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI. You just open a URL:
+Time to use your parsing code on a live URL with different queries (not just `[fraise|strawberry]`). Use the [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI:
 
 ```ruby
 require 'nokogiri'
@@ -113,7 +117,9 @@ doc = Nokogiri::HTML(open(url), nil, 'utf-8')
 
 ### `Controller` / `View` / `Router`
 
-Once you have this parsing logic, time to add this new user action in your `Controller`. Use the pseudo-code above as a guide of this new method.
+Once you have this parsing logic, time to add this new user action in your `Controller`. Use the pseudo-code above as a guide of this new method. For your first attempt, you can copy-paste the working parsing code into your controller.
+
+Think about the **class** that should be used to hold information parsed from the web, what is it?
 
 Try it live running your Cookbook!
 
@@ -143,15 +149,15 @@ Once you're done with the "Search", try to add a feature to mark a recipe as tes
 
 Again, this new property should be stored in the CSV and displayed when listing recipes.
 
-If you're working with Marmiton, try modifying the web-import feature so that you can import recipes with a given difficulty (you might want to make this argument optional keeping the old import feature possible).
+Try modifying the web-import feature so that you can import recipes with a given difficulty (you might want to make this argument optional keeping the old import feature possible).
 
 ## 6 - (Optional) Service
 
-Try to extract the **parsing** logic out of the controller in a **Service Object**:
+Try to extract the **parsing** logic out of the controller in a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
 ```ruby
-class Marmiton  # or JamieOliver
-  def search_recipes(keyword)
+class JamieOliver # or Marmiton
+  def search(keyword)
     # TODO: return a list of `Recipe` built from scrapping the web.
   end
 end
