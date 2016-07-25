@@ -1,24 +1,23 @@
-## Background & Objectives
+⚠️ There's **no `rake`** for this exercise.
 
-You'll be building an interface for a delivery-restaurant.
+Let's build a Food Delivery program for a restaurant.
 
-The software will run in **one restaurant** only, so no need to think of a multi-restaurant one.
+The software will run in **one restaurant** only, so no need to think of a multi-restaurant one (no need for a `Restaurant` model for instance).
 
 The main components are:
 
-- **Employees** (manager, delivery guys)
+- **Employees** (managers, delivery guys)
 - **Customers** of the Restaurant
 - **Meals** that can be ordered
-- **Orders** made by customers, and assigned to a given delivery guy
+- **Orders** made by customers, and assigned to a given delivery guy.
 
-This is a fairly open-ended challenge. The expectations are loose, so you will be making most of the decisions about how to design and build your program. Talk it out with your pair. Go to the whiteboard. Have fun!
+This is a fairly open-ended challenge. The expectations are loose, so you will be making most of the decisions about how to design and build your program. Talk it out with your pair. Use a pen and paper. Have fun!
 
 ## Models
 
 ### What's on the menu?
 
-You restaurant sells food, so you must store somewhere the meals that can be ordered.
-A meal typically has a name and a price.
+You restaurant sells food, so you must store somewhere the meals that can be ordered. A meal typically has a name and a price.
 
 Write some code to model this, along with the repository which will read/write the meals from a CSV.
 
@@ -43,12 +42,11 @@ Again, this model needs its repository.
 
 ### Orders
 
-An order is taken for a given **customer**, a given **meal** (we'll simplify to say that
-an order is just one meal) and assigned to a given **delivery guy**.
+An order is taken for a given **customer**, a given **meal** (we'll simplify to say that an order is **just one meal**) and assigned to a given **delivery guy**.
 
 That's where our models become connected together. Write the model class and its repository.
 
-## Specs / User stories
+## User actions
 
 Please implement the following user stories in your program:
 
@@ -62,7 +60,7 @@ Please implement the following user stories in your program:
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
 
-### Bonus
+## Bonus
 
 We did not talk about **deleting** stuff here. What happens if you want to implement these new user stories?
 
