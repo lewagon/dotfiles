@@ -1,0 +1,1 @@
+No Karr lecture for today, this is Cookbook Day Two. Start the day with a quick reminder on what is the MVC architecture, and how adding a new feature to an existing MVC code impacts the code (model, then repo, then controller, then view, then router).
