@@ -65,4 +65,13 @@ describe "Order" do
       expect(order.customer).to be_a(Customer)
     end
   end
+
+  describe "#deliver!" do
+    it "should mark a recipe as delievered" do
+      order = Order.new
+      expect(order.delivered?).to be false
+      order.deliver!
+      expect(order.delivered?).to be true
+    end
+  end
 end

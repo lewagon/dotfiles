@@ -29,7 +29,8 @@ describe "OrdersController" do
     [
       [ "id", "username", "password", "role" ],
       [ 1, "paul", "secret", "manager" ],
-      [ 2, "john", "secret", "delivery_guy" ]
+      [ 2, "john", "secret", "delivery_guy" ],
+      [ 3, "ringo", "secret", "delivery_guy"]
     ]
   end
   let(:employees_csv_path) { "spec/support/employees.csv" }
@@ -52,6 +53,7 @@ describe "OrdersController" do
       [ 1, true,  1, 2, 1 ],
       [ 2, false, 1, 2, 2 ],
       [ 3, false, 2, 2, 3 ],
+      [ 4, false, 5, 3, 1 ]
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }
@@ -90,10 +92,42 @@ describe "OrdersController" do
       allow(STDIN).to receive(:gets).and_return("1", "2", "1")
       controller.add
 
-      expect(orders_repository.undelivered_orders.length).to eq(3)
-      expect(orders_repository.undelivered_orders[2].meal.name).to eq("Margherita")
-      expect(orders_repository.undelivered_orders[2].employee.username).to eq("paul")
-      expect(orders_repository.undelivered_orders[2].customer.name).to eq("John Bonham")
+      expect(orders_repository.undelivered_orders.length).to eq(4)
+      expect(orders_repository.undelivered_orders[3].meal.name).to eq("Margherita")
+      expect(orders_repository.undelivered_orders[3].employee.username).to eq("paul")
+      expect(orders_repository.undelivered_orders[3].customer.name).to eq("John Bonham")
+    end
+  end
+
+  describe "#list_my_orders" do
+    it "should take an Employee instance as a parameter" do
+      expect(OrdersController.instance_method(:list_my_orders).arity).to eq(1)
+    end
+
+    it "should list the undelivered orders of john" do
+      controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
+      ringo = employees_repository.find(3)  # ringo is a delivery guy
+      expect(STDOUT).to receive(:puts).with(/Paul McCartney.*Calzone/)
+      controller.list_my_orders(ringo)
+    end
+  end
+
+  describe "#mark_as_delivered" do
+    it "should take an Employee instance as a parameter" do
+      expect(OrdersController.instance_method(:list_my_orders).arity).to eq(1)
+    end
+
+    it "should ask the delivery guy for a meal id and mark it as delivered" do
+      controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
+
+      # Ringo wants to mark as delivered number 4.
+      allow(STDIN).to receive(:gets).and_return("4")
+      ringo = employees_repository.find(3)  # ringo is a delivery guy
+      controller.mark_as_delivered(ringo)
+
+      # Reload from CSV
+      new_order_repository = OrdersRepository.new(orders_csv_path, meals_repository, employees_repository, customers_repository)
+      expect(new_order_repository.undelivered_orders.map(&:id)).not_to include(4)
     end
   end
 end
