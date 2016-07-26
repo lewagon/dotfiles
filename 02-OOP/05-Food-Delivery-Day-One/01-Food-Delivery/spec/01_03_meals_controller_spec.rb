@@ -1,4 +1,3 @@
-require 'open3'
 require_relative "support/csv_helper.rb"
 
 begin
