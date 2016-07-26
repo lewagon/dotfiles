@@ -39,7 +39,7 @@ describe "EmployeesRepository" do
       expect(EmployeesRepository.instance_method(:initialize).arity).to eq(1)
     end
 
-    it "should not crash if the CSV path does not exist yet. Hint: use File.exists?" do
+    it "should not crash if the CSV path does not exist yet. Hint: use File.exist?" do
       expect { EmployeesRepository.new('unexisting_file.csv') }.not_to raise_error
     end
 
