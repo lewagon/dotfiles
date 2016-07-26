@@ -36,7 +36,7 @@ describe "OrdersRepository" do
     ]
   end
   let(:employees_csv_path) { "spec/support/employees.csv" }
-  let(:employees_repository) { EmployeesRepository.new(meals_csv_path) }
+  let(:employees_repository) { EmployeesRepository.new(employees_csv_path) }
 
   let(:customers) do
     [
@@ -47,18 +47,18 @@ describe "OrdersRepository" do
     ]
   end
   let(:customers_csv_path) { "spec/support/customers.csv" }
-  let(:customers_repository) { CustomersRepository.new(meals_csv_path) }
+  let(:customers_repository) { CustomersRepository.new(customers_csv_path) }
 
   let(:orders) do
     [
-      [ "id", "delivered", "meal_id", "customer_id", "employee_id" ],
+      [ "id", "delivered", "meal_id", "employee_id", "customer_id" ],
       [ 1, true,  1, 2, 1 ],
       [ 2, false, 1, 2, 2 ],
       [ 3, false, 2, 2, 3 ],
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }
-  let(:orders_repository) { OrdersRepository.new(meals_csv_path) }
+  let(:orders_repository) { OrdersRepository.new(orders_csv_path) }
 
   before(:each) do
     CsvHelper.write_csv(meals_csv_path, meals)
