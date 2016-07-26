@@ -1,7 +1,7 @@
 First, we'll need to copy the code from yesterday:
 
 ```bash
-cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} .
+cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} .  # trailing dot is important
 ```
 
 Run the `rake`. The code which was working yesterday should still work. If not, open a ticket.
