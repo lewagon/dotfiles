@@ -9,20 +9,39 @@ The main components are:
 - **Meals** that can be ordered
 - **Orders** made by customers, and assigned to a given delivery guy.
 
-This is a fairly open-ended challenge. The expectations are loose, so you will be making most of the decisions about how to design and build your program. Talk it out with your pair. Use a pen and paper. Have fun!
+## 1 - (`Meal`) What's on the menu?
 
-## Models
+Your restaurant sells food, so you must store somewhere the meals that can be ordered. A meal typically has a name and a price. Write some code to model this, along with the repository which will read/write the meals from a CSV.
 
-### What's on the menu?
+Then let's move to the controller. Here are the user actions we want to implement:
 
-You restaurant sells food, so you must store somewhere the meals that can be ordered. A meal typically has a name and a price.
+- List all meals available in the restaurant
+- Add a new meal (later, we'll restrict that to the manager role)
 
-Write some code to model this, along with the repository which will read/write the meals from a CSV.
+The `rake` should help you go through all these steps.
 
-### Restaurant's employees
+## 2 - We need a router!
 
-The restaurant has two types of employees, **managers** and **delivery guys**.
-As soon as you start your ruby code, the employee will have to sign in (manager/delivery guys
+We haven't launch our app code yet. We need a router and a `run` method. Go back to the **Cookbook** code to get some inspiration. Make sure that you can run the two meals-related user actions when launching the program:
+
+```bash
+ruby app.rb
+```
+
+## 3 - (`Customer`) Who's always right?
+
+We will maintain a list of all our customers. When a new customer calls to order, we'll first need to add him/her to our list. A customer has a name and an address. Work on the model, the repository to store the CSV (it's a different file than `meals.csv`!) and finally the controller to implement the following user actions:
+
+- List all customers available in the restaurant
+- Add a new customer (later, we'll restrict that to the manager role as well)
+
+Once your controller methods are implemented, add them to the router! Make sure your 4 user actions work before moving on to the next feature.
+
+-- WIP --
+
+## 4 - Employee
+
+The restaurant has two types of employees, **managers** and **delivery guys**. As soon as you start your ruby code, the employee will have to sign in (manager/delivery guys
 don't have the same privileges). So the employee model should have something to login (user / password)
 and a way to tell if he's a manager or not.
 
@@ -32,11 +51,6 @@ employees through the ruby application)
 Open your `employees.csv` file and manually add some employees.
 
 NB: Their password would be stored in clear, is that a good idea? What could we do?
-
-### The customer is king
-
-A customer is another model. We'll store a name and an address where the delivery guy can go deliver.
-Again, this model needs its repository.
 
 ### Orders
 
