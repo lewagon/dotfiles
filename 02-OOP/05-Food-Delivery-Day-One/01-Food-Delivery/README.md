@@ -41,6 +41,10 @@ We will maintain a list of all our customers. When a new customer calls to order
 
 Once your controller methods are implemented, add them to the router! Make sure your 4 user actions work before moving on to the next feature.
 
+```bash
+ruby app.rb
+```
+
 Done? Good! Time to `commit` and `push`.
 
 ## 4 - (Optional) Inheritance to the rescue
@@ -49,9 +53,7 @@ When you look at `MealsRepository` and `CustomersRepository`, don't you see simi
 
 Reminder: as it's an optional section, you can skip it and come back to it later.
 
--- WIP --
-
-## 4 - Employee
+## 5 - (`Employee`) Who's working here?
 
 The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeesRepository` from a CSV file that we fill manually (no need for an `add` action).
 
@@ -63,13 +65,21 @@ id,name,password,role
 2,john,secret,delivery_guy
 ```
 
-With that information, we can implement a **login** logic in our app to have two menus in the router depending no the user role: a menu for the manager, and a menu for the delivery guy (with less user actions available).
+With that information, we can implement a **login** logic in our app to have two menus in the router depending on the user role: a menu for the manager, and a menu for the delivery guy (with less user actions available).
+
+To handle that, we'll introduce a notion of **session**. At the router level, we'll store the logged in user in a session.
 
 Optional: Their password would be stored in clear, is that a good idea? What could we do?
 
+Now when you run the food delivery app, the first thing you can do is to **sign in**, and then the menu printed to you should be **dependent on your role**:
+
+```bash
+ruby app.rb
+```
+
 Done? Good! Time to `commit` and `push`.
 
-## 5 - (`Order`) Time to link all the models!
+## 6 - (`Order`) Time to link all the models!
 
 An order is taken for a given **customer**, a given **meal** (we'll simplify to say that an order is **just one meal**) and assigned to a given **delivery guy**.
 
@@ -87,7 +97,7 @@ Make sure that the following **user stories** are implemented in your program:
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
 
-## 6 - (Optional) - Destroy actions
+## 7 - (Optional) - Destroy actions
 
 We did not talk about **deleting** stuff here. What happens if you want to implement these new user stories?
 
