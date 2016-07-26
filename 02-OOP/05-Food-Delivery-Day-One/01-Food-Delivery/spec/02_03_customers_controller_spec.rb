@@ -44,7 +44,7 @@ describe "CustomersController" do
   end
 
   describe "#add" do
-    it "should ask the user for a name and price, then store the new customer" do
+    it "should ask the user for a name and address, then store the new customer" do
       controller = CustomersController.new(repository)
       module Kernel; def gets; STDIN.gets; end; end
       allow(STDIN).to receive(:gets).and_return("Michael Jackson", "Gary")
