@@ -1,56 +1,51 @@
-## Background & Objectives
+First, we'll need to copy the code from yesterday:
 
-You'll be building an interface for a delivery-restaurant.
+```bash
+cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} .
+```
 
-The software will run in **one restaurant** only, so no need to think of a multi-restaurant one.
+Run the `rake`. The code which was working yesterday should still work. If not, open a ticket.
 
-The main components are:
+Do not hesitate to look at the [livecode's correction](http://github.com/lewagon/food-delivery-day-one). The goal of today is to implement the employee logic and let manager add orders, delivery guys mark them as delivered.
 
-- **Employees** (manager, delivery guys)
-- **Customers** of the Restaurant
-- **Meals** that can be ordered
-- **Orders** made by customers, and assigned to a given delivery guy
 
-This is a fairly open-ended challenge. The expectations are loose, so you will be making most of the decisions about how to design and build your program. Talk it out with your pair. Go to the whiteboard. Have fun!
+---
 
-## Models
+[...]
 
-### What's on the menu?
+## 5 - (`Employee`) Who's working here?
 
-You restaurant sells food, so you must store somewhere the meals that can be ordered.
-A meal typically has a name and a price.
+The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeesRepository` from a CSV file that we fill manually (no need for an `add` action).
 
-Write some code to model this, along with the repository which will read/write the meals from a CSV.
+Open your `employees.csv` file and manually add some employees:
 
-### Restaurant's employees
+```bash
+id,name,password,role
+1,paul,secret,manager
+2,john,secret,delivery_guy
+```
 
-The restaurant has two types of employees, **managers** and **delivery guys**.
-As soon as you start your ruby code, the employee will have to sign in (manager/delivery guys
-don't have the same privileges). So the employee model should have something to login (user / password)
-and a way to tell if he's a manager or not.
+With that information, we can implement a **login** logic in our app to have two menus in the router depending on the user role: a menu for the manager, and a menu for the delivery guy (with less user actions available).
 
-Again, write some code for the model, along with its **read-only** repository (we won't create
-employees through the ruby application)
+To handle that, we'll introduce a notion of **session**. At the router level, we'll store the logged in user in a session.
 
-Open your `employees.csv` file and manually add some employees.
+Optional: Their password would be stored in clear, is that a good idea? What could we do?
 
-NB: Their password would be stored in clear, is that a good idea? What could we do?
+Now when you run the food delivery app, the first thing you can do is to **sign in**, and then the menu printed to you should be **dependent on your role**:
 
-### The customer is king
+```bash
+ruby app.rb
+```
 
-A customer is another model. We'll store a name and an address where the delivery guy can go deliver.
-Again, this model needs its repository.
+Done? Good! Time to `commit` and `push`.
 
-### Orders
+## 6 - (`Order`) Time to link all the models!
 
-An order is taken for a given **customer**, a given **meal** (we'll simplify to say that
-an order is just one meal) and assigned to a given **delivery guy**.
+An order is taken for a given **customer**, a given **meal** (we'll simplify to say that an order is **just one meal**) and assigned to a given **delivery guy**. Moreover, the `Order` model should store the info that it has been delivered (or not).
 
-That's where our models become connected together. Write the model class and its repository.
+That's where our models become connected together. Write the `Order` model class and its repository.
 
-## Specs / User stories
-
-Please implement the following user stories in your program:
+Then, make sure that the following **user stories** are implemented in your program:
 
 - As an employee, I can log in
 - As a manager, I can add a meal
@@ -62,7 +57,7 @@ Please implement the following user stories in your program:
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
 
-### Bonus
+## 7 - (Optional) - Destroy actions
 
 We did not talk about **deleting** stuff here. What happens if you want to implement these new user stories?
 
