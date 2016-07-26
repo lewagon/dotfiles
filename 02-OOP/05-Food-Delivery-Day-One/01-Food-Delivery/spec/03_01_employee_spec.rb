@@ -56,24 +56,24 @@ describe "Employee" do
   end
 
   describe "#manager?" do
-    it "should return the true is the employee is a manager" do
+    it "should return true is the employee is a manager" do
       employee = Employee.new({ role: 'manager' })
       expect(employee.manager?).to be true
     end
 
-    it "should return the true is the employee is a delivery guy" do
+    it "should return false is the employee is a delivery guy" do
       employee = Employee.new({ role: 'delivery_guy' })
       expect(employee.manager?).to be false
     end
   end
 
   describe "#delivery_guy?" do
-    it "should return the true is the employee is a delivery guy" do
+    it "should return true is the employee is a delivery guy" do
       employee = Employee.new({ role: 'delivery_guy' })
       expect(employee.delivery_guy?).to be true
     end
 
-    it "should return the true is the employee is a manager" do
+    it "should return false is the employee is a manager" do
       employee = Employee.new({ role: 'manager' })
       expect(employee.delivery_guy?).to be false
     end
