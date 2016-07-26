@@ -1,10 +1,14 @@
 begin
   require_relative "../app/models/customer.rb"
-rescue LoadError
-  describe "Customer" do
-    it "You need a `customer.rb` file for your `Customer` model" do
-      fail
+rescue LoadError => e
+  if e.message =~ /customer\.rb/
+    describe "Customer" do
+      it "You need a `customer.rb` file for your `Customer` model" do
+        fail
+      end
     end
+  else
+    raise e
   end
 end
 
@@ -37,8 +41,8 @@ describe "Customer" do
     end
   end
 
-  describe "#price" do
-    it "should return the price of the Customer" do
+  describe "#address" do
+    it "should return the address of the Customer" do
       customer = Customer.new({ address: "Liverpool" })
       expect(customer.address).to eq("Liverpool")
     end

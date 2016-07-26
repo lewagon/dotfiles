@@ -3,11 +3,15 @@ require_relative "support/csv_helper.rb"
 begin
   require_relative "../app/controllers/customers_controller.rb"
   require_relative "../app/repositories/customers_repository.rb"
-rescue LoadError
-  describe "CustomersController" do
-    it "You need a `customers_controller.rb` file for your `CustomersController`" do
-      fail
+rescue LoadError => e
+  if e.message =~ /customers_repository\.rb/ || e.message =~ /customers_controller\.rb/
+    describe "CustomersController" do
+      it "You need a `customers_controller.rb` file for your `CustomersController`" do
+        fail
+      end
     end
+  else
+    fail e
   end
 end
 

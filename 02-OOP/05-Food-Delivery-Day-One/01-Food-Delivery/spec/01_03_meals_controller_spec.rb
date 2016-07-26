@@ -3,11 +3,15 @@ require_relative "support/csv_helper.rb"
 begin
   require_relative "../app/controllers/meals_controller.rb"
   require_relative "../app/repositories/meals_repository.rb"
-rescue LoadError
-  describe "MealsController" do
-    it "You need a `meals_controller.rb` file for your `MealsController`" do
-      fail
+rescue LoadError => e
+  if e.message =~ /meals_repository\.rb/ || e.message =~ /meals_controller\.rb/
+    describe "MealsController" do
+      it "You need a `meals_controller.rb` file for your `MealsController`" do
+        fail
+      end
     end
+  else
+    raise e
   end
 end
 

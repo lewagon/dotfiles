@@ -1,10 +1,14 @@
 begin
   require_relative "../app/models/employee.rb"
-rescue LoadError
-  describe "Employee" do
-    it "You need a `employee.rb` file for your `Employee` model" do
-      fail
+rescue LoadError => e
+  if e.message =~ /employee\.rb/
+    describe "Employee" do
+      it "You need a `employee.rb` file for your `Employee` model" do
+        fail
+      end
     end
+  else
+    raise e
   end
 end
 
