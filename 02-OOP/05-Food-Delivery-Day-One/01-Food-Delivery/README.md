@@ -81,11 +81,11 @@ Done? Good! Time to `commit` and `push`.
 
 ## 6 - (`Order`) Time to link all the models!
 
-An order is taken for a given **customer**, a given **meal** (we'll simplify to say that an order is **just one meal**) and assigned to a given **delivery guy**.
+An order is taken for a given **customer**, a given **meal** (we'll simplify to say that an order is **just one meal**) and assigned to a given **delivery guy**. Moreover, the `Order` model should store the info that it has been delivered (or not).
 
 That's where our models become connected together. Write the `Order` model class and its repository.
 
-Make sure that the following **user stories** are implemented in your program:
+Then, make sure that the following **user stories** are implemented in your program:
 
 - As an employee, I can log in
 - As a manager, I can add a meal
