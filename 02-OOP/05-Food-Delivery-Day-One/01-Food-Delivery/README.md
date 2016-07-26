@@ -18,7 +18,9 @@ Then let's move to the controller. Here are the user actions we want to implemen
 - List all meals available in the restaurant
 - Add a new meal (later, we'll restrict that to the manager role)
 
-The `rake` should help you go through all these steps.
+The `rake` should help you go through all these steps. Follow your guide!
+
+Done? Good! Time to `commit` and `push`.
 
 ## 2 - We need a router!
 
@@ -27,6 +29,8 @@ We haven't launch our app code yet. We need a router and a `run` method. Go back
 ```bash
 ruby app.rb
 ```
+
+Done? Good! Time to `commit` and `push`.
 
 ## 3 - (`Customer`) Who's always right?
 
@@ -37,30 +41,41 @@ We will maintain a list of all our customers. When a new customer calls to order
 
 Once your controller methods are implemented, add them to the router! Make sure your 4 user actions work before moving on to the next feature.
 
+Done? Good! Time to `commit` and `push`.
+
+## 4 - (Optional) Inheritance to the rescue
+
+When you look at `MealsRepository` and `CustomersRepository`, don't you see similarities? We want to stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), so time to introduce a parent class, `BaseRepository`, which will hold the common behavior.
+
+Reminder: as it's an optional section, you can skip it and come back to it later.
+
 -- WIP --
 
 ## 4 - Employee
 
-The restaurant has two types of employees, **managers** and **delivery guys**. As soon as you start your ruby code, the employee will have to sign in (manager/delivery guys
-don't have the same privileges). So the employee model should have something to login (user / password)
-and a way to tell if he's a manager or not.
+The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeesRepository` from a CSV file that we fill manually (no need for an `add` action).
 
-Again, write some code for the model, along with its **read-only** repository (we won't create
-employees through the ruby application)
+Open your `employees.csv` file and manually add some employees:
 
-Open your `employees.csv` file and manually add some employees.
+```bash
+id,name,password,role
+1,paul,secret,manager
+2,john,secret,delivery_guy
+```
 
-NB: Their password would be stored in clear, is that a good idea? What could we do?
+With that information, we can implement a **login** logic in our app to have two menus in the router depending no the user role: a menu for the manager, and a menu for the delivery guy (with less user actions available).
 
-### Orders
+Optional: Their password would be stored in clear, is that a good idea? What could we do?
+
+Done? Good! Time to `commit` and `push`.
+
+## 5 - (`Order`) Time to link all the models!
 
 An order is taken for a given **customer**, a given **meal** (we'll simplify to say that an order is **just one meal**) and assigned to a given **delivery guy**.
 
-That's where our models become connected together. Write the model class and its repository.
+That's where our models become connected together. Write the `Order` model class and its repository.
 
-## User actions
-
-Please implement the following user stories in your program:
+Make sure that the following **user stories** are implemented in your program:
 
 - As an employee, I can log in
 - As a manager, I can add a meal
@@ -72,7 +87,7 @@ Please implement the following user stories in your program:
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
 
-## Bonus
+## 6 - (Optional) - Destroy actions
 
 We did not talk about **deleting** stuff here. What happens if you want to implement these new user stories?
 
