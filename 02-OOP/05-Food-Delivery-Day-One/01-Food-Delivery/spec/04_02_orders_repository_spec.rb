@@ -67,6 +67,11 @@ describe "OrdersRepository" do
     CsvHelper.write_csv(orders_csv_path, orders)
   end
 
+  def elements(repo)
+    repo.instance_variable_get(:@orders) ||
+      repo.instance_variable_get(:@elements)
+  end
+
   describe "#initialize" do
     it "should take one argument: the CSV file path to store orders, and 3 repository instances for meal, employee and customer" do
       expect(OrdersRepository.instance_method(:initialize).arity).to eq(4)
@@ -83,20 +88,20 @@ describe "OrdersRepository" do
       expect(repo.instance_variable_get(:@customers_repository)).to be_a(CustomersRepository)
     end
 
-    it "store orders in memory in an instance variable `@orders`" do
+    it "store orders in memory in an instance variable `@orders` or `@elements`" do
       repo = OrdersRepository.new(orders_csv_path, meals_repository, employees_repository, customers_repository)
-      expect(repo.instance_variable_get(:@orders)).to be_a(Array)
+      expect(elements(repo)).to be_a(Array)
     end
 
     it "loads existing orders from the CSV" do
       repo = OrdersRepository.new(orders_csv_path, meals_repository, employees_repository, customers_repository)
-      loaded_orders = repo.instance_variable_get(:@orders) || []
+      loaded_orders = elements(repo) || []
       expect(loaded_orders.length).to eq(3)
     end
 
     it "fills the `@orders` with instance of `Order`, setting the correct types on each property" do
       repo = OrdersRepository.new(orders_csv_path, meals_repository, employees_repository, customers_repository)
-      loaded_orders = repo.instance_variable_get(:@orders) || []
+      loaded_orders = elements(repo) || []
       fail if loaded_orders.empty?
       loaded_orders.each do |order|
         expect(order).to be_a(Order)

@@ -87,9 +87,13 @@ describe "OrdersController" do
     it "should ask the user for a meal, a customer and an employee to be assigned" do
       controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
 
-      # TODO: simulate gets the three indexes.
-
+      allow(STDIN).to receive(:gets).and_return("1", "2", "1")
       controller.add
+
+      expect(orders_repository.undelivered_orders.length).to eq(3)
+      expect(orders_repository.undelivered_orders[2].meal.name).to eq("Margherita")
+      expect(orders_repository.undelivered_orders[2].employee.username).to eq("paul")
+      expect(orders_repository.undelivered_orders[2].customer.name).to eq("John Bonham")
     end
   end
 end

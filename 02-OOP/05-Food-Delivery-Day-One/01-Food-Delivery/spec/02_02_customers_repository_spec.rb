@@ -30,6 +30,11 @@ describe "CustomersRepository" do
     CsvHelper.write_csv(csv_path, customers)
   end
 
+  def elements(repo)
+    repo.instance_variable_get(:@customers) ||
+      repo.instance_variable_get(:@elements)
+  end
+
   describe "#initialize" do
     it "should take one argument: the CSV file path to store customers" do
       expect(CustomersRepository.instance_method(:initialize).arity).to eq(1)
@@ -39,20 +44,20 @@ describe "CustomersRepository" do
       expect { CustomersRepository.new('unexisting_file.csv') }.not_to raise_error
     end
 
-    it "store customers in memory in an instance variable `@customers`" do
+    it "store customers in memory in an instance variable `@customers` or `@elements`" do
       repo = CustomersRepository.new(csv_path)
-      expect(repo.instance_variable_get(:@customers)).to be_a(Array)
+      expect(elements(repo)).to be_a(Array)
     end
 
     it "loads existing customers from the CSV" do
       repo = CustomersRepository.new(csv_path)
-      loaded_customers = repo.instance_variable_get(:@customers) || []
+      loaded_customers = elements(repo) || []
       expect(loaded_customers.length).to eq(3)
     end
 
     it "fills the `@customers` with instance of `Customer`, setting the correct types on each property" do
       repo = CustomersRepository.new(csv_path)
-      loaded_customers = repo.instance_variable_get(:@customers) || []
+      loaded_customers = elements(repo) || []
       fail if loaded_customers.empty?
       loaded_customers.each do |customer|
         expect(customer).to be_a(Customer)
