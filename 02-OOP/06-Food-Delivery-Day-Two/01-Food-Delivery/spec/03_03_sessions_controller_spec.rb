@@ -38,10 +38,11 @@ describe "SessionsController" do
   describe "#sign_in" do
     module Kernel; def gets; STDIN.gets; end; end
 
-    it "should ask for a username and a password, find the employee and return it if the password matches" do
+    it "should ask for a username and a password, find the employee, say hello if the employee exists and password match + return the employee" do
       controller = SessionsController.new(repository)
-      expect(STDOUT).to receive(:puts).with(/username/i).once
-      expect(STDOUT).to receive(:puts).with(/password/i).once
+      expect(STDOUT).to receive(:puts).with(/username/i)
+      expect(STDOUT).to receive(:puts).with(/password/i)
+      expect(STDOUT).to receive(:puts).with(/welcome/i)
       allow(STDIN).to receive(:gets).and_return("paul", "secret")
       employee = controller.sign_in
 
@@ -55,6 +56,7 @@ describe "SessionsController" do
       expect(STDOUT).to receive(:puts).with(/username/i).twice
       expect(STDOUT).to receive(:puts).with(/password/i).twice
       expect(STDOUT).to receive(:puts).with(/wrong credentials/i)
+      expect(STDOUT).to receive(:puts).with(/welcome/i)
       employee = controller.sign_in
     end
 
@@ -64,6 +66,7 @@ describe "SessionsController" do
       expect(STDOUT).to receive(:puts).with(/username/i).twice
       expect(STDOUT).to receive(:puts).with(/password/i).twice
       expect(STDOUT).to receive(:puts).with(/wrong credentials/i)
+      expect(STDOUT).to receive(:puts).with(/welcome/i)
       employee = controller.sign_in
     end
   end
