@@ -109,6 +109,9 @@ describe "OrdersRepository" do
         expect(order.employee).to be_a(Employee)
         expect(order.customer).to be_a(Customer)
       end
+      expect(loaded_orders[0].instance_variable_get(:@delivered)).to be true
+      expect(loaded_orders[0].instance_variable_get(:@delivered)).to be false
+      expect(loaded_orders[0].instance_variable_get(:@delivered)).to be false
     end
   end
 
