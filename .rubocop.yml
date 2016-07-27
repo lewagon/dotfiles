@@ -32,6 +32,8 @@ SignalException:
   Enabled: false
 Casecmp:
   Enabled: false
+CyclomaticComplexity:
+  Enabled: false
 
 AllCops:
   Exclude:
