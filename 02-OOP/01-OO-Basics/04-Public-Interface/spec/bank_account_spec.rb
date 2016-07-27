@@ -1,6 +1,6 @@
 # Encoding: utf-8
 
-require "account"
+require "bank_account"
 
 describe BankAccount do
   let(:account) { BankAccount.new("Bruce Lee", "FR14-2004-1010-0505-0001-3M02-606", 200, "brucelit") }
