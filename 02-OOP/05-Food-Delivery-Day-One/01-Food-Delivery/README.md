@@ -69,7 +69,20 @@ With that information, we can implement a **login** logic in our app to have two
 
 To handle that, we'll introduce a notion of **session**. At the router level, we'll store the logged in user in a session.
 
-Optional: Their password would be stored in clear, is that a good idea? What could we do?
+The sign sequence should go like this:
+
+```bash
+> username?
+paul
+> password?
+blablabla
+Wrong credentials... Try again!
+> username?
+paul
+> password?
+secret
+Welcome paul!
+```
 
 Now when you run the food delivery app, the first thing you can do is to **sign in**, and then the menu printed to you should be **dependent on your role**:
 
@@ -78,6 +91,8 @@ ruby app.rb
 ```
 
 Done? Good! Time to `commit` and `push`.
+
+Optional: Their password would be stored in clear in the CSV / display in clear, is that a good idea? What could we do?
 
 ## 6 - (`Order`) Time to link all the models!
 
