@@ -1,13 +1,18 @@
-First, we'll need to copy the code from yesterday:
+Make sure you execute the commands above 👆
+
+Then let's copy the code from yesterday.
 
 ```bash
-cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} .  # trailing dot is important
+cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
 ```
 
-Run the `rake`. The code which was working yesterday should still work. If not, open a ticket.
+Then, check that the code working from yesterday still does:
 
-Do not hesitate to look at the [livecode's correction](http://github.com/lewagon/food-delivery-day-one). The goal of today is to implement the employee logic and let manager add orders, delivery guys mark them as delivered.
+```bash
+rake
+```
 
+You should continue with your own code and keep adding features to the router / making the `rake` greener. Of course, you can have a look at [this morning's code](https://github.com/lewagon/food-delivery/tree/lecture-day-two) to get some inspiration.
 
 ---
 
