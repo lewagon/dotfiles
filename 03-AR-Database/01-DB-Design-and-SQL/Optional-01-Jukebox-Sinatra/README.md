@@ -1,21 +1,8 @@
 ## Background & Objectives
 
-We'd like to build a small [Sinatra](http://www.sinatrarb.com/) web application to display all the
-information from that Jukebox Database.
+We'd like to build a small [Sinatra](http://www.sinatrarb.com/) web application to display all the information from that Jukebox Database.
 
-First make sure you have those gem installed:
-
-```
-$ gem install sinatra sinatra-contrib rack-test
-```
-
-To launch the Sinatra app, run:
-
-```
-$ ruby lib/app.rb
-```
-
-Then in your browser, go to [http://localhost:4567](http://localhost:4567)
+You can start from our [Sinatra 101](https://github.com/lewagon/sinatra-101)
 
 ## Specs
 
@@ -39,9 +26,4 @@ Clicking on a track name should redirect you to the track page.
 You should code a `/tracks/:id` page displaying the track info, and hit the Youtube
 API to get a video of this track. Embed it with an iframe.
 
-In the end, use [`ngrok`](https://ngrok.com/) to showcase your work in Slack (on OSX,
-just run `brew cask install ngrok` to get it):
-
-```bash
-$ ngrok http 4567
-```
+In the end, use `ngrok` to share your work in Slack 👌
