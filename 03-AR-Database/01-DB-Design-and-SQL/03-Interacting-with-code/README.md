@@ -1,30 +1,36 @@
 ## Background & Objectives
 
-Now it is time to use ruby code to interact with the `jukebox` database. For that we use a gem called `sqlite3` (not surprising!), see [sqlite3](http://rubygems.org/gems/sqlite3).
+Now it is time to use ruby code to interact with the `jukebox` database. For that we use a gem called [sqlite3](http://rubygems.org/gems/sqlite3).
 
-To install the gem on your computer, run in your terminal:
+To install the gem on your computer, run this in the terminal:
 
 ```bash
-$ gem install sqlite3
+gem install sqlite3
 ```
 
-The goal of this challenge is to query the database inside Ruby code.
+The goal of this challenge is to query the database **from Ruby code**.
 
 ## Specs
+
+Each method take a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. Thus your method will look like this:
+
+```ruby
+def the_method(db)
+  results = db.execute("YOUR SQL QUERY")
+  # results in an Array (rows) of Array (columns)
+  return ?
+end
+```
 
 Complete the program `queries.rb` to answer the following questions:
 
 1. How many rows contains each table?
 2. Return the list of all the artists and sort them by name (alphabetical order). **Hint:** use the `order by` SQL filter.
-3. Find all the love songs (i.e the tracks that contain "love" in their name) and count them. **Hint:** use the `where` and `like` SQL conditions.
+3. Find all the love songs (i.e the tracks that contain "love" in their name) and count them. **Hint:** use the `WHERE` and `LIKE` SQL keywords.
 4. Return all the tracks that are longer than 10 minutes and sort them by length. **Hint:** you can use the comparison operator `>` in SQL.
 
-Each method take a `db` argument, which is an instance
-of `SQLite3::Database` on which you can call the `execute` method.
+## Resources
 
-## Further suggestions & resources
-
-* [http://zetcode.com/db/sqliteruby/](http://zetcode.com/db/sqliteruby/)
-* [quick guide to Sqlite](http://viewsourcecode.org/why/hacking/aQuickGuideToSQLite.html)
-* [http://www.sqlcommands.net/](http://www.sqlcommands.net/)
-* [course in french](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
+* [**Great 101 on Ruby/Sqlite3**](http://sqlite-ruby.rubyforge.org/sqlite3/faq.html)
+* [SQL Commands](http://www.sqlcommands.net/)
+* [Course in 🇫🇷 about `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
