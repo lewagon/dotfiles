@@ -18,6 +18,9 @@ Each method take a `db` argument, which is an instance of `SQLite3::Database` on
 def the_method(db)
   results = db.execute("YOUR SQL QUERY")
   # results in an Array (rows) of Array (columns)
+  p results  # Inspect what you get back! Don't guess!
+
+  # Then you'll need to return something.
   return ?
 end
 ```
