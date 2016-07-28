@@ -14,11 +14,11 @@ describe 'Join Query method' do
       expect(detailed_tracks(db).length).to eq 3503
     end
 
-    it 'should return the first track correctly (AC/DC)' do
+    it 'should return the first track correctly (track name, album title, artist name)' do
       first_track = detailed_tracks(db).first
-      expect(first_track[0]).to eq("For Those About To Rock (We Salute You)"), "Track name is incorrect"
-      expect(first_track[1]).to eq("For Those About To Rock We Salute You"), "Album title is incorrect"
-      expect(first_track[2]).to eq("AC/DC"), "Artist name is incorrect"
+      expect(first_track[0]).to eq("For Those About To Rock (We Salute You)")
+      expect(first_track[1]).to eq("For Those About To Rock We Salute You")
+      expect(first_track[2]).to eq("AC/DC")
     end
 
     it 'should return details for each track' do
