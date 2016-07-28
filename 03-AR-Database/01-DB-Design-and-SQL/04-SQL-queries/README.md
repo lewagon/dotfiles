@@ -24,7 +24,9 @@ detailed_tracks(db)
 ### Statistics
 
 For each genre of music, find the stats, i.e. the number of tracks and the average song length (in minutes).
+
 **Hint:** you have to use a `GROUP BY` statement with aggregate SQL functions such as `COUNT` and `AVG`.
+
 The method should return a Hash of statistics, for example:
 
 ```ruby
@@ -48,3 +50,12 @@ top_five_artists(db, 'Rock')
 #      # etc...
 #    ]
 ```
+
+## Tools
+
+You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
+
+- [  SQLite Pro (Paying, 7 days trial)](https://www.sqlitepro.com/)
+- [SQLStudio (Free)](http://sqlitestudio.pl/?act=download)
+- [SQLite Browser (Free)](http://sqlitebrowser.org/)
+

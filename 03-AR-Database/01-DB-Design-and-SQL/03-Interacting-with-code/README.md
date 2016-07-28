@@ -37,3 +37,11 @@ Complete the program `queries.rb` to answer the following questions:
 * [**Great 101 on Ruby/Sqlite3**](http://sqlite-ruby.rubyforge.org/sqlite3/faq.html)
 * [SQL Commands](http://www.sqlcommands.net/)
 * [Course in 🇫🇷 about `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
+
+## Tools
+
+You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
+
+- [  SQLite Pro (Paying, 7 days trial)](https://www.sqlitepro.com/)
+- [SQLStudio (Free)](http://sqlitestudio.pl/?act=download)
+- [SQLite Browser (Free)](http://sqlitebrowser.org/)

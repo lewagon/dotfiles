@@ -41,10 +41,10 @@ The goal of this exercise is to explore the Jukebox database, and understand its
 
 Submit your SQL schema in XML format in `jukebox.xml`.
 
-## Further suggestions & resources
+## Tools
 
-- [http://zetcode.com/db/sqlite/tool/](http://zetcode.com/db/sqlite/tool/)
+You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
 
-- **Tools**: You can also use a SQLite viewer to read the SQlite database and check your results.
-  - [http://sourceforge.net/projects/sqlitebrowser/](http://sourceforge.net/projects/sqlitebrowser/)
-  - [Sqlite Manager for Firefox](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/)
+- [  SQLite Pro (Paying, 7 days trial)](https://www.sqlitepro.com/)
+- [SQLStudio (Free)](http://sqlitestudio.pl/?act=download)
+- [SQLite Browser (Free)](http://sqlitebrowser.org/)
