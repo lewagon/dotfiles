@@ -45,6 +45,8 @@ of `Post`.
 Assume there is a global variable `DB` defined in the program, no need for
 you to instantiate it and care of the file where it is stored.
 
+We want you to protect the `find` method against **SQL injections**. What is an SQL injection you may ask? Well, try to [hack this bank](https://www.hacksplaining.com/exercises/sql-injection#/start), you'll get the big picture!. Coming back at our exercise, here's a hint. You might need to pass several arguments to the `.execute` method using [placeholders and bind parameters](http://sqlite-ruby.rubyforge.org/sqlite3/faq.html#538670816)
+
 ### `all`
 
 Implement a **class** method `all` on the `Post` class which takes
