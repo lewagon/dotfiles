@@ -19,7 +19,7 @@ For the map section, the code is a bit complicated since it uses a bit of javasc
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 <script type="text/javascript">
-var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+var myLatlng = new google.maps.LatLng(48.8655909, 2.378983);
 
 var myOptions = {
   zoom: 16,
