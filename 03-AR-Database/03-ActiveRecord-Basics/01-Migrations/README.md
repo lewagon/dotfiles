@@ -13,7 +13,7 @@ Don't forget to run in your terminal:
 
 ## Specs
 
-This exercise focuses on **migrations** only. We won't use any model at this point. So you will have to code the migration to create your database scheme (remember, the scheme stands for DB's **structure**, i.e. tables and columns, **not data**). We want to create the database schema which will host a clone of [Hacker News](https://news.ycombinator.com).
+This exercise focuses on **migrations** only. We won't use any model at this point. So you will have to code the migrations to create your database schema (remember, the schema stands for DB's **structure**, i.e. tables and columns, **not data**). We want to create the database schema which will host a clone of [Hacker News](https://news.ycombinator.com).
 It's the famous website to share links about Technology & Startup.
 We need a `posts` table storing posts (with a title and a URL).
 
