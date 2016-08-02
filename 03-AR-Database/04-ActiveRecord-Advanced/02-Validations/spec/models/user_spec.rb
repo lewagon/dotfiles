@@ -10,7 +10,7 @@ describe "User" do
   after(:each) { drop_db }
 
   it "should be invalid if there is no username" do
-    user = User.new(email: "george@abitbol.me")
+    user = User.new(email: "george@abitbol.com")
     expect(user.valid?).to eq false
     expect(user.errors.messages[:username]).to include "can't be blank"
   end
@@ -28,10 +28,10 @@ describe "User" do
   end
 
   it "should be invalid if another user already took this username" do
-    user_one = User.new(username: "bob", email: "bob@leponge.me")
+    user_one = User.new(username: "bob", email: "bob@leponge.com")
     user_one.save!
 
-    user_two = User.new(username: "bob", email: "anotherbob@leponge.me")
+    user_two = User.new(username: "bob", email: "anotherbob@leponge.com")
     expect(user_two.valid?).to eq false
     expect(user_two.errors.messages[:username]).to include "has already been taken"
   end
@@ -40,14 +40,14 @@ describe "User" do
     if User.new(username: "bob", email: "NOT_A_VALID_EMAIL").valid?
       fail NotImplementedError, "Please implement a format validation on email column"
     end
-    user = User.new(username: "bob", email: "   bob@leponge.me   ")
+    user = User.new(username: "bob", email: "   bob@leponge.com   ")
     expect(user.valid?).to eq(true)
-    expect(user.email).to eq("bob@leponge.me"), "You should have a `before_validation` callback to strip whitespaces"
+    expect(user.email).to eq("bob@leponge.com"), "You should have a `before_validation` callback to strip whitespaces"
   end
 
   it "should send a welcome email to Bob on user creation [Bonus]" do
     FakeMailer.instance.reset
-    expect{User.create(username: "bob", email: "bob@lebonge.me")}.to change{FakeMailer.instance.email_sent}.from(0).to(1)
+    expect{User.create(username: "bob", email: "bob@lebonge.com")}.to change{FakeMailer.instance.email_sent}.from(0).to(1)
   end
 
 end
