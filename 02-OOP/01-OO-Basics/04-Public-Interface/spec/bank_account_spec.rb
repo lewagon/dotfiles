@@ -3,19 +3,15 @@
 require "bank_account"
 
 describe BankAccount do
-  let(:account) { BankAccount.new("Bruce Lee", "FR14-2004-1010-0505-0001-3M02-606", 200, "brucelit") }
+  let(:account) { BankAccount.new("John Lennon", "FR14-2004-1010-0505-0001-3M02-606", 200, "yoko") }
 
   describe 'Getters' do
     it 'has a way to access the account name' do
       expect(account.name).to eq 'Bruce Lee'
     end
 
-    it 'has a way to access the account iban' do
-      expect(account.iban).to match /FR14\*+606/
-    end
-
     it 'has a way to access the account balance' do
-      expect(account.balance).to eq 200
+      expect(account.balance).to be_a Fixnum
     end
   end
 
@@ -26,8 +22,8 @@ describe BankAccount do
     end
 
     it 'update its balance when a new transaction is made' do
-      account.send(:add_transaction, -200)
-      expect(account.balance).to eq 0
+      account.send(:add_transaction, -100)
+      expect(account.balance).to eq 100
     end
   end
 
@@ -48,8 +44,8 @@ describe BankAccount do
 
   describe '#withdraw' do
     it 'changes the accounts balance' do
-      account.withdraw(200)
-      expect(account.balance).to eq 0
+      account.withdraw(50)
+      expect(account.balance).to eq 150
     end
 
     it 'returns a message containing the withdrawn amount' do
