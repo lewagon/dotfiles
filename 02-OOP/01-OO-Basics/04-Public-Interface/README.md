@@ -24,7 +24,7 @@ Let's play with a `BankAccount` class that stores information about a bank accou
 
 The public interface of the class, i.e. the set of all its public methods, defines what is called the class contract (see the notion of [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). It is a sort of promise made by the class to other objects or other ruby programs. Below we specify our `BankAccount` class contract. We want to be able to do the following with our BankAccount objects from the outside world :
 
-* Access owner's full name and position
+* Access owner's full name and balance
 * Access only partial IBAN
 * Print partial account info in an user-friendly way
 * Print transaction history if a password is provided
