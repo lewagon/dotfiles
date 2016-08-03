@@ -4,12 +4,12 @@ end
 
 class BankAccount
   # Contract for the BankAccount class
-  # - you can access full owner's name and position, but partial IBAN
+  # - you can access full owner's name and balance, but partial IBAN
   # - you cannot access full IBAN
   # - you can print partial account info
   # - you can print transactions only with a password
   # - you can withdraw or deposit money
-  # - You can see the balance of the account (through the position variable)
+  # - You can see the balance of the account (through the balance variable)
 
   MIN_DEPOSIT = 100
 
@@ -18,7 +18,7 @@ class BankAccount
 
     @password     = password
     @transactions = []
-    @position     = 0
+    @balance      = 0
     @name         = name
     @iban         = iban
 
@@ -46,13 +46,13 @@ class BankAccount
 
   def to_s
     # Method used when printing account object as string (also used for string interpolation)
-    # TODO: Displays the account owner, the hidden iban and the position of the account
+    # TODO: Displays the account owner, the hidden iban and the balance of the account
   end
 
   private
 
   def add_transaction(amount)
     # TODO: add the amount in the transactions array
-    # TODO: update the current position (which represents the balance of the account)
+    # TODO: update the current balance (which represents the balance of the account)
   end
 end

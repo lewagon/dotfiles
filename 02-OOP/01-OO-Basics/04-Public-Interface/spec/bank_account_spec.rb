@@ -3,19 +3,15 @@
 require "bank_account"
 
 describe BankAccount do
-  let(:account) { BankAccount.new("Bruce Lee", "FR14-2004-1010-0505-0001-3M02-606", 200, "brucelit") }
+  let(:account) { BankAccount.new("John Lennon", "FR14-2004-1010-0505-0001-3M02-606", 200, "yoko") }
 
   describe 'Getters' do
     it 'has a way to access the account name' do
-      expect(account.name).to eq 'Bruce Lee'
+      expect(account.name).to eq 'John Lennon'
     end
 
-    it 'has a way to access the account iban' do
-      expect(account.iban).to match /FR14\*+606/
-    end
-
-    it 'has a way to access the account position' do
-      expect(account.position).to eq 200
+    it 'has a way to access the account balance' do
+      expect(account.balance).to be_a Fixnum
     end
   end
 
@@ -25,9 +21,9 @@ describe BankAccount do
       expect(account.instance_variable_get(:@transactions).length).to eq 2
     end
 
-    it 'update its position when a new transaction is made' do
-      account.send(:add_transaction, -200)
-      expect(account.position).to eq 0
+    it 'update its balance when a new transaction is made' do
+      account.send(:add_transaction, -100)
+      expect(account.balance).to eq 100
     end
   end
 
@@ -47,9 +43,9 @@ describe BankAccount do
   end
 
   describe '#withdraw' do
-    it 'changes the accounts position' do
-      account.withdraw(200)
-      expect(account.position).to eq 0
+    it 'changes the accounts balance' do
+      account.withdraw(50)
+      expect(account.balance).to eq 150
     end
 
     it 'returns a message containing the withdrawn amount' do
@@ -58,9 +54,9 @@ describe BankAccount do
   end
 
   describe '#deposit' do
-    it 'changes the accounts position' do
+    it 'changes the accounts balance' do
       account.deposit(200)
-      expect(account.position).to eq 400
+      expect(account.balance).to eq 400
     end
 
     it 'returns a message containing the deposit amount' do
@@ -79,7 +75,7 @@ describe BankAccount do
 
     it 'displays all your transactions if given the correct password' do
       account.instance_variable_set(:@transactions, [300])
-      expect(account.transactions_history(password: 'brucelit')).to match /300/
+      expect(account.transactions_history(password: 'yoko')).to match /300/
     end
   end
 end

@@ -1,6 +1,4 @@
-## Background & Objectives
-
-### Introduction
+## Introduction
 
 Good object-oriented design relies on understanding how much of an object to **expose**.
 
@@ -8,7 +6,7 @@ Exposing an object means making its properties (internal data) available to the 
 
 As a general rule, you should only expose as much of an object as is needed for other objects to interact with it. Design objects that can take care of their own properties. They should not invite everyone else in to mess around with their business. **Don't design permeable objects if they don't need to be permeable**
 
-### Objectives
+## Objectives
 
 - Create a class with a public interface
 - Play with getters
@@ -20,82 +18,51 @@ Let's play with a `BankAccount` class that stores information about a bank accou
 
 ## Specs
 
-#### The `BankAccount` contract in `account.rb`
+### The `BankAccount` contract in `account.rb`
 
 The public interface of the class, i.e. the set of all its public methods, defines what is called the class contract (see the notion of [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). It is a sort of promise made by the class to other objects or other ruby programs. Below we specify our `BankAccount` class contract. We want to be able to do the following with our BankAccount objects from the outside world :
 
-* Access owner's full name and position
-* Access only partial IBAN
+* Access owner's full name and balance
+* Access only **partial** IBAN
 * Print partial account info in an user-friendly way
 * Print transaction history if a password is provided
 * Withdraw or deposit money
 
-##### Which getters ?
 
-Given this class contract, and the code canvas, decide which getters are necessary for the `BankAccount` class.
-
-#### Partial IBAN getter
-
-Code a partial IBAN accessor, which hides the middle of the IBAN, replacing the characters by `*`, as in our example in the test suite.
-
-##### The `to_s` method
+### The `to_s` method
 
 You will probably come across many classes in Ruby that redefine the built-in method `to_s`. This is an easy way to display taylor-made information about an object to the user, and to control which information is printed.
 
 This is the method called when you try to print the object or use string interpolation. Once implemented, it will be called as in the following examples :
 
 ```ruby
-account = BankAccount.new("Bruce Lee", "FR14-2004-1010-0505-0001-3M02-606", 200, "brucelit")
+account = BankAccount.new("John Lennon", "FR14-2004-1010-0505-0001-3M02-606", 200, "yoko")
+
 puts account
-# =>  Owner: Bruce Lee
-#     IBAN: FR14**************606
-#     Current amount: 200 euros
-puts "Account info\n#{account}"
-# =>  Account info
-#     Owner: Bruce Lee
+# =>  Owner: John Lenon
 #     IBAN: FR14**************606
 #     Current amount: 200 euros
 ```
 
-Implement your `BankAccount#to_s` method, which should call your partial IBAN method.
+Implement your `#to_s` method, which should call your partial IBAN method.
 
-##### Withdraw and Deposit
+### Withdraw and Deposit
 
-Implement `BankAccount#withdraw` and `BankAccount#deposit`. Both of these methods should call the private `BankAccount#add_transaction` method (which is also called in the `BankAccount#initialize`). These methods should return a message like "You've just withdrawn/deposited XXX euros".
+Implement `#withdraw` and `#deposit`. Both of these methods should call the private `#add_transaction` method (which is also called in the `#initialize`). These methods should return a message like "You've just withdrawn/deposited XXX euros".
 
-##### Transactions history
+### Transactions history
 
-Now you have to implement  `BankAccount#transactions_history` method. This method takes a password hash as parameter, which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args={}`). Your transaction history method should
+Now you have to implement  `#transactions_history` method. This method takes a password hash as parameter, which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args={}`). Your transaction history method should
 
 1. print the transactions array if the right password is given.
 2. print "wrong password" if the password does not correspond to the account's password.
 3. print "no password given" if the method is called without arguments.
 
-#### Printing = returning a string, not an object!
-
-Note that your method `transactions_history` should **print** the transactions array but not return it directly, that's what is said in the class contract. Let's imagine you code something like:
-
-```ruby
-def transactions_history(args = {})
-  (args[:password] == @password) ? @transactions : "wrong password"
-end
-```
-
-This would be very dangerous as you would return `@transactions` directly which is very different from printing a string. With a bad implementation as this one, you enable users to access and modify the transactions array from the outside world! For instance:
-
-```ruby
-account = BankAccount.new("Bruce Lee", "FR14-2004-1010-0505-0001-3M02-606", 200, "brucelit")
-account.transactions_history(password: "brucelit") << 100
-account.transactions_history(password: "brucelit") # => [200, 100]
-```
-
-That is NOT what is expected from the class contract. We only want to add amounts to the transactions array through the `withdraw` and `deposit` methods which are our chosen interfaces for making transactions, and not by directly accessing the transactions array!
-
-## Extra : enhance your transactions
+## (Optional) Add a `Transaction` class
 
 What about enhancing our bank account, by adding info about the date of each transactions? And change our transaction history method so that it prints transactions like:
 
-```ruby
+```bash
 + 200 euros on 22/10/13 at 8:30am
 - 120 euros on 30/11/13 at 2:30pm
 + 1050 euros on 30/11/13 at 2:30pm
@@ -122,7 +89,7 @@ require_relative 'transaction'
 - What is the difference between a getter and a setter?
 - What is the to_s method's use?
 - What is the use of default arguments? How do you use them?
-- In `account.rb` what is happening in lines 2-3 and line 19?
+- In `bank_account.rb` what is happening in lines 2-3 and line 19?
 
 ## Further suggestions & resources
 
