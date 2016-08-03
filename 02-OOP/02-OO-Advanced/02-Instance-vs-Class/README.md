@@ -15,10 +15,8 @@ a_time_object.hour
 Do you clearly distinguish one method that differs from the others in the examples above? Make sure you can find the intruse!
 
 ## Specs
-- Write a `Restaurant` class with attributes of your choice (`name`, `address`, `type_of_food`...), and associated getters and setters if necessary (if you want a funnier class).
-- **constraint:** your Restaurant class must have at least `@average_rating` and `@city` as instance variables.
-- Define an instance method `#rate` enabling to rate a restaurant object. This method should re-compute the restaurant average rating `@average_rating` every time it's called with a new rating. This average rating should be accessible.
-
+- Create a `Restaurant` class with two instance variables, `@city` and `@name`, set with the two parameters of `initialize`.
+- Define an instance method `#rate(new_rate)` enabling to rate a restaurant object. This method should re-compute the restaurant average rating `@average_rating` every time it's called with a new rating. This `@average_rating` should be accessible to the external world.
 - Define a **class** method `#filter_by_city(restaurants, city)` that returns all the restaurants in a given city (this return should be an array of restaurant objects). For instance:
 
 ```ruby
