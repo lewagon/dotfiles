@@ -7,7 +7,7 @@ describe BankAccount do
 
   describe 'Getters' do
     it 'has a way to access the account name' do
-      expect(account.name).to eq 'Bruce Lee'
+      expect(account.name).to eq 'John Lennon'
     end
 
     it 'has a way to access the account balance' do
@@ -75,7 +75,7 @@ describe BankAccount do
 
     it 'displays all your transactions if given the correct password' do
       account.instance_variable_set(:@transactions, [300])
-      expect(account.transactions_history(password: 'brucelit')).to match /300/
+      expect(account.transactions_history(password: 'yoko')).to match /300/
     end
   end
 end
