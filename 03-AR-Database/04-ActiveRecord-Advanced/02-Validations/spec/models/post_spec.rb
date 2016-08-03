@@ -34,7 +34,7 @@ describe "Post" do
     invalid_url = "THIS_IS_NOT_A_URI"
     post = Post.new(name: "Le Wagon", url: invalid_url, user: valid_user)
     expect(post.valid?).to eq false
-    expect(post.errors.messages[:url]).to include "invalid url"
+    expect(post.errors.messages[:url]).to include "is invalid"
   end
 
   it "is valid if the URL is valid" do
