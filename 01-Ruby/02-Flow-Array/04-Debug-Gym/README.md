@@ -10,8 +10,7 @@ Only one lesson to learn from this exercise : **READ THE ERROR** ! This will tel
 Just run
 
 ```bash
-$ rake
+rake
 ```
 
-- the code in "bugged_concatenate.rb" has got some error. Try to fix it by reading the error on the terminal.
-- **constraint**: do not cheat and try to detect the bug before reading the error on the terminal ! The objective of this exercise is for you to read this error.
+the code in "bugged_concatenate.rb" has got some error. Try to fix it by reading the error on the terminal. The error message should tell you what seems to be the problem.
