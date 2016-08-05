@@ -19,7 +19,7 @@ cd rails-mister-cocktail
 We then need to locally create the database for this new rails app.
 
 ```bash
-rake db:create
+rails db:create
 ```
 
 Let's set up git, create a repo on GitHub and push our skeleton.
@@ -37,7 +37,7 @@ Let's import the teacher's spec to be able to `rake` our progress.
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 bundle install
-rake db:test:prepare
+rails db:test:prepare
 git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
 git add .
 git commit -m "Prepare rails app with external specs"
@@ -46,7 +46,7 @@ git commit -m "Prepare rails app with external specs"
 You'll be able to test your code with:
 
 ```bash
-rake db:migrate RAILS_ENV=test  # If you added a migration
+rails db:migrate RAILS_ENV=test  # If you added a migration
 rake                            # Launch tests
 ```
 
@@ -64,7 +64,7 @@ heroku create <user.github_nickname>-rails-mister-cocktail --region eu
 ...and make your first deployment:
 
 ```bash
-git push heroku master && heroku run rake db:migrate
+git push heroku master && heroku run rails db:migrate
 ```
 
 ## Style

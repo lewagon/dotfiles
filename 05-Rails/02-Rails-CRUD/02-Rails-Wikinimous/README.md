@@ -38,7 +38,7 @@ run `bundle install`. Use this gem to generate 10 fake articles in
 `db/seeds.rb`. When your code is done, you can run:
 
 ```bash
-rake db:seed
+rails db:seed
 ```
 
 ## Controller & Views

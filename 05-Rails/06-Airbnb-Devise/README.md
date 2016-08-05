@@ -67,7 +67,7 @@ Even if it's just a skeleton app, it's important to deploy on Heroku from Day on
 ```bash
 heroku create --region=eu rails-airbnb-clone-<user.github_nickname>
 git push heroku master
-heroku run rake db:migrate
+heroku run rails db:migrate
 ```
 
 From this point you can start splitting the tasks. Spend time on the setup, because everything will be simpler if you do it the right way from the beginning.
