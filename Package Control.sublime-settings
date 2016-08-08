@@ -5,13 +5,12 @@
     "All Autocomplete",
     "ApplySyntax",
     "BracketHighlighter",
-    "DocBlockr",
     "Emmet",
     "Git",
     "GitGutter",
     "JSX",
     "Package Control",
-    "Ruby on Rails snippets",
-    "SCSS"
+    "SCSS",
+    "ERB Snippets"
   ]
 }
