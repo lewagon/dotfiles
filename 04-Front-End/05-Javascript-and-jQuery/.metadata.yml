@@ -4,10 +4,14 @@ lectures:
 lecture:
   fr:
     video: 153946289
+  en:
+    video: 178176559
 
 livecode:
   fr:
     video: 172713249
+  en:
+    video: 178221212
 
 # #Old:
 # lecture:
