@@ -4,11 +4,15 @@ lectures:
 lecture:
   fr:
     video: 154308534
+  en:
+    video: 178500394
 
 livecode:
   fr:
     video: 136207523
     gist: 7e6c32b50e574c604c35
+  en:
+    video: 178500577
 
 
 
