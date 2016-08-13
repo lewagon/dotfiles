@@ -40,13 +40,16 @@ Before splitting the tasks among the team, setup your project. The **lead develo
 #### 1. Create the Rails project with Postgres config
 
 ```bash
-rails _4.2.6_ new \
+cd ~/code/<user.github_nickname>
+rails new \
   -T --database postgresql \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   rails-airbnb-clone
 ```
 
 _Of course, you can choose another name than `rails-airbnb-clone`..._
+
+Again, only the **lead developer** will do this! Not everyone in the team...
 
 #### 2. Push the project on Github
 
