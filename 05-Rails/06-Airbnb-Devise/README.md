@@ -65,7 +65,7 @@ Go to [github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaborati
 Even if it's just a skeleton app, it's important to deploy on Heroku from Day one.
 
 ```bash
-heroku create --region=eu rails-airbnb-clone-<user.github_nickname>
+heroku create airbnb-<user.lower_github_nickname> --region=eu
 git push heroku master
 heroku run rails db:migrate
 ```

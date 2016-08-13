@@ -58,7 +58,7 @@ preparing your app for being hosted on Heroku.
 Then, in your terminal, create the app...
 
 ```bash
-heroku create <user.github_nickname>-rails-mister-cocktail --region eu
+heroku create mr-cocktail-<user.lower_github_nickname> --region eu
 ```
 
 ...and make your first deployment:
