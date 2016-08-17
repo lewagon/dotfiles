@@ -1,4 +1,4 @@
-One of the most important Rails challenge every developper should master: **recoding CRUD from scratch**.
+One of the most important Rails challenges every developper should master: **recoding CRUD from scratch**.
 
 - `resources` routing
 - 7 CRUD actions in your controller
