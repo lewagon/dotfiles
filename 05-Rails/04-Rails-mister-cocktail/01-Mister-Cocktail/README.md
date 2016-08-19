@@ -124,6 +124,8 @@ Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 ```
 
+**Optional**: have fun and seed real ingredients, e.g. using [this JSON list](http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list) (with `open-uri` and `json` ruby libs).
+
 ### Routing
 
 Once again, you must have a precise idea of the features of your app in order to build your routes. Here is the list of features:
