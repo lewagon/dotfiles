@@ -53,21 +53,21 @@ On Friday at 2pm, quizz time! Let's step back and rehearse all the core notions 
 - Authentication with [Devise](https://github.com/plataformatec/devise) gem.
 - Collaboration techniques with git & Github. You will discover how we work in a dev team using branches and pull requests. You will have to use this workflow within your Airbnb teams. You'll have 5 days to go as far as you can on your Airbnb clone.
 
-### `06-Airbnb-Facebook-connect`
+### `07-Airbnb-Facebook-connect`
 
 In the continuity of Devise course, we will teach you how to customize Devise to build a Facebook connect, you will use [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
 
-### `06-Airbnb-SMTP`
+### `08-Airbnb-SMTP`
 
 Morning lecture is about sending mail with the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc..). At 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
-### `06-Airbnb-Geo`
+### `09-Airbnb-Geocoder`
 
-Morning talk is about geocoding (with the `geocoder` gem) and Google API to add autocomplete on address form inputs.
+Morning lecture is about geocoding (with the `geocoder` gem) and Google API to add autocomplete on address form inputs.
 
-### `06-Airbnb-ActiveAdmin`
+### `10-Airbnb-Ajax-in-Rails`
 
-Morning talk about building an "admin space" using [ActiveAdmin](https://github.com/activeadmin/activeadmin) gem. Final demos are at 5pm.
+Once you understand CRUD and can quickly re-create a rails scaffold, it's time to add some magic in the app with AJAX. You'll be able to talk to the server without reloading the page (think adding a new comment to a post, clicking on a 5-star rating item, removing something from a list, etc.)
 
 ### Projects prep (weekend)
 
