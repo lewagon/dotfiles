@@ -5,7 +5,12 @@ lectures:
 lecture:
   fr:
     video: 136725134
+  en:
+    video: 179189739
 
 livecode:
   fr:
     video: 136743151
+  en:
+    video: 179220171
+    gist: bdd0078a9370aa8b09028bc82ebcec01

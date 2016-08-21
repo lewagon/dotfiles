@@ -6,3 +6,5 @@ lecture:
   fr:
     video: 155120876
     # video: 137223621  # Paperclip - AWS
+  en:
+    video: 179464603
