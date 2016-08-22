@@ -1,7 +1,8 @@
 ## AirBnB Week
 
-The next 5 days will be in groups of 2 to 4 students, working on an AirBnB clone
-(you don't have to rent **flats**, be creative!)
+The next 5 days will be in groups of 3 to 4 students, working on an AirBnB clone
+(you don't have to rent **flats**, be creative!). You should start working with
+your 2-week final project.
 
 ### Demos
 
@@ -11,16 +12,13 @@ You will demo your work (in production, no demo on `localhost`!) on Wednesday an
 
 They will drive your software development and the way you split tasks in your team. Write all the user-stories of your airbnb MVP. Example:
 
-```
-- as a visitor, I can search for a flat in a city for given checkin/checkout dates
-- as a visitor, I can signup
-- as a user, I can login/logout
-- as a user, I can book an available flat
-- as a owner, I can add a flat announce
-- etc..
-```
+- As a visitor, I can signup
+- As a visitor, I can search for a flat in a city for given checkin/checkout dates
+- As a user, I can book an available flat
+- As an owner, I can create a flat ad
+- Atc..
 
-Please download and **print** [this template for your User Stories](https://github.com/lewagon/fullstack-images/raw/master/rails/rails-user-stories.pdf) (or ask a teacher!)
+Please download and **print** [this template for your User Stories](https://github.com/lewagon/fullstack-images/raw/master/rails/rails-user-stories.pdf).
 
 ### 2 - Database Scheme
 
@@ -28,7 +26,7 @@ Draw your database scheme  (e.g. using [our db tool](http://db.lewagon.org/)) an
 
 ### 3 - Mockup
 
-Draw a basic mockup of your app on a paperbook. First list all the views suggested by your user-stories (home / signin / signup / flats index / flats show / profile / etc.. ). For each view, make a simple drawing, to know what info you will insert in it (owner's picture? Flat's picture? map? Flat's info?), and what navigation and buttons (button "book this flat", links in the navbar to go back to the search page etc..). No need to be Michelangelo, just think about
+Draw a basic mockup of your app on paper. First list all the views suggested by your user-stories (home / signin / signup / flats index / flats show / profile / etc.. ). For each view, make a simple drawing, to know what info you will insert in it (owner's picture? Flat's picture? map? Flat's info?), and what navigation and buttons (button "book this flat", links in the navbar to go back to the search page etc..). No need to be Michelangelo, just think about:
 
 1. The info you want to display
 2. The buttons and navigations to make the glue between your different views.
@@ -47,8 +45,6 @@ rails new \
   rails-airbnb-clone
 ```
 
-_Of course, you can choose another name than `rails-airbnb-clone`..._
-
 Again, only the **lead developer** will do this! Not everyone in the team...
 
 #### 2. Push the project on Github
@@ -62,6 +58,8 @@ git push origin master
 #### 3. Add his team mates as collaborators on the Github repo
 
 Go to [github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration](https://github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration) and add your teammates as **collaborators** to the repo.
+
+The other teammates can now **clone** the project. **⚠️ Be careful, use `SSH` url**
 
 #### 4. Deploy on Heroku
 
@@ -79,7 +77,7 @@ From this point you can start splitting the tasks. Spend time on the setup, beca
 
 #### Kick-off
 
-When trying to split work in your team, you'll realize that many tasks depend on other ones.. How to integrate facebook connect if there is no User model? How to implement bookings if there is no Flat model? Here are some guidelines to help you organize your work:
+When trying to split work in your team, you'll realize that many tasks depend on other ones... How to integrate facebook connect if there is no User model? How to implement bookings if there is no Flat model? Here are some guidelines to help you organize your work:
 
 You will always detect **core models** in your app on which all future features relie. In our case, they are clearly `User` and `Flat`. Once these models are integrated, then it's easier to split work on remaining features. As a kick-off phase, you can therefore separate two main tasks:
 
@@ -102,7 +100,7 @@ Here is a list of different things to do on the Airbnb project
 
 Some of these features are more important than others. It's your role to prioritize them to get an MVP at the end of the week!
 
-#### Example of feature - bookings integration
+#### Feature example: Book a flat
 
 **Specify your feature**
 
