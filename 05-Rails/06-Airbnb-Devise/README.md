@@ -60,6 +60,12 @@ git push origin master
 Go to [github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration](https://github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration) and add your teammates as **collaborators** to the repo.
 
 The other teammates can now **clone** the project. **⚠️ Be careful, use `SSH` url**
+Then they should run:
+
+```bash
+bundle install
+rails db:create db:migrate
+```
 
 #### 4. Deploy on Heroku
 
