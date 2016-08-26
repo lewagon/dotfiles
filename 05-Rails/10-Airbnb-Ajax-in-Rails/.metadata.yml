@@ -4,3 +4,5 @@ help: true
 lecture:
   fr:
     video: 137594327
+  en:
+    video: 180305317  # TODO(ssaunier): maybe redo it without the JS fail.
