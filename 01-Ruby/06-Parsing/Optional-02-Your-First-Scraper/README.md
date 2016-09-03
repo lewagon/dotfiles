@@ -6,7 +6,7 @@ First, open your terminal and installed [Nokogiri](http://www.nokogiri.org/),
 a **gem** very useful when you want to scrape web page content.
 
 ```bash
-$ gem install nokogiri
+gem install nokogiri
 ```
 
 Then, you can run the following Ruby code:
@@ -16,8 +16,8 @@ require "open-uri"
 require "nokogiri"
 
 doc = Nokogiri::HTML(open('https://www.etsy.com/search?q=wallet'))
-doc.search('.title').each do |element|
-  puts element.text
+doc.search('.card-title').each_with_index do |element, index|
+  puts "#{index}. #{element.text.strip}"
 end
 ```
 
@@ -27,24 +27,14 @@ the first page of results on [Etsy](https://www.etsy.com/search?q=wallet)
 How did it work?
 
 The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors) and look for all HTML
-element in the page matching it. Here we used a **class** selector `.title`
+element in the page matching it. Here we used a **class** selector `.card-title`
 because the [HTML source](https://support.mozilla.org/en-US/questions/873324)
 was something like:
 
 ```html
-<div class="listing-detail">
-  <div class="listing-title">
-    <a class="title" href="[...]">
-      Handmade BLACK Leather iPhone 6 PLUS Wallet Clutch Case - Rustic Design Signature Hand-Stitching by JooJoobs [065]
-    </a>
-  </div>
-  <div class="listing-info clearfix">
-    <div class="listing-maker">
-      <a href="[...]">
-        JooJoobs
-      </a>
-    </div>
-    <!-- [...] -->
+<div class="card-meta-row">
+  <div class="card-meta-row-item card-title selected-color">
+    Engraved Picture Wallet Insert - Back Engraving Too - the WOW factor - Him or Her - Laser Engraved - Handwritten Wallet Insert GIFT
   </div>
 </div>
 ```
