@@ -12,7 +12,7 @@ $ host www.lewagon.com
 You'll see that `www.lewagon.com` is aliased to a domain on Heroku, which
 is mapped to a specific address.
 
-Now you may want to discover your own IP address? Your computer as a local
+Now you may want to discover your own IP address? Your computer has a local
 address given by the WiFi router, and you can get it typing `ips` in your
 terminal. If you want to determine what is the Public IP Address of this Wifi router, the one shared between you and other students, you can type `ip`.
 
