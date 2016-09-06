@@ -9,7 +9,7 @@ You'll use these heavily in your application.
 
 ## Required Features
 
-* character count (including **and** excluding spaces)
+* Character count (including **and** excluding spaces)
 * Line count
 * Word count
 * Sentence count
@@ -23,6 +23,7 @@ and return a result `Hash` with the following keys:
 ```ruby
 {
   character_count: 523,
+  character_count_excluding_spaces: 463,
   line_count: 42
   word_count: 145,
   sentence_count: 32,
