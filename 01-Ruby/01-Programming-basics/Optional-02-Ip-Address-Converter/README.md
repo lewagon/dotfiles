@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-Here is another code kata for the faster of you. We want to manipulate numbers in different notation, and we'll talk about IPv4 addresses.
+Here is another code kata for the fastest among you. We want to manipulate numbers in different notation, and we'll talk about IPv4 addresses.
 
 You might already saw some IPv4 addresses, for instance `192.168.0.1`, or
 `173.194.40.200`. To get an IP address from a domain name, you can use the `host` command. For instance:

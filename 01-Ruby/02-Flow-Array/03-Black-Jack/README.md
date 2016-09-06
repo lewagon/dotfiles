@@ -16,11 +16,12 @@ We will implement a *simplified* version of Black Jack:
 - For each round, the player can:
   - Draw a card with a random value between 1 and 11. This number will be added to his score.
   - Pass, and finish the game.
-- In the end, there are 4 possibilities:
-  - If the player score is > to 21, he looses.
-  - If the player score is 21, he pulls a "Black Jack" and wins.
-  - If the player score is > to the bank, he wins.
-  - If the player score is < to the bank, he looses.
+- In the end, there are 5 possibilities:
+  - If the player's score is > to 21, he loses.
+  - If the player's score is 21, he pulls a "Black Jack" and wins.
+  - If the player's score is > to the bank's, he wins.
+  - If the player's score is equal to the bank's, no one wins,
+  - If the player's score is < to the bank's, he loses.
 
 ## Specs
 
