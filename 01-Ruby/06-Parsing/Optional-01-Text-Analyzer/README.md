@@ -35,14 +35,13 @@ and return a result `Hash` with the following keys:
 
 ## Application Flow
 
-1. Load the file containing the text document to analyze
-1. Keep a count of the number of lines there were
-1. Put the text into a string and measure its length to get a character count
+1. Create a `program.rb` that loads the file containing the text document to analyze and calls the `analyze` method
+1. In `analyze`, `text` is a string, you can thus measure its length easily
 1. Temporarily remove white spaces and count characters excluding spaces
 1. Split out all the whitespaces to find out how many words there are
-1. Split out full stops to find out the nuber of sentences
-1. Split out double newlnes to calculate number of paragraph
-1. Work out the averages using all your counters.
+1. Split out full stops to find out the number of sentences
+1. Split out double linebreaks to calculate the number of paragraph
+1. Compute the averages using your counters.
 
 ### Testing data
 
