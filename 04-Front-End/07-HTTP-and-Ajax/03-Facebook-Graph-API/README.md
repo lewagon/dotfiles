@@ -8,7 +8,7 @@ Use the Facebook Graph API to build a dynamic webpage showing all your facebook 
 In order to make request to the facebook graph API, you have to obtain a token, i.e. a kind of passord authenticating yourself to Facebook.
 
 - Visit the [graph API explorer](https://developers.facebook.com/tools/explorer/)
-- Get a token
+- Get a token and select fields you want to fetch
 - Copy this token in your Javascript file `fb.js`
 
 
