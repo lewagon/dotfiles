@@ -117,8 +117,8 @@ You can now read in the hash `data.flats` using the owner's name as a key, like 
 Now try to access:
 
 - [http://localhost:4567/flats/anne.html](http://localhost:4567/flats/anne.html) (where `owner = "anne"`)
-- [http://localhost:4567/flats/seb.html](http://localhost:4567/flats/anne.html) (where `owner = "seb"`)
-- [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/anne.html) (where `owner = "romain"`)
+- [http://localhost:4567/flats/seb.html](http://localhost:4567/flats/seb.html) (where `owner = "seb"`)
+- [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/romain.html) (where `owner = "romain"`)
 - etc...
 
 How cool? Your turn to build a dynamic page like [this one](http://lewagon.github.io/middleman-airbnb/flats/romain.html).

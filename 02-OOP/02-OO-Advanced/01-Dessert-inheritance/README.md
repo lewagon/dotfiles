@@ -21,7 +21,9 @@ Complete `JellyBean` which inherits from `Dessert`
 
 #### Super bicycle
 
-* in `bicycle.rb`, replace all the `"?"` in the `#quizz` method by the correct integer. Do you understand what the `super`keyword does? If you get it, you can re-implement `JellyBean#initialize` using the `super` keyword.
+* in `bicycle.rb`, replace all the `"?"` in the `#quizz` method by the correct integer.
+
+* Do you understand what the `super` keyword does? If you get it you can use it to rewrite your `JellyBean#initialize`, in `dessert.rb`, using the `super` keyword.
 
 ## Key learning points
 
