@@ -18,7 +18,7 @@ mail_joke("boris@lewagon.org")
 
 It must `raise` an
 [`ArgumentError`](http://www.ruby-doc.org/core-2.2.0/ArgumentError.html) if the
-first argument passed is not a string.
+first argument passed is not an email.
 
 It must handle correctly email with domains it does not know about.
 
