@@ -2,19 +2,70 @@
 
 Read the [Middleman documentation](https://middlemanapp.com/basics/blogging/) about their blog extension.
 
-Start a brand new middleman app including a blog:
+## Starting a brand new Middleman app including a blog
 
 ```bash
-$ cd ~/code/<user.github_nickname>
-$ gem install middleman-blog
-$ middleman init YOUR_FIRST_MIDDLEMAN_BLOG --template=blog
-$ cd YOUR_FIRST_MIDDLEMAN_BLOG
-$ stt
+cd ~/code/<user.github_nickname>
+gem install middleman-blog
+middleman init YOUR_FIRST_MIDDLEMAN_BLOG --template=blog
+cd YOUR_FIRST_MIDDLEMAN_BLOG
+middleman article YOUR_FIRST_ARTICLE
+stt
 ```
-Have a look at the blog structure and then:
+
+Have a look at the blog structure and write your first article with markdown syntax.
+
+Now you can run:
 
 ```bash
-$ middleman server
+middleman server
 ```
+
 You can see your first Middleman blog on _http://localhost:4567_
+
+Find your first article url on _http://localhost:4567/__middleman/sitemap/_
+
+## Adding a blog to your existing Middleman app
+
+Add `gem 'middleman-blog'` to your `Gemfile`.
+
+```bash
+bundle install
+```
+
+Configure your app to add a blog:
+
+```ruby
+# config.rb
+activate :blog do |blog|
+  blog.prefix = 'blog'
+end
+```
+
+Create your first article:
+
+```bash
+middleman article YOUR_FIRST_ARTICLE
+```
+
+Write your first article with markdown syntax, you will find it in `source/blog`.
+
+Launch `middleman server`and go to _http://localhost:4567/__middleman/sitemap/_ to find your first article's url.
+
+Now you can create a page wich lists all your articles:
+
+```bash
+touch source/blog/index.html.erb
+```
+
+```erb
+<!-- source/blog/index.html.erb -->
+<ul class="list-unstyled">
+  <% blog.articles.each do |article| %>
+    <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e %Y') %></span></li>
+  <% end %>
+</ul>
+```
+
+Then go to _http://localhost:4567/blog_ to visit your blog!
 
