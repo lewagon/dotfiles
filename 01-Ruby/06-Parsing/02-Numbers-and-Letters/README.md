@@ -32,7 +32,7 @@ This challenge will let you access a web-API, and parse JSON data returned by th
 
 **Constraints**:
 
-- For your code to pass the tests, you should consider the first translation among the principal translations given by the API. You will use the [Systran REST Translation API](https://platform.systran.net/reference/translation). Sign up on [http://www.systran.io/](http://www.systran.io/) and get your **server** API key on the [administration console](https://platform.systran.net/user/admin#/apiKeys). Look at the apple JSON translations: _https://api-platform.systran.net/translation/text/translate?source=en&target=fr&key=YOUR_API_KEY&input=apple_.
+- For your code to pass the tests, you should consider the first translation among the principal translations given by the API. You will use the [Systran REST Translation API](https://platform.systran.net/reference/translation). Sign up on [http://www.systran.io/](http://www.systran.io/) and get your **server** API key on the [administration console](https://platform.systran.net/user/admin#/apiKeys). Look at the apple JSON translations: [https://api-platform.systran.net/translation/text/translate?source=en&target=fr&key=YOUR_API_KEY&input=apple](https://api-platform.systran.net/translation/text/translate?source=en&target=fr&key=YOUR_API_KEY&input=apple).
 - Your grid should be a real random grid, hence possibly embed same characters multiple times.
 - Make sure you check if the word is an english word, i.e. has a translation, and if it is well included in the grid.
 - If the word is not valid or is not in the grid, the score will be 0 and you should build a custom message to explain it to the player.
