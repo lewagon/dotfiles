@@ -116,7 +116,7 @@ describe OrangeTree do
     expect(orange_tree.fruits).to eq 0
   end
 
-  it "should have an `one_year_passes!` method to simulate people picking fruits on the tree" do
+  it "should have an `pick_a_fruit!` method to simulate people picking fruits on the tree" do
     expect(orange_tree).to respond_to :pick_a_fruit!
   end
 
