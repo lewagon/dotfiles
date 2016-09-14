@@ -24,7 +24,7 @@ jules_verne = Restaurant.new("paris", "Jules Verne")
 tour_d_argent = Restaurant.new("paris", "Tour d'argent")
 bocuse = Restaurant.new("lyon", "Paul Bocuse")
 restos = [jules_verne, tour_d_argent, bocuse]
-Restaurant.filter_by_city(restos,"lyon") # => [bocuse]
+Restaurant.filter_by_city(restos,"lyon") # => [ #<Restaurant:0x007f9a43bb7eb8 @city="lyon", @name="Paul Bocuse"> ]
 ```
 
 ## Key learning points

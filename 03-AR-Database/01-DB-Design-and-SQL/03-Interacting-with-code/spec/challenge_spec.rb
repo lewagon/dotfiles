@@ -215,6 +215,45 @@ describe 'Queries methods' do
       expect(result.length).to eq(tracks.length)
       tracks.each { |t| expect(result).to include(t) }
     end
+    
+    it 'returns tracks sorted by length' do
+      tracks = [
+                                        "Hero",
+                                        "Three Minutes",
+                                        "Maternity Leave",
+                                        "\"?\"",
+                                        "Dave",
+                                        "The Young Lords",
+                                        "Crossroads, Pt. 2",
+                                        "Greetings from Earth, Pt. 2",
+                                        "The Gun On Ice Planet Zero, Pt. 1",
+                                        "Lost Planet of the Gods, Pt. 2",
+                                        "The Lost Warrior",
+                                        "Baltar's Escape",
+                                        "Lost Planet of the Gods, Pt. 1",
+                                        "War of the Gods, Pt. 1",
+                                        "The Living Legend, Pt. 2",
+                                        "War of the Gods, Pt. 2",
+                                        "Experiment In Terra",
+                                        "The Hand of God",
+                                        "The Gun On Ice Planet Zero, Pt. 2",
+                                        "The Living Legend, Pt. 1",
+                                        "The Magnificent Warriors",
+                                        "The Long Patrol",
+                                        "Fire In Space",
+                                        "Take the Celestra",
+                                        "Battlestar Galactica, Pt. 3",
+                                        "Murder On the Rising Star",
+                                        "Battlestar Galactica, Pt. 1",
+                                        "Battlestar Galactica, Pt. 2",
+                                        "The Man With Nine Lives",
+                                        "Greetings from Earth, Pt. 1",
+                                        "Through a Looking Glass",
+                                        "Occupation / Precipice"
+                                      ]
+      result = long_tracks(db, 45)
+      tracks.each_with_index { |t, idx| expect(result.index(t)).to eq(idx) }
+    end
 
   end
 
