@@ -18,7 +18,7 @@ Let's play with a `BankAccount` class that stores information about a bank accou
 
 ## Specs
 
-### The `BankAccount` contract in `account.rb`
+### The `BankAccount` contract in `bank_account.rb`
 
 The public interface of the class, i.e. the set of all its public methods, defines what is called the class contract (see the notion of [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). It is a sort of promise made by the class to other objects or other ruby programs. Below we specify our `BankAccount` class contract. We want to be able to do the following with our BankAccount objects from the outside world :
 
