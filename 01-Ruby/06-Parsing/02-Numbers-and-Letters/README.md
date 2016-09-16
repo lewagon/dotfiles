@@ -32,12 +32,12 @@ This challenge will let you access a web-API, and parse JSON data returned by th
 
 **Constraints**:
 
-- For your code to pass the tests, you should consider the first translation among the principal translations given by the API. Look at the [apple JSON translations](http://api.wordreference.com/0.8/80143/json/enfr/apple) to get an example.
+- For your code to pass the tests, you should consider the first translation among the principal translations given by the API. You will use the [Systran REST Translation API](https://platform.systran.net/reference/translation). Sign up on [http://www.systran.io/](http://www.systran.io/) and get your **server** API key on the [administration console](https://platform.systran.net/user/admin#/apiKeys). Look at the apple JSON translations: [https://api-platform.systran.net/translation/text/translate?source=en&target=fr&key=YOUR_API_KEY&input=apple](https://api-platform.systran.net/translation/text/translate?source=en&target=fr&key=YOUR_API_KEY&input=apple).
 - Your grid should be a real random grid, hence possibly embed same characters multiple times.
 - Make sure you check if the word is an english word, i.e. has a translation, and if it is well included in the grid.
 - If the word is not valid or is not in the grid, the score will be 0 and you should build a custom message to explain it to the player.
 - Your score should depend on the time you take to answer, and of the length of the word you found. The longer word the user finds and the quicker he answers, the better score he gets. Saying that, feel free to invent your own penalty rules!
-- The WordReference API might stop to respond at some point (too much requests from you guys!). Try to implement a **fallback** strategy where you [`rescue` the error](http://rubylearning.com/satishtalim/ruby_exceptions.html), and look at the built-in dictionary (English-only):
+- The Systran API might stop to respond at some point (too much requests from you guys!). Try to implement a **fallback** strategy where you [`rescue` the error](http://rubylearning.com/satishtalim/ruby_exceptions.html), and look at the built-in dictionary (English-only):
 
 ```ruby
 words = File.read('/usr/share/dict/words').upcase.split("\n")
@@ -56,4 +56,3 @@ This challenge is deliberately not guided. Here are some elements that will help
 * You can install the extension JSONView for [Chrome](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) or [Firefox](https://addons.mozilla.org/fr/firefox/addon/jsonview/) to help you read a JSON rendered by an API.
 * Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get the JSON result. Use the `json` package to parse returned JSON files.
 * For testing the grid inclusion, make use of `Enumerable#all?`
-* The API key we are going to use is `80143`. Hence the URL to query word reference database is: `"http://api.wordreference.com/0.8/80143/json/enfr/#{search_term}";`
