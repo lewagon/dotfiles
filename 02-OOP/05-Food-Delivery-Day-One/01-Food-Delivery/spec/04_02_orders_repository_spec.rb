@@ -141,7 +141,7 @@ describe "OrdersRepository" do
         employee: employees_repository.find(1)
       })
       repo.add(new_order)
-      expect(repo.instance_variable_get(:@orders).length).to eq(4)
+      expect(elements(repo).length).to eq(4)
     end
 
     it "should set the new order id" do
