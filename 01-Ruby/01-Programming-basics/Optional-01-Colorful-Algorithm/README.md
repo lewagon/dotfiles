@@ -10,7 +10,7 @@ true if the number is **colorful**, false otherwise.
 
 A colorful number is a number where all the products of consecutive subsets of digit are different.
 
-For this exercise, just consider numbers with **3** digits only.
+For this exercise, just consider numbers with up to **3** digits only (not more).
 
 Example:
 
