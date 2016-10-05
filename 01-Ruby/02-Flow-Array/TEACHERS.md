@@ -49,7 +49,7 @@ puts "heads or tails?"
 choice = gets.chomp
 coin = ["heads", "tails"].sample
 
-result = (choice == coin) ? "winner" : "looser"
+result = (choice == coin) ? "winner" : "loser"
 puts "#{result}, that was #{coin}"
 ```
 
