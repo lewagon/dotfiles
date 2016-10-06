@@ -11,4 +11,4 @@ livecode:
     video: 176492237
     gist: a2d3fc1f5ea9ed41ced161c23d7a4ff9
  
-no_flashcard_alert: true
+flashcard_alert: false
