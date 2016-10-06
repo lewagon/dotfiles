@@ -4,4 +4,4 @@ help: true
 lecture:
   fr:
     video: 138300673
-no_flashcard_alert: true
+flashcard_alert: false
