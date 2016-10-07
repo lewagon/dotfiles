@@ -6,3 +6,6 @@ lecture:
     video: 137594327
   en:
     video: 180305317  # TODO(ssaunier): maybe redo it without the JS fail.
+
+teacher_ratio: 7
+comment: Demo

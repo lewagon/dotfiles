@@ -8,3 +8,6 @@ lecture:
     # video: 137223621  # Paperclip - AWS
   en:
     video: 179464603
+
+teacher_ratio: 8
+comment: Quizz
