@@ -2,6 +2,7 @@
   "detect_indentation": false,
   "draw_white_space": true,
   "ensure_newline_at_eof_on_save": true,
+  "update_check": false,
   "folder_exclude_patterns":
   [
     "tmp",
