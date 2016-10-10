@@ -61,8 +61,4 @@ ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ C
 
 zsh ~/.zshrc
 
-if [[ `uname` =~ "darwin" ]]; then
-  echo "Quit your terminal and restart it (⌘ + Q)."
-else
-  echo "Quit your terminal and restart it (Alt + F4)."
-fi
+echo "👌  Carry on with git setup!"
