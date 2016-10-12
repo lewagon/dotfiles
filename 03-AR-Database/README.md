@@ -20,7 +20,6 @@ Let's go deeper into Active Record and speak of validations and associations.
 
 At 2pm, third paper quizz of the program:
 
-- [Quizz in English](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/3-db-english.pdf)
-- [Quizz in French](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/3-db-french.pdf)
+👉 [Quizz #3](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-3.en.pdf)
 
 This one will take you up to 45 minutes and will be corrected publicly by the lead-teacher (for all the class at the same time and not in one-to-one reviews).

@@ -12,4 +12,4 @@ Let's replace our terminal output by a website! In this exercise, you'll discove
 
 ## Quiz
 
-[Third paper quiz](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/3-db-english.pdf) at 4pm (on DB, SQL and Active Record). **No live-code tonight**, we will correct this quiz altogether on the white board at 5:30pm.
+[Third paper quiz](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-1.en.pdf) at 4pm (on DB, SQL and Active Record). **No live-code tonight**, we will correct this quiz altogether on the white board at 5:30pm.

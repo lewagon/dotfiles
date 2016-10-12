@@ -33,5 +33,4 @@ Let's start on a recap live-code to help you finish the Food Delivery app today.
 
 At 2pm on the day of the Food Delivery (Day Two), let's shut down our computers and make a paper quizz during 30 minutes to fix our ideas:
 
-- [Quizz in English](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/2-oop-english.pdf)
-- [Quizz in French](https://github.com/lewagon/quizzes/raw/gh-pages/pdf/2-oop-french.pdf)
+👉 [Quizz #2](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-2.en.pdf)
