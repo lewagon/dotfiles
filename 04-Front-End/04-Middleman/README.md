@@ -2,14 +2,14 @@ Reminder, **no live-code tonight as you will pitch your idea in front of the cla
 
 ## Evening Pitch session
 
-If you've done your homework 😀, you should have uploaded your product pitch [here](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches). You now have 5 minutes to pitch your idea in front of the class.
+If you've done your homework 😀, you should have uploaded your product pitch [here](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches). You now have 5 minutes to pitch your idea in front of the class in the evening.
 
 ## Votes & Team building
 
 - After the pitch session, [you can vote on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) for the projects you like most. It will give a first idea of popular projects within the class.
 - Then you'll have until Friday to [build teams on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) of **3 people**.
 
-On Friday, we will start prototyping your app during a great Product Design Sprint. Teams need to be set up for Friday 👊👊👊.
+On Friday, we will start prototyping your app during a great Product Design Sprint. Teams need to be set up for Friday 👊👊👊. Now let's go back to today's challenge !
 
 ## `01-Playing-with-ERB`
 
