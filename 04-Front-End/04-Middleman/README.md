@@ -18,11 +18,11 @@ Use Middleman [blogging extension](https://middlemanapp.com/basics/blogging/) to
 
 ## Pitch session
 
-Normally (if you've done your homework), you should have uploaded your product pitch [here]([upload your pitch on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches). You now have 5 minutes to pitch your idea in front of the class.
+Normally (if you've done your homework), you should have uploaded your product pitch [here](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches). You now have 5 minutes to pitch your idea in front of the class.
 
 ## Votes & Team building
 
-- After the pitch session, [you can vote for the projects you like most on Kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting). It will give a first idea of popular projects within the class.
+- After the pitch session, [you can vote on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) for the projects you like most. It will give a first idea of popular projects within the class.
 - Then you have until Friday to [build teams](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) of 3 people.
 
-On Friday, you will start prototyping your app during Product Design Sprint. Teams need to be set up at this stage.
+On Friday, you will start prototyping your app during the Product Design Sprint. Teams need to be set up for Friday.
