@@ -47,12 +47,9 @@ Learn how to include a jQuery plugin **the correct way** in your project, either
 
 HTTP is **the** protocol on which a website is based and that you absolutely need to know. **So understand it**. Then learn to make HTTP requests in javascript using AJAX. We'll start playing with APIs today, yeah!
 
-## `08-Project-Day` (Friday)
+## `08-Product-Design-Sprint` (Friday)
 
-This is a rather special day. **No code, no challenges, no buddy**. The objective is to:
+This is a rather special day. **No code, just prototyping and Product design**. The objective is to:
 
-- Pitch your idea for the final 2-week projects
-- Start building teams, or negociating about it :)
-- Start defining your products (**user stories**, **first mockups**).
-
-**Disclaimer: This day should be organized by "Product Experts", selected with Paris agreement.**
+- Prototype your project with your team
+- Make a demo of your project in front of the class as if you had coded it.
