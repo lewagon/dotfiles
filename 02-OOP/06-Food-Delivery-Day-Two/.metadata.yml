@@ -10,5 +10,8 @@ livecode:
   en:
     video: 176492237
     gist: a2d3fc1f5ea9ed41ced161c23d7a4ff9
- 
+
 flashcard_alert: false
+
+teacher_ratio: 7
+comment: nil
