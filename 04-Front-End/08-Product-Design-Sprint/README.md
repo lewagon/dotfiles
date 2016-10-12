@@ -18,7 +18,7 @@ Time to draw rectangles for each page of your journey. You can use Keynote, Sket
 
 Once your core journey is well defined, and once you have worked on the zoning of each page, it's time to build an actual mockup.
 
-There must be one Mac user in each team 🙏. So you can [download the free trial of Sketch](https://www.sketchapp.com/) and watch our [15 minutes Sketch tutorial on Youtube](https://www.youtube.com/watch?v=zR-6RW3kHyM). It should be enough to work on your mockup.
+There must be one Mac user in each team 🙏! So you can [download the free trial of Sketch](https://www.sketchapp.com/) and watch our [15 minutes Sketch tutorial on Youtube](https://www.youtube.com/watch?v=zR-6RW3kHyM). It should be enough to work on your mockup.
 
 ## `05-Prototype`
 
