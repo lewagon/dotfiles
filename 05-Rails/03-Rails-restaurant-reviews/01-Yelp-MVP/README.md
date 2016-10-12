@@ -198,7 +198,7 @@ It will generate this HTML
 ```html
 <form action="/reviews">
   <!-- [...] -->
-<% end %>
+</form>
 ```
 
 That's not what we want because **we don't have any route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
@@ -214,7 +214,7 @@ This will will generate the following HTML form:
 ```html
 <form action="/restaurants/42/reviews">
   <!-- [...] -->
-<% end %>
+</form>
 ```
 
 This URL is consistent with the route `POST "restaurants/:restaurant_id/reviews"` you have defined in `routes.rb`. Yeah! For more insights, you can read [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
