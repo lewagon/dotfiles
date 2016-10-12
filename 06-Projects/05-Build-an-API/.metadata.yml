@@ -4,3 +4,6 @@ help: true
 lecture:
   fr:
     video: 138300673
+
+teacher_ratio: 7
+comment: Demo

@@ -13,3 +13,6 @@ livecode:
   en:
     video: 178932539
     gist: c80c39bbb3b79d41ee38f8cfca31bd10
+
+teacher_ratio: 10
+comment: nil
