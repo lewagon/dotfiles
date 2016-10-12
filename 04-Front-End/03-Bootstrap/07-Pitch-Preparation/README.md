@@ -1,12 +1,12 @@
 ## Upload your pitch this weekend
 
-You need to [upload your pitch on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches) this weekend.
+Reminder - you have some homework this weekend and you need to [upload your pitch on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches) this weekend.
 
-Then, on Monday evening (instead of the live-code) you will pitch your idea in front of the class.
+Then, next Monday evening (instead of the live-code) you will pitch your idea in front of the class.
 
 ## What makes a good product pitch
 
-A good pitch should explain in 5 minutes max (and very simply):
+A good pitch should explain in 5 minutes max and very simply:
 
 - Your **target** (and first customer segment)
 - Their **pain** (or need)

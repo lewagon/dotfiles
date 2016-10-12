@@ -2,7 +2,7 @@
 
 You need to [upload your pitch on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches) this weekend.
 
-Then, on Monday evening (instead of the live-code) you will pitch your idea in front of the class. A good pitch should explain in 5 minutes max (and very simply):
+Then, next Monday evening, instead of the live-code, you will pitch your idea in front of the class. A good pitch should explain in 5 minutes max and very simply:
 
 - Your **target** (and first customer segment)
 - Their **pain** (or need)
@@ -14,7 +14,7 @@ Here is an example of a good product pitch:
 - **pain**: struggle to build plannings and pay employees (big turnover)
 - **value proposition**: web-app to handle plannings and generate pay slips
 
-Don't forget to [upload your pitch on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches) before Monday!
+Don't forget to [upload your pitch on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches) before Monday 🙏🙏🙏.
 
 ## `01-Smiley-grids`
 

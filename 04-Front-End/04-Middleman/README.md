@@ -1,5 +1,16 @@
 Reminder, **no live-code tonight as you will pitch your idea in front of the class instead**!
 
+## Evening Pitch session
+
+If you've done your homework 😀, you should have uploaded your product pitch [here](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches). You now have 5 minutes to pitch your idea in front of the class.
+
+## Votes & Team building
+
+- After the pitch session, [you can vote on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) for the projects you like most. It will give a first idea of popular projects within the class.
+- Then you'll have until Friday to [build teams on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) of **3 people**.
+
+On Friday, we will start prototyping your app during a great Product Design Sprint. Teams need to be set up for Friday 👊👊👊.
+
 ## `01-Playing-with-ERB`
 
 Play with ERB, add a team page to your Middleman project and import your Airbnb home putting common parts in the layout. Replace `<a>` and `<img>` tags with `<%= link_to >` and `<%= image_tag >` helpers.
@@ -16,13 +27,3 @@ First create a YAML database for your flats. Then add a dynamic flat template ab
 
 Use Middleman [blogging extension](https://middlemanapp.com/basics/blogging/) to add a blog to your Airbnb.
 
-## Pitch session
-
-Normally (if you've done your homework), you should have uploaded your product pitch [here](http://kitt.lewagon.org/camps/<user.batch_slug>/products/pitches). You now have 5 minutes to pitch your idea in front of the class.
-
-## Votes & Team building
-
-- After the pitch session, [you can vote on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) for the projects you like most. It will give a first idea of popular projects within the class.
-- Then you have until Friday to [build teams](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) of 3 people.
-
-On Friday, you will start prototyping your app during the Product Design Sprint. Teams need to be set up for Friday.
