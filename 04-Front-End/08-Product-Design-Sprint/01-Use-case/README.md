@@ -17,15 +17,16 @@ Let's take some projects from Le Wagon alumni and define their use case and angl
   - `use case`: find a restaurant
   - `angle`: depending on your food allergies
 2. **Kudoz**:
-  - `use case`: find a job
-  - `angle`: don't update CV, and just accept / decline offers
+  - `use case`: find a job that fits you
+  - `angle`: no more CV updates, just connect with Linkedin and accept / decline offers
 3. **Skello**:
   - `use case`: manage your plannings
   - `angle`: for your restaurant employees and generate their pay slips
 4. **Take Away Trips**
-  - `use case`:
+  - `use case`: share a custom travel guide
+  - `angle`: create and share a guide in only a few clicks
 5. **Dinja**
-  - `use case`: cook your meals
+  - `use case`: cook your meals for the week
   - `angle`: buy online what's needed for cool recipes
 6. **Happy Papi**
   - `use case`: order a cab
