@@ -67,7 +67,7 @@ describe "Order" do
   end
 
   describe "#deliver!" do
-    it "should mark a recipe as delievered" do
+    it "should mark a order as delievered" do
       order = Order.new
       expect(order.delivered?).to be false
       order.deliver!
