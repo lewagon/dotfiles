@@ -117,7 +117,7 @@ describe "OrdersController" do
       expect(OrdersController.instance_method(:list_my_orders).arity).to eq(1)
     end
 
-    it "should ask the delivery guy for a meal id and mark it as delivered" do
+    it "should ask the delivery guy for a order id and mark it as delivered" do
       controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
 
       # Ringo wants to mark as delivered number 4.
