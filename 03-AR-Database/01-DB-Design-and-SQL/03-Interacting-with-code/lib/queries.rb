@@ -9,9 +9,9 @@ def sorted_artists(db)
 end
 
 def love_tracks(db)
-  # TODO: return a sorted array of love songs
+  # TODO: return array of love songs sorted alphabetically
 end
 
 def long_tracks(db, min_length)
-  # TODO: return tracks verifying: duration > min_length (minutes)
+  # TODO: return an array of tracks verifying: duration > min_length (minutes) sorted by length (ascending)
 end
