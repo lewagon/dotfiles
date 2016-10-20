@@ -1,7 +1,7 @@
 require 'sqlite3'
 
 def detailed_tracks(db)
-  # TODO: return the list of tracks with their album and artist, ordered by artist name.
+  # TODO: return the list of tracks with their album and artist.
 end
 
 def stats_on(db, genre_name)
