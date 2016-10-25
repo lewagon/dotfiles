@@ -6,5 +6,6 @@ lecture:
   # fr:
   #   video: 136596392
 
+flashcard_alert: false
 teacher_ratio: 10
 comment: Demo
