@@ -59,6 +59,8 @@ Now let's implement an enhanced version of the coach, with the method `coach_ans
 - Write the code for the interface that makes you discuss with your coach through the terminal
 - **constraint**: This program should **"loop"**. Your coach should answer to your message and wait for your next one until you decide to get rid of him. Use a `while..end` or `until..end` structure for that purpose.
 
+If you're getting stuck in an **infinite loop**, just hit `Ctrl` + `C`! It will kill the process.
+
 ## Key learning points
 
 - What's the usual flow of a program ?

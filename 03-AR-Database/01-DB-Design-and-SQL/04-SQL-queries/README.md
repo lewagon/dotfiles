@@ -4,7 +4,7 @@ Now it is time to perform more complex SQL queries and especially `join` queries
 
 ## Specs
 
-Complete the code in `join_queries.rb`. Each method take a `db` argument, which is an instance
+Complete the code in `join_queries.rb`. Each method takes a `db` argument, which is an instance
 of `SQLite3::Database` on which you can call the `execute` method.
 
 ### Detailed Tracks

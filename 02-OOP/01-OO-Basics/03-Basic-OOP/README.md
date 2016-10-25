@@ -22,7 +22,7 @@ end
 ```
 
 - You should be able to measure the tree.
-- You should be able to know if the three is dead.
+- You should be able to know if the tree is dead.
 - Each year, the tree should age (it becomes older and taller, and eventually dies).
 - A tree grows 1 meter per year until 10 years old. Then it stops growing.
 - Up until 50 years old, the orange tree should not be dead.
