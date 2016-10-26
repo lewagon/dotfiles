@@ -42,16 +42,16 @@ Start by building the main loop displaying action menu and getting user's input:
 ```bash
 $ ruby interface.rb
 > Welcome to your Christmas giftlist!
-> What do you want to do [list|add|delete|quit]?
+> Which action [list|add|delete|quit]?
 > list
 > TODO: list items
-> What do you want to do [list|add|delete|quit]?
+> Which action [list|add|delete|quit]?
 > add
 > TODO: ask user an item and add it to giftlist
-> What do you want to do [list|add|delete|quit]?
+> Which action [list|add|delete|quit]?
 > add
 > TODO: ask user the index of item to delete and delete it
-> What do you want to do [list|add|delete|quit]?
+> Which action [list|add|delete|quit]?
 > quit
 > Goodbye
 ```
@@ -73,16 +73,16 @@ We want to be able to mark item as bought:
 ```bash
 $ ruby interface.rb
 > Welcome to your Christmas giftlist!
-> What do you want to do [list|add|delete|mark|quit]?
+> Which action [list|add|delete|mark|quit]?
 > list
 > 1 - [ ] sockets
 > 2 - [X] ruby book
 > 3 - [ ] macbook pro
-> What do you want to do [list|add|delete|mark|quit]?
+> Which action [list|add|delete|mark|quit]?
 > mark
 > Which item have you bought (give the index)?
 > 3
-> What do you want to do [list|add|delete|mark|quit]?
+> Which action [list|add|delete|mark|quit]?
 > list
 > 1 - [ ] sockets
 > 2 - [X] ruby book
