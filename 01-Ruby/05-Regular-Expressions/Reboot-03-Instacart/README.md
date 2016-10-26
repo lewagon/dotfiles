@@ -8,7 +8,7 @@
 
 Let's create a folder for this new challenge:
 
-```bash
+```shell
 $ cd ~/code/${GITHUB_USERNAME}/reboot
 $ mkdir instacart
 $ cd instacart
@@ -38,7 +38,7 @@ How should your program work when your launch it? **Let's write the pseudo code*
 ## Step 1 - dumb shopping 🛍
 
 
-```bash
+```shell
 $ ruby interface.rb
 > --------------------
 > Welcome to Instacart
@@ -72,7 +72,7 @@ How do we model the `store` and the `cart`? What's the most convenient for each 
 
 ## Step 2 - Adding quantity 🛍🛍
 
-```bash
+```shell
 $ ruby interface.rb
 > --------------------
 > Welcome to Instacart
@@ -107,7 +107,7 @@ How do we modify the `store` and the `cart` to take the quantity into considerat
 
 Now let's push the program further and handle our stock, with availability:
 
-```bash
+```shell
 $ ruby interface.rb
 > --------------------
 > Welcome to Instacart
