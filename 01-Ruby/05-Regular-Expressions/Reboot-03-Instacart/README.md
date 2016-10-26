@@ -2,7 +2,7 @@
 
 - You should kickstart this challenge before lunch altogether with the teacher.
 - Then it will take your all the afternoon to finish it.
-- Validate each step of the challenge with the teacher with an intermediate correction live-code 💻.
+- Validate each step of the challenge with the teacher with an intermediate live-code 💻 to correct each step.
 
 ## Setup
 
