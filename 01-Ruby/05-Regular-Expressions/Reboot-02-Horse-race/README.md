@@ -1,6 +1,6 @@
 ## Guidelines
 
-This challenge should take you **45 minutes 🕒🕒🕒**. You should finish it and start brainstorming on the next challenge before lunch!
+This challenge should take you **45 minutes 🕒**. You should finish it and start brainstorming on the next challenge before lunch!
 
 1. Kickstart by writing the pseudo-code with the teacher as a live-code.
 2. Work 20 minutes on your own to try to figure out the solution.
