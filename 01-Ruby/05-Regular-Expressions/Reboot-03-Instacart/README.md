@@ -37,6 +37,8 @@ How should your program work when your launch it? **Let's write the pseudo code*
 
 ## Step 1 - dumb shopping 🛍
 
+Here is the first version of our program:
+
 
 ```shell
 $ ruby interface.rb
@@ -63,12 +65,14 @@ $ ruby interface.rb
 > --------------------
 ```
 
-How do we model the `store` and the `cart`? What's the most convenient for each one?
+### Modeling the store and the cart
 
+- How do we model the `store` and the `cart`?
+- What's the most convenient stucture for each one?
 - Should we use an array?
-- Should we use an array? Which keys? Which values?
+- Should we use a hash? With which keys and which values?
 
-*Brainstorm with your teacher before starting!*
+**Brainstorm about it with your teacher before starting!**
 
 ## Step 2 - Adding quantity 🛍🛍
 
@@ -100,8 +104,10 @@ $ ruby interface.rb
 > --------------------
 ```
 
-How do we modify the `store` and the `cart` to take the quantity into consideration?
+### Modeling the store and the cart
 
+- How do we modify the `store` and the `cart` to take the quantity into consideration?
+- What do we need to change in our code?
 
 ## Step 3 - Adding availability 🛍🛍🛍
 
@@ -129,3 +135,8 @@ $ ruby interface.rb
 > Sorry, only 3 kiwis remaining..
 > [...]
 ```
+
+### Modeling the store and the cart
+
+- How do we modify the `store` and the `cart` to take the quantity into consideration?
+- What do we need to change in our code?
