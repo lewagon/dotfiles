@@ -35,7 +35,7 @@ Always kickstart a challenge altogether with the teacher (as a live-code), and b
 
 ```ruby
 # interface.rb
-# pseudo-code == what's happening (in english) when I launch my program
+# pseudo-code = what's happening (in plain english) when I run my program
 
 # 1. Say hello to the user
 # 2. Ask user for first number
