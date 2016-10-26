@@ -2,9 +2,9 @@
 
 This challenge should take you **30 minutes 🕒**
 
-1. Let's kickstart the challenge with the teacher (as a live-code) and **write the pseudo-code altogether**.
+1. Let's kickstart the challenge with the teacher (as a live-code 💻) and **write the pseudo-code altogether**.
 2. Then work 10 minutes on your own to try to figure out the solution.
-3. Then correct it altogether with the teacher (again as a live-code).
+3. Then correct it altogether with the teacher (again as a live-code 💻).
 
 ## ReBoot setup
 

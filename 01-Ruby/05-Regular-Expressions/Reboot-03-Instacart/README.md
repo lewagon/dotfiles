@@ -1,6 +1,8 @@
 ## Guidelines
 
-You should kickstart this challenge before lunch with the teacher. And then it will take your all the afternoon to finish it!
+- You should kickstart this challenge before lunch with the teacher.
+- Then it will take your all the afternoon to finish it.
+- Validate each step of the challenge with the teacher with an intermediate live-code altogether 💻.
 
 ## Setup
 
