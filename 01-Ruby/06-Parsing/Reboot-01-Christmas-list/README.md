@@ -9,7 +9,7 @@ This challenge should take you all day.
 
 Let's create a folder for this new challenge:
 
-```bash
+```shell
 $ cd ~/code/${GITHUB_USERNAME}/reboot
 $ mkdir christmas-list
 $ cd christmas-list
@@ -39,9 +39,9 @@ First thing first, let's brainstorm on the **pseudo-code**
 
 Start by building the main loop displaying action menu and getting user's input:
 
-```bash
+```shell
 $ ruby interface.rb
-> Welcome to your Christmas giftlist!
+> Welcome to your Christmas giftlist
 > Which action [list|add|delete|quit]?
 > list
 > TODO: list items
@@ -58,21 +58,20 @@ $ ruby interface.rb
 
 ## Step 2 - List, Add, Delete 🎁🎁
 
-Now you must impletement all the simple actions (list, add, delete).
+Now let's impletement the simple actions (`list`, `add`, `delete`).
 
 - How do you model your `giftlist`?
 - Do you use a hash? an array?
 
-**Discuss that with your teacher.**
-
+**Discuss that with your teacher before implementinhg each action.**
 
 ## Step 3 - Mark an item as bought 🎁🎁🎁
 
-We want to be able to mark item as bought:
+We want to be able to mark any item as bought:
 
-```bash
+```shell
 $ ruby interface.rb
-> Welcome to your Christmas giftlist!
+> Welcome to your Christmas giftlist
 > Which action [list|add|delete|mark|quit]?
 > list
 > 1 - [ ] sockets
@@ -97,10 +96,10 @@ Again, **discuss that with your teacher.**
 ## Step 4 - Find ideas on Etsy 🎁🎁🎁🎁
 
 You are out of ideas for Christmas and you want to find inspiration from [Etsy](https://www.etsy.com).
-Add a new action `idea` to your menu (additionally to the `list`, `add`, `delete` and `mark` action). Here is how this action could work:
+Add a new action `idea` to your menu (additionally to the `list`, `add`, `delete` and `mark` actions). Here is how this action could work:
 
-```bash
-What do you search on Etsy?
+```shell
+What are you searching on Etsy?
 > Jeans
 Here are Etsy results for "Jeans":
 1 - Blue Jeans Levis..
@@ -117,18 +116,16 @@ For the scraper, here is a starting script to help you extract the data:
 
 ```ruby
 # scraping_etsy.rb
-# This is an example script, you need to adapt it
-
 require "open-uri"
 require "nokogiri"
 
-puts "What do you search on Etsy?"
+puts "What are you searching on Etsy?"
 article = gets.chomp
 
 # 1. We get the HTML file thanks to open-uri
 file = open("https://www.etsy.com/search?q=#{article}")
 
-# 2. We build a Nokogiri document with cool searching method on it
+# 2. We build a Nokogiri document from this file
 doc = Nokogiri::HTML(file)
 
 # 3. We search every elements with class="card" in our HTML doc
@@ -139,7 +136,6 @@ doc.search(".card").each do |card|
   puts title
 end
 ```
-
 
 - Feel free to scrape another website adapting this script.
 - Also, you can scrape other information than just the name (for example the price of the item 💲💲💲).
