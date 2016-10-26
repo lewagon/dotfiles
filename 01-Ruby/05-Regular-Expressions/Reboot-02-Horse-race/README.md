@@ -1,6 +1,6 @@
 ## Guidelines
 
-This challenge should take you **45 minutes**. You should finish it and start brainstorming on the next challenge before lunch!
+This challenge should take you **45 minutes 🕒🕒🕒**. You should finish it and start brainstorming on the next challenge before lunch!
 
 1. Kickstart by writing the pseudo-code with the teacher as a live-code.
 2. Work 20 minutes on your own to try to figure out the solution.
@@ -40,4 +40,4 @@ Each step above is too general, **try to detail a bit more this pseudo-code**.
 
 ## Make your computer speak :)
 
-Let's pimp our program and make our computer speak! For that you can use `say`. That is pretty cool 😊 Be creative and build custom messages 🐴🐴🐴🐴🐴🐴!
+Let's pimp our program and make our computer speak! For that you can use `say`. That is pretty cool 😊 Be creative and build custom messages 🐴🐴🐴🐴🐴🐴

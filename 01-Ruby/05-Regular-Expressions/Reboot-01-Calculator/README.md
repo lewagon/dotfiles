@@ -1,6 +1,6 @@
 ## Guidelines
 
-This challenge should take you **30 minutes max**
+This challenge should take you **30 minutes 🕒🕒🕒**
 
 1. Let's kickstart the challenge with the teacher (as a live-code) and **write the pseudo-code altogether**.
 2. Then work 10 minutes on your own to try to figure out the solution.
