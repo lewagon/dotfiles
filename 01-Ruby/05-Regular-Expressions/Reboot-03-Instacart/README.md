@@ -68,9 +68,8 @@ $ ruby interface.rb
 ### Modeling the store and the cart
 
 - How do we model the `store` and the `cart`?
-- What's the most convenient stucture for each one?
-- Should we use an array?
-- Should we use a hash? With which keys and which values?
+- What's the **most adapted stucture for each one**?
+- Should we use an array? Should we use a hash (which keys and which values)?
 
 **Brainstorm about it with your teacher before starting!**
 
@@ -107,7 +106,7 @@ $ ruby interface.rb
 ### Modeling the store and the cart
 
 - How do we modify the `store` and the `cart` to take the quantity into consideration?
-- What do we need to change in our code?
+- What do we need to change in our code with this new modeling?
 
 ## Step 3 - Adding availability 🛍🛍🛍
 
@@ -132,11 +131,11 @@ $ ruby interface.rb
 > kiwi
 > Which quantity?
 > 4
-> Sorry, only 3 kiwis remaining..
+> Sorry, only 3 kiwis left..
 > [...]
 ```
 
 ### Modeling the store and the cart
 
 - How do we modify the `store` and the `cart` to take the quantity into consideration?
-- What do we need to change in our code?
+- What do we need to change in our code with this new modeling?
