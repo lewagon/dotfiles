@@ -51,15 +51,15 @@ $ ruby interface.rb
 > mango: 4€
 > asparagus: 9€
 > --------------------
-> Which article? ('exit' to checkout)
+> Which article? ('quit' to checkout)
 > kiwi
-> Which article? ('exit' to checkout)
+> Which article? ('quit' to checkout)
 > pineapple
-> Sorry, we don't have pineapple
-> Which article? ('exit' to checkout)
+> Sorry, no pineapple..
+> Which article? ('quit' to checkout)
 > mango
-> Which article? ('exit' to checkout)
-> exit
+> Which article? ('quit' to checkout)
+> quit
 > -------BILL---------
 > TOTAL: 5.25€
 > --------------------
@@ -87,16 +87,16 @@ $ ruby interface.rb
 > mango: 4€
 > asparagus: 9€
 > --------------------
-> Which article? ('exit' to checkout)
+> Which article? ('quit' to checkout)
 > kiwi
 > Which quantity?
 > 2
-> Which article? ('exit' to checkout)
+> Which article? ('quit' to checkout)
 > mango
 > Which quantity?
 > 3
-> Which article? ('exit' to checkout)
-> exit
+> Which article? ('quit' to checkout)
+> quit
 > -------BILL---------
 > kiwi: 2 X 1.25€ = 2.5€
 > mango: 3 X 4€ = 12€
@@ -111,7 +111,7 @@ $ ruby interface.rb
 
 ## Step 3 - Adding availability 🛍🛍🛍
 
-Now let's push the program further and handle our stock, with availability:
+Now let's push the program further and handle our stock (with availability):
 
 ```shell
 $ ruby interface.rb
@@ -124,11 +124,11 @@ $ ruby interface.rb
 > mango: 4€ (1 items)
 > asparagus: 9€ (5 items)
 > --------------------
-> Which article? ('exit' to checkout)
+> Which article? ('quit' to checkout)
 > kiwi
 > Which quantity?
 > 2
-> Which article? ('exit' to checkout)
+> Which article? ('quit' to checkout)
 > kiwi
 > Which quantity?
 > 4
