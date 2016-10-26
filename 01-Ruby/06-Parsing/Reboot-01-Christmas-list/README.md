@@ -20,9 +20,9 @@ Again let's start with the interface. It's more intuitive.
 
 ## Pseudo-code
 
-Winter is coming ⛄⛄⛄! We want to build a program to handle our gifts list, mark items as bought when we've found them and eventually find some inspiration from external website like Etsy.
+Winter is coming ⛄⛄⛄. We want to build a program to handle our gifts list, mark items as bought when we've found them and eventually find some inspiration from external website like Etsy.
 
-But first things first, let's brainstorm in the **pseudo-code**
+First thing first, let's brainstorm on the **pseudo-code**
 
 
 ```ruby
