@@ -14,9 +14,9 @@ If these concepts are not 200% clear for you, **work on ReBoot challenges to reh
 
 You will work on these challenges **from scratch without code canvas and without `rake`**. You will start every ReBoot challenge with the teacher on the screen, to help you write the pseudo-code and kickstart every challenge.
 
-1. `01-calculator`: build a simple calculator with a command-line UI, first handling only additions, then all operations (mutliplications, substractions, divisions).
-1. `02-horse_racing`: code a program simulating a horse race, where you have to enter horse names, you then run the race (which will shuffle the horses array) and then the terminal outputs the race results. You can make your program much funnier using `say` to simulate the anchorman. That is pretty cool :)
-1. `03-instacart`: implement a shopping cart, where ultimately you can
+1. `Reboot-01-Calculator`: build a simple calculator with a command-line UI, first handling only additions, then all operations (mutliplications, substractions, divisions).
+1. `Reboot-02-Horse-race`: code a program simulating a horse race, where you have to enter horse names, you then run the race (which will shuffle the horses array) and then the terminal outputs the race results. You can make your program much funnier using `say` to simulate the anchorman. That is pretty cool :)
+1. `Reboot-03-Instacart`: implement a shopping cart, where ultimately you can
   - Add items with prices and amount in your cart.
   - Then checkout and the terminal will print you the detailed receipt.
   - Start with a very simple program without handling prices nor available stock, then improve it.
