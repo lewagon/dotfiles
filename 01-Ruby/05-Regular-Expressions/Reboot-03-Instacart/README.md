@@ -19,24 +19,23 @@ Again let's start with the interface. It's more intuitive.
 
 ## Pseudo-code
 
-How should your program work when your launch it? Write the pseudo code!
+How should your program work when your launch it? **Let's write the pseudo code**
 
 
 ```ruby
 # interface.rb
 
 # Pseudo-code
-
 # 1. Print Welcome
 # 2. Define your store (with a bunch of food items)
 # 2. Get items from the user (shopping step)
 # 3. Print the bill (cashier step)
 ```
 
-For each step above (a bit too general), *try to detail a bit more the pseudo-code*.
+**Can you to detail a bit more the pseudo-code above?**
 
 
-## Start simple
+## Step 1 - dumb shopping 🛍
 
 
 ```ruby
@@ -71,7 +70,7 @@ How do we model the `store` and the `cart`? What's the most convenient for each 
 
 *Brainstorm with your teacher before starting!*
 
-## Adding quantity
+## Step 2 - Adding quantity 🛍🛍
 
 ```ruby
 $ ruby interface.rb
@@ -104,7 +103,7 @@ $ ruby interface.rb
 How do we modify the `store` and the `cart` to take the quantity into consideration?
 
 
-## Adding availability
+## Step 3 - Adding availability 🛍🛍🛍
 
 Now let's push the program further and handle our stock, with availability:
 
