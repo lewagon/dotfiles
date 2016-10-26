@@ -36,8 +36,7 @@ Always kickstart a challenge altogether with the teacher and write the *pseudo-c
 ```ruby
 # interface.rb
 
-# Pseudo-code = what's happening (in plain english) when I run my program
-
+# Pseudo-code (what are the steps in plain english):
 # 1. Say hello to the user
 # 2. Ask user for first number
 # 3. Get user answer

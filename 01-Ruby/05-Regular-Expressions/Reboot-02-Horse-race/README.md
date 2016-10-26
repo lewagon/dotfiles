@@ -2,9 +2,9 @@
 
 This challenge should take you **45 minutes**. You should finish it and start brainstorming on the next challenge before lunch!
 
-1. Kickstart as a live-code to write the pseudo-code altogether with the teacher.
-2. Work 20 minutes on your own to try to figure out the solution
-3. Then make the correction altogether.
+1. Kickstart by writing the pseudo-code with the teacher as a live-code.
+2. Work 20 minutes on your own to try to figure out the solution.
+3. Then let's correct it altogether.
 
 ## Setup
 
@@ -27,8 +27,7 @@ How should your program work when your launch it? Write the pseudo code!
 ```ruby
 # interface.rb
 
-# Pseudo-code
-
+# Pseudo-code:
 # 1. Print welcome
 # 2. Get horses
 # 3. Get user's bet
@@ -36,9 +35,9 @@ How should your program work when your launch it? Write the pseudo code!
 # 5. Print results
 ```
 
-For each step above (a bit too general), *try to detail a bit more the pseudo-code*.
+Each step above is too general, **try to detail a bit more this pseudo-code**.
 
 
 ## Make your computer speak :)
 
-Let's pimp our program and make our computer speak! For that you can use `say`. That is pretty cool :) Be creative and build custom messages.
+Let's pimp our program and make our computer speak! For that you can use `say`. That is pretty cool 😊 Be creative and build custom messages 🐴🐴🐴🐴🐴🐴!
