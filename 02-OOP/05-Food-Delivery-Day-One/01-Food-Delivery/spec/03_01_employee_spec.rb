@@ -12,7 +12,7 @@ rescue LoadError => e
   end
 end
 
-describe "Employee" do
+describe "Employee", :employee do
   it "should be initialized with a hash of properties" do
     properties = { id: 1, username: "paul", password: 'secret', role: 'manager' }
     employee = Employee.new(properties)

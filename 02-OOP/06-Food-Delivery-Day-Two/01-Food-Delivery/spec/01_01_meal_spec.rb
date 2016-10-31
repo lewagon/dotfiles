@@ -12,7 +12,7 @@ rescue LoadError => e
   end
 end
 
-describe "Meal" do
+describe "Meal", :meal do
   it "should be initialized with a hash of properties" do
     properties = { id: 1, name: "Margherita", price: 8 }
     meal = Meal.new(properties)

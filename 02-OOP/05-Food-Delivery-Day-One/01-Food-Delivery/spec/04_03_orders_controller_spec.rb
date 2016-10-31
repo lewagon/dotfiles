@@ -11,7 +11,7 @@ rescue LoadError => e
   end
 end
 
-describe "OrdersController" do
+describe "OrdersController", :order do
   let(:meals) do
     [
       [ "id", "name", "price" ],

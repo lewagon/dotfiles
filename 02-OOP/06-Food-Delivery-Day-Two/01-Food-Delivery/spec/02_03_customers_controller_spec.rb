@@ -15,7 +15,7 @@ rescue LoadError => e
   end
 end
 
-describe "CustomersController" do
+describe "CustomersController", :customer do
   let(:customers) do
     [
       [ "id", "name", "address" ],
