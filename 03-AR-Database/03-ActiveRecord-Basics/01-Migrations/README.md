@@ -8,7 +8,7 @@
 Don't forget to run in your terminal:
 
 ```bash
- gem install activerecord -v 4.2.7
+gem install activerecord
 ```
 
 ## Specs
