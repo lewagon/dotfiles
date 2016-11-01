@@ -20,7 +20,7 @@ If there is one Mac user in your team (let's pray 🙏🙏🙏), he/she can [dow
 
 ## `05-Prototype`
 
-Once you have finished your mockup (and validated it with a teacher), you can now export each page as a PNG and build a prototype on [marvelapp](https://marvelapp.com/) by connecting the views. This time, it's web app with a free plan so you can all use it!
+Once you have finished your mockup (and validated it with a teacher), you can now export each page as a PNG and build a prototype on [marvelapp](https://marvelapp.com/) by connecting the views. This time, Marvelapp is a web application (with a free plan) so everyone can use it!
 
 Again, you can watch [our quick Marvelapp tutorial on Youtube](https://www.youtube.com/watch?v=MFIlW68giDY).
 

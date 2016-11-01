@@ -4,7 +4,7 @@ Once your core journey is well defined, and once you have worked on the zoning o
 
 There must be one Mac user in each team! In this case, he/she can [download the free trial of Sketch](https://www.sketchapp.com/).
 
-The objective is to build a PNG for each page of the core journey, so you can also use a different tool if you are more familiar with it (Powerpoint, balsamiq, other):
+The objective is to build a PNG for each page of the user journey, so you can also use a different tool if you are more familiar with it (Powerpoint, balsamiq, other):
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/product-design/mockup-tools.png)
 
@@ -17,7 +17,7 @@ Here is a 15 minutes tutorial for Sketch. It should be enough to work on your mo
 
 ## Example
 
-Here is the zoning for the airbnb page detailing the flat:
+Here is the zoning for the airbnb page detailing a flat:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/product-design/show-zoning.png)
 
