@@ -18,3 +18,7 @@ This work will help you a lot to build a clear mockup. Remember:
 - Just display the info **necessary to make the user understand what you want him/her to do**.
 - Just ask your user to do one thing for each page (which translates into **only one call-to-action in each view**).
 
+
+## Your turn, use post-its!
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/product-design/journey-board.png)
