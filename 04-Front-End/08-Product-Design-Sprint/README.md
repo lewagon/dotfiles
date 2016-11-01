@@ -4,9 +4,9 @@ Define your app use case in a very clear way, e.g. **verb + complement**, and fi
 
 ## `02-User-journey`
 
-There is always **one** user journey at the heart of a product. For Airbnb, it's the user journey to book a flat. **What about yours?** To kill frictions, a good journey should have 5 views max, no more (**this is mandatory!**).
+There is always **one core user journey** at the heart of a product. For Airbnb, it's the user journey to book a flat. **What about yours?** To kill frictions, a good journey should have 5 views max, **no more**.
 
-For each page, what do you want your user to do? How he/she is supposed to understand that, depending on the info you display? Let's detail a bit your core journey.
+For each page of your journey, what do you want your user to do? How is he supposed to understand that? **Let's detail a bit your core journey with post-its**.
 
 ## `03-Zoning`
 
