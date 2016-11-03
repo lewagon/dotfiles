@@ -25,7 +25,7 @@ The restaurant has two types of employees, **managers** and **delivery guys**. W
 Open your `employees.csv` file and manually add some employees:
 
 ```bash
-id,name,password,role
+id,username,password,role
 1,paul,secret,manager
 2,john,secret,delivery_guy
 ```
@@ -55,6 +55,8 @@ Now when you run the food delivery app, the first thing you can do is to **sign 
 ruby app.rb
 ```
 
+To launch only employee tests, use `rspec -t employee`
+
 Done? Good! Time to `commit` and `push`.
 
 Optional: Their password would be stored in clear in the CSV / display in clear, is that a good idea? What could we do?
@@ -76,6 +78,8 @@ Then, make sure that the following **user stories** are implemented in your prog
 - As a manager, I can add an order for a customer and assign it to a delivery guy
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
+
+To launch only order tests, use `rspec -t order`
 
 ## 7 - (Optional) - Destroy actions
 

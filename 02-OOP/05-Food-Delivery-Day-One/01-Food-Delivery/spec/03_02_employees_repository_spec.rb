@@ -15,7 +15,7 @@ rescue LoadError => e
   end
 end
 
-describe "EmployeesRepository" do
+describe "EmployeesRepository", :employee do
   let(:employees) do
     [
       [ "id", "username", "password", "role" ],
