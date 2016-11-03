@@ -1,8 +1,12 @@
-## `01-promo-chat`
+## `01-geocoder`
+
+Use Google Geocoding API to write your first AJAX request
+
+## `02-promo-chat`
 
 Implement a dynamic chat-room for your promotion using AJAX requests.
 
-## `02-Facebook-graph-API`
+## `03-Facebook-graph-API`
 
 Use the Facebook Graph API to build a dynamic webpage showing all your facebook info (firstname, lastname, picture, friends..)
 
