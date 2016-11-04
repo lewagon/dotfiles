@@ -4,7 +4,7 @@ class PostsController
   end
 
   ################################################################
-  # BEWARE: you MUST not use the global variable DB in this file #
+  # BEWARE: you MUST NOT use the global variable DB in this file #
   ################################################################
 
   def index
