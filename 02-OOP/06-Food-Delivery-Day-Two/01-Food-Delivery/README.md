@@ -25,7 +25,7 @@ The restaurant has two types of employees, **managers** and **delivery guys**. W
 Open your `employees.csv` file and manually add some employees:
 
 ```bash
-id,name,password,role
+id,username,password,role
 1,paul,secret,manager
 2,john,secret,delivery_guy
 ```
