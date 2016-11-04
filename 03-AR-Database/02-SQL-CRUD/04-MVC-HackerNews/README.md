@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In the previous exercices, we carefully built method directly into our
+In the previous exercises, we carefully built method directly into our
 model class, `Post`. This way, we don't need any `Repository` class like
 when we were storing data into a CSV, the model class handles directly
 the relation with the database. Great isn't it?
