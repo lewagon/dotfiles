@@ -15,6 +15,8 @@ bundle install
 bundle exec middleman init YOUR_FIRST_MIDDLEMAN_BLOG --template=blog
 rm Gemfile*
 cd YOUR_FIRST_MIDDLEMAN_BLOG
+bundle install
+bundle binstub middleman-core
 middleman article YOUR_FIRST_ARTICLE
 stt
 ```
@@ -30,14 +32,6 @@ middleman server
 You can see your first Middleman blog on _http://localhost:4567_
 
 Find your first article url on _http://localhost:4567/__middleman/sitemap/_
-
-## Adding a blog to your existing Middleman app
-
-Add `gem 'middleman-blog'` to your `Gemfile`.
-
-```bash
-bundle install
-```
 
 Configure your app to add a blog:
 
