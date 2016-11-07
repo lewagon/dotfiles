@@ -3,8 +3,10 @@ lectures:
 help: true
 
 lecture:
+  en:
+    video: 190239835
   # fr:
-  #   video: 136596392
+  #   video: 154308534
 
 flashcard_alert: false
 teacher_ratio: 10

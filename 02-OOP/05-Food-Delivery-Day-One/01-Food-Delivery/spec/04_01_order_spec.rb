@@ -11,7 +11,7 @@ rescue LoadError => e
   end
 end
 
-describe "Order" do
+describe "Order", :order do
   it "should be initialized with a hash of properties" do
     properties = { id: 1, delivered: false }
     order = Order.new(properties)
@@ -67,7 +67,7 @@ describe "Order" do
   end
 
   describe "#deliver!" do
-    it "should mark a recipe as delievered" do
+    it "should mark an order as delivered" do
       order = Order.new
       expect(order.delivered?).to be false
       order.deliver!

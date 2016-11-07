@@ -15,7 +15,7 @@
 #   end
 # end
 
-# describe "SessionsController" do
+# describe "SessionsController", :session do
 #   let(:employees) do
 #     [
 #       [ "id", "username", "password", "role" ],

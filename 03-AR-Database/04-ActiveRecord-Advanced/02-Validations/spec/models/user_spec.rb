@@ -24,7 +24,7 @@ describe "User" do
   it "should be invalid if the email does not have the right format" do
     user = User.new(username: "george", email: "not_an_email")
     expect(user.valid?).to eq false
-    expect(user.errors.messages[:email]).to include "invalid email"
+    expect(user.errors.messages[:email]).to include "is invalid"
   end
 
   it "should be invalid if another user already took this username" do
