@@ -6,8 +6,14 @@ Read the [Middleman documentation](https://middlemanapp.com/basics/blogging/) ab
 
 ```bash
 cd ~/code/<user.github_nickname>
-gem install middleman-blog
-middleman init YOUR_FIRST_MIDDLEMAN_BLOG --template=blog
+cat <<EOF  > Gemfile
+source "https://rubygems.org"
+gem "middleman", "3.4.1"
+gem "middleman-blog", "3.5.3"
+EOF
+bundle install
+bundle exec middleman init YOUR_FIRST_MIDDLEMAN_BLOG --template=blog
+rm Gemfile*
 cd YOUR_FIRST_MIDDLEMAN_BLOG
 middleman article YOUR_FIRST_ARTICLE
 stt
