@@ -209,7 +209,7 @@ That's not what we want because **we don't have any route for `POST "reviews"`**
 <% end %>
 ```
 
-This will will generate the following HTML form:
+This will generate the following HTML form:
 
 ```html
 <form action="/restaurants/42/reviews">
