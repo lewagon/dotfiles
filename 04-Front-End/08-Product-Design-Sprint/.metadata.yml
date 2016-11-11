@@ -5,8 +5,8 @@ help: true
 lecture:
   en:
     video: 190239835
-  # fr:
-  #   video: 154308534
+  fr:
+    video: 191161476
 
 flashcard_alert: false
 teacher_ratio: 10
