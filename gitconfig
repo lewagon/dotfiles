@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = subl -n -w  >/dev/null 2>&1
+	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 
 [alias]
   co = checkout
@@ -48,4 +48,4 @@
   mergeoptions = --no-edit
 [user]
 	email = b.hanae@gmail.com
-	name = Hanae Bezad
+	name = hanae bezad
