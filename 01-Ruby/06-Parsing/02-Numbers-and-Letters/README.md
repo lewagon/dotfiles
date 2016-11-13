@@ -53,6 +53,6 @@ words = File.read('/usr/share/dict/words').upcase.split("\n")
 This challenge is deliberately not guided. Here are some elements that will help you
 
 * Write the pseudo code to figure out how to proceed before diving into the code
-* You can install the extension JSONView for [Chrome](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) or [Firefox](https://addons.mozilla.org/fr/firefox/addon/jsonview/) to help you read a JSON rendered by an API.
+* You can install the extension [Json Formatter for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) to help you read a JSON rendered by an API.
 * Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get the JSON result. Use the `json` package to parse returned JSON files.
 * For testing the grid inclusion, make use of `Enumerable#all?`
