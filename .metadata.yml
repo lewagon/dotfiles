@@ -6,3 +6,4 @@ module_names:
   - Front-End
   - Rails
   - Projects
+max_teachers_size: 6
