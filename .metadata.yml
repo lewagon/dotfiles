@@ -7,3 +7,4 @@ module_names:
   - Rails
   - Projects
 max_teachers_size: 6
+number_of_weeks: 9
