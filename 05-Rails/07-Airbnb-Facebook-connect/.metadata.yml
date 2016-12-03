@@ -1,7 +1,7 @@
 help: true
 
 schedule:
-  ta:
+  assistant:
     ends_at_hours: 18
     ends_at_minutes: 30
 

@@ -5,7 +5,7 @@ The goal of the next two challenges is to re-implement some of your ruby scripts
 - Your program interface isn't the terminal anymore, it is your browser now.
 - The only way to communicate with your Rails app is through HTTP requests.
 
-Re-implement the stupid coaching challenge (01-Ruby/01-Programming-basics/05-Stupid-coaching) in Rails.
+Re-implement the stupid coaching challenge (01-Ruby/01-Programming-basics/04-Stupid-coaching) in Rails.
 
 There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
 

@@ -1,5 +1,5 @@
 schedule:
-  ta:
+  assistant:
     starts_at_hours: 10
     starts_at_minutes: 0
     ends_at_hours: 17
