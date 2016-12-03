@@ -1,3 +1,8 @@
+schedule:
+  ta:
+    ends_at_hours: 18
+    ends_at_minutes: 30
+
 help: true
 lectures:
   - rails/react

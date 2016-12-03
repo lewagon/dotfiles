@@ -1,4 +1,9 @@
 days: 1
+schedule:
+  ta:
+    starts_at_hours: 9
+    starts_at_minutes: 30
+
 lectures:
   - setup/1-setup
   - setup/2-terminal-101
