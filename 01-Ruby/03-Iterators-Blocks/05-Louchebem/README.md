@@ -27,4 +27,4 @@ Did you know that popular expressions like "larfeuille", "loufiah", "loucedé", 
 
 ## Further suggestions & resources
 
-- You pseudo code should follow [these principles](http://www.cs.cornell.edu/Courses/cs482/2003su/handouts/pseudocode.pdf)
+- You pseudo code should follow [these principles](http://www.cs.cornell.edu/courses/cs211/2000fa/materials/using_pseudo_code.htm)
