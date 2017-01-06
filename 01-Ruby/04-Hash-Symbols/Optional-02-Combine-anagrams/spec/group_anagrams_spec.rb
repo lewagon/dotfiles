@@ -9,7 +9,7 @@ describe "#group_anagrams" do
     expect(group_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams', 'scream']).reduce(true){ |bool, el| bool && el.class.name == "Array"}).to eq(true)
   end
 
-  it "should group anagrams together" do
+  it "should group anagrams together, sorted lexicographically" do
     output = group_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams', 'scream'])
     ouput = output.nil? ? nil : output.sort
     expect(output).to \
