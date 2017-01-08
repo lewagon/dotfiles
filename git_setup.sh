@@ -17,7 +17,7 @@ GITHUB_NICKNAME=$(git remote get-url --push origin | cut -d ":" -f 2 | cut -d "/
 GITHUB_EMAIL=$(curl -s https://api.github.com/repos/${GITHUB_NICKNAME}/dotfiles/commits/`git rev-parse HEAD` | jq -r '.commit.author.email')
 GIT_EMAIL=$(git config --global user.email)
 
-if [ ${GITHUB_EMAIL} = ${GIT_EMAIL} ]
+if [ "${GITHUB_EMAIL}" = "${GIT_EMAIL}" ] || [ -z ${GITHUB_EMAIL} ]
 then
   echo "👌 Awesome, all set."
 else
