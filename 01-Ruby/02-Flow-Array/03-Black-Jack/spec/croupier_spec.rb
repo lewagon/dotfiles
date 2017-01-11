@@ -22,7 +22,7 @@ describe "#end_game_message" do
   end
 
   it 'returns the fact that you win when doing 21' do
-    expect(end_game_message(21, 16)).to match /black jack/i
+    expect(end_game_message(21, 16)).to match /black[ -]?jack/i
   end
 
   it 'returns the fact that you won when doing more than the bank' do
