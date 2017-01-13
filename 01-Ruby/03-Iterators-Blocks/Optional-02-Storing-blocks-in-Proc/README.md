@@ -13,7 +13,7 @@ def speak(&block)
   puts block.call
 end
 
-speak { puts "Hello" }
+speak { "Hello" }
 # Hello
 #  => nil
 ```
