@@ -19,7 +19,7 @@ Hence many Hash keys are symbols, as they are more here to identify things than 
 fox = { color: "red", specie: "mammal" }
 ```
 
-The `:color` and `:specie` keys are used as identifiers, their actuel text value is chosen so that a human can quickly understand what these hash keys are bout. Hence we used Symbols instead of Strings.
+The `:color` and `:specie` keys are used as identifiers, their actual text value is chosen so that a human can quickly understand what these hash keys are bout. Hence we used Symbols instead of Strings.
 
 You may find this other syntax:
 
