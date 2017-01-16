@@ -1,220 +1,138 @@
-## Guidelines
+## Intro (1')
+1. Until now, scripts in 1 or 2 files
+1. Today: we’ll build a software from scratch
+1. How to figure out the classes we need to code?
 
-### Morning lecture
+## How to figure out a class (10')
+1. Until now : `Car`, `Restaurant`, `OrangeTree`… == **Real world objects**
+  1. Note: classes are always defined in the singular form!
+  1. Quite easy to figure out attributes (instance variables) and behavior (instance methods)
+  1. Examples (slides)
 
-#### Reminder
+1. **Data structures** - ex: `Array`, `Hash` (less concrete, harder to model)
+  1. Stack
+    1. State? elements’ list `@elements = []`
+    1. Behavior? LIFO `#push(element)` `#pop`
+  1. Queue
+    1. State? elements’ list `@elements = []`
+    1. Behavior? FIFO `#enqueue(element)` `#dequeue`
+    1. Load Balancer example
 
-Spend 20 minutes to rehearse core concepts on a simple `Cat` class (or another example) and ask them questions step-by-step to code it:
+## Livecode: TODO-manager (35')
+1. Client demand: task manager
+1. User stories:
+  - list tasks
+  - add a task
+  - mark a task as done
+  - remove a task
 
-- How do I define the class for my cat? What's the convention for a class name?
-- What are the caracteristics of a cat? which kind of variables do you use to store this data?
-- Where do I find the value to instantiate color and name? start coding the `initialize` without arguments
-- How do I access my cat name? define the reader manually with them then use `attr_reader`?
-- How do I change my color? **Rule of thumb:** No `attr_writer` or `attr_accessor`, code your own writer methods. It enables to add intelligence (in our case store cat's color history) without changing you class API.
+### Let's figure out the classes we need!
+1. Smallest entity? Underlying data to model? class **Task**
+  1. Process: conceive your class on the whiteboard
+  1. State? `@description`, `@done` - that’s it for our MVP
+  1. Behavior? `#mark_as_done!`
+  1. Code [class](https://github.com/lewagon/oop-todolist/blob/master/lib/task.rb)
+  1. Test it in `irb` : `cleaning = Task.new("Cleaning")`, `cooking = Task.new("Cooking")`, `cleaning.mark_as_done!` => OK
+  1. Emerging need: where should we store our tasks?
+1. Class to act as our in-memory DB? **Repository**
+  1. State? `@tasks = []` - # Stores INSTANCES of Task!
+  1. Behavior? `#add(task)`, `#remove(task)`
+  1. Code [class](https://github.com/lewagon/oop-todolist/blob/master/lib/tasks_repository.rb)
+  1. Test in `irb` : `repo.add(cleaning)`, `repo.add(cooking)`, `repo.remove(cleaning)` => OK
+  1. Emerging need: how do we display tasks in the terminal?
+1. Class to display/ fetch data to/ from user? **View**
+  1. State? None! There’s nothing to characterise a View! Only behavior.
+  1. Behavior? `#display(tasks)` # array of Task INSTANCES
+  1. Code [class](https://github.com/lewagon/oop-todolist/blob/master/lib/tasks_view.rb)
+  1. Test in `irb` : `view.display(repo.all)`
+    1. Necessity to add `#all` in our `Repository` class
+    1. Necessity to add `attr_reader :description` in our `Task` class
+  1. Good. But we're still far from launching `ruby app.rb` and typing 1, 2, 3…
+1. Class to articulate everything: **Controller**
+  1. Responsibility: serve user actions
+  1. State? Hard to guess here (not concrete enough). We’ll discover it when we code the actions.
+  1. Behavior? ACTIONS : `#list`, `#create`, `#mark_as_done`, `#destroy`
+    1. **List**
+      1. Pseudo code
+        1. # Fetch array of tasks from repo
+        1. # Send it to view to display them
+      1. Code action in controller
+        1. Necessity to define `@repo` and `@view`
+        1. Necessity to define `Repository#all`
+      1. Create `test.rb` file to test
+      1. Improve `View#display(tasks)` with `“[x]” : “[ ]”`
+      1. Add `#done?` in `Task`
+      1. Test => OK
+    1. **Create**
+      1. Pseudo code
+        1. # Get description from `@view`
+        1. # Create new task with description
+        1. # Store it in `@repo`
+      1. Code
+        1. Necessity to code `View#ask_user_for_description`
+      1. Add `controller.create` in `test.rb`
+      1. Test => OK
+    1. **Mark as done**
+      1. Pseudo code
+        1. # Display tasks
+        1. # Ask user for index
+        1. # Fetch task
+        1. # Mark task as done
+      1. Code
+        1. Refacto private `Controller#display` with the 2 steps from `#list`
+        1. Necessity to enhance `View#display(tasks)` with indices
+        1. Code `View#ask_user_for_index`
+        1. Necessity to code `Repository#find(index)`
+      1. Add action in `test.rb`
+      1. Test => OK
+    1. **Destroy** (if there’s enough time left)
+      1. Pseudo code
+        1. # Display tasks
+        1. # Ask user for index
+        1. # Remove it from repo
+      1. Code
+        1. Replace `#remove(task)` by `#remove(task_index)` (better UX)
+      1. Add action in `test.rb`
+      1. Test => OK
+1. Class to route user’s request to the right controller’s action: **Router**
+  1. State? No guess here either => we’ll see as we code
+  1. Behavior? `#run`
+  1. Code [class](https://github.com/lewagon/oop-todolist/blob/master/lib/router.rb)
+    1. Infinite loop
+    1. Private `#print_menu`
+    1. Case action calling the right action on `@controller` (dependency injection)
+1. Executable [file](https://github.com/lewagon/oop-todolist/blob/master/app.rb) `app.rb`
+  1. Bottom-up approach
+  1. `router.run` => we need a `router`
+  1. `Router.new(controller)` => we need a `controller`
+  1. `Controller.new(repo)` => we need a `repo`
+  1. `Repo.new`
+  1. `require_relative` => every class called with a capital first letter in the file
+  1. Test => OK
 
-<script src="https://gist.github.com/ssaunier/f95ac9e983032bcbe396.js"></script>
+## Whiteboard => MVC recap (15')
+1. View => **V** - Controller => **C** - Task? Generic name => Model **M** => **MVC** design pattern
+1. Rails framework based on MVC
+1. In software architecture: 1 file == 1 class
+1. **SRP - Single Responsibility Principle** - 1 class == 1 responsibility
+1. The MVC pattern follows this principle
+1. Responsibilities
+  1. **Model (Task)**: **in-memory representation of a task**
+  1. **View**: **interact with the user** - only `puts` and `gets`
+  1. **Controller**: **serve user actions** by pivoting between V and M + Repo (= Data brick). Encapsulates intelligence
+  1. Outside MVC
+    1. Repository: store tasks - will be replaced by a DB in a few days
+    1. Router: dispatch user’s intention to the right action in the controller
+1. Parallel with Web
+  1. View: will generate the HTML to send back to the user’s browser
+  1. Repository: out - ActiveRecord: in. Request DB directly from Model.
+  1. Router: given by Rails. User intention == HTTP request.
+1. What’s the major limit of our TODO-manager?
+  1. When we quit the program and relaunch it => data is lost
+  1. Repository only holds an in-memory DB role
+  1. In today’s exercise => you’ll add persistency to your hard drives by using a CSV file!
 
-#### Building Software
-
-Start with the slides
-
-- Real-life objects: direct way to see classes (ex: car, recipe)
-- Data structures: which data structures do you know already? `Array`, `Hash`
-
-There are other classical structures we use a lot in programming
-
-**Stack ("pile" in french)**
-
-- LIFO stucture: "Last In First Out"
-- `push` => append element at the end of the array
-- `pop` => delete **last** elements and return it
-- Well, `Array` is already a LIFO.
-
-**Queue**
-
-- FIFO structure: "First In First Out"
-- `push` => append element at the end of the array
-- `pop` => delete **first** elements and return it
-
-There are **queues** everywhere in programs. If **A** wants to transfer tasks to **B**, he will use an intermediate queue to store tasks. **A** will push tasks and **B** will pop them progressively.
-
-#### TODO manager
-
-We'll code this software together and interactively. **Herebelow we describe a good way to articulate the live-code and discussion with the class**
-
-#### Whiteboard Brainstorm
-
-What classes do we need for this program ?
-- task, list, file (**data**)
-- **display** tasks
-- how do you make data & display communicate? **controller** => chief orchestra who has methods for the app logic, add / delete / mark tasks.
-
-#### Data
-What do we start with? display, interface, controller? Let's start with data. It's the heart of our todo-app.
-
-```ruby
-# task.rb
-class Task
-  attr_reader :description, :done
-  def initialize(description)
-    @description = description
-    @done = false
-  end
-end
-```
-Where is the real data stored? We need a database (that we'll see next week). For the moment, let's create a repository class to mimic a database.
-
-```ruby
-# task_repository.rb
-class TaskRepository
-  attr_reader :tasks
-  def initialize
-    @tasks = []
-  end
-
-  def add_task(task)
-    @tasks << task
-  end
-end
-```
-
-#### Controller
-
-The controller is the chief conductor ("chef d'orchestre"). He will get user input through the display, update tasks in the repository, and output results through the display. He needs to manipulate both the display and the repository.
-
-```ruby
-# controller.rb
-class Controller
-  def initialize(task_repository) # 4) ok we need to create our controller with an attached repo for 3)
-    @task_repository = task_repository
-  end
-
-  def add_task
-    description = ? # 1) user gives description
-    task = Task.new(description) # 2) we create the task
-    @task_repository.add_task(task) # 3) add it to our "DB"
-  end
-end
-```
-How do we deal with 1)? No `gets.chomp` in the controller! this is interface responsibility.
-
-#### Display
-
-```ruby
-# display.rb
-class Display
-  def ask_user_for_new_task_description
-    puts "What do you want to do?"
-    print "> "
-    return  gets.chomp
-  end
-end
-```
-
-Now we can complete 1) in the controller
-
-```ruby
-# controller.rb
-class Controller
-  def initialize(task_repository, display)
-    @task_repository = task_repository
-    @display = display
-  end
-
-  def add_task
-    description = @display.ask_user_for_new_task_description # 1) we can add the display method
-    task = Task.new(description)
-    @task_repository.add_task(task)
-  end
-
-  def list_tasks
-    tasks = @task_repository.tasks # 2) use the repository reader
-    @display.print_tasks # 3) don't use puts here ! this is the interface responsibility
-  end
-end
-```
-
-Let's enhance our interface
-
-```ruby
-# display.rb
-class Display
-  def ask_user_for_new_task_description
-    puts "What do you want to do?"
-    print "> "
-    return  gets.chomp
-  end
-  def print_tasks
-    puts "Here is your list of tasks:"
-    tasks.each do |task|
-      task.done ? (print "[ ]") : (print "[X]")
-      puts " #{task.description}"
-    end
-  end
-end
-```
-
-#### The Glue
-
-Let's code the `app.rb` file that we will launch from terminal to start our todo-app.
-
-```ruby
-require_relative "task_repository"
-require_relative "display"
-require_relative "controller"
-
-# Create fake DB
-task_repo = Task_repository.new
-
-# Create display
-display = Display.new
-
-# Create controller
-controller = Controller.new(task_repository, display)
-
-while true
-  controller.list_tasks
-
-  puts "What do you want to do?"
-  puts "1 - add a task"
-  puts "2 - ..."
-  action = gets_chomp.to_i
-
-  if action == 1
-    controller.add_task
-  end
-end
-```
-
-Read the error message! the controller needs the task class. Add `require_relative "task"` in the controller. If we are not satisfied by the display, we know we need to change the `Display` class only :) yeah, that's what is great with separating responsibilities.
-
-Finish the live-code adding the possibility of marking tasks as done.
-
-### Day challenges
-Before starting the challenges
-
-- Ensure every student has a clean git status, and that he has pulled upstream. Otherwise students may work on old versions of the challenges :).
-
-```
-$ cd ~/code/${GITHUB_USERNAME}/fullstack-challenges/
-$ git status #everything should be ok!
-$ git pull --no-edit upstream master
-```
-
-- Ensure they're connected on the class Slack
-
-- Make a brief overview of the roadmap of the day with them, explaining the general idea behind each challenge.
-
-### Live-code
-
-#### General guidelines
-
-- The live-code should be made **from scratch**. No specs, no boilerplate. The student has to `mkdir` a new folder, `touch` its ruby file, and start coding in it. Help him on the setup. Make him code **a solution that works** in one ruby file before refactoring the code (separating the logic from the interface in 2 files, DRYing the repetitive code chunks, etc..)
-
-- Announce, **before the live-code**, which challenges they are going to live-code and who are the coders of the day. It will make them stay tensed and focused! Tell them they have to speak loud and explain their approach while they are live-coding. That's the best exercise to improve their skills!
-
-- At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
-
-#### Live-code details
-
-No live-code on Friday, we will correct the Cookbook on Monday evening.
+## Cookbook challenge (1')
+1. Really close from this morning's livecode
+1. Add persistency
+1. The challenge is to organize your code properly!
