@@ -6,8 +6,8 @@ describe "The method group_mails" do
   end
 
   it "should group emails by provider" do
-    user_emails = %w(bob@yahoo.fr roger57@hotmail.fr bigbox@yahoo.fr \
-                      boris@lewagon.org monsieur.olivier@gmail.com \
+    user_emails = %w(bob@yahoo.fr roger57@hotmail.fr bigbox@yahoo.fr
+                      boris@lewagon.org monsieur.olivier@gmail.com
                       monsieur.mack@gmail.com)
     result = {
         "yahoo" => ["bob@yahoo.fr", "bigbox@yahoo.fr"],
