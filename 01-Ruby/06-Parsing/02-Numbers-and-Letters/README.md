@@ -1,7 +1,7 @@
 ## Background & Objectives
 
 - Get familiar with parsing JSON format
-- Learn how to separate responsabilities of your gaming program in several sub-methods
+- Learn how to separate responsibilities of your gaming program in several sub-methods
 
 ## Specs
 
@@ -46,7 +46,7 @@ words = File.read('/usr/share/dict/words').upcase.split("\n")
 ## Key learning points
 
 - What's a JSON file ? How is it close from the structure of a ruby hash ?
-- How could you refactor your code to separate the responsabilities of each method ?
+- How could you refactor your code to separate the responsibilities of each method ?
 
 ## Further suggestions & resources
 
