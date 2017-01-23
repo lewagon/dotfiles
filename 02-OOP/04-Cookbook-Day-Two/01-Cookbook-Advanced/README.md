@@ -1,7 +1,7 @@
 ⚠️ There's **no `rake`** for this exercise.
 
 We want to enhance our cookbook by finding recipes data from the web. We will use
-[🇫🇷 Marmiton](http://www.marmiton.org/) or [🇬🇧 Jamie Oliver's Recipes](http://www.jamieoliver.com/recipes/), because their markup structure is pretty clean (good candidate for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
+[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 LetsCookFrench](http://www.letscookfrench.com), because their markup structure is pretty clean (good candidate for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
@@ -30,14 +30,14 @@ What do you wanna do?
 1. List all recipes
 2. Add a recipe
 3. Delete a recipe
-4. Import recipes from [Marmiton|Jamie Oliver]
+4. Import recipes from [Marmiton|LetsCookFrench]
 5. Exit
 
 > 4
 Import recipes for which ingredient ?
 > [fraise|strawberry]
 
-Looking for "[fraise|strawberry]" on [Marmiton|Jamie Oliver]...
+Looking for "[fraise|strawberry]" on [Marmiton|LetsCookFrench]...
 10 results found!
 
 1. [Tarte aux Fraises|Strawberry shortcake]
@@ -70,10 +70,12 @@ You can save an HTML document on your computer through `curl` command. Get the f
 
 ```
 curl http://www.marmiton.org/recettes/recherche.aspx?aqt=fraise > fraise.html
-curl http://www.jamieoliver.com/search/?s=strawberry > strawberry.html
+curl http://www.letscookfrench.com/recipes/find-recipe.aspx?aqt=strawberry > strawberry.html
 ````
 
-The reason why we dump the page on our hard drive is that we'll run a Ruby script over it a hundred times to test our code. It will be faster to open the file on disk rather than to make a network call to Marmiton.
+👆 **This step is really important**!
+
+The reason why we dump the page on our hard drive is that we'll run a Ruby script over it a hundred times to test our code. It will be faster to open the file on disk rather than to make a network call to Marmiton/LetsCookFrench (and get blacklisted).
 
 ### Parse with Nokogiri
 
@@ -158,7 +160,7 @@ Try modifying the web-import feature so that you can import recipes with a given
 Try to extract the **parsing** logic out of the controller in a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
 ```ruby
-class JamieOliver # or Marmiton
+class Letscookfrench # or Marmiton
   def search(keyword)
     # TODO: return a list of `Recipe` built from scrapping the web.
   end
