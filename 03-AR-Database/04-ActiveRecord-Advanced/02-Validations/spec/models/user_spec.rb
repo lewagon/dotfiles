@@ -50,5 +50,4 @@ describe "User" do
     user = User.new(username: "bob", email: "bob@lebonge.com")
     expect { user.save }.to change { FakeMailer.instance.email_sent }.from(0).to(1)
   end
-
 end
