@@ -47,7 +47,8 @@ describe "User" do
 
   it "should send a welcome email to Bob on user creation [Bonus]" do
     FakeMailer.instance.reset
-    expect{User.create(username: "bob", email: "bob@lebonge.com")}.to change{FakeMailer.instance.email_sent}.from(0).to(1)
+    user = User.new(username: "bob", email: "bob@lebonge.com")
+    expect { user.save }.to change { FakeMailer.instance.email_sent }.from(0).to(1)
   end
 
 end
