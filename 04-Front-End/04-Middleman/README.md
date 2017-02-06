@@ -13,7 +13,7 @@ On Friday, we will start prototyping your app during a great Product Design Spri
 
 ## `01-Playing-with-ERB`
 
-Play with ERB, add a team page to your Middleman project and import your Airbnb home putting common parts in the layout. Replace `<a>` and `<img>` tags with `<%= link_to >` and `<%= image_tag >` helpers.
+Play with ERB, add a team page to your Middleman project and import your Airbnb home putting common parts in the layout. Replace `<a>` and `<img>` tags with `<%= link_to %>` and `<%= image_tag %>` helpers.
 
 ## `02-Over-ride-Bootstrap`
 
