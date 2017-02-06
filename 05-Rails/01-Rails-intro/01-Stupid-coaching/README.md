@@ -27,7 +27,7 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 - Create a new Rails app
 - Launch a web server to test your app locally
 - Generate a new controller from the command line
-- Check your routes with the relevant `rake` task
+- Check your routes with the relevant `rails` command
 
 ### Generate a CoachingController
 
