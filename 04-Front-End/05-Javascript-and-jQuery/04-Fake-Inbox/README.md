@@ -17,7 +17,7 @@ We haven't seen AJAX yet, so we'll simulate email fetching. A skeleton is given 
 }
 ```
 
-You can `rake` this 2 methods.
+You can `rake` these 2 methods.
 
 Now, we'll work by testing the code in the browser (no more `rake` available). In another terminal tab, run:
 
