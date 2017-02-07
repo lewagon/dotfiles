@@ -9,6 +9,8 @@ lectures:
 lecture:
   fr:
     video: 169102684
+  en:
+    video: 193540570 # Livedode only w/ errors. Should be re-done
 
 teacher_ratio: 7
 
