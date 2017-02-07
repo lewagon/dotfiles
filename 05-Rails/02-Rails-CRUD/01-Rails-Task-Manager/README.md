@@ -32,7 +32,7 @@ Before starting to build your routes, your controller and views, generate your m
 Build a Rails todolist application. Your todo-app should have 7 entry points in the routing:
 
 1. `GET '/tasks'`: get all your tasks.
-1. `GET '/tasks/:id'`: get a precise task, e.g `GET '/tasks/33'` get task with id=3
+1. `GET '/tasks/:id'`: get a precise task, e.g `GET '/tasks/3'` get task with id=3
 1. `GET '/tasks/new'`: get the form to create a new task
 1. `POST '/tasks'`: post a new task
 1. `GET '/tasks/:id/edit'`: get the form to edit an existing task
