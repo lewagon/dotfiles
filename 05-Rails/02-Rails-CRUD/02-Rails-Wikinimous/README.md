@@ -43,7 +43,7 @@ rails db:seed
 
 ## Controller & Views
 
-Generate your model, and implement all 7 CRUD default actions to
+Generate your controller, and implement all 7 CRUD default actions to
 list, show, create, update and destroy an article.
 
 Once you're done, you should have a very nice wiki with all basic functionalities.
