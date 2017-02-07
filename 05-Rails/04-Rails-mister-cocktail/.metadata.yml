@@ -1,5 +1,6 @@
 instructions: false
 lectures:
+  - rails/extra-01-rails-front-end
   - rails/04-hosting-deployment
 
 lecture:
