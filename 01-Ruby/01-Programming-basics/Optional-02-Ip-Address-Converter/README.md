@@ -27,7 +27,7 @@ These commands are not standard, you have them thanks to the setup we did on the
 
 An IPv4 address is a 32-bit number that identifies a device on the internet.
 
-While computers read and write IP addresses as a 32-bit number, we prefer to read them in dotted-decimal notation, which is basically the number split into 4 chunks of 8 bits, converted to decimal, and delmited by a dot.
+While computers read and write IP addresses as a 32-bit number, we prefer to read them in dotted-decimal notation, which is basically the number split into 4 chunks of 8 bits, converted to decimal, and delimited by a dot.
 
 In this kata, you will create the function `ip_to_num` that takes an ip address string and converts it to a number, as well as the function `num_to_ip` that takes a number and converts it to an IP address string.
 
