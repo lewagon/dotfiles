@@ -14,7 +14,7 @@ To simulate time passing, you will need to implement the following **instance** 
 
 ```ruby
 def one_year_passes!
-  # TODO: age the tree of one year
+  # TODO: age the tree by one year
   # TODO: check if the tree has survived
   # TODO: if so, make the tree height grow
   # TODO: if so, make the tree grow fruits
