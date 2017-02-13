@@ -37,7 +37,7 @@
 1. Class to act as our in-memory DB? **Repository**
   1. State? `@tasks = []` - # Stores INSTANCES of Task!
   1. Behavior? `#add(task)`, `#remove(task)`
-  1. Code [class](https://github.com/lewagon/oop-todolist/blob/master/lib/tasks_repository.rb)
+  1. Code [class](https://github.com/lewagon/oop-todolist/blob/master/lib/task_repository.rb)
   1. Test in `irb` : `repo.add(cleaning)`, `repo.add(cooking)`, `repo.remove(cleaning)` => OK
   1. Emerging need: how do we display tasks in the terminal?
 1. Class to display/ fetch data to/ from user? **View**
