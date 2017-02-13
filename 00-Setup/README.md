@@ -2,7 +2,7 @@
 
 Let's set up your workstation:
 
-1.**10:15am**: Go through a 15 min first lecture with your lead-coad about the tools you need to install as a developer.
+1.**10:15am**: Go through a 15 min first lecture with your teacher about the tools you need to install as a developer.
 
 2. **10:30am-1pm**: Follow [Le Wagon's setup carefully](https://github.com/lewagon/setup) and ask help whenever you are stuck. It should take you all morning, maybe overlap a bit on your lunch break for non-Mac users 😉.
 
@@ -13,7 +13,7 @@ Let's set up your workstation:
 5. **2pm45-3:15pm**: At the end of the git lecture, your teacher will show you the Kitt platform (challenges, tickets, flashcards) and how to push a solution on a demo challenge `00-Setup/00-Demo` (first challenge that teacher should solve and push with the class).
 .
 
-5. **3:15pm-5pm**: Time to push your attempt to the first challenge `01-Submit-your-code` of the bootcamp. This challenge is just a sanity check to ensure you have correctly forked the exercise repo. No real code here, serious things begin tomorrow. Be prepared!
+6. **3:15pm-5pm**: Time to push your attempt to the first challenge `01-Submit-your-code` of the bootcamp. This challenge is just a sanity check to ensure you have correctly forked the exercise repo. No real code here, serious things begin tomorrow. Be prepared!
 
 You now have all the tools you need to successfully work your way through the bootcamp during these 9 weeks. Remember, your new toolbox is:
 

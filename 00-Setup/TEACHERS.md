@@ -6,6 +6,7 @@ Students' welcoming with pastries and coffee
 The manager should introduce the 9 week program and its philosophy, then detail the 9 weeks, the typical week, the typical day.
 
 ### Program philosophy
+
 1. Standard computer science courses are boring because they don't focus on building products. Le Wagon has a different approach mixing hard and soft skills. You will realize that building a product with code is fascinating because it requires several skills
 
 - Product-oriented vision
@@ -14,7 +15,7 @@ The manager should introduce the 9 week program and its philosophy, then detail 
 - UX
 - Good writing skills for content
 
-1. Le Wagon is a technical accelerator focused on web development:
+2. Le Wagon is a technical accelerator focused on web development:
 
 - You will tackle in 9 weeks what students learn in 2 years in "regular" CS degree (often during their last year)
 - At the end you'll be able to prototype any Web product
