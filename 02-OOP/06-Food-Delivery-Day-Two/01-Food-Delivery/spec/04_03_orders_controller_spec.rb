@@ -2,7 +2,7 @@ require_relative "support/csv_helper.rb"
 
 begin
   require_relative "../app/controllers/orders_controller.rb"
-  require_relative "../app/repositories/employees_repository.rb"
+  require_relative "../app/repositories/employee_repository.rb"
 rescue LoadError => e
   describe "OrdersController" do
     it "You need a `orders_controller.rb` file for your `OrdersController`" do
@@ -23,7 +23,7 @@ describe "OrdersController", :order do
     ]
   end
   let(:meals_csv_path) { "spec/support/meals.csv" }
-  let(:meals_repository) { MealsRepository.new(meals_csv_path) }
+  let(:meal_repository) { MealRepository.new(meals_csv_path) }
 
   let(:employees) do
     [
@@ -34,7 +34,7 @@ describe "OrdersController", :order do
     ]
   end
   let(:employees_csv_path) { "spec/support/employees.csv" }
-  let(:employees_repository) { EmployeesRepository.new(employees_csv_path) }
+  let(:employee_repository) { EmployeeRepository.new(employees_csv_path) }
 
   let(:customers) do
     [
@@ -45,7 +45,7 @@ describe "OrdersController", :order do
     ]
   end
   let(:customers_csv_path) { "spec/support/customers.csv" }
-  let(:customers_repository) { CustomersRepository.new(customers_csv_path) }
+  let(:customer_repository) { CustomerRepository.new(customers_csv_path) }
 
   let(:orders) do
     [
@@ -57,7 +57,7 @@ describe "OrdersController", :order do
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }
-  let(:orders_repository) { OrdersRepository.new(orders_csv_path, meals_repository, employees_repository, customers_repository) }
+  let(:order_repository) { OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository) }
 
   before(:each) do
     CsvHelper.write_csv(meals_csv_path, meals)
@@ -67,7 +67,7 @@ describe "OrdersController", :order do
   end
 
   it "should be initialized with a 4 repositories instance" do
-    controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
+    controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
     expect(controller).to be_a(OrdersController)
   end
 
@@ -75,9 +75,9 @@ describe "OrdersController", :order do
     module Kernel; def gets; STDIN.gets; end; end
 
     it "should list undelivered orders (with meal, employee assigned and customer info)" do
-      controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
+      controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
       orders.drop(2).each do |order|
-        expect(STDOUT).to receive(:puts).with(/#{customers_repository.find(order[4]).name}/)
+        expect(STDOUT).to receive(:puts).with(/#{customer_repository.find(order[4]).name}/)
       end
       controller.list_undelivered_orders
     end
@@ -87,15 +87,15 @@ describe "OrdersController", :order do
     module Kernel; def gets; STDIN.gets; end; end
 
     it "should ask the user for a meal, a customer and an employee to be assigned" do
-      controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
+      controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
 
       allow(STDIN).to receive(:gets).and_return("1", "2", "1")
       controller.add
 
-      expect(orders_repository.undelivered_orders.length).to eq(4)
-      expect(orders_repository.undelivered_orders[3].meal.name).to eq("Margherita")
-      expect(orders_repository.undelivered_orders[3].employee.username).to eq("paul")
-      expect(orders_repository.undelivered_orders[3].customer.name).to eq("John Bonham")
+      expect(order_repository.undelivered_orders.length).to eq(4)
+      expect(order_repository.undelivered_orders[3].meal.name).to eq("Margherita")
+      expect(order_repository.undelivered_orders[3].employee.username).to eq("paul")
+      expect(order_repository.undelivered_orders[3].customer.name).to eq("John Bonham")
     end
   end
 
@@ -105,8 +105,8 @@ describe "OrdersController", :order do
     end
 
     it "should list the undelivered orders of john" do
-      controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
-      ringo = employees_repository.find(3)  # ringo is a delivery guy
+      controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
+      ringo = employee_repository.find(3)  # ringo is a delivery guy
       expect(STDOUT).to receive(:puts).with(/Paul McCartney.*Calzone/)
       controller.list_my_orders(ringo)
     end
@@ -118,15 +118,15 @@ describe "OrdersController", :order do
     end
 
     it "should ask the delivery guy for an order id and mark it as delivered" do
-      controller = OrdersController.new(meals_repository, employees_repository, customers_repository, orders_repository)
+      controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
 
       # Ringo wants to mark as delivered number 4.
       allow(STDIN).to receive(:gets).and_return("4")
-      ringo = employees_repository.find(3)  # ringo is a delivery guy
+      ringo = employee_repository.find(3)  # ringo is a delivery guy
       controller.mark_as_delivered(ringo)
 
       # Reload from CSV
-      new_order_repository = OrdersRepository.new(orders_csv_path, meals_repository, employees_repository, customers_repository)
+      new_order_repository = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
       expect(new_order_repository.undelivered_orders.map(&:id)).not_to include(4)
     end
   end

@@ -2,9 +2,9 @@ require_relative "support/csv_helper.rb"
 
 begin
   require_relative "../app/controllers/customers_controller.rb"
-  require_relative "../app/repositories/customers_repository.rb"
+  require_relative "../app/repositories/customer_repository.rb"
 rescue LoadError => e
-  if e.message =~ /customers_repository\.rb/ || e.message =~ /customers_controller\.rb/
+  if e.message =~ /customer_repository\.rb/ || e.message =~ /customers_controller\.rb/
     describe "CustomersController" do
       it "You need a `customers_controller.rb` file for your `CustomersController`" do
         fail
@@ -25,9 +25,9 @@ describe "CustomersController", :customer do
     ]
   end
   let(:csv_path) { "spec/support/customers.csv" }
-  let(:repository) { CustomersRepository.new(csv_path) }
+  let(:repository) { CustomerRepository.new(csv_path) }
 
-  it "should be initialized with a `CustomersRepository` instance" do
+  it "should be initialized with a `CustomerRepository` instance" do
     controller = CustomersController.new(repository)
     expect(controller).to be_a(CustomersController)
   end

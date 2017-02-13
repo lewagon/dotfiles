@@ -2,11 +2,11 @@ require "fileutils"
 require_relative "support/csv_helper.rb"
 
 begin
-  require_relative "../app/repositories/meals_repository.rb"
+  require_relative "../app/repositories/meal_repository.rb"
 rescue LoadError => e
-  if e.message =~ /meals_repository\.rb/
-    describe "MealsRepository" do
-      it "You need a `meals_repository.rb` file for your `MealsRepository`" do
+  if e.message =~ /meal_repository\.rb/
+    describe "MealRepository" do
+      it "You need a `meal_repository.rb` file for your `MealRepository`" do
         fail
       end
     end
@@ -15,7 +15,7 @@ rescue LoadError => e
   end
 end
 
-describe "MealsRepository", :meal do
+describe "MealRepository", :meal do
   let(:meals) do
     [
       [ "id", "name", "price" ],
@@ -39,26 +39,26 @@ describe "MealsRepository", :meal do
 
   describe "#initialize" do
     it "should take one argument: the CSV file path to store meals" do
-      expect(MealsRepository.instance_method(:initialize).arity).to eq(1)
+      expect(MealRepository.instance_method(:initialize).arity).to eq(1)
     end
 
     it "should not crash if the CSV path does not exist yet. Hint: use File.exist?" do
-      expect { MealsRepository.new('unexisting_file.csv') }.not_to raise_error
+      expect { MealRepository.new('unexisting_file.csv') }.not_to raise_error
     end
 
     it "store meals in memory in an instance variable `@meals` or `@elements`" do
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       expect(elements(repo)).to be_a(Array)
     end
 
     it "loads existing meals from the CSV" do
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       loaded_meals = elements(repo) || []
       expect(loaded_meals.length).to eq(5)
     end
 
     it "fills the `@meals` with instance of `Meal`, setting the correct types on each property" do
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       loaded_meals = elements(repo) || []
       fail if loaded_meals.empty?
       loaded_meals.each do |meal|
@@ -71,27 +71,27 @@ describe "MealsRepository", :meal do
 
   describe "#all" do
     it "should return all the meals stored by the repo" do
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       expect(repo.all).to be_a(Array)
       expect(repo.all[0].name).to eq("Margherita")
     end
 
-    it "MealsRepository should not expose the @meals through a reader/method" do
-      repo = MealsRepository.new(csv_path)
+    it "MealRepository should not expose the @meals through a reader/method" do
+      repo = MealRepository.new(csv_path)
       expect(repo).not_to respond_to(:meals)
     end
   end
 
   describe "#add" do
     it "should add a meal to the in-memory list" do
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       new_meal = Meal.new(price: 12, name: 'Hawaii')
       repo.add(new_meal)
       expect(repo.all.length).to eq(6)
     end
 
     it "should set the new meal id" do
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       hawaii_meal = Meal.new(price: 11, name: 'Hawaii')
       repo.add(hawaii_meal)
       expect(hawaii_meal.id).to eq(6)
@@ -104,7 +104,7 @@ describe "MealsRepository", :meal do
       csv_path = 'unexisting_empty_meals.csv'
       FileUtils.remove_file(csv_path, force: true)
 
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       hawaii_meal = Meal.new(price: 11, name: 'Hawaii')
       repo.add(hawaii_meal)
       expect(hawaii_meal.id).to eq(1)
@@ -116,11 +116,11 @@ describe "MealsRepository", :meal do
       csv_path = 'spec/support/empty_meals.csv'
       FileUtils.remove_file(csv_path, force: true)
 
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       hawaii_meal = Meal.new(price: 11, name: 'Hawaii')
       repo.add(hawaii_meal)
 
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       expect(repo.all.length).to eq(1)
       expect(repo.all[0].id).to eq(1)
       expect(repo.all[0].name).to eq("Hawaii")
@@ -130,7 +130,7 @@ describe "MealsRepository", :meal do
       repo.add(rucola_meal)
       expect(rucola_meal.id).to eq(2)
 
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       expect(repo.all.length).to eq(2)
       expect(repo.all[1].id).to eq(2)
       expect(repo.all[1].name).to eq("Rucola")
@@ -142,7 +142,7 @@ describe "MealsRepository", :meal do
 
   describe "#find" do
     it "should retrieve a specific meal based on its id" do
-      repo = MealsRepository.new(csv_path)
+      repo = MealRepository.new(csv_path)
       meal = repo.find(3)
       expect(meal.id).to eq(3)
       expect(meal.name).to eq("Napolitana")
