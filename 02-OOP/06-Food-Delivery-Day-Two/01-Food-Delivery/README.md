@@ -20,7 +20,7 @@ You should continue with your own code and keep adding features to the router / 
 
 ## 5 - (`Employee`) Who's working here?
 
-The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeesRepository` from a CSV file that we fill manually (no need for an `add` action).
+The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeeRepository` from a CSV file that we fill manually (no need for an `add` action).
 
 Open your `employees.csv` file and manually add some employees:
 

@@ -2,9 +2,9 @@
 
 # begin
 #   require_relative "../app/controllers/sessions_controller.rb"
-#   require_relative "../app/repositories/employees_repository.rb"
+#   require_relative "../app/repositories/employee_repository.rb"
 # rescue LoadError => e
-#   if e.message =~ /employees_repository\.rb/ || e.message =~ /sessions_controller\.rb/
+#   if e.message =~ /employee_repository\.rb/ || e.message =~ /sessions_controller\.rb/
 #     describe "SessionsController" do
 #       it "You need a `sessions_controller.rb` file for your `SessionsController`" do
 #         fail
@@ -24,13 +24,13 @@
 #     ]
 #   end
 #   let(:csv_path) { "spec/support/employees.csv" }
-#   let(:repository) { EmployeesRepository.new(csv_path) }
+#   let(:repository) { EmployeeRepository.new(csv_path) }
 
 #   before(:each) do
 #     CsvHelper.write_csv(csv_path, employees)
 #   end
 
-#   it "should be initialized with a `EmployeesRepository` instance" do
+#   it "should be initialized with a `EmployeeRepository` instance" do
 #     controller = SessionsController.new(repository)
 #     expect(controller).to be_a(SessionsController)
 #   end
