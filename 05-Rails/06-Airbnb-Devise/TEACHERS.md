@@ -1,4 +1,6 @@
-## Guidelines
+## Validation Guidelines (Monday morning)
+
+Here are some instructions for validating DB and routes when kick-starting project on Monday morning. Note that students work on a Airbnb-like so they can replace `flats` by any other table of `offers` (e.g. renting `boats`, `cats`, `gardens`, etc...).
 
 ### DB scheme validation
 
@@ -70,3 +72,33 @@ namespace :account do
   resources :bookings
 end
 ```
+
+## Le Wagon's minimal template (Monday afternoon)
+
+Don't let students waste time and creating their Rails app from scratch. Use our minimal template with already a frontend setup (Bootstrap, Simple Form)
+
+```bash
+cd ~/code/<user.github_nickname>
+rails new \
+  -T --database postgresql \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
+  rails-airbnb-clone
+```
+
+## Intermediate demo (until Wednesday)
+
+For the first intermediate demo on Wednesday evening, every team should have:
+
+- A well-designed app (Bootstrap classes for form inputs and buttons, content centered in `container`, responsive grid for flat's cards, nice home page, functional navigation bar, etc...).
+- Where a user can signup/signin
+- Where a user can post a new offer (and attach pictures to it)
+- Where a user can check all offers and see one specific offer
+- They should have started working on the "booking" features (at least embed a booking form in the offer show page).
+- Every page should have a clean design.
+
+If you see students losing time on non-core features (edit your profile, connect with Facebook, geocode the offers, etc...) while they have not finished the core ones or have a dirty design for main pages, **it's your role to put them back on track**. You are a teacher but also a product manager this week!
+
+On the contrary, if all your teams have a very well designed app with simple core features working, they will be really motivated to keep enhancing their app and make kick-ass final demo on Friday evening.
+
+
+
