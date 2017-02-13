@@ -1,43 +1,45 @@
 ## 9 AM - 9:30 AM
 Students' welcoming with pastries and coffee
 
-## 9:30 AM - 10:30 AM
+## 9:30 AM - 10:15 AM
 
-### Staff and basic rules (manager)
-- Gather students in the classroom for the Kick-Off
-- Introduce the team
-- Spell out basic rules for the place
+The manager should introduce the 9 week program and its philosophy, then detail the 9 weeks, the typical week, the typical day.
 
-### Program philosophy (teacher)
-1. Teacher's background
-1. Computer science = boring. Le Wagon = different approach mixing hard and soft skills:
-  - Product-oriented vision
-  - Engineering
-  - Design
-  - UX
-1. Technical accelerator focused on web development:
-  - Tackle in 9 weeks what students learn in 2 years in "regular" CS degree (often in their last year)
-  - At the end you'll be able to prototype any Web product
+### Program philosophy
+
+1. Standard computer science courses are boring because they don't focus on building products. Le Wagon has a different approach mixing hard and soft skills. You will realize that building a product with code is fascinating because it requires several skills
+
+- Product-oriented vision
+- Engineering and software architecture
+- Design
+- UX
+- Good writing skills for content
+
+2. Le Wagon is a technical accelerator focused on web development:
+
+- You will tackle in 9 weeks what students learn in 2 years in "regular" CS degree (often during their last year)
+- At the end you'll be able to prototype any Web product
+- It will be very hard but trust us, 1000+ students had gone throught the same steps!
 
 _Ask students who among them wants to be a developer, who wants to found a startup, who has no idea yet?_
 
-### Calendar overview (teacher)
+### Calendar overview
 
-Project calendar on the screen to go through the program with the class.
+Project the calendar on the screen to go through the program with the class, week after week.
 
 #### First 3 weeks - DISCLAIMER
 
 - The first 3 weeks are **hard**. Only algo / software architecture
 - The equivalent of an entire year in coding schools
 - You will struggle, you may doubt, wonder where we're heading
-- Just hold on, stay motivated and trust us: 600 former students have experienced the program
+- Just hold on, stay motivated and trust us: 1000+ former students have experienced the program
 - It works, so at this point, **trust us** and fight for it!
 
 #### Monday (Week 1) - Setup
 - Special day, we'll focus on your machines setup, you'll go home with pimped workstations ready for the next 9 weeks!
 
 #### Tuesday -> Friday (Week 1) - Ruby Core
-- Ruby core program. Fundamentals. Elementary blocks. Scripts in 1 or 2 files, we'll run them in the terminal.
+- Ruby core program. Fundamentals. Elementary blocks. Scripts in 1 or 2 files, we'll run them from the terminal.
 - Fast pace, a lot of information, you might feel on the verge of exploding
 
 #### Monday -> Tuesday (Week 2) - Ruby ReBoot
@@ -45,7 +47,7 @@ Project calendar on the screen to go through the program with the class.
 - There will be a **reboot** group for those who want to have a second pass on the fundamentals
 
 #### Wednesday (Week 2) -> Wednesday (Week 3) - Building Softwares
-- When your program grows, you won't keep 2000 in one big file, it's impossible to maintain.
+- When your program grows, you won't keep 2000 lines of code in one big file, it's impossible to maintain.
 - Instead, you'll need to **organize** your code and split it in different files.
 - That's what Software architecture is.
 - Also very hard, you'll build entire software in two days, still in the terminal, **hang on :)**
@@ -62,12 +64,7 @@ Project calendar on the screen to go through the program with the class.
 
 #### Friday (Week 5) - Project Day
 - No code
-- Product day
-- Pitch your idea
-- Discuss, constitute 3-member (or 4-member) teams
-- Convince other students to join your team, or join someone else's
-- Focus on the **learning interest** of the project.
-- After the bootcamp you can build 1, 2, 3, any Rails app. The 2 weeks is not the only opportunity to ship **your** idea.
+- Product day, you will prototype your ideas in team of 3 or 4 students.
 - Team up with people you'll get along with!
 - Choose **above all** a cool and interesting project (not a 10000th market place...). You are here to have fun and learn a maximum.
 
@@ -118,26 +115,26 @@ Project calendar on the screen to go through the program with the class.
 
 ## 10:30 AM - 1 PM: Setup
 
-### Setup lecture (teacher)
+### Setup lecture - 10:15am (15 min)
 
 Run the first Karr lecture on [Setup and Tools](https://karr.lewagon.org/lectures/setup/1-setup/)
 
-### Setup session (students)
+### Setup session - 10:30am (2h30)
 
-At the end of the lecture:
+At the end of the lecture
 
 - Tell all students to start [Le Wagon's setup](https://github.com/lewagon/setup)
 - Students on Mac should click on the apple, Linux on the penguin
 - Students on Linux should gather with a dedicated teacher
 - If you struggle on Linux setup: first read [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) and [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
 
-### Student validation (manager)
+### Student validation (end of morning setup)
 
 At the end of the setup, students will signin on [alumni.lewagon.org](http://alumni.lewagon.org) and complete their profile. Then:
 
-- Manager should approve them on the city admin page (see for instance [Paris page](http://alumni.lewagon.org/cities/paris) to validate students' onboarding.
+- Manager should approve them on his Slack channel
 - Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the wrong batch.
-- After this validation, they will receive 2 mails to join Le Wagon on Github and on Slack.
+- After this validation, students will receive 2 mails to join Le Wagon on Github and on Slack.
 
 ## 1 PM - 2 PM: Lunch time
 - Tell students to be back at 2 PM sharp for the first (short) lectures
@@ -146,20 +143,24 @@ At the end of the setup, students will signin on [alumni.lewagon.org](http://alu
 
 ### Terminal & Git (teacher)
 
-- Introduce Karr (lecture platform) now that they have access to it.
-- Start with [terminal lecture](https://karr.lewagon.org/lectures/setup/2-terminal-101/#/)
-- Then continue with [git and Github lecture](https://karr.lewagon.org/lectures/setup/3-git-101/#/)
-- At the end of the git and Github lecture, make a **demo of Kitt** and how to submit solution to challenges:
-  1. Navigation
-  2. Lectures
-  3. Videos
-  4. Classmates
-  5. Buddies
-  6. Exercises (Solving the demo exercise 00-Setup/00-Demo)
-  7. Tickets
-  8. Flashcards
+1. **2pm-2pm15**: Second 15 min lecture on command line basics (navigate in filesystem, create directories & files, launch Sublime Text from terminal, etc...)
 
-## 3 PM - End of the day
+2. **2pm-2pm45**: Third 45 min lecture on git commands (`add`/`commit`/`push`).
+
+3. **2pm45-3:15pm**: At the end of the git lecture, your teacher will show you the Kitt platform
+
+1. Navigation
+2. Lectures
+3. Videos
+4. Classmates
+5. Buddies
+6. Exercises (Solving the demo exercise 00-Setup/00-Demo)
+7. Tickets
+8. Flashcards
+
+4. Teacher should show to the class how to push a solution on the demo challenge `00-Setup/00-Demo` (first challenge that teacher should solve and push with the class).
+
+## 3:15 PM - End of the day
 
 - Students should finish their setup
 - They should complete Kitt's first challenge
