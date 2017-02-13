@@ -53,13 +53,13 @@ Done? Good! Time to `commit` and `push`.
 
 ## 4 - (Optional) Inheritance to the rescue
 
-When you look at `MealsRepository` and `CustomersRepository`, don't you see similarities? We want to stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), so time to introduce a parent class, `BaseRepository`, which will hold the common behavior.
+When you look at `MealRepository` and `CustomerRepository`, don't you see similarities? We want to stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), so time to introduce a parent class, `BaseRepository`, which will hold the common behavior.
 
 Reminder: as it's an optional section, you can skip it and come back to it later.
 
 ## 5 - (`Employee`) Who's working here?
 
-The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeesRepository` from a CSV file that we fill manually (no need for an `add` action).
+The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeeRepository` from a CSV file that we fill manually (no need for an `add` action).
 
 Open your `employees.csv` file and manually add some employees:
 
