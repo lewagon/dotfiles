@@ -51,12 +51,11 @@ Once you're done, you should have a very nice wiki with all basic functionalitie
 ## Markdown (Optional, Ruby)
 
 Add the [`kramdown` gem](https://github.com/gettalong/kramdown) to your `Gemfile`
-and run `bundle install`. We want to use the [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to write our articles content.
-Markdown is a simple and human-readable syntax which generates HTML. It is used
-everywhere, especially on GitHub.
+and run `bundle install`. We want to use the [Markdown syntax](https://guides.github.com/features/mastering-markdown/) to write our articles content.
 
-Store some Markdown in your articles, and use the `kramdown` gem to display
-the rendered text in the `show` view.
+Markdown is a simple and human-readable syntax which generates HTML. It is used everywhere, especially on GitHub.
+
+Store some Markdown in your articles and the database, and use the `kramdown` gem to display the rendered text in the `show` view.
 
 ## Code Editor (Optional, JavaScript)
 
