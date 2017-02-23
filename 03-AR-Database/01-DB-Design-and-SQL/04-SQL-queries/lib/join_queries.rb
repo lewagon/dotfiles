@@ -9,5 +9,5 @@ def stats_on(db, genre_name)
 end
 
 def top_five_artists(db, genre_name)
-  # TODO: return list of top 5 rock artists
+  # TODO: return list of top 5 artists with the most songs for a given genre.
 end
