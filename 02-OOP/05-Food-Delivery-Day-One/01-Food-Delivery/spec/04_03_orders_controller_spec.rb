@@ -114,7 +114,7 @@ describe "OrdersController", :order do
 
   describe "#mark_as_delivered" do
     it "should take an Employee instance as a parameter" do
-      expect(OrdersController.instance_method(:list_my_orders).arity).to eq(1)
+      expect(OrdersController.instance_method(:mark_as_delivered).arity).to eq(1)
     end
 
     it "should ask the delivery guy for an order id and mark it as delivered" do
