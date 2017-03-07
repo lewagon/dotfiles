@@ -1,5 +1,15 @@
 ## Background & Objectives
 
+Let's build a ToDo Manager with the basic CRUD features:
+
+```
+As a user I can list tasks
+As a user I can display the details of a task
+As a user I can add a task in my ToDo list
+As a user I can edit the details of a task
+As a user I can remove a task from my ToDo list
+```
+
 In this challenge, you will meet your old friend [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) again, which is Rails' ORM.
 
 There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
