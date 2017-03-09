@@ -36,7 +36,7 @@ describe Cookbook do
   end
 
   describe '#initialize' do
-    it 'should have loading existing recipies in spec/recipies.csv' do
+    it 'should have loading existing recipes in spec/recipes.csv' do
       expect(@cookbook.all.length).to eq recipes.length
     end
   end
