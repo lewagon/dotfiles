@@ -20,7 +20,7 @@ We will implement a *simplified* version of Black Jack:
   - If the player's score is > to 21, he loses.
   - If the player's score is 21, he pulls a "Black Jack" and wins.
   - If the player's score is > to the bank's, he wins.
-  - If the player's score is equal to the bank's, no one wins,
+  - If the player's score is == to the bank's, it's a "Push". The player gets his/her money back.
   - If the player's score is < to the bank's, he loses.
 
 ## Specs

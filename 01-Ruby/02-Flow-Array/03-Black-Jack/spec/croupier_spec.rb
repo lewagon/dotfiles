@@ -17,19 +17,23 @@ describe "#end_game_message" do
     expect(end_game_message(2, 16)).to be_a String
   end
 
-  it 'returns the fact that you lose when over 21' do
-    expect(end_game_message(22, 16)).to match /lose/i
+  it "returns a message telling you that you lost when going over 21" do
+    expect(end_game_message(22, 16)).to match /los[et]/i
   end
 
-  it 'returns the fact that you win when doing 21' do
+  it 'returns a "Black Jack" when you reached 21 exactly' do
     expect(end_game_message(21, 16)).to match /black[ -]?jack/i
   end
 
-  it 'returns the fact that you won when doing more than the bank' do
-    expect(end_game_message(20, 18)).to match /win/i
+  it 'returns "Push" when it\'s a draw' do
+    expect(end_game_message(18, 18)).to match /push/i
   end
 
-  it 'returns the fact that you lost when doing less than the bank' do
-    expect(end_game_message(17, 20)).to match /lose/i
+  it 'returns a message telling you that you lost if your score is lower than the bank\'s' do
+    expect(end_game_message(20, 18)).to match /w[io]n/i
+  end
+
+  it 'returns a message telling you that you won if your score is lower than the bank\'s' do
+    expect(end_game_message(17, 20)).to match /los[et]/i
   end
 end
