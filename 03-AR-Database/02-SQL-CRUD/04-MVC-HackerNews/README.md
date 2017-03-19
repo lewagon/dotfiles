@@ -22,7 +22,7 @@ Before that, gather the code you wrote in the previous exercises into the
 
 There is no specs for this exercise (still, you should rake for `rubocop`),
 so make sure all your controller method work by launching the app in your terminal.
-To test the persistense, you can restart your app. You can also directly look
+To test the persistence, you can restart your app. You can also directly look
 at the database file `db/posts.db` with the `sqlite3` terminal utility or
 a tool like SQLite Browser.
 
