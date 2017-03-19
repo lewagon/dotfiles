@@ -15,8 +15,8 @@
 
 The `lib/interface.rb` file contains a program to interact with a user. Try it now with:
 
-```
-$ ruby lib/interface.rb
+```bash
+ruby lib/interface.rb
 ```
 
 Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `"Hello, Boris Alexandre Papillard !"`.

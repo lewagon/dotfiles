@@ -4,8 +4,9 @@ Write a program that prints the lyrics of the song [99 Bottles of Beer](http://w
 
 It will take as an argument the starting number of bottles, given through the command line when executing the program. This program should work this way.
 
-```
-$ ruby lib/beer_song.rb 5
+```bash
+ruby lib/beer_song.rb 5
+
 5 bottles of beer on the wall, 5 bottles of beer!
 Take one down, pass it around, 4 bottles of beer on the wall!
 4 bottles of beer on the wall, 4 bottles of beer!
@@ -37,11 +38,16 @@ puts ARGV.inspect
 ````
 Now run it in the terminal this ways
 
-```
-$ ruby testing_argv.rb un deux trois
+```bash
+ruby testing_argv.rb un deux trois
+
 *** Command line arguments ***
 ["un", "deux", "trois"]
-$ ruby testing_argv.rb "un et deux" trois
+
+# ---
+
+ruby testing_argv.rb "un et deux" trois
+
 *** Command line arguments ***
 ["un et deux", "trois"]
 ```

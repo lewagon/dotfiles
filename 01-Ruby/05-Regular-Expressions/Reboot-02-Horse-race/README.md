@@ -11,10 +11,10 @@ This challenge should take you **45 minutes 🕒**. You should finish it and sta
 Let's create a folder for this new challenge:
 
 ```bash
-$ cd ~/code/${GITHUB_USERNAME}/reboot
-$ mkdir horse-race
-$ cd horse-race
-$ touch interface.rb
+cd ~/code/<user.github_nickname>/reboot
+mkdir horse-race
+cd horse-race
+touch interface.rb
 ```
 
 Again let's start with the interface. It's more intuitive.

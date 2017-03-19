@@ -13,16 +13,16 @@ For Reboot challenges we will not use `rake` and we will create a new folder for
 First, let's create a `reboot` folder for these 2 days:
 
 ```bash
-$ mkdir ~/code/${GITHUB_USERNAME}/reboot
-$ cd ~/code/${GITHUB_USERNAME}/reboot
+mkdir ~/code/<user.github_nickname>/reboot
+cd ~/code/<user.github_nickname>/reboot
 ```
 
 Now let's create a folder for the first challenge:
 
 ```bash
-$ mkdir calculator
-$ cd calculator
-$ touch interface.rb
+mkdir calculator
+cd calculator
+touch interface.rb
 ```
 
 We will always start with the `interface.rb` file. That's the file your will launch (with `ruby interface.rb`) to execute your program. It's always intuitive to start with the interface and ask yourself **"What should happen when I launch my program?"**
@@ -57,7 +57,8 @@ Build a simple calculator with a command-line UI:
 It should work like this:
 
 ```bash
-$ ruby interface.rb
+ruby interface.rb
+
 > Enter a first number:
 > 6
 > Enter a second one:
@@ -74,7 +75,8 @@ It's a bit painful to re-launch your calculator every time your program ends.. I
 Make it loop:
 
 ```bash
-$ ruby interface.rb
+ruby interface.rb
+
 > Enter a first number:
 > 6
 > Enter a second one:

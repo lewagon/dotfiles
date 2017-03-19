@@ -9,8 +9,8 @@ Now that associations are in place between `Post` and `User`, let's add some val
 There is already a migration to create the `posts` and `users` table (look at the `db/migrate` folder). You can play these migrations with:
 
 ```bash
-$ rake db:create
-$ rake db:migrate
+rake db:create
+rake db:migrate
 ```
 
 ## Specs

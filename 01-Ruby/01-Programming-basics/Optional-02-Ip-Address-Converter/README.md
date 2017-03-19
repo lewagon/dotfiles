@@ -6,7 +6,7 @@ You might already saw some IPv4 addresses, for instance `192.168.0.1`, or
 `173.194.40.200`. To get an IP address from a domain name, you can use the `host` command. For instance:
 
 ```bash
-$ host www.lewagon.com
+host www.lewagon.com
 ```
 
 You'll see that `www.lewagon.com` is aliased to a domain on Heroku, which
@@ -17,8 +17,8 @@ address given by the WiFi router, and you can get it typing `ips` in your
 terminal. If you want to determine what is the Public IP Address of this Wifi router, the one shared between you and other students, you can type `ip`.
 
 ```bash
-$ ips
-$ ip
+ips
+ip
 ```
 
 These commands are not standard, you have them thanks to the setup we did on the first day. You can review those aliases by opening the `~/.aliases` file with Sublime Text for instance.

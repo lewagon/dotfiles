@@ -10,10 +10,10 @@ This challenge should take you all day.
 Let's create a folder for this new challenge:
 
 ```shell
-$ cd ~/code/${GITHUB_USERNAME}/reboot
-$ mkdir christmas-list
-$ cd christmas-list
-$ touch interface.rb
+cd ~/code/<user.github_nickname>/reboot
+mkdir christmas-list
+cd christmas-list
+touch interface.rb
 ```
 
 Again let's start with the interface. It's more intuitive.
@@ -40,7 +40,7 @@ First thing first, let's brainstorm on the **pseudo-code**
 Start by building the main loop displaying action menu and getting user's input:
 
 ```shell
-$ ruby interface.rb
+ruby interface.rb
 > Welcome to your Christmas giftlist
 > Which action [list|add|delete|quit]?
 > list
@@ -70,7 +70,7 @@ Now let's impletement the simple actions (`list`, `add`, `delete`).
 We want to be able to mark any item as bought:
 
 ```shell
-$ ruby interface.rb
+ruby interface.rb
 > Welcome to your Christmas giftlist
 > Which action [list|add|delete|mark|quit]?
 > list

@@ -8,7 +8,7 @@ We want to enhance our cookbook by finding recipes data from the web. We will us
 You will add your HTML scraper feature to your already existing app (from Friday). You can copy paste your old code and put it into today's folder with this command (don't forget to copy the trailing dot!):
 
 ```bash
-$ cp -r ../../03-Cookbook-Day-One/01-Cookbook/lib .
+cp -r ../../03-Cookbook-Day-One/01-Cookbook/lib .
 ```
 
 It will add fill the lib folder with your previous code from which you can start. You can also take the solution from the livecode (cf. Slack).

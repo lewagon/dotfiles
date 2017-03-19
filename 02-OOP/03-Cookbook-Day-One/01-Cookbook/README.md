@@ -51,7 +51,7 @@ The view is responsible for all the `puts` and `gets` of your code.
 When you are ready, you can test your program with:
 
 ```bash
-$ ruby lib/app.rb
+ruby lib/app.rb
 ```
 
 We give you the `app.rb` which requires the code, instantiate a `Cookbook`, `Controller` and starts the app. The infinite loop is given in the `Router` because this is not part of MVC. In fact, when you'll work with Rails, it will be something taken as granted as well.

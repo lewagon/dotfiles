@@ -14,7 +14,7 @@
 - Once your method `age_in_days` is correct, we want to use it in `lib/interface.rb` which runs a command line tool. To launch this program, just run in your terminal:
 
 ```bash
-$ ruby lib/interface.rb
+ruby lib/interface.rb
 ```
 
 You'll see that your program says you are `0 years old`. You must change the code so that the program uses your `age_in_days` method. It is available in the `interface.rb` file as we do a `require_relative` command at the beginning of the file.

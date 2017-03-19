@@ -5,7 +5,7 @@ A simple challenge to manipulate basic HTML tags and create a profile page with 
 Note: You can start a local webserver by typing the following command in your terminal (just make sure you are in the exercise's folder):
 
 ```bash
-$ serve
+serve
 ```
 
 (it has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7))

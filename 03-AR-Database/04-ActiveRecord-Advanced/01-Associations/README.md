@@ -10,8 +10,8 @@ You don't need to log in to view posts.
 We gave you a first migration to create the `posts` table.
 
 ```bash
-$ rake db:create
-$ rake db:migrate
+rake db:create
+rake db:migrate
 ```
 
 ## Specs

@@ -27,19 +27,19 @@ Let's play with the [Sinatra](http://www.sinatrarb.com) gem for a preview of how
 Install the gems specified in your `Gemfile` with the following command:
 
 ```bash
-$ bundle install
+bundle install
 ```
 
 We already give you the migration and the seed. Run them with:
 
 ```bash
-$ rake db:drop db:create db:migrate db:seed
+rake db:drop db:create db:migrate db:seed
 ```
 
 Launch the sinatra app.
 
 ```bash
-$ ruby app.rb
+ruby app.rb
 ```
 
 Look! You can go to [http://localhost:4567](http://localhost:4567). You are running a small webserver and query it with your browser. No more command line!
@@ -84,7 +84,7 @@ Don't hesitate to share you work on Slack with [`ngrok`](https://ngrok.com/). In
 in another window.
 
 ```bash
-$ ngrok http 4567
+ngrok http 4567
 ```
 
 You should get a publicly browsable URL (`*.ngrok.com`) to share with everybody!

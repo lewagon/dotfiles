@@ -31,7 +31,7 @@ gem install gosu
 Just follow the gosu [tutorial](https://github.com/gosu/gosu/wiki/Ruby-Tutorial) and copy/paste the code in the `game.rb` file. At any point in the tutorial, you can test your code running:
 
 ```
-$ ruby lib/game.rb
+ruby lib/game.rb
 ```
 
 In the tutorial, sometimes there needs to be printed some images, you can take your own or re-use [these ones](https://github.com/gosu/gosu/tree/master/examples/media).

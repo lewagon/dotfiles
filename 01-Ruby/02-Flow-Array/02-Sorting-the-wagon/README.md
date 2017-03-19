@@ -20,7 +20,8 @@ Open the `interface.rb` file and make sure to use the
 `wagon_sort` method. It should work like this:
 
 ```bash
-$ ruby lib/interface.rb
+ruby lib/interface.rb
+
 Type a student name:
 felix
 Type another student name (or press enter to finish):

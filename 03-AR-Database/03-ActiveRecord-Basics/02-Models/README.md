@@ -11,8 +11,8 @@ Before starting this exercise, make sure you read the [Active Record starting gu
 As we changed exercise, we need to create a new database in the `db` folder:
 
 ```bash
-$ rake db:create
-$ rake db:migrate
+rake db:create
+rake db:migrate
 ```
 
 We gave you the migration file (see the `db/migrate` file), it should be the same
@@ -21,7 +21,7 @@ as the one you built from scratch in the previous exercise!
 Ensure the schema is in place by openning the DB with `sqlite3`:
 
 ```bash
-$ sqlite3 db/development.sqlite3
+sqlite3 db/development.sqlite3
 sqlite> .schema
 ```
 
@@ -36,7 +36,7 @@ Add a class model for your `posts` table in the `app/models` folder.
 We gave you the same app skeleton than last Friday. You can launch it with:
 
 ```bash
-$ ruby app.rb
+ruby app.rb
 ```
 
 Open the `app/controllers/posts_controller.rb` and implement the methods. You

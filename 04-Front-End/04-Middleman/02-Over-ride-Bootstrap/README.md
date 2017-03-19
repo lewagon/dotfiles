@@ -68,13 +68,13 @@ Assuming that `$red: #D4312D;` and `$blue: #5E74ED;`.
 Once you're done, commit and publish your changes:
 
 ```bash
-$ git add .
-$ git commit -m "Add CSS for colors and fonts and over-ride Bootstrap theme"
-$ git push
+git add .
+git commit -m "Add CSS for colors and fonts and over-ride Bootstrap theme"
+git push
 ```
 
 Don't forget to deploy your site:
 
 ```bash
-$ middleman deploy
+middleman deploy
 ```

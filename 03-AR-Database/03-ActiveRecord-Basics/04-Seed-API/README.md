@@ -9,19 +9,19 @@ We will use the [rest-client](https://github.com/rest-client/rest-client) to cal
 the HackerNews API. First, install the gem on your laptop:
 
 ```bash
-$ gem install rest-client
+gem install rest-client
 ```
 
 Again, you can reuse this sequence to test your seed.
 
 ```bash
-$ rake db:drop db:create db:migrate db:seed
+rake db:drop db:create db:migrate db:seed
 ```
 
 Look at your rows inserted with the `rake db:seed`:
 
 ```bash
-$ sqlite3 db/development.sqlite3
+sqlite3 db/development.sqlite3
 sqlite> .mode columns
 sqlite> .headers on
 sqlite> SELECT * FROM posts;

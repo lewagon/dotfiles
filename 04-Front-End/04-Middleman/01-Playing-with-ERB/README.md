@@ -24,10 +24,10 @@ But first, let's get started with Middleman!
 Now let's clone the project and install missing gems:
 
 ```bash
-$ cd ~/code/<user.github_nickname>
-$ git clone git@github.com:<user.github_nickname>/airbnb-static.git
-$ cd airbnb-static
-$ bundle install
+cd ~/code/<user.github_nickname>
+git clone git@github.com:<user.github_nickname>/airbnb-static.git
+cd airbnb-static
+bundle install
 ```
 
 This is a new separated project, so **we don't clone it inside `fullstack-challenges`**.
@@ -37,20 +37,20 @@ This is a new separated project, so **we don't clone it inside `fullstack-challe
 To start a web-server:
 
 ```bash
-$ middleman server # launch local server (Ctr + C to kill it)
+middleman server # launch local server (Ctr + C to kill it)
 ```
 
 When you want to build your HTML/CSS code and deploy it with Github Pages, first commit your work:
 
-```
-$ git add .
-$ git commit -m "finished some work"
+```bash
+git add .
+git commit -m "finished some work"
 ```
 
 And when your `git status` is clean, deploy your website:
 
 ```bash
-$ middleman deploy # deploy website on Github Pages
+middleman deploy # deploy website on Github Pages
 ```
 
 ## Home Page
@@ -146,11 +146,11 @@ You can have a look at [Middleman documentation for helpers](https://middlemanap
 
 Now that you have a working Middleman project with a home and a team page, time to commit your work and deploy:
 
-```
-$ git add .
-$ git commit -m "finished home and team page"
-$ git push origin master
-$ middleman deploy
+```bash
+git add .
+git commit -m "finished home and team page"
+git push origin master
+middleman deploy
 ```
 
 Visit your masterpiece on <a href="http://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-static</a>.

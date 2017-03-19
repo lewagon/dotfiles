@@ -12,7 +12,7 @@ We'll start with a simple exercise that you already solved a few weeks ago, in R
 **If you are on Ubuntu, make sure you have the `node` commande**. If not, run this:
 
 ```bash
-$ sudo ln -s "$(which nodejs)" /usr/bin/node
+sudo ln -s "$(which nodejs)" /usr/bin/node
 ```
 
 If you are on Mac OSX, you can ignore this.

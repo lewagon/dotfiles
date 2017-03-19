@@ -9,10 +9,10 @@
 Let's create a folder for this new challenge:
 
 ```shell
-$ cd ~/code/${GITHUB_USERNAME}/reboot
-$ mkdir instacart
-$ cd instacart
-$ touch interface.rb
+cd ~/code/<user.github_nickname>/reboot
+mkdir instacart
+cd instacart
+touch interface.rb
 ```
 
 Again let's start with the interface. It's more intuitive.
@@ -41,7 +41,7 @@ Here is the first version of our program:
 
 
 ```shell
-$ ruby interface.rb
+ruby interface.rb
 > --------------------
 > Welcome to Instacart
 > --------------------
@@ -76,7 +76,7 @@ $ ruby interface.rb
 ## Step 2 - Adding quantity 🛍🛍
 
 ```shell
-$ ruby interface.rb
+ruby interface.rb
 > --------------------
 > Welcome to Instacart
 > --------------------
@@ -113,7 +113,7 @@ $ ruby interface.rb
 Now let's push the program further and handle our stock (with availability):
 
 ```shell
-$ ruby interface.rb
+ruby interface.rb
 > --------------------
 > Welcome to Instacart
 > --------------------

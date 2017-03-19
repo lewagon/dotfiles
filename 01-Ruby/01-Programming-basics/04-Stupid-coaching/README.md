@@ -19,7 +19,7 @@ Let's make a comparison between the **real world** and the **code world** on thi
   <tbody>
     <tr>
       <td>Waking up</td>
-      <td>Running <code>$ ruby lib/interface.rb</code> in the terminal</td>
+      <td>Running <code>ruby lib/interface.rb</code> in the terminal</td>
     </tr>
     <tr>
       <td>Speaking to your coach</td>

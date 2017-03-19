@@ -35,7 +35,7 @@ Then run this migration with `rake db:migrate`.
 Check that your table has been created:
 
 ```bash
-$ sqlite3 db/development.sqlite3
+sqlite3 db/development.sqlite3
 sqlite> .schema
 ```
 

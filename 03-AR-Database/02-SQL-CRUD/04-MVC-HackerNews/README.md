@@ -12,7 +12,7 @@ We will now use this new code into a regular MVC architecture.
 Launch the ruby app with:
 
 ```bash
-$ ruby app.rb
+ruby app.rb
 ```
 
 It will instantiate a router and start the app. The router is provided,
@@ -29,7 +29,7 @@ a tool like SQLite Browser.
 We provide you with the script `reset_db.rb` that you can run with:
 
 ```bash
-$ ruby reset_db.rb
+ruby reset_db.rb
 ```
 
 It will drop all data from the database and recreate the schema. You should launch

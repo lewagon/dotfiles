@@ -7,7 +7,7 @@ We will take our last exercise Wagon-race and make it a little bit more interest
 Go to the exercise folder
 
 ```bash
-$ bundle install
+bundle install
 ```
 
 **For the API:**
