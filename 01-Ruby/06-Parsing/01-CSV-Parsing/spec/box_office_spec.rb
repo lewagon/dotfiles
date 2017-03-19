@@ -1,10 +1,10 @@
 # Encoding: utf-8
 require "box_office"
 
-describe "#most_successfull" do
+describe "#most_successful" do
 
   context "Most successful movies before 1975" do
-    let(:movies_list) { most_successfull(3, 1975, File.dirname(__FILE__) + '/../lib/movies.csv') }
+    let(:movies_list) { most_successful(3, 1975, File.dirname(__FILE__) + '/../lib/movies.csv') }
 
     it "should return an array of movies" do
       expect(movies_list).to be_a Array
@@ -33,7 +33,7 @@ describe "#most_successfull" do
   end
 
   context "Most successful movies ever" do
-    let(:movies_list) { most_successfull(3, 2100, File.dirname(__FILE__) + '/../lib/movies.csv') }
+    let(:movies_list) { most_successful(3, 2100, File.dirname(__FILE__) + '/../lib/movies.csv') }
 
     it "should be Avatar, Titanic and The Avengers" do
       target = [
