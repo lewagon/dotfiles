@@ -29,7 +29,7 @@ We also need another class which will act as a database. We don't have a databas
 
 Please implement a `Cookbook` class which will act as fake database. It should implement 4 methods:
 
-- `initialize(csv_file)` which loads existing `Recipe` from the CSV
+- `initialize(csv_file_path)` which loads existing `Recipe` from the CSV
 - `all` which returns all the recipies
 - `add_recipe(recipe)` which adds a new recipe to the cookbook
 - `remove_recipe(recipe_id)` which removes a recipe from the cookbook.
