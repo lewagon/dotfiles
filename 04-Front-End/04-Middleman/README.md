@@ -6,8 +6,8 @@ If you've done your homework 😀, you should have uploaded your product pitch [
 
 ## Votes & Team building
 
-- After the pitch session, [you can vote on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) for the projects you like most. It will give a first idea of popular projects within the class.
-- Then you'll have until Friday to [build teams on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products/voting) of **3 people**.
+- After the pitch session, [you can vote on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products) for the projects you like most. It will give a first idea of popular projects within the class.
+- Then you'll have until Friday to [build teams on kitt](http://kitt.lewagon.org/camps/<user.batch_slug>/products) of **3 people**.
 
 On Friday, we will start prototyping your app during a great Product Design Sprint. Teams need to be set up for Friday 👊👊👊. Now let's go back to today's challenge !
 
