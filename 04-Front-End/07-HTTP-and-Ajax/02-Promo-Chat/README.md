@@ -17,6 +17,11 @@ This is a basic jQuery exercise, no AJAX involved yet! **Hint**: You'll have to 
 
 Code your javascript in `js/app.js`.
 
+### Fetch recent messages
+
+In the markup, you'll find a `#refresh` button that should reload all the comments for your promotion and make you discover what your mates have posted on the wall! Implement the jQuery code for getting all the comments when clicking on the refresh button. You will have to make a `GET` request to the API in JS using `$.get()`. Again, you have to read the [the documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return.
+
+
 ### Push your messages
 
 That's cool to add new messages without reloading all the HTML. But try refreshing your page... The comments are gone!
@@ -24,10 +29,6 @@ That's cool to add new messages without reloading all the HTML. But try refreshi
 All your smart jQuery code is on client-side. It does not post any data on the server for the moment. For that, you have to enhance your javascript code adding the adequate `POST` request and send data to be stored on the API's database. Read [the documentation](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to figure out how to build your request using `$.post()`.
 
 Open your Web Inspector, and put some `console.log()`, espacially in the `success` & `error` callbacks of the `$.ajax()` method.
-
-### Fetch recent messages
-
-In the markup, you'll find a `#refresh` button that should reload all the comments for your promotion and make you discover what your mates have posted on the wall! Implement the jQuery code for getting all the comments when clicking on the refresh button. You will have to make a `GET` request to the API in JS using `$.get()`. Again, you have to read the [the documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return.
 
 
 ### Auto-refresh
