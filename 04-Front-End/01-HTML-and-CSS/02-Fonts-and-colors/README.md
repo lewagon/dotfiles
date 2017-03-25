@@ -1,3 +1,7 @@
+## Setup
+
+Copy the contents of your `body` tag from the previous exercice into this one.
+
 ## Background & Objectives
 
 Add simple CSS rules to design fonts and colors of your profile page.
