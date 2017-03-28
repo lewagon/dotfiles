@@ -11,7 +11,7 @@ rescue LoadError => e
   end
 end
 
-describe "Order", :order do
+describe "Order", :_order do
   it "should be initialized with a hash of properties" do
     properties = { id: 1, delivered: false }
     order = Order.new(properties)

@@ -118,7 +118,7 @@ Then, make sure that the following **user stories** are implemented in your prog
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
 
-To launch only order tests, use `rspec -t order`
+To launch only order tests, use `rspec -t order_`
 
 ## 7 - (Optional) - Destroy actions
 
