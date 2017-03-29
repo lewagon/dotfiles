@@ -86,7 +86,7 @@ describe "OrdersController", :order do
   describe "#add" do
     module Kernel; def gets; STDIN.gets; end; end
 
-    it "should ask the user for a meal, a customer and an employee to be assigned" do
+    it "should ask the user for a meal id, a customer id and an employee id to be assigned" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
 
       allow(STDIN).to receive(:gets).and_return("1", "2", "1")
