@@ -1,3 +1,7 @@
+## Setup
+
+Copy the contents of your `body` tag from the previous exercice into this one.
+
 ## Background & Objectives
 
 Play with the box model (`margin/border/padding/width/height`) by splitting your profile information into different `<div>`.
