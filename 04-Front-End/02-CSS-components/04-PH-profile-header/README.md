@@ -59,7 +59,7 @@ The HTML markup of the tabs component is easy, it should look like
 ```
 
 - `<div class="tabs">` is the **flexbox** and should be `display:flex;`
-- `<div class="tab"> are the **flex item**
+- `<div class="tab">` are the **flex item**
 
 You have two options to code the flex items:
 
