@@ -1,3 +1,7 @@
+## Setup
+
+Copy the contents of your `body` tag from the previous exercice into this one.
+
 ## Background & Objectives
 
 Use advanced CSS selectors (id, class, grouping, descendant selectors) to fine-tune your page with a more subtle design.
