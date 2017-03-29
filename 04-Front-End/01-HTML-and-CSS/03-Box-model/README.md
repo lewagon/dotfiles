@@ -27,7 +27,7 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 
 ```css
 .container {
-  width: 500px;   /* Set width
+  width: 500px;   /* Set width */
   margin: 0 auto; /* Automatically set left/right margins */
 }
 ```
