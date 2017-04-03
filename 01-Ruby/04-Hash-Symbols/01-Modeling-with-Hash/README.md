@@ -26,10 +26,10 @@ STUDENTS_WITH_AGE = {
 
 Read the documentation about [Hashes](http://www.ruby-doc.org/core-2.2.0/Hash.html).
 They will be your best friends and you'll use them a lot!
-As you see, `Hash`es are unordered data structured where data is indexed by **unique** keys,
-whereas `Array`s are ordered data structures where elements are retrieved by index (`0`, `1`, `2`...)
+As you see, `Hashes` are unordered data structured where data is indexed by **unique** keys,
+whereas `Arrays` are ordered data structures where elements are retrieved by index (`0`, `1`, `2`...)
 
-**Use `String`s as hash keys, not `Symbol`s, for simplicity's sake**
+**Use `Strings` as hash keys, not `Symbols`, for simplicity's sake**
 
 ## Specs
 
@@ -51,8 +51,8 @@ just store which dishes compose a meal. How are can you represent the dishes of 
 Enhance your method `#calories_counter` so that you can calculate calories by running:
 
 ```ruby
-orders = ["French Fries", "Happy Meal", "Sprite"]
-puts calories_counter(orders)
+order = ["French Fries", "Happy Meal", "Sprite"]
+puts calories_counter(order)
 ```
 
 ## Key learning points
