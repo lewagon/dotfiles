@@ -6,7 +6,7 @@ We want to have a dataset with which we can bootstrap our database. It's called 
 ## Setup
 
 We will use the [faker](https://github.com/stympy/faker) gem to generate `Post` attributes.
- But first you have to install it on your laptop:
+But first you have to install it on your laptop:
 
 ```bash
 gem install faker
