@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick function that computes the number of calories in a McDonald order. We consider the following products (with their respective number of calories).
+Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonald order. We consider the following products (with their respective number of calories).
 
 | Item          | Calories |
 | ------------- |---------:|
@@ -26,10 +26,10 @@ STUDENTS_WITH_AGE = {
 
 Read the documentation about [Hashes](http://www.ruby-doc.org/core-2.2.0/Hash.html).
 They will be your best friends and you'll use them a lot!
-As you see, `Hashes` are unordered data structured where data is indexed by **unique** keys,
-whereas `Arrays` are ordered data structures where elements are retrieved by index (`0`, `1`, `2`...)
+As you see, `Hash`es are unordered data structured where data is indexed by **unique** keys,
+whereas `Array`s are ordered data structures where elements are retrieved by index (`0`, `1`, `2`...)
 
-**Use `Strings` as hash keys, not `Symbols`, for simplicity's sake**
+**Use `String`s as hash keys, not `Symbol`s, for simplicity's sake**
 
 ## Specs
 
