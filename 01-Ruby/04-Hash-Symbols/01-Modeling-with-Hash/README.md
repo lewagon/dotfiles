@@ -14,7 +14,7 @@ Let's say you want to stay fit but keep eating McDonalds... You have the brillia
 | Sprite        | 170      |
 
 You will want to store this information in a ruby [constant](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Variables_and_Constants#Constants) and treat it as your database.
-For instance, below is an example of a `Hash` about students and their ages stored in the constant `STUDENTS_WITH_AGE`:
+For instance, below is an example of a `Hash` about students and their ages stored in the constant `STUDENTS_WITH_AGE` that we can treat as a database:
 
 ```ruby
 STUDENTS_WITH_AGE = {
