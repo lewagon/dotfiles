@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonald order. We consider the following products (with their respective number of calories).
+Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonald order. We consider the following items on the menu (with their respective number of calories).
 
 | Item          | Calories |
 | ------------- |---------:|
