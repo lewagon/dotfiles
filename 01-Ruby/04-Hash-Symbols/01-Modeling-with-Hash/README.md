@@ -13,7 +13,7 @@ Let's say you want to stay fit but keep eating McDonalds... You have the brillia
 | Coca          | 160      |
 | Sprite        | 170      |
 
-You want to store this information in a ruby [constant](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Variables_and_Constants#Constants) and treat it as your database.
+You will want to store this information in a ruby [constant](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Variables_and_Constants#Constants) and treat it as your database.
 For instance, below is an example of a `Hash` about students and their ages stored in the constant `STUDENTS_WITH_AGE`:
 
 ```ruby
