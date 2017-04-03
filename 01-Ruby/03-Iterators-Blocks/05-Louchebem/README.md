@@ -20,8 +20,8 @@ Did you know that popular expressions like "larfeuille", "loufiah", "loucedé", 
 ## Specs
 
 - **constraint**: you should pick your final random suffix in `["em", "é", "ji", "oc", "ic", "uche", "ès"]`
-- **constraint**: one-letter word like "a" or "l" should not be translated
-- **constraint**: for words beginning with consonnants ("chat", "trou") you'll have to take all the first *consonnants* group and put it at the end. Ex: "chat" should give "latchem", or "latchoc". Read [this article](http://en.wikipedia.org/wiki/Louch%C3%A9bem) for more info.
+- **constraint**: one-letter word like "a" should not be translated
+- **constraint**: for words beginning with consonnants ("chat", "trou") you'll have to take all the first *consonnants* group and put it at the end and add a "l" at the start of the word. Ex: "chat" should give "latchem", or "latchoc". Read [this article](http://en.wikipedia.org/wiki/Louch%C3%A9bem) for more info.
 - **constraint**: words beginning with a vowel are more straightforward to translate. Ex: "atout" may give "latoutoc"
 - **enhancement**: ideally your program should be able to translate any complicated sentence, eventually embedding special characters like "!", or "'".
 

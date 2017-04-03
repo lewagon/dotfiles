@@ -2,7 +2,7 @@
 
 ## Exemple
 
-First, open your terminal and installed [Nokogiri](http://www.nokogiri.org/),
+First, open your terminal and install [Nokogiri](http://www.nokogiri.org/),
 a **gem** very useful when you want to scrape web page content.
 
 ```bash
