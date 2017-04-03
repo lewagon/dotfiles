@@ -13,7 +13,7 @@ A rule of thumb, symbols are "like" strings, but:
 
 When you use a string not really for its textual content, but as a kind of tag/unique identifier in your program, you should consider using a Symbol.
 
-Hence many Hash keys are symbols, as they are more here to identify things than for their "text value". Consider for instance this Hash:
+Hence, many Hash keys are symbols, as they are more here to identify things than for their "text value". Consider for instance this Hash:
 
 ```ruby
 fox = { color: "red", species: "mammal" }
