@@ -40,6 +40,7 @@ whereas `Arrays` are ordered data structures where elements are retrieved by ind
 Now let's say you want to enhance your calories counter, so that he can accepts indifferently a list of beverage, burgers, sides, **and MEALS**. Here are the 3 only meals we will impose:
 
 | Meal                 | Dishes                            |
+| -------------------- | ----------------------------------|
 | Happy Meal           | Cheese Burger, French Fries, Coca |
 | Best Of Big Mac      | Big Mac, French Fries, Coca       |
 | Best Of Royal Cheese | Royal Cheese, Potatoes, Sprite    |
