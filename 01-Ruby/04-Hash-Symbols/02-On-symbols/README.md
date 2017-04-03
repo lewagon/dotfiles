@@ -11,15 +11,15 @@
 For ruby beginners, understanding symbols can be quite harsh.
 A rule of thumb, symbols are "like" strings, but:
 
-When you use a string not really for its textual content, but as a kind of tag, a unique identifier in your program, you should consider using a Symbol
+When you use a string not really for its textual content, but as a kind of tag, a unique identifier in your program, you should consider using a Symbol.
 
-Hence many Hash keys are symbols, as they are more here to identify things than for their "text value". Consider for instance this hash
+Hence many Hash keys are symbols, as they are more here to identify things than for their "text value". Consider for instance this Hash:
 
 ```ruby
 fox = { color: "red", species: "mammal" }
 ```
 
-The `:color` and `:specie` keys are used as identifiers, their actual text value is chosen so that a human can quickly understand what these hash keys are about. Hence we used Symbols instead of Strings.
+The `:color` and `:species` keys are used as identifiers, their actual text value is chosen so that a human can quickly understand what these hash keys are about. Hence we used Symbols instead of Strings.
 
 You may find this other syntax:
 
