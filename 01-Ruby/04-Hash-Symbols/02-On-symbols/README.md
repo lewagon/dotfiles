@@ -16,7 +16,7 @@ When you use a string not really for its textual content, but as a kind of tag, 
 Hence many Hash keys are symbols, as they are more here to identify things than for their "text value". Consider for instance this hash
 
 ```ruby
-fox = { color: "red", specie: "mammal" }
+fox = { color: "red", species: "mammal" }
 ```
 
 The `:color` and `:specie` keys are used as identifiers, their actual text value is chosen so that a human can quickly understand what these hash keys are about. Hence we used Symbols instead of Strings.
@@ -24,7 +24,7 @@ The `:color` and `:specie` keys are used as identifiers, their actual text value
 You may find this other syntax:
 
 ```ruby
-fox = { :color => "red", :specie => "mammal" }
+fox = { :color => "red", :species => "mammal" }
 ```
 
 Read [this StackOverflow answer](http://stackoverflow.com/a/8189435/197944/) to understand more in-depth the subtle difference  between Strings and Symbols. The concept of **mutability** is important here.
