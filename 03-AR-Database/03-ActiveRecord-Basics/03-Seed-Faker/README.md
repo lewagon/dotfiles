@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now you are OK with both migrations and models, we'll put ourselves in a real-life scenario
+Now you are OK with both migrations and models, we'll put ourselves in a real-life scenario.
 We want to have a dataset with which we can bootstrap our database. It's called a `seed`.
 
 ## Setup
