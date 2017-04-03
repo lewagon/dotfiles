@@ -1,13 +1,13 @@
 ## Background & Objectives
-Use the Facebook Graph API to build a dynamic webpage showing all your facebook info (firstname, lastname, picture, friends..)
+Use the Facebook Graph API to build a dynamic webpage showing all your facebook info (firstname, lastname, picture, friends..).
 
 ## Specs
 
 ### Get an access token
 
-In order to make request to the facebook graph API, you have to obtain a token, i.e. a kind of passord authenticating yourself to Facebook.
+First, you need to get an access token to be authenticated (with your Facebook account) when you request the API:
 
-- Visit the [graph API explorer](https://developers.facebook.com/tools/explorer/)
+- Visit the [Graph API explorer](https://developers.facebook.com/tools/explorer/)
 - Get a token and select fields you want to fetch
 - Copy this token in your Javascript file `fb.js`
 
