@@ -151,7 +151,7 @@ POST "restaurants/38/reviews"
 
 In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) who will have to make some curation from his rails console.
 
-We know it's a pretty poor MVP. However, we want you to understand that **each route is a traduction of a user-story or your product**. Don't write stupidly 7 CRUD routes for any model of your app. It's the best way to get lost and to forget what your MVP really is.
+We know it's a pretty poor MVP. However, we want you to understand that **each route is a translation of a user-story or your product**. Don't write stupidly 7 CRUD routes for any model of your app. It's the best way to get lost and to forget what your MVP really is.
 
 Implement all the routes you need to build this product
 
