@@ -59,6 +59,7 @@ Project the calendar on the screen to go through the program with the class, wee
 #### Wednesday (Week 4) -> Thursday (Week 5) - Frontend
 - What's missing now? A proper interface. We'll replace the terminal by a Web browser.
 - Front-end: HTML, CSS, Bootstrap, less painful, and more graphical, good way to express your creativity, fresh air for your minds.
+- Monday night: you'll get to pitch a product! Then you have 24 hours to vote for your 3 favorite products, and until Thursday night to join a team.
 - A couple of days on JavaScript at the end.
 - At this time you'll have nice static websites online :)
 
