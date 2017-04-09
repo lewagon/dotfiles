@@ -112,7 +112,7 @@ Project the calendar on the screen to go through the program with the class, wee
   - You've reached the end of the day! Have a beer in the neighborhood, get to know each others!
   - Back home, don't code (your brains need to **rest**), but take a few minutes to read next day's lecture (you can also play flashcards, we'll show you later)
 
-### Any question?
+### Any questions?
 
 ## 10:30 AM - 1 PM: Setup
 
