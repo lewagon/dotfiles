@@ -54,7 +54,7 @@ Implement `#withdraw` and `#deposit`. Both of these methods should call the priv
 
 Now you have to implement  `#transactions_history` method. This method takes a password hash as parameter, which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args={}`). Your transaction history method should
 
-1. print the transactions array if the right password is given.
+1. print a string displaying the transactions if the right password is given.
 2. print "wrong password" if the password does not correspond to the account's password.
 3. print "no password given" if the method is called without arguments.
 
