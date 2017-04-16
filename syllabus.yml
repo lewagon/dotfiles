@@ -64,8 +64,17 @@ default: &default
             - path: 01-Ruby/05-Regular-Expressions/Optional-02-A-translation-story
             - path: 01-Ruby/05-Regular-Expressions/Optional-03-Regex-Games
             - path: 01-Ruby/05-Regular-Expressions/Reboot-01-Calculator
+              rake: false
+              instructions: false
+              flashcard_alert: false
             - path: 01-Ruby/05-Regular-Expressions/Reboot-02-Horse-race
+              rake: false
+              instructions: false
+              flashcard_alert: false
             - path: 01-Ruby/05-Regular-Expressions/Reboot-03-Instacart
+              rake: false
+              instructions: false
+              flashcard_alert: false
         - number: 2
           path: 01-Ruby/06-Parsing
           exercises:
@@ -74,6 +83,9 @@ default: &default
             - path: 01-Ruby/06-Parsing/Optional-01-Text-Analyzer
             - path: 01-Ruby/06-Parsing/Optional-02-Your-First-Scraper
             - path: 01-Ruby/06-Parsing/Reboot-01-Christmas-list
+              rake: false
+              instructions: false
+              flashcard_alert: false
         - number: 3
           path: 02-OOP/01-OO-Basics
           exercises:
@@ -91,6 +103,7 @@ default: &default
             - path: 02-OOP/02-OO-Advanced/03-About-self
             - path: 02-OOP/02-OO-Advanced/Optional-01-Web-Browser
             - path: 02-OOP/02-OO-Advanced/Optional-02-Gosu-Game
+              rake: false
             - path: 02-OOP/02-OO-Advanced/Optional-03-Tracking-Subclasses
         - number: 5
           path: 02-OOP/03-Cookbook-Day-One
@@ -103,6 +116,8 @@ default: &default
           path: 02-OOP/04-Cookbook-Day-Two
           exercises:
             - path: 02-OOP/04-Cookbook-Day-Two/01-Cookbook-Advanced
+              rake: false
+              flashcard_alert: false
         - number: 2
           path: 02-OOP/05-Food-Delivery-Day-One
           exercises:
@@ -111,6 +126,8 @@ default: &default
           path: 02-OOP/06-Food-Delivery-Day-Two
           exercises:
             - path: 02-OOP/06-Food-Delivery-Day-Two/01-Food-Delivery
+              rake: false
+              flashcard_alert: false
         - number: 4
           path: 03-AR-Database/01-DB-Design-and-SQL
           exercises:
@@ -154,6 +171,7 @@ default: &default
             - path: 04-Front-End/01-HTML-and-CSS/03-Box-model
             - path: 04-Front-End/01-HTML-and-CSS/04-Advanced-selectors
             - path: 04-Front-End/01-HTML-and-CSS/05-Push-on-Github-Pages
+              instructions: false
             - path: 04-Front-End/01-HTML-and-CSS/Optional-01-Fixed-sidebar
             - path: 04-Front-End/01-HTML-and-CSS/Optional-02-Profile-dashboard
             - path: 04-Front-End/01-HTML-and-CSS/Optional-03-Event-form
@@ -166,6 +184,7 @@ default: &default
             - path: 04-Front-End/02-CSS-components/04-PH-profile-header
             - path: 04-Front-End/02-CSS-components/05-PH-profile-dashboard
             - path: 04-Front-End/02-CSS-components/06-Take-away
+              instructions: false
         - number: 5
           path: 04-Front-End/03-Bootstrap
           exercises:
@@ -176,6 +195,8 @@ default: &default
             - path: 04-Front-End/03-Bootstrap/05-Login
             - path: 04-Front-End/03-Bootstrap/06-Search-form
             - path: 04-Front-End/03-Bootstrap/07-Pitch-Preparation
+              rake: false
+              instructions: false
 
     - number: 5
       days:
@@ -183,41 +204,71 @@ default: &default
           path: 04-Front-End/04-Middleman
           exercises:
             - path: 04-Front-End/04-Middleman/01-Playing-with-ERB
+              instructions: false
             - path: 04-Front-End/04-Middleman/02-Over-ride-Bootstrap
+              instructions: false
             - path: 04-Front-End/04-Middleman/03-Flat-dynamic-view
+              instructions: false
             - path: 04-Front-End/04-Middleman/Optional-01-Blogging-with-Middleman
+              instructions: false
         - number: 2
           path: 04-Front-End/05-Javascript-and-jQuery
           exercises:
             - path: 04-Front-End/05-Javascript-and-jQuery/01-Age-In-Days
             - path: 04-Front-End/05-Javascript-and-jQuery/02-Split-The-Bill
             - path: 04-Front-End/05-Javascript-and-jQuery/03-DOM-Manipulation
+              rake: false
             - path: 04-Front-End/05-Javascript-and-jQuery/04-Fake-Inbox
             - path: 04-Front-End/05-Javascript-and-jQuery/Optional-01-Bowling-Calculator
         - number: 3
           path: 04-Front-End/06-Events-And-Plugins
           exercises:
             - path: 04-Front-End/06-Events-And-Plugins/01-Bootstrap-modal
+              rake: false
             - path: 04-Front-End/06-Events-And-Plugins/02-jQuery-Tabs
+              rake: false
             - path: 04-Front-End/06-Events-And-Plugins/03-Wagon-Race
+              rake: false
             - path: 04-Front-End/06-Events-And-Plugins/04-Image-Gallery
+              rake: false
             - path: 04-Front-End/06-Events-And-Plugins/Optional-01-Minesweeper
+              rake: false
             - path: 04-Front-End/06-Events-And-Plugins/Optional-02-Form-Validation
+              rake: false
         - number: 4
           path: 04-Front-End/07-HTTP-and-Ajax
           exercises:
             - path: 04-Front-End/07-HTTP-and-Ajax/01-Geocoder
+              rake: false
             - path: 04-Front-End/07-HTTP-and-Ajax/02-Promo-Chat
+              rake: false
             - path: 04-Front-End/07-HTTP-and-Ajax/03-Facebook-Graph-API
+              rake: false
             - path: 04-Front-End/07-HTTP-and-Ajax/Optional-01-AJAX-wagon-race
+              rake: false
         - number: 5
           path: 04-Front-End/08-Product-Design-Sprint
           exercises:
             - path: 04-Front-End/08-Product-Design-Sprint/01-Use-case
+              rake: false
+              instructions: false
+              flashcard_alert: false
             - path: 04-Front-End/08-Product-Design-Sprint/02-User-journey
+              rake: false
+              instructions: false
+              flashcard_alert: false
             - path: 04-Front-End/08-Product-Design-Sprint/03-Zoning
+              rake: false
+              instructions: false
+              flashcard_alert: false
             - path: 04-Front-End/08-Product-Design-Sprint/04-Mockup
+              rake: false
+              instructions: false
+              flashcard_alert: false
             - path: 04-Front-End/08-Product-Design-Sprint/05-Prototype
+              rake: false
+              instructions: false
+              flashcard_alert: false
 
     - number: 6
       days:
@@ -225,24 +276,31 @@ default: &default
           path: 05-Rails/01-Rails-intro
           exercises:
             - path: 05-Rails/01-Rails-intro/01-Stupid-coaching
+              instructions: false
             - path: 05-Rails/01-Rails-intro/02-Longest-word-game
+              instructions: false
         - number: 2
           path: 05-Rails/02-Rails-CRUD
           exercises:
             - path: 05-Rails/02-Rails-CRUD/01-Rails-Task-Manager
+              instructions: false
             - path: 05-Rails/02-Rails-CRUD/02-Rails-Wikinimous
+              instructions: false
         - number: 3
           path: 05-Rails/03-Rails-restaurant-reviews
           exercises:
             - path: 05-Rails/03-Rails-restaurant-reviews/01-Yelp-MVP
+              instructions: false
         - number: 4
           path: 05-Rails/04-Rails-mister-cocktail
           exercises:
             - path: 05-Rails/04-Rails-mister-cocktail/01-Mister-Cocktail
+              instructions: false
         - number: 5
           path: 05-Rails/05-Rails-MC-with-images
           exercises:
             - path: 05-Rails/05-Rails-MC-with-images/01-Mister-Cocktail-Images
+              instructions: false
 
     - number: 7
       days:
