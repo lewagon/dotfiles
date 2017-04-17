@@ -3,7 +3,7 @@
 Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonald order. We consider the following items on the menu (with their respective number of calories).
 
 | Item          | Calories |
-| ------------- |----------|
+| ------------- |:---------|
 | Cheese Burger | 290      |
 | Big Mac       | 300      |
 | Mc Bacon      | 400      |
