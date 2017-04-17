@@ -23,8 +23,8 @@ Open the `lib/wagon_start.rb` file in Sublime Text. That's where you'll need to 
 
 * Make the `wagon_start` method return `"That's how it starts"`
 * In the terminal, run `rake` and make sure you have a green result for `#wagon_start` and a good style (**no** offenses).
-* Commit your changes, and push them.
-* Go back to Kitt, and refresh the page. You should see your solution on the right.
+* Commit your changes and push them.
+* Go back to Kitt and refresh the page. You should see your solution on the right.
 
 ## Exercise 2: Once more, with feelings
 
