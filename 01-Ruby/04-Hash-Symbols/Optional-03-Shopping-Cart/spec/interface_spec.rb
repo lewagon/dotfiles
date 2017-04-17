@@ -1,8 +1,5 @@
-# encoding: UTF-8
-
 require 'data'
 require 'open3'
-
 
 describe 'Shopping cart interface' do
 

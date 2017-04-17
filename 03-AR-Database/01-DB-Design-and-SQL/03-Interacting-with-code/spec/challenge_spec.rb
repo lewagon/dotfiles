@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 require 'queries'
 
 DATABASE_PATH = File.join(File.dirname(__FILE__), '../lib/db/jukebox.sqlite')
@@ -215,7 +213,7 @@ describe 'Queries methods' do
       expect(result.length).to eq(tracks.length)
       tracks.each { |t| expect(result).to include(t) }
     end
-    
+
     it 'returns tracks sorted by length' do
       tracks = [
                                         "Hero",

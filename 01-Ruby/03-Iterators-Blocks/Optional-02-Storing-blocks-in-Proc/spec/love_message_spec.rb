@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 require "love_message"
 
 describe "#tell" do

@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 require "mail_joke"
 
 describe "#mail_joke" do

@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require 'open3'
 require 'compute_name'
 

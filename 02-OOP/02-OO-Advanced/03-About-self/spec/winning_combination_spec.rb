@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 require "winning_combination"
 
 describe "#winning_combination?" do

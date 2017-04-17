@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "anagrams"
 
 describe "#anagrams?" do

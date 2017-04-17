@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require 'open3'
 require 'age_in_days'
 

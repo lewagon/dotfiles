@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require 'age_in_days'
 
 describe '#age_in_days' do
