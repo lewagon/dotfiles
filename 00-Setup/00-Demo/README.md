@@ -6,7 +6,7 @@ Welcome to Kitt! The teacher will now demonstrate how to work on an exercise.
 
 The goal is to implement a `circle_area` method which takes **one** parameter,
 `radius`, and returns the area of the circle of this given radius. As a reminder,
-is here the formula:
+here is the formula:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/area-circle.png)
 

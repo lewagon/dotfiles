@@ -9,7 +9,7 @@ During these 9 weeks, you'll work in pairs or groups of 3-4. Everyday, a new bud
 
 Before starting a new challenge, **make sure that you explain to each other what you've understood of it** and **before** starting to write a single line of code. Then you can pair program, or work side by side, checking up every 10 minutes or so to help one another.
 
-Working in pairs is a common practice of Software Engineering. The idea is that if you work alone and you get stuck, you can loose several hours digging in the issue, whereas a fresh pair of eyes would find the problem within seconds. Don't underestimate that!
+Working in pairs is a common practice of Software Engineering. The idea is that if you work alone and you get stuck, you can lose several hours digging in the issue, whereas a fresh pair of eyes would find the problem within seconds. Don't underestimate that!
 
 ## Exercise 1: Let's `rake`.
 
@@ -23,8 +23,8 @@ Open the `lib/wagon_start.rb` file in Sublime Text. That's where you'll need to 
 
 * Make the `wagon_start` method return `"That's how it starts"`
 * In the terminal, run `rake` and make sure you have a green result for `#wagon_start` and a good style (**no** offenses).
-* Commit your changes, and push them.
-* Go back to Kitt, and refresh the page. You should see your solution on the right.
+* Commit your changes and push them.
+* Go back to Kitt and refresh the page. You should see your solution on the right.
 
 ## Exercise 2: Once more, with feelings
 
