@@ -6,9 +6,9 @@ In this exercise, we'll write a morse code **encoder** and **decoder**. We will 
 
 ### Specs
 
-First, impement the `encode` method which will take a text as a parameter and return the Morse sequence for it. Letters of the same word will be separated by a space, and words will be separated by a pipe character `|`.
+First, implement the `encode` method which will take a text as a parameter and return the Morse sequence for it. Letters of the same word will be separated by a space and words will be separated by a pipe character `|`.
 
 For example, the sentence `"Hi Guys"` should be encoded into `".... ..|--. ..- -.-- ..."`
 
-Once the encoder is working, ou can start working on the `decode` method which will do the opposite!
+Once the encoder is working, you can start working on the `decode` method which will do the opposite!
 
