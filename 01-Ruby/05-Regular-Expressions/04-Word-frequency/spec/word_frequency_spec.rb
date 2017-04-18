@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "word_frequency"
 
 describe "#most_common_words" do

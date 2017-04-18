@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 require "experiment"
 
 describe "#get_rid_of_surrounding_whitespaces" do

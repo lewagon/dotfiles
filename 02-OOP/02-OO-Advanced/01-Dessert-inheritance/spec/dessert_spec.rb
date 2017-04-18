@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 require "dessert"
 
 describe Dessert do

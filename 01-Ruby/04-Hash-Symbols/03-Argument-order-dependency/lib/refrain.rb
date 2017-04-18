@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 def refrain(lyrics, number_of_times = 1, vibrato = 0, strong = false)
   refrain = []
   lyrics += lyrics[lyrics.size - 1] * vibrato

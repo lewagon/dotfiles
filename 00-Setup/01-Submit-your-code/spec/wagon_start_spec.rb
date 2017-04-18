@@ -1,5 +1,3 @@
-# Encoding: utf-8
-
 require "wagon_start"
 
 describe "#wagon_start" do

@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "animal"
 
 describe Animal do

@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "croupier"
 
 describe "#state_of_the_game" do

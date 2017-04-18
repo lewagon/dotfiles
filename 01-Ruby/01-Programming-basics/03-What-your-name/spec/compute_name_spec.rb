@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "compute_name"
 
 describe "#compute_name" do

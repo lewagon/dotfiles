@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "longest_word"
 
 describe "#generate_grid" do

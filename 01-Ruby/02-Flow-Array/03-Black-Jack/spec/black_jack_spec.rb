@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "black_jack"
 
 describe "#pick_bank_score" do

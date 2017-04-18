@@ -1,5 +1,3 @@
-# encoding: UTF-8
-
 # This file contains methods related to your store and its supplies.
 # You should complete it according to the instructions in the TODO comments
 

@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "box_office"
 
 describe "#most_successful" do

@@ -1,4 +1,3 @@
-# Encoding: utf-8
 require "coach_answer"
 
 describe "The method coach_answer" do

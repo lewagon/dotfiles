@@ -1,5 +1,3 @@
-# encoding: UTF-8
-
 require_relative 'store'
 require_relative 'cart'
 
