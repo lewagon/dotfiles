@@ -11,6 +11,8 @@ They are dangerous in a way. Therefore a good **convention** is to name them wit
 Ex: `["Abricot du Laudot", "Black Caviar", "Brigadier Gerard"]` should become `["3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]` after formating.
 That's the only format the anchorman can understand !
 
+**🤔 Tip:** Do not hesitate to open the file in the `spec` folder and **read the test code** to understand what's going on. This is the code which gets executed when you run `rake` in your terminal.
+
 ## Further suggestions & resources
 
 - Of course, you should use destructive iterators within the method :)

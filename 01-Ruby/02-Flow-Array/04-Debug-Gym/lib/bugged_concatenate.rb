@@ -1,5 +1,9 @@
 def bugged_concatenate(array)
-  array.reduce("") { |a, e| a + e }.upcase
+  concatenated_string = ""
+  array.each do |element|
+    concatenated_string = concatenated_string + element
+  end
+  return concatenated_string.upcase
 end
 
 def build_1984_title
