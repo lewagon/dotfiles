@@ -8,10 +8,10 @@ class VendingMachine
   end
 
   def insert_coin(value_cents)
-    # TODO: what happens to `@snacks, @current_value and @snack_price when the user insert a coin?
+    # TODO: what happens to @snacks, @amount_cents and @snack_price_cents when the user insert a coin?
   end
 
   def buy_snack
-    # TODO: what happens to `@snacks, @current_value and @snack_price when the user pushes a button to buy a Snack?
+    # TODO: what happens to @snacks, @amount_cents and @snack_price_cents when the user pushes a button to buy a Snack?
   end
 end
