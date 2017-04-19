@@ -54,6 +54,8 @@ You beat the bank! You win.
 $
 ```
 
+⚠️ For this exercise, you're not finished when `rake` is 100% green! You need to make sure you can actually play the game by running `ruby lib/run_game.rb` 😉
+
 ## Key learning points
 
 - What are the different ways of looping?
