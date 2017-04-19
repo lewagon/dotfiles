@@ -27,7 +27,7 @@ uber_hash.color
 
 You might think that you just have to put an `attr_accessor :color` on `UberHash`, and that's it, but wait! We want to store **any** possible property like that.
 
-You will need to define a `method_missing` method in your class, and implement it. You can read [this article](http://technicalpickles.com/posts/using-method_missing-and-respond_to-to-create-dynamic-methods/) to get a sense of how ruby calls instance methods.
+You will need to define a `method_missing` method in your class, and implement it. You can read [this article](http://technicalpickles.com/posts/using-method_missing-and-respond_to-to-create-dynamic-methods) to get a sense of how ruby calls instance methods.
 
 One other thing you will need is the ability to call an arbitrary method on an instance. Say we have this simple `Student` class:
 
