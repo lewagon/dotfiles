@@ -5,5 +5,5 @@ class Restaurant
     # TODO: implement constructor with relevant instance variables
   end
 
-  # TODO: implement #filter_by_city and #rate methods
+  # TODO: implement .filter_by_city and #rate methods
 end
