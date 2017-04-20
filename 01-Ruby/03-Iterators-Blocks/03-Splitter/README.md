@@ -8,7 +8,7 @@ Let's combine the power of enumerable (`#each`, `#map`, etc.) with blocks (and `
 
 Implement a first method `size_splitter` which takes two parameters: an array, and a integer (the `size`). We assume that the array only contains words, e.g. `String`, and the arbitrary rule is to form two groups: the first one with words of the given size (second parameter of the method), and the other group with all the other words.
 
-The `size_splitter` method should return an array of two arrays, the two groups defined above.
+The `size_splitter` method should return an array of two arrays, the two groups defined above, with the contents sorted alphabetically.
 
 
 ```ruby
