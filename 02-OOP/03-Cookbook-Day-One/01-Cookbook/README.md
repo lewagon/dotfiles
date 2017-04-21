@@ -32,7 +32,7 @@ Please implement a `Cookbook` class which will act as fake database. It should i
 - `initialize(csv_file_path)` which loads existing `Recipe` from the CSV
 - `all` which returns all the recipies
 - `add_recipe(recipe)` which adds a new recipe to the cookbook
-- `remove_recipe(recipe_id)` which removes a recipe from the cookbook.
+- `remove_recipe(recipe_index)` which removes a recipe from the cookbook.
 
 ## Controller
 
