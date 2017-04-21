@@ -57,7 +57,7 @@ user_name = "bob"
 ```
 
 ```ruby
-{ "action" => "show", controller => "users" }
+{ "action" => "show", controller: "users" }
 # or something else? (you will see that in Rails)
 ```
 
