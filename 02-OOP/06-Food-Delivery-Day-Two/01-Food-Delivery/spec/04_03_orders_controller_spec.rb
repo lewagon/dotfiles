@@ -89,12 +89,12 @@ describe "OrdersController", :_order do
     it "should ask the user for a meal id, a customer id and an employee id to be assigned" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
 
-      allow(STDIN).to receive(:gets).and_return("1", "2", "1")
+      allow(STDIN).to receive(:gets).and_return("2", "2", "2")
       controller.add
 
       expect(order_repository.undelivered_orders.length).to eq(4)
-      expect(order_repository.undelivered_orders[3].meal.name).to eq("Margherita")
-      expect(order_repository.undelivered_orders[3].employee.username).to eq("paul")
+      expect(order_repository.undelivered_orders[3].meal.name).to eq("Capricciosa")
+      expect(order_repository.undelivered_orders[3].employee.username).to eq("john")
       expect(order_repository.undelivered_orders[3].customer.name).to eq("John Bonham")
     end
   end
