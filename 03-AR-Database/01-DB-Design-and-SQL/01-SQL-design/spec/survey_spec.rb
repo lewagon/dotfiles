@@ -40,10 +40,6 @@ describe "The schema in survey.xml" do
       expect(foreign_key_exists?("user_id", "user_answers", "users")).to eq true
     end
 
-    it "should have a `question_id` column, foreign key to `questions` table" do
-      expect(foreign_key_exists?("question_id", "user_answers", "questions")).to eq true
-    end
-
     it "should have a `answer_id` column, foreign key to `answers` table" do
       expect(foreign_key_exists?("answer_id", "user_answers", "answers")).to eq true
     end
