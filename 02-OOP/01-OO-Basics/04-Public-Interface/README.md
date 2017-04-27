@@ -50,7 +50,7 @@ Implement `#withdraw` and `#deposit`. Both of these methods should call the priv
 
 ### Transactions history
 
-Now you have to implement  `#transactions_history` method. This method takes a password hash as parameter (for example `{ password: 'yoko' }`), which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args = {}`). Your transaction history method should
+Now you have to implement  `#transactions_history` method. This method takes a password hash as parameter (for example `{ password: 'yoko' }`), which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args = {}`). Your transaction history method should :
 
 1. return a string displaying the transactions if the right password is given.
 2. return `"wrong password"` if the password does not correspond to the account's password.
