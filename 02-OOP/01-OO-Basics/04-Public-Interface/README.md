@@ -91,4 +91,4 @@ require_relative 'transaction'
 
 ## Further suggestions & resources
 
-- You could use `Time#strftime` method to format your date in `Transaction#to_s`.**
+- You could use `Time#strftime` method to format your date in `Transaction#to_s`.
