@@ -1,8 +1,8 @@
 require_relative "vending_machine"
 
 def display(vending_machine)
-  return "---> Amount: #{vending_machine.amount_cents / 100}€" \
-    " - 1 Snack = #{vending_machine.snack_price_cents / 100}€" \
+  return "---> Amount: #{vending_machine.amount_cents / 100.0}€" \
+    " - 1 Snack = #{vending_machine.snack_price_cents / 100.0}€" \
     " - Stock: #{vending_machine.snacks}"
 end
 
@@ -28,7 +28,7 @@ puts "Pushing 'Buy Snack' button"
 vending_machine.buy_snack
 puts display(vending_machine)
 
-# The nthe client pushes the Buy snac button again (but forgot to insert some coins!)
+# Then the client pushes the Buy snac button again (but forgot to insert some coins!)
 puts "Pushing 'Buy Snack' button"
 vending_machine.buy_snack
 puts display(vending_machine)
