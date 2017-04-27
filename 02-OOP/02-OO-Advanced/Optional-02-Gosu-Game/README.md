@@ -20,9 +20,9 @@ gem install gosu
 
 ```bash
 sudo apt-get update
-sudo apt-get install build-essential libsdl2-dev\
-  libsdl2-ttf-dev libpango1.0-dev libgl1-mesa-dev\
-  libfreeimage-dev libopenal-dev libsndfile-dev
+sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
+  libpango1.0-dev libgl1-mesa-dev libfreeimage-dev libopenal-dev\
+  libsndfile-dev libmpg123-dev
 gem install gosu
 ```
 
