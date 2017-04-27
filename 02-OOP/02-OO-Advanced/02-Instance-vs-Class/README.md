@@ -17,29 +17,29 @@ Do you clearly distinguish one method that differs from the others in the exampl
 ## Specs
 - Create a `Restaurant` class with two instance variables, `@city` and `@name`, set with the two parameters of `initialize`.
 - Define an instance method `#rate(new_rate)` enabling to rate a restaurant object. This method should re-compute the restaurant average rating `@average_rating` every time it's called with a new rating. This `@average_rating` should be accessible to the external world.
-- Define a **class** method `#filter_by_city(restaurants, city)` that returns all the restaurants in a given city (this return should be an array of restaurant objects). For instance:
+- Define a **class** method `.filter_by_city(restaurants, city)` that returns all the restaurants in a given city (this return should be an array of restaurant objects). For instance:
 
 ```ruby
 jules_verne = Restaurant.new("paris", "Jules Verne")
-tour_d_argent = Restaurant.new("paris", "Tour d'argent")
-bocuse = Restaurant.new("lyon", "Paul Bocuse")
-restos = [jules_verne, tour_d_argent, bocuse]
-Restaurant.filter_by_city(restos,"lyon") # => [ #<Restaurant:0x007f9a43bb7eb8 @city="lyon", @name="Paul Bocuse"> ]
+bluebird = Restaurant.new("london", "Bluebird")
+daniel = Restaurant.new("new york", "Daniel")
+restaurants = [jules_verne, bluebird, daniel]
+Restaurant.filter_by_city(restaurants, "london") # => [ #<Restaurant:0x007f9a43bb7eb8 @city="london", @name="Bluebird"> ]
 ```
 
 ## Key learning points
 
 Are you able to answer the following questions (go into the doc if necessary)?
 
-- Among `#rate` and `#filter_by_city`, which one is an instance method? Which one is a class method?
+- Among `#rate` and `.filter_by_city`, which one is an instance method? Which one is a class method?
 
 - For each of the following methods, is it an instance method or a class method?
 
 ```
-- Date#today
+- Date.today
 - Twitter::REST::Client#follow (see https://github.com/sferik/twitter)
 - String#upcase
-- Nokogiri::HTML::Document#parse (http://nokogiri.org/Nokogiri/HTML/Document.html)
+- Nokogiri::HTML::Document.parse (see http://www.rubydoc.info/gems/nokogiri/Nokogiri/XML/Document)
 - Array#shuffle
 ```
 
