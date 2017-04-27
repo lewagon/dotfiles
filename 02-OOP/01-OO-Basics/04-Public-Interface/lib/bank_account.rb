@@ -46,7 +46,7 @@ class BankAccount
 
   def to_s
     # Method used when printing account object as string (also used for string interpolation)
-    # TODO: Displays the account owner, the hidden iban and the balance of the account
+    # TODO: return a string with the account owner, the hidden iban and the balance of the account
   end
 
   private

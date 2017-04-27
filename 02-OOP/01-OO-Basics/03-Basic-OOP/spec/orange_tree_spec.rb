@@ -146,14 +146,14 @@ describe OrangeTree do
     expect(orange_tree.fruits).to eq 0
   end
 
-  it "should be probable for it to die between 50 and 99 years" do
+  it "should be probable for it to die between 50 and 100 years old" do
     50.times do
       orange_tree.one_year_passes!
     end
 
     found_dead = false
 
-    49.times do
+    50.times do
       orange_tree.one_year_passes!
       found_dead = found_dead || orange_tree.dead?
     end

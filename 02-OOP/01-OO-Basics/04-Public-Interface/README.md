@@ -39,9 +39,7 @@ This is the method called when you try to print the object or use string interpo
 account = BankAccount.new("John Lennon", "FR14-2004-1010-0505-0001-3M02-606", 200, "yoko")
 
 puts account
-# =>  Owner: John Lenon
-#     IBAN: FR14**************606
-#     Current amount: 200 euros
+# =>  Owner: John Lenon - IBAN: FR14**************606 - Balance: 200 euros
 ```
 
 Implement your `#to_s` method, which should call your partial IBAN method.
@@ -52,11 +50,11 @@ Implement `#withdraw` and `#deposit`. Both of these methods should call the priv
 
 ### Transactions history
 
-Now you have to implement  `#transactions_history` method. This method takes a password hash as parameter, which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args={}`). Your transaction history method should
+Now you have to implement  `#transactions_history` method. This method takes a password hash as parameter (for example `{ password: 'yoko' }`), which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args = {}`). Your transaction history method should
 
-1. print a string displaying the transactions if the right password is given.
-2. print "wrong password" if the password does not correspond to the account's password.
-3. print "no password given" if the method is called without arguments.
+1. return a string displaying the transactions if the right password is given.
+2. return `"wrong password"` if the password does not correspond to the account's password.
+3. return `"no password given"` if the method is called without arguments.
 
 ## (Optional) Add a `Transaction` class
 
