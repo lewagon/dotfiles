@@ -60,9 +60,10 @@ describe Post do
     end
 
     it "should resist SQL injections" do
-      id = "' OR 1=1 --"
-      post = Post.find(id)  # Inject SQL to fetch all posts...
-      expect(post.title).to eq 'I am the post 2'
+      id = '(DROP TABLE IF EXISTS `posts`;)'
+      post = Post.find(id)  # Inject SQL to delete the posts table...
+      expect { Post.find(1) }.not_to raise_error
+      expect(Post.find(1).title).to eq 'Hello world'
     end
   end
 
