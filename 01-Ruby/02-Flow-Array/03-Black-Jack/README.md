@@ -51,7 +51,6 @@ Your score is 19, bank is 17
 Card ? (type 'y' or 'yes' for a new card)
 > no
 You beat the bank! You win.
-$
 ```
 
 ⚠️ For this exercise, you're not finished when `rake` is 100% green! You need to make sure you can actually play the game by running `ruby lib/run_game.rb` 😉
