@@ -34,7 +34,7 @@ Please implement a `Cookbook` class which will act as fake database. It should i
 - `add_recipe(recipe)` which adds a new recipe to the cookbook
 - `remove_recipe(recipe_index)` which removes a recipe from the cookbook.
 
-## Controller
+### Controller
 
 The controller will gather data from the cookbook to hand them over to the view. It will also ask the view for information to create new recipes. Here are the methods to implement:
 
