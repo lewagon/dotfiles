@@ -1,5 +1,8 @@
 {
 	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"AdvancedNewFile",
@@ -7,11 +10,11 @@
 		"ApplySyntax",
 		"BracketHighlighter",
 		"Emmet",
+		"ERB Snippets",
 		"Git",
 		"GitGutter",
 		"JSX",
 		"Package Control",
-		"SCSS",
-		"ERB Snippets"
+		"SCSS"
 	]
 }
