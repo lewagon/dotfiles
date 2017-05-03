@@ -42,9 +42,9 @@ git co -b gh-pages
 git push origin gh-pages
 ```
 
-Now you can build the URL `http://<user.github_nickname>.github.io/profile` and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
+Now you can build the URL `http://<user.github_nickname>.github.io/profile/` and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
 
-From now and until the end of the day, keep working in your `~/code/<user.github_nickname>/profile` directory AND on the `gh-pages` branch. Thus, any updates of your profile page could be pushed on `http://<user.github_nickname>.github.io/profile` throw the command line
+From now and until the end of the day, keep working in your `~/code/<user.github_nickname>/profile` directory AND on the `gh-pages` branch. Thus, any updates of your profile page could be pushed on `http://<user.github_nickname>.github.io/profile/` throw the command line
 
 ```bash
 git push origin gh-pages
