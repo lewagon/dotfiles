@@ -17,13 +17,13 @@ describe "#tag" do
 
   it "should return the correct html string for a nested configuration" do
     html_string = tag("div", ["class", "kitt-container"]) do
-      tag("a", ["href", "http://kitt.lewagon.org"]) do
+      tag("a", ["href", "https://kitt.lewagon.com"]) do
         tag("h2") do
           "KITT"
         end
       end
     end
-    expect(html_string).to eq '<div class="kitt-container"><a href="http://kitt.lewagon.org"><h2>KITT</h2></a></div>'
+    expect(html_string).to eq '<div class="kitt-container"><a href="https://kitt.lewagon.com"><h2>KITT</h2></a></div>'
   end
 end
 
