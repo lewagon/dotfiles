@@ -20,14 +20,14 @@ describe "Order", :_order do
 
   describe "#id" do
     it "should return the order id" do
-      order = Order.new({ id: 42 })
+      order = Order.new(id: 42)
       expect(order.id).to eq(42)
     end
   end
 
   describe "#id=" do
     it "should set the order id" do
-      order = Order.new({ id: 42 })
+      order = Order.new(id: 42)
       order.id = 43
       expect(order.id).to eq(43)
     end
@@ -68,7 +68,7 @@ describe "Order", :_order do
 
   describe "#deliver!" do
     it "should mark an order as delivered" do
-      order = Order.new
+      order = Order.new(id: 12)
       expect(order.delivered?).to be false
       order.deliver!
       expect(order.delivered?).to be true
