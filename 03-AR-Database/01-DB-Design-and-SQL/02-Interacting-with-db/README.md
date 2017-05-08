@@ -45,6 +45,6 @@ Submit your SQL schema in XML format in `jukebox.xml`.
 
 You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
 
-- [  SQLite Pro (Paying, 7 days trial)](https://www.sqlitepro.com/)
-- [SQLStudio (Free)](http://sqlitestudio.pl/?act=download)
+- [SQLite Pro (Paying macOS, 7 days trial)](https://www.sqlitepro.com/)
 - [SQLite Browser (Free)](http://sqlitebrowser.org/)
+- [SQLStudio (Free)](http://sqlitestudio.pl/)
