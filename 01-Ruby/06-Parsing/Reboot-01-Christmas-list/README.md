@@ -63,7 +63,7 @@ Now let's impletement the simple actions (`list`, `add`, `delete`).
 - How do you model your `giftlist`?
 - Do you use a hash? an array?
 
-**Discuss that with your teacher before implementinhg each action.**
+**Discuss that with your teacher before implementing each action.**
 
 ## Step 3 - Mark an item as bought 🎁🎁🎁
 
