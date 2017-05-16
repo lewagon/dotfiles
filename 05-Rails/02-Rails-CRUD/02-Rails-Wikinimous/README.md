@@ -66,7 +66,7 @@ use the [ace editor](http://ace.c9.io) in place of the simple text area.
 
 If you're happy with all the items below, and if a T.A. approved your code,
 you may try this: adding a user sign in / sign up logic, and making sure
-that you can edit an article iif you are logged in.
+that you can edit an article if you are logged in.
 
 Here's a nice [gist](https://gist.github.com/thebucknerlife/10090014) on how
 to use Bcrypt and `has_secure_password` in a Rails app. Next week, we'll see
