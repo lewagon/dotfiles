@@ -21,7 +21,6 @@ git push origin master
 This is how your game should work: we only give you the routing structure, it's your call to generate the relevant controller, actions and views.
 
 - `GET '/game'`: render the page with a new random grid of words, and the HTML form to write your guess just below the word-grid.
-
 - `GET '/score'` should compute and display your score..
 
 ## Further suggestions

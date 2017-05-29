@@ -4,7 +4,7 @@
 
 IRB is a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) for ruby. Basically, it works this way
 
-1. It **R**-eads the expression written by the user, which can be any valid ruby expression like `"Hello"`, `2+2`, `"hello".upcase`,...
+1. It **R**-eads the expression written by the user, which can be any valid ruby expression like `"Hello"`, `2+2`, `"hello".upcase` ...
 2. It **E**-valuates the result of this expression.
 3. It **P**-rints this result.
 4. It **L**-oops back to point 1, waiting for a new user input.

@@ -6,10 +6,13 @@ describe '#shuffle' do
   end
 
   it 'sorts an array in a random way' do
-    a = [1, 2, 3, 4]
+    a = (1..100).to_a
     b = shuffle(a)
     expect(b).not_to be_nil
     expect(b.length).to eq a.length
     expect(a).not_to eq b
+    (1..100).to_a.each do |element|
+      expect(b).to include(element)
+    end
   end
 end

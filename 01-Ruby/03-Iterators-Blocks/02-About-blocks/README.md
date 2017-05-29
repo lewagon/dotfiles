@@ -80,7 +80,7 @@ end
 To better understand `yield`, let's try to reimplement the `Enumerable#map` method without actually using it (you can use `Enumerable.each` though!). In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method.
 
 ```ruby
-my_map(["john", "ringo", "paul"]) {|name| name.upcase }
+my_map(["john", "ringo", "paul"]) { |name| name.upcase }
 # => ["JOHN", "RINGO", "PAUL"]
 ```
 
