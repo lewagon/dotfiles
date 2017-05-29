@@ -27,7 +27,7 @@ Time to refactor your CSS code into SCSS:
 1. Replace hexadecimal values like `#D4312D` by SCSS variables like `$red`. Your design will be more consistent since you will use same colors everywhere.
 1. Go through [this guide](http://sass-lang.com/guide) and read more about SCSS. Re-write your code with **nesting** and **chaining**, as below:
 
-```scss
+```css
 .banner {
   background: $blue;
   color: white;
@@ -50,7 +50,7 @@ This SCSS code will generate the following CSS:
   background: #5E74ED;
   color: white;
 }
-.banner  h1 {
+.banner h1 {
   font-size: 50px;
 }
 .banner a {
