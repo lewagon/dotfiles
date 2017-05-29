@@ -9,7 +9,7 @@ This challenge should take you all day.
 
 Let's create a folder for this new challenge:
 
-```shell
+```bash
 cd ~/code/<user.github_nickname>/reboot
 mkdir christmas-list
 cd christmas-list
@@ -39,7 +39,7 @@ First thing first, let's brainstorm on the **pseudo-code**
 
 Start by building the main loop displaying action menu and getting user's input:
 
-```shell
+```bash
 ruby interface.rb
 > Welcome to your Christmas giftlist
 > Which action [list|add|delete|quit]?
@@ -69,7 +69,7 @@ Now let's impletement the simple actions (`list`, `add`, `delete`).
 
 We want to be able to mark any item as bought:
 
-```shell
+```bash
 ruby interface.rb
 > Welcome to your Christmas giftlist
 > Which action [list|add|delete|mark|quit]?
@@ -98,7 +98,7 @@ Again, **discuss that with your teacher.**
 You are out of ideas for Christmas and you want to find inspiration from [Etsy](https://www.etsy.com).
 Add a new action `idea` to your menu (additionally to the `list`, `add`, `delete` and `mark` actions). Here is how this action could work:
 
-```shell
+```bash
 What are you searching on Etsy?
 > Jeans
 Here are Etsy results for "Jeans":
