@@ -16,8 +16,7 @@ Programmers are often asked to sort things, that's why you should read about som
 
 ### Interactive Program
 
-Open the `interface.rb` file and make sure to use the
-`wagon_sort` method. It should work like this:
+Open the `interface.rb` file and make sure to use the `wagon_sort` method. It should work like this:
 
 ```bash
 ruby lib/interface.rb
