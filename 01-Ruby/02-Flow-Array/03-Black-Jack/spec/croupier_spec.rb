@@ -28,11 +28,11 @@ describe "#end_game_message" do
     expect(end_game_message(18, 18)).to match /push/i
   end
 
-  it 'returns a message telling you that you lost if your score is lower than the bank\'s' do
+  it 'returns a message telling you that you won if your score is higher than the bank\'s' do
     expect(end_game_message(20, 18)).to match /w[io]n/i
   end
 
-  it 'returns a message telling you that you won if your score is lower than the bank\'s' do
+  it 'returns a message telling you that you lost if your score is lower than the bank\'s' do
     expect(end_game_message(17, 20)).to match /los[et]/i
   end
 end
