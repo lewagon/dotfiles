@@ -12,7 +12,7 @@ vending_machine = VendingMachine.new(250, 10)
 puts "Vending machine ready!"
 puts display(vending_machine)
 
-# A client comes and insert some coins
+# A client comes and inserts some coins
 puts "Inserting 2€"
 vending_machine.insert_coin(200)
 puts display(vending_machine)
@@ -28,7 +28,7 @@ puts "Pushing 'Buy Snack' button"
 vending_machine.buy_snack
 puts display(vending_machine)
 
-# Then the client pushes the Buy snac button again (but forgot to insert some coins!)
+# Then the client pushes the Buy snack button again (but forgot to insert some more coins!)
 puts "Pushing 'Buy Snack' button"
 vending_machine.buy_snack
 puts display(vending_machine)
