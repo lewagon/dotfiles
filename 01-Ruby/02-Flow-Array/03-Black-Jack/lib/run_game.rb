@@ -1,3 +1,3 @@
-require_relative "croupier.rb"
+require_relative "croupier"
 
 play_game

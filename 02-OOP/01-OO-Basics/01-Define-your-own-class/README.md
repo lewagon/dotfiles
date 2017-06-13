@@ -51,7 +51,7 @@ Time to add some **behavior** to your class with an **instance method**.
 Here's an example of how we might want to use a `start` instance method on a `Car` class:
 
 ```ruby
-require_relative "lib/car.rb"
+require_relative "lib/car"
 car = Car.new("T", "Ford", 0)
 car.start
 ```
