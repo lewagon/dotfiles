@@ -9,7 +9,7 @@ If you've done your homework 😀, you should have uploaded your product pitch [
 - After the pitch session, [you can vote on kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) for the projects you like most. It will give a first idea of popular projects within the class.
 - Then you'll have until Friday to [build teams on kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) of **3 people**.
 
-On Friday, we will start prototyping your app during a great Product Design Sprint. Teams need to be set up for Friday 👊👊👊. Now let's go back to today's challenge !
+On Friday, we will start prototyping your app during a great Product Design Sprint. Teams need to be set up for Friday 👊👊👊. Now let's go back to today's challenge!
 
 ## `01-Playing-with-ERB`
 

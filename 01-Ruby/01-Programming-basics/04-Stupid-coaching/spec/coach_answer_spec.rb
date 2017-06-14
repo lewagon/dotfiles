@@ -2,7 +2,7 @@ require "coach_answer"
 
 describe "The method coach_answer" do
   it 'returns a String' do
-    expect( coach_answer("Hello Coach !") ).to be_a String
+    expect( coach_answer("Hello Coach!") ).to be_a String
   end
 
   it 'answers back he does not care when you tell him something' do
@@ -20,7 +20,7 @@ end
 
 describe "The method coach_answer_enhanced" do
   it 'returns a String' do
-    expect( coach_answer_enhanced("Hello Coach !") ).to be_a String
+    expect( coach_answer_enhanced("Hello Coach!") ).to be_a String
   end
 
   it 'answers back he does not care when you tell him something and does not shout' do

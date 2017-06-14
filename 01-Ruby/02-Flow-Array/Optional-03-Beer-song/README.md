@@ -22,7 +22,7 @@ Take one down, pass it around, no more bottles of beer on the wall!
 ### Hint
 
 * You can communicate arguments to your program from the command line using [ARGV](http://ruby.about.com/od/rubyfeatures/a/argv.htm)
-* I hope you noticed the change from bottl<strong>es</strong> to bottl<strong>e</strong> when only 1 bottle remains !
+* I hope you noticed the change from bottl<strong>es</strong> to bottl<strong>e</strong> when only 1 bottle remains!
 
 ### A bit of context on ARGV
 

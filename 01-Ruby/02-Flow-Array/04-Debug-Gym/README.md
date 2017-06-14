@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Only one lesson to learn from this exercise : **READ THE ERROR** ! This will tell you
+Only one lesson to learn from this exercise: **READ THE ERROR**! This will tell you
 
 - the kind of error you have
 - the line where it occurs in your program

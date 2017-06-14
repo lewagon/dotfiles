@@ -19,7 +19,7 @@ The `lib/interface.rb` file contains a program to interact with a user. Try it n
 ruby lib/interface.rb
 ```
 
-Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `"Hello, Boris Alexandre Papillard !"`.
+Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `"Hello, Boris Alexandre Papillard!"`.
 
 * **constraint**: of course, your `interface.rb` program should use the `compute_name` method defined in the other file.
 * **enhancement**: you can improve your `custom_message` by adding other information like the number of characters in your full name (for instance, "Boris Alexandre Papillard" has got 24 characters, including spaces), or other very important details...
@@ -30,20 +30,20 @@ Again, ask yourself these questions and make sure you can answer all of them:
 
 ### on variable
 
-* What are the variables in your code ?
-* Where do you assign values to these variables and where do you use them ?
-* What's the scope of a variable ?
+* What are the variables in your code?
+* Where do you assign values to these variables and where do you use them?
+* What's the scope of a variable?
 
 ### on methods
 
-* What is the method of your program ? Where do you define it ?
-* Where do you call this method and with which arguments ?
-* What's the flow of your program when you try to read it line by line ?
+* What is the method of your program? Where do you define it?
+* Where do you call this method and with which arguments?
+* What's the flow of your program when you try to read it line by line?
 
 ### on strings
 
-* What's string interpolation ? What's the syntax to "insert" some ruby expression in a string ?
-* What's the difference between single-quotes `''` or double-quotes `""` when using string interpolation ?
+* What's string interpolation? What's the syntax to "insert" some ruby expression in a string?
+* What's the difference between single-quotes `''` or double-quotes `""` when using string interpolation?
 
 ## Further suggestions & resources
 

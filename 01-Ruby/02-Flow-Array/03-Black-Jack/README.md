@@ -39,19 +39,19 @@ We will implement a *simplified* version of Black Jack:
 ```bash
 ruby lib/run_game.rb
 
-Card ? 'y' or 'yes' to get a new card
+Card? 'y' or 'yes' to get a new card
 > yes
 Your score is 6, bank is 17
 
-Card ? 'y' or 'yes' to get a new card
+Card? 'y' or 'yes' to get a new card
 > yes
 Your score is 16, bank is 17
 
-Card ? 'y' or 'yes' to get a new card
+Card? 'y' or 'yes' to get a new card
 > yes
 Your score is 19, bank is 17
 
-Card ? 'y' or 'yes' to get a new card
+Card? 'y' or 'yes' to get a new card
 > no
 You beat the bank! You win.
 ```

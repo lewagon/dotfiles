@@ -1,7 +1,8 @@
 The Front-end module has 7 days + 1 project-day to start preparing your final projects.
 
 ## `01-HTML-and-CSS` (Wednesday)
-You will cover most of HTML & CSS concepts :
+
+You will cover most of HTML & CSS concepts:
 
 - HTML skeleton and common tags (in `<head>` and `<body>`)
 - CSS simple and advanced selectors
@@ -10,6 +11,7 @@ You will cover most of HTML & CSS concepts :
 The objective of this day is to build [your profile page](http://lewagon.github.io/html-css-challenges/04-advanced-selectors/) and put it online using [Github Pages](https://pages.github.com/).
 
 ## `02-CSS-components` (Thursday)
+
 We will go a bit further and make you code your own CSS component library. The objectives are
 
 - Improve your components culture

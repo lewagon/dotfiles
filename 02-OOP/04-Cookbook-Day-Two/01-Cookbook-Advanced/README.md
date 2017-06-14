@@ -34,7 +34,7 @@ What do you wanna do?
 5. Exit
 
 > 4
-Import recipes for which ingredient ?
+Import recipes for which ingredient?
 > [fraise|strawberry]
 
 Looking for "[fraise|strawberry]" on [Marmiton|LetsCookFrench]...

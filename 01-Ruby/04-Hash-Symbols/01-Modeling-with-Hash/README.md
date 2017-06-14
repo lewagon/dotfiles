@@ -66,8 +66,8 @@ whereas `Arrays` are ordered data structures where elements are retrieved by ind
 ## Specs
 
 - Implement `poor_calories_counter` that return the number of calories for the three courses of your order.
-- **constraint**: your method should make use of a hash of course !
-- **constraint**: your method should use **our given numbers of calories** !
+- **constraint**: your method should make use of a hash of course!
+- **constraint**: your method should use **our given numbers of calories**!
 
 Now let's say you want to enhance your calories counter, so that he can accepts indifferently a list of beverage, burgers, sides, **and MEALS**. Here are the 3 only meals we will impose:
 
@@ -106,5 +106,5 @@ puts calories_counter(order)
 
 ## Key learning points
 
-- What's a hash ? When do you use them ?
-- Can you figure out how you would have done to code your calories counter using arrays ? painfull, no ?
+- What's a hash? When do you use them?
+- Can you figure out how you would have done to code your calories counter using arrays? painfull, no?

@@ -5,7 +5,7 @@
 
 ## Specs
 
-If you watched French TV, you may have stumbled upon [_Des chiffres et des lettres_](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres). The goal of this challenge is to write a simplified version of this game from the terminal where :
+If you watched French TV, you may have stumbled upon [_Des chiffres et des lettres_](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres). The goal of this challenge is to write a simplified version of this game from the terminal where:
 
 * you are given a random word-grid.
 * you have to enter the longest english word you can find using only letters of this grid.
@@ -14,11 +14,11 @@ If you watched French TV, you may have stumbled upon [_Des chiffres et des lettr
 Here is how this should work, when running `ruby lib/interface.rb`:
 
 ```bash
-******** Welcome to the longest word-game !********
-Here is your grid :
+******** Welcome to the longest word-game!********
+Here is your grid:
 ["Q", "F", "M", "R", "K", "L", "I", "T", "P"]
 *****************************************************
-What's your best shot ?
+What's your best shot?
 lift
 ******** Now your results ********
 Your word: lift
@@ -45,8 +45,8 @@ words = File.read('/usr/share/dict/words').upcase.split("\n")
 
 ## Key learning points
 
-- What's a JSON file ? How is it close from the structure of a ruby hash ?
-- How could you refactor your code to separate the responsibilities of each method ?
+- What's a JSON file? How is it close from the structure of a ruby hash?
+- How could you refactor your code to separate the responsibilities of each method?
 
 ## Further suggestions & resources
 
