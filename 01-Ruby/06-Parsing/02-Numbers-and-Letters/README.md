@@ -16,7 +16,7 @@ Here is how this should work, when running `ruby lib/interface.rb`:
 ```bash
 ******** Welcome to the longest word-game !********
 Here is your grid :
-["Q", "F", "M", "R", "K", "L", "I", "T", "P"]
+Q F M R K L I T P
 *****************************************************
 What's your best shot ?
 lift
