@@ -40,7 +40,7 @@ Let's make a comparison between the **real world** and the **code world** on thi
   </tbody>
 </table>
 
-The objectives of this challenge are :
+The objectives of this challenge are:
 
 - Understand the **flow** of a program and learn how to "read" through your code, line by line
 - Learn about **conditional** statements
@@ -63,8 +63,8 @@ If you're getting stuck in an **infinite loop**, just hit `Ctrl` + `C`! It will 
 
 ## Key learning points
 
-- What's the usual flow of a program ?
-- How do structures like `if..else..end` or `while..end` change this flow ?
-- How do these structures work ?
-- What's a conditional statement ? Which values can it take ? What's the difference between `=` and `==` ?
-- Does a simple method call change the flow of your program ?
+- What's the usual flow of a program?
+- How do structures like `if..else..end` or `while..end` change this flow?
+- How do these structures work?
+- What's a conditional statement? Which values can it take? What's the difference between `=` and `==`?
+- Does a simple method call change the flow of your program?

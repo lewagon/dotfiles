@@ -1,6 +1,6 @@
 ## Notes
 
-In exercice 3 : Interacting with code, it's hard for the students to understand that in:
+In exercice 3: Interacting with code, it's hard for the students to understand that in:
 
 ```
 def number_of_rows(db, table_name)

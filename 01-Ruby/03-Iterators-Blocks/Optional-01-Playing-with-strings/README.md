@@ -4,7 +4,7 @@ Write a method that determines whether a given word or phrase is a palindrome, t
 
 ## Further suggestions
 
-Methods you might find useful (which you'll have to look up in Ruby documentation, ruby-doc.org) include : `String#downcase, String#gsub, String#reverse`
+Methods you might find useful (which you'll have to look up in Ruby documentation, ruby-doc.org) include: `String#downcase, String#gsub, String#reverse`
 
 ## Enhance/Refactor
 

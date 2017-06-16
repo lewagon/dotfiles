@@ -19,7 +19,7 @@ ruby lib/interface.rb
 
 You'll see that your program says you are `0 years old`. You must change the code so that the program uses your `age_in_days` method. It is available in the `interface.rb` file as we do a `require_relative` command at the beginning of the file.
 
-- **Enhancement** : Are there some repetitive lines of code in `interface.rb` ? Could you refactor those lines and make your code DRY?
+- **Enhancement**: Are there some repetitive lines of code in `interface.rb`? Could you refactor those lines and make your code DRY?
 
 ## Further suggestions & resources
 

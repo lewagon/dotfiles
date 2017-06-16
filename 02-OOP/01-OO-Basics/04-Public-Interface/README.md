@@ -20,7 +20,7 @@ Let's play with a `BankAccount` class that stores information about a bank accou
 
 ### The `BankAccount` contract in `bank_account.rb`
 
-The public interface of the class, i.e. the set of all its public methods, defines what is called the class contract (see the notion of [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). It is a sort of promise made by the class to other objects or other ruby programs. Below we specify our `BankAccount` class contract. We want to be able to do the following with our BankAccount objects from the outside world :
+The public interface of the class, i.e. the set of all its public methods, defines what is called the class contract (see the notion of [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). It is a sort of promise made by the class to other objects or other ruby programs. Below we specify our `BankAccount` class contract. We want to be able to do the following with our BankAccount objects from the outside world:
 
 * Access owner's full name and balance
 * Access only **partial** IBAN
@@ -33,7 +33,7 @@ The public interface of the class, i.e. the set of all its public methods, defin
 
 You will probably come across many classes in Ruby that redefine the built-in method `to_s`. This is an easy way to display taylor-made information about an object to the user, and to control which information is printed.
 
-This is the method called when you try to print the object or use string interpolation. Once implemented, it will be called as in the following examples :
+This is the method called when you try to print the object or use string interpolation. Once implemented, it will be called as in the following examples:
 
 ```ruby
 account = BankAccount.new("John Lennon", "FR14-2004-1010-0505-0001-3M02-606", 200, "yoko")
@@ -50,7 +50,7 @@ Implement `#withdraw` and `#deposit`. Both of these methods should call the priv
 
 ### Transactions history
 
-Now you have to implement  `#transactions_history` method. This method takes a password hash as parameter (for example `{ password: 'yoko' }`), which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args = {}`). Your transaction history method should :
+Now you have to implement  `#transactions_history` method. This method takes a password hash as parameter (for example `{ password: 'yoko' }`), which is an optional parameter, and is set to the empty hash if not provided (this is the meaning of the notation `args = {}`). Your transaction history method should:
 
 1. return a string displaying the transactions if the right password is given.
 2. return `"wrong password"` if the password does not correspond to the account's password.

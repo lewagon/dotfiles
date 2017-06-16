@@ -4,7 +4,7 @@ Grasp the basic concepts of object-oriented programming while writing your very 
 
 ## Specs
 
-Choose something from the real world that you would like to model. Restaurants, vehicles, users, games, recipes.. *It's your call !*
+Choose something from the real world that you would like to model. Restaurants, vehicles, users, games, recipes.. *It's your call!*
 
 Once chosen, create a file in the `lib` directory which has the name of your object.
 For instance, if you chose to model Restaurants, create the `restaurant.rb` file:

@@ -12,7 +12,7 @@ Implement the 2 methods `#anagrams?(a_string, another_string)` and `#anagrams_on
 
 ## Key learning points
 
-- What's the time complexity of `#anagrams?` and `#anagrams_on_steroids?` ? Which one is best ?
+- What's the time complexity of `#anagrams?` and `#anagrams_on_steroids?`? Which one is best?
 
 ## Further suggestions & resources
 
