@@ -115,8 +115,3 @@ require_relative "calculator"
 
 # [...]
 ```
-
-
-
-
-

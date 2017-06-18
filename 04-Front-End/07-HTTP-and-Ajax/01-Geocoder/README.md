@@ -30,8 +30,6 @@ To use it, add to your HTML this line at the bottom of your file, just **before*
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 ```
 
-
-
 To add a map, you'll need an empty supporting HTML element. For instance:
 
 ```html

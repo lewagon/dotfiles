@@ -39,7 +39,6 @@ else
 end
 ```
 
-
 ### Ternary operator
 
 For inline `if..else`, let's flip coins:

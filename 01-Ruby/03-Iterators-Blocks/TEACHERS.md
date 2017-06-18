@@ -35,7 +35,6 @@ Like a collection of **successive** elements:
 # => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-
 ### Array iteration
 
 1. Code a loop with `for` on range's indices
