@@ -247,8 +247,8 @@ fancy_place.add_reservation("boris")
 fancy_place.add_reservation("seb")
 fancy_place.add_reservation("romain")
 fancy_place.print_clients
-
 ```
+
 Let's comment the outputs. As you see, if you apply an instance method on an object, ruby will first look in the object class if there is a corresponding method, if not it will look for this method in the parent class.
 
 #### `super` keyword
