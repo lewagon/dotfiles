@@ -19,10 +19,10 @@ The `lib/interface.rb` file contains a program to interact with a user. Try it n
 ruby lib/interface.rb
 ```
 
-Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `"Hello, Boris Alexandre Papillard!"`.
+Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `Hello, Boris Alexandre Papillard!`.
 
 * **constraint**: of course, your `interface.rb` program should use the `compute_name` method defined in the other file.
-* **enhancement**: you can improve your `custom_message` by adding other information like the number of characters in your full name (for instance, "Boris Alexandre Papillard" has got 24 characters, including spaces), or other very important details...
+* **enhancement**: you can improve your `custom_message` by adding other information like the number of characters in your full name (for instance, `Boris Alexandre Papillard has got 24 characters, including spaces`), or other very important details...
 
 ## Key learning points
 
@@ -47,5 +47,5 @@ Again, ask yourself these questions and make sure you can answer all of them:
 
 ## Further suggestions & resources
 
-* to get a user input from the terminal you should use <a href="http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html" target="_blank">gets</a>. You will also need to <a href="http://ruby-doc.org/core-2.2.0/String.html#method-i-chomp" target="_blank">chomp</a> the resulting string.
+* to get a user input from the terminal you should use [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). You will also need to <a href="http://ruby-doc.org/core-2.2.0/String.html#method-i-chomp" target="_blank">chomp</a> the resulting string.
 * to print question in the terminal, you should use <a href="http://www.ruby-doc.org/core-2.2.0/IO.html#method-i-puts" target="_blank">puts</a>
