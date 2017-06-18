@@ -3,11 +3,11 @@
 
 def store_items
   # Here's what you should have in store:
-  #   yogurts : 2€
-  #   meat : 7€
+  #   yogurts: 2€
+  #   meat: 7€
   #   vegetables: 5€
-  #   potatoes : 2€
-  #   rice : 1€
+  #   potatoes: 2€
+  #   rice: 1€
 
   # TODO: find the correct data structure to hold the shopping store items
   # instead of using nil below

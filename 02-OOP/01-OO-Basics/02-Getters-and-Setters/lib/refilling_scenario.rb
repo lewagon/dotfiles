@@ -11,7 +11,7 @@ vending_machine = VendingMachine.new(250, 0)
 puts "Vending machine ready!"
 puts display(vending_machine)
 
-# A technician comes and refill the vendinc machine with 20 snacks.
+# A technician comes and refill the vending machine with 20 snacks.
 puts "Technician filling machine with 20 snacks"
 vending_machine.snacks = vending_machine.snacks + 20
 puts display(vending_machine)

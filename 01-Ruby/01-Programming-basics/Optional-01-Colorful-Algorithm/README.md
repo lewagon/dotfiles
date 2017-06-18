@@ -5,8 +5,7 @@ and should keep you busy longer. It can be seen as a [Code Kata](http://en.wikip
 
 ## Specs
 
-We want you to write a method `colorful?` which takes a number as argument and return
-true if the number is **colorful**, false otherwise.
+We want you to write a method `colorful?` which takes a number as argument and return true if the number is **colorful**, false otherwise.
 
 A colorful number is a number where all the products of consecutive subsets of digit are different.
 

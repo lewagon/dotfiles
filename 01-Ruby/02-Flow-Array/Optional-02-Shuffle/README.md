@@ -9,7 +9,7 @@ An advanced exercise that makes you write a `shuffle` method that takes an array
 - You should the use ruby `rand()` method
 - To write your algorithm, you are not authorized to use any fancy Array methods like `sort_by` or `shuffle`!
 
-### Go further : write a 1-line method
+### Go further: write a 1-line method
 
 Once you have written your algorithm all by yourself, rewrite another version with only one line of code, this time using `Array#sort_by`?
 

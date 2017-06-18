@@ -16,19 +16,18 @@ Programmers are often asked to sort things, that's why you should read about som
 
 ### Interactive Program
 
-Open the `interface.rb` file and make sure to use the
-`wagon_sort` method. It should work like this:
+Open the `interface.rb` file and make sure to use the `wagon_sort` method. It should work like this:
 
 ```bash
 ruby lib/interface.rb
 
 Type a student name:
 felix
-Type another student name (or press enter to finish):
+Type another student name or press enter to finish:
 Cedric
-Type another student name (or press enter to finish):
+Type another student name or press enter to finish:
 brice
-Type another student name (or press enter to finish):
+Type another student name or press enter to finish:
 
 Congratulations! Your Wagon has 3 students:
 - brice, Cedric and felix

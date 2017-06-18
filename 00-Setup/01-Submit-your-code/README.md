@@ -47,7 +47,6 @@ First step, we'll create all our files in a directory named `tmp`.
 ### README file
 
 * Inside `tmp` directory, create a file named `README`
-
 * Open this `tmp` directory in Sublime Text. Write some text in the `README` file.
 
 ### Level-1 directory
