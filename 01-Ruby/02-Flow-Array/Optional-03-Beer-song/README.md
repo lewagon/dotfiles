@@ -36,6 +36,7 @@ One way is via the ARGV constant which comes pre-defined in every Ruby program. 
 puts "*** Command line arguments ***"
 puts ARGV.inspect
 ````
+
 Now run it in the terminal this ways
 
 ```bash
@@ -43,9 +44,9 @@ ruby testing_argv.rb un deux trois
 
 *** Command line arguments ***
 ["un", "deux", "trois"]
+```
 
-# ---
-
+```bash
 ruby testing_argv.rb "un et deux" trois
 
 *** Command line arguments ***
