@@ -45,7 +45,6 @@ And here is the **good version** of it
 ```
 
 - Making an image circle and centering texts are **very common design tasks**. They deserve their own re-usable class, not to be mixed in other classes or ids!
-
 - Don't repeat yourself and try to use **generic class names**. Consider each CSS class as a re-usable design that you can apply everywhere on your website. Getting this mindset is the main difficulty for CSS beginners.
 
 ## Further suggestions & resources (inlining a list)
