@@ -28,7 +28,7 @@ Here is an example of **bad** CSS code:
 }
 ```
 
-And here is the **good version** of it
+And here is the **good version** of it:
 
 ```css
 .img-circle {
