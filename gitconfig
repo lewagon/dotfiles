@@ -47,5 +47,5 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = 'konstantin.bifert@gmail.com'
-	name = 'Konstantin BIFERT'
+	email = konstantin.bifert@gmail.com
+	name = Konstantin BIFERT
