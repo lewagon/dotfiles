@@ -18,7 +18,7 @@ Let's set up your workstation:
 You now have all the tools you need to successfully work your way through the bootcamp during these 9 weeks. Remember, your new toolbox is:
 
 - **Sublime Text**, where you'll write Ruby code (and more!)
-- The **Terminal**, also called a shell, where you'll type commands. When you see a `$` in the exercises, it means that you'll have to type that command in the terminal.
+- The **Terminal**, also called a shell, where you'll type commands.
 - **git**, the version control tool you'll use to watch your code, snapshot, and thus submit your attempts to Kitt!
 
 Glad you are here! Let's rock it 🚀🚀🚀!
