@@ -11,7 +11,7 @@ Programmers are often asked to sort things, that's why you should read about som
 ## Specs
 
 - Implement a `wagon_sort` method which takes one argument, an array of student names (`String`), and returns an array of those student names, sorted alphabetically.
-- The sorting method should be case insensitive, e.g. put `bill` before `Felix` (look at the [ASCII table](http://www.asciitable.com/))
+- The sorting method should be case insensitive, e.g. put `bob` before `Felix` (look at the [ASCII table](http://www.asciitable.com/))
 - The method should keep the original spelling of names.
 
 ### Interactive Program
@@ -26,11 +26,11 @@ felix
 Type another student name or press enter to finish:
 Cedric
 Type another student name or press enter to finish:
-bill
+bob
 Type another student name or press enter to finish:
 
 Congratulations! Your Wagon has 3 students:
-- bill, Cedric and felix
+- bob, Cedric and felix
 ```
 
 ## Key learning points
