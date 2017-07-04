@@ -21,12 +21,12 @@ Take one down, pass it around, no more bottles of beer on the wall!
 
 ### Hint
 
-* You can communicate arguments to your program from the command line using [ARGV](http://ruby.about.com/od/rubyfeatures/a/argv.htm)
+* You can send arguments to your program from the command line using [ARGV](http://ruby.about.com/od/rubyfeatures/a/argv.htm)
 * I hope you noticed the change from bottl<strong>es</strong> to bottl<strong>e</strong> when only 1 bottle remains!
 
 ### A bit of context on ARGV
 
-Any Ruby program you write runs inside another piece of software: the Ruby interpreter. And that interpreter is itself running inside another piece of software: your operating system. These software layers are called the environment and there are many ways you can exchange data between the environment and your program.
+Any Ruby program you write runs inside another piece of software: the Ruby interpreter. And that interpreter is itself running inside another piece of software: your operating system. These software layers are called the environment, and there are many ways you can exchange data between the environment & your program.
 
 One way is via the ARGV constant which comes pre-defined in every Ruby program. It is an Array of Strings representing the command line arguments. Consider this simple program
 

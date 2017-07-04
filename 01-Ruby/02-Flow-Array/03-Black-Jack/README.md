@@ -1,27 +1,27 @@
 ## Background and Objectives
 
-This exercise is a synthesis to validate the core concepts you have seen so far, common to most programming languages:
+This exercise is designed to validate the core concepts you have seen so far, common to most programming languages:
 
 - Read user input / Print output to user
 - Variables and methods
 - Program flow and control structures
 - Manipulation of strings and arrays
 
-### Black Jack Rules
+### Black Jack - Rules
 
 We will implement a *simplified* version of Black Jack:
 
-- The player starts with no card (score of 0)
+- The player starts with no cards (score of 0)
 - The bank starts with a score between 16 and 21
 - For each round, the player can:
   - Draw a card with a random value between 1 and 11. This number will be added to his score.
-  - Pass, and finish the game.
+  - Draw another, or stick with the current score and finish the game.
 - In the end, there are 5 possibilities:
-  - If the player's score is > to 21, he loses.
+  - If the player's score is > 21, he loses (bust).
   - If the player's score is 21, he pulls a "Black Jack" and wins.
-  - If the player's score is > to the bank's, he wins.
-  - If the player's score is == to the bank's, it's a "Push". The player gets his/her money back.
-  - If the player's score is < to the bank's, he loses.
+  - If the player's score is > than the bank's, he wins.
+  - If the player's score is < than the bank's, he loses.
+  - If the player's score is == to the bank's, it's a "Push". The player gets their money back.
 
 ## Specs
 
@@ -33,7 +33,7 @@ We will implement a *simplified* version of Black Jack:
 ### `croupier.rb`
 
 - Implement the `#state_of_the_game` method which builds a message containing the bank and player' scores.
-- Implement the `#end_game_message` method to be called at the end of the game, containing the game outcome (win/lost)
+- Implement the `#end_game_message` method to be called at the end of the game, containing the game outcome (win/lost/push)
 - Implement the main `#play_game` method which runs a Black Jack game from the terminal. It should work this way:
 
 ```bash
