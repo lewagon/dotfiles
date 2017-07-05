@@ -11,36 +11,36 @@ Let's say you want to stay fit but keep eating McDonalds... You have the brillia
   </thead>
   <tbody>
     <tr>
-      <td>Cheese Burger</td>
-      <td>290</td>
+      <td>Hamburger</td>
+      <td>250</td>
     </tr>
     <tr>
-      <td>Big Mac</td>
+      <td>Cheese Burger</td>
       <td>300</td>
     </tr>
     <tr>
-      <td>Mc Bacon</td>
-      <td>400</td>
+      <td>Big Mac</td>
+      <td>540</td>
     </tr>
     <tr>
-      <td>Royal Cheese</td>
-      <td>130</td>
+      <td>McChicken</td>
+      <td>350</td>
     </tr>
     <tr>
       <td>French Fries</td>
-      <td>130</td>
+      <td>230</td>
     </tr>
     <tr>
-      <td>Potatoes</td>
-      <td>130</td>
+      <td>Salad</td>
+      <td>15</td>
     </tr>
     <tr>
-      <td>Coca</td>
-      <td>160</td>
+      <td>Coca Cola</td>
+      <td>150</td>
     </tr>
     <tr>
       <td>Sprite</td>
-      <td>170</td>
+      <td>150</td>
     </tr>
   </tbody>
 </table>
@@ -67,13 +67,15 @@ You'll use them all the time, so make friends with them :)
 - **constraint**: your method should make use of a hash (obviously!)
 - **constraint**: your method must use **our given calorie values** !
 
-Now let's say you want to improve your calorie counter, so that it can accept a list of drinks, burgers, sides, **and MEALS**. Let's add these 3 meals to our menu:
+For example `poor_calories_counter("Big Mac", "French Fries", "Coca Cola")` should return `920`
+
+Now, let's say you want to improve your calorie counter, so that it can accept a list of drinks, burgers, sides, **and MEALS**. Let's add these 3 meals to our menu:
 
 <table class="table">
   <thead>
     <tr>
-      <th>Item</th>
-      <th>Calories</th>
+      <th>Meal</th>
+      <th>Items in Meal</th>
     </tr>
   </thead>
   <tbody>
@@ -86,8 +88,8 @@ Now let's say you want to improve your calorie counter, so that it can accept a 
       <td>Big Mac, French Fries, Coca Cola</td>
     </tr>
     <tr>
-      <td>Best Of Royal Cheese</td>
-      <td>Royal Cheese, Salad, Sprite</td>
+      <td>Best Of McChicken</td>
+      <td>McChicken, Salad, Sprite</td>
     </tr>
   </tbody>
 </table>
@@ -95,7 +97,7 @@ Now let's say you want to improve your calorie counter, so that it can accept a 
 You may want to store these meals in another constant. Note: don't try to pre-compute the calories for each meal,
 just store the dishes that make up the meal. How do you think you could represent the dishes in each meal?
 
-Enhance your method `#calories_counter` so that you can calculate calories by running:
+Let's now create a complete `#calories_counter` that will enable us to calculate calories by running:
 
 ```ruby
 order = ["French Fries", "Happy Meal", "Sprite"]
