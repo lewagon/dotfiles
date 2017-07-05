@@ -28,8 +28,8 @@ How should your program work when your launch it? **Let's write the pseudo code*
 # Pseudo-code
 # 1. Print Welcome
 # 2. Define your store (what items are for sale?)
-# 2. Get items from the user (shopping)
-# 3. Print the bill (checkout)
+# 3. Get items from the user (shopping)
+# 4. Print the bill (checkout)
 ```
 
 **Can you make the pseudo-code above a bit more detailed?**
