@@ -2,9 +2,9 @@
 
 This challenge should take you **30 minutes 🕒**
 
-1. Let's kickstart the challenge with the teacher (as a live-code 💻) and **write the pseudo-code altogether**.
-2. Then work 10 minutes on your own to try to figure out the solution.
-3. Then correct it altogether with the teacher (again as a live-code 💻).
+1. Let's kickstart the challenge with the teacher (as a live-code 💻) and **write the pseudo-code together**.
+2. Then spend 10 minutes on your own to try and figure out the solution.
+3. You'll then correct it with the teacher (again as a live-code 💻).
 
 ## ReBoot setup
 
@@ -25,7 +25,7 @@ cd calculator
 touch interface.rb
 ```
 
-We will always start with the `interface.rb` file. That's the file your will launch (with `ruby interface.rb`) to execute your program. It's always intuitive to start with the interface and ask yourself **"What should happen when I launch my program?"**
+We will always start with the `interface.rb` file. That's the file you will launch (with the command `ruby interface.rb`) to run your program. It's always intuitive to start with the interface and ask yourself **"What should happen when I launch my program?"**
 
 
 ## Pseudo-code
@@ -38,9 +38,9 @@ Always kickstart a challenge altogether with the teacher and write the *pseudo-c
 
 # Pseudo-code (what are the steps in plain english):
 # 1. Say hello to the user
-# 2. Ask user for first number
+# 2. Ask user for the first number
 # 3. Get user answer
-# 4. Ask user for second number
+# 4. Ask user for the second number
 # 5. etc...
 ```
 
@@ -63,14 +63,14 @@ ruby interface.rb
 > 6
 > Enter a second one:
 > 8
-> Which operation [+][-][x][/]
+> Choose operation [+][-][x][/]
 > x
 > Result: 48
 ```
 
 ## Make it loop
 
-It's a bit painful to re-launch your calculator every time your program ends.. Imagine a real calcultor that just switch off after every operation :)
+It's a bit painful to re-launch your calculator every time your program ends.. Imagine a real calcultor that just switched off after every operation :)
 
 Make it loop:
 
@@ -93,7 +93,7 @@ ruby interface.rb
 > Result: 53
 ```
 
-## Refacto your code
+## Refactor your code
 
 - What's the code that is really part of the UI (`gets` and `puts`)?
 - What's the code that does not belong to the interface?

@@ -1,9 +1,9 @@
 ## Background & Objectives
 
-## Exemple
+## Example
 
 First, open your terminal and install [Nokogiri](http://www.nokogiri.org/),
-a **gem** very useful when you want to scrape web page content.
+a very useful **gem** when you want to scrape web page content.
 
 ```bash
 gem install nokogiri
@@ -26,8 +26,7 @@ the first page of results on [Etsy](https://www.etsy.com/search?q=wallet)
 
 How did it work?
 
-The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors) and look for all HTML
-element in the page matching it. Here we used a **class** selector `.card-title`
+The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors) and looks for all the HTML element in the page that match it. Here we used a **class** selector `.card-title`
 because the [HTML source](https://support.mozilla.org/en-US/questions/873324)
 was something like:
 
