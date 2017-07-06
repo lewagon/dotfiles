@@ -13,12 +13,12 @@ If you watched French TV, you may have stumbled upon [_Des chiffres et des lettr
 
 Here is how this should work, when running `ruby lib/interface.rb`:
 
-```bash
+```
 ******** Welcome to the longest word-game !********
 Here is your grid:
 Q F M R K L I T P
 *****************************************************
-What's your best shot?
+What is your best shot?
 lift
 ******** Now your results ********
 Your word: lift

@@ -12,8 +12,8 @@ When you work on a Middleman project (or even a Rails app), **it's crucial to or
 
 Here is a roadmap of things to do:
 
-1. In **`config/_variables.css.scss`** change the color and font scheme.
-1. In **`config/_bootstrap_variables.css.scss`** use your SCSS variables to over-ride **Bootstrap SCSS variables**.
+1. In `config/_variables.css.scss` change the color and font scheme.
+1. In `config/_bootstrap_variables.css.scss` use your SCSS variables to over-ride **Bootstrap SCSS variables**.
 1. Look at all [Bootstrap variables](http://getbootstrap.com/customize/#less-variables) that can be customized and add new ones to `config/_bootstrap_variables.css.scss`.
 
 ## Organize your code
@@ -27,7 +27,7 @@ Time to refactor your CSS code into SCSS:
 1. Replace hexadecimal values like `#D4312D` by SCSS variables like `$red`. Your design will be more consistent since you will use same colors everywhere.
 1. Go through [this guide](http://sass-lang.com/guide) and read more about SCSS. Re-write your code with **nesting** and **chaining**, as below:
 
-```sass
+```scss
 .banner {
   background: $blue;
   color: white;

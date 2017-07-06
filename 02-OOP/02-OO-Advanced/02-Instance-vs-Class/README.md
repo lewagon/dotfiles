@@ -32,15 +32,14 @@ Restaurant.filter_by_city(restaurants, "london") # => [ #<Restaurant:0x007f9a43b
 Are you able to answer the following questions (go into the doc if necessary)?
 
 - Among `#rate` and `.filter_by_city`, which one is an instance method? Which one is a class method?
-
 - For each of the following methods, is it an instance method or a class method?
 
-```
-- Date.today
-- Twitter::REST::Client#follow (see https://github.com/sferik/twitter)
-- String#upcase
-- Nokogiri::HTML::Document.parse (see http://www.rubydoc.info/gems/nokogiri/Nokogiri/XML/Document)
-- Array#shuffle
+```ruby
+Date.today
+Twitter::REST::Client#follow (see https://github.com/sferik/twitter)
+String#upcase
+Nokogiri::HTML::Document.parse (see http://www.rubydoc.info/gems/nokogiri/Nokogiri/XML/Document)
+Array#shuffle
 ```
 
 - **optional:** Between the `new` and `initialize` methods. Which one is an instance method? Which one is a class method? How do they articulate together? Which one is sub-calling the other?

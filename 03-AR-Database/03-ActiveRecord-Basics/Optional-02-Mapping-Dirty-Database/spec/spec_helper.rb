@@ -1,4 +1,4 @@
-require_relative "../config/application.rb"
+require_relative "../config/application"
 ActiveRecord::Base.logger = nil
 
 def migrate(version = nil)

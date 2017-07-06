@@ -160,9 +160,13 @@ Try modifying the web-import feature so that you can import recipes with a given
 Try to extract the **parsing** logic out of the controller in a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
 ```ruby
-class Letscookfrench # or Marmiton
-  def search(keyword)
-    # TODO: return a list of `Recipe` built from scrapping the web.
+class ScrapeLetsCookFrenchService # or ScrapeMarmitonService
+  def initialize(keyword)
+    @keyword = keyword
+  end
+
+  def call
+    # TODO: return a list of `Recipe` built from scraping the web.
   end
 end
 ```

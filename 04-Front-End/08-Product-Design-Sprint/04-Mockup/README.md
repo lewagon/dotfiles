@@ -2,7 +2,8 @@
 
 Once your core journey is well defined, and once you have worked on the zoning of each page, it's time to build an actual mockup.
 
-There must be one Mac user in each team! In this case, he/she can [download the free trial of Sketch](https://www.sketchapp.com/).
+On Mac, you can [download a free trial of Sketch](https://www.sketchapp.com/). For groups that are full Linux, have a look at 
+[Gravit](https://gravit.io/) or [Figma](https://www.figma.com/).
 
 The objective is to build a PNG for each page of the user journey, so you can also use a different tool if you are more familiar with it (Powerpoint, balsamiq, other):
 
