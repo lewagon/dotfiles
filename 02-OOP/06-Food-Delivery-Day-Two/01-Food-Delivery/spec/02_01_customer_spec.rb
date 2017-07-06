@@ -1,5 +1,5 @@
 begin
-  require_relative "../app/models/customer.rb"
+  require_relative "../app/models/customer"
 rescue LoadError => e
   if e.message =~ /customer\.rb/
     describe "Customer" do

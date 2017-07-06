@@ -1,8 +1,8 @@
-require_relative "support/csv_helper.rb"
+require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/controllers/customers_controller.rb"
-  require_relative "../app/repositories/customer_repository.rb"
+  require_relative "../app/controllers/customers_controller"
+  require_relative "../app/repositories/customer_repository"
 rescue LoadError => e
   if e.message =~ /customer_repository\.rb/ || e.message =~ /customers_controller\.rb/
     describe "CustomersController" do
