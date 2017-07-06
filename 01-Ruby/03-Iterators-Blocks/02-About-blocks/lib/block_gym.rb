@@ -8,5 +8,5 @@ def timer_for
 end
 
 def my_map(array)
-  # TODO: Re-mplement the same behavior as `Enumerable#map` without using it! You can use `#each` though.
+  # TODO: Re-implement the same behavior as `Enumerable#map` without using it! You can use `#each` though.
 end
