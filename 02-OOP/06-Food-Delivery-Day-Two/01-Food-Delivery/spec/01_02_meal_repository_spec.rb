@@ -1,8 +1,8 @@
 require "fileutils"
-require_relative "support/csv_helper.rb"
+require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/repositories/meal_repository.rb"
+  require_relative "../app/repositories/meal_repository"
 rescue LoadError => e
   if e.message =~ /meal_repository\.rb/
     describe "MealRepository" do

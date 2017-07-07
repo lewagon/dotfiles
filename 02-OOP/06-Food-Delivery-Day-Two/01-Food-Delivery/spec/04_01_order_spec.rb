@@ -1,8 +1,8 @@
 begin
-  require_relative "../app/models/order.rb"
-  require_relative "../app/models/meal.rb"
-  require_relative "../app/models/employee.rb"
-  require_relative "../app/models/customer.rb"
+  require_relative "../app/models/order"
+  require_relative "../app/models/meal"
+  require_relative "../app/models/employee"
+  require_relative "../app/models/customer"
 rescue LoadError => e
   describe "Order" do
     it "You need a `order.rb` file for your `Order` model" do

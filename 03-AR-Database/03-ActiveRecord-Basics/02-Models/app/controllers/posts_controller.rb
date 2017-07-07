@@ -1,4 +1,4 @@
-require_relative "../views/posts_view.rb"
+require_relative "../views/posts_view"
 
 class PostsController
   def initialize
