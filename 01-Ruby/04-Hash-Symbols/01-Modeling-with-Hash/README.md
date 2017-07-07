@@ -56,7 +56,7 @@ STUDENTS_WITH_AGE = {
 }
 ```
 
-Read the documentation about [Hashes](http://www.ruby-doc.org/core-2.2.0/Hash.html).
+Read the documentation about [Hashes](https://ruby-doc.org/core-2.3.4/Hash.html).
 They will be your best friends and you'll use them a lot!
 As you see, `Hashes` are unordered data structured where data is indexed by **unique** keys,
 whereas `Arrays` are ordered data structures where elements are retrieved by index (`0`, `1`, `2`...)
