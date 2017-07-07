@@ -9,7 +9,7 @@ Now that you are Bootstrap-grid experts, learn two advanced techniques very usef
 - You need a **full-screen** wrapper around your grid.
 - You need **inner cards** inside your grid to play with their border, margin, padding, etc.
 
-Bootstrap beginners often write CSS directly on grid components (`.container`, `.row` or `.col`) to change their border, width, margin, padding, etc... By doing so **they break the grid**. In fact, grid dimensions are computed automatically by Bootstrap, so playing with grid elements is the best way to break the grid..
+Bootstrap beginners often write CSS directly on grid components (`.container`, `.row` or `.col`) to change their border, width, margin, padding, etc. By doing so **they break the grid**. In fact, grid dimensions are computed automatically by Bootstrap, so playing with grid elements is the best way to break the grid..
 
 Instead, **you must use the following techniques.**
 

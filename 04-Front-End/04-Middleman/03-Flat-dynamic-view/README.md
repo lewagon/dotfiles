@@ -44,7 +44,7 @@ romain:
   wifi: false
 ```
 
-Be creative and **add other keys/values to this YAML** (flat's rating, pictures of different rooms, maximum number of guests, etc..).
+Be creative and **add other keys/values to this YAML** (flat's rating, pictures of different rooms, maximum number of guests, etc.).
 
 ## Loop with ERB
 
@@ -97,7 +97,7 @@ end
 
 Don't forget to **restart your server when you change the config**.
 
-Create the dynamic template `/flats/show.html.erb`. In this template, `owner` will dynamically change to `"romain"`, `"seb"`, `"anne"`, etc.. depending on the URL.
+Create the dynamic template `/flats/show.html.erb`. In this template, `owner` will dynamically change to `"romain"`, `"seb"`, `"anne"`, etc. depending on the URL.
 
 You can now read in the hash `data.flats` using the owner's name as a key, like that:
 
@@ -119,6 +119,6 @@ Now try to access:
 - [http://localhost:4567/flats/anne.html](http://localhost:4567/flats/anne.html) (where `owner = "anne"`)
 - [http://localhost:4567/flats/seb.html](http://localhost:4567/flats/seb.html) (where `owner = "seb"`)
 - [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/romain.html) (where `owner = "romain"`)
-- etc...
+- etc.
 
 How cool? Your turn to build a dynamic page like [this one](http://lewagon.github.io/middleman-airbnb/flats/romain.html).

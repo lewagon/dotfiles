@@ -21,7 +21,7 @@ As a developer, you will often have to manipulate structured data files such as 
 Knowing to read these files and transform them into friendly ruby objects (array, hash) is really convenient. This is what developers call **parsing**. Parsing HTML files has its little nickname: it's called **scraping**. You may want to parse files for many reasons:
 
 - Populate your initial database with cool real-life data
-- Build growth hacking scripts by parsing files containing emails, twitter username, etc..
+- Build growth hacking scripts by parsing files containing emails, twitter username, etc.
 
 #### `01-CSV-parsing`
 

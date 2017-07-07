@@ -41,7 +41,7 @@ Always kickstart a challenge altogether with the teacher and write the *pseudo-c
 # 2. Ask user for first number
 # 3. Get user answer
 # 4. Ask user for second number
-# 5. etc...
+# 5. etc.
 ```
 
 **Writing the pseudo-code is 80% of the job!** Then translating english into ruby is really the easy part. Adopt this pseudo-code methodology for every challenge of the Reboot session.

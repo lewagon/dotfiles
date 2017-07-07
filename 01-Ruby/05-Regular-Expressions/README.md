@@ -45,4 +45,4 @@ A simple challenge on email Regexp, very useful in web apps.
 
 #### `04-Word-frequency`
 
-A challenge using Regexp to extract data from a text and compute the most frequent words in a given text (the Bible, Obama's inaugural address, etc..). You will have to filter stop-words like ("a", "the", "is"..) who will spoil your algorithm otherwise.
+A challenge using Regexp to extract data from a text and compute the most frequent words in a given text (the Bible, Obama's inaugural address, etc.). You will have to filter stop-words like ("a", "the", "is"..) who will spoil your algorithm otherwise.

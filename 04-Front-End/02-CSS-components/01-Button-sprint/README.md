@@ -14,7 +14,7 @@ Your job is now to write the associated CSS in `button.css`
 
 ### Organize your CSS with component files
 
-From this point, you will start organizing your CSS code with **one CSS file for each component**. A button is a standard component, such as an avatar, a card, a list, a navbar, a tab, a form, etc.. All these guys deserve their own CSS file. Your project architecture will look like:
+From this point, you will start organizing your CSS code with **one CSS file for each component**. A button is a standard component, such as an avatar, a card, a list, a navbar, a tab, a form, etc. All these guys deserve their own CSS file. Your project architecture will look like:
 
 ```
 .

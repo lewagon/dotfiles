@@ -98,7 +98,7 @@ Important to make this disclaimer to the students:
 
 - Advanced concept, normal if they struggle!
 - They'll probably never have to **define** such methods in their ruby/Rails career.
-- But they will **use** lots of them (like `each`, `map`, etc..)
+- But they will **use** lots of them (like `each`, `map`, etc.)
 
 
 ### `yield` calls the block

@@ -59,7 +59,7 @@ In the continuity of Devise course, we will teach you how to customize Devise to
 
 ### `08-Airbnb-SMTP`
 
-Morning lecture is about sending mail with the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc..). At 5pm, every group should demo the current version of their Airbnb clone in front of the class.
+Morning lecture is about sending mail with the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc.). At 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
 ### `09-Airbnb-Geocoder`
 

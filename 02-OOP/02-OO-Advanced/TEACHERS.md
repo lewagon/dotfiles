@@ -337,7 +337,7 @@ puts Nokogiri::HTML::Document.parse("<h1>Hello guys</h1>")
 JSON.parse('{ "key": "value", "other_key": "other_value" }')
 ```
 
-`now` and `parse` are methods called on the class `Time`, `JSON`, etc.. not on instances of these classes. Methods like this, as you can guess, are called **class methods** and you can create them too if you want to.
+`now` and `parse` are methods called on the class `Time`, `JSON`, etc. not on instances of these classes. Methods like this, as you can guess, are called **class methods** and you can create them too if you want to.
 
 ```ruby
 # Defining your own class methods
