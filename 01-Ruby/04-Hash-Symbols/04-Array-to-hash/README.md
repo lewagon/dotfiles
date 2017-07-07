@@ -14,4 +14,4 @@ and return a `Hash` built from this array.
 
 ## Resource
 
-You may want to look at `[Kernel#block_given?](http://ruby-doc.org/core/Kernel.html#method-i-block_given-3F)`
+You may want to look at [`Kernel#block_given?`](http://ruby-doc.org/core/Kernel.html#method-i-block_given-3F)
