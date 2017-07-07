@@ -71,7 +71,7 @@ You can save an HTML document on your computer through `curl` command. Get the f
 ```bash
 curl --silent 'http://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
 curl --silent 'http://www.letscookfrench.com/recipes/find-recipe.aspx?aqt=strawberry' > strawberry.html
-````
+```
 
 👆 **This step is really important**!
 
