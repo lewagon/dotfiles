@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-A few small exercises her to get you manipulating arrays, hashes and blocks. Ready to consolidate your ruby skills?
+A few small exercises here to get you manipulating arrays, hashes and blocks. Ready to consolidate your ruby skills?
 
 ## Specs
 

@@ -28,4 +28,4 @@ Add a filter to your method to get rid of [stop words](http://en.wikipedia.org/w
 
 ### Be creative
 
-Copy/Paste any text you want in the source file to experiment your program (political speech, fairy tale, your favourite song etc...)
+Copy/Paste any text you want in the source file to experiment your program (political speech, fairy tale, your favourite song, etc.)

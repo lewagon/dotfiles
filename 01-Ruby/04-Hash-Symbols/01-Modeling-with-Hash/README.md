@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonald order. Let's use the below as our abridged McDonalds menu:
+Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonalds order. Let's use the table below as our abridged McDonalds menu:
 
 <table class="table">
   <thead>
@@ -65,9 +65,9 @@ You'll use them all the time, so make friends with them :)
 
 - Create a `poor_calories_counter` that returns the total number of calories for the three items of your order.
 - **constraint**: your method should make use of a hash (obviously!)
-- **constraint**: your method must use **our given calorie values** !
+- **constraint**: your method must use **our given calorie values**!
 
-For example `poor_calories_counter("Big Mac", "French Fries", "Coca Cola")` should return `920`
+For example `poor_calories_counter("Big Mac", "French Fries", "Coca Cola")` should return `920`.
 
 Now, let's say you want to improve your calorie counter, so that it can accept a list of drinks, burgers, sides, **and MEALS**. Let's add these 3 meals to our menu:
 
