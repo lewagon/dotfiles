@@ -38,4 +38,4 @@ speak (message_block)
 
 ## Specs
 
-- Your turn! Tell your mum how you love her ! Implement the `#tell`, `#tell_mum`, `#tell_with_proc`, `#tell_mum_with_proc`  methods which use either ampersand block arguments or pass `Proc` objects explicitly.
+- Your turn! Tell your mum how you love her! Implement the `#tell`, `#tell_mum`, `#tell_with_proc`, `#tell_mum_with_proc`  methods which use either ampersand block arguments or pass `Proc` objects explicitly.
