@@ -167,4 +167,4 @@ Then you have to <i>flexboxize</i> the `.profile-header-infos` div, and make the
 }
 ```
 
-Everything is so easy with flexbox :)
+Everything is so easy with flexbox 😊

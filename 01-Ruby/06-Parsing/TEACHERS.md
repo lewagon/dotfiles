@@ -9,7 +9,7 @@
 
 1. There are 3 common data formats: CSV, XML & JSON
 1. Describe each format using the slides + showing the files in the boilerplate.
-1. Explain well, but **don't spend too much time on that**. Lots of live-code coming :)
+1. Explain well, but **don't spend too much time on that**. Lots of live-code coming 😊
 1. Explain that all format are heavily used in web services
 
 

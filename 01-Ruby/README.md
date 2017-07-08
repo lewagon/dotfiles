@@ -18,7 +18,7 @@ Finally, let's introduce hashes - data stuctures designed to store key-value pai
 
 #### Friday ruby quiz
 
-On Friday afternoon, at 2pm there will be a short quiz (30mins). No computer, no Google, just pencil and paper. It's not high school and you won't be graded :) But it's very useful to understand what you got wrong, and identify your weakpoints. So take your time and try to answer as precisely as you can.
+On Friday afternoon, at 2pm there will be a short quiz (30mins). No computer, no Google, just pencil and paper. It's not high school and you won't be graded 😊 But it's very useful to understand what you got wrong, and identify your weakpoints. So take your time and try to answer as precisely as you can.
 
 👉 [Quiz #1](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-1.en.pdf)
 

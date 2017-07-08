@@ -26,4 +26,4 @@ Post.find(42)
 # => nil
 ```
 
-This exercise should be done quicker than the previous one :)
+This exercise should be done quicker than the previous one 😊

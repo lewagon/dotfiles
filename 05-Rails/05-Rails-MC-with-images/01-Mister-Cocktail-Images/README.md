@@ -16,7 +16,7 @@ of `Cocktail`, as thumbnails. On the `show` view of `Cocktail`, the same
 image should be displayed, but bigger!
 
 Even with such a simple app, try to make something beatiful using Bootstrap,
-the right fonts and an ounce of creativity :) You should build something beautiful!
+the right fonts and an ounce of creativity 😊 You should build something beautiful!
 
 **Hint**: Use [lewagon/ui-components](http://lewagon.github.io/ui-components/)
 

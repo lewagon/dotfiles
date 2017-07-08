@@ -12,7 +12,7 @@ Complete the class `Dessert`
 
 - Add getters and setters for `name` and `calories`
 - Instance methods `Dessert#healthy?` should return `true` if a dessert has less than 200 calories
-- `Dessert#delicious?` should return `true` for all desserts :)
+- `Dessert#delicious?` should return `true` for all desserts 😊
 
 Complete `JellyBean` which inherits from `Dessert`
 
@@ -31,4 +31,4 @@ Complete `JellyBean` which inherits from `Dessert`
 - What's the keyword to extend the behavior of an inherited method?
 - Let's assume we have `class Bike < Vehicle` and we defined `Vehicle#drive`. If we implement `Bike#drive` which method will apply to `Bike` objects, `Vehicle#drive` or `Bike#drive`?
 - Can you find some examples of object inheritance in Rails? For which objects?
-- Digression: About `nil?` and inheritance. In the ruby doc, look for the ruby implementation of the `nil?` method in the `NilClass` (which is the class of the nil object), and in the `Object` class which is the superclass of all ruby objects (the gran-daddy). Now try to figure out what happens exactly when you call `some_object.nil?`. If you find out the answer with so few clues, we'll pay you a beer :)
+- Digression: About `nil?` and inheritance. In the ruby doc, look for the ruby implementation of the `nil?` method in the `NilClass` (which is the class of the nil object), and in the `Object` class which is the superclass of all ruby objects (the gran-daddy). Now try to figure out what happens exactly when you call `some_object.nil?`. If you find out the answer with so few clues, we'll pay you a beer 😊

@@ -80,7 +80,7 @@ In Rails, we will have a real DB (not YAML files) and we will use Active Record 
 
 **Do you see how frontend and backend will magically connect?**
 
-We hope you do :)
+We hope you do 😊
 
 ## Dynamic page
 

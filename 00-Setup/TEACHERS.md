@@ -50,7 +50,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - When your program grows, you won't keep 2000 lines of code in one big file, it's impossible to maintain.
 - Instead, you'll need to **organize** your code and split it in different files.
 - That's what Software architecture is.
-- Also very hard, you'll build entire software in two days, still in the terminal, **hang on :)**
+- Also very hard, you'll build entire software in two days, still in the terminal, **hang on 😊**
 
 #### Thursday (Week 3) -> Tuesday (Week 4) - Database
 - Now that you know how to build software, you need to learn how to save **data**.
@@ -61,7 +61,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - Front-end: HTML, CSS, Bootstrap, less painful, and more graphical, good way to express your creativity, fresh air for your minds.
 - Monday night: you'll get to pitch a product! Then you have 24 hours to vote for your 3 favorite products, and until Thursday night to join a team.
 - A couple of days on JavaScript at the end.
-- At this time you'll have nice static websites online :)
+- At this time you'll have nice static websites online 😊
 
 #### Friday (Week 5) - Project Day
 - No code
@@ -79,13 +79,13 @@ Project the calendar on the screen to go through the program with the class, wee
 - Airbnb clone! (no flats allowed).
 - Team up with your project buddies.
 - Collaborate on Github.
-- Make mistakes you won't make again during the Project's weeks :)
+- Make mistakes you won't make again during the Project's weeks 😊
 
 #### Monday (Week 8) - Friday (Week 9) - Project Weeks
 - Projects!
 - Same teams as Airbnb's week
 - Make beautiful products!
-- No marketplaces :)
+- No marketplaces 😊
 - Enjoy yourselves!
 
 ### Typical week overview (teacher)
@@ -93,7 +93,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - _Paris_ yoga lessons with our yoga teacher **Claire** (let her introduce herself) on Wednesdays (4:30 - 5:30 PM) & Fridays (12 PM - 1 PM)
   - Yoga lessons are **strongly recommended** to relax from long hours focusing on your screens
   - You'll come back with a fresh and reloaded mind, and you'll be **more productive**!
-  - Yoga and Code get along pretty well! :)
+  - Yoga and Code get along pretty well! 😊
 - _Paris_ apero-talks on Thursdays (7 PM) organized by our CM: **Edouard** (let him introduce himself and mention coming events)
   - **You** get to run the interview of a guest (CEOs, actors of the Tech scene, entrepreneurs...)
   - One "animator" sits next to our guest and leads the interview - prepare an agenda

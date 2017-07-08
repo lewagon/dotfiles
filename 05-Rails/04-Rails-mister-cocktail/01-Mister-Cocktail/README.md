@@ -168,7 +168,7 @@ And now think. Do we need an `IngredientsController`?
 
 ### Views
 
-Now put a nice looking front-end on top of that :)
+Now put a nice looking front-end on top of that 😊
 
 ### Going further (Harder)
 
