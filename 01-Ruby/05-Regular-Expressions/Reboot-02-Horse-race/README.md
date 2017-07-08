@@ -2,9 +2,9 @@
 
 This challenge should take you **45 minutes 🕒**. You should finish it and start brainstorming on the next challenge before lunch!
 
-1. Kickstart by writing the pseudo-code with the teacher as a live-code 💻.
-2. Work 20 minutes on your own to try to figure out the solution.
-3. Then let's correct it altogether 💻.
+1. Just like the first exercise, start by writing the pseudo-code with the teacher as a live-code 💻.
+2. Spend 20 minutes on your own to try to figure out the solution.
+3. Then let's correct it together! 💻
 
 ## Setup
 
@@ -29,13 +29,13 @@ How should your program work when your launch it? Write the pseudo code!
 
 # Pseudo-code:
 # 1. Print welcome
-# 2. Get horses
+# 2. Get horses 🐴
 # 3. Get user's bet
-# 4. Run the race
+# 4. Run the race 🐴
 # 5. Print results
 ```
 
-Each step above is too general, **try to detail a bit more this pseudo-code**.
+Each step above is too general, so **try to build it out in a bit more detail**.
 
 
 ## Make your computer speak :)

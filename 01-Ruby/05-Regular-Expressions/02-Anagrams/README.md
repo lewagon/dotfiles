@@ -1,11 +1,12 @@
 ## Background & Objectives
 
-- Get some basic knowledge on what [time complexity](http://en.wikipedia.org/wiki/Time_complexity) means
+- Before starting, take some time to have a read of [time complexity](http://en.wikipedia.org/wiki/Time_complexity)
 - Learn to use `Hash` in programming algorithms
+- And if you didn't know... An anagram is a word or phrase formed by rearranging the letters of another word or phrase
 
 ## Specs
 
-Implement the 2 methods `#anagrams?(a_string, another_string)` and `#anagrams_on_steroids?(a_string, another_string)` that return whether or not two strings are anagrams (a boolean). Anagrams are strings where only the order of the characters differs.
+Implement the 2 methods `#anagrams?(a_string, another_string)` and `#anagrams_on_steroids?(a_string, another_string)` that check whether or not two strings are anagrams (returning a boolean).
 
 - the first method `#anagrams?` should make use of the ruby `sort` method.
 - use a ruby `Hash` to improve the time complexity in the second implementation `#anagrams_on_steroids?(a_string, another_string)`, meaning that your second solution should be faster.
@@ -16,6 +17,5 @@ Implement the 2 methods `#anagrams?(a_string, another_string)` and `#anagrams_on
 
 ## Further suggestions & resources
 
-- First learn more about what [time complexity](http://en.wikipedia.org/wiki/Time_complexity) means
 - Try to google the time-complexity of ruby native `sort` method
 - Learn more about [Hash](http://www.ruby-doc.org/core-2.2.0/Hash.html) as a data structure. How would you model the number of occurences of each character of a String using a ruby Hash? What's the link with the anagrams problem?

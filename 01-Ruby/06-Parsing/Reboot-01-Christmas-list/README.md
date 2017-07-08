@@ -1,9 +1,8 @@
 ## Guidelines
 
-This challenge should take you all day.
+Winter is coming ⛄⛄⛄. We want to build a program to handle our gifts list, mark items as bought when we've found them and eventually find some inspiration from an external website like Etsy. This challenge should take you all day. 🎁
 
-1. As yesterday, kickstart by writing the pseudo-code altogether with the teacher as a live-code 💻.
-2. Make intermediate live-codes 💻 all day long to validate each step.
+As with yesterday, start off by writing the pseudo-code in the group as a live-code 💻.
 
 ## Setup
 
@@ -16,13 +15,11 @@ cd christmas-list
 touch interface.rb
 ```
 
-Again let's start with the interface. It's more intuitive.
 
 ## Pseudo-code
 
-Winter is coming ⛄⛄⛄. We want to build a program to handle our gifts list, mark items as bought when we've found them and eventually find some inspiration from external website like Etsy.
 
-First thing first, let's brainstorm on the **pseudo-code**
+First things first, let's brainstorm the **pseudo-code** together:
 
 
 ```ruby
@@ -58,12 +55,12 @@ ruby interface.rb
 
 ## Step 2 - List, Add, Delete 🎁🎁
 
-Now let's impletement the simple actions (`list`, `add`, `delete`).
+Now let's implement the simple actions (`list`, `add`, `delete`).
 
 - How do you model your `giftlist`?
-- Do you use a hash? an array?
+- Do you use a hash? An array?
 
-**Discuss that with your teacher before implementing each action.**
+**Discuss that with your teacher before you start each action.**
 
 ## Step 3 - Mark an item as bought 🎁🎁🎁
 
@@ -91,7 +88,7 @@ ruby interface.rb
 - How do you modify your `giftlist` to store the `status` of each item?
 - How does it affect your code?
 
-Again, **discuss that with your teacher.**
+Again, **discuss with your teacher**
 
 ## Step 4 - Find ideas on Etsy 🎁🎁🎁🎁
 
@@ -99,12 +96,12 @@ You are out of ideas for Christmas and you want to find inspiration from [Etsy](
 Add a new action `idea` to your menu (additionally to the `list`, `add`, `delete` and `mark` actions). Here is how this action could work:
 
 ```bash
-What are you searching on Etsy?
+What are you looking for on Etsy?
 > Jeans
 Here are Etsy results for "Jeans":
-1 - Blue Jeans Levis
+1 - Levis Blue Jeans
 2 - Vintage Jeans
-3 - Jeans Pants
+3 - Cargo Jeans Pants
 4 - White Jeans
 etc.
 Pick one to add to your list (give the number)
@@ -138,6 +135,4 @@ end
 ```
 
 - Feel free to scrape another website adapting this script.
-- Also, you can scrape other information than just the name (for example the price of the item 💲💲💲).
-
-
+- Also, you can scrape other information than just the name (for example the price of the item).

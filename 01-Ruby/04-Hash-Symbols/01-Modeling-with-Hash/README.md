@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonald order. We consider the following items on the menu (with their respective number of calories).
+Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonalds order. Let's use the table below as our abridged McDonalds menu:
 
 <table class="table">
   <thead>
@@ -11,45 +11,45 @@ Let's say you want to stay fit but keep eating McDonalds... You have the brillia
   </thead>
   <tbody>
     <tr>
-      <td>Cheese Burger</td>
-      <td>290</td>
+      <td>Hamburger</td>
+      <td>250</td>
     </tr>
     <tr>
-      <td>Big Mac</td>
+      <td>Cheese Burger</td>
       <td>300</td>
     </tr>
     <tr>
-      <td>Mc Bacon</td>
-      <td>400</td>
+      <td>Big Mac</td>
+      <td>540</td>
     </tr>
     <tr>
-      <td>Royal Cheese</td>
-      <td>130</td>
+      <td>McChicken</td>
+      <td>350</td>
     </tr>
     <tr>
       <td>French Fries</td>
-      <td>130</td>
+      <td>230</td>
     </tr>
     <tr>
-      <td>Potatoes</td>
-      <td>130</td>
+      <td>Salad</td>
+      <td>15</td>
     </tr>
     <tr>
-      <td>Coca</td>
-      <td>160</td>
+      <td>Coca Cola</td>
+      <td>150</td>
     </tr>
     <tr>
       <td>Sprite</td>
-      <td>170</td>
+      <td>150</td>
     </tr>
   </tbody>
 </table>
 
-You will want to store this information in a ruby [constant](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Variables_and_Constants#Constants) and treat it as your database.
-For instance, below is an example of a `Hash` about students and their ages stored in the constant `STUDENTS_WITH_AGE` that we can treat as a database:
+You need to store this information in a ruby [constant](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Variables_and_Constants#Constants) to create a kind of database.
+For instance, below is an example of a `Hash` - `AGE_OF_STUDENTS` - that contains students and their ages:
 
 ```ruby
-STUDENTS_WITH_AGE = {
+AGE_OF_STUDENTS = {
   "Peter" => 21,
   "George" => 22,
   "Mary" => 20
@@ -57,47 +57,47 @@ STUDENTS_WITH_AGE = {
 ```
 
 Read the documentation about [Hashes](https://ruby-doc.org/core-2.3.4/Hash.html).
-They will be your best friends and you'll use them a lot!
-As you see, `Hashes` are unordered data structured where data is indexed by **unique** keys,
-whereas `Arrays` are ordered data structures where elements are retrieved by index (`0`, `1`, `2`...)
+You'll use them all the time, so make friends with them :)
 
-**Use `Strings` as hash keys, not `Symbols`, for simplicity's sake**
+**For this exercise, use `Strings` for your keys rather than `Symbols`, just for simplicity's sake**
 
 ## Specs
 
-- Implement `poor_calories_counter` that return the number of calories for the three courses of your order.
-- **constraint**: your method should make use of a hash of course!
-- **constraint**: your method should use **our given numbers of calories**!
+- Create a `poor_calories_counter` that returns the total number of calories for the three items of your order.
+- **constraint**: your method should make use of a hash (obviously!)
+- **constraint**: your method must use **our given calorie values**!
 
-Now let's say you want to enhance your calories counter, so that he can accepts indifferently a list of beverage, burgers, sides, **and MEALS**. Here are the 3 only meals we will impose:
+For example `poor_calories_counter("Big Mac", "French Fries", "Coca Cola")` should return `920`.
+
+Now, let's say you want to improve your calorie counter, so that it can accept a list of drinks, burgers, sides, **and MEALS**. Let's add these 3 meals to our menu:
 
 <table class="table">
   <thead>
     <tr>
-      <th>Item</th>
-      <th>Calories</th>
+      <th>Meal</th>
+      <th>Items in Meal</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Happy Meal</td>
-      <td>Cheese Burger, French Fries, Coca</td>
+      <td>Cheese Burger, French Fries, Coca Cola</td>
     </tr>
     <tr>
       <td>Best Of Big Mac</td>
-      <td>Big Mac, French Fries, Coca</td>
+      <td>Big Mac, French Fries, Coca Cola</td>
     </tr>
     <tr>
-      <td>Best Of Royal Cheese</td>
-      <td>Royal Cheese, Potatoes, Sprite</td>
+      <td>Best Of McChicken</td>
+      <td>McChicken, Salad, Sprite</td>
     </tr>
   </tbody>
 </table>
 
-You may want to store these meals in another constant. Don't try to pre-compute the calories for each meal,
-just store which dishes compose a meal. How are can you represent the dishes of the meal?
+You may want to store these meals in another constant. Note: don't try to pre-compute the calories for each meal,
+just store the dishes that make up the meal. How do you think you could represent the dishes in each meal?
 
-Enhance your method `#calories_counter` so that you can calculate calories by running:
+Let's now create a complete `#calories_counter` that will enable us to calculate calories by running:
 
 ```ruby
 order = ["French Fries", "Happy Meal", "Sprite"]
@@ -107,4 +107,4 @@ puts calories_counter(order)
 ## Key learning points
 
 - What's a hash? When do you use them?
-- Can you figure out how you would have done to code your calories counter using arrays? painfull, no?
+- Can you figure out how you would have had to code your calorie counter using just arrays? Painful, right?

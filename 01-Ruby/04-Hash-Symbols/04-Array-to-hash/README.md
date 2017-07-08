@@ -1,13 +1,13 @@
 ## Background & Objectives
 
-Small exercises to make you manipulate arrays, hashes and blocks, and consolidate your ruby skills on this!
+A few small exercises here to get you manipulating arrays, hashes and blocks. Ready to consolidate your ruby skills?
 
 ## Specs
 
 Write a method `array_to_hash` which takes an `Array` as an argument
-and return a `Hash` built from this array.
+and returns a `Hash`.
 
-- If no block is given, then the hash keys should just be integer indexes of elements in the array, converted as `String`.
+- If no block is given, then the hash keys should just be integer indexes of elements in the array, converted as `Strings`.
 - If a block is given, call it passing the array index and use what's returned as the hash key.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/array_to_hash.png)

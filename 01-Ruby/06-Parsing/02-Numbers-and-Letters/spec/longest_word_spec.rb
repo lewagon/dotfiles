@@ -34,8 +34,8 @@ describe "#run_game" do
       expect(not_english[:translation]).to eq nil
     end
 
-    it "should build custom messages for invalid word" do
-      expect(not_english[:message]).to eq "not an english word"
+    it "should build a custom message for an invalid word" do
+      expect(not_english[:message]).to be_a String
     end
   end
 
@@ -46,8 +46,8 @@ describe "#run_game" do
       expect(not_in_the_grid[:score]).to eq 0
     end
 
-    it "should build custom messages for word not in the grid" do
-      expect(not_in_the_grid[:message]).to eq "not in the grid"
+    it "should build a custom message for a word not in the grid" do
+      expect(not_in_the_grid[:message]).to be_a String
     end
   end
 
@@ -72,7 +72,7 @@ describe "#run_game" do
     expect(perfect[:translation]).to eq "chariot"
   end
 
-  it "should build custom messages for good catch" do
-    expect(perfect[:message]).to eq "well done"
+  it "should build a custom messages for a good catch" do
+    expect(perfect[:message]).to be_a String
   end
 end

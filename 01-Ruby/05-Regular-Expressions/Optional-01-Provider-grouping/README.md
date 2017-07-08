@@ -1,10 +1,10 @@
 ## Background & Objectives
 
-Let's say you have a user database with thousands of email, and you want to make some semantic analysis on these emails depending on their provider.
+Let's say you have a user database with thousands of emails, and you want to analyze them according to their provider.
 
 ### The problem
 
-In input, you have a ruby Array containing all your users' email. For instance
+Your input will be a ruby Array containing all your users' email. For instance:
 
 ```ruby
 users = [
@@ -17,7 +17,7 @@ users = [
 ]
 ```
 
-You want to group these users depending on their mail provider (gmail, yahoo, hotmail,...), and put the result in a hash.
+You need to group these users depending on their mail provider (gmail, yahoo, hotmail,...), and put the result in a hash:
 
 ```ruby
 group_mails(users)
