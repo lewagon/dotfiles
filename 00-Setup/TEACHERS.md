@@ -105,7 +105,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - **9 AM - 10:30 AM**: Morning lecture in the classroom. Quite intense. Don't be late, the lecture starts at 9 AM **sharp**, with or without you!
 - **10:30 AM - 5:30 PM**:
   - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the exercise's README from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
-  - Usually everyone takes a lunch break around 1 PM, but you can take it whenever you want (Teaching Assistants often have lunch around 1 PM ;)
+  - Usually everyone takes a lunch break around 1 PM, but you can take it whenever you want (Teaching Assistants often have lunch around 1 PM 😉
   - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson), mention restaurants around
 - **5:30 PM - 7 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class and teacher, the idea is to have an interactive session where everyone's involved.
 - **7:00 PM**:

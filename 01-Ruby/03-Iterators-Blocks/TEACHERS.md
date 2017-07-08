@@ -113,10 +113,10 @@ end
 timer() do
   puts "I'm doing something slow..."
   sleep(4)
-  puts "I'm done 😊"
+  puts "I'm done!"
 end
 # => I'm doing somethings slow...
-# => I'm done 😊
+# => I'm done!
 # => Elapsed time: 4s
 ```
 

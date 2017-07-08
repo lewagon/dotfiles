@@ -11,4 +11,4 @@ For those who have time, let's improve your online profile page (the one you pus
 
 ## [Optional] Flexbox froggy
 
-For those who want to practice their flexbox skills, here's a cool [froggy game](http://flexboxfroggy.com/). I love it, because I'm French ;)
+For those who want to practice their flexbox skills, here's a cool [froggy game](http://flexboxfroggy.com/). We love it, because we are French 😉

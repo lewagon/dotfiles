@@ -1,7 +1,7 @@
 ## Background & Objectives
 
 In this challenge, you will play with an API we provide: the **wagon-chat** API.
-This API will allow you to chat and post some gossips on your wagon-mates ;)
+This API will allow you to chat and post some gossips on your wagon-mates 😉
 
 Throughout this exercise, you'll have to make `GET` and `POST` requests to an API code by Le Wagon teachers.
 

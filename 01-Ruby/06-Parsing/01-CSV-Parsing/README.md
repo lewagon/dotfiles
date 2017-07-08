@@ -24,4 +24,4 @@ There are loads more useful ones in there too, so make sure you have a read!
 ## Further suggestions & resources
 
 - Make sure you specify the good `encoding` options for reading the CSV.
-Remember, some titles are given in French with special characters ;)
+Remember, some titles are given in French with special characters 😉
