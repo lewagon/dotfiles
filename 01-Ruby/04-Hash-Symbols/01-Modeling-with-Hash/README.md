@@ -67,7 +67,7 @@ You'll use them all the time, so make friends with them :)
 - **constraint**: your method should make use of a hash (obviously!)
 - **constraint**: your method must use **our given calorie values**!
 
-For example `poor_calories_counter("Big Mac", "French Fries", "Coca Cola")` should return `920`.
+For example `poor_calories_counter("McChicken", "French Fries", "Sprite")` should return `730`.
 
 Now, let's say you want to improve your calorie counter, so that it can accept a list of drinks, burgers, sides, **and MEALS**. Let's add these 3 meals to our menu:
 
@@ -84,11 +84,11 @@ Now, let's say you want to improve your calorie counter, so that it can accept a
       <td>Cheese Burger, French Fries, Coca Cola</td>
     </tr>
     <tr>
-      <td>Best Of Big Mac</td>
+      <td>Best of Big Mac</td>
       <td>Big Mac, French Fries, Coca Cola</td>
     </tr>
     <tr>
-      <td>Best Of McChicken</td>
+      <td>Best of McChicken</td>
       <td>McChicken, Salad, Sprite</td>
     </tr>
   </tbody>
@@ -100,7 +100,7 @@ just store the dishes that make up the meal. How do you think you could represen
 Let's now create a complete `#calories_counter` that will enable us to calculate calories by running:
 
 ```ruby
-order = ["French Fries", "Happy Meal", "Sprite"]
+order = ["French Fries", "Happy Meal", "Sprite", "Best of McChicken"]
 puts calories_counter(order)
 ```
 
