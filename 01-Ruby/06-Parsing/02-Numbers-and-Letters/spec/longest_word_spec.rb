@@ -31,7 +31,7 @@ describe "#run_game" do
     end
 
     it "should build a custom message for an invalid word" do
-      expect(not_english[:message]).to be_a String
+      expect(not_english[:message]).to match(/not an english word/i)
     end
   end
 
@@ -43,7 +43,7 @@ describe "#run_game" do
     end
 
     it "should build a custom message for a word not in the grid" do
-      expect(not_in_the_grid[:message]).to be_a String
+      expect(not_in_the_grid[:message]).to match(/not in the grid/i)
     end
   end
 
@@ -52,7 +52,7 @@ describe "#run_game" do
 
     it "should tell it's not in the grid" do
       expect(not_enough_letters[:score]).to eq 0
-      expect(not_enough_letters[:message]).to be_a String
+      expect(not_enough_letters[:message]).to match(/not in the grid/i)
     end
   end
 
@@ -65,6 +65,6 @@ describe "#run_game" do
   end
 
   it "should build a custom messages for a correct word" do
-    expect(perfect[:message]).to be_a String
+    expect(perfect[:message]).to match(/well done/i)
   end
 end
