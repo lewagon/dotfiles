@@ -70,7 +70,7 @@ that you can edit an article if you are logged in.
 
 Here's a nice [gist](https://gist.github.com/thebucknerlife/10090014) on how
 to use Bcrypt and `has_secure_password` in a Rails app. Next week, we'll see
-Devise, a powerful auth system. Still it's nice to know how to do it by hand :)
+Devise, a powerful auth system. Still it's nice to know how to do it by hand 😊
 
 ## Versionning (Optional, adding a model - bis)
 

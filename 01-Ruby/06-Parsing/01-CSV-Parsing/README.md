@@ -16,7 +16,6 @@ require "date"
 
 There are loads more useful ones in there too, so make sure you have a read!
 
-
 ## Specs
 
 - implement `#most_successful` that returns the number of movies published prior to a given year, with associated earnings.
@@ -25,4 +24,4 @@ There are loads more useful ones in there too, so make sure you have a read!
 ## Further suggestions & resources
 
 - Make sure you specify the good `encoding` options for reading the CSV.
-Remember, some titles are given in French with special characters ;)
+Remember, some titles are given in French with special characters 😉

@@ -31,7 +31,6 @@ and go to [localhost:8000](http://localhost:8000). Force reload the page if nece
 - Finally, let's glue everything together. As you can see at the bottom of the file, The `refresh` method is called every `1000` milliseconds. Implement that method which checks if there is a new message (`hasNewMessage()`), and if so, adds a new message (`newMessage()`) to the top of the message list (`appendMessageToDom(message)`). It should also update the counter in the `h1` title.
 - (Optional) Update the document title (browser tab) so that the unread counter appears (like Gmail does)
 
-
 ## Further suggestions & resources
 
 There are 4 ways to add new content to the DOM. Can you explain the differences?

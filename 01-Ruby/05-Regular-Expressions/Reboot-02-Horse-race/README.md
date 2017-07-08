@@ -23,7 +23,6 @@ Again let's start with the interface. It's more intuitive.
 
 How should your program work when your launch it? Write the pseudo code!
 
-
 ```ruby
 # interface.rb
 
@@ -36,8 +35,3 @@ How should your program work when your launch it? Write the pseudo code!
 ```
 
 Each step above is too general, so **try to build it out in a bit more detail**.
-
-
-## Make your computer speak :)
-
-Let's pimp our program and make our computer speak! For that you can use `say`. That is pretty cool 😊 Be creative and build custom messages 🐴🐴🐴🐴🐴🐴

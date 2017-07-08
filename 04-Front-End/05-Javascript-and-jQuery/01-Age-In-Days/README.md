@@ -5,7 +5,7 @@ a programming language, like Ruby. It has variables, functions, conditions, loop
 In this first exercise, we won't need the browser and use the power of [Node.js](https://nodejs.org/en/)
 to execute somme JavaScript directly in our terminal.
 
-We'll start with a simple exercise that you already solved a few weeks ago, in Ruby :)
+We'll start with a simple exercise that you already solved a few weeks ago, in Ruby 😊
 
 ## Setup
 

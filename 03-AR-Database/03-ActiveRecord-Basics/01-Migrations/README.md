@@ -39,7 +39,7 @@ sqlite3 db/development.sqlite3
 sqlite> .schema
 ```
 
-Can you see more than just your `posts` table? That's ActiveRecord internal plumbing :)
+Can you see more than just your `posts` table? That's ActiveRecord internal plumbing 😊
 Can you guess what it's needed for?
 
 ### 2. Migration to update a table

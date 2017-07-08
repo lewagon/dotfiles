@@ -21,7 +21,6 @@ Again, let's start with the interface.
 
 How should your program work when your launch it? **Let's write the pseudo code**
 
-
 ```ruby
 # interface.rb
 
@@ -34,11 +33,9 @@ How should your program work when your launch it? **Let's write the pseudo code*
 
 **Can you make the pseudo-code above a bit more detailed?**
 
-
 ## Step 1 - dumb shopping 🛍
 
 Here is the first version of our program:
-
 
 ```bash
 ruby interface.rb

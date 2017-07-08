@@ -4,4 +4,4 @@ If you're done with all the previous exercices, you can master your skill with t
 - [Regex Crossword](https://regexcrossword.com/)
 - [Regex One](http://regexone.com/)
 
-Take your pick :)
+Take your pick 😊

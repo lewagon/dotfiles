@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Congrats, you are now an expert in ActiveRecord :) Let's take a step back from
+Congrats, you are now an expert in ActiveRecord 😊 Let's take a step back from
 what we've learnt so far since the very first day and the setup:
 
 - Store information in variables

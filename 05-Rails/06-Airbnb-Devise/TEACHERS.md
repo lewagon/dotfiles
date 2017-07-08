@@ -99,6 +99,3 @@ For the first intermediate demo on Wednesday evening, every team should have:
 If you see students losing time on non-core features (edit your profile, connect with Facebook, geocode the offers, etc.) while they have not finished the core ones or have a dirty design for main pages, **it's your role to put them back on track**. You are a teacher but also a product manager this week!
 
 On the contrary, if all your teams have a very well designed app with simple core features working, they will be really motivated to keep enhancing their app and make kick-ass final demo on Friday evening.
-
-
-

@@ -15,7 +15,7 @@ That's the only format the anchorman can understand!
 
 ## Further suggestions & resources
 
-- Needless to say, you should be using destructive iterators within your method :)
+- Needless to say, you should be using destructive iterators within your method 😊
 
 ## Key learning points
 

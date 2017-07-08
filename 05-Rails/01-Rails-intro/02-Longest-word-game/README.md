@@ -2,7 +2,6 @@
 
 Time to re-implement your "Longest-word game" with a cool web-interface. You can use the code in the solution to `01-Ruby/06-Parsing/02-Numbers-and-Letters` as a starting point.
 
-
 There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
 
 ```bash

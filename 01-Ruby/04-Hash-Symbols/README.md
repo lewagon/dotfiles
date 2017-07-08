@@ -1,6 +1,6 @@
 ## Quizz
 
-Don't forget, at 2pm you'll have to answer a paper quizz during 30 min. No computer, no Google, just pencil and paper. It's not highschool and you won't receive grades :) But it's very useful to detect what you get wrong and to get rid of your misunderstandings. So take your time and try to answer as precisely as you can.
+Don't forget, at 2pm you'll have to answer a paper quizz during 30 min. No computer, no Google, just pencil and paper. It's not highschool and you won't receive grades 😊 But it's very useful to detect what you get wrong and to get rid of your misunderstandings. So take your time and try to answer as precisely as you can.
 
 👉 [Quizz #1](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-1.en.pdf)
 

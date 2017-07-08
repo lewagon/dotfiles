@@ -124,7 +124,7 @@ Now time to move on to the real content of the lecture. We'll see three importan
 
 #### Restaurants
 
-Let's stay in the food business but be more specific about restaurant kinds (because we're French ;))
+Let's stay in the food business but be more specific about restaurant kinds (because we're French 😉)
 
 ```ruby
 class Fastfood

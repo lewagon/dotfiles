@@ -56,7 +56,6 @@ And then implement your own `.form-login` CSS class in a `components/form.css` f
 
 A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Each input may have an associated `<label>` or not. The button to submit the form is also an input with the `type="submit"`. Here is what a form looks like:
 
-
 ```html
 <form action="#">
   <label for="your-email">Your email</label>
