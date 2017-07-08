@@ -30,10 +30,6 @@ describe "#run_game" do
       expect(not_english[:score]).to eq 0
     end
 
-    it "should return nil translation for invalid word" do
-      expect(not_english[:translation]).to eq nil
-    end
-
     it "should build a custom message for an invalid word" do
       expect(not_english[:message]).to be_a String
     end
@@ -56,7 +52,7 @@ describe "#run_game" do
 
     it "should tell it's not in the grid" do
       expect(not_enough_letters[:score]).to eq 0
-      expect(not_enough_letters[:message]).to eq "not in the grid"
+      expect(not_enough_letters[:message]).to be_a String
     end
   end
 
@@ -68,11 +64,7 @@ describe "#run_game" do
     expect(quick[:score] > slow[:score]).to eq true
   end
 
-  it "should consider the first translation returned by the API" do
-    expect(perfect[:translation]).to eq "chariot"
-  end
-
-  it "should build a custom messages for a good catch" do
+  it "should build a custom messages for a correct word" do
     expect(perfect[:message]).to be_a String
   end
 end
