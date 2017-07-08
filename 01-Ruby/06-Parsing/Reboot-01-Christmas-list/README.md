@@ -15,12 +15,9 @@ cd christmas-list
 touch interface.rb
 ```
 
-
 ## Pseudo-code
 
-
 First things first, let's brainstorm the **pseudo-code** together:
-
 
 ```ruby
 # interface.rb

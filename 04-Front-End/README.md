@@ -30,7 +30,6 @@ Then, let's move to Bootstrap.
 - For standard ones, let's not re-invent the wheel and use Bootstrap built-in classes.
 - Also yesterday, we saw how to build small grids with flexbox (e.g. for tabs). Again for a functional responsive grid, we need something more robust: here comes [Bootstrap grid](http://getbootstrap.com/css/#grid).
 
-
 ## `04-Frontend-Advanced` (Monday)
 
 We will introduce advanced concepts such as ERB, layout, and SASS. For that, we will use a nice frontend framework called [Middleman](https://middlemanapp.com) and we will learn to organize our HTML and CSS code in a very DRY way.

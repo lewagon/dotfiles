@@ -8,7 +8,6 @@ In this exercise, we'll write our first AJAX request. Let's start simple with a 
 
 ### Geocoding
 
-
 Read carefully the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro). It boils down to doing a HTTP `GET` request with an address as a query string parameter.
 
 ```
@@ -22,7 +21,6 @@ In the `success` callback, try to `console.log()` what the API gave you back. It
 ### [OPTIONAL] Displaying a map
 
 To display a Google Map with a marker at the specified address, we'll use a second API, the [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
-
 
 To use it, add to your HTML this line at the bottom of your file, just **before** the requiring of `app.js`:
 

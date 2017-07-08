@@ -10,7 +10,6 @@ Implement a first method `size_splitter` which takes two parameters: an array, a
 
 The `size_splitter` method should return an array of two arrays - the two groups defined above - with the contents sorted **alphabetically**.
 
-
 ```ruby
 words = %w(dog data ask win two beer)
 result = size_splitter(words, 3)

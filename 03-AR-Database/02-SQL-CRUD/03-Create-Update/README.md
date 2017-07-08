@@ -28,7 +28,6 @@ post.save  # TODO: persist the record!
 post.id
 # => 1 (expected result, the database has inserted a row, store the id in memory)
 
-
 post.title = "Awesome article, updated"
 post.save   # TODO: should update the record in the database
 ```

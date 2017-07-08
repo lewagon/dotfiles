@@ -11,7 +11,6 @@ First, you need to get an access token to be authenticated (with your Facebook a
 - Get a token and select fields you want to fetch
 - Copy this token in your Javascript file `fb.js`
 
-
 ```javascript
 var accessToken = "CAu......0vXW"; // copy your access token here
 ```

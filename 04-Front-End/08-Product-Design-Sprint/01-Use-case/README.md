@@ -4,7 +4,6 @@ You have already worked on your **Product Pitch** (defining your target / pain /
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/product-design/use-case.png)
 
-
 **What's your use case?** Take your time, discuss with your team and come up with a simple **verb + complement**.
 
 ## What's your new angle?

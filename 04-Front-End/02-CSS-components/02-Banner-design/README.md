@@ -8,7 +8,6 @@ Let's code Airbnb banner, here is [your objective](http://lewagon.github.io/html
 
 Don't forget to re-use the `button.css` file that you've coded in the previous challenge. That's exactly the point of splitting your design by components: you can then re-use them!
 
-
 ### HTML Structure
 
 **Always start by thinking about the HTML structure of your component**. For a banner it should look like:

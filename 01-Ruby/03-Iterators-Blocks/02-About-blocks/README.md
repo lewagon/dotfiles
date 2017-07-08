@@ -62,7 +62,7 @@ Here, the second argument is worth `0` if we call `sum` with only one argument.
 
 ### Link with Rails
 
-When we cover Rails helper methods, you will see that they do exactly the same as your home-made `#tag` method. They write the HTML for you :)
+When we cover Rails helper methods, you will see that they do exactly the same as your home-made `#tag` method. They write the HTML for you 😊
 
 ### Timer method
 

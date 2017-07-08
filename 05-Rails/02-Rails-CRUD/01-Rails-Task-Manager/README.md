@@ -36,7 +36,6 @@ Before starting to build your routes, your controller and views, generate your m
 - You still have to run the good `rails db:migrate` to execute your migrations.
 - Once that's done, play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is a **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
 
-
 ### Routing
 
 Your todo-app should have 7 entry points in the routing:

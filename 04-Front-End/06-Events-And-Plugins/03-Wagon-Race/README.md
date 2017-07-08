@@ -69,7 +69,6 @@ Write all your code in `game.js`. We need a way for JavaScript to update the boa
 
 Now we'll make the game interactive! Add 2 buttons to your page. The first one should make the red wagon move forward, and the second button should make the yellow wagon move forward.
 
-
 #### Binding to Keyboard
 
 Clicking a button is not fast enough. And you can't play with someone else! Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key. We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key (hence players could cheat by just keeping a key pressed), whereas the keyup event doesn't.

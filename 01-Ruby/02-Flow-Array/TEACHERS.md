@@ -98,7 +98,6 @@ end
 2. Explain `||`
 3. Live-code a program giving a **shop's opening hours**
 
-
 ```ruby
 hour = Time.now.hour
 
@@ -139,7 +138,6 @@ puts "You won! Price was #{price_to_find}$"
 1. Get **array's size**
 1. Loop with `each`
 1. Pick custom methods in the ruby doc with the class and test them
-
 
 ```ruby
 # 1. Define an array
