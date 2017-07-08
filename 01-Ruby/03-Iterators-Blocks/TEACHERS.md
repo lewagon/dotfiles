@@ -8,7 +8,6 @@
 
 Start with a quick rehearsal on array and range (5 minutes)
 
-
 ### Array
 
 ```ruby
@@ -67,7 +66,6 @@ end
 1.  **Many more**: look at the doc http://www.ruby-doc.org/core/Array.html with the class.
 1. **Today's first challenge** => pick the right iterators from this documentation
 
-
 **Transition to next part** => What the hell was this?
 
 ```ruby
@@ -78,9 +76,7 @@ end
 
 This is a piece of code called a **block**!
 
-
 ## Blocks
-
 
 Blocks are pieces of code, a bit as **anonymous methods**.
 
@@ -88,7 +84,6 @@ Blocks are pieces of code, a bit as **anonymous methods**.
 1. Introduce block syntax (1-line or multi-line)
 1. Explain that **block returns last statement as a method**
 1. Explain the block **can be passed as an argument to a method**
-
 
 ## Define methods using blocks
 
@@ -100,13 +95,11 @@ Important to make this disclaimer to the students:
 - They'll probably never have to **define** such methods in their ruby/Rails career.
 - But they will **use** lots of them (like `each`, `map`, etc.)
 
-
 ### `yield` calls the block
 
 1. `yield` is a Ruby keyword **executing** the block.
 1. **Live-code**: let's code a `timer` method.
 1. Go through the slides with schemas **AFTER you make this live-code**. To explain the flow of a method call with a block.
-
 
 Example **without block parameters**
 

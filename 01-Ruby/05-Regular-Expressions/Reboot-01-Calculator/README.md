@@ -27,11 +27,9 @@ touch interface.rb
 
 We will always start with the `interface.rb` file. That's the file you will launch (with the command `ruby interface.rb`) to run your program. It's always intuitive to start with the interface and ask yourself **"What should happen when I launch my program?"**
 
-
 ## Pseudo-code
 
 Always kickstart a challenge altogether with the teacher and write the *pseudo-code*. For example:
-
 
 ```ruby
 # interface.rb
@@ -45,7 +43,6 @@ Always kickstart a challenge altogether with the teacher and write the *pseudo-c
 ```
 
 **Writing the pseudo-code is 80% of the job!** Then translating english into ruby is really the easy part. Adopt this pseudo-code methodology for every challenge of the Reboot session.
-
 
 ## Dumb calculator
 

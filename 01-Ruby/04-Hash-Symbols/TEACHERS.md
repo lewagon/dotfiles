@@ -28,7 +28,6 @@ student_ages = [ 24     , 25    , 22      ,  20    ]
 2. Is it a good modeling? What if there are **10K students**? Hard to maintain, we can do better.
 3. What if we could do `students_age["Peter"]`? We can with Hash. Introduce it:
 
-
 ```ruby
 students_age = {
   "Peter" => 24,
@@ -45,7 +44,6 @@ students_age = {
 3. Go through basic CRUD operation on `Hash`
 4. Explain how `each` works on a hash
 5. Show some custom methods from the doc like `has_key?`
-
 
 ```ruby
 # Defining a hash

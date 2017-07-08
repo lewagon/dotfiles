@@ -139,7 +139,6 @@ Then define their `:hover state, for example:
 
 Hover products on [our dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/) to see these effects in action.
 
-
 ### [Optional] Advanced Design
 
 For an advanced design of the header like [this one](http://lewagon.github.io/html-css-challenges/12-profile-with-products-bis/), you should first improve the HTML structure of your `profile-header-infos`:

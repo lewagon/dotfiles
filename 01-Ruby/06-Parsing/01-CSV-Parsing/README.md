@@ -16,7 +16,6 @@ require "date"
 
 There are loads more useful ones in there too, so make sure you have a read!
 
-
 ## Specs
 
 - implement `#most_successful` that returns the number of movies published prior to a given year, with associated earnings.

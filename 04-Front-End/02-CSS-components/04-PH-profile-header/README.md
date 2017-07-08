@@ -8,7 +8,6 @@ Build Product Hunt profile header, like [this one](http://lewagon.github.io/html
 
 Before coding the [tabs component](http://lewagon.github.io/ui-components/#tabs) used in the header, take 10 minutes to think about the global "div structure" of the [profile header](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs/). In `index.html` we made some choices for you:
 
-
 ```html
 <div class="profile-header-wrapper">
   <div class="container">

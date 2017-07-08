@@ -4,9 +4,7 @@ Once you have finished your mockup (done with Sketch or with another tool) and o
 
 Again, you can watch our quick marvelapp tutorial:
 
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MFIlW68giDY" frameborder="0" allowfullscreen></iframe>
-
 
 ## Demo time 🎉🎉🎉
 

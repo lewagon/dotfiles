@@ -23,7 +23,6 @@ In Middleman `data` folder, add a new file `flats.yml`
 
 YAML syntax is based on indentation and keys/values (a bit like JSON but without `{}`). Your YAML file should look like:
 
-
 ```yaml
 # data/flats.yml
 seb:
@@ -87,7 +86,6 @@ We hope you do 😊
 Time to generate a dynamic view for each flat. Start by reading the section about [Middleman dynamic pages](https://middlemanapp.com/advanced/dynamic_pages/).
 
 Then add to `config.rb` something like:
-
 
 ```ruby
 ["anne", "seb", "romain"].each do |name|

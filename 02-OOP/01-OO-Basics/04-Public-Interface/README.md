@@ -28,7 +28,6 @@ The public interface of the class, i.e. the set of all its public methods, defin
 * Print transaction history if a password is provided
 * Withdraw or deposit money
 
-
 ### The `to_s` method
 
 You will probably come across many classes in Ruby that redefine the built-in method `to_s`. This is an easy way to display taylor-made information about an object to the user, and to control which information is printed.
