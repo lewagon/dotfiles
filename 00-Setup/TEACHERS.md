@@ -144,7 +144,7 @@ At the end of the setup, students will signin on [alumni.lewagon.org](http://alu
 
 ### Terminal & Git (teacher)
 
-1. **2pm-2pm15**: Second 15 min lecture on command line basics (navigate in filesystem, create directories & files, launch Sublime Text from terminal, etc...)
+1. **2pm-2pm15**: Second 15 min lecture on command line basics (navigate in filesystem, create directories & files, launch Sublime Text from terminal, etc.)
 
 2. **2pm-2pm45**: Third 45 min lecture on git commands (`add`/`commit`/`push`).
 

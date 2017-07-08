@@ -1,8 +1,8 @@
-require_relative "support/csv_helper.rb"
+require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/controllers/orders_controller.rb"
-  require_relative "../app/repositories/employee_repository.rb"
+  require_relative "../app/controllers/orders_controller"
+  require_relative "../app/repositories/employee_repository"
 rescue LoadError => e
   describe "OrdersController" do
     it "You need a `orders_controller.rb` file for your `OrdersController`" do

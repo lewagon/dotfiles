@@ -102,14 +102,14 @@ Add a new action `idea` to your menu (additionally to the `list`, `add`, `delete
 What are you searching on Etsy?
 > Jeans
 Here are Etsy results for "Jeans":
-1 - Blue Jeans Levis..
-2 - Vintage Jeans..
-3 - Jeans Pants etc etc..
-4 - White jeans..
-etc..
+1 - Blue Jeans Levis
+2 - Vintage Jeans
+3 - Jeans Pants
+4 - White Jeans
+etc.
 Pick one to add to your list (give the number)
 > 2
-"Vintage Jeans.." added to your wishlist
+"Vintage Jeans" added to your wishlist
 ```
 
 For the scraper, here is a starting script to help you extract the data:

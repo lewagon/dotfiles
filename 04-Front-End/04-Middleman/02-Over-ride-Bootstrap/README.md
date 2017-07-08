@@ -6,7 +6,7 @@ When you work on a Middleman project (or even a Rails app), **it's crucial to or
 - Use these variables to over-ride your Bootstrap theme in `config/_bootstrap_variables.scss`
 - Code your components in `components` (as you already know).
 - For special layout's components (like `footer`, `navbar`), put them in a separated `layout` folder.
-- Finally, code small page's adjustments in the `pages` folder (with one SCSS file for each page, e.g. `_home.scss`, `_login.scss`, etc..).
+- Finally, code small page's adjustments in the `pages` folder (with one SCSS file for each page, e.g. `_home.scss`, `_login.scss`, etc.).
 
 ## Your own Bootstrap theme
 

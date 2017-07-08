@@ -21,7 +21,7 @@ Define your own graphical variables for fonts and colors in `config/_variables.s
 
 ## `03-Flat-dynamic-view`
 
-First create a YAML database for your flats. Then add a dynamic flat template able to display [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html), [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html), [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html), etc..
+First create a YAML database for your flats. Then add a dynamic flat template able to display [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html), [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html), [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html), etc.
 
 ## `Optional-01-Blogging-with-Middleman`
 

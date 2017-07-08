@@ -21,7 +21,7 @@ Build a simple HTML profile page with the following elements (use the right HTML
 - a header and sub-header with your name and position
 - a description of yourself
 - a list of your social links
-- a table of your projects, favorite movies, programming languages, sport teams, recipes, etc... whatever you want.
+- a table of your projects, favorite movies, programming languages, sport teams, recipes, etc. whatever you want.
 
 A picture is worth a thousand words, [here is what you should build in this challenge](http://lewagon.github.io/html-css-challenges/01-profile-content/)
 

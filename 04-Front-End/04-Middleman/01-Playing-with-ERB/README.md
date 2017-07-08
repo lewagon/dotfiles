@@ -84,7 +84,7 @@ Then add a ERB partial `_footer.html.erb` with your footer code:
 </div>
 ```
 
-- By using a layout, all common parts (navbar, footer, analytics, etc..) are **coded just once in the layout**.
+- By using a layout, all common parts (navbar, footer, analytics, etc.) are **coded just once in the layout**.
 - By using ERB partials, HTML code is more concise and easy to read.
 
 ## Team Page
@@ -126,7 +126,7 @@ This ERB code will generate this HTML code:
 
 ## Helpers
 
-Helpers are ruby method that you will use in your templates to generate `<a>`, `<img>`, `<link>`, etc.. Most helper methods can be called with an optional hash of attributes (like `class` and `id`). For instance:
+Helpers are ruby method that you will use in your templates to generate `<a>`, `<img>`, `<link>`, etc. Most helper methods can be called with an optional hash of attributes (like `class` and `id`). For instance:
 
 ```erb
 <%= image_tag "example.png", class: "img-rounded avatar" %>

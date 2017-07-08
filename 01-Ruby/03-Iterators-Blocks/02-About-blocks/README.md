@@ -84,7 +84,6 @@ my_map(["john", "ringo", "paul"]) { |name| name.upcase }
 # => ["JOHN", "RINGO", "PAUL"]
 ```
 
-
 ## Key learning points
 
 - What's a block?

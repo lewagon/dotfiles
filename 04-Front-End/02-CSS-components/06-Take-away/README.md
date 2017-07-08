@@ -3,7 +3,7 @@
 Congratulations for today, it was a very important day in your CSS career. From now on:
 
 - You can directly use [Le Wagon components library](http://lewagon.github.io/ui-components/) without recoding it every time :)
-- Remember, always **take time to think about your HTML stucture** (wrapper, container, inside components etc..). It's **90% of the work**. After that, you just have to re-use components and make some small CSS adjustments.
+- Remember, always **take time to think about your HTML stucture** (wrapper, container, inside components, etc.). It's **90% of the work**. After that, you just have to re-use components and make some small CSS adjustments.
 
 ## [Optional] Enhanced profile on Github Pages
 

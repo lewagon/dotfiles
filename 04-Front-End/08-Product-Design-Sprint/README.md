@@ -16,7 +16,7 @@ Time to draw rectangles to organize the info you display on each page. You can u
 
 Once your core journey is defined, and once you have worked on the zoning of each page, it's time to build an actual mockup.
 
-If there is one Mac user in your team (let's pray 🙏🙏🙏), he/she can [download the free trial of Sketch](https://www.sketchapp.com/) and watch our [15 minutes Sketch tutorial on Youtube](https://www.youtube.com/watch?v=zR-6RW3kHyM). If not, just use another tool you are familiar with (powerpoint, balsamiq, other). It should be enough to build a decent mockup.
+If there is one Mac user in your team (let's pray 🙏🙏🙏), he/she can [download the free trial of Sketch](https://www.sketchapp.com/) and watch our [15 minutes Sketch tutorial on Youtube](https://www.youtube.com/watch?v=zR-6RW3kHyM). If not, you can use an online tool like [Gravit](https://gravit.io) or just another tool you are familiar with (powerpoint, balsamiq, other). It should be enough to build a decent mockup.
 
 ## `05-Prototype`
 

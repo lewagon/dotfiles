@@ -35,7 +35,6 @@ Like a collection of **successive** elements:
 # => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-
 ### Array iteration
 
 1. Code a loop with `for` on range's indices
@@ -99,7 +98,7 @@ Important to make this disclaimer to the students:
 
 - Advanced concept, normal if they struggle!
 - They'll probably never have to **define** such methods in their ruby/Rails career.
-- But they will **use** lots of them (like `each`, `map`, etc..)
+- But they will **use** lots of them (like `each`, `map`, etc.)
 
 
 ### `yield` calls the block

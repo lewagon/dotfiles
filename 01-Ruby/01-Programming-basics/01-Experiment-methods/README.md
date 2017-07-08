@@ -39,5 +39,5 @@ Are you able to answer the following questions? If not, you're not ready to move
 
 - How many built-in ruby classes do you know? Which ones?
 - What's the syntax to call a method on an object of these classes?
-- What should be the immediate 1st step when you are looking to perform a standard operation (sorting an array, upcasing a word, etc..)?
+- What should be the immediate 1st step when you are looking to perform a standard operation (sorting an array, upcasing a word, etc.)?
 - What's the second step, to make sure you really understand the method you found?

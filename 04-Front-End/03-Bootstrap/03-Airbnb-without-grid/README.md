@@ -33,7 +33,7 @@ A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Ea
 </form>
 ```
 
-1. There are different types of input (`type="text"`, `type="email"`, `type="date"`, etc...)
+1. There are different types of input (`type="text"`, `type="email"`, `type="date"`, etc.)
 2. The `placeholder` is an indicative text which disappears when the user starts writing.
 3. The label `for="something"` will be linked to the input with `id="something"`. Linking labels and inputs is not just for fun. When you will click on the label, the cursor will jump into the associated input (thus a better UX).
 4. The text of the submit button is given thanks to the `value` attribute.

@@ -1,6 +1,6 @@
 def sum_odd_indexed(array)
   # TODO: computes the sum of elements at odd indexes (1, 3, 5, 7, etc.)
-  #       You should make use Enumerable#each_with_index
+  #       You should use Enumerable#each_with_index
 end
 
 def even_numbers(array)
@@ -30,5 +30,5 @@ end
 
 def sorted_pairs(array)
   # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
-  #       You should make use of Enumerable#each_slice
+  #       You should use of Enumerable#each_slice
 end

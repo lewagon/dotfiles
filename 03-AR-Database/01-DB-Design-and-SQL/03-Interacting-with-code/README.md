@@ -34,7 +34,7 @@ Complete the program `queries.rb` to answer the following questions. Don't forge
 
 ## Resources
 
-* [**Great 101 on Ruby/Sqlite3**](http://sqlite-ruby.rubyforge.org/sqlite3/faq.html)
+* [Into to Ruby/Sqlite3](https://rubyplus.com/articles/1141-SQL-Basics-SQLite3-Ruby-Driver-Basics)
 * [SQL Commands](http://www.sqlcommands.net/)
 * [Course in 🇫🇷 about `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
