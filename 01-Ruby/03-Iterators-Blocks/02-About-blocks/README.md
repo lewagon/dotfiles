@@ -1,11 +1,11 @@
 ## Background & Objectives
 
-Blocks are chunks of code enclosed between `{}` (for 1-line blocks) or between `do..end` (for muli-line blocks).
-Although we can store them in `Proc` objects and pass them to a method as standard arguments, **many methods can just be called with an implicit block given after the list of arguments**. In fact, that's exactly what you did with all these iterators! This implicit block is executed any time the keyword `yield` appears in the method definition. Use the resources to learn more on blocks. The objectives are:
+Blocks are chunks of code enclosed between `{}` (for 1-line blocks) or between `do..end` (for multi-line blocks).
+Although we can store them in `Proc` objects and pass them to a method as standard arguments, **many methods can just be called with an implicit block given after the list of arguments**. In fact, that's exactly what you did with all these iterators! This implicit block is executed any time the keyword `yield` appears in the method definition. Use the resources to learn more about blocks. The objectives here are:
 
-- Know the syntax to call a method with an implicit block (either 1-line or multiline).
-- Understand what happens when passing a parameter to the block.
-- Implement some basic methods which are using `yield`, to understand the inner mechanics.
+- Learn the syntax for calling a method with an implicit block (either 1-line or multi-line).
+- Understand what happens when you pass a parameter to the block.
+- Implement some basic methods using `yield`, to understand the inner mechanics.
 
 ## Specs
 
@@ -32,7 +32,7 @@ end
 You may need to know that to include a `"` symbol inside a string delimited by double quotes,
 you need to **escape** this character with an antislash: `\"`.
 
-The cool thing with this method is that you can nest method calls
+The cool thing about this method is that you can nest method calls:
 
 ```ruby
 tag("a", ["href", "www.google.com"]) do
@@ -43,7 +43,7 @@ end
 # => '<a href="www.google.com"><h1>Google it</h1></a>'
 ```
 
-How cool?
+Cool right?
 
 ### Arguments with default value
 
@@ -62,11 +62,11 @@ Here, the second argument is worth `0` if we call `sum` with only one argument.
 
 ### Link with Rails
 
-When you will discover Rails helper methods, you will see that they do exatly the same as your home-made `#tag` method. They write HTML for you :)
+When we cover Rails helper methods, you will see that they do exactly the same as your home-made `#tag` method. They write the HTML for you :)
 
 ### Timer method
 
-Implement a block-timer in `#timer_for` than enables to track the duration (in seconds) of execution of any given block. It should work this way.
+Implement a block-timer in `#timer_for` that allows you to track the duration (in seconds) of the execution of any given block. It should work this way:
 
 ```ruby
 timer_for do

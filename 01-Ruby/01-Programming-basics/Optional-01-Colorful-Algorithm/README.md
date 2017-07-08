@@ -9,7 +9,7 @@ We want you to write a method `colorful?` which takes a number as argument and r
 
 A colorful number is a number where all the products of consecutive subsets of digit are different.
 
-For this exercise, just consider numbers with up to **3** digits only (not more).
+For this exercise, only consider numbers with up to **3** digits only (not more).
 
 Example:
 
