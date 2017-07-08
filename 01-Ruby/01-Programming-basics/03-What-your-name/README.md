@@ -47,5 +47,5 @@ Again, ask yourself these questions and make sure you can answer all of them:
 
 ## Further suggestions & resources
 
-* To get a user input from the terminal you should use [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). You will also need to [chomp](https://ruby-doc.org/core-2.4.1/String.html#method-i-chomp) the resulting string
-* To print question in the terminal, you should use [puts](http://www.ruby-doc.org/core-2.4.1/IO.html#method-i-puts)
+* To get a user input/answer from the terminal you should use [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). You will also need to [chomp](https://ruby-doc.org/core-2.4.1/String.html#method-i-chomp) the resulting string
+* To print a question in the terminal, you should use [puts](http://www.ruby-doc.org/core-2.4.1/IO.html#method-i-puts)

@@ -247,8 +247,8 @@ fancy_place.add_reservation("boris")
 fancy_place.add_reservation("seb")
 fancy_place.add_reservation("romain")
 fancy_place.print_clients
-
 ```
+
 Let's comment the outputs. As you see, if you apply an instance method on an object, ruby will first look in the object class if there is a corresponding method, if not it will look for this method in the parent class.
 
 #### `super` keyword
@@ -337,7 +337,7 @@ puts Nokogiri::HTML::Document.parse("<h1>Hello guys</h1>")
 JSON.parse('{ "key": "value", "other_key": "other_value" }')
 ```
 
-`now` and `parse` are methods called on the class `Time`, `JSON`, etc.. not on instances of these classes. Methods like this, as you can guess, are called **class methods** and you can create them too if you want to.
+`now` and `parse` are methods called on the class `Time`, `JSON`, etc. not on instances of these classes. Methods like this, as you can guess, are called **class methods** and you can create them too if you want to.
 
 ```ruby
 # Defining your own class methods

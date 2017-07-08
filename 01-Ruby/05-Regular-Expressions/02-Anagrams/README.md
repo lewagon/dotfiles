@@ -8,7 +8,7 @@
 
 Implement the 2 methods `#anagrams?(a_string, another_string)` and `#anagrams_on_steroids?(a_string, another_string)` that check whether or not two strings are anagrams (returning a boolean).
 
-- the first method `#anagrams?` should make use the ruby `sort` method.
+- the first method `#anagrams?` should make use of the ruby `sort` method.
 - use a ruby `Hash` to improve the time complexity in the second implementation `#anagrams_on_steroids?(a_string, another_string)`, meaning that your second solution should be faster.
 
 ## Key learning points

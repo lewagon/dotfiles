@@ -1,6 +1,6 @@
 ## Objective
 
-Write a method that determines whether a given word or phrase is a palindrome, that is, it reads the same backwards as forwards, ignoring case, spaces and punctation.
+Write a method that determines whether a given word or phrase is a palindrome, that is, it reads the same backwards as forwards, ignoring case, spaces and punctuation.
 
 ## Further suggestions
 
@@ -8,4 +8,4 @@ Methods you might find useful (which you'll have to look up in Ruby documentatio
 
 ## Enhance/Refactor
 
-Once you have your code working, consider making it more beautiful by using techniques like method chaining.
+Once you have your code working, try and make it prettier by using techniques like method chaining.

@@ -17,6 +17,7 @@ var group = {
   "ringo" : 150,
 }
 ```
+
 It means that John spent 120€, Paul spent 30€ and Ringo spent 150€.
 
 Implement the method `splitTheBill(group)` which should return how much money the group

@@ -47,7 +47,7 @@ top_five_artists(db, 'Rock')
 # => [
 #      [ 'Led Zeppelin', 114 ],  # Led Zeppelin has 114 Rock songs.
 #      [ 'U2',           112 ]
-#      # etc...
+#      # etc.
 #    ]
 ```
 

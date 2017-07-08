@@ -11,7 +11,7 @@ Write a `Browser` class in the `lib/browser.rb` file so that when you run the fo
 ```
 
 Study the program we provide you in the `lib/run.rb` to understand
-which methods your `Browser` class should expose. We want to **only print** web pages text, not markup like `<h1>`, `<p>`, etc...
+which methods your `Browser` class should expose. We want to **only print** web pages text, not markup like `<h1>`, `<p>`, etc.
 
 ## Further suggestions
 

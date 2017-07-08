@@ -178,6 +178,7 @@ When using Rails helper like `link_to`, you can pass a hash of HTML attributes. 
 ```erb
 <%= link_to "See details", @restaurant, class: "btn btn-primary"%>
 ```
+
 Will generate  this HTML
 
 ```html

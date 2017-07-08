@@ -36,4 +36,4 @@ email = "bob@gmail.com"
 provider?(email, "gmail") # => true
 provider?(email, "lewagon") # => false
 provider?(email, "noos") # => false
-````
+```
