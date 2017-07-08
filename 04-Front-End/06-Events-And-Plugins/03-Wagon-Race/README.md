@@ -19,14 +19,14 @@ You will start by building a simple two-player board in HTML. There are a few wa
     <td class="active"></td>
     <td></td>
     <td></td>
-    ... etc ...
+    etc.
   </tr>
   <tr id="player2_race">
     <td></td>
     <td></td>
     <td></td>
     <td class="active"></td>
-    ... etc ...
+    etc.
   </tr>
 </table>
 ```

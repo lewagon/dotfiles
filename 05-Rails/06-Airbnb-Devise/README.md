@@ -13,7 +13,7 @@ Work on the following steps and validate them with a coach on Monday morning, be
 #### 1 - Mockup and routes
 
 - Download and **print** [this template for your mockup and routes](https://github.com/lewagon/fullstack-images/raw/master/rails/rails-user-stories.pdf).
-- Brainstorm on your core routes and associated views (home page, results page, show page, posting a new offer, booking something, checking your bookings, accepting or declining a booking etc...)
+- Brainstorm on your core routes and associated views (home page, results page, show page, posting a new offer, booking something, checking your bookings, accepting or declining a booking, etc.)
 
 #### 2 - Database Scheme
 
@@ -92,7 +92,7 @@ Once both groups are done (it should take you ~2h each) and once you have all me
 
 Here is a list of different user stories to implement on the Airbnb project:
 
-- As a user, I can navigate on the website from the navbar (with functional links, e.g. "signin/signout", "My bookings", "Publish an offer", etc..)
+- As a user, I can navigate on the website from the navbar (with functional links, e.g. "signin/signout", "My bookings", "Publish an offer", etc.)
 - As a user, I can view a flat's page
 - As a user, I can book a flat
 - As a user, I can add pictures for my flat

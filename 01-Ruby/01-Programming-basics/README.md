@@ -8,7 +8,7 @@ When you want to accomplish some basic operation, there's often a perfect ruby m
 
 ## `02-Age-in-days`
 
-A challenge to make you manipulate objects of the standard lib, which are not "built-in" as `String`, `Fixnum`, etc.. but that are loaded thanks to the `require` directive.
+A challenge to make you manipulate objects of the standard lib, which are not "built-in" as `String`, `Fixnum`, etc. but that are loaded thanks to the `require` directive.
 
 ## `03-What-your-name`
 

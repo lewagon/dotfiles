@@ -9,7 +9,7 @@ If you miss these steps, it often ends up with redundant and poor code since you
 
 Here is a ruby function to animate your gym training. Running this program will get the following result
 
-````
+```
 hop! One more time..
 hop! hop! One more time..
 hop! hop! hop! One more time..

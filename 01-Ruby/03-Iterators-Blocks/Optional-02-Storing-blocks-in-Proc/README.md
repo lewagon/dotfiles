@@ -17,6 +17,7 @@ speak { "Hello" }
 # Hello
 #  => nil
 ```
+
 **A new `Proc` object will be created from the block any time the method is called.**
 
 ## Creating Proc objects
@@ -32,8 +33,9 @@ speak (message_block)
 # Hello
 #  => nil
 ```
+
 **The `Proc` object is created once and for all, and can be used several times if we call the method several times.**
 
 ## Specs
 
-- Your turn! Tell your mum how you love her ! Implement the `#tell`, `#tell_mum`, `#tell_with_proc`, `#tell_mum_with_proc`  methods which use either ampersand block arguments or pass `Proc` objects explicitly.
+- Your turn! Tell your mum how you love her! Implement the `#tell`, `#tell_mum`, `#tell_with_proc`, `#tell_mum_with_proc`  methods which use either ampersand block arguments or pass `Proc` objects explicitly.
