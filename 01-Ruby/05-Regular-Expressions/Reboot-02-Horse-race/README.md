@@ -21,7 +21,7 @@ Again let's start with the interface. It's more intuitive.
 
 ## Pseudo-code
 
-How should your program work when your launch it? Write the pseudo code!
+How should your program work when you launch it? Write the pseudo code!
 
 ```ruby
 # interface.rb
