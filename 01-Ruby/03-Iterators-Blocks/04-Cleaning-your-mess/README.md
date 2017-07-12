@@ -22,4 +22,4 @@ The problem is that this code was written by a poor developer, who started codin
 
 ## Specs
 
-Try to refactor the code in `lib/refactor_gym_tonic.rb`, getting rid of useless code.
+Try to refactor the code in `lib/refactor_gym.rb`, getting rid of useless code.
