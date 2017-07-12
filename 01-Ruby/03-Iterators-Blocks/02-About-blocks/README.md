@@ -9,6 +9,26 @@ Although we can store them in `Proc` objects and pass them to a method as standa
 
 ## Specs
 
+### Timer method
+
+Implement a block-timer in `#timer_for` that allows you to track the duration (in seconds) of the execution of any given block. It should work this way:
+
+```ruby
+timer_for do
+  (1..100).each { |i| (1..100000).to_a.shuffle.sort }
+end
+#=> 3.39051
+```
+
+### A custom map
+
+To better understand `yield`, let's try to reimplement the `Enumerable#map` method without actually using it (you can use `Enumerable.each` though!). In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method.
+
+```ruby
+my_map(["john", "ringo", "paul"]) { |name| name.upcase }
+#=> ["JOHN", "RINGO", "PAUL"]
+```
+
 ### HTML generator method
 
 Implement the `#tag` method that builds the HTML tags around the content we give it in the block. For instance:
@@ -17,7 +37,7 @@ Implement the `#tag` method that builds the HTML tags around the content we give
 tag("h1") do
   "Some Title"
 end
-# => "<h1>Some Title</h1>"
+#=> "<h1>Some Title</h1>"
 ```
 
 This method accepts a second optional parameter, enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`.
@@ -26,7 +46,7 @@ This method accepts a second optional parameter, enabling to pass an array with 
 tag("a", ["href", "www.google.com"]) do
   "Google it"
 end
-# => '<a href="www.google.com">Google it</a>'
+#=> '<a href="www.google.com">Google it</a>'
 ```
 
 You may need to know that to include a `"` symbol inside a string delimited by double quotes,
@@ -59,30 +79,6 @@ sum(4)    # => 4
 ```
 
 Here, the second argument is worth `0` if we call `sum` with only one argument.
-
-### Link with Rails
-
-When we cover Rails helper methods, you will see that they do exactly the same as your home-made `#tag` method. They write the HTML for you 😊
-
-### Timer method
-
-Implement a block-timer in `#timer_for` that allows you to track the duration (in seconds) of the execution of any given block. It should work this way:
-
-```ruby
-timer_for do
-  (1..100).each { |i| (1..100000).to_a.shuffle.sort }
-end
-# => 3.39051
-```
-
-### A custom map
-
-To better understand `yield`, let's try to reimplement the `Enumerable#map` method without actually using it (you can use `Enumerable.each` though!). In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method.
-
-```ruby
-my_map(["john", "ringo", "paul"]) { |name| name.upcase }
-# => ["JOHN", "RINGO", "PAUL"]
-```
 
 ## Key learning points
 
