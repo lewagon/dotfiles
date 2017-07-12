@@ -15,7 +15,7 @@ Implement a block-timer in `#timer_for` that allows you to track the duration (i
 
 ```ruby
 timer_for do
-  (1..100).each { |i| (1..100000).to_a.shuffle.sort }
+  100.times { (1..100000).to_a.shuffle.sort }
 end
 #=> 3.39051
 ```
@@ -25,8 +25,11 @@ end
 To better understand `yield`, let's try to reimplement the `Enumerable#map` method without actually using it (you can use `Enumerable.each` though!). In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method.
 
 ```ruby
-my_map(["john", "ringo", "paul"]) { |name| name.upcase }
-#=> ["JOHN", "RINGO", "PAUL"]
+beatles = ["john", "paul", "george", "ringo"]
+my_map(beatles) do |name|
+  name.upcase
+end
+#=> ["JOHN", "PAUL", "GEORGE", RINGO"]
 ```
 
 ### HTML generator method
@@ -65,20 +68,20 @@ end
 
 Cool right?
 
-### Arguments with default value
+#### Arguments with default value
 
 In ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
 
 ```ruby
-def sum(a, b = 0)
-  a + b
+def sum(a, b, c = 0)
+  return a + b + c
 end
 
-sum(3, 6) # => 9
-sum(4)    # => 4
+sum(3, 6, 1) # => 10
+sum(4, 2)    # => 6
 ```
 
-Here, the second argument is worth `0` if we call `sum` with only one argument.
+Here, the thrid argument is worth `0` if we call `sum` with only two arguments.
 
 ## Key learning points
 
