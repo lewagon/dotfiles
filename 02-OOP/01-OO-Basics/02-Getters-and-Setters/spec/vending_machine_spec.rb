@@ -48,7 +48,7 @@ describe "VendingMachine" do
         expect(vending_machine.amount_cents).to eq(100)
       end
 
-      it "should not let you buy a snack if there aren't any snack left! (error path)" do
+      it "should not let you buy a snack if there aren't any snacks left! (error path)" do
         empty_vending_machine.insert_coin(200)
         empty_vending_machine.insert_coin(50)
         empty_vending_machine.buy_snack
