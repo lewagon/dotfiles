@@ -1,7 +1,7 @@
 ## Background & Objectives
 
 The goal of this first challenge is to become familiar with database design,
-*the* crucial skill to make your backend maintainable, flexible and efficient.
+*a* crucial skill to make your backend maintainable, flexible and efficient.
 
 ## Specs
 
