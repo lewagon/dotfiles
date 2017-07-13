@@ -13,7 +13,7 @@ classic_hash[:color]
 # => "red"
 ```
 
-But we want to do that:
+But we want to do this instead:
 
 ```ruby
 uber_hash = UberHash.new

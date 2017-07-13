@@ -1,11 +1,11 @@
-⚠️ There's **no `rake`** for this exercise.
+⚠️ There's **no `rake`** for this exercise. Sorry 😉
 
-We want to enhance our cookbook by finding recipes data from the web. We will use
-[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 LetsCookFrench](http://www.letscookfrench.com), because their markup structure is pretty clean (good candidate for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
+So now we want to enhance our cookbook by finding recipes from the web. We will use
+[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 LetsCookFrench](http://www.letscookfrench.com), because their markup structure is pretty clean (making them good candidates for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
-You will add your HTML scraper feature to your already existing app (from Friday). You can copy paste your old code and put it into today's folder with this command (don't forget to copy the trailing dot!):
+You will add your HTML scraper feature to your already existing app (from Friday). You can copy & paste your old code and put it into today's folder with this command (don't forget to copy the trailing dot!):
 
 ```bash
 cp -r ../../03-Cookbook-Day-One/01-Cookbook/lib .
@@ -13,19 +13,19 @@ cp -r ../../03-Cookbook-Day-One/01-Cookbook/lib .
 
 It will add fill the lib folder with your previous code from which you can start. You can also take the solution from the livecode (cf. Slack).
 
-Run the cookbook, make sure that the basic user actions (list / add / remove) are working!
+Before starting on today, run your pasted cookbook to make sure that the basic user actions (list / add / remove) are working!
 
 ```bash
 ruby lib/app.rb
 ```
 
-## 1 - (User action) Import Recipes from the web
+## 1 - (User action) Import recipes from the web
 
 Here's how this feature should work:
 
 ```
 -- My CookBook --
-What do you wanna do?
+What do you want to do?
 
 1. List all recipes
 2. Add a recipe
@@ -34,7 +34,7 @@ What do you wanna do?
 5. Exit
 
 > 4
-Import recipes for which ingredient?
+What ingredient would you like a recipe for?
 > [fraise|strawberry]
 
 Looking for "[fraise|strawberry]" on [Marmiton|LetsCookFrench]...
@@ -55,12 +55,12 @@ Importing "[Clafouti aux Fraises|Strawberry slushie]"...
 For this new **user action** (hence new _route_), we need to:
 
 1. Ask a user for a keyword to search
-2. Make a HTTP request to the recipe website with this keyword
-3. Parse the HTML document to extract useful recipe info
-4. Display to the user a list of recipes found
-5. Ask the user which recipe he/she wants to import
-6. (Optional) Make a new HTTP request to fetch more info (description, ...) from the recipe page
-7. Add the recipe to the `Cookbook`
+2. Make an HTTP request to the recipe's website with our keyword
+3. Parse the HTML document to extract the useful recipe info
+4. Display a list of recipes found to the user
+5. Ask the user which number recipe they want to import
+6. (Optional) Make a new HTTP request to fetch more info (description, cooking time, etc.) from the recipe page
+7. Add the chosen recipe to the `Cookbook`
 
 ### Analyze the page markup
 
@@ -75,12 +75,11 @@ curl --silent 'http://www.letscookfrench.com/recipes/find-recipe.aspx?aqt=strawb
 
 👆 **This step is really important**!
 
-The reason why we dump the page on our hard drive is that we'll run a Ruby script over it a hundred times to test our code. It will be faster to open the file on disk rather than to make a network call to Marmiton/LetsCookFrench (and get blacklisted).
+The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to Marmiton/LetsCookFrench every time (that would probably also get us blacklisted).
 
-### Parse with Nokogiri
+### Parsing with Nokogiri
 
-Nokogiri is a cool and famous gem to parse HTML documents (not only). Here is how you can use it to parse a document once you know the CSS selectors of the elements you are interested in. CSS selectors will be explained later, but the gist of it is that you
-can select all elements with a given `class` attribute by creating the query `.class`.
+Nokogiri is a cool and famous gem used to parse HTML documents (it does other stuff too!) Here is how you can use it to parse a document once you know the CSS selectors of the elements you are interested in. CSS selectors will be explained later, but the gist of it is that you can select all elements with a given `class` attribute by creating the query `.class`.
 
 For instance, if you want to find all elements with the `student` class in the following HTML, you will use the query `".student"`
 
@@ -157,7 +156,7 @@ Try modifying the web-import feature so that you can import recipes with a given
 
 ## 6 - (Optional) Service
 
-Try to extract the **parsing** logic out of the controller in a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
+Try to extract the **parsing** logic out of the controller and put it into a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
 ```ruby
 class ScrapeLetsCookFrenchService # or ScrapeMarmitonService
@@ -166,11 +165,11 @@ class ScrapeLetsCookFrenchService # or ScrapeMarmitonService
   end
 
   def call
-    # TODO: return a list of `Recipe` built from scraping the web.
+    # TODO: return a list of `Recipes` built from scraping the web.
   end
 end
 ```
 
 ## 7 - (Optional) Web Application
 
-Terminal app are cool, but you know what's cooler? Web applications! Let's try to port our Cookbook to a new web application using the `sinatra` gem. Here's a [101 on Sinatra](https://github.com/lewagon/sinatra-101#readme) to start working on that.
+Terminal apps are cool, but you know what's cooler? Web applications! Let's try to port our Cookbook to a new web application using the `sinatra` gem. Here's a [101 on Sinatra](https://github.com/lewagon/sinatra-101#readme) to start working on that.

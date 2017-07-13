@@ -2,13 +2,13 @@
 
 In `01-Ruby` module, you wrote many Ruby programs involving classes such as `String`, `Fixnum`, `Array`, `Hash`, etc. In fact, you manipulated *instances* of those classes.
 
-For instance, `"world"` is an instance of `String`.
+`String` is a class right? That means that `"john lennon"`, or `"Hello!"` are both instances of `String`.
 
 Using built-in classes is good, but creating your *own* classes is even better!
 
 ## Specs
 
-Implement an `OrangeTree` class that models an orange tree (its birth, life cycle and death).
+Implement an `OrangeTree` class that models the life of an orange tree (its birth, life cycle and death).
 
 To simulate time passing, you will need to implement the following **instance** method:
 
@@ -21,19 +21,19 @@ def one_year_passes!
 end
 ```
 
-- You should be able to measure the tree.
-- You should be able to know if the tree is dead.
-- Each year, the tree should age (it becomes older and taller, and eventually dies).
-- A tree grows 1 meter per year until 10 years old. Then it stops growing.
-- Up until 50 years old, the orange tree should not be dead.
-- After 50 years, the probability of dying increases.
+- You should be able to measure the height of the tree.
+- You should be able to find out if the tree is dead.
+- Each year, the tree should age by one (it becomes older and taller, and eventually dies).
+- A tree grows 1 meter per year until it is 10 years old. Then it stops growing.
+- The orange tree cannot die until it reaches 50 years old.
+- After 50 years, the probability of dying increases each year.
 - No tree can live more than 100 years.
-- A tree will produce 100 fruits a year once it is strictly older than 5 years.
+- A tree will produce 100 fruits a year once it is more than 5 years old.
 - A tree will produce 200 fruits a year when it reaches 10 years old.
 - A tree will not produce once it reaches 15 years old.
-- You should be able to pick a fruit from the tree.
-- You should be able to count how many fruits are left hanging on the tree.
-- Every year fruits which are not picked will fall off.
+- You should be able to pick fruit from the tree.
+- You should be able to find out how many fruits are left hanging on the tree.
+- At the end of each year, the fruits which have not been picked will fall off.
 
 ## Key learning points
 
