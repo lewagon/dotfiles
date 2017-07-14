@@ -35,19 +35,19 @@ What do you want to do?
 
 > 4
 What ingredient would you like a recipe for?
-> [fraise|strawberry]
+> strawberry
 
-Looking for "[fraise|strawberry]" on [Marmiton|LetsCookFrench]...
+Looking for "strawberry" on LetsCookFrench...
 10 results found!
 
-1. [Tarte aux Fraises|Strawberry shortcake]
-2. [Clafouti aux Fraises|Strawberry slushie]
-3. [Fraises à la Chantilly|Strawberry martini]
+1. Strawberry shortcake
+2. Strawberry slushie
+3. Strawberry martini
 [...]
 
 Please type a number to choose which recipe to import
 > 2
-Importing "[Clafouti aux Fraises|Strawberry slushie]"...
+Importing "Strawberry slushie"...
 ```
 
 ### Pseudo-code
