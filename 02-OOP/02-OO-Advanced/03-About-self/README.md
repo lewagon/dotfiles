@@ -18,4 +18,4 @@ There are basically 3 contexts:
 
 ### Chaining with self [OPTIONAL]
 
-In **animal.rb**, we give you a program which runs with errors. We tried to implement method chaining, but we failed miserably.. There is a **very** small fix to make our program work - try to figure it out! **Hint:** this fix involves using `self` (obviously 😊)
+In **animal.rb**, we give you a program which runs with errors. We tried to implement method chaining, but we failed miserably... There is a **very** small fix to make our program work - try to figure it out! **Hint:** this fix involves using `self` (obviously 😊)
