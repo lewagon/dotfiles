@@ -1,6 +1,6 @@
-Let's build a Food Delivery program for a restaurant.
+Time to build a Food Delivery program for a restaurant.
 
-The software will run in **one restaurant** only, so no need to think of a multi-restaurant one (no need for a `Restaurant` model for instance).
+The software is designed for **one restaurant only**, so no need to cater (no pun intended 😉) for a multi-restaurant one (e.g. you don't need a `Restaurant` model).
 
 The main components are:
 
@@ -9,24 +9,24 @@ The main components are:
 - **Meals** that can be ordered
 - **Orders** made by customers, and assigned to a given delivery guy.
 
-## 1 - (`Meal`) What's on the menu?
+## 1 - (`Meal`)
 
-Your restaurant sells food, so you must store somewhere the meals that can be ordered. A meal typically has a name and a price. Write some code to model this, along with the repository which will read/write the meals from a CSV.
+Your restaurant sells food, so you need a way to store the meals that can be ordered. Each meal has a name and a price. Write some code to model this, and create a repository that will read/write the meals from a CSV.
 
-Then let's move to the controller. Here are the user actions we want to implement:
+Then let's move to the controller. Here are the **user actions** we want to implement:
 
-- List all meals available in the restaurant
-- Add a new meal (later, we'll restrict that to the manager role)
+- `List` all meals available in the restaurant
+- `Add` a new meal
 
 The `rake` should help you go through all these steps. Follow your guide!
 
-To launch only meal tests, use `rspec -t meal`
+To launch `rake` for just the meal section, use `rspec -t meal`
 
 Done? Good! Time to `commit` and `push`.
 
 ## 2 - We need a router!
 
-We haven't launch our app code yet. We need a router and a `run` method. Go back to the **Cookbook** code to get some inspiration. Make sure that you can run the two meals-related user actions when launching the program:
+We haven't launched our app code yet. To do this, we need a router and a `run` method. If you're stuck, go back to the **Cookbook** code to get some inspiration. Make sure that you can run the two meal-related user actions when launching the program:
 
 ```bash
 ruby app.rb
@@ -34,12 +34,12 @@ ruby app.rb
 
 Done? Good! Time to `commit` and `push`.
 
-## 3 - (`Customer`) Who's always right?
+## 3 - (`Customer`)
 
-We will maintain a list of all our customers. When a new customer calls to order, we'll first need to add him/her to our list. A customer has a name and an address. Work on the model, the repository to store the CSV (it's a different file than `meals.csv`!) and finally the controller to implement the following user actions:
+We need to keep a list of all our customers. When a new customer calls to order, the first thing we need to do is add them to our list. Each customer has a name and an address. Work on the model, the repository to store the CSV (it's a different file than `meals.csv`!) and finally the controller to implement the following user actions:
 
-- List all customers available in the restaurant
-- Add a new customer (later, we'll restrict that to the manager role as well)
+- `List` all customers available in the restaurant
+- `Add` a new customer
 
 Once your controller methods are implemented, add them to the router! Make sure your 4 user actions work before moving on to the next feature.
 
@@ -47,17 +47,17 @@ Once your controller methods are implemented, add them to the router! Make sure 
 ruby app.rb
 ```
 
-To launch only customer tests, use `rspec -t customer`
+To launch `rake` for just the customer tests, use `rspec -t customer`
 
-Done? Good! Time to `commit` and `push`.
+Done? Boom! Don't forget to `commit` and `push`.
 
 ## 4 - (Optional) Inheritance to the rescue
 
-When you look at `MealRepository` and `CustomerRepository`, don't you see similarities? We want to stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), so time to introduce a parent class, `BaseRepository`, which will hold the common behavior.
+`MealRepository` and `CustomerRepository` have a lot of similarities don't they? We should always stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), so it's time to introduce a parent class, `BaseRepository`, which will hold all of the shared behavior.
 
-Reminder: as it's an optional section, you can skip it and come back to it later.
+Reminder: this is an optional section, so you can skip it and come back to it later if you want.
 
-## 5 - (`Employee`) Who's working here?
+## 5 - (`Employee`)
 
 The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeeRepository` from a CSV file that we fill manually (no need for an `add` action).
 
@@ -69,9 +69,9 @@ id,username,password,role
 2,john,secret,delivery_guy
 ```
 
-With that information, we can implement a **login** logic in our app to have two menus in the router depending on the user role: a menu for the manager, and a menu for the delivery guy (with less user actions available).
+With that information, we can implement a **login** logic in our app to have two dashboards in the router depending on the user role: one dashboard for the manager, and another dashboard for the delivery guy (with fewer user actions available).
 
-To handle that, we'll introduce a notion of **session**. At the router level, we'll store the logged in user in a session.
+To handle that, we'll introduce the notion of a **session**. At the router level, we'll store the logged-in user in a session.
 
 The sign sequence should go like this:
 
@@ -85,26 +85,26 @@ Wrong credentials... Try again!
 paul
 > password?
 secret
-Welcome paul!
+Welcome Paul!
 ```
 
-Now when you run the food delivery app, the first thing you can do is to **sign in**, and then the menu printed to you should be **dependent on your role**:
+Now when you run the food delivery app, the first thing you can do is to **sign in**. The dashboard that you then see should be **dependent on your role**:
 
 ```bash
 ruby app.rb
 ```
+Optional: At the moment, a user's password is stored straight in the CSV and is visible to anyone. Is that a good idea? What could we do instead?
 
 To launch only employee tests, use `rspec -t employee`
 
-Done? Good! Time to `commit` and `push`.
+Finished? Great work :) Remember to `commit` and `push`.
 
-Optional: Their password would be stored in clear in the CSV / display in clear, is that a good idea? What could we do?
 
 ## 6 - (`Order`) Time to link all the models!
 
-An order is taken for a given **customer**, a given **meal** (we'll simplify to say that an order is **just one meal**) and assigned to a given **delivery guy**. Moreover, the `Order` model should store the info that it has been delivered (or not).
+An order is taken for a **customer**, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **delivery guy**. Finally, the `Order` model needs to record whether or not the meal has been delivered.
 
-That's where our models become connected together. Write the `Order` model class and its repository.
+Here's where our models link up. First, write the `Order` model class and its repository.
 
 Then, make sure that the following **user stories** are implemented in your program:
 
@@ -118,11 +118,11 @@ Then, make sure that the following **user stories** are implemented in your prog
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
 
-To launch only order tests, use `rspec -t _order`
+Again, to launch just the order tests, use `rspec -t _order`
 
-## 7 - (Optional) - Destroy actions
+## 7 - (Optional) - `Destroy` actions
 
-We did not talk about **deleting** stuff here. What happens if you want to implement these new user stories?
+We haven't done any **deleting** yet. How would you implement these additional user stories?
 
 - As a manager, I can delete a meal
 - As a manager, I can delete a customer

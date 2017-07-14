@@ -2,7 +2,7 @@
 
 - understand the difference between a class method and an instance method.
 
-When using a gem or a module of the standard library, you will often have to use class methods, which are **CALLED DIRECTLY ON THE CLASS**, not on instances of the class. Consider the following lines in IRB
+When using a gem or a module of the standard library, you will have to use class methods that are **CALLED DIRECTLY ON THE CLASS**, not on instances of the class. Consider the following lines in IRB:
 
 ```ruby
 "this is a string object".upcase
@@ -12,7 +12,7 @@ a_time_object = Time.now
 a_time_object.hour
 ```
 
-Do you clearly distinguish one method that differs from the others in the examples above? Make sure you can find the intruse!
+Can you spot the one method that differs from the others? Make sure you can find the intruder!
 
 ## Specs
 - Create a `Restaurant` class with two instance variables, `@city` and `@name`, set with the two parameters of `initialize`.
@@ -29,10 +29,10 @@ Restaurant.filter_by_city(restaurants, "london") # => [ #<Restaurant:0x007f9a43b
 
 ## Key learning points
 
-Are you able to answer the following questions (go into the doc if necessary)?
+Are you able to answer the following questions? (Go into the doc if necessary)
 
 - Among `#rate` and `.filter_by_city`, which one is an instance method? Which one is a class method?
-- For each of the following methods, is it an instance method or a class method?
+- Look at the list below. Which ones are which?
 
 ```ruby
 Date.today
@@ -42,4 +42,4 @@ Nokogiri::HTML::Document.parse (see http://www.rubydoc.info/gems/nokogiri/Nokogi
 Array#shuffle
 ```
 
-- **optional:** Between the `new` and `initialize` methods. Which one is an instance method? Which one is a class method? How do they articulate together? Which one is sub-calling the other?
+- **optional:** Looking at the `new` and `initialize` methods, which one is an instance method? Which one is a class method? How do they relate to each other? Which one is sub-calling the other?
