@@ -4,7 +4,7 @@ Good object-oriented design relies on understanding how much of an object to **e
 
 Exposing an object means making its properties (internal data) available to the "public", i.e. other objects in the program or even other programs. Together, these public methods make up an object's **public interface**. The methods which are private (accessible only within the object itself) make up its **private interface**.
 
-As a general rule, you should only expose as much of an object as is needed for other objects to interact with it.**Don't design permeable objects if they don't need to be permeable**
+As a general rule, you should only expose as much of an object as is needed for other objects to interact with it. **Don't design permeable objects if they don't need to be permeable**
 
 ## Objectives
 
