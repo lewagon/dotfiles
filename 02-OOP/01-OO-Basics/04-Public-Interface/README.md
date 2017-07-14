@@ -86,7 +86,7 @@ require_relative 'transaction'
 
 - What is the public interface of a class?
 - What is the difference between a getter and a setter?
-- What is the to_s method used for?
+- What is the `to_s` method used for?
 - What are default arguments? How do you use them?
 - In `bank_account.rb` what is happening in lines 2-3 and line 19?
 
