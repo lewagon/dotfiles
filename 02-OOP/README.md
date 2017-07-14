@@ -17,7 +17,7 @@ They are also key for structuring our code (and therefore building smart softwar
 
 ### `04-Cookbook-Day-Two` (Monday)
 
-Let's rehearse the MVC pattern during a recap live-code (no slides, just a demo from the lead coach), and then finish the cookbook app you all started on Friday. For the speedy ones who have finished early, try to adapt your cookbook manager into a web-app using the Sinatra gem. (Ask a teacher to give you a short introduction to Sinatra before you start)
+Let's rehearse the MVC pattern during a recap live-code (no slides, just a demo from the lead coach), and then finish the cookbook app you all started on Friday. For the speedy ones who have finished early, try to adapt your cookbook manager into a web-app using the Sinatra gem. (Ask a teacher to give you a short introduction to Sinatra before you start and have a look at this [tutorial](https://github.com/lewagon/sinatra-101))
 
 ## Dealing with data models (2 days)
 
