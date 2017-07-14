@@ -7,12 +7,8 @@ The rule is simple. Used inside an instance method, `self` will point to the obj
 There are basically 3 contexts:
 
 1. The global or "main" context, which you can see by typing `self.inspect` in IRB console (**try it**)
-
 2. The Class or Module context where the `self` keyword represents a Class or a Module
-
 3. The Object context where `self` represents an **instance** of a class.
-
-
 
 ## Specs
 
