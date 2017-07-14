@@ -15,21 +15,21 @@ rake db:migrate
 
 ## Specs
 
-### Add some validations to the `User` model
+### Add validations to the `User` model
 
 - A user should have a `username`
-- A user should have an `email`, and a valid one
-- Users should have unique `username`s
+- A user should have a **valid** `email`
+- Each should have a unique `username`
 
-### Add some validations to the `Post` model
+### Add validations to the `Post` model
 
 - A post should have a `name`, `url` (in the right format!) and a user
 - A post `name` should be at least 5 characters long
-- Posts should have unique `name`s (case insensitive uniqueness)
+- Each post should have a unique `name` (case insensitive)
 
 ### Bonus: Callbacks
 
-We did not talk about this subject in the lecture, but you need to know that callbacks exist in ActiveRecord. **A callback is a piece of code that is called when an event is fired**. We will heavily use this notion when programming with jQuery later in the bootcamp.
+We didn't cover this in the lecture, but you need to know that callbacks exist in ActiveRecord. **A callback is a piece of code that is called when an event is fired**. We will use this concept a lot when programming with jQuery later in the bootcamp.
 
 Example: when a user instance is about to be validated, call a method to do some cleanup beforehand. For instance, we may want to put the `username` in lowercase.
 
@@ -53,7 +53,7 @@ Implement a callback to strip the email before validation.
 
 Implement a callback triggered after a user has been created to send a **welcome email** to this new user. Read about the [available callbacks](http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks) to figure out which callback to use.
 
-Right now we don't have Rails, not utilities gems like [letter_opener](https://github.com/ryanb/letter_opener), so we'll simulate sending an email with the following method call:
+Right now we don't have Rails or utilities gems like [letter_opener](https://github.com/ryanb/letter_opener), so we'll simulate sending an email with the following method call:
 
 ```ruby
 FakeMailer.instance.mail('boris@lewagon.org', 'Welcome to HN!')

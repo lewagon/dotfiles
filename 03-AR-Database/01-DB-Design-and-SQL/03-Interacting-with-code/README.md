@@ -8,7 +8,7 @@ To install the gem on your computer, run this in the terminal:
 gem install sqlite3
 ```
 
-The goal of this challenge is to query the database **from our Ruby code**.
+The goal of this challenge is to talk to the database **from our Ruby code**.
 
 ## Specs
 

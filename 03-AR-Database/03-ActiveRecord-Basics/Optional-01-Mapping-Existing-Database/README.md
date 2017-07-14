@@ -1,18 +1,18 @@
 ## Background & Objectives
 
 Sometimes, you will want to work with an existing database from an existing project.
-You would like to write some ruby code to manipulate data, and use ActiveRecord, instead
-of writing your SQL queries.
+You might need to write some ruby code to manipulate data using ActiveRecord, instead
+of writing SQL queries.
 
 ## Specs
 
-- Open the `db/jukebox.db` database with the `sqlite3` binary and creates all
+- Open the `db/jukebox.db` database with the `sqlite3` binary and create all
 the necessary models in `app/models` by browsing the `.schema`. **Do not** run
-the tests before having created the models with the `has_many` and `belongs_to`
-relations based on the schema foreign keys. The specs would give you too much clues.
-- Once your models are created, you must add some methods and validations.
+the tests before you've created the models with the `has_many` and `belongs_to`
+relationships based on the schema foreign keys. The specs will give you too many clues.
+- Once your models are created, add some methods and validations.
 - Open the `app/queries.rb` file and fetch the relevant results from database with
-active record queries (no SQL allowed!)
+ActiveRecord queries (no SQL allowed!)
 
 ## Further suggestions
 

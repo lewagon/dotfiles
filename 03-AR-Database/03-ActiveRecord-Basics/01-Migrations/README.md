@@ -5,7 +5,7 @@
 
 ## Setup
 
-Don't forget to run in your terminal:
+Don't forget to run this in your terminal:
 
 ```bash
  gem install activerecord
@@ -13,12 +13,11 @@ Don't forget to run in your terminal:
 
 ## Specs
 
-This exercise focuses on **migrations** only. We won't use any model at this point. So you will have to code the migrations to create your database schema (remember, the schema stands for DB's **structure**, i.e. tables and columns, **not data**). We want to create the database schema which will host a clone of [Hacker News](https://news.ycombinator.com).
-It's the famous website to share links about Technology & Startup.
-We need a `posts` table storing posts (with a title and a URL).
+This exercise is focused on **migrations**. No models yet, so you'll have to code the migrations to create your database schema (remember, the schema is the **structure** of the DB, i.e. tables and columns, **not data**). We want to create the database schema which will host a clone of [Hacker News](https://news.ycombinator.com).
+It's the famous website to share links about Tech & Startups.
+We need a `posts` table to store the posts (with a title and a URL).
 
-In `db/migrate` we created a `20141025152200_create_posts.rb` file, containing an Active Record migration class. Migration files are always in the following format `yyyymmddhhmmss_migration_task_name.rb`. The timestamp in the file is really important for `rake db:migrate` to know which migrations
-it has not run yet.
+In `db/migrate` we created a `20141025152200_create_posts.rb` file, containing an Active Record migration class. Migration files are always in the following format `yyyymmddhhmmss_migration_task_name.rb`. The timestamp in the file is really important - it allows `rake db:migrate` to tell which migrations it has not run yet.
 
 ### 1. Migration to create a table
 
@@ -44,19 +43,15 @@ Can you guess what it's needed for?
 
 ### 2. Migration to update a table
 
-Go back to the lecture and read the [ActiveRecord Migrations documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). It explains how to easily generate migrations but right now we are not in Rails so we'll have to create manually our migration files.
+Go back to the lecture and read the [ActiveRecord Migration documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). It shows you how easy it is to do migrations on Rails. But we haven't got to Rails yet ;) so we'll have to create our migration files manually.
 
-Use the task `rake db:timestamp` to get a correct timestamp for your migration file name.
+Use the task `rake db:timestamp` to get a correct timestamp for your migration file name. Write a new migration in a new file `db/migrate/` to add a new column to the `posts` table. Call the column `votes` and make it an `integer`.
 
-Write a new migration, in a new file in `db/migrate/` to add a new column to the `posts` table.
-
-This column will be called `votes` and will be of type `integer`.
-
-Remember what we said about migration filenames, the format is **really** important.
+Remember what we said about migration filenames! The format is **really** important.
 
 Then run this migration with `rake db:migrate`
 
 ## Key learning points
 
-You should have understood by now that migrations are related to changes in the structure of the schema
-(i.e. what are the tables and their columns).
+By now, you should have understood that migrations are related to **changes in the structure of the schema**
+(i.e. the tables and their columns).

@@ -1,7 +1,7 @@
 ## Background & Objectives
 
-The `faker` gem is nice, but what if we could directly import some of the **real** HackerNews
-data? It's possible, as they now have an [API](https://github.com/HackerNews/API).
+The `faker` gem is cool, but what if we could directly import some of the **real** HackerNews
+data? Well, you guessed it, it's possible! We can do this thanks to their [API](https://github.com/HackerNews/API).
 
 ## Setup
 
@@ -12,7 +12,7 @@ the HackerNews API. First, install the gem on your laptop:
 gem install rest-client
 ```
 
-Again, you can reuse this sequence to test your seed.
+Again, you can reuse the `drop` `create` `migrate` `seed` sequence to test your seed.
 
 ```bash
 rake db:drop db:create db:migrate db:seed
