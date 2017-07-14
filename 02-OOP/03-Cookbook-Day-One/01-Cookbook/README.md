@@ -14,7 +14,7 @@ If you are interested, the following concepts are also important in Software Arc
 
 - [Single Responsibility Principle](http://en.wikipedia.org/wiki/Single_responsibility_principle)
 - [Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns)
- 
+
 Please start with a paper and pen to identify your components and their responsibilities.
 
 ## Specs
