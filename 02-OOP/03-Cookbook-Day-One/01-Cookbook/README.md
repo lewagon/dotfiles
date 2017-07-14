@@ -10,11 +10,6 @@ You will build this app using the MVC **pattern**, also used in Rails:
 - View: this is the place where we **display information** to the user (`puts`) and **ask for information** from the user (`gets`)
 - Controller: it will fetch and store data of the Model, and tell the view to show or gather data to and from the user.
 
-If you are interested, the following concepts are also important in Software Architecture:
-
-- [Single Responsibility Principle](http://en.wikipedia.org/wiki/Single_responsibility_principle)
-- [Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns)
-
 Please start with a paper and pen to identify your components and their responsibilities.
 
 ## Specs
