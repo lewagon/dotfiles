@@ -72,9 +72,9 @@ Read about the [single responsibility principle](http://en.wikipedia.org/wiki/Si
 - Is it the responsibility of the bank account to keep track of the date of each transaction or to print each transaction nicely?
 
 Here comes the time where you might delegate these responsibilities to another `Transaction` class which would be responsible for:
-- keeping track of the date of the deposit or withdrawal, and the amount
-- printing this info in a user-friendly fashion
-- ..you could even think of additional data for this class such as a `@message` instance variable to store the reference string for each withdrawal/deposit ("car rental", "ibiza weekend", "christmas shopping"...)
+- Keeping track of the date of the deposit or withdrawal, and the amount
+- Printing this info in a user-friendly fashion
+- You could even think of additional data for this class such as a `@message` instance variable to store the reference string for each withdrawal/deposit ("car rental", "ibiza weekend", "christmas shopping", etc.)
 
 After implementing your `Transaction` class, you will have to change your `BankAccount` class so that its transactions arrays store `Transaction` objects instead of numbers. You will also have to load the *transaction.rb* file in *account.rb* with
 
