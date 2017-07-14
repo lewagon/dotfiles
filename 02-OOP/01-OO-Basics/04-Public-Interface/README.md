@@ -39,7 +39,8 @@ We can use this method for our bank account. Once implemented, it will look like
 account = BankAccount.new("John Lennon", "FR14-2004-1010-0505-0001-3M02-606", 200, "yoko")
 
 puts account
-# this is our to_s method =>  Owner: John Lenon - IBAN: FR14**************606 - Balance: 200 euros
+# the puts will call the `to_s` method on the object
+# =>  Owner: John Lenon - IBAN: FR14**************606 - Balance: 200 euros
 ```
 
 Implement your `#to_s` method, which also needs to call your partial IBAN method.
