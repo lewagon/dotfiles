@@ -6,15 +6,15 @@ Let's combine the power of enumerables (`#each`, `#map`, etc.) and blocks (and `
 
 ### Size Splitter
 
-Implement a first method `size_splitter` which takes two parameters: an array, and a integer (the `size`). We will assume that the array only contains words, e.g. `String`, and that the arbitrary rule is to form two groups: the first one with words of the given size (second parameter of the method), and the other group with all the other words.
+Implement a first method `size_splitter` which takes two parameters: an array, and a integer (the `size`). We will assume that the array only contains words, e.g. `Strings`, and that the arbitrary rule is to form two groups: the first one with words of the given size (second parameter of the method), and the other group with all the other words.
 
 The `size_splitter` method should return an array of two arrays - the two groups defined above - with the contents sorted **alphabetically**.
 
 ```ruby
-words = %w(dog data ask win two beer)
+words = %w(dog data ask my win two beer as)
 result = size_splitter(words, 3)
 
-# result => [["ask", "dog", "two", "win"], ["beer", "data"]]
+# result => [["ask", "dog", "two", "win"], ["as", "beer", "data", "my"]]
 ```
 
 ### (Advanced) Block Splitter
