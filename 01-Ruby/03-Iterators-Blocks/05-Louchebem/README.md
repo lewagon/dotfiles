@@ -28,4 +28,5 @@ Did you know that popular French expressions like "larfeuille", "loufiah", "louc
 
 ## Further suggestions & resources
 
+- We all know the `#split` method by now, but did you know you can also pass a string pattern as an argument of the `split` method? Don't worry, we will have a look at Regular Expressions soon but for now, let's try `"hello, friend!!".split(/\b/)` in irb, can you see why it could be useful for the enhancement part of the exercise? 😉
 - You pseudo code should follow [these principles](http://www.cs.cornell.edu/courses/cs211/2000fa/materials/using_pseudo_code.htm)
