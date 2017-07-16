@@ -18,19 +18,19 @@ describe Controller do
   end
 
   describe '#list' do
-    it 'should implements a method to list cookbook recipes' do
+    it 'should implement a method to list cookbook recipes' do
       expect(controller).to respond_to :list
     end
   end
 
   describe '#create' do
-    it 'should implements a method to create a cookbook recipe' do
+    it 'should implement a method to create a cookbook recipe' do
       expect(controller).to respond_to :create
     end
   end
 
   describe '#destroy' do
-    it 'should implements a method to destroy a cookbook recipe' do
+    it 'should implement a method to destroy a cookbook recipe' do
       expect(controller).to respond_to :destroy
     end
   end
