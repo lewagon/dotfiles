@@ -8,7 +8,7 @@ a sample database called `jukebox.sqlite` that we give you
 
 ### Setup
 
-First test if you have sqlite3 installed on your computer:
+First test just to see if you have sqlite3 installed on your computer:
 
 ```bash
 sqlite3 --version
@@ -25,7 +25,7 @@ You can open the database we provided you to make some queries on it:
 sqlite3 lib/db/jukebox.sqlite
 ```
 
-You are in the interactive sqlite3 console and you can write your SQL queries to the database.
+You are now in the interactive sqlite3 console and you can write your SQL queries to the database.
 You can exit the sqlite3 console with `.quit` or `CTRL+D`.
 
 If you are confused with the command line, you can download [SQLiteBrowser](http://sqlitebrowser.org)
@@ -33,11 +33,11 @@ and open the `jukebox.sqlite` file with it.
 
 ## Specs
 
-The goal of this exercise is to explore the Jukebox database, and understand its schema. Answer the following questions.
+The goal of this exercise is to explore the Jukebox database, and understand its schema. Answer the following questions:
 
 1. What is the database schema? (i.e what are the tables, and the relations between tables)
 2. Use SQL Design tool to draw the schema of this database.
-3. How many rows each table contains? What are the column names for each table?
+3. How many rows does each table contain? What are the column names for each table?
 
 Submit your SQL schema in XML format in `jukebox.xml`.
 

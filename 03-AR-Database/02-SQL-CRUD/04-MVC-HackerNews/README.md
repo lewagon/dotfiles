@@ -1,11 +1,11 @@
 ## Background & Objectives
 
-In the previous exercises, we carefully built method directly into our
-model class, `Post`. This way, we don't need any `Repository` class like
-when we were storing data into a CSV, the model class handles directly
-the relation with the database. Great isn't it?
+In the previous exercises, we built methods directly in our
+model class, `Post`. It meant we didn't need a `Repository` class like
+when we were storing data into a CSV, because the model class handles
+the relation with the database directly. Awesome right?
 
-We will now use this new code into a regular MVC architecture.
+The next step is to insert our new code into the proper MVC architecture.
 
 ## Specs
 
@@ -15,14 +15,14 @@ Launch the ruby app with:
 ruby app.rb
 ```
 
-It will instantiate a router and start the app. The router is provided,
-you just have to code the controller methods into the `PostsController` class.
-Before that, gather the code you wrote in the previous exercises into the
+It will create a router and start the app. The router is provided,
+you just have to code the controller methods in the `PostsController` class.
+Before that, put all the code you wrote in the previous exercises into the
 `Post` class.
 
-There is no specs for this exercise (still, you should rake for `rubocop`),
-so make sure all your controller method work by launching the app in your terminal.
-To test the persistence, you can restart your app. You can also directly look
+There are no specs for this exercise (still, you should rake for `rubocop`),
+so you'll need to test your controller methods by launching the app in your terminal.
+To make sure things are saving, restart your app and check they are still there. You can also directly look
 at the database file `db/posts.db` with the `sqlite3` terminal utility or
 a tool like SQLite Browser.
 
@@ -32,5 +32,5 @@ We provide you with the script `reset_db.rb` that you can run with:
 ruby reset_db.rb
 ```
 
-It will drop all data from the database and recreate the schema. You should launch
-it at least once before launching `ruby app.rb` so that the database is created.
+It will drop all data from the database and re-create the schema. You should launch
+it once before launching `ruby app.rb` so that the database is created.
