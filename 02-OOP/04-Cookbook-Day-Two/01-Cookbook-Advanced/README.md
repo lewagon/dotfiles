@@ -66,7 +66,7 @@ For this new **user action** (hence new _route_), we need to:
 
 First, let's have a look at how we'll retrieve information from the Web.
 
-You can save an HTML document on your computer through `curl` command. Get the following HTML page saved as a `.html` file in your working directory by running one of these two commands:
+You can save an HTML document on your computer through `curl` command. Get the following HTML page saved as a `.html` file in your working directory by running one of these two commands in the terminal:
 
 ```bash
 curl --silent 'http://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
