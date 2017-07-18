@@ -84,11 +84,11 @@ Now, let's say you want to improve your calorie counter, so that it can accept a
       <td>Cheese Burger, French Fries, Coca Cola</td>
     </tr>
     <tr>
-      <td>Best of Big Mac</td>
+      <td>Best Of Big Mac</td>
       <td>Big Mac, French Fries, Coca Cola</td>
     </tr>
     <tr>
-      <td>Best of McChicken</td>
+      <td>Best Of McChicken</td>
       <td>McChicken, Salad, Sprite</td>
     </tr>
   </tbody>

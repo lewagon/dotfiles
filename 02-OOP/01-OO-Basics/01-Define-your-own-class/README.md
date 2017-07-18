@@ -16,8 +16,7 @@ touch lib/restaurant.rb
 ## Convention
 
 **Pay attention** to your class file and your class name. Remember, `lower_snake_case(.rb)` for file name,
-`UpperCamelCase` for class name in the class definition. Bother are going to be singular! If you want to model restaurants, you'll use a `Restaurant` class, not `Restaurants`! Remember, the class is the mold to produce
-several restaurants (with `new`), so it should be singular!
+`UpperCamelCase` for class name in the class definition. **Both must be singular!** Remember, the class is the structure that allows you to create lots of different restaurants (with `.new`).
 
 ### What are the inner properties of your objects?
 

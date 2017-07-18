@@ -1,24 +1,24 @@
 Make sure you execute the commands above 👆
 
-Then let's copy the code from yesterday.
+Then let's copy the code from yesterday:
 
 ```bash
 cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
 ```
 
-Then, check that the code working from yesterday still does:
+Then - before you start - check that it still works:
 
 ```bash
 rake
 ```
 
-You should continue with your own code and keep adding features to the router / making the `rake` greener. Of course, you can have a look at [this morning's code](https://github.com/lewagon/food-delivery/tree/lecture-day-two) to get some inspiration.
+Now continue with your own code and keep adding features to the router / making the `rake` greener. Of course, you can have a look at [this morning's code](https://github.com/lewagon/food-delivery/tree/lecture-day-two) to get some inspiration.
 
 ---
 
 [...]
 
-## 5 - (`Employee`) Who's working here?
+## 5 - (`Employee`)
 
 The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeeRepository` from a CSV file that we fill manually (no need for an `add` action).
 
@@ -30,9 +30,9 @@ id,username,password,role
 2,john,secret,delivery_guy
 ```
 
-With that information, we can implement a **login** logic in our app to have two menus in the router depending on the user role: a menu for the manager, and a menu for the delivery guy (with less user actions available).
+With that information, we can implement a **login** logic in our app to have two dashboards in the router depending on the user role: one dashboard for the manager, and another dashboard for the delivery guy (with fewer user actions available).
 
-To handle that, we'll introduce a notion of **session**. At the router level, we'll store the logged in user in a session.
+To handle that, we'll introduce the notion of a **session**. At the router level, we'll store the logged-in user in a session.
 
 The sign sequence should go like this:
 
@@ -46,26 +46,26 @@ Wrong credentials... Try again!
 paul
 > password?
 secret
-Welcome paul!
+Welcome Paul!
 ```
 
-Now when you run the food delivery app, the first thing you can do is to **sign in**, and then the menu printed to you should be **dependent on your role**:
+Now when you run the food delivery app, the first thing you can do is to **sign in**. The dashboard that you then see should be **dependent on your role**:
 
 ```bash
 ruby app.rb
 ```
+Optional: At the moment, a user's password is stored straight in the CSV and is visible to anyone. Is that a good idea? What could we do instead?
 
 To launch only employee tests, use `rspec -t employee`
 
-Done? Good! Time to `commit` and `push`.
+Finished? Great work :) Remember to `commit` and `push`.
 
-Optional: Their password would be stored in clear in the CSV / display in clear, is that a good idea? What could we do?
 
 ## 6 - (`Order`) Time to link all the models!
 
-An order is taken for a given **customer**, a given **meal** (we'll simplify to say that an order is **just one meal**) and assigned to a given **delivery guy**. Moreover, the `Order` model should store the info that it has been delivered (or not).
+An order is taken for a **customer**, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **delivery guy**. Finally, the `Order` model needs to record whether or not the meal has been delivered.
 
-That's where our models become connected together. Write the `Order` model class and its repository.
+Here's where our models link up. First, write the `Order` model class and its repository.
 
 Then, make sure that the following **user stories** are implemented in your program:
 
@@ -79,11 +79,12 @@ Then, make sure that the following **user stories** are implemented in your prog
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
 
-To launch only order tests, use `rspec -t _order`
+Again, to launch just the order tests, use `rspec -t _order`
 
-## 7 - (Optional) - Destroy actions
+## 7 - (Optional) - `Destroy` actions
 
-We did not talk about **deleting** stuff here. What happens if you want to implement these new user stories?
+We haven't done any **deleting** yet. How would you implement these additional user stories?
 
 - As a manager, I can delete a meal
 - As a manager, I can delete a customer
+
