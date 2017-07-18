@@ -73,7 +73,7 @@ describe "OrderRepository", :_order do
   end
 
   describe "#initialize" do
-    it "should take one argument: the CSV file path to store orders, and 3 repository instances for meal, employee and customer" do
+    it "should take four arguments: the CSV file path to store orders, and 3 repository instances for meal, employee and customer" do
       expect(OrderRepository.instance_method(:initialize).arity).to eq(4)
     end
 
