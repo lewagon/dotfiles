@@ -4,19 +4,6 @@
 - It should take you all the afternoon to finish it.
 - Validate each step of the challenge with the teacher with an intermediate live-code 💻 to correct each step.
 
-## Setup
-
-Let's create a folder for this new challenge:
-
-```bash
-cd ~/code/<user.github_nickname>/reboot
-mkdir instacart
-cd instacart
-touch interface.rb
-```
-
-Again, let's start with the interface.
-
 ## Pseudo-code
 
 How should your program work when your launch it? **Let's write the pseudo code**
@@ -33,12 +20,13 @@ How should your program work when your launch it? **Let's write the pseudo code*
 
 **Can you make the pseudo-code above a bit more detailed?**
 
-## Step 1 - dumb shopping 🛍
+## Step 1 - Dumb shopping 🛍
 
 Here is the first version of our program:
 
-```bash
+```
 ruby interface.rb
+
 > --------------------
 > Welcome to Instacart
 > --------------------
@@ -72,8 +60,9 @@ ruby interface.rb
 
 ## Step 2 - Adding quantity 🛍🛍
 
-```bash
+```
 ruby interface.rb
+
 > --------------------
 > Welcome to Instacart
 > --------------------
@@ -109,8 +98,9 @@ ruby interface.rb
 
 Now let's push the program further and handle our stock (with availability):
 
-```bash
+```
 ruby interface.rb
+
 > --------------------
 > Welcome to Instacart
 > --------------------

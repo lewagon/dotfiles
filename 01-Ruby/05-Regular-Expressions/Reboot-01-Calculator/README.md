@@ -6,28 +6,9 @@ This challenge should take you **30 minutes 🕒**
 2. Then spend 10 minutes on your own to try and figure out the solution.
 3. You'll then correct it with the teacher (again as a live-code 💻).
 
-## ReBoot setup
-
-For Reboot challenges we will not use `rake` and we will create a new folder for every new challenge and start coding from scratch. Sometimes that's the best way to learn.
-
-First, let's create a `reboot` folder for these 2 days:
-
-```bash
-mkdir ~/code/<user.github_nickname>/reboot
-cd ~/code/<user.github_nickname>/reboot
-```
-
-Now let's create a folder for the first challenge:
-
-```bash
-mkdir calculator
-cd calculator
-touch interface.rb
-```
+## Pseudo-code
 
 We will always start with the `interface.rb` file. That's the file you will launch (with the command `ruby interface.rb`) to run your program. It's always intuitive to start with the interface and ask yourself **"What should happen when I launch my program?"**
-
-## Pseudo-code
 
 Always kickstart a challenge altogether with the teacher and write the *pseudo-code*. For example:
 
@@ -42,9 +23,9 @@ Always kickstart a challenge altogether with the teacher and write the *pseudo-c
 # 5. etc.
 ```
 
-**Writing the pseudo-code is 80% of the job!** Then translating english into ruby is really the easy part. Adopt this pseudo-code methodology for every challenge of the Reboot session.
+**Writing the pseudo-code is 80% of the job!** Then translating english into ruby is really the easy part. Adopt this pseudo-code methodology for **every** challenge of the Reboot session.
 
-## Dumb calculator
+## Setup 1 - Dumb calculator
 
 Build a simple calculator with a command-line UI:
 
@@ -53,25 +34,25 @@ Build a simple calculator with a command-line UI:
 
 It should work like this:
 
-```bash
+```
 ruby interface.rb
 
 > Enter a first number:
 > 6
 > Enter a second one:
 > 8
-> Choose operation [+][-][x][/]
-> x
+> Choose operation [+][-][*][/]
+> *
 > Result: 48
 ```
 
-## Make it loop
+## Step 2 - Make it loop
 
 It's a bit painful to re-launch your calculator every time your program ends.. Imagine a real calcultor that just switched off after every operation 😊
 
 Make it loop:
 
-```bash
+```
 ruby interface.rb
 
 > Enter a first number:
@@ -90,7 +71,7 @@ ruby interface.rb
 > Result: 53
 ```
 
-## Refactor your code
+## Step 3 - Refactor your code
 
 - What's the code that is really part of the UI (`gets` and `puts`)?
 - What's the code that does not belong to the interface?
