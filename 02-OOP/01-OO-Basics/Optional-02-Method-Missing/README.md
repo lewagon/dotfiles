@@ -8,7 +8,7 @@ We want to create a `UberHash` class which will be able to store anything. A cla
 
 ```ruby
 classic_hash = Hash.new
-classic_hash[:color] = red
+classic_hash[:color] = "red"
 classic_hash[:color]
 # => "red"
 ```
