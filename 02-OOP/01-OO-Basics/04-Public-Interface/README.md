@@ -25,8 +25,8 @@ The public interface of the class, i.e. the set of all its public methods, is ca
 * Access owner's full name and balance
 * Access only **partial** IBAN, e.g. IBAN: FR14**************606
 * Print partial account info in an user-friendly way
-* Print transaction history if a password is provided
 * Withdraw or deposit money
+* Print transaction history if a password is provided
 
 ### The `to_s` method
 
