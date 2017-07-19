@@ -1,6 +1,10 @@
 ## Setup
 
-Copy the contents of your `body` tag from the previous exercice into this one.
+Again, let's continue building our profile page and copy our previous profile in the current directory of this challenge:
+
+```bash
+cp -r ../03-Box-model/profile .
+```
 
 ## Background & Objectives
 
