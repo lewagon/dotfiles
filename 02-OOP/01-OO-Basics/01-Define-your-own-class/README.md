@@ -13,6 +13,8 @@ For instance, if you chose to model Restaurants, create the `restaurant.rb` file
 touch lib/restaurant.rb
 ```
 
+You can safely delete the `.gitkeep` file. This file is only there so that git sees the otherwise empty folder. 
+
 ## Convention
 
 **Pay attention** to your class file and your class name. Remember, `lower_snake_case(.rb)` for file name,
