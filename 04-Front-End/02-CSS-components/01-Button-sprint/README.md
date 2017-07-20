@@ -10,9 +10,7 @@ Work on three different button designs (two given by us, one of your choice). He
 
 Your job is now to write the associated CSS in `button.css`
 
-## Further suggestions & resources
-
-### Organize your CSS with component files
+## Organize your CSS with component files
 
 From this point, you will start organizing your CSS code with **one CSS file for each component**. A button is a standard component, such as an avatar, a card, a list, a navbar, a tab, a form, etc. All these guys deserve their own CSS file. Your project architecture will look like:
 
@@ -52,3 +50,7 @@ Then you just need **one unique link to `style.css`** in your HTML file:
   <link rel="stylesheet" href="css/style.css">
 </head>
 ```
+
+## Don't forget hover effect
+
+Don't forget to design the `.btn:hover` state of your buttons.

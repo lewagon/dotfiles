@@ -27,30 +27,22 @@ A picture is worth a thousand words, [here is what you should build in this chal
 
 ## Further suggestions & resources
 
-### Find images and resize them
-
-Prepare your image files (one profile picture and three pictures of your favorite movies/books/hobbies/etc..) before starting to code.
+### Find nice pictures
 
 
-- Make sure your **profile picture is square** (you can crop it to make it square)
-- Make sure **your movies pictures all have the same width**.
-
-### HTML Skeleton tags
-
+Prepare your image files (1 profile picture + 3 movie pictures) before starting to code. Ensure your **profile image is square** (you can crop it to make it square) and ensure **your movies pictures are all of the same width**.
 - Don't forget the basic skeleton tags `<html>`, `<body>`, `<head>`.
 - Don't forget the page `<title>` in the `<head>` section, and other important metatags like `<meta charset="utf-8">`.
-- *Tip:* You can use the `target="_blank"` attribute on your links to open them on new tabs once clicked.
-
-### Fontawesome
-
-You can use [Font Awesome](http://fortawesome.github.io/Font-Awesome/) to find nice icons (e.g. for social networks). It is a very convenient library since it is a **font** of icons (hence it will be very easy to resize these icons, change their color, and add animations on them!). To import Fontawesome, simply add this link into your `<head>`:
+- You can use [Font Awesome](http://fortawesome.github.io/Font-Awesome/) to find nice icons (e.g. for social networks). It is a very convenient library since it is a **font** of icons (hence it will be very easy to resize these icons, change their color, and add animations on them!). To import Fontawesome, simply add this link into your `<head>`:
 
 ```html
 <!-- Fontawesome Stylesheet -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 ```
 
-### Indent or die 😱😱😱
+- You can use the `target="_blank"` attribute on your links to open them on new tabs once clicked.
+
+## Indent or die
 
 **Take your time to indent your HTML carefully**. HTML code has a lot of nestings, way more than ruby. If you don't indent, you are dead!
 
@@ -94,4 +86,4 @@ Or that one:
 </ul>
 ```
 
-Indent your HTML! Your code should look like a flight of ducks 🦆🦆🦆 and be symmetrical.
+Indent your HTML! Your code should look like a flight of ducks 🦆🦆🦆.
