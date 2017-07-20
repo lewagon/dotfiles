@@ -16,6 +16,14 @@ There are basically 3 contexts:
 
 * Look at the following code that contains nested module, class and methods. Implement the return of each method, so that you get the winning combination! When you are sure you have it, run the test to check it out!
 
-### Chaining with self [OPTIONAL]
+### Chaining with self
 
 In **animal.rb**, we give you a program which runs with errors. We tried to implement method chaining, but we failed miserably... There is a **very** small fix to make our program work - try to figure it out! **Hint:** this fix involves using `self` (obviously 😊)
+
+This is what we want to be able to do:
+
+```ruby
+cat = Animal.new
+cat.name("garfield").color("orange")
+p cat
+```
