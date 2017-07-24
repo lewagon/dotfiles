@@ -29,7 +29,7 @@ sqlite> SELECT * FROM posts;
 
 ## Specs
 
-Open the `db/seeds.rb` file and write some code to insert **10** posts (**NOT 100**, otherwise they may ban us from using the API...), retrieveing
+Open the `db/seeds.rb` file and write some code to insert **10** posts (**NOT 100**, otherwise they may ban us from using the API...), retrieving
 data from the HackerNews API.
 
 You can call the API endpoint [https://hacker-news.firebaseio.com/v0/topstories.json](https://hacker-news.firebaseio.com/v0/topstories.json). It will give you an array of the latest 100 post ids. Then, for the first ten (NOT hundred!) ids, you have to call the API
