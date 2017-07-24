@@ -18,8 +18,6 @@ Time to go deeper into Active Record and learn about validations and association
 
 ### Quiz
 
-At 2pm, it's your third paper quiz of the program:
-
-👉 [Quiz #3](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-3.en.pdf)
+At 2pm, it's your third paper quiz of the program!
 
 This one will take you up to 45 minutes, and the answers will be reviewed by the lead-teacher in live-code (for all the class at the same time and not in one-to-one reviews). Only one more quiz after this!
