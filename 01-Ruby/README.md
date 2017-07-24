@@ -20,8 +20,6 @@ Finally, let's introduce hashes - data stuctures designed to store key-value pai
 
 On Friday afternoon, at 2pm there will be a short quiz (30mins). No computer, no Google, just pencil and paper. It's not high school and you won't be graded 😊 But it's very useful to understand what you got wrong, and identify your weakpoints. So take your time and try to answer as precisely as you can.
 
-👉 [Quiz #1](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-1.en.pdf)
-
 When the quiz is finished, teachers will take you one-by-one during 15-min reviews to go through your answers and try to re-explain things. This chat will help you know what to go over during the weekend and whether or not you should join the Reboot group next Monday-Tuesday (see next section).
 
 ## Advanced part
