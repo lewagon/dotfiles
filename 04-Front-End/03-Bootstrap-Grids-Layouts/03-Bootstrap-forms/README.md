@@ -2,6 +2,8 @@
 
 Build a [responsive signup form](http://lewagon.github.io/bootstrap-challenges/10-Login/).
 
+**⚠️ Before starting, read all the instructions carefully until the end.⚠️**. Forms are among the most important components in a website, so you should know how to design them!
+
 ## Grid offset technique
 
 The trick to make a responsive form is to inject it in a Bootstrap grid with an offset:
@@ -40,7 +42,7 @@ A HTML `<form>` is made of different `<input>` (i.e. the fields of the form). Ea
 3. The label `for="something"` will be linked to the input with `id="something"`. Linking labels and inputs is not just for fun. When you will click on the label, the cursor will jump into the associated input (thus a better UX).
 4. The text of the submit button is given thanks to the `value` attribute.
 
-Dropdown-lists are a bit different. **They have their own `<select>` tag and an `<option>` tag for each option of the list. Their HTML looks like this:
+Dropdown-lists are a bit different. **They have their own `<select>` tag and `<option>` tag for each option of the list**. Their HTML looks like this:
 
 
 ```html
@@ -60,23 +62,23 @@ Now let's speak about Bootstrap form classes:
 - `.form-control` is here to design every `<input>` or `<select>`, except the submit button.
 - `.form-group` is here to group each `<input>` or `<select>` with its associated `<label>`.
 
-Example of Bootstrap form with labels:
+Example of Bootstrap form **with labels**:
 
 ```html
 <form action="#">
   <div class="form-group">
-    <label>Your email</label>
-    <input type="email" class="form-control">
+    <label for="email">Your email</label>
+    <input type="email" id="email" class="form-control">
   </div>
   <div class="form-group">
-    <label>Your password</label>
-    <input type="password" class="form-control">
+    <label for="password">Your password</label>
+    <input type="password" id="password" class="form-control">
   </div>
   <input type="submit" value="Sign In" class="btn btn-primary">
 </form>
 ```
 
-Example of Bootstrap form without labels:
+Example of Bootstrap form **without labels**:
 
 ```html
 <form action="#">
@@ -90,7 +92,7 @@ Example of Bootstrap form without labels:
 </form>
 ```
 
-Now if you want an horizontal form you can **add the `.form-inline` class to the `<form>`** (same as `list-inline` for a list):
+Now if you want an horizontal form you can **add the `.form-inline` class to the `<form>`** (same as the `.list-inline` class for a list `<ul>`):
 
 ```html
 <form action="#" class="form-inline">
@@ -104,7 +106,7 @@ Now if you want an horizontal form you can **add the `.form-inline` class to the
 </form>
 ```
 
-## Injecting a row on the form
+## Injecting a `.row` in the form
 
 You can also inject a row inside a form, here is an example with inputs for first name and last name:
 
@@ -127,4 +129,10 @@ You can also inject a row inside a form, here is an example with inputs for firs
   <!-- Rest of the form -->
 </form>
 ```
+
+## Your turn
+
+- Your turn to build a [responsive signup form](http://lewagon.github.io/bootstrap-challenges/10-Login/).
+
+- You can try to customize a bit your form design in `components/form.css`
 

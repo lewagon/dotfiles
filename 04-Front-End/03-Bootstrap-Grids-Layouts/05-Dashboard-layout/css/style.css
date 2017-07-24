@@ -3,11 +3,9 @@
 
 /* Importing components */
 @import url("components/card.css");
-@import url("components/footer.css");
 @import url("components/navbar.css");
 
 /* Importing layouts */
-@import url("layouts/map.css");
 @import url("layouts/profile.css");
 
 body {
