@@ -35,8 +35,6 @@ Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), u
 
 On Friday at 2pm, quizz time! Let's step back and rehearse all the core notions of Rails on a paper quizz.
 
-👉 [Quizz #4](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-4.en.pdf)
-
 ## Second week - Airbnb
 
 **AirBnB**! For the second week, we'll work as teams of 2 to 4. The goal is to start from scratch and build a MVP of AirBnB.
