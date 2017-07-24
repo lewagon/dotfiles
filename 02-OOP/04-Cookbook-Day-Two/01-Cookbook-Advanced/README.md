@@ -21,7 +21,7 @@ ruby lib/app.rb
 
 ## 1 - (User action) Import recipes from the web
 
-Here's how this feature should work:
+You can scrape from any recipe website that you know, but good ones are [Epicurious](http://www.epicurious.com/), [LetsCookFrench](http://www.letscookfrench.com/) and [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
 
 ```
 -- My CookBook --
@@ -30,7 +30,7 @@ What do you want to do?
 1. List all recipes
 2. Add a recipe
 3. Delete a recipe
-4. Import recipes from [Marmiton|LetsCookFrench]
+4. Import recipes from LetsCookFrench
 5. Exit
 
 > 4
