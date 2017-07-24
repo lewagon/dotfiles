@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map Layout</title>
+
+    <!-- Bootstrap + Fontawesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="navbar-minimalist">
+      <img src="images/logo.png">
+    </div>
+
+    <div class="card" style="background-image: url(images/rio.jpg)">
+      Rio
+    </div>
+    <div class="card" style="background-image: url(images/berlin.jpg)">
+      Berlin
+    </div>
+    <div class="card" style="background-image: url(images/shanghai.jpg)">
+      Shanghai
+    </div>
+    <div class="card" style="background-image: url(images/barcelona.jpg)">
+      Barcelona
+    </div>
+
+    <div id="map"></div>
+
+    <!-- Gmaps js: building the map -->
+    <script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 52.5206, lng: 13.4098},
+          scrollwheel: false,
+          zoom: 8
+        });
+      }
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Gmaps JavaScript -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzER7O10ZOUp7FloJzMe2r8X1GIQhgt7Q&callback=initMap">
+        </script>
+  </body>
+</html>
