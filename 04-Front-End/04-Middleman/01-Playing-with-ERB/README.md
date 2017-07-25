@@ -1,8 +1,8 @@
 ## Background & Objectives
 
-Let's play with [Middleman](https://middlemanapp.com/), a nice tool coded in ruby to build **static websites**. You can use it for your personal website or portfolio, or for any freelance frontend project with rich content and design.
+Let's play with [Middleman](https://middlemanapp.com/), a nice ruby tool to help build **static websites**. You can use it for your personal website or portfolio, or for any freelance frontend project with rich content and design.
 
-The objective of today is to code a static version of Airbnb with a [home page](http://lewagon.github.io/middleman-airbnb/), a [team page](http://lewagon.github.io/middleman-airbnb/team.html), and a [dynamic flat page](http://lewagon.github.io/middleman-airbnb/flats/seb.html) (change `seb` by `romain` in the URL to see that the flat's page is dynamic).
+The objective of today is to code a static version of Airbnb with a [home page](http://lewagon.github.io/middleman-airbnb/), a [team page](http://lewagon.github.io/middleman-airbnb/team.html), and a [dynamic flat page](http://lewagon.github.io/middleman-airbnb/flats/seb.html) (change `seb` to `romain` in the URL to see it in action).
 
 But first, let's get started with Middleman!
 
@@ -19,9 +19,9 @@ But first, let's get started with Middleman!
   </li>
 </ol>
 
-![change repo name](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/settings-rename-repo.png)
+**![change repo name](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/settings-rename-repo.png)**
 
-Now let's clone the project and install missing gems:
+Now let's clone the project and install any missing gems:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -30,14 +30,14 @@ cd airbnb-static
 bundle install
 ```
 
-This is a new separated project, so **we don't clone it inside `fullstack-challenges`**.
+This is a new, separate project, so **we don't clone it inside `fullstack-challenges`**.
 
 ### Middleman commands
 
 To start a web-server:
 
 ```bash
-middleman server # launch local server (Ctr + C to kill it)
+middleman server # launch local server (Ctrl + C to kill it)
 ```
 
 When you want to build your HTML/CSS code and deploy it with Github Pages, first commit your work:
@@ -63,9 +63,9 @@ Let's get back our Airbnb home-page (built last Friday) and include it in Middle
 
 ## Footer & Layout
 
-The footer should not be only in the `index.html.erb` template. In fact, the footer is on every page of the website.
+The footer shouldn't just be in the `index.html.erb` template. It's on every page of the website, right?
 
-To avoid repeating the footer's code in every template of the project, put it in the `layout.erb` file, i.e. the common skeleton of all templates:
+So, to avoid repeating the footer's code in every template of the project, put it in the `layout.erb` file, i.e. the common skeleton of all templates:
 
 ```erb
 <!-- layouts/layout.erb -->
@@ -74,24 +74,24 @@ To avoid repeating the footer's code in every template of the project, put it in
 <%= partial "footer" %>   <!-- call _footer.html.erb partial -->
 ```
 
-Then add a ERB partial `_footer.html.erb` with your footer code:
+Then add an ERB partial `_footer.html.erb` with your footer code:
 
 ```html
 <!-- _footer.erb -->
 
 <div id="footer">
-  <!-- Your footer code goes here -->
+  <!-- Your footer code in here -->
 </div>
 ```
 
-- By using a layout, all common parts (navbar, footer, analytics, etc.) are **coded just once in the layout**.
-- By using ERB partials, HTML code is more concise and easy to read.
+- Using layouts means that all the common parts (navbar, footer, analytics, etc.) **only have to be coded once**.
+- ERB partials make our HTML code way more concise and easy to read.
 
 ## Team Page
 
-Add a second page `team.html.erb` to your website with your team's members, like [this one](http://lewagon.github.io/middleman-airbnb/team.html).
+Add a second page `team.html.erb` to your website with your team's members, like [this one](http://lewagon.github.io/middleman-airbnb/team.html). Don't forget to put real pictures of you and your buddy (from the `Classmates` page on Kitt).
 
-Put real pictures of you and your buddy of course. Don't forget that you are using ERB now, and you can write **ruby code that will generate HTML code**, like:
+Also remember that you are using ERB now, so you can **write ruby to generate HTML code**. It means we can now do awesome stuff like this:
 
 ```erb
 <ul class="list-inline text-center">
@@ -104,7 +104,7 @@ Put real pictures of you and your buddy of course. Don't forget that you are usi
 </ul>
 ```
 
-This ERB code will generate this HTML code:
+That ERB code will generate this HTML code:
 
 ```html
 <!-- HTML output -->
@@ -124,9 +124,11 @@ This ERB code will generate this HTML code:
 </ul>
 ```
 
+Awesome right? 😲
+
 ## Helpers
 
-Helpers are ruby method that you will use in your templates to generate `<a>`, `<img>`, `<link>`, etc. Most helper methods can be called with an optional hash of attributes (like `class` and `id`). For instance:
+Helpers are ruby methods that you will use in your templates to generate `<a>`, `<img>`, `<link>`, etc. Most helper methods can be called with an optional hash of attributes (like `class` and `id`). For instance:
 
 ```erb
 <%= image_tag "example.png", class: "img-rounded avatar" %>
@@ -140,11 +142,11 @@ Or
 
 You can have a look at [Middleman documentation for helpers](https://middlemanapp.com/basics/helper_methods/).
 
-**Your turn to replace all your `<a>` and `<img>` using the right helper methods.**
+**Your turn to replace all your `<a>` and `<img>` with the right helper methods.**
 
 ## Commit and deploy
 
-Now that you have a working Middleman project with a home and a team page, time to commit your work and deploy:
+Now that you have a working Middleman project with a home and a team page, it's time to `commit` your work and `deploy`:
 
 ```bash
 git add .
@@ -153,4 +155,4 @@ git push origin master
 middleman deploy
 ```
 
-Visit your masterpiece on <a href="http://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-static</a>.
+Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-static</a>.

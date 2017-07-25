@@ -6,26 +6,26 @@ Build <a href="http://lewagon.github.io/html-css-challenges/10-homepage-with-car
 
 ## Re-use your previous components
 
-First let's save time and implement or re-use simple components:
+First let's save time re-use our simple components:
 
-1. Write quickly your avatar, button and banner CSS files (we put empty files for that in the starting boilerplate). For button and banner, you can re-use your code from previous challenges.
-2. Add the banner in the HTML
-2. Then you will have to implement your card design (the hard part of this challenge) in `card.css`
+1. Create your avatar, button and banner CSS files (we have put empty files for that in the starting boilerplate). For button and banner files, just re-use your code from previous challenges.
+2. Add the banner to your HTML
+2. Now it's time for your card design (the hard part of this challenge) in `card.css`
 
-## Draw the `div` first 🎨🎨🎨
+## Draw all your `div` first 🎨🎨🎨
 
-Drawing the structure of a component is the hardest part, but once you've done that, you will just nail the CSS! You have to get used to **guessing the invisible `div` 😉**. We help you here and give you the structure of the cards you need to reproduce in this challenge:
+Drawing the structure of a component is the hardest part, but once you've done that, it becomes so much easier to nail the CSS! We've helped you a little here and given you the structure of the cards you need to reproduce in this challenge:
 
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-design.png" alt="">
 </div>
 
-Now that you have this structure in mind, ask yourself:
+Now that you have this structure, ask yourself:
 
-- What CSS technique should I use to position elements in the corners for the `.card-body` section? Flexbox? Relative/absolute positionning?
-- What CSS technique should I use for the `.card-footer`? Flexbox? Is it `space-between` for spacing the items or `space-around`?
+- What CSS technique should I use to position elements in the corners for the `.card-body` section? Flexbox? Relative/absolute positioning?
+- What CSS technique should I use for the `.card-footer`? Flexbox? Is it `space-between` or `space-around`?
 
-When you know the **div structure 📐 + CSS techniques 🚀** for a component then you just have to code it!
+Now you know the **div structure 📐 & CSS techniques 🚀** for a component, you just have to code it!
 
 
 ## Center content in a container
@@ -51,7 +51,7 @@ We already defined the container class for you in `style.css`
 
 ## Start with one card only
 
-Before putting the 3 cards inside a "grid", try to design just one card!
+Before putting all 3 cards inside a "grid", start with one!
 
 ```html
 <div class="container">
@@ -66,7 +66,7 @@ Before putting the 3 cards inside a "grid", try to design just one card!
 
 ## Build a flexbox grid of cards
 
-We have one card in our page.. A bit sad no? What about having three cards next to each other? Let's build a simple flexbox grid for that. Here's the HTML:
+We only have one card in our page.. A bit sad no? What if we had three cards next to each other? Let's build a simple flexbox grid. Here's the HTML:
 
 ```html
 <div class="container">
@@ -78,7 +78,7 @@ We have one card in our page.. A bit sad no? What about having three cards next 
 </div>
 ```
 
-Now the CSS code using flexbox:
+Now add the CSS code for your flexbox:
 
 ```css
 .cards {
@@ -89,4 +89,4 @@ Now the CSS code using flexbox:
 }
 ```
 
-How cool? Sadly, when resizing your browser you will discover that this flexbox grid is not very responsive 😬. Good news: tomorrow you will discover **Bootstrap responsive grid**. Be patient!
+Cool right 💥? Sadly, when resizing your browser you will discover that your flexbox grid is not very responsive 😬. Good news: tomorrow you will discover **Bootstrap responsive grids**. Be patient!

@@ -15,7 +15,7 @@ Use advanced CSS selectors (id, class, grouping, descendant selectors) to fine-t
 Here is [your objective](http://lewagon.github.io/html-css-challenges/04-advanced-selectors/). Any time you want to **name** an element of your page, ask yourself:
 
 - Should I use a `class` or an `id`? Is it unique or re-usable?
-- What name should I pick for my class? Respect the `component-shape` convention/
+- What name should I pick for my class? Respect the `component-shape` convention
 - Should I split this design into several classes instead of one big class?
 
 Here is an example of **bad** CSS code:
@@ -62,7 +62,7 @@ To design your lists of icons, you'll have to change the `block` behavior of lis
 }
 ```
 
-Even inline, a list `<ul>` has some `padding-left` that you must also kill to perfectly center your list.
+Even inline, a list `<ul>` has some `padding-left` that you will also have to kill to perfectly center your list.
 
 ```css
 .list-inline {

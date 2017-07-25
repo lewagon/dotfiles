@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Build a [profile dashboard](https://lewagon.github.io/layouts-demo/grid-layout.html) like in Karr lecture. Implement this layout in the `layout/profile.css` file.
+Build a [profile dashboard](https://lewagon.github.io/layouts-demo/grid-layout.html) like in the Karr lecture. Implement this layout in the `layout/profile.css` file.
 
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/profile-example.png" alt="">
@@ -8,9 +8,9 @@ Build a [profile dashboard](https://lewagon.github.io/layouts-demo/grid-layout.h
 
 ## Starting the challenge
 
-1. Make sure you understand the code in `index.html`, and the design we give you for cards in `components/card.css`.
-2. Go back to Karr lecture to rehearse how you can build a layout using **CSS grid**
-3. **Don't cheat and don't inspect the code of our solution!** The goal of this challenge is that you really know how to build a layout by yourself. So take you time to think and raise tickets if you're stuck, but don't cheat 😉!
+1. Make sure you understand the code in `index.html` and the design in `components/card.css`.
+2. Go back to the Karr lecture to review how to build a layout using **CSS grids**
+3. **Don't cheat by inspecting the code! 🔎** The goal of this challenge is to teach you how to build a layout by yourself. Take you time to think, ask teachers if you're stuck, but don't cheat 😉!
 
 
 ## Resources

@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's create a dynamic template for the flat's show view. This template will inject different data depending on the URL, see [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html), [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html), [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html).
+Let's create a dynamic template for the flat's show view. This template will inject different data depending on the URL, as with [Romain's flat](http://lewagon.github.io/middleman-airbnb/flats/romain.html), [Anne's flat](http://lewagon.github.io/middleman-airbnb/flats/anne.html) and [Seb's flat](http://lewagon.github.io/middleman-airbnb/flats/seb.html).
 
 ## YAML data
 
@@ -43,11 +43,11 @@ romain:
   wifi: false
 ```
 
-Be creative and **add other keys/values to this YAML** (flat's rating, pictures of different rooms, maximum number of guests, etc.).
+Feel free to get creative and add **other keys/values to this YAML** (flat's rating, pictures of different rooms, maximum number of guests, etc.).
 
 ## Loop with ERB
 
-In Middleman, the content of `flats.yml` is loaded in a ruby hash `data.flats`. You can now replace your static cards on the home page by looping dynamically on data with `each`:
+In Middleman, the content of `flats.yml` is loaded in a ruby hash `data.flats`. You can now replace your static cards on the home page by using `each` to loop dynamically:
 
 ```erb
 <!-- source/index.html.erb -->
@@ -71,25 +71,25 @@ In Middleman, the content of `flats.yml` is loaded in a ruby hash `data.flats`. 
 </div>
 ```
 
-How cool is that? Now you can add new flats on your home-page just by updating `flats.yml`. Find more infos on data in [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
+How cool is that? Now you can add new flats on your homepage just by updating `flats.yml`. As usual, there is a ton of extra info in the [Middleman documentation](https://middlemanapp.com/advanced/data_files/).
 
 ## Middleman vs. Rails
 
-In Rails, we will have a real DB (not YAML files) and we will use Active Record to connect to this DB. That being said, the ERB template will be very similar. Just replace `data.flats` by `Flat.all` in the code above and that's it!
+In Rails, we will have a real DB (no more YAML) and we will use Active Record to connect to it. The ERB template is very similar though. Just replace `data.flats` with `Flat.all` and that's it!
 
-**Do you see how frontend and backend will magically connect?**
+**Are you beginning to see how frontend and backend will magically connect?**
 
-We hope you do 😊
+We hope so 😊
 
 ## Dynamic page
 
 Time to generate a dynamic view for each flat. Start by reading the section about [Middleman dynamic pages](https://middlemanapp.com/advanced/dynamic_pages/).
 
-Then add to `config.rb` something like:
+Then add something like this to `config.rb`:
 
 ```ruby
 ["anne", "seb", "romain"].each do |name|
-  proxy "/flats/#{name}.html", "/flats/show.html", :locals => { :owner => name }, :ignore => true
+  proxy "/flats/#{name}.html", "/flats/show.html", locals: { owner: name }, ignore: true
 end
 ```
 
@@ -97,12 +97,12 @@ Don't forget to **restart your server when you change the config**.
 
 Create the dynamic template `/flats/show.html.erb`. In this template, `owner` will dynamically change to `"romain"`, `"seb"`, `"anne"`, etc. depending on the URL.
 
-You can now read in the hash `data.flats` using the owner's name as a key, like that:
+You can now access the hash `data.flats` using the owner's name as a key, like this:
 
 ```erb
 <!-- source/flats/show.html.erb -->
 
-<!-- Read from data.flats with owner's name as key -->
+<!-- Access data.flats with owner's name as key -->
 <% flat = data.flats[owner] %>
 
 <!-- Inject flat data in template -->
@@ -119,4 +119,7 @@ Now try to access:
 - [http://localhost:4567/flats/romain.html](http://localhost:4567/flats/romain.html) (where `owner = "romain"`)
 - etc.
 
-How cool? Your turn to build a dynamic page like [this one](http://lewagon.github.io/middleman-airbnb/flats/romain.html).
+Amazing right?
+
+
+Now it's your turn to build a dynamic page like [this one](http://lewagon.github.io/middleman-airbnb/flats/romain.html).
