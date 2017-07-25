@@ -19,7 +19,10 @@ But first, let's get started with Middleman!
   </li>
 </ol>
 
-![change repo name](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/settings-rename-repo.png)
+
+<div class="text-center">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/settings-rename-repo.png" width="100%">
+</div>
 
 Now let's clone the project and install missing gems:
 
