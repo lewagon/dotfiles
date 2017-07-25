@@ -24,7 +24,7 @@ We will go a bit further and make you code your own CSS component library. The o
 
 Before diving into Bootstrap, we will briefly (15 minutes) go over some key design resources & tools you'll be using to build your graphical assets (pictures, icons, colors, fonts).
 
-Then, we move to Bootstrap.
+Then, we will move to Bootstrap.
 
 - For rich components, we've built our own CSS library.
 - For standard ones, let's not re-invent the wheel! We'll be using built-in Bootstrap classes.
