@@ -8,7 +8,7 @@ Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/
 
 ## Starting the challenge
 
-1. Make sure you understand the code in `index.html`, and the design we give you for navbar and cards in `components/navbar.css` and `components/card.css`. Normally you should be able to understand questions. Ask questions if it's not the case.
+1. Make sure you understand the code in `index.html`, and the design we give you for navbar and cards in `components/navbar.css` and `components/card.css`. Ask questions if it's not the case.
 2. Go back to Karr lecture to rehearse how you can build a layout using **flexbox** and `position: sticky`
 3. **Don't cheat and don't inspect the code of our solution!** The goal of this challenge is that you really know how to build a layout by yourself. So take you time to think and raise tickets if you're stuck, but don't cheat 😉!
 
