@@ -3,7 +3,7 @@
 Build a [profile dashboard](https://lewagon.github.io/layouts-demo/grid-layout.html) like in Karr lecture. Implement this layout in the `layout/profile.css` file.
 
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/profile-example.png" alt="">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/profile-example.png" alt="" width="100%">
 </div>
 
 ## Starting the challenge
