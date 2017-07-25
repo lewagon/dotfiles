@@ -12,7 +12,7 @@ Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/
 2. Go back to Karr lecture to rehearse how you can build a layout using **flexbox** and `position: sticky`
 3. **Don't cheat and don't inspect the code of our solution!** The goal of this challenge is that you really know how to build a layout by yourself. So take you time to think and raise tickets if you're stuck, but don't cheat 😉!
 
-## New CSS organizatin
+## New CSS organization
 
 Notice that we now have **two folders** in our CSS:
 
@@ -21,7 +21,7 @@ Notice that we now have **two folders** in our CSS:
 
 As usual, `style.css` is importing all the other stylesheets and then is linked in the HTML.
 
-## Gmaps
+## Gmaps javascript and `!important` keyword
 
 When a javascript code is injecting CSS into the HTML (e.g. what Gmaps javascript is doing), you must use the keyword `!important` in your CSS to override the CSS injected by the javascript code.
 
