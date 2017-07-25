@@ -1,6 +1,10 @@
 ## Setup
 
-Copy the contents of your `body` tag from the previous exercice into this one.
+Again, let's continue building our profile page and copy our previous profile in the current directory of this challenge:
+
+```bash
+cp -r ../02-Fonts-and-colors/profile .
+```
 
 ## Background & Objectives
 
@@ -27,7 +31,7 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 
 ## Further suggestions & resources
 
-- Here is the div centering technique for the main container:
+Here is the div centering technique for the main container:
 
 ```css
 .container {
@@ -36,4 +40,37 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 }
 ```
 
-- From this exercise (and for next ones), you must **absolutely** use your developer tool to play with your CSS in the browser and make experiments.
+From this exercise (and for next ones), you must **absolutely** use your developer tool to play with your CSS in the browser and test things.
+
+## Make it responsive with media queries
+
+If you want a responsive design, you can add media queries in CSS. They work a bit like an `if` statement in ruby. Basically **you can define CSS rules that will only apply if the window is smaller than a given width**. For instance, if you want a responsive container, you can build it like this:
+
+
+```css
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
+```
+
+Try to resize your window to understand how media queries work.
+
+### ⚠️⚠️⚠️ Be careful with media queries' order ⚠️⚠️⚠️
+
+Such as for `if` statements in ruby, order matters! If several conditions are `true`, it's the last CSS rule that will be applied.
+

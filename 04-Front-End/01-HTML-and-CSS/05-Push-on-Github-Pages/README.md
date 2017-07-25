@@ -1,33 +1,31 @@
-## Create a new project
+## Setup
 
-Let's create a new project for your profile page (you are not going to keep it under in the `fullstack-challenges` folder).
+We don't want to keep your profile within `fullstack-challenges` because we want to version it with `git` as a separate project. So let's copy your profile as an independent folder and jump into it:
+
 
 ```bash
-cd ~/code/<user.github_nickname>
-mkdir profile
+cp -r ../04-Advanced-selectors/profile ~/code/$GITHUB_USERNAME
+cd ~/code/$GITHUB_USERNAME/profile
 ```
-
-Copy and paste your `index.html`, `style.css` files and `images` folder in this new `profile` folder.
 
 ## Create the Github repo
 
-Let's install the `hub` gem to create a Github repo from your terminal without opening your browser
+Let's install the `hub` gem to create a Github repo from your terminal without opening your browser (very cool when you are lazy 😉)
 
 ```bash
 gem install hub
 ```
 
-Now you can init a git repo, commit your changes, and create the associated Github repo.
+Now you can init a git repository, commit your changes, and create the associated Github repo.
 
 ```bash
-cd ~/code/<user.github_nickname>/profile
 git init
 git add .
 git commit -m "my profile page"
-hub create
+hub create # this creates the associated repo on Github!
 ```
 
-To open the Github repo in your browser you can run:
+To open the Github repo from your browser you can run:
 
 ```bash
 hub browse
@@ -39,13 +37,15 @@ hub browse
 
 ```bash
 git co -b gh-pages
-git push origin gh-pages
+git push origin gh-pages # we push the gh-pages branch, not master!
 ```
 
-Now you can build the URL `http://<user.github_nickname>.github.io/profile/` and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
+Now you can build the URL `http://<user.github_nickname>.github.io/profile/` (it's the URL built automatically by Github) and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
 
-From now and until the end of the day, keep working in your `~/code/<user.github_nickname>/profile` directory AND on the `gh-pages` branch. Thus, any updates of your profile page could be pushed on `http://<user.github_nickname>.github.io/profile/` throw the command line
+From now and until the end of the day, you can keep working in your `~/code/<user.github_nickname>/profile` directory AND on the `gh-pages` branch. Thus, any updates of your profile can be pushed on `http://<user.github_nickname>.github.io/profile/` through usual git commands:
 
 ```bash
+git add .
+git commit -m "make my profile prettier"
 git push origin gh-pages
 ```

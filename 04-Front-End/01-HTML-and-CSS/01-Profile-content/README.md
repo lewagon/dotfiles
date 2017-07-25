@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-A simple challenge to manipulate basic HTML tags and create a profile page with headers/texts/lists/images/tables.
+A simple challenge to manipulate basic HTML tags and create a profile page with headers, text, lists, images and tables.
 
 Note: You can start a local webserver by typing the following command in your terminal (just make sure you are in the exercise's folder):
 
@@ -18,26 +18,47 @@ serve
 Build a simple HTML profile page with the following elements (use the right HTML tags):
 
 - an image of yourself
-- a header and sub-header with your name and position
+- a header and sub-header with your name and your job title (you can put programmer now 💻)
 - a description of yourself
 - a list of your social links
-- a table of your projects, favorite movies, programming languages, sport teams, recipes, etc. whatever you want.
+- a table showing your projects, favorite movies/programming languages/sport teams/recipes, etc. whatever you want.
 
-A picture is worth a thousand words, [here is what you should build in this challenge](http://lewagon.github.io/html-css-challenges/01-profile-content/)
+A picture is worth a thousand words, [so here is what you should build in this challenge](http://lewagon.github.io/html-css-challenges/01-profile-content/)
 
 ## Further suggestions & resources
 
-- Prepare your image files (1 profile picture + 3 movie pictures) before starting to code. Ensure your **profile image is square** (you can crop it to make it square) and ensure **your movies pictures are all the same width**.
+### Find **good** pictures
+
+Prepare your image files (1 profile picture & 3 movie pictures) before starting to code.
+
+**Always use hi-res images**
+**Always use hi-res images**
+**Always use hi-res images**
+
+Got it? 😉
+
+Go to [Google Images](https://www.google.com/imghp) and search for what you want. Then, under the menu bar, click on `Tools` ➡️ `Size` ➡️ `Large`. No more pixelation now!
+
+Finally, ensure your **profile image is square** (you can crop it to make it square) and ensure **your movies pictures are all of same width**.
+
 - Don't forget the basic skeleton tags `<html>`, `<body>`, `<head>`.
 - Don't forget the page `<title>` in the `<head>` section, and other important metatags like `<meta charset="utf-8">`.
-- You can use [Font Awesome](http://fortawesome.github.io/Font-Awesome/) to find nice icons (e.g. for social networks). It is a very convenient library since it is a **font** of icons (hence it will be very easy to resize these icons, change their color, and add animations on them!)
+- You can use [Font Awesome](http://fontawesome.io/) to find cool icons (e.g. for social networks). It's a super useful library because all of the icons are **fonts**, making it really easy to resize them, change their color, and even add animations to them!). To import Font Awesome, simply add this link into your `<head>`:
+
+```html
+<!-- Fontawesome Stylesheet -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+```
+
 - You can use the `target="_blank"` attribute on your links to open them on new tabs once clicked.
 
 ## Indent or die
 
-**Take your time to indent your HTML carefully**. HTML code has a lot of nestings, way more than ruby. If you don't indent, you are dead!
+**Take your time to indent your HTML carefully**. HTML code has a lot of nesting - way more than ruby. If you don't indent, it's game over for your code!
 
-Which code do you understand best? This one:
+Which code is easier to understand?
+
+This one:
 
 ```html
 <ul>
@@ -55,7 +76,7 @@ Which code do you understand best? This one:
     </ul>
 ```
 
-Or that one
+Or this one:
 
 ```html
 <ul>
@@ -76,3 +97,5 @@ Or that one
   </li>
 </ul>
 ```
+
+Indent your HTML! Your code should look like a [V formation of ducks](https://upload.wikimedia.org/wikipedia/commons/0/0b/Eurasian_Cranes_migrating_to_Meyghan_Salt_Lake.jpg) 🦆🦆🦆!

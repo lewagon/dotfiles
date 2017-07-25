@@ -1,0 +1,8 @@
+.card {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding: 50px;
+}
