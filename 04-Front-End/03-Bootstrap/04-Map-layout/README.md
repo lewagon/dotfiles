@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/flexbox-layout.html) like in Karr lecture. Implement this layout in the `layout/map.css` file.
+Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/flexbox-layout.html) like in Karr lecture. Implement this layout in the `layouts/map.css` file.
 
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/map-example.png" alt="" width="100%">
