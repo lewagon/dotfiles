@@ -2,7 +2,20 @@
 
 A simple challenge to manipulate basic HTML tags and create a profile page with headers, text, lists, images and tables.
 
-Note: You can start a local webserver by typing the following command in your terminal (just make sure you are in the exercise's folder):
+## Setup 
+
+Jump into your `profile` and create an `images` directory to store all your pictures:
+
+
+```bash
+cd profile
+mkdir images
+stt
+```
+
+## Local server
+
+You can start a local webserver by typing the following command in your terminal (just make sure you are in the exercise's folder):
 
 ```bash
 serve
@@ -24,16 +37,6 @@ Build a simple HTML profile page with the following elements (use the right HTML
 - a table showing your projects, favorite movies/programming languages/sport teams/recipes, etc. whatever you want.
 
 A picture is worth a thousand words, [so here is what you should build in this challenge](http://lewagon.github.io/html-css-challenges/01-profile-content/)
-
-## Images folder
-
-Make sure you have an `images` folder inside your profile project to store all your images:
-
-bash
-```
-cd profile
-mkdir images
-```
 
 ## Further suggestions & resources
 
