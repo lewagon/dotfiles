@@ -4,8 +4,8 @@ We don't want to keep your profile within `fullstack-challenges` because we want
 
 
 ```bash
-cp -r ../04-Advanced-selectors/profile ~/code/$GITHUB_USERNAME
-cd ~/code/$GITHUB_USERNAME/profile
+cp -r ../04-Advanced-selectors/profile ~/code/<user.github_nickname>
+cd ~/code/<user.github_nickname>/profile
 ```
 
 ## Create the Github repo
