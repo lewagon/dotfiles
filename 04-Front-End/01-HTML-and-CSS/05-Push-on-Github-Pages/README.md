@@ -10,13 +10,13 @@ cd ~/code/$GITHUB_USERNAME/profile
 
 ## Create the Github repo
 
-Let's install the `hub` gem to create a Github repo from your terminal without opening your browser (very cool when you are lazy 😉)
+Let's install the `hub` gem to create a Github repo from your terminal without opening your browser (very useful when you are lazy 😉)
 
 ```bash
 gem install hub
 ```
 
-Now you can init a git repository, commit your changes, and create the associated Github repo.
+Now you can **init**(ialize) a git repository, commit your changes, and create the associated Github repo:
 
 ```bash
 git init
@@ -33,16 +33,16 @@ hub browse
 
 ## Github Pages
 
-[Github Pages](https://pages.github.com/) is a sub-service of Github, very convenient to deploy any **static website** in 10 seconds (static == not a Rails app). It is based on a "magic" branch, called `gh-pages`. When Github detects this branch, it puts your website online, how cool! Let's create this magic branch and push it.
+[Github Pages](https://pages.github.com/) is a sub-service of Github that makes it easy to deploy any **static website** in 10 seconds (static == not a Rails app). It is based on a "magic" branch, called `gh-pages`. When Github detects this branch, it puts your website online. Awesome right? Let's create this magic branch and push it. ✨🌿✨
 
 ```bash
 git co -b gh-pages
 git push origin gh-pages # we push the gh-pages branch, not master!
 ```
 
-Now you can build the URL `http://<user.github_nickname>.github.io/profile/` (it's the URL built automatically by Github) and have a look at your masterpiece, it's online! Share it on Slack with your buddies.
+Now you can build the URL `http://<user.github_nickname>.github.io/profile/` (this is the URL built automatically by Github) and have a look at your masterpiece online! Share the link on Slack with your buddies.
 
-From now and until the end of the day, you can keep working in your `~/code/<user.github_nickname>/profile` directory AND on the `gh-pages` branch. Thus, any updates of your profile can be pushed on `http://<user.github_nickname>.github.io/profile/` through usual git commands:
+From now and until the end of the day, you can keep working in your `~/code/<user.github_nickname>/profile` directory AND on the `gh-pages` branch. This means any updates of your profile can be pushed on `http://<user.github_nickname>.github.io/profile/` through usual git commands:
 
 ```bash
 git add .

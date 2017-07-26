@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Build Product Hunt profile header, like [this one](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs/)
+Recreate the Product Hunt profile header, like [this one](http://lewagon.github.io/html-css-challenges/11-profile-with-tabs/)
 
 ## Further suggestions & resources
 
@@ -30,11 +30,11 @@ Now answer these questions:
 - What's the role of the `.profile-header-wrapper`?
 - What's the role of the `.container`?
 
-`wrapper` and `container` are two elementary blocks used to build your page's layout. Then you just have to insert the right components inside.
+`wrapper` and `container` are two elementary blocks used to build your page's layout. Once you have that structure, you just have to insert the right components inside.
 
 ### Tabs with flexbox
 
-The HTML markup of the tabs component is easy, it should look like
+The HTML markup of the tabs component is easy - it should look like
 
 ```html
 <div class="tabs">
@@ -58,7 +58,7 @@ The HTML markup of the tabs component is easy, it should look like
 ```
 
 - `<div class="tabs">` is the **flexbox** and should be `display:flex;`
-- `<div class="tab">` are the **flex item**
+- `<div class="tab">` are the **flex items**
 
 You have two options to code the flex items:
 

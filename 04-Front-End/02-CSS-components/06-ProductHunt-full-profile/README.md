@@ -6,7 +6,7 @@ Time to build a full Product Hunt dashboard like [this one](http://lewagon.githu
 
 ### Layout
 
-The layout is pretty easy here since we just re-use profile header from previous challenge:
+The layout is pretty easy here since we are just re-using the profile header from our previous challenge:
 
 ```html
 <div class="profile-header-wrapper">
@@ -21,11 +21,11 @@ The layout is pretty easy here since we just re-use profile header from previous
 </div>
 ```
 
-You can put a wrapper around the products' container if you want to add a background-color (in our example, products' background is white so we don't need any wrapper).
+You can put a wrapper around the products' container if you want to add a background-color (in our example, the background is white so we don't need a wrapper).
 
 ### Product design
 
-First, you must think carefully about the HTML structure of each product. A bad HTML structure will make you write poor and over-complicated CSS.
+First, you must think carefully about the HTML structure of each product. A bad HTML structure will over-complicate your CSS.
 
 The structure of each product should look like this:
 
@@ -70,11 +70,11 @@ Then just make the `.product-body` item grow:
 }
 ```
 
-And that's it! Now, you just have to adjust paddings on each flex-item.
+And that's it! Now, you just have to adjust padding on each flex-item.
 
 #### List inline
 
-For the list-inline, we give you the code in `style.css` to save you some time.
+For the list-inline, we have given you the code in `style.css` to save you some time.
 
 #### Product arrow
 
@@ -109,12 +109,12 @@ If you want hover effects with smooth transition, first add CSS transitions on t
 }
 ```
 
-Then define their `:hover state, for example:
+Then define their `:hover` state, for example:
 
 ```css
 /* 1 - Hover effects on product */
 
-/* Background turns grey + cursor becomes Mickey Mouse's hand*/
+/* Background turns grey & cursor becomes Mickey Mouse's hand*/
 .product:hover {
   background: #f7f7fa;
   cursor: pointer;
@@ -131,17 +131,17 @@ Then define their `:hover state, for example:
   color: #5898f1;
   cursor: pointer;
 }
-/* Arrow triangle turns also blue */
+/* Arrow triangle turns blue */
 .product-upvote:hover .product-arrow {
   border-bottom: 9px solid #5898f1;
 }
 ```
 
-Hover products on [our dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/) to see these effects in action.
+Hover over the products on [our dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/) to see these effects in action.
 
 ### [Optional] Advanced Design
 
-For an advanced design of the header like [this one](http://lewagon.github.io/html-css-challenges/12-profile-with-products-bis/), you should first improve the HTML structure of your `profile-header-infos`:
+For an advanced design of a header like [this one](http://lewagon.github.io/html-css-challenges/12-profile-with-products-bis/), you should first improve the HTML structure of your `profile-header-infos`:
 
 ```html
 <div class="profile-header-infos">
@@ -153,7 +153,7 @@ For an advanced design of the header like [this one](http://lewagon.github.io/ht
 </div>
 ```
 
-Then you have to <i>flexboxize</i> the `.profile-header-infos` div, and make the second flex-item grow.
+Then you have to <i>flexboxify</i> the `.profile-header-infos` div, and make the second flex-item grow.
 
 ```css
 .profile-header-infos {

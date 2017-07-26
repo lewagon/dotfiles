@@ -1,11 +1,11 @@
 ## Background & Objectives
 
-Let's code a banner, like [this airbnb-like banner](http://lewagon.github.io/html-css-challenges/09-canonical-banner/). A banner is an important component, used on most startups' home page.
+Let's code a banner, like [this airbnb-like banner](http://lewagon.github.io/html-css-challenges/09-canonical-banner/). A banner is a vital component that is used on most startups' home pages.
 
 
 ## Re-use your button
 
-Don't forget to re-use the `button.css` file that you've coded in the previous challenge. That's exactly the point of splitting your design by components: you can then re-use them 💪💪💪.
+Don't forget to re-use the `button.css` file that you coded in the previous challenge. This is exactly why we split our design into components: it makes it super easy to re-use them 💪💪💪.
 
 ## HTML Structure
 
@@ -21,10 +21,9 @@ Don't forget to re-use the `button.css` file that you've coded in the previous c
 </div>
 ```
 
-It can be convenient to put the `background-image` directly in the HTML (we speak of **"inlining the CSS"**
-). You can then use your banner class **with different background pictures** by just changing the image URL in the HTML.
+It is often convenient to put the `background-image` directly in the HTML (this is called **"inlining the CSS"**). You can then use your banner class **with different background pictures** by just changing the image URL in the HTML.
 
-Don't forget `background-size: cover;` in the CSS to tell the background to cover all the banner div.
+Don't forget `background-size: cover;` in your CSS (to tell the background to cover the entire banner div).
 
 ### Linear-gradient filters
 
@@ -57,7 +56,7 @@ If you just want a **flat** filter with transparency, you can use this simple sy
 }
 ```
 
-In this case, we put a flat black filter with a `0.3` opacity on top of the background image.
+Here, we put a flat black filter with a `0.3` opacity on top of the background image.
 
 
 ## Banner height
@@ -72,4 +71,4 @@ If you want your banner to take 100% of your screen height:
 
 ## Centering content with flexbox
 
-Here the `<div class="banner">` is a flexbox with only one item which is `<div class="banner-content">`. Use flexbox properties (`justify-content` and `align-items`) to center the banner's content both horizontally and vertically. Have a look to the Karr lecture if you forgot how flexbox works.
+The `<div class="banner">` here is a flexbox with only one item inside it: `<div class="banner-content">`. Use flexbox properties (`justify-content` & `align-items`) to center the banner's content both horizontally and vertically. Have a look at the Karr lecture if you can't remember how flexboxes work.

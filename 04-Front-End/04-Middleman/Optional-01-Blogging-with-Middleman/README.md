@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Read the [Middleman documentation](https://middlemanapp.com/basics/blogging/) about their blog extension.
+Read about the blogging extension in the [Middleman documentation](https://middlemanapp.com/basics/blogging/).
 
 ## Starting a brand new Middleman app including a blog
 
@@ -21,7 +21,7 @@ middleman article YOUR_FIRST_ARTICLE
 stt
 ```
 
-Have a look at the blog structure and write your first article with markdown syntax.
+Have a look at the blog structure and write your first article using markdown syntax.
 
 Now you can run:
 
@@ -29,7 +29,7 @@ Now you can run:
 middleman server
 ```
 
-You can see your first Middleman blog on _http://localhost:4567_
+You can see your first Middleman blog on [_http://localhost:4567_](http://localhost:4567)
 
 Find your first article url on _http://localhost:4567/__middleman/sitemap/_
 
@@ -48,9 +48,9 @@ Create your first article:
 middleman article YOUR_FIRST_ARTICLE
 ```
 
-Write your first article with markdown syntax, you will find it in `source/blog`.
+Write your first article with markdown syntax. (You will find it in `source/blog`)
 
-Launch `middleman server`and go to _http://localhost:4567/__middleman/sitemap/_ to find your first article's url.
+Launch `middleman server` and go to _http://localhost:4567/__middleman/sitemap/_ to find your first article's url.
 
 Now you can create a page wich lists all your articles:
 

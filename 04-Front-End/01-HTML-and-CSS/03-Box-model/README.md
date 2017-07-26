@@ -8,7 +8,7 @@ cp -r ../02-Fonts-and-colors/profile .
 
 ## Background & Objectives
 
-Play with the box model (`margin/border/padding/width/height`) by splitting your profile information into different `<div>`.
+Play with the box model (`margin/border/padding/width/height`) by splitting your profile information into different `<div>` tags.
 
 ## Specs
 
@@ -25,9 +25,9 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 </div>
 ```
 
-- The `<div class="container">` is here to center the page content with some left/right margin so that it does not take 100% of the window (which would be ugly).
-- The `<div class="card">` is here to group some info into a nice white box.
-- Add a cool touch to your cards thanks to `background`, `border`, `border-radius` and `box-shadow` CSS properties. Keep it simple, with white background and subtle radius and shadows (as in the Karr lecture).
+- The `<div class="container">` is here to center the page content using left & right margins to prevent it taking 100% of the window (which would be ugly).
+- The `<div class="card">` is used to group information into a nice white box.
+- Add cool touches to your cards using CSS properties like `background`, `border`, `border-radius` and `box-shadow`. Keep it simple, with white background and subtle radius and shadows (as you saw in the Karr lecture).
 
 ## Further suggestions & resources
 
@@ -35,12 +35,12 @@ Here is the div centering technique for the main container:
 
 ```css
 .container {
-  width: 500px;   /* Set width */
-  margin: 0 auto; /* Automatically set left/right margins */
+  width: 500px;   /* This sets the width */
+  margin: 0 auto; /* This automatically sets left/right margins */
 }
 ```
 
-From this exercise (and for next ones), you must **absolutely** use your developer tool to play with your CSS in the browser and test things.
+From this exercise onwards, **it is critical that you use your developer tool (`inspect`)** to play with your CSS in the browser and test things out before you write the final code.
 
 ## Make it responsive with media queries
 
@@ -70,7 +70,7 @@ If you want a responsive design, you can add media queries in CSS. They work a b
 
 Try to resize your window to understand how media queries work.
 
-### ⚠️⚠️⚠️ Be careful with media queries' order ⚠️⚠️⚠️
+### ⚠️⚠️⚠️ Be careful with the order of your media queries ⚠️⚠️⚠️
 
-Such as for `if` statements in ruby, order matters! If several conditions are `true`, it's the last CSS rule that will be applied.
+As with `if` statements in ruby, order matters! If several conditions are `true`, the last CSS rule will be applied.
 
