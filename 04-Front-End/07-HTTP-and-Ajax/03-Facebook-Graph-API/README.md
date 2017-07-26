@@ -21,9 +21,9 @@ We have already implemented the first AJAX request for you to insert basic info 
 
 ### Your turn
 
-It's your turn to play with Facebook API:
+It's your turn to play with the Facebook API:
 
-- Play with the [open graph api explorer](https://developers.facebook.com/tools/explorer/) to setup the request you want to build (groups, likes, education, any *public* data from your profile).
-- Once you know how this URL is structured, implement a new AJAX `$.get` request in the js code to get this data and inject it in the `#your-profile .advanced` div.
+- Play with the [open graph API explorer](https://developers.facebook.com/tools/explorer/) to set up the request you want to build (groups, likes, education... any *public* data from your profile).
+- Once you know how the structure of the URL, implement a new AJAX `$.get` request in the js code to get the data and inject it into the `#your-profile .advanced` div.
 
-Let's play with the Facebook API!
+

@@ -1,6 +1,6 @@
 ## Objectives & Background
 
-We will take our last exercise Wagon-race and make it a little bit more interesting by adding a way to register the games we play on a server and store the results through an API.
+Let's take our Wagon Race and make it a little bit more interesting by using an API to register the games we play and store the results.
 
 **Before anything else:**
 
@@ -19,11 +19,11 @@ bundle install
 **For YOUR javascript code:**
 
 * Use the files located in the `public` folder
-  * Place your JS code in `public/js/game.js`
-  * Place your CSS in `public/css/main.css`
-  * Place your HTML in `public/index.html`
+  * Put your JS code in `public/js/game.js`
+  * Put your CSS in `public/css/main.css`
+  * Put your HTML in `public/index.html`
 
-**Access the Game:**
+**Access the game**
 
 Once you've started the API with the `rake api` command, the game will be accessible on http://localhost:4567/index.html.
 
@@ -33,10 +33,10 @@ Once you've started the API with the `rake api` command, the game will be access
 
 Your application will work like this:
 
-1. When the page loads, you will ask the API to create a new Game Session
-2. Once the Game Session created your page will display a button "Start a new Game!"
-3. When clicked the button disappears and a form is displayed to type Player1 and Player2 names
+1. When the page loads, ask the API to create a new Game Session
+2. Once the Game Session is created, your page will display a button `Start a new Game!`
+3. When clicked, the button disappears and is replaced by a form where you can type Player1 and Player2 names
 4. On form submission you will ask the API to create a new Game based on the players' names
-5. When you get a response, hide the form, display the board (what you've done in the last exercise) and listen for users' input
-6. When the game ends, send a request to the API to _finish_ the game, providing the winner and the time spent on the game (in seconds)
-7. When you get the API response, display the information on a score board and provide a "Play again!" button.
+5. When you get a response, hide the form, display the board (what you did in the last exercise) and listen for users' input
+6. When the game ends, send a request to the API to _finish_ the game, provide the winner and show the time taken to win (in seconds)
+7. When you get the API response, display the information on a score board and provide a "Play again!" button
