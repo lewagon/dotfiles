@@ -3,7 +3,7 @@
 Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/flexbox-layout.html) like in the Karr lecture. Implement this layout in the `layout/map.css` file:
 
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/map-example.png" alt="">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/map-example.png" alt="" width="100%">
 </div>
 
 ## Starting the challenge
@@ -21,7 +21,7 @@ Notice that we now have **two folders** in our CSS:
 
 As usual, `style.css` is importing all the other stylesheets and is then linked in the HTML.
 
-## Gmaps
+## Gmaps javascript and `!important` keyword
 
 When javascript code is injecting CSS into the HTML (e.g. what Gmaps javascript is doing), you must use the keyword `!important` in your CSS to override the CSS injected by the javascript code.
 

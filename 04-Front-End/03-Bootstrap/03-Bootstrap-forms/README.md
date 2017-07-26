@@ -133,6 +133,4 @@ You can also inject a row inside a form. Here is an example with inputs for firs
 ## Your turn
 
 - Now it's your turn to build a [responsive signup form](http://lewagon.github.io/bootstrap-challenges/10-Login/).
-
 - Try to customize your design a bit in `components/form.css`
-
