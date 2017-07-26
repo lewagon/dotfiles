@@ -25,6 +25,16 @@ Build a simple HTML profile page with the following elements (use the right HTML
 
 A picture is worth a thousand words, [so here is what you should build in this challenge](http://lewagon.github.io/html-css-challenges/01-profile-content/)
 
+## Images folder
+
+Make sure you have an `images` folder inside your profile project to store all your images:
+
+bash
+```
+cd profile
+mkdir images
+```
+
 ## Further suggestions & resources
 
 ### Find **good** pictures
