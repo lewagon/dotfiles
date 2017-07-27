@@ -1,1 +1,7 @@
-/* Your message CSS code here */
+.inbox {
+  padding-left: 0px;
+  list-style: none;
+}
+.message {
+  /* Your turn to design a flexbox message */
+}
