@@ -25,7 +25,7 @@ Morning lecture is split into 2 topics:
 - Follow the frontend setup carefully to work on a nice-looking app.
 - Deploy on Heroku from start, and try applying continuous deployment.
 
-1. **Rails frontend**: respect our setup to implement Bootstrap SASS + frontend libraries the good way, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
+2. **Rails frontend**: respect our setup to implement Bootstrap SASS + frontend libraries the good way, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
 
 Tomorrow, we'll speak of image hosting on Amazon S3, and you will add an image upload feature to your cocktails app using Paperclip.
 
