@@ -7,7 +7,7 @@ require 'minitest/pride'
 task :default do
   describe "style.css" do
     it "should have your custom code (more than 5 lines!)" do
-      (File.open("profile-dashboard/css/style.css","r").readlines.size > 5).must_equal true
+      (File.open("profile-dashboard/css/components/profile_header.css","r").readlines.size > 5).must_equal true
     end
   end
 end
