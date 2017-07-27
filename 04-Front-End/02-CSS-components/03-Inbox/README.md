@@ -32,3 +32,18 @@ For the `.message` design, **go back to the Karr slides!** This is a classic use
 Once that is done, it's just a matter of fine-tuning your `margin`, `padding`, and playing with fonts and colors.
 
 So what are you waiting for? Time to make a cool inbox! 🚀📥🚀
+
+## [Extra tip] First & last child selectors
+
+You can select first (or last message) with these selectors:
+
+```css
+.message:first-child {
+  /* CSS code for the first element with class="message" */
+}
+.message:last-child {
+  /* CSS code for the last element with class="message" */
+}
+```
+
+It can be useful to get rid of `border-bottom` on the last message of the inbox for instance!
