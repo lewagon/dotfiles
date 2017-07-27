@@ -16,9 +16,6 @@ Here comes our good old friend Active Record again! One of the most important Ra
 
 During this day, you will add a second model to a Rails app by building a 2-model clone of Yelp, with restaurants and reviews. Morning lecture is about going **Beyond CRUD** with advanced routing and validations in Rails.
 
-1. **Beyond CRUD**: discover advanced routing and validations in Rails
-1. **Rails frontend**: respect our setup to implement Bootstrap SASS + frontend libraries the good way, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
-
 ### `04-Rails-mister-cocktail` (Thursday)
 
 Morning lecture is split into 2 topics:
