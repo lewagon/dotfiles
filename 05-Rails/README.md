@@ -14,18 +14,21 @@ Here comes our good old friend Active Record again! One of the most important Ra
 
 ### `03-Rails-restaurant-reviews` (Wednesday)
 
-During this day, you will add a second model to a Rails app by building a 2-model clone of Yelp, with restaurants and reviews. Morning lecture is split between two independent parts:
+During this day, you will add a second model to a Rails app by building a 2-model clone of Yelp, with restaurants and reviews. Morning lecture is about going **Beyond CRUD** with advanced routing and validations in Rails.
 
 1. **Beyond CRUD**: discover advanced routing and validations in Rails
 1. **Rails frontend**: respect our setup to implement Bootstrap SASS + frontend libraries the good way, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
 
 ### `04-Rails-mister-cocktail` (Thursday)
 
-Morning talk is about deployment on [Heroku](http://heroku.com/). Then, you'll start working during 2 days on a cocktails app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
+Morning lecture is split into 2 topics:
 
+1. **Hosting**: deployment on [Heroku](http://heroku.com/). Then, you'll start working during 2 days on a cocktails app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
 - Create your app with good Postgres config.
 - Follow the frontend setup carefully to work on a nice-looking app.
 - Deploy on Heroku from start, and try applying continuous deployment.
+
+1. **Rails frontend**: respect our setup to implement Bootstrap SASS + frontend libraries the good way, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
 
 Tomorrow, we'll speak of image hosting on Amazon S3, and you will add an image upload feature to your cocktails app using Paperclip.
 
