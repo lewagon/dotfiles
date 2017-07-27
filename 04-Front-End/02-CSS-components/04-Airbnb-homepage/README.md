@@ -6,7 +6,7 @@ Build <a href="http://lewagon.github.io/html-css-challenges/10-homepage-with-car
 
 ## Re-use your previous components
 
-First let's save time re-use our simple components:
+First let's save time and re-use our simple components:
 
 1. Create your avatar, button and banner CSS files (we have put empty files for that in the starting boilerplate). For button and banner files, just re-use your code from previous challenges.
 2. Add the banner to your HTML
