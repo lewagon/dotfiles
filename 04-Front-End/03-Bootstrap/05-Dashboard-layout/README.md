@@ -12,9 +12,9 @@ Build a [profile dashboard](https://lewagon.github.io/layouts-demo/grid-layout.h
 2. Go back to the Karr lecture to review how to build a layout using **CSS grids**
 3. **Don't cheat by inspecting the code! 🔎** The goal of this challenge is to teach you how to build a layout by yourself. Take you time to think, ask teachers if you're stuck, but don't cheat 😉!
 
-## Structure the HTML of your grid
+## HTML structure of your grid
 
-Your grid should look like this:
+Your profile grid should look like this:
 
 ```html
 <div class="grid">
@@ -31,7 +31,7 @@ Your grid should look like this:
 </div>
 ```
 
-Here the `.card` class is just to design every grid item with a white background and a nice shadow, then the different classes `.main-section`, `.stats-section`, etc... are here to precisely define the CSS grid behavior of each grid item. Good luck!
+Here the `.card` class is just here to design every item with a white background and a fancy shadow. Then the different classes `.main-section`, `.stats-section`,... are here to precisely define the CSS grid behavior of each grid item. Your turn now!
 
 
 ## Resources
