@@ -1,13 +1,13 @@
 ## Background & Objectives
 
-The goal of the next two challenges is to re-implement some of your ruby scripts in Rails. That means:
+For the next two challenges, you'll be re-implementing some of your ruby scripts in Rails. That means:
 
-- Your program interface isn't the terminal anymore, it is your browser now.
-- The only way to communicate with your Rails app is through HTTP requests.
+- Your program interface is now your browser (rather than your terminal)
+- The only way to communicate with your Rails app is through HTTP requests
 
 Re-implement the stupid coaching challenge (01-Ruby/01-Programming-basics/04-Stupid-coaching) in Rails.
 
-There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
+There is no `rake` here, and do not create your Rails app in `fullstack-challenges` ⛔️
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -31,7 +31,7 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 
 ### Generate a CoachingController
 
-Once you have created your new coaching app, add a new `CoachingController`, using the adequate rails generator on the command line. This controller will have two actions, `CoachingController#answer` and `CoachingController#ask`
+Once you have created your new coaching app, add a new `CoachingController`, using the correct rails generator on the command line. This controller will have two actions, `CoachingController#answer` and `CoachingController#ask`
 
 ### Your coach answer logic
 
@@ -39,9 +39,9 @@ Implement a first route `GET '/answer'` to your `CoachingController#answer` acti
 
 Your question to your coach should be given as a parameter named `:query`. Ex: GET `/answer?query=hello` or GET `/answer?query=what+should+i+do?`.
 
-![Coach answer to question](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-2.png)
+![Coach answer to a question](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-2.png)
 
-![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-1.png)
+![Coach answer to a statement](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-1.png)
 
 ### Ask a question using a form
 
@@ -62,10 +62,10 @@ Notice the important HTML attributes in the form:
 
 Replace the `???` so that your form send a request to `CoachingController#answer` with a good parameter name.
 
-![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
+![Question for the Coach](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
 
 ### Add a backlink in `answer.html.erb`
 
 - Add a link to `/ask` on the `answer.html.erb` view using the `link_to` Rails helper.
 
-![Coach answer to assertion](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-adding-link.png)
+![Coach answer](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-adding-link.png)

@@ -6,74 +6,80 @@ This is the last "real week" on Kitt with day-by-day challenges. From next week,
 
 ### `01-Rails-intro` (Monday)
 
-First day of Rails, introducing Rails flow: `routing > controller > view` without adding the model layer and explaining `params`. During this day, you'll have to transform old ruby challenges of 1st week into Rails apps.
+Your first day will introduce the standard Rails flow of `routing > controller > view` without adding the model layer and explaining `params`. Over the course of the day, you'll be transforming old ruby challenges from Week 1 into Rails apps.
 
 ### `02-Rails-CRUD` (Tuesday)
 
-Here comes our good old friend Active Record again! One of the most important Rails lectures. Your lead-coach will code from scratch all of the 7 CRUD actions and introduce the `resources` routing. Pay attention!
+Here comes our old friend Active Record again! **One of the most important Rails lectures.** Your lead coach will code all of the 7 CRUD actions from scratch and introduce the `resources` routing. Pay attention! 🤓
 
 ### `03-Rails-restaurant-reviews` (Wednesday)
 
-During this day, you will add a second model to a Rails app by building a 2-model clone of Yelp, with restaurants and reviews. Morning lecture is about going **Beyond CRUD** with advanced routing and validations in Rails.
+Today you will add a second model to a Rails app by building a two model clone of Yelp, with restaurants and reviews. The morning lecture is about going **Beyond CRUD** with advanced routing and validations in Rails.
 
 ### `04-Rails-mister-cocktail` (Thursday)
 
-Morning lecture is split into 2 topics:
+The morning lecture is split into 2 topics:
 
-1. **Hosting**: deployment on [Heroku](http://heroku.com/). Then, you'll start working during 2 days on a cocktails app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
+1. **Hosting**: Deployment on [Heroku](http://heroku.com/)
+
+2. **Rails Frontend**: Learn the best setup for implementing Bootstrap SASS + frontend libraries, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config
+
+For the exercises, you'll start a two-day build of a cocktail app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
 - Create your app with good Postgres config.
 - Follow the frontend setup carefully to work on a nice-looking app.
 - Deploy on Heroku from start, and try applying continuous deployment.
 
-2. **Rails frontend**: respect our setup to implement Bootstrap SASS + frontend libraries the good way, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
-
-Tomorrow, we'll speak of image hosting on Amazon S3, and you will add an image upload feature to your cocktails app using Paperclip.
-
 ### `05-Mister-cocktail-final` (Friday)
 
-Morning-talk is about image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want to loose money because you have a security leak on Github.**
+Today's lecture covers image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want your bank details stolen on Github.**
 
-On Friday at 2pm, quizz time! Let's step back and rehearse all the core notions of Rails on a paper quizz.
+On Friday at 2pm, **quiz time**! Your last one! Don't be sad 😢
+
+We'll take a step back and check you've grasped all the core notions of Rails.
 
 ## Second week - Airbnb
 
-**AirBnB**! For the second week, we'll work as teams of 2 to 4. The goal is to start from scratch and build a MVP of AirBnB.
+**AirBnB**! For the second week, we'll work in your project teams of 3 or 4. The goal is to start from scratch and build an MVP of AirBnB - you'll have 5 days to go as far as you can on your clone.
 
 - First demo on Wednesday (5pm)
-- Official demo on Friday (5pm)
+- **Official demo on Friday! (5pm)**
 
-**No live-code at 5pm for this week.** But you still have morning lecture at 9am on cool topics. So get up early! Here is the lectures' planning.
+**No live-code at 5pm for this week.** But you still have morning lecture at 9am on cool topics. So get up early! Here is an overview of what will be covered:
 
 ### `06-Airbnb-Devise`
 
 2-parts morning lecture:
 
 - Authentication with [Devise](https://github.com/plataformatec/devise) gem.
-- Collaboration techniques with git & Github. You will discover how we work in a dev team using branches and pull requests. You will have to use this workflow within your Airbnb teams. You'll have 5 days to go as far as you can on your Airbnb clone.
+- Collaboration techniques with git & Github. You will discover how to work in a dev team using `branches` and `pull requests`. It's a system you will use for every dev project you ever do, so pay attention!
 
 ### `07-Airbnb-Facebook-connect`
 
-In the continuity of Devise course, we will teach you how to customize Devise to build a Facebook connect, you will use [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
+Following on from Devise, we will teach you how to customize it to build a `Sign In With Facebook` function, using [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
 
 ### `08-Airbnb-SMTP`
 
-Morning lecture is about sending mail with the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc.). At 5pm, every group should demo the current version of their Airbnb clone in front of the class.
+Today's lecture covers sending mail using the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc.).
+
+Then, at 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
 ### `09-Airbnb-Geocoder`
 
-Morning lecture is about geocoding (with the `geocoder` gem) and Google API to add autocomplete on address form inputs.
+Morning lecture on geocoding (with the `geocoder` gem) plus a bit about using the Google API to add autocomplete on address form inputs.
 
 ### `10-Airbnb-Ajax-in-Rails`
 
-Once you understand CRUD and can quickly re-create a rails scaffold, it's time to add some magic in the app with AJAX. You'll be able to talk to the server without reloading the page (think adding a new comment to a post, clicking on a 5-star rating item, removing something from a list, etc.)
+Once you understand CRUD and can quickly re-create a rails scaffold, it's time to add some extra wizardry using AJAX. You'll be able to talk to the server without reloading the page (adding new comments to posts / clicking on star ratings / removing something from a list, etc.)
 
 ### Projects prep (weekend)
 
-You've worked well and we are really proud of you! Time to work on your projects. During this weekend, take 3 hours to think about your projects:
+You've done amazing things - we are really proud of you!
 
-1. Write your user stories (< 15 user stories).
-1. Draw mockups of your main views on a paperbook.
-1. Start building your DB scheme on [db.lewagon.org](http://db.lewagon.org).
-1. Start thinking about your routes.
+Now, it's time for the Grand Finale - your projects. Take a bit of time over the weekend to think about your projects:
 
-Thanks to this work, you will save a lot of time on Monday to start on your projects.
+- Write your user stories (not more than 15).
+- Draw mockups of your main views on a paper.
+- Start building your DB schema on [db.lewagon.org](http://db.lewagon.org).
+- Start thinking about your routes.
+
+If you can get most of this done, you'll save a lot of time on Monday and be able to start on your projects without too much fuss.

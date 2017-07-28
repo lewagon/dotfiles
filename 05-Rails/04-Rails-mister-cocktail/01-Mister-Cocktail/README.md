@@ -1,12 +1,12 @@
 ## Background & Objectives
 
-Now it's time to make a 3-model app. And you guessed it, we'll introduce
-a `n:n` (many to many) relation. So what is it about? Well, it's a cocktail
-manager. We want to store our best recipes of cocktails.
+Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to
+many relationship (`n:n`). So what's the deal? Well, it's time to build a cocktail
+manager. We want to store our favourite cocktails, and their recipes.
 
 ## Rails app generation
 
-**Note**: You should be able to run those steps without this cheat sheet.
+**Note**: You should now be able to run these steps without this cheat sheet!
 
 First let's create a new Rails app using PostgreSQL
 
@@ -53,8 +53,7 @@ rake                            # Launch tests
 
 ## Heroku deployment
 
-Follow [the lecture's instructions](https://karr.lewagon.org/lectures/rails/04-hosting-deployment/#/1/12) about
-preparing your app for being hosted on Heroku.
+Follow [the lecture instructions](https://karr.lewagon.org/lectures/rails/04-hosting-deployment/#/1/12) about preparing your app for Heroku hosting.
 
 Then, in your terminal, create the app...
 
@@ -70,10 +69,10 @@ git push heroku master && heroku run rails db:migrate
 
 ## Style
 
-Don't forget to use [lewagon/stylesheets](https://github.com/lewagon/rails-stylesheets)
-to start from a good CSS architecture.
+Don't forget to use the [lewagon/stylesheets](https://github.com/lewagon/rails-stylesheets)
+for your CSS architecture.
 
-(commit and deploy this. You know the drill. **continuous deployment**)
+(Now `commit` and `deploy` this. You know the drill. **Continuous deployment!**)
 
 ## Specs
 
@@ -94,13 +93,13 @@ to selectively run tests in the `spec/models` folder.
 
 - A **cocktail** has a name (e.g. `"Mint Julep"`, `"Whiskey Sour"`, `"Mojito"`)
 - An **ingredient** has a name (e.g. `"lemon"`, `"ice"`, `"mint leaves"`)
-- A **dose** references a cocktail, an ingredient and has a description. (e.g. the Mojito cocktail needs **6cl** of lemon)
+- A **dose** is the amount needed for each ingredient in a cocktail (e.g. the Mojito cocktail needs **6cl** of lemon). So each dose references a cocktail, an ingredient and has a description.
 
 #### Validation
 
-- A cocktail must have a name, and names should be unique
-- An ingredient must have a name, and names should be unique
-- A dose must have a description, a cocktail and an ingredient, and [cocktail, ingredient] couples should be unique.
+- A cocktail must have a unique name.
+- An ingredient must have a unique name.
+- A dose must have a description, a cocktail and an ingredient, and [cocktail, ingredient] pairings should be unique.
 
 #### Associations
 
@@ -112,10 +111,10 @@ to selectively run tests in the `spec/models` folder.
 - You can't delete an ingredient if it used by at least one cocktail.
 - When you delete a cocktail, you should delete associated doses (but not the ingredients as they can be linked to other cocktails).
 
-### Seed the ingredients
+### Seed the ingredients 🍋
 
 **Our app will not allow users to create ingredients**.
-Instead, we will generate a static seed of ingredients.
+Instead, we will generate a static seed of ingredients to choose from.
 Write this seed, for example
 
 ```ruby
@@ -125,49 +124,49 @@ Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 ```
 
-**Optional**: have fun and seed real ingredients, e.g. using [this JSON list](http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list) (with `open-uri` and `json` ruby libs).
+**Optional**: have fun and seed real ingredients using [this JSON list](http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list) (with `open-uri` and `json` ruby libs).
 
 ### Routing
 
 Once again, you must have a precise idea of the features of your app in order to build your routes. Here is the list of features:
 
-- A user can see the list of all cocktails
+- A user can see the list of cocktails
 
 ```
 GET "cocktails"
 ```
 
-- A user can see the details of a given cocktail, with the ingredient list
+- A user can see the details of a given cocktail, with the dose needed for each ingredient
 
 ```
 GET "cocktails/42"
 ```
 
-- A user can create a new cocktail.
+- A user can create a new cocktail
 
 ```
 GET "cocktails/new"
 POST "cocktails"
 ```
 
-- A user can add a new dose (ingredient/description pair) on an existing cocktail.
+- A user can add a new dose (ingredient/description pair) to an existing cocktail
 
 ```
 GET "cocktails/42/doses/new"
 POST "cocktails/42/doses"
 ```
 
-- A user can delete a dose on an existing cocktail
+- A user can delete a dose that belongs to an existing cocktail
 
 ```
 DELETE "doses/25"
 ```
 
-And now think. Do we need an `IngredientsController`?
+Do we need an `IngredientsController`?
 
 ### Views
 
-Now put a nice looking front-end on top of that 😊
+Now time to make a nice front-end! 😊
 
 ### Going further (Harder)
 

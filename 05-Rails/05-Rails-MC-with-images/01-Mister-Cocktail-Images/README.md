@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Today, we'll take the Mister Cocktail app from yesterday and enhance it with some images.
+Today, we'll take the Mr Cocktail app from yesterday and enhance it using images.
 
 We'll continue working on yesterday's code, so go back to your folder:
 
@@ -11,20 +11,19 @@ cd ~/code/<user.github_nickname>/rails-mister-cocktail
 ### Specs
 
 The goal is to add a picture to the `Cocktail` model. The user should be able to
-upload an image. The image would then be displayed on the `index` view
-of `Cocktail`, as thumbnails. On the `show` view of `Cocktail`, the same
+upload an image that will then be displayed on the `index` view
+of `Cocktail` as a thumbnail. On the `show` view of `Cocktail`, the same
 image should be displayed, but bigger!
 
-Even with such a simple app, try to make something beatiful using Bootstrap,
-the right fonts and an ounce of creativity 😊 You should build something beautiful!
+Even though it's a simple app, try your best to make something beatiful using Bootstrap,
+a few nice fonts, and all your creativity 🎨😊🎨
 
-**Hint**: Use [lewagon/ui-components](http://lewagon.github.io/ui-components/)
+**Hint**: You can always build on top of [lewagon/ui-components](http://lewagon.github.io/ui-components/)
 
 ### Deployment
 
-Make sure uploading works both in the `development` environment (on your laptop)
-and on the `production` environment (Heroku). To deploy your work, you need
-to commit and then run:
+Make sure uploading works both in `development` (on your laptop)
+and in `production` (Heroku). To deploy your work, you need to `commit` and then run:
 
 ```bash
 git push heroku master
@@ -32,4 +31,4 @@ git push heroku master
 
 ### (Optional) Cocktail Reviews
 
-If you're done with the image, try to add an anonymous review system to the cocktails.
+If you're done with the images, try to add an anonymous review system to the cocktails.
