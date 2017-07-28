@@ -35,9 +35,9 @@ and open the `jukebox.sqlite` file with it.
 
 The goal of this exercise is to explore the Jukebox database, and understand its schema. Answer the following questions:
 
-1. What is the database schema? (i.e what are the tables, and the relations between tables)
-2. Use SQL Design tool to draw the schema of this database.
-3. How many rows does each table contain? What are the column names for each table?
+- What is the database schema? (i.e what are the tables, and the relations between tables)
+- Use SQL Design tool to draw the schema of this database.
+- How many rows does each table contain? What are the column names for each table?
 
 Submit your SQL schema in XML format in `jukebox.xml`.
 

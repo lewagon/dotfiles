@@ -12,11 +12,11 @@ system with users, questions, responses and votes.
 
 Here are the requirements of our system:
 
-1. The application manages several `users`
-1. A user can create many `surveys`, but a survey is created by only one user
-1. A survey has several `questions`.
-1. A question has several possible `answers`.
-1. When a user answers a survey, they can only choose one answer. These are stored as `user_answers`.
+- The application manages several `users`
+- A user can create many `surveys`, but a survey is created by only one user
+- A survey has several `questions`.
+- A question has several possible `answers`.
+- When a user answers a survey, they can only choose one answer. These are stored as `user_answers`.
 
 #### Design the schema
 
