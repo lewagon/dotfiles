@@ -33,7 +33,7 @@ Use the right rails generator to generate the `Article` model.
 
 ## Seed
 
-Add the [`faker`](https://github.com/stympy/faker) gem to your `Gemfile` and
+Add the [`faker` gem](https://github.com/stympy/faker) to your `Gemfile` and
 run `bundle install`. Use this gem to generate 10 fake articles in
 `db/seeds.rb`. When your code is done, you can run:
 
