@@ -1,37 +1,38 @@
 ## Projects
 
-We are now entering the two last weeks of the program. It's your turn to shine. Time flies, so make sure you release often in production and have a nice front-end
-as soon as possible! Good luck, here are your milestones:
+We are now entering the two last weeks of the program. It's your time to shine. Time is going to really fly, so make sure you are deploying in production as often as you can, and **don't neglect your front-end**! Remember, the look of your site will be the first thing people see on Demo Day.
 
-- First week, Friday 5pm: first demo to get class/staff feedbacks and organize your roadmap for the second week.
+Good luck - you're going to be amazing. Here are your milestones:
+
+- First week, Friday 5pm: first demo to get class / staff feedback and organize your roadmap for the second week.
 - Second week Thursday (7pm): rehearsal for final demo.
-- Second week Friday (6pm): the big day. Every one is here! Press, VCs, your family! Kick it!
+- Second week Friday (6pm): THE BIG DAY. Everyone is here! Press, VCs, your family! Smash it!
 
-**Le Wagon Rails Templates**: to save time on all boring configurations of last week, you can use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates). It'll get you up and running faster.
+**Le Wagon Rails Templates**: to save time on all the boring configurations of last week, you can use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates). It'll get you up and running faster.
 
 ## Morning lectures
 
-During these two weeks, **no live-code at 5pm**. You will still have morning talks on advanced topics. Here is the program for morning lectures.
+During these two weeks, **there is no afternoon live-code**. You will still have morning talks on advanced topics though. Here is the program for morning lectures:
 
 ### `01-Pundit` (Monday)
 
-Handle authorizations using the [Pundit](https://github.com/elabs/pundit) gem. This library makes you isolate the "authorization logic" in `Policy` objects in order not to pollute the code of your controllers.
+Handle authorizations using the [Pundit](https://github.com/elabs/pundit) gem. This library isolates the "authorization logic" in `Policy` objects to stop you polluting your controllers with extra code.
 
 ### `02-i18n` (Tuesday)
 
-How about having an international app handling different languages? That is what Internationalization (`I..18 characters..n"`) is about.
+How about having an international app to handle different languages? That is what Internationalization (`I + 18 characters + n"` = `i18n`) is about.
 
 ### `03-Advanced-Admin`(Wednesday)
 
-Learn to customize your administration dashboards using either [ActiveAdmin](http://activeadmin.info/) or [Rails Admin](https://github.com/sferik/rails_admin).
+Learn to customize your admin dashboards using either [ActiveAdmin](http://activeadmin.info/) or [Rails Admin](https://github.com/sferik/rails_admin).
 
 ### `04-Background-jobs` (Thursday)
 
-Push outside of the controller time-consuming processes (delivering emails, posting to an API, cleaning up, etc.) using [Active Job](http://edgeguides.rubyonrails.org/active_job_basics.html).
+Take time-consuming processes (delivering emails, posting to an API, cleaning up, etc.) out of the controller using [Active Job](http://edgeguides.rubyonrails.org/active_job_basics.html).
 
 ### `05-Build-an-API` (Friday)
 
-Learn the best practices to build an API with Rails.
+Learn how to build an API with Rails.
 
 ### `06-Payment-with-Stripe` (Monday)
 

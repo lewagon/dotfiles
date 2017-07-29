@@ -17,7 +17,8 @@ git push origin master
 
 ## Specs
 
-This is how your game should work: we only give you the routing structure, it's your call to generate the relevant controller, actions and views.
+For this challenge, we only give you the routing structure. It's your call to generate the relevant controller, actions and views.
+This is how your game should work:
 
 - `GET '/game'`: render the page with a new random grid of words, and the HTML form to write your guess just below the word-grid.
 - `GET '/score'` should compute and display your score..
@@ -28,6 +29,6 @@ This is how your game should work: we only give you the routing structure, it's 
 
 ## Extra (optional)
 
-Every time a new HTTP request hits your Rails app, it generates a new instance of the controller. Hence, you cannot store values across requests, except if you use Rails session. Rails session is persisted between all requests of the user's session.
+Every time a new HTTP request hits your Rails app, it generates a new instance of the controller. This means you cannot store values across requests unless you use a Rails session. A Rails session persists across all requests during a user's session.
 
-Here you can use [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the total number of games you have played, your average score and other kind of general information.
+Here's how to use a [Rails session](http://guides.rubyonrails.org/action_controller_overview.html#session) to keep track of the total number of games you have played, your average score and other kind of general information.

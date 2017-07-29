@@ -20,28 +20,28 @@ Here is how this should work, when running `ruby lib/interface.rb`:
 Here is your grid:
 Q F M R K L I T P
 *****************************************************
-What is your best shot?
+What is your longest word?
 lift
 ******** Now your results ********
 Your word: lift
 Time Taken to answer: 12.07916
 Your score: 3.194722666666667
-Message: well done!
+Message: Well Done!
 ```
 
 This challenge will let you access a web-API, and parse JSON data returned by this API!
 
 **Constraints**:
 
-- You will use the Wagon Dictionary API. Let's have a look at what is exposed by the API when you query a [correct English word](https://wagon-dictionary.herokuapp.com/apple) and a [wrong one](https://wagon-dictionary.herokuapp.com/zzz), pay attention to the structure of the URL.
-- Your grid should be a real random grid, making it possible to embed the same characters multiple times.
-- Make sure you check if the attempted word is an actual English word, and if every letter appears in the grid.
-- If the word is not valid or is not in the grid, the score will be 0 and you should build a custom message to explain it to the player.
-- Your score should depend on the time you take to answer plus the length of the word you found. The longer the word and the quicker the time, the better the score! Although feel free to invent your own penalty rules!
+- You will use the Wagon Dictionary API. Let's have a look at what we get back from the API when we submit a [correct English word](https://wagon-dictionary.herokuapp.com/apple) and a [wrong one](https://wagon-dictionary.herokuapp.com/zzz). Pay attention to the structure of the URL.
+- Your grid must be a random grid where it's possible to embed the same characters multiple times.
+- Make sure you are validating that **1)** your word is an actual English word, and **2)** that every letter in your word appears in the grid (remember you can only use each letter once).
+- If the word is not valid or is not in the grid, the score will be 0 (and should be accompanied by a message to the player explaining why they didn't score any points).
+- The score depends on the time taken to answer, plus the length of the word you submit. The longer the word and the quicker the time, the better the score! Feel free to invent your own penalty rules too!
 
 ## Key learning points
 
-- What's a JSON? How is it close from the structure of a ruby hash?
+- What's a JSON? How is it similar to the structure of a ruby hash?
 - How could you refactor your code to separate the responsibilities of each method?
 
 ## Further suggestions & resources
@@ -50,5 +50,5 @@ This challenge is deliberately not guided. Here are some elements that will help
 
 - Write the pseudo code to figure out how to proceed before diving into the code
 - You can install the extension [Json Formatter for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) to help you read a JSON rendered by an API.
-- Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get the JSON result. Use the `json` package to parse returned JSON files.
+- Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get a JSON result. Use the `json` package to parse returned JSON files.
 - For testing the grid inclusion, try making use of `Enumerable#all?`
