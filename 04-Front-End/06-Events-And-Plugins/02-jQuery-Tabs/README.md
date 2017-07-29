@@ -1,10 +1,10 @@
 ## Background & Objectives
 
-Build dynamic tabs like in [this page](http://lewagon.github.io/animation-challenges/05-jQuery-tabs/). You will have to write your code in the `javascript/tabs.js` file.
+Build dynamic tabs like the ones on [this page](http://lewagon.github.io/animation-challenges/05-jQuery-tabs/). You will have to write your code in the `javascript/tabs.js` file.
 
 ## Good HTML => Good jQuery
 
-Everything starts with a good HTML markup. If your HTML markup is poor, there's nothing you can do to compensate in jQuery. Look at our HTML structure:
+Everything starts with a good HTML markup. If your HTML markup is poor, there's nothing you can do to make up for it in jQuery. Look at our HTML structure:
 
 ```html
 <div class="tabs">

@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Once you have finished your mockup (done with Sketch or with another tool) and once you have validated it with a teacher, you can now export each page as a PNG and build a prototype with [marvelapp](https://marvelapp.com/) by connecting the views.
+Once you have finished your Sketch mockup and validated it with a teacher, you can export each page as a PNG and build a prototype with [marvelapp](https://marvelapp.com/) by connecting the views.
 
 Again, you can watch our quick marvelapp tutorial:
 
@@ -8,4 +8,6 @@ Again, you can watch our quick marvelapp tutorial:
 
 ## Demo time 🎉🎉🎉
 
-Time to demo your masterpiece to the class (5 minutes max). When making your demo, **try to impersonate a real user** and tell us a story!
+Time to demo your masterpiece to the class **(5 minutes max)**. When making your demo, **try to impersonate a real user**.
+
+Don't tell us how it works. Tell us a story!
