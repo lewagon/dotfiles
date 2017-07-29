@@ -27,10 +27,10 @@ end
 
 Complete the program `queries.rb` to answer the following questions. Don't forget you can look inside the database by running `sqlite3 lib/db/jukebox.sqlite` in the Terminal.
 
-1. How many rows does each table contain?
-2. Return the list of all the artists and sort them by name (alphabetically). **Hint:** use the `ORDER BY` SQL filter.
-3. Find all the love songs (i.e the tracks that contain "love" **anywhere** in their name). **Hint:** use the `WHERE` and `LIKE` SQL keywords.
-4. Return all the tracks that are longer than 10 minutes and sort them by length. **Hint:** you can use the comparison operator `>` in SQL.
+- How many rows does each table contain?
+- Return the list of all the artists and sort them by name (alphabetically). **Hint:** use the `ORDER BY` SQL filter.
+- Find all the love songs (i.e the tracks that contain "love" **anywhere** in their name). **Hint:** use the `WHERE` and `LIKE` SQL keywords.
+- Return all the tracks that are longer than 10 minutes and sort them by length. **Hint:** you can use the comparison operator `>` in SQL.
 
 ## Resources
 

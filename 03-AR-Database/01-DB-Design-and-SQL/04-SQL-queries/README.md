@@ -9,8 +9,9 @@ of `SQLite3::Database` on which you can call the `execute` method.
 
 ### Detailed Tracks
 
-Implement `detailed_tracks` to get all the tracks with the corresponding artist name and album titles.
-Your output should be an array of arrays. **Hint:** you will have to use two `JOIN` sql statements.
+- Implement `detailed_tracks` to get all the tracks with the corresponding artist name and album titles.
+- Your output should be an array of arrays. **Hint:** you will have to use two `JOIN` sql statements.
+
 Your method should return something like this:
 
 ```ruby
