@@ -23,7 +23,7 @@ In `lib/age_in_days.js`, implement the function `ageInDays(day, month, year)` wh
 ## Further suggestions & resources
 
 You may want to read the [Date documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-on Mozilla Developer Network (the **best** one out here. Do not use the `w3schools` website 💩). **Do not** use external libraries, just pure JavaScript.
+on Mozilla Developer Network (the **best** one out here. Do not use the `w3schools` website). **Do not** use external libraries, just pure JavaScript.
 
 Remember, to debug something, it's not `puts` like in Ruby, it's:
 
