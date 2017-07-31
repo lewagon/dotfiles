@@ -4,7 +4,8 @@
     "no-console": "off",
     "comma-dangle": "off",
     "quotes": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "no-param-reassign": "off"
   },
   "env": {
     "node": true,

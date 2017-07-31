@@ -40,7 +40,7 @@ function check(email, teamCount, sum) {
   assertEqual(email, "boris@lewagon.org");
   assertNotEqual(document.getElementById("email").value, "boris@lewagon.org");
   assertEqual(document.getElementById("email-hint").innerText, "This is my email now");
-  assertEqual(document.querySelector('th').style.color, 'rgb(0, 0, 255)');
+  assertEqual(document.querySelectorAll('th.blue').length, 3);
   assertEqual(teamCount, 14);
   assertEqual(document.querySelectorAll('tbody > tr').length, 15);
   assertEqual(sum, 859);

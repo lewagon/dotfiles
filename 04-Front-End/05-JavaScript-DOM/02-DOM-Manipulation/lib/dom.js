@@ -1,4 +1,5 @@
 /* eslint-disable no-multiple-empty-lines */
+/* eslint-disable prefer-const */
 
 // INSTRUCTIONS - PLEASE READ!!
 // Here are some challenges. Solve them from top to bottom
@@ -39,7 +40,7 @@ module.exports = function runChallenges(check) {
 
 
   // Ex 7. Write some code to sum all points given to all teams
-  const sum = 0; // TODO: replace 0 with your sum result, keep the sum variable.
+  let sum = 0; // TODO: replace 0 with your sum result, keep the sum variable.
 
 
 
