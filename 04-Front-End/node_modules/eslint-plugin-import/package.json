@@ -1,0 +1,98 @@
+{
+  "name": "eslint-plugin-import",
+  "version": "2.7.0",
+  "description": "Import with sanity.",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "lib",
+    "config",
+    "memo-parser"
+  ],
+  "scripts": {
+    "watch": "cross-env NODE_PATH=./src mocha --watch --compilers js:babel-register --recursive tests/src",
+    "cover": "gulp pretest && cross-env NODE_PATH=./lib istanbul cover --dir reports/coverage _mocha tests/lib/ -- --recursive -R progress",
+    "pretest": "linklocal",
+    "posttest": "eslint ./src",
+    "test": "cross-env BABEL_ENV=test NODE_PATH=./src nyc -s mocha -R dot --recursive tests/src -t 5s",
+    "test-compiled": "npm run prepublish && NODE_PATH=./lib mocha --compilers js:babel-register --recursive tests/src",
+    "coverage-report": "npm t && nyc report --reporter html",
+    "test-all": "npm test && for resolver in ./resolvers/*; do cd $resolver && npm test && cd ../..; done",
+    "ci-test": "eslint ./src && gulp pretest && cross-env NODE_PATH=./lib istanbul cover --report lcovonly --dir reports/coverage _mocha tests/lib/ -- --recursive --reporter dot",
+    "debug": "cross-env NODE_PATH=./lib mocha debug --recursive --reporter dot tests/lib/",
+    "prepublish": "gulp prepublish",
+    "coveralls": "nyc report --reporter lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benmosher/eslint-plugin-import"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "es6",
+    "jsnext",
+    "modules",
+    "import",
+    "export"
+  ],
+  "author": "Ben Mosher <me@benmosher.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benmosher/eslint-plugin-import/issues"
+  },
+  "homepage": "https://github.com/benmosher/eslint-plugin-import",
+  "devDependencies": {
+    "babel-eslint": "next",
+    "babel-plugin-istanbul": "^2.0.1",
+    "babel-preset-es2015-argon": "latest",
+    "babel-register": "6.24.1",
+    "babylon": "6.15.0",
+    "chai": "^3.4.0",
+    "coveralls": "^2.11.4",
+    "cross-env": "^4.0.0",
+    "eslint": "3.x",
+    "eslint-import-resolver-node": "file:./resolvers/node",
+    "eslint-import-resolver-webpack": "file:./resolvers/webpack",
+    "eslint-module-utils": "file:./utils",
+    "eslint-plugin-import": "2.x",
+    "gulp": "^3.9.0",
+    "gulp-babel": "6.1.2",
+    "istanbul": "^0.4.0",
+    "linklocal": "^2.6.0",
+    "mocha": "^3.1.2",
+    "nyc": "^8.3.0",
+    "redux": "^3.0.4",
+    "rimraf": "2.5.2",
+    "sinon": "^2.3.2",
+    "typescript": "^2.0.3",
+    "typescript-eslint-parser": "^2.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "2.x - 4.x"
+  },
+  "dependencies": {
+    "builtin-modules": "^1.1.1",
+    "contains-path": "^0.1.0",
+    "debug": "^2.6.8",
+    "doctrine": "1.5.0",
+    "eslint-import-resolver-node": "^0.3.1",
+    "eslint-module-utils": "^2.1.1",
+    "has": "^1.0.1",
+    "lodash.cond": "^4.3.0",
+    "minimatch": "^3.0.3",
+    "read-pkg-up": "^2.0.0"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "querystringify",
+  "version": "0.0.4",
+  "description": "Querystringify - Small, simple but powerful query string parser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js",
+    "watch": "mocha --watch test.js",
+    "coverage": "istanbul cover _mocha -- test.js",
+    "test-travis": "istanbul cover _mocha --report lcovonly -- test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unshiftio/querystringify"
+  },
+  "keywords": [
+    "query",
+    "string",
+    "query-string",
+    "querystring",
+    "qs",
+    "stringify",
+    "parse",
+    "decode",
+    "encode"
+  ],
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unshiftio/querystringify/issues"
+  },
+  "homepage": "https://github.com/unshiftio/querystringify",
+  "devDependencies": {
+    "assume": "1.4.x",
+    "istanbul": "0.4.x",
+    "mocha": "2.4.x",
+    "pre-commit": "1.1.x"
+  }
+}

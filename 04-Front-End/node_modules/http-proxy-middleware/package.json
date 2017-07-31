@@ -1,0 +1,60 @@
+{
+  "name": "http-proxy-middleware",
+  "version": "0.17.4",
+  "description": "The one-liner node.js proxy middleware for connect, express and browser-sync",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rm -rf coverage",
+    "test": "mocha --recursive --colors --reporter spec",
+    "cover": "npm run clean && istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive --reporter spec && istanbul-coveralls && npm run clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chimurai/http-proxy-middleware.git"
+  },
+  "keywords": [
+    "reverse",
+    "proxy",
+    "middleware",
+    "http",
+    "https",
+    "connect",
+    "express",
+    "browser-sync",
+    "gulp",
+    "grunt-contrib-connect",
+    "websocket",
+    "ws",
+    "cors"
+  ],
+  "author": "Steven Chim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chimurai/http-proxy-middleware/issues"
+  },
+  "homepage": "https://github.com/chimurai/http-proxy-middleware",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "chai": "^3.5.0",
+    "connect": "^3.5.0",
+    "coveralls": "^2.11.15",
+    "express": "^4.14.0",
+    "istanbul": "^0.4.5",
+    "istanbul-coveralls": "^1.0.3",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "1.2.0",
+    "opn": "^4.0.2",
+    "ws": "^1.1.1"
+  },
+  "dependencies": {
+    "http-proxy": "^1.16.2",
+    "is-glob": "^3.1.0",
+    "lodash": "^4.17.2",
+    "micromatch": "^2.3.11"
+  }
+}

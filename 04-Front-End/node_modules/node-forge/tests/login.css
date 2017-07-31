@@ -1,0 +1,26 @@
+/* WebID CSS */
+
+* {
+margin: 0;
+padding: 0;
+}
+
+p {
+margin: 10px 0;
+}
+
+body {
+margin: 10px;
+font-family: helvetica,arial,sans-serif;
+font-size: 14px;
+}
+
+#header {
+padding: 5px;
+background-color: #ddf;
+border: 2px solid #000;
+}
+
+#header h1 {
+font-size: 20px;
+}

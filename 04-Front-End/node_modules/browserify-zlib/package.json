@@ -1,0 +1,40 @@
+{
+  "name": "browserify-zlib",
+  "version": "0.1.4",
+  "description": "Full zlib module for browserify",
+  "keywords": ["zlib", "browserify"],
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "pako": "~0.2.0"
+  },
+  "devDependencies": {
+    "tape": "^2.12.3",
+    "brfs": "^1.0.1"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  },
+  "scripts": {
+    "test": "node_modules/tape/bin/tape test/*.js"
+  },
+  "main": "src/index.js",
+  "author": "Devon Govett <devongovett@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/devongovett/browserify-zlib.git"
+  }
+}

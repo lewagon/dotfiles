@@ -1,0 +1,35 @@
+{
+  "name": "dns-packet",
+  "version": "1.1.1",
+  "description": "An abstract-encoding compliant module for encoding / decoding DNS packets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/dns-packet"
+  },
+  "dependencies": {
+    "ip": "^1.1.0",
+    "safe-buffer": "^5.0.1"
+  },
+  "devDependencies": {
+    "standard": "^6.0.5",
+    "tape": "^4.4.0"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/mafintosh/dns-packet/issues"
+  },
+  "homepage": "https://github.com/mafintosh/dns-packet",
+  "main": "index.js",
+  "keywords": [
+    "dns",
+    "packet",
+    "encodings",
+    "encoding",
+    "encoder",
+    "abstract-encoding"
+  ],
+  "author": "Mathias Buus",
+  "license": "MIT"
+}

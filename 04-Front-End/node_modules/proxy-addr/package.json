@@ -1,0 +1,38 @@
+{
+  "name": "proxy-addr",
+  "description": "Determine address of proxied request",
+  "version": "1.1.5",
+  "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
+  "license": "MIT",
+  "keywords": [
+    "ip",
+    "proxy",
+    "x-forwarded-for"
+  ],
+  "repository": "jshttp/proxy-addr",
+  "dependencies": {
+    "forwarded": "~0.1.0",
+    "ipaddr.js": "1.4.0"
+  },
+  "devDependencies": {
+    "benchmark": "2.1.4",
+    "beautify-benchmark": "0.2.4",
+    "istanbul": "0.4.5",
+    "mocha": "~1.21.5"
+  },
+  "files": [
+    "LICENSE",
+    "HISTORY.md",
+    "README.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.6"
+  },
+  "scripts": {
+    "bench": "node benchmark/index.js",
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  }
+}
