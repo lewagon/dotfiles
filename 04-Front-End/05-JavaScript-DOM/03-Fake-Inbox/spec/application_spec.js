@@ -2,7 +2,7 @@ global.document = {
   addEventListener: () => {} // mock document
 };
 
-const assert = require("assert");
+const assert = require("chai").assert;
 const expect = require("chai").expect;
 const inbox = require('../lib/inbox');
 
