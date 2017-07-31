@@ -13,8 +13,7 @@ gem install activerecord
 
 ## Specs
 
-This exercise is focused on **migrations**. No models yet, so you'll have to code the migrations to create your database schema (remember, the schema is the **structure** of the DB, i.e. tables and columns, **not data**). We want to create the database schema which will host a clone of [Hacker News](https://news.ycombinator.com).
-It's the famous website to share links about Tech & Startups.
+This exercise is focused on **migrations**. No models yet, so you'll have to code the migrations to create your database schema (remember, the schema is the **structure** of the DB, i.e. tables and columns, **not data**). We want to create the database schema that will host a clone of [Hacker News](https://news.ycombinator.com) - a famous website that shares links about Tech & Startups.
 We need a `posts` table to store the posts (with a title and a URL).
 
 In `db/migrate` we created a `20141025152200_create_posts.rb` file, containing an Active Record migration class. Migration files are always in the following format `yyyymmddhhmmss_migration_task_name.rb`. The timestamp in the file is really important - it allows `rake db:migrate` to tell which migrations it has not run yet.
@@ -43,7 +42,7 @@ Can you guess what it's needed for?
 
 ### 2. Migration to update a table
 
-Go back to the lecture and read the [ActiveRecord Migration documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). It shows you how easy it is to do migrations on Rails. But we haven't got to Rails yet ;) so we'll have to create our migration files manually.
+Go back to the lecture and read the [ActiveRecord Migration documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). It shows how easy it is to perform migrations on Rails. But we haven't got to Rails yet ;) so we'll have to create our migration files manually.
 
 Use the task `rake db:timestamp` to get a correct timestamp for your migration file name. Write a new migration in a new file `db/migrate/` to add a new column to the `posts` table. Call the column `votes` and make it an `integer`.
 
