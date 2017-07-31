@@ -11,7 +11,7 @@ it's time to balance the books! Who owes money to the group, and who spent too m
 Suppose the group is represented with the following object:
 
 ```js
-var group = {
+const group = {
   "john"  : 120,
   "paul"  :  30,
   "ringo" : 150,
