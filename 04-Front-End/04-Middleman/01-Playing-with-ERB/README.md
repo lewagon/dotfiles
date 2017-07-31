@@ -149,4 +149,4 @@ git push origin master
 middleman deploy
 ```
 
-Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/middleman-airbnb</a>.
+Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/middleman-airbnb" target="_blank">https://&lt;user.github_nickname&gt;.github.io/middleman-airbnb</a>.
