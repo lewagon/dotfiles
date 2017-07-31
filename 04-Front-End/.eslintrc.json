@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-console": "off",
+    "comma-dangle": "off",
+    "quotes": "off",
+    "no-unused-vars": "off"
+  },
+  "env": {
+    "node": true,
+    "mocha": true
+  }
+}
