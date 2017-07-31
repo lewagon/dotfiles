@@ -8,9 +8,9 @@ describe("Age in days", () => {
     assert.equal(days, millenialExpectedDays);
   });
 
-  const sebExpectedDays = Math.round(((Date.now() - new Date(1984, 11, 8)) / 86400000));
-  it(`should be ${sebExpectedDays} days for someone born on December 8th, 1984`, () => {
-    const days = ageInDays(8, 12, 1984);
-    assert.equal(days, sebExpectedDays);
+  const johnExpectedDays = Math.round(((Date.now() - new Date(1940, 9, 9)) / 86400000));
+  it(`should be ${johnExpectedDays} days for John Lennon`, () => {
+    const days = ageInDays(9, 10, 1940);
+    assert.equal(days, johnExpectedDays);
   });
 });
