@@ -21,7 +21,7 @@ or
 ```js
 {
   sender: 'Arnold Schwarzenegger',
-  subject: 'I'm Back'
+  subject: "I'm Back"
 }
 ```
 
