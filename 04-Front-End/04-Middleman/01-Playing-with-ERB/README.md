@@ -4,7 +4,7 @@ Let's play with [Middleman](https://middlemanapp.com/), a very nice tool to gene
 
 The objective of today is to code a static version of Airbnb with:
 - A [home page](http://lewagon.github.io/middleman-airbnb/)
-- A team page similar to our [about page](http://lewagon.github.io/middleman-airbnb/team.html)
+- A team page similar to our [about page](http://lewagon.github.io/middleman-airbnb/about.html)
 - A [dynamic flat page](http://lewagon.github.io/middleman-airbnb/flats/ssaunier.html) (change `ssaunier` to `monsieurpaillard` in the URL to see it in action).
 
 But first, let's get started with Middleman!
