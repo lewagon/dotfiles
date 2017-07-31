@@ -4,7 +4,7 @@ Let's play with [Middleman](https://middlemanapp.com/), a very nice tool to gene
 
 The objective of today is to code a static version of Airbnb with:
 - A [home page](http://lewagon.github.io/middleman-airbnb/)
-- A team page similar to our [about page](http://lewagon.github.io/middleman-airbnb/team.html)
+- A team page similar to our [about page](http://lewagon.github.io/middleman-airbnb/about.html)
 - A [dynamic flat page](http://lewagon.github.io/middleman-airbnb/flats/ssaunier.html) (change `ssaunier` to `monsieurpaillard` in the URL to see it in action).
 
 But first, let's get started with Middleman!
@@ -67,6 +67,7 @@ Let's start with the layout, i.e. the common HTML skeleton of all your pages, it
 
 - Don't forget to add ERB partials `layouts/_navbar.html.erb` and `layouts/_footer.html.erb` in your projects.
 - For the HTML and the CSS of the navbar and footer, feel free to re-use [Le Wagon's navbar](http://lewagon.github.io/ui-components/#navbar) and [Le Wagon's footer](http://lewagon.github.io/ui-components/#navbar) to save time.
+- Don't forget to use `image_tag` helper for your logo (as in Karr lecture) instead of a stupid `img`.
 - Also, take your time to add the corresponding SCSS files `components/_navbar.scss` (should already be there) and `components/_footer.scss` in your stylesheets and `@import` these two files in `components/_index.scss`
 
 
@@ -149,4 +150,4 @@ git push origin master
 middleman deploy
 ```
 
-Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/airbnb-static" target="_blank">https://&lt;user.github_nickname&gt;.github.io/airbnb-static</a>.
+Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/middleman-airbnb" target="_blank">https://&lt;user.github_nickname&gt;.github.io/middleman-airbnb</a>.

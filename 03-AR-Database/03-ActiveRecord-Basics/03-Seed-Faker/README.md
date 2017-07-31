@@ -1,13 +1,13 @@
 ## Background & Objectives
 
-Now you understand migrations and models, it's time for a real-life scenario.
-How do you test that your database works, if you don't have any **data**?
-We need a bunch of data that we can use to bootstrap our database. It's called a `seed`.
+Now you are familiar with migrations and models, it's time for a real-life scenario.
+How do you test if your database works, if you don't have any **data**?
+To do this, we need to create a bunch of data that we can use to bootstrap our database. It's called a `seed`.
 
 ## Setup
 
 We will use the [faker](https://github.com/stympy/faker) gem to generate `Post` attributes.
-But first you have to install it on your laptop:
+But first you have to install it:
 
 ```bash
 gem install faker

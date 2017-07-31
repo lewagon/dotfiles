@@ -38,13 +38,12 @@ We've given you the same app skeleton as last Friday. You can launch it with:
 ruby app.rb
 ```
 
-Open the `app/controllers/posts_controller.rb` and implement the methods. You
-should **not** write SQL, but only use ActiveRecord methods with your class model.
+Open the `app/controllers/posts_controller.rb` and implement the methods. Remember - do **not** write SQL. Just use ActiveRecord methods with your class model.
 There's no `rake` to test this second part of the exercise, so you'll have to test your app
 by launching it in the terminal.
 
 ## Key learning points
 
 * What's an ORM? How does it simplify your life?
-* On which naming convention does Active Record mapping rely? Where does the magic come from?
+* What naming convention does Active Record mapping rely on? Where does the magic come from?
 * Can you see how much better it is to use ActiveRecord than writing all the SQL yourself?
