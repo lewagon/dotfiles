@@ -84,7 +84,7 @@ Just to recap:
 
 ## Team Page
 
-Time to add a second page `team.html.erb` to your website with your buddy of the day, similar to our [about page](http://lewagon.github.io/middleman-airbnb/team.html). Don't forget to put real pictures of you and your buddy (from the `Classmates` page on Kitt).
+Time to add a second page `team.html.erb` to your website with your buddy of the day, similar to our [about page](http://lewagon.github.io/middleman-airbnb/about.html). Don't forget to put real pictures of you and your buddy (from the `Classmates` page on Kitt).
 
 Also remember that you are using ERB now, so you can **write ruby to generate HTML code**. It means we can now do awesome stuff like this:
 
