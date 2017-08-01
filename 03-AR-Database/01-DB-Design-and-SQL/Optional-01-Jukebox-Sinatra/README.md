@@ -2,7 +2,7 @@
 
 We'd like to build a small [Sinatra](http://www.sinatrarb.com/) web application to display all the information from that Jukebox Database.
 
-You can start from our [Sinatra 101](https://github.com/lewagon/sinatra-101)
+You can start from our [Sinatra 101](https://github.com/lewagon/sinatra-101). There is a rake for this exercise that will test your sinatra app, for it to work, run `gem install rack-test` in the Terminal.
 
 ## Specs
 
