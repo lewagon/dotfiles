@@ -5,19 +5,24 @@ When people are filling your form, it's best to give them feedback as quickly as
 
 ## Specs
 
-- Check that **all** fields have been filled
+As usual, you can start Webpack and go to [localhost:8080](http://localhost:8080).
+
+```bash
+rake webpack
+```
+
+We want to validate the form as the user fills inputs. The [`blur`](https://developer.mozilla.org/en-US/docs/Web/Events/blur) might be what you look for.
+
+- All fields are required
 - Ensure the Terms of Service checkbox is ticked
 - Ensure the user enters a valid **French zipcode**
 - Validate the email format
 - Validate the phone number. **French mobile phones only**
-- If all fields have been completed correctly, activate the submit button
+- If all fields have been completed correctly, enable the submit button
 
-Open the `form_validation.js` file. This is where you'll code the validation
-logic and bind it when the DOM is ready.
+Open the `lib/validation.js` file. This is where you'll code the validation
+logic.
 
 ## Further suggestions
-
-Have a look at the [focusout](https://api.jquery.com/focusout/) and
-[keyup](http://api.jquery.com/keyup/) events.
 
 Use [bootstrap validation state classes](http://getbootstrap.com/css/#forms-control-validation) to add a red background when a field is not properly filled.
