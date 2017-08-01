@@ -33,5 +33,3 @@ We'll give you the solution of the Food Delivery challenge at 5pm.
 ### Quiz
 
 At 2pm on the day of the Food Delivery (Day Two) - it's quiz time again! Again, no passing or failing, just a quick checkpoint to make sure everyone is grasping the key concepts.
-
-👉 [Quiz #2](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-2.en.pdf)
