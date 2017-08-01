@@ -2,7 +2,7 @@
 
 Today is your first day of JavaScript. The goal here is for you to realize that it's
 a programming language, like Ruby. It has variables, functions, conditions, loops, etc.
-In this first exercise, we won't need the browser. Instead, we'll use the power of [Node.js](https://nodejs.org/en/) to execute somme JavaScript directly in our terminal.
+In this first exercise, we won't need the browser. Instead, we'll use the power of [Node.js](https://nodejs.org/en/) to execute some JavaScript directly in our terminal.
 
 We'll start with a simple exercise that you should remember very fondly from Ruby week. It's your age... in... days! 😊
 
