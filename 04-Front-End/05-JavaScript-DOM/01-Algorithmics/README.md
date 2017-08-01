@@ -60,7 +60,29 @@ The second function `buildSoldierMap` takes a `battlefield` (`String`) as a para
 - `Elves:5,Orcs:4`
 - `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk Hai:1`
 
-Have a look at the lecture slides on `Map` and at the [MDN reference](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map)
+Here is how you can use a JavaScript [Map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+```js
+const beatles = new Map();
+
+// Create
+beatles.set("john", "guitar");
+beatles.set("paul", "bass");
+
+// Read
+console.log(beatles.get("paul"));
+
+// Update
+beatles.set("paul", "bass guitar");
+
+// Delete
+beatles.delete("paul");
+
+// Loop
+beatles.forEach((value, key) => {
+  console.log(`${key} played the ${value}`);
+});
+```
 
 The third function `whoWinsTheWar` will tie everything together. Given a `battlefield` parameter (`String`), it will return a `String` revealing the outcome of the war:
 
