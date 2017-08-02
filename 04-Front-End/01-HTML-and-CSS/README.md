@@ -24,11 +24,6 @@ Time to put your profile page online using [Github Pages](https://pages.github.c
 
 Build a nice layout with a fixed sidebar and a scrollable page content.
 
-## `Optional-02-Profile-dashboard`
-
-Create a profile dashboard by inserting your info into a nice 2D layout. You'll
-have to use a lot of CSS positioning techniques.
-
-## `Optional-03-Event-form`
+## `Optional-02-Event-form`
 
 A little challenge to manipulate HTML `<form>` and most standard `<input>`.
