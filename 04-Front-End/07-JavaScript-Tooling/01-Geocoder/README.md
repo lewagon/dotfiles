@@ -6,6 +6,12 @@ In this exercise, we'll write our first AJAX request. Let's start simple with a 
 
 ## Specs
 
+You can launch your local server with:
+
+```bash
+rake webpack
+```
+
 ### Geocoding
 
 Read the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro). It boils down to doing an HTTP `GET` request with an address as a query string parameter.
@@ -16,9 +22,9 @@ https://maps.googleapis.com/maps/api/geocode/json?address=16%20Villa%20Gaudelet%
 
 Go ahead and add a form to your HTML page. It should contain an `input` where a user can type an address in, and a `submit` button.
 
-Once that's done, use the jQuery `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the AJAX query to the Google Geocoding service with an `$.ajax()` call.
+Once that's done, use the `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the AJAX query to the Google Geocoding service using `fetch` (go back to yesterday's lecture slides).
 
-In the `success` callback, try to `console.log()` what you get back from the API. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
+Try to `console.log()` what you get back from the API. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
 
 ### [OPTIONAL] Displaying a map
 
