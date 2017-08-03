@@ -1,3 +1,20 @@
+## Getting started
+
+For this challenge, continue to work on your profile project, the one you pushed on Github pages:
+
+```bash
+cd ~/code/<user.github_nickname>/profile
+```
+
+Then, **at the end of this challenge**, when you're done implementing the fixed sidebar, you can push your work on the `gh-pages` branch to make it live!
+
+```bash
+git add .
+git commit -m "enhanced my profile with a fixed sidebar"
+git push origin gh-pages
+```
+
+
 ## Background & Objectives
 
 Build a nice layout with a fixed sidebar and scrollable page content.
