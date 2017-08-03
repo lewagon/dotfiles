@@ -9,15 +9,15 @@ During this exercise, you'll have to make `GET` and `POST` requests to an API co
 
 ### View logic
 
-In the `index.html` file of the challenge, you'll find an HTML form `#comment-form` with two inputs (`#your-message` and `#your-name`). Start by coding a simple jQuery script to dynamically insert a new comment to the top of the comments' list, without reloading the page.
+In the `index.html` file of the challenge, you'll find an HTML form `#comment-form` with two inputs (`#your-message` and `#your-name`). Start by coding a simple script to dynamically insert a new comment to the top of the comments' list, without reloading the page.
 
-This is a basic jQuery exercise, no AJAX involved yet! **Hint**: You'll have to prevent the default behavior of the form submission (using the `preventDefault()` method).
+This is a basic DOM exercise, no AJAX involved yet! **Hint**: You'll have to prevent the default behavior of the form submission (using the `preventDefault()` method).
 
 Code your javascript in `lib/app.js`.
 
 ### Fetch recent messages
 
-In the markup, you'll find a `#refresh` button. We want to make it show all the latest comments from everyone your batch. Implement the jQuery code to do this. You will have to make a `GET` request to the API in JS using `fetch`. Again, you have to read [the documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return.
+In the markup, you'll find a `#refresh` button. We want to make it show all the latest comments from everyone your batch. Implement the JS code to do this. You will have to make a `GET` request to the API in JS using `fetch`. Again, you have to read [the documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return.
 
 ### Push your messages to the API
 
