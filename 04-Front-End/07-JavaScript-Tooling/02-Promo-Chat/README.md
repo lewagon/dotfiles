@@ -17,7 +17,7 @@ Code your javascript in `lib/app.js`.
 
 ### Fetch recent messages
 
-In the markup, you'll find a `#refresh` button. We want to make it show all the latest comments from everyone your batch. Implement the jQuery code to do this. You will have to make a `GET` request to the API in JS using `$.get()`. Again, you have to read [the documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return.
+In the markup, you'll find a `#refresh` button. We want to make it show all the latest comments from everyone your batch. Implement the jQuery code to do this. You will have to make a `GET` request to the API in JS using `fetch`. Again, you have to read [the documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return.
 
 ### Push your messages to the API
 
