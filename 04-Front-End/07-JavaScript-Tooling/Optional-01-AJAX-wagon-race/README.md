@@ -13,7 +13,7 @@ bundle install
 **For the API:**
 
 * You can read the [API documentation](https://github.com/lewagon/fullstack-challenges/blob/master/04-Front-End/07-HTTP-and-Ajax/Optional-01-AJAX-wagon-race/API.md)
-* Start the API by calling the `rake api` command in the exercise forlder
+* Start the API by calling the `bundle exec rake api` command in the exercise forlder
 * The API will be accessible on http://localhost:4567
 
 **For YOUR javascript code:**
@@ -25,7 +25,7 @@ bundle install
 
 **Access the game**
 
-Once you've started the API with the `rake api` command, the game will be accessible on http://localhost:4567/index.html.
+Once you've started the API with the `bundle exec rake api` command, the game will be accessible on http://localhost:4567/index.html.
 
 ## Specs
 
