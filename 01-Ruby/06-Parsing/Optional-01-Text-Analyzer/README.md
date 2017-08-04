@@ -24,7 +24,7 @@ and returns a result `Hash` with the following keys:
 {
   character_count: 523,
   character_count_excluding_spaces: 463,
-  line_count: 42
+  line_count: 42,
   word_count: 145,
   sentence_count: 32,
   paragraph_count: 4,
