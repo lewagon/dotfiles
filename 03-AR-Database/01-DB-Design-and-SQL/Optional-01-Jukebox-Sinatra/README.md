@@ -23,7 +23,8 @@ Clicking on a track name should redirect you to the track page.
 
 ### Track page
 
-You should code a `/tracks/:id` page displaying the track info, and hit the Youtube
-API to get a video of this track. Embed it with an iframe.
+You should code a `/tracks/:id` page displaying all the track info, and if you have time
+you can have a look at a video embed API service like youtube to also throw in a video on
+that page.
 
 When you've finished, use `ngrok` to share your work on Slack 👌
