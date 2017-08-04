@@ -120,9 +120,9 @@ You can now access the hash `data.flats` using the owner's name as a key, like t
 
 Now try to access:
 
-- [http://localhost:4567/flats/ssaunier.html](http://localhost:4567/flats/anne.html) (where `owner = "ssaunier"`)
-- [http://localhost:4567/flats/papillard.html](http://localhost:4567/flats/seb.html) (where `owner = "papillard"`)
-- [http://localhost:4567/flats/monsieurpaillard.html](http://localhost:4567/flats/romain.html) (where `owner = "monsieurpaillard"`)
+- [http://localhost:4567/flats/ssaunier.html](http://localhost:4567/flats/ssaunier.html) (where `owner = "ssaunier"`)
+- [http://localhost:4567/flats/papillard.html](http://localhost:4567/flats/papillard.html) (where `owner = "papillard"`)
+- [http://localhost:4567/flats/monsieurpaillard.html](http://localhost:4567/flats/monsieurpaillard.html) (where `owner = "monsieurpaillard"`)
 - etc.
 
 Amazing right?
