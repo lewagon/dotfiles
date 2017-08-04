@@ -24,7 +24,7 @@ Here is an example of **bad** CSS code:
 #home-page-first-image {
   border-radius: 50%;
 }
-.home-card{
+.home-card {
   text-align: center;
   background: white;
   padding: 30px;
@@ -38,7 +38,7 @@ And here is the **good version** of it:
 .img-circle {
   border-radius: 50%;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
 .card-white {
