@@ -18,9 +18,9 @@ Please start with a paper and pen to identify your components and their responsi
 
 You should always start with your model. The most important thing in your app is your data, and using models allows you to manipulate whatever data you have. So, create a new file `recipe.rb` to define a `Recipe` class. It should have two instance variables, `@name` and `@description`.
 
-### Database
+### Repository
 
-We now need another class that will act as a database. We don't have a proper database yet, so we will use a class that acts like one (as we saw in the lecture). We also need to store our recipes, and don't want to lose them when exiting the program. We need to store them on the hard drive, so we'll use a CSV file.
+We now need another class that will act as a database, the `Repository`. We don't have a proper database yet, so we will use a class that acts like one (as we saw in the lecture). When a Ruby program exits, we lose all the data that we stored in variables. If we want to recuperate the data next time we run the program, we need to store them in a more persistent way, on the hard drive, in a CSV file.
 
 Implement a `Cookbook` class which will act as fake database. It should implement 4 methods:
 
