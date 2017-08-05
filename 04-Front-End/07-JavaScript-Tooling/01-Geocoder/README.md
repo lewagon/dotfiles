@@ -14,7 +14,7 @@ rake webpack
 
 ### Geocoding
 
-Read the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro). It boils down to doing an HTTP `GET` request with an address as a query string parameter.
+Read the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro) and the quick start tutorial [Adding a Map to your Website](https://developers.google.com/maps/documentation/javascript/adding-a-google-map). It boils down to doing an HTTP `GET` request with an address as a query string parameter.
 
 ```
 https://maps.googleapis.com/maps/api/geocode/json?address=16%20Villa%20Gaudelet%20Paris
