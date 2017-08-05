@@ -81,7 +81,7 @@ How cool is that? Now you can add new flats on your homepage just by updating `f
 
 ## Middleman vs. Rails
 
-In Rails, we will have a real DB (no more YAML) and we will use Active Record to connect to it. The ERB template is very similar though. Just replace `data.flats` with `Flat.all` and that's it!
+In Rails, we will have a real DB (no more YAML file) and we will use Active Record to connect to it. The ERB template is very similar though. We won't use `data.flats` to retrieve all the the flats but `Flat.all`, and that's it!
 
 **Are you beginning to see how frontend and backend will magically connect?**
 
