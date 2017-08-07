@@ -1,5 +1,5 @@
 const assert = require("assert");
-const { whoWinsTheWar, buildSoldierMap, isGood } = require("../lib/03_lord_of_the_rings");
+const { whoWinsTheWar, buildSoldierMap, isGood } = require("../lib/lord_of_the_rings");
 
 describe("Exercise 3", () => {
   describe("isGood", () => {
