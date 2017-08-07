@@ -21,7 +21,7 @@ Let's start with a very simple algorithm. Open the `lib/01_even_or_odd.js` file.
 - `"even"` if the number is even (0, 2, 4, etc.)
 - `"odd"` if the number is odd (1, 3, 5, etc.)
 
-_Hint: the Ruby modulo operator that you know also exists in JavaScript_
+_Hint: remember the Ruby modulo operator? It also exists in JavaScript and might be useful!_
 
 Run `rake` to check your style and the correctness of your function! Once the first exercise is all green (style + tests), **please commit and push** 🙏
 
@@ -32,19 +32,19 @@ Open the `lib/02_sum_of_negative.js`. Implement the `sumOfNegative` function whi
 - `sumOfNegatives([-1, 4, -2, 9, 18])` should return `-3`
 - `sumOfNegatives([15, 16, 17, 1000])` should return `0`
 
-👨‍🏫 Remember when TAs used to tell you "Stop raking, try your own test" in Ruby? That meant that you should call the method with your own test arguments at the bottom of the file and then run `ruby <file>` in the terinal. In JavaScript, you can use the same technique! Just call your method below its definition (above the `module.exports` line), like this:
+👨‍🏫 Remember when TAs told you to "stop raking and test it yourself" in Ruby? That meant that you should call the method with your own test arguments at the bottom of the file and then run `ruby <file>` in the terinal. In JavaScript, you can use the same technique! Just call your method below its definition (above the `module.exports` line), like this:
 
 ```js
 console.log(sumOfNegative([-4, 5, -2, 9]));
 ```
 
-and then run in the terminal:
+and then run this in the terminal:
 
 ```bash
 node lib/02_sum_of_negative.js
 ```
 
-If your code works, you should see `-6`. Add more `console.log` statements in the `sumOfNegative` function to debug your code!
+If your code works, you should see `-6`. Add more `console.log` statements in the `sumOfNegative` function to debug your code.
 
 ### 3rd exercise - Lord of the Rings
 
@@ -55,12 +55,12 @@ The first function `isGood` takes a soldier type (`String`) as a parameter and s
 - `isGood("Hobbit")` should return `true`
 - `isGood("Uruk Hai")` should return `false`
 
-The second function `buildSoldierMap` takes a `battlefield` (`String`) as a parameter and should return a `Map`. The map keys will be the soldier type and the values will be the number of soldiers of this type on the battlefield. Here are some examples of battlefield strings you need to parse (and convert to a Map):
+The second function `buildSoldierMap` takes a `battlefield` (`String`) as a parameter and should return a `Map`. The map `keys` will be the **soldier type**, and the `values` will be the **number of soldiers of this type on the battlefield**. Here are some examples of battlefield strings you need to parse (and convert to a Map):
 
 - `Elves:5,Orcs:4`
 - `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk Hai:1`
 
-Here is how you can use a JavaScript [Map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map)
+Here is how to use a JavaScript [Map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map):
 
 ```js
 const beatles = new Map();
@@ -90,7 +90,7 @@ The third function `whoWinsTheWar` will tie everything together. Given a `battle
 - `Good` if Good soldiers outnumber Evil soldiers
 - `Evil` if Evil soldiers outnumber Good soldiers
 
-_NB: we simplify the war and do not take any concept of "worth" of each soldier type_
+_NB: for this exercise we are simplifying the war and not taking any concept of "worth" of each soldier type into account._
 
 ## About the testing setup
 

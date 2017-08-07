@@ -14,7 +14,7 @@ rake webpack
 
 ### Geocoding
 
-Read the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro) and the quick start tutorial [Adding a Map to your Website](https://developers.google.com/maps/documentation/javascript/adding-a-google-map). It boils down to doing an HTTP `GET` request with an address as a query string parameter.
+Read the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro) and the quick start tutorial **[Adding a Map to your Website](https://developers.google.com/maps/documentation/javascript/adding-a-google-map)**. It boils down to doing an HTTP `GET` request with an address as a query string parameter.
 
 ```
 https://maps.googleapis.com/maps/api/geocode/json?address=16%20Villa%20Gaudelet%20Paris
@@ -42,7 +42,7 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 <div id="map" style="height: 300px"></div>
 ```
 
-Once again, please read at the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript). These instruction pages will be where you start for every API you ever use. The real world doesn't have Kitt 😿, so make friends with the API documentation!
+Once again, please read at the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript). These kinds of pages will be your starting point for every API you ever use. The real world doesn't have Kitt 😿, so make friends with the API documentation!
 
 To display a map in your `#map` element, you can use these lines:
 

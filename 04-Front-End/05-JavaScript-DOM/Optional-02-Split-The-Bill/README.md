@@ -5,7 +5,7 @@ how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs
 
 ## Specs
 
-You went on a trip with a group of friends. Each one of you have paid for something (food, car, hotel, etc.), and
+You went on a trip with a group of friends. Each one of you paid for different things (food, car, hotel, etc.), and now
 it's time to balance the books! Who owes money to the group, and who spent too much? Let's find out!
 
 Suppose the group is represented with the following object:

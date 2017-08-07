@@ -12,11 +12,11 @@ The function should return the player score.
 
 ### General rules
 
-1. Each game consists of 10 frames. In each frame the player rolls 1 or 2 balls, except for the 10th frame, where the player will roll 2 or 3 balls.
-1. The total score is the sum of your scores for the 10 frames
-1. If you knock down fewer than 10 pins with 2 rolls, your frame score is simply the number of pins knocked down
-1. If you knock down all 10 pins with 2 rolls (a 'spare'), your score is the amount of pins knocked down **plus a bonus** - the amount of pins knocked down with the **next roll**
-1. If you knock down all 10 pins with your first roll (a 'strike'), you do not take your second roll. You score the amount of pins knocked down **plus a bigger bonus** - the amount of pins knocked down with the **next 2 rolls**
+- Each game consists of 10 frames. In each frame the player rolls 1 or 2 balls, except for the 10th frame, where the player will roll 2 or 3 balls.
+- The total score is the sum of your scores for the 10 frames
+- If you knock down fewer than 10 pins with 2 rolls, your frame score is simply the number of pins knocked down
+- If you knock down all 10 pins with 2 rolls (a 'spare'), your score is the amount of pins knocked down **plus a bonus** - the amount of pins knocked down with the **next roll**
+- If you knock down all 10 pins with your first roll (a 'strike'), you do not take your second roll. You score the amount of pins knocked down **plus a bigger bonus** - the amount of pins knocked down with the **next 2 rolls**
 
 ### Rules for 10th frame
 

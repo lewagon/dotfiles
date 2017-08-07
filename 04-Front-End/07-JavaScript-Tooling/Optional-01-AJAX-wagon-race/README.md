@@ -34,9 +34,9 @@ Once you've started the API with the `bundle exec rake api` command, the game wi
 Your application will work like this:
 
 1. When the page loads, ask the API to create a new Game Session
-2. Once the Game Session is created, your page will display a button `Start a new Game!`
+2. Once the Game Session is created, your page will display a button `Start New Game!`
 3. When clicked, the button disappears and is replaced by a form where you can type Player1 and Player2 names
 4. On form submission you will ask the API to create a new Game based on the players' names
 5. When you get a response, hide the form, display the board (what you did in the last exercise) and listen for users' input
 6. When the game ends, send a request to the API to _finish_ the game, provide the winner and show the time taken to win (in seconds)
-7. When you get the API response, display the information on a score board and provide a "Play again!" button
+7. When you get the API response, display the information on a score board and provide a "Play Again!" button
