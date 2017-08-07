@@ -42,7 +42,7 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 <div id="map" style="height: 300px"></div>
 ```
 
-Once again, please read at the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript). These kinds of pages will your starting point for every API you ever use. The real world doesn't have Kitt 😿, so make friends with the API documentation!
+Once again, please read at the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript). These kinds of pages will be your starting point for every API you ever use. The real world doesn't have Kitt 😿, so make friends with the API documentation!
 
 To display a map in your `#map` element, you can use these lines:
 
