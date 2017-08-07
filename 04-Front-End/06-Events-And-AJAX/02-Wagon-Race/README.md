@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's create a JavaScript game: the Wagon Race 🏎. It's a simple game where you use your keyboard to make a Wagon move forward. Each player will move their Wagon by tapping a key (e.g. `Q` or `A` for player one, `P` for player two)
+Let's create a JavaScript game: the Wagon Race 🏎. It's a simple game where you use your keyboard to make a Wagon move forward. Each player will move their Wagon by tapping a key (e.g. `Q` for player one, `P` for player two)
 
 The goal here is to learn more about JavaScript, jQuery, the DOM, and asynchronous event handling.
 
@@ -52,9 +52,9 @@ Once your HTML is finished, switch to CSS and design your race track! Example:
 }
 ```
 
-You will update a player's position by moving the `active` class from one `td` to the next one. Of course, there are other solutions to implement this game. Using a table and a CSS class is one option. Make sure you're able to "manually" produce all the board views you might need.
+You will update a player's position by moving the `active` class from one `td` to the next one. Of course, there are other solutions to implement this game. Using a table and a CSS class is one option. Just make sure you're able to "manually" produce all the board views you might need.
 
-It's always a good idea to do as much work as possible using smart HTML markup and CSS classes before jumping into JavaScript. Bad front-end developers spend time writing long javascript code that change CSS values, instead of short scripts that play nicely with existing CSS classes.
+It's always a good idea to do as much work as possible using smart HTML markup and CSS classes before jumping into JavaScript. Bad front-end developers spend time writing long javascript code that changes CSS values, instead of short scripts that play nicely with existing CSS classes.
 
 #### Javascript
 
@@ -71,6 +71,8 @@ Clicking a button is not fast enough. And you can't play with someone else! Have
 ```js
 document.addEventListener("keyup", event => console.log(event));
 ```
+
+_Do you understand why we use `keyup` and not `keydown`?_
 
 ##### Starting and Winning 🏁
 
