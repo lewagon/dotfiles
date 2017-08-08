@@ -2,7 +2,10 @@
 
 In this exercise, we'll write our first AJAX request. Let's start simple with a `GET` request. Here we'll use the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/intro). We want to build a tool where we can input an address, hit a button, and get the **GPS Coordinates** back! For the cherry on top, we'll display the map as well.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax_geocoder.gif)
+
+<div class="text-center">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax_geocoder.gif" alt="Google Geocoding demo" width="100%">
+</div>
 
 ## Specs
 

@@ -25,7 +25,7 @@ It's fun seeing the new messages without reloading all the HTML. But try refresh
 
 All your smart code is on the client-side. It does not post any data on the server for the moment. To do that, you have to enhance your javascript code by adding a `POST` request to send data to be stored on the API's database. Read [the documentation](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to figure out how to build your request using `fetch`.
 
-Here is an example on using `fetch` on the JSON Plachoder API:
+Here is an example on using `fetch` on the [JSON Placehoder API](https://jsonplaceholder.typicode.com/):
 
 ```js
 const data = { name: "George", body: "Hello from Kitt" };
