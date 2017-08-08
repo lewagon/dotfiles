@@ -10,7 +10,7 @@ Make sure that the following command returns a version older than `4`:
 node -v
 ```
 
-If not, Node might not be installed on your system. Please have a look at the Setup seciton in the lecture slides.
+If not, Node might not be installed on your system. Please have a look at the Setup section in the lecture slides.
 
 ## Specs
 
