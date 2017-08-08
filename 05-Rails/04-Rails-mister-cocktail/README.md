@@ -1,1 +1,1 @@
-Now it's time to make a 3-model app. And you guessed it, we'll introduce a `n:n` (many to many) relation. So what is it about? Well, it's a cocktail manager. We want to store our best recipes of cocktails.
+👈 Please choose an exercise!

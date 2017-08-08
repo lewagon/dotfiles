@@ -29,23 +29,23 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 - Generate a new controller from the command line
 - Check your routes with the relevant `rails` command
 
-### Generate a CoachingController
+### Generate a QuestionsController
 
-Once you have created your new coaching app, add a new `CoachingController`, using the correct rails generator on the command line. This controller will have two actions, `CoachingController#answer` and `CoachingController#ask`
+Once you have created your new coaching app, add a new `QuestionsController`, using the correct rails generator on the command line. This controller will have two actions, `QuestionsController#answer` and `QuestionsController#ask`
 
 ### Your coach answer logic
 
-Implement a first route `GET '/answer'` to your `CoachingController#answer` action. The `answer.html.erb` will display the question you ask your coach as well as his answer.
+Implement a first route `GET '/answer'` to your `QuestionsController#answer` action. The `answer.html.erb` will display the question you ask your coach as well as his answer.
 
 Your question to your coach should be given as a parameter named `:query`. Ex: GET `/answer?query=hello` or GET `/answer?query=what+should+i+do?`.
 
-![Coach answer to a question](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-2.png)
-
 ![Coach answer to a statement](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-1.png)
+
+![Coach answer to a question](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-2.png)
 
 ### Ask a question using a form
 
-Implement a new route `GET '/ask'` to your `CoachingController#ask` action. This action is here to build the page including your HTML form. Here is the code for the form.
+Implement a new route `GET '/ask'` to your `QuestionsController#ask` action. This action is here to build the page including your HTML form. Here is the code for the form.
 
 ```html
 <form action="/???">
@@ -60,7 +60,7 @@ Notice the important HTML attributes in the form:
 - `action` specifies the URL that will be used when submitting the form
 - `name` enables you to name each parameter corresponding to each input of the form.
 
-Replace the `???` so that your form send a request to `CoachingController#answer` with a good parameter name.
+Replace the `???` so that your form send a request to `QuestionsController#answer` with a good parameter name.
 
 ![Question for the Coach](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
 

@@ -1,5 +1,7 @@
 ## Background and Objectives
 
+A more advanced challenge now, where you will have to use notions that we haven't covered yet (conditional and looping structures). Don't panic, **we'll see these concepts tomorrow**. Try to go step-by-step and ask yourself what you are trying to accomplish in your program before writing some code.
+
 In this exercise, we will create your own personal coach.
 Unfortunately though, the coach is a little stupid and can only exhibit the following behavior:
 

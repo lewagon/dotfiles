@@ -8,7 +8,7 @@ def hop_hop_hop(number_of_exercises)
     end
     unless counter != i # Test if reaching the end of the current exercise.
       # Prints message in that case
-      print 'One more time..' + "\n"
+      print 'One more time...' + "\n"
     end
     # Reset counter to 0 for the next exercise
     counter = 0

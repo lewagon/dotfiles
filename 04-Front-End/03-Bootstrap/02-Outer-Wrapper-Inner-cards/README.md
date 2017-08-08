@@ -9,13 +9,13 @@ Now that you are Bootstrap-grid experts, it's time to learn two very useful adva
 - You need a **wrapper** around the grid to put a full-width background color for instance.
 - You need to space **internal cards** and play with their `border`, `margin`, `padding`, etc.
 
-Bootstrap beginners often write their CSS directly on grid components (`.container`, `.row` or `.col`) to change their `border`, `width`, `margin`, `padding`, etc... **⚠️ Never do that because it breaks the grid ⚠**️. In fact, grid dimensions are computed automatically by Bootstrap, so changing the CSS of grid components is the easiest way to break it..
+Bootstrap beginners often write their CSS directly on grid components (`.container`, `.row` or `.col`) to change their `border`, `width`, `margin`, `padding`, etc... **⚠️ Never do that because it breaks the grid ⚠️**️. In fact, grid dimensions are computed automatically by Bootstrap, so changing the CSS of grid components is the easiest way to break it..
 
 Instead, **you must use the following techniques**:
 
 ## Outside Wrapper
 
- If you need a special background, just put a wrapper around the container:
+ If you need a special full-screen background, just put a wrapper around your container:
 
 ```html
 <div class="wrapper-blue">
@@ -29,7 +29,7 @@ Instead, **you must use the following techniques**:
 
 ### Inside cards
 
-If you want to space inner cards or change their `border`, `padding`, `margin`, etc... play with the CSS of inner cards, **not the `.col`**:
+If you want to space inner cards or change their `border`, `padding`, `margin`, etc... play with the CSS of inner cards, **not of the `.col`**:
 
 ```html
 <div class="container">

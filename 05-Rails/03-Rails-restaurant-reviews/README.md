@@ -1,1 +1,1 @@
-Let's jump to a 2-model app, and see what's beyond 1-model CRUD.
+👈 Please choose an exercise!

@@ -1,1 +1,1 @@
-## Second (& Final) Week!
+## Second (& Final) Week! Chaaaarge!

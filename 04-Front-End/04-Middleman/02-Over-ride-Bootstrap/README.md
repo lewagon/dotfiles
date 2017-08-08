@@ -12,9 +12,9 @@ When you work on a Middleman project (or even a Rails app), **it's crucial to or
 
 Here is a roadmap of things to do:
 
-1. In `config/_fonts.css.scss` and `config/_colors.css.scss` change the color and font scheme. Be creative!
-1. In `config/_bootstrap_variables.css.scss` use your SCSS variables to over-ride **Bootstrap SCSS variables**.
-1. Look at all of the [Bootstrap variables](http://getbootstrap.com/customize/#less-variables) that can be customized and add new ones to `config/_bootstrap_variables.css.scss` to experiment things.
+- In `config/_fonts.css.scss` and `config/_colors.css.scss` change the color and font scheme. Be creative!
+- In `config/_bootstrap_variables.css.scss` use your SCSS variables to over-ride **Bootstrap SCSS variables**.
+- Look at all of the [Bootstrap variables](http://getbootstrap.com/customize/#less-variables) that can be customized and add new ones to `config/_bootstrap_variables.css.scss` to experiment things.
 
 
 ## Refactor your code

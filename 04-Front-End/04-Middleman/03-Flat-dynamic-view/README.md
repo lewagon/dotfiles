@@ -4,7 +4,7 @@ Let's create a dynamic template for the flat's show view. This template will inj
 
 ## YAML data
 
-In a static website, it's often convenient to store some data in a structured text file (like a YAML file), and then use this data in uour templates. Let's do this for flats.
+In a static website, it's often convenient to store some data in a structured text file (like a YAML file), and then use this data in your templates. Let's do this for flats.
 
 In Middleman `data` folder, add a new file `flats.yml`
 
@@ -81,7 +81,7 @@ How cool is that? Now you can add new flats on your homepage just by updating `f
 
 ## Middleman vs. Rails
 
-In Rails, we will have a real DB (no more YAML) and we will use Active Record to connect to it. The ERB template is very similar though. Just replace `data.flats` with `Flat.all` and that's it!
+In Rails, we will have a real DB (no more YAML file) and we will use Active Record to connect to it. The ERB template is very similar though. We won't use `data.flats` to retrieve all the the flats - all we need instead is `Flat.all`!
 
 **Are you beginning to see how frontend and backend will magically connect?**
 
@@ -120,11 +120,11 @@ You can now access the hash `data.flats` using the owner's name as a key, like t
 
 Now try to access:
 
-- [http://localhost:4567/flats/ssaunier.html](http://localhost:4567/flats/anne.html) (where `owner = "ssaunier"`)
-- [http://localhost:4567/flats/papillard.html](http://localhost:4567/flats/seb.html) (where `owner = "papillard"`)
-- [http://localhost:4567/flats/monsieurpaillard.html](http://localhost:4567/flats/romain.html) (where `owner = "monsieurpaillard"`)
+- [http://localhost:4567/flats/ssaunier.html](http://localhost:4567/flats/ssaunier.html) (where `owner = "ssaunier"`)
+- [http://localhost:4567/flats/papillard.html](http://localhost:4567/flats/papillard.html) (where `owner = "papillard"`)
+- [http://localhost:4567/flats/monsieurpaillard.html](http://localhost:4567/flats/monsieurpaillard.html) (where `owner = "monsieurpaillard"`)
 - etc.
 
 Amazing right?
 
-Now it's your turn to build a dynamic page like [this one](http://lewagon.github.io/middleman-airbnb/flats/monsieurpaillard.html). You don't have to copy the design exactly, just have fun with all this data 🎉🎉🎉!
+Now it's your turn to build a dynamic page like [this one](http://lewagon.github.io/middleman-airbnb/flats/monsieurpaillard.html). You don't have to copy the design exactly, just have fun with the data 🎉🎉🎉!
