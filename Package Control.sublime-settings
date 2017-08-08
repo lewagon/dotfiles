@@ -1,17 +1,36 @@
 {
-  "installed_packages":
-  [
-    "AdvancedNewFile",
-    "All Autocomplete",
-    "ApplySyntax",
-    "BracketHighlighter",
-    "DocBlockr",
-    "Emmet",
-    "Git",
-    "GitGutter",
-    "JSX",
-    "Package Control",
-    "Ruby on Rails snippets",
-    "SCSS"
-  ]
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"ApplySyntax",
+		"BracketHighlighter",
+		"DocBlockr",
+		"Emmet",
+		"Expand Selection to Quotes",
+		"Git",
+		"GitGutter",
+		"Go To Definition",
+		"JSX",
+		"MarkdownEditing",
+		"orgmode",
+		"Package Control",
+		"PlainTasks",
+		"Python PEP8 Autoformat",
+		"Ruby on Rails snippets",
+		"SCSS",
+		"Seti_UI",
+		"Seti_UX",
+		"SideBarEnhancements",
+		"Sublime Tutor",
+		"SublimeLinter",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pydocstyle",
+		"SublimeLinter-pyflakes",
+		"SublimeLinter-pylint",
+		"SummitLinter"
+	]
 }
