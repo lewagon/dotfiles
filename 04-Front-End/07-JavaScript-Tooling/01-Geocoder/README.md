@@ -33,7 +33,7 @@ Try to `console.log()` what you get back from the API. It's a massive JSON! Now 
 
 To display a Google Map with a marker at the specified address, we'll use a second API, the [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
 
-To use it, add this line to the bottom of your HTML file, just **before** you require `app.js`:
+To use it, add this line to the bottom of your HTML file, just **before** you require `build/application.js`:
 
 ```html
 <script src="https://maps.googleapis.com/maps/api/js"></script>
