@@ -13,30 +13,6 @@ end
 
 DB = Sequel.sqlite('sessions.sqlite3')
 
-begin
-  DB.create_table :sessions do
-    primary_key :id
-    column :created_at, :datetime
-    column :updated_at, :datetime
-  end
-
-  DB.create_table :games do
-    primary_key :id
-    column :session_id,   :integer
-    column :winner,       :integer
-    column :status,       :string, default: 'started'
-    column :elapsed_time, :integer
-  end
-
-  DB.create_table :players do
-    primary_key :id
-    column :game_id, :integer
-    column :name,    :string
-  end
-rescue
-  puts 'Oops! Failed to initialize database. Call a teacher!'
-end
-
 class Session < Sequel::Model
   one_to_many :games
 

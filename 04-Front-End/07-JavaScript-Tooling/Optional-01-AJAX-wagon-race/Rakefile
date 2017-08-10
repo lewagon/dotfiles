@@ -14,3 +14,31 @@ task :api do
 
   API.run!
 end
+
+task :reset_db do
+  require "sequel"
+  require "fileutils"
+  DB_FILE = "sessions.sqlite3"
+  FileUtils.rm(DB_FILE) if File.exists?(DB_FILE)
+  DB = Sequel.sqlite(DB_FILE)
+  DB.create_table :sessions do
+    primary_key :id
+    column :created_at, :datetime
+    column :updated_at, :datetime
+  end
+
+  DB.create_table :games do
+    primary_key :id
+    column :session_id,   :integer
+    column :winner,       :integer
+    column :status,       :string, default: 'started'
+    column :elapsed_time, :integer
+  end
+
+  DB.create_table :players do
+    primary_key :id
+    column :game_id, :integer
+    column :name,    :string
+  end
+  puts "Database has been reset! Now you can run `bundle exec rake api`"
+end

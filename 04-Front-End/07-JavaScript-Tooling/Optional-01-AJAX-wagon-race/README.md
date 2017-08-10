@@ -16,6 +16,8 @@ bundle install
 * Start the API by calling the `bundle exec rake api` command in the exercise forlder
 * The API will be accessible on http://localhost:4567
 
+NB: If you have trouble launching the api, try to run `bundle exec rake db_reset`.
+
 **For YOUR javascript code:**
 
 * Use the files located in the `public` folder
