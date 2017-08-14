@@ -2,7 +2,7 @@
 
 You will spend the next 5 days in your Projects group of 3 or 4, working on an AirBnB clone (you don't have to rent **flats**, be creative!)
 
-If possible, try and create a clone that contains a few things you might also need for your Project. So maybe pick a colour scheme / fonts / layout style that you can copy across - it will save you time next week and will your product even more awesome!
+If possible, try and create a clone that contains a few things you might also need for your Project. So maybe pick a colour scheme / fonts / layout style that you can copy across - it will save you time next week and will make your product even more awesome!
 
 ### Demos
 
