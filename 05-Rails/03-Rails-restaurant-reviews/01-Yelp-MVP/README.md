@@ -164,6 +164,7 @@ Let's turn our attention to frontend, because that is what our users are going t
 #### Layout / partials
 
 Remember to refactor your views using layouts and partials. For example:
+
 - The applicaton layout can include a Bootstrap navbar with links to the list of restaurants and to the restaurant creation form.
 - Forms can be placed in a `partial` to make your HTML more readable.
 
