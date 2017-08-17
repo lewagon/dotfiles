@@ -15,7 +15,7 @@ upload an image that will then be displayed on the `index` view
 of `Cocktail` as a thumbnail. On the `show` view of `Cocktail`, the same
 image should be displayed, but bigger!
 
-Even though it's a simple app, try your best to make something beatiful using Bootstrap,
+Even though it's a simple app, try your best to make something beautiful using Bootstrap,
 a few nice fonts, and all your creativity 🎨😊🎨
 
 **Hint**: You can always build on top of [lewagon/ui-components](http://lewagon.github.io/ui-components/)
