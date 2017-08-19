@@ -33,7 +33,7 @@ ruby interface.rb
 > add
 > TODO: ask user an item and add it to gift list
 > Which action [list|add|delete|quit]?
-> add
+> delete
 > TODO: ask user the index of item to delete and delete it
 > Which action [list|add|delete|quit]?
 > quit
