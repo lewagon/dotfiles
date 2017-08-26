@@ -79,7 +79,7 @@ If you have trouble running `rake`, you may need to run `bin/rake`. It means tha
 - A restaurant has a name, an address, a phone number, a category (chinese, italian...) and many reviews
 - A review has content (the text), a rating (between 0 and 5) and references a restaurant
 
-**Question**: Can you draw this simple schema at [db.lewagon.org](http://db.lewagon.org)? Discuss with your buddy.
+**Question**: Can you draw this simple schema at [db.lewagon.com](http://db.lewagon.com)? Discuss with your buddy.
 
 #### Validation
 

@@ -19,7 +19,7 @@ Work on the following steps and validate them with a coach on Monday morning bef
 
 #### 2 - Database Scheme
 
-Draw your database schema using [our db tool](http://db.lewagon.org/) and validate it with a coach. The database schema is the foundation of your app. If your schema is incorrect or overcomplicated, you will really struggle when you start to code.
+Draw your database schema using [our db tool](http://db.lewagon.com/) and validate it with a coach. The database schema is the foundation of your app. If your schema is incorrect or overcomplicated, you will really struggle when you start to code.
 
 ### Setup (Monday afternoon)
 

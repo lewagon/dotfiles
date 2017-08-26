@@ -21,7 +21,7 @@ Here are the requirements of our system:
 #### Design the schema
 
 Design a database schema for a survey app that meets the requirements.
-For this, you must use the [SQL Designer](http://db.lewagon.org).
+For this, you must use the [SQL Designer](http://db.lewagon.com).
 To check your solution, click on "Save / Load", then "Save XML", copy/paste the generated XML code
 in `lib/survey.xml`. You can then `rake` to check your solution.
 

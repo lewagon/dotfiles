@@ -79,7 +79,7 @@ Now, it's time for the Grand Finale - your projects. Take a bit of time over the
 
 - Write your user stories (not more than 15).
 - Draw mockups of your main views on a paper.
-- Start building your DB schema on [db.lewagon.org](http://db.lewagon.org).
+- Start building your DB schema on [db.lewagon.com](http://db.lewagon.com).
 - Start thinking about your routes.
 
 If you can get most of this done, you'll save a lot of time on Monday and be able to start on your projects without too much fuss.

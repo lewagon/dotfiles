@@ -78,7 +78,7 @@ for your CSS architecture.
 
 ### Models
 
-Go to [db.lewagon.org](http://db.lewagon.org) and draw the schema with your buddy. The tables
+Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
 we need are `cocktails`, `ingredients` and `doses`.
 
 Validate all models tests before moving to the routing layer. You can use this command:
