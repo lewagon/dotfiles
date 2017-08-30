@@ -17,6 +17,7 @@
 		"JSX",
 		"MarkdownEditing",
 		"orgmode",
+		"Origami",
 		"Package Control",
 		"PlainTasks",
 		"Python PEP8 Autoformat",
@@ -26,11 +27,14 @@
 		"Seti_UX",
 		"SideBarEnhancements",
 		"Sublime Tutor",
+		"SublimeGit",
 		"SublimeLinter",
 		"SublimeLinter-pep8",
 		"SublimeLinter-pydocstyle",
 		"SublimeLinter-pyflakes",
 		"SublimeLinter-pylint",
+		"SublimeREPL",
+		"SublimeTextGitX",
 		"SummitLinter"
 	]
 }

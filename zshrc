@@ -17,7 +17,7 @@ source "${ZSH}/oh-my-zsh.sh"
 # So instead of running `bin/rails` like the doc says, just run `rails`
 export PATH="./bin:${PATH}"
 
-# Store your own aliases in the ~/.aliases file and load the here.
+# Store your own aliases in the ~/.aliases file and load them here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
 # Shell integration on login
@@ -30,6 +30,10 @@ export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bi
 export PATH="/usr/local/sbin:$PATH"
 
 export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.5
 source /usr/local/bin/virtualenvwrapper.sh
+
+export PATH=/usr/local/bin:$PATH
+source '/Users/nathankuik/lib/azure-cli/az.completion'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
