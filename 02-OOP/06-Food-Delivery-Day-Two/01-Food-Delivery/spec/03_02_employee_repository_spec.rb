@@ -4,7 +4,7 @@ require_relative "support/csv_helper"
 begin
   require_relative "../app/repositories/employee_repository"
 rescue LoadError => e
-  if e.message =~ /employee_repository\.rb/
+  if e.message =~ /employee_repository/
     describe "EmployeeRepository" do
       it "You need a `employee_repository.rb` file for your `EmployeeRepository`" do
         fail
@@ -43,12 +43,12 @@ describe "EmployeeRepository", :employee do
       expect { EmployeeRepository.new('unexisting_file.csv') }.not_to raise_error
     end
 
-    it "store employees in memory in an instance variable `@employees` or `@elements`" do
+    it "should store employees in memory in an instance variable `@employees` or `@elements`" do
       repo = EmployeeRepository.new(csv_path)
       expect(elements(repo)).to be_a(Array)
     end
 
-    it "loads existing employees from the CSV" do
+    it "should load existing employees from the CSV" do
       repo = EmployeeRepository.new(csv_path)
       loaded_employees = elements(repo) || []
       expect(loaded_employees.length).to eq(2)

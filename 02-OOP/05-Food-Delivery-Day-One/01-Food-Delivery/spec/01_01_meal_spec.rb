@@ -35,14 +35,14 @@ describe "Meal", :meal do
   end
 
   describe "#name" do
-    it "should return the name of the Meal" do
+    it "should return the name of the meal" do
       meal = Meal.new({ name: "Margherita" })
       expect(meal.name).to eq("Margherita")
     end
   end
 
   describe "#price" do
-    it "should return the price of the Meal" do
+    it "should return the price of the meal" do
       meal = Meal.new({ price: 8 })
       expect(meal.price).to eq(8)
     end

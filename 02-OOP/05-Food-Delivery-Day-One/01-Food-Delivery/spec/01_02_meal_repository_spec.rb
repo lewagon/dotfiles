@@ -100,7 +100,7 @@ describe "MealRepository", :meal do
       expect(rucola_meal.id).to eq(7)
     end
 
-    it "should start auto-incremting at 1 if very first meal added" do
+    it "should start auto-incrementing at 1 if it is the first meal added" do
       csv_path = 'unexisting_empty_meals.csv'
       FileUtils.remove_file(csv_path, force: true)
 
@@ -112,7 +112,7 @@ describe "MealRepository", :meal do
       FileUtils.remove_file(csv_path, force: true)
     end
 
-    it "should persist in the CSV the new added meal (first row = headers)" do
+    it "every new added meal shold be saved in a row in the CSV (first row = headers)" do
       csv_path = 'spec/support/empty_meals.csv'
       FileUtils.remove_file(csv_path, force: true)
 

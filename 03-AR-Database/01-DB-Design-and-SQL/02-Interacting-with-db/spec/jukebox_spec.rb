@@ -18,13 +18,13 @@ describe "The schema in jukebox.xml" do
   end
 
   describe "the `albums` table" do
-    it "should have a `artist_id` column, foreign key to `artists` table" do
+    it "should have an `artist_id` column, foreign key to `artists` table" do
       expect(foreign_key_exists?("artist_id", "albums", "artists")).to eq true
     end
   end
 
   describe "the `tracks` table" do
-    it "should have a `album_id` column, foreign key to `albums` table" do
+    it "should have an `album_id` column, foreign key to `albums` table" do
       expect(foreign_key_exists?("album_id", "tracks", "albums")).to eq true
     end
 

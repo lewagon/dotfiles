@@ -26,7 +26,7 @@ describe "Album" do
     expect(Album.new(title: "fake title", artist: nil)).to be_invalid
   end
 
-  it "is valid if title and artist is present" do
+  it "is valid if title and artist are present" do
     expect(Album.new(title: "fake title", artist: Artist.first)).to be_valid
   end
 end

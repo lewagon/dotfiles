@@ -173,7 +173,7 @@ describe 'Queries methods' do
 
   describe 'long_tracks' do
 
-    it 'returns songs with duration greater than a minimum' do
+    it 'returns songs with duration greater than the minimum' do
       tracks = [
                                         "Occupation / Precipice",
                                         "Hero",

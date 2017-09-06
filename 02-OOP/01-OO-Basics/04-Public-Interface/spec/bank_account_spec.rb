@@ -41,7 +41,7 @@ describe BankAccount do
   end
 
   describe '#withdraw' do
-    it 'changes the accounts balance' do
+    it 'changes the account balance' do
       account.withdraw(50)
       expect(account.balance).to eq 150
     end
@@ -52,7 +52,7 @@ describe BankAccount do
   end
 
   describe '#deposit' do
-    it 'changes the accounts balance' do
+    it 'changes the account balance' do
       account.deposit(200)
       expect(account.balance).to eq 400
     end
@@ -67,7 +67,7 @@ describe BankAccount do
       expect(account.transactions_history(password: 'sdofijdsi')).to eq 'wrong password'
     end
 
-    it 'is not happy if you do not give it any password' do
+    it 'is not happy if you do not provide a password' do
       expect(account.transactions_history()).to eq 'no password given'
     end
 
