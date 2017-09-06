@@ -1,7 +1,7 @@
 require "group_anagrams"
 
 describe "#group_anagrams" do
-  it "should return an empty array when empty array taken" do
+  it "should return an empty array if empty array is given" do
     expect(group_anagrams([])).to eq([])
   end
 

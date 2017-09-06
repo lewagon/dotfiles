@@ -5,24 +5,24 @@ describe "encoder" do
     expect(encode("a")).to eq(".-")
   end
 
-  it "should be case insensitive. Encoding 'b' or 'B' is the same." do
+  it "should be case insensitive. 'b' or 'B' should give the same result." do
     expect(encode("b")).to eq("-...")
     expect(encode("b")).to eq(encode("B"))
   end
 
-  it "should put a space between two letters of the same word" do
+  it "should put a space between each letter of the same word" do
     expect(encode("hi")).to eq(".... ..")
   end
 
-  it "should put a pipe (|) character between two words" do
+  it "should put a pipe (|) character between each word to separate them" do
     expect(encode("hi guys")).to eq(".... ..|--. ..- -.-- ...")
   end
 
-  it "should ignore punctation like a comma (,) or a single quote (')" do
+  it "should remove punctation like commas (,) or single quotes (')" do
     expect(encode("hello, world")).to eq(".... . .-.. .-.. ---|.-- --- .-. .-.. -..")
   end
 
-  it "should encode Hey jude's first sentence" do
+  it "should encode Hey Jude's first sentence" do
     text = "Hey Jude, don't make it bad"
     morse = ".... . -.--|.--- ..- -.. .|-.. --- -. -|-- .- -.- .|.. -|-... .- -.."
     expect(encode(text)).to eq(morse)

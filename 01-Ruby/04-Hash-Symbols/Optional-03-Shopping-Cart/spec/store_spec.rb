@@ -16,7 +16,7 @@ describe '#product_in_store?' do
     end
   end
 
-  it 'returns false for any product not in store' do
+  it 'returns false for any products not in store' do
     NOT_PRODUCTS.each do |p|
       expect(product_in_store?(p)).to be false
     end

@@ -5,11 +5,11 @@ describe "#wagon_sort" do
     expect(wagon_sort([])).to eq []
   end
 
-  it "should sort all-caps students" do
+  it "should alphabetically sort all-caps students" do
     expect(wagon_sort(["BOB", "ALICE", "CHARLIE"])).to eq(["ALICE", "BOB", "CHARLIE"])
   end
 
-  it "should be case-insensitive" do
+  it "should be case-insensitive when sorting" do
     expect(wagon_sort(["BOB", "alice", "CHARLIE"])).to eq(["alice", "BOB", "CHARLIE"])
   end
 end
