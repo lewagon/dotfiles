@@ -1,0 +1,38 @@
+{
+  "name": "is-resolvable",
+  "version": "1.0.0",
+  "description": "Check if a module ID is resolvable with require()",
+  "repository": "shinnn/is-resolvable",
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+  "scripts": {
+    "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json index.js test.js",
+    "test": "node test.js",
+    "coverage": "istanbul cover test.js"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "read",
+    "file",
+    "font",
+    "glyph",
+    "code-point",
+    "unicode",
+    "parse",
+    "cmap",
+    "table",
+    "data",
+    "metadata"
+  ],
+  "dependencies": {
+    "tryit": "^1.0.1"
+  },
+  "devDependencies": {
+    "@shinnn/eslintrc-node": "^1.0.2",
+    "eslint": "^0.24.0",
+    "istanbul": "^0.3.17",
+    "tape": "^4.0.0"
+  }
+}

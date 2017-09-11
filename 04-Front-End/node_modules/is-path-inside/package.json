@@ -1,0 +1,36 @@
+{
+  "name": "is-path-inside",
+  "version": "1.0.0",
+  "description": "Check if a path is inside another path",
+  "license": "MIT",
+  "repository": "sindresorhus/is-path-inside",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "path",
+    "inside",
+    "folder",
+    "directory",
+    "dir",
+    "file",
+    "resolve"
+  ],
+  "dependencies": {
+    "path-is-inside": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}

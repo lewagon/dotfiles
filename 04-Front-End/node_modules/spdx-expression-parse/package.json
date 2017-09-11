@@ -1,0 +1,37 @@
+{
+  "name": "spdx-expression-parse",
+  "description": "parse SPDX license expressions",
+  "version": "1.0.4",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
+  "files": [
+    "AUTHORS",
+    "index.js",
+    "parser.js"
+  ],
+  "devDependencies": {
+    "defence-cli": "^1.0.1",
+    "jison": "^0.4.15",
+    "replace-require-self": "^1.0.0",
+    "spdx-exceptions": "^1.0.4",
+    "spdx-license-ids": "^1.0.0",
+    "standard": "^8.0.0"
+  },
+  "keywords": [
+    "SPDX",
+    "law",
+    "legal",
+    "license",
+    "metadata",
+    "package",
+    "package.json",
+    "standards"
+  ],
+  "license": "(MIT AND CC-BY-3.0)",
+  "repository": "kemitchell/spdx-expression-parse.js",
+  "scripts": {
+    "lint": "standard",
+    "prepublish": "node generate-parser.js > parser.js",
+    "pretest": "npm run prepublish",
+    "test": "defence -i javascript README.md | replace-require-self | node"
+  }
+}

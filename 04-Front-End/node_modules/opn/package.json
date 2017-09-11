@@ -1,0 +1,57 @@
+{
+  "name": "opn",
+  "version": "4.0.2",
+  "description": "A better node-open. Opens stuff like websites, files, executables. Cross-platform.",
+  "license": "MIT",
+  "repository": "sindresorhus/opn",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "xdg-open"
+  ],
+  "keywords": [
+    "app",
+    "open",
+    "opn",
+    "opener",
+    "opens",
+    "launch",
+    "start",
+    "xdg-open",
+    "xdg",
+    "default",
+    "cmd",
+    "browser",
+    "editor",
+    "executable",
+    "exe",
+    "url",
+    "urls",
+    "arguments",
+    "args",
+    "spawn",
+    "exec",
+    "child",
+    "process",
+    "website",
+    "file"
+  ],
+  "dependencies": {
+    "object-assign": "^4.0.1",
+    "pinkie-promise": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}

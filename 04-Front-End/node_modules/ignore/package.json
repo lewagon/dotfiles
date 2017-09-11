@@ -1,0 +1,46 @@
+{
+  "name": "ignore",
+  "version": "3.3.3",
+  "description": "Ignore is a manager and filter for .gitignore rules.",
+  "main": "./ignore.js",
+  "files": [
+    "ignore.js",
+    "index.d.ts",
+    "LICENSE-MIT"
+  ],
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec ./test/ignore.js && codecov",
+    "test-no-cov": "./node_modules/.bin/mocha --reporter spec ./test/ignore.js",
+    "cov-report": "istanbul report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kaelzhang/node-ignore.git"
+  },
+  "keywords": [
+    "ignore",
+    ".gitignore",
+    "gitignore",
+    "npmignore",
+    "rules",
+    "manager",
+    "filter",
+    "regexp",
+    "regex",
+    "fnmatch",
+    "glob",
+    "asterisks",
+    "regular-expression"
+  ],
+  "author": "kael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaelzhang/node-ignore/issues"
+  },
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "codecov": "^1.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "~1.13.0"
+  }
+}

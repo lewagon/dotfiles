@@ -1,0 +1,44 @@
+{
+  "name": "url-parse",
+  "version": "1.1.9",
+  "description": "Small footprint URL parser that works seamlessly across Node.js and browser environments",
+  "main": "index.js",
+  "scripts": {
+    "100%": "istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "browserify": "mkdir -p dist && browserify index.js -s URLParse -o dist/url-parse.js",
+    "test-node": "istanbul cover _mocha --report lcovonly -- test.js",
+    "coverage": "istanbul cover _mocha -- test.js",
+    "test-browser": "zuul -- test.js",
+    "watch": "mocha --watch test.js",
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unshiftio/url-parse.git"
+  },
+  "keywords": [
+    "URL",
+    "parser",
+    "uri",
+    "url",
+    "parse",
+    "query",
+    "string",
+    "querystring",
+    "stringify"
+  ],
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "dependencies": {
+    "querystringify": "~1.0.0",
+    "requires-port": "1.0.x"
+  },
+  "devDependencies": {
+    "assume": "~1.5.0",
+    "browserify": "~14.3.0",
+    "istanbul": "0.4.x",
+    "mocha": "~3.3.0",
+    "pre-commit": "~1.2.0",
+    "zuul": "3.11.x"
+  }
+}

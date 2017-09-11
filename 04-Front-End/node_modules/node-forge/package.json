@@ -1,0 +1,86 @@
+{
+  "name": "node-forge",
+  "version": "0.6.33",
+  "description": "JavaScript implementations of network transports, cryptography, ciphers, PKI, message digests, and various utilities.",
+  "homepage": "http://github.com/digitalbazaar/forge",
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "http://digitalbazaar.com/"
+  },
+  "contributors": [
+    {
+      "name": "Dave Longley",
+      "email": "dlongley@digitalbazaar.com"
+    },
+    {
+      "name": "Stefan Siegl",
+      "email": "stesie@brokenpipe.de"
+    },
+    {
+      "name": "Christoph Dorn",
+      "email": "christoph@christophdorn.com"
+    }
+  ],
+  "devDependencies": {
+    "almond": "~0.2.6",
+    "jscs": "^1.8.1",
+    "requirejs": "~2.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/digitalbazaar/forge"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/forge/issues",
+    "email": "support@digitalbazaar.com"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "https://github.com/digitalbazaar/forge/raw/master/LICENSE"
+    }
+  ],
+  "main": "js/forge.js",
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "aes",
+    "asn",
+    "asn.1",
+    "cbc",
+    "crypto",
+    "cryptography",
+    "csr",
+    "des",
+    "gcm",
+    "hmac",
+    "http",
+    "https",
+    "md5",
+    "network",
+    "pkcs",
+    "pki",
+    "prng",
+    "rc2",
+    "rsa",
+    "sha1",
+    "sha256",
+    "sha384",
+    "sha512",
+    "ssh",
+    "tls",
+    "x.509",
+    "x509"
+  ],
+  "scripts": {
+    "bundle": "r.js -o minify.js optimize=none out=js/forge.bundle.js",
+    "minify": "r.js -o minify.js",
+    "jscs": "jscs *.js js/*.js minify.js nodejs/*.js nodejs/test/*.js nodejs/ui/*.js tests/*.js",
+    "jshint": "jshint *.js js/*.js minify.js nodejs/*.js nodejs/test/*.js nodejs/ui/*.js tests/*.js"
+  },
+  "jspm": {
+    "format": "amd"
+  }
+}

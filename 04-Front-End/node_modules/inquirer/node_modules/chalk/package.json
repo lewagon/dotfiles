@@ -1,0 +1,62 @@
+{
+	"name": "chalk",
+	"version": "2.0.1",
+	"description": "Terminal string styling done right. Much color",
+	"license": "MIT",
+	"repository": "chalk/chalk",
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && nyc mocha",
+		"bench": "matcha benchmark.js",
+		"coveralls": "nyc report --reporter=text-lcov | coveralls"
+	},
+	"files": [
+		"index.js",
+		"templates.js"
+	],
+	"keywords": [
+		"color",
+		"colour",
+		"colors",
+		"terminal",
+		"console",
+		"cli",
+		"string",
+		"str",
+		"ansi",
+		"style",
+		"styles",
+		"tty",
+		"formatting",
+		"rgb",
+		"256",
+		"shell",
+		"xterm",
+		"log",
+		"logging",
+		"command-line",
+		"text"
+	],
+	"dependencies": {
+		"ansi-styles": "^3.1.0",
+		"escape-string-regexp": "^1.0.5",
+		"supports-color": "^4.0.0"
+	},
+	"devDependencies": {
+		"coveralls": "^2.11.2",
+		"import-fresh": "^2.0.0",
+		"matcha": "^0.7.0",
+		"mocha": "*",
+		"nyc": "^11.0.2",
+		"resolve-from": "^3.0.0",
+		"xo": "*"
+	},
+	"xo": {
+		"envs": [
+			"node",
+			"mocha"
+		]
+	}
+}
