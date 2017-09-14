@@ -1,1 +1,0 @@
-👈 Please choose an exercise!
