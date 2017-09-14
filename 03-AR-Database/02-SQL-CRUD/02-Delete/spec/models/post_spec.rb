@@ -26,7 +26,7 @@ describe Post do
       DB.execute("INSERT INTO `posts` (title) VALUES ('Third post')")
     end
 
-    it "should remove the post #1 from the database" do
+    it "should remove post #1 from the database" do
       post = find(1)
       post.destroy
       expect(find(1)).to be_nil

@@ -18,7 +18,7 @@ describe Post do
     DB.execute(create_statement)
   end
 
-  it "should expose its id" do
+  it "should reveal its id" do
     expect(Post.new(id: 1).id).to eq 1
   end
 
@@ -26,7 +26,7 @@ describe Post do
     expect { Post.new({}).id = 2 }.to raise_error NoMethodError
   end
 
-  it "should not allow the external world to directly change the number of votes" do
+  it "should not allow the external world to change the number of votes directly" do
     expect { Post.new({}).vote += 1 }.to raise_error NoMethodError
   end
 
@@ -47,7 +47,7 @@ describe Post do
       DB.execute("INSERT INTO `posts` (title) VALUES ('Hello world')")
     end
 
-    it "should return nil if post not found in database" do
+    it "should return nil if post is not found in database" do
       expect(Post.find(42)).to be_nil
     end
 
@@ -67,7 +67,7 @@ describe Post do
   end
 
   describe "self.all (class method)" do
-    it "should return an empty array if database is empty" do
+    it "should return an empty array if the database is empty" do
       posts = Post.all
       expect(posts).to eq []
     end

@@ -27,7 +27,7 @@ describe "User" do
     expect(user.errors.messages[:email]).to include "is invalid"
   end
 
-  it "should be invalid if another user already took this username" do
+  it "should be invalid if username is already in use" do
     user_one = User.new(username: "bob", email: "bob@leponge.com")
     user_one.save!
 

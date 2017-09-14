@@ -66,7 +66,7 @@ describe "OrdersController", :_order do
     CsvHelper.write_csv(orders_csv_path, orders)
   end
 
-  it "should be initialized with a 4 repositories instance" do
+  it "should be initialized with 4 repository instances" do
     controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
     expect(controller).to be_a(OrdersController)
   end
@@ -104,7 +104,7 @@ describe "OrdersController", :_order do
       expect(OrdersController.instance_method(:list_my_orders).arity).to eq(1)
     end
 
-    it "should list the undelivered orders of john" do
+    it "should list John's undelivered orders" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
       ringo = employee_repository.find(3)  # ringo is a delivery guy
       expect(STDOUT).to receive(:puts).with(/Paul McCartney.*Calzone/)

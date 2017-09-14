@@ -6,13 +6,13 @@ describe "VendingMachine" do
 
   context "Buying Scenario" do
     describe "#amount_cents (getter)" do
-      it "should return how much money has been inserted in the machine" do
+      it "should return the amount of money that has been inserted into the machine" do
         expect(vending_machine.amount_cents).to eq(0)
       end
     end
 
     describe "#snacks (getter)" do
-      it "should return how much snacks are left in the machine" do
+      it "should return how many snacks are left in the machine" do
         expect(vending_machine.snacks).to eq(10)
         expect(empty_vending_machine.snacks).to eq(0)
       end
@@ -25,7 +25,7 @@ describe "VendingMachine" do
     end
 
     describe "#insert_coin (instance method)" do
-      it "should update the vending machine stored amount (in cents)" do
+      it "should update the vending machine account balance (in cents)" do
         expect(vending_machine.amount_cents).to eq(0)
         vending_machine.insert_coin(100)
         expect(vending_machine.amount_cents).to eq(100)
@@ -33,7 +33,7 @@ describe "VendingMachine" do
     end
 
     describe "#buy_snack (instance method)" do
-      it "should let you buy a snack if you inserted enough coin (happy path)" do
+      it "should let you buy a snack if you inserted enough money (happy path)" do
         vending_machine.insert_coin(200)
         vending_machine.insert_coin(100) # We inserted 3 euros, snack is 2.5 euros
         vending_machine.buy_snack
@@ -41,7 +41,7 @@ describe "VendingMachine" do
         expect(vending_machine.amount_cents).to eq(50)
       end
 
-      it "should not let you buy a snack if you did not insert enough coin (error path)" do
+      it "should not let you buy a snack if you didn't insert enough money (error path)" do
         vending_machine.insert_coin(100)
         vending_machine.buy_snack
         expect(vending_machine.snacks).to eq(10)
