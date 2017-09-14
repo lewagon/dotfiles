@@ -4,19 +4,19 @@ At last, Rails!
 
 This is the last "real week" on Kitt with day-by-day challenges. From next week, you'll start working on longer projects, either an Airbnb clone or your own personal project. For now, we will dive into the architecture of a fresh Rails app and try to understand what's going on. **We'll build one Rails app per day**.
 
-### `01-Rails-intro` (Monday)
+### `01 Routing, Controllers & Views`
 
 Your first day will introduce the standard Rails flow of `routing > controller > view` without adding the model layer and explaining `params`. Over the course of the day, you'll be transforming old ruby challenges from Week 1 into Rails apps.
 
-### `02-Rails-CRUD` (Tuesday)
+### `02 Models & CRUD`
 
 Here comes our old friend Active Record again! **One of the most important Rails lectures.** Your lead coach will code all of the 7 CRUD actions from scratch and introduce the `resources` routing. Pay attention! 🤓
 
-### `03-Rails-restaurant-reviews` (Wednesday)
+### `03 Advanced Routing`
 
 Today you will add a second model to a Rails app by building a two model clone of Yelp, with restaurants and reviews. The morning lecture is about going **Beyond CRUD** with advanced routing and validations in Rails.
 
-### `04-Rails-mister-cocktail` (Thursday)
+### `04 Hosting & Deployment`
 
 The morning lecture is split into 2 topics:
 
@@ -29,9 +29,9 @@ For the exercises, you'll start a two-day build of a cocktail app, with 3 models
 - Follow the frontend setup carefully to work on a nice-looking app.
 - Deploy on Heroku from start, and try applying continuous deployment.
 
-### `05-Mister-cocktail-final` (Friday)
+### `05 Image Upload`
 
-Today's lecture covers image upload on [Amazon S3](https://aws.amazon.com/s3/), using the [Paperclip](https://github.com/thoughtbot/paperclip) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want your bank details stolen on Github.**
+Today's lecture covers image upload on [Cloudinary](http://cloudinary.com/), using the [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) and [Attachinary](https://github.com/assembler/attachinary) gems. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want your bank details stolen on Github.**
 
 On Friday at 2pm, **quiz time**! Your last one! Don't be sad 😢
 
@@ -46,26 +46,26 @@ We'll take a step back and check you've grasped all the core notions of Rails.
 
 **No live-code at 5pm for this week.** But you still have morning lecture at 9am on cool topics. So get up early! Here is an overview of what will be covered:
 
-### `06-Airbnb-Devise`
+### `06 Devise`
 
 2-parts morning lecture:
 
 - Authentication with [Devise](https://github.com/plataformatec/devise) gem.
 - Collaboration techniques with git & Github. You will discover how to work in a dev team using `branches` and `pull requests`. It's a system you will use for every dev project you ever do, so pay attention!
 
-### `07-Airbnb-Facebook-connect`
+### `07 Facebook Connect`
 
 Following on from Devise, we will teach you how to customize it to build a `Sign In With Facebook` function, using [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
 
-### `08-Airbnb-SMTP`
-
-Today's lecture covers sending mail using the *SMTP* protocol. We will use the [Mandrill](https://www.mandrill.com/) SaaS to make our Rails app send automatic emails (order or signup confirmation, booking approval, etc.).
-
-Then, at 5pm, every group should demo the current version of their Airbnb clone in front of the class.
-
-### `09-Airbnb-Geocoder`
+### `08 Geocoding`
 
 Morning lecture on geocoding (with the `geocoder` gem) plus a bit about using the Google API to add autocomplete on address form inputs.
+
+### `09 Mailing`
+
+Today's lecture covers sending mail using the *SMTP* protocol. We will use the [Postmark](https://postmarkapp.com/) app to make our Rails app send transactional emails (order or signup confirmation, booking approval, etc.).
+
+Then, at 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
 ### `10-Airbnb-Ajax-in-Rails`
 
