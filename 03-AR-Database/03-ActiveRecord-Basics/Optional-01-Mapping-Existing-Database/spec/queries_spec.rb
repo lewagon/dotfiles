@@ -205,7 +205,7 @@ describe "Challenges in app/queries.rb" do
       @top_5_rock = top_five_artists('Rock')
     end
 
-    it 'returns a list of Artists' do
+    it 'returns a list of artists' do
       expect(@top_5_rock).to be_kind_of(ActiveRecord::Relation)
       expect(@top_5_rock.first).to be_a Artist
     end

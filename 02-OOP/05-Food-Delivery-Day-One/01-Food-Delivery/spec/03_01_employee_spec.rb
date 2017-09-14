@@ -1,7 +1,7 @@
 begin
   require_relative "../app/models/employee"
 rescue LoadError => e
-  if e.message =~ /employee/
+  if e.message =~ /employee\.rb/
     describe "Employee" do
       it "You need a `employee.rb` file for your `Employee` model" do
         fail

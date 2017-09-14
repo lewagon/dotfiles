@@ -4,7 +4,7 @@ require_relative "support/csv_helper"
 begin
   require_relative "../app/repositories/meal_repository"
 rescue LoadError => e
-  if e.message =~ /meal_repository/
+  if e.message =~ /meal_repository\.rb/
     describe "MealRepository" do
       it "You need a `meal_repository.rb` file for your `MealRepository`" do
         fail

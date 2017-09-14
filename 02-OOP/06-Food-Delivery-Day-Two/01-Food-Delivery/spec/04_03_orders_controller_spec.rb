@@ -66,7 +66,7 @@ describe "OrdersController", :_order do
     CsvHelper.write_csv(orders_csv_path, orders)
   end
 
-  it "should be initialized with 4 repository instances" do
+  it "should be initialized with 4 repository instances in this order (meal, employee, customer, order)" do
     controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
     expect(controller).to be_a(OrdersController)
   end

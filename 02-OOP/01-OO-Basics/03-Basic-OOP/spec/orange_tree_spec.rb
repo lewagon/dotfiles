@@ -22,7 +22,7 @@ describe OrangeTree do
     expect(orange_tree.height).to be_a Fixnum
   end
 
-  it "should measure 0m when 0 years old" do
+  it "should measure 0 meters when 0 years old" do
     expect(orange_tree.height).to eq 0
   end
 
@@ -57,7 +57,7 @@ describe OrangeTree do
     end
   end
 
-  it "should measure 10m when 10 years old" do
+  it "should measure 10 meters when 10 years old" do
     10.times do
       orange_tree.one_year_passes!
     end
@@ -65,7 +65,7 @@ describe OrangeTree do
     expect(orange_tree.height).to eq 10
   end
 
-  it "should still measure 10m when 20 years old" do
+  it "should still measure 10 meters when 20 years old" do
     20.times do
       orange_tree.one_year_passes!
     end
@@ -116,7 +116,7 @@ describe OrangeTree do
     expect(orange_tree.fruits).to eq 0
   end
 
-  it "should have a `pick_a_fruit!` method to simulate people picking fruits from the tree" do
+  it "should have a `pick_a_fruit!` method to simulate people picking a single fruit from the tree" do
     expect(orange_tree).to respond_to :pick_a_fruit!
   end
 
@@ -131,7 +131,7 @@ describe OrangeTree do
     expect(orange_tree.fruits).to eq 199
   end
 
-  it "should not let people pick fruits if there is no fruit remaining" do
+  it "should not let people pick fruits if there are no fruits remaining" do
     10.times do
       orange_tree.one_year_passes!
     end
