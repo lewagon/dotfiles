@@ -17,7 +17,7 @@ describe "fizz_buzz" do
     expect(fizz_buzz(7)).to eq([ 1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7 ])
   end
 
-  it "should return an array with 'FizzBuzz' in the 15th element of the array (15 is divisible by 3 and 5)" do
+  it "should return an array with 'FizzBuzz' at the 15th element of the array (15 is divisible by both 3 and 5)" do
     expect(fizz_buzz(100)[14]).to eq 'FizzBuzz'
   end
 end

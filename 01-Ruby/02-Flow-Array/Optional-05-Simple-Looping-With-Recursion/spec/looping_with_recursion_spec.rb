@@ -7,7 +7,7 @@ describe "#sum_recursive" do
     expect(sum).to eq 5050
   end
 
-  it "should handle gracefully the case where min > max by returning -1" do
+  it "should return -1 if min > max" do
     sum = sum_recursive(101, 100)
     expect(sum).to eq -1
   end
