@@ -14,30 +14,34 @@ Good luck - you're going to be amazing. Here are your milestones:
 
 During these two weeks, **there is no afternoon live-code**. You will still have morning talks on advanced topics though. Here is the program for morning lectures:
 
-### `01-Pundit` (Monday)
+### `01 Authorization with Pundit`
 
 Handle authorizations using the [Pundit](https://github.com/elabs/pundit) gem. This library isolates the "authorization logic" in `Policy` objects to stop you polluting your controllers with extra code.
 
-### `02-i18n` (Tuesday)
+### `02 i18n`
 
 How about having an international app to handle different languages? That is what Internationalization (`I + 18 characters + n"` = `i18n`) is about.
 
-### `03-Advanced-Admin`(Wednesday)
+### `03 Admin Interfaces`
 
 Learn to customize your admin dashboards using either [ActiveAdmin](http://activeadmin.info/) or [Rails Admin](https://github.com/sferik/rails_admin).
 
-### `04-Background-jobs` (Thursday)
+### `04 Background Jobs with Sidekiq`
 
 Take time-consuming processes (delivering emails, posting to an API, cleaning up, etc.) out of the controller using [Active Job](http://edgeguides.rubyonrails.org/active_job_basics.html).
 
-### `05-Build-an-API` (Friday)
+### `05 Build an API with Rails`
 
 Learn how to build an API with Rails.
 
-### `06-Payment-with-Stripe` (Monday)
+### `06 Payment with Stripe`
 
 Add payment to your apps using [Stripe](https://stripe.com).
 
-### `07-Search` (Tuesday)
+### `07 Search`
 
 Implement a search, either manually or by using [Algolia](https://www.algolia.com/).
+
+### `08 Testing`
+
+What are tests and how can they be used to drive development and make sure other developers don't break your code?
