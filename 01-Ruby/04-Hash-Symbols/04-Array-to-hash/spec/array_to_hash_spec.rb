@@ -3,7 +3,7 @@ require "array_to_hash"
 describe "#array_to_hash" do
   let(:array) {["a", "b", "c"]}
 
-  it "should build hash with index keys when called without block" do
+  it "should build a hash with index keys when called without block" do
     expect(array_to_hash(array)).to eq({ "0" => "a", "1" => "b", "2" => "c" })
   end
 

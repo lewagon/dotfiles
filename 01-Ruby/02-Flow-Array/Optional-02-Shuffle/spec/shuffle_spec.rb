@@ -5,7 +5,7 @@ describe '#shuffle' do
     expect(shuffle([])).to be_a Array
   end
 
-  it 'sorts an array in a random way' do
+  it 'should sort an array randomly' do
     a = (1..100).to_a
     b = shuffle(a)
     expect(b).not_to be_nil

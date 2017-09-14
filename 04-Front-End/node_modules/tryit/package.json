@@ -1,0 +1,27 @@
+{
+  "name": "tryit",
+  "description": "Module to wrap try-catch for better performance and cleaner API.",
+  "version": "1.0.3",
+  "author": "Henrik Joreteg <henrik@andyet.net>",
+  "files": [
+    "tryit.js"
+  ],
+  "devDependencies": {
+    "tap-spec": "^2.1.2",
+    "tape": "^3.0.3"
+  },
+  "keywords": [
+    "errors",
+    "try",
+    "errorhandling"
+  ],
+  "license": "MIT",
+  "main": "tryit.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:HenrikJoreteg/tryit.git"
+  },
+  "scripts": {
+    "test": "node test/test.js | tap-spec"
+  }
+}

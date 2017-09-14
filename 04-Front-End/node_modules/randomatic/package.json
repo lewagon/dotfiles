@@ -1,0 +1,78 @@
+{
+  "name": "randomatic",
+  "description": "Generate randomized strings of a specified length, fast. Only the length is necessary, but you can optionally generate patterns using any combination of numeric, alpha-numeric, alphabetical, special or custom characters.",
+  "version": "1.1.7",
+  "homepage": "https://github.com/jonschlinkert/randomatic",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Bogdan Chadkin (https://github.com/TrySound)",
+    "Dragos Fotescu (http://dragosfotescu.com)",
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
+    "Paul Miller (paulmillr.com)",
+    "Sun Knudsen (http://sunknudsen.com)"
+  ],
+  "repository": "jonschlinkert/randomatic",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/randomatic/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "is-number": "^3.0.0",
+    "kind-of": "^4.0.0"
+  },
+  "devDependencies": {
+    "ansi-bold": "^0.1.1",
+    "benchmarked": "^1.1.1",
+    "glob": "^7.1.2",
+    "gulp-format-md": "^0.1.12",
+    "mocha": "^3.4.2",
+    "should": "^11.2.1"
+  },
+  "keywords": [
+    "alpha",
+    "alpha-numeric",
+    "alphanumeric",
+    "characters",
+    "chars",
+    "numeric",
+    "rand",
+    "random",
+    "randomatic",
+    "randomize",
+    "randomized"
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "pad-left",
+        "pad-right",
+        "repeat-string"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "verb",
+      "verb-generate-readme"
+    ]
+  }
+}

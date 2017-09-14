@@ -1,0 +1,29 @@
+{
+  "name": "handle-thing",
+  "version": "1.2.5",
+  "description": "Wrap Streams2 instance into a HandleWrap",
+  "main": "lib/handle.js",
+  "scripts": {
+    "test": "mocha --reporter=spec test/*-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/indutny/handle-thing.git"
+  },
+  "keywords": [
+    "handle",
+    "net",
+    "streams2"
+  ],
+  "author": "Fedor Indutny <fedor@indutny.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indutny/handle-thing/issues"
+  },
+  "homepage": "https://github.com/indutny/handle-thing#readme",
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "readable-stream": "^2.0.1",
+    "stream-pair": "^1.0.0"
+  }
+}

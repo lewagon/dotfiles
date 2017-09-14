@@ -1,7 +1,7 @@
 require "symbols"
 
-describe "quizz" do
-  it "should have correct quizz answers" do
+describe "quiz" do
+  it "should have correct quiz answers" do
     all_answers = are_identical_symbols_same_objects? &&
                   !are_identical_strings_same_objects?
     expect(all_answers).to be true
@@ -25,12 +25,12 @@ end
 describe "#me" do
   let(:me_hash) { me }
 
-  it "should tell your age" do
+  it "should return your age" do
     expect(me_hash).to be_instance_of(Hash)
     expect(me_hash[:age]).to be_instance_of(Fixnum)
   end
 
-  it "should tell your name" do
+  it "should return your name" do
     expect(me_hash).to  be_instance_of(Hash)
     expect(me_hash[:name]).not_to be_nil
   end

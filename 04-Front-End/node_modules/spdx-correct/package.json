@@ -1,0 +1,27 @@
+{
+  "name": "spdx-correct",
+  "description": "correct invalid SPDX identifiers",
+  "version": "1.0.2",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com)",
+  "dependencies": {
+    "spdx-license-ids": "^1.0.2"
+  },
+  "devDependencies": {
+    "defence-cli": "^1.0.1",
+    "replace-require-self": "^1.0.0",
+    "spdx-expression-parse": "^1.0.0",
+    "tape": "~4.0.0"
+  },
+  "keywords": [
+    "SPDX",
+    "law",
+    "legal",
+    "license",
+    "metadata"
+  ],
+  "license": "Apache-2.0",
+  "repository": "kemitchell/spdx-correct.js",
+  "scripts": {
+    "test": "defence README.md | replace-require-self | node && tape *.test.js"
+  }
+}
