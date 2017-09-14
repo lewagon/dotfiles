@@ -1,6 +1,6 @@
 The Front-end module has 7 days + 1 project-day to start preparing your final projects.
 
-## `01-HTML-and-CSS` (Wednesday)
+## `01 HTML & CSS`
 
 You'll cover a lot of HTML & CSS concepts in the next few days, such as:
 
@@ -10,7 +10,7 @@ You'll cover a lot of HTML & CSS concepts in the next few days, such as:
 
 The objective of this day is to build [your profile page](http://lewagon.github.io/html-css-challenges/04-advanced-selectors/) and put it online using [Github Pages](https://pages.github.com/).
 
-## `02-CSS-components` (Thursday)
+## `02 CSS Components`
 
 We will go a bit further and make you code your own CSS component library. The objectives are:
 
@@ -20,17 +20,17 @@ We will go a bit further and make you code your own CSS component library. The o
 
 **Take-away**: Once you've finished, you'll be able to take HTML/CSS code directly from [Le Wagon components](http://lewagon.github.io/ui-components).
 
-## `03-Bootstrap` (Friday)
+## `03 Bootstrap, Grids & Layouts`
 
-Before diving into Bootstrap, we will briefly (15 minutes) go over some key design resources & tools you'll be using to build your graphical assets (pictures, icons, colors, fonts).
+We will first have a look at the CSS framework Bootstrap and everything it gives us then we will explore the different ways to structure your webpages by looking at the Bootstrap grid, flexboxes for simple layouts and CSS grid for more complex ones. The objectives at the end of the day are:
 
-Then, we will move to Bootstrap.
+- For rich components, we've now built our own CSS library
+- For standard ones, let's not re-invent the wheel! We'll be using built-in Bootstrap classes
+- Using the Bootstrap grid for funtional responsive layours
+- Using flexboxes for horizontal or vertical alginment of components
+- Using CSS grid to build complex 2D layouts
 
-- For rich components, we've built our own CSS library.
-- For standard ones, let's not re-invent the wheel! We'll be using built-in Bootstrap classes.
-- Yesterday we saw how to build small grids with flexbox (e.g. for tabs). But for a functional responsive grid, we need something more robust: here comes the [Bootstrap grid](http://getbootstrap.com/css/#grid)!
-
-## `04-Frontend-Advanced` (Monday)
+## `04 Middleman`
 
 We'll introduce advanced concepts such as ERB, layout, and SASS. For that, we will use a nice frontend framework called [Middleman](https://middlemanapp.com) and we'll learn to organize our HTML and CSS code in a very DRY way.
 
@@ -38,19 +38,19 @@ It's normal to struggle a bit with Middleman. The good news is: Rails frontend w
 
 Then, instead of the live-code it's Pitch Night! You will have 5 minutes to pitch your idea in front of the class. [Here's a link](https://kitt.lewagon.com/camps/93/challenges?path=04-Front-End/03-Bootstrap/06-Pitch-Preparation) if you want a head-start on preparing.
 
-## `05-Javascript-and-jQuery` (Tuesday)
+## `05 Javascript & the DOM`
 
-Our morning talk will be an introduction to Javascript and jQuery. We'll look at what js and ruby have in common, and how they differ. Then, we will introduce jQuery – an awesome JavaScript library – to play with the DOM, define events and callbacks.
+Our morning talk will be an introduction to Javascript and the DOM. We'll look at what Javascript and Ruby have in common, and how they differ. Then, we will introduce the DOM – how the browser processes the webpage – and how we can use Javascript to interact with it.
 
-## `06-jQuery-plugins` (Wednesday)
+## `06 DOM Events & AJAX`
 
-Learn how to include a jQuery plugin **the correct way** in your project, either by using a gem or using [Rails-assets](https://rails-assets.org/), and then adding the correct links in your `application.js` and `application.scss` files.
+We will have a look at the different user events we can listen to with Javascript in order to build highly dynamic websites. We will also discover how to fetch content dynamically using AJAX and Javascript without having to reload the page.
 
-## `07-HTTP-Ajax` (Thursday)
+## `07 Javascript Tooling`
 
-HTTP is **the** protocol on which a website is based and that you absolutely need to know. **So make sure you understand it :)**. Then learn to make HTTP requests in javascript using AJAX. And today is the day when we start playing with APIs! Yeah!
+In this lecture, we will have a look at how to use modern Javascript development tools, including package managers, Webpack to bundle our JS and babel to make it compatible with older browsers.
 
-## `08-Product-Design-Sprint` (Friday)
+## `08 Product Design Sprint`
 
 This is a special day. **No coding 😱, just prototyping and Product design 🖌🖍📝**. The objective is to:
 
