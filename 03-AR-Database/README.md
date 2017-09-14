@@ -1,22 +1,22 @@
 The DB & ActiveRecord module has 4 days.
 
-## `01-DB-Design-and-SQL` (Thursday)
+## `01 Schema Design & SQL`
 
 Time to learn about relational databases, discover the different relationships between tables (`1:n`, `n:n`) and how to **draw** a database scheme. Then, we'll get started on SQL - the language used to make queries to our database structured with keywords (`SELECT`, `FROM`, `WHERE`, `JOIN` etc.). We will start with simple "read queries" (`SELECT`) on day one.
 
-## `02-SQL-CRUD` (Friday)
+## `02 CRUD with SQL`
 
 Second day of SQL. First, we get to grips with CRUD. After that, you'll learn to write in the DB using a few new SQL keywords (`INSERT`, `UPDATE`, `DELETE`).
 
-## `03-Active-Record-Basics` (Monday)
+## `03 Active Record Basics`
 
 This is the first part of Active Record - a powerful ruby library to connect your object to a database. Active Record is one of the core modules in Rails. Discover how an ActiveRecord model is magically linked to a table thanks to a simple **naming convention**. That's Active Record magic!
 
-## `04-Active-Record-Advanced` (Tuesday)
+## `04 Associations & Validations`
 
 Time to go deeper into Active Record and learn about validations and associations.
 
-### Quiz
+## Quiz
 
 At 2pm, it's your third paper quiz of the program!
 
