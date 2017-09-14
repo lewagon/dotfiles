@@ -67,7 +67,7 @@ Today's lecture covers sending mail using the *SMTP* protocol. We will use the [
 
 Then, at 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
-### `10-Airbnb-Ajax-in-Rails`
+### `10 Airbnb Ajax in Rails`
 
 Once you understand CRUD and can quickly re-create a rails scaffold, it's time to add some extra wizardry using AJAX. You'll be able to talk to the server without reloading the page (adding new comments to posts / clicking on star ratings / removing something from a list, etc.)
 
