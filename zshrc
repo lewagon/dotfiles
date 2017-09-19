@@ -1,5 +1,8 @@
 ZSH=$HOME/.oh-my-zsh
 
+# Correct number of colors for iTerm
+export TERM="xterm-256color"
+
 # You can change the theme with another one:
 #   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -34,6 +37,6 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.5
 source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH=/usr/local/bin:$PATH
-source '/Users/nathankuik/lib/azure-cli/az.completion'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
