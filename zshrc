@@ -14,10 +14,7 @@ export HOMEBREW_NO_ANALYTICS=1
 source "${ZSH}/oh-my-zsh.sh"
 
 # Load rbenv
-if [ -x "$(command -v rbenv)" ]; then
-  eval "$(rbenv init -)";
-  RPS1="[$(ruby -v | cut -f2 -d ' ' | cut -f1 -d 'p')]$EPS1"
-fi
+eval "$(rbenv init -)"
 
 # Rails and Ruby uses the local `bin` folder to store binstubs.
 # So instead of running `bin/rails` like the doc says, just run `rails`
