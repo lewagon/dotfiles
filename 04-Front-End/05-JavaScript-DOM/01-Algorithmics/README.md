@@ -32,7 +32,7 @@ Open the `lib/02_sum_of_negative.js`. Implement the `sumOfNegative` function whi
 - `sumOfNegatives([-1, 4, -2, 9, 18])` should return `-3`
 - `sumOfNegatives([15, 16, 17, 1000])` should return `0`
 
-👨‍🏫 Remember when TAs told you to "stop raking and test it yourself" in Ruby? That meant that you should call the method with your own test arguments at the bottom of the file and then run `ruby <file>` in the terinal. In JavaScript, you can use the same technique! Just call your method below its definition (above the `module.exports` line), like this:
+👨‍🏫 Remember when TAs told you to "stop raking and test it yourself" in Ruby? That meant that you should call the method with your own test arguments at the bottom of the file and then run `ruby <file>` in the terminal. In JavaScript, you can use the same technique! Just call your method below its definition (above the `module.exports` line), like this:
 
 ```js
 console.log(sumOfNegative([-4, 5, -2, 9]));
