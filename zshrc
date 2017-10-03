@@ -14,7 +14,7 @@ export HOMEBREW_NO_ANALYTICS=1
 source "${ZSH}/oh-my-zsh.sh"
 
 # Load rbenv if installed
-export PATH="~/.rbenv/bin:${PATH}"
+export PATH="${HOME}/.rbenv/bin:${PATH}"
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Rails and Ruby uses the local `bin` folder to store binstubs.
