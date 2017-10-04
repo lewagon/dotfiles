@@ -24,7 +24,7 @@ speak { "Hello" }
 You may also want to create your `Proc` objects by yourself and pass them to the method as normal parameters like so:
 
 ```ruby
-def speak(&block)
+def speak(block)
   puts block.call
 end
 
