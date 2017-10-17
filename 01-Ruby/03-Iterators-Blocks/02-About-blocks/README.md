@@ -44,7 +44,7 @@ end
 #=> "<h1>Some Title</h1>"
 ```
 
-This method accepts a second optional parameter (see below!), enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`.
+This method accepts a second optional parameter (see section below on arguments with default value), enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`.
 
 ```ruby
 tag("a", ["href", "www.google.com"]) do
