@@ -29,7 +29,7 @@ rake db:migrate
 
 ### Bonus: Callbacks
 
-We didn't cover this in the lecture, but you need to know that callbacks exist in ActiveRecord. **A callback is a piece of code that is called when an event is fired**. We will use this concept a lot when programming with jQuery later in the bootcamp.
+We didn't cover this in the lecture, but you need to know that callbacks exist in ActiveRecord. **A callback is a piece of code that is called when an event is fired**. We will use this concept a lot when programming with JavaScript later in the bootcamp.
 
 Example: when a user instance is about to be validated, call a method to do some cleanup beforehand. For instance, we may want to put the `username` in lowercase.
 
