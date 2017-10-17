@@ -24,7 +24,7 @@ To get suggestions, you can use the following API:
 https://wagon-dictionary.herokuapp.com/autocomplete/:stem
 ```
 
-Here, you will replace `:stem` with the characters typed by the user. As soon as the user enter a new character (`keyup` maybe?), you will trigger a new AJAX call. If you look at your "Network" tab in Chrome Inspector you should see something like this:
+Here, you will replace `:stem` with the characters typed by the user. As soon as the user enters a new character (`keyup` maybe?), you will trigger a new AJAX call. If you look at your "Network" tab in Chrome Inspector you should see something like this:
 
 ```bash
 https://wagon-dictionary.herokuapp.com/autocomplete/u
