@@ -1,9 +1,10 @@
 ## Background & Objectives
 
-Blocks are chunks of code enclosed between `{}` (for 1-line blocks) or between `do..end` (for multi-line blocks).
-Although we can store them in `Proc` objects and pass them to a method as standard arguments, **many methods can just be called with an implicit block given after the list of arguments**. In fact, that's exactly what you did with all these iterators! This implicit block is executed any time the keyword `yield` appears in the method definition. Use the resources to learn more about blocks. The objectives here are:
+Blocks are chunks of code enclosed between `{}` (for single-line blocks) or between `do..end` (for multi-line blocks).
 
-- Learn the syntax for calling a method with an implicit block (either 1-line or multi-line).
+Many methods can just be called **with a block** given after the list of arguments. In fact, that's exactly what you did with all these iterators! This block is executed any time the keyword `yield` appears in the method definition. Use the resources to learn more about blocks. The objectives here are:
+
+- Learn the syntax for calling a method with an implicit block (either single-line or multi-line).
 - Understand what happens when you pass a parameter to the block.
 - Implement some basic methods using `yield`, to understand the inner mechanics.
 
@@ -15,14 +16,14 @@ Implement a block-timer in `#timer_for` that allows you to track the duration (i
 
 ```ruby
 timer_for do
-  100.times { (1..100000).to_a.shuffle.sort }
+  (1..10000000).to_a.shuffle.sort
 end
-#=> 3.39051
+#=> 3.313461
 ```
 
 ### A custom map
 
-To better understand `yield`, let's try to reimplement the `Enumerable#map` method without actually using it (you can use `Enumerable.each` though!). In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method.
+To better understand `yield`, let's try to reimplement the [`Enumerable#map`](https://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-map) method without actually using it. In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method. You can use `Enumerable#each` in your code to iterate through elements.
 
 ```ruby
 beatles = ["john", "paul", "george", "ringo"]
@@ -43,7 +44,7 @@ end
 #=> "<h1>Some Title</h1>"
 ```
 
-This method accepts a second optional parameter, enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`.
+This method accepts a second optional parameter (see below!), enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`.
 
 ```ruby
 tag("a", ["href", "www.google.com"]) do
