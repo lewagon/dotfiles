@@ -1,7 +1,7 @@
 begin
   require_relative "../app/models/customer"
 rescue LoadError => e
-  if e.message =~ /customer/
+  if e.message =~ /customer\.rb/
     describe "Customer" do
       it "You need a `customer.rb` file for your `Customer` model" do
         fail

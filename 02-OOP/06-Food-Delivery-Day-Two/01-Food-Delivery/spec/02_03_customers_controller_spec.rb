@@ -4,7 +4,7 @@ begin
   require_relative "../app/controllers/customers_controller"
   require_relative "../app/repositories/customer_repository"
 rescue LoadError => e
-  if e.message =~ /customer_repository\.rb/ || e.message =~ /customers_controller\.rb/
+  if e.message =~ /customer_repository/ || e.message =~ /customers_controller/
     describe "CustomersController" do
       it "You need a `customers_controller.rb` file for your `CustomersController`" do
         fail

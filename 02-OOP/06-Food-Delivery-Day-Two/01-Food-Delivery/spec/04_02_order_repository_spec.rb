@@ -73,7 +73,7 @@ describe "OrderRepository", :_order do
   end
 
   describe "#initialize" do
-    it "should take one argument: the CSV file path to store orders, and 3 repository instances for meal, employee and customer" do
+    it "should take 4 arguments: the CSV file path to store orders, and 3 repository instances (meal, employee and customer)" do
       expect(OrderRepository.instance_method(:initialize).arity).to eq(4)
     end
 
@@ -93,13 +93,13 @@ describe "OrderRepository", :_order do
       expect(elements(repo)).to be_a(Array)
     end
 
-    it "loads existing orders from the CSV" do
+    it "should load existing orders from the CSV" do
       repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
       loaded_orders = elements(repo) || []
       expect(loaded_orders.length).to eq(3)
     end
 
-    it "fills the `@orders` with instance of `Order`, setting the correct types on each property" do
+    it "should fill the `@orders` with instance of `Order`, setting the correct types on each property" do
       repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
       loaded_orders = elements(repo) || []
       fail if loaded_orders.empty?
@@ -133,7 +133,7 @@ describe "OrderRepository", :_order do
   end
 
   describe "#add" do
-    it "should add a order to the in-memory list" do
+    it "should add an order to the in-memory list" do
       repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
       new_order = Order.new({
         meal: meal_repository.find(1),
@@ -155,7 +155,7 @@ describe "OrderRepository", :_order do
       expect(new_order.id).to eq(4)
     end
 
-    it "should start auto-incremting at 1 if very first order added" do
+    it "should start auto-incrementing at 1 if it is the first order added" do
       orders_csv_path = 'unexisting_empty_orders.csv'
       FileUtils.remove_file(orders_csv_path, force: true)
 
@@ -171,7 +171,7 @@ describe "OrderRepository", :_order do
       FileUtils.remove_file(orders_csv_path, force: true)
     end
 
-    it "should persist in the CSV the new added order (first row = headers)" do
+    it "should save each new order in the CSV (first row = headers)" do
       orders_csv_path = 'spec/support/empty_orders.csv'
       FileUtils.remove_file(orders_csv_path, force: true)
 

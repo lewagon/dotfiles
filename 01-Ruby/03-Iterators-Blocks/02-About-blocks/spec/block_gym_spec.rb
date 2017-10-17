@@ -38,7 +38,7 @@ describe "#my_map" do
 end
 
 describe "#tag" do
-  it "should return the correct html for an example without any attribute" do
+  it "should return the correct html for any example without an attribute" do
     html_string = tag("h1") do
       "Hello world"
     end

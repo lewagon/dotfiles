@@ -1,19 +1,19 @@
 require "palindrome"
 
 describe "#palindrome?" do
-  it "should return false for an empty word" do
+  it "should return false for an empty string" do
     expect(palindrome?("")).to eq false
   end
 
-  it "should return false for a non-palindrome word" do
+  it "should return false for a non-palindromic word" do
     expect(palindrome?("wagon")).to eq false
   end
 
-  it "should return true for a simple palindrome word" do
+  it "should return true for a simple palindromic word" do
     expect(palindrome?("laval")).to eq true
   end
 
-  it "should return true for a simple palindrome word, ignoring case" do
+  it "should return true for a simple palindromic word, ignoring case" do
     expect(palindrome?("Laval")).to eq true
   end
 

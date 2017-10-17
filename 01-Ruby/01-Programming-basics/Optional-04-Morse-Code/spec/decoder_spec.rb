@@ -9,7 +9,7 @@ describe "decoder" do
     expect(decode('.... ..')).to eq('HI')
   end
 
-  it "should detect convert pipe (|) character into space between words" do
+  it "should detect pipe (|) character and convert it into a space between words" do
     expect(decode(".... ..|--. ..- -.-- ...")).to eq("HI GUYS")
   end
 

@@ -10,7 +10,7 @@ Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/
 
 1. Make sure you understand the code in `index.html`, and the design we give you for navbar and cards in `components/navbar.css` and `components/card.css`. If you don't understand it fully, raise a ticket and someone will explain it!
 2. Go back to Karr lecture to rehearse how you can build a layout using **flexbox** and `position: sticky`
-3. **Don't cheat by inspecting the code! 🔎** The goal of this challenge is to teach you how to build a layout by yourself. Take you time to think, ask teachers if you're stuck, but don't cheat 😉!
+3. **Don't cheat by inspecting the code! 🔎** The goal of this challenge is to teach you how to build a layout by yourself. Take your time to think, ask teachers if you're stuck, but don't cheat 😉!
 
 To display the Google map, you need to launch a web server (not just open the HTML file in your browser):
 

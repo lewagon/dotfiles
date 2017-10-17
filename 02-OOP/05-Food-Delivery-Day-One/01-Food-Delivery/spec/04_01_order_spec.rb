@@ -46,21 +46,21 @@ describe "Order", :_order do
   end
 
   describe "#meal" do
-    it "should return the meal associated to this order" do
+    it "should return the meal associated with the order" do
       order = Order.new(meal: Meal.new({}))
       expect(order.meal).to be_a(Meal)
     end
   end
 
   describe "#employee" do
-    it "should return the employee associated to this order" do
+    it "should return the employee associated with the order" do
       order = Order.new(employee: Employee.new({}))
       expect(order.employee).to be_a(Employee)
     end
   end
 
   describe "#customer" do
-    it "should return the customer associated to this order" do
+    it "should return the customer associated with the order" do
       order = Order.new(customer: Customer.new({}))
       expect(order.customer).to be_a(Customer)
     end

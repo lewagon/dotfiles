@@ -55,7 +55,7 @@ describe 'Join Query method' do
       expect(top_five_artists(db, 'Rock')).to be_a Array
     end
 
-    it 'returns the TOP 5 for Rock' do
+    it 'returns the TOP 5 artists for Rock' do
       top_5_rock = top_five_artists(db, 'Rock')
       expect(top_5_rock[0]).to eq [ 'Led Zeppelin', 114 ]
       expect(top_5_rock[1]).to eq [ 'U2', 112 ]
@@ -68,7 +68,7 @@ describe 'Join Query method' do
       expect(top_five_artists(db, 'Rock').length).to eq 5
     end
 
-    it 'returns the TOP 5 for Pop' do
+    it 'returns the TOP 5 artists for Pop' do
       top_5_pop = top_five_artists(db, 'Pop')
       expect(top_5_pop[0]).to eq [ 'U2', 23 ]
       expect(top_5_pop[1]).to eq [ 'Various Artists', 14 ]

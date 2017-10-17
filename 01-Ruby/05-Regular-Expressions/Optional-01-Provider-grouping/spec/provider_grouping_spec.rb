@@ -22,11 +22,11 @@ describe "The method group_mails" do
 end
 
 describe "The method provider?" do
-  it "should return true if provider asked is correct" do
+  it "should return true if email is from the given provider" do
     expect(provider?("seb@gmail.com", "gmail")).to eq true
   end
 
-  it "should return false if provider asked is not correct" do
+  it "should return false if email is from the given provider" do
     expect(provider?("seb@gmail.com", "hotmail")).to eq false
   end
 end

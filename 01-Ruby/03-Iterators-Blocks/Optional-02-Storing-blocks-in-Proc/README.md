@@ -29,7 +29,7 @@ def speak(block)
 end
 
 message_block = Proc.new { "Hello" }
-speak (message_block)
+speak(message_block)
 # Hello
 #  => nil
 ```

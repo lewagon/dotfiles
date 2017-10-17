@@ -53,7 +53,7 @@ ruby interface.rb
 ### Modeling the store and the cart
 
 - How do we model the `store` and the `cart`?
-- What's the **most suited stucture for each one**?
+- What's the **most suited structure for each one**?
 - Should we use an array? Should we use a hash (which keys and which values)?
 
 **Brainstorm with your teacher before starting!**

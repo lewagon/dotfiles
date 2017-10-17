@@ -10,7 +10,7 @@ describe Controller do
   let(:controller) { Controller.new(cookbook) }
 
   describe '#initialize' do
-    it 'stores the Cookbook in an instance variable' do
+    it 'should store the Cookbook in an instance variable' do
       expect(controller
         .instance_variable_get(:@cookbook))
         .to be_a Cookbook

@@ -9,7 +9,7 @@ describe "#size_splitter(array, size)" do
     expect(result).to be_a Array
   end
 
-  it "should return an array containg two arrays" do
+  it "should return an array containing two arrays" do
     expect(result.size).to eq(2)
     expect(result.first).to be_a Array
     expect(result.last).to be_a Array
@@ -84,7 +84,7 @@ describe "#block_splitter" do
       expect(result.first).to eq(%w(apple apricot))
     end
 
-    it "should return other words in the second array" do
+    it "should return the other words in the second array" do
       expect(result.last).to eq(%w(banana pear))
     end
   end

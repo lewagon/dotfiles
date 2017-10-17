@@ -4,7 +4,7 @@ begin
   require_relative "../app/controllers/meals_controller"
   require_relative "../app/repositories/meal_repository"
 rescue LoadError => e
-  if e.message =~ /meal_repository/ || e.message =~ /meals_controller/
+  if e.message =~ /meal_repository\.rb/ || e.message =~ /meals_controller\.rb/
     describe "MealsController" do
       it "You need a `meals_controller.rb` file for your `MealsController`" do
         fail

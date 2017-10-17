@@ -12,13 +12,14 @@ gem install nokogiri
 Then, you can run the following Ruby code:
 
 ```ruby
-require "open-uri"
-require "nokogiri"
+require 'open-uri'
+require 'nokogiri'
 
-doc = Nokogiri::HTML(open('https://www.etsy.com/search?q=wallet').read)
+html_content = open('https://www.etsy.com/search?q=wallet').read
+doc = Nokogiri::HTML(html_content)
 
-doc.search('.card-meta-row').each_with_index do |element, index|
-  puts "#{index}. #{element.text.strip}"
+doc.search('.block-grid-xs-2 .v2-listing-card__info .text-body').each_with_index do |element, index|
+  puts "#{index + 1}. #{element.text.strip}"
 end
 ```
 

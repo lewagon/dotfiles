@@ -100,23 +100,21 @@ Pick one to add to your list (give the number)
 For the scraper, here is a starting script to help you extract the data:
 
 ```ruby
-require "open-uri"
-require "nokogiri"
+require 'open-uri'
+require 'nokogiri'
 
 puts "What are you searching on Etsy?"
 article = gets.chomp
 
-# 1. We get the HTML file thanks to open-uri
-file = open("https://www.etsy.com/search?q=#{article}")
-
+# 1. We get the HTML page content thanks to open-uri
+html_content = open("https://www.etsy.com/search?q=#{article}").read
 # 2. We build a Nokogiri document from this file
-doc = Nokogiri::HTML(file)
+doc = Nokogiri::HTML(html_content)
 
-# 3. We search every elements with class="card-meta-row" in our HTML doc
-doc.search(".card-meta-row").each do |item|
-  # 4. for each item found, we extract its title and print it
-  title = item.text.strip
-  puts title
+# 3. We search for the correct elements containing the items' title in our HTML doc
+doc.search('.block-grid-xs-2 .v2-listing-card__info .text-body').each do |element|
+  # 4. For each item found, we extract its title and print it
+  puts element.text.strip
 end
 ```
 
