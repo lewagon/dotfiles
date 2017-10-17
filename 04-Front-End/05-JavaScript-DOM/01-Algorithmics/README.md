@@ -4,7 +4,7 @@ Today is your first day of JavaScript. The goal of this first assignment is for 
 
 In this first assignment, we won't need the browser. Instead, we'll use [Node.js](https://nodejs.org/en/) to execute somme JavaScript directly in our terminal.
 
-Make sure that the following command returns a version older than `4`:
+Make sure that the following command returns a version greater than `4`:
 
 ```bash
 node -v
