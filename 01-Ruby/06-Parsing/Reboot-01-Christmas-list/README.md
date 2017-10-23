@@ -1,8 +1,8 @@
 ## Guidelines
 
-Winter is coming ⛄⛄⛄. We want to build a program to handle our gifts list, mark items as bought when we've found them and eventually find some inspiration from an external website like Etsy. This challenge should take you all day. 🎁
+Winter is coming ⛄⛄⛄. We want to build a program to handle our gift list, mark items as bought and eventually find some inspiration from an external website like Etsy. This challenge should take you all day. 🎁
 
-As with yesterday, start off by writing the pseudo-code in the group as a live-code 💻.
+Like yesterday, start off by writing the pseudo-code in the group as a live-code 💻.
 
 ## Pseudo-code
 
@@ -20,7 +20,7 @@ First things first, let's brainstorm the **pseudo-code** together:
 
 ## Step 1 - The menu loop 🎁
 
-Start by building the main loop displaying action menu and getting user's input:
+Start by building the main loop displaying the actions and getting user's input:
 
 ```
 ruby interface.rb
