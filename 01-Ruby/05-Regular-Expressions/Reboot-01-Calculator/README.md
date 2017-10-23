@@ -48,7 +48,7 @@ ruby interface.rb
 
 ## Step 2 - Make it loop
 
-It's a bit painful to re-launch your calculator every time your program ends.. Imagine a real calcultor that just switched off after every operation 😊
+It's a bit painful to re-launch your calculator every time your program ends.. Imagine a real calculator that just switched off after every operation 😊
 
 Make it loop:
 
