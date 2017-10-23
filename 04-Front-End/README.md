@@ -36,7 +36,7 @@ We'll introduce advanced concepts such as ERB, layout, and SASS. For that, we wi
 
 It's normal to struggle a bit with Middleman. The good news is: Rails frontend will be very similar to Middleman. So it's a very good investment to work hard on it!
 
-Then, instead of the live-code it's Pitch Night! You will have 5 minutes to pitch your idea in front of the class. [Here's a link](https://kitt.lewagon.com/camps/93/challenges?path=04-Front-End/03-Bootstrap/06-Pitch-Preparation) if you want a head-start on preparing.
+Then, instead of the live-code it's Pitch Night! You will have 5 minutes to pitch your idea in front of the class. Have a look at `Front-End/Bootstrap/Pitch-Preparation` if you want a head-start on preparing.
 
 ## `05 Javascript & the DOM`
 
