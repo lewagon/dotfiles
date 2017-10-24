@@ -2,7 +2,7 @@
 
 Today is your first day of JavaScript. The goal of this first assignment is for you to realize that it's a programming language, like Ruby. It has variables, functions, conditions, loops, etc.
 
-In this first assignment, we won't need the browser. Instead, we'll use [Node.js](https://nodejs.org/en/) to execute somme JavaScript directly in our terminal.
+In this first assignment, we won't need the browser. Instead, we'll use [Node.js](https://nodejs.org/en/) to execute some JavaScript directly in our terminal.
 
 Make sure that the following command returns a version greater than `4`:
 
