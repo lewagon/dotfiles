@@ -27,7 +27,3 @@ The morning lecture explains how to deal with several data models in your app. T
 ### `06 Food Delivery (Day 2)`
 
 We'll start with a recap live-code to help you finish the Food Delivery app. Then it's your turn. We'll give you the solution of the Food Delivery challenge at 5pm.
-
-## Quiz
-
-At 2pm on the day of the Food Delivery (Day 2) - it's quiz time again! Again, no passing or failing, just a quick checkpoint to make sure everyone is grasping the key concepts.
