@@ -56,7 +56,7 @@ Before putting all 3 cards inside a "grid", start with one!
 ```html
 <div class="container">
   <div class="cards">
-    <div class="car">
+    <div class="card">
       <!-- design one card first -->
     </div>
   </div>
