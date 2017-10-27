@@ -18,6 +18,8 @@ To display the Google map, you need to launch a web server (not just open the HT
 serve
 ```
 
+Again, you might need to `cmd + shift + R` to hard reload the page (so the browser sees the changes an won't take a cached version of the css file).
+
 In fact, we've loaded the map with a [Gmaps API key](https://developers.google.com/maps/documentation/javascript/get-api-key), and we've set up this key to only accept `localhost:8000` as a domain.
 
 ## New CSS organization
