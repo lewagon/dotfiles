@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Build a [profile dashboard](https://lewagon.github.io/layouts-demo/grid-layout.html) like in the Karr lecture. Implement this layout in the `layout/profile.css` file.
+Build a [profile dashboard](https://lewagon.github.io/layouts-demo/grid-layout.html) like in the lecture. Implement this layout in the `layout/profile.css` file.
 
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/profile-example.png" alt="" width="100%">
