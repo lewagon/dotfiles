@@ -66,3 +66,5 @@ With these techniques, you can play with border/padding/margin without breaking 
 ### Your turn
 
 Apply these techniques to reproduce [this page](http://lewagon.github.io/bootstrap-challenges/02-Advanced-Bootstrap-grid/), starting with the HTML skeleton we give you. You will have to code a bit of CSS for backgrounds, padding and margin. Of course you can combine the two techniques and add **both** a wrapper around your `.container` and cards inside your `.cols`.
+
+You might need to `cmd + shift + R` to hard reload the page so that the browser doesn't take a cached version of the css file when editing the css.
