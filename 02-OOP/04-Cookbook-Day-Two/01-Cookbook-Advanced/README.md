@@ -11,7 +11,7 @@ You will add your HTML scraper feature to your already existing app (from Friday
 cp -r ../../03-Cookbook-Day-One/01-Cookbook/lib .
 ```
 
-It will add fill the lib folder with your previous code from which you can start. You can also take the solution from the livecode (cf. Slack).
+It will fill the lib folder with your previous code from which you can start. You can also take the solution from the livecode (cf. Slack).
 
 Before starting on today, run your pasted cookbook to make sure that the basic user actions (list / add / remove) are working!
 
