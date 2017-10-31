@@ -16,6 +16,13 @@ The second function `buildSoldierMap` takes a `battlefield` (`String`) as a para
 - `Elves:5,Orcs:4`
 - `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk Hai:1`
 
+So for example:
+
+```js
+const battlefield = "Elves:3,Orcs:2"
+buildSoldierMap(battlefield)  //=> { "Elves" => 3, "Orcs" => 2 }
+```
+
 Here is how to use a JavaScript [Map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map):
 
 ```js
