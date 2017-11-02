@@ -166,10 +166,8 @@ describe 'Queries methods' do
       result = love_tracks(db)
 
       expect(result.length).to eq(tracks.length)
-      tracks.each { |t| expect(result).to include(t) }
-      tracks.first(3).each_with_index { |_, i| expect(tracks[i]).to eq(result[i]) }
+      tracks.each_with_index { |t, i| expect(t).to eq(result[i]) }
     end
-
   end
 
   describe 'long_tracks' do
