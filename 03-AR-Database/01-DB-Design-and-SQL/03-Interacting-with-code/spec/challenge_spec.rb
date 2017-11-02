@@ -168,6 +168,7 @@ describe 'Queries methods' do
       expect(result.length).to eq(tracks.length)
       tracks.each_with_index { |t, i| expect(t).to eq(result[i]) }
     end
+    
   end
 
   describe 'long_tracks' do
