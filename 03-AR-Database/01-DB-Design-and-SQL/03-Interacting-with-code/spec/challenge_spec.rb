@@ -167,6 +167,7 @@ describe 'Queries methods' do
 
       expect(result.length).to eq(tracks.length)
       tracks.each { |t| expect(result).to include(t) }
+      tracks.first(3).each_with_index { |_, i| expect(tracks[i]).to eq(result[i]) }
     end
 
   end
