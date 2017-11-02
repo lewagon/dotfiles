@@ -50,7 +50,7 @@ Once again, please read at the [Google Maps JavaScript API documentation](https:
 To display a map in your `#map` element, you can use these lines:
 
 ```js
-var map = new google.maps.Map(document.getElementById('map'), {
+const map = new google.maps.Map(document.getElementById('map'), {
   center: { lat: 48.8648482, lng: 2.3798534 },
   zoom: 14  // Change this value from 0 to 18
 });
@@ -59,7 +59,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
 To add a marker to the map, if the variable `map` holds the `google.maps.Map` object, you can run:
 
 ```js
-var marker = new google.maps.Marker({
+const marker = new google.maps.Marker({
   map: map,
   position: { lat: 48.8648482, lng: 2.3798534 }
 });
