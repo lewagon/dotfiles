@@ -110,7 +110,7 @@ Just open (or create) the `app/assets/stylesheets/questions.scss` file. You can 
 
 ### 7 - Testing (Optional)
 
-⚠️ Please skip this section if you don't feel at ease yet with Rails internal, and work on the next exercise.
+⚠️ Please skip this section if you don't feel at ease yet with Rails internal. You can always come back here later in the day after completing the Longest Word Game exercise.
 
 First, delete the `test/controllers/questions_controller_test.rb` file if it got generated. We will be doing [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). The goal of this kind of testing is to automate all the manual testing of "code editing / go to the browser / reload the page / check if this is working". Everything you did manually in the browser can be done _via_ code!
 
