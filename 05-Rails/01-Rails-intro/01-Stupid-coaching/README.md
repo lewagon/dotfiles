@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Remember your first weeks of Ruby? We only had the terminal for the program user interface. Those days are over, we can now use Rails! This means:
+Remember your first weeks of Ruby? We only had the terminal for the program user interface. Those days are over, we will now use Rails! This means:
 
 - The program user interface is now your **browser**
 - The only way to communicate with your Rails app is through **HTTP requests**
@@ -38,31 +38,50 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 
 Open your `routes.rb` file and add the two routes needed for your Stupid Coaching web application.
 
+Check the routes are defined with the following command:
+
+```bash
+rails routes
+```
+
+It should look like this:
+
+```bash
+  Prefix Verb URI Pattern       Controller#Action
+     ask GET  /ask(.:format)    questions#ask
+  answer GET  /answer(.:format) questions#answer
+```
+
 ### 2 - Controller
 
-Generate a new `QuestionsController`, using the correct rails generator on the command line. This controller will have two actions, `ask` and `answer`.
+Generate a new `QuestionsController`, using the correct rails generator on the command line. This controller will have two actions, `ask` and `answer`. Open the `routes.rb` file and delete the duplicated routes if they got generated.
 
-### 3 - Coach Answer implementation
+### 3 - Coach Answer Page
 
 Time to implement the logic in the `answer` action (second step of the user story). The `answer.html.erb` will display the question you ask your coach as well as his answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
 
 
 ```bash
-GET /answer?query=hello
-GET /answer?query=what+time+is+it%3F
+GET /answer?question=hello
+GET /answer?question=what+time+is+it%3F
 ```
 
-![Coach answer to a statement](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-1.png)
+If you don't remember about the coach (poor) logic, here it is:
 
-![Coach answer to a question](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-answer-2.png)
+1. If the message is `I am going to work`, the coach will answer `Great!`
+2. If the message has a question mark `?` at the end, the coach will answer `Silly question, get dressed and go to work!`.
+3. Otherwise he will answer `I don't care, get dressed and go to work!`
 
-### 4 - Question Form
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/hello_there.png)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/can_i_go.png)
+
+### 4 - Question Form Page
 
 Let's implement the `ask` action. On this page, we should build a form with an input where the user can type in a question.
 
 ```html
 <form action="???">
-  <label for="question">Speak to your coach</label>
   <input type="text" name="???">
   <input type="submit" value="Ask!">
 </form>
@@ -75,12 +94,16 @@ Notice the important HTML attributes in the form:
 
 Replace the `???` so that your form send a request to `QuestionsController#answer` with a good parameter name.
 
-![Question for the Coach](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-ask.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/ask.png)
 
 ### 5 - Backlink from `/answer` to `/ask`
 
 - Add a link to `/ask` on the `answer.html.erb` view using the `link_to` Rails helper.
 
-![Coach answer](https://raw.githubusercontent.com/lewagon/karr-images/master/coach-adding-link.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/bottom_link.png)
 
+### 6 - Make it look nice!
 
+We have not covered the Front-End aspect of a Rails project, but you can start on your own!
+
+Just open (or create) the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
