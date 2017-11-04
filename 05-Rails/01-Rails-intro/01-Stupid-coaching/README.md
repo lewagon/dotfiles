@@ -107,3 +107,98 @@ Replace the `???` so that your form send a request to `QuestionsController#answe
 We have not covered the Front-End aspect of a Rails project, but you can start on your own!
 
 Just open (or create) the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
+
+### 7 - Testing (Optional)
+
+⚠️ Please skip this section if you don't feel at ease yet with Rails internal, and work on the next exercise.
+
+First, delete the `test/controllers/questions_controller_test.rb` file if it got generated. We will be doing [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). The goal of this kind of testing is to automate all the manual testing of "code editing / go to the browser / reload the page / check if this is working". Everything you did manually in the browser can be done _via_ code!
+
+First, you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu. Then you need to install `chromedriver`:
+
+```bash
+ # OSX
+brew install chromedriver
+
+# Ubuntu
+gem install chromedriver-helper
+```
+
+We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. To do that, open the following file and replace **all** its content with:
+
+```ruby
+# test/application_system_test.rb
+require "test_helper"
+
+class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
+  Capybara.register_driver(:headless_chrome) do |app|
+    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome \
+      chromeOptions: { args: %w[headless disable-gpu window-size=1280x760] }
+    Capybara::Selenium::Driver.new app,
+      browser: :chrome, desired_capabilities: capabilities
+  end
+  driven_by :headless_chrome
+end
+```
+
+Ready? Let's dive into Rails Testing.
+
+In the terminal, run the following to create the test file:
+
+```bash
+rails g system_test questions
+```
+
+Open the generated file in Sublime Text, and write your first test:
+
+```ruby
+# test/system/questions_test.rb
+require "application_system_test_case"
+
+class QuestionsTest < ApplicationSystemTestCase
+  test "visting /ask renders the form" do
+    visit ask_url
+    assert_selector "p", text: "Ask your coach anything"
+  end
+end
+```
+
+Run the test in the terminal with:
+
+```bash
+rails test:system
+```
+
+If you look closely at the test scenario, you can read it as:
+
+1. Go to the `/ask` page
+2. Make sure the page got rendered and we can read `Ask your coach anything`.
+
+Great! That's our first feature test. What do we want to test next? If you think about what you _manually_ did, it was tuping some text (with different scenarios) and then clicking the button "Ask". Let's do that with tests!
+
+```ruby
+# test/system/questions_test.rb
+require "application_system_test_case"
+
+class QuestionsTest < ApplicationSystemTestCase
+  # [...]
+
+  test "saying Hello yields a grumpy response from the coach" do
+    visit ask_url
+    fill_in "question", with: "Hello"
+    click_on "Ask"
+
+    assert_text "I don't care, get dressed and go to work!"
+  end
+end
+```
+
+Intrigued about this syntax? This is the **capybara** gem! Very helpful in this testing context where we need to automate clicking on links, buttons, or filling forms. Have a look at [its DSL](https://github.com/teamcapybara/capybara#the-dsl).
+
+Now your turn ✌️. Try to implement other scenarios in your system tests. The equivalent of `binding.pry` in the test world is the following in the Ruby code:
+
+```bash
+take_screenshot
+```
+
+It will take screenshots in the _Headless Chrome_. They will go in the `tmp/screenshots` folder.
