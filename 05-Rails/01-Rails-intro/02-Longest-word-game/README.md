@@ -124,7 +124,7 @@ gem install chromedriver-helper
 We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. To do that, open the following file and replace **all** its content with:
 
 ```ruby
-# test/application_system_test.rb
+# test/application_system_test_case.rb
 require "test_helper"
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
