@@ -58,7 +58,7 @@ We now have a list of tasks, and we would like to click on the task title and na
 
 Update the `index.html.erb` view with the `link_to` helper to build the links.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index_show.gif)
 
 ### 5 - _As a user, I can add a new task_
 
