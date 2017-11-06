@@ -60,11 +60,10 @@ Generate a new `QuestionsController`, using the correct rails generator on the c
 
 Time to implement the logic in the `answer` action (second step of the user story). The `answer.html.erb` will display the question you ask your coach as well as his answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
 
+- [localhost:3000/answer?question=hello](http://localhost:3000/answer?question=hello)
+- [localhost:3000/answer?question=what+time+is+it%3F](http://localhost:3000/answer?question=what+time+is+it%3F)
 
-```bash
-GET /answer?question=hello
-GET /answer?question=what+time+is+it%3F
-```
+⚠️ Don't try to work on the form yet! Click on the links above and make your Answer page work!
 
 If you don't remember about the coach (poor) logic, here it is:
 
