@@ -4,6 +4,8 @@ Time to re-implement your "Longest-word game" with a cool web-interface!
 
 There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
 
+⛔️ Please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
+
 ```bash
 cd ~/code/<user.github_nickname>
 rails new rails-longest-word-game
