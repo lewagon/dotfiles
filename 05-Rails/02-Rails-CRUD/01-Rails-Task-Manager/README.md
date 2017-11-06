@@ -4,9 +4,9 @@ Let's build a To Do Manager with the basic CRUD features:
 
 1. As a user, I can list tasks
 1. As a user, I can view the details of a task
-1. As a user, I can add a task in my To Do list
-1. As a user, I can edit the details of a task
-1. As a user, I can remove a task from my To Do list
+1. As a user, I can add a new task
+1. As a user, I can edit a task (mark as completed / update title & details)
+1. As a user, I can remove a task
 
 In this challenge, you will meet your old friend [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) again, which is Rails' ORM.
 
@@ -52,5 +52,14 @@ Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: 
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png)
 
+### 4 - _As a user, I can view the details of a task_
+
+We now have a list of tasks, and we would like to click on the task title and navigate to a new page, displaying the details of this task. Following the convention from the lecture, add a new route, a new controller action and a new view. This action should **find** a specific task, thanks to its `id`, directly from `params`.
+
+Update the `index.html.erb` view with the `link_to` helper to build the links.
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png)
+
+### 5 - _As a user, I can add a new task_
 
 WIP
