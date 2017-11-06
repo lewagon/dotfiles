@@ -101,7 +101,7 @@ end
 
 Don't forget to **restart your server when you change the config**.
 
-Create the dynamic template `/flats/show.html.erb`. In this template, `owner` will dynamically change to `"papillard"`, `"ssaunier"`, `"monsieurpaillard"`, etc. depending on the URL.
+Create the dynamic template `show.html.erb` in a new `flats` folder in `source`. In this template, `owner` will dynamically change to `"papillard"`, `"ssaunier"`, `"monsieurpaillard"`, etc. depending on the URL.
 
 You can now access the hash `data.flats` using the owner's name as a key, like this:
 
