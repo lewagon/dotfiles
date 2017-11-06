@@ -14,7 +14,7 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-task-manager -T
+rails new rails-task-manager
 cd rails-task-manager
 git init
 git add .
