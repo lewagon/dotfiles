@@ -7,7 +7,8 @@ For the next two challenges, you'll be re-implementing some of your ruby scripts
 
 Re-implement the stupid coaching challenge (01-Ruby/01-Programming-basics/04-Stupid-coaching) in Rails.
 
-There is no `rake` here, and do not create your Rails app in `fullstack-challenges`. 
+There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
+
 ⛔️ Please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
 
 ```bash
