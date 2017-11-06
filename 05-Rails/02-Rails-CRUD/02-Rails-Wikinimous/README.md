@@ -25,6 +25,15 @@ Generate the `Article` model through the right rails generator. It should have a
 - `title`, as a `string`
 - `content`, as a `text`
 
+Don't hesitate to crash test your new model in the `rails console`:
+
+```ruby
+new_article = Article.new(title: 'The meaning of life', content: 'It's 42!')
+new_article.valid?  # => should be `true`
+new_article.save    # => should not display rollback warnings
+Article.last        # => should be the one you just saved
+```
+
 ### 2 - Seed
 
 Add the [`faker` gem](https://github.com/stympy/faker) to your `Gemfile` and
