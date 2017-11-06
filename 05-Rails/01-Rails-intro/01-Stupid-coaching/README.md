@@ -5,7 +5,9 @@ Remember your first weeks of Ruby? We only had the terminal for the program user
 - The program user interface is now your **browser**
 - The only way to communicate with your Rails app is through **HTTP requests**
 
-There is no `rake` here. Also, do not create your Rails app in `fullstack-challenges` ⛔️
+There is no `rake` here. Also, do not create your Rails app in `fullstack-challenges`.
+
+⛔️ Please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
 
 ```bash
 cd ~/code/<user.github_nickname>
