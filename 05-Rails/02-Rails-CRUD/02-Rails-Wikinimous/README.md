@@ -44,36 +44,6 @@ rails db:seed
 ## Controller & Views
 
 Generate your controller, and implement all 7 CRUD default actions to
-list, show, create, update and destroy an article.
+list, show, create, update and destroy an article, like we did for the task manager.
 
-Once you're done, you should have a very nice wiki with all basic functionalities.
-
-## Markdown (Optional, Ruby)
-
-Add the [`kramdown` gem](https://github.com/gettalong/kramdown) to your `Gemfile`
-and run `bundle install`. We want to use the [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to write our articles content.
-
-Markdown is a simple and human-readable syntax which generates HTML. It is used everywhere, especially on GitHub. We're also using it _right now_ in what you're reading on **kitt**!
-
-Store some Markdown in your articles and the database, and use the `kramdown` gem to display the rendered text in the `show` view.
-
-## Code Editor (Optional, JavaScript)
-
-Use the [`ace-rails-ap` gem](https://github.com/codykrieger/ace-rails-ap) to use the [ace editor](http://ace.c9.io) in place of the simple text area.
-
-## Adding users (Optional, adding a model)
-
-If you're happy with all the items above, and if a T.A. has approved your code,
-try this:
-
-- Add a user sign in / sign up logic, and make sure you can edit an article if you are logged in.
-
-Here's a nice [gist](https://gist.github.com/thebucknerlife/10090014) on how
-to use Bcrypt and `has_secure_password` in a Rails app. Next week, we'll use
-Devise, a powerful auth system, but it's nice to know how to do it by hand 😊
-
-## Versioning (Optional, adding a model - bis)
-
-What about versioning your articles? Like Wikipedia, we'd like to store a new
-version each time the `Save` button is pressed. Also, we'd like to have a page
-listing all revisions for an article. What about diffs?
+You can now directly use the `resources` shortcut in your routes.
