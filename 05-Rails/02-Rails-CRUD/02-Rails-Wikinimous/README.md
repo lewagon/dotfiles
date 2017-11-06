@@ -16,7 +16,9 @@ hub create
 git push origin master
 ```
 
-## Model
+## Specs
+
+### 1 - Model
 
 Here is our schema:
 
@@ -29,9 +31,9 @@ Here is our schema:
 +----------------+
 ```
 
-Use the right rails generator to generate the `Article` model.
+Use the right rails generator to generate the `Article` model with the correct fields.
 
-## Seed
+### 2 -Seed
 
 Add the [`faker` gem](https://github.com/stympy/faker) to your `Gemfile` and
 run `bundle install`. Use this gem to generate 10 fake articles in
@@ -41,9 +43,11 @@ run `bundle install`. Use this gem to generate 10 fake articles in
 rails db:seed
 ```
 
-## Controller & Views
+### 3 - Controller & Views
 
 Generate your controller, and implement all 7 CRUD default actions to
 list, show, create, update and destroy an article, like we did for the task manager.
 
 You can now directly use the `resources` shortcut in your routes.
+
+Have a look at the [live app](https://wagon-wikinimous.herokuapp.com) to see what it should look like. 😉
