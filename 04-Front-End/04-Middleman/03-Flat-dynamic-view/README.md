@@ -35,7 +35,7 @@ ssaunier:
 papillard:
   name: "Boris' home"
   description: Small flat in Tokyo
-  city_name: "Paris, France"
+  city_name: "Tokyo, Japan"
   city_slug: "tokyo"
   wifi: true
   rating: 3
