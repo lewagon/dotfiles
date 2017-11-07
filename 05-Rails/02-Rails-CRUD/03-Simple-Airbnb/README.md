@@ -75,6 +75,8 @@ Time to add the correct action to show all the information of a single given fla
 
 Let's also update the `index.html.erb` view with the `link_to` helper to build the dynamic links.
 
+You can use the [Google Maps Static Map API](https://developers.google.com/maps/documentation/static-maps/intro) to incorporate a map in your show view. It works with basic addresses so no need to geocode. 😊
+
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show.png)
 
 ### 6 - As a user, I can edit the details of a flat
