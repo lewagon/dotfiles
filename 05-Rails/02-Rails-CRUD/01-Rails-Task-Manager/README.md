@@ -35,7 +35,7 @@ Generate the `Task` model through the right rails generator. It should have at l
 
 ### 2 - Controller
 
-Generate an empty (no action) `TasksController` with the right rails generator.
+Generate an empty (no actions) `TasksController` with the right rails generator.
 
 For this exercise, **do not use `resources`** in your `config/routes.rb`. The goal of this exercise is to re-build the regular CRUD from scratch.
 
