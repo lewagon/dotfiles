@@ -95,27 +95,21 @@ Once again, let's update all our view to put in this destroy link.
 
 ### 8 - Adding `picture_url` to the flat model (Optional)
 
-- Add picture url attribute to the flat moodel, so we can display a nice banner picture in the show
+Let's add a picture url attribute to the flat model (just storing a string of a picture url). Let update our new and edit forms to allow the user to specify a flat picture to be displayed throughout the website. We can also update our index and show pages with the new picture.
+
+For your seed, you can find nice images of houses on [unsplash](https://unsplash.com/search/photos/house).
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show_2.png)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index_3.png)
 
 ### 9 - Filtering flats (Optional)
 
-- Let's try to add a search bar to be able to filter flats in the index to find the perfect flat!
+Let's try to add a search bar to be able to filter flats in the index to find the perfect flat!
 
-### 10 - Adding a second `User` model (Optional)
+- How can we find what the user is searching for?
+- What active record method can we use to build a simple search engine? This can get you started `@flats = Flat.where("name iLIKE '%garden%'")`, make sure you understand this statement before going any further.
+- How can we make sure the page still works like a traditional index, even if the user isn't searching anything?
+- How can we make sure the input is prefilled with the search query once the user searched?
 
-- Let's add a `User` model to our app (first, last, email, password)
-- `SessionsController`
-- Making sure user is loged in except index, show
-- Setting the user on creation
-
-### 11 - Authorizing the edit and destroy actions (Optional)
-
-- Only the owner should be able to edit and destroy, let's make it happen!
-
-### 12 - User Dashboard (Optional x2)
-
-- Let's add a `dashboard` page do our app where a user can see all the flats he added to our website
-
-### 13 - Map on index with markers (Optional x2)
-
-- On the index page, let's build a static map AirBnB style!
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index_4.png)
