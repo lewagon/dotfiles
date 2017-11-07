@@ -67,7 +67,7 @@ Once you're done and you have a cool design, `commit` your changes:
 ```bash
 git add .
 git commit -m "Added CSS for colors and fonts to over-ride Bootstrap theme"
-git push
+git push origin master
 ```
 
 Don't forget to `deploy` your site:
