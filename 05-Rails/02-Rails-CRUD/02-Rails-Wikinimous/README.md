@@ -28,7 +28,7 @@ Generate the `Article` model through the right rails generator. It should have a
 Don't hesitate to crash test your new model in the `rails console`:
 
 ```ruby
-new_article = Article.new(title: 'The meaning of life', content: 'It's 42!')
+new_article = Article.new(title: 'The meaning of life', content: "It's 42!")
 new_article.valid?  # => should be `true`
 new_article.save    # => should not display rollback warnings
 Article.last        # => should be the one you just saved
