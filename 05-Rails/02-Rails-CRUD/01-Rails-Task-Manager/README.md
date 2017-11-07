@@ -14,7 +14,7 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-task-manager -T
+rails new rails-task-manager
 cd rails-task-manager
 git init
 git add .
@@ -35,7 +35,7 @@ Generate the `Task` model through the right rails generator. It should have at l
 
 ### 2 - Controller
 
-Generate an empty (no action) `TasksController` with the right rails generator.
+Generate an empty (no actions) `TasksController` with the right rails generator.
 
 For this exercise, **do not use `resources`** in your `config/routes.rb`. The goal of this exercise is to re-build the regular CRUD from scratch.
 
