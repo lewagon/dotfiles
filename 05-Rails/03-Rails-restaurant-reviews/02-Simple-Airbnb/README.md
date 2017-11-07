@@ -108,7 +108,7 @@ For your seed, you can find nice images of houses on [unsplash](https://unsplash
 Let's try to add a search bar to be able to filter flats in the index to find the perfect flat!
 
 - How can we find what the user is searching for?
-- What active record method can we use to build a simple search engine? This can get you started `@flats = Flat.where("name iLIKE '%garden%'")`, make sure you understand this statement before going any further.
+- What active record method can we use to build a simple search engine? This can get you started `@flats = Flat.where("name LIKE '%garden%'")`, make sure you understand this statement before going any further.
 - How can we make sure the page still works like a traditional index, even if the user isn't searching anything?
 - How can we make sure the input is prefilled with the search query once the user searched?
 
