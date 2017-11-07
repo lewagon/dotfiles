@@ -1,8 +1,47 @@
 ## Background & Objectives
 
 We'd like to build a small [Sinatra](http://www.sinatrarb.com/) web application to display all the information from that Jukebox Database.
+There is a rake for this exercise that will test your sinatra app, for it to work, run `gem install rack-test` in the Terminal.
 
-You can start from our [Sinatra 101](https://github.com/lewagon/sinatra-101). There is a rake for this exercise that will test your sinatra app, for it to work, run `gem install rack-test` in the Terminal.
+## Setup
+
+Install the gems specified in your `Gemfile` with the following command:
+
+```bash
+bundle install
+```
+This will create an auto-generated `Gemfile.lock` file which specifies versions for each gem. It locks them actually.
+
+Launch the sinatra app.
+
+```bash
+ruby lib/app.rb
+```
+
+Look! You can go to [http://localhost:4567](http://localhost:4567). You are now running a small webserver and are accessing it with your browser. No more command line!
+
+## Some words about Sinatra
+
+Sinatra is what we call a web "microframework". It's basically a micro Rails, also following the **MVC** pattern.
+The `app.rb` file acts as the controller. The router layer is handled by Sinatra.
+We already created a controller method to handle the root of the web app. Sinatra maps the URL in the browser to the right method in `app.rb`. Take a look at the [routing doc](http://www.sinatrarb.com/intro.html#Routes) for more info.
+
+Don't hesitate to read more about Sinatra in our homemade [tutorial](https://github.com/lewagon/sinatra-101) (skip the Setup part).
+
+```ruby
+# app.rb
+# [...]
+
+get '/' do  # <- Router part
+
+  # [...]   #
+  # [...]   # <- Controller part
+  # [...]   #
+
+end
+```
+
+Read about Views, Routing, `params` [here](https://github.com/lewagon/sinatra-101#views) before starting coding.
 
 ## Specs
 
@@ -27,4 +66,4 @@ You should code a `/tracks/:id` page displaying all the track info, and if you h
 you can have a look at a video embed API service like youtube to also throw in a video on
 that page.
 
-When you've finished, use `ngrok` to share your work on Slack 👌
+When you've finished, use `[ngrok](https://github.com/lewagon/sinatra-101/blob/master/README.md#share-with-the-world)` to share your work on Slack 👌
