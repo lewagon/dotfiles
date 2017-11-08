@@ -7,7 +7,7 @@ Remember your first weeks of Ruby? We only had the terminal for the program user
 
 There is no `rake` here. Also, do not create your Rails app in `fullstack-challenges`.
 
-⛔️ Please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
+⛔ Please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -19,6 +19,8 @@ git commit -m "rails new"
 hub create
 git push origin master
 ```
+
+`hub` is a gem that we installed on the first day that created a repo on github for us so that we can `git push`. 😊
 
 **Objective**: We will implement a simple Rails application with 2 pages:
 

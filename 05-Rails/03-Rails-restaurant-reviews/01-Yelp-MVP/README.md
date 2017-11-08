@@ -9,9 +9,8 @@ You are going to use external specs written by the teachers to test your rails a
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new -T rails-yelp-mvp
+rails new rails-yelp-mvp
 cd rails-yelp-mvp
-git init
 git add .
 git commit -m "rails new"
 hub create
