@@ -18,11 +18,11 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--webpack` option!
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--webpack` option! Let's also add a `--database=postgresql` (we will talk about this tomorrow). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-mister-cocktail --webpack
+rails new rails-mister-cocktail --webpack --database=postgresql
 cd rails-mister-cocktail
 ```
 
