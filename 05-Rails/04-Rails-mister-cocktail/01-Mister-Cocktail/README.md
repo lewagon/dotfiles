@@ -63,7 +63,16 @@ rake                             # Launch tests
 
 ## Style
 
-Don't forget to follow the slides of this morning to organise your CSS in components, pages and layouts.
+Let's add the front-end gems!
+
+```ruby
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+```
+
+Don't forget to follow the slides of this morning and organise your CSS in components, pages and layouts.
 
 ```bash
 rm -rf app/assets/stylesheets
