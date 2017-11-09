@@ -5,11 +5,11 @@ You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started
 
 ## Rails app generation
 
-You are going to use external specs written by the teachers to test your rails app. Here is the setup you need:
+You are going to use external specs written by the teachers to test your rails app, that is why we specify `-T` which means, don't generate the inbuilt rails tests. Here is the setup you need:
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-yelp-mvp
+rails new -T rails-yelp-mvp
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"
