@@ -171,7 +171,7 @@ Now time to make a nice front-end! Time to play around with CSS! 😊 Can you ma
 
 Don't forget you can have local images in the `app/assets/images` folder. Or even better, you can ask the user for an `image_url` on submission of the cocktail.
 
-### 6 - New dose form on the cockatil show page (Optional)
+### 6 - New dose form on the cocktail show page (Optional)
 
 Try to put the "New dose form" on the cocktail page, not on a separate page. What changes in the routes? And in the controllers?
 
