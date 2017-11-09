@@ -6,6 +6,18 @@ manager. We want to store our favourite cocktails, and their recipes.
 
 ## Rails app generation
 
+Let's install `yarn` if you haven't already!
+
+```bash
+# OSX
+brew install yarn
+
+# Ubuntu
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
 **Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--webpack` option!
 
 ```bash
