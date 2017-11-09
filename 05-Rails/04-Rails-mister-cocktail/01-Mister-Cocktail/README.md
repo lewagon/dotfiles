@@ -72,6 +72,10 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 ```
 
+```bash
+rails generate simple_form:install --bootstrap
+```
+
 Don't forget to follow the slides of this morning and organise your CSS in components, pages and layouts.
 
 ```bash
