@@ -8,13 +8,13 @@ Remember the key points:
 - What's the **pain** your product tackles?
 - What's the **solution**?
 
-One little incentive: If you are the first to upload 🥇, you get choose if you pitch first, or last!
+One little incentive: If you are the first to upload 🥇, you get to choose if you pitch first, or last!
 
 For all the information you need about what makes a good pitch, make sure you refer to [Guidelines for Le Wagon's projects](https://github.com/lewagon/product#pitches). This page also has some information on Voting.
 
 ## Voting on projects
 
-The [guidelines](https://github.com/lewagon/product#pitches) page also has some information on voting.
+The [guidelines](https://github.com/lewagon/product#teams) page also has some information on voting.
 
 Once everyone has pitched, you will have 24 hours to vote for your 3️⃣ favourite projects (i.e. **the ones you want to work on!**) You can vote for your own product if you want, but it's not necessary.
 
