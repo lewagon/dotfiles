@@ -3,7 +3,7 @@
 Today, we have **three goals**:
 
 1. Deploy Mister Cocktail on Heroku
-2. Add the
+2. Add the Image Upload features
 3. There's a Rails Quizz at 2pm!
 
 ### Setup
