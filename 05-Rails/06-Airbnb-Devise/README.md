@@ -32,8 +32,8 @@ Use Le Wagon's minimal template, which already has a good frontend setup:
 ```bash
 cd ~/code/<user.github_nickname>
 rails new \
-  -T --database postgresql \
-  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
+  --database postgresql \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/rails-51/minimal.rb \
   rails-airbnb-clone
 ```
 
