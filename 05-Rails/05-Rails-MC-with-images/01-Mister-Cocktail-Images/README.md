@@ -3,7 +3,7 @@
 Today, we have **three goals**:
 
 1. Deploy Mister Cocktail on Heroku
-2. Add the
+2. Add the Image Upload features
 3. There's a Rails Quizz at 2pm!
 
 ### Setup
@@ -14,9 +14,9 @@ We'll continue working on yesterday's code, so go back to your folder:
 cd ~/code/<user.github_nickname>/rails-mister-cocktail
 ```
 
-We generated this rails app **without** the `--database` flag, so we need to manually migrate this Rails app to Postgresql.
+If you generated the rails app **without** the `--database` flag (it's alex's fault), we need to manually migrate this Rails app to Postgresql for heroku. You can check if the app is configured with postgresql if you have the `pg` gem in the gemfile.
 
-Open your Gemfile, find the `sqlite` line. **Replace** it with:
+If you need to change the app to postgres, open your Gemfile, find the `sqlite` line. **Replace** it with:
 
 ```ruby
 # Gemfile
@@ -63,6 +63,6 @@ Even though it's a simple app, try your best to make something beautiful using B
 
 **Hint**: You can always build on top of [lewagon/ui-components](http://lewagon.github.io/ui-components/)
 
-### (Optional) Cocktail Reviews
+### Cocktail Reviews (Optional)
 
 If you're done with the images, try to add an anonymous review system to the cocktails.
