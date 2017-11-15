@@ -2,6 +2,7 @@
   "extends": "airbnb-base",
   "rules": {
     "no-console": "off",
+    "no-alert": "off",
     "comma-dangle": "off",
     "quotes": "off",
     "no-unused-vars": "off",
