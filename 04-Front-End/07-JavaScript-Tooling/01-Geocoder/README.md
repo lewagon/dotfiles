@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In this exercise, we'll write our first AJAX request. Let's start simple with a `GET` request. Here we'll use the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/intro). We want to build a tool where we can input an address, hit a button, and get the **GPS Coordinates** back! For the cherry on top, we'll display the map as well.
+In this exercise, we'll practise our AJAX skills. Let's start simple with a `GET` request. Here we'll use the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/intro). We want to build a tool where we can input an address, hit a button, and get the **GPS Coordinates** back! For the cherry on top, we'll display the map as well.
 
 
 <div class="text-center">

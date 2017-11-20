@@ -8,7 +8,7 @@ In this exercise, Hobbits, Elves, Dwarves and Eagles will battle against the evi
 
 The first function `isGood` takes a soldier type (`String`) as a parameter and should return `true` if this soldier belongs to the Good side.
 
-- `isGood("Hobbit")` should return `true`
+- `isGood("Hobbits")` should return `true`
 - `isGood("Uruk Hai")` should return `false`
 
 The second function `buildSoldierMap` takes a `battlefield` (`String`) as a parameter and should return a `Map`. The map `keys` will be the **soldier type**, and the `values` will be the **number of soldiers of this type on the battlefield**. Here are some examples of battlefield strings you need to parse (and convert to a Map):
