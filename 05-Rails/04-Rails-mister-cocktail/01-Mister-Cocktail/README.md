@@ -35,7 +35,6 @@ rails db:create
 Let's set up git, create a repo on GitHub and push our skeleton.
 
 ```bash
-git init
 git add .
 git commit -m "rails new"
 hub create

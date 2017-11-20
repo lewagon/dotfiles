@@ -13,7 +13,6 @@ There is no `rake` here. Also, do not create your Rails app in `fullstack-challe
 cd ~/code/<user.github_nickname>
 rails new rails-stupid-coaching
 cd rails-stupid-coaching
-git init
 git add .
 git commit -m "rails new"
 hub create

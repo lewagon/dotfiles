@@ -10,7 +10,6 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 cd ~/code/<user.github_nickname>
 rails new rails-longest-word-game
 cd rails-longest-word-game
-git init
 git add .
 git commit -m "rails new"
 hub create

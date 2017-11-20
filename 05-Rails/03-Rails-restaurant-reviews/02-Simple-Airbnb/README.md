@@ -14,7 +14,6 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 cd ~/code/<user.github_nickname>
 rails new rails-simple-airbnb
 cd rails-simple-airbnb
-git init
 git add .
 git commit -m "rails new"
 hub create

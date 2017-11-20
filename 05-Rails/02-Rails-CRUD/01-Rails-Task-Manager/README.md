@@ -16,7 +16,6 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 cd ~/code/<user.github_nickname>
 rails new rails-task-manager
 cd rails-task-manager
-git init
 git add .
 git commit -m "rails new"
 hub create
