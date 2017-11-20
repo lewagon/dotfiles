@@ -15,7 +15,7 @@ source "${ZSH}/oh-my-zsh.sh"
 
 # Load rbenv if installed
 export PATH="${HOME}/.rbenv/bin:${PATH}"
-type -a rbenv > /dev/null && eval "$(rbenv init -)"
+type -a rbenv > /dev/null && eval "$(rbenv init -)" && RPS1="[$(ruby -v | cut -f2 -d ' ' | cut -f1 -d 'p')]$EPS1"
 
 # Rails and Ruby uses the local `bin` folder to store binstubs.
 # So instead of running `bin/rails` like the doc says, just run `rails`
