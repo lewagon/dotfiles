@@ -26,7 +26,7 @@ rails new rails-mister-cocktail -T --webpack --database=postgresql
 cd rails-mister-cocktail
 ```
 
-We then need to create the sqlite database for this new rails app.
+We then need to create the postgresql database for this new rails app.
 
 ```bash
 rails db:create
