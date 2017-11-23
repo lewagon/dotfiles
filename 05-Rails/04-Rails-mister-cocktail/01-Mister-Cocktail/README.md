@@ -47,6 +47,7 @@ Let's import the teacher's spec to be able to `rake` our progress.
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
+rails db:migrate
 rails db:test:prepare
 git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
 git add .
