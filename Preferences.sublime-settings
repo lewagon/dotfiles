@@ -1,4 +1,5 @@
 {
+  "always_show_minimap_viewport": false,
   "detect_indentation": false,
   "draw_white_space": true,
   "ensure_newline_at_eof_on_save": true,
@@ -8,10 +9,16 @@
     "tmp",
     "log",
     ".git",
+    ".svn",
     "_site",
     ".bundle",
     ".sass-cache",
-    "build"
+    ".asset-cache",
+    "build",
+    "node_modules",
+    "dist",
+    "public/packs",
+    "coverage"
   ],
   "highlight_modified_tabs": true,
   "hot_exit": false,
