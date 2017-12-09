@@ -10,12 +10,16 @@
 		"ApplySyntax",
 		"BracketHighlighter",
 		"Emmet",
+		"ERB Autocomplete",
 		"ERB Snippets",
 		"Git",
 		"GitGutter",
 		"JSX",
 		"LiveReload",
+		"Markdown Preview",
+		"MarkdownEditing",
 		"Package Control",
-		"SCSS"
+		"SCSS",
+		"SideBarEnhancements"
 	]
 }

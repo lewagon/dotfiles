@@ -1,4 +1,5 @@
 {
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -12,23 +13,26 @@
 		".sass-cache",
 		"build"
 	],
+	"font_size": 10,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"remember_open_files": false,
 	"rulers":
 	[
 		80
 	],
+	"save_on_focus_lost": true,
 	"tab_size": 2,
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 	"use_tab_stops": true,
-	"word_wrap": true,
-  "save_on_focus_lost": true
+	"word_wrap": true
 }
