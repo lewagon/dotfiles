@@ -1,15 +1,26 @@
 {
-  "installed_packages":
-  [
-    "AdvancedNewFile",
-    "All Autocomplete",
-    "ApplySyntax",
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ApplySyntax",
     "Babel",
-    "Emmet",
-    "Git",
-    "GitGutter",
-    "Package Control",
-    "SCSS",
-    "ERB Snippets"
-  ]
+		"BracketHighlighter",
+		"Emmet",
+		"ERB Autocomplete",
+		"ERB Snippets",
+		"Git",
+		"GitGutter",
+		"JSX",
+		"LiveReload",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Package Control",
+		"SCSS",
+		"SideBarEnhancements"
+	]
 }
