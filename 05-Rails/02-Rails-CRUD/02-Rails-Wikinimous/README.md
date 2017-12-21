@@ -7,31 +7,33 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-wikinimous -T
+rails new rails-wikinimous
 cd rails-wikinimous
-git init
 git add .
 git commit -m "rails new"
 hub create
 git push origin master
 ```
 
-## Model
+## Specs
 
-Here is our schema:
+### 1 - Model
 
+Generate the `Article` model through the right rails generator. It should have at least the following columns:
+
+- `title`, as a `string`
+- `content`, as a `text`
+
+Don't hesitate to crash test your new model in the `rails console`:
+
+```ruby
+new_article = Article.new(title: 'The meaning of life', content: "It's 42!")
+new_article.valid?  # => should be `true`
+new_article.save    # => should not display rollback warnings
+Article.last        # => should be the one you just saved
 ```
-+----------------+
-| Article        |
-+----------------+
-| title (string) |
-| content (text) |
-+----------------+
-```
 
-Use the right rails generator to generate the `Article` model.
-
-## Seed
+### 2 - Seed
 
 Add the [`faker` gem](https://github.com/stympy/faker) to your `Gemfile` and
 run `bundle install`. Use this gem to generate 10 fake articles in
@@ -41,39 +43,11 @@ run `bundle install`. Use this gem to generate 10 fake articles in
 rails db:seed
 ```
 
-## Controller & Views
+### 3 - Routes, Controller & Views
 
 Generate your controller, and implement all 7 CRUD default actions to
-list, show, create, update and destroy an article.
+list, show, create, update and destroy an article, like we did for the task manager.
 
-Once you're done, you should have a very nice wiki with all basic functionalities.
+You can now directly use the `resources` shortcut in your routes.
 
-## Markdown (Optional, Ruby)
-
-Add the [`kramdown` gem](https://github.com/gettalong/kramdown) to your `Gemfile`
-and run `bundle install`. We want to use the [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to write our articles content.
-
-Markdown is a simple and human-readable syntax which generates HTML. It is used everywhere, especially on GitHub. We're also using it _right now_ in what you're reading on **kitt**!
-
-Store some Markdown in your articles and the database, and use the `kramdown` gem to display the rendered text in the `show` view.
-
-## Code Editor (Optional, JavaScript)
-
-Use the [`ace-rails-ap` gem](https://github.com/codykrieger/ace-rails-ap) to use the [ace editor](http://ace.c9.io) in place of the simple text area.
-
-## Adding users (Optional, adding a model)
-
-If you're happy with all the items above, and if a T.A. has approved your code,
-try this:
-
-- Add a user sign in / sign up logic, and make sure you can edit an article if you are logged in.
-
-Here's a nice [gist](https://gist.github.com/thebucknerlife/10090014) on how
-to use Bcrypt and `has_secure_password` in a Rails app. Next week, we'll use
-Devise, a powerful auth system, but it's nice to know how to do it by hand 😊
-
-## Versioning (Optional, adding a model - bis)
-
-What about versioning your articles? Like Wikipedia, we'd like to store a new
-version each time the `Save` button is pressed. Also, we'd like to have a page
-listing all revisions for an article. What about diffs?
+Have a look at the [live app](https://wagon-wikinimous.herokuapp.com) to see what it should look like. 😉

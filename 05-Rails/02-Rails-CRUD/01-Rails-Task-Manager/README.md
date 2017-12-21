@@ -2,13 +2,11 @@
 
 Let's build a To Do Manager with the basic CRUD features:
 
-```
-As a user I can list tasks
-As a user I can view the details of a task
-As a user I can add a task in my To Do list
-As a user I can edit the details of a task
-As a user I can remove a task from my To Do list
-```
+1. As a user, I can list tasks
+1. As a user, I can view the details of a task
+1. As a user, I can add a new task
+1. As a user, I can edit a task (mark as completed / update title & details)
+1. As a user, I can remove a task
 
 In this challenge, you will meet your old friend [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) again, which is Rails' ORM.
 
@@ -16,9 +14,8 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-task-manager -T
+rails new rails-task-manager
 cd rails-task-manager
-git init
 git add .
 git commit -m "rails new"
 hub create
@@ -27,68 +24,63 @@ git push origin master
 
 ## Specs
 
-### Your model
+### 1 - Model
 
-Before getting started with your routes, your controller and the views, generate your model:
+Generate the `Task` model through the right rails generator. It should have at least the following columns:
 
-- Use `rails generate model <ModelName> <attr1>:<type> <attr2>:<type> ..` to create the model and associated migration all at the same time.
-- If you forget a field in your model, you can use `rails generate migration <MigrationName>` to automatically create a new migration file with the required timestamps.
-- Remember, you still have to run the `rails db:migrate` to execute your migrations.
-- Once that's done, play with the [Rails console](http://guides.rubyonrails.org/command_line.html#rails-console). This is **IRB-on-steroids** that enables you to interact with your Rails application from the command line. You can try to add new tasks to your DB directly from the command line.
+- `title`, as a `string`
+- `details`, as a `text`
+- `completed`, as a `boolean` (default: `false`)
 
-### Routing
+### 2 - Controller
 
-Your To Do app should have 7 entry points in the routing:
+Generate an empty (no actions) `TasksController` with the right rails generator.
 
-- `GET '/tasks'`: get all your tasks.
-- `GET '/tasks/:id'`: get a precise task, e.g `GET '/tasks/3'` fetches the task with id=3
-- `GET '/tasks/new'`: get the form to create a new task
-- `POST '/tasks'`: post a new task
-- `GET '/tasks/:id/edit'`: get the form to edit an existing task
-- `PATCH '/tasks/:id'`: update an existing task
-- `DELETE '/tasks/:id'`: delete an existing task
+For this exercise, **do not use `resources`** in your `config/routes.rb`. The goal of this exercise is to re-build the regular CRUD from scratch.
 
-You will also have to create a `TasksController` with 7 actions related to those 7 routes. For the names of these actions, use the Rails naming convention:
+### 3 - As a user, I can list tasks
 
-- `index`
-- `show`
-- `new`
-- `create`
-- `edit`
-- `update`
-- `destroy`
+First, add a new route to list the tasks, following the convention from the lecture. Then, add a controller action and its view. This action should fetch **all** tasks, and a view should loop over these to display them, like in the screenshot below.
 
-### Guidelines on Views
+To test your view, you need some tasks in the database! To create some, run a `rails console` in another terminal tab and then run:
 
-`index.html.erb`
+```ruby
+Task.create title: 'Laundry', details: 'Do not mix colors!'
+Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: true
+```
 
-- Should display a list of all tasks and, for each task:
-  - a link to its show view (use a `link_to` helper)
-  - a link to its edit view
-  - a link to its delete action. **Hint:** a standard link does not allow `DELETE` requests, so here you should add a `method: :delete` option to your `link_to` helper.
-- Should include a link to the new view to create a new task
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png)
 
-`show.html.erb`
+### 4 - As a user, I can view the details of a task
 
-- Should display the task's details (content, date of creation, etc.) and a back-link to the index page.
+We now have a list of tasks, and we would like to click on the task title and navigate to a new page, displaying the details of this task. Following the conventions from the lecture, add a new route, a new controller action and a new view. This action should **find** a specific task, thanks to its `id`, directly from `params`.
 
-`new.html.erb` and `edit.html.erb`
+Update the `index.html.erb` view with the `link_to` helper to build the links.
 
-- Should include a form to create or update a task.
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index_show.gif)
 
-#### Important
+### 5 - As a user, I can add a new task
 
-Notice that creating (as well as updating) a task is a **2-requests** process:
+Following the lecture conventions, add two routes to handle the creation of a task. One route is there to display the Task form, and another one is there to handle the `POST` request generated when submitting this form. Try to use directly the `form_for` helper in your view.
 
-- A first GET request displays the HTML form
-- A second POST or PATCH request enables us to actually create or update the task using the parameters submitted in the form.
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/new.gif)
 
-**Controller actions do not necessarily need a view.** For instance, the `create` `update` & `destroy` actions. All they do is perform operations on the DB and then `redirect_to` another URL... so we don't need views for them, right?
+### 6 - As a user, I can edit a task
 
-#### When you are done
+We want to be able to edit a task, changing its title, its details and especially **marking it as completed**. Following the lecture conventions, add the two routes you need for that feature. Implement the controller actions, and the views.
 
-Once you have finished the exercise and have a fully-functioning To Do app, refactor your code:
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/edit.gif)
 
-- Use a [partial](http://guides.rubyonrails.org/layouts_and_rendering.html) to factor the new and edit HTML forms.
-- Use the `form_for` helper to build your `new`/`edit` form.
-- Refactor your routes with the `resources` routing method.
+### 7 - As a user, I can remove a task
+
+Last feature, we want to be able to destroy tasks directly from the list. A JavaScript confirmation could be handy.
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/destroy.gif)
+
+### 8 - Refactoring (Optional)
+
+Have a critical look at your code and introduce the following refactoring:
+
+1. Use `resources` in your `config/routes.rb`
+1. Use a `before_action` in the `TasksController`
+1. Should we DRY a bit the `new` and `edit` views? How can we handle the fact that the `new` form should **not** display "Completed"? ([hint](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F))

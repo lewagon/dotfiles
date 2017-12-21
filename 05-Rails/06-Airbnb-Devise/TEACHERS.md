@@ -80,7 +80,7 @@ Don't let students waste time and creating their Rails app from scratch. Use our
 ```bash
 cd ~/code/<user.github_nickname>
 rails new \
-  -T --database postgresql \
+  --database postgresql \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   rails-airbnb-clone
 ```
