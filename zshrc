@@ -3,15 +3,19 @@ ZSH=$HOME/.oh-my-zsh
 # Correct number of colors for iTerm
 export TERM="xterm-256color"
 
-# You can change the theme with another one:
-#   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
+kubeon-prompt() {
+    if [ "${KUBEON_PROMPT}" ]; then
+        echo -n ${KUBEON_THEME_PROMPT_PREFIX}${KUBEON_PROMPT}${KUBEON_THEME_PROMPT_SUFFIX}
+    fi
+}
+
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-# Add ruby version on prompt (float right)
-RPS1='[$(ruby_prompt_info)]$EPS1'
+RPS1="${kubeon-prompt}"
 
 # Useful plugins for Rails development with Sublime Text
-plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
+plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search kubectl) 
 
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
@@ -40,3 +44,31 @@ export PATH=/usr/local/bin:$PATH
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export TWYLA_XPI_CONF=/Users/nathankuik/code/twyla/xpi/config/local.yml
+export TWYLA_CLIENTAPP_CONF=/Users/nathankuik/code/twyla/clientapp/config/local.yml
+
+function kubeon {
+    if [ "${1}" ]; then
+        local config_file="${1}"
+    else
+        echo "Usage: kubeon <config|config_file>"
+        return 1
+    fi
+
+    if [ ! -f "${1}" ]; then
+        config_file="${HOME}/.kube/${1}-config"
+    fi
+
+    if [ ! -f "${config_file}" ]; then
+        echo "No config file found. Tried ${1} and ${config_file}"
+        return 1
+    fi
+
+    export KUBECONFIG="${HOME}/.kube/${1}-config"
+    export KUBEON_PROMPT="${1}"
+}
+
+function kubeoff {
+    unset KUBECONFIG
+    unset KUBEON_PROMPT
+}

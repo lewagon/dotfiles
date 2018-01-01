@@ -9,4 +9,3 @@ alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 # Twyla related
 alias kube-twyla="kubectl --namespace twyla"
 
-
