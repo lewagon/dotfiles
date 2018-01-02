@@ -9,6 +9,7 @@ kubeon-prompt() {
     fi
 }
 
+function podname { kubectl get pods | grep $1  | awk '{print $1}'; }
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
