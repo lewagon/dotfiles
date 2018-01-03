@@ -10,7 +10,7 @@ describe OrangeTree do
 
   it "should have an age" do
     expect(orange_tree).to respond_to :age
-    expect(orange_tree.age).to be_a Fixnum
+    expect(orange_tree.age).to be_a Integer
   end
 
   it "should be 0 years old when created" do
@@ -19,7 +19,7 @@ describe OrangeTree do
 
   it "should have a height" do
     expect(orange_tree).to respond_to :height
-    expect(orange_tree.height).to be_a Fixnum
+    expect(orange_tree.height).to be_a Integer
   end
 
   it "should measure 0 meters when 0 years old" do
@@ -28,7 +28,7 @@ describe OrangeTree do
 
   it "should have fruits" do
     expect(orange_tree).to respond_to :fruits
-    expect(orange_tree.fruits).to be_a Fixnum
+    expect(orange_tree.fruits).to be_a Integer
   end
 
   it "should have 0 fruits when 0 years old" do

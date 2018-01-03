@@ -7,7 +7,7 @@
 
 ### Compute the age
 
-- Complete the method `age_in_days` defined in the `lib/age_in_days.rb` file. This method takes 3 arguments (`day`, `month` and `year`) and should return a `Fixnum` which is your age in days (the number of days you have lived on planet earth).
+- Complete the method `age_in_days` defined in the `lib/age_in_days.rb` file. This method takes 3 arguments (`day`, `month` and `year`) and should return a `Integer` which is your age in days (the number of days you have lived on planet earth).
 
 ### Interactive Program
 

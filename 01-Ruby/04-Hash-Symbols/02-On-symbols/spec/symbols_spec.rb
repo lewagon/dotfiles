@@ -27,7 +27,7 @@ describe "#me" do
 
   it "should return your age" do
     expect(me_hash).to be_instance_of(Hash)
-    expect(me_hash[:age]).to be_instance_of(Fixnum)
+    expect(me_hash[:age]).to be_instance_of(Integer)
   end
 
   it "should return your name" do

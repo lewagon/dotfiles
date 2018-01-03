@@ -8,7 +8,7 @@
 ## Rehearsal
 
 ```ruby
-42                          # Fixnum
+42                          # Integer
 1.25                        # Float
 true                        # Boolean
 "hello world"               # String

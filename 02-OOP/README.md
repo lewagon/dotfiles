@@ -2,7 +2,7 @@ The OOP module has 6 days.
 
 ## `01 Classes & Instances`
 
-So far, you've played with lots of built-in objects in ruby (Fixnum, Hash, Date, etc.). But what about defining your own classes? During this first day you'll learn to manipulate classes, instances, instance variables and instance methods. You'll also learn about constructors and accessors. Let's build your first classes!
+So far, you've played with lots of built-in objects in ruby (Integer, Hash, Date, etc.). But what about defining your own classes? During this first day you'll learn to manipulate classes, instances, instance variables and instance methods. You'll also learn about constructors and accessors. Let's build your first classes!
 
 ## `02 Inheritance & Self`
 
