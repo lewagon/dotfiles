@@ -61,7 +61,7 @@ describe "CustomerRepository", :customer do
       fail if loaded_customers.empty?
       loaded_customers.each do |customer|
         expect(customer).to be_a(Customer)
-        expect(customer.id).to be_a(Fixnum)
+        expect(customer.id).to be_a(Integer)
       end
     end
   end

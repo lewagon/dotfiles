@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In `01-Ruby` module, you wrote many Ruby programs involving classes such as `String`, `Fixnum`, `Array`, `Hash`, etc. In fact, you manipulated *instances* of those classes.
+In `01-Ruby` module, you wrote many Ruby programs involving classes such as `String`, `Integer`, `Array`, `Hash`, etc. In fact, you manipulated *instances* of those classes.
 
 `String` is a class right? That means that `"john lennon"`, or `"Hello!"` are both instances of `String`.
 

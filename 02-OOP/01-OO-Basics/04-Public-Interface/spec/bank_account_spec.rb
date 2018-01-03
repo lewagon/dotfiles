@@ -9,7 +9,7 @@ describe BankAccount do
     end
 
     it 'has a way to access the account balance' do
-      expect(account.balance).to be_a Fixnum
+      expect(account.balance).to be_a Integer
     end
   end
 

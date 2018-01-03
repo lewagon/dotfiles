@@ -5,7 +5,7 @@ what we've learnt so far since the very first day and the setup:
 
 - Store information in variables
 - Define methods to implement generic behavior on arguments and reuse code
-- Use several types, simple (`Fixnum`, `String`) or complex (`Hash`, `Array`)
+- Use several types, simple (`Integer`, `String`) or complex (`Hash`, `Array`)
 - Use conditional branching with `if`
 - Loop over collections with `for`, `while` or `Enumerable#each`
 

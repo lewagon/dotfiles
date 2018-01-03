@@ -63,8 +63,8 @@ describe "MealRepository", :meal do
       fail if loaded_meals.empty?
       loaded_meals.each do |meal|
         expect(meal).to be_a(Meal)
-        expect(meal.id).to be_a(Fixnum)
-        expect(meal.price).to be_a(Fixnum)
+        expect(meal.id).to be_a(Integer)
+        expect(meal.price).to be_a(Integer)
       end
     end
   end

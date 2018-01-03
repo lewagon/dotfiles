@@ -6,7 +6,7 @@
 
 ## Rehearsal
 
-1. Start with a **5-minutes rehearsal** on data types they know (String, Fixnum, Float, Booleans), and on variables and methods
+1. Start with a **5-minutes rehearsal** on data types they know (String, Integer, Float, Booleans), and on variables and methods
 
 ## Controlling the flow
 

@@ -10,8 +10,8 @@ describe 'Queries methods' do
 
   describe 'number_of_rows' do
 
-    it 'returns a Fixnum' do
-      expect(number_of_rows(db, 'tracks')).to be_a Fixnum
+    it 'returns a Integer' do
+      expect(number_of_rows(db, 'tracks')).to be_a Integer
     end
 
     it 'returns the number of records for a given table' do
@@ -168,7 +168,7 @@ describe 'Queries methods' do
       expect(result.length).to eq(tracks.length)
       tracks.each_with_index { |t, i| expect(t).to eq(result[i]) }
     end
-    
+
   end
 
   describe 'long_tracks' do

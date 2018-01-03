@@ -60,7 +60,7 @@ describe "EmployeeRepository", :employee do
       fail if loaded_employees.empty?
       loaded_employees.each do |employee|
         expect(employee).to be_a(Employee)
-        expect(employee.id).to be_a(Fixnum)
+        expect(employee.id).to be_a(Integer)
         expect(employee.username).not_to be_empty
         expect(employee.password).not_to be_empty
         expect(employee.role).not_to be_empty
