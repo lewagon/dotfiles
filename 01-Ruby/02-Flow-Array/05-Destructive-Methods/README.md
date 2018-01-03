@@ -5,7 +5,7 @@ They are dangerous in a way. Therefore a good **convention** is to name them wit
 
 ## Specs
 
-- Implement `#pmu_format!` that modifies the array it takes as argument to make it more friendly for the PMU anchorman
+- Implement `#horse_racing_format!` that modifies the array it takes as argument to make it more friendly for the race anchorman
 - **constraint**: The method should reverse the array, prepend the horse position, and add a bang at the end of the horse name string.
 
 e.g. `["Abricot du Laudot", "Black Caviar", "Brigadier Gerard"]` should become `["3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]` after formatting.
