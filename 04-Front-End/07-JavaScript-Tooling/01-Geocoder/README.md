@@ -17,17 +17,17 @@ rake webpack
 
 ### Geocoding
 
-Read the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro) and the quick start tutorial **[Adding a Map to your Website](https://developers.google.com/maps/documentation/javascript/adding-a-google-map)**. It boils down to doing an HTTP `GET` request with an address as a query string parameter.
+Read the [Google Geocoding API documentation](https://developers.google.com/maps/documentation/geocoding/intro). It boils down to doing an HTTP `GET` request with an address as a query string parameter.
 
 ```js
 'https://maps.googleapis.com/maps/api/geocode/json?address=16 Villa Gaudelet Paris'
 ```
 
-Go ahead and add a form to your HTML page. It should contain an `input` where a user can type an address in, and a `submit` button.
+Go ahead and add a form to your HTML page. It should contain an `input` of type `"text"` where a user can type an address in, and an `input` of type `"submit"` to display a button.
 
 Once that's done, use the `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the AJAX query to the Google Geocoding service using `fetch` (go back to yesterday's lecture slides).
 
-Try to `console.log()` what you get back from the API. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
+As always when you fetch data from an API, start by `console.log()`ing what you get back from Google. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
 
 ### [OPTIONAL] Displaying a map
 
@@ -45,24 +45,23 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 <div id="map" style="height: 300px"></div>
 ```
 
-Once again, please read at the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript). These kinds of pages will be your starting point for every API you ever use. The real world doesn't have Kitt 😿, so make friends with the API documentation!
+To easily build the map and add a marker to it, we'll use [npm's gmaps package](https://yarnpkg.com/fr/package/gmaps).
 
-To display a map in your `#map` element, you can use these lines:
+You already have a `package.json` so you just need to `yarn add gmaps` to download it locally in `01-Geocoder/node_modules`.
+
+To display a map in your `#map` with the `gmaps` package you can use these lines:
 
 ```js
-const map = new google.maps.Map(document.getElementById('map'), {
-  center: { lat: 48.8648482, lng: 2.3798534 },
-  zoom: 14 // Change this value from 0 to 18
-});
+import GMaps from 'gmaps';
+
+const map = new GMaps({ el: '#map', lat: 48.8648482, lng: 2.3798534, zoom: 14 });
 ```
 
-To add a marker to the map, if the variable `map` holds the `google.maps.Map` object, you can run:
+To add a marker to the map, if the variable `map` holds the `GMaps` object, you can run:
 
 ```js
-const marker = new google.maps.Marker({
-  map: map,
-  position: { lat: 48.8648482, lng: 2.3798534 }
-});
+const marker = { lat: lat, lng: lng };
+map.addMarkers([ marker ]);
 ```
 
 If you get the following warning, just **ignore** it for this exercise.
