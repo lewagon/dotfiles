@@ -1,0 +1,6 @@
+{
+  "name": "01-Geocoder",
+  "version": "1.0.0",
+  "main": "lib/app.js",
+  "license": "UNLICENSED"
+}
