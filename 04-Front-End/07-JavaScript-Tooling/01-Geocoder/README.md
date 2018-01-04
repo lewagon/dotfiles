@@ -52,7 +52,7 @@ To display a map in your `#map` element, you can use these lines:
 ```js
 const map = new google.maps.Map(document.getElementById('map'), {
   center: { lat: 48.8648482, lng: 2.3798534 },
-  zoom: 14  // Change this value from 0 to 18
+  zoom: 14 // Change this value from 0 to 18
 });
 ```
 
