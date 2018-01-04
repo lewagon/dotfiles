@@ -60,7 +60,7 @@ const map = new GMaps({ el: '#map', lat: 48.8648482, lng: 2.3798534, zoom: 14 })
 To add a marker to the map, if the variable `map` holds the `GMaps` object, you can run:
 
 ```js
-const marker = { lat: lat, lng: lng };
+const marker = { lat: 48.8648482, lng: 2.3798534 };
 map.addMarkers([ marker ]);
 ```
 
