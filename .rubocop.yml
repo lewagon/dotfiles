@@ -36,9 +36,6 @@ CyclomaticComplexity:
   Enabled: false
 MethodMissing:
   Enabled: false
-# remove this when we pass on ruby 2.4+
-UnifiedInteger:
-  Enabled: false
 
 AllCops:
   Exclude:
