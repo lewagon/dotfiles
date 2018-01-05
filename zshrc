@@ -73,3 +73,4 @@ function kubeoff {
     unset KUBECONFIG
     unset KUBEON_PROMPT
 }
+export PATH="/usr/local/bin:/usr/local/sbin:./bin:/Users/nathankuik/.rbenv/shims:/usr/local/opt/rbenv/bin:/Users/nathankuik/.cargo/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
