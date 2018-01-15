@@ -28,7 +28,7 @@ describe 'cart methods' do
 
       str = cart_to_s(cart)
       str.split(',').each_with_index do |p, idx|
-        expect(p.strip).to eq(PRODUCTS[idx * 2])
+        expect(p.strip).to include(PRODUCTS[idx * 2])
       end
     end
   end
