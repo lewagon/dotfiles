@@ -1,3 +1,5 @@
+IRB.conf[:SAVE_HISTORY] = 100
+
 begin
   require 'rubygems'
   require 'pry'
