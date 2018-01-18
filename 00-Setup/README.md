@@ -4,7 +4,7 @@ Let's set up your workstation:
 
 1. **10:15am**: Go through a 15 min first lecture with your teacher about the tools you need to install as a developer.
 
-2. **10:30am-1pm**: Follow [Le Wagon's setup carefully](https://github.com/lewagon/setup) and ask for help whenever you are stuck. It should take you all morning, maybe overlap a bit on your lunch break for non-Mac users 😉.
+2. **10:30am-1pm**: Follow [Le Wagon's setup carefully](https://github.com/lewagon/setup) and ask for help whenever you are stuck. It should take you all morning, and might overlap a bit into your lunch break for non-Mac users 😉.
 
 3. **2pm-2:15pm**: Second 15 min lecture on command line basics (navigating through the filesystem, creating directories & files, launching Sublime Text from terminal, etc.)
 
