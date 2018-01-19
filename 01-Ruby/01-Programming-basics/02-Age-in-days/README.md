@@ -7,7 +7,7 @@
 
 ### Compute the age
 
-- Complete the method `age_in_days` defined in the `lib/age_in_days.rb` file. This method takes 3 arguments (`day`, `month` and `year`) and should return a `Integer` which is your age in days (the number of days you have lived on planet earth).
+- Complete the method `age_in_days` defined in the `lib/age_in_days.rb` file. This method takes 3 arguments (`day`, `month` and `year`) and should return a `Integer` which is your age in days (the number of days you have lived on planet Earth).
 
 ### Interactive Program
 
@@ -23,9 +23,9 @@ You'll see that your program says you are `0 years old`. You must change the cod
 
 ## Further suggestions & resources
 
-- You may want to use the [Date class](http://www.ruby-doc.org/stdlib-2.2.0/libdoc/date/rdoc/Date.html), that we load in our file with the line `require 'date'`
+- You may want to use the [Date class](http://www.ruby-doc.org/stdlib-2.2.0/libdoc/date/rdoc/Date.html), which we load into our file using the line `require 'date'`
 - Use the interactive ruby console (IRB) to experiment.
-- As you can see from the given code, ruby uses the `puts` method to output values (show you things!) on the terminal.
+- As you can see from the given code, ruby uses the `puts` method to output values (show you things!) to the terminal.
 
 ## Key learning points
 
@@ -44,7 +44,7 @@ some_number = 1
 some_number = some_number * 2
 ```
 
-- What are the good conventions for naming variables in ruby (you can google the answer)?
+- What's the proper convention for naming variables in ruby (you can google the answer)?
 
 ### On methods
 
