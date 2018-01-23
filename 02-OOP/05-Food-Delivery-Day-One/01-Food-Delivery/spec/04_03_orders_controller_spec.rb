@@ -72,8 +72,6 @@ describe "OrdersController", :_order do
   end
 
   describe "#list_undelivered_orders" do
-    module Kernel; def gets; STDIN.gets; end; end
-
     it "should list undelivered orders (with meal, employee assigned and customer info)" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
       orders.drop(2).each do |order|
@@ -84,8 +82,6 @@ describe "OrdersController", :_order do
   end
 
   describe "#add" do
-    module Kernel; def gets; STDIN.gets; end; end
-
     it "should ask the user for a meal id, a customer id and an employee id to be assigned" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
 

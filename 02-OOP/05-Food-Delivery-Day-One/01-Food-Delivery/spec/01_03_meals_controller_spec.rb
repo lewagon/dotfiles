@@ -48,9 +48,8 @@ describe "MealsController", :meal do
   describe "#add" do
     it "should ask the user for a name and price, then store the new meal" do
       controller = MealsController.new(repository)
-      module Kernel; def gets; STDIN.gets; end; end
-      allow(STDIN).to receive(:gets).and_return("Hawaii", "11")
 
+      allow(STDIN).to receive(:gets).and_return("Hawaii", "11")
       controller.add
 
       expect(repository.all.length).to eq(6)
