@@ -37,14 +37,18 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 export PATH="/usr/local/sbin:$PATH"
 
+# python
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.5
 source /usr/local/bin/virtualenvwrapper.sh
+# go
+export PATH=$PATH:/usr/local/go/bin
 
 export PATH=/usr/local/bin:$PATH
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Twyla config variables
 export TWYLA_XPI_CONF=/Users/nathankuik/code/twyla/xpi/config/local.yml
 export TWYLA_CLIENTAPP_CONF=/Users/nathankuik/code/twyla/clientapp/config/local.yml
 
@@ -73,4 +77,6 @@ function kubeoff {
     unset KUBECONFIG
     unset KUBEON_PROMPT
 }
-export PATH="/usr/local/bin:/usr/local/sbin:./bin:/Users/nathankuik/.rbenv/shims:/usr/local/opt/rbenv/bin:/Users/nathankuik/.cargo/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+
+export PATH="/usr/local/bin:/usr/local/sbin:./bin:/Users/nathankuik/.rbenv/shims:/usr/local/opt/rbenv/bin:/Users/nathankuik/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
