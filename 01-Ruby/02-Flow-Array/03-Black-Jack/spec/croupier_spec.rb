@@ -6,8 +6,8 @@ describe "#state_of_the_game" do
   end
 
   it "should return an interpolated String with player and bank scores" do
-    expect(state_of_the_game(1, 2)).to match /score is 1/i
-    expect(state_of_the_game(1, 2)).to match /bank('s)?( score)? is 2/i
+    expect(state_of_the_game(1, 2)).to match /score is:? 1/i
+    expect(state_of_the_game(1, 2)).to match /bank('s)?( score)? is:? 2/i
   end
 end
 

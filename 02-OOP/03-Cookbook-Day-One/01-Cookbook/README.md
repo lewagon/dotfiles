@@ -25,7 +25,7 @@ We now need another class that will act as a database, the `Repository`. We don'
 Implement a `Cookbook` class which will act as fake database. It should implement 4 methods:
 
 - `initialize(csv_file_path)` which loads existing `Recipe` from the CSV
-- `all` which returns all the recipies
+- `all` which returns all the recipes
 - `add_recipe(recipe)` which adds a new recipe to the cookbook
 - `remove_recipe(recipe_index)` which removes a recipe from the cookbook.
 

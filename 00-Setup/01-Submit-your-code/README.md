@@ -9,7 +9,7 @@ During these 9 weeks, you'll work in pairs or groups of 3-4. A new buddy is assi
 
 Before starting a new challenge, **make sure that you explain to each other what you think you are being asked to do** and **before** starting to write a single line of code. Then you can pair program on one screen, or work side by side, checking up every 10 minutes or so to help one another.
 
-Working in pairs is a common practice of Software Engineering. The idea is that if you work alone and you get stuck, you can lose several hours digging in the issue, whereas a fresh pair of eyes would find the problem within seconds. Don't underestimate that!
+Working in pairs is a common practice in software engineering. The idea is that if you work alone and you get stuck, you can lose several hours digging around for the issue, whereas a fresh pair of eyes would find the problem within seconds. Don't underestimate that!
 
 ## Exercise 1: Let's `rake`.
 
