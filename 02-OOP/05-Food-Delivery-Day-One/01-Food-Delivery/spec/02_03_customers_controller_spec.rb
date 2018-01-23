@@ -46,14 +46,13 @@ describe "CustomersController", :customer do
   describe "#add" do
     it "should ask the user for a name and address, then store the new customer" do
       controller = CustomersController.new(repository)
-      module Kernel; def gets; STDIN.gets; end; end
-      allow(STDIN).to receive(:gets).and_return("Michael Jackson", "Gary")
+      Object.any_instance.stub(gets: "Le Wagon")
 
       controller.add
 
       expect(repository.all.length).to eq(4)
-      expect(repository.all[3].name).to eq("Michael Jackson")
-      expect(repository.all[3].address).to eq("Gary")
+      expect(repository.all[3].name).to eq("Le Wagon")
+      expect(repository.all[3].address).to eq("Le Wagon")
     end
   end
 end
