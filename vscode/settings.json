@@ -1,13 +1,15 @@
 {
     "git.enableSmartCommit": true,
-    "sublimeTextKeymap.promptV3Features": true,
+    "sublimeTextKeymap.promptV3Features": false,
+    "vim.disableExtension": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": true,
     "files.autoSave": "afterDelay",
-    "python.venvPath": "~/.virtualenv",
-    "python.pythonPath": "python3",
-    "python.linting.pep8Enabled": true,
+    "python.venvPath": "~/.virtualenvs/vscode/",
+    "python.pythonPath": "python3.6",
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.pyTestPath": "~/.virtualenvs/vscode/bin/pytest",
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -17,5 +19,8 @@
         "suppressNoRepositoryWarning": false,
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
-    }
+    },
+    "git.autofetch": true,
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 0
 }

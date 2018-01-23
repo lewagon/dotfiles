@@ -18,6 +18,7 @@
 		"GitGutter",
 		"Go To Definition",
 		"Indent XML",
+		"IndentX",
 		"JSONLint",
 		"JSX",
 		"MarkdownEditing",
@@ -48,6 +49,7 @@
 		"SublimeREPL",
 		"SublimeTextGitX",
 		"SummitLinter",
+		"Terminal",
 		"Todo",
 		"Virtualenv"
 	]
