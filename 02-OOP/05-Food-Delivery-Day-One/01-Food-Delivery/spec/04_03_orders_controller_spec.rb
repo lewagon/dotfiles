@@ -74,6 +74,8 @@ describe "OrdersController", :_order do
   describe "#list_undelivered_orders" do
     it "should list undelivered orders (with meal, employee assigned and customer info)" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
+      module Kernel; def gets; STDIN.gets; end; end
+
       orders.drop(2).each do |order|
         expect(STDOUT).to receive(:puts).with(/#{customer_repository.find(order[4]).name}/)
       end
@@ -84,8 +86,9 @@ describe "OrdersController", :_order do
   describe "#add" do
     it "should ask the user for a meal id, a customer id and an employee id to be assigned" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
-
+      module Kernel; def gets; STDIN.gets; end; end
       allow(STDIN).to receive(:gets).and_return("2", "2", "2")
+
       controller.add
 
       expect(order_repository.undelivered_orders.length).to eq(4)
