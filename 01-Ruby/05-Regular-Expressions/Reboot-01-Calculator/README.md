@@ -46,11 +46,13 @@ ruby interface.rb
 > Result: 48
 ```
 
+There is no tests for the reboot exercises but you can still run `rake` to check the style of your code.
+
 ## Step 2 - Make it loop
 
 It's a bit painful to re-launch your calculator every time your program ends.. Imagine a real calculator that just switched off after every operation 😊
 
-Make it loop:
+Make it loop! Think about when you want the program to stop looping.
 
 ```
 ruby interface.rb
@@ -62,6 +64,8 @@ ruby interface.rb
 > Which operation [+][-][x][/]
 > x
 > Result: 48
+> Do you want to calculate again? [Y/N]
+> Y
 > Enter a first number:
 > 55
 > Enter a second one:
@@ -69,6 +73,8 @@ ruby interface.rb
 > Which operation [+][-][x][/]
 > -
 > Result: 53
+> Do you want to calculate again? [Y/N]
+> N
 ```
 
 ## Step 3 - Refactor your code
