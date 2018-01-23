@@ -66,7 +66,7 @@ describe "OrdersController", :_order do
     CsvHelper.write_csv(orders_csv_path, orders)
   end
 
-  it "should be initialized with 4 repository instances in this order (meal, employee, customer, order)" do
+  it "should be initialized with 4 repository instances" do
     controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
     expect(controller).to be_a(OrdersController)
   end
@@ -74,7 +74,6 @@ describe "OrdersController", :_order do
   describe "#list_undelivered_orders" do
     it "should list undelivered orders (with meal, employee assigned and customer info)" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
-      module Kernel; def gets; STDIN.gets; end; end
 
       orders.drop(2).each do |order|
         expect(STDOUT).to receive(:puts).with(/#{customer_repository.find(order[4]).name}/)
@@ -84,12 +83,9 @@ describe "OrdersController", :_order do
   end
 
   describe "#add" do
-
-
     it "should ask the user for a meal id, a customer id and an employee id to be assigned" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
-      module Kernel; def gets; STDIN.gets; end; end
-      allow(STDIN).to receive(:gets).and_return("2", "2", "2")
+      Object.any_instance.stub(gets: '2')
 
       controller.add
 
@@ -120,12 +116,10 @@ describe "OrdersController", :_order do
 
     it "should ask the delivery guy for an order id and mark it as delivered" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
-
       # Ringo wants to mark as delivered number 4.
-      allow(STDIN).to receive(:gets).and_return("4")
+      Object.any_instance.stub(gets: '4')
       ringo = employee_repository.find(3)  # ringo is a delivery guy
       controller.mark_as_delivered(ringo)
-
       # Reload from CSV
       new_order_repository = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
       expect(new_order_repository.undelivered_orders.map(&:id)).not_to include(4)

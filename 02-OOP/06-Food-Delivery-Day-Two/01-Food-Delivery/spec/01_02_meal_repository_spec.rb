@@ -112,7 +112,7 @@ describe "MealRepository", :meal do
       FileUtils.remove_file(csv_path, force: true)
     end
 
-    it "every new added meal shold be saved in a row in the CSV (first row = headers)" do
+    it "every new added meal should be saved in a row in the CSV (first row = headers)" do
       csv_path = 'spec/support/empty_meals.csv'
       FileUtils.remove_file(csv_path, force: true)
 
