@@ -3,14 +3,6 @@ ZSH=$HOME/.oh-my-zsh
 # Correct number of colors for iTerm
 export TERM="xterm-256color"
 
-kubeon-prompt() {
-    if [ "${KUBEON_PROMPT}" ]; then
-        echo -n ${KUBEON_THEME_PROMPT_PREFIX}${KUBEON_PROMPT}${KUBEON_THEME_PROMPT_SUFFIX}
-    fi
-}
-
-function podname { kubectl get pods | grep $1  | awk '{print $1}'; }
-
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 RPS1="${kubeon-prompt}"
@@ -77,6 +69,3 @@ function kubeoff {
     unset KUBECONFIG
     unset KUBEON_PROMPT
 }
-
-
-export PATH="/usr/local/bin:/usr/local/sbin:./bin:/Users/nathankuik/.rbenv/shims:/usr/local/opt/rbenv/bin:/Users/nathankuik/.cargo/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
