@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-- Validate one more time your understanding of methods and variables.
+- Validate once more your understanding of methods and variables.
 - Learn how to use string interpolation.
 - Understand the difference between **single** and **double** quotes.
 
@@ -28,7 +28,7 @@ Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard"
 
 Again, ask yourself these questions and make sure you can answer all of them:
 
-### on variable
+### on variables
 
 * What are the variables in your code?
 * Where do you assign values to these variables and where do you use them?

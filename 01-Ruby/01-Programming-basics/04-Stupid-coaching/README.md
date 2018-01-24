@@ -52,9 +52,9 @@ The objectives of this challenge are:
 
 ### Coach answer
 
-In the `lib/coach_anwser.rb` file, you will find method definition of `coach_answer`. You can see that it takes one argument, `your_message` which is the sentence you tell the coach. The method should return a `String`, the coach answer which obviously depends of which value is passed in `your_message`.
+In the `lib/coach_anwser.rb` file, you will find method definition of `coach_answer`. You can see that it takes one argument, `your_message` which is the sentence you tell the coach. The method should return a `String` (i.e., the coach's answer) which will obviously depend on which value is passed in `your_message`.
 
-Now let's implement an enhanced version of the coach, with the method `coach_answer_enhanced`. If you **SHOUT** at your coach, he will like it, and will say: "I can feel your motivation!" before the regular answer. Remember that shouting on the Internet is done writing in CAPS LOCK! However, if you shout "I AM GOING TO WORK RIGHT NOW!", your coach will leave you alone.
+Now let's implement an enhanced version of the coach, with the method `coach_answer_enhanced`. If you **SHOUT** at your coach, he will like it, and will say: "I can feel your motivation!" before the regular answer. Remember that shouting on the Internet is done by writing in CAPS LOCK! However, if you shout "I AM GOING TO WORK RIGHT NOW!", your coach will leave you alone.
 
 ### Interactive Program
 
