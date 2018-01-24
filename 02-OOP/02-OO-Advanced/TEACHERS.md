@@ -182,7 +182,7 @@ Now how can we make our classes inherit from this? The syntax is pretty simple:
 class SuperClass
 end
 
-class SubClass < Superclass
+class SubClass < SuperClass
 end
 ```
 
