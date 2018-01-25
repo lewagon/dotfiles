@@ -30,7 +30,7 @@ Complete the program `queries.rb` to answer the following questions. Don't forge
 - How many rows does each table contain?
 - Return the list of all the artists and sort them by name (alphabetically). **Hint:** use the `ORDER BY` SQL filter.
 - Find all the love songs (i.e the tracks that contain "love" **anywhere** in their name). **Hint:** use the `WHERE` and `LIKE` SQL keywords.
-- Return all the tracks that are longer than 10 minutes and sort them by length. **Hint:** you can use the comparison operator `>` in SQL.
+- Return all the tracks that are longer than a given duration and sort them. **Hint:** you can use the comparison operator `>` in SQL.
 
 ## Resources
 
