@@ -17,6 +17,7 @@ describe Restaurant do
     it "should update average restaurant rating" do
       bocuse.rate(10)
       bocuse.rate(20)
+      bocuse.rate(15)
       expect(bocuse.average_rating).to eq 15.0
     end
   end
