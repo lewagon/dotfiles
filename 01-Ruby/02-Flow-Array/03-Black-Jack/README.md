@@ -18,7 +18,7 @@ We will implement a *simplified* version of Black Jack:
   - Draw another, or stick with the current score and finish the game.
 - In the end, there are 5 possibilities:
   - If the player's score is > 21, they lose (bust).
-  - If the player's score is 21, they pulls a "Black Jack" and win.
+  - If the player's score is 21, they pull a "Black Jack" and win.
   - If the player's score is > than the bank's, they win.
   - If the player's score is < than the bank's, they lose.
   - If the player's score is == to the bank's, it's a "Push". The player gets their money back.
