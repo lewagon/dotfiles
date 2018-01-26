@@ -17,10 +17,10 @@ We will implement a *simplified* version of Black Jack:
   - Draw a card with a random value between 1 and 11. This number will be added to his score.
   - Draw another, or stick with the current score and finish the game.
 - In the end, there are 5 possibilities:
-  - If the player's score is > 21, he loses (bust).
-  - If the player's score is 21, he pulls a "Black Jack" and wins.
-  - If the player's score is > than the bank's, he wins.
-  - If the player's score is < than the bank's, he loses.
+  - If the player's score is > 21, they lose (bust).
+  - If the player's score is 21, they pulls a "Black Jack" and win.
+  - If the player's score is > than the bank's, they win.
+  - If the player's score is < than the bank's, they lose.
   - If the player's score is == to the bank's, it's a "Push". The player gets their money back.
 
 ## Specs
@@ -32,7 +32,7 @@ We will implement a *simplified* version of Black Jack:
 
 ### `croupier.rb`
 
-- Implement the `#state_of_the_game` method which builds a message containing the bank and player' scores.
+- Implement the `#state_of_the_game` method which builds a message containing the bank and player's scores.
 - Implement the `#end_game_message` method to be called at the end of the game, containing the game outcome (win/lost/push)
 - Implement the main `#play_game` method which runs a Black Jack game from the terminal. It should work this way:
 
@@ -56,7 +56,7 @@ Card? 'y' or 'yes' to get a new card
 You beat the bank! You win.
 ```
 
-⚠️ For this exercise, you're not finished when `rake` is 100% green! You need to make sure you can actually play the game by running `ruby lib/run_game.rb` 😉
+⚠️ For this exercise you're not finished when `rake` is 100% green! You need to make sure that you can actually play the game by running `ruby lib/run_game.rb` 😉
 
 ## Key learning points
 

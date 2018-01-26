@@ -18,4 +18,4 @@ Learn the two ways to "loop" in ruby:
 
 ## Key learning points
 
-- What's the difference between using a `while..end` and `for..end` structures?
+- What's the difference between using a `while..end` and `for..end` structure?

@@ -3,7 +3,7 @@
 Only one lesson to learn from this exercise: **READ THE ERROR**! The message will tell you:
 
 - what kind of error you have
-- the line where it occurs in your program
+- the line in your program where it occurs
 
 ## Specs
 

@@ -1,9 +1,9 @@
 ## Background & Objectives
 
 When recruiting developers for your team, you often interview people who struggle with basic code. There is a famous article talking about
-[Why Can't Programmers... Program?](http://blog.codinghorror.com/why-cant-programmers-program/) where it talks about the 'FizzBuzz' problem.
+[Why Can't Programmers... Program?](http://blog.codinghorror.com/why-cant-programmers-program/) where it talks about the "FizzBuzz" problem.
 
-Let's train on this basic program and make sure we can do it 😊
+Let's work on this basic program and make sure that we can do it 😊
 
 ## Specs
 
