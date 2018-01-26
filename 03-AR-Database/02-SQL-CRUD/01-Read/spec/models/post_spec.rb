@@ -18,6 +18,16 @@ describe Post do
     DB.execute(create_statement)
   end
 
+  it "should accept title, url, votes as attributes" do
+    url = "www.lewagon.com"
+    title = "Le Wagon"
+    votes = 9000
+    post = Post.new(id: 1, url: url, title: title, votes: )
+    expect(post.instance_variable_get(:@title)).to eq title
+    expect(post.instance_variable_get(:@url)).to eq url
+    expect(post.instance_variable_get(:@votes)).to eq votes
+  end
+
   it "should reveal its id" do
     expect(Post.new(id: 1).id).to eq 1
   end
