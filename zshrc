@@ -13,6 +13,8 @@ plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-h
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
 
+export HOMEBREW_NO_ANALYTICS=1
+
 # Rails and Ruby uses the local `bin` folder to store binstubs.
 # So instead of running `bin/rails` like the doc says, just run `rails`
 export PATH="./bin:${PATH}"
@@ -35,6 +37,9 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.5
 source /usr/local/bin/virtualenvwrapper.sh
 # go
 export PATH=$PATH:/usr/local/go/bin
+# ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 export PATH=/usr/local/bin:$PATH
 
