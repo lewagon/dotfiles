@@ -22,7 +22,7 @@ describe Post do
     url = "www.lewagon.com"
     title = "Le Wagon"
     votes = 9000
-    post = Post.new(id: 1, url: url, title: title, votes: )
+    post = Post.new(id: 1, url: url, title: title, votes: votes)
     expect(post.instance_variable_get(:@title)).to eq title
     expect(post.instance_variable_get(:@url)).to eq url
     expect(post.instance_variable_get(:@votes)).to eq votes
