@@ -29,4 +29,16 @@ describe "#group_anagrams" do
     expect(four_group.size).to eq(1)
   end
 
+  it "should not have duplicates" do
+    words = ['cars', 'for', 'POTATOES', 'racs', 'four', 'scar', 'creams', 'SCREAM']
+    groups = group_anagrams(words)
+    result = words.all? do |word|
+      counter = groups.count do |group|
+        group.include? word
+      end
+      counter < 2
+    end
+    expect(result).to eq(true)
+  end
+
 end
