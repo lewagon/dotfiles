@@ -14,7 +14,7 @@ How should your program work when you launch it? Write the pseudo code!
 # interface.rb
 
 # Pseudo-code:
-# 1. Print welcome and the horse names
+# 1. Print welcome and the horses names
 # 2. Get user's bet
 # 3. Run the race 🐴
 # 4. Print results
