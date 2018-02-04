@@ -34,7 +34,7 @@ Build a simple calculator with a command-line UI:
 
 It should work like this:
 
-```
+```bash
 ruby interface.rb
 
 > Enter a first number:
@@ -54,7 +54,7 @@ It's a bit painful to re-launch your calculator every time your program ends.. I
 
 Make it loop! Think about when you want the program to stop looping.
 
-```
+```bash
 ruby interface.rb
 
 > Enter a first number:
