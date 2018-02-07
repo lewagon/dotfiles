@@ -25,13 +25,13 @@ Let's take a bunch of projects from Le Wagon's alumni and see their unique value
   - `in 2 words`: an app to **find a job**
   - `unique value proposition`: no active search, just a Linkedin connect matching most adapted job offers for you.
 3. **Skello**:
-  - `in 2 words`: an app to **manage your employees' planning**
+  - `in 2 words`: an app to **manage your staff schedules**
   - `unique value proposition`: taylor-made for restaurant managers who spend their life on excel spreadsheets.
 4. **Take Away Trips**
   - `in 2 words`: an app to **share a travel guide**
   - `unique value proposition`: only few clicks, no unnecessary features.
 5. **Dinja**
-  - `in 2 words`: an app to cook your meals
+  - `in 2 words`: an app to **cook your meals**
   - `unique value proposition`: Get delivered what you need to cook recipes for an entire week.
 6. **Happy Papi**
   - `in 2 words`: an app to **order a cab**
