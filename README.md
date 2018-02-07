@@ -12,3 +12,4 @@ Keyboard Hex
     + https://configure.ergodox-ez.com/layouts/JVGW/latest/0
 - V4 (Windows)
     + https://configure.ergodox-ez.com/layouts/09bx/latest/0
+
