@@ -69,8 +69,9 @@ class API < Sinatra::Base
     session = Session[params[:id]]
     @game = session.add_game(Game.new)
 
-    @game.add_player(name: params["player1"])
-    @game.add_player(name: params["player2"])
+    payload = JSON.parse(request.body.read)
+    @game.add_player(name: payload["player1"])
+    @game.add_player(name: payload["player2"])
 
     rabl :'games/game'
   end
