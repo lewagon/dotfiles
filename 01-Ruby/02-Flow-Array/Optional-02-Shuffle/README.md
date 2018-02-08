@@ -15,5 +15,5 @@ Once you have written your algorithm all by yourself, rewrite another version wi
 
 ## Further suggestions & resources
 
-- Look at the [Object#clone](http://ruby-doc.org/core-2.2.0/Object.html#method-i-clone) documentation - it might help you.
+- Look at the [Object#clone](http://ruby-doc.org/core-2.2.0/Object.html#method-i-clone) documentation – it might help you.
 - Don't forget the [Array doc](http://www.ruby-doc.org/core-2.2.0/Array.html)
