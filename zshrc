@@ -78,3 +78,5 @@ function kubeoff {
 function podname { kubectl get pods | grep $1  | awk '{print $1}'; }
 
 function kc-debugger { kubectl exec -ti $(podname debugger) bash; };
+
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
