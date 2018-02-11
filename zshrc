@@ -36,7 +36,8 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.5
 source /usr/local/bin/virtualenvwrapper.sh
 # go
-export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 # ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -74,3 +75,7 @@ function kubeoff {
     unset KUBECONFIG
     unset KUBEON_PROMPT
 }
+
+function podname { kubectl get pods | grep $1  | awk '{print $1}'; }
+
+function kc-debugger { kubectl exec -ti $(podname debugger) bash; };

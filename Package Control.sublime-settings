@@ -7,6 +7,7 @@
 	[
 		"AdvancedNewFile",
 		"ApplySyntax",
+		"auto-save",
 		"AutoPEP8",
 		"BracketHighlighter",
 		"DataConverter",
