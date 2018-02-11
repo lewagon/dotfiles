@@ -34,7 +34,6 @@ export PATH="/usr/local/sbin:$PATH"
 # python
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.5
-source /usr/local/bin/virtualenvwrapper.sh
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
