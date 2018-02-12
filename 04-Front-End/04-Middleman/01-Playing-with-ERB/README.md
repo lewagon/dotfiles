@@ -69,7 +69,7 @@ Make sure that your `git status` is clean and run:
 middleman deploy
 ```
 
-This should build your Middleman project and push it to the `gh-pages` of your GitHub repository. Then go to `<user.github_nickname>.github.io/middleman-airbnb` to see it live 🚀 !
+This should build your Middleman project and push it to the `gh-pages` of your GitHub repository. Then go to `<user.github_nickname>.github.io/middleman-airbnb/` to see it live 🚀 !
 
 ## Building your layout
 
@@ -167,4 +167,4 @@ git push origin master
 middleman deploy
 ```
 
-Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/middleman-airbnb" target="_blank">https://&lt;user.github_nickname&gt;.github.io/middleman-airbnb</a>.
+Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/middleman-airbnb/" target="_blank">https://&lt;user.github_nickname&gt;.github.io/middleman-airbnb</a>.
