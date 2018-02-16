@@ -78,8 +78,9 @@ class API < Sinatra::Base
 
   patch '/games/:id/finish', provides: [:json] do
     @game = Game[params[:id]]
-    @game.update(winner: params['winner'],
-                 elapsed_time: params['elapsed_time'],
+    payload = JSON.parse(request.body.read)
+    @game.update(winner: payload['winner'],
+                 elapsed_time: payload['elapsed_time'],
                  status: 'completed')
     @game.save
     rabl :'games/game'
