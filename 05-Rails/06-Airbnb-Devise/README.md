@@ -33,8 +33,9 @@ Use Le Wagon's minimal template, which already has a good frontend setup:
 cd ~/code/<user.github_nickname>
 rails new \
   --database postgresql \
+  --webpack \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
-  rails-airbnb-clone
+  CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
 
 Again, only the **lead developer** will do this! Not everyone in the team...
