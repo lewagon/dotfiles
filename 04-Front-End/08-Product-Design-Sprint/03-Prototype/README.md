@@ -8,7 +8,7 @@ To save time, follow rigorously the following steps:
 
 1. Signup on [Figma](https://www.figma.com/).
 2. Download & install the [desktop app](https://www.figma.com/downloads).
-3. Let your team leader create the project.
+3. Let your team leader create the **draft** (⚠️keep it in the drafts or you'll be restricted in the number of editors).
 4. Let him/her invite you to join the project as collaborator.
 
 ## Start with a basic UI-Kit
