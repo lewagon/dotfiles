@@ -53,6 +53,6 @@ student.send(:name)
 # => "George"
 ```
 
-(You can convert a string to a symbol with the [`to_sym`](http://www.ruby-doc.org/core-2.2.0/String.html#method-i-to_sym) method.)
+(You can convert a string to a symbol with the [`to_sym`](http://www.ruby-doc.org/core-2.4.0/String.html#method-i-to_sym) method.)
 
 Good luck!
