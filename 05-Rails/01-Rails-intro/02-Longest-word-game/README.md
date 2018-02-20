@@ -37,7 +37,7 @@ Prefix Verb URI Pattern      Controller#Action
 
 ### 2 - Generating a new game
 
-Have a look at your old Ruby code. How did you generate an `Array` of random letters? In the `new` action of the `GamesController`, create a new `@letters` instance variable storing these random letters. Then display it in the view. You should get something like this:
+Have a look at your old Ruby code. How did you generate an `Array` of random letters? In the `new` action of the `GamesController`, create a new `@letters` instance variable storing these random letters from the alphabet. Then display it in the view. You should get something like this:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game.png)
 
