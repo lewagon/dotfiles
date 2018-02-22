@@ -9,7 +9,7 @@ def even_numbers(array)
 end
 
 def short_words(array, max_length)
-  # TODO: Take and array of words, return the array of words not exceeding max_length characters
+  # TODO: Take an array of words, return the array of words not exceeding max_length characters
   #       You should use Enumerable#reject
 end
 
