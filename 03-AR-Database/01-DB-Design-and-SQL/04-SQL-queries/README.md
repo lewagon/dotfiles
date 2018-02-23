@@ -26,8 +26,6 @@ detailed_tracks(db)
 
 For each genre of music, find the stats, i.e. the number of tracks and the average song length (in minutes).
 
-**Hint:** you have to use a `GROUP BY` statement with aggregate SQL functions such as `COUNT` and `AVG`.
-
 The method should return a Hash of statistics, for example:
 
 ```ruby
