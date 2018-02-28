@@ -1,7 +1,7 @@
-We've given you a global object below that contains sentences in different languages:
+We've given you a `STRINGS` constant below that contains sentences in different languages:
 
 ```ruby
-$strings = {
+STRINGS = {
  home: {
    intro: {
      en: 'Welcome to Le Wagon',
