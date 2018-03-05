@@ -126,12 +126,18 @@ brew install chromedriver
 gem install chromedriver-helper
 ```
 
-Last, you need to add `chromedriver-helper` to your `Gemfile`:
+Last, in your `Gemfile`, you need the following gems:
 
 ```ruby
 # Gemfile
 # [...]
-gem 'chromedriver-helper'
+group :development, :test do
+  # [...]
+  gem 'capybara'             # should be there already
+  gem 'selenium-webdriver'   # should be there already
+  gem 'chromedriver-helper'  # add it!
+  gem 'launchy'              # useful for screenshots, add it too!
+end
 ```
 
 and run `bundle install`!
