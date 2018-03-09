@@ -26,15 +26,17 @@ describe Post do
       DB.execute("INSERT INTO `posts` (title) VALUES ('Third post')")
     end
 
-    it "should remove post #1 from the database" do
-      post = find(1)
+    it "should remove post from the database" do
+      id = rand(1..3)
+      post = find(id)
       post.destroy
-      expect(find(1)).to be_nil
+      expect(find(id)).to be_nil
     end
 
     it "should not remove other posts from the database" do
       before_destroy_post_count = DB.execute("SELECT COUNT(*) FROM `posts`")[0][0]
-      post = find(1)
+      id = rand(1..3)
+      post = find(id)
       post.destroy
       after_destroy_post_count = DB.execute("SELECT COUNT(*) FROM `posts`")[0][0]
       expect(before_destroy_post_count - after_destroy_post_count).to eq(1)
