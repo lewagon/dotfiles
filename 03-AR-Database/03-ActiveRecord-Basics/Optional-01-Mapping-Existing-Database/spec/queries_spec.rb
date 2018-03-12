@@ -229,9 +229,5 @@ describe "Challenges in app/queries.rb" do
       expect(top_5_pop[2].name).to eq 'Amy Winehouse'
       # Only 3 artists have POP songs in the DB.
     end
-
-    it 'should be an ActiveRecord Relation' do
-      expect(love_tracks).to be_kind_of(ActiveRecord::Relation)
-    end
   end
 end
