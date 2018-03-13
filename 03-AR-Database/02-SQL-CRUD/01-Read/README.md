@@ -19,7 +19,7 @@ the `DB` variable is created).
 
 ## Tests
 We prepared for you a `test.rb` file where the `DB` global variable is created the same way
-as in `spec/models/post_spec.rb`. Fell free to use this file to test your methods.
+as in `spec/models/post_spec.rb`. Feel free to use this file to test your methods.
 
 ## Specs
 
