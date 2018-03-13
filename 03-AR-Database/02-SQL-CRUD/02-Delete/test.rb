@@ -13,4 +13,4 @@ create_statement = "
     );"
 DB.execute(create_statement)
 
-# You can test your methods below:
+# Write your test code here (and run `ruby test.rb` in your terminal to run it):
