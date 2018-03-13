@@ -6,7 +6,7 @@ describe Dessert do
   let(:fat) { Dessert.new("Fat cake", 500) }
 
   describe "#healthy?" do
-    it "considers a dessert healthy under 200 calories" do
+    it "considers a dessert healthy when under 200 calories" do
       expect(fat_free.healthy?).to eq true
       expect(fat.healthy?).to eq false
     end

@@ -18,7 +18,17 @@ describe Post do
     DB.execute(create_statement)
   end
 
-  it "should expose its id" do
+  it "should accept title, url, votes as attributes" do
+    url = "www.lewagon.com"
+    title = "Le Wagon"
+    votes = 9000
+    post = Post.new(id: 1, url: url, title: title, votes: votes)
+    expect(post.instance_variable_get(:@title)).to eq title
+    expect(post.instance_variable_get(:@url)).to eq url
+    expect(post.instance_variable_get(:@votes)).to eq votes
+  end
+
+  it "should reveal its id" do
     expect(Post.new(id: 1).id).to eq 1
   end
 
@@ -26,7 +36,7 @@ describe Post do
     expect { Post.new({}).id = 2 }.to raise_error NoMethodError
   end
 
-  it "should not allow the external world to directly change the number of votes" do
+  it "should not allow the external world to change the number of votes directly" do
     expect { Post.new({}).vote += 1 }.to raise_error NoMethodError
   end
 
@@ -47,7 +57,7 @@ describe Post do
       DB.execute("INSERT INTO `posts` (title) VALUES ('Hello world')")
     end
 
-    it "should return nil if post not found in database" do
+    it "should return nil if post is not found in database" do
       expect(Post.find(42)).to be_nil
     end
 
@@ -60,15 +70,14 @@ describe Post do
     end
 
     it "should resist SQL injections" do
-      id = '(DROP TABLE IF EXISTS `posts`;)'
-      post = Post.find(id)  # Inject SQL to delete the posts table...
-      expect { Post.find(1) }.not_to raise_error
-      expect(Post.find(1).title).to eq 'Hello world'
+      id = "2' OR 1=1 --"
+      post = Post.find(id)  # SQL Injection to retrieve all posts.
+      expect(post).to be_nil
     end
   end
 
   describe "self.all (class method)" do
-    it "should return an empty array if database is empty" do
+    it "should return an empty array if the database is empty" do
       posts = Post.all
       expect(posts).to eq []
     end

@@ -18,7 +18,7 @@ describe "#mail_joke" do
     expect(mail_joke "jean-marc.alarue@live.com").to eq "jean-marc alarue, aren't you born after 1973?"
   end
 
-  it "should tell unknownd domain users that we can't judge them" do
+  it "should tell unknown domain users that we can't judge them" do
     expect(mail_joke "voyageurdufutur@milkyway.gal").to eq "Sorry voyageurdufutur, we don't know how to judge 'milkyway.gal'"
   end
 

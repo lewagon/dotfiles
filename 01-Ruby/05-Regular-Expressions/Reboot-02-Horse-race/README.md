@@ -1,43 +1,31 @@
 ## Guidelines
 
-This challenge should take you **45 minutes 🕒**. You should finish it and start brainstorming on the next challenge before lunch!
+This challenge should take you **45 minutes 🕒**.
 
-1. Kickstart by writing the pseudo-code with the teacher as a live-code 💻.
-2. Work 20 minutes on your own to try to figure out the solution.
-3. Then let's correct it altogether 💻.
-
-## Setup
-
-Let's create a folder for this new challenge:
-
-```bash
-cd ~/code/<user.github_nickname>/reboot
-mkdir horse-race
-cd horse-race
-touch interface.rb
-```
-
-Again let's start with the interface. It's more intuitive.
+1. Just like the first exercise, start by writing the pseudo-code with the teacher as a live-code 💻.
+2. Spend 20 minutes on your own to try to figure out the solution.
+3. Then let's correct it together! 💻
 
 ## Pseudo-code
 
-How should your program work when your launch it? Write the pseudo code!
-
+How should your program work when you launch it? Write the pseudo code!
 
 ```ruby
 # interface.rb
 
 # Pseudo-code:
-# 1. Print welcome
-# 2. Get horses
-# 3. Get user's bet
-# 4. Run the race
-# 5. Print results
+# 1. Print welcome and the horses names
+# 2. Get user's bet
+# 3. Run the race 🐴
+# 4. Print results
 ```
 
-Each step above is too general, **try to detail a bit more this pseudo-code**.
+Each step above is too general, so **try to build it out in a bit more detail**.
 
+## Step 1 - Dumb horse race
 
-## Make your computer speak :)
+Let's model a horse race. The user can bet on (choose) a horse, the horses run the race (the computer randomly selects a winner), and the winner is printed out in the terminal with a message telling the user if he won. Let's start with the pseudo code. How are we going to model the horses?
 
-Let's pimp our program and make our computer speak! For that you can use `say`. That is pretty cool 😊 Be creative and build custom messages 🐴🐴🐴🐴🐴🐴
+## Step 2 - Make it loop!
+
+What about adding a balance to the game? Let's say you arrive to the horse race with 100€, win 50€ if you place a correct bet and lose 10€ if your horse does not win. What do you need to change to your horse race program? Let's make sure the user can't play if he does not have enough money.

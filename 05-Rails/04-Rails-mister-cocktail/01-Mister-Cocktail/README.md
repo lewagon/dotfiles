@@ -1,22 +1,32 @@
 ## Background & Objectives
 
-Now it's time to make a 3-model app. And you guessed it, we'll introduce
-a `n:n` (many to many) relation. So what is it about? Well, it's a cocktail
-manager. We want to store our best recipes of cocktails.
+Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to
+many relationship (`n:n`). So what's the deal? Well, it's time to build a cocktail
+manager. We want to store our favourite cocktails, and their recipes.
 
 ## Rails app generation
 
-**Note**: You should be able to run those steps without this cheat sheet.
+Let's install `yarn` if you haven't already!
 
-First let's create a new Rails app using PostgreSQL
+```bash
+# OSX
+brew install yarn
+
+# Ubuntu
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--webpack` option! Let's also add a `--database=postgresql` (we will talk about this tomorrow). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-mister-cocktail -T --database=postgresql
+rails new rails-mister-cocktail -T --webpack --database=postgresql
 cd rails-mister-cocktail
 ```
 
-We then need to locally create the database for this new rails app.
+We then need to create the postgresql database for this new rails app.
 
 ```bash
 rails db:create
@@ -25,7 +35,6 @@ rails db:create
 Let's set up git, create a repo on GitHub and push our skeleton.
 
 ```bash
-git init
 git add .
 git commit -m "rails new"
 hub create
@@ -38,6 +47,7 @@ Let's import the teacher's spec to be able to `rake` our progress.
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
+rails db:migrate
 rails db:test:prepare
 git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git spec
 git add .
@@ -48,39 +58,17 @@ You'll be able to test your code with:
 
 ```bash
 rails db:migrate RAILS_ENV=test  # If you added a migration
-rake                            # Launch tests
+rake                             # Launch tests
 ```
 
-## Heroku deployment
-
-Follow [the lecture's instructions](https://karr.lewagon.org/lectures/rails/04-hosting-deployment/#/1/12) about
-preparing your app for being hosted on Heroku.
-
-Then, in your terminal, create the app...
-
-```bash
-heroku create mr-cocktail-<user.lower_github_nickname> --region eu
-```
-
-...and make your first deployment:
-
-```bash
-git push heroku master && heroku run rails db:migrate
-```
-
-## Style
-
-Don't forget to use [lewagon/stylesheets](https://github.com/lewagon/rails-stylesheets)
-to start from a good CSS architecture.
-
-(commit and deploy this. You know the drill. **continuous deployment**)
+Don't forget to `commit` and `push` your work often.
 
 ## Specs
 
-### Models
+### 1 - Models
 
-Go to [db.lewagon.org](http://db.lewagon.org) and draw the schema with your buddy. The tables
-we need are `cocktails`, `ingredients` and `doses`.
+Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
+we need are `cocktails`, `ingredients` and `doses`. Think about the relations between the tables and who is storing the *references*. 😉
 
 Validate all models tests before moving to the routing layer. You can use this command:
 
@@ -94,13 +82,13 @@ to selectively run tests in the `spec/models` folder.
 
 - A **cocktail** has a name (e.g. `"Mint Julep"`, `"Whiskey Sour"`, `"Mojito"`)
 - An **ingredient** has a name (e.g. `"lemon"`, `"ice"`, `"mint leaves"`)
-- A **dose** references a cocktail, an ingredient and has a description. (e.g. the Mojito cocktail needs **6cl** of lemon)
+- A **dose** is the amount needed for each ingredient in a cocktail (e.g. the Mojito cocktail needs **6cl** of lemon). So each dose references a cocktail, an ingredient and has a description.
 
 #### Validation
 
-- A cocktail must have a name, and names should be unique
-- An ingredient must have a name, and names should be unique
-- A dose must have a description, a cocktail and an ingredient, and [cocktail, ingredient] couples should be unique.
+- A cocktail must have a unique name.
+- An ingredient must have a unique name.
+- A dose must have a description, a cocktail and an ingredient, and [cocktail, ingredient] pairings should be unique.
 
 #### Associations
 
@@ -112,10 +100,10 @@ to selectively run tests in the `spec/models` folder.
 - You can't delete an ingredient if it used by at least one cocktail.
 - When you delete a cocktail, you should delete associated doses (but not the ingredients as they can be linked to other cocktails).
 
-### Seed the ingredients
+### 2 - Seed the ingredients
 
 **Our app will not allow users to create ingredients**.
-Instead, we will generate a static seed of ingredients.
+Instead, we will generate a static seed of ingredients to choose from.
 Write this seed, for example
 
 ```ruby
@@ -125,51 +113,78 @@ Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 ```
 
-**Optional**: have fun and seed real ingredients, e.g. using [this JSON list](http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list) (with `open-uri` and `json` ruby libs).
+**Optional**: have fun and seed real ingredients using [this JSON list](http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list) (with `open-uri` and `json` ruby libs).
 
-### Routing
+### 3 - Routing, Controller, Views for Cockatils
 
 Once again, you must have a precise idea of the features of your app in order to build your routes. Here is the list of features:
 
-- A user can see the list of all cocktails
+- A user can see the list of cocktails
 
 ```
 GET "cocktails"
 ```
 
-- A user can see the details of a given cocktail, with the ingredient list
+- A user can see the details of a given cocktail, with the dose needed for each ingredient
 
 ```
 GET "cocktails/42"
 ```
 
-- A user can create a new cocktail.
+- A user can create a new cocktail
 
 ```
 GET "cocktails/new"
 POST "cocktails"
 ```
 
-- A user can add a new dose (ingredient/description pair) on an existing cocktail.
+### 4 - Routing, Controller, Views for Doses
+
+- A user can add a new dose (ingredient/description pair) to an existing cocktail
+- Checkout `simple_form` [docs](https://github.com/plataformatec/simple_form#associations) about `f.association` to easily create a select dropdown for our list of ingredients.
 
 ```
 GET "cocktails/42/doses/new"
 POST "cocktails/42/doses"
 ```
 
-- A user can delete a dose on an existing cocktail
+- A user can delete a dose that belongs to an existing cocktail. How can we make a delete link again?
 
 ```
 DELETE "doses/25"
 ```
 
-And now think. Do we need an `IngredientsController`?
+Do we need an `IngredientsController`?
 
+### 5 - Design as we go
 
-### Views
+Now time to make a nice front-end! Time to play around with CSS! 😊 Can you make it into the Hall of Fame? Go check out [dribbble](https://dribbble.com/) or [onepagelove](https://onepagelove.com/) for inspiration.
 
-Now put a nice looking front-end on top of that :)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_1.png)
 
-### Going further (Harder)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_2.png)
 
-Try to put the "New dose form" on the cocktail page, not on a separate page.
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_3.png)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_4.png)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/show_1.png)
+
+Don't forget you can have local images in the `app/assets/images` folder. Or even better, you can ask the user for an `image_url` on submission of the cocktail.
+
+### 6 - New dose form on the cocktail show page (Optional)
+
+Try to put the "New dose form" on the cocktail page, not on a separate page. What changes in the routes? And in the controllers?
+
+### 7 - Select2 on the ingredients dropdown (Optional)
+
+Let's try adding an npm package to our rails app! Let's follow the slides to see how to add `select2` to our ingredients dropdown.
+
+### 8 - Let's add reviews for these awesome cocktails! (Optional)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/show_2.png)
+
+### 9 - Going further
+
+- Adding a possibility to search cocktails and adding `typed.js` to the search input field.
+- Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our list of cocktails as we scroll down the index.

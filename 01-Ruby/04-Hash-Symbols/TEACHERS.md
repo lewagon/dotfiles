@@ -1,20 +1,19 @@
 ## Intro
 
 1. We gonna start with quick rehearsal on data type we know
-1. Then first part on **Hash**
-1. Second part on **Symbol**
-1. Few words on CSV/JSON files and the way we can extract data as array/hash
+2. Then first part on **Hash**
+3. Second part on **Symbol**
+4. Few words on CSV/JSON files and the way we can extract data as array/hash
 
 ## Rehearsal
 
 ```ruby
-42                          # Fixnum
+42                          # Integer
 1.25                        # Float
 true                        # Boolean
 "hello world"               # String
 [ "a", "e", "i", "o", "u" ] # Array
 ```
-
 
 ## From arrays to hash
 
@@ -26,9 +25,8 @@ student_ages = [ 24     , 25    , 22      ,  20    ]
 ```
 
 1. Write a program to display the list of students with their age with `each_with_index`
-1. Is it a good modeling? What if there are **10K students**? Hard to maintain, we can do better.
-1. What if we could do `students_age["Peter"]`? We can with Hash. Introduce it:
-
+2. Is it a good modeling? What if there are **10K students**? Hard to maintain, we can do better.
+3. What if we could do `students_age["Peter"]`? We can with Hash. Introduce it:
 
 ```ruby
 students_age = {
@@ -39,15 +37,13 @@ students_age = {
 }
 ```
 
-
 ## `Hash`
 
 1. Explain that a hash is a **collection of key/value pairs**.
-1. It has **unique keys** as a dictionary.
-1. Go through basic CRUD operation on `Hash`
-1. Explain how `each` works on a hash
-1. Show some custom methods from the doc like `has_key?`
-
+2. It has **unique keys** as a dictionary.
+3. Go through basic CRUD operation on `Hash`
+4. Explain how `each` works on a hash
+5. Show some custom methods from the doc like `has_key?`
 
 ```ruby
 # Defining a hash
@@ -82,7 +78,6 @@ p paris.keys
 p paris.values
 ```
 
-
 ### Similar to `Array`?
 
 Explain `Array` are accessed by **indexes**, `Hash` by **keys**
@@ -98,7 +93,6 @@ city = {
 cities[0]    # => "London"
 city["name"] # => "Paris"
 ```
-
 
 ### More readable for rich data
 
@@ -119,16 +113,14 @@ cities = {
 puts cities["Paris"]["monument"]
 ```
 
-
 ## `Symbol`
 
 1. Explain that `Symbol` is a cousin of `String` used for **text identifiers**
-1. Start coding a city hash with string keys.
-1. **Refacto with symbols** explaining it's more adapted.
-1. Introduce the new hash syntax when keys are symbols
+2. Start coding a city hash with string keys.
+3. **Refacto with symbols** explaining it's more adapted.
+4. Introduce the new hash syntax when keys are symbols
 
-
-```
+```ruby
 # Not good!
 paris = {
   "country" => "France",
@@ -151,12 +143,11 @@ paris = {
 p paris[:population]
 ```
 
-
 ### `Symbol` vs `String`
 
 Tell the students strings are for **data**. symbols for **identifiers**.
 
-```
+```ruby
 # Text data => String
 "Sebastien Saunier"
 "seb@lewagon.org"
@@ -170,14 +161,11 @@ Tell the students strings are for **data**. symbols for **identifiers**.
 :city
 ```
 
-
 ## `Hash` as last method argument
 
-
 1. Explain hash are often used as last optional argument
-1. Code with them an **HTML generator**
-1. Tease them saying Rails will use similar helper methods generating HTML.
-
+2. Code with them an **HTML generator**
+3. Tease them saying Rails will use similar helper methods generating HTML.
 
 ```ruby
 def tag(name, content, attrs = {})
@@ -198,10 +186,9 @@ tag("a", "Le Wagon", { href: "http://lewagon.org", class: "btn" })
 ## Extracting data from CSV/JSON files
 
 1. Explain it's easy to extract data as array or hash from standard files like CSV/JSON.
-1. Introduce CSV and JSON with the slides.
-1. Don't spend too much time => **full course on Parsing is next Tuesday**.
-1. If you have time, play a bit with Github API building an interactive program getting info on a user from the terminal.
-1. You can install [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) to make JSON readable on your browser.
-
+2. Introduce CSV and JSON with the slides.
+3. Don't spend too much time => **full course on Parsing is next Tuesday**.
+4. If you have time, play a bit with Github API building an interactive program getting info on a user from the terminal.
+5. You can install [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) to make JSON readable on your browser.
 
 Github API URL for user: https://api.github.com/users/ssaunier

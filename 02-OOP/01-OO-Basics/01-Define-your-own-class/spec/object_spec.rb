@@ -3,8 +3,10 @@ classes = []
 Dir.glob("lib/*.rb").each do |file|
   filename = file.split("lib/").last
   class_name = filename.split(".rb").first
-  require filename
-  classes <<  Object.const_get(class_name.split('_').collect(&:capitalize).join)
+  unless class_name == "interface"
+    require filename
+    classes <<  Object.const_get(class_name.split('_').collect(&:capitalize).join)
+  end
 end
 
 describe "lib folder" do

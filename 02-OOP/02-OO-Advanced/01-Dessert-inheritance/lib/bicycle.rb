@@ -21,7 +21,7 @@ def quizz
   b = Bicycle.new
   t = Tandem.new(4)
 
-  # TODO: replace "?" by the correct fixnum !
+  # TODO: replace "?" by the correct fixnum!
 
   answers << (b.gears == "?")
   answers << (b.wheels == "?")

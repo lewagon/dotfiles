@@ -5,7 +5,7 @@ describe "The method translation" do
     expect(translation('home.intro', 'fr')).to eq 'Bienvenue sur Le Wagon'
   end
 
-  it "should fallback to english if key found but no translation yet for given language" do
+  it "should fall back to english if key found but no translation yet for given language" do
     expect(translation('home.intro', 'es')).to eq 'Welcome on Le Wagon'
   end
 

@@ -1,0 +1,68 @@
+{
+  "author": {
+    "email": "gajus@gajus.com",
+    "name": "Gajus Kuizinas",
+    "url": "http://gajus.com"
+  },
+  "dependencies": {
+    "ajv": "^4.7.0",
+    "ajv-keywords": "^1.0.0",
+    "chalk": "^1.1.1",
+    "lodash": "^4.0.0",
+    "slice-ansi": "0.0.4",
+    "string-width": "^2.0.0"
+  },
+  "description": "Formats data into a string table.",
+  "devDependencies": {
+    "ajv-cli": "^1.1.0",
+    "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-plugin-istanbul": "^2.0.3",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-register": "^6.14.0",
+    "chai": "^3.4.1",
+    "eslint": "^3.5.0",
+    "eslint-config-canonical": "^1.8.6",
+    "gitdown": "^2.4.0",
+    "husky": "^0.11.7",
+    "mocha": "^3.0.2",
+    "nyc": "^8.3.1",
+    "sinon": "^1.17.2"
+  },
+  "keywords": [
+    "ascii",
+    "text",
+    "table",
+    "align",
+    "ansi"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "./dist/index.js",
+  "name": "table",
+  "nyc": {
+    "include": [
+      "src/*.js"
+    ],
+    "instrument": false,
+    "lines": 70,
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gajus/table"
+  },
+  "scripts": {
+    "build": "rm -fr ./dist && NODE_ENV=production babel --copy-files ./src --out-dir ./dist && npm run make-validators",
+    "lint": "npm run build && eslint ./src ./tests",
+    "make-readme": "gitdown ./.README/README.md --output-file ./README.md",
+    "make-validators": "ajv compile --all-errors --inline-refs=false -s src/schemas/config -c ajv-keywords/keywords/typeof -o dist/validateConfig.js && ajv compile --all-errors --inline-refs=false -s src/schemas/streamConfig -c ajv-keywords/keywords/typeof -o dist/validateStreamConfig.js",
+    "precommit": "npm run lint && npm run test",
+    "prepublish": "NODE_ENV=production npm run build",
+    "test": "npm run build && nyc --check-coverage mocha"
+  },
+  "version": "4.0.1"
+}

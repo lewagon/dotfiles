@@ -6,7 +6,7 @@
 
 ## Rehearsal
 
-1. Start with a **5-minutes rehearsal** on data types they know (String, Fixnum, Float, Booleans), and on variables and methods
+1. Start with a **5-minutes rehearsal** on data types they know (String, Integer, Float, Booleans), and on variables and methods
 
 ## Controlling the flow
 
@@ -38,7 +38,6 @@ else
   puts "too young to vote.."
 end
 ```
-
 
 ### Ternary operator
 
@@ -99,7 +98,6 @@ end
 2. Explain `||`
 3. Live-code a program giving a **shop's opening hours**
 
-
 ```ruby
 hour = Time.now.hour
 
@@ -140,7 +138,6 @@ puts "You won! Price was #{price_to_find}$"
 1. Get **array's size**
 1. Loop with `each`
 1. Pick custom methods in the ruby doc with the class and test them
-
 
 ```ruby
 # 1. Define an array

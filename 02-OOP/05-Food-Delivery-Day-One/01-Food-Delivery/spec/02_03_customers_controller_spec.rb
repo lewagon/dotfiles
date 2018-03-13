@@ -1,10 +1,10 @@
-require_relative "support/csv_helper.rb"
+require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/controllers/customers_controller.rb"
-  require_relative "../app/repositories/customer_repository.rb"
+  require_relative "../app/controllers/customers_controller"
+  require_relative "../app/repositories/customer_repository"
 rescue LoadError => e
-  if e.message =~ /customer_repository\.rb/ || e.message =~ /customers_controller\.rb/
+  if e.message =~ /customer_repository/ || e.message =~ /customers_controller/
     describe "CustomersController" do
       it "You need a `customers_controller.rb` file for your `CustomersController`" do
         fail
@@ -46,14 +46,13 @@ describe "CustomersController", :customer do
   describe "#add" do
     it "should ask the user for a name and address, then store the new customer" do
       controller = CustomersController.new(repository)
-      module Kernel; def gets; STDIN.gets; end; end
-      allow(STDIN).to receive(:gets).and_return("Michael Jackson", "Gary")
+      Object.any_instance.stub(gets: "Le Wagon")
 
       controller.add
 
       expect(repository.all.length).to eq(4)
-      expect(repository.all[3].name).to eq("Michael Jackson")
-      expect(repository.all[3].address).to eq("Gary")
+      expect(repository.all[3].name).to eq("Le Wagon")
+      expect(repository.all[3].address).to eq("Le Wagon")
     end
   end
 end

@@ -1,17 +1,16 @@
 ## Background & Objectives
 
-The objective of this challenge is to build a 2-model Rails app with restaurant and anonymous reviews.
-You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) to see a similar example on articles and comments.
+The objective of this challenge is to build a two-model Rails app with a restaurant and anonymous reviews.
+You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) for a similar example using articles and comments.
 
 ## Rails app generation
 
-You are going to use external specs written by the teachers to test your rails app. Here is the setup you need:
+You are going to use external specs written by the teachers to test your rails app, that is why we specify `-T` which means, don't generate the inbuilt rails tests. Here is the setup you need:
 
 ```bash
 cd ~/code/<user.github_nickname>
 rails new -T rails-yelp-mvp
 cd rails-yelp-mvp
-git init
 git add .
 git commit -m "rails new"
 hub create
@@ -24,7 +23,7 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Also before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to be able to use simple form and Bootstrap, and have a cool stylesheets folder.
+Before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure you can use simple form, Bootstrap, and have a cool stylesheets folder.
 
 ### Testing your code
 
@@ -77,24 +76,23 @@ If you have trouble running `rake`, you may need to run `bin/rake`. It means tha
 #### Schema
 
 - A restaurant has a name, an address, a phone number, a category (chinese, italian...) and many reviews
-- A review has a content and a rating (between 0 and 5) and references a restaurant
+- A review has content (the text), a rating (between 0 and 5) and references a restaurant
 
-**Question**: Can you draw this simple schema at [db.lewagon.org](http://db.lewagon.org)? Discuss with your buddy.
+**Question**: Can you draw this simple schema at [db.lewagon.com](http://db.lewagon.com)? Discuss with your buddy.
 
 #### Validation
 
 - A restaurant must have at least a name and an address.
 - The restaurant category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`.
 - A review must have a parent restaurant.
-- A review must have a content and a rating. The rating should be a number between 0 and 5.
-- When a restaurant is destroyed, all reviews should be destroyed as well.
+- A review must have content and a rating. The rating should be a number between 0 and 5.
+- When a restaurant is destroyed, all of its reviews should be destroyed as well.
 
-Validate all models tests before moving to the routing layer. You can use this command:
+Validate all model tests before moving to the routing layer. You can use this command:
 
 ```bash
 rspec spec/models
 ```
-
 to selectively run tests in the `spec/models` folder.
 
 You can also manually test your code with the `rails console`. Do not forget to `reload!` between each code change!
@@ -134,7 +132,7 @@ GET "restaurants/new"
 POST "restaurants"
 ```
 
-- He can see the details of a restaurant, with all reviews related to the restaurant.
+- He can see the details of a restaurant, with all the reviews related to the restaurant.
 
 ```
 GET "restaurants/38"
@@ -149,36 +147,37 @@ POST "restaurants/38/reviews"
 
 - And that's it!
 
-In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) who will have to make some curation from his rails console.
 
-We know it's a pretty poor MVP. However, we want you to understand that **each route is a translation of a user-story or your product**. Don't write stupidly 7 CRUD routes for any model of your app. It's the best way to get lost and to forget what your MVP really is.
+In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) - no need to generate a new controller through `namespace :admin` routes, as a developer you have the power to manipulate the DB from the `rails console` if you want to update / delete any record.
 
-Implement all the routes you need to build this product
+We know it's a pretty basic MVP, but we just need you to understand that **each route is the embodiment of a user-story**. Don't just blindly write 7 CRUD routes for every model in your app. It's the best way to get confused by your own product and forget what your MVP really is.
+
+Now, it's time to implement all the routes you need to build this product!
 
 **Hint:** to handle the route `GET "restaurants/38/reviews/new"`, you will have to use [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
 ### Views
 
-Let's care about our front-end, because that is what our users see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to setup your Rails frontend.
+Let's turn our attention to frontend, because that is what our users are going to see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to set up your Rails frontend.
 
 #### Layout / partials
 
 Remember to refactor your views using layouts and partials. For example:
 
 - The applicaton layout can include a Bootstrap navbar with links to the list of restaurants and to the restaurant creation form.
-
-- Forms can be placed in partial, to make your HTML more readable.
+- Forms can be placed in a `partial` to make your HTML more readable.
 
 #### Helpers
 
-When using Rails helper like `link_to`, you can pass a hash of HTML attributes. This allows you to add Bootstrap CSS class to your links. Herebelow some example.
+When using a Rails helper like `link_to`, you can pass it a hash of HTML attributes. This allows you to add Bootstrap CSS classes to your links. Example below:
 
 ##### [link_to](http://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to)
 
 ```erb
 <%= link_to "See details", @restaurant, class: "btn btn-primary"%>
 ```
-Will generate  this HTML
+
+This generates the following HTML:
 
 ```html
 <a href="/restaurants/3" class="btn btn-primary">See details</a>
@@ -186,7 +185,7 @@ Will generate  this HTML
 
 ##### [form_for](http://guides.rubyonrails.org/form_helpers.html)
 
-Be careful, your reviews URLs are now nested in `/restaurants/:restaurant_id`. Hence, you cannot use `form_for` the same way you did with a non-nested resource. If you write:
+Be careful though - your reviews URLs are now nested in `/restaurants/:restaurant_id`. This means you can't use `form_for` the same way you did with a non-nested resource. If you write:
 
 ```erb
 <%= form_for(@review) do |f| %>
@@ -194,7 +193,7 @@ Be careful, your reviews URLs are now nested in `/restaurants/:restaurant_id`. H
 <% end %>
 ```
 
-It will generate this HTML
+It will generate this HTML:
 
 ```html
 <form action="/reviews">
@@ -202,7 +201,7 @@ It will generate this HTML
 </form>
 ```
 
-That's not what we want because **we don't have any route for `POST "reviews"`**. Instead you will have to use the nested resource syntax for `form_for`:
+That's not what we want because **we don't have a route for `POST "reviews"`**. Instead, you will have to use the nested resource syntax for `form_for`:
 
 ```erb
 <%= form_for [@restaurant, @review] do |f| %>
@@ -218,13 +217,13 @@ This will generate the following HTML form:
 </form>
 ```
 
-This URL is consistent with the route `POST "restaurants/:restaurant_id/reviews"` you have defined in `routes.rb`. Yeah! For more insights, you can read [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
+This URL is now consistent with the route `POST "restaurants/:restaurant_id/reviews"` you have defined in `routes.rb`. Yeah! For a bit more info on this, have a read of [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
 
-**Hint:** Install the [simple_form](https://github.com/plataformatec/simple_form) gem to have bootstrap-compatible forms with a lighter syntax.
+**Hint:** Install the [simple_form](https://github.com/plataformatec/simple_form) gem to get bootstrap-compatible forms with a lighter syntax.
 
 ### Improve your app
 
-**Once you have finished the first version of your resto-review app**, try to improve it by embedding your review form inside each restaurant's show view. In that case your new routing will be:
+**Once you have finished the first version of your resto-review app**, try to improve it by embedding your review form inside each restaurant's show view. This means your new routing will look like this:
 
 ```
 GET "restaurants"
@@ -234,4 +233,4 @@ POST "restaurants"
 POST "restaurants/38/reviews"
 ```
 
-Notice that we got rid of the route `GET "restaurants/38/reviews/new"` since the review form is **now embedded in the `restaurants/show.html.erb` view**.
+Notice that we got rid of the route `GET "restaurants/38/reviews/new"`. This is because the review form is **now embedded in the `restaurants/show.html.erb` view**. 🛏

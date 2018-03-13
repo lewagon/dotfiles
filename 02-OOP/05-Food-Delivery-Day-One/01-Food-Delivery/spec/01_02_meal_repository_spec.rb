@@ -1,10 +1,10 @@
 require "fileutils"
-require_relative "support/csv_helper.rb"
+require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/repositories/meal_repository.rb"
+  require_relative "../app/repositories/meal_repository"
 rescue LoadError => e
-  if e.message =~ /meal_repository\.rb/
+  if e.message =~ /meal_repository/
     describe "MealRepository" do
       it "You need a `meal_repository.rb` file for your `MealRepository`" do
         fail
@@ -63,8 +63,8 @@ describe "MealRepository", :meal do
       fail if loaded_meals.empty?
       loaded_meals.each do |meal|
         expect(meal).to be_a(Meal)
-        expect(meal.id).to be_a(Fixnum)
-        expect(meal.price).to be_a(Fixnum)
+        expect(meal.id).to be_a(Integer)
+        expect(meal.price).to be_a(Integer)
       end
     end
   end
@@ -100,7 +100,7 @@ describe "MealRepository", :meal do
       expect(rucola_meal.id).to eq(7)
     end
 
-    it "should start auto-incremting at 1 if very first meal added" do
+    it "should start auto-incrementing at 1 if it is the first meal added" do
       csv_path = 'unexisting_empty_meals.csv'
       FileUtils.remove_file(csv_path, force: true)
 
@@ -112,7 +112,7 @@ describe "MealRepository", :meal do
       FileUtils.remove_file(csv_path, force: true)
     end
 
-    it "should persist in the CSV the new added meal (first row = headers)" do
+    it "every new added meal should be saved in a row in the CSV (first row = headers)" do
       csv_path = 'spec/support/empty_meals.csv'
       FileUtils.remove_file(csv_path, force: true)
 

@@ -15,9 +15,12 @@ describe Restaurant do
 
   describe "#rate" do
     it "should update average restaurant rating" do
-      bocuse.rate(10)
-      bocuse.rate(20)
-      expect(bocuse.average_rating).to eq 15.0
+      ratings = [10, 15, 20]
+      average = ratings.reduce(:+).fdiv(ratings.length)
+      ratings.each do |rating|
+        bocuse.rate(rating)
+      end
+      expect(bocuse.average_rating).to eq average
     end
   end
 

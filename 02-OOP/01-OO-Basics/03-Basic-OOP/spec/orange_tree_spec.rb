@@ -10,7 +10,7 @@ describe OrangeTree do
 
   it "should have an age" do
     expect(orange_tree).to respond_to :age
-    expect(orange_tree.age).to be_a Fixnum
+    expect(orange_tree.age).to be_a Integer
   end
 
   it "should be 0 years old when created" do
@@ -19,28 +19,28 @@ describe OrangeTree do
 
   it "should have a height" do
     expect(orange_tree).to respond_to :height
-    expect(orange_tree.height).to be_a Fixnum
+    expect(orange_tree.height).to be_a Integer
   end
 
-  it "should measure 0 meter when 0 years old" do
+  it "should measure 0 meters when 0 years old" do
     expect(orange_tree.height).to eq 0
   end
 
   it "should have fruits" do
     expect(orange_tree).to respond_to :fruits
-    expect(orange_tree.fruits).to be_a Fixnum
+    expect(orange_tree.fruits).to be_a Integer
   end
 
-  it "should measure 0 fruits when 0 years old" do
+  it "should have 0 fruits when 0 years old" do
     expect(orange_tree.fruits).to eq 0
   end
 
-  it "should let us see if it's dead or not" do
+  it "should let us check whether the tree is dead or alive" do
     expect(orange_tree).to respond_to(:dead?)
     expect(orange_tree.dead?).to eq(false)
   end
 
-  it "should have an `one_year_passes!` method to simulate time passing" do
+  it "should have an `one_year_passes!` method to simulate a year passing" do
     expect(orange_tree).to respond_to :one_year_passes!
   end
 
@@ -49,7 +49,7 @@ describe OrangeTree do
     expect(orange_tree.age).to eq(8)
   end
 
-  it "should be alive until 50 years old" do
+  it "should always live until 50 years old" do
     expect(orange_tree.dead?).to eq false
     50.times do
       orange_tree.one_year_passes!
@@ -73,7 +73,7 @@ describe OrangeTree do
     expect(orange_tree.height).to eq 10
   end
 
-  it "should die when reaching 100 years old" do
+  it "should not be able to live until more than 100 years old" do
     100.times do
       orange_tree.one_year_passes!
     end
@@ -108,7 +108,7 @@ describe OrangeTree do
     end
   end
 
-  it "should not produce any fruits when reaching 15 years old" do
+  it "should stop producing fruits when reaching 15 years old" do
     15.times do
       orange_tree.one_year_passes!
     end
@@ -116,11 +116,11 @@ describe OrangeTree do
     expect(orange_tree.fruits).to eq 0
   end
 
-  it "should have an `pick_a_fruit!` method to simulate people picking fruits on the tree" do
+  it "should have a `pick_a_fruit!` method to simulate people picking a single fruit from the tree" do
     expect(orange_tree).to respond_to :pick_a_fruit!
   end
 
-  it "should be able to let people pick an orange" do
+  it "should let people pick an orange" do
     10.times do
       orange_tree.one_year_passes!
     end
@@ -131,7 +131,7 @@ describe OrangeTree do
     expect(orange_tree.fruits).to eq 199
   end
 
-  it "should not let people pick fruits if there aren't anymore fruits" do
+  it "should not let people pick fruits if there are no fruits remaining" do
     10.times do
       orange_tree.one_year_passes!
     end
@@ -146,14 +146,14 @@ describe OrangeTree do
     expect(orange_tree.fruits).to eq 0
   end
 
-  it "should be probable for it to die between 50 and 99 years" do
+  it "from 50 years old, probability of dying should increase until 100 years old" do
     50.times do
       orange_tree.one_year_passes!
     end
 
     found_dead = false
 
-    49.times do
+    50.times do
       orange_tree.one_year_passes!
       found_dead = found_dead || orange_tree.dead?
     end

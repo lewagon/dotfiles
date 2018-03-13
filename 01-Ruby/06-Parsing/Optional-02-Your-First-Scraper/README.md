@@ -1,9 +1,9 @@
 ## Background & Objectives
 
-## Exemple
+## Example
 
 First, open your terminal and install [Nokogiri](http://www.nokogiri.org/),
-a **gem** very useful when you want to scrape web page content.
+a very useful **gem** when you want to scrape web page content.
 
 ```bash
 gem install nokogiri
@@ -12,12 +12,14 @@ gem install nokogiri
 Then, you can run the following Ruby code:
 
 ```ruby
-require "open-uri"
-require "nokogiri"
+require 'open-uri'
+require 'nokogiri'
 
-doc = Nokogiri::HTML(open('https://www.etsy.com/search?q=wallet'))
-doc.search('.card-title').each_with_index do |element, index|
-  puts "#{index}. #{element.text.strip}"
+html_content = open('https://www.etsy.com/search?q=wallet').read
+doc = Nokogiri::HTML(html_content)
+
+doc.search('.block-grid-xs-2 .v2-listing-card__info .text-body').each_with_index do |element, index|
+  puts "#{index + 1}. #{element.text.strip}"
 end
 ```
 
@@ -26,20 +28,18 @@ the first page of results on [Etsy](https://www.etsy.com/search?q=wallet)
 
 How did it work?
 
-The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors) and look for all HTML
-element in the page matching it. Here we used a **class** selector `.card-title`
-because the [HTML source](https://support.mozilla.org/en-US/questions/873324)
-was something like:
+The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
+and looks for all the HTML element in the page that match it. Here we used a **class** selector `.card-meta-row`
+because the [HTML source](https://support.mozilla.org/en-US/questions/873324) was something like:
 
 ```html
 <div class="card-meta-row">
-  <div class="card-meta-row-item card-title selected-color">
-    Engraved Picture Wallet Insert - Back Engraving Too - the WOW factor - Him or Her - Laser Engraved - Handwritten Wallet Insert GIFT
-  </div>
+  Leather Wallet
 </div>
 ```
 
 ## Specs
 
-We would like to scrape **antiques** listed on [Craiglist](http://www.craiglist.com)
-for a given city. Open the `lib/scraper.rb` and implement the `scrape_craiglist_antiques` method. It should **return** an `Array` of antiques found on the website.
+We would like to scrape **antiques** listed on [Craiglist](http://www.craiglist.com) for a given city. Open the `lib/scraper.rb` and implement the `scrape_craiglist_antiques` method. It should **return** an `Array` of antiques found on the website.
+
+This method should scrape successfully for London, Paris and New York. Therefore `scrape_craiglist_antiques("london")`, `scrape_craiglist_antiques("paris")` and `scrape_craiglist_antiques("newyork")` should all return results. Are the craiglist urls for all the cities the same?

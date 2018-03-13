@@ -4,7 +4,7 @@ Grasp the basic concepts of object-oriented programming while writing your very 
 
 ## Specs
 
-Choose something from the real world that you would like to model. Restaurants, vehicles, users, games, recipes.. *It's your call !*
+Choose something from the real world that you would like to model. Restaurants, vehicles, users, games, recipes.. *It's your call!*
 
 Once chosen, create a file in the `lib` directory which has the name of your object.
 For instance, if you chose to model Restaurants, create the `restaurant.rb` file:
@@ -13,11 +13,12 @@ For instance, if you chose to model Restaurants, create the `restaurant.rb` file
 touch lib/restaurant.rb
 ```
 
+You can safely delete the `.gitkeep` file. This file is only there so that git sees the otherwise empty folder. 
+
 ## Convention
 
 **Pay attention** to your class file and your class name. Remember, `lower_snake_case(.rb)` for file name,
-`UpperCamelCase` for class name in the class definition. Bother are going to be singular! If you want to model restaurants, you'll use a `Restaurant` class, not `Restaurants`! Remember, the class is the mold to produce
-several restaurants (with `new`), so it should be singular!
+`UpperCamelCase` for class name in the class definition. **Both must be singular!** Remember, the class is the structure that allows you to create lots of different restaurants (with `.new`).
 
 ### What are the inner properties of your objects?
 
@@ -51,7 +52,7 @@ Time to add some **behavior** to your class with an **instance method**.
 Here's an example of how we might want to use a `start` instance method on a `Car` class:
 
 ```ruby
-require_relative "lib/car.rb"
+require_relative "lib/car"
 car = Car.new("T", "Ford", 0)
 car.start
 ```

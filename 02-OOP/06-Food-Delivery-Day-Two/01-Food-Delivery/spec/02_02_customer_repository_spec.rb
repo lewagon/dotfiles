@@ -1,10 +1,10 @@
 require "fileutils"
-require_relative "support/csv_helper.rb"
+require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/repositories/customer_repository.rb"
+  require_relative "../app/repositories/customer_repository"
 rescue LoadError => e
-  if e.message =~ /customer_repository\.rb/
+  if e.message =~ /customer_repository/
     describe "CustomerRepository" do
       it "You need a `customer_repository.rb` file for your `CustomerRepository`" do
         fail
@@ -44,24 +44,24 @@ describe "CustomerRepository", :customer do
       expect { CustomerRepository.new('unexisting_file.csv') }.not_to raise_error
     end
 
-    it "store customers in memory in an instance variable `@customers` or `@elements`" do
+    it "should store customers in memory in an instance variable `@customers` or `@elements`" do
       repo = CustomerRepository.new(csv_path)
       expect(elements(repo)).to be_a(Array)
     end
 
-    it "loads existing customers from the CSV" do
+    it "should load existing customers from the CSV" do
       repo = CustomerRepository.new(csv_path)
       loaded_customers = elements(repo) || []
       expect(loaded_customers.length).to eq(3)
     end
 
-    it "fills the `@customers` with instance of `Customer`, setting the correct types on each property" do
+    it "should fill the `@customers` with instances of `Customer`, setting the correct types on each property" do
       repo = CustomerRepository.new(csv_path)
       loaded_customers = elements(repo) || []
       fail if loaded_customers.empty?
       loaded_customers.each do |customer|
         expect(customer).to be_a(Customer)
-        expect(customer.id).to be_a(Fixnum)
+        expect(customer.id).to be_a(Integer)
       end
     end
   end
@@ -97,7 +97,7 @@ describe "CustomerRepository", :customer do
       expect(rucola_customer.id).to eq(5)
     end
 
-    it "should start auto-incremting at 1 if very first customer added" do
+    it "should start auto-incremting at 1 if it is the first customer added" do
       csv_path = 'unexisting_empty_customers.csv'
       FileUtils.remove_file(csv_path, force: true)
 
@@ -109,7 +109,7 @@ describe "CustomerRepository", :customer do
       FileUtils.remove_file(csv_path, force: true)
     end
 
-    it "should persist in the CSV the new added customer (first row = headers)" do
+    it "should save each new customer in the CSV (first row = headers)" do
       csv_path = 'spec/support/empty_customers.csv'
       FileUtils.remove_file(csv_path, force: true)
 

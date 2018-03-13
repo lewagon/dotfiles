@@ -153,7 +153,7 @@ describe "Challenges in app/queries.rb" do
 
   describe 'long_tracks' do
 
-    it 'returns songs with duration greater than a minimum' do
+    it 'returns songs with duration greater than the minimum' do
       tracks = [
         "Occupation / Precipice",
         "Hero",
@@ -205,12 +205,12 @@ describe "Challenges in app/queries.rb" do
       @top_5_rock = top_five_artists('Rock')
     end
 
-    it 'returns a list of Artist' do
+    it 'returns a list of artists' do
       expect(@top_5_rock).to be_kind_of(ActiveRecord::Relation)
       expect(@top_5_rock.first).to be_a Artist
     end
 
-    it 'returns the TOP 5 for Rock' do
+    it 'returns the TOP 5 artists for Rock' do
       expect(@top_5_rock[0].name).to eq 'Led Zeppelin'
       expect(@top_5_rock[1].name).to eq 'U2'
       expect(@top_5_rock[2].name).to eq 'Deep Purple'
@@ -222,16 +222,12 @@ describe "Challenges in app/queries.rb" do
       expect(@top_5_rock.length).to eq 5
     end
 
-    it 'returns the TOP 5 for Pop' do
+    it 'returns the TOP 5 artists for Pop' do
       top_5_pop = top_five_artists('Pop')
       expect(top_5_pop[0].name).to eq 'U2'
       expect(top_5_pop[1].name).to eq 'Various Artists'
       expect(top_5_pop[2].name).to eq 'Amy Winehouse'
       # Only 3 artists have POP songs in the DB.
-    end
-
-    it 'should be an ActiveRecord Relation' do
-      expect(love_tracks).to be_kind_of(ActiveRecord::Relation)
     end
   end
 end

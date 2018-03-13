@@ -1,16 +1,15 @@
 ## Background and Objectives
 
-Have you noticed that the credit card your hold in your wallet usually starts with a 4 or 5?
-Did you recognize a pattern? Well, in fact there is. In this exercise, we'll implement the
+Have you ever noticed that your credit cards normally start with a 4 or 5? That's because there's a pattern.
+In this exercise, we'll implement the
 [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm) to check if a credit card number is valid.
 
 ## Specs
 
 There are three methods to implement in this exercise. First, we'd like to code two methods,
-`visa?` and `mastercard?` which will return a boolean based on the `card` argument they received.
+`visa?` and `mastercard?` which will return a boolean based on the `card` argument they receive.
 
-You must know that if your credit card number starts with a `5`, then it was issued by Mastercard,
-and if starts with a `4` then it was issued by Visa. Check in your wallet!
+One thing you need to know first is that if your credit card number starts with a `5`, then it was issued by Mastercard, and if starts with a `4` then it was issued by Visa. Check inside your wallet!
 
 ```ruby
 visa?("4242 4242 4242 4242")
@@ -42,4 +41,5 @@ valid_card?("4242 4242 4242 4241")
 # => false
 ```
 
-You'll discover running `rake` that your code should work even if the credit card number was given with spaces. That's something to keep in mind, the user input will always be dirty, and we could say that we got this number from a web form.
+You'll discover by running `rake` that your code should work even if the credit card number was given with spaces. This is something to keep in mind: user input will always be dirty.
+

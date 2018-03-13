@@ -2,52 +2,30 @@
 
 This challenge should take you **30 minutes 🕒**
 
-1. Let's kickstart the challenge with the teacher (as a live-code 💻) and **write the pseudo-code altogether**.
-2. Then work 10 minutes on your own to try to figure out the solution.
-3. Then correct it altogether with the teacher (again as a live-code 💻).
-
-## ReBoot setup
-
-For Reboot challenges we will not use `rake` and we will create a new folder for every new challenge and start coding from scratch. Sometimes that's the best way to learn.
-
-First, let's create a `reboot` folder for these 2 days:
-
-```bash
-mkdir ~/code/<user.github_nickname>/reboot
-cd ~/code/<user.github_nickname>/reboot
-```
-
-Now let's create a folder for the first challenge:
-
-```bash
-mkdir calculator
-cd calculator
-touch interface.rb
-```
-
-We will always start with the `interface.rb` file. That's the file your will launch (with `ruby interface.rb`) to execute your program. It's always intuitive to start with the interface and ask yourself **"What should happen when I launch my program?"**
-
+1. Let's kickstart the challenge with the teacher (as a live-code 💻) and **write the pseudo-code together**.
+2. Then spend 10 minutes on your own to try and figure out the solution.
+3. You'll then correct it with the teacher (again as a live-code 💻).
 
 ## Pseudo-code
 
-Always kickstart a challenge altogether with the teacher and write the *pseudo-code*. For example:
+We will always start with the `interface.rb` file. That's the file you will launch (with the command `ruby interface.rb`) to run your program. It's always intuitive to start with the interface and ask yourself **"What should happen when I launch my program?"**
 
+Always kickstart a challenge altogether with the teacher and write the *pseudo-code*. For example:
 
 ```ruby
 # interface.rb
 
 # Pseudo-code (what are the steps in plain english):
 # 1. Say hello to the user
-# 2. Ask user for first number
+# 2. Ask user for the first number
 # 3. Get user answer
 # 4. Ask user for second number
-# 5. etc...
+# 5. etc.
 ```
 
-**Writing the pseudo-code is 80% of the job!** Then translating english into ruby is really the easy part. Adopt this pseudo-code methodology for every challenge of the Reboot session.
+**Writing the pseudo-code is 80% of the job!** Then translating english into ruby is really the easy part. Adopt this pseudo-code methodology for **every** challenge of the Reboot session.
 
-
-## Dumb calculator
+## Setup 1 - Dumb calculator
 
 Build a simple calculator with a command-line UI:
 
@@ -63,16 +41,18 @@ ruby interface.rb
 > 6
 > Enter a second one:
 > 8
-> Which operation [+][-][x][/]
-> x
+> Choose operation [+][-][*][/]
+> *
 > Result: 48
 ```
 
-## Make it loop
+There is no tests for the reboot exercises but you can still run `rake` to check the style of your code.
 
-It's a bit painful to re-launch your calculator every time your program ends.. Imagine a real calcultor that just switch off after every operation :)
+## Step 2 - Make it loop
 
-Make it loop:
+It's a bit painful to re-launch your calculator every time your program ends.. Imagine a real calculator that just switched off after every operation 😊
+
+Make it loop! Think about when you want the program to stop looping.
 
 ```bash
 ruby interface.rb
@@ -84,6 +64,8 @@ ruby interface.rb
 > Which operation [+][-][x][/]
 > x
 > Result: 48
+> Do you want to calculate again? [Y/N]
+> Y
 > Enter a first number:
 > 55
 > Enter a second one:
@@ -91,9 +73,11 @@ ruby interface.rb
 > Which operation [+][-][x][/]
 > -
 > Result: 53
+> Do you want to calculate again? [Y/N]
+> N
 ```
 
-## Refacto your code
+## Step 3 - Refactor your code
 
 - What's the code that is really part of the UI (`gets` and `puts`)?
 - What's the code that does not belong to the interface?
@@ -115,8 +99,3 @@ require_relative "calculator"
 
 # [...]
 ```
-
-
-
-
-

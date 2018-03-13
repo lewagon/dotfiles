@@ -2,11 +2,11 @@ require 'data'
 require 'store'
 
 # Here's what you should have in store:
-#   yogurts : 2€
-#   meat : 7€
+#   yogurts: 2€
+#   meat: 7€
 #   vegetables: 5€
-#   potatoes : 2€
-#   rice : 1€
+#   potatoes: 2€
+#   rice: 1€
 
 describe '#product_in_store?' do
 
@@ -16,7 +16,7 @@ describe '#product_in_store?' do
     end
   end
 
-  it 'returns false for any product not in store' do
+  it 'returns false for any products not in store' do
     NOT_PRODUCTS.each do |p|
       expect(product_in_store?(p)).to be false
     end

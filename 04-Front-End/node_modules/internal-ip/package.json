@@ -1,0 +1,43 @@
+{
+  "name": "internal-ip",
+  "version": "1.2.0",
+  "description": "Get your internal IPv4 or IPv6 address",
+  "license": "MIT",
+  "repository": "sindresorhus/internal-ip",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "bin",
+    "ip",
+    "ipv4",
+    "ipv6",
+    "address",
+    "internal",
+    "local",
+    "machine"
+  ],
+  "dependencies": {
+    "meow": "^3.3.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "is-ip": "^1.0.0",
+    "xo": "*"
+  }
+}

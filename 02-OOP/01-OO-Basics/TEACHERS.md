@@ -1,6 +1,6 @@
 Software are not one-file programs. They are made of different files and different objects communicating with each other.
 
-From day-one @Le Wagon, you've been manipulating classes without knowing it, `String`, `Array`, etc... They're the built-in classes. Now you'll see how to define your own classes !
+From day-one @Le Wagon, you've been manipulating classes without knowing it, `String`, `Array`, etc. They're the built-in classes. Now you'll see how to define your own classes!
 
 In a class you'll find:
 
@@ -96,7 +96,7 @@ class Car
 end
 ```
 
-What if we have 10 instance variables (`@color`, `@brand`, `@kms`, `@engine_started`, etc..)
+What if we have 10 instance variables (`@color`, `@brand`, `@kms`, `@engine_started`, etc.)
 
 ```ruby
 class Car

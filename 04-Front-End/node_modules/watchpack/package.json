@@ -1,0 +1,44 @@
+{
+  "name": "watchpack",
+  "version": "1.4.0",
+  "description": "",
+  "main": "./lib/watchpack.js",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "travis": "npm run cover -- --report lcovonly",
+    "lint": "eslint lib",
+    "precover": "npm run lint",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webpack/watchpack.git"
+  },
+  "author": "Tobias Koppers @sokra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webpack/watchpack/issues"
+  },
+  "homepage": "https://github.com/webpack/watchpack",
+  "devDependencies": {
+    "codecov.io": "^0.1.6",
+    "coveralls": "^2.11.2",
+    "eslint": "^2.9.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.1.0",
+    "rimraf": "~2.5.0",
+    "should": "^8.3.1"
+  },
+  "dependencies": {
+    "async": "^2.1.2",
+    "chokidar": "^1.7.0",
+    "graceful-fs": "^4.1.2"
+  }
+}

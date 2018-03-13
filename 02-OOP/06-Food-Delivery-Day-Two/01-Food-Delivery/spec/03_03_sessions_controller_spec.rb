@@ -1,10 +1,10 @@
-# require_relative "support/csv_helper.rb"
+# require_relative "support/csv_helper"
 
 # begin
-#   require_relative "../app/controllers/sessions_controller.rb"
-#   require_relative "../app/repositories/employee_repository.rb"
+#   require_relative "../app/controllers/sessions_controller"
+#   require_relative "../app/repositories/employee_repository"
 # rescue LoadError => e
-#   if e.message =~ /employee_repository\.rb/ || e.message =~ /sessions_controller\.rb/
+#   if e.message =~ /employee_repository/ || e.message =~ /sessions_controller/
 #     describe "SessionsController" do
 #       it "You need a `sessions_controller.rb` file for your `SessionsController`" do
 #         fail

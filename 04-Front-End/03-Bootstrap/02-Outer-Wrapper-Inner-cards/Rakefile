@@ -6,7 +6,7 @@ require 'minitest/pride'
 
 task :default do
   describe "index.html" do
-    it "should changed some HTML" do
+    it "should change some HTML" do
       (File.open("index.html","r").readlines.size == 53).must_equal false
     end
   end

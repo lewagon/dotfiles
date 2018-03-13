@@ -1,30 +1,27 @@
 ## Background & Objectives
 
-When you work on a Middleman project (or even a Rails app), **it's crucial to organize your CSS code**. Otherwise, you will loose an incredible amount of time. Here is Le Wagon's methodology:
+When you work on a Middleman project (or even a Rails app), **it's crucial to organize your SCSS code**. If you don't, you will lose an incredible amount of time. Here is Le Wagon's methodology:
 
-- Define your SCSS variables for fonts and colors in `config/_variables.scss`.
-- Use these variables to over-ride your Bootstrap theme in `config/_bootstrap_variables.scss`
+- Define your SCSS variables for fonts and colors in `config/_fonts.scss` and `config/_colors.scss`.
+- Use these variables to over-ride Bootstrap SCSS variables in `config/_bootstrap_variables.scss`
 - Code your components in `components` (as you already know).
-- For special layout's components (like `footer`, `navbar`), put them in a separated `layout` folder.
-- Finally, code small page's adjustments in the `pages` folder (with one SCSS file for each page, e.g. `_home.scss`, `_login.scss`, etc..).
+- To build layouts (like a layout for a [user's dashboard](https://lewagon.github.io/layouts-demo/grid-layout.html) `_user_dashboard.scss`), add SCSS partials in the `layouts` folder.
+- Finally, for specific design adjustments on a page, code the SCSS in the `pages` folder (with one SCSS file for each page, e.g. `_home.scss`, `_team.scss`, etc.).
 
 ## Your own Bootstrap theme
 
 Here is a roadmap of things to do:
 
-1. In **`config/_variables.css.scss`** change the color and font scheme.
-1. In **`config/_bootstrap_variables.css.scss`** use your SCSS variables to over-ride **Bootstrap SCSS variables**.
-1. Look at all [Bootstrap variables](http://getbootstrap.com/customize/#less-variables) that can be customized and add new ones to `config/_bootstrap_variables.css.scss`.
+- In `config/_fonts.scss` and `config/_colors.scss` change the color and font scheme. Be creative!
+- In `config/_bootstrap_variables.scss` use your SCSS variables to over-ride **Bootstrap SCSS variables**.
+- Look at all of the [Bootstrap variables](http://getbootstrap.com/customize/#less-variables) that can be customized and add new ones to `config/_bootstrap_variables.scss` to experiment things.
 
-## Organize your code
-
-If you haven't done it in the previous challenge, import the CSS code of your Airbnb home in your Middleman project. For each piece of code, ask yourself: where should I write it? in `config/_variables.scss`? `layout`? `pages`? `components`? Following Le Wagon's guidelines.
 
 ## Refactor your code
 
 Time to refactor your CSS code into SCSS:
 
-1. Replace hexadecimal values like `#D4312D` by SCSS variables like `$red`. Your design will be more consistent since you will use same colors everywhere.
+1. Replace hexadecimal values like `#D4312D` with SCSS variables like `$red`. Not only your design will be more consistent as you will use the same colors everywhere, but if you ever wanted to change the colour of your `$red` slightly, you would only need to change one line of code!
 1. Go through [this guide](http://sass-lang.com/guide) and read more about SCSS. Re-write your code with **nesting** and **chaining**, as below:
 
 ```scss
@@ -50,7 +47,7 @@ This SCSS code will generate the following CSS:
   background: #5E74ED;
   color: white;
 }
-.banner  h1 {
+.banner h1 {
   font-size: 50px;
 }
 .banner a {
@@ -65,15 +62,15 @@ Assuming that `$red: #D4312D;` and `$blue: #5E74ED;`.
 
 ## Commit & Deploy
 
-Once you're done, commit and publish your changes:
+Once you're done and you have a cool design, `commit` your changes:
 
 ```bash
 git add .
-git commit -m "Add CSS for colors and fonts and over-ride Bootstrap theme"
-git push
+git commit -m "Added CSS for colors and fonts to over-ride Bootstrap theme"
+git push origin master
 ```
 
-Don't forget to deploy your site:
+Don't forget to `deploy` your site:
 
 ```bash
 middleman deploy

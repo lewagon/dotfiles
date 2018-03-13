@@ -1,7 +1,7 @@
 require "group_anagrams"
 
 describe "#group_anagrams" do
-  it "should return an empty array when empty array taken" do
+  it "should return an empty array if empty array is given" do
     expect(group_anagrams([])).to eq([])
   end
 
@@ -27,6 +27,18 @@ describe "#group_anagrams" do
     expect(potatoes_group.size).to eq(1)
     expect(for_group.size).to eq(1)
     expect(four_group.size).to eq(1)
+  end
+
+  it "should not have duplicates" do
+    words = ['cars', 'for', 'POTATOES', 'racs', 'four', 'scar', 'creams', 'SCREAM']
+    groups = group_anagrams(words)
+    result = words.all? do |word|
+      counter = groups.count do |group|
+        group.include? word
+      end
+      counter < 2
+    end
+    expect(result).to eq(true)
   end
 
 end

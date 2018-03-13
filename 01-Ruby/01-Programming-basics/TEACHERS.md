@@ -4,10 +4,9 @@
 2. `touch file.rb` and run it from terminal with `ruby file.rb`
 3. Use `puts` to output results
 
-
 ## Built-in objects
 
-1. Go through common objects on IRB (String, Fixnum, Float, Array, booleans)
+1. Go through common objects on IRB (String, Integer, Float, Array, booleans)
 2. Each object has **its own set of methods**, example:
 
 ```ruby
@@ -32,10 +31,10 @@
 
 '1984'.class        #=> String
 '1984'.to_i         #=> 1984
-'1984'.to_i.class   #=> Fixnum
+'1984'.to_i.class   #=> Integer
 ```
 
-### Fixnum
+### Integer
 
 1. Show standard arithmetic with basic operations
 2. Show one or two custom methods
@@ -89,6 +88,8 @@ puts "You are now #{age}"
 Example **without** parameters
 
 ```ruby
+require 'date'
+
 def tomorrow
   tomorrow_date = Date.today + 1
   return tomorrow_date.strftime("%B %d")
@@ -124,7 +125,6 @@ puts boris_full_name
 ```
 
 ### Parameters vs. arguments
-
 
 ```ruby
 def new_population(population, births)

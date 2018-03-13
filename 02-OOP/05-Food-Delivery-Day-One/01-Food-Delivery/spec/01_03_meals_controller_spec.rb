@@ -1,10 +1,10 @@
-require_relative "support/csv_helper.rb"
+require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/controllers/meals_controller.rb"
-  require_relative "../app/repositories/meal_repository.rb"
+  require_relative "../app/controllers/meals_controller"
+  require_relative "../app/repositories/meal_repository"
 rescue LoadError => e
-  if e.message =~ /meal_repository\.rb/ || e.message =~ /meals_controller\.rb/
+  if e.message =~ /meal_repository/ || e.message =~ /meals_controller/
     describe "MealsController" do
       it "You need a `meals_controller.rb` file for your `MealsController`" do
         fail
@@ -48,14 +48,13 @@ describe "MealsController", :meal do
   describe "#add" do
     it "should ask the user for a name and price, then store the new meal" do
       controller = MealsController.new(repository)
-      module Kernel; def gets; STDIN.gets; end; end
-      allow(STDIN).to receive(:gets).and_return("Hawaii", "11")
 
+      Object.any_instance.stub(gets: '12')
       controller.add
 
       expect(repository.all.length).to eq(6)
-      expect(repository.all[5].name).to eq("Hawaii")
-      expect(repository.all[5].price).to eq(11)
+      expect(repository.all[5].name).to eq("12")
+      expect(repository.all[5].price).to eq(12)
     end
   end
 end

@@ -30,12 +30,8 @@ describe "#run_game" do
       expect(not_english[:score]).to eq 0
     end
 
-    it "should return nil translation for invalid word" do
-      expect(not_english[:translation]).to eq nil
-    end
-
-    it "should build custom messages for invalid word" do
-      expect(not_english[:message]).to eq "not an english word"
+    it "should build a custom message for an invalid word" do
+      expect(not_english[:message]).to match(/not an english word/i)
     end
   end
 
@@ -46,17 +42,17 @@ describe "#run_game" do
       expect(not_in_the_grid[:score]).to eq 0
     end
 
-    it "should build custom messages for word not in the grid" do
-      expect(not_in_the_grid[:message]).to eq "not in the grid"
+    it "should build a custom message for a word not in the grid" do
+      expect(not_in_the_grid[:message]).to match(/not in the grid/i)
     end
   end
 
-  context "the given word has all letters but not in sufficient number" do
+  context "the given word has the correct letters but not in sufficient number" do
     let(:not_enough_letters) { run_game("spell", %w(S P E L O O O O), Time.now, Time.now + 1.0) }
 
     it "should tell it's not in the grid" do
       expect(not_enough_letters[:score]).to eq 0
-      expect(not_enough_letters[:message]).to eq "not in the grid"
+      expect(not_enough_letters[:message]).to match(/not in the grid/i)
     end
   end
 
@@ -68,11 +64,7 @@ describe "#run_game" do
     expect(quick[:score] > slow[:score]).to eq true
   end
 
-  it "should consider the first translation returned by the API" do
-    expect(perfect[:translation]).to eq "chariot"
-  end
-
-  it "should build custom messages for good catch" do
-    expect(perfect[:message]).to eq "well done"
+  it "should build a custom messages for a correct word" do
+    expect(perfect[:message]).to match(/well done/i)
   end
 end

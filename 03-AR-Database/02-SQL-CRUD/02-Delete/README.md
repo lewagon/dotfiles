@@ -11,7 +11,7 @@ You can still use the `test.rb` file to test your methods.
 
 ## Specs
 
-In this second exercise, we focus on **D**elete (the `D` in `CRUD`).
+In this exercise, we'll focus on **D**elete (the `D` in `CRUD`).
 
 ### `destroy`
 
@@ -28,4 +28,4 @@ Post.find(42)
 # => nil
 ```
 
-This exercise should be done quicker than the previous one :)
+This exercise should take less time than the previous one 😊

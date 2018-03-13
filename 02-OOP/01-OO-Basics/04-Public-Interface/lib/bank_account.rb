@@ -37,7 +37,7 @@ class BankAccount
 
   def transactions_history(args = {})
     # TODO: Check if there is a password and if so if it is correct
-    # TODO: return a string displaying the transactions, BUT NOT return the transaction array !
+    # TODO: return a string displaying the transactions, BUT NOT return the transaction array!
   end
 
   def iban
@@ -46,7 +46,7 @@ class BankAccount
 
   def to_s
     # Method used when printing account object as string (also used for string interpolation)
-    # TODO: Displays the account owner, the hidden iban and the balance of the account
+    # TODO: return a string with the account owner, the hidden iban and the balance of the account
   end
 
   private

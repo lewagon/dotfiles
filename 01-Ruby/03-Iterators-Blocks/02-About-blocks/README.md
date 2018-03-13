@@ -1,13 +1,37 @@
 ## Background & Objectives
 
-Blocks are chunks of code enclosed between `{}` (for 1-line blocks) or between `do..end` (for muli-line blocks).
-Although we can store them in `Proc` objects and pass them to a method as standard arguments, **many methods can just be called with an implicit block given after the list of arguments**. In fact, that's exactly what you did with all these iterators ! This implicit block is executed any time the keyword `yield` appears in the method definition. Use the resources to learn more on blocks. The objectives are :
+Blocks are chunks of code enclosed between `{}` (for single-line blocks) or between `do..end` (for multi-line blocks).
 
-- Know the syntax to call a method with an implicit block (either 1-line or multiline).
-- Understand what happens when passing a parameter to the block.
-- Implement some basic methods which are using `yield`, to understand the inner mechanics.
+Many methods can just be called **with a block** given after the list of arguments. In fact, that's exactly what you did with all these iterators! This block is executed any time the keyword `yield` appears in the method definition. Use the resources to learn more about blocks. The objectives here are:
+
+- Learn the syntax for calling a method with an implicit block (either single-line or multi-line).
+- Understand what happens when you pass a parameter to the block.
+- Implement some basic methods using `yield`, to understand the inner mechanics.
 
 ## Specs
+
+### Timer method
+
+Implement a block-timer in `#timer_for` that allows you to track the duration (in seconds) of the execution of any given block. It should work this way:
+
+```ruby
+timer_for do
+  (1..10000000).to_a.shuffle.sort
+end
+#=> 3.313461
+```
+
+### A custom map
+
+To better understand `yield`, let's try to reimplement the [`Enumerable#map`](https://ruby-doc.org/core-2.4.0/Enumerable.html#method-i-map) method without actually using it. In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method. You can use `Enumerable#each` in your code to iterate through elements.
+
+```ruby
+beatles = ["john", "paul", "george", "ringo"]
+my_map(beatles) do |name|
+  name.upcase
+end
+#=> ["JOHN", "PAUL", "GEORGE", RINGO"]
+```
 
 ### HTML generator method
 
@@ -17,22 +41,22 @@ Implement the `#tag` method that builds the HTML tags around the content we give
 tag("h1") do
   "Some Title"
 end
-# => "<h1>Some Title</h1>"
+#=> "<h1>Some Title</h1>"
 ```
 
-This method accepts a second optional parameter, enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`.
+This method accepts a second optional parameter (see section below on arguments with default value), enabling to pass an array with one HTML attribute name and its value, like `["href", "www.google.com"]`.
 
 ```ruby
 tag("a", ["href", "www.google.com"]) do
   "Google it"
 end
-# => '<a href="www.google.com">Google it</a>'
+#=> '<a href="www.google.com">Google it</a>'
 ```
 
 You may need to know that to include a `"` symbol inside a string delimited by double quotes,
 you need to **escape** this character with an antislash: `\"`.
 
-The cool thing with this method is that you can nest method calls
+The cool thing about this method is that you can nest method calls:
 
 ```ruby
 tag("a", ["href", "www.google.com"]) do
@@ -43,47 +67,22 @@ end
 # => '<a href="www.google.com"><h1>Google it</h1></a>'
 ```
 
-How cool?
+Cool right?
 
-### Arguments with default value
+#### Arguments with default value
 
 In ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
 
 ```ruby
-def sum(a, b = 0)
-  a + b
+def sum(a, b, c = 0)
+  return a + b + c
 end
 
-sum(3, 6) # => 9
-sum(4)    # => 4
+sum(3, 6, 1) # => 10
+sum(4, 2)    # => 6
 ```
 
-Here, the second argument is worth `0` if we call `sum` with only one argument.
-
-### Link with Rails
-
-When you will discover Rails helper methods, you will see that they do exatly the same as your home-made `#tag` method. They write HTML for you :)
-
-### Timer method
-
-Implement a block-timer in `#timer_for` than enables to track the duration (in seconds) of execution of any given block. It should work this way.
-
-```ruby
-timer_for do
-  (1..100).each { |i| (1..100000).to_a.shuffle.sort }
-end
-# => 3.39051
-```
-
-### A custom map
-
-To better understand `yield`, let's try to reimplement the `Enumerable#map` method without actually using it (you can use `Enumerable.each` though!). In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method.
-
-```ruby
-my_map(["john", "ringo", "paul"]) {|name| name.upcase }
-# => ["JOHN", "RINGO", "PAUL"]
-```
-
+Here, the thrid argument is worth `0` if we call `sum` with only two arguments.
 
 ## Key learning points
 

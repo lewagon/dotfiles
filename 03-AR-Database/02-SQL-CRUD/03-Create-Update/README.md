@@ -11,10 +11,8 @@ You can still use the `test.rb` file to test your methods.
 
 ## Specs
 
-In this third exercise, we focus on **C**reate and the **U**pdate of `CRUD`).
-Why do we have to tackle both at once? Well, when manipulating object instance
-in memory, we don't want to think about this difference. We just want to
-call `save` on the object and know the database will handle the persistence for us.
+In this third exercise, we'll focus on the **C**reate and the **U**pdate of `CRUD`.
+Why are we doing the `C` and the `U` together? It's because the process is very similar. When manipulating object instances, if we call `save` on something and it doesn't exist in our DB yet, it will get **C**reated. If it already exists, it will just get **U**pdated.
 
 ### `save`
 
@@ -29,7 +27,6 @@ post.id
 post.save  # TODO: persist the record!
 post.id
 # => 1 (expected result, the database has inserted a row, store the id in memory)
-
 
 post.title = "Awesome article, updated"
 post.save   # TODO: should update the record in the database

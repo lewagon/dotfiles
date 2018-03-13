@@ -1,8 +1,8 @@
 begin
-  require_relative "../app/models/order.rb"
-  require_relative "../app/models/meal.rb"
-  require_relative "../app/models/employee.rb"
-  require_relative "../app/models/customer.rb"
+  require_relative "../app/models/order"
+  require_relative "../app/models/meal"
+  require_relative "../app/models/employee"
+  require_relative "../app/models/customer"
 rescue LoadError => e
   describe "Order" do
     it "You need a `order.rb` file for your `Order` model" do
@@ -20,14 +20,14 @@ describe "Order", :_order do
 
   describe "#id" do
     it "should return the order id" do
-      order = Order.new({ id: 42 })
+      order = Order.new(id: 42)
       expect(order.id).to eq(42)
     end
   end
 
   describe "#id=" do
     it "should set the order id" do
-      order = Order.new({ id: 42 })
+      order = Order.new(id: 42)
       order.id = 43
       expect(order.id).to eq(43)
     end
@@ -46,21 +46,21 @@ describe "Order", :_order do
   end
 
   describe "#meal" do
-    it "should return the meal associated to this order" do
+    it "should return the meal associated with the order" do
       order = Order.new(meal: Meal.new({}))
       expect(order.meal).to be_a(Meal)
     end
   end
 
   describe "#employee" do
-    it "should return the employee associated to this order" do
+    it "should return the employee associated with the order" do
       order = Order.new(employee: Employee.new({}))
       expect(order.employee).to be_a(Employee)
     end
   end
 
   describe "#customer" do
-    it "should return the customer associated to this order" do
+    it "should return the customer associated with the order" do
       order = Order.new(customer: Customer.new({}))
       expect(order.customer).to be_a(Customer)
     end
@@ -68,7 +68,7 @@ describe "Order", :_order do
 
   describe "#deliver!" do
     it "should mark an order as delivered" do
-      order = Order.new
+      order = Order.new(id: 12)
       expect(order.delivered?).to be false
       order.deliver!
       expect(order.delivered?).to be true

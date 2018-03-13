@@ -18,13 +18,13 @@ You'll use these heavily in your application.
 * Average number of sentences per paragraph
 
 Implement a method `analyze` which takes a text (`String`) as an argument (text you can load from a file)
-and return a result `Hash` with the following keys:
+and returns a result `Hash` with the following keys:
 
 ```ruby
 {
   character_count: 523,
   character_count_excluding_spaces: 463,
-  line_count: 42
+  line_count: 42,
   word_count: 145,
   sentence_count: 32,
   paragraph_count: 4,
@@ -35,9 +35,9 @@ and return a result `Hash` with the following keys:
 
 ## Application Flow
 
-1. Create a `program.rb` that loads the file containing the text document to analyze and calls the `analyze` method
+1. Create a `program.rb` that loads the file containing the text document and calls the `analyze` method
 1. In `analyze`, `text` is a string, you can thus measure its length easily
-1. Temporarily remove white spaces and count characters excluding spaces
+1. Temporarily remove whitespaces and count characters excluding spaces
 1. Split out all the whitespaces to find out how many words there are
 1. Split out full stops to find out the number of sentences
 1. Split out double linebreaks to calculate the number of paragraph
@@ -45,12 +45,11 @@ and return a result `Hash` with the following keys:
 
 ### Testing data
 
-You can get some testing txt data on http://www.rubyinside.com/book/oliver.txt
+You can get some testing txt data [here](http://www.rubyinside.com/book/oliver.txt)
 
-### Adding Extra-features
+### Adding extra features
 
-Your analyzer in not particularly interesting at the moment :( Let's add it some cool features. Line, paragraph and word count are useful statistics, but with the power of ruby you can perform much cooler analysis. The ony limit is your imagination !
+Your analyzer is not particularly interesting at the moment :( Let's add a few cool features to it. Line, paragraph and word count are useful statistics, but with the power of ruby you can perform even better analysis. The ony limit is your imagination!
 
-* **Percentage of "useful" words** : most written material contains insipid words as "the", "are",.. These are called stop-words and are often ignored by computer systems whose job is to analyze and search through text, because they aren't words most people are likely to be searching for (Google beign a perfect example of that). It can be argued that texts with a high ratio of "useful" words (as opposed with stop-words) are likely to be more interesting, this is a true debate :) Add a statistics in your analyzer to compute the percentage of "useful" words in the inputed text file.
-
-* **Interesting summary** : Word processors as Microsoft Word generally have summarization feature that can pick out the most meaningfull extract in a given page and produce an "at-glance" summary. One of the techniques to find the good extract is to pick up sentences that are of about average length and contains **nouns**. Tiny sentences are likely not to be very useful, and long sentences may be too long for a summary. To see if the sentences includes nouns you can look for words like "is" or "are" which are a good indicators ("There are x nouns", "Noun is", "Nouns are",...). **Hint:** you should decide first which proportion of the original text you keep for your summary (for instance computed an the number of sentences).
+* **Percentage of "useful" words**: most written material contains words like "the", "are",.. These are called stop-words and are often ignored by computer systems whose job is to analyze and search through text, because they aren't words most people are likely to be searching for (Google is a perfect example of that).
+* **Interesting summary**: Word processors like Microsoft Word generally have summarization feature that can pick out the most meaningfull extract in a given page and produce an "at-a-glance" summary. One of the techniques to find the good extract is to pick up sentences that are of about average length and contain **nouns**. Tiny sentences are likely not to be very useful, and long sentences may be too long for a summary. To see if the sentences includes nouns you can look for words like "is" or "are" which are a good indicators ("There are x nouns", "Noun is", "Nouns are",...). **Hint:** you should decide first which proportion of the original text you keep for your summary (for instance computed an the number of sentences).

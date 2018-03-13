@@ -9,7 +9,7 @@ describe "#size_splitter(array, size)" do
     expect(result).to be_a Array
   end
 
-  it "should return an array containg two arrays" do
+  it "should return an array containing two arrays" do
     expect(result.size).to eq(2)
     expect(result.first).to be_a Array
     expect(result.last).to be_a Array
@@ -23,11 +23,11 @@ describe "#size_splitter(array, size)" do
       size_splitter(FIRST_SAMPLE, 3)
     end
 
-    it "should find 7 3-letter words" do
+    it "should find 7 words that have 3 letters" do
       expect(result.first.size).to eq(7)
     end
 
-    it "should find 3 3-leter words" do
+    it "should find 3 words that do not have 3 letters" do
       expect(result.last.size).to eq(3)
     end
 
@@ -75,16 +75,16 @@ describe "#block_splitter" do
 
   context "when the given block tests if a word starts with an a" do
     let(:result) do
-      block_splitter(%w(apple ananas banana pear)) do |element|
+      block_splitter(%w(apple apricot banana pear)) do |element|
         element.start_with? "a"
       end
     end
 
     it "should return an array where the first array only has a-words" do
-      expect(result.first).to eq(%w(apple ananas))
+      expect(result.first).to eq(%w(apple apricot))
     end
 
-    it "should return other words in the second array" do
+    it "should return the other words in the second array" do
       expect(result.last).to eq(%w(banana pear))
     end
   end

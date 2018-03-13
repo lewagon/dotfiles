@@ -1,27 +1,27 @@
 ## Background & Objectives
 
-Now that you are Bootstrap-grid experts, learn two advanced techniques very useful.
+Now that you are Bootstrap-grid experts, it's time to learn two very useful advanced techniques.
 
 ## Specs
 
 99% of the time you face two issues using the grid:
 
-- You need a **full-screen** wrapper around your grid.
-- You need **inner cards** inside your grid to play with their border, margin, padding, etc.
+- You need a **wrapper** around the grid to put a full-width background color for instance.
+- You need to space **internal cards** and play with their `border`, `margin`, `padding`, etc.
 
-Bootstrap beginners often write CSS directly on grid components (`.container`, `.row` or `.col`) to change their border, width, margin, padding, etc... By doing so **they break the grid**. In fact, grid dimensions are computed automatically by Bootstrap, so playing with grid elements is the best way to break the grid..
+Bootstrap beginners often write their CSS directly on grid components (`.container`, `.row` or `.col`) to change their `border`, `width`, `margin`, `padding`, etc... **⚠️ Never do that because it breaks the grid ⚠️**️. In fact, grid dimensions are computed automatically by Bootstrap, so changing the CSS of grid components is the easiest way to break it..
 
-Instead, **you must use the following techniques.**
+Instead, **you must use the following techniques**:
 
 ## Outside Wrapper
 
- If you need a special background, just put a wrapper around the container:
+ If you need a special full-screen background, just put a wrapper around your container:
 
 ```html
 <div class="wrapper-blue">
   <div class="container">
     <div class="row">
-      <!-- all you cols -->
+      <!-- all your cols -->
     </div>
   </div>
 </div>
@@ -29,18 +29,18 @@ Instead, **you must use the following techniques.**
 
 ### Inside cards
 
-If you want to change border/padding/margin/etc of grid inner elements, just inject cards **inside each col**:
+If you want to space inner cards or change their `border`, `padding`, `margin`, etc... play with the CSS of inner cards, **not of the `.col`**:
 
 ```html
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      <div class="card-white">
+      <div class="card">
         <!-- card content -->
       </div>
     </div>
     <div class="col-xs-12 col-md-6">
-      <div class="card-white">
+      <div class="card">
         <!-- card content -->
       </div>
     </div>
@@ -51,9 +51,8 @@ If you want to change border/padding/margin/etc of grid inner elements, just inj
 Then you can write:
 
 ```css
-/* You will not break the grid */
-/* Cards are not grid element (container/row/col) */
-.card-white {
+/* Now the grid won't break because you are manipulating the inner cards*/
+.card {
   background: white;
   padding: 30px;
   box-shadow: 1px 1px 2px #e7e7e7;
@@ -62,8 +61,10 @@ Then you can write:
 }
 ```
 
-With these techniques, you can play on border, padding, margin without breaking the grid. Indeed, **you don't touch directly at grid components** (`container/row/col`). You can feel safe!
+With these techniques, you can play with border/padding/margin without breaking the grid. You're safe now!
 
 ### Your turn
 
-Apply these two techniques to reproduce [this page](http://lewagon.github.io/bootstrap-challenges/02-Advanced-Bootstrap-grid/), starting with the HTML skeleton we give you. You will have to code a bit of CSS for backgrounds, padding and margin. Of course you can combine the two techniques and add **both** a wrapper around your `.container` and cards inside your `.cols`.
+Apply these techniques to reproduce [this page](http://lewagon.github.io/bootstrap-challenges/02-Advanced-Bootstrap-grid/), starting with the HTML skeleton we give you. You will have to code a bit of CSS for backgrounds, padding and margin. Of course you can combine the two techniques and add **both** a wrapper around your `.container` and cards inside your `.cols`.
+
+You might need to `cmd + shift + R` to hard reload the page so that the browser doesn't take a cached version of the css file when editing the css.

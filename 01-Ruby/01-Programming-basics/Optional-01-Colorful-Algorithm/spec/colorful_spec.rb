@@ -1,7 +1,7 @@
 require "colorful"
 
 describe "colorful?" do
-  it "returns false if provided with something else than a number" do
+  it "returns false if provided with something other than a number" do
     expect(colorful?("not_a_number_but_a_string")).to eq false
   end
 

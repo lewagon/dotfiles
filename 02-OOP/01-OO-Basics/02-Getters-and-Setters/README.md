@@ -1,8 +1,9 @@
 ## Background & Objectives
 
-Getters and setters are elementary methods to read or write the values of instance variables. At any given time of the program execution, an object's instance variables represent the current state (data) of the object.
+A **getter** is a method that **requests** information from our instance variable.
+A **setter** is a method that **changes** information in our instance variable.
 
-In this exercise, we are going to implement a simple vending machine (`VendingMachine` ruby class) where a user can buy snacks for a given price. The user can walk to the machine, insert some coins and then press a "Buy" button.
+In this exercise, we are going to implement a simple vending machine (`VendingMachine` ruby class) where a user can buy snacks for a given price. The user can go to the machine, insert some coins and then press a "Buy" button.
 
 ## Specs
 
@@ -20,13 +21,13 @@ The code will **fail** with an error message. That's the beginning of the exerci
 
 ### Refilling scenario
 
-This scenario is simpler. We start with an empty vending machine, so a technician needs to come and refill it with some snacks!
+This scenario is simpler. Now we start with an empty vending machine, so a technician needs to come and refill it with some snacks!
 
 ```bash
 ruby lib/refilling_scenario.rb
 ```
 
-Same idea here, the code will fail. It's your job to figure out what to add in the `lib/vending_machine.rb` file!
+Same idea here, the code will fail. It's your job to figure out what to add into the `lib/vending_machine.rb` file!
 
 ### Finally, we can `rake`
 
@@ -41,5 +42,5 @@ There might be a little more work to do in your `VendingMachine` class 😉
 ## (Advanced) Some open questions 🤔
 
 1. You may have noticed that in both scenario files, there is a `display` method. How could we refactor this code so that it may be more "object-oriented"? Doing so, how can we change our readers to expose **less** information to the external world? The concept you need to remember here is [**Encapsulation**](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
-1. You used a writer to update the amount of snacks when refilling. How could we change this code to use an instance method instead of this writer?
+2. You used a writer to update the amount of snacks when refilling. How could we change this code to use an instance method instead of this writer? Why is it better?
 

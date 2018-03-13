@@ -2,39 +2,37 @@
 
 ### Discuss with classmates
 
-- What are the differences between Strings and Symbols?
-- When is it more relevant to use one or the other type?
-- Memory-wize, what's the behavior of each type?
+- What is the differences between a String and a Symbol?
+- When should you use one vs the other?
+- Memory-wise, what's the behavior of each one?
 
 ### Technical overview
 
-For ruby beginners, understanding symbols can be quite harsh.
-A rule of thumb, symbols are "like" strings, but:
+For ruby beginners, understanding symbols can be quite tricky.
+As a rule of thumb, symbols are pretty similar to strings, but:
 
-When you use a string not really for its textual content, but as a kind of tag/unique identifier in your program, you should consider using a Symbol.
+When you use a string less for its textual content, and more as a kind of unique identifier in your program, you should consider using a Symbol.
 
-Hence, many Hash keys are symbols, as they are more here to identify things than for their "text value". Consider for instance this Hash:
+Because of this, many Hash keys are symbols, given their job is more to identify things than to simply be plain text. Here's an example:
 
 ```ruby
 fox = { color: "red", species: "mammal" }
 ```
 
-The `:color` and `:species` keys are used as identifiers, their actual text value is chosen so that a human can quickly understand what these hash keys are about. Hence we used Symbols instead of Strings.
+`:color` and `:species` are used as identifiers here, so we use symbols. Their actual text value has been chosen so that a human can quickly understand what the keys represent.
 
-You may find this other syntax:
+Note: you may occasionally see this other (old) syntax too:
 
 ```ruby
 fox = { :color => "red", :species => "mammal" }
 ```
 
-Read [this StackOverflow answer](http://stackoverflow.com/a/8189435/197944/) to understand more in-depth the subtle difference  between Strings and Symbols. The concept of **mutability** is important here.
+Read [this StackOverflow answer](http://stackoverflow.com/a/8189435/197944/) if you really want to get into the subtle differences between Strings and Symbols. The concept of **mutability** is important here.
 
 ## Specs
 
-Look at the `lib/symbols.rb`, you will find a true/false quizz
-and some methods to exercise your ability to pick symbols over strings.
-
-Instructions are inlined in the file.
+Look at the `lib/symbols.rb`. You will find a true/false quiz
+and a few methods to test your ability to pick symbols over strings.
 
 ## Key learning points
 
@@ -55,10 +53,3 @@ user_name = "bob"
 # or
 :user_name = :bob
 ```
-
-```ruby
-{ "action" => "show", controller => "users" }
-# or something else? (you will see that in Rails)
-```
-
-*TL;DR: Use symbols every time you need internal identifiers that aren't generated dynamically*

@@ -1,0 +1,44 @@
+{
+  "name": "bytes",
+  "description": "Utility to parse a string bytes to bytes and vice-versa",
+  "version": "2.5.0",
+  "author": "TJ Holowaychuk <tj@vision-media.ca> (http://tjholowaychuk.com)",
+  "contributors": [
+    "Jed Watson <jed.watson@me.com>",
+    "Théo FIDRY <theo.fidry@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "byte",
+    "bytes",
+    "utility",
+    "parse",
+    "parser",
+    "convert",
+    "converter"
+  ],
+  "repository": "visionmedia/bytes.js",
+  "component": {
+    "scripts": {
+      "bytes/index.js": "index.js"
+    }
+  },
+  "devDependencies": {
+    "mocha": "1.21.5",
+    "nyc": "10.1.2"
+  },
+  "files": [
+    "History.md",
+    "LICENSE",
+    "Readme.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.6"
+  },
+  "scripts": {
+    "test": "mocha --check-leaks --reporter spec",
+    "test-ci": "nyc --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
+  }
+}

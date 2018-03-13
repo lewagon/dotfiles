@@ -1,47 +1,32 @@
 ## Guidelines
 
-- You should kickstart this challenge before lunch altogether with the teacher.
-- Then it will take your all the afternoon to finish it.
+- If you have time before lunch, start thinking about the pseudo-code for this challenge with the teacher.
+- It should take you all the afternoon to finish it.
 - Validate each step of the challenge with the teacher with an intermediate live-code 💻 to correct each step.
-
-## Setup
-
-Let's create a folder for this new challenge:
-
-```shell
-cd ~/code/<user.github_nickname>/reboot
-mkdir instacart
-cd instacart
-touch interface.rb
-```
-
-Again let's start with the interface. It's more intuitive.
 
 ## Pseudo-code
 
 How should your program work when your launch it? **Let's write the pseudo code**
-
 
 ```ruby
 # interface.rb
 
 # Pseudo-code
 # 1. Print Welcome
-# 2. Define your store (with a bunch of food items)
-# 2. Get items from the user (shopping step)
-# 3. Print the bill (cashier step)
+# 2. Define your store (what items are for sale?)
+# 3. Get items from the user (shopping)
+# 4. Print the bill (checkout)
 ```
 
-**Can you to detail a bit more the pseudo-code above?**
+**Can you make the pseudo-code above a bit more detailed?**
 
-
-## Step 1 - dumb shopping 🛍
+## Step 1 - Dumb shopping 🛍
 
 Here is the first version of our program:
 
-
-```shell
+```
 ruby interface.rb
+
 > --------------------
 > Welcome to Instacart
 > --------------------
@@ -51,14 +36,14 @@ ruby interface.rb
 > mango: 4€
 > asparagus: 9€
 > --------------------
-> Which article? ('quit' to checkout)
+> Which item? (or 'quit' to checkout)
 > kiwi
-> Which article? ('quit' to checkout)
+> Which item? (or 'quit' to checkout)
 > pineapple
-> Sorry, no pineapple..
-> Which article? ('quit' to checkout)
+> Sorry, we don't have pineapple today..
+> Which item? (or 'quit' to checkout)
 > mango
-> Which article? ('quit' to checkout)
+> Which item? (or 'quit' to checkout)
 > quit
 > -------BILL---------
 > TOTAL: 5.25€
@@ -68,15 +53,16 @@ ruby interface.rb
 ### Modeling the store and the cart
 
 - How do we model the `store` and the `cart`?
-- What's the **most adapted stucture for each one**?
+- What's the **most suited structure for each one**?
 - Should we use an array? Should we use a hash (which keys and which values)?
 
-**Brainstorm about it with your teacher before starting!**
+**Brainstorm with your teacher before starting!**
 
 ## Step 2 - Adding quantity 🛍🛍
 
-```shell
+```
 ruby interface.rb
+
 > --------------------
 > Welcome to Instacart
 > --------------------
@@ -86,15 +72,15 @@ ruby interface.rb
 > mango: 4€
 > asparagus: 9€
 > --------------------
-> Which article? ('quit' to checkout)
+> Which item? (or 'quit' to checkout)
 > kiwi
-> Which quantity?
+> How many?
 > 2
-> Which article? ('quit' to checkout)
+> Which item? (or 'quit' to checkout)
 > mango
-> Which quantity?
+> How many?
 > 3
-> Which article? ('quit' to checkout)
+> Which item? (or 'quit' to checkout)
 > quit
 > -------BILL---------
 > kiwi: 2 X 1.25€ = 2.5€
@@ -106,36 +92,37 @@ ruby interface.rb
 ### Modeling the store and the cart
 
 - How do we modify the `store` and the `cart` to take the quantity into consideration?
-- What do we need to change in our code with this new modeling?
+- What do we need to change in our code with this new modelling?
 
 ## Step 3 - Adding availability 🛍🛍🛍
 
 Now let's push the program further and handle our stock (with availability):
 
-```shell
+```
 ruby interface.rb
+
 > --------------------
 > Welcome to Instacart
 > --------------------
 > In our store today:
-> kiwi: 1.25€ (5 items)
-> banana: 0.5€ (4 items)
-> mango: 4€ (1 items)
-> asparagus: 9€ (5 items)
+> kiwi: 1.25€ (5 available)
+> banana: 0.5€ (4 available)
+> mango: 4€ (1 available)
+> asparagus: 9€ (5 available)
 > --------------------
-> Which article? ('quit' to checkout)
+> Which item? ('quit' to checkout)
 > kiwi
-> Which quantity?
+> How many?
 > 2
-> Which article? ('quit' to checkout)
+> Which item? ('quit' to checkout)
 > kiwi
-> Which quantity?
+> How many?
 > 4
-> Sorry, only 3 kiwis left..
+> Sorry, there are only 3 kiwis left..
 > [...]
 ```
 
-### Modeling the store and the cart
+### Modelling the store and the cart
 
 - How do we modify the `store` and the `cart` to take the quantity into consideration?
-- What do we need to change in our code with this new modeling?
+- What do we need to change in our code with this new modelling?

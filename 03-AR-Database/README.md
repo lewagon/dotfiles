@@ -1,25 +1,23 @@
 The DB & ActiveRecord module has 4 days.
 
-## `01-DB-Design-and-SQL` (Thursday)
+## `01 Schema Design & SQL`
 
-Let's learn about relational database, discover the different relationships between tables (`1:n`, `n:n`) and how to **draw** a database scheme. Then, we'll speak of SQL, this language to make queries to our database structured with keywords (`SELECT`, `FROM`, `WHERE`, `JOIN` etc..). We will start with simple "read queries" (`SELECT`) during this first day.
+Time to learn about relational databases, discover the different relationships between tables (`1:n`, `n:n`) and how to **draw** a database scheme. Then, we'll get started on SQL - the language used to make queries to our database structured with keywords (`SELECT`, `FROM`, `WHERE`, `JOIN` etc.). We will start with simple "read queries" (`SELECT`) on day one.
 
-## `02-SQL-CRUD` (Friday)
+## `02 CRUD with SQL`
 
-Second day of SQL. You'll discover the concept of CRUD, and you will learn to write in the DB using new SQL keywords (`INSERT`, `UPDATE`, `DELETE`).
+Second day of SQL. First, we get to grips with CRUD. After that, you'll learn to write in the DB using a few new SQL keywords (`INSERT`, `UPDATE`, `DELETE`).
 
-## `03-Active-Record-Basics` (Monday)
+## `03 Active Record Basics`
 
-First course on Active Record, this powerful ruby library to connect your object to the database. Active Record is one of the core modules in Rails. Discover how an ActiveRecord model is magically linked to a table thanks to a simple **naming convention**. That's Active Record magic!
+This is the first part of Active Record - a powerful ruby library to connect your object to a database. Active Record is one of the core modules in Rails. Discover how an ActiveRecord model is magically linked to a table thanks to a simple **naming convention**. That's Active Record magic!
 
-## `04-Active-Record-Advanced` (Tuesday)
+## `04 Associations & Validations`
 
-Let's go deeper into Active Record and speak of validations and associations.
+Time to go deeper into Active Record and learn about validations and associations.
 
-### Quizz
+## Quiz
 
-At 2pm, third paper quizz of the program:
+At 2pm, it's your third paper quiz of the program!
 
-👉 [Quizz #3](https://github.com/lewagon/quizzes/raw/master/pdf/quizz-3.en.pdf)
-
-This one will take you up to 45 minutes and will be corrected publicly by the lead-teacher (for all the class at the same time and not in one-to-one reviews).
+This one will take you up to 45 minutes, and the answers will be reviewed by the lead-teacher in live-code (for all the class at the same time and not in one-to-one reviews). Only one more quiz after this!

@@ -9,9 +9,8 @@
 
 1. There are 3 common data formats: CSV, XML & JSON
 1. Describe each format using the slides + showing the files in the boilerplate.
-1. Explain well, but **don't spend too much time on that**. Lots of live-code coming :)
+1. Explain well, but **don't spend too much time on that**. Lots of live-code coming 😊
 1. Explain that all format are heavily used in web services
-
 
 ## Parsing & Storing
 
@@ -19,7 +18,6 @@
 1. **Live-code** parsing & storing on `data/beers.csv`
 1. **Live-code** parsing & storing on `data/beers.json`
 1. Skip the XML live-code (just show the code in the slides to the students)
-
 
 ## Data from the Web
 

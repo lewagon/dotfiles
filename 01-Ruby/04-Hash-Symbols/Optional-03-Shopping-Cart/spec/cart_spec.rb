@@ -21,14 +21,14 @@ describe 'cart methods' do
   end
 
   describe 'cart_to_s' do
-    it 'returns a string containing all products separated by a coma' do
+    it 'returns a string containing all products separated by a comma' do
       add_to_cart(cart, PRODUCTS[0])
       add_to_cart(cart, PRODUCTS[2])
       add_to_cart(cart, PRODUCTS[4])
 
       str = cart_to_s(cart)
       str.split(',').each_with_index do |p, idx|
-        expect(p.strip).to eq(PRODUCTS[idx * 2])
+        expect(p.strip).to include(PRODUCTS[idx * 2])
       end
     end
   end

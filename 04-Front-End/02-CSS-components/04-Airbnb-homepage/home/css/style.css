@@ -1,0 +1,17 @@
+@import url("components/button.css");
+@import url("components/banner.css");
+@import url("components/avatar.css");
+@import url("components/card.css");
+
+body {
+  margin: 0;
+  margin-bottom: 100px;
+  font-family: 'Varela Round', sans-serif;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+}

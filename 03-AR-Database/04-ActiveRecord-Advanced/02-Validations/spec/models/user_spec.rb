@@ -27,7 +27,7 @@ describe "User" do
     expect(user.errors.messages[:email]).to include "is invalid"
   end
 
-  it "should be invalid if another user already took this username" do
+  it "should be invalid if username is already in use" do
     user_one = User.new(username: "bob", email: "bob@leponge.com")
     user_one.save!
 
@@ -36,7 +36,7 @@ describe "User" do
     expect(user_two.errors.messages[:username]).to include "has already been taken"
   end
 
-  it "should strip leading and trailing spaces from email before saving to DB" do
+  it "should strip leading and trailing spaces from email before validating the data and saving to DB" do
     if User.new(username: "bob", email: "NOT_A_VALID_EMAIL").valid?
       fail NotImplementedError, "Please implement a format validation on email column"
     end

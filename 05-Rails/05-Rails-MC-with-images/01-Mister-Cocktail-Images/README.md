@@ -1,6 +1,12 @@
 ## Background & Objectives
 
-Today, we'll take the Mister Cocktail app from yesterday and enhance it with some images.
+Today, we have **three goals**:
+
+1. Deploy Mister Cocktail on Heroku
+2. Add the Image Upload features
+3. There's a Rails Quizz at 2pm!
+
+### Setup
 
 We'll continue working on yesterday's code, so go back to your folder:
 
@@ -8,28 +14,55 @@ We'll continue working on yesterday's code, so go back to your folder:
 cd ~/code/<user.github_nickname>/rails-mister-cocktail
 ```
 
-### Specs
+If you generated the rails app **without** the `--database` flag, we need to manually migrate this Rails app to Postgresql for heroku. You can check if the app is configured with postgresql if you have the `pg` gem in the gemfile.
 
-The goal is to add a picture to the `Cocktail` model. The user should be able to
-upload an image. The image would then be displayed on the `index` view
-of `Cocktail`, as thumbnails. On the `show` view of `Cocktail`, the same
-image should be displayed, but bigger!
+If you need to change the app to postgres, open your Gemfile, find the `sqlite` line. **Replace** it with:
 
-Even with such a simple app, try to make something beatiful using Bootstrap,
-the right fonts and an ounce of creativity :) You should build something beautiful!
-
-**Hint**: Use [lewagon/ui-components](http://lewagon.github.io/ui-components/)
-
-### Deployment
-
-Make sure uploading works both in the `development` environment (on your laptop)
-and on the `production` environment (Heroku). To deploy your work, you need
-to commit and then run:
-
-```bash
-git push heroku master
+```ruby
+# Gemfile
+gem "pg"
 ```
 
-### (Optional) Cocktail Reviews
+Open the `config/database.yml` file, **delete** everything in it and replace it with:
 
-If you're done with the image, try to add an anonymous review system to the cocktails.
+```yaml
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: rails-mister-cocktail_development
+
+test:
+  <<: *default
+  database: rails-mister-cocktail_test
+```
+
+Open your terminal and run:
+
+```bash
+rails db:create
+rails db:migrate
+rails db:seed
+```
+
+### First Deployment
+
+Go back to the lecture and follow the step to deploy your app in production on Heroku. You will need to sign up to the service.
+
+### Image Upload
+
+The goal is to **add a picture** to the `Cocktail` model. The user should be able to
+upload an image that will then be displayed on the `index` view
+of `Cocktail` as a thumbnail. On the `show` view of `Cocktail`, the same
+image should be displayed, but bigger!
+
+Even though it's a simple app, try your best to make something beautiful using Bootstrap, a few nice font, and all your creativity 🎨😊🎨
+
+**Hint**: You can always build on top of [lewagon/ui-components](http://lewagon.github.io/ui-components/)
+
+### Cocktail Reviews (Optional)
+
+If you're done with the images, try to add an anonymous review system to the cocktails.
