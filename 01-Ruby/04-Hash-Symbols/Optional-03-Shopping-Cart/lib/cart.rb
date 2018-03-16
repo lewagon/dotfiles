@@ -11,5 +11,6 @@ end
 
 def cart_total_price(cart, store_items)
   # TODO: you get a cart and the store items with their prices. Return the total
-  # price of the shopping cart
+  # price of the shopping cart.
+  # /!\ Make sure it does not crash with carts having items not in store!
 end
