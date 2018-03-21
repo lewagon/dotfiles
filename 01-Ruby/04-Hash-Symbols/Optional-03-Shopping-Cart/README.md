@@ -21,7 +21,7 @@ As an extra:
 
 - Improve the `cart_to_s` method so that instead of returning something like
 "meat, vegetables, vegetables, meat, yoghurt, vegetables", you'd return
-"meat x 2, vegetables x 3, yoghurt".
+"meat x 2, vegetables x 3, yoghurt". You might want to **change the data structure** you were using previously for your cart (the rake won't pass anymore).
 
 ## Key learning points
 
