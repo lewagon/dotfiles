@@ -29,9 +29,9 @@ Now you can run:
 middleman server
 ```
 
-You can see your first Middleman blog on [_http://localhost:4567_](http://localhost:4567)
+You can see your first Middleman blog on http://localhost:4567
 
-Find your first article url on _http://localhost:4567/__middleman/sitemap/_
+Find your first article url on http://localhost:4567/__middleman/sitemap/
 
 Configure your app to add a blog:
 
@@ -50,7 +50,7 @@ middleman article YOUR_FIRST_ARTICLE
 
 Write your first article with markdown syntax. (You will find it in `source/blog`)
 
-Launch `middleman server` and go to _http://localhost:4567/__middleman/sitemap/_ to find your first article's url.
+Launch `middleman server` and go to http://localhost:4567/__middleman/sitemap/ to find your first article's url.
 
 Now you can create a page wich lists all your articles:
 
@@ -67,5 +67,5 @@ touch source/blog/index.html.erb
 </ul>
 ```
 
-Then go to _http://localhost:4567/blog_ to visit your blog!
+Then go to http://localhost:4567/blog to visit your blog!
 
