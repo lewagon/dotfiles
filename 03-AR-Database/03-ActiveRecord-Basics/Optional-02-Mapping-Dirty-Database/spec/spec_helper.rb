@@ -4,7 +4,13 @@ ActiveRecord::Base.logger = nil
 def migrate(version = nil)
   ActiveRecord::Migration.verbose = false
   ActiveRecord::Migrator.migrations_paths << File.expand_path(File.dirname(__FILE__), '../db/migrate')
-  ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths, version)
+  if defined?(ActiveRecord::MigrationContext)
+    ActiveRecord::MigrationContext
+      .new(ActiveRecord::Migrator.migrations_paths)
+      .migrate(version)
+  else
+    ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths, version)
+  end
 end
 
 def create_db
