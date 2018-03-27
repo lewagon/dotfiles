@@ -7,6 +7,8 @@ variable defined as this:
 DB = SQLite3::Database.new("a_file.db")
 ```
 
+You can still use the `test.rb` file to test your methods.
+
 ## Specs
 
 In this exercise, we'll focus on **D**elete (the `D` in `CRUD`).

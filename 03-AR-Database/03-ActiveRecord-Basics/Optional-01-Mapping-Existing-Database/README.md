@@ -7,7 +7,7 @@ of writing SQL queries.
 ## Specs
 
 - Open the `db/jukebox.db` database with the `sqlite3` binary and create all
-the necessary models in `app/models` by browsing the `.schema`. **Do not** run
+the necessary models in `app/models` by browsing the `.schema` (you might not see the `.db` files as Sublime Text's default settings are to keep them hidden, you can still check that the file is there by using `ls -l db` in the terminal). **Do not** run
 the tests before you've created the models with the `has_many` and `belongs_to`
 relationships based on the schema foreign keys. The specs will give you too many clues.
 - Once your models are created, add some methods and validations.

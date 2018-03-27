@@ -14,7 +14,7 @@ We'll continue working on yesterday's code, so go back to your folder:
 cd ~/code/<user.github_nickname>/rails-mister-cocktail
 ```
 
-If you generated the rails app **without** the `--database` flag (it's alex's fault), we need to manually migrate this Rails app to Postgresql for heroku. You can check if the app is configured with postgresql if you have the `pg` gem in the gemfile.
+If you generated the rails app **without** the `--database` flag, we need to manually migrate this Rails app to Postgresql for heroku. You can check if the app is configured with postgresql if you have the `pg` gem in the gemfile.
 
 If you need to change the app to postgres, open your Gemfile, find the `sqlite` line. **Replace** it with:
 

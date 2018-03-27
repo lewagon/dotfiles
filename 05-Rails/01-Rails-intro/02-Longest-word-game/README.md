@@ -37,7 +37,7 @@ Prefix Verb URI Pattern      Controller#Action
 
 ### 2 - Generating a new game
 
-Have a look at your old Ruby code. How did you generate an `Array` of random letters? In the `new` action of the `GamesController`, create a new `@letters` instance variable storing these random letters. Then display it in the view. You should get something like this:
+Have a look at your old Ruby code. How did you generate an `Array` of random letters? In the `new` action of the `GamesController`, create a new `@letters` instance variable storing these random letters from the alphabet. Then display it in the view. You should get something like this:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game.png)
 
@@ -66,7 +66,7 @@ Go to the `/new` page, fill a word and submit the form. You should get a **Runti
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/raise.png)
 
-The cleaner way is to add the `pry-rails` gem (you can get rid of the default `byebug` one from `rails new`) and add `binding.pry` in your Controller code. This way you can pause the Rails request in the terminal, inspect, and type `continue` to let it go and finish rendering the view.
+The cleaner way is to add the `pry-byebug` gem (you can get rid of the default `byebug` one from `rails new`) and add `binding.pry` in your Controller code. This way you can pause the Rails request in the terminal, inspect, and type `continue` to let it go and finish rendering the view.
 
 ```ruby
 # Gemfile
@@ -74,7 +74,7 @@ The cleaner way is to add the `pry-rails` gem (you can get rid of the default `b
 # [...]
 group :development, :test do
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-rails'
+  gem 'pry-byebug'
 end
 ```
 

@@ -17,6 +17,10 @@ no need to instantiate a new `SQLite3::Database` yourself. Just use `DB.execute`
 your code, it'll work (have a look at `spec/models/post_spec.rb` to view how
 the `DB` variable is created).
 
+## Tests
+We prepared for you a `test.rb` file where the `DB` global variable is created the same way
+as in `spec/models/post_spec.rb`. Feel free to use this file to test your methods.
+
 ## Specs
 
 In this first exercise, we focus on **R**ead (the `R` in `CRUD`).

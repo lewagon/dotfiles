@@ -88,6 +88,8 @@ puts "You are now #{age}"
 Example **without** parameters
 
 ```ruby
+require 'date'
+
 def tomorrow
   tomorrow_date = Date.today + 1
   return tomorrow_date.strftime("%B %d")

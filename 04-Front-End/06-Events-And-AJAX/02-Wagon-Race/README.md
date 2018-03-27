@@ -7,6 +7,12 @@ The goal here is to learn more about JavaScript, the DOM, and asynchronous event
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/wagon_race.gif)
 
 ## Specs
+Launch your local webserver with:
+
+```bash
+rake webpack
+```
+and go to http://localhost:8080
 
 #### HTML
 

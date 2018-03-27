@@ -6,15 +6,6 @@ Reminder, **no live-code tonight as you will pitch your idea in front of the cla
 
 If you've done your homework 😀, you should have uploaded your product pitch [here](https://kitt.lewagon.com/camps/<user.batch_slug>/products). You will have 5 minutes to pitch your idea in front of the class in the evening.
 
-## Votes & Team building
-
-- After the pitch session, [you can vote on kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) for the projects you like most. It will give a first idea of popular projects within the class.
-- Then you'll have until Friday to [build teams on kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) of **3 - 4 people**.
-
-On Friday, we will start prototyping your app during a great Product Design Sprint. Teams need to be set up for Friday 👊👊👊. Now let's go back to today's challenge!
-
-
-
 ## Background & Objectives
 
 Let's play with [Middleman](https://middlemanapp.com/), a very nice tool to generate static websites in ruby. You can use it for your personal website or portfolio, or for any freelance frontend project with rich content and design.
@@ -69,7 +60,7 @@ Make sure that your `git status` is clean and run:
 middleman deploy
 ```
 
-This should build your Middleman project and push it to the `gh-pages` of your GitHub repository. Then go to `<user.github_nickname>.github.io/middleman-airbnb` to see it live 🚀 !
+This should build your Middleman project and push it to the `gh-pages` of your GitHub repository. Then go to `<user.github_nickname>.github.io/middleman-airbnb/` to see it live 🚀 !
 
 ## Building your layout
 
@@ -84,7 +75,7 @@ Let's start with the layout, i.e. the common HTML skeleton of all your pages. It
 
 - Don't forget to add ERB partials `layouts/_navbar.html.erb` and `layouts/_footer.html.erb` in your projects.
 - For the HTML and the CSS of the navbar and footer, feel free to re-use [Le Wagon's navbar](http://lewagon.github.io/ui-components/#navbar) and [Le Wagon's footer](http://lewagon.github.io/ui-components/#footer) to save time.
-- Don't forget to use the `image_tag` helper for your logo (as in Karr lecture) instead of a stupid `img`.
+- Don't forget to use the `image_tag` helper for your logo (as in Kitt lecture) instead of a stupid `img`.
 - Also, take your time to add the corresponding SCSS files `components/_navbar.scss` (should already be there) and `components/_footer.scss` in your stylesheets and `@import` these two files in `components/_index.scss`
 
 
@@ -167,4 +158,4 @@ git push origin master
 middleman deploy
 ```
 
-Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/middleman-airbnb" target="_blank">https://&lt;user.github_nickname&gt;.github.io/middleman-airbnb</a>.
+Visit your masterpiece at <a href="http://&lt;user.github_nickname&gt;.github.io/middleman-airbnb/" target="_blank">https://&lt;user.github_nickname&gt;.github.io/middleman-airbnb</a>.

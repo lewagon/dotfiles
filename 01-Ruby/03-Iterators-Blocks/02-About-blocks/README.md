@@ -23,7 +23,7 @@ end
 
 ### A custom map
 
-To better understand `yield`, let's try to reimplement the [`Enumerable#map`](https://ruby-doc.org/core-2.4.2/Enumerable.html#method-i-map) method without actually using it. In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method. You can use `Enumerable#each` in your code to iterate through elements.
+To better understand `yield`, let's try to reimplement the [`Enumerable#map`](https://ruby-doc.org/core-2.4.0/Enumerable.html#method-i-map) method without actually using it. In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method. You can use `Enumerable#each` in your code to iterate through elements.
 
 ```ruby
 beatles = ["john", "paul", "george", "ringo"]

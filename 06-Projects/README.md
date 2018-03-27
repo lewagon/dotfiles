@@ -12,36 +12,24 @@ Good luck - you're going to be amazing. Here are your milestones:
 
 ## Morning lectures
 
-During these two weeks, **there is no afternoon live-code**. You will still have morning talks on advanced topics though. Here is the program for morning lectures:
+During these two weeks, **there is no afternoon live-code**. During the first week, you will still have morning talks on advanced topics though. Here is the program for morning lectures:
 
-### `01 Authorization with Pundit`
-
-Handle authorizations using the [Pundit](https://github.com/elabs/pundit) gem. This library isolates the "authorization logic" in `Policy` objects to stop you polluting your controllers with extra code.
-
-### `02 i18n`
-
-How about having an international app to handle different languages? That is what Internationalization (`I + 18 characters + n"` = `i18n`) is about.
-
-### `03 Admin Interfaces`
-
-Learn to customize your admin dashboards using either [ActiveAdmin](http://activeadmin.info/) or [Rails Admin](https://github.com/sferik/rails_admin).
-
-### `04 Background Jobs with Sidekiq`
-
-Take time-consuming processes (delivering emails, posting to an API, cleaning up, etc.) out of the controller using [Active Job](http://edgeguides.rubyonrails.org/active_job_basics.html).
-
-### `05 Build an API with Rails`
-
-Learn how to build an API with Rails.
-
-### `06 Payment with Stripe`
+### `01 Payment & Stripe`
 
 Add payment to your apps using [Stripe](https://stripe.com).
 
-### `07 Search`
+### `02 Mailing`
 
-Implement a search, either manually or by using [Algolia](https://www.algolia.com/).
+Learn how to plug transactional email services and marketing lists subscription services in your app.
 
-### `08 Testing`
+### `03 Background Jobs with Sidekiq`
 
-What are tests and how can they be used to drive development and make sure other developers don't break your code?
+Take time-consuming processes (delivering emails, posting to an API, cleaning up, etc.) out of the controller using [Active Job](http://edgeguides.rubyonrails.org/active_job_basics.html).
+
+### `04 Build an API with Rails`
+
+Learn how to build an API with Rails.
+
+### `05 Testing in Rails`
+
+Learn how to test your code with [Rails built-in framework: Minitest](http://guides.rubyonrails.org/testing.html).
