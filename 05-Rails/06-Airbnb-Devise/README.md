@@ -58,6 +58,8 @@ Then, the teammates should run:
 
 ```bash
 bundle install
+yarn install
+figaro install
 rails db:create db:migrate
 ```
 
