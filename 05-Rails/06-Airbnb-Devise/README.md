@@ -59,7 +59,7 @@ Then, the teammates should run:
 ```bash
 bundle install
 yarn install
-figaro install
+touch config/application.yml
 rails db:create db:migrate
 ```
 
