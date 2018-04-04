@@ -27,32 +27,12 @@ uber_hash.color
 
 You might think that you just have to put an `attr_accessor :color` on `UberHash`, and that's it, but wait! We want to store **any** possible property like that.
 
-You will need to define a `method_missing` method in your class, and implement it. You can read [this article](http://technicalpickles.com/posts/using-method_missing-and-respond_to-to-create-dynamic-methods) to get a sense of how ruby calls instance methods.
+If you try to call an instance method that wasn't defined in the class, ruby calls a `method_missing` built-in method that raises a `NoMethodError`.
 
-One other thing you will need is the ability to call an arbitrary method on an instance. Say we have this simple `Student` class:
+To prevent the `NoMethodError` to be raised, you can define **your own** `method_missing` instance method in your class, and implement it to do whatever you want!
 
-```ruby
-class Student
-  attr_reader :name
+You can read [this article](http://rubylearning.com/satishtalim/ruby_method_missing.html) to get a sense of how and when ruby calls `method_missing`.
 
-  def initialize(name)
-    @name = name
-  end
-end
-```
-
-Then, both ways of retrieving the student's name is equivalent:
-
-```ruby
-student = Student.new("George")
-
-student.name
-# => "George"
-
-student.send(:name)
-# => "George"
-```
-
-(You can convert a string to a symbol with the [`to_sym`](http://www.ruby-doc.org/core-2.4.0/String.html#method-i-to_sym) method.)
+You may also want to read how Ruby lets you dynamically [get](https://apidock.com/ruby/Object/instance_variable_get) or [set](https://apidock.com/ruby/Object/instance_variable_set) an instance variable.
 
 Good luck!
