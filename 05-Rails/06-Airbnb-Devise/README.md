@@ -58,6 +58,8 @@ Then, the teammates should run:
 
 ```bash
 bundle install
+yarn install
+touch config/application.yml
 rails db:create db:migrate
 ```
 
