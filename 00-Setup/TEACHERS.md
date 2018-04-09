@@ -131,7 +131,7 @@ At the end of the lecture
 
 ### Student validation (end of morning setup)
 
-At the end of the setup, students will signin on [alumni.lewagon.org](http://alumni.lewagon.org) and complete their profile. Then:
+At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org/onboarding) and complete their profile. Then:
 
 - Manager should approve them on his Slack channel
 - Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the wrong batch.
