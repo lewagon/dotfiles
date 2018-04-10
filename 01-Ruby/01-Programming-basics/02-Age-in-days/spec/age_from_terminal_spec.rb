@@ -1,7 +1,7 @@
 require 'open3'
 require 'age_in_days'
 
-describe '#age_in_days' do
+describe 'Interface' do
 
   it 'should print out the age calculated from age_in_days' do
     result = nil
