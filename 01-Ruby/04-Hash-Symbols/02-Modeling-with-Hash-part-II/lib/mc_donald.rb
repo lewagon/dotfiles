@@ -10,7 +10,7 @@ DISHES_CALORIES = {
 }
 
 def poor_calories_counter(burger, side, beverage)
-  return DISHES[burger] + DISHES[side] + DISHES[beverage]
+  DISHES_CALORIES[burger] + DISHES_CALORIES[side] + DISHES_CALORIES[beverage]
 end
 
 def calories_counter(orders)
