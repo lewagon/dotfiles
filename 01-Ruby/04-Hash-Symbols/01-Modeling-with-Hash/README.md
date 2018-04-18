@@ -81,4 +81,4 @@ For example `poor_calories_counter("McChicken", "French Fries", "Sprite")` shoul
 ## Key learning points
 
 - What's a hash? When do you use them?
-- How do you get a value that is stored in a `Hash`?
+- How do you retrieve a value stored in a `Hash`?
