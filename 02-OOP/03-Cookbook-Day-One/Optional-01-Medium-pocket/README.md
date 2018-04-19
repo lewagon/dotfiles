@@ -1,10 +1,10 @@
 ## Background and Objectives
 
-Congratulations, you outperformed the Cookbook challenge! If you don't want to watch the correction during tonight's livecode, this challenge should keep you busy.
+Congratulations, you outperformed the Cookbook challenge! If you don't want to watch the correction during tonight's livecode, this challenge should keep you busy meanwhile.
 
 Let's start over and code another entire MVC app. This time we'll create an app to save [Medium](https://medium.com) posts and read them later:
 
-```bash
+```
 As a user, I can list all posts I saved
 As a user, I can add a post I want to read later
 As a user, I can read a post I saved
@@ -30,6 +30,7 @@ What do you want to do next?
 
 1. [x] - What’s your goal for learning to code? (Boris Paillard)
 2. [ ] - Teaching Programming is Hard (Boris Paillard)
+
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -132,7 +133,7 @@ When you think you're done -- don't force too much if you can't find all instanc
 
 Like in the cookbook, we need a repository to **store** our posts in-memory and on our hard drives. This class needs to be coded right after the model, both classes being part of the same **data** brick.
 
-Implement a `Repository` class which will act as fake database. It should be connected to a `posts.csv` file to make our app persistent.
+Implement a `Repository` class which will act as a fake database. It should be connected to a `posts.csv` file to make our app persistent.
 
 ### Controller
 
@@ -180,7 +181,7 @@ ruby lib/test.rb
 
 ### Router
 
-In the Cookbook, we gave you the router. This time, try and code it by yourself!
+In the Cookbook, we gave you the router. This time, try and code it by yourself! Remember that at the end of the day, we want to call `router.run` in `app.rb` and this should launch our app!
 
 ### Tying it all together
 
@@ -190,7 +191,7 @@ When you are ready, you can test your program with:
 ruby lib/app.rb
 ```
 
-This time we didn't give you the `app.rb`. Don't be afraid, just take the problem from the end. We know that at the end of the day, the purpose of the `app.rb` file is to call `router.run`.
+This time we didn't give you the `app.rb`. Don't be afraid, just take the problem from the end. We know that the purpose of the `app.rb` file is to call `router.run`.
 This means you need to instantiate a `router` which is an instance of our `Router` class. OK so that's a `Router.new(controller)`. That means we need a `controller`... Following this train of thoughts will lead you to the whole code.
 
 
