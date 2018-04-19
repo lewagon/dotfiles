@@ -147,14 +147,14 @@ Its state:
 
 The answer will give you the instance variables.
 
-Its behavior?
+Its behavior:
 
 - What transformations will we need to perform on a post?
 - Which pieces of state will we need to expose to reading? to writing?
 
 The answers will give you the public instance methods.
 
-Don't force too much if you can't find all instance variables and methods, you'll find them later when the need will emerge while coding the controller. When you think you're done, test your class in `irb`, fix bugs, and move on to the next class.
+Don't force too much if you can't find all instance variables and methods, you'll find them later when the need emerges while coding the repo and the controller. When you think you're done, test your class in `irb`, fix bugs, and move on to the next class.
 
 ### Repository
 
