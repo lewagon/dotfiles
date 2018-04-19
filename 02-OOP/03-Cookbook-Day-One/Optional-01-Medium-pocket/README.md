@@ -108,6 +108,8 @@ You'll find the answer at the end of this readme.
 
 ## Specs
 
+This time you'll code without any help, `rake` will only give you style offenses 👌
+
 ### Model
 
 As you know now, you should always start with your model. The model is the ruby class we need in order to manipulate the data in our program.
