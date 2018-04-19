@@ -198,7 +198,7 @@ ruby lib/app.rb
 
 So where should you code the scraping part of the program? Well, let's re-formulate our question. Our program should be able to instantiate a `Post` with only a `path`.
 
-But when we instantiate the `post`, we want it to be automatically populated with its title, content, and author. A good place to code it would be in the `Post`'s `initialize` method. The scraping lines should be refactored in a private method, called in `initialize`, **except when the post is instantiated from loading the csv**.
+But when we instantiate the `post`, we want it to be automatically populated with its title, content, and author. A good place to code it would be in the `Post`'s `initialize` method. The scraping lines should be refactored in a private method, called in `initialize`, **except when the post is instantiated from our repo's `load_csv` method** as we store everything in the csv.
 
 Monday we'll see how we can plug a `Service` class to the MVC pattern if we want to extract this kind of spacialized features from the pattern.
 
