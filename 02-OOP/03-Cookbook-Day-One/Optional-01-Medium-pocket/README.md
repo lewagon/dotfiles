@@ -13,6 +13,8 @@ As a user, I can mark a post as read
 
 A demo's worth a thousand words, so this is the app we want to code:
 
+#### List posts
+
 ```
 ------------------------------------
 Welcome to your Medium pocket reader
@@ -30,7 +32,11 @@ What do you want to do next?
 
 1. [x] - What’s your goal for learning to code? (Boris Paillard)
 2. [ ] - Teaching Programming is Hard (Boris Paillard)
+```
 
+#### Save post for later
+
+```
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -44,6 +50,14 @@ What do you want to do next?
 Path?
 > le-wagon/this-is-what-a-developer-looks-like-379c261db24d
 
+1. [x] - What’s your goal for learning to code? (Boris Paillard)
+2. [ ] - Teaching Programming is Hard (Boris Paillard)
+3. [ ] - This is what a developer looks like (Rebecca Menat)
+```
+
+#### Read post
+
+```
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -61,7 +75,11 @@ Index?
 > 2
 
 [...] # this should display the post's entire content with linebreaks between paragraphs!
+```
 
+#### Mark post as read
+
+```
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -81,6 +99,11 @@ Index?
 1. [x] - What’s your goal for learning to code? (Boris Paillard)
 2. [x] - Teaching Programming is Hard (Boris Paillard)
 3. [ ] - This is what a developer looks like (Rebecca Menat)
+```
+
+#### Exit gracefully
+
+```
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -131,7 +154,7 @@ Its behavior?
 
 The answers will give you the public instance methods.
 
-When you think you're done -- don't force too much if you can't find all instance variables and methods, you'll find them later when the need will emerge while coding the controller -- test your class in `irb`, fix bugs, and move on to the next class.
+Don't force too much if you can't find all instance variables and methods, you'll find them later when the need will emerge while coding the controller. When you think you're done, test your class in `irb`, fix bugs, and move on to the next class.
 
 ### Repository
 
@@ -142,7 +165,6 @@ Implement a `Repository` class which will act as a fake database. It should be c
 ### Controller
 
 The controller serves the user stories. Let's have a look at them:
-
 
 ```bash
 As a user, I can list all posts I saved
@@ -159,7 +181,7 @@ This is the process you need to follow for each action:
 
 - Write pseudo-code to breakdown the problem in small steps that you can easily translate in ruby
 - Remember that each instruction having to do with the data will be delegated to the repo, and every `puts` and `gets` will be handled by the view (again, think SRP)
-- Coding your actions will make you code your `View` class and its instance methods naturally
+- Coding your actions will make you code your `View` class and its instance methods naturally, when the necessity arises
 - Everytime there's an emerging need (we need a new method in the repo or in the model), follow the flow and code it right away
 - Test regularly your code (every 2 or 3 lines of code)
 
