@@ -166,7 +166,7 @@ Implement a `Repository` class which will act as a fake database. It should be c
 
 The controller serves the user stories. Let's have a look at them:
 
-```bash
+```
 As a user, I can list all posts I saved
 As a user, I can add a post I want to read later
 As a user, I can read a post I saved
