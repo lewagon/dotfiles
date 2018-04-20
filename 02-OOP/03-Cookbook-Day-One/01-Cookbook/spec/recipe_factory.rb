@@ -1,7 +1,6 @@
 begin
   require 'recipe'
 rescue LoadError
-  class Recipe; end
 end
 
 class RecipeFactory
