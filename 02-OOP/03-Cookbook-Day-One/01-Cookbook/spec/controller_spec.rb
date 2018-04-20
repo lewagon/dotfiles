@@ -1,10 +1,17 @@
 begin
   require "controller"
 rescue LoadError
-  class Controller; end
 end
 
-describe Controller do
+describe "Controller" do
+  it '`cookbook.rb` file should exist' do 
+    expect(File.exists?(__dir__ + "/../lib/cookbook.rb")).to be(true)
+  end
+
+  it '`Controller` class should be defined' do
+    expect(Object.const_defined?("Controller")).to be(true)
+  end
+
   let(:csv_path) { "spec/recipes.csv" }
   let(:cookbook) { Cookbook.new(csv_path) }
   let(:controller) { Controller.new(cookbook) }
