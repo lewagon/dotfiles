@@ -47,7 +47,7 @@ Looking for "strawberry" on LetsCookFrench...
 3. Strawberry martini
 [...] display only the first 5 results
 
-Which recipe do you like to import? (enter index)
+Which recipe would you like to import? (enter index)
 > 2
 Importing "Strawberry slushie"...
 ```
