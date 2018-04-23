@@ -1,5 +1,9 @@
 require 'sqlite3'
 
+def artist_count(db)
+  # TODO: use `db` to execute an SQL query against the database.
+end
+
 def number_of_rows(db, table_name)
   # TODO: count number of rows in table table_name
 end

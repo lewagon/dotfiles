@@ -7,6 +7,15 @@ describe 'Queries methods' do
 
   let(:db) { SQLite3::Database.new(DATABASE_PATH) }
 
+  describe 'count_artists' do
+    it 'returns a Integer' do
+      expect(artist_count(db)).to be_a Integer
+    end
+
+    it 'returns the number of artists in the DB' do
+      expect(artist_count(db)).to eq 275
+    end
+  end
 
   describe 'number_of_rows' do
 
