@@ -1,32 +1,24 @@
 ## Background & Objectives
 
-Now it's time to for something more complex. We'll be using `join` queries to read data from multiple tables. To acquire instant Jedi skills in `join` queries, [read this](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) - the picture is really helpful. If you speak French, you can also [read this one](http://sql.sh/cours/jointures).
+Now it's time to for something more complex. We'll be using `JOIN` queries to read data from multiple tables. To acquire instant Jedi skills in `JOIN` queries, [read this](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) - the picture is really helpful. If you speak French, you can also [read this one](http://sql.sh/cours/jointures).
 
 ## Specs
 
 Complete the code in `join_queries.rb`. Each method takes a `db` argument, which is an instance
-of `SQLite3::Database` on which you can call the `execute` method.
+of `SQLite3::Database` on which you can call the `execute` method. Exactly like in the previous exercise.
 
 ### Detailed Tracks
 
 - Implement `detailed_tracks` to get all the tracks with the corresponding artist name and album titles.
 - Your output should be an array of arrays. **Hint:** you will have to use two `JOIN` sql statements.
 
-Your method should return something like this:
-
-```ruby
-detailed_tracks(db)
-# => [
-#      ["Demain c'est loin", "L'école du micro d'argent", "IAM"],
-#      ["Back dans les bacs", "Supreme NTM", "NTM"]
-#    ]
-```
+This method should return an array of tracks. Each element of this array would be an array as well: first element being the track title, second element the track album name, third element the track's artist name.
 
 ### Statistics
 
 For each genre of music, find the stats, i.e. the number of tracks and the average song length (in minutes).
 
-The method should return a Hash of statistics, for example:
+The method should return a Hash of statistics:
 
 ```ruby
 stats_on(db, "Rock")
@@ -39,7 +31,8 @@ stats_on(db, "Rock")
 
 ### Top 5
 
-Find the top 5 artists that made the most songs in a given genre.
+Find the top 5 artists that made the most songs in a given genre. This method should return an
+array of arrays with the artist name and the number of songs of the given genre for each artist.
 
 ```ruby
 top_five_artists(db, 'Rock')
@@ -49,12 +42,3 @@ top_five_artists(db, 'Rock')
 #      # etc.
 #    ]
 ```
-
-## Tools
-
-You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
-
-- [ SQLite Pro (Paying, 7 days trial)](https://www.sqlitepro.com/)
-- [SQLStudio (Free)](http://sqlitestudio.pl/?act=download)
-- [SQLite Browser (Free)](http://sqlitebrowser.org/)
-
