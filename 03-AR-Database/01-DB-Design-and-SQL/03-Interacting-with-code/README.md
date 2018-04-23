@@ -12,7 +12,7 @@ The goal of this challenge is to talk to the database **from our Ruby code**.
 
 ## Specs
 
-Each method takes a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. Your method will look like this:
+👉 **IMPORTANT**: Each method takes a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. This `db` is **built by the test and passed along to the method**. No need to create one yourself to satisfy `rake`. Your method will look like this:
 
 ```ruby
 def the_method(db)
@@ -25,12 +25,43 @@ def the_method(db)
 end
 ```
 
-Complete the program `queries.rb` to answer the following questions. Don't forget you can look inside the database by running `sqlite3 lib/db/jukebox.sqlite` in the Terminal.
+👉 To try your code with `irb` (or in the `lib/queries.rb` file), you will need to build `db` yourself.
 
-- How many rows does each table contain?
+```ruby
+# ➜ 03-Interacting-with-code git:(master) ✗  irb
+require "sqlite3"
+db = SQLite3::Database.new("lib/db/jukebox.sqlite")
+rows = db.execute("SELECT * FROM artists LIMIT 3")
+# => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
+```
+
+Open the file `lib/queries.rb` to answer the following questions. Don't forget you can look inside the database by running `sqlite3 lib/db/jukebox.sqlite` in the Terminal or use one of the tools mentionned in the previous exercise (SQLite Pro, SQLStudio or SQLite Browser).
+
+There are five methods to implement:
+
+- How many rows does the `artists` table contain?
+- How many rows does each table contain (generic method)?
 - Return the list of all the artists and sort them by name (alphabetically). **Hint:** use the `ORDER BY` SQL filter.
 - Find all the love songs (i.e the tracks that contain "love" **anywhere** in their name). **Hint:** use the `WHERE` and `LIKE` SQL keywords.
 - Return all the tracks that are longer than a given duration and sort them. **Hint:** you can use the comparison operator `>` in SQL.
+
+## Tips
+
+SQL queries tend to get pretty long, especially when you start using `WHERE` or `JOIN`. In Ruby,
+you can use the [HEREDOC](https://infinum.co/the-capsized-eight/multiline-strings-ruby-2-3-0-the-squiggly-heredoc) syntax to write **multi-line** strings:
+
+```ruby
+# Find the first 3 artists with the letter `Z` in their name.
+query = <<~SQL
+  SELECT * FROM artists
+  WHERE name LIKE "%Z%"
+  ORDER BY name
+  LIMIT 3
+SQL
+rows = db.execute(query)
+```
+
+You'll notice that Sublime Text understand Heredoc and the syntax highlighting is actually SQL inside the Ruby file!
 
 ## Resources
 
@@ -40,8 +71,8 @@ Complete the program `queries.rb` to answer the following questions. Don't forge
 
 ## Tools
 
-You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
+You were introduced to those tools in the previous exercise. Use them!
 
-- [SQLStudio (Free)](http://sqlitestudio.pl/?act=download)
+- [SQLite Pro (macOS only, paying but trial seems unlimited)](https://www.sqlitepro.com/)
+- [SQLStudio (Free)](http://sqlitestudio.pl/)
 - [SQLite Browser (Free)](http://sqlitebrowser.org/)
-- [SQLite Pro (Paying, 7 days trial)](https://www.sqlitepro.com/)

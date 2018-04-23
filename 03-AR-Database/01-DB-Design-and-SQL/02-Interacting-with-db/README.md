@@ -28,8 +28,15 @@ sqlite3 lib/db/jukebox.sqlite
 You are now in the interactive sqlite3 console and you can write your SQL queries to the database.
 You can exit the sqlite3 console with `.quit` or `CTRL+D`.
 
-If you are confused with the command line, you can download [SQLiteBrowser](http://sqlitebrowser.org)
-and open the `jukebox.sqlite` file with it.
+## Tools
+
+You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
+
+- [SQLite Pro (macOS only, paying but trial seems unlimited)](https://www.sqlitepro.com/)
+- [SQLStudio (Free)](http://sqlitestudio.pl/)
+- [SQLite Browser (Free)](http://sqlitebrowser.org/)
+
+❓Should I use the command-line `sqlite3` or one of the visual tool above? Well, both are useful! It's good to learn a bit to manipulate the command line for two reasons. On the one hand, a [CLI](https://en.wikipedia.org/wiki/Command-line_interface) allows you to focus on the SQL queries. On the other hand, a [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) tool will prove helpful to explore a database schema structure (tables? columns? etc.). Try both!
 
 ## Specs
 
@@ -39,12 +46,4 @@ The goal of this exercise is to explore the Jukebox database, and understand its
 - Use SQL Design tool to draw the schema of this database.
 - How many rows does each table contain? What are the column names for each table?
 
-Submit your SQL schema in XML format in `jukebox.xml`.
-
-## Tools
-
-You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
-
-- [SQLite Pro (macOS Paid, 7 days trial)](https://www.sqlitepro.com/)
-- [SQLite Browser (Free)](http://sqlitebrowser.org/)
-- [SQLStudio (Free)](http://sqlitestudio.pl/)
+Use [db.lewagon.com](http://db.lewagon.com/) to draw the Jukebox schema. Save it in XML format to `jukebox.xml` and check it with `rake`.
