@@ -26,22 +26,7 @@ Sinatra is what we call a web "microframework". It's basically a micro Rails, al
 The `app.rb` file acts as the controller. The router layer is handled by Sinatra.
 We already created a controller method to handle the root of the web app. Sinatra maps the URL in the browser to the right method in `app.rb`. Take a look at the [routing doc](http://www.sinatrarb.com/intro.html#Routes) for more info.
 
-Don't hesitate to read more about Sinatra in our homemade [tutorial](https://github.com/lewagon/sinatra-101) (skip the Setup part).
-
-```ruby
-# app.rb
-# [...]
-
-get '/' do  # <- Router part
-
-  # [...]   #
-  # [...]   # <- Controller part
-  # [...]   #
-
-end
-```
-
-Read about Views, Routing, `params` [here](https://github.com/lewagon/sinatra-101#views) before starting coding.
+Don't hesitate to read more about Sinatra in our homemade [tutorial](https://github.com/lewagon/sinatra-101) (skip the **Setup** part as you have already a boilerplate in the `lib` folder).
 
 ## Specs
 
