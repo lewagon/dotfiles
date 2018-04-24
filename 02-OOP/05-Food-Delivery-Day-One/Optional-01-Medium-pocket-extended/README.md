@@ -2,7 +2,7 @@
 
 You managed your way through the first part of the Food Delivery challenge, kudoz!
 
-In this challenge, we are going to extend the Medium Pocket challenge, with an `Author` model. We are going to model the following relation between `Post` and `Author`:
+In this challenge, we are going to extend the Medium Pocket challenge (Cookbook Day One's optional challenge), with an `Author` model. We are going to model the following relation between `Post` and `Author`:
 
 ![Medium tables](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/medium_pocket_tables.png)
 
