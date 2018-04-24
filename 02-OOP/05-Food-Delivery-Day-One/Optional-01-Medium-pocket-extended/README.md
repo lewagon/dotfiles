@@ -136,7 +136,7 @@ Make sure it still works, and move on to the next user story.
 
 **List authors**
 
-Phew, this one is an easy one. We want to list authors, so let's code an `AuthorsController`.
+Phew, the hardest part is behind us. This one is an easy one. We want to list authors, so let's code an `AuthorsController`.
 
 It will need to access the author repo and an authors view. The view must display authors names and associated unread posts in an indexed list:
 
