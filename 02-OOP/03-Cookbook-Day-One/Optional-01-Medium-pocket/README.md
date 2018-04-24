@@ -226,6 +226,8 @@ So where should you code the scraping part of the program? Well, let's re-formul
 
 But when we instantiate the `post`, we want it to be automatically populated with its title, content, and author. A good place to code it would be in the `Post`'s `initialize` method. The scraping lines should be refactored in a private method, called in `initialize`, **except when the post is instantiated from our repo's `load_csv` method** as we store everything in the csv.
 
+Now let's imagine that we add an `Author` model in the picture, and that we want to scrape info about the post's author when scraping the post. The `Post#initialize` method wouldn't be a good choice anymore... Leaving it in the **controller** (where we have an access to repositories) would be a necessity, so let's code it there!
+
 Monday we'll see how we can plug a `Service` class to the MVC pattern if we want to extract this kind of specific features from the pattern.
 
 Have a nice weekend 💪
