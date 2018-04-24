@@ -153,7 +153,7 @@ Our work on the models should make this one pretty easy. We can access all posts
 
 As always, start by breaking down the action in small steps in pseudo-code, then translate line by line in ruby and test regularly.
 
-The output for one author should look like:
+Our user must see the following in the terminal when choosing Boris:
 
 ```
 1. Boris Paillard (3 unread)
