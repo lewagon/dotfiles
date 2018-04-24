@@ -76,7 +76,7 @@ In the `PostRepository`, we need to update the `load_csv` method now that a post
 On a given post, when we read the `author_id` from the csv, we need to find the corresponding author instance to associate it to our post object. This means:
 
 - The `PostRepository` must be instantiated after the `AuthorRepository`
-- The `PostReposirory` should have access to an `@author_repo` instance
+- The `PostRepository` should have access to an `@author_repo` instance
 - The `AuthorRepository` should have a `find(id)` method that returns the right `Author` instance from its `@authors` array
 
 Make sure your repositories work well before moving on to the applicative brick of our software.
