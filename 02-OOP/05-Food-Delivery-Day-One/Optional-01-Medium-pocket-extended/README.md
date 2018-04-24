@@ -27,7 +27,35 @@ As you probably imagine, the info about authors will be scraped when a post is s
 
 We need to add an `Author` model with instance variables we can deduce from the schema.
 
-We also need to think the `@author` instance variable will no longer store the name of the author but the `Author` instead. We also need to add an `@id` to store the primary key.
+**Author-posts relationship**
+
+The relation we want to model between posts and authors is the following:
+
+```
+An author can write several posts
+A post is written by an author
+```
+
+This means that in your code:
+
+- We need to add a `@posts` instance variable in `Author` (and expose it to reading)
+- The `@posts` is an array of **`Post` instances**
+- We need to update the `@author` instance variable in `Post` to no longer store the name, but **the `Author` instance instead** (and expose it to reading)
+- We need to add `@id`s in both models to persist the relationship in our csv files
+- The relationship is carried by the children (the posts here), meaning we need an `author_id` column in our `posts.csv`
+
+To associate a post to its author, consider the following:
+
+```ruby
+# lib/models/author
+class Author
+  [...]
+  def add_post(post)
+    @posts << post
+    post.author = self  # <-- what do you need in you Post class to write this?
+  end
+end
+```
 
 ### Repositories
 
