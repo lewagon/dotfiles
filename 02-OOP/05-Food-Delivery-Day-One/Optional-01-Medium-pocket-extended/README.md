@@ -54,7 +54,7 @@ class Author
   [...]
   def add_post(post)
     @posts << post
-    post.author = self  # <-- what do you need in you Post class to write this?
+    post.author = self  # <-- what do you need in your Post class to write this?
   end
 end
 ```
