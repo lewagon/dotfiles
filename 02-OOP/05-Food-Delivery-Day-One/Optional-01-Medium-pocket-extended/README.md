@@ -13,9 +13,9 @@ We want to extend the user actions to:
 2. Save post for later
 3. Read post
 4. Mark post as read
-5. List authors
-6. List author's posts
-7. See author info
+5. List authors         # NEW
+6. List author's posts  # NEW
+7. See author info      # NEW
 8. Exit
 ```
 
