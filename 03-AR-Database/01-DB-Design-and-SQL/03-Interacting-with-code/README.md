@@ -48,11 +48,11 @@ There are five methods to implement:
 ## Tips
 
 SQL queries tend to get pretty long, especially when you start using `WHERE` or `JOIN`. In Ruby,
-you can use the [HEREDOC](https://infinum.co/the-capsized-eight/multiline-strings-ruby-2-3-0-the-squiggly-heredoc) syntax to write **multi-line** strings:
+you can use the [HEREDOC](https://zaiste.net/heredoc_in_ruby/) syntax to write **multi-line** strings:
 
 ```ruby
 # Find the first 3 artists with the letter `Z` in their name.
-query = <<~SQL
+query = <<-SQL
   SELECT * FROM artists
   WHERE name LIKE "%Z%"
   ORDER BY name
