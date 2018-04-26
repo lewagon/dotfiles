@@ -175,7 +175,7 @@ describe 'Queries methods' do
       result = love_tracks(db)
 
       expect(result.length).to eq(tracks.length)
-      tracks.each_with_index { |t, i| expect(t).to eq(result[i]) }
+      tracks.each_with_index { |t, i| expect(result[i]).to eq(t) }
     end
 
   end
