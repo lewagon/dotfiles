@@ -54,7 +54,7 @@ describe 'Queries methods' do
 
   describe 'love_tracks' do
 
-    it 'returns tracks with names containing "love"' do
+    it 'returns track names with names containing "love"' do
 
       tracks = [
                                         "(I Can't Help) Falling In Love With You",
