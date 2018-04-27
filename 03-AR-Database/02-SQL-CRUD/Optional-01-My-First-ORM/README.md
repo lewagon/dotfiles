@@ -24,7 +24,7 @@ end
 
 ## Specs
 
-Implement the `Record` method so that it has all the behavior expected from
+Implement the `Record` class so that it has all the behavior expected from
 a model (`save`, `destroy`, `self.find` and `self.all`).
 
 **Do not** write any code in your `Post` and `User` classes! This constraint
