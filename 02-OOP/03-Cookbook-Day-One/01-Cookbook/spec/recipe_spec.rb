@@ -1,9 +1,26 @@
+require_relative 'cookbook_helper'
+
 begin
   require 'recipe_factory'
 rescue
 end
 
-describe Recipe do
+cookbook_helper = CookbookHelper.new(
+  file_name: "recipe",
+  class_name: "Recipe"
+)
+
+describe "Recipe", unless: cookbook_helper.file_and_class_valid? do
+  it '`recipe.rb` file should exist' do 
+    expect(cookbook_helper.file_exists?).to be(true)
+  end
+
+  it '`Recipe` class should be defined' do
+    expect(cookbook_helper.class_defined?).to be(true)
+  end
+end
+
+describe "Recipe", if: cookbook_helper.file_and_class_valid? do
   let(:recipe) { RecipeFactory.build("", "") }
 
   describe '#name' do

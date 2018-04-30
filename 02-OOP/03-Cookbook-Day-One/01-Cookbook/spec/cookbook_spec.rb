@@ -1,10 +1,10 @@
 require "csv"
 require 'recipe_factory'
+require_relative 'cookbook_helper'
 
 begin
   require "cookbook"
 rescue LoadError
-  class Cookbook; end
 end
 
 class Helper
@@ -17,7 +17,22 @@ class Helper
   end
 end
 
-describe Cookbook do
+cookbook_helper = CookbookHelper.new(
+  file_name: "cookbook",
+  class_name: "Cookbook"
+)
+
+describe "Cookbook", unless: cookbook_helper.file_and_class_valid? do
+  it '`cookbook.rb` file should exist' do 
+    expect(cookbook_helper.file_exists?).to be(true)
+  end
+
+  it '`Cookbook` class should be defined' do
+    expect(cookbook_helper.class_defined?).to be(true)
+  end
+end
+
+describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
   let(:recipes) do
     [
       [ "Crumpets", "Crumpets description" ],
