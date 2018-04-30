@@ -49,6 +49,17 @@ describe Post do
       expect(updated_post.title).to eq("Article 1 updated")
     end
 
+    it "should only update the post that `save` was called on" do
+      DB.execute("INSERT INTO `posts` (title) VALUES ('Article 1'), ('Article 2')")
+      post = find(1)
+      post.title = "Article 1 updated"
+      post.save
+      updated_post = find(1)
+      other_post = find(2)
+      expect(updated_post.title).to eq("Article 1 updated")
+      expect(other_post.title).to eq("Article 2")
+    end    
+
     it 'should not *update* the post and *create* a new post at the same time' do
       DB.execute("INSERT INTO `posts` (title) VALUES ('Article 1')")
       post = find(1)
