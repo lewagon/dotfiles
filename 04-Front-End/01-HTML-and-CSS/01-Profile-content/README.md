@@ -2,7 +2,7 @@
 
 A simple challenge to manipulate basic HTML tags and create a profile page with headers, text, lists, images and tables.
 
-## Setup 
+## Setup
 
 Jump into your `profile` and create an `images` directory to store all your pictures:
 
@@ -60,7 +60,7 @@ Finally, ensure your **profile image is square** (you can crop it to make it squ
 
 ```html
 <!-- Fontawesome Stylesheet -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
 ```
 
 - You can use the `target="_blank"` attribute on your links to open them on new tabs once clicked.
