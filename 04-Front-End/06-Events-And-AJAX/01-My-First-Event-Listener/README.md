@@ -18,4 +18,10 @@ Your goal is to implement some JavaScript in the `lib/listener.js` file. **You s
 - The button text to change from "Click me!" to "Bingo!"
 - Optional: the `sound.mp3` [plays in the Browser](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript)
 
+The sound might not work on some browsers running on **Ubuntu**. To fix it, just run:
+
+```bash
+sudo apt-get install ubuntu-restricted-extras 
+```
+
 There aren't any tests for this exercise, but we check your style! So run `rake`.
