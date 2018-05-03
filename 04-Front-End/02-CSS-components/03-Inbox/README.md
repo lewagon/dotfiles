@@ -27,7 +27,7 @@ Once that is done:
 
 ## Message design
 
-For the `.message` design, **go back to the Karr slides!** This is a classic use case for flexbox here, with the body of the message pushing the other items thanks to a `flex-grow`.
+For the `.message` design, **go back to the slides!** This is a classic use case for flexbox here, with the body of the message pushing the other items thanks to a `flex-grow`.
 
 Once that is done, it's just a matter of fine-tuning your `margin`, `padding`, and playing with fonts and colors.
 

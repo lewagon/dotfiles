@@ -71,4 +71,4 @@ If you want your banner to take 100% of your screen height:
 
 ## Centering content with flexbox
 
-The `<div class="banner">` here is a flexbox with only one item inside it: `<div class="banner-content">`. Use flexbox properties (`justify-content` & `align-items`) to center the banner's content both horizontally and vertically. Have a look at the Karr lecture if you can't remember how flexboxes work.
+The `<div class="banner">` here is a flexbox with only one item inside it: `<div class="banner-content">`. Use flexbox properties (`justify-content` & `align-items`) to center the banner's content both horizontally and vertically. Have a look at the lecture slides if you can't remember how flexboxes work.

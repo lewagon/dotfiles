@@ -27,7 +27,7 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 
 - The `<div class="container">` is here to center the page content using left & right margins to prevent it taking 100% of the window (which would be ugly).
 - The `<div class="card">` is used to group information into a nice white box.
-- Add cool touches to your cards using CSS properties like `background`, `border`, `border-radius` and `box-shadow`. Keep it simple, with white background and subtle radius and shadows (as you saw in the Karr lecture).
+- Add cool touches to your cards using CSS properties like `background`, `border`, `border-radius` and `box-shadow`. Keep it simple, with white background and subtle radius and shadows (as you saw in the lecture).
 
 ## Further suggestions & resources
 
