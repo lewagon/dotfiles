@@ -1,4 +1,4 @@
-No Karr lecture for today.
+No lecture for today.
 
 The goal is to take the code from yesterday's livecode, [lewagon/food-delivery@livecode-day-one](https://github.com/lewagon/food-delivery/tree/livecode-day-one) and implement the "Sign in" feature.
 
