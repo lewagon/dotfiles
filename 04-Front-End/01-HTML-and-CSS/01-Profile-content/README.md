@@ -56,7 +56,7 @@ Finally, ensure your **profile image is square** (you can crop it to make it squ
 
 - Don't forget the basic skeleton tags `<html>`, `<body>`, `<head>`.
 - Don't forget the page `<title>` in the `<head>` section, and other important metatags like `<meta charset="utf-8">`.
-- You can use [Font Awesome](http://fontawesome.io/) to find cool icons (e.g. for social networks). It's a super useful library because all of the icons are **fonts**, making it really easy to resize them, change their color, and even add animations to them!). To import Font Awesome, simply add this link into your `<head>`:
+- You can use [Font Awesome](https://fontawesome.com/icons) to find cool icons (e.g. for social networks). It's a super useful library because all of the icons are **fonts**, making it really easy to resize them, change their color, and even add animations to them!). To import Font Awesome, simply add this link into your `<head>`:
 
 ```html
 <!-- Fontawesome Stylesheet -->
