@@ -118,7 +118,7 @@ Project the calendar on the screen to go through the program with the class, wee
 
 ### Setup lecture - 10:15am (15 min)
 
-Run the first Karr lecture on [Setup and Tools](https://karr.lewagon.org/lectures/setup/1-setup/)
+Run the first lecture on [Setup and Tools](https://karr.lewagon.org/lectures/setup/1-setup/)
 
 ### Setup session - 10:30am (2h30)
 
