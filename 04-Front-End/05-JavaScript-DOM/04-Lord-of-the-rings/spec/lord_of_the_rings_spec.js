@@ -35,7 +35,10 @@ describe("Exercise 3", () => {
     });
 
     [
+      ["Tie", "Elves:3,Eagles:5,Goblins:2,Uruk Hai:6"],
       ["Good", "Hobbits:1"],
+      ["Evil", "Goblin:2,Wargs:3"],
+      ["Evil", "Hobbits:1,Elves:2,Dwarves:3,Eagles:4,Orcs:5,Wargs:6,Goblins:7"]
     ].forEach((scenario) => {
       const [outcome, battlefield] = scenario;
       it(`should return '${outcome}' with the following battlefield: '${battlefield}'`, () => {
