@@ -76,14 +76,14 @@ This one:
 ```html
 <ul>
     <li><a href="#">
-        <i class="fa fa-facebook"></i> Facebook
+        <i class="fab fa-facebook-f"></i> Facebook
   </a>
 </li><li>
   <a href="#">
-    <i class="fa fa-linkedin"></i> Linkedin
+    <i class="fab fa-linkedin-in"></i> Linkedin
       </a></li>
 <li>  <a href="#">
-  <i class="fa fa-twitter"></i> Twitter
+  <i class="fab fa-twitter"></i> Twitter
     </a>
   </li>
     </ul>
@@ -95,17 +95,17 @@ Or this one:
 <ul>
   <li>
     <a href="#">
-      <i class="fa fa-facebook"></i> Facebook
+      <i class="fab fa-facebook-f"></i> Facebook
     </a>
   </li>
   <li>
     <a href="#">
-      <i class="fa fa-linkedin"></i> Linkedin
+      <i class="fab fa-linkedin-in"></i> Linkedin
     </a>
   </li>
   <li>
     <a href="#">
-      <i class="fa fa-twitter"></i> Twitter
+      <i class="fab fa-twitter"></i> Twitter
     </a>
   </li>
 </ul>
