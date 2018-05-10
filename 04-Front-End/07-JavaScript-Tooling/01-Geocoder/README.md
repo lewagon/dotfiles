@@ -42,7 +42,7 @@ To use it, add this line to the bottom of your HTML file, just **before** you re
 To add a map, you'll need an empty supporting HTML element. For instance:
 
 ```html
-<div id="map" style="height: 300px"></div>
+<div id="map" style="height: 300px; width: 600px"></div>
 ```
 
 To easily build the map and add a marker to it, we'll use [npm's gmaps package](https://yarnpkg.com/fr/package/gmaps).
