@@ -192,7 +192,7 @@ If you look closely at the test scenario, you can read it as:
 1. Go to the `/ask` page
 2. Make sure the page got rendered and we can read `Ask your coach anything`.
 
-Great! That's our first feature test. What do we want to test next? If you think about what you _manually_ did, it was tuping some text (with different scenarios) and then clicking the button "Ask". Let's do that with tests!
+Great! That's our first feature test. What do we want to test next? If you think about what you _manually_ did, it was typing some text (with different scenarios) and then clicking the button "Ask". Let's do that with tests!
 
 ```ruby
 # test/system/questions_test.rb
