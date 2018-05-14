@@ -4,6 +4,7 @@
 > Open a ticket if it’s the case
 
 This is the good way to install Rails:
+
 ```bash
 gem install rails -v 5.2
 ```
