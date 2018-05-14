@@ -41,9 +41,9 @@ The structure of each product should look like this:
     <p>Tinder for job search</p>
   </div>
   <ul class="product-controls list-inline ">
-    <li><a href=""><i class="fa fa-heart"></i></a></li>
-    <li><a href=""><i class="fa fa-share"></i></a></li>
-    <li><a href=""><i class="fa fa-star"></i></a></li>
+    <li><a href=""><i class="fas fa-heart"></i></a></li>
+    <li><a href=""><i class="fas fa-share"></i></a></li>
+    <li><a href=""><i class="fas fa-star"></i></a></li>
   </ul>
 </div>
 ```

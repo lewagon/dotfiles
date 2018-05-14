@@ -2,7 +2,7 @@
 
 A simple challenge to manipulate basic HTML tags and create a profile page with headers, text, lists, images and tables.
 
-## Setup 
+## Setup
 
 Jump into your `profile` and create an `images` directory to store all your pictures:
 
@@ -56,11 +56,11 @@ Finally, ensure your **profile image is square** (you can crop it to make it squ
 
 - Don't forget the basic skeleton tags `<html>`, `<body>`, `<head>`.
 - Don't forget the page `<title>` in the `<head>` section, and other important metatags like `<meta charset="utf-8">`.
-- You can use [Font Awesome](http://fontawesome.io/) to find cool icons (e.g. for social networks). It's a super useful library because all of the icons are **fonts**, making it really easy to resize them, change their color, and even add animations to them!). To import Font Awesome, simply add this link into your `<head>`:
+- You can use [Font Awesome](https://fontawesome.com/icons) to find cool icons (e.g. for social networks). It's a super useful library because all of the icons are **fonts**, making it really easy to resize them, change their color, and even add animations to them!). To import Font Awesome, simply add this link into your `<head>`:
 
 ```html
 <!-- Fontawesome Stylesheet -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
 ```
 
 - You can use the `target="_blank"` attribute on your links to open them on new tabs once clicked.
@@ -76,14 +76,14 @@ This one:
 ```html
 <ul>
     <li><a href="#">
-        <i class="fa fa-facebook"></i> Facebook
+        <i class="fab fa-facebook-f"></i> Facebook
   </a>
 </li><li>
   <a href="#">
-    <i class="fa fa-linkedin"></i> Linkedin
+    <i class="fab fa-linkedin-in"></i> Linkedin
       </a></li>
 <li>  <a href="#">
-  <i class="fa fa-twitter"></i> Twitter
+  <i class="fab fa-twitter"></i> Twitter
     </a>
   </li>
     </ul>
@@ -95,17 +95,17 @@ Or this one:
 <ul>
   <li>
     <a href="#">
-      <i class="fa fa-facebook"></i> Facebook
+      <i class="fab fa-facebook-f"></i> Facebook
     </a>
   </li>
   <li>
     <a href="#">
-      <i class="fa fa-linkedin"></i> Linkedin
+      <i class="fab fa-linkedin-in"></i> Linkedin
     </a>
   </li>
   <li>
     <a href="#">
-      <i class="fa fa-twitter"></i> Twitter
+      <i class="fab fa-twitter"></i> Twitter
     </a>
   </li>
 </ul>

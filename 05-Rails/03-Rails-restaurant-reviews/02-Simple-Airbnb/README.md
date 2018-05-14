@@ -58,7 +58,7 @@ Do you remember why we use `.create!` instead of just `.create`? Ask around if y
 
 Let's add the correct action in our `FlatsController` (hint: it's `index` 😉). The action in the controller should fetch all flats in our database (we have Active Record for that!) and pass in onto the view.
 
-The view should loop over these to display them, like in the screenshot below. Let start designing right from the begining. We can use [font awesome](http://fontawesome.io/icons/) or [materialize](http://materializecss.com/icons.html) for icons.
+The view should loop over these to display them, like in the screenshot below. Let start designing right from the begining. We can use [font awesome](https://fontawesome.com/icons) or [materialize](http://materializecss.com/icons.html) for icons.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png)
 
