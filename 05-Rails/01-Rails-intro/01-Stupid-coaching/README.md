@@ -185,7 +185,7 @@ Open the generated file in Sublime Text, and write your first test:
 require "application_system_test_case"
 
 class QuestionsTest < ApplicationSystemTestCase
-  test "visting /ask renders the form" do
+  test "visiting /ask renders the form" do
     visit ask_url
     assert_selector "p", text: "Ask your coach anything"
   end
