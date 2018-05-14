@@ -1,3 +1,13 @@
+## Warning
+
+:warning: **Never do `sudo gem install rails` even if the terminal tells you so!** :warning:
+> Open a ticket if it’s the case
+
+This is the good way to install Rails:
+```bash
+gem install rails -v 5.2
+```
+
 ## Background & Objectives
 
 Remember your first weeks of Ruby? We only had the terminal for the program user interface. Those days are over, we will now use Rails! This means:
