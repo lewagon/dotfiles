@@ -102,7 +102,7 @@ For your seed, you can find nice images of houses on [unsplash](https://unsplash
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index_3.png)
 
-### 9 - Filtering flats (Optional)
+### 10 - Filtering flats (Optional)
 
 Let's try to add a search bar to be able to filter flats in the index to find the perfect flat!
 
