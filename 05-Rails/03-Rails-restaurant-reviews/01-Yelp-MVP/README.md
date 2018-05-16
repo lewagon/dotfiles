@@ -174,7 +174,7 @@ When using a Rails helper like `link_to`, you can pass it a hash of HTML attribu
 ##### [link_to](http://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to)
 
 ```erb
-<%= link_to "See details", @restaurant, class: "btn btn-primary"%>
+<%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
 ```
 
 This generates the following HTML:
