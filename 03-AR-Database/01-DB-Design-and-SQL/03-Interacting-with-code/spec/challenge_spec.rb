@@ -172,7 +172,7 @@ describe 'Queries methods' do
                                         "You Can't Do it Right (With the One You Love)",
                                         "You Sure Love To Ball"
                                       ]
-      result = love_tracks(db)
+      result = love_tracks(db).sort
 
       expect(result.length).to eq(tracks.length)
       tracks.each_with_index { |t, i| expect(result[i]).to eq(t) }
