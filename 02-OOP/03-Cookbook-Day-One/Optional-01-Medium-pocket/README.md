@@ -162,6 +162,13 @@ Like in the cookbook, we need a repository to **store** our posts in-memory and 
 
 Implement a `Repository` class which will act as a fake database. It should be connected to a `posts.csv` file to make our app persistent.
 
+**NB:** if you encounter a `csv invalid byte sequence in us-ascii` error while parsing the csv, this can be solved with an option passed to the `CSV.foreach` call: 
+
+```ruby
+CSV.foreach("posts.csv", encoding: 'ISO-8859-1') do |row|
+  # [...]
+```
+
 ### Controller
 
 The controller serves the user stories. Let's have a look at them:
