@@ -59,10 +59,8 @@ no argument and will return an array containing every `Post` instance.
 ## Further suggestions
 
 An SQL injection is a type of attack where the person using your application won't just pass a regular integer `id`
-to the `find` method, but will add an evil string to damage your data. If you look at
-the SQL query in the spec, you'll see what we mean.
+to the `find` method, but will add an evil string to damage your data. If you look at the SQL query in the spec, you'll see what we mean.
 
-You'll need to use [**bind parameters** with the `execute` method](http://zetcode.com/db/sqliteruby/bind/)
-to avoid those injections and correctly **escape** the user value.
+You can read [this Medium article](https://medium.com/@yelstin.fernandes/how-to-add-items-to-a-database-table-using-ruby-sqlite3-74dcd8f931f9) and [this StackOverflow answer](https://stackoverflow.com/questions/13462112/inserting-ruby-string-into-sqlite#answer-13462218) to wrap your head around SQL injections 👌
 
 **Never trust user data**!
