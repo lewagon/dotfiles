@@ -103,12 +103,24 @@ Otherwise just a make a query to get all the patients from DB like in lecture
 
 ### Day 4
 
--
+- Convert an HTML list to an ERB list using a loop and <%= %>, can we open an erb file without middleman tho ?
+
 
 ### Day 5
+
+- No need I think, the first exercise is already fairly easy
+
 ### Day 6
+
+- Same here
+
 ### Day 7
+
+- Use Star wars API to add the name of your favorite character to an HTML page
+
 ### Day 8
+
+- Product design, no need
 
 # Rails
 
