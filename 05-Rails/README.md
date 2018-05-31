@@ -16,22 +16,21 @@ Here comes our old friend Active Record again! **One of the most important Rails
 
 Today you will add a second model to a Rails app by building a two model clone of Yelp, with restaurants and reviews. The morning lecture is about going **Beyond CRUD** with advanced routing and validations in Rails.
 
-### `04 Hosting & Deployment`
+### `04 Rails frontend`
 
-The morning lecture is split into 2 topics:
+Learn the best setup for implementing Bootstrap SASS + frontend libraries, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
 
-1. **Hosting**: Deployment on [Heroku](http://heroku.com/)
-
-2. **Rails Frontend**: Learn the best setup for implementing Bootstrap SASS + frontend libraries, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config
+Learn about the asset pipeline and webpacker.
 
 For the exercises, you'll start a two-day build of a cocktail app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
-- Create your app with good Postgres config.
 - Follow the frontend setup carefully to work on a nice-looking app.
-- Deploy on Heroku from start, and try applying continuous deployment.
 
-### `05 Image Upload`
+### `05 Hosting & Image Upload`
 
-Today's lecture covers image upload on [Cloudinary](http://cloudinary.com/), using the [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) and [Attachinary](https://github.com/assembler/attachinary) gems. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want your bank details stolen on Github.**
+This  morning lecture has 2 parts:
+**Hosting**: Deployment on [Heroku](http://heroku.com/)
+
+**Image Upload**: We'll host images on [Cloudinary](http://cloudinary.com/), using the [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want your bank details stolen on Github.**
 
 On Friday at 2pm, **quiz time**! Your last one! Don't be sad 😢
 
@@ -53,19 +52,19 @@ We'll take a step back and check you've grasped all the core notions of Rails.
 - Authentication with [Devise](https://github.com/plataformatec/devise) gem.
 - Collaboration techniques with git & Github. You will discover how to work in a dev team using `branches` and `pull requests`. It's a system you will use for every dev project you ever do, so pay attention!
 
-### `07 Facebook Connect`
+### `07 Pundit`
 
-Following on from Devise, we will teach you how to customize it to build a `Sign In With Facebook` function, using [Devise Omniauth integration](https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview).
+Following on from Devise, we will teach you how to handle **authorization** in your Rails app and make sure only the restaurant creator can update it or destroy it!
 
 ### `08 Geocoding`
 
 Morning lecture on geocoding (with the `geocoder` gem) plus a bit about using the Google API to add autocomplete on address form inputs.
 
-### `09 Mailing`
-
-Today's lecture covers sending mail using the *SMTP* protocol. We will use the [Postmark](https://postmarkapp.com/) app to make our Rails app send transactional emails (order or signup confirmation, booking approval, etc.).
-
 Then, at 5pm, every group should demo the current version of their Airbnb clone in front of the class.
+
+### `09 Search`
+
+Today's lecture covers the search topic, from the search 101 using ActiveRecord to stronger solutions like ElasticSearch or Algolia.
 
 ### `10 Airbnb Ajax in Rails`
 
