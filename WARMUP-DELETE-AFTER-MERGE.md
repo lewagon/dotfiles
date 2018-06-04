@@ -4,7 +4,7 @@
 
 - BUDDY (create a method that return the name of your buddy today)
 
-Need to change the one on setup day
+Need to change the one on setup day, maybe return sum of two numbers instead?
 
 ### Day 2
 
