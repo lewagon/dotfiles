@@ -71,13 +71,11 @@ my_home.square_meters => error
 
 ### Day 1
 
-- SQL design already fairly easy ?
-
-Otherwise just a make a query to get all the patients from DB like in lecture
+- Draw a users table with 3 fields: id, first_name and last_name
 
 ### Day 2
 
-- SQL design for hacker news or just add one record to the table `students` using `sqlite3`
+- make a query to get all the patients from DB like in lecture
 
 ### Day 3
 
@@ -108,15 +106,15 @@ Otherwise just a make a query to get all the patients from DB like in lecture
 
 ### Day 5
 
-- No need I think, the first exercise is already fairly easy
+- No need for now, will review module
 
 ### Day 6
 
-- Same here
+- No need for now, will review module
 
 ### Day 7
 
-- Use Star wars API to add the name of your favorite character to an HTML page
+- No need for now, will review module
 
 ### Day 8
 
