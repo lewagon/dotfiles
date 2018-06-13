@@ -19,3 +19,7 @@ end
 ## Key learning points
 
 - What is the syntax when using an `if/else` statement?
+
+## Optional
+
+- Can you think of a way to refacto your code using one line only?
