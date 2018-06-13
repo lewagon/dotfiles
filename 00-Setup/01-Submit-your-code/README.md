@@ -26,11 +26,7 @@ Open the `lib/wagon_start.rb` file in Sublime Text. That's where you'll need to 
 * Commit your changes and push them.
 * Go back to Kitt and refresh the page. You should see your solution on the right.
 
-## Exercise 2: Github Nickname
-
-Open the `lib/buddy.rb`. Make sure that the method `today_my_buddys_github_nickname_is` does **return** (this is different to **puts**!) the github username of your buddy. It should return a `String`! If you don't have a buddy, just return your own github username.
-
-## Exercise 3: Practising command lines (Terminal)
+## Exercise 2: Practising command lines (Terminal)
 
 Before going further in fullstack-challenges directory, we'll first work on the command lines you've just learnt.
 
