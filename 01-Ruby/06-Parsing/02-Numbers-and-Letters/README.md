@@ -49,6 +49,6 @@ This challenge will let you access a web-API, and parse JSON data returned by th
 This challenge is deliberately not guided. Here are some elements that will help you:
 
 - Write the pseudo code to figure out how to proceed before diving into the code
-- You can install the extension [Json Formatter for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) to help you read a JSON rendered by an API.
+- You can install the extension [Json Formatter for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) to help you read a JSON rendered by an API (see [JSONView for Mozilla](https://addons.mozilla.org/fr/firefox/addon/jsonview/))
 - Use the `open-uri` package from ruby standard library to make HTTP requests to this API and get a JSON result. Use the `json` package to parse returned JSON files.
 - For testing the grid inclusion, try making use of `Enumerable#all?`
