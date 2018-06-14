@@ -38,30 +38,3 @@ describe 'Recipe', if: recipe_helper.file_exists? do
     end
   end
 end
-
-# Object.const_defined?("Recipe")
-
-# describe
-
-# describe Recipe do
-#   let(:recipe) { Recipe.new('test', 'description') }
-#   describe '#name' do
-#     it 'should return the name of recipe' do
-#       expect(recipe).to respond_to :name
-#     end
-#   end
-
-#   describe '#description' do
-#     it 'should return the description of recipe' do
-#       expect(recipe).to respond_to :description
-#     end
-#   end
-
-#   describe '#initialize' do
-#     it 'should create a recipe with a list of attributes' do
-#       recipe = RecipeFactory.build('Brownie', 'Delicious chocolate cake')
-#       expect(recipe.name).to eq 'Brownie'
-#       expect(recipe.description).to eq 'Delicious chocolate cake'
-#     end
-#   end
-# end
