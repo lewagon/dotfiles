@@ -60,7 +60,7 @@ Then, the teammates should run:
 bundle install
 yarn install
 touch .env
-echo '.env' >> .gitignore
+echo '.env*' >> .gitignore
 rails db:create db:migrate
 ```
 
