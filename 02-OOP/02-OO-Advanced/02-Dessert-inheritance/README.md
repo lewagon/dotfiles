@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Inheritance is a core concept of OO programming. It allows us to "transfer" methods by defining subclasses (children) that inherit from superclasses (parents). A child class will inherit from its parents' methods.
+So why do we need inheritance? Because we don't want to have the same logic repeated in multiple places in our code! If multiple classes share some of the same behaviour then it may be time to introduce inheritance.
 
 e.g. You want to code a generic `Parser` with the basic features (read a file, store its content, etc.). After a while, you decide you want to create more specific parsers like `XmlParser` or a `JsonParser` to handle specific formats. By making these new classes **children** of the `Parser` class, it means you don't have to re-write all the basic methods created in Parser, and you only need to create the methods that are **specific** to your Xml or Json needs. So inheritance keeps things DRY!
 
@@ -29,7 +29,6 @@ Complete `JellyBean` which inherits from `Dessert`
 ## Key learning points
 
 - Why do we make classes inherit from others? What's the point?
-- What's the syntax to do it?
 - What's the keyword to extend the behavior of an inherited method?
 - Let's assume we have `class Bike < Vehicle` and we defined `Vehicle#drive`. If we implement `Bike#drive` which method will apply to `Bike` objects, `Vehicle#drive` or `Bike#drive`?
 - Can you find any examples of object inheritance in Rails?

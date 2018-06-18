@@ -10,12 +10,12 @@
 
 
 module.exports = function runChallenges(check) {
-  // Ex 1. Read the content of the email input
+  // Ex 1. Read what's written in the email input and store it in the email variable below
   const email = null; // TODO: replace null, keep the email variable.
 
 
 
-  // Ex 2. Fill the content of the email input with your email
+  // Ex 2. Change the content of the email input by writing your own email address
 
 
 
@@ -29,7 +29,7 @@ module.exports = function runChallenges(check) {
 
 
 
-  // Ex 5. Count the number of table body rows there are (team count!)
+  // Ex 5. Count the number of table body rows there are and store it in the below variable (team count!)
   const teamCount = 0; // TODO: replace 0, keep the teamCount variable.
 
 

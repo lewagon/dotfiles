@@ -16,7 +16,13 @@ Please start with a paper and pen to identify your components and their responsi
 
 ### Model
 
-You should always start with your model. The most important thing in your app is your data, and using models allows you to manipulate whatever data you have. So, create a new file `recipe.rb` to define a `Recipe` class. It should have two instance variables, `@name` and `@description`.
+Luckily, we already defined our `Recipe` class in the previous exercise. Now all we need to do is copy that into our cookbook app. To do so, copy this command into your terminal:
+
+```bash
+cp ../01-Recipe/lib/recipe.rb lib
+```
+
+This is copying the `recipe.rb` file from the previous exercise, into the `lib` folder in our cookbook app.
 
 ### Repository
 

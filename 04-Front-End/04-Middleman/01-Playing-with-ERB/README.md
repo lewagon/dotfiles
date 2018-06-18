@@ -4,7 +4,7 @@ Reminder, **no live-code tonight as you will pitch your idea in front of the cla
 
 ## Evening Pitch session
 
-If you've done your homework 😀, you should have uploaded your product pitch [here](https://kitt.lewagon.com/camps/<user.batch_slug>/products). You will have 5 minutes to pitch your idea in front of the class in the evening.
+If you've done your homework 😀, you should have uploaded your product pitch [here](https://kitt.lewagon.com/camps/<user.batch_slug>/products). You will have 2 to 3 minutes to pitch your idea in front of the class in the evening.
 
 ## Background & Objectives
 
