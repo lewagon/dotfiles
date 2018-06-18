@@ -1,14 +1,5 @@
 ## Background & Objectives
 
-You now know how to use the `SQLite3::Database` instance to `execute` SQL queries
-against a SQLite database:
-
-```ruby
-DB = SQLite3::Database.new("a_file.db")
-rows = DB.execute('SELECT * FROM stuff')
-# => rows is an `Array` of row, each row being an `Array` of columns.
-```
-
 The goal of the day is to implement each one of the `CRUD` operations and build a copycat of
 [Hacker News](https://news.ycombinator.com).
 
