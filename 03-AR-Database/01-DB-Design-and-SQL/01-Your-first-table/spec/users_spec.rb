@@ -1,6 +1,5 @@
 require 'net/http'
 require 'rexml/document'
-require 'pry-byebug'
 
 describe "The schema in users.xml" do
   let(:doc) do

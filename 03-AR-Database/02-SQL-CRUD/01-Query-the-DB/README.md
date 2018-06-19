@@ -9,9 +9,9 @@ rows = DB.execute('SELECT * FROM table_name')
 # => rows is an `Array` of row, each row being an `Array` of columns.
 ```
 
-Before moving on to the main goal for today, let's rehearse making a query to the database. 
-We will be using the same `jukebox` database from yesterdays exercises. 
+Before moving on to the main goal for today, let's rehearse making a query to the database.
+We will be using the same `jukebox` database from yesterday's exercises.
 
 ## Specs
 
-We prepared for you a `query.rb` file with one method: `all_artists`. This method should use the db passed as an argument to retrieve all the records in the artists table. 
+We prepared for you a `query.rb` file with one method: `all_artists`. This method should use the `db` passed as an argument to retrieve all the records in the artists table.

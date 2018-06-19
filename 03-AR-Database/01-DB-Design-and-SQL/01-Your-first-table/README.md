@@ -21,5 +21,6 @@ To check your solution, click on "Save / Load", then "Save XML", copy/paste the 
 
 ## Key learning points
 
-- TODO
+- Become comfortable with using the [SQL Designer](http://db.lewagon.com) tool to build your schema.
+- Use the correct conventions when naming tables and columns in your schema.
 
