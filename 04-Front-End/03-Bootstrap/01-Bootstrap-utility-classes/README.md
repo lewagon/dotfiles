@@ -1,10 +1,10 @@
 ## Background & Objectives
 
-Practice the Bootstrap utility classes. Learn how to use their classes to make various components.
+Practice using the Bootstrap utility classes. Learn how to use their classes to make various components.
 
 ## Specs
 
-For this exercise the HTML is already done for you on the `index.html` all you have to do is add the right Bootstrap class to have the wanted behavior. For example:
+For this exercise the HTML is already done for you on the `index.html` all you have to do is add the right Bootstrap class to have the wanted behaviour. For example:
 
 ```html
 <a href="#">I'm a link!</a>
