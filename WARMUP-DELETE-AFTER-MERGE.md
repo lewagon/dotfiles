@@ -123,6 +123,9 @@ my_home.square_meters => error
 # Rails
 
 ### Day 1
+
+ - Have a rails app set up, with a pages controller + `home` action , with the coresponding view. Walk them through the conventions, and then just ask them to add the correct route to `routes.rb`.
+
 ### Day 2
 ### Day 3
 ### Day 4
