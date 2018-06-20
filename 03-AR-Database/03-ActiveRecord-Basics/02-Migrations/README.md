@@ -3,14 +3,6 @@
 - Understand the concept of **schema** migration
 - Learn how to execute `migrations` on your database running `rake` tasks.
 
-## Setup
-
-Don't forget to run this in your terminal:
-
-```bash
-gem install activerecord
-```
-
 ## Specs
 
 This exercise is focused on **migrations**. No models yet, so you'll have to code the migrations to create your database schema (remember, the schema is the **structure** of the DB, i.e. tables and columns, **not data**). We want to create the database schema that will host a clone of [Hacker News](https://news.ycombinator.com) - a famous website that shares links about Tech & Startups.
