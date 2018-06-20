@@ -17,4 +17,9 @@ describe '#all_artists' do
     all_ids = (1..275).to_a
     expect(all_artists(db)&.map(&:first)).to eq(all_ids)
   end
+
+  it 'returns all the fields from artists table' do
+    record = all_artists(db).sample
+    expect(record.size).to eq(2)
+  end
 end
