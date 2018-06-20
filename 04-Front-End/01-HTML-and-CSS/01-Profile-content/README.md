@@ -112,3 +112,20 @@ Or this one:
 ```
 
 Indent your HTML! Your code should look like a [V formation of ducks](https://upload.wikimedia.org/wikipedia/commons/0/0b/Eurasian_Cranes_migrating_to_Meyghan_Salt_Lake.jpg) 🦆🦆🦆!
+
+## Finished?
+
+Once you've finished you can push this exercise and copy the content to the next exercise foler with this command:
+
+```bash
+# Push to gihtub
+git add .
+git commit -m "Added content to my profile page"
+git push origin master
+
+# Copy folder into next exercise folder
+cp -r profile ../02-Fonts-and-colors
+```
+
+
+
