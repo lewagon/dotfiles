@@ -1,41 +1,22 @@
 require "quiz"
 
 describe "quiz" do
-  describe "#launching_a_rails_server" do
+  describe "#crud_routes" do
     it "should return the correct answer" do
-      correct_commands = ['rails server', 'rails s']
-      expect(correct_commands).to include(launching_a_rails_server)
+      correct_actions = ['index', 'show', 'new', 'create', 'edit', 'update', 'destroy'].sort
+      expect(correct_actions).to eq(crud_routes.sort)
     end
   end
 
-  describe "#rails_flow" do
+  describe "#nested_routes_for_n_to_n?" do
     it "should return the correct answer" do
-      expect(rails_flow).to eq(['add routes', 'generate controller and action', 'create view'])
+      expect(nested_routes_for_n_to_n?).to eq(false)
     end
   end
 
-  describe "#route_to_about_page" do
+  describe "#validate_name" do
     it "should return the correct answer" do
-      expect(route_to_about_page).to eq("get 'about', to: 'pages#about'")
-    end
-  end
-
-  describe "#generate_controller_command" do
-    it "should return the correct answer" do
-      correct_commands = [
-                            'rails g controller pages about',
-                            'rails g controller Pages about',
-                            'rails generate controller pages about',
-                            'rails generate controller Pages about'
-                          ]
-
-      expect(correct_commands).to include(generate_controller_command)
-    end
-  end
-
-  describe "#naming_conventions" do
-    it "should return the correct answer" do
-      expect(naming_conventions).to eq('app/views/pages/about.html.erb')
+      expect(validate_name).to eq('validates :name, presence: true')
     end
   end
 end

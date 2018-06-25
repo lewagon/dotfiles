@@ -1,8 +1,9 @@
-# TODO: Below are five questions for you to answer. Read each of the questions
-# and make sure each of the methods return the correct answer.
+# TODO: Below are three questions for you to answer. Read each of the questions
+# and make sure each of the methods `return` the correct answer.
+# ⚠️ Try and answer them before running `rake`.
 
 def crud_routes
-  # TODO: Return a `Array` all the `actions` that `resources :restaurants` would generate for you.
+  # TODO: Return a `Array` the 7 `actions` that `resources :restaurants` would generate for you.
   actions = []
 
   actions << 'index'
@@ -18,27 +19,8 @@ def nested_routes_for_n_to_n?
 
 end
 
-def top
-  # TODO: Assuming you are in your `RestaurantsController` and that you have this in your routes:
+def validate_name
+  # TODO: Return a `string` of the ActiveRecord validation need to make sure no record is
+  # created without a name.
 
-  # resources :restaurants do
-  #   collection do                       # collection => no restaurant id in URL
-  #     get 'top', to: "restaurants#top"  # RestaurantsController#top
-  #   end
-  # end
-
-  # how those
-end
-
-def chef
-  # TODO: Return a `string` of what you have to add you your `routes`
-  # in order to have a route like this: `GET /restaurants/1/chef` that would
-  # show info about a chef of a specific restaurant of your website.
-
-end
-
-def naming_conventions
-  # TODO: Return a `string` with the file path (from the root of you rails
-  # application) to the view corresponding to the controller action generated
-  # in the question above (the `about` action, in the `pages` controller).
 end
