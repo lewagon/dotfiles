@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Before we move on to looking at a rails app with the basic CRUD features, lets review some of the principles we saw yeserday when we looked at routing, controllers & views.
+Before we move on to looking the second part of Mister Cocktail challenge let's review some of the principles we saw yeserday when we looked at rails modern frontend techniques.
 
 ## Specs
 
@@ -10,38 +10,18 @@ the correct information to pass the quiz!
 
 ### Question 1
 
-Return a `String` with the command you would run in your terminal
-to launch a rails server so that you could visit your your app in development
-at `http://localhost:3000`.
+Return a `String` with the write command to create a new rails app called `mister-cocktail` with webpack.
 
 ### Question 2
 
-You will find three variables defined with the three different
-steps required to add a new page to your rails app. Add these variables
-to the `Array` returned so that these steps are in the correct order.
+Return a string of what you have to add to `application.html.erb` if you want to import the javascript file `application.js` that is inside of `app/javascript`.
 
 ### Question 3
 
-If you want to add an about page to your rails app, you will
-first need to add a new route. Return a `String` with the line you would
-add to your `config/routes.rb` file, so that you could visit your page
-at `localhost:3000/about` (you will need to specify the controller and
-action somehow....).
-
-### Question 4
-
-Return a `String` with the command you would run in the terminal to
-generate a `pages` controller, with an `about` action.
-
-### Question 5
-
-Return a `String` with the file path (from the root of you rails
-application) to the view corresponding to the controller action generated
-in the question above (the `about` action, in the `pages` controller).
-
+Return a `String` with the command to type in the terminal to add the npm package `sweetalert` to your rails app.
 
 ## Key learning points
 
-- Know the steps for adding a new page to your Rails application.
-- How do we generate new controllers in our application?
-- What are the conventions we must follow when working with Rails?
+- How to make a new rails app with webpack.
+- Understand where to put your javascript in a rails app.
+- How to add extra JavaScript packages to your rails app.

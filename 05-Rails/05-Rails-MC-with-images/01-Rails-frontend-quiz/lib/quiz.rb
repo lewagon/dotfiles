@@ -8,7 +8,7 @@ def rails_app_with_wepback
 end
 
 def modern_javascript
-  # TODO: a string of what you have to add to you `application.html.erb` if you want to import
+  # TODO: Return a string of what you have to add to `application.html.erb` if you want to import
   # the javascript file `application.js` that is inside of `app/javascript`
 end
 
