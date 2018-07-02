@@ -15,7 +15,7 @@ def generate_model_command
   # stars(`Integer`).
 end
 
-def files_generated_by_model_generator
+def files_created_by_model_generator
   # TODO: Update the `Array` returned with the paths to the two files created
   # for you when run the model generator for a `Restaurant` model (from the
   # question above). Use `YYYYMMDDHHMMSS` for any timestamps.
@@ -26,8 +26,8 @@ def files_generated_by_model_generator
 end
 
 def crud_routing
-  # TODO: there are seven `CRUD` routes that we need to know by heart. But
-  # we don't want to write all of the in our routes. Return a `String` with
+  # TODO: There are seven `CRUD` routes that we need to know by heart. But
+  # we don't want to write all of them in our routes. Return a `String` with
   # the single line we would add in `config/routes.rb` to add all seven CRUD
   # routes for our `Restaurant` model.
 end

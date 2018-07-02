@@ -29,7 +29,7 @@ describe "quiz" do
     end
   end
 
-  describe "#files_generated_by_model_generator" do
+  describe "#files_created_by_model_generator" do
     it "should return the correct answer" do
       files_generated = [
                           'app/models/restaurant.rb',
