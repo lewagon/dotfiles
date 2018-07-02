@@ -1,6 +1,5 @@
 # TODO: Below are three questions for you to answer. Read each of the questions
 # and make sure each of the methods `return` the correct answer.
-# ⚠️ Try and answer them before running `rake`.
 
 
 def rails_app_with_wepback
