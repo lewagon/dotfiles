@@ -1,0 +1,15 @@
+{
+  "paths": {
+    "linux": [
+      "~/.rbenv/shims"
+    ],
+    "osx": [
+      "~/.rbenv/shims"
+    ]
+  },
+  "linters": {
+    "rubocop": {
+      "args": ["--config", ".rubocop.yml"]
+    }
+  }
+}
