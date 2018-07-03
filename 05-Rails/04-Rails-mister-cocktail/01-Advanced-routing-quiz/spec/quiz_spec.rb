@@ -1,10 +1,18 @@
 require "quiz"
 
 describe "quiz" do
-  describe "#crud_routes" do
+  describe "#plants_resources_routes" do
     it "should return the correct answer" do
-      correct_actions = ['index', 'show', 'new', 'create', 'edit', 'update', 'destroy'].sort
-      expect(correct_actions).to eq(crud_routes.sort)
+      correct_actions = [
+                          "get '/restaurants', to: 'restaurants#index'",
+                          "post '/restaurants', to: 'restaurants#create'",
+                          "get '/restaurants/new', to: 'restaurants#new'",
+                          "get '/restaurants/:id/edit', to: 'restaurants#edit'",
+                          "get '/restaurants/:id', to: 'restaurants#show'",
+                          "patch '/restaurants/:id', to: 'restaurants#update'",
+                          "delete '/restaurants/:id', to: 'restaurants#destroy'",
+                        ]
+      expect(correct_actions.sort).to eq(plants_resources_routes.sort)
     end
   end
 

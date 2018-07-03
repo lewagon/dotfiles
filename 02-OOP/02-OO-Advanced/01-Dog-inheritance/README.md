@@ -11,19 +11,19 @@ end
 
 ## Specs
 
-#### Building inheritance
+#### Dog inheritance
 
-- We have created a `Building` class with three instance variables, `@name`, `@width` and `@length`, set with the three parameters of `initialize`.
-- We have also create a `House` class that is empty.
-- Change the definition of the `House` class, so that it has the instance variables and behaviour of the `Building` class.
+- We have created a `Dog` class with one instance method: `bark`.
+- We have also create a `GermanShephard` class that is empty.
+- Change the definition of the `GermanShephard` class, so that it has the instance methods and behaviour of the `Dog` class.
 - For example, the code below should work:
 
 ```ruby
-cottage = House.new("Country Cottage", 20, 40)
-cottage.floor_area # => 800
+german_shephard = GermanShephard.new
+german_shephard.bark # => "woof woof"
 ```
 
-NOTE: do not add any code within the body of the `House` class!
+NOTE: do not add any code within the body of the `GermanShephard` class!
 
 
 ## Key learning points

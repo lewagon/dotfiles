@@ -1,6 +1,6 @@
 ## Setup
 
-We want to continue building our profile page. If you haven't already let's copy our previous profile into this challenge's folder and add a CSS file to it:
+We want to continue building our profile page. If you haven't already, let's copy our previous profile into this challenge's folder and add a CSS file to it:
 
 ```bash
 cp -r ../01-Profile-content/profile .
@@ -18,7 +18,7 @@ Add simple CSS rules to design **fonts** and **colors** for your profile page.
 
 ### Body
 
-Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-height` for the `<body>`. **Setting these font rules at the body-level will apply them on all basic text tags ** (`<p>`, `<li>`, etc.).
+Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-height` for the `<body>`. **Setting these font rules at the body-level will apply them on all basic text tags** (`<p>`, `<li>`, etc.).
 
 ### Headers
 
@@ -59,7 +59,7 @@ body {
 
 ## Finished?
 
-Once you've finished you can push this exercise and copy the content to the next exercise foler with this command:
+Once you've finished you can push this exercise and copy the content to the next exercise folder with this command:
 
 ```bash
 # Push to gihtub

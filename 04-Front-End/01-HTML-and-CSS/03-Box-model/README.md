@@ -76,10 +76,10 @@ As with `if` statements in ruby, order matters! If several conditions are `true`
 
 ## Finished?
 
-Once you've finished you can push this exercise and copy the content to the next exercise foler with this command:
+Once you've finished you can push this exercise and copy the content to the next exercise folder with this command:
 
 ```bash
-# Push to gihtub
+# Push to Gihtub
 git add .
 git commit -m "Added div to my profile page"
 git push origin master
