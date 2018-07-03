@@ -10,6 +10,8 @@
     "Git",
     "GitGutter",
     "Package Control",
-    "SCSS"
+    "SCSS",
+    "SublimeLinter",
+    "SublimeLinter-rubocop"
   ]
 }
