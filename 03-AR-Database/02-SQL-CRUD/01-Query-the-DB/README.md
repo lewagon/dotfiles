@@ -6,7 +6,7 @@ against a SQLite database:
 ```ruby
 DB = SQLite3::Database.new("a_file.db")
 rows = DB.execute('SELECT * FROM table_name')
-# => rows is an `Array` of row, each row being an `Array` of columns.
+# => rows is an Array of records, each record being an Array of columns.
 ```
 
 Before moving on to the main goal for today, let's rehearse making a query to the database.

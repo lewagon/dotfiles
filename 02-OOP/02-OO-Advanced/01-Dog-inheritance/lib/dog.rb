@@ -1,0 +1,8 @@
+class Dog
+  def bark
+    puts "woof woof"
+  end
+end
+
+class GermanShephard
+end

@@ -4,24 +4,22 @@
 
 def plants_resources_routes
   # TODO: Return a `Array` the 7 `actions` that `resources :restaurants` would generate for you.
-  actions = []
+  routes = []
 
-  actions << 'index'
-  # Add more actions here
+  routes << "get '/restaurants', to: 'restaurants#index'"
+  # Add more routes here
 
-  return actions
+  return routes
 end
 
 def nested_routes_for_n_to_n?
   # TODO: Return a `true` or `false` to answer this question:
   # If you have a many to many relationship between you models like `Restaurant` and `Review` (belongs_to :restaurant),
   # do you always have to nest all your routes for `Review` in `Restaurant`?
-
 end
 
 def validate_name
   # TODO: Return a `string` of the ActiveRecord validation need to make sure no record is
   # created without a name. /!\ in Rails' context, a validation **is not** a String!
   # (it is only a String for the purpose of this exercise)
-
 end

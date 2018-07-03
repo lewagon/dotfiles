@@ -72,10 +72,10 @@ Even inline, a list `<ul>` has some `padding-left` that you will also have to ki
 
 ## Finished?
 
-Once you've finished you can push this exercise and copy the content to the next exercise foler with this command:
+Once you've finished you can push this exercise and copy the content to the next exercise folder with this command:
 
 ```bash
-# Push to gihtub
+# Push to Gihtub
 git add .
 git commit -m "Added advanced css to my profile page"
 git push origin master

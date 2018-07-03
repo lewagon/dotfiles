@@ -3,7 +3,7 @@
 - Practice using our first `rake` task to create our database.
 - Remember that we now have some rake tasks available to us to manipulate our database:
 
-```ruby
+```bash
   rake db:create      # Creates your database
   rake db:drop        # Destroys your whole database
   rake db:migrate     # Runs any migrations that haven't already been run
