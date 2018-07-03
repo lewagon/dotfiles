@@ -6,10 +6,5 @@
     "osx": [
       "~/.rbenv/shims"
     ]
-  },
-  "linters": {
-    "rubocop": {
-      "args": ["--config", ".rubocop.yml"]
-    }
   }
 }
