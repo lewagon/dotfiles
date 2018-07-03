@@ -115,7 +115,7 @@ Indent your HTML! Your code should look like a [V formation of ducks](https://up
 
 ## Finished?
 
-Once you've finished you can push this exercise and copy the content to the next exercise foler with this command:
+Once you've finished you can push this exercise and copy the content to the next exercise folder with this command:
 
 ```bash
 # Push to gihtub

@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Before we move on to looking at a rails app with the basic CRUD features, lets review some of the principles we saw yeserday when we looked at routing, controllers & views.
+Before we move on to looking at a rails app with the basic CRUD features, lets review some of the principles we saw yesterday when we looked at routing, controllers & views.
 
 ## Specs
 
