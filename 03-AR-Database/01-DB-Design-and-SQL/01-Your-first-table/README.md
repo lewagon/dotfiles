@@ -4,7 +4,7 @@ The goal of this first challenge is to create our first table using the [SQL Des
 
 ## Specs
 
-#### Creating our first table
+#### Designing our first table
 
 Let's create a table to store users. The table should have these columns:
 
