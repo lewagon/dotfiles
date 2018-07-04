@@ -3,29 +3,15 @@ require "quiz"
 describe "quiz" do
   describe "#crud" do
     it "should return the correct answer" do
-      crud_verbs = [
-                     'create',
-                     'read',
-                     'update',
-                     'delete',
-                    ]
+      crud_verbs = %w[create read update delete]
       expect(crud.map(&:downcase)).to eq(crud_verbs)
     end
   end
 
   describe "#generate_model_command" do
     it "should return the correct answer" do
-      correct_commands = [
-                          'rails generate model Restaurant name:string stars:integer',
-                          'rails generate model Restaurant name stars:integer',
-                          'rails generate model restaurant name:string stars:integer',
-                          'rails generate model restaurant name stars:integer',
-                          'rails g model Restaurant name:string stars:integer',
-                          'rails g model Restaurant name stars:integer',
-                          'rails g model restaurant name:string stars:integer',
-                          'rails g model restaurant name stars:integer',
-                          ]
-      expect(correct_commands).to include(generate_model_command)
+      correct_commands_regexp = /^rails (g|generate) model (restaurant|Restaurant) (name|name:string) stars:integer$/
+      expect(generate_model_command.match(correct_commands_regexp)).not_to eq(nil)
     end
   end
 
@@ -36,7 +22,7 @@ describe "quiz" do
                           'db/migrate/YYYYMMDDHHMMSS_create_restaurants.rb'
                         ]
 
-      expect(files_generated_by_model_generator.sort).to eq(files_generated)
+      expect(files_created_by_model_generator.sort).to eq(files_generated)
     end
   end
 
@@ -46,10 +32,10 @@ describe "quiz" do
     end
   end
 
-  describe "#controller_methods" do
+  describe "#controller_actions" do
     it "should return the correct answer" do
       instance_methods = %w(create destroy edit index new show update)
-      expect(controller_methods.sort).to eq(instance_methods)
+      expect(controller_actions.sort).to eq(instance_methods)
     end
   end
 end

@@ -32,8 +32,8 @@ def crud_routing
   # routes for our `Restaurant` model.
 end
 
-def controller_methods
+def controller_actions
   # TODO: If we have all seven CRUD routes, we will also need seven instance
   # methods in our `RestaurantsController`. Return an `Array` with the seven
-  # controller methods that go along with the CRUD routes.
+  # controller actions that go along with the CRUD routes.
 end
