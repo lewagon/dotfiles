@@ -7,6 +7,7 @@ Before we move on to looking at a rails app with the basic CRUD features, lets r
 Look at the `lib/quiz.rb` file. You will find a quiz with a few methods
 to test your rails knowledge so far. Make sure each of the methods returns
 the correct information to pass the quiz!
+⚠️ Try and answer them before running `rake`.
 
 ### Question 1
 

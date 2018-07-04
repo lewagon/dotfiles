@@ -1,6 +1,5 @@
 # TODO: Below are five questions for you to answer. Read each of the questions
 # and make sure each of the methods return the correct answer.
-# ⚠️ Try and answer them before running `rake`.
 
 def launching_a_rails_server
   # TODO: Return a `string` with the command you would run in your terminal

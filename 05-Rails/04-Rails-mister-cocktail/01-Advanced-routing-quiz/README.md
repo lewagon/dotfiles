@@ -7,6 +7,7 @@ Before we move on to looking the Mister Cocktail challenge let's review some of 
 Look at the `lib/quiz.rb` file. You will find a quiz with a few methods
 to test your rails knowledge so far. Make sure each of the methods returns
 the correct information to pass the quiz!
+⚠️ Try and answer them before running `rake`.
 
 ### Question 1
 
