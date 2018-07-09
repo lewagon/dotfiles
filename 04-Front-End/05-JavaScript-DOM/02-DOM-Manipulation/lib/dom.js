@@ -10,9 +10,11 @@
 
 
 module.exports = function runChallenges(check) {
-  // Ex 1. Read what's written in the email input and store it in the email variable below
-  const email = null; // TODO: replace null, keep the email variable.
-
+  // Ex 1. Read what's written in the email input
+  //       Make the function getEmail() return it
+  function getEmail() {
+    // TODO: return the email
+  }
 
 
   // Ex 2. Change the content of the email input by writing your own email address
@@ -29,9 +31,11 @@ module.exports = function runChallenges(check) {
 
 
 
-  // Ex 5. Count the number of table body rows there are and store it in the below variable (team count!)
-  const teamCount = 0; // TODO: replace 0, keep the teamCount variable.
-
+  // Ex 5. Count the number of table body rows there are
+  //       Make the function countTeam() return it
+  function countTeam() {
+    // TODO: return the number of team
+  }
 
 
   // Ex 6. Say there is a 15th team added to the table.
@@ -40,8 +44,10 @@ module.exports = function runChallenges(check) {
 
 
   // Ex 7. Write some code to sum all points given to all teams
-  let sum = 0; // TODO: replace 0 with your sum result, keep the sum variable.
-
+  //       Make the function summarizePoints() return it
+  function summarizePoints() {
+    // TODO: return the sum
+  }
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF
@@ -59,6 +65,6 @@ module.exports = function runChallenges(check) {
 
 
 
-
-  check(email, teamCount, sum); // Checking exercise answers. DO NOT MODIFY THIS LINE
+  // Checking exercise answers. DO NOT MODIFY THIS LINE
+  check(getEmail(), countTeam(), summarizePoints());
 };
