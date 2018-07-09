@@ -65,9 +65,6 @@ module.exports = function runChallenges(check) {
 
 
 
-  // Checking exercise answers. DO NOT MODIFY THESES LINES
-  const email = getEmail();
-  const teamCount = countTeam();
-  const sum = summarizePoints();
-  check(email, teamCount, sum);
+  // Checking exercise answers. DO NOT MODIFY THIS LINE
+  check(getEmail(), countTeam(), summarizePoints());
 };
