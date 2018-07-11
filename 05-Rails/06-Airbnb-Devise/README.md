@@ -59,7 +59,8 @@ Then, the teammates should run:
 ```bash
 bundle install
 yarn install
-touch config/application.yml
+touch .env
+echo '.env*' >> .gitignore
 rails db:create db:migrate
 ```
 

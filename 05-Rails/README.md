@@ -30,7 +30,7 @@ For the exercises, you'll start a two-day build of a cocktail app, with 3 models
 This  morning lecture has 2 parts:
 **Hosting**: Deployment on [Heroku](http://heroku.com/)
 
-**Image Upload**: We'll host images on [Cloudinary](http://cloudinary.com/), using the [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) gem. The course also explains how you can secure your API keys using the [Figaro](https://github.com/laserlemon/figaro) gem. **Listen carefully if you don't want your bank details stolen on Github.**
+**Image Upload**: We'll host images on [Cloudinary](http://cloudinary.com/), using the [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) gem. The course also explains how you can secure your API keys using the [dotenv](https://github.com/bkeepers/dotenv) gem. **Listen carefully if you don't want your bank details stolen on Github.**
 
 On Friday at 2pm, **quiz time**! Your last one! Don't be sad 😢
 
