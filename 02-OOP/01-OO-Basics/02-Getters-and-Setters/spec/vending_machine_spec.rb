@@ -50,10 +50,10 @@ describe "VendingMachine" do
 
       it "should not let you buy a snack if there aren't any snacks left! (error path)" do
         empty_vending_machine.insert_coin(200)
-        empty_vending_machine.insert_coin(50)
+        empty_vending_machine.insert_coin(51)
         empty_vending_machine.buy_snack
         expect(empty_vending_machine.snacks).to eq(0)
-        expect(empty_vending_machine.amount_cents).to eq(250)
+        expect(empty_vending_machine.amount_cents).to eq(251)
       end
     end
   end
