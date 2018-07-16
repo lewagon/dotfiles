@@ -70,7 +70,7 @@ First, let's have a look at how we'll retrieve information from the Web.
 You can download an HTML document on your computer with the `curl` command. Get the following HTML page saved as a `.html` file in your working directory by running one of these two commands in the terminal:
 
 ```bash
-curl --silent 'http://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
+curl --silent 'https://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
 curl --silent 'http://www.letscookfrench.com/recipes/find-recipe.aspx?aqt=strawberry' > strawberry.html
 ```
 
