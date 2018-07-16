@@ -77,7 +77,7 @@ Don't use `rake` but:
 rspec spec/models
 ```
 
-to only run tests in the `spec/models` folder. Make sure they're all green before moving to the applicative part of the challenge.
+to only run tests in the `spec/models` folder. Make sure they're all green before moving on to the applicative part of the challenge.
 
 #### Attributes
 
