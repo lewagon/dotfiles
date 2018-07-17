@@ -22,6 +22,7 @@ describe "#run_game" do
   let(:perfect) { run_game("wagon", %w(W G G Z O N A L), Time.now, Time.now + 1.0) }
   let(:quick) { run_game("law", %w(W G G Z O N A L), Time.now, Time.now + 1.0) }
   let(:slow) { run_game("law", %w(W G G Z O N A L), Time.now, Time.now + 10.0) }
+  let(:repetitive) { run_game("season", %w(S S A Z O N E L), Time.now, Time.now + 1.0) }
 
   context "the given word is not an english one" do
     let(:not_english) { run_game("zon", %w(W G G Z O N A L), Time.now, Time.now + 1.0) }
@@ -62,6 +63,10 @@ describe "#run_game" do
 
   it "should compute higher score for quicker answer" do
     expect(quick[:score] > slow[:score]).to eq true
+  end
+
+  it "should allow success when answer has repetitive letters" do
+    expect(repetitive[:score] > 0).to eq true
   end
 
   it "should build a custom messages for a correct word" do
