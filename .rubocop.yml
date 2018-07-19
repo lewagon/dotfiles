@@ -38,6 +38,8 @@ MethodMissingSuper:
   Enabled: false
 MissingRespondToMissing:
   Enabled: false
+Security/Open:
+  Enabled: false
 
 AllCops:
   Exclude:
