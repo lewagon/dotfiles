@@ -8,10 +8,11 @@ So now we want to enhance our cookbook by finding recipes online. We will use
 First, let's copy paste your Cookbook's code in today's challenge `lib` folder:
 
 ```bash
-cd ~/code/<user.github_nickname>/fullstack-challenges
-git pull upstream master -X ours
-cd 02-OOP/04-Cookbook-Day-Two/01-Cookbook-Advanced
-cp -r ../../03-Cookbook-Day-One/01-Cookbook/lib .
+# make sure you're in the right directory
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/04-Cookbook-Day-Two/01-Cookbook-Advanced
+
+# copy your code from Cookbook Day 1
+cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
 ```
 
 You can also take the solution from the livecode as a starting point for today (ask your teacher to share it in Slack).
