@@ -70,13 +70,14 @@ Don't forget to `commit` and `push` your work often.
 Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
 we need are `cocktails`, `ingredients` and `doses`. Think about the relations between the tables and who is storing the *references*. 😉
 
-Validate all models tests before moving to the routing layer. You can use this command:
+**Important**
+Don't use `rake` but:
 
 ```bash
 rspec spec/models
 ```
 
-to selectively run tests in the `spec/models` folder.
+to only run tests in the `spec/models` folder. Make sure they're all green before moving on to the applicative part of the challenge.
 
 #### Attributes
 
@@ -117,6 +118,18 @@ Ingredient.create(name: "mint leaves")
 
 ### 3 - Routing, Controller, Views for Cockatils
 
+**Important**
+Don't use `rake` to code the applicative part. It's time to launch a `rails s` in your terminal and open a browser at [http://localhost:3000/](http://localhost:3000/). Always code in silo:
+
+- start with the **route**,
+- then start coding the **controller**,
+- start coding the **view** and refresh your browser.
+
+When your feature is done (and looks good), move on to the next one and repeat the process!
+
+When you think you're done with the **whole** challenge, use `rake` to make sure it satisfies the specs.
+
+**Features**
 Once again, you must have a precise idea of the features of your app in order to build your routes. Here is the list of features:
 
 - A user can see the list of cocktails
