@@ -82,7 +82,7 @@ If you have trouble running `rake`, you may need to run `bin/rake`. It means tha
 
 #### Validation
 
-- A restaurant must have at least a name and an address.
+- A restaurant must have at least a name, an address and a category.
 - The restaurant category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`.
 - A review must have a parent restaurant.
 - A review must have content and a rating. The rating should be a number between 0 and 5.

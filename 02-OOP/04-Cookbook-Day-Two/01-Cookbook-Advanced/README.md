@@ -1,7 +1,7 @@
 ⚠️ There's **no `rake`** for this exercise. Sorry 😉
 
 So now we want to enhance our cookbook by finding recipes online. We will use
-[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 LetsCookFrench](http://www.letscookfrench.com), because their markup structure is pretty clean (making them good candidates for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
+[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 LetsCookFrench](http://www.letscookfrench.com/recipes/find-recipe.aspx), because their markup structure is pretty clean (making them good candidates for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
@@ -25,7 +25,7 @@ ruby lib/app.rb
 
 ## 1 - Import recipes from the web
 
-You can scrape from any recipe website that you know, but good ones are [LetsCookFrench](http://www.letscookfrench.com/) and [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
+You can scrape from any recipe website that you know, but good ones are [LetsCookFrench](http://www.letscookfrench.com/recipes/find-recipe.aspx) and [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
 
 ```
 -- My CookBook --
