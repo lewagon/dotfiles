@@ -30,7 +30,7 @@ Always kickstart a challenge altogether with the teacher and write the *pseudo-c
 Build a simple calculator with a command-line UI:
 
 - First handling only additions
-- Then all operations (mutliplications, substractions, divisions).
+- Then all operations (mutliplications, subtractions, divisions).
 
 It should work like this:
 
