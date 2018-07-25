@@ -85,7 +85,7 @@ Again, to launch just the order tests, use `rspec -t _order`
 
 ```ruby
 class OrderRepository
-  def initialize(orders_csv_path, meal_repository, employee_repository, customer_repository) # <-- /!\ careful with the order of the parameters here /!\
+  def initialize(orders_csv_path, meal_repository, employee_repository, customer_repository)
     # [...]
   end
 
@@ -95,7 +95,7 @@ end
 
 ```ruby
 class OrdersController
-  def initialize(meal_repository, employee_repository, customer_repository, order_repository) # <-- /!\ careful with the order of the parameters here /!\
+  def initialize(meal_repository, employee_repository, customer_repository, order_repository)
     # [...]
   end
 
