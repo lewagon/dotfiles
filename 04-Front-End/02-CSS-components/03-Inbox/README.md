@@ -47,3 +47,5 @@ You can select first (or last message) with these selectors:
 ```
 
 It can be useful to get rid of `border-bottom` on the last message of the inbox for instance!
+
+NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!

@@ -10,6 +10,8 @@ cp -r ../02-Fonts-and-colors/profile .
 
 Play with the box model (`margin/border/padding/width/height`) by splitting your profile information into different `<div>` tags.
 
+Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
+
 ## Specs
 
 Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-model/).
