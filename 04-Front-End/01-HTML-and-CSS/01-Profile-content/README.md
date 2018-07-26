@@ -24,7 +24,7 @@ serve
 (it has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7))
 
 - You can now visit your files on [http://localhost:8000](http://localhost:8000)
-- Sometimes, you may have to kill the server with **Ctrl + C** and start it again with `serve`.
+- /!\ The browser caches the assets (stylesheets, images) coming from a web page. It keeps in memory a version of your website and sometimes, the older version remains and your newest code is not taken into consideration. To fix this, use `cmd + shift + r` to **hard refresh** your to clear the cache and reload the whole page 👌
 
 ## Specs
 

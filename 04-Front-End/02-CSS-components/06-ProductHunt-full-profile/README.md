@@ -167,3 +167,5 @@ Then you have to <i>flexboxify</i> the `.profile-header-infos` div, and make the
 ```
 
 Everything is so easy with flexbox 😊
+
+NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!

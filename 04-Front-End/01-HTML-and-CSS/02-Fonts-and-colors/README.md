@@ -12,6 +12,8 @@ touch style.css
 
 Add simple CSS rules to design **fonts** and **colors** for your profile page.
 
+Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
+
 ## Specs
 
 [This is an example](http://lewagon.github.io/html-css-challenges/02-fonts-colors/) of what you need to create. Here is a list of CSS rules to write:

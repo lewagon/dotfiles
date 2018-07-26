@@ -2,7 +2,6 @@
 
 Let's code a banner, like [this airbnb-like banner](http://lewagon.github.io/html-css-challenges/09-canonical-banner/). A banner is a vital component that is used on most startups' home pages.
 
-
 ## Re-use your button
 
 Don't forget to re-use the `button.css` file that you coded in the previous challenge. This is exactly why we split our design into components: it makes it super easy to re-use them 💪💪💪.
@@ -72,3 +71,5 @@ If you want your banner to take 100% of your screen height:
 ## Centering content with flexbox
 
 The `<div class="banner">` here is a flexbox with only one item inside it: `<div class="banner-content">`. Use flexbox properties (`justify-content` & `align-items`) to center the banner's content both horizontally and vertically. Have a look at the lecture slides if you can't remember how flexboxes work.
+
+NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
