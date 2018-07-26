@@ -92,3 +92,5 @@ To make the left-top corner of first tab and right-top corner of last tab rounde
 ```
 
 `:first-child` and `:last-child` are very useful pseudo-classes!
+
+NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!

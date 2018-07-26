@@ -90,3 +90,5 @@ Now add the CSS code for your flexbox:
 ```
 
 Cool right 💥? Sadly, when resizing your browser you will discover that your flexbox grid is not very responsive 😬. Good news: tomorrow you will discover **Bootstrap responsive grids**. Be patient!
+
+NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!

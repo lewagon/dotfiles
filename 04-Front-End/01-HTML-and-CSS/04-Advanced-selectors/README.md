@@ -10,6 +10,8 @@ cp -r ../03-Box-model/profile .
 
 Use advanced CSS selectors (id, class, grouping, descendant selectors) to fine-tune your page with a more subtle design.
 
+Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
+
 ## Specs
 
 Here is [your objective](http://lewagon.github.io/html-css-challenges/04-advanced-selectors/). Any time you want to **name** an element of your page, ask yourself:
