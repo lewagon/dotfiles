@@ -116,7 +116,7 @@ Code everything in the `PostsController` until the action works fine. Then you m
 ```ruby
 # lib/services/medium_scraper.rb
 class MediumScraper
-  def initalize(post_path)
+  def initialize(post_path)
     @post_path = post_path
   end
 

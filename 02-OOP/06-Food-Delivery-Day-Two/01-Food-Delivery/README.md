@@ -81,7 +81,27 @@ Then, make sure that the following **user stories** are implemented in your prog
 
 Again, to launch just the order tests, use `rspec -t _order`
 
-**Important**: the specs are a little whimsical -- make sure you pass the parameters of both `OrderRepository#initialize` and `OrdersController#initialize` methods in the same order as in the tests (go ahead and inspect the spec files), or you won't pass the `rake` even if your app works fine! 
+**Important**: the `order_repository` and `orders_controller` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
+
+```ruby
+class OrderRepository
+  def initialize(orders_csv_path, meal_repository, employee_repository, customer_repository)
+    # [...]
+  end
+
+  # [...]
+end
+```
+
+```ruby
+class OrdersController
+  def initialize(meal_repository, employee_repository, customer_repository, order_repository)
+    # [...]
+  end
+
+  # [...]
+end
+```
 
 ## 7 - (Optional) - `Destroy` actions
 
