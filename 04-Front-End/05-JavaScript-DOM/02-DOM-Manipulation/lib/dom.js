@@ -16,10 +16,10 @@ module.exports = function runChallenges(check) {
     // TODO: return the email
   }
 
+  // /!\ DO NOT CHANGE THIS LINE - TEST PURPOSES
+  const borisesEmail = getEmail();
 
   // Ex 2. Change the content of the email input by writing your own email address
-
-
 
 
   // Ex 3. Replace the email hint (next to the input) with 'This is my email now'
@@ -32,11 +32,13 @@ module.exports = function runChallenges(check) {
 
 
   // Ex 5. Count the number of table body rows there are
-  //       Make the function countTeam() return it
-  function countTeam() {
-    // TODO: return the number of team
+  //       Make the function teamCount() return it
+  function teamCount() {
+    // TODO: return the number of teams
   }
 
+  // /!\ DO NOT CHANGE THIS LINE - TEST PURPOSES
+  const teamCountBeforeAddition = teamCount();
 
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
@@ -66,5 +68,5 @@ module.exports = function runChallenges(check) {
 
 
   // Checking exercise answers. DO NOT MODIFY THIS LINE
-  check(getEmail(), countTeam(), summarizePoints());
+  check(borisesEmail, teamCountBeforeAddition, summarizePoints());
 };
