@@ -13,7 +13,7 @@ module.exports = function runChallenges(check) {
   // Ex 1. Read what's written in the email input
   //       Make the function getEmail() return it
   function getEmail() {
-    // TODO: return the email input's value
+    // TODO: return the email
   }
 
   // /!\ DO NOT CHANGE THIS LINE - TEST PURPOSES
