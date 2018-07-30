@@ -28,7 +28,7 @@ gem install middleman
 # You should have a version >= 4.2.1
 ```
 
-Then run the following:
+Then run the following code (line by line, making sure every command works before proceeding to the next one)
 
 ```bash
 cd ~/code/<user.github_nickname>
