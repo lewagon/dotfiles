@@ -113,15 +113,15 @@ Then your ERB code will generate this HTML code:
 <!-- HTML output -->
 <ul class="list-inline text-center">
   <li>
-    <img src="https://kitt.lewagon.com/placeholder/users/papillard" alt="">
+    <img src="https://kitt.lewagon.com/placeholder/users/papillard" alt="" class="img-circle">
     <h3>Papillard</h3>
   </li>
   <li>
-    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" alt="">
+    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" alt="" class="img-circle">
     <h3>Ssaunier</h3>
   </li>
   <li>
-    <img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard" alt="">
+    <img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard" alt="" class="img-circle">
     <h3>Monsieurpaillard</h3>
   </li>
 </ul>
