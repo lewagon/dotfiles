@@ -15,8 +15,6 @@ Doing any of these will instantly change the look of the page without hitting "R
 Open the `lib/dom.js` file, you will find a list of challenges to
 complete.
 
-**NB:** Make sure you **replace** the values assigned to `email` and `teamCount` variables!
-
 To test your code, open a new terminal and run this command:
 
 ```bash
