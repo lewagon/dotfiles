@@ -5,8 +5,6 @@ export TERM="xterm-256color"
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-RPS1="${kubeon-prompt}"
-
 # Useful plugins for Rails development with Sublime Text
 plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search kubectl) 
 
@@ -14,6 +12,9 @@ plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-h
 source "${ZSH}/oh-my-zsh.sh"
 
 export HOMEBREW_NO_ANALYTICS=1
+
+# RPS1="${kubeon-prompt}"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 
 # Rails and Ruby uses the local `bin` folder to store binstubs.
 # So instead of running `bin/rails` like the doc says, just run `rails`
@@ -33,7 +34,8 @@ export PATH="/usr/local/sbin:$PATH"
 
 # python
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.5
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
+source /usr/local/bin/virtualenvwrapper.sh
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -48,6 +50,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Twyla config variables
 export TWYLA_XPI_CONF=/Users/nathankuik/code/twyla/xpi/config/local.yml
 export TWYLA_CLIENTAPP_CONF=/Users/nathankuik/code/twyla/clientapp/config/local.yml
+
+export DANISH_AMAZON_ENV="dev"
+export DANISH_AMAZON_CONFIG=/Users/nathankuik/code/danish-amazon/config/local.yml
 
 function kubeon {
     if [ "${1}" ]; then
