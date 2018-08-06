@@ -22,6 +22,8 @@ most_common_words('source-text.txt', 3)
 #=> { 'lord' => 8722, 'God' => 7380, 'Jesus' => 2617 }
 ```
 
+NOTE: Please ignore punctuation (example: `Seb's` should be counted as `Seb` in your final count of word occurrences).
+
 ### Get rid of the noise
 
 Add a filter to your method to get rid of [stop words](http://en.wikipedia.org/wiki/Stop_words) like ("a", "the", "is" etc.) We've given you a text file "stop_words.txt" containing English stop words. You should use this file in your program.
