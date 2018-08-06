@@ -22,7 +22,7 @@ most_common_words('source-text.txt', 3)
 #=> { 'lord' => 8722, 'God' => 7380, 'Jesus' => 2617 }
 ```
 
-NOTE: Please ignore punctuation (example: `Seb's` should be counted as `Seb` in your final tally of word occurrences).
+NOTE: Please ignore punctuation (example: `Seb's` should be counted as `Seb` in your final count of word occurrences).
 
 ### Get rid of the noise
 
