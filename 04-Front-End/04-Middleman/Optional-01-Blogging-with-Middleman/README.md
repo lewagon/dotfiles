@@ -52,7 +52,7 @@ Write your first article with markdown syntax. (You will find it in `source/blog
 
 Launch `middleman server` and go to [http://localhost:4567/__middleman/sitemap/](http://localhost:4567/__middleman/sitemap/) to find your first article's url.
 
-Now you can create a page wich lists all your articles:
+Now you can create a page which lists all your articles:
 
 ```bash
 touch source/blog/index.html.erb

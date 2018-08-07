@@ -75,7 +75,7 @@ Let's start with the layout, i.e. the common HTML skeleton of all your pages. It
 
 - Don't forget to add ERB partials `layouts/_navbar.html.erb` and `layouts/_footer.html.erb` in your projects.
 - For the HTML and the CSS of the navbar and footer, feel free to re-use [Le Wagon's navbar](http://lewagon.github.io/ui-components/#navbar) and [Le Wagon's footer](http://lewagon.github.io/ui-components/#footer) to save time.
-- Don't forget to use the `image_tag` helper for your logo (as in Kitt lecture) instead of a stupid `img`.
+- Don't forget to use the `image_tag` helper for your logo (as in the lecture) instead of a raw `<img>` tag.
 - Also, take your time to add the corresponding SCSS files `components/_navbar.scss` (should already be there) and `components/_footer.scss` in your stylesheets and `@import` these two files in `components/_index.scss`
 
 
@@ -92,7 +92,7 @@ Just to recap:
 
 ## Team Page
 
-Time to add a second page `team.html.erb` to your website with your buddy of the day, similar to our [about page](http://lewagon.github.io/middleman-airbnb/about.html). Don't forget to put real pictures of you and your buddy (from the `Classmates` page on Kitt).
+Time to add a second page `team.html.erb` to your website with your buddy of the day, similar to our [about page](http://lewagon.github.io/middleman-airbnb/about.html). Don't forget to put real pictures of you and your buddy (take the image from the `Classmates` page or use Kitt's placeholder service like this `https://kitt.lewagon.com/placeholder/users/papillard`).
 
 Also remember that you are using ERB now, so you can **write ruby to generate HTML code**. It means we can now do awesome stuff like this:
 
@@ -113,15 +113,15 @@ Then your ERB code will generate this HTML code:
 <!-- HTML output -->
 <ul class="list-inline text-center">
   <li>
-    <img src="https://kitt.lewagon.com/placeholder/users/papillard" alt="">
+    <img src="https://kitt.lewagon.com/placeholder/users/papillard" alt="" class="img-circle">
     <h3>Papillard</h3>
   </li>
   <li>
-    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" alt="">
+    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" alt="" class="img-circle">
     <h3>Ssaunier</h3>
   </li>
   <li>
-    <img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard" alt="">
+    <img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard" alt="" class="img-circle">
     <h3>Monsieurpaillard</h3>
   </li>
 </ul>

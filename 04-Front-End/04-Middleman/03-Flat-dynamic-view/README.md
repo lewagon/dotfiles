@@ -99,9 +99,9 @@ Then add something like this to `config.rb`:
 end
 ```
 
-Don't forget to **restart your server when you change the config**.
-
 Create the dynamic template `show.html.erb` in a new `flats` folder in `source`. In this template, `owner` will dynamically change to `"papillard"`, `"ssaunier"`, `"monsieurpaillard"`, etc. depending on the URL.
+
+Don't forget to **restart your server when you change the config**.
 
 You can now access the hash `data.flats` using the owner's name as a key, like this:
 

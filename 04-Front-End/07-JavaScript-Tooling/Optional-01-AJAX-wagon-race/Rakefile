@@ -15,7 +15,7 @@ task :api do
   API.run!
 end
 
-task :reset_db do
+task :db_reset do
   require "sequel"
   require "fileutils"
   DB_FILE = "sessions.sqlite3"
