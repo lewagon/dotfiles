@@ -61,6 +61,8 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rake                             # Launch tests
 ```
 
+⚠️ Before starting to code, don't forget to follow our [Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure it's all setup for later when we design the app 💅.
+
 Don't forget to `commit` and `push` your work often.
 
 ## Specs
