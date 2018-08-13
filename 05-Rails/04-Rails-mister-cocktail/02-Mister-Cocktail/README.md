@@ -61,6 +61,80 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rake                             # Launch tests
 ```
 
+Before starting to code, don't forget to setup your Rails app for Frontend, like in this morning's lecture let's add the gems we're going to need:
+
+```ruby
+# Gemfile
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'font-awesome-sass', '~> 5.0.9'
+gem 'simple_form'
+```
+
+```bash
+bundle install
+rails generate simple_form:install --bootstrap
+```
+
+Then let's download the Le Wagon's stylesheets:
+
+```bash
+rm -rf app/assets/stylesheets
+curl -L https://github.com/lewagon/rails-stylesheets/archive/master.zip > stylesheets.zip
+unzip stylesheets.zip -d app/assets && rm -f stylesheets.zip && rm -f app/assets/rails-stylesheets-master/README.md
+mv app/assets/rails-stylesheets-master app/assets/stylesheets
+```
+
+To enable Bootstrap responsiveness you will also need to add the following to your `<head>`:
+
+```html
+<!-- app/views/layouts/application.html.erb -->
+
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- [...] -->
+```
+
+Finally let's also add the Bootstrap JavaScript library:
+
+```bash
+# In the terminal:
+yarn add jquery bootstrap@3
+```
+
+```js
+// config/webpack/environment.js
+const { environment } = require('@rails/webpacker')
+
+// Bootstrap 3 has a dependency over jQuery:
+const webpack = require('webpack')
+environment.plugins.prepend('Provide',
+  new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery'
+  })
+)
+module.exports = environment
+```
+```js
+// app/javascript/packs/application.js
+import 'bootstrap';
+```
+Make sure you are importing the JavaScript in the `application.html.erb`, note that the JS scripts should be a the bottom of the file (for performance and only when the DOM is loaded), also you can create several packs and import them where you need them!
+
+```html
+<!-- app/views/layouts/application.html.erb -->
+
+  <!-- [...] -->
+
+  <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+</body>
+```
+
 Don't forget to `commit` and `push` your work often.
 
 ## Specs
