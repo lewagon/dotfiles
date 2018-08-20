@@ -45,3 +45,4 @@ AllCops:
   Exclude:
     - '**/Rakefile'
     - '**/spec/**/*'
+    - '**/db/schema.rb'

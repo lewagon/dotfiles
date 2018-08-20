@@ -33,10 +33,18 @@ As always when you fetch data from an API, start by `console.log()`ing what you 
 
 To display a Google Map with a marker at the specified address, we'll use a second API, the [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript).
 
+⚠️ Google only allows the use of its API to those who create an [API Key](https://developers.google.com/maps/documentation/javascript/get-api-key) and provide billing details.
+
+Don't worry, you get $200 free usage every month for Maps, Routes, or Places.
+
+You will get the error `You have exceeded your request quota for this API` until you enable billing and add an API key.
+
+For more information about Google's pricing, [read this guide](https://cloud.google.com/maps-platform/user-guide/pricing-changes/).
+
 To use it, add this line to the bottom of your HTML file, just **before** you require `build/application.js`:
 
 ```html
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 ```
 
 To add a map, you'll need an empty supporting HTML element. For instance:
@@ -63,9 +71,5 @@ To add a marker to the map, if the variable `map` holds the `GMaps` object, you 
 const marker = { lat: 48.8648482, lng: 2.3798534 };
 map.addMarkers([ marker ]);
 ```
-
-If you get the following warning, just **ignore** it for this exercise.
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/google_maps_api_warning.png)
 
 Happy geocoding! 🌎 🌍 🌏
