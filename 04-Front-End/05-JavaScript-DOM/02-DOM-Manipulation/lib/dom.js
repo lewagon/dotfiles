@@ -27,7 +27,7 @@ module.exports = function runChallenges(check) {
 
 
 
-  // Ex 4. Add the .blue CSS class to the table header cells (th elements)
+  // Ex 4. Add the .blue CSS class to the th elements
 
 
 
