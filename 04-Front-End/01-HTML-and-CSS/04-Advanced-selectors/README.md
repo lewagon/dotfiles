@@ -1,6 +1,6 @@
 ## Setup
 
-Again, let's continue building our profile page and copy our previous profile in the current directory of this challenge:
+Again if you haven't copied the files from the previous exercise yet, let's move the profile folder from the previous exercise in the current directory of this challenge:
 
 ```bash
 cp -r ../03-Box-model/profile .
@@ -70,4 +70,18 @@ Even inline, a list `<ul>` has some `padding-left` that you will also have to ki
 .list-inline {
   padding-left: 0px;
 }
+```
+
+## Finished?
+
+Once you've finished you can push this exercise and copy the content to the next exercise folder with this command:
+
+```bash
+# Push to Gihtub
+git add .
+git commit -m "Added advanced css to my profile page"
+git push origin master
+
+# Copy folder into next exercise folder
+cp -r profile ../05-Push-on-Github-Pages
 ```

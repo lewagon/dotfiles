@@ -1,6 +1,6 @@
 ## Setup
 
-We want to continue building our profile page. For that, let's copy our previous profile into this challenge's folder and add a CSS file to it:
+We want to continue building our profile page. If you haven't already, let's copy our previous profile into this challenge's folder and add a CSS file to it:
 
 ```bash
 cp -r ../01-Profile-content/profile .
@@ -20,7 +20,7 @@ Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your 
 
 ### Body
 
-Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-height` for the `<body>`. **Setting these font rules at the body-level will apply them on all basic text tags ** (`<p>`, `<li>`, etc.).
+Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-height` for the `<body>`. **Setting these font rules at the body-level will apply them on all basic text tags** (`<p>`, `<li>`, etc.).
 
 ### Headers
 
@@ -57,3 +57,18 @@ body {
 ```
 
 **Feel free to choose other fonts on Google fonts and be creative 😎🌈!**
+
+
+## Finished?
+
+Once you've finished you can push this exercise and copy the content to the next exercise folder with this command:
+
+```bash
+# Push to gihtub
+git add .
+git commit -m "Added fonts & colors to my profile page"
+git push origin master
+
+# Copy folder into next exercise folder
+cp -r profile ../03-Box-model
+```
