@@ -4,12 +4,12 @@
 - Remember that we now have some rake tasks available to us to manipulate our database:
 
 ```bash
-  rake db:create      # Creates your database
-  rake db:drop        # Destroys your whole database
-  rake db:migrate     # Runs any migrations that haven't already been run
-  rake db:version     # Retrieves the current schema version number
-  rake db:seed        # Populates your database with sample data
-  rake db:timestamp   # Gives you a timestamp for your migration file name
+rake db:create      # Creates your database
+rake db:drop        # Destroys your whole database
+rake db:migrate     # Runs any migrations that haven't already been run
+rake db:version     # Retrieves the current schema version number
+rake db:seed        # Populates your database with sample data
+rake db:timestamp   # Gives you a timestamp for your migration file name
 ```
 
 ## Setup
