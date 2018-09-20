@@ -1,3 +1,5 @@
+FrozenStringLiteralComment:
+  Enabled: false
 ConditionalAssignment:
   Enabled: false
 StringLiterals:
