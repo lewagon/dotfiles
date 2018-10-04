@@ -31,7 +31,7 @@ describe 'Recipe', if: recipe_helper.file_exists? do
     end
   end
 
-  describe '#initialze', if: recipe_helper.file_and_class_valid? do
+  describe '#initialize', if: recipe_helper.file_and_class_valid? do
     it 'should create a recipe with a list of attributes' do
       expect(recipe.name).to eq 'Brownie'
       expect(recipe.description).to eq 'Delicious chocolate cake'

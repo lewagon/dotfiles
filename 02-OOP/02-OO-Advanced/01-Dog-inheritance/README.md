@@ -14,19 +14,18 @@ end
 #### Dog inheritance
 
 - We have created a `Dog` class with one instance method: `bark`.
-- We have also create a `GermanShephard` class that is empty.
-- Change the definition of the `GermanShephard` class, so that it has the instance methods and behaviour of the `Dog` class.
+- We have also create a `GermanShepherd` class that is empty.
+- Change the definition of the `GermanShepherd` class, so that it has the instance methods and behaviour of the `Dog` class.
 - For example, the code below should work:
 
 ```ruby
-german_shephard = GermanShephard.new
-german_shephard.bark # => "woof woof"
+german_shepherd = GermanShepherd.new
+german_shepherd.bark # => "woof woof"
 ```
 
-NOTE: do not add any code within the body of the `GermanShephard` class!
+NOTE: do not add any code within the body of the `GermanShepherd` class!
 
 
 ## Key learning points
 
 - What is the syntax when we want one class to inherit from another?
-

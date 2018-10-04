@@ -4,5 +4,5 @@ class Dog
   end
 end
 
-class GermanShephard
+class GermanShepherd
 end
