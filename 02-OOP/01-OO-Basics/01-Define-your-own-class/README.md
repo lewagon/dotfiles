@@ -4,7 +4,9 @@ Grasp the basic concepts of object-oriented programming while writing your very 
 
 ## Specs
 
-Choose something from the real world that you would like to model. Restaurants, vehicles, users, games, recipes.. *It's your call!*
+Before you create your class, create a file in the `lib` directory to test out your class as you go along (create new instances, call instance methods, and print the results to the terminal). Let's call this file `interface.rb`.
+
+Next, choose something from the real world that you would like to model. Restaurants, vehicles, users, games, recipes.. *It's your call!*
 
 Once chosen, create a file in the `lib` directory which has the name of your object.
 For instance, if you chose to model Restaurants, create the `restaurant.rb` file:
@@ -13,7 +15,7 @@ For instance, if you chose to model Restaurants, create the `restaurant.rb` file
 touch lib/restaurant.rb
 ```
 
-You can safely delete the `.gitkeep` file. This file is only there so that git sees the otherwise empty folder. 
+Now you can safely delete the `.gitkeep` file. This file is only there so that git sees the otherwise empty folder.
 
 ## Convention
 
