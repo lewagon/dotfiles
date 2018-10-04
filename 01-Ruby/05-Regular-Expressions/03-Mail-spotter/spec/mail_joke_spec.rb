@@ -15,7 +15,7 @@ describe "#mail_joke" do
   end
 
   it "should tell Live user that they live in the past" do
-    expect(mail_joke "jean-marc.alarue@live.com").to eq "jean-marc alarue, aren't you born after 1973?"
+    expect(mail_joke "jean-marc.alarue@live.com").to eq "jean-marc alarue, weren't you born after 1973?"
   end
 
   it "should tell unknown domain users that we can't judge them" do
