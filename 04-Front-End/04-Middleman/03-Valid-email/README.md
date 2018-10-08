@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-The return of the [RegExp](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp)! Good news, they're the exact same expressions you discovered on week 2.
+The return of the [RegExp](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp)! Good news, they're the exact same expressions you discovered on week 2 🙌
 
 The only difference is the built-in way of testing one in JavaScript (vs. Ruby).
 
