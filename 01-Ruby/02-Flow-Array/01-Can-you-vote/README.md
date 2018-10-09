@@ -22,4 +22,4 @@ end
 
 ## Optional
 
-- Can you think of a way to refacto your code using one line only?
+- Can you think of a way to refactor your code using one line only?
