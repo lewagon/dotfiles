@@ -82,7 +82,7 @@ ruby interface.rb
 - What's the code that is really part of the UI (`gets` and `puts`)?
 - What's the code that does not belong to the interface?
 
-Try to refactor the code with the help of the teacher. For instance you can create a new `calcultor.rb` file:
+Try to refactor the code with the help of the teacher. For instance you can create a new `calculator.rb` file:
 
 ```ruby
 # calculator.rb
