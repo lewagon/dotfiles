@@ -23,3 +23,4 @@ The easiest and most straightforward way to select an element from the DOM is wi
 
 Happy selecting 🎣
 
+N.B: there's no `rake` for this challenge, read the feedback directly in the browser! When you see `Congratulations!` you can `add`, `commit`, `push` and move on to the next challenge!
