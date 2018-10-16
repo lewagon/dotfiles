@@ -4,7 +4,7 @@ In this first challenge, we are going to select an element from the DOM!
 
 ## Specs
 
-First, let's run a server with the following command in the terminal:
+First, let's launch a local webserver by running in the terminal:
 
 ```bash
 rake webpack
