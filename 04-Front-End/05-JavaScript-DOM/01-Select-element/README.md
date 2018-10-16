@@ -1,28 +1,25 @@
 ## Background & Objectives
 
-The goal of this exercise is to dynamically manipulate a web page using what you learnt about selectors during the CSS module.
-
-We refer to this as manipulating the [Document Object Model](http://en.wikipedia.org/wiki/Document_Object_Model) (DOM), which is **the in-memory representation of the HTML built by the browser**. Think of it like a family tree: the root node, its children, its grandchildren, etc. On that tree, you can then:
-
-- Traverse it to read specific nodes
-- Remove nodes
-- Add nodes
-
-Doing any of these will instantly change the look of the page without hitting "Refresh".
+In this first challenge, we are going to select an element from the DOM!
 
 ## Specs
 
-Open the `lib/dom.js` file, you will find a list of challenges to
-complete.
-
-To test your code, open a new terminal and run this command:
+First, let's run a server with the following command in the terminal:
 
 ```bash
 rake webpack
 ```
 
-Then open [`localhost:8080`](http://localhost:8080) in your favorite web browser. Open the Console.
+Then, open [`localhost:8080`](http://localhost:8080) in your favorite web browser.
 
-Change some code in the `lib/dom.js`, as soon as you save in Sublime Text, the page will reload in the browser.
+You should see the countries that won the most FIFA World Cups in an ordered list.
 
-Your goal is to make all tests pass!
+The goal of the challenge is to select France's `<li>` 🇫🇷!
+
+The easiest and most straightforward way to select an element from the DOM is with an `id`:
+
+- Open the `index.html` file, spot the element we want to select and set an `id` to it;
+- Open the `lib/select.js` file and write the JavaScript to select the element with the given id, and make the function return it!
+
+Happy selecting 🎣
+
