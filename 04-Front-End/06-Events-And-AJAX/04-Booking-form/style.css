@@ -50,6 +50,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 #submit {
@@ -69,4 +70,16 @@ body {
   color: #848484;
   height: 35px;
   padding: 3px
+}
+
+.btn-primary {
+  background-color: #FF5A5F;
+  padding: 16px 24px;
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #FF5A5F;
 }

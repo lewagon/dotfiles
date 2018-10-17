@@ -1,10 +1,14 @@
 ## Background & Objectives
 
-In this challenge, we want to reproduce the UX we tend to see more and more in modern web app forms when it comes to selecting **multiple** possible answers to a given question:
+This is what you'll build in this challenge:
 
-![Highlights Gif](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/highlights.gif)
+![Dynamic form Gif](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/booking-form.gif)
 
-Again it will come down to **selecting** elements, **binding** them to an event and **reacting** to it!
+We won't do AJAX in this challenge, we just want to **update the form's UI** when a user clicks on the `-` / `+` buttons.
+
+Submitting the form is not expected to have any effects.
+
+Time to play with [`dataset`s](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)!
 
 ## Specs
 
@@ -16,17 +20,22 @@ rake webpack
 
 Open [`localhost:8080`](http://localhost:8080) in your browser.
 
-You should see a grid of 8 sports boxes that look like they are clickable. When you hover over one of them, you see that the UI changes to suggest you to click. However, nothing happens when you click... yet! Let's fix that!
+The page displays a booking form that we want to make **dynamic**. When the user clicks on the `-` / `+` buttons, we want to:
 
-- When you click on a sport, you should toggle the `active` css class on the element (no need to write any css in this challenge)
-- We should be able to select several sports (as if they were checkboxes)
+- Update the counter
+- Update the price displayed on the submit button
+- Update the value of the read-only input (in cents)
 
-Before writing any code, break down the problem in small steps using pseudo-code!
+To do so, take a good look at the `index.html` file and specifically at **the `data-` attributes** that hold precious values to help you!
 
-## Going further
+Once you managed to update the form's **counter, input and CTA**, make it even better by:
 
-Once the highlighting works as expected, try to extract:
-- the binding logic in a `toggleActiveOnClick` arrow function,
-- the click callback in a `toggleActiveClass` arrow function.
+- Hiding the input (you may want to look into [input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input))
+- Toggle the `disabled` attribute on the `-` link: disable the link when there's `1` participant and enable it otherwise (the counter should never reach `0` nor negative values)!
 
-At the end, your code should be easily readable and have no more than 1 indentation level!
+This challenge is **hard**, discuss it with your buddy and do it step by step, with pseudo-code!
+
+## Resources
+
+- To add / remove an HTML attribute to / from an element, you may want to look at [this](https://developer.mozilla.org/fr/docs/Web/API/Element/removeAttribute) and [this](https://developer.mozilla.org/fr/docs/Web/API/Element/setAttribute)
+- You can get all the attributes of an HTML element by calling the [`.attributes` property](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) on the element

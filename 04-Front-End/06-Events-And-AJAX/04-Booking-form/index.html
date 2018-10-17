@@ -17,7 +17,7 @@
         <div class="form-container">
           <div class="header">
             <div class="header-row">
-              <div class="big-bold" id="price" data-amount-cents="7600">76€</div>
+              <div class="big-bold" id="price" data-amount-cents="15000">150€</div>
               <div class="small-light"> / PARTICIPANT</div>
             </div>
             <div class="header-row">
@@ -32,15 +32,15 @@
           <div class="flex-between">
             Participants:
             <div class="actions">
-              <a href="#" class="btn round-bordered" data-offset="-1">-</a>
+              <a href="#" class="btn round-bordered incrementer minus" disabled data-offset="-1">-</a>
               <span id="counter" data-count="1">1</span>
-              <a href="#" class="btn round-bordered" data-offset="1">+</a>
+              <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
             </div>
           </div>
 
-          <form action="/">
-            <input type="number" value="1" disabled class="form-control">
-            <input type="submit" value="Pay 76€" class="btn btn-primary" id="submit">
+          <form>
+            <input type="number" value="15000" disabled class="form-control" id="price-input" name="price-cents">
+            <input type="submit" value="Pay 150€" class="btn btn-primary" id="submit">
           </form>
         </div>
 
