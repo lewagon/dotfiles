@@ -1,6 +1,8 @@
 ## Background & Objectives
 
-In this challenge, let's parse an HTML tag and extract its data attributes in an `Object`.
+In frontend development, **data attributes** are a pretty handy way to inject values in your HTML that you can easily access in your JS.
+
+In this challenge, let's write a function that parses an HTML tag and extracts its data attributes into an `Object`.
 
 ## Specs
 
@@ -37,7 +39,7 @@ Also, when you want to match **all the matching occurrences** in your string, yo
 
 ### Improvements
 
-We don't test this in the `specs` but you can implement the fact "compound" data attributes should be translated in `lowerCamelCase` keys:
+We don't test this in the `specs` but you can implement the translation of "compound" data attributes from `kebab-case` to `lowerCamelCase` keys:
 
 ```js
 const element = `<div class="card" data-meal-id="42">ANY CONTENT</div>`;
