@@ -33,4 +33,4 @@ When the `listItem` function passes all the tests, go on and code the `unordered
 
 ### Going further
 
-If your solution passes the tests using `forEach()`, try and find a better solution usnig `map()`!
+If your solution passes the tests using `forEach()`, try and find a better solution using `map()`!
