@@ -25,9 +25,34 @@ Before writing any code, break down the problem in small steps using pseudo-code
 
 ## Refactoring
 
-Once the highlighting works as expected, try to extract:
+Once the highlighting works as expected, let's make the code more readable.
+
+When you combine `forEach` and `addEventListener`, you end up with some code that has **3 levels** of indentation, which makes it hard to read.
+
+Good news, in JavaScript, you can store **arrow functions** in variables! That way you can refer to the variable without calling the function by **omitting the parentheses**, perfect for **callbacks**!
+
+For instance, you can refactor this code:
+
+```js
+button.addEventListener('click', (event) => {
+  console.log(event.currentTarget);
+});
+```
+
+into:
+
+```js
+const displayClickedElement = (event) => {
+  console.log(event.currentTarget);
+};
+
+button.addEventListener('click', displayClickedElement);
+```
+
+Your turn to refactor:
 
 - the binding logic in a `toggleActiveOnClick` arrow function,
 - the click callback in a `toggleActiveClass` arrow function.
 
 At the end, your code should be easily readable and have no more than 1 indentation level!
+
