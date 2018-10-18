@@ -23,6 +23,8 @@ You should see a grid of 6 sports boxes that look like they are clickable. When 
 
 Before writing any code, break down the problem in small steps using pseudo-code!
 
+There aren't any tests for this exercise, but we check your style! So run `rake`.
+
 ## Refactoring
 
 Once the highlighting works as expected, let's make the code more readable.
@@ -55,4 +57,3 @@ Your turn to refactor:
 - the click callback in a `toggleActiveClass` arrow function.
 
 At the end, your code should be easily readable and have no more than 1 indentation level!
-

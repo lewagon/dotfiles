@@ -35,6 +35,8 @@ Once you managed to update the form's **counter, input and CTA**, make it even b
 
 This challenge is **hard**, discuss it with your buddy and do it step by step, with pseudo-code!
 
+There aren't any tests for this exercise, but we check your style! So run `rake`.
+
 ## Resources
 
 - To add / remove an HTML attribute to / from an element, you may want to look at [this](https://developer.mozilla.org/fr/docs/Web/API/Element/removeAttribute) and [this](https://developer.mozilla.org/fr/docs/Web/API/Element/setAttribute)

@@ -21,3 +21,5 @@ Open [`localhost:8080`](http://localhost:8080) in your browser.
 You should see a big green button saying `Click me!`. The goal of this challenge is to display an [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) saying `Thank you!` when you click on it.
 
 Open the `lib/index.js` and follow the pseudo-code!
+
+There aren't any tests for this exercise, but we check your style! So run `rake`.
