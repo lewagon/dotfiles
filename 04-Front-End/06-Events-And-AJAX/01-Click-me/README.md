@@ -3,6 +3,7 @@
 A quick challenge to warmup! Let's rehearse how to bind a DOM event to some action in JavaScript!
 
 It's always the same 3-step process:
+
 - **Select** the element you want to make interactive
 - **Listen** to some event on the element
 - Write the **callback** (the code that runs when the event occurs)
