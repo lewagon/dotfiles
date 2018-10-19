@@ -52,7 +52,7 @@ We will discover how to fetch content dynamically using AJAX and JavaScript with
 
 ## `07 JavaScript Plugins`
 
-In this lecture, we will have a look at how to use external JavaScript packages using **[Yarn](https://yarnpkg.com/en/)**, and how to organise our code in several files in a frontend app.
+In this lecture, we will download external JavaScript packages with **[Yarn](https://yarnpkg.com/en/)** and use them in our interfaces. We'll also see how to organise our code in several files in a frontend app.
 
 ## `08 Product Design Sprint`
 
