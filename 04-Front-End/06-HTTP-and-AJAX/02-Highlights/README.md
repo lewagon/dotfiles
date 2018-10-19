@@ -51,7 +51,7 @@ const displayClickedElement = (event) => {
 button.addEventListener('click', displayClickedElement);
 ```
 
-Your turn to refactor:
+Your turn to extract:
 
 - the binding logic in a `toggleActiveOnClick` arrow function,
 - the click callback in a `toggleActiveClass` arrow function.

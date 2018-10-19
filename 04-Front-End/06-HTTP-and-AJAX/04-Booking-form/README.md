@@ -26,7 +26,7 @@ The page displays a booking form that we want to make **dynamic**. When the user
 - Update the price displayed on the submit button
 - Update the value of the read-only input (in cents)
 
-To do so, take a good look at the `index.html` file and specifically at **the `data-` attributes** that hold precious values to help you!
+To do so, take a good look at the `index.html` file, especially **the `data-` attributes** that hold precious values to help you!
 
 Once you managed to update the form's **counter, input and CTA**, make it even better by:
 
