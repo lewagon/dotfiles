@@ -99,7 +99,7 @@ Pick one to add to your list (give the number)
 
 For the scraper, here is a starting script to help you extract the data:
 
-_Disclaimer: to prevent ip banishment from etsy, we won't scrap Etsy in real time but we will download a html page and scrap it locally_
+_Disclaimer: to prevent ip banishment from etsy, we won't scrape Etsy in real time but we will download a html page and scrape it locally_
 
 ```bash
 # Download the page to be scraped inside your working directory
@@ -124,7 +124,7 @@ doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |elemen
 end
 ```
 
-Once your scraper is implement inside your interface, you can search and scrape directly from etsy:
+Once your scraper works on your `results.html` local file, update it to connect to Etsy's results page for any keywords and scrape the online page:
 ```ruby
 require 'open-uri'
 require 'nokogiri'
