@@ -99,6 +99,32 @@ Pick one to add to your list (give the number)
 
 For the scraper, here is a starting script to help you extract the data:
 
+_Disclaimer: to prevent ip banishment from etsy, we won't scrape Etsy in real time but we will download a html page and scrape it locally_
+
+```bash
+# Download the page to be scraped inside your working directory
+curl https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR > results.html
+# get the path to the HTML file
+pwd
+```
+```ruby
+# lib/scraper.rb
+require 'nokogiri'
+
+filepath = "/path/to/the/HTML/file.html"
+# 1. We get the HTML page content
+html_content = File.open(filepath)
+# 2. We build a Nokogiri document from this file
+doc = Nokogiri::HTML(html_content)
+
+# 3. We search for the correct elements containing the items' title in our HTML doc
+doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
+  # 4. For each item found, we extract its title and print it
+  puts element.text.strip
+end
+```
+
+Once your scraper works on your `results.html` local file, update it to connect to Etsy's results page for any keywords and scrape the online page:
 ```ruby
 require 'open-uri'
 require 'nokogiri'
@@ -112,7 +138,7 @@ html_content = open("https://www.etsy.com/search?q=#{article}").read
 doc = Nokogiri::HTML(html_content)
 
 # 3. We search for the correct elements containing the items' title in our HTML doc
-doc.search('.block-grid-xs-2 .v2-listing-card__info .text-body').each do |element|
+doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
   # 4. For each item found, we extract its title and print it
   puts element.text.strip
 end
