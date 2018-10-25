@@ -23,7 +23,7 @@ cookbook_helper = CookbookHelper.new(
 )
 
 describe "Cookbook", unless: cookbook_helper.file_and_class_valid? do
-  it '`cookbook.rb` file should exist' do 
+  it '`cookbook.rb` file should exist' do
     expect(cookbook_helper.file_exists?).to be(true)
   end
 
@@ -42,64 +42,96 @@ describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
       [ "Christmas crumble", "Crumble description" ]
     ]
   end
+
   let(:csv_path) { "spec/recipes.csv" }
 
-  # On setup reset csv file with recipes
-  before do
-    Helper.write_csv(csv_path, recipes)
-    @cookbook = Cookbook.new(csv_path)
-  end
+  describe "without CSV" do
+    # Permit Cookbook initialization with zero or one argument(s)
+    before do
+      if Cookbook.instance_method(:initialize).arity == 1
+        @cookbook = Cookbook.new(csv_path)
+      else
+        @cookbook = Cookbook.new()
+      end
+    end
 
-  describe '#initialize' do
-    it 'should have loaded existing recipes in spec/recipes.csv' do
-      expect(@cookbook.all.length).to eq recipes.length
+    describe "#initialize" do
+      it "should create an array `@recipes`" do
+        expect(@cookbook.instance_variable_get("@recipes")).to be_a(Array)
+      end
+    end
+
+    describe "#all" do
+      it "should give access to all recipes" do
+        @cookbook.instance_variable_set("@recipes", [RecipeFactory.build("Risotto", "Good stuff")])
+        expect(@cookbook.all).to be_a(Array)
+        expect(@cookbook.all.first).to be_a(Recipe)
+      end
+    end
+
+    describe "#add_recipe" do
+      it 'should add a recipe to the cookbook' do
+        size_before = @cookbook.all.length
+        @cookbook.add_recipe(RecipeFactory.build("Risotto", "Good stuff"))
+        expect(@cookbook.all.length).to eq (size_before + 1)
+      end
+    end
+
+    describe "#remove_recipe" do
+      it 'should remove a recipe from the cookbook' do
+        @cookbook.instance_variable_set("@recipes", [RecipeFactory.build("Risotto", "Good stuff")])
+        size_before = @cookbook.all.length
+        @cookbook.remove_recipe(0)
+        expect(@cookbook.all.length).to eq (size_before - 1)
+      end
     end
   end
 
-  describe '#all' do
-    it "should give access to all recipes" do
-      expect(@cookbook).to respond_to :all
-      expect(@cookbook.all).to be_a Array
-      first_recipe = @cookbook.all.first
-      expect(first_recipe).to be_a(Recipe), lambda { "Cookbook should store Recipe instances, not #{first_recipe.class}" }
+  describe "with CSV" do
+    # On setup reset csv file with recipes
+    before do
+      Helper.write_csv(csv_path, recipes)
+      @cookbook = Cookbook.new(csv_path)
     end
 
-    it 'should have Recipe instances' do
-      expect(@cookbook.all.first).to be_instance_of(Recipe)
-    end
-  end
-
-  describe '#add_recipe' do
-    it 'should add a recipe to the cookbook' do
-      size_before = @cookbook.all.length
-      @cookbook.add_recipe(RecipeFactory.build("Risotto", "Good stuff"))
-      expect(@cookbook.all.length).to eq (size_before + 1)
+    describe '#initialize' do
+      it 'should have loaded existing recipes in spec/recipes.csv' do
+        expect(@cookbook.all.length).to eq recipes.length
+      end
     end
 
-    it 'should store the new recipe in CSV' do
-      size_before = @cookbook.all.length
-      @cookbook.add_recipe(RecipeFactory.build("Risotto","Good stuff"))
+    describe '#all' do
+      it "should give access to all recipes" do
+        expect(@cookbook).to respond_to :all
+        expect(@cookbook.all).to be_a Array
+      end
 
-      # Reload from CSV
-      new_cookbook = Cookbook.new(csv_path)
-      expect(new_cookbook.all.length).to eq (size_before + 1)
-    end
-  end
-
-  describe '#remove_recipe' do
-    it 'should remove a recipe from the cookbook' do
-      size_before = @cookbook.all.length
-      @cookbook.remove_recipe(0)
-      expect(@cookbook.all.length).to eq (size_before - 1)
+      it 'should return array of Recipe instances' do
+        first_recipe = @cookbook.all.first
+        expect(first_recipe).to be_instance_of(Recipe), lambda { "Cookbook should store Recipe instances, not #{first_recipe.class}" }
+      end
     end
 
-    it 'should remove the recipe from the CSV' do
-      size_before = @cookbook.all.length
-      @cookbook.remove_recipe(0)
+    describe '#add_recipe' do
+      it 'should store the new recipe in CSV' do
+        size_before = @cookbook.all.length
+        @cookbook.add_recipe(RecipeFactory.build("Risotto","Good stuff"))
 
-      # Reload from CSV
-      new_cookbook = Cookbook.new(csv_path)
-      expect(new_cookbook.all.length).to eq (size_before - 1)
+        # Reload from CSV
+        new_cookbook = Cookbook.new(csv_path)
+        expect(new_cookbook.all.length).to eq (size_before + 1)
+      end
+    end
+
+    describe '#remove_recipe' do
+      it 'should remove the recipe from the CSV' do
+        size_before = @cookbook.all.length
+        @cookbook.remove_recipe(0)
+
+        # Reload from CSV
+        new_cookbook = Cookbook.new(csv_path)
+        expect(new_cookbook.all.length).to eq (size_before - 1)
+      end
     end
   end
 end
