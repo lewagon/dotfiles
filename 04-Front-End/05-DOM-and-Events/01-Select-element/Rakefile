@@ -1,5 +1,5 @@
 task :eslint do
-  system "../../node_modules/.bin/eslint lib/dom.js"
+  system "../../node_modules/.bin/eslint lib/select.js"
 end
 
 task :mocha do
