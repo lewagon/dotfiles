@@ -12,6 +12,10 @@ node -v
 
 If not, Node might not be installed on your system. Please have a look at the Setup section in the lecture slides.
 
+## Install Eslint Sublime Linter
+
+Before starting, take the time to [install Eslint Sublime Linter](https://kitt.lewagon.com/knowledge/tutorials/sublime_linter_es6) on your laptop. It will highlight instantly your syntax errors / style offenses in Sublime Text. Picking up this JavaScript ES6 syntax after Ruby may be tricky, so this should help you **a lot**.
+
 ## Specs
 
 Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `Number`) and returns a `String`:
