@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In this challenge, we are going to play around with the [OpenWeatherMap API](https://openweathermap.org/)! We'll practise AJAX again, and discover how we can ask the users for their current position!
+In this challenge, we are going to play around with the [OpenWeatherMap API](https://openweathermap.org/)! We'll practise AJAX again, and discover how we can ask users for their current position!
 
 ## Specs
 
@@ -42,7 +42,7 @@ With the data sent back by the API, go ahead and build the following page:
 
 - start by designing your HTML with a pen & paper ✏️
 - code the HTML with the relevant attributes (`id`s mostly)
-- code your JS to inject the data in the right places
+- code your JS to inject data in the right places
 - code your CSS to make it shine ✨
 
 ### What's the weather in Kuala Lumpur?
@@ -57,4 +57,13 @@ Last but not least, let's add a link to get the weather in the **current locatio
 
 Add a link in your `index.html` file and bind it to a fetch call that requests the weather in your current city!
 
-Happy Ajaxing!
+### Time to reorganize your code!
+
+You are not done yet. When your features work, it's tempting to leave the code as it is. Reorganizing your code to make it maintainable in the long run is key if you want to save tons of time in the future.
+
+Remember the rules?
+
+- Write functions in separate files
+- `import` them in `lib/app.js` to call them
+
+Happy Coding!
