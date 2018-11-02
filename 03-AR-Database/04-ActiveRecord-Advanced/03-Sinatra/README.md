@@ -67,7 +67,7 @@ Read about Views, Routing, `params` [here](https://github.com/lewagon/sinatra-10
 
 ## ERB
 
-Have you heard about **templating**? It's a way to write HTML in which you can inject values **dynamically** using code.
+Have you heard about **templating**? It's a way to write HTML in which you can inject data **dynamically** using code.
 
 In a Ruby framework like Sinatra, we can use **erb** which stands for embedded ruby.
 
@@ -98,7 +98,7 @@ And use it in your `home.erb` view:
 
 Make sure you define **instance variables with an `@`** in your controller for variables you want to use in your views!
 
-**Rails will use erb too!**
+**Rails will use erb too!** So take the time to read [this section](https://github.com/lewagon/sinatra-101#passing-stuff-to-the-view) thoroughly.
 
 ## Specs
 
