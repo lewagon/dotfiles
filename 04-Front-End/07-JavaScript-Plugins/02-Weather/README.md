@@ -45,7 +45,7 @@ With the data sent back by the API, go ahead and build the following page:
 - code your JS to inject data in the right places
 - code your CSS to make it shine ✨
 
-### What's the weather in Kuala Lumpur?
+### What's the weather like in Kuala Lumpur?
 
 Now let's add a `<form>` with an `<input>` of `type="text"` to request the weather in any city! Add a `submit` button and listen to the form's `submit` event to make the new API call.
 
