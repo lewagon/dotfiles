@@ -23,4 +23,4 @@ The easiest and most straightforward way to select an element from the DOM is **
 
 Happy selecting 🎣
 
-**N.B:** there's no tests for this challenge, but `rake` checks your style. To know if your code works, read the feedback directly in the browser! When you see `Congratulations!` you can `add`, `commit`, `push` and move on to the next challenge!
+**N.B:** In this challenge, the tests output is displayed directly in the browser! When you see `Congratulations!` you can `add`, `commit`, `push` and move on to the next challenge! You can also `rake` to check your style.
