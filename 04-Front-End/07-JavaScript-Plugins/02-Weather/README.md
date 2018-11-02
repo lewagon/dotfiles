@@ -36,7 +36,7 @@ Remember the syntax? Go on and `console.log()` what you get back from the API to
 
 With the data sent back by the API, go ahead and build the following page:
 
-**TODO(Eschults) Add picture**
+![Current Weather](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_api.png)
 
 **Don't rush** in the code:
 
