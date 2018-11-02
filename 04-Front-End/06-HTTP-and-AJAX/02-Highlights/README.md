@@ -31,7 +31,7 @@ Once the highlighting works as expected, let's make the code more readable.
 
 When you combine `forEach` and `addEventListener`, you end up with some code that has **3 levels** of indentation, which makes it hard to read.
 
-Good news, in JavaScript, you can store **arrow functions** in variables! That way you can refer to the variable without calling the function by **omitting the parentheses**, perfect for **callbacks**!
+Good news, in JavaScript, you can store **functions** in variables! That way you can refer to the variable without calling the function by **omitting the parentheses**, perfect for **callbacks**!
 
 For instance, you can refactor this code:
 
