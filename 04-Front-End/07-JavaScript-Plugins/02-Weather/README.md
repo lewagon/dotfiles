@@ -53,7 +53,17 @@ Your page should update and display the right data, without reloading! If your H
 
 ![Weather in Kuala Lumpur](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_in_kuala_lumpur.png)
 
-### How about
+### Add Select2 package from NPM
+
+During this morning lecture you saw how to add [select2](https://select2.org/).
+
+In the `data/cities.json` file, you will find a list of cities we want to parse and inject in the select2.
+
+Go ahead and parse this file to get an `Array` you pass to the select using the [data option](https://select2.org/data-sources/arrays).
+
+Update the HTML to display the `select` instead of the `input`, and make sure the card still updates when you submit the `form`.
+
+
 
 ### Get current location
 
