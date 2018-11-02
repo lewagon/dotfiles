@@ -51,6 +51,10 @@ Now let's add a `<form>` with an `<input>` of `type="text"` to request the weath
 
 Your page should update and display the right data, without reloading! If your HTML reloads, it means you forgot to **prevent** something...
 
+![Weather in Kuala Lumpur](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_in_kuala_lumpur.png)
+
+### How about
+
 ### Get current location
 
 Last but not least, let's add a link to get the weather in the **current location**. We can do this with browsers's native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition).
