@@ -57,19 +57,43 @@ Your page should update and display the right data, without reloading! If your H
 
 During this morning lecture you saw how to add [select2](https://select2.org/).
 
-In the `data/cities.json` file, you will find a list of cities we want to parse and inject in the select2.
+Let's change replace the `input` by a `select` in the `index.html` file:
 
-Go ahead and parse this file to get an `Array` you pass to the select using the [data option](https://select2.org/data-sources/arrays).
+```html
+<select id="city-input" class="select2"></select>
+```
 
-Update the HTML to display the `select` instead of the `input`, and make sure the card still updates when you submit the `form`.
+Now we want to inject a list of cities without touching the HTML file. Thankfully, select2 [has an option for that](https://select2.org/data-sources/arrays)!
 
+Copy-paste this array in your code to pass it to your `select2`:
 
+```js
+const cities = ["Amsterdam","Bali","Barcelona","Belo Horizonte","Berlin","Bordeaux","Brussels","Buenos Aires","Casablanca","Chengdu","Copenhagen","Kyoto","Lausanne","Lille","Lisbon","London","Lyon","Marseille","Melbourne","Mexico","Milan","Montréal","Nantes","Paris","Rio de Janeiro","São Paulo","Shanghai","Shenzhen","Tel Aviv","Tokyo"];
+```
+
+You should see the cities appear on the select, but not really well designed. That's normal, we did not include select2's css in the code yet! To do so, add this in your HTML's `<head>`:
+
+```html
+<link rel="stylesheet" href="node_modules/select2/dist/css/select2.css">
+```
+
+Much better right?
 
 ### Get current location
 
 Last but not least, let's add a link to get the weather in the **current location**. We can do this with browsers's native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition).
 
-Add a link in your `index.html` file and bind it to a fetch call that requests the weather in your current city!
+Add a link in your `index.html` file and bind it to the following callback:
+
+```js
+navigator.geolocation.getCurrentPosition((data) => {
+  console.log(data);
+});
+```
+
+Do you see what you get from your browser? Your GPS coordinates. Our code currently uses city **names** to get the weather. Thankfully, there is also an endpoint that takes **coordinates** in the url. You can scroll down a little [in the doc](https://openweathermap.org/current) to find the endpoint that takes a latitude and a longitude as parameters.
+
+So go on and define another `fetchWeatherByCoordinates` to adapt the url you pass to your `fetch` request.
 
 ### Time to reorganize your code!
 
