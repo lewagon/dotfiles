@@ -1,5 +1,6 @@
 function isGood(soldierType) {
   // TODO: return `true` if the soldierType is Good.
+  // Hint: Hobbits, Elves, Dwarves and Eagles are Good
 }
 
 function buildSoldierMap(battlefield) {
