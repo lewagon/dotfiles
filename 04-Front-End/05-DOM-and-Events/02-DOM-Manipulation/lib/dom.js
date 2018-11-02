@@ -12,9 +12,9 @@
 module.exports = function runChallenges(check) {
   // Ex 1. Read what's written in the email input
   //       Make the function getEmail() return it
-  function getEmail() {
+  const getEmail = () => {
     // TODO: return the email
-  }
+  };
 
   // /!\ DO NOT CHANGE THIS LINE - TEST PURPOSES
   const borisesEmail = getEmail();
@@ -33,9 +33,9 @@ module.exports = function runChallenges(check) {
 
   // Ex 5. Count the number of table body rows there are
   //       Make the function teamCount() return it
-  function teamCount() {
+  const teamCount = () => {
     // TODO: return the number of teams
-  }
+  };
 
   // /!\ DO NOT CHANGE THIS LINE - TEST PURPOSES
   const teamCountBeforeAddition = teamCount();
@@ -47,9 +47,9 @@ module.exports = function runChallenges(check) {
 
   // Ex 7. Write some code to sum all points given to all teams
   //       Make the function summarizePoints() return it
-  function summarizePoints() {
+  const summarizePoints = () => {
     // TODO: return the sum
-  }
+  };
 
 
   // Ex 8. Change the background color of all table header cells to #DDF4FF

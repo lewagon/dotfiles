@@ -1,1 +1,1 @@
-// TODO: Put your JS code in here
+// TODO: Write your JS code in here
