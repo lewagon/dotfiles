@@ -20,10 +20,10 @@ rake webpack
 First, you will need to create an account with MapBox and get and API key (it's free to sign up!) Then, read the [MapBox Geocoding API documentation](https://www.mapbox.com/api-documentation/#geocoding). It boils down to doing an HTTP `GET` request with an address as a query string parameter.
 
 ```js
-'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=YOUR-ACCESS-TOKEN'
+'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=YOUR-API-KEY'
 ```
 
-NOTE: You can find your access token on your [account page](https://www.mapbox.com/account/) once you have created an account and signed in.
+NOTE: The request to the MapBox API will require your API key as one of the parameters in your request. You can find your key on your [account page](https://www.mapbox.com/account/) once you have created an account and signed in.
 
 Go ahead and add a form to your HTML page. It should contain an `input` of type `"text"` where a user can type an address in, and an `input` of type `"submit"` to display a button.
 
@@ -56,7 +56,7 @@ To display a map in your `#map` with the `mapbox-gl` package you can use these l
 ```js
 import mapboxgl from 'mapbox-gl';
 
-mapboxgl.accessToken = 'yourAccessToken';
+mapboxgl.accessToken = 'yourApiKey';
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v9',
