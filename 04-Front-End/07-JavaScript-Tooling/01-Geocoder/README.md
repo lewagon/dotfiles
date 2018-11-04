@@ -31,6 +31,8 @@ Once that's done, use the `submit` event to catch the moment the form is posted 
 
 As always when you fetch data from an API, start by `console.log()`ing what you get back from MapBox. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
 
+HINT: Mapbox returns coordinates with longitude first, and latitude sencond!
+
 ### [OPTIONAL] Displaying a map
 
 To display a MapBox Map with a marker at the specified address, we'll use a second API, the [MapBox JavaScript API](https://www.mapbox.com/mapbox-gl-js/api/).
