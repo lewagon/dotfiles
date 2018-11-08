@@ -12,7 +12,7 @@ describe "quiz" do
                           "patch '/restaurants/:id', to: 'restaurants#update'",
                           "delete '/restaurants/:id', to: 'restaurants#destroy'",
                         ]
-      expect(correct_actions.sort).to eq(plants_resources_routes.sort)
+      expect(plants_resources_routes.sort).to eq(correct_actions.sort)
     end
   end
 
