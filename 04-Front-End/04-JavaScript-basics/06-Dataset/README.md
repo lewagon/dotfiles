@@ -25,17 +25,9 @@ dataset(burger);
 
 ### Help
 
-In this challenge you may want to use the `debugger` to help you with the data extraction.
+Don't forget to use Chrome DevTools to debug!
 
-To do so, add the `debugger` in the body of your function, make sure you call your `dataset('<div data-titi="toto">Hello World!</div>')` function and run:
-
-```js
-node inspect lib/dataset.js
-```
-
-Then you can navigate using `cont` and `next`, and watch expressions using `watch('my_expression')` and call `watchers` to display their content!
-
-Also, when you want to match **all the matching occurrences** in your string, you may want to look into the [`g` modifier](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Parameters).
+When you want to match **all the matching occurrences** in your string, you may want to look into the [`g` modifier](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Parameters).
 
 ### Improvements
 
