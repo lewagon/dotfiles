@@ -35,7 +35,7 @@ var toString = Object.prototype.toString;
 /**
  * Initialize a new `Router` with the given `options`.
  *
- * @param {Object} options
+ * @param {Object} [options]
  * @return {Router} which is an callable function
  * @public
  */
@@ -448,14 +448,14 @@ proto.use = function use(fn) {
   var callbacks = flatten(slice.call(arguments, offset));
 
   if (callbacks.length === 0) {
-    throw new TypeError('Router.use() requires middleware functions');
+    throw new TypeError('Router.use() requires a middleware function')
   }
 
   for (var i = 0; i < callbacks.length; i++) {
     var fn = callbacks[i];
 
     if (typeof fn !== 'function') {
-      throw new TypeError('Router.use() requires middleware function but got a ' + gettype(fn));
+      throw new TypeError('Router.use() requires a middleware function but got a ' + gettype(fn))
     }
 
     // add the middleware

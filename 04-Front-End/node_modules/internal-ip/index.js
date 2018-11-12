@@ -1,41 +1,47 @@
 'use strict';
-var os = require('os');
+const os = require('os');
+const defaultGateway = require('default-gateway');
+const ipaddr = require('ipaddr.js');
 
-var type = {
-	v4: {
-		def: '127.0.0.1',
-		family: 'IPv4'
-	},
-	v6: {
-		def: '::1',
-		family: 'IPv6'
-	}
-};
+function findIp(gateway) {
+	const interfaces = os.networkInterfaces();
+	const gatewayIp = ipaddr.parse(gateway);
+	let ip;
 
-function internalIp(version) {
-	var options = type[version];
-	var ret = options.def;
-	var interfaces = os.networkInterfaces();
+	// Look for the matching interface in all local interfaces
+	Object.keys(interfaces).some(name => {
+		return interfaces[name].some(addr => {
+			const prefix = ipaddr.parse(addr.netmask).prefixLengthFromSubnetMask();
+			const net = ipaddr.parseCIDR(`${addr.address}/${prefix}`);
 
-	Object.keys(interfaces).forEach(function (el) {
-		interfaces[el].forEach(function (el2) {
-			if (!el2.internal && el2.family === options.family) {
-				ret = el2.address;
+			if (net[0] && net[0].kind() === gatewayIp.kind() && gatewayIp.match(net)) {
+				ip = net[0].toString();
 			}
+
+			return Boolean(ip);
 		});
 	});
 
-	return ret;
+	return ip;
 }
 
-function v4() {
-	return internalIp('v4');
+function promise(family) {
+	return defaultGateway[family]().then(result => {
+		return findIp(result.gateway) || null;
+	}).catch(() => null);
 }
 
-function v6() {
-	return internalIp('v6');
+function sync(family) {
+	try {
+		const result = defaultGateway[family].sync();
+		return findIp(result.gateway) || null;
+	} catch (err) {
+		return null;
+	}
 }
 
-module.exports = v4;
-module.exports.v4 = v4;
-module.exports.v6 = v6;
+module.exports.v6 = () => promise('v6');
+module.exports.v4 = () => promise('v4');
+
+module.exports.v6.sync = () => sync('v6');
+module.exports.v4.sync = () => sync('v4');

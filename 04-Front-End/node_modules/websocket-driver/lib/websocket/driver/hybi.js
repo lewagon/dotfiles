@@ -421,6 +421,7 @@ var instance = {
 
     if (opcode === this.OPCODES.ping) {
       this.frame(payload, 'pong');
+      this.emit('ping', new Base.PingEvent(payload.toString()))
     }
 
     if (opcode === this.OPCODES.pong) {
@@ -430,6 +431,8 @@ var instance = {
 
       delete callbacks[message];
       if (callback) callback()
+
+      this.emit('pong', new Base.PongEvent(payload.toString()))
     }
   },
 

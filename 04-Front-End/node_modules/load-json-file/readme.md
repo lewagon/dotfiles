@@ -28,7 +28,7 @@ loadJsonFile('foo.json').then(json => {
 
 ### loadJsonFile(filepath)
 
-Returns a promise that resolves to the parsed JSON.
+Returns a promise for the parsed JSON.
 
 ### loadJsonFile.sync(filepath)
 
@@ -42,4 +42,4 @@ Returns the parsed JSON.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

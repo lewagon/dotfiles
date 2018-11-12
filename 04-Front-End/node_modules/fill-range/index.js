@@ -1,408 +1,208 @@
 /*!
  * fill-range <https://github.com/jonschlinkert/fill-range>
  *
- * Copyright (c) 2014-2015, Jon Schlinkert.
- * Licensed under the MIT License.
+ * Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+ * Released under the MIT License.
  */
 
 'use strict';
 
-var isObject = require('isobject');
+var util = require('util');
 var isNumber = require('is-number');
-var randomize = require('randomatic');
-var repeatStr = require('repeat-string');
-var repeat = require('repeat-element');
-
-/**
- * Expose `fillRange`
- */
-
-module.exports = fillRange;
+var extend = require('extend-shallow');
+var repeat = require('repeat-string');
+var toRegex = require('to-regex-range');
 
 /**
  * Return a range of numbers or letters.
  *
- * @param  {String} `a` Start of the range
- * @param  {String} `b` End of the range
+ * @param  {String} `start` Start of the range
+ * @param  {String} `stop` End of the range
  * @param  {String} `step` Increment or decrement to use.
  * @param  {Function} `fn` Custom function to modify each element in the range.
  * @return {Array}
  */
 
-function fillRange(a, b, step, options, fn) {
-  if (a == null || b == null) {
-    throw new Error('fill-range expects the first and second args to be strings.');
+function fillRange(start, stop, step, options) {
+  if (typeof start === 'undefined') {
+    return [];
   }
 
-  if (typeof step === 'function') {
-    fn = step; options = {}; step = null;
+  if (typeof stop === 'undefined' || start === stop) {
+    // special case, for handling negative zero
+    var isString = typeof start === 'string';
+    if (isNumber(start) && !toNumber(start)) {
+      return [isString ? '0' : 0];
+    }
+    return [start];
+  }
+
+  if (typeof step !== 'number' && typeof step !== 'string') {
+    options = step;
+    step = undefined;
   }
 
   if (typeof options === 'function') {
-    fn = options; options = {};
+    options = { transform: options };
   }
 
-  if (isObject(step)) {
-    options = step; step = '';
-  }
-
-  var expand, regex = false, sep = '';
-  var opts = options || {};
-
-  if (typeof opts.silent === 'undefined') {
-    opts.silent = true;
-  }
-
-  step = step || opts.step;
-
-  // store a ref to unmodified arg
-  var origA = a, origB = b;
-
-  b = (b.toString() === '-0') ? 0 : b;
-
-  if (opts.optimize || opts.makeRe) {
-    step = step ? (step += '~') : step;
-    expand = true;
-    regex = true;
-    sep = '~';
-  }
-
-  // handle special step characters
-  if (typeof step === 'string') {
-    var match = stepRe().exec(step);
-
-    if (match) {
-      var i = match.index;
-      var m = match[0];
-
-      // repeat string
-      if (m === '+') {
-        return repeat(a, b);
-
-      // randomize a, `b` times
-      } else if (m === '?') {
-        return [randomize(a, b)];
-
-      // expand right, no regex reduction
-      } else if (m === '>') {
-        step = step.substr(0, i) + step.substr(i + 1);
-        expand = true;
-
-      // expand to an array, or if valid create a reduced
-      // string for a regex logic `or`
-      } else if (m === '|') {
-        step = step.substr(0, i) + step.substr(i + 1);
-        expand = true;
-        regex = true;
-        sep = m;
-
-      // expand to an array, or if valid create a reduced
-      // string for a regex range
-      } else if (m === '~') {
-        step = step.substr(0, i) + step.substr(i + 1);
-        expand = true;
-        regex = true;
-        sep = m;
-      }
-    } else if (!isNumber(step)) {
-      if (!opts.silent) {
-        throw new TypeError('fill-range: invalid step.');
-      }
-      return null;
+  var opts = extend({step: step}, options);
+  if (opts.step && !isValidNumber(opts.step)) {
+    if (opts.strictRanges === true) {
+      throw new TypeError('expected options.step to be a number');
     }
+    return [];
   }
 
-  if (/[.&*()[\]^%$#@!]/.test(a) || /[.&*()[\]^%$#@!]/.test(b)) {
-    if (!opts.silent) {
-      throw new RangeError('fill-range: invalid range arguments.');
+  opts.isNumber = isValidNumber(start) && isValidNumber(stop);
+  if (!opts.isNumber && !isValid(start, stop)) {
+    if (opts.strictRanges === true) {
+      throw new RangeError('invalid range arguments: ' + util.inspect([start, stop]));
     }
-    return null;
+    return [];
   }
 
-  // has neither a letter nor number, or has both letters and numbers
-  // this needs to be after the step logic
-  if (!noAlphaNum(a) || !noAlphaNum(b) || hasBoth(a) || hasBoth(b)) {
-    if (!opts.silent) {
-      throw new RangeError('fill-range: invalid range arguments.');
-    }
-    return null;
+  opts.isPadded = isPadded(start) || isPadded(stop);
+  opts.toString = opts.stringify
+    || typeof opts.step === 'string'
+    || typeof start === 'string'
+    || typeof stop === 'string'
+    || !opts.isNumber;
+
+  if (opts.isPadded) {
+    opts.maxLength = Math.max(String(start).length, String(stop).length);
   }
 
-  // validate arguments
-  var isNumA = isNumber(zeros(a));
-  var isNumB = isNumber(zeros(b));
+  // support legacy minimatch/fill-range options
+  if (typeof opts.optimize === 'boolean') opts.toRegex = opts.optimize;
+  if (typeof opts.makeRe === 'boolean') opts.toRegex = opts.makeRe;
+  return expand(start, stop, opts);
+}
 
-  if ((!isNumA && isNumB) || (isNumA && !isNumB)) {
-    if (!opts.silent) {
-      throw new TypeError('fill-range: first range argument is incompatible with second.');
-    }
-    return null;
+function expand(start, stop, options) {
+  var a = options.isNumber ? toNumber(start) : start.charCodeAt(0);
+  var b = options.isNumber ? toNumber(stop) : stop.charCodeAt(0);
+
+  var step = Math.abs(toNumber(options.step)) || 1;
+  if (options.toRegex && step === 1) {
+    return toRange(a, b, start, stop, options);
   }
 
-  // by this point both are the same, so we
-  // can use A to check going forward.
-  var isNum = isNumA;
-  var num = formatStep(step);
+  var zero = {greater: [], lesser: []};
+  var asc = a < b;
+  var arr = new Array(Math.round((asc ? b - a : a - b) / step));
+  var idx = 0;
 
-  // is the range alphabetical? or numeric?
-  if (isNum) {
-    // if numeric, coerce to an integer
-    a = +a; b = +b;
-  } else {
-    // otherwise, get the charCode to expand alpha ranges
-    a = a.charCodeAt(0);
-    b = b.charCodeAt(0);
-  }
-
-  // is the pattern descending?
-  var isDescending = a > b;
-
-  // don't create a character class if the args are < 0
-  if (a < 0 || b < 0) {
-    expand = false;
-    regex = false;
-  }
-
-  // detect padding
-  var padding = isPadded(origA, origB);
-  var res, pad, arr = [];
-  var ii = 0;
-
-  // character classes, ranges and logical `or`
-  if (regex) {
-    if (shouldExpand(a, b, num, isNum, padding, opts)) {
-      // make sure the correct separator is used
-      if (sep === '|' || sep === '~') {
-        sep = detectSeparator(a, b, num, isNum, isDescending);
-      }
-      return wrap([origA, origB], sep, opts);
-    }
-  }
-
-  while (isDescending ? (a >= b) : (a <= b)) {
-    if (padding && isNum) {
-      pad = padding(a);
-    }
-
-    // custom function
-    if (typeof fn === 'function') {
-      res = fn(a, isNum, pad, ii++);
-
-    // letters
-    } else if (!isNum) {
-      if (regex && isInvalidChar(a)) {
-        res = null;
-      } else {
-        res = String.fromCharCode(a);
-      }
-
-    // numbers
+  while (asc ? a <= b : a >= b) {
+    var val = options.isNumber ? a : String.fromCharCode(a);
+    if (options.toRegex && (val >= 0 || !options.isNumber)) {
+      zero.greater.push(val);
     } else {
-      res = formatPadding(a, pad);
+      zero.lesser.push(Math.abs(val));
     }
 
-    // add result to the array, filtering any nulled values
-    if (res !== null) arr.push(res);
+    if (options.isPadded) {
+      val = zeros(val, options);
+    }
 
-    // increment or decrement
-    if (isDescending) {
-      a -= num;
+    if (options.toString) {
+      val = String(val);
+    }
+
+    if (typeof options.transform === 'function') {
+      arr[idx++] = options.transform(val, a, b, step, idx, arr, options);
     } else {
-      a += num;
+      arr[idx++] = val;
+    }
+
+    if (asc) {
+      a += step;
+    } else {
+      a -= step;
     }
   }
 
-  // now that the array is expanded, we need to handle regex
-  // character classes, ranges or logical `or` that wasn't
-  // already handled before the loop
-  if ((regex || expand) && !opts.noexpand) {
-    // make sure the correct separator is used
-    if (sep === '|' || sep === '~') {
-      sep = detectSeparator(a, b, num, isNum, isDescending);
-    }
-    if (arr.length === 1 || a < 0 || b < 0) { return arr; }
-    return wrap(arr, sep, opts);
+  if (options.toRegex === true) {
+    return toSequence(arr, zero, options);
   }
-
   return arr;
 }
 
-/**
- * Wrap the string with the correct regex
- * syntax.
- */
-
-function wrap(arr, sep, opts) {
-  if (sep === '~') { sep = '-'; }
-  var str = arr.join(sep);
-  var pre = opts && opts.regexPrefix;
-
-  // regex logical `or`
-  if (sep === '|') {
-    str = pre ? pre + str : str;
-    str = '(' + str + ')';
+function toRange(a, b, start, stop, options) {
+  if (options.isPadded) {
+    return toRegex(start, stop, options);
   }
 
-  // regex character class
-  if (sep === '-') {
-    str = (pre && pre === '^')
-      ? pre + str
-      : str;
-    str = '[' + str + ']';
+  if (options.isNumber) {
+    return toRegex(Math.min(a, b), Math.max(a, b), options);
   }
-  return [str];
+
+  var start = String.fromCharCode(Math.min(a, b));
+  var stop = String.fromCharCode(Math.max(a, b));
+  return '[' + start + '-' + stop + ']';
 }
 
-/**
- * Check for invalid characters
- */
-
-function isCharClass(a, b, step, isNum, isDescending) {
-  if (isDescending) { return false; }
-  if (isNum) { return a <= 9 && b <= 9; }
-  if (a < b) { return step === 1; }
-  return false;
-}
-
-/**
- * Detect the correct separator to use
- */
-
-function shouldExpand(a, b, num, isNum, padding, opts) {
-  if (isNum && (a > 9 || b > 9)) { return false; }
-  return !padding && num === 1 && a < b;
-}
-
-/**
- * Detect the correct separator to use
- */
-
-function detectSeparator(a, b, step, isNum, isDescending) {
-  var isChar = isCharClass(a, b, step, isNum, isDescending);
-  if (!isChar) {
-    return '|';
+function toSequence(arr, zeros, options) {
+  var greater = '', lesser = '';
+  if (zeros.greater.length) {
+    greater = zeros.greater.join('|');
   }
-  return '~';
-}
-
-/**
- * Correctly format the step based on type
- */
-
-function formatStep(step) {
-  return Math.abs(step >> 0) || 1;
-}
-
-/**
- * Format padding, taking leading `-` into account
- */
-
-function formatPadding(ch, pad) {
-  var res = pad ? pad + ch : ch;
-  if (pad && ch.toString().charAt(0) === '-') {
-    res = '-' + pad + ch.toString().substr(1);
+  if (zeros.lesser.length) {
+    lesser = '-(' + zeros.lesser.join('|') + ')';
   }
-  return res.toString();
+  var res = greater && lesser
+    ? greater + '|' + lesser
+    : greater || lesser;
+
+  if (options.capture) {
+    return '(' + res + ')';
+  }
+  return res;
 }
 
-/**
- * Check for invalid characters
- */
-
-function isInvalidChar(str) {
-  var ch = toStr(str);
-  return ch === '\\'
-    || ch === '['
-    || ch === ']'
-    || ch === '^'
-    || ch === '('
-    || ch === ')'
-    || ch === '`';
-}
-
-/**
- * Convert to a string from a charCode
- */
-
-function toStr(ch) {
-  return String.fromCharCode(ch);
-}
-
-
-/**
- * Step regex
- */
-
-function stepRe() {
-  return /\?|>|\||\+|\~/g;
-}
-
-/**
- * Return true if `val` has either a letter
- * or a number
- */
-
-function noAlphaNum(val) {
-  return /[a-z0-9]/i.test(val);
-}
-
-/**
- * Return true if `val` has both a letter and
- * a number (invalid)
- */
-
-function hasBoth(val) {
-  return /[a-z][0-9]|[0-9][a-z]/i.test(val);
-}
-
-/**
- * Normalize zeros for checks
- */
-
-function zeros(val) {
-  if (/^-*0+$/.test(val.toString())) {
-    return '0';
+function zeros(val, options) {
+  if (options.isPadded) {
+    var str = String(val);
+    var len = str.length;
+    var dash = '';
+    if (str.charAt(0) === '-') {
+      dash = '-';
+      str = str.slice(1);
+    }
+    var diff = options.maxLength - len;
+    var pad = repeat('0', diff);
+    val = (dash + pad + str);
+  }
+  if (options.stringify) {
+    return String(val);
   }
   return val;
 }
 
-/**
- * Return true if `val` has leading zeros,
- * or a similar valid pattern.
- */
+function toNumber(val) {
+  return Number(val) || 0;
+}
 
-function hasZeros(val) {
-  return /[^.]\.|^-*0+[0-9]/.test(val);
+function isPadded(str) {
+  return /^-?0\d/.test(str);
+}
+
+function isValid(min, max) {
+  return (isValidNumber(min) || isValidLetter(min))
+      && (isValidNumber(max) || isValidLetter(max));
+}
+
+function isValidLetter(ch) {
+  return typeof ch === 'string' && ch.length === 1 && /^\w+$/.test(ch);
+}
+
+function isValidNumber(n) {
+  return isNumber(n) && !/\./.test(n);
 }
 
 /**
- * If the string is padded, returns a curried function with
- * the a cached padding string, or `false` if no padding.
- *
- * @param  {*} `origA` String or number.
- * @return {String|Boolean}
+ * Expose `fillRange`
+ * @type {Function}
  */
 
-function isPadded(origA, origB) {
-  if (hasZeros(origA) || hasZeros(origB)) {
-    var alen = length(origA);
-    var blen = length(origB);
-
-    var len = alen >= blen
-      ? alen
-      : blen;
-
-    return function (a) {
-      return repeatStr('0', len - length(a));
-    };
-  }
-  return false;
-}
-
-/**
- * Get the string length of `val`
- */
-
-function length(val) {
-  return val.toString().length;
-}
+module.exports = fillRange;

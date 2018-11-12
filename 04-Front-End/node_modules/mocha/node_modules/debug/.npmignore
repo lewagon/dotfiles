@@ -6,3 +6,4 @@ example
 dist
 yarn.lock
 coverage
+bower.json

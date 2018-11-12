@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.18.0](https://github.com/chimurai/http-proxy-middleware/releases/tag/v0.18.0)
+- fix(vulnerability): update micromatch to v3.x ([npm:braces:20180219](https://snyk.io/test/npm/http-proxy-middleware?tab=issues&severity=high&severity=medium&severity=low#npm:braces:20180219
+))
+- test(node): drop node 0.x support ([#212](https://github.com/chimurai/http-proxy-middleware/pull/212))
+
+
 ## [v0.17.4](https://github.com/chimurai/http-proxy-middleware/releases/tag/v0.17.4)
 - fix(ntlm authentication): fixed bug preventing proxying with ntlm authentication. ([#132](https://github.com/chimurai/http-proxy-middleware/pull/149)) (Thanks: [EladBezalel](https://github.com/EladBezalel), [oshri551](https://github.com/oshri551))
 

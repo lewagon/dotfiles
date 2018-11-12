@@ -10,7 +10,7 @@ Node style HMACs for use in the browser, with native HMAC functions in node. API
 
 ```js
 var createHmac = require('create-hmac')
-var hmac = createHmac('sha224', new Buffer("secret key"))
+var hmac = createHmac('sha224', Buffer.from('secret key'))
 hmac.update('synchronous write') //optional encoding parameter
 hmac.digest() // synchronously get result with optional encoding parameter
 

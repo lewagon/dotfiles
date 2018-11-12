@@ -1,6 +1,6 @@
 # EventEmitter3
 
-[![Version npm](https://img.shields.io/npm/v/eventemitter3.svg?style=flat-square)](http://browsenpm.org/package/eventemitter3)[![Build Status](https://img.shields.io/travis/primus/eventemitter3/master.svg?style=flat-square)](https://travis-ci.org/primus/eventemitter3)[![Dependencies](https://img.shields.io/david/primus/eventemitter3.svg?style=flat-square)](https://david-dm.org/primus/eventemitter3)[![Coverage Status](https://img.shields.io/coveralls/primus/eventemitter3/master.svg?style=flat-square)](https://coveralls.io/r/primus/eventemitter3?branch=master)[![IRC channel](https://img.shields.io/badge/IRC-irc.freenode.net%23primus-00a8ff.svg?style=flat-square)](https://webchat.freenode.net/?channels=primus)
+[![Version npm](https://img.shields.io/npm/v/eventemitter3.svg?style=flat-square)](https://www.npmjs.com/package/eventemitter3)[![Build Status](https://img.shields.io/travis/primus/eventemitter3/master.svg?style=flat-square)](https://travis-ci.org/primus/eventemitter3)[![Dependencies](https://img.shields.io/david/primus/eventemitter3.svg?style=flat-square)](https://david-dm.org/primus/eventemitter3)[![Coverage Status](https://img.shields.io/coveralls/primus/eventemitter3/master.svg?style=flat-square)](https://coveralls.io/r/primus/eventemitter3?branch=master)[![IRC channel](https://img.shields.io/badge/IRC-irc.freenode.net%23primus-00a8ff.svg?style=flat-square)](https://webchat.freenode.net/?channels=primus)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/eventemitter3.svg)](https://saucelabs.com/u/eventemitter3)
 
@@ -13,13 +13,13 @@ differences:
 - Domain support has been removed.
 - We do not `throw` an error when you emit an `error` event and nobody is
   listening.
-- The `newListener` event is removed as the use-cases for this functionality are
-  really just edge cases.
-- No `setMaxListeners` and it's pointless memory leak warnings. If you want to
-  add `end` listeners you should be able to do that without modules complaining.
-- No `listenerCount` function. Use `EE.listeners(event).length` instead.
+- The `newListener` and `removeListener` events have been removed as they
+  are useful only in some uncommon use-cases.
+- The `setMaxListeners`, `getMaxListeners`, `prependListener` and
+  `preperndOnceListener` methods are not available.
 - Support for custom context for events so there is no need to use `fn.bind`.
-- `listeners` method can do existence checking instead of returning only arrays.
+- The `removeListener` method removes all matching listeners, not only the
+  first.
 
 It's a drop in replacement for existing EventEmitters, but just faster. Free
 performance, who wouldn't want that? The EventEmitter is written in EcmaScript 3
@@ -29,9 +29,15 @@ support.
 ## Installation
 
 ```bash
-$ npm install --save eventemitter3        # npm
-$ component install primus/eventemitter3  # Component
-$ bower install eventemitter3             # Bower
+$ npm install --save eventemitter3
+```
+
+## CDN
+
+Recommended CDN:
+
+```text
+https://unpkg.com/eventemitter3@latest/umd/eventemitter3.min.js
 ```
 
 ## Usage
@@ -68,21 +74,18 @@ EE.on('another-event', emitted, context);
 EE.removeListener('another-event', emitted, context);
 ```
 
-### Existence
+### Tests and benchmarks
 
-To check if there is already a listener for a given event you can supply the
-`listeners` method with an extra boolean argument. This will transform the
-output from an array, to a boolean value which indicates if there are listeners
-in place for the given event:
+This module is well tested. You can run:
 
-```js
-var EE = new EventEmitter();
-EE.once('event-name', function () {});
-EE.on('another-event', function () {});
+- `npm test` to run the tests under Node.js.
+- `npm run test-browser` to run the tests in real browsers via Sauce Labs.
 
-EE.listeners('event-name', true); // returns true
-EE.listeners('unknown-name', true); // returns false
-```
+We also have a set of benchmarks to compare EventEmitter3 with some available
+alternatives. To run the benchmarks run `npm run benchmark`.
+
+Tests and benchmarks are not included in the npm package. If you want to play
+with them you have to clone the GitHub repository.
 
 ## License
 

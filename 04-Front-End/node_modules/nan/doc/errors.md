@@ -24,7 +24,7 @@ Also consult the V8 Embedders Guide section on [Exceptions](https://developers.g
 <a name="api_nan_error"></a>
 ### Nan::Error()
 
-Create a new Error object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
+Create a new Error object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.3/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
 
 Note that an Error object is simply a specialized form of `v8::Value`.
 
@@ -39,7 +39,7 @@ v8::Local<v8::Value> Nan::Error(v8::Local<v8::String> msg);
 <a name="api_nan_range_error"></a>
 ### Nan::RangeError()
 
-Create a new RangeError object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
+Create a new RangeError object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.3/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
 
 Note that an RangeError object is simply a specialized form of `v8::Value`.
 
@@ -54,7 +54,7 @@ v8::Local<v8::Value> Nan::RangeError(v8::Local<v8::String> msg);
 <a name="api_nan_reference_error"></a>
 ### Nan::ReferenceError()
 
-Create a new ReferenceError object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
+Create a new ReferenceError object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.3/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
 
 Note that an ReferenceError object is simply a specialized form of `v8::Value`.
 
@@ -69,7 +69,7 @@ v8::Local<v8::Value> Nan::ReferenceError(v8::Local<v8::String> msg);
 <a name="api_nan_syntax_error"></a>
 ### Nan::SyntaxError()
 
-Create a new SyntaxError object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
+Create a new SyntaxError object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.3/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
 
 Note that an SyntaxError object is simply a specialized form of `v8::Value`.
 
@@ -84,7 +84,7 @@ v8::Local<v8::Value> Nan::SyntaxError(v8::Local<v8::String> msg);
 <a name="api_nan_type_error"></a>
 ### Nan::TypeError()
 
-Create a new TypeError object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.0/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
+Create a new TypeError object using the [v8::Exception](https://v8docs.nodesource.com/io.js-3.3/da/d6a/classv8_1_1_exception.html) class in a way that is compatible across the supported versions of V8.
 
 Note that an TypeError object is simply a specialized form of `v8::Value`.
 
@@ -194,7 +194,7 @@ v8::Local<v8::Value> Nan::ErrnoException(int errorno,
 <a name="api_nan_try_catch"></a>
 ### Nan::TryCatch
 
-A simple wrapper around [`v8::TryCatch`](https://v8docs.nodesource.com/io.js-3.0/d4/dc6/classv8_1_1_try_catch.html) compatible with all supported versions of V8. Can be used as a direct replacement in most cases. See also [`Nan::FatalException()`](#api_nan_fatal_exception) for an internal use compatible with `node::FatalException`.
+A simple wrapper around [`v8::TryCatch`](https://v8docs.nodesource.com/io.js-3.3/d4/dc6/classv8_1_1_try_catch.html) compatible with all supported versions of V8. Can be used as a direct replacement in most cases. See also [`Nan::FatalException()`](#api_nan_fatal_exception) for an internal use compatible with `node::FatalException`.
 
 Signature:
 

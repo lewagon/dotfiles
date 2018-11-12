@@ -4,7 +4,6 @@
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
-[![Gratipay][gratipay-image]][gratipay-url]
 
 Node.js compression middleware.
 
@@ -127,8 +126,8 @@ is not set appropriately.
 ##### threshold
 
 The byte threshold for the response body size before compression is considered
-for the response, defaults to `1kb`. This is a number of bytes, any string
-accepted by the [bytes](https://www.npmjs.com/package/bytes) module, or `false`.
+for the response, defaults to `1kb`. This is a number of bytes or any string
+accepted by the [bytes](https://www.npmjs.com/package/bytes) module.
 
 **Note** this is only an advisory setting; if the response size cannot be determined
 at the time the response headers are written, then it is assumed the response is
@@ -239,5 +238,3 @@ app.get('/events', function (req, res) {
 [coveralls-url]: https://coveralls.io/r/expressjs/compression?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/compression.svg
 [downloads-url]: https://npmjs.org/package/compression
-[gratipay-image]: https://img.shields.io/gratipay/dougwilson.svg
-[gratipay-url]: https://www.gratipay.com/dougwilson/

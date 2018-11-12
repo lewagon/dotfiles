@@ -15,9 +15,25 @@ test('foo', function (t) {
         path.join(dir, 'foo.js')
     );
 
+    t.equal(
+        resolve.sync('./foo.js', { basedir: dir, filename: path.join(dir, 'bar.js') }),
+        path.join(dir, 'foo.js')
+    );
+
     t.throws(function () {
         resolve.sync('foo', { basedir: dir });
     });
+
+    // Test that filename is reported as the "from" value when passed.
+    t.throws(
+        function () {
+            resolve.sync('foo', { basedir: dir, filename: path.join(dir, 'bar.js') });
+        },
+        {
+            name: 'Error',
+            message: "Cannot find module 'foo' from '" + path.join(dir, 'bar.js') + "'"
+        }
+    );
 
     t.end();
 });
@@ -263,5 +279,33 @@ test('sync dot slash main', function (t) {
     var start = new Date();
     t.equal(resolve.sync('./resolver/dot_slash_main'), path.join(__dirname, 'resolver/dot_slash_main/index.js'));
     t.ok(new Date() - start < 50, 'resolve.sync timedout');
+    t.end();
+});
+
+test('not a directory', function (t) {
+    var path = './foo';
+    try {
+        resolve.sync(path, { basedir: __filename });
+        t.fail();
+    } catch (err) {
+        t.ok(err, 'a non-directory errors');
+        t.equal(err && err.message, 'Cannot find module \'' + path + "' from '" + __filename + "'");
+    }
+    t.end();
+});
+
+test('browser field in package.json', function (t) {
+    var dir = path.join(__dirname, 'resolver');
+    var res = resolve.sync('./browser_field', {
+        basedir: dir,
+        packageFilter: function packageFilter(pkg) {
+            if (pkg.browser) {
+                pkg.main = pkg.browser;
+                delete pkg.browser;
+            }
+            return pkg;
+        }
+    });
+    t.equal(res, path.join(dir, 'browser_field', 'b.js'));
     t.end();
 });

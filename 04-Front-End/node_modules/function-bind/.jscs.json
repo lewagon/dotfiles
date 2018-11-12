@@ -45,7 +45,7 @@
 
 	"disallowSpacesInsideArrayBrackets": true,
 
-	"disallowQuotedKeysInObjects": "allButReserved",
+	"disallowQuotedKeysInObjects": { "allExcept": ["reserved"] },
 
 	"disallowSpaceAfterObjectKeys": true,
 
@@ -154,6 +154,23 @@
 
 	"requireCapitalizedConstructorsNew": {
 		"allExcept": ["Function", "String", "Object", "Symbol", "Number", "Date", "RegExp", "Error", "Boolean", "Array"]
-	}
+	},
+
+	"requireImportAlphabetized": false,
+
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpaceBeforeDestructuredValues": true,
+
+	"disallowSpacesInsideTemplateStringPlaceholders": true,
+
+    "disallowArrayDestructuringReturn": false,
+
+    "requireNewlineBeforeSingleStatementsInIf": false,
+
+	"disallowUnusedVariables": true,
+
+	"requireSpacesInsideImportedObjectBraces": true,
+
+	"requireUseStrict": true
 }
 

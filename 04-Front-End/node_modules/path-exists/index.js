@@ -1,22 +1,15 @@
 'use strict';
-var fs = require('fs');
-var Promise = require('pinkie-promise');
+const fs = require('fs');
 
-module.exports = function (fp) {
-	var fn = typeof fs.access === 'function' ? fs.access : fs.stat;
-
-	return new Promise(function (resolve) {
-		fn(fp, function (err) {
-			resolve(!err);
-		});
+module.exports = fp => new Promise(resolve => {
+	fs.access(fp, err => {
+		resolve(!err);
 	});
-};
+});
 
-module.exports.sync = function (fp) {
-	var fn = typeof fs.accessSync === 'function' ? fs.accessSync : fs.statSync;
-
+module.exports.sync = fp => {
 	try {
-		fn(fp);
+		fs.accessSync(fp);
 		return true;
 	} catch (err) {
 		return false;

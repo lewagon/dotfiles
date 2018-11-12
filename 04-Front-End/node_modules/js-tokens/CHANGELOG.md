@@ -1,3 +1,20 @@
+### Version 4.0.0 (2018-01-28) ###
+
+- Added: Support for ES2018. The only change needed was recognizing the `s`
+  regex flag.
+- Changed: _All_ tokens returned by the `matchToToken` function now have a
+  `closed` property. It is set to `undefined` for the tokens where “closed”
+  doesn’t make sense. This means that all tokens objects have the same shape,
+  which might improve performance.
+
+These are the breaking changes:
+
+- `'/a/s'.match(jsTokens)` no longer returns `['/', 'a', '/', 's']`, but
+  `['/a/s']`. (There are of course other variations of this.)
+- Code that rely on some token objects not having the `closed` property could
+  now behave differently.
+
+
 ### Version 3.0.2 (2017-06-28) ###
 
 - No code changes. Just updates to the readme.

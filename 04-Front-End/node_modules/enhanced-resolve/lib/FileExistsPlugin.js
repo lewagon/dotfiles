@@ -2,29 +2,32 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-function FileExistsPlugin(source, target) {
-	this.source = source;
-	this.target = target;
-}
-module.exports = FileExistsPlugin;
+"use strict";
 
-FileExistsPlugin.prototype.apply = function(resolver) {
-	var target = this.target;
-	resolver.plugin(this.source, function(request, callback) {
-		var fs = this.fileSystem;
-		var file = request.path;
-		fs.stat(file, function(err, stat) {
-			if(err || !stat) {
-				if(callback.missing) callback.missing.push(file);
-				if(callback.log) callback.log(file + " doesn't exist");
-				return callback();
-			}
-			if(!stat.isFile()) {
-				if(callback.missing) callback.missing.push(file);
-				if(callback.log) callback.log(file + " is not a file");
-				return callback();
-			}
-			this.doResolve(target, request, "existing file: " + file, callback, true);
-		}.bind(this));
-	});
+module.exports = class FileExistsPlugin {
+	constructor(source, target) {
+		this.source = source;
+		this.target = target;
+	}
+
+	apply(resolver) {
+		const target = resolver.ensureHook(this.target);
+		const fs = resolver.fileSystem;
+		resolver.getHook(this.source).tapAsync("FileExistsPlugin", (request, resolveContext, callback) => {
+			const file = request.path;
+			fs.stat(file, (err, stat) => {
+				if(err || !stat) {
+					if(resolveContext.missing) resolveContext.missing.add(file);
+					if(resolveContext.log) resolveContext.log(file + " doesn't exist");
+					return callback();
+				}
+				if(!stat.isFile()) {
+					if(resolveContext.missing) resolveContext.missing.add(file);
+					if(resolveContext.log) resolveContext.log(file + " is not a file");
+					return callback();
+				}
+				resolver.doResolve(target, request, "existing file: " + file, resolveContext, callback);
+			});
+		});
+	}
 };

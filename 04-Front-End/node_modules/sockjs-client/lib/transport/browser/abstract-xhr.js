@@ -72,7 +72,7 @@ AbstractXHRObject.prototype._start = function(method, url, payload, opts) {
     // Mozilla docs says https://developer.mozilla.org/en/XMLHttpRequest :
     // "This never affects same-site requests."
 
-    this.xhr.withCredentials = 'true';
+    this.xhr.withCredentials = true;
   }
   if (opts && opts.headers) {
     for (var key in opts.headers) {

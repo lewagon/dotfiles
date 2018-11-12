@@ -2,226 +2,300 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-var Tapable = require("tapable");
-var createInnerCallback = require("./createInnerCallback");
+"use strict";
 
-function Resolver(fileSystem) {
-	Tapable.call(this);
-	this.fileSystem = fileSystem;
+const util = require("util");
+
+const Tapable = require("tapable/lib/Tapable");
+const SyncHook = require("tapable/lib/SyncHook");
+const AsyncSeriesBailHook = require("tapable/lib/AsyncSeriesBailHook");
+const AsyncSeriesHook = require("tapable/lib/AsyncSeriesHook");
+const createInnerContext = require("./createInnerContext");
+
+const REGEXP_NOT_MODULE = /^\.$|^\.[\\\/]|^\.\.$|^\.\.[\/\\]|^\/|^[A-Z]:[\\\/]/i;
+const REGEXP_DIRECTORY = /[\/\\]$/i;
+
+const memoryFsJoin = require("memory-fs/lib/join");
+const memoizedJoin = new Map();
+const memoryFsNormalize = require("memory-fs/lib/normalize");
+
+function withName(name, hook) {
+	hook.name = name;
+	return hook;
 }
-module.exports = Resolver;
 
-Resolver.prototype = Object.create(Tapable.prototype);
+function toCamelCase(str) {
+	return str.replace(/-([a-z])/g, str => str.substr(1).toUpperCase());
+}
 
-Resolver.prototype.constructor = Resolver;
+const deprecatedPushToMissing = util.deprecate((set, item) => {
+	set.add(item);
+}, "Resolver: 'missing' is now a Set. Use add instead of push.");
 
-Resolver.prototype.resolveSync = function resolveSync(context, path, request) {
-	var err, result, sync = false;
-	this.resolve(context, path, request, function(e, r) {
-		err = e;
-		result = r;
-		sync = true;
-	});
-	if(!sync) throw new Error("Cannot 'resolveSync' because the fileSystem is not sync. Use 'resolve'!");
-	if(err) throw err;
-	return result;
-};
+const deprecatedResolveContextInCallback = util.deprecate((x) => {
+	return x;
+}, "Resolver: The callback argument was splitted into resolveContext and callback.");
 
-Resolver.prototype.resolve = function resolve(context, path, request, callback) {
-	if(arguments.length === 3) {
-		throw new Error("Signature changed: context parameter added");
+const deprecatedHookAsString = util.deprecate((x) => {
+	return x;
+}, "Resolver#doResolve: The type arguments (string) is now a hook argument (Hook). Pass a reference to the hook instead.");
+
+class Resolver extends Tapable {
+	constructor(fileSystem) {
+		super();
+		this.fileSystem = fileSystem;
+		this.hooks = {
+			resolveStep: withName("resolveStep", new SyncHook(["hook", "request"])),
+			noResolve: withName("noResolve", new SyncHook(["request", "error"])),
+			resolve: withName("resolve", new AsyncSeriesBailHook(["request", "resolveContext"])),
+			result: new AsyncSeriesHook(["result", "resolveContext"])
+		};
+		this._pluginCompat.tap("Resolver: before/after", options => {
+			if(/^before-/.test(options.name)) {
+				options.name = options.name.substr(7);
+				options.stage = -10;
+			} else if(/^after-/.test(options.name)) {
+				options.name = options.name.substr(6);
+				options.stage = 10;
+			}
+		});
+		this._pluginCompat.tap("Resolver: step hooks", options => {
+			const name = options.name;
+			const stepHook = !/^resolve(-s|S)tep$|^no(-r|R)esolve$/.test(name);
+			if(stepHook) {
+				options.async = true;
+				this.ensureHook(name);
+				const fn = options.fn;
+				options.fn = (request, resolverContext, callback) => {
+					const innerCallback = (err, result) => {
+						if(err) return callback(err);
+						if(result !== undefined) return callback(null, result);
+						callback();
+					};
+					for(const key in resolverContext) {
+						innerCallback[key] = resolverContext[key];
+					}
+					fn.call(this, request, innerCallback);
+				};
+			}
+		});
 	}
-	var resolver = this;
-	var obj = {
-		context: context,
-		path: path,
-		request: request
-	};
 
-	var localMissing;
-	var log;
-	var message = "resolve '" + request + "' in '" + path + "'";
-
-	function writeLog(msg) {
-		log.push(msg);
-	}
-
-	function logAsString() {
-		return log.join("\n");
-	}
-
-	function onError(err, result) {
-		if(callback.log) {
-			for(var i = 0; i < log.length; i++)
-				callback.log(log[i]);
+	ensureHook(name) {
+		if(typeof name !== "string") return name;
+		name = toCamelCase(name);
+		if(/^before/.test(name)) {
+			return this.ensureHook(name[6].toLowerCase() + name.substr(7)).withOptions({
+				stage: -10
+			});
 		}
-
-		if(err) return callback(err);
-
-		var error = new Error("Can't " + message);
-		error.details = logAsString();
-		error.missing = localMissing;
-		resolver.applyPlugins("no-resolve", obj, error);
-		return callback(error);
-	}
-
-	function onResolve(err, result) {
-		if(!err && result) {
-			return callback(null, result.path === false ? false : result.path + (result.query || ""), result);
+		if(/^after/.test(name)) {
+			return this.ensureHook(name[5].toLowerCase() + name.substr(6)).withOptions({
+				stage: 10
+			});
 		}
-
-		localMissing = [];
-		log = [];
-
-		return resolver.doResolve("resolve", obj, message, createInnerCallback(onError, {
-			log: writeLog,
-			missing: localMissing,
-			stack: callback.stack
-		}));
-	}
-
-	onResolve.missing = callback.missing;
-	onResolve.stack = callback.stack;
-
-	return this.doResolve("resolve", obj, message, onResolve);
-};
-
-Resolver.prototype.doResolve = function doResolve(type, request, message, callback) {
-	var resolver = this;
-	var stackLine = type + ": (" + request.path + ") " +
-		(request.request || "") + (request.query || "") +
-		(request.directory ? " directory" : "") +
-		(request.module ? " module" : "");
-	var newStack = [stackLine];
-	if(callback.stack) {
-		newStack = callback.stack.concat(newStack);
-		if(callback.stack.indexOf(stackLine) >= 0) {
-			// Prevent recursion
-			var recursionError = new Error("Recursion in resolving\nStack:\n  " + newStack.join("\n  "));
-			recursionError.recursion = true;
-			if(callback.log) callback.log("abort resolving because of recursion");
-			return callback(recursionError);
+		const hook = this.hooks[name];
+		if(!hook) {
+			return this.hooks[name] = withName(name, new AsyncSeriesBailHook(["request", "resolveContext"]));
 		}
-	}
-	resolver.applyPlugins("resolve-step", type, request);
-
-	var beforePluginName = "before-" + type;
-	if(resolver.hasPlugins(beforePluginName)) {
-		resolver.applyPluginsAsyncSeriesBailResult1(beforePluginName, request, createInnerCallback(beforeInnerCallback, {
-			log: callback.log,
-			missing: callback.missing,
-			stack: newStack
-		}, message && ("before " + message), true));
-	} else {
-		runNormal();
+		return hook;
 	}
 
-	function beforeInnerCallback(err, result) {
-		if(arguments.length > 0) {
-			if(err) return callback(err);
-			if(result) return callback(null, result);
-			return callback();
+	getHook(name) {
+		if(typeof name !== "string") return name;
+		name = toCamelCase(name);
+		if(/^before/.test(name)) {
+			return this.getHook(name[6].toLowerCase() + name.substr(7)).withOptions({
+				stage: -10
+			});
 		}
-		runNormal();
+		if(/^after/.test(name)) {
+			return this.getHook(name[5].toLowerCase() + name.substr(6)).withOptions({
+				stage: 10
+			});
+		}
+		const hook = this.hooks[name];
+		if(!hook) {
+			throw new Error(`Hook ${name} doesn't exist`);
+		}
+		return hook;
 	}
 
-	function runNormal() {
-		if(resolver.hasPlugins(type)) {
-			return resolver.applyPluginsAsyncSeriesBailResult1(type, request, createInnerCallback(innerCallback, {
-				log: callback.log,
-				missing: callback.missing,
-				stack: newStack
-			}, message));
+	resolveSync(context, path, request) {
+		let err, result, sync = false;
+		this.resolve(context, path, request, {}, (e, r) => {
+			err = e;
+			result = r;
+			sync = true;
+		});
+		if(!sync) throw new Error("Cannot 'resolveSync' because the fileSystem is not sync. Use 'resolve'!");
+		if(err) throw err;
+		return result;
+	}
+
+	resolve(context, path, request, resolveContext, callback) {
+		// TODO remove in enhanced-resolve 5
+		// For backward compatiblity START
+		if(typeof callback !== "function") {
+			callback = deprecatedResolveContextInCallback(resolveContext);
+			// resolveContext is a function containing additional properties
+			// It's now used for resolveContext and callback
+		}
+		// END
+		const obj = {
+			context: context,
+			path: path,
+			request: request
+		};
+
+		const message = "resolve '" + request + "' in '" + path + "'";
+
+		// Try to resolve assuming there is no error
+		// We don't log stuff in this case
+		return this.doResolve(this.hooks.resolve, obj, message, {
+			missing: resolveContext.missing,
+			stack: resolveContext.stack
+		}, (err, result) => {
+			if(!err && result) {
+				return callback(null, result.path === false ? false : result.path + (result.query || ""), result);
+			}
+
+			const localMissing = new Set();
+			// TODO remove in enhanced-resolve 5
+			localMissing.push = item => deprecatedPushToMissing(localMissing, item);
+			const log = [];
+
+			return this.doResolve(this.hooks.resolve, obj, message, {
+				log: msg => {
+					if(resolveContext.log) {
+						resolveContext.log(msg);
+					}
+					log.push(msg);
+				},
+				missing: localMissing,
+				stack: resolveContext.stack
+			}, (err, result) => {
+				if(err) return callback(err);
+
+				const error = new Error("Can't " + message);
+				error.details = log.join("\n");
+				error.missing = Array.from(localMissing);
+				this.hooks.noResolve.call(obj, error);
+				return callback(error);
+			});
+		});
+	}
+
+	doResolve(hook, request, message, resolveContext, callback) {
+		// TODO remove in enhanced-resolve 5
+		// For backward compatiblity START
+		if(typeof callback !== "function") {
+			callback = deprecatedResolveContextInCallback(resolveContext);
+			// resolveContext is a function containing additional properties
+			// It's now used for resolveContext and callback
+		}
+		if(typeof hook === "string") {
+			const name = toCamelCase(hook);
+			hook = deprecatedHookAsString(this.hooks[name]);
+			if(!hook) {
+				throw new Error(`Hook "${name}" doesn't exist`);
+			}
+		}
+		// END
+		if(typeof callback !== "function") throw new Error("callback is not a function " + Array.from(arguments));
+		if(!resolveContext) throw new Error("resolveContext is not an object " + Array.from(arguments));
+
+		const stackLine = hook.name + ": (" + request.path + ") " +
+			(request.request || "") + (request.query || "") +
+			(request.directory ? " directory" : "") +
+			(request.module ? " module" : "");
+
+		let newStack;
+		if(resolveContext.stack) {
+			newStack = new Set(resolveContext.stack);
+			if(resolveContext.stack.has(stackLine)) {
+				// Prevent recursion
+				const recursionError = new Error("Recursion in resolving\nStack:\n  " + Array.from(newStack).join("\n  "));
+				recursionError.recursion = true;
+				if(resolveContext.log) resolveContext.log("abort resolving because of recursion");
+				return callback(recursionError);
+			}
+			newStack.add(stackLine);
 		} else {
-			runAfter();
+			newStack = new Set([stackLine]);
 		}
-	}
+		this.hooks.resolveStep.call(hook, request);
 
-	function innerCallback(err, result) {
-		if(arguments.length > 0) {
-			if(err) return callback(err);
-			if(result) return callback(null, result);
-			return callback();
-		}
-		runAfter();
-	}
-
-	function runAfter() {
-		var afterPluginName = "after-" + type;
-		if(resolver.hasPlugins(afterPluginName)) {
-			return resolver.applyPluginsAsyncSeriesBailResult1(afterPluginName, request, createInnerCallback(afterInnerCallback, {
-				log: callback.log,
-				missing: callback.missing,
+		if(hook.isUsed()) {
+			const innerContext = createInnerContext({
+				log: resolveContext.log,
+				missing: resolveContext.missing,
 				stack: newStack
-			}, message && ("after " + message), true));
+			}, message);
+			return hook.callAsync(request, innerContext, (err, result) => {
+				if(err) return callback(err);
+				if(result) return callback(null, result);
+				callback();
+			});
 		} else {
 			callback();
 		}
 	}
 
-	function afterInnerCallback(err, result) {
-		if(arguments.length > 0) {
-			if(err) return callback(err);
-			if(result) return callback(null, result);
-			return callback();
+	parse(identifier) {
+		if(identifier === "") return null;
+		const part = {
+			request: "",
+			query: "",
+			module: false,
+			directory: false,
+			file: false
+		};
+		const idxQuery = identifier.indexOf("?");
+		if(idxQuery === 0) {
+			part.query = identifier;
+		} else if(idxQuery > 0) {
+			part.request = identifier.slice(0, idxQuery);
+			part.query = identifier.slice(idxQuery);
+		} else {
+			part.request = identifier;
 		}
-		return callback();
-	}
-};
-
-Resolver.prototype.parse = function parse(identifier) {
-	if(identifier === "") return null;
-	var part = {
-		request: "",
-		query: "",
-		module: false,
-		directory: false,
-		file: false
-	};
-	var idxQuery = identifier.indexOf("?");
-	if(idxQuery === 0) {
-		part.query = identifier;
-	} else if(idxQuery > 0) {
-		part.request = identifier.slice(0, idxQuery);
-		part.query = identifier.slice(idxQuery);
-	} else {
-		part.request = identifier;
-	}
-	if(part.request) {
-		part.module = this.isModule(part.request);
-		part.directory = this.isDirectory(part.request);
-		if(part.directory) {
-			part.request = part.request.substr(0, part.request.length - 1);
+		if(part.request) {
+			part.module = this.isModule(part.request);
+			part.directory = this.isDirectory(part.request);
+			if(part.directory) {
+				part.request = part.request.substr(0, part.request.length - 1);
+			}
 		}
+		return part;
 	}
-	return part;
-};
 
-var notModuleRegExp = /^\.$|^\.[\\\/]|^\.\.$|^\.\.[\/\\]|^\/|^[A-Z]:[\\\/]/i;
-Resolver.prototype.isModule = function isModule(path) {
-	return !notModuleRegExp.test(path);
-};
-
-var directoryRegExp = /[\/\\]$/i;
-Resolver.prototype.isDirectory = function isDirectory(path) {
-	return directoryRegExp.test(path);
-};
-
-var memoryFsJoin = require("memory-fs/lib/join");
-var memoizedJoin = new Map();
-Resolver.prototype.join = function(path, request) {
-	var cacheEntry;
-	var pathCache = memoizedJoin.get(path);
-	if(typeof pathCache === "undefined") {
-		memoizedJoin.set(path, pathCache = new Map());
-	} else {
-		cacheEntry = pathCache.get(request);
-		if(typeof cacheEntry !== "undefined")
-			return cacheEntry;
+	isModule(path) {
+		return !REGEXP_NOT_MODULE.test(path);
 	}
-	cacheEntry = memoryFsJoin(path, request);
-	pathCache.set(request, cacheEntry);
-	return cacheEntry;
-};
 
-Resolver.prototype.normalize = require("memory-fs/lib/normalize");
+	isDirectory(path) {
+		return REGEXP_DIRECTORY.test(path);
+	}
+
+	join(path, request) {
+		let cacheEntry;
+		let pathCache = memoizedJoin.get(path);
+		if(typeof pathCache === "undefined") {
+			memoizedJoin.set(path, pathCache = new Map());
+		} else {
+			cacheEntry = pathCache.get(request);
+			if(typeof cacheEntry !== "undefined")
+				return cacheEntry;
+		}
+		cacheEntry = memoryFsJoin(path, request);
+		pathCache.set(request, cacheEntry);
+		return cacheEntry;
+	}
+
+	normalize(path) {
+		return memoryFsNormalize(path);
+	}
+}
+
+module.exports = Resolver;

@@ -1,53 +1,48 @@
 'use strict';
-var path = require('path');
-var pathExists = require('path-exists');
-var Promise = require('pinkie-promise');
+const path = require('path');
+const locatePath = require('locate-path');
 
-function splitPath(x) {
-	return path.resolve(x || '').split(path.sep);
-}
-
-function join(parts, filename) {
-	return path.resolve(parts.join(path.sep) + path.sep, filename);
-}
-
-module.exports = function (filename, opts) {
+module.exports = (filename, opts) => {
 	opts = opts || {};
 
-	var parts = splitPath(opts.cwd);
+	const startDir = path.resolve(opts.cwd || '');
+	const root = path.parse(startDir).root;
 
-	return new Promise(function (resolve) {
-		(function find() {
-			var fp = join(parts, filename);
+	const filenames = [].concat(filename);
 
-			pathExists(fp).then(function (exists) {
-				if (exists) {
-					resolve(fp);
-				} else if (parts.pop()) {
-					find();
-				} else {
+	return new Promise(resolve => {
+		(function find(dir) {
+			locatePath(filenames, {cwd: dir}).then(file => {
+				if (file) {
+					resolve(path.join(dir, file));
+				} else if (dir === root) {
 					resolve(null);
+				} else {
+					find(path.dirname(dir));
 				}
 			});
-		})();
+		})(startDir);
 	});
 };
 
-module.exports.sync = function (filename, opts) {
+module.exports.sync = (filename, opts) => {
 	opts = opts || {};
 
-	var parts = splitPath(opts.cwd);
-	var len = parts.length;
+	let dir = path.resolve(opts.cwd || '');
+	const root = path.parse(dir).root;
 
-	while (len--) {
-		var fp = join(parts, filename);
+	const filenames = [].concat(filename);
 
-		if (pathExists.sync(fp)) {
-			return fp;
+	// eslint-disable-next-line no-constant-condition
+	while (true) {
+		const file = locatePath.sync(filenames, {cwd: dir});
+
+		if (file) {
+			return path.join(dir, file);
+		} else if (dir === root) {
+			return null;
 		}
 
-		parts.pop();
+		dir = path.dirname(dir);
 	}
-
-	return null;
 };

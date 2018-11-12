@@ -14,9 +14,3 @@ test('dotted default', function (t) {
     t.equal(argv.aa.bb, 11);
     t.end();
 });
-
-test('dotted default with no alias', function (t) {
-    var argv = parse('', {default: {'a.b': 11}});
-    t.equal(argv.a.b, 11);
-    t.end();
-});

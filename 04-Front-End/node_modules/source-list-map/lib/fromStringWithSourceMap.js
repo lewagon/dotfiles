@@ -19,6 +19,30 @@ module.exports = function fromStringWithSourceMap(code, map) {
 	let currentLine = 1;
 	let currentSourceIdx = 0;
 	let currentSourceNodeLine;
+	function addCode(generatedCode) {
+		if(currentNode && currentNode instanceof CodeNode) {
+			currentNode.addGeneratedCode(generatedCode);
+		} else if(currentNode && currentNode instanceof SourceNode && !generatedCode.trim()) {
+			currentNode.addGeneratedCode(generatedCode);
+			currentSourceNodeLine++;
+		} else {
+			currentNode = new CodeNode(generatedCode);
+			nodes.push(currentNode);
+		}
+	}
+	function addSource(generatedCode, source, originalSource, linePosition) {
+		if(currentNode && currentNode instanceof SourceNode &&
+			currentNode.source === source &&
+			currentSourceNodeLine === linePosition
+		) {
+			currentNode.addGeneratedCode(generatedCode);
+			currentSourceNodeLine++;
+		} else {
+			currentNode = new SourceNode(generatedCode, source, originalSource, linePosition);
+			currentSourceNodeLine = linePosition + 1;
+			nodes.push(currentNode);
+		}
+	}
 	mappings.forEach(function(mapping, idx) {
 		let line = lines[idx];
 		if(typeof line === 'undefined') return;
@@ -73,30 +97,6 @@ module.exports = function fromStringWithSourceMap(code, map) {
 		if(!ignore) {
 			addSource(line, sources ? sources[sourceIdx] : null, sourcesContent ? sourcesContent[sourceIdx] : null, linePosition)
 			return true;
-		}
-	}
-	function addCode(generatedCode) {
-		if(currentNode && currentNode instanceof CodeNode) {
-			currentNode.addGeneratedCode(generatedCode);
-		} else if(currentNode && currentNode instanceof SourceNode && !generatedCode.trim()) {
-			currentNode.addGeneratedCode(generatedCode);
-			currentSourceNodeLine++;
-		} else {
-			currentNode = new CodeNode(generatedCode);
-			nodes.push(currentNode);
-		}
-	}
-	function addSource(generatedCode, source, originalSource, linePosition) {
-		if(currentNode && currentNode instanceof SourceNode &&
-			currentNode.source === source &&
-			currentSourceNodeLine === linePosition
-		) {
-			currentNode.addGeneratedCode(generatedCode);
-			currentSourceNodeLine++;
-		} else {
-			currentNode = new SourceNode(generatedCode, source, originalSource, linePosition);
-			currentSourceNodeLine = linePosition + 1;
-			nodes.push(currentNode);
 		}
 	}
 };

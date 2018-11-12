@@ -29,9 +29,10 @@ module.exports = Accepts
  * @public
  */
 
-function Accepts(req) {
-  if (!(this instanceof Accepts))
+function Accepts (req) {
+  if (!(this instanceof Accepts)) {
     return new Accepts(req)
+  }
 
   this.headers = req.headers
   this.negotiator = new Negotiator(req)
@@ -95,12 +96,18 @@ Accepts.prototype.types = function (types_) {
     return this.negotiator.mediaTypes()
   }
 
-  if (!this.headers.accept) return types[0];
-  var mimes = types.map(extToMime);
-  var accepts = this.negotiator.mediaTypes(mimes.filter(validMime));
-  var first = accepts[0];
-  if (!first) return false;
-  return types[mimes.indexOf(first)];
+  // no accept header, return first given type
+  if (!this.headers.accept) {
+    return types[0]
+  }
+
+  var mimes = types.map(extToMime)
+  var accepts = this.negotiator.mediaTypes(mimes.filter(validMime))
+  var first = accepts[0]
+
+  return first
+    ? types[mimes.indexOf(first)]
+    : false
 }
 
 /**
@@ -212,7 +219,7 @@ Accepts.prototype.languages = function (languages_) {
  * @private
  */
 
-function extToMime(type) {
+function extToMime (type) {
   return type.indexOf('/') === -1
     ? mime.lookup(type)
     : type
@@ -226,6 +233,6 @@ function extToMime(type) {
  * @private
  */
 
-function validMime(type) {
-  return typeof type === 'string';
+function validMime (type) {
+  return typeof type === 'string'
 }

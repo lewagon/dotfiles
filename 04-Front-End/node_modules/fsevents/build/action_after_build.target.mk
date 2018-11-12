@@ -3,12 +3,12 @@
 TOOLSET := target
 TARGET := action_after_build
 ### Generated for copy rule.
-/Users/eshanker/Code/fsevents/lib/binding/Release/node-v48-darwin-x64/fse.node: TOOLSET := $(TOOLSET)
-/Users/eshanker/Code/fsevents/lib/binding/Release/node-v48-darwin-x64/fse.node: $(builddir)/fse.node FORCE_DO_CMD
+/Users/eshanker/Code/fsevents/lib/binding/Release/node-v64-darwin-x64/fse.node: TOOLSET := $(TOOLSET)
+/Users/eshanker/Code/fsevents/lib/binding/Release/node-v64-darwin-x64/fse.node: $(builddir)/fse.node FORCE_DO_CMD
 	$(call do_cmd,copy)
 
-all_deps += /Users/eshanker/Code/fsevents/lib/binding/Release/node-v48-darwin-x64/fse.node
-binding_gyp_action_after_build_target_copies = /Users/eshanker/Code/fsevents/lib/binding/Release/node-v48-darwin-x64/fse.node
+all_deps += /Users/eshanker/Code/fsevents/lib/binding/Release/node-v64-darwin-x64/fse.node
+binding_gyp_action_after_build_target_copies = /Users/eshanker/Code/fsevents/lib/binding/Release/node-v64-darwin-x64/fse.node
 
 ### Rules for final target.
 # Build our special outputs first.

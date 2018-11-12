@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
-var mime = require('./mime.js');
+'use strict';
+
+var mime = require('.');
 var file = process.argv[2];
-var type = mime.lookup(file);
+var type = mime.getType(file);
 
 process.stdout.write(type + '\n');
 

@@ -1,7 +1,7 @@
 /*********************************************************************
  * NAN - Native Abstractions for Node.js
  *
- * Copyright (c) 2017 NAN contributors
+ * Copyright (c) 2018 NAN contributors
  *
  * MIT License <https://github.com/nodejs/nan/blob/master/LICENSE.md>
  ********************************************************************/
@@ -41,7 +41,7 @@ class MaybeLocal {
 
   template<typename S>
   inline v8::Local<S> FromMaybe(v8::Local<S> default_value) const {
-    return IsEmpty() ? default_value : val_;
+    return IsEmpty() ? default_value : v8::Local<S>(val_);
   }
 
  private:
@@ -148,7 +148,18 @@ inline Maybe<bool> Set(
   return Just<bool>(obj->Set(index, value));
 }
 
-inline Maybe<bool> ForceSet(
+#include "nan_define_own_property_helper.h"  // NOLINT(build/include)
+
+inline Maybe<bool> DefineOwnProperty(
+    v8::Handle<v8::Object> obj
+  , v8::Handle<v8::String> key
+  , v8::Handle<v8::Value> value
+  , v8::PropertyAttribute attribs = v8::None) {
+  v8::PropertyAttribute current = obj->GetPropertyAttributes(key);
+  return imp::DefineOwnPropertyHelper(current, obj, key, value, attribs);
+}
+
+NAN_DEPRECATED inline Maybe<bool> ForceSet(
     v8::Handle<v8::Object> obj
   , v8::Handle<v8::Value> key
   , v8::Handle<v8::Value> value

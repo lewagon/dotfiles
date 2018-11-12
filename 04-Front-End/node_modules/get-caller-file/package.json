@@ -1,6 +1,6 @@
 {
   "name": "get-caller-file",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/stefanpenner/get-caller-file#readme",
   "devDependencies": {
-    "chai": "^3.4.1",
+    "chai": "^4.1.2",
     "ensure-posix-path": "^1.0.1",
-    "mocha": "^2.3.4"
+    "mocha": "^5.2.0"
   }
 }

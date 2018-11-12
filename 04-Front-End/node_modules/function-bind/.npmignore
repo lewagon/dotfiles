@@ -1,3 +1,4 @@
+# gitignore
 .DS_Store
 .monitor
 .*.swp
@@ -14,3 +15,8 @@ compile
 .lock-wscript
 coverage
 node_modules
+
+# Only apps should have lockfiles
+npm-shrinkwrap.json
+package-lock.json
+yarn.lock

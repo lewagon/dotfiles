@@ -1,6 +1,6 @@
 ```javascript
-var correct = require('spdx-correct');
-var assert = require('assert');
+var correct = require('spdx-correct')
+var assert = require('assert')
 
 assert.equal(correct('mit'), 'MIT')
 

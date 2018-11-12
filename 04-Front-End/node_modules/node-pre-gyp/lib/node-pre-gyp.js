@@ -10,10 +10,12 @@ module.exports = exports;
  * Module dependencies.
  */
 
+var fs = require('fs');
 var path = require('path');
 var nopt = require('nopt');
 var log = require('npmlog');
 log.disableProgress();
+var napi = require('./util/napi.js');
 
 var EE = require('events').EventEmitter;
 var inherits = require('util').inherits;
@@ -127,6 +129,13 @@ proto.parseArgv = function parseOpts (argv) {
   if (commands.length > 0) {
     commands[commands.length - 1].args = argv.splice(0);
   }
+
+  // expand commands entries for multiple napi builds
+  var dir = this.opts.directory;
+  if (dir == null) dir = process.cwd();
+  var package_json = JSON.parse(fs.readFileSync(path.join(dir,'package.json')));
+
+  this.todo = napi.expand_commands (package_json, commands);
 
   // support for inheriting config env variables from npm
   var npm_config_prefix = 'npm_config_';

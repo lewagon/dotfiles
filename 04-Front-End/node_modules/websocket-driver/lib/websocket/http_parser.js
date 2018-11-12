@@ -1,15 +1,17 @@
 'use strict';
 
-var NodeHTTPParser = process.binding('http_parser').HTTPParser,
-    version        = NodeHTTPParser.RESPONSE ? 6 : 4;
+var NodeHTTPParser = require('http-parser-js').HTTPParser;
+
+var VERSION = process.version.match(/[0-9]+/g).map(function(n) { return parseInt(n, 10) });
+
+var TYPES = {
+  request:  NodeHTTPParser.REQUEST  || 'request',
+  response: NodeHTTPParser.RESPONSE || 'response'
+};
 
 var HttpParser = function(type) {
-  if (type === 'request')
-    this._parser = new NodeHTTPParser(NodeHTTPParser.REQUEST || 'request');
-  else
-    this._parser = new NodeHTTPParser(NodeHTTPParser.RESPONSE || 'response');
-
   this._type     = type;
+  this._parser   = new NodeHTTPParser(TYPES[type]);
   this._complete = false;
   this.headers   = {};
 
@@ -76,20 +78,52 @@ HttpParser.METHODS = {
   13: 'PROPPATCH',
   14: 'SEARCH',
   15: 'UNLOCK',
-  16: 'REPORT',
-  17: 'MKACTIVITY',
-  18: 'CHECKOUT',
-  19: 'MERGE',
-  24: 'PATCH'
+  16: 'BIND',
+  17: 'REBIND',
+  18: 'UNBIND',
+  19: 'ACL',
+  20: 'REPORT',
+  21: 'MKACTIVITY',
+  22: 'CHECKOUT',
+  23: 'MERGE',
+  24: 'M-SEARCH',
+  25: 'NOTIFY',
+  26: 'SUBSCRIBE',
+  27: 'UNSUBSCRIBE',
+  28: 'PATCH',
+  29: 'PURGE',
+  30: 'MKCALENDAR',
+  31: 'LINK',
+  32: 'UNLINK'
 };
+
+if (VERSION[0] === 0 && VERSION[1] === 12) {
+  HttpParser.METHODS[16] = 'REPORT';
+  HttpParser.METHODS[17] = 'MKACTIVITY';
+  HttpParser.METHODS[18] = 'CHECKOUT';
+  HttpParser.METHODS[19] = 'MERGE';
+  HttpParser.METHODS[20] = 'M-SEARCH';
+  HttpParser.METHODS[21] = 'NOTIFY';
+  HttpParser.METHODS[22] = 'SUBSCRIBE';
+  HttpParser.METHODS[23] = 'UNSUBSCRIBE';
+  HttpParser.METHODS[24] = 'PATCH';
+  HttpParser.METHODS[25] = 'PURGE';
+}
 
 HttpParser.prototype.isComplete = function() {
   return this._complete;
 };
 
 HttpParser.prototype.parse = function(chunk) {
-  var offset   = (version < 6) ? 1 : 0,
-      consumed = this._parser.execute(chunk, 0, chunk.length) + offset;
+  var consumed = this._parser.execute(chunk, 0, chunk.length);
+
+  if (typeof consumed !== 'number') {
+    this.error     = consumed;
+    this._complete = true;
+    return;
+  }
+
+  if (VERSION[0] === 0 && VERSION[1] < 6) consumed += 1;
 
   if (this._complete)
     this.body = (consumed < chunk.length)

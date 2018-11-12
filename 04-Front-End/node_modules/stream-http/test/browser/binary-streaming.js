@@ -8,8 +8,8 @@ var http = require('../..')
 var browser = (new UAParser()).setUA(navigator.userAgent).getBrowser()
 var browserName = browser.name
 var browserVersion = browser.major
-// Binary streaming doesn't work in IE10 or below or in Opera
-var skipStreamingCheck = (browserName === 'Opera' || (browserName === 'IE' && browserVersion <= 10))
+// Binary streaming doesn't work in IE10 or below
+var skipStreamingCheck = (browserName === 'IE' && browserVersion <= 10)
 
 // Binary data gets corrupted in IE8 or below
 var skipVerification = (browserName === 'IE' && browserVersion <= 8)

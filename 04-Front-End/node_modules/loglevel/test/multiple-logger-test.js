@@ -106,6 +106,29 @@ define(['test/test-helpers'], function(testHelpers) {
                 expect(newLogger.methodFactory).toEqual(log.methodFactory);
             });
 
+            it("loggers have independent method factories", function(log) {
+                var log1 = log.getLogger('logger1');
+                var log2 = log.getLogger('logger2');
+
+                var log1Spy = jasmine.createSpy('log1spy');
+                log1.methodFactory = function(methodName, level) {
+                    return log1Spy;
+                };
+                log1.setLevel(log1.getLevel());
+
+                var log2Spy = jasmine.createSpy('log2spy');
+                log2.methodFactory = function(methodName, level) {
+                    return log2Spy;
+                };
+                log2.setLevel(log2.getLevel());
+
+                log1.error('test1');
+                log2.error('test2');
+
+                expect(log1Spy).toHaveBeenCalledWith("test1");
+                expect(log2Spy).toHaveBeenCalledWith("test2");
+            });
+
             it("new loggers correctly inherit a logging level of `0`", function(log) {
               log.setLevel(0);
               var newLogger = log.getLogger("newLogger");

@@ -27,7 +27,7 @@ Functor.prototype.call = function(error, message, callback, context) {
     return this._flushQueue();
   }
 
-  this._session[this._method](message, function(err, msg) {
+  var handler = function(err, msg) {
     if (!(called ^ (called = true))) return;
 
     if (err) {
@@ -40,7 +40,13 @@ Functor.prototype.call = function(error, message, callback, context) {
 
     record.done = true;
     self._flushQueue();
-  });
+  };
+
+  try {
+    this._session[this._method](message, handler);
+  } catch (err) {
+    handler(err);
+  }
 };
 
 Functor.prototype._stop = function() {
@@ -52,8 +58,13 @@ Functor.prototype._flushQueue = function() {
   var queue = this._queue, record;
 
   while (queue.length > 0 && queue.peek().done) {
-    this.pending -= 1;
     record = queue.shift();
+    if (record.error) {
+      this.pending = 0;
+      queue.clear();
+    } else {
+      this.pending -= 1;
+    }
     record.callback.call(record.context, record.error, record.message);
   }
 };

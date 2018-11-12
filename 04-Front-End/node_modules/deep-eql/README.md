@@ -44,6 +44,11 @@
       alt="devDependencies:?"
       src="https://img.shields.io/david/chaijs/deep-eql.svg?style=flat-square"
     />
+  </a><a href="https://github.com/nodejs/LTS#lts-schedule1">
+    <img
+      alt="Supported Node Version: 4+"
+      src="https://img.shields.io/badge/node-4+-43853d.svg?style=flat-square"
+    />
   </a>
   <br/>
   <a href="https://saucelabs.com/u/chaijs-deep-eql">
@@ -97,7 +102,7 @@ The primary export of `deep-eql` is function that can be given two objects to co
 
 ### Rules
 
-- Strict equality for non-traversable nodes according to [`Object.is`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+- Strict equality for non-traversable nodes according to [`Object.is`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is):
   - `eql(NaN, NaN).should.be.true;`
   - `eql(-0, +0).should.be.false;`
 - All own and inherited enumerable properties are considered:
@@ -106,3 +111,6 @@ The primary export of `deep-eql` is function that can be given two objects to co
 - Arguments are not Arrays:
   - `eql([], arguments).should.be.false;`
   - `eql([], Array.prototype.slice.call(arguments)).should.be.true;`
+- Error objects are compared by reference (see https://github.com/chaijs/chai/issues/608):
+  - `eql(new Error('msg'), new Error('msg')).should.be.false;`
+  - `var err = new Error('msg'); eql(err, err).should.be.true;`

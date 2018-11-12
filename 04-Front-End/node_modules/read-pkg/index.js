@@ -1,10 +1,9 @@
 'use strict';
-var path = require('path');
-var loadJsonFile = require('load-json-file');
-var normalizePackageData = require('normalize-package-data');
-var pathType = require('path-type');
+const path = require('path');
+const loadJsonFile = require('load-json-file');
+const pathType = require('path-type');
 
-module.exports = function (fp, opts) {
+module.exports = (fp, opts) => {
 	if (typeof fp !== 'string') {
 		opts = fp;
 		fp = '.';
@@ -13,23 +12,23 @@ module.exports = function (fp, opts) {
 	opts = opts || {};
 
 	return pathType.dir(fp)
-		.then(function (isDir) {
+		.then(isDir => {
 			if (isDir) {
 				fp = path.join(fp, 'package.json');
 			}
 
 			return loadJsonFile(fp);
 		})
-		.then(function (x) {
+		.then(x => {
 			if (opts.normalize !== false) {
-				normalizePackageData(x);
+				require('normalize-package-data')(x);
 			}
 
 			return x;
 		});
 };
 
-module.exports.sync = function (fp, opts) {
+module.exports.sync = (fp, opts) => {
 	if (typeof fp !== 'string') {
 		opts = fp;
 		fp = '.';
@@ -38,10 +37,10 @@ module.exports.sync = function (fp, opts) {
 	opts = opts || {};
 	fp = pathType.dirSync(fp) ? path.join(fp, 'package.json') : fp;
 
-	var x = loadJsonFile.sync(fp);
+	const x = loadJsonFile.sync(fp);
 
 	if (opts.normalize !== false) {
-		normalizePackageData(x);
+		require('normalize-package-data')(x);
 	}
 
 	return x;

@@ -23,7 +23,7 @@
       src="https://img.shields.io/github/tag/chaijs/chai.svg?style=flat-square"
     />
   </a>
-  <a href="https://www.npmjs.com/packages/chai">
+  <a href="https://www.npmjs.com/package/chai">
     <img
       alt="node:?"
       src="https://img.shields.io/badge/node-%3E=4.0-blue.svg?style=flat-square"
@@ -49,10 +49,10 @@
       src="https://img.shields.io/travis/chaijs/chai/master.svg?style=flat-square"
     />
   </a>
-  <a href="https://coveralls.io/r/chaijs/chai">
+  <a href="https://codecov.io/gh/chaijs/chai">
     <img
       alt="coverage:?"
-      src="https://img.shields.io/coveralls/chaijs/chai/master.svg?style=flat-square"
+      src="https://img.shields.io/codecov/c/github/chaijs/chai.svg?style=flat-square"
     />
   </a>
   <a href="">
@@ -86,7 +86,7 @@ For more information or to download plugins, view the [documentation](http://cha
 
 ## What is Chai?
 
-Chai is an _assertion library_, similar to Node's build in `assert`. It makes testing much easier by giving you lots of assertions you can run against your code.
+Chai is an _assertion library_, similar to Node's built-in `assert`. It makes testing much easier by giving you lots of assertions you can run against your code.
 
 ## Installation
 

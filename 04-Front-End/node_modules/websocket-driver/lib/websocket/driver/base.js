@@ -144,4 +144,12 @@ Base.MessageEvent = function(data) {
   this.data = data;
 };
 
+Base.PingEvent = function(data) {
+  this.data = data;
+};
+
+Base.PongEvent = function(data) {
+  this.data = data;
+};
+
 module.exports = Base;

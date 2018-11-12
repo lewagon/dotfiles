@@ -1,4 +1,11 @@
-Usage:
+### Install
+
+```shell
+npm install --save detect-node
+```
+
+### Usage:
+
 ```js
 var isNode = require('detect-node');
 

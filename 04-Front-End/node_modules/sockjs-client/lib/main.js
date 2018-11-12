@@ -75,7 +75,7 @@ function SockJS(url, protocols, options) {
 
   var secure = parsedUrl.protocol === 'https:';
   // Step 2 - don't allow secure origin with an insecure protocol
-  if (loc.protocol === 'https' && !secure) {
+  if (loc.protocol === 'https:' && !secure) {
     throw new Error('SecurityError: An insecure SockJS connection may not be initiated from a page loaded over HTTPS');
   }
 
@@ -230,6 +230,10 @@ SockJS.prototype._connect = function() {
 SockJS.prototype._transportTimeout = function() {
   debug('_transportTimeout');
   if (this.readyState === SockJS.CONNECTING) {
+    if (this._transport) {
+      this._transport.close();
+    }
+
     this._transportClose(2007, 'Transport timed out');
   }
 };

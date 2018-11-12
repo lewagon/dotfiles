@@ -1,4 +1,4 @@
-# readdirp [![Build Status](https://secure.travis-ci.org/thlorenz/readdirp.png)](http://travis-ci.org/thlorenz/readdirp)
+# readdirp [![Build Status](https://secure.travis-ci.org/thlorenz/readdirp.svg)](http://travis-ci.org/thlorenz/readdirp)
 
 [![NPM](https://nodei.co/npm/readdirp.png?downloads=true&stars=true)](https://nodei.co/npm/readdirp/)
 
@@ -13,12 +13,12 @@ var readdirp = require('readdirp')
 
 var stream = readdirp({ root: path.join(__dirname), fileFilter: '*.js' });
 stream
-  .on('warn', function (err) { 
-    console.error('non-fatal error', err); 
+  .on('warn', function (err) {
+    console.error('non-fatal error', err);
     // optionally call stream.destroy() here in order to abort and cause 'close' to be emitted
   })
   .on('error', function (err) { console.error('fatal error', err); })
-  .pipe(es.mapSync(function (entry) { 
+  .pipe(es.mapSync(function (entry) {
     return { path: entry.path, size: entry.stat.size };
   }))
   .pipe(es.stringify())
@@ -59,7 +59,7 @@ Reads given root recursively and returns a `stream` of [entry info](#entry-info)
 ## entry stream
 
 Behaves as follows:
-  
+
 - `emit('data')` passes an [entry info](#entry-info) whenever one is found
 - `emit('warn')` passes a non-fatal `Error` that prevents a file/directory from being processed (i.e., if it is
   inaccessible to the user)
@@ -68,13 +68,13 @@ Behaves as follows:
 - `emit('close')` called when the stream is destroyed via `stream.destroy()` (which could be useful if you want to
   manually abort even on a non fatal error) - at that point the stream is no longer `readable` and no more entries,
   warning or errors are emitted
-- to learn more about streams, consult the very detailed 
+- to learn more about streams, consult the very detailed
   [nodejs streams documentation](http://nodejs.org/api/stream.html) or the
   [stream-handbook](https://github.com/substack/stream-handbook)
-  
+
 
 ## options
-    
+
 - **root**: path in which to start reading and recursing into subdirectories
 
 - **fileFilter**: filter to include/exclude files found (see [Filters](#filters) for more)
@@ -98,32 +98,32 @@ Has the following properties:
 - **fullPath**      :  full path to the file/directory found
 - **stat**          :  built in [stat object](http://nodejs.org/docs/v0.4.9/api/fs.html#fs.Stats)
 - **Example**: (assuming root was `/User/dev/readdirp`)
-        
+
         parentDir     :  'test/bed/root_dir1',
         fullParentDir :  '/User/dev/readdirp/test/bed/root_dir1',
         name          :  'root_dir1_subdir1',
         path          :  'test/bed/root_dir1/root_dir1_subdir1',
         fullPath      :  '/User/dev/readdirp/test/bed/root_dir1/root_dir1_subdir1',
         stat          :  [ ... ]
-                    
+
 ## Filters
-    
-There are three different ways to specify filters for files and directories respectively. 
+
+There are three different ways to specify filters for files and directories respectively.
 
 - **function**: a function that takes an entry info as a parameter and returns true to include or false to exclude the entry
 
 - **glob string**: a string (e.g., `*.js`) which is matched using [minimatch](https://github.com/isaacs/minimatch), so go there for more
-    information. 
+    information.
 
-    Globstars (`**`) are not supported since specifiying a recursive pattern for an already recursive function doesn't make sense.
+    Globstars (`**`) are not supported since specifying a recursive pattern for an already recursive function doesn't make sense.
 
     Negated globs (as explained in the minimatch documentation) are allowed, e.g., `!*.txt` matches everything but text files.
 
 - **array of glob strings**: either need to be all inclusive or all exclusive (negated) patterns otherwise an error is thrown.
-    
+
     `[ '*.json', '*.js' ]` includes all JavaScript and Json files.
-    
-    
+
+
     `[ '!.git', '!node_modules' ]` includes all directories except the '.git' and 'node_modules'.
 
 Directories that do not pass a filter will not be recursed into.
@@ -138,7 +138,7 @@ If callback2 is given, callback1 functions as the **fileProcessed** callback, an
 
 If only callback1 is given, it functions as the **allProcessed** callback.
 
-### allProcessed 
+### allProcessed
 
 - function with err and res parameters, e.g., `function (err, res) { ... }`
 - **err**: array of errors that occurred during the operation, **res may still be present, even if errors occurred**
@@ -165,13 +165,13 @@ readdirp({ root: './test/bed', fileFilter: '*.js' })
 // Combined glob file filters
 readdirp({ root: './test/bed', fileFilter: [ '*.js', '*.json' ] })
   .on('data', function (entry) {
-    // do something with each JavaScript and Json file entry 
+    // do something with each JavaScript and Json file entry
   });
 
 // Combined negated directory filters
 readdirp({ root: './test/bed', directoryFilter: [ '!.git', '!*modules' ] })
   .on('data', function (entry) {
-    // do something with each file entry found outside '.git' or any modules directory 
+    // do something with each file entry found outside '.git' or any modules directory
   });
 
 // Function directory filter
@@ -187,47 +187,18 @@ readdirp({ root: './test/bed', depth: 1 })
   });
 
 // callback api
-readdirp(
-    { root: '.' }
-  , function(fileInfo) { 
-      // do something with file entry here
-    } 
-  , function (err, res) {
-      // all done, move on or do final step for all file entries here
-    }
-);
+readdirp({ root: '.' }, function(fileInfo) {
+   // do something with file entry here
+  }, function (err, res) {
+    // all done, move on or do final step for all file entries here
+});
 ```
 
-Try more examples by following [instructions](https://github.com/thlorenz/readdirp/blob/master/examples/Readme.md)
+Try more examples by following [instructions](https://github.com/paulmillr/readdirp/blob/master/examples/Readme.md)
 on how to get going.
-
-## stream api
-
-[stream-api.js](https://github.com/thlorenz/readdirp/blob/master/examples/stream-api.js)
-
-Demonstrates error and data handling by listening to events emitted from the readdirp stream.
-
-## stream api pipe
-
-[stream-api-pipe.js](https://github.com/thlorenz/readdirp/blob/master/examples/stream-api-pipe.js)
-
-Demonstrates error handling by listening to events emitted from the readdirp stream and how to pipe the data stream into
-another destination stream.
-
-## grep
-
-[grep.js](https://github.com/thlorenz/readdirp/blob/master/examples/grep.js)
-
-Very naive implementation of grep, for demonstration purposes only.
-
-## using callback api
-
-[callback-api.js](https://github.com/thlorenz/readdirp/blob/master/examples/callback-api.js)
-
-Shows how to pass callbacks in order to handle errors and/or data.
 
 ## tests
 
-The [readdirp tests](https://github.com/thlorenz/readdirp/blob/master/test/readdirp.js) also will give you a good idea on
+The [readdirp tests](https://github.com/paulmillr/readdirp/blob/master/test/readdirp.js) also will give you a good idea on
 how things work.
 

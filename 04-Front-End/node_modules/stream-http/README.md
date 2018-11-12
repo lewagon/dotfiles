@@ -13,6 +13,10 @@ This is heavily inspired by, and intended to replace, [http-browserify](https://
 In accordance with its name, `stream-http` tries to provide data to its caller before
 the request has completed whenever possible.
 
+Backpressure, allowing the browser to only pull data from the server as fast as it is
+consumed, is supported in:
+* Chrome >= 58 (using `fetch` and `WritableStream`)
+
 The following browsers support true streaming, where only a small amount of the request
 has to be held in memory at once:
 * Chrome >= 43 (using the `fetch` API)
@@ -80,6 +84,12 @@ capability. Preserves the correctness of binary data and the 'content-type' resp
   * 'prefer-fast': Deprecated; now a synonym for 'default', which has the same performance
 characteristics as this mode did in versions before 1.5.
 
+* `options.requestTimeout` allows setting a timeout in millisecionds for XHR and fetch (if
+supported by the browser). This is a limit on how long the entire process takes from
+beginning to end. Note that this is not the same as the node `setTimeout` functions,
+which apply to pauses in data transfer over the underlying socket, or the node `timeout`
+option, which applies to opening the connection.
+
 ### Features missing compared to Node
 
 * `http.Agent` is only a stub
@@ -94,8 +104,8 @@ the server.
 * `message.trailers` and `message.rawTrailers` will remain empty.
 * Redirects are followed silently by the browser, so it isn't possible to access the 301/302
 redirect pages.
-* The `timeout` options in the `request` method is non-operational in Safari <= 5 and
-Opera <= 12.
+* The `timeout` event/option and `setTimeout` functions, which operate on the underlying
+socket, are not available. However, see `options.requestTimeout` above.
 
 ## Example
 

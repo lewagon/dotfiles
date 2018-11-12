@@ -9,32 +9,10 @@ var SourceMapConsumer = require("source-map").SourceMapConsumer;
 var SourceListMap = require("source-list-map").SourceListMap;
 var Source = require("./Source");
 
-function isSplitter(c) {
-	switch(c) {
-		case 10: // \n
-		case 13: // \r
-		case 59: // ;
-		case 123: // {
-		case 125: // }
-			return true;
-	}
-	return false;
-}
+var SPLIT_REGEX = /(?!$)[^\n\r;{}]*[\n\r;{}]*/g;
 
 function _splitCode(code) {
-	var result = [];
-	var i = 0;
-	var j = 0;
-	for(; i < code.length; i++) {
-		if(isSplitter(code.charCodeAt(i))) {
-			while(isSplitter(code.charCodeAt(++i)));
-			result.push(code.substring(j, i));
-			j = i;
-		}
-	}
-	if(j < code.length)
-		result.push(code.substr(j));
-	return result;
+	return code.match(SPLIT_REGEX) || [];
 }
 
 class OriginalSource extends Source {
@@ -63,7 +41,10 @@ class OriginalSource extends Source {
 				}
 				return new SourceNode(null, null, null,
 					_splitCode(line + (idx != lines.length - 1 ? "\n" : "")).map(function(item) {
-						if(/^\s*$/.test(item)) return item;
+						if(/^\s*$/.test(item)) {
+							pos += item.length;
+							return item;
+						}
 						var res = new SourceNode(idx + 1, pos, name, item);
 						pos += item.length;
 						return res;

@@ -8,7 +8,7 @@ Useful when you need to run promise-returning & async functions multiple times w
 ## Install
 
 ```
-$ npm install --save p-map
+$ npm install p-map
 ```
 
 

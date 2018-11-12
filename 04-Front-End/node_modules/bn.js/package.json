@@ -1,6 +1,6 @@
 {
   "name": "bn.js",
-  "version": "4.11.7",
+  "version": "4.11.8",
   "description": "Big number implementation in pure javascript",
   "main": "lib/bn.js",
   "scripts": {
@@ -25,6 +25,9 @@
     "url": "https://github.com/indutny/bn.js/issues"
   },
   "homepage": "https://github.com/indutny/bn.js",
+  "browser": {
+    "buffer": false
+  },
   "devDependencies": {
     "istanbul": "^0.3.5",
     "mocha": "^2.1.0",

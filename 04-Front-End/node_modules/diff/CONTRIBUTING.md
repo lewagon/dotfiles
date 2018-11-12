@@ -15,10 +15,10 @@ Generally we like to see pull requests that
 
 ```
 npm install
-grunt
+npm test
 ````
 
-The `grunt dev` implements watching for tests within Node and `karma start` may be used for manual testing in browsers.
+The `npm test -- dev` implements watching for tests within Node and `karma start` may be used for manual testing in browsers.
 
 If you notice any problems, please report them to the GitHub issue tracker at
 [http://github.com/kpdecker/jsdiff/issues](http://github.com/kpdecker/jsdiff/issues).

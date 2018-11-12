@@ -42,9 +42,18 @@ module.exports = function (chai, util) {
     var should = {};
 
     /**
+     * ### .fail([message])
      * ### .fail(actual, expected, [message], [operator])
      *
      * Throw a failure.
+     *
+     *     should.fail();
+     *     should.fail("custom error message");
+     *     should.fail(1, 2);
+     *     should.fail(1, 2, "custom error message");
+     *     should.fail(1, 2, "custom error message", ">");
+     *     should.fail(1, 2, undefined, ">");
+     *
      *
      * @name fail
      * @param {Mixed} actual
@@ -56,6 +65,11 @@ module.exports = function (chai, util) {
      */
 
     should.fail = function (actual, expected, message, operator) {
+      if (arguments.length < 2) {
+          message = actual;
+          actual = undefined;
+      }
+
       message = message || 'should.fail()';
       throw new chai.AssertionError(message, {
           actual: actual

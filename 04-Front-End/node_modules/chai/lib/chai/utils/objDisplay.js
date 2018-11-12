@@ -5,7 +5,7 @@
  */
 
 /*!
- * Module dependancies
+ * Module dependencies
  */
 
 var inspect = require('./inspect');

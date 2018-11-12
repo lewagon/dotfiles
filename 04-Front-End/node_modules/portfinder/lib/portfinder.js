@@ -27,9 +27,7 @@ internals.testPort = function(options, callback) {
     options = {};
   }
 
-  options.port   = options.port   || exports.basePort;
-  options.host   = options.host   || null;
-  options.server = options.server || net.createServer(function () {
+  options.server = options.server  || net.createServer(function () {
     //
     // Create an empty listener for the port testing server.
     //
@@ -50,7 +48,7 @@ internals.testPort = function(options, callback) {
 
     options.server.removeListener('listening', onListen);
 
-    if (err.code !== 'EADDRINUSE' && err.code !== 'EACCES') {
+    if (!(err.code == 'EADDRINUSE' || err.code == 'EACCES')) {
       return callback(err);
     }
 
@@ -63,7 +61,17 @@ internals.testPort = function(options, callback) {
 
   options.server.once('error', onError);
   options.server.once('listening', onListen);
-  options.server.listen(options.port, options.host);
+
+  if (options.host) {
+    options.server.listen(options.port, options.host);
+  } else {
+    /*
+      Judgement of service without host
+      example:
+        express().listen(options.port)
+    */
+    options.server.listen(options.port);
+  }
 };
 
 //
@@ -71,6 +79,12 @@ internals.testPort = function(options, callback) {
 // The lowest port to begin any port search from
 //
 exports.basePort = 8000;
+
+//
+// ### @highestPort {Number}
+// Largest port number is an unsigned short 2**16 -1=65335
+//
+exports.highestPort = 65535;
 
 //
 // ### @basePath {string}
@@ -88,6 +102,21 @@ exports.getPort = function (options, callback) {
   if (!callback) {
     callback = options;
     options = {};
+
+  }
+
+  options.port   = Number(options.port) || Number(exports.basePort);
+  options.host   = options.host    || null;
+  options.stopPort = Number(options.stopPort) || Number(exports.highestPort);
+
+  if(!options.startPort) {
+    options.startPort = Number(options.port);
+    if(options.startPort < 0) {
+      throw Error('Provided options.startPort(' + options.startPort + ') is less than 0, which are cannot be bound.');
+    }
+    if(options.stopPort < options.startPort) {
+      throw Error('Provided options.stopPort(' + options.stopPort + 'is less than options.startPort (' + options.startPort + ')');
+    }
   }
 
   if (options.host) {
@@ -137,11 +166,11 @@ exports.getPort = function (options, callback) {
           // hosts, without showing them a good error.
           var msg = 'Provided host ' + options.host + ' could NOT be bound. Please provide a different host address or hostname';
           return callback(Error(msg));
+        } else {
+          var idx = exports._defaultHosts.indexOf(currentHost);
+          exports._defaultHosts.splice(idx, 1);
+          return exports.getPort(options, callback);
         }
-
-        var idx = exports._defaultHosts.indexOf(currentHost);
-        exports._defaultHosts.splice(idx, 1);
-        return exports.getPort(options, callback);
       } else {
         // error is not accounted for, file ticket, handle special case
         return callback(err);
@@ -157,10 +186,16 @@ exports.getPort = function (options, callback) {
 
     if (openPorts[0] === openPorts[openPorts.length-1]) {
       // if first === last, we found an open port
-      return callback(null, openPorts[0]);
+      if(openPorts[0] <= options.stopPort) {
+        return callback(null, openPorts[0]);
+      }
+      else {
+        var msg = 'No open ports found in between '+ options.startPort + ' and ' + options.stopPort;
+        return callback(Error(msg));
+      }
     } else {
       // otherwise, try again, using sorted port, aka, highest open for >= 1 host
-      return exports.getPort({ port: openPorts.pop(), host: options.host }, callback);
+      return exports.getPort({ port: openPorts.pop(), host: options.host, startPort: options.startPort, stopPort: options.stopPort }, callback);
     }
 
   });
@@ -329,7 +364,6 @@ exports.nextSocket = function (socketPath) {
       match = name.match(/^([a-zA-z]+)(\d*)$/i),
       index = parseInt(match[2]),
       base = match[1];
-
   if (isNaN(index)) {
     index = 0;
   }
@@ -447,6 +481,9 @@ exports._defaultHosts = (function() {
       results.push(curr.address);
     }
   }
+
+  // add null value, For createServer function, do not use host.
+  results.push(null);
 
   debugDefaultHosts("exports._defaultHosts is: %o", results);
 

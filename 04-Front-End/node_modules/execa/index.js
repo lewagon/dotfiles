@@ -1,4 +1,5 @@
 'use strict';
+const path = require('path');
 const childProcess = require('child_process');
 const util = require('util');
 const crossSpawn = require('cross-spawn');
@@ -16,18 +17,26 @@ const TEN_MEGABYTES = 1000 * 1000 * 10;
 function handleArgs(cmd, args, opts) {
 	let parsed;
 
-	if (opts && opts.env && opts.extendEnv !== false) {
+	opts = Object.assign({
+		extendEnv: true,
+		env: {}
+	}, opts);
+
+	if (opts.extendEnv) {
 		opts.env = Object.assign({}, process.env, opts.env);
 	}
 
-	if (opts && opts.__winShell === true) {
+	if (opts.__winShell === true) {
 		delete opts.__winShell;
 		parsed = {
 			command: cmd,
 			args,
 			options: opts,
 			file: cmd,
-			original: cmd
+			original: {
+				cmd,
+				args
+			}
 		};
 	} else {
 		parsed = crossSpawn._parse(cmd, args, opts);
@@ -47,6 +56,16 @@ function handleArgs(cmd, args, opts) {
 
 	if (opts.preferLocal) {
 		opts.env = npmRunPath.env(Object.assign({}, opts, {cwd: opts.localDir}));
+	}
+
+	if (opts.detached) {
+		// #115
+		opts.cleanup = false;
+	}
+
+	if (process.platform === 'win32' && path.basename(parsed.command) === 'cmd.exe') {
+		// #116
+		parsed.args.unshift('/q');
 	}
 
 	return {
@@ -123,16 +142,62 @@ function getStream(process, stream, encoding, maxBuffer) {
 	});
 }
 
-module.exports = (cmd, args, opts) => {
+function makeError(result, options) {
+	const stdout = result.stdout;
+	const stderr = result.stderr;
+
+	let err = result.error;
+	const code = result.code;
+	const signal = result.signal;
+
+	const parsed = options.parsed;
+	const joinedCmd = options.joinedCmd;
+	const timedOut = options.timedOut || false;
+
+	if (!err) {
+		let output = '';
+
+		if (Array.isArray(parsed.opts.stdio)) {
+			if (parsed.opts.stdio[2] !== 'inherit') {
+				output += output.length > 0 ? stderr : `\n${stderr}`;
+			}
+
+			if (parsed.opts.stdio[1] !== 'inherit') {
+				output += `\n${stdout}`;
+			}
+		} else if (parsed.opts.stdio !== 'inherit') {
+			output = `\n${stderr}${stdout}`;
+		}
+
+		err = new Error(`Command failed: ${joinedCmd}${output}`);
+		err.code = code < 0 ? errname(code) : code;
+	}
+
+	err.stdout = stdout;
+	err.stderr = stderr;
+	err.failed = true;
+	err.signal = signal || null;
+	err.cmd = joinedCmd;
+	err.timedOut = timedOut;
+
+	return err;
+}
+
+function joinCmd(cmd, args) {
 	let joinedCmd = cmd;
 
 	if (Array.isArray(args) && args.length > 0) {
 		joinedCmd += ' ' + args.join(' ');
 	}
 
+	return joinedCmd;
+}
+
+module.exports = (cmd, args, opts) => {
 	const parsed = handleArgs(cmd, args, opts);
 	const encoding = parsed.opts.encoding;
 	const maxBuffer = parsed.opts.maxBuffer;
+	const joinedCmd = joinCmd(cmd, args);
 
 	let spawned;
 	try {
@@ -151,10 +216,14 @@ module.exports = (cmd, args, opts) => {
 	let timeoutId = null;
 	let timedOut = false;
 
-	const cleanupTimeout = () => {
+	const cleanup = () => {
 		if (timeoutId) {
 			clearTimeout(timeoutId);
 			timeoutId = null;
+		}
+
+		if (removeExitHandler) {
+			removeExitHandler();
 		}
 	};
 
@@ -168,19 +237,19 @@ module.exports = (cmd, args, opts) => {
 
 	const processDone = new Promise(resolve => {
 		spawned.on('exit', (code, signal) => {
-			cleanupTimeout();
+			cleanup();
 			resolve({code, signal});
 		});
 
 		spawned.on('error', err => {
-			cleanupTimeout();
-			resolve({err});
+			cleanup();
+			resolve({error: err});
 		});
 
 		if (spawned.stdin) {
 			spawned.stdin.on('error', err => {
-				cleanupTimeout();
-				resolve({err});
+				cleanup();
+				resolve({error: err});
 			});
 		}
 	});
@@ -195,54 +264,26 @@ module.exports = (cmd, args, opts) => {
 		}
 	}
 
-	const promise = pFinally(Promise.all([
+	const handlePromise = () => pFinally(Promise.all([
 		processDone,
 		getStream(spawned, 'stdout', encoding, maxBuffer),
 		getStream(spawned, 'stderr', encoding, maxBuffer)
 	]).then(arr => {
 		const result = arr[0];
-		const stdout = arr[1];
-		const stderr = arr[2];
+		result.stdout = arr[1];
+		result.stderr = arr[2];
 
-		let err = result.err;
-		const code = result.code;
-		const signal = result.signal;
-
-		if (removeExitHandler) {
-			removeExitHandler();
-		}
-
-		if (err || code !== 0 || signal !== null) {
-			if (!err) {
-				let output = '';
-
-				if (Array.isArray(parsed.opts.stdio)) {
-					if (parsed.opts.stdio[2] !== 'inherit') {
-						output += output.length > 0 ? stderr : `\n${stderr}`;
-					}
-
-					if (parsed.opts.stdio[1] !== 'inherit') {
-						output += `\n${stdout}`;
-					}
-				} else if (parsed.opts.stdio !== 'inherit') {
-					output = `\n${stderr}${stdout}`;
-				}
-
-				err = new Error(`Command failed: ${joinedCmd}${output}`);
-				err.code = code < 0 ? errname(code) : code;
-			}
+		if (result.error || result.code !== 0 || result.signal !== null) {
+			const err = makeError(result, {
+				joinedCmd,
+				parsed,
+				timedOut
+			});
 
 			// TODO: missing some timeout logic for killed
 			// https://github.com/nodejs/node/blob/master/lib/child_process.js#L203
 			// err.killed = spawned.killed || killed;
 			err.killed = err.killed || spawned.killed;
-
-			err.stdout = stdout;
-			err.stderr = stderr;
-			err.failed = true;
-			err.signal = signal || null;
-			err.cmd = joinedCmd;
-			err.timedOut = timedOut;
 
 			if (!parsed.opts.reject) {
 				return err;
@@ -252,8 +293,8 @@ module.exports = (cmd, args, opts) => {
 		}
 
 		return {
-			stdout: handleOutput(parsed.opts, stdout),
-			stderr: handleOutput(parsed.opts, stderr),
+			stdout: handleOutput(parsed.opts, result.stdout),
+			stderr: handleOutput(parsed.opts, result.stderr),
 			code: 0,
 			failed: false,
 			killed: false,
@@ -267,8 +308,8 @@ module.exports = (cmd, args, opts) => {
 
 	handleInput(spawned, parsed.opts);
 
-	spawned.then = promise.then.bind(promise);
-	spawned.catch = promise.catch.bind(promise);
+	spawned.then = (onfulfilled, onrejected) => handlePromise().then(onfulfilled, onrejected);
+	spawned.catch = onrejected => handlePromise().catch(onrejected);
 
 	return spawned;
 };
@@ -287,21 +328,37 @@ module.exports.shell = (cmd, opts) => handleShell(module.exports, cmd, opts);
 
 module.exports.sync = (cmd, args, opts) => {
 	const parsed = handleArgs(cmd, args, opts);
+	const joinedCmd = joinCmd(cmd, args);
 
 	if (isStream(parsed.opts.input)) {
 		throw new TypeError('The `input` option cannot be a stream in sync mode');
 	}
 
 	const result = childProcess.spawnSync(parsed.cmd, parsed.args, parsed.opts);
+	result.code = result.status;
 
-	if (result.error || result.status !== 0) {
-		throw (result.error || new Error(result.stderr === '' ? result.stdout : result.stderr));
+	if (result.error || result.status !== 0 || result.signal !== null) {
+		const err = makeError(result, {
+			joinedCmd,
+			parsed
+		});
+
+		if (!parsed.opts.reject) {
+			return err;
+		}
+
+		throw err;
 	}
 
-	result.stdout = handleOutput(parsed.opts, result.stdout);
-	result.stderr = handleOutput(parsed.opts, result.stderr);
-
-	return result;
+	return {
+		stdout: handleOutput(parsed.opts, result.stdout),
+		stderr: handleOutput(parsed.opts, result.stderr),
+		code: 0,
+		failed: false,
+		signal: null,
+		cmd: joinedCmd,
+		timedOut: false
+	};
 };
 
 module.exports.shellSync = (cmd, opts) => handleShell(module.exports.sync, cmd, opts);

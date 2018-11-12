@@ -88,10 +88,19 @@ exports.generate = function generate(attrs, options, done) {
 
     cert.sign(keyPair.privateKey, getAlgorithm(options && options.algorithm));
 
+    const fingerprint = forge.md.sha1
+                          .create()
+                          .update(forge.asn1.toDer(forge.pki.certificateToAsn1(cert)).getBytes())
+                          .digest()
+                          .toHex()
+                          .match(/.{2}/g)
+                          .join(':');
+
     var pem = {
-      private: forge.pki.privateKeyToPem(keyPair.privateKey),
-      public: forge.pki.publicKeyToPem(keyPair.publicKey),
-      cert: forge.pki.certificateToPem(cert)
+      private:     forge.pki.privateKeyToPem(keyPair.privateKey),
+      public:      forge.pki.publicKeyToPem(keyPair.publicKey),
+      cert:        forge.pki.certificateToPem(cert),
+      fingerprint: fingerprint,
     };
 
     if (options && options.pkcs7) {

@@ -19,3 +19,8 @@ setPrototypeOf(obj, {
 });
 obj.foo(); // bar
 ```
+
+TypeScript is also supported:
+```typescript
+import setPrototypeOf = require('setprototypeof');
+```

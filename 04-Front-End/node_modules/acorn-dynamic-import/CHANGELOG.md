@@ -1,3 +1,8 @@
+# 3.0.0
+
+- Adding acorn walk support.
+- Bump acorn version.
+
 # 2.0.2
 
 - Fixing parsing of `yield import()`.

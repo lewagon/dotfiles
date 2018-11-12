@@ -1,3 +1,8 @@
+1.1.0 / 2018-01-02
+==================
+
+  * Add type definitions ([#11](https://github.com/chaijs/assertion-error/pull/11))
+
 1.0.1 / 2015-03-04
 ==================
 

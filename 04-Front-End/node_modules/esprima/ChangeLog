@@ -1,3 +1,13 @@
+2018-06-17: Version 4.0.1
+
+      *  Fix parsing async get/set in a class (issue 1861, 1875)
+      *  Account for different return statement argument (issue 1829, 1897, 1928)
+      *  Correct the handling of HTML comment when parsing a module (issue 1841)
+      *  Fix incorrect parse async with proto-identifier-shorthand (issue 1847)
+      *  Fix negative column in binary expression (issue 1844)
+      *  Fix incorrect YieldExpression  in object methods (issue 1834)
+      *  Various documentation fixes
+
 2017-06-10: Version 4.0.0
 
       * Support ES2017 async function and await expression (issue 1079)

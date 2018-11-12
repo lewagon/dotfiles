@@ -5,12 +5,11 @@
  */
 
 /*!
- * Module dependancies
+ * Module dependencies
  */
 
 var flag = require('./flag')
   , getActual = require('./getActual')
-  , inspect = require('./inspect')
   , objDisplay = require('./objDisplay');
 
 /**

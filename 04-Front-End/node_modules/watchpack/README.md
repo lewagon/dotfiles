@@ -6,7 +6,7 @@ Wrapper library for directory and file watching.
 
 ## Concept
 
-watchpack high level API don't map directly to watchers. Instead a three level architecture ensures that for each directory only a single watcher exists.
+watchpack high level API doesn't map directly to watchers. Instead a three level architecture ensures that for each directory only a single watcher exists.
 
 * The high level API requests `DirectoryWatchers` from a `WatcherManager`, which ensures that only a single `DirectoryWatcher` per directory is created.
 * A user-faced `Watcher` can be obtained from a `DirectoryWatcher` and provides a filtered view on the `DirectoryWatcher`.
@@ -24,7 +24,7 @@ var Watchpack = require("watchpack");
 var wp = new Watchpack({
 	// options:
 	aggregateTimeout: 1000
-	// fire "aggregated" event when after a change for 1000ms no additonal change occured
+	// fire "aggregated" event when after a change for 1000ms no additional change occurred
 	// aggregated defaults to undefined, which doesn't fire an "aggregated" event
 
 	poll: true

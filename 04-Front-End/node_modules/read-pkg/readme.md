@@ -21,19 +21,19 @@ $ npm install --save read-pkg
 ## Usage
 
 ```js
-var readPkg = require('read-pkg');
+const readPkg = require('read-pkg');
 
-readPkg().then(function (pkg) {
+readPkg().then(pkg => {
 	console.log(pkg);
 	//=> {name: 'read-pkg', ...}
 });
 
-readPkg(__dirname).then(function (pkg) {
+readPkg(__dirname).then(pkg => {
 	console.log(pkg);
 	//=> {name: 'read-pkg', ...}
 });
 
-readPkg(path.join('unicorn', 'package.json')).then(function (pkg) {
+readPkg(path.join('unicorn', 'package.json')).then(pkg => {
 	console.log(pkg);
 	//=> {name: 'read-pkg', ...}
 });
@@ -44,7 +44,7 @@ readPkg(path.join('unicorn', 'package.json')).then(function (pkg) {
 
 ### readPkg([path], [options])
 
-Returns a promise that resolves to the parsed JSON.
+Returns a `Promise` for the parsed JSON.
 
 ### readPkg.sync([path], [options])
 
@@ -52,7 +52,7 @@ Returns the parsed JSON.
 
 #### path
 
-Type: `string`  
+Type: `string`<br>
 Default: `.`
 
 Path to a `package.json` file or its directory.
@@ -61,7 +61,7 @@ Path to a `package.json` file or its directory.
 
 ##### normalize
 
-Type: `boolean`  
+Type: `boolean`<br>
 Default: `true`
 
 [Normalize](https://github.com/npm/normalize-package-data#what-normalization-currently-entails) the package data.
@@ -76,4 +76,4 @@ Default: `true`
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

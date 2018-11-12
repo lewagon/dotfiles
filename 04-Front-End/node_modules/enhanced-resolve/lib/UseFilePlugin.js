@@ -2,22 +2,24 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-function UseFilePlugin(source, filename, target) {
-	this.source = source;
-	this.filename = filename;
-	this.target = target;
-}
-module.exports = UseFilePlugin;
+"use strict";
 
-UseFilePlugin.prototype.apply = function(resolver) {
-	var filename = this.filename;
-	var target = this.target;
-	resolver.plugin(this.source, function(request, callback) {
-		var filePath = resolver.join(request.path, filename);
-		var obj = Object.assign({}, request, {
-			path: filePath,
-			relativePath: request.relativePath && resolver.join(request.relativePath, filename)
+module.exports = class UseFilePlugin {
+	constructor(source, filename, target) {
+		this.source = source;
+		this.filename = filename;
+		this.target = target;
+	}
+
+	apply(resolver) {
+		const target = resolver.ensureHook(this.target);
+		resolver.getHook(this.source).tapAsync("UseFilePlugin", (request, resolveContext, callback) => {
+			const filePath = resolver.join(request.path, this.filename);
+			const obj = Object.assign({}, request, {
+				path: filePath,
+				relativePath: request.relativePath && resolver.join(request.relativePath, this.filename)
+			});
+			resolver.doResolve(target, obj, "using path: " + filePath, resolveContext, callback);
 		});
-		resolver.doResolve(target, obj, "using path: " + filePath, callback);
-	});
+	}
 };
