@@ -2,6 +2,7 @@
 
 ### Setup
 Before you start:
+
 - Sign up to [Whimsical](https://whimsical.co)
 - Sign up to [Figma](https://www.figma.com/) and install the desktop app from [this page](https://www.figma.com/downloads/)
 
@@ -20,6 +21,7 @@ For your product pitch, persona and user journey, make a copy of our [UX Researc
 - **2:30pm to 5:30pm**: finish your prototype and start adding the visual identity **only if you have time**. It's more strategic to have a kickass prototype in black and white rather than a poor mockup with lots of pictures and colors but that no one understands 😬.
 
 Resources for design assets:
+
 - **Fonts**: download and install `.ttf` fonts from [Google fonts](https://fonts.google.com/) or [getthefont](https://www.getthefont.com/)
 - **Colors**: find them on [Color Hunt](https://colorhunt.co/) or use a color picker like [Colorzilla](http://www.colorzilla.com/)
 - **Pictures**: you can use [unsplash](https://unsplash.com/)
