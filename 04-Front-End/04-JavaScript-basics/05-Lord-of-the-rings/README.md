@@ -1,7 +1,3 @@
-## Background & Objectives
-
-Moving off the Browser world, let's do more algorithmics with JavaScript!
-
 ## Specs
 
 In this exercise, Hobbits, Elves, Dwarves and Eagles will battle against the evil Orcs, Wargs, Goblins, Uruk Hai and Trolls. Open the `lib/lord_of_the_rings.js` file. You will find three functions to implement.

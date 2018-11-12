@@ -33,4 +33,14 @@ should give back to each individual. In our example it should return:
 
 ## Further suggestions & resources
 
-To iterate over a JavaScript object, your can use the [Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) method.
+To iterate over a JavaScript object, your can use the [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) method.
+
+Here's an example:
+
+```js
+const character =  { name: 'Luke Skywalker', type: 'Jedi' };
+Object.keys(character).forEach((key) => {
+  const value = character[key];
+  console.log(`The character ${key} is ${value}`);
+});
+```
