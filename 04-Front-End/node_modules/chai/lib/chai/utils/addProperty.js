@@ -36,7 +36,7 @@ var transferFlags = require('./transferFlags');
  */
 
 module.exports = function addProperty(ctx, name, getter) {
-  getter = getter === undefined ? new Function() : getter;
+  getter = getter === undefined ? function () {} : getter;
 
   Object.defineProperty(ctx, name,
     { get: function propertyGetter() {

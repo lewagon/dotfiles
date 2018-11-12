@@ -1,7 +1,7 @@
 /*!
  * parseurl
  * Copyright(c) 2014 Jonathan Ong
- * Copyright(c) 2014 Douglas Christopher Wilson
+ * Copyright(c) 2014-2017 Douglas Christopher Wilson
  * MIT Licensed
  */
 
@@ -9,6 +9,7 @@
 
 /**
  * Module dependencies.
+ * @private
  */
 
 var url = require('url')
@@ -16,14 +17,8 @@ var parse = url.parse
 var Url = url.Url
 
 /**
- * Pattern for a simple path case.
- * See: https://github.com/joyent/node/pull/7878
- */
-
-var simplePathRegExp = /^(\/\/?(?!\/)[^\?#\s]*)(\?[^#\s]*)?$/
-
-/**
- * Exports.
+ * Module exports.
+ * @public
  */
 
 module.exports = parseurl
@@ -34,10 +29,10 @@ module.exports.original = originalurl
  *
  * @param {ServerRequest} req
  * @return {Object}
- * @api public
+ * @public
  */
 
-function parseurl(req) {
+function parseurl (req) {
   var url = req.url
 
   if (url === undefined) {
@@ -56,7 +51,7 @@ function parseurl(req) {
   parsed = fastparse(url)
   parsed._raw = url
 
-  return req._parsedUrl = parsed
+  return (req._parsedUrl = parsed)
 };
 
 /**
@@ -64,10 +59,10 @@ function parseurl(req) {
  *
  * @param {ServerRequest} req
  * @return {Object}
- * @api public
+ * @public
  */
 
-function originalurl(req) {
+function originalurl (req) {
   var url = req.originalUrl
 
   if (typeof url !== 'string') {
@@ -86,7 +81,7 @@ function originalurl(req) {
   parsed = fastparse(url)
   parsed._raw = url
 
-  return req._parsedOriginalUrl = parsed
+  return (req._parsedOriginalUrl = parsed)
 };
 
 /**
@@ -94,31 +89,52 @@ function originalurl(req) {
  *
  * @param {string} str
  * @return {Object}
- * @api private
+ * @private
  */
 
-function fastparse(str) {
-  // Try fast path regexp
-  // See: https://github.com/joyent/node/pull/7878
-  var simplePath = typeof str === 'string' && simplePathRegExp.exec(str)
-
-  // Construct simple URL
-  if (simplePath) {
-    var pathname = simplePath[1]
-    var search = simplePath[2] || null
-    var url = Url !== undefined
-      ? new Url()
-      : {}
-    url.path = str
-    url.href = str
-    url.pathname = pathname
-    url.search = search
-    url.query = search && search.substr(1)
-
-    return url
+function fastparse (str) {
+  if (typeof str !== 'string' || str.charCodeAt(0) !== 0x2f /* / */) {
+    return parse(str)
   }
 
-  return parse(str)
+  var pathname = str
+  var query = null
+  var search = null
+
+  // This takes the regexp from https://github.com/joyent/node/pull/7878
+  // Which is /^(\/[^?#\s]*)(\?[^#\s]*)?$/
+  // And unrolls it into a for loop
+  for (var i = 1; i < str.length; i++) {
+    switch (str.charCodeAt(i)) {
+      case 0x3f: /* ?  */
+        if (search === null) {
+          pathname = str.substring(0, i)
+          query = str.substring(i + 1)
+          search = str.substring(i)
+        }
+        break
+      case 0x09: /* \t */
+      case 0x0a: /* \n */
+      case 0x0c: /* \f */
+      case 0x0d: /* \r */
+      case 0x20: /*    */
+      case 0x23: /* #  */
+      case 0xa0:
+      case 0xfeff:
+        return parse(str)
+    }
+  }
+
+  var url = Url !== undefined
+    ? new Url()
+    : {}
+  url.path = str
+  url.href = str
+  url.pathname = pathname
+  url.query = query
+  url.search = search
+
+  return url
 }
 
 /**
@@ -127,12 +143,12 @@ function fastparse(str) {
  * @param {string} url
  * @param {object} parsedUrl
  * @return {boolean}
- * @api private
+ * @private
  */
 
-function fresh(url, parsedUrl) {
-  return typeof parsedUrl === 'object'
-    && parsedUrl !== null
-    && (Url === undefined || parsedUrl instanceof Url)
-    && parsedUrl._raw === url
+function fresh (url, parsedUrl) {
+  return typeof parsedUrl === 'object' &&
+    parsedUrl !== null &&
+    (Url === undefined || parsedUrl instanceof Url) &&
+    parsedUrl._raw === url
 }

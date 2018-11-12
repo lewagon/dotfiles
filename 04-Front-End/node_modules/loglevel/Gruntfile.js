@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                 }
             },
             context: {
-                src: 'test/test-context-using-apply.test.js',
+                src: 'test/test-context-using-apply.generated.js',
                 options: {
                     specs: 'test/global-integration-with-new-context.js',
                     vendor: 'test/vendor/*.js'
@@ -162,7 +162,7 @@ module.exports = function (grunt) {
                 options: {
                     jshintrc: 'test/.jshintrc'
                 },
-                src: ['test/*.js']
+                src: ['test/*.js', '!test/*.generated.js']
             }
         },
         watch: {
@@ -172,11 +172,11 @@ module.exports = function (grunt) {
             },
             lib: {
                 files: '<%= jshint.lib.src %>',
-                tasks: ['jshint:lib', 'jasmine']
+                tasks: ['jshint:lib', 'test']
             },
             test: {
                 files: '<%= jshint.test.src %>',
-                tasks: ['jshint:test', 'jasmine']
+                tasks: ['jshint:test', 'test']
             }
         },
         qunit: {
@@ -185,11 +185,11 @@ module.exports = function (grunt) {
         preprocess: {
             "test-context-using-apply": {
                 src: 'test/test-context-using-apply.js',
-                dest: 'test/test-context-using-apply.test.js'
+                dest: 'test/test-context-using-apply.generated.js'
             }
         },
         clean:{
-            test:['test/test-context-using-apply.test.js']
+            test:['test/test-context-using-apply.generated.js']
         }
     });
 

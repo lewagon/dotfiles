@@ -11,19 +11,29 @@ Abstract base class to inherit from if you want to create streams implementing t
 ## Example
 
 ```js
+const HashBase = require('hash-base')
+const inherits = require('inherits')
+
+// our hash function is XOR sum of all bytes
 function MyHash () {
-  HashBase.call(64) // in bytes
+  HashBase.call(this, 1) // in bytes
+
+  this._sum = 0x00
 }
 
-inherti(MyHash, HashBase)
+inherits(MyHash, HashBase)
 
 MyHash.prototype._update = function () {
-  // hashing one block with buffer this._block
+  for (let i = 0; i < this._block.length; ++i) this._sum ^= this._block[i]
 }
 
 MyHash.prototype._digest = function () {
-  // create padding and produce result
+  return this._sum
 }
+
+const data = Buffer.from([ 0x00, 0x42, 0x01 ])
+const hash = new MyHash().update(data).digest()
+console.log(hash) // => 67
 ```
 You also can check [source code](index.js) or [crypto-browserify/md5.js][5]
 

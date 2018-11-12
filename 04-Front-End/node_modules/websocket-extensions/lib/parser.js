@@ -1,12 +1,14 @@
 'use strict';
 
-var TOKEN    = /([!#\$%&'\*\+\-\.\^_`\|~0-9a-z]+)/,
-    NOTOKEN  = /([^!#\$%&'\*\+\-\.\^_`\|~0-9a-z])/g,
+var TOKEN    = /([!#\$%&'\*\+\-\.\^_`\|~0-9A-Za-z]+)/,
+    NOTOKEN  = /([^!#\$%&'\*\+\-\.\^_`\|~0-9A-Za-z])/g,
     QUOTED   = /"((?:\\[\x00-\x7f]|[^\x00-\x08\x0a-\x1f\x7f"])*)"/,
     PARAM    = new RegExp(TOKEN.source + '(?:=(?:' + TOKEN.source + '|' + QUOTED.source + '))?'),
     EXT      = new RegExp(TOKEN.source + '(?: *; *' + PARAM.source + ')*', 'g'),
     EXT_LIST = new RegExp('^' + EXT.source + '(?: *, *' + EXT.source + ')*$'),
     NUMBER   = /^-?(0|[1-9][0-9]*)(\.[0-9]+)?$/;
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var Parser = {
   parseHeader: function(header) {
@@ -35,7 +37,7 @@ var Parser = {
         }
         if (NUMBER.test(data)) data = parseFloat(data);
 
-        if (offer.hasOwnProperty(key)) {
+        if (hasOwnProperty.call(offer, key)) {
           offer[key] = [].concat(offer[key]);
           offer[key].push(data);
         } else {
@@ -77,7 +79,9 @@ var Offers = function() {
 };
 
 Offers.prototype.push = function(name, params) {
-  this._byName[name] = this._byName[name] || [];
+  if (!hasOwnProperty.call(this._byName, name))
+    this._byName[name] = [];
+
   this._byName[name].push(params);
   this._inOrder.push({name: name, params: params});
 };

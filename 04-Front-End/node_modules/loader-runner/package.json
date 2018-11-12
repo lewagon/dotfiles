@@ -1,6 +1,6 @@
 {
   "name": "loader-runner",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Runs (webpack) loaders",
   "main": "lib/LoaderRunner.js",
   "scripts": {

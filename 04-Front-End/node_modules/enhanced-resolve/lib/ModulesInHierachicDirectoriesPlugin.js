@@ -2,45 +2,43 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-var createInnerCallback = require("./createInnerCallback");
-var forEachBail = require("./forEachBail");
-var getPaths = require("./getPaths");
+"use strict";
 
-function ModulesInHierachicDirectoriesPlugin(source, directories, target) {
-	this.source = source;
-	this.directories = [].concat(directories);
-	this.target = target;
-}
-module.exports = ModulesInHierachicDirectoriesPlugin;
+const forEachBail = require("./forEachBail");
+const getPaths = require("./getPaths");
 
-ModulesInHierachicDirectoriesPlugin.prototype.apply = function(resolver) {
-	var directories = this.directories;
-	var target = this.target;
-	resolver.plugin(this.source, function(request, callback) {
-		var fs = this.fileSystem;
-		var topLevelCallback = callback;
-		var addrs = getPaths(request.path).paths.map(function(p) {
-			return directories.map(function(d) {
-				return this.join(p, d);
-			}, this);
-		}, this).reduce(function(array, p) {
-			array.push.apply(array, p);
-			return array;
-		}, []);
-		forEachBail(addrs, function(addr, callback) {
-			fs.stat(addr, function(err, stat) {
-				if(!err && stat && stat.isDirectory()) {
-					var obj = Object.assign({}, request, {
-						path: addr,
-						request: "./" + request.request
-					});
-					var message = "looking for modules in " + addr;
-					return resolver.doResolve(target, obj, message, createInnerCallback(callback, topLevelCallback));
-				}
-				if(topLevelCallback.log) topLevelCallback.log(addr + " doesn't exist or is not a directory");
-				if(topLevelCallback.missing) topLevelCallback.missing.push(addr);
-				return callback();
-			});
-		}, callback);
-	});
+module.exports = class ModulesInHierachicDirectoriesPlugin {
+	constructor(source, directories, target) {
+		this.source = source;
+		this.directories = [].concat(directories);
+		this.target = target;
+	}
+
+	apply(resolver) {
+		const target = resolver.ensureHook(this.target);
+		resolver.getHook(this.source).tapAsync("ModulesInHierachicDirectoriesPlugin", (request, resolveContext, callback) => {
+			const fs = resolver.fileSystem;
+			const addrs = getPaths(request.path).paths.map(p => {
+				return this.directories.map(d => resolver.join(p, d));
+			}).reduce((array, p) => {
+				array.push.apply(array, p);
+				return array;
+			}, []);
+			forEachBail(addrs, (addr, callback) => {
+				fs.stat(addr, (err, stat) => {
+					if(!err && stat && stat.isDirectory()) {
+						const obj = Object.assign({}, request, {
+							path: addr,
+							request: "./" + request.request
+						});
+						const message = "looking for modules in " + addr;
+						return resolver.doResolve(target, obj, message, resolveContext, callback);
+					}
+					if(resolveContext.log) resolveContext.log(addr + " doesn't exist or is not a directory");
+					if(resolveContext.missing) resolveContext.missing.add(addr);
+					return callback();
+				});
+			}, callback);
+		});
+	}
 };

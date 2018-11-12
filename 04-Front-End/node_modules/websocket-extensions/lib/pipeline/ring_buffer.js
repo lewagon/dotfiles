@@ -1,10 +1,14 @@
 'use strict';
 
 var RingBuffer = function(bufferSize) {
-  this._buffer     = new Array(bufferSize);
   this._bufferSize = bufferSize;
+  this.clear();
+};
+
+RingBuffer.prototype.clear = function() {
+  this._buffer     = new Array(this._bufferSize);
   this._ringOffset = 0;
-  this._ringSize   = bufferSize;
+  this._ringSize   = this._bufferSize;
   this._head       = 0;
   this._tail       = 0;
   this.length      = 0;

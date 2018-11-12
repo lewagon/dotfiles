@@ -4,8 +4,10 @@ var errno = require('./')
   , arg   = process.argv[2]
   , data, code
 
-if (arg === undefined)
-  return console.log(JSON.stringify(errno.code, null, 2))
+if (arg === undefined) {
+  console.log(JSON.stringify(errno.code, null, 2))
+  process.exit(0)
+}
 
 if ((code = +arg) == arg)
   data = errno.errno[code]

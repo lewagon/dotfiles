@@ -10,7 +10,11 @@ Parse a URL with memoization.
 
 ## Install
 
-```bash
+This is a [Node.js](https://nodejs.org/en/) module available through the
+[npm registry](https://www.npmjs.com/). Installation is done using the
+[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
+```sh
 $ npm install parseurl
 ```
 
@@ -40,68 +44,68 @@ does not change will return a cached parsed object, rather than parsing again.
 ```bash
 $ npm run-script bench
 
-> parseurl@1.3.1 bench nodejs-parseurl
+> parseurl@1.3.2 bench nodejs-parseurl
 > node benchmark/index.js
+
+  http_parser@2.7.0
+  node@4.8.4
+  v8@4.5.103.47
+  uv@1.9.1
+  zlib@1.2.11
+  ares@1.10.1-DEV
+  icu@56.1
+  modules@46
+  openssl@1.0.2k
 
 > node benchmark/fullurl.js
 
   Parsing URL "http://localhost:8888/foo/bar?user=tj&pet=fluffy"
 
-  1 test completed.
-  2 tests completed.
   3 tests completed.
 
-  fasturl   x 1,290,780 ops/sec ±0.46% (195 runs sampled)
-  nativeurl x    56,401 ops/sec ±0.22% (196 runs sampled)
-  parseurl  x    55,231 ops/sec ±0.22% (194 runs sampled)
+  fasturl   x 1,246,766 ops/sec ±0.74% (188 runs sampled)
+  nativeurl x    91,536 ops/sec ±0.54% (189 runs sampled)
+  parseurl  x    90,645 ops/sec ±0.38% (189 runs sampled)
 
 > node benchmark/pathquery.js
 
   Parsing URL "/foo/bar?user=tj&pet=fluffy"
 
-  1 test completed.
-  2 tests completed.
   3 tests completed.
 
-  fasturl   x 1,986,668 ops/sec ±0.27% (190 runs sampled)
-  nativeurl x    98,740 ops/sec ±0.21% (195 runs sampled)
-  parseurl  x 2,628,171 ops/sec ±0.36% (195 runs sampled)
+  fasturl   x 2,077,650 ops/sec ±0.69% (186 runs sampled)
+  nativeurl x   638,669 ops/sec ±0.67% (189 runs sampled)
+  parseurl  x 2,431,842 ops/sec ±0.71% (189 runs sampled)
 
 > node benchmark/samerequest.js
 
   Parsing URL "/foo/bar?user=tj&pet=fluffy" on same request object
 
-  1 test completed.
-  2 tests completed.
   3 tests completed.
 
-  fasturl   x  2,184,468 ops/sec ±0.40% (194 runs sampled)
-  nativeurl x     99,437 ops/sec ±0.71% (194 runs sampled)
-  parseurl  x 10,498,005 ops/sec ±0.61% (186 runs sampled)
+  fasturl   x  2,135,391 ops/sec ±0.69% (188 runs sampled)
+  nativeurl x    672,809 ops/sec ±3.83% (186 runs sampled)
+  parseurl  x 11,604,947 ops/sec ±0.70% (189 runs sampled)
 
 > node benchmark/simplepath.js
 
   Parsing URL "/foo/bar"
 
-  1 test completed.
-  2 tests completed.
   3 tests completed.
 
-  fasturl   x 4,535,825 ops/sec ±0.27% (191 runs sampled)
-  nativeurl x    98,769 ops/sec ±0.54% (191 runs sampled)
-  parseurl  x 4,164,865 ops/sec ±0.34% (192 runs sampled)
+  fasturl   x 4,961,391 ops/sec ±0.97% (186 runs sampled)
+  nativeurl x   914,931 ops/sec ±0.83% (186 runs sampled)
+  parseurl  x 7,559,196 ops/sec ±0.66% (188 runs sampled)
 
 > node benchmark/slash.js
 
   Parsing URL "/"
 
-  1 test completed.
-  2 tests completed.
   3 tests completed.
 
-  fasturl   x 4,908,405 ops/sec ±0.42% (191 runs sampled)
-  nativeurl x   100,945 ops/sec ±0.59% (188 runs sampled)
-  parseurl  x 4,333,208 ops/sec ±0.27% (194 runs sampled)
+  fasturl   x  4,053,379 ops/sec ±0.91% (187 runs sampled)
+  nativeurl x    963,999 ops/sec ±0.58% (189 runs sampled)
+  parseurl  x 11,516,143 ops/sec ±0.58% (188 runs sampled)
 ```
 
 ## License
@@ -111,7 +115,7 @@ $ npm run-script bench
 [npm-image]: https://img.shields.io/npm/v/parseurl.svg
 [npm-url]: https://npmjs.org/package/parseurl
 [node-version-image]: https://img.shields.io/node/v/parseurl.svg
-[node-version-url]: http://nodejs.org/download/
+[node-version-url]: https://nodejs.org/en/download/
 [travis-image]: https://img.shields.io/travis/pillarjs/parseurl/master.svg
 [travis-url]: https://travis-ci.org/pillarjs/parseurl
 [coveralls-image]: https://img.shields.io/coveralls/pillarjs/parseurl/master.svg

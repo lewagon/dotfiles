@@ -4,6 +4,8 @@ build: off
 
 environment:
   matrix:
+    - nodejs_version: "9"
+    - nodejs_version: "8"
     - nodejs_version: "7"
     - nodejs_version: "6"
     - nodejs_version: "5"
@@ -18,6 +20,7 @@ environment:
 matrix:
   # fast_finish: true
   allow_failures:
+    - nodejs_version: "0.8"
     - nodejs_version: "0.6"
 
 platform:
@@ -28,8 +31,8 @@ platform:
 install:
  # Get the latest stable version of Node.js or io.js
  - ps: Install-Product node $env:nodejs_version $env:platform
- - IF %nodejs_version% EQU 0.6 npm -g install npm@1.3
- - IF %nodejs_version% EQU 0.8 npm -g install npm@2
+ - IF %nodejs_version% EQU 0.6 npm config set strict-ssl false && npm -g install npm@1.3
+ - IF %nodejs_version% EQU 0.8 npm config set strict-ssl false && npm -g install npm@1.4.28 && npm install -g npm@4.5
  - set PATH=%APPDATA%\npm;%PATH%
  #- IF %nodejs_version% NEQ 0.6 AND %nodejs_version% NEQ 0.8 npm -g install npm
  # install modules

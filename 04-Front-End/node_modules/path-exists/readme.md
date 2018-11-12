@@ -20,9 +20,9 @@ $ npm install --save path-exists
 
 ```js
 // foo.js
-var pathExists = require('path-exists');
+const pathExists = require('path-exists');
 
-pathExists('foo.js').then(function (exists) {
+pathExists('foo.js').then(exists => {
 	console.log(exists);
 	//=> true
 });
@@ -33,13 +33,18 @@ pathExists('foo.js').then(function (exists) {
 
 ### pathExists(path)
 
-Returns a promise that resolves to a boolean of whether the path exists.
+Returns a promise for a boolean of whether the path exists.
 
 ### pathExists.sync(path)
 
 Returns a boolean of whether the path exists.
 
 
+## Related
+
+- [path-exists-cli](https://github.com/sindresorhus/path-exists-cli) - CLI for this module
+
+
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -197,7 +197,7 @@ OffsetBuffer.prototype.readUInt16LE = function readUInt16LE() {
 
   // Fast case - first buffer has all bytes
   if (first.length - this.offset >= 2) {
-    r = first.readUInt16LE(this.offset, true);
+    r = first.readUInt16LE(this.offset);
     shift = 0;
     this.offset += 2;
 
@@ -227,13 +227,13 @@ OffsetBuffer.prototype.readUInt24LE = function readUInt24LE() {
 
   // Fast case - first buffer has all bytes
   if (firstHas >= 3) {
-    r = first.readUInt16LE(this.offset, true) | (first[this.offset + 2] << 16);
+    r = first.readUInt16LE(this.offset) | (first[this.offset + 2] << 16);
     shift = 0;
     this.offset += 3;
 
   // First buffer has 2 of 3 bytes
   } else if (firstHas >= 2) {
-    r = first.readUInt16LE(this.offset, true) | (this.buffers[1][0] << 16);
+    r = first.readUInt16LE(this.offset) | (this.buffers[1][0] << 16);
     shift = 1;
     this.offset = 1;
 
@@ -268,13 +268,13 @@ OffsetBuffer.prototype.readUInt32LE = function readUInt32LE() {
 
   // Fast case - first buffer has all bytes
   if (firstHas >= 4) {
-    r = first.readUInt32LE(this.offset, true);
+    r = first.readUInt32LE(this.offset);
     shift = 0;
     this.offset += 4;
 
   // First buffer has 3 of 4 bytes
   } else if (firstHas >= 3) {
-    r = (first.readUInt16LE(this.offset, true) |
+    r = (first.readUInt16LE(this.offset) |
          (first[this.offset + 2] << 16)) +
         (this.buffers[1][0] * 0x1000000);
     shift = 1;
@@ -282,7 +282,7 @@ OffsetBuffer.prototype.readUInt32LE = function readUInt32LE() {
 
   // Slow case: First buffer has 2 of 4 bytes
   } else if (firstHas >= 2) {
-    r = first.readUInt16LE(this.offset, true);
+    r = first.readUInt16LE(this.offset);
     this.offset = 0;
     this.buffers.shift();
     this.size -= 2;

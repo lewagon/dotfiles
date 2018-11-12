@@ -1,6 +1,6 @@
 {
   "name": "json-schema-traverse",
-  "version": "0.3.1",
+  "version": "0.4.1",
   "description": "Traverse JSON Schema passing each schema object to callback",
   "main": "index.js",
   "scripts": {

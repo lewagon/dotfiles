@@ -27,7 +27,8 @@ exports.resolve = function (source, file, config) {
 function opts(file, config) {
   return Object.assign({
       // more closely matches Node (#333)
-      extensions: ['.js', '.json'],
+      // plus 'mjs' for native modules! (#939)
+      extensions: ['.mjs', '.js', '.json'],
     },
     config,
     {

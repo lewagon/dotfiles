@@ -8,6 +8,7 @@ var fs = require('fs');
 var path = require('path');
 var log = require('npmlog');
 var versioning = require('./util/versioning.js');
+var napi = require('./util/napi.js');
 var s3_setup = require('./util/s3_setup.js');
 var existsAsync = fs.exists || path.exists;
 var url = require('url');
@@ -16,7 +17,8 @@ var config = require('rc')("node_pre_gyp",{acl:"public-read"});
 function publish(gyp, argv, callback) {
     var AWS = require("aws-sdk");
     var package_json = JSON.parse(fs.readFileSync('./package.json'));
-    var opts = versioning.evaluate(package_json, gyp.opts);
+    var napi_build_version = napi.get_napi_build_version_from_command_args(argv);
+    var opts = versioning.evaluate(package_json, gyp.opts, napi_build_version);
     var tarball = opts.staged_tarball;
     existsAsync(tarball,function(found) {
         if (!found) {

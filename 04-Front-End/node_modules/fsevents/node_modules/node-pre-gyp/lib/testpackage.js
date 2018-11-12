@@ -9,32 +9,39 @@ var path = require('path');
 var log = require('npmlog');
 var existsAsync = fs.exists || path.exists;
 var versioning = require('./util/versioning.js');
+var napi = require('./util/napi.js');
 var testbinary = require('./testbinary.js');
-var read = require('fs').createReadStream;
-var zlib = require('zlib');
+var tar = require('tar');
+var mkdirp = require('mkdirp');
 
 function testpackage(gyp, argv, callback) {
     var package_json = JSON.parse(fs.readFileSync('./package.json'));
-    var opts = versioning.evaluate(package_json, gyp.opts);
+    var napi_build_version = napi.get_napi_build_version_from_command_args(argv);
+    var opts = versioning.evaluate(package_json, gyp.opts, napi_build_version);
     var tarball = opts.staged_tarball;
     existsAsync(tarball, function(found) {
         if (!found) {
             return callback(new Error("Cannot test package because " + tarball + " missing: run `node-pre-gyp package` first"));
         }
         var to = opts.module_path;
-        var gunzip = zlib.createGunzip();
-        var extracter = require('tar').Extract({ path: to, strip: 1 });
         function filter_func(entry) {
-            // ensure directories are +x
-            // https://github.com/mapnik/node-mapnik/issues/262
-            entry.props.mode |= (entry.props.mode >>> 2) & parseInt('0111',8);
-            log.info('install','unpacking ' + entry.path);
+            log.info('install','unpacking [' + entry.path + ']');
         }
-        gunzip.on('error', callback);
-        extracter.on('error', callback);
-        extracter.on('entry', filter_func);
-        extracter.on('end', function(err) {
-            if (err) return callback(err);
+
+        mkdirp(to, function(err) {
+            if (err) {
+                return callback(err);
+            } else {
+                tar.extract({
+                    file: tarball,
+                    cwd: to,
+                    strip: 1,
+                    onentry: filter_func
+                }).then(after_extract, callback);
+            }
+        });
+
+        function after_extract() {
             testbinary(gyp,argv,function(err) {
                 if (err) {
                     return callback(err);
@@ -43,7 +50,6 @@ function testpackage(gyp, argv, callback) {
                     return callback();
                 }
             });
-        });
-        read(tarball).pipe(gunzip).pipe(extracter);
+        }
     });
 }

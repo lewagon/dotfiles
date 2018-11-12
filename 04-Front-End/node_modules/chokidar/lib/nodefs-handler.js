@@ -87,11 +87,13 @@ function setFsWatchListener(path, fullPath, options, handlers) {
     if (!watcher) return;
     var broadcastErr = fsWatchBroadcast.bind(null, fullPath, 'errHandlers');
     watcher.on('error', function(error) {
+      container.watcherUnusable = true; // documented since Node 10.4.1
       // Workaround for https://github.com/joyent/node/issues/4337
       if (process.platform === 'win32' && error.code === 'EPERM') {
         fs.open(path, 'r', function(err, fd) {
-          if (fd) fs.close(fd);
-          if (!err) broadcastErr(error);
+          if (!err) fs.close(fd, function(err) {
+            if (!err) broadcastErr(error);
+          });
         });
       } else {
         broadcastErr(error);
@@ -117,7 +119,9 @@ function setFsWatchListener(path, fullPath, options, handlers) {
     delete container.errHandlers[listenerIndex];
     delete container.rawEmitters[listenerIndex];
     if (!Object.keys(container.listeners).length) {
-      container.watcher.close();
+      if (!container.watcherUnusable) { // check to protect against issue #730
+        container.watcher.close();
+      }
       delete FsWatchInstances[fullPath];
     }
   };
@@ -379,7 +383,7 @@ function(dir, stats, initialAdd, depth, target, wh, callback) {
         this._addToNodeFs(path, initialAdd, wh, depth + 1);
       }
     }.bind(this)).on('end', function() {
-      if (throttler) throttler.clear();
+      var wasThrottled = throttler ? throttler.clear() : false;
       if (done) done();
 
       // Files that absent in current directory snapshot
@@ -397,6 +401,9 @@ function(dir, stats, initialAdd, depth, target, wh, callback) {
       }).forEach(function(item) {
         this._remove(directory, item);
       }, this);
+
+      // one more time for any missed in case changes came in extremely quickly
+      if (wasThrottled) read(directory, false);
     }.bind(this)).on('error', this._handleError.bind(this));
   }.bind(this);
 

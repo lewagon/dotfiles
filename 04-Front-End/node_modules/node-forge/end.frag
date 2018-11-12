@@ -1,4 +1,0 @@
-
-return require('js/forge');
-
-});

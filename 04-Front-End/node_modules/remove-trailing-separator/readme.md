@@ -26,7 +26,7 @@ removeTrailingSeparator('///')  // '/'
 removeTrailingSeparator('') // ''
 ```
 
-## Backslash, or win32 separator
+## Notable backslash, or win32 separator behavior
 
 `\` is considered a separator only on WIN32 systems. All POSIX compliant systems
 see backslash as a valid file name character, so it would break POSIX compliance
@@ -35,7 +35,7 @@ to remove it there.
 In practice, this means that this code will return different things depending on
 what system it runs on:
 
-```
+```js
 removeTrailingSeparator('\\foo\\')
 // UNIX  => '\\foo\\'
 // WIN32 => '\\foo'

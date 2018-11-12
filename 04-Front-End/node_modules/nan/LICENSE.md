@@ -1,7 +1,7 @@
 The MIT License (MIT)
 =====================
 
-Copyright (c) 2017 NAN contributors
+Copyright (c) 2018 NAN contributors
 -----------------------------------
 
 *NAN contributors listed at <https://github.com/nodejs/nan#contributors>*

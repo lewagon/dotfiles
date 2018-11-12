@@ -3,6 +3,8 @@
  * @type {Object}
  */
 module.exports = {
+  plugins: ['import'],
+
   rules: {
     // analysis/correctness
     'import/no-unresolved': 'error',
@@ -14,15 +16,13 @@ module.exports = {
     // red flags (thus, warnings)
     'import/no-named-as-default': 'warn',
     'import/no-named-as-default-member': 'warn',
-    'import/no-duplicates': 'warn',
-    'import/unambiguous': 'warn',
+    'import/no-duplicates': 'warn'
   },
 
   // need all these for parsing dependencies (even if _your_ code doesn't need
   // all of them)
   parserOptions: {
     sourceType: 'module',
-    ecmaVersion: 6,
-    ecmaFeatures: { experimentalObjectRestSpread: true },
+    ecmaVersion: 2018,
   },
 }

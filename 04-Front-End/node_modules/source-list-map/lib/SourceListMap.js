@@ -102,7 +102,7 @@ class SourceListMap {
 		}).join("");
 		const arrays = mappingsContext.getArrays();
 		return {
-			source: source,
+			source,
 			map: {
 				version: 3,
 				file: options && options.file,

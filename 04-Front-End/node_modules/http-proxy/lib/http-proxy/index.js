@@ -41,14 +41,15 @@ function createRightProxy(type) {
         cntr--;
       }
 
+      var requestOptions = options;
       if(
         !(args[cntr] instanceof Buffer) &&
         args[cntr] !== res
       ) {
         //Copy global options
-        options = extend({}, options);
+        requestOptions = extend({}, options);
         //Overwrite with request options
-        extend(options, args[cntr]);
+        extend(requestOptions, args[cntr]);
 
         cntr--;
       }
@@ -60,11 +61,11 @@ function createRightProxy(type) {
       /* optional args parse end */
 
       ['target', 'forward'].forEach(function(e) {
-        if (typeof options[e] === 'string')
-          options[e] = parse_url(options[e]);
+        if (typeof requestOptions[e] === 'string')
+          requestOptions[e] = parse_url(requestOptions[e]);
       });
 
-      if (!options.target && !options.forward) {
+      if (!requestOptions.target && !requestOptions.forward) {
         return this.emit('error', new Error('Must provide a proper URL as target'));
       }
 
@@ -77,7 +78,7 @@ function createRightProxy(type) {
          * refer to the connection socket
          * pass(req, socket, options, head)
          */
-        if(passes[i](req, res, options, head, this, cbl)) { // passes can return a truthy value to halt the loop
+        if(passes[i](req, res, requestOptions, head, this, cbl)) { // passes can return a truthy value to halt the loop
           break;
         }
       }

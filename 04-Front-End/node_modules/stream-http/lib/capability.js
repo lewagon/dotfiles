@@ -1,5 +1,9 @@
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
 
+exports.writableStream = isFunction(global.WritableStream)
+
+exports.abortController = isFunction(global.AbortController)
+
 exports.blobConstructor = false
 try {
 	new Blob([new ArrayBuffer(1)])

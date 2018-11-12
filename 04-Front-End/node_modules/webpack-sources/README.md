@@ -48,7 +48,7 @@ Source.prototype.sourceAndMap(options: Object) -> {
 }
 ```
 
-Returns both, source code (like `Source.prototype.source()` and SourceMap (like `Source.prototype.map()`). This method could have better performance than calling `source()` and `map()` separatly.
+Returns both, source code (like `Source.prototype.source()` and SourceMap (like `Source.prototype.map()`). This method could have better performance than calling `source()` and `map()` separately.
 
 See `map()` for `options`.
 
@@ -130,7 +130,7 @@ new SourceMapSource(
 
 ## `LineToLineMappedSource`
 
-Represents source code, which is mapped line by line to the orginal file.
+Represents source code, which is mapped line by line to the original file.
 
 ``` js
 new LineToLineMappedSource(

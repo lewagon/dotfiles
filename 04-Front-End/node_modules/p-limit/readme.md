@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save p-limit
+$ npm install p-limit
 ```
 
 
@@ -23,10 +23,11 @@ const input = [
 	limit(() => doSomething())
 ];
 
-// only one promise is run at once
-Promise.all(input).then(result => {
+(async () => {
+	// Only one promise is run at once
+	const result = await Promise.all(input);
 	console.log(result);
-});
+})();
 ```
 
 

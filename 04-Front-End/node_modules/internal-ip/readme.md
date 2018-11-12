@@ -1,54 +1,49 @@
 # internal-ip [![Build Status](https://travis-ci.org/sindresorhus/internal-ip.svg?branch=master)](https://travis-ci.org/sindresorhus/internal-ip)
 
-> Get your internal IPv4 or IPv6 address
+> Get your internal IP address
 
 
-## CLI
-
-```
-$ npm install --global internal-ip
-```
+## Install
 
 ```
-$ internal-ip --help
-
-  Usage
-    $ internal-ip
-
-  Options
-    -4, --ipv4  Return the IPv4 address (default)
-    -6, --ipv6  Return the IPv6 address
-
-  Example
-    $ internal-ip
-    192.168.0.123
-    $ internal-ip -6
-    fe80::200:f8ff:fe21:67cf
+$ npm install internal-ip
 ```
 
 
-## API
-
-```
-$ npm install --save internal-ip
-```
+## Usage
 
 ```js
-var internalIp = require('internal-ip');
+const internalIp = require('internal-ip');
 
-internalIp.v4();
-//=> '192.168.0.123'
+internalIp.v6().then(ip => {
+	console.log(ip);
+	//=> 'fe80::1'
+});
 
-internalIp.v6();
-//=> 'fe80::200:f8ff:fe21:67cf'
+internalIp.v4().then(ip => {
+	console.log(ip);
+	//=> '10.0.0.79'
+});
+
+console.log(internalIp.v6.sync())
+//=> 'fe80::1'
+
+console.log(internalIp.v4.sync())
+//=> '10.0.0.79'
 ```
+
+The module returns the address of the internet-facing interface, as determined from the default gateway. When the adress cannot be determined for any reason, `null` will be returned.
+
+The module relies on operating systems tools. On Linux and Android, the `ip` command must be available, which depending on distribution might not be installed by default. It is usually provided by the `iproute2` package.
 
 
 ## Related
 
-See [public-ip](https://github.com/sindresorhus/public-ip) or [ipify](https://github.com/sindresorhus/ipify) to get your external IP address.
+- [internal-ip-cli](https://github.com/sindresorhus/internal-ip-cli) - CLI for this module
+- [public-ip](https://github.com/sindresorhus/public-ip) - Get your public IP address
+- [default-gateway](https://github.com/silverwind/default-gateway) - Get your default gateway address
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

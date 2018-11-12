@@ -12,9 +12,20 @@ interface PortFinderOptions{
    */
   host?: string;
   /**
+   * search start port (equals to port when not provided)
+   * This exists because getPort and getPortPromise mutates port state in
+   * recursive calls and doesn't have a way to retrieve begininng port while
+   * searching.
+   */
+  startPort?: number;
+  /**
    * Minimum port (takes precedence over `basePort`).
    */
   port?: number;
+  /**
+   * Maximum port
+   */
+  stopPort?: number;
 }
 
 /**

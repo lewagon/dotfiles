@@ -1,16 +1,16 @@
 {
   "name": "camelcase",
-  "version": "3.0.0",
+  "version": "4.1.0",
   "description": "Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar",
   "license": "MIT",
   "repository": "sindresorhus/camelcase",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -35,5 +35,8 @@
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }

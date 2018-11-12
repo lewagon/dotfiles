@@ -1,3 +1,15 @@
+0.5.2 / 2017-09-13
+==================
+
+  * Fix regression matching multiple ETags in `If-None-Match`
+  * perf: improve `If-None-Match` token parsing
+
+0.5.1 / 2017-09-11
+==================
+
+  * Fix handling of modified headers with invalid dates
+  * perf: improve ETag match loop
+
 0.5.0 / 2017-02-21
 ==================
 

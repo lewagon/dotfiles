@@ -73,8 +73,8 @@ discussions and support.
 SockJS-node API
 ---------------
 
-The API design is based on the common Node API's like
-[Streams API](http://nodejs.org/docs/v0.5.8/api/streams.html) or
+The API design is based on common Node APIs like the
+[Streams API](http://nodejs.org/docs/v0.5.8/api/streams.html) or the
 [Http.Server API](http://nodejs.org/docs/v0.5.8/api/http.html#http.Server).
 
 ### Server class
@@ -156,6 +156,13 @@ Where `options` is a hash which can contain:
   connection have not been seen for a while. This delay is configured
   by this setting. By default the `close` event will be emitted when a
   receiving connection wasn't seen for 5 seconds.  </dd>
+
+<dt>disable_cors (boolean)</dt>
+<dd>Enabling this option will prevent
+  <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a>
+  headers from being included in the HTTP response. Can be used when the
+  sockjs client is known to be connecting from the same origin as the 
+  sockjs server.</dd>
 </dl>
 
 

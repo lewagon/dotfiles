@@ -1,4 +1,5 @@
 # Growl for nodejs
+[![Build Status](https://travis-ci.org/tj/node-growl.svg?branch=master)](https://travis-ci.org/tj/node-growl)
 
 Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](http://github.com/visionmedia/growl). Ubuntu/Linux support added thanks to [@niftylettuce](http://github.com/niftylettuce).
 

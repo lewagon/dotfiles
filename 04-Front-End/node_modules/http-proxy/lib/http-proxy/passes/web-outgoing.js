@@ -84,18 +84,26 @@ module.exports = { // <--
    */
   writeHeaders: function writeHeaders(req, res, proxyRes, options) {
     var rewriteCookieDomainConfig = options.cookieDomainRewrite,
+        rewriteCookiePathConfig = options.cookiePathRewrite,
         preserveHeaderKeyCase = options.preserveHeaderKeyCase,
         rawHeaderKeyMap,
         setHeader = function(key, header) {
           if (header == undefined) return;
           if (rewriteCookieDomainConfig && key.toLowerCase() === 'set-cookie') {
-            header = common.rewriteCookieDomain(header, rewriteCookieDomainConfig);
+            header = common.rewriteCookieProperty(header, rewriteCookieDomainConfig, 'domain');
+          }
+          if (rewriteCookiePathConfig && key.toLowerCase() === 'set-cookie') {
+            header = common.rewriteCookieProperty(header, rewriteCookiePathConfig, 'path');
           }
           res.setHeader(String(key).trim(), header);
         };
 
     if (typeof rewriteCookieDomainConfig === 'string') { //also test for ''
       rewriteCookieDomainConfig = { '*': rewriteCookieDomainConfig };
+    }
+
+    if (typeof rewriteCookiePathConfig === 'string') { //also test for ''
+      rewriteCookiePathConfig = { '*': rewriteCookiePathConfig };
     }
 
     // message.rawHeaders is added in: v0.11.6
@@ -129,9 +137,10 @@ module.exports = { // <--
   writeStatusCode: function writeStatusCode(req, res, proxyRes) {
     // From Node.js docs: response.writeHead(statusCode[, statusMessage][, headers])
     if(proxyRes.statusMessage) {
-      res.writeHead(proxyRes.statusCode, proxyRes.statusMessage);
+      res.statusCode = proxyRes.statusCode;
+      res.statusMessage = proxyRes.statusMessage;
     } else {
-      res.writeHead(proxyRes.statusCode);
+      res.statusCode = proxyRes.statusCode;
     }
   }
 

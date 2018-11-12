@@ -18,7 +18,7 @@ var isProxyEnabled = require('./isProxyEnabled');
  * the list of existing properties. However, if a nonChainableMethodName is
  * provided, then the root cause is instead a failure to invoke a non-chainable
  * method prior to reading the non-existent property.
- * 
+ *
  * If proxies are unsupported or disabled via the user's Chai config, then
  * return object without modification.
  *
@@ -49,19 +49,31 @@ module.exports = function proxify(obj, nonChainableMethodName) {
             nonChainableMethodName + '".');
         }
 
-        var orderedProperties = getProperties(target).filter(function(property) {
-          return !Object.prototype.hasOwnProperty(property) &&
-            builtins.indexOf(property) === -1;
-        }).sort(function(a, b) {
-          return stringDistance(property, a) - stringDistance(property, b);
+        // If the property is reasonably close to an existing Chai property,
+        // suggest that property to the user. Only suggest properties with a
+        // distance less than 4.
+        var suggestion = null;
+        var suggestionDistance = 4;
+        getProperties(target).forEach(function(prop) {
+          if (
+            !Object.prototype.hasOwnProperty(prop) &&
+            builtins.indexOf(prop) === -1
+          ) {
+            var dist = stringDistanceCapped(
+              property,
+              prop,
+              suggestionDistance
+            );
+            if (dist < suggestionDistance) {
+              suggestion = prop;
+              suggestionDistance = dist;
+            }
+          }
         });
 
-        if (orderedProperties.length &&
-            stringDistance(orderedProperties[0], property) < 4) {
-          // If the property is reasonably close to an existing Chai property,
-          // suggest that property to the user.
+        if (suggestion !== null) {
           throw Error('Invalid Chai property: ' + property +
-            '. Did you mean "' + orderedProperties[0] + '"?');
+            '. Did you mean "' + suggestion + '"?');
         } else {
           throw Error('Invalid Chai property: ' + property);
         }
@@ -89,34 +101,44 @@ module.exports = function proxify(obj, nonChainableMethodName) {
 };
 
 /**
- * # stringDistance(strA, strB)
- * Return the Levenshtein distance between two strings.
+ * # stringDistanceCapped(strA, strB, cap)
+ * Return the Levenshtein distance between two strings, but no more than cap.
  * @param {string} strA
  * @param {string} strB
- * @return {number} the string distance between strA and strB
+ * @param {number} number
+ * @return {number} min(string distance between strA and strB, cap)
  * @api private
  */
 
-function stringDistance(strA, strB, memo) {
-  if (!memo) {
-    // `memo` is a two-dimensional array containing a cache of distances
-    // memo[i][j] is the distance between strA.slice(0, i) and
-    // strB.slice(0, j).
-    memo = [];
-    for (var i = 0; i <= strA.length; i++) {
-      memo[i] = [];
-    }
+function stringDistanceCapped(strA, strB, cap) {
+  if (Math.abs(strA.length - strB.length) >= cap) {
+    return cap;
   }
 
-  if (!memo[strA.length] || !memo[strA.length][strB.length]) {
-    if (strA.length === 0 || strB.length === 0) {
-      memo[strA.length][strB.length] = Math.max(strA.length, strB.length);
-    } else {
-      memo[strA.length][strB.length] = Math.min(
-        stringDistance(strA.slice(0, -1), strB, memo) + 1,
-        stringDistance(strA, strB.slice(0, -1), memo) + 1,
-        stringDistance(strA.slice(0, -1), strB.slice(0, -1), memo) +
-          (strA.slice(-1) === strB.slice(-1) ? 0 : 1)
+  var memo = [];
+  // `memo` is a two-dimensional array containing distances.
+  // memo[i][j] is the distance between strA.slice(0, i) and
+  // strB.slice(0, j).
+  for (var i = 0; i <= strA.length; i++) {
+    memo[i] = Array(strB.length + 1).fill(0);
+    memo[i][0] = i;
+  }
+  for (var j = 0; j < strB.length; j++) {
+    memo[0][j] = j;
+  }
+
+  for (var i = 1; i <= strA.length; i++) {
+    var ch = strA.charCodeAt(i - 1);
+    for (var j = 1; j <= strB.length; j++) {
+      if (Math.abs(i - j) >= cap) {
+        memo[i][j] = cap;
+        continue;
+      }
+      memo[i][j] = Math.min(
+        memo[i - 1][j] + 1,
+        memo[i][j - 1] + 1,
+        memo[i - 1][j - 1] +
+          (ch === strB.charCodeAt(j - 1) ? 0 : 1)
       );
     }
   }

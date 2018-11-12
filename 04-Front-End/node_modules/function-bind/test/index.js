@@ -1,3 +1,5 @@
+// jscs:disable requireUseStrict
+
 var test = require('tape');
 
 var functionBind = require('../implementation');

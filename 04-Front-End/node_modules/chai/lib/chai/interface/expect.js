@@ -10,9 +10,17 @@ module.exports = function (chai, util) {
   };
 
   /**
+   * ### .fail([message])
    * ### .fail(actual, expected, [message], [operator])
    *
    * Throw a failure.
+   *
+   *     expect.fail();
+   *     expect.fail("custom error message");
+   *     expect.fail(1, 2);
+   *     expect.fail(1, 2, "custom error message");
+   *     expect.fail(1, 2, "custom error message", ">");
+   *     expect.fail(1, 2, undefined, ">");
    *
    * @name fail
    * @param {Mixed} actual
@@ -24,6 +32,11 @@ module.exports = function (chai, util) {
    */
 
   chai.expect.fail = function (actual, expected, message, operator) {
+    if (arguments.length < 2) {
+        message = actual;
+        actual = undefined;
+    }
+
     message = message || 'expect.fail()';
     throw new chai.AssertionError(message, {
         actual: actual

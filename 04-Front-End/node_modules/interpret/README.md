@@ -15,6 +15,16 @@ Map file types to modules which provide a [require.extensions] loader.
 {
   '.babel.js': [
     {
+      module: '@babel/register',
+      register: function (module) {
+        module({
+          // register on .js extension due to https://github.com/joyent/node/blob/v0.12.0/lib/module.js#L353
+          // which only captures the final extension (.babel.js -> .js)
+          extensions: '.js'
+        });
+      }
+    },
+    {
       module: 'babel-register',
       register: function (module) {
         module({
@@ -45,8 +55,8 @@ Map file types to modules which provide a [require.extensions] loader.
   '.cirru': 'cirru-script/lib/register',
   '.cjsx': 'node-cjsx/register',
   '.co': 'coco',
-  '.coffee': ['coffee-script/register', 'coffee-script'],
-  '.coffee.md': ['coffee-script/register', 'coffee-script'],
+  '.coffee': ['coffeescript/register', 'coffee-script/register', 'coffeescript', 'coffee-script'],
+  '.coffee.md': ['coffeescript/register', 'coffee-script/register', 'coffeescript', 'coffee-script'],
   '.csv': 'require-csv',
   '.eg': 'earlgrey/register',
   '.iced': ['iced-coffee-script/register', 'iced-coffee-script'],
@@ -56,6 +66,14 @@ Map file types to modules which provide a [require.extensions] loader.
   '.json': null,
   '.json5': 'json5/lib/require',
   '.jsx': [
+    {
+      module: '@babel/register',
+      register: function (module) {
+        module({
+          extensions: '.jsx'
+        });
+      }
+    },
     {
       module: 'babel-register',
       register: function (module) {
@@ -90,7 +108,7 @@ Map file types to modules which provide a [require.extensions] loader.
       }
     }
   ],
-  '.litcoffee': ['coffee-script/register', 'coffee-script'],
+  '.litcoffee': ['coffeescript/register', 'coffee-script/register', 'coffeescript', 'coffee-script'],
   '.liticed': 'iced-coffee-script/register',
   '.ls': ['livescript', 'LiveScript'],
   '.node': null,

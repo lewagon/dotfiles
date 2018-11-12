@@ -1,6 +1,6 @@
 {
   "name": "which-module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Find the module object for something that was require()d",
   "main": "index.js",
   "scripts": {
@@ -32,10 +32,10 @@
   },
   "homepage": "https://github.com/nexdrew/which-module#readme",
   "devDependencies": {
-    "ava": "^0.15.2",
-    "coveralls": "^2.11.9",
-    "nyc": "^6.4.4",
-    "standard": "^7.1.2",
-    "standard-version": "^2.3.0"
+    "ava": "^0.19.1",
+    "coveralls": "^2.13.1",
+    "nyc": "^10.3.0",
+    "standard": "^10.0.2",
+    "standard-version": "^4.0.0"
   }
 }

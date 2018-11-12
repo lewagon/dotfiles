@@ -21,6 +21,10 @@ UI.prototype.span = function () {
   cols.span = true
 }
 
+UI.prototype.resetOutput = function () {
+  this.rows = []
+}
+
 UI.prototype.div = function () {
   if (arguments.length === 0) this.div('')
   if (this.wrap && this._shouldApplyLayoutDSL.apply(this, arguments)) {
@@ -209,7 +213,7 @@ UI.prototype._rasterize = function (row) {
   row.forEach(function (col, c) {
     // leave room for left and right padding.
     col.width = widths[c]
-    if (_this.wrap) wrapped = wrap(col.text, _this._negatePadding(col), {hard: true}).split('\n')
+    if (_this.wrap) wrapped = wrap(col.text, _this._negatePadding(col), { hard: true }).split('\n')
     else wrapped = col.text.split('\n')
 
     if (col.border) {
@@ -282,6 +286,10 @@ function _minWidth (col) {
   return minWidth
 }
 
+function getWindowWidth () {
+  if (typeof process === 'object' && process.stdout && process.stdout.columns) return process.stdout.columns
+}
+
 function alignRight (str, width) {
   str = str.trim()
   var padding = ''
@@ -310,7 +318,7 @@ module.exports = function (opts) {
   opts = opts || {}
 
   return new UI({
-    width: (opts || {}).width || 80,
+    width: (opts || {}).width || getWindowWidth() || 80,
     wrap: typeof opts.wrap === 'boolean' ? opts.wrap : true
   })
 }

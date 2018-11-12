@@ -71,17 +71,17 @@ module.exports = {
     };
     var post = function(msg, origin) {
       debug('post', msg, origin);
-      try {
-        // When the iframe is not loaded, IE raises an exception
-        // on 'contentWindow'.
-        setTimeout(function() {
+      setTimeout(function() {
+        try {
+          // When the iframe is not loaded, IE raises an exception
+          // on 'contentWindow'.
           if (iframe && iframe.contentWindow) {
             iframe.contentWindow.postMessage(msg, origin);
           }
-        }, 0);
-      } catch (x) {
-        // intentionally empty
-      }
+        } catch (x) {
+          // intentionally empty
+        }
+      }, 0);
     };
 
     iframe.src = iframeUrl;

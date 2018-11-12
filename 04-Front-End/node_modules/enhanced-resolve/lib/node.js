@@ -2,34 +2,40 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-var ResolverFactory = require("./ResolverFactory");
+"use strict";
 
-var NodeJsInputFileSystem = require("./NodeJsInputFileSystem");
-var CachedInputFileSystem = require("./CachedInputFileSystem");
+const ResolverFactory = require("./ResolverFactory");
 
-var nodeFileSystem = new CachedInputFileSystem(new NodeJsInputFileSystem(), 4000);
+const NodeJsInputFileSystem = require("./NodeJsInputFileSystem");
+const CachedInputFileSystem = require("./CachedInputFileSystem");
 
-var nodeContext = {
+const nodeFileSystem = new CachedInputFileSystem(new NodeJsInputFileSystem(), 4000);
+
+const nodeContext = {
 	environments: [
 		"node+es3+es5+process+native"
 	]
 };
 
-var asyncResolver = ResolverFactory.createResolver({
+const asyncResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	fileSystem: nodeFileSystem
 });
-module.exports = function resolve(context, path, request, callback) {
+module.exports = function resolve(context, path, request, resolveContext, callback) {
 	if(typeof context === "string") {
-		callback = request;
+		callback = resolveContext;
+		resolveContext = request;
 		request = path;
 		path = context;
 		context = nodeContext;
 	}
-	asyncResolver.resolve(context, path, request, callback);
+	if(typeof callback !== "function") {
+		callback = resolveContext;
+	}
+	asyncResolver.resolve(context, path, request, resolveContext, callback);
 };
 
-var syncResolver = ResolverFactory.createResolver({
+const syncResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	useSyncFileSystemCalls: true,
 	fileSystem: nodeFileSystem
@@ -43,22 +49,26 @@ module.exports.sync = function resolveSync(context, path, request) {
 	return syncResolver.resolveSync(context, path, request);
 };
 
-var asyncContextResolver = ResolverFactory.createResolver({
+const asyncContextResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	resolveToContext: true,
 	fileSystem: nodeFileSystem
 });
-module.exports.context = function resolveContext(context, path, request, callback) {
+module.exports.context = function resolveContext(context, path, request, resolveContext, callback) {
 	if(typeof context === "string") {
-		callback = request;
+		callback = resolveContext;
+		resolveContext = request;
 		request = path;
 		path = context;
 		context = nodeContext;
 	}
-	asyncContextResolver.resolve(context, path, request, callback);
+	if(typeof callback !== "function") {
+		callback = resolveContext;
+	}
+	asyncContextResolver.resolve(context, path, request, resolveContext, callback);
 };
 
-var syncContextResolver = ResolverFactory.createResolver({
+const syncContextResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	resolveToContext: true,
 	useSyncFileSystemCalls: true,
@@ -73,23 +83,27 @@ module.exports.context.sync = function resolveContextSync(context, path, request
 	return syncContextResolver.resolveSync(context, path, request);
 };
 
-var asyncLoaderResolver = ResolverFactory.createResolver({
+const asyncLoaderResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	moduleExtensions: ["-loader"],
 	mainFields: ["loader", "main"],
 	fileSystem: nodeFileSystem
 });
-module.exports.loader = function resolveLoader(context, path, request, callback) {
+module.exports.loader = function resolveLoader(context, path, request, resolveContext, callback) {
 	if(typeof context === "string") {
-		callback = request;
+		callback = resolveContext;
+		resolveContext = request;
 		request = path;
 		path = context;
 		context = nodeContext;
 	}
-	asyncLoaderResolver.resolve(context, path, request, callback);
+	if(typeof callback !== "function") {
+		callback = resolveContext;
+	}
+	asyncLoaderResolver.resolve(context, path, request, resolveContext, callback);
 };
 
-var syncLoaderResolver = ResolverFactory.createResolver({
+const syncLoaderResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	moduleExtensions: ["-loader"],
 	mainFields: ["loader", "main"],
@@ -109,15 +123,19 @@ module.exports.create = function create(options) {
 	options = Object.assign({
 		fileSystem: nodeFileSystem
 	}, options);
-	var resolver = ResolverFactory.createResolver(options);
-	return function(context, path, request, callback) {
+	const resolver = ResolverFactory.createResolver(options);
+	return function(context, path, request, resolveContext, callback) {
 		if(typeof context === "string") {
-			callback = request;
+			callback = resolveContext;
+			resolveContext = request;
 			request = path;
 			path = context;
 			context = nodeContext;
 		}
-		resolver.resolve(context, path, request, callback);
+		if(typeof callback !== "function") {
+			callback = resolveContext;
+		}
+		resolver.resolve(context, path, request, resolveContext, callback);
 	};
 };
 
@@ -126,7 +144,7 @@ module.exports.create.sync = function createSync(options) {
 		useSyncFileSystemCalls: true,
 		fileSystem: nodeFileSystem
 	}, options);
-	var resolver = ResolverFactory.createResolver(options);
+	const resolver = ResolverFactory.createResolver(options);
 	return function(context, path, request) {
 		if(typeof context === "string") {
 			request = path;

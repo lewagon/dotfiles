@@ -2,17 +2,19 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-function TryNextPlugin(source, message, target) {
-	this.source = source;
-	this.message = message;
-	this.target = target;
-}
-module.exports = TryNextPlugin;
+"use strict";
 
-TryNextPlugin.prototype.apply = function(resolver) {
-	var target = this.target;
-	var message = this.message;
-	resolver.plugin(this.source, function(request, callback) {
-		resolver.doResolve(target, request, message, callback);
-	});
+module.exports = class TryNextPlugin {
+	constructor(source, message, target) {
+		this.source = source;
+		this.message = message;
+		this.target = target;
+	}
+
+	apply(resolver) {
+		const target = resolver.ensureHook(this.target);
+		resolver.getHook(this.source).tapAsync("TryNextPlugin", (request, resolveContext, callback) => {
+			resolver.doResolve(target, request, this.message, resolveContext, callback);
+		});
+	}
 };

@@ -8,8 +8,7 @@ var browser = (new UAParser()).setUA(navigator.userAgent).getBrowser()
 var browserName = browser.name
 var browserVersion = browser.major
 // Skip browsers with poor or nonexistant WebWorker support
-var skip = ((browserName === 'Opera' && browserVersion <= 12) ||
-	(browserName === 'IE' && browserVersion <= 10) ||
+var skip = ((browserName === 'IE' && browserVersion <= 10) ||
 	(browserName === 'Safari' && browserVersion <= 5) ||
 	(browserName === 'WebKit' && browserVersion <= 534) || // Old mobile safari
 	(browserName === 'Android Browser' && browserVersion <= 4))

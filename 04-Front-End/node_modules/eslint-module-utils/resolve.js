@@ -14,6 +14,20 @@ exports.CASE_SENSITIVE_FS = CASE_SENSITIVE_FS
 
 const fileExistsCache = new ModuleCache()
 
+function tryRequire(target) {
+  let resolved;
+  try {
+    // Check if the target exists
+    resolved = require.resolve(target);
+  } catch(e) {
+    // If the target does not exist then just return undefined
+    return undefined;
+  }
+
+  // If the target exists then return the loaded module
+  return require(resolved);
+}
+
 // http://stackoverflow.com/a/27382838
 exports.fileExistsWithCaseSync = function fileExistsWithCaseSync(filepath, cacheSettings) {
   // don't care if the FS is case-sensitive
@@ -21,6 +35,7 @@ exports.fileExistsWithCaseSync = function fileExistsWithCaseSync(filepath, cache
 
   // null means it resolved to a builtin
   if (filepath === null) return true
+  if (filepath.toLowerCase() === process.cwd().toLowerCase()) return true
   const parsedPath = path.parse(filepath)
       , dir = parsedPath.dir
 
@@ -134,27 +149,20 @@ function resolverReducer(resolvers, map) {
   throw new Error('invalid resolver config')
 }
 
+function getBaseDir(sourceFile) {
+  return pkgDir.sync(sourceFile) || process.cwd()
+}
 function requireResolver(name, sourceFile) {
   // Try to resolve package with conventional name
-  try {
-    return require(`eslint-import-resolver-${name}`)
-  } catch (err) { /* continue */ }
+  let resolver = tryRequire(`eslint-import-resolver-${name}`) ||
+    tryRequire(name) ||
+    tryRequire(path.resolve(getBaseDir(sourceFile), name))
 
-  // Try to resolve package with custom name (@myorg/resolver-name)
-  try {
-    return require(name)
-  } catch (err) { /* continue */ }
-
-  // Try to resolve package with path, relative to closest package.json
-  // or current working directory
-  try {
-    const baseDir = pkgDir.sync(sourceFile) || process.cwd()
-    // absolute paths ignore base, so this covers both
-    return require(path.resolve(baseDir, name))
-  } catch (err) { /* continue */ }
-
-  // all else failed
-  throw new Error(`unable to load resolver "${name}".`)
+  if (!resolver) {
+    throw new Error(`unable to load resolver "${name}".`)
+  } else {
+    return resolver;
+  }
 }
 
 const erroredContexts = new Set()

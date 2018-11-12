@@ -1,24 +1,19 @@
 'use strict';
-var findUp = require('find-up');
-var readPkg = require('read-pkg');
+const findUp = require('find-up');
+const readPkg = require('read-pkg');
 
-module.exports = function (opts) {
-	return findUp('package.json', opts).then(function (fp) {
+module.exports = opts => {
+	return findUp('package.json', opts).then(fp => {
 		if (!fp) {
 			return {};
 		}
 
-		return readPkg(fp, opts).then(function (pkg) {
-			return {
-				pkg: pkg,
-				path: fp
-			};
-		});
+		return readPkg(fp, opts).then(pkg => ({pkg, path: fp}));
 	});
 };
 
-module.exports.sync = function (opts) {
-	var fp = findUp.sync('package.json', opts);
+module.exports.sync = opts => {
+	const fp = findUp.sync('package.json', opts);
 
 	if (!fp) {
 		return {};

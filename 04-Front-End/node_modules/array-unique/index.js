@@ -26,3 +26,18 @@ module.exports = function unique(arr) {
   }
   return arr;
 };
+
+module.exports.immutable = function uniqueImmutable(arr) {
+  if (!Array.isArray(arr)) {
+    throw new TypeError('array-unique expects an array.');
+  }
+
+  var arrLen = arr.length;
+  var newArr = new Array(arrLen);
+
+  for (var i = 0; i < arrLen; i++) {
+    newArr[i] = arr[i];
+  }
+
+  return module.exports(newArr);
+};

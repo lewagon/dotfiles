@@ -1,16 +1,13 @@
 'use strict';
-var isUtf8 = require('is-utf8');
-
-module.exports = function (x) {
-	// Catches EFBBBF (UTF-8 BOM) because the buffer-to-string
-	// conversion translates it to FEFF (UTF-16 BOM)
-	if (typeof x === 'string' && x.charCodeAt(0) === 0xFEFF) {
-		return x.slice(1);
+module.exports = x => {
+	if (typeof x !== 'string') {
+		throw new TypeError('Expected a string, got ' + typeof x);
 	}
 
-	if (Buffer.isBuffer(x) && isUtf8(x) &&
-		x[0] === 0xEF && x[1] === 0xBB && x[2] === 0xBF) {
-		return x.slice(3);
+	// Catches EFBBBF (UTF-8 BOM) because the buffer-to-string
+	// conversion translates it to FEFF (UTF-16 BOM)
+	if (x.charCodeAt(0) === 0xFEFF) {
+		return x.slice(1);
 	}
 
 	return x;

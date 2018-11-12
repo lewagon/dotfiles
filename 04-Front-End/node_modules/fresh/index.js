@@ -15,13 +15,6 @@
 var CACHE_CONTROL_NO_CACHE_REGEXP = /(?:^|,)\s*?no-cache\s*?(?:,|$)/
 
 /**
- * Simple expression to split token list.
- * @private
- */
-
-var TOKEN_LIST_REGEXP = / *, */
-
-/**
  * Module exports.
  * @public
  */
@@ -58,9 +51,20 @@ function fresh (reqHeaders, resHeaders) {
   // if-none-match
   if (noneMatch && noneMatch !== '*') {
     var etag = resHeaders['etag']
-    var etagStale = !etag || noneMatch.split(TOKEN_LIST_REGEXP).every(function (match) {
-      return match !== etag && match !== 'W/' + etag && 'W/' + match !== etag
-    })
+
+    if (!etag) {
+      return false
+    }
+
+    var etagStale = true
+    var matches = parseTokenList(noneMatch)
+    for (var i = 0; i < matches.length; i++) {
+      var match = matches[i]
+      if (match === etag || match === 'W/' + etag || 'W/' + match === etag) {
+        etagStale = false
+        break
+      }
+    }
 
     if (etagStale) {
       return false
@@ -70,7 +74,7 @@ function fresh (reqHeaders, resHeaders) {
   // if-modified-since
   if (modifiedSince) {
     var lastModified = resHeaders['last-modified']
-    var modifiedStale = !lastModified || Date.parse(lastModified) > Date.parse(modifiedSince)
+    var modifiedStale = !lastModified || !(parseHttpDate(lastModified) <= parseHttpDate(modifiedSince))
 
     if (modifiedStale) {
       return false
@@ -78,4 +82,56 @@ function fresh (reqHeaders, resHeaders) {
   }
 
   return true
+}
+
+/**
+ * Parse an HTTP Date into a number.
+ *
+ * @param {string} date
+ * @private
+ */
+
+function parseHttpDate (date) {
+  var timestamp = date && Date.parse(date)
+
+  // istanbul ignore next: guard against date.js Date.parse patching
+  return typeof timestamp === 'number'
+    ? timestamp
+    : NaN
+}
+
+/**
+ * Parse a HTTP token list.
+ *
+ * @param {string} str
+ * @private
+ */
+
+function parseTokenList (str) {
+  var end = 0
+  var list = []
+  var start = 0
+
+  // gather tokens
+  for (var i = 0, len = str.length; i < len; i++) {
+    switch (str.charCodeAt(i)) {
+      case 0x20: /*   */
+        if (start === end) {
+          start = end = i + 1
+        }
+        break
+      case 0x2c: /* , */
+        list.push(str.substring(start, end))
+        start = end = i + 1
+        break
+      default:
+        end = i + 1
+        break
+    }
+  }
+
+  // final token
+  list.push(str.substring(start, end))
+
+  return list
 }

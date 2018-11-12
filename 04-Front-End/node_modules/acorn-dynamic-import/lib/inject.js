@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
 exports['default'] = injectDynamicImport;
 /* eslint-disable no-underscore-dangle */
 
+var DynamicImportKey = exports.DynamicImportKey = 'Import';
+
 function injectDynamicImport(acorn) {
   var tt = acorn.tokTypes;
 
@@ -16,7 +18,7 @@ function injectDynamicImport(acorn) {
     if (this.type !== tt.parenL) {
       this.unexpected();
     }
-    return this.finishNode(node, 'Import');
+    return this.finishNode(node, DynamicImportKey);
   }
 
   function peekNext() {

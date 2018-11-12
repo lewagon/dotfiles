@@ -1,7 +1,7 @@
 /*********************************************************************
  * NAN - Native Abstractions for Node.js
  *
- * Copyright (c) 2017 NAN contributors
+ * Copyright (c) 2018 NAN contributors
  *
  * MIT License <https://github.com/nodejs/nan/blob/master/LICENSE.md>
  ********************************************************************/
@@ -16,6 +16,14 @@ template<typename T> struct ToFactoryBase {
 template<typename T> struct ValueFactoryBase { typedef Maybe<T> return_t; };
 
 template<typename T> struct ToFactory;
+
+template<>
+struct ToFactory<v8::Function> : ToFactoryBase<v8::Function> {
+  static inline return_t convert(v8::Local<v8::Value> val) {
+    if (val.IsEmpty() || !val->IsFunction()) return MaybeLocal<v8::Function>();
+    return MaybeLocal<v8::Function>(val.As<v8::Function>());
+  }
+};
 
 #define X(TYPE)                                                                \
     template<>                                                                 \

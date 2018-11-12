@@ -8,8 +8,8 @@ var http = require('../..')
 var browser = (new UAParser()).setUA(navigator.userAgent).getBrowser()
 var browserName = browser.name
 var browserVersion = browser.major
-// Streaming doesn't work in IE9 or below or in Opera
-var skipStreamingCheck = (browserName === 'Opera' || (browserName === 'IE' && browserVersion <= 9))
+// Streaming doesn't work in IE9 or below
+var skipStreamingCheck = (browserName === 'IE' && browserVersion <= 9)
 
 var COPIES = 1000
 var MIN_PIECES = 5

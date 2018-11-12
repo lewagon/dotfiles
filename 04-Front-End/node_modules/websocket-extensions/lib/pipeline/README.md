@@ -228,7 +228,7 @@ is a mechanism to reorder the output so that message order is preserved for the
 next session in line.
 
 
-## Solution
+## Solution
 
 We now describe the model implemented here and how it meets the above design
 goals. The above diagram where a stack of extensions sit between the driver and
@@ -592,7 +592,7 @@ pipeline following *m2* will be processed by `A`, since it's upstream of the
 error. Those messages will be dropped by `B`.
 
 
-## Alternative ideas
+## Alternative ideas
 
 I am considering implementing `Functor` as an object-mode transform stream
 rather than what is essentially an async function. Being object-mode, a stream

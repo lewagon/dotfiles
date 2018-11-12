@@ -182,6 +182,10 @@ See LICENCE.
 
 ## Change Log
 
+####3.2.0
+
+* 14/09/17 Aid ES6 import.
+
 ####3.1.3
 
 * Minor documentation updates.
@@ -212,7 +216,7 @@ See LICENCE.
 
 * 10/12/14 Added [multiple constructor functionality](http://mikemcl.github.io/big.js/#faq).
 * No breaking changes or other additions, but a major code reorganisation,
- so *v3* seemed appropiate.
+ so *v3* seemed appropriate.
 
 ####2.5.2
 

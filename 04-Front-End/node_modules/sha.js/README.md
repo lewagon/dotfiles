@@ -1,54 +1,44 @@
 # sha.js
+[![NPM Package](https://img.shields.io/npm/v/sha.js.svg?style=flat-square)](https://www.npmjs.org/package/sha.js)
+[![Build Status](https://img.shields.io/travis/crypto-browserify/sha.js.svg?branch=master&style=flat-square)](https://travis-ci.org/crypto-browserify/sha.js)
+[![Dependency status](https://img.shields.io/david/crypto-browserify/sha.js.svg?style=flat-square)](https://david-dm.org/crypto-browserify/sha.js#info=dependencies)
 
-Streamable SHA hashes in pure javascript.
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-[![build status](https://secure.travis-ci.org/crypto-browserify/sha.js.png)](http://travis-ci.org/crypto-browserify/sha.js)
-[![NPM](http://img.shields.io/npm/v/sha.js.svg)](https://www.npmjs.org/package/sha.js)
+Node style `SHA` on pure JavaScript.
 
+```js
+var shajs = require('sha.js')
 
-## Example
+console.log(shajs('sha256').update('42').digest('hex'))
+// => 73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049
+console.log(new shajs.sha256().update('42').digest('hex'))
+// => 73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049
 
-``` js
-var createHash = require('sha.js')
-
-var sha256 = createHash('sha256')
-var sha512 = createHash('sha512')
-
-var h = sha256.update('abc', 'utf8').digest('hex')
-console.log(h) //ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
-
-//LEGACY, do not use in new systems:
-var sha0 = createHash('sha')
-var sha1 = createHash('sha1')
-
-
+var sha256stream = shajs('sha256')
+sha256stream.end('42')
+console.log(sha256stream.read().toString('hex'))
+// => 73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049
 ```
 
 ## supported hashes
+`sha.js` currently implements:
 
-sha.js currently implements:
+  - SHA (SHA-0) -- **legacy, do not use in new systems**
+  - SHA-1 -- **legacy, do not use in new systems**
+  - SHA-224
+  - SHA-256
+  - SHA-384
+  - SHA-512
 
 
-* sha256
-* sha512
-* sha1 (legacy, no not use in new systems)
-* sha (legacy, no not use in new systems)
-
-## Note
-
+## Not an actual stream
 Note, this doesn't actually implement a stream, but wrapping this in a stream is trivial.
-but is does update incrementally, so you can hash things larger than ram, and also, since it reuses
-the typedarrays, it uses a constant amount of memory (except when using base64 or utf8 encoding,
-see code comments)
+It does update incrementally, so you can hash things larger than RAM, as it uses a constant amount of memory (except when using base64 or utf8 encoding, see code comments).
 
 
 ## Acknowledgements
-
-This work is derived from Paul Johnston's ["A JavaScript implementation of the Secure Hash Algorithm"]
-(http://pajhome.org.uk/crypt/md5/sha1.html)
+This work is derived from Paul Johnston's [A JavaScript implementation of the Secure Hash Algorithm](http://pajhome.org.uk/crypt/md5/sha1.html).
 
 
-
-## License
-
-MIT
+## LICENSE [MIT](LICENSE)

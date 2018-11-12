@@ -22,9 +22,9 @@ Mime.prototype.define = function (map) {
   for (var type in map) {
     var exts = map[type];
     for (var i = 0; i < exts.length; i++) {
-      if (process.env.DEBUG_MIME && this.types[exts]) {
-        console.warn(this._loading.replace(/.*\//, ''), 'changes "' + exts[i] + '" extension type from ' +
-          this.types[exts] + ' to ' + type);
+      if (process.env.DEBUG_MIME && this.types[exts[i]]) {
+        console.warn((this._loading || "define()").replace(/.*\//, ''), 'changes "' + exts[i] + '" extension type from ' +
+          this.types[exts[i]] + ' to ' + type);
       }
 
       this.types[exts[i]] = type;
@@ -67,7 +67,7 @@ Mime.prototype.load = function(file) {
  * Lookup a mime type based on extension
  */
 Mime.prototype.lookup = function(path, fallback) {
-  var ext = path.replace(/.*[\.\/\\]/, '').toLowerCase();
+  var ext = path.replace(/^.*[\.\/\\]/, '').toLowerCase();
 
   return this.types[ext] || fallback || this.default_type;
 };
@@ -101,7 +101,7 @@ mime.Mime = Mime;
 mime.charsets = {
   lookup: function(mimeType, fallback) {
     // Assume text types are utf8
-    return (/^text\//).test(mimeType) ? 'UTF-8' : fallback;
+    return (/^text\/|^application\/(javascript|json)/).test(mimeType) ? 'UTF-8' : fallback;
   }
 };
 

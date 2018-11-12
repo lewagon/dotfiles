@@ -5,7 +5,7 @@
  */
 
 /*!
- * Module dependancies
+ * Module dependencies
  */
 
 var getOwnEnumerablePropertySymbols = require('./getOwnEnumerablePropertySymbols');

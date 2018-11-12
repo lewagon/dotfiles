@@ -4,7 +4,9 @@ var fs = require('fs');
 var sysPath = require('path');
 var readdirp = require('readdirp');
 var fsevents;
-try { fsevents = require('fsevents'); } catch (error) {}
+try { fsevents = require('fsevents'); } catch (error) {
+  if (process.env.CHOKIDAR_PRINT_FSEVENTS_REQUIRE_ERROR) console.error(error)
+}
 
 // fsevents instance helper functions
 
@@ -211,9 +213,15 @@ function(watchPath, realPath, transform, globFilter) {
     }
     function checkFd() {
       fs.open(path, 'r', function(error, fd) {
-        if (fd) fs.close(fd);
-        error && error.code !== 'EACCES' ?
-          handleEvent('unlink') : addOrChange();
+        if (error) {
+          error.code !== 'EACCES' ?
+            handleEvent('unlink') : addOrChange();
+        } else {
+          fs.close(fd, function(err) {
+            err && err.code !== 'EACCES' ?
+              handleEvent('unlink') : addOrChange();
+          });
+        }
       });
     }
     // correct for wrong events emitted

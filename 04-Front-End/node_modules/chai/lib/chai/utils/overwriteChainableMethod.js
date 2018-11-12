@@ -10,7 +10,7 @@ var transferFlags = require('./transferFlags');
 /**
  * ### .overwriteChainableMethod(ctx, name, method, chainingBehavior)
  *
- * Overwites an already existing chainable method
+ * Overwrites an already existing chainable method
  * and provides access to the previous function or
  * property.  Must return functions to be used for
  * name.

@@ -28,11 +28,9 @@ function usage () {
 
 if (!process.stdin.isTTY) {
   pipe(argv[0], process.stdin)
-
 } else if (argv.length) {
   if (/--help|-h/.test(argv[0])) {
     usage()
-
   } else {
     var filename = argv.pop()
     var algorithm = argv.pop()

@@ -1,3 +1,21 @@
+1.6.16 / 2018-02-16
+===================
+
+  * deps: mime-types@~2.1.18
+    - Add `application/raml+yaml` with extension `.raml`
+    - Add `application/wasm` with extension `.wasm`
+    - Add `text/shex` with extension `.shex`
+    - Add extensions for JPEG-2000 images
+    - Add extensions from IANA for `message/*` types
+    - Add extension `.mjs` to `application/javascript`
+    - Add extension `.wadl` to `application/vnd.sun.wadl+xml`
+    - Add extension `.gz` to `application/gzip`
+    - Add glTF types and extensions
+    - Add new mime types
+    - Update extensions `.md` and `.markdown` to be `text/markdown`
+    - Update font MIME types
+    - Update `text/hjson` to registered `application/hjson`
+
 1.6.15 / 2017-03-31
 ===================
 

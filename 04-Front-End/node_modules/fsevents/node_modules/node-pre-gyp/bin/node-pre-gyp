@@ -26,10 +26,13 @@ prog.parseArgv(process.argv);
 if (prog.todo.length === 0) {
   if (~process.argv.indexOf('-v') || ~process.argv.indexOf('--version')) {
     console.log('v%s', prog.version);
-  } else {
+    return process.exit(0);
+  } else if (~process.argv.indexOf('-h') || ~process.argv.indexOf('--help')) {
     console.log('%s', prog.usage());
+    return process.exit(0);
   }
-  return process.exit(0);
+  console.log('%s', prog.usage());
+  return process.exit(1);
 }
 
 // if --no-color is passed

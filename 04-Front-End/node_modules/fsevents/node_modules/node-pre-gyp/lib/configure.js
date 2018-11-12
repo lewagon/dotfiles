@@ -4,6 +4,7 @@ module.exports = exports = configure;
 
 exports.usage = 'Attempts to configure node-gyp or nw-gyp build';
 
+var napi = require('./util/napi.js');
 var compile = require('./util/compile.js');
 var handle_gyp_opts = require('./util/handle_gyp_opts.js');
 
@@ -41,6 +42,9 @@ function configure(gyp, argv, callback) {
                               concat(result.unparsed);
             }
             compile.run_gyp(['configure'].concat(final_args),result.opts,function(err) {
+                if (!err && result.opts.napi_build_version) {
+                    napi.swap_build_dir_out(result.opts.napi_build_version);
+                }
                 return callback(err);
             });
         }

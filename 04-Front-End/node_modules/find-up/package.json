@@ -1,6 +1,6 @@
 {
   "name": "find-up",
-  "version": "1.1.2",
+  "version": "2.1.0",
   "description": "Find a file by walking up parent directories",
   "license": "MIT",
   "repository": "sindresorhus/find-up",
@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -40,12 +40,14 @@
     "path"
   ],
   "dependencies": {
-    "path-exists": "^2.0.0",
-    "pinkie-promise": "^2.0.0"
+    "locate-path": "^2.0.0"
   },
   "devDependencies": {
     "ava": "*",
     "tempfile": "^1.1.1",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }

@@ -71,10 +71,9 @@ PriorityNode.prototype.remove = function remove () {
 PriorityNode.prototype.removeChild = function removeChild (child) {
   this.children.weight -= child.weight
   var index = utils.binarySearch(this.children.list, child, compareChildren)
-  assert(index !== -1)
-
-  // Remove the child
-  this.children.list.splice(index, 1)
+  if (index !== -1 && this.children.list.length >= index) {
+    this.children.list.splice(index, 1)
+  }
 }
 
 PriorityNode.prototype.removeChildren = function removeChildren () {

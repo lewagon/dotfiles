@@ -1,4 +1,4 @@
-This package parses SPDX license expression strings describing license terms, like [package.json license strings](https://docs.npmjs.com/files/package.json#license), into consistently structured ECMAScript objects.  The npm command-line interface depends on this package, as do many automatic license-audit tools.
+This package parses [SPDX license expression](https://spdx.org/spdx-specification-21-web-version#h.jxpfx0ykyb60) strings describing license terms, like [package.json license strings](https://docs.npmjs.com/files/package.json#license), into consistently structured ECMAScript objects.  The npm command-line interface depends on this package, as do many automatic license-audit tools.
 
 In a nutshell:
 
@@ -19,8 +19,9 @@ assert.throws(function () {
 })
 
 assert.deepEqual(
-  // Dual licensed under LGPL 2.1 or a combination of the Three-Clause
-  // BSD License and the MIT License.
+  // Dual licensed under either:
+  // - LGPL 2.1
+  // - a combination of Three-Clause BSD and MIT
   parse('(LGPL-2.1 OR BSD-3-Clause AND MIT)'),
   {
     left: {license: 'LGPL-2.1'},
@@ -38,12 +39,16 @@ The syntax comes from the [Software Package Data eXchange (SPDX)](https://spdx.o
 
 The bulk of the SPDX standard describes syntax and semantics of XML metadata files.  This package implements two lightweight, plain-text components of that larger standard:
 
-1.  The [license list](https://spdx.org/licenses), a mapping from specific string identifiers, like `Apache-2.0`, to standard form license texts and bolt-on license exceptions.  The [spdx-license-ids](https://www.npmjs.com/package/spdx-exceptions) and [spdx-exceptions](https://www.npmjs.com/package/spdx-license-ids) packages implement the license list.  They are development dependencies of this package.
+1.  The [license list](https://spdx.org/licenses), a mapping from specific string identifiers, like `Apache-2.0`, to standard form license texts and bolt-on license exceptions.  The [spdx-license-ids](https://www.npmjs.com/package/spdx-exceptions) and [spdx-exceptions](https://www.npmjs.com/package/spdx-license-ids) packages implement the license list.  `spdx-expression-parse` depends on and `require()`s them.
 
     Any license identifier from the license list is a valid license expression:
 
     ```javascript
-    require('spdx-license-ids').forEach(function (id) {
+    var identifiers = []
+      .concat(require('spdx-license-ids'))
+      .concat(require('spdx-license-ids/deprecated'))
+
+    identifiers.forEach(function (id) {
       assert.deepEqual(parse(id), {license: id})
     })
     ```
@@ -51,7 +56,7 @@ The bulk of the SPDX standard describes syntax and semantics of XML metadata fil
     So is any license identifier `WITH` a standardized license exception:
 
     ```javascript
-    require('spdx-license-ids').forEach(function (id) {
+    identifiers.forEach(function (id) {
       require('spdx-exceptions').forEach(function (e) {
         assert.deepEqual(
           parse(id + ' WITH ' + e),
@@ -61,12 +66,15 @@ The bulk of the SPDX standard describes syntax and semantics of XML metadata fil
     })
     ```
 
-2.  The license expression language, for describing simple and complex license terms, like `MIT` for MIT-licensed and `(GPL-2.0 OR Apache-2.0)` for dual-licensing under GPL 2.0 and Apache 2.0.  This package implements the license expression language.
+2.  The license expression language, for describing simple and complex license terms, like `MIT` for MIT-licensed and `(GPL-2.0 OR Apache-2.0)` for dual-licensing under GPL 2.0 and Apache 2.0.  `spdx-expression-parse` itself implements license expression language, exporting a parser.
 
     ```javascript
     assert.deepEqual(
-      // Licensed under a combination of the MIT License and a combination
-      // of LGPL 2.1 (or a later version) and the Three-Clause BSD License.
+      // Licensed under a combination of:
+      // - the MIT License AND
+      // - a combination of:
+      //   - LGPL 2.1 (or a later version) AND
+      //   - Three-Clause BSD
       parse('(MIT AND (LGPL-2.1+ AND BSD-3-Clause))'),
       {
         left: {license: 'MIT'},

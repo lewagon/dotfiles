@@ -5,7 +5,7 @@
  */
 
 /*!
- * Module dependancies
+ * Module dependencies
  */
 
 var inspect = require('./inspect');
@@ -20,7 +20,7 @@ var inspect = require('./inspect');
  *
  * @param {Mixed} first element to compare
  * @param {Mixed} second element to compare
- * @returns {Number} -1 if 'a' should come before 'b'; otherwise 1 
+ * @returns {Number} -1 if 'a' should come before 'b'; otherwise 1
  * @name compareByInspect
  * @namespace Utils
  * @api public

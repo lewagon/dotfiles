@@ -2,9 +2,8 @@
 
 var fs        =  require('graceful-fs')
   , path      =  require('path')
-  , minimatch =  require('minimatch')
+  , micromatch =  require('micromatch').isMatch
   , toString  =  Object.prototype.toString
-  , si        =  require('set-immediate-shim')
   ;
 
 
@@ -17,15 +16,11 @@ function isString (obj) {
   return toString.call(obj) === '[object String]';
 }
 
-function isRegExp (obj) {
-  return toString.call(obj) === '[object RegExp]';
-}
-
 function isUndefined (obj) {
   return obj === void 0;
 }
 
-/** 
+/**
  * Main function which ends up calling readdirRec and reads all files and directories in given root recursively.
  * @param { Object }   opts     Options to specify root (start directory), filters and recursion depth
  * @param { function } callback1  When callback2 is given calls back for each processed file - function (fileInfo) { ... },
@@ -37,7 +32,6 @@ function readdir(opts, callback1, callback2) {
   var stream
     , handleError
     , handleFatalError
-    , pending = 0
     , errors = []
     , readdirResult = {
         directories: []
@@ -73,7 +67,7 @@ function readdir(opts, callback1, callback2) {
   if (isUndefined(opts)){
     handleFatalError(new Error (
       'Need to pass at least one argument: opts! \n' +
-      'https://github.com/thlorenz/readdirp#options'
+      'https://github.com/paulmillr/readdirp#options'
       )
     );
     return stream;
@@ -101,8 +95,8 @@ function readdir(opts, callback1, callback2) {
 
     function isNegated (filters) {
 
-      function negated(f) { 
-        return f.indexOf('!') === 0; 
+      function negated(f) {
+        return f.indexOf('!') === 0;
       }
 
       var some = filters.some(negated);
@@ -115,7 +109,7 @@ function readdir(opts, callback1, callback2) {
           // if we detect illegal filters, bail out immediately
           throw new Error(
             'Cannot mix negated with non negated glob filters: ' + filters + '\n' +
-            'https://github.com/thlorenz/readdirp#filters'
+            'https://github.com/paulmillr/readdirp#filters'
           );
         }
       }
@@ -129,7 +123,7 @@ function readdir(opts, callback1, callback2) {
     } else if (isString(filter)) {
 
       return function (entryInfo) {
-        return minimatch(entryInfo.name, filter.trim());
+        return micromatch(entryInfo.name, filter.trim());
       };
 
     } else if (filter && Array.isArray(filter)) {
@@ -142,14 +136,14 @@ function readdir(opts, callback1, callback2) {
         // use AND to concat multiple negated filters
         function (entryInfo) {
           return filter.every(function (f) {
-            return minimatch(entryInfo.name, f);
+            return micromatch(entryInfo.name, f);
           });
         }
         :
         // use OR to concat multiple inclusive filters
         function (entryInfo) {
           return filter.some(function (f) {
-            return minimatch(entryInfo.name, f);
+            return micromatch(entryInfo.name, f);
           });
         };
     }
@@ -175,7 +169,7 @@ function readdir(opts, callback1, callback2) {
       if (entries.length === 0) {
         callProcessed([]);
       } else {
-        entries.forEach(function (entry) { 
+        entries.forEach(function (entry) {
 
           var fullPath = path.join(realCurrentDir, entry)
             , relPath  = path.join(relDir, entry);
@@ -207,11 +201,11 @@ function readdir(opts, callback1, callback2) {
     var args = arguments;
     if (aborted) return;
     if (paused) {
-      si(function () {
+      setImmediate(function () {
         readdirRec.apply(null, args);
       })
       return;
-    } 
+    }
 
     fs.readdir(currentDir, function (err, entries) {
       if (err) {
@@ -229,7 +223,7 @@ function readdir(opts, callback1, callback2) {
           if(opts.entryType === 'directories' || opts.entryType === 'both' || opts.entryType === 'all') {
             fileProcessed(di);
           }
-          readdirResult.directories.push(di); 
+          readdirResult.directories.push(di);
         });
 
         entryInfos
@@ -242,7 +236,7 @@ function readdir(opts, callback1, callback2) {
             if(opts.entryType === 'files' || opts.entryType === 'both' || opts.entryType === 'all') {
               fileProcessed(fi);
             }
-            readdirResult.files.push(fi); 
+            readdirResult.files.push(fi);
           });
 
         var pendingSubdirs = subdirs.length;
@@ -251,12 +245,12 @@ function readdir(opts, callback1, callback2) {
         if(pendingSubdirs === 0 || depth === opts.depth) {
           callCurrentDirProcessed();
         } else {
-          // recurse into subdirs, keeping track of which ones are done 
+          // recurse into subdirs, keeping track of which ones are done
           // and call back once all are processed
           subdirs.forEach(function (subdir) {
             readdirRec(subdir.fullPath, depth + 1, function () {
               pendingSubdirs = pendingSubdirs - 1;
-              if(pendingSubdirs === 0) { 
+              if(pendingSubdirs === 0) {
                 callCurrentDirProcessed();
               }
             });
@@ -284,10 +278,10 @@ function readdir(opts, callback1, callback2) {
     }
 
     realRoot = res;
-    readdirRec(opts.root, 0, function () { 
+    readdirRec(opts.root, 0, function () {
       // All errors are collected into the errors array
       if (errors.length > 0) {
-        allProcessed(errors, readdirResult); 
+        allProcessed(errors, readdirResult);
       } else {
         allProcessed(null, readdirResult);
       }

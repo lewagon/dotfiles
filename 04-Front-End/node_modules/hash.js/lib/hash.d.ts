@@ -1,7 +1,7 @@
 declare var hash: Hash;
 
 declare module "hash.js" {
-    export default hash;
+    export = hash;
 }
 
 interface BlockHash<T> {
@@ -14,7 +14,8 @@ interface MessageDigest<T> {
     blockSize: number
     outSize: number
     update(msg: any, enc?: 'hex'): T
-    digest(enc?: 'hex'): T
+    digest(): number[]
+    digest(enc: 'hex'): string
 }
 
 interface Hash {

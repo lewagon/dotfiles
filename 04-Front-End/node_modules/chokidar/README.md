@@ -1,4 +1,4 @@
-# Chokidar [![Mac/Linux Build Status](https://img.shields.io/travis/paulmillr/chokidar/master.svg?label=Mac%20OSX%20%26%20Linux)](https://travis-ci.org/paulmillr/chokidar) [![Windows Build status](https://img.shields.io/appveyor/ci/es128/chokidar/master.svg?label=Windows)](https://ci.appveyor.com/project/es128/chokidar/branch/master) [![Coverage Status](https://coveralls.io/repos/paulmillr/chokidar/badge.svg)](https://coveralls.io/r/paulmillr/chokidar) [![Join the chat at https://gitter.im/paulmillr/chokidar](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/paulmillr/chokidar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Chokidar [![Mac/Linux Build Status](https://img.shields.io/travis/paulmillr/chokidar/master.svg?label=Mac%20OSX%20%26%20Linux)](https://travis-ci.org/paulmillr/chokidar) [![Windows Build status](https://img.shields.io/appveyor/ci/paulmillr/chokidar/master.svg?label=Windows)](https://ci.appveyor.com/project/paulmillr/chokidar/branch/master) [![Coverage Status](https://coveralls.io/repos/paulmillr/chokidar/badge.svg)](https://coveralls.io/r/paulmillr/chokidar) [![Join the chat at https://gitter.im/paulmillr/chokidar](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/paulmillr/chokidar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.
 
@@ -12,7 +12,7 @@ Node.js `fs.watch`:
 * Doesn't report events at all when using editors like Sublime on OS X.
 * Often reports events twice.
 * Emits most changes as `rename`.
-* Has [a lot of other issues](https://github.com/joyent/node/search?q=fs.watch&type=Issues)
+* Has [a lot of other issues](https://github.com/nodejs/node/search?q=fs.watch&type=Issues)
 * Does not provide an easy way to recursively watch file trees.
 
 Node.js `fs.watchFile`:

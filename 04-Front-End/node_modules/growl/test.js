@@ -17,7 +17,7 @@ growl('Show pdf filesystem icon', { image: 'article.pdf' }, function(){
 })
 growl('Show pdf filesystem icon', { title: 'Use show()', image: 'article.pdf' })
 growl('here \' are \n some \\ characters that " need escaping', {}, function(error, stdout, stderr) {
-  if (error !== null) throw new Error('escaping failed:\n' + stdout + stderr);
+  if (error) throw new Error('escaping failed:\n' + stdout + stderr);
 })
 growl('Allow custom notifiers', { exec: 'echo XXX %s' }, function(error, stdout, stderr) {
   console.log(stdout);

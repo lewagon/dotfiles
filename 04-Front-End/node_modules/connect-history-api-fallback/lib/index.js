@@ -49,14 +49,15 @@ exports = module.exports = function historyApiFallback(options) {
       var rewrite = options.rewrites[i];
       var match = parsedUrl.pathname.match(rewrite.from);
       if (match !== null) {
-        rewriteTarget = evaluateRewriteRule(parsedUrl, match, rewrite.to);
+        rewriteTarget = evaluateRewriteRule(parsedUrl, match, rewrite.to, req);
         logger('Rewriting', req.method, req.url, 'to', rewriteTarget);
         req.url = rewriteTarget;
         return next();
       }
     }
 
-    if (parsedUrl.pathname.indexOf('.') !== -1 &&
+    var pathname = parsedUrl.pathname;
+    if (pathname.lastIndexOf('.') > pathname.lastIndexOf('/') &&
         options.disableDotRule !== true) {
       logger(
         'Not rewriting',
@@ -74,7 +75,7 @@ exports = module.exports = function historyApiFallback(options) {
   };
 };
 
-function evaluateRewriteRule(parsedUrl, match, rule) {
+function evaluateRewriteRule(parsedUrl, match, rule, req) {
   if (typeof rule === 'string') {
     return rule;
   } else if (typeof rule !== 'function') {
@@ -83,7 +84,8 @@ function evaluateRewriteRule(parsedUrl, match, rule) {
 
   return rule({
     parsedUrl: parsedUrl,
-    match: match
+    match: match,
+    request: req
   });
 }
 

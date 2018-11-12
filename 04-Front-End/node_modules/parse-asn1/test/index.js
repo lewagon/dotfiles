@@ -80,6 +80,33 @@ function testIt (keys) {
   })
 }
 
+function testEOL (keys) {
+  var publicKey = keys.public.toString()
+  var newLineRegex = /\r?\n/g
+  var genPrivate = function (replace) {
+    if (keys.private.key) {
+      return { key: keys.private.key.toString().replace(newLineRegex, replace), passphrase: keys.private.passphrase }
+    } else {
+      return keys.private.toString().replace(newLineRegex, replace)
+    }
+  }
+  var testN = {
+    private: genPrivate('\n'),
+    public: publicKey.replace(newLineRegex, '\n')
+  }
+  testIt(testN)
+  var testR = {
+    private: genPrivate('\r'),
+    public: publicKey.replace(newLineRegex, '\r')
+  }
+  testIt(testR)
+  var testRN = {
+    private: genPrivate('\r\n'),
+    public: publicKey.replace(newLineRegex, '\r\n')
+  }
+  testIt(testRN)
+}
+
 testIt(dsa)
 testIt(dsa2)
 testIt(rsa1024)
@@ -94,3 +121,18 @@ testIt(rsapass2)
 testIt(pass1024)
 testIt(pass1024)
 testIt(cert)
+
+testEOL(dsa)
+testEOL(dsa2)
+testEOL(rsa1024)
+testEOL(ec)
+testEOL(rsa2028)
+testEOL(nonrsa1024)
+testEOL(ecpass)
+testEOL(dsapass)
+testEOL(dsapass2)
+testEOL(rsapass)
+testEOL(rsapass2)
+testEOL(pass1024)
+testEOL(pass1024)
+testEOL(cert)

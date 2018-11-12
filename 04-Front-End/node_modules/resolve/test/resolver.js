@@ -3,7 +3,7 @@ var test = require('tape');
 var resolve = require('../');
 
 test('async foo', function (t) {
-    t.plan(10);
+    t.plan(12);
     var dir = path.join(__dirname, 'resolver');
 
     resolve('./foo', { basedir: dir }, function (err, res, pkg) {
@@ -30,9 +30,19 @@ test('async foo', function (t) {
         t.equal(pkg.main, 'resolver');
     });
 
+    resolve('./foo', { basedir: dir, filename: path.join(dir, 'baz.js') }, function (err, res) {
+        if (err) t.fail(err);
+        t.equal(res, path.join(dir, 'foo.js'));
+    });
+
     resolve('foo', { basedir: dir }, function (err) {
         t.equal(err.message, "Cannot find module 'foo' from '" + path.resolve(dir) + "'");
         t.equal(err.code, 'MODULE_NOT_FOUND');
+    });
+
+    // Test that filename is reported as the "from" value when passed.
+    resolve('foo', { basedir: dir, filename: path.join(dir, 'baz.js') }, function (err) {
+        t.equal(err.message, "Cannot find module 'foo' from '" + path.join(dir, 'baz.js') + "'");
     });
 });
 
@@ -55,7 +65,7 @@ test('bar', function (t) {
     resolve('foo', { basedir: dir + '/bar', 'package': { main: 'bar' } }, function (err, res, pkg) {
         if (err) t.fail(err);
         t.equal(res, path.join(dir, 'bar/node_modules/foo/index.js'));
-        t.equal(pkg, undefined);
+        t.equal(pkg.main, 'bar');
     });
 });
 
@@ -113,7 +123,7 @@ test('biz', function (t) {
     resolve('tiv', { basedir: dir + '/grux', 'package': { main: 'grux' } }, function (err, res, pkg) {
         if (err) t.fail(err);
         t.equal(res, path.join(dir, 'tiv/index.js'));
-        t.equal(pkg, undefined);
+        t.equal(pkg.main, 'grux');
     });
 
     resolve('tiv', { basedir: dir + '/garply' }, function (err, res, pkg) {
@@ -125,7 +135,7 @@ test('biz', function (t) {
     resolve('tiv', { basedir: dir + '/garply', 'package': { main: './lib' } }, function (err, res, pkg) {
         if (err) t.fail(err);
         t.equal(res, path.join(dir, 'tiv/index.js'));
-        t.equal(pkg, undefined);
+        t.equal(pkg.main, './lib');
     });
 
     resolve('grux', { basedir: dir + '/tiv' }, function (err, res, pkg) {
@@ -137,7 +147,7 @@ test('biz', function (t) {
     resolve('grux', { basedir: dir + '/tiv', 'package': { main: 'tiv' } }, function (err, res, pkg) {
         if (err) t.fail(err);
         t.equal(res, path.join(dir, 'grux/index.js'));
-        t.equal(pkg, undefined);
+        t.equal(pkg.main, 'tiv');
     });
 
     resolve('garply', { basedir: dir + '/tiv' }, function (err, res, pkg) {
@@ -176,7 +186,7 @@ test('normalize', function (t) {
 });
 
 test('cup', function (t) {
-    t.plan(4);
+    t.plan(5);
     var dir = path.join(__dirname, 'resolver');
 
     resolve('./cup', { basedir: dir, extensions: ['.js', '.coffee'] }, function (err, res) {
@@ -192,6 +202,11 @@ test('cup', function (t) {
     resolve('./cup', { basedir: dir, extensions: ['.js'] }, function (err, res) {
         t.equal(err.message, "Cannot find module './cup' from '" + path.resolve(dir) + "'");
         t.equal(err.code, 'MODULE_NOT_FOUND');
+    });
+
+    // Test that filename is reported as the "from" value when passed.
+    resolve('./cup', { basedir: dir, extensions: ['.js'], filename: path.join(dir, 'cupboard.js') }, function (err, res) {
+        t.equal(err.message, "Cannot find module './cup' from '" + path.join(dir, 'cupboard.js') + "'");
     });
 });
 
@@ -346,4 +361,42 @@ test('async dot slash main', function (t) {
         t.ok(new Date() - start < 50, 'resolve.sync timedout');
         t.end();
     });
+});
+
+test('not a directory', function (t) {
+    t.plan(5);
+    var path = './foo';
+    resolve(path, { basedir: __filename }, function (err, res, pkg) {
+        t.ok(err, 'a non-directory errors');
+        t.equal(arguments.length, 1);
+        t.equal(res, undefined);
+        t.equal(pkg, undefined);
+
+        t.equal(err && err.message, 'Cannot find module \'' + path + "' from '" + __filename + "'");
+    });
+});
+
+test('browser field in package.json', function (t) {
+    t.plan(3);
+
+    var dir = path.join(__dirname, 'resolver');
+    resolve(
+        './browser_field',
+        {
+            basedir: dir,
+            packageFilter: function packageFilter(pkg) {
+                if (pkg.browser) {
+                    pkg.main = pkg.browser;
+                    delete pkg.browser;
+                }
+                return pkg;
+            }
+        },
+        function (err, res, pkg) {
+            if (err) t.fail(err);
+            t.equal(res, path.join(dir, 'browser_field', 'b.js'));
+            t.equal(pkg && pkg.main, 'b');
+            t.equal(pkg && pkg.browser, undefined);
+        }
+    );
 });

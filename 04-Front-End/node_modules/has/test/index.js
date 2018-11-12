@@ -1,10 +1,10 @@
-global.expect = require('chai').expect;
-var has = require('../src');
+'use strict';
 
+var test = require('tape');
+var has = require('../');
 
-describe('has', function() {
-  it('works!', function() {
-    expect(has({}, 'hasOwnProperty')).to.be.false;
-    expect(has(Object.prototype, 'hasOwnProperty')).to.be.true;
-  });
+test('has', function (t) {
+  t.equal(has({}, 'hasOwnProperty'), false, 'object literal does not have own property "hasOwnProperty"');
+  t.equal(has(Object.prototype, 'hasOwnProperty'), true, 'Object.prototype has own property "hasOwnProperty"');
+  t.end();
 });

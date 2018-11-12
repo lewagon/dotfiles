@@ -1,6 +1,6 @@
 {
   "name": "path-exists",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Check if a path exists",
   "license": "MIT",
   "repository": "sindresorhus/path-exists",
@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -30,11 +30,11 @@
     "access",
     "stat"
   ],
-  "dependencies": {
-    "pinkie-promise": "^2.0.0"
-  },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }
