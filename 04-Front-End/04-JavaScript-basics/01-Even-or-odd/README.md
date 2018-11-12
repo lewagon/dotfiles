@@ -14,7 +14,30 @@ If not, Node might not be installed on your system. Please have a look at the Se
 
 ## Install Eslint Sublime Linter
 
-Before starting, take the time to [install Eslint Sublime Linter](https://kitt.lewagon.com/knowledge/tutorials/sublime_linter_es6) on your laptop. It will highlight instantly your syntax errors / style offenses in Sublime Text. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
+Before starting, take the time to install **Eslint Sublime Linter** in Sublime Text: 
+
+1. Open Sublime Text
+
+```bash
+stt
+```
+
+2. In **Sublime Text**, open **Package Control**'s menu:
+
+```bash
+# macOS
+cmd shift p
+
+# Ubuntu
+ctrl shift p
+```
+
+3. Type `install package` and select `Package Control: Install Package`
+4. Type `SublimeLinter-eslint` and select it
+5. Restart Sublime Text
+
+
+It will highlight instantly your syntax errors / style offenses in Sublime Text. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
 
 ## Specs
 
