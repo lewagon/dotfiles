@@ -33,4 +33,12 @@ When the `listItem` function passes all the tests, go on and code the `unordered
 
 ### Going further
 
-If your solution passes the tests using `forEach()`, try and find a better solution using `map()`!
+If your solution passes the tests using `forEach()`, try and find a better solution using [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)!
+
+Here's an example:
+
+```js
+const beatles = ["paul", "john", "ringo", "george"];
+const upcasedBeatles = beatles.map(beatle => beatle.toUpperCase());
+// => ["PAUL", "JOHN", "RINGO", "GEORGE"]
+```
