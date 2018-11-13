@@ -1,9 +1,11 @@
 const path = require("path");
 
 module.exports = {
-  entry: path.resolve(__dirname, "./lib/autocomplete.js"),
+  entry: path.resolve(__dirname, "./lib/index.js"),
+  mode: "development",
   output: {
-    filename: "build/application.js"
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js"
   },
   devtool: "sourcemap"
 };
