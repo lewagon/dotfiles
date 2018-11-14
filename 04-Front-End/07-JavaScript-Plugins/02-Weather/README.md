@@ -28,7 +28,7 @@ Before coding anything, try opening the url in your browser to see if you get a 
 &appid=YOUR_API_KEY
 ```
 
-Once you managed to display the API's response in your browser, go ahead and start writing your `fetch` request in the `lib/app.js` file.
+Once you managed to display the API's response in your browser, go ahead and start writing your `fetch` request in the `lib/index.js` file.
 
 Remember the syntax? Go on and `console.log()` what you get back from the API to make sure everything works fine before going any further.
 
@@ -81,7 +81,7 @@ Much better right?
 
 ### Get current location
 
-Last but not least, let's add a link to get the weather in the **current location**. We can do this with browsers's native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition).
+Last but not least, let's add a link to get the weather in the **current location**. We can do this with browsers' native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition).
 
 Add a link in your `index.html` file and bind it to the following callback:
 
@@ -102,6 +102,6 @@ You are not done yet. When your features work, it's tempting to leave the code a
 Remember the rules?
 
 - Write functions in separate files
-- `import` them in `lib/app.js` to call them
+- `import` them in `lib/index.js` to call them
 
 Happy Coding!
