@@ -258,7 +258,7 @@ const sound = new Audio('secret.mp3');
 
 We'd like `"secret.mp3"` to actually be a variable. A way to do that is to use another `data-` attribute in the HTML:
 
-```
+```html
 <div data-controller="zelda" data-zelda-sound="treasure.mp3">
   <button data-action="click->zelda#play" data-target="zelda.trigger" class="btn btn-success btn-lg">
     Treasure!
