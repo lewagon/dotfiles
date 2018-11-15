@@ -20,7 +20,7 @@ You are allowed to perform 60 calls / minute for free, which should be plenty en
 
 ### Current weather
 
-Read the [current weather API doc](https://openweathermap.org/current) to find the endpoint we want to call with `fetch`.
+Read the [current weather API doc](https://openweathermap.org/current) to find the endpoint we want to call with `fetch`. Found it? **Don't forget that a url always starts with `http://`** (or `https://`).
 
 Before coding anything, try opening the url in your browser to see if you get a response. If you get a `401` it means you forgot to pass your API key! You can add it to the url's **query string** with the `appid` parameter:
 
