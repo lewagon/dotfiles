@@ -171,7 +171,7 @@ If you look at the code above where we _did not use_ Stimulus, we were using the
 Re-open your HTML and add another `data-` attribute:
 
 ```html
-<button data-target="trigger" [...]>
+<button data-target="zelda.trigger" [...]>
 ```
 
 Our button now has a target named `trigger` that we will be able to reference directly in the Stimulus controller:
