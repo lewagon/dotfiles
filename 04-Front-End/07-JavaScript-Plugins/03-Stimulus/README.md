@@ -64,7 +64,7 @@ rake webpack
 open http://localhost:8080
 ```
 
-See how we enhanced the solution you came up with listening to the `ended` event on the `audio` element. That way, when the sound is finished playing, we re-enable the button and put back the
+See how we enhanced the solution you came up with listening to the `ended` event on the `audio` element. That way, when the sound is finished playing, we re-enable the button and put back the initial text.
 
 ### Refactoring with Stimulus
 
