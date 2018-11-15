@@ -6,7 +6,7 @@ The tagline of this framework is to be the "modest framework for the HTML you al
 
 The big upside of Stimulus is that if you use it, you will almost never have to do a manual `querySelector` or `addEventListener` anymore! Instead you will use conventional `data-` HTML attributes on specific element.
 
-This framwork uses [ES6 Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), a neat addition since 2015 (ES6 release year) to add Object Oriented Programming to JavaScript.
+This framework uses [ES6 Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), a neat addition since 2015 (ES6 release year) to add Object Oriented Programming to JavaScript.
 
 ## Getting Started: JavaScript Classes
 
