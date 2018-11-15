@@ -12,9 +12,9 @@ rake webpack
 
 Go to [`localhost:8080`](http://localhost:8080/) and open your console.
 
-### Get your API key
+### Get your API key (1 for you and your buddy)
 
-First, go to [OpenWeatherMap API](https://home.openweathermap.org/users/sign_up) and create an account to get your API key. You should find it [here](https://home.openweathermap.org/api_keys).
+First, go to [OpenWeatherMap API](https://home.openweathermap.org/users/sign_up) and create an account to get your API key. You should find it [here](https://home.openweathermap.org/api_keys). You all will be creating accounts at the same time, which can create some delay in the keys activation by Open Weather. To avoid this problem, **share your API key with your buddy** to limit the number of keys to activate.
 
 You are allowed to perform 60 calls / minute for free, which should be plenty enough for this challenge.
 
