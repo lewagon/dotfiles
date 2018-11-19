@@ -119,7 +119,46 @@ Replace the `???` so that your form send a request to `QuestionsController#answe
 
 We have not covered the Front-End aspect of a Rails project, but you can start on your own!
 
-Just open (or create) the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
+**A few words about SCSS**
+
+[.scss](https://sass-lang.com/guide) is a file extension that allows you to write your css more easily! Browsers only speak css, so there's internal magic that happens in Rails to **pre-process** the file and translate it in "vanilla" css. The main features of scss you need to know are:
+
+1. Variables
+
+```scss
+// Defining a variable
+$gray: #F4F4F4;
+
+body {
+  background: $gray; // Using this variable
+}
+```
+
+2. Nesting
+
+```scss
+.banner {
+  background: red;
+  h1 {
+    font-size: 50px;
+  }
+}
+```
+
+3. Chaining
+
+```scss
+a {
+  color: grey;
+  &:hover {
+    color: black;
+  }
+}
+```
+
+In a few days, we'll also see how to organize our stylesheets in multiple files, and load them using the `import` keyword!
+
+For now, just open (or create) the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
 
 ### 7 - Testing (Optional)
 
