@@ -181,7 +181,7 @@ Last, in your `Gemfile`, you need the following gems:
 ```ruby
 # Gemfile
 # [...]
-group :development, :test do
+group :test do
   # [...]
   gem 'capybara'             # should be there already
   gem 'selenium-webdriver'   # should be there already
