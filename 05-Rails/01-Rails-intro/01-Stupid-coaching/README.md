@@ -121,7 +121,7 @@ We have not covered the Front-End aspect of a Rails project, but you can start o
 
 **A few words about SCSS**
 
-[.scss](https://sass-lang.com/guide) is a file extension that allows you to write your css more easily! Browsers only speak css, so there's internal magic that happens in Rails to **pre-process** the file and translate it in "vanilla" css. The main features of scss you need to know are:
+[.scss](https://sass-lang.com/guide) is a file extension that allows you to write your css more easily! Browsers only speak css, so there's internal magic that happens in Rails to **pre-process** the file and translate it in "vanilla" css. The main features of `scss` you need to know are:
 
 1. Variables
 
