@@ -3,7 +3,7 @@
 # ⚠️ Try and answer them before running `rake`.
 
 def plants_resources_routes
-  # TODO: Return a `Array` the 7 `actions` that `resources :restaurants` would generate for you.
+  # TODO: Return a `Array` the 7 `routes` that `resources :restaurants` would generate for you.
   routes = []
 
   routes << "get '/restaurants', to: 'restaurants#index'"
