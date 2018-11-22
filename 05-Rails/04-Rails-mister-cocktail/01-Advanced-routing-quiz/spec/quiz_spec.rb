@@ -16,9 +16,9 @@ describe "quiz" do
     end
   end
 
-  describe "#nested_routes_for_n_to_n?" do
+  describe "#nested_routes_for_one_to_many?" do
     it "should return the correct answer" do
-      expect(nested_routes_for_n_to_n?).to eq(false)
+      expect(nested_routes_for_one_to_many?).to eq(false)
     end
   end
 

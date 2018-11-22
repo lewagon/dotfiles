@@ -12,7 +12,7 @@ def plants_resources_routes
   return routes
 end
 
-def nested_routes_for_n_to_n?
+def nested_routes_for_one_to_many?
   # TODO: Return a `true` or `false` to answer this question:
   # If you have a one to many relationship between you models like `Restaurant` and `Review` (belongs_to :restaurant),
   # do you always have to nest all your routes for `Review` in `Restaurant`?
