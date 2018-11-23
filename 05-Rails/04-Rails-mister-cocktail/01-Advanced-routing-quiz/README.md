@@ -18,7 +18,7 @@ Hint: a route follows this pattern: `verb "url", to: "controller#action"`
 ### Question 2
 
 Return a `true` or `false` to answer this question:
-If you have a many to many relationship between your models like `Restaurant` and `Review` (belongs_to :restaurant), do you always have to nest all your routes for `Review` in `Restaurant`?
+If you have a one to many relationship between your models like `Restaurant` and `Review` (belongs_to :restaurant), do you always have to nest all your routes for `Review` in `Restaurant`?
 
 ### Question 3
 
