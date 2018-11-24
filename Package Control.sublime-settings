@@ -1,4 +1,4 @@
-{
+
 	"bootstrapped": true,
 	"in_process_packages":
 	[
@@ -16,4 +16,4 @@
 		"Package Control",
 		"SCSS"
 	]
-}
+
