@@ -28,13 +28,13 @@ All your smart code is on the client-side. It does not post any data on the serv
 Here is an example on using `fetch` on the [JSON Placehoder API](https://jsonplaceholder.typicode.com/):
 
 ```js
-const data = { name: "George", body: "Hello from Kitt" };
+const postData = { name: "George", body: "Hello from Kitt" };
 const url = "https://jsonplaceholder.typicode.com/comments";
 
 fetch(url, {
   method: 'POST',
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(data)
+  body: JSON.stringify(postData)
 })
 .then(response => response.json())
 .then((data) => {
