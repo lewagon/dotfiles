@@ -13,7 +13,7 @@ def sorted_artists(db)
 end
 
 def love_tracks(db)
-  # TODO: return array of love songs' names sorted alphabetically
+  # TODO: return array of love songs' names
 end
 
 def long_tracks(db, min_length)

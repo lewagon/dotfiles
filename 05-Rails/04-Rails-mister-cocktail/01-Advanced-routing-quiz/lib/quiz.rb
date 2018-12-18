@@ -3,7 +3,7 @@
 # ⚠️ Try and answer them before running `rake`.
 
 def plants_resources_routes
-  # TODO: Return a `Array` the 7 `actions` that `resources :restaurants` would generate for you.
+  # TODO: Return an `Array` with the 7 `routes` that `resources :restaurants` would generate for you.
   routes = []
 
   routes << "get '/restaurants', to: 'restaurants#index'"
@@ -12,9 +12,9 @@ def plants_resources_routes
   return routes
 end
 
-def nested_routes_for_n_to_n?
+def nested_routes_for_one_to_many?
   # TODO: Return a `true` or `false` to answer this question:
-  # If you have a many to many relationship between you models like `Restaurant` and `Review` (belongs_to :restaurant),
+  # If you have a one to many relationship between you models like `Restaurant` and `Review` (belongs_to :restaurant),
   # do you always have to nest all your routes for `Review` in `Restaurant`?
 end
 

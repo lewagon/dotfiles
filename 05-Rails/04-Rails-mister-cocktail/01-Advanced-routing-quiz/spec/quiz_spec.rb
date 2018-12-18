@@ -12,13 +12,13 @@ describe "quiz" do
                           "patch '/restaurants/:id', to: 'restaurants#update'",
                           "delete '/restaurants/:id', to: 'restaurants#destroy'",
                         ]
-      expect(correct_actions.sort).to eq(plants_resources_routes.sort)
+      expect(plants_resources_routes.sort).to eq(correct_actions.sort)
     end
   end
 
-  describe "#nested_routes_for_n_to_n?" do
+  describe "#nested_routes_for_one_to_many?" do
     it "should return the correct answer" do
-      expect(nested_routes_for_n_to_n?).to eq(false)
+      expect(nested_routes_for_one_to_many?).to eq(false)
     end
   end
 

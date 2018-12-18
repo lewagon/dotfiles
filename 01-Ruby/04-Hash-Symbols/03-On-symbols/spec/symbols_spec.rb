@@ -3,7 +3,7 @@ require "symbols"
 describe "quiz" do
   it "should have correct quiz answers" do
     all_answers = are_identical_symbols_same_objects? &&
-                  !are_identical_strings_same_objects?
+                  are_identical_strings_same_objects? == false
     expect(all_answers).to be true
   end
 end

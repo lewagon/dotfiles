@@ -42,6 +42,8 @@ MissingRespondToMissing:
   Enabled: false
 Security/Open:
   Enabled: false
+Bundler/OrderedGems:
+  Enabled: false
 
 AllCops:
   TargetRubyVersion: 2.4
