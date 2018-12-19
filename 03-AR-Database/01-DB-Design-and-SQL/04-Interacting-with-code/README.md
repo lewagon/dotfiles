@@ -65,7 +65,7 @@ You'll notice that Sublime Text understand Heredoc and the syntax highlighting i
 
 ## Resources
 
-* [Into to Ruby/Sqlite3](https://rubyplus.com/articles/1141-SQL-Basics-SQLite3-Ruby-Driver-Basics)
+* [Intro to Ruby/Sqlite3](https://rubyplus.com/articles/1141-SQL-Basics-SQLite3-Ruby-Driver-Basics)
 * [SQL Commands](http://www.sqlcommands.net/)
 * [Course in 🇫🇷 about `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
