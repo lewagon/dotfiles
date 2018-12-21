@@ -230,7 +230,7 @@ WBuf.prototype.writeUInt16BE = function writeUInt16BE(v) {
 
   // Fast case - everything fits into the last buffer
   if (this.avail >= 2) {
-    this.last.writeUInt16BE(v, this.offset, true);
+    this.last.writeUInt16BE(v, this.offset);
     this.offset += 2;
     this.avail -= 2;
 
@@ -250,7 +250,7 @@ WBuf.prototype.writeUInt24BE = function writeUInt24BE(v) {
 
   // Fast case - everything fits into the last buffer
   if (this.avail >= 3) {
-    this.last.writeUInt16BE(v >>> 8, this.offset, true);
+    this.last.writeUInt16BE(v >>> 8, this.offset);
     this.last[this.offset + 2] = v & 0xff;
     this.offset += 3;
     this.avail -= 3;
@@ -258,7 +258,7 @@ WBuf.prototype.writeUInt24BE = function writeUInt24BE(v) {
 
   // Two bytes here
   } else if (this.avail >= 2) {
-    this.last.writeUInt16BE(v >>> 8, this.offset, true);
+    this.last.writeUInt16BE(v >>> 8, this.offset);
     this._next();
     this.last[this.offset++] = v & 0xff;
     this.avail--;
@@ -278,7 +278,7 @@ WBuf.prototype.writeUInt32BE = function writeUInt32BE(v) {
 
   // Fast case - everything fits into the last buffer
   if (this.avail >= 4) {
-    this.last.writeUInt32BE(v, this.offset, true);
+    this.last.writeUInt32BE(v, this.offset);
     this.offset += 4;
     this.avail -= 4;
     this._move(4);
@@ -309,11 +309,28 @@ WBuf.prototype.writeUInt24LE = function writeUInt24LE(num) {
 };
 
 WBuf.prototype.writeUInt32LE = function writeUInt32LE(num) {
-  var r = ((num & 0xff) << 24) |
-          (((num >>> 8) & 0xff) << 16) |
-          (((num >>> 16) & 0xff) << 8) |
-          (num >>> 24);
-  this.writeUInt32BE(r);
+  this._ensure(4);
+
+  // Fast case - everything fits into the last buffer
+  if (this.avail >= 4) {
+    this.last.writeUInt32LE(num, this.offset);
+    this.offset += 4;
+    this.avail -= 4;
+    this._move(4);
+
+  // Three bytes here
+  } else if (this.avail >= 3) {
+    this.writeUInt24LE(num & 0xffffff);
+    this._next();
+    this.last[this.offset++] = num >>> 24;
+    this.avail--;
+    this._move(1);
+
+  // Slow case, who cares
+  } else {
+    this.writeUInt16LE(num & 0xffff);
+    this.writeUInt16LE(num >>> 16);
+  }
 };
 
 WBuf.prototype.render = function render() {

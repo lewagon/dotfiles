@@ -1,31 +1,55 @@
-var isError = function(err) { // inlined from util so this works in the browser
-	return Object.prototype.toString.call(err) === '[object Error]';
-};
+'use strict'
 
-var thunky = function(fn) {
-	var run = function(callback) {
-		var stack = [callback];
+var nextTick = nextTickArgs
+process.nextTick(upgrade, 42) // pass 42 and see if upgrade is called with it
 
-		state = function(callback) {
-			stack.push(callback);
-		};
+module.exports = thunky
 
-		fn(function(err) {
-			var args = arguments;
-			var apply = function(callback) {
-				if (callback) callback.apply(null, args);
-			};
+function thunky (fn) {
+  var state = run
+  return thunk
 
-			state = isError(err) ? run : apply;
-			while (stack.length) apply(stack.shift());
-		});
-	};
+  function thunk (callback) {
+    state(callback || noop)
+  }
 
-	var state = run;
+  function run (callback) {
+    var stack = [callback]
+    state = wait
+    fn(done)
 
-	return function(callback) {
-		state(callback);
-	};
-};
+    function wait (callback) {
+      stack.push(callback)
+    }
 
-module.exports = thunky;
+    function done (err) {
+      var args = arguments
+      state = isError(err) ? run : finished
+      while (stack.length) finished(stack.shift())
+
+      function finished (callback) {
+        nextTick(apply, callback, args)
+      }
+    }
+  }
+}
+
+function isError (err) { // inlined from util so this works in the browser
+  return Object.prototype.toString.call(err) === '[object Error]'
+}
+
+function noop () {}
+
+function apply (callback, args) {
+  callback.apply(null, args)
+}
+
+function upgrade (val) {
+  if (val === 42) nextTick = process.nextTick
+}
+
+function nextTickArgs (fn, a, b) {
+  process.nextTick(function () {
+    fn(a, b)
+  })
+}

@@ -132,6 +132,6 @@ app.use(function (req, res, next) {
 
 app.use(express.static(path.join(__dirname, 'static')))
 
-var port = parseInt(process.env.ZUUL_PORT) || 8199
+var port = parseInt(process.env.AIRTAP_PORT) || 8199
 console.log('Test server listening on port', port)
 server.listen(port)

@@ -12,7 +12,7 @@ var transferFlags = require('./transferFlags');
 /**
  * ### .overwriteProperty(ctx, name, fn)
  *
- * Overwites an already existing property getter and provides
+ * Overwrites an already existing property getter and provides
  * access to previous value. Must return function to use as getter.
  *
  *     utils.overwriteProperty(chai.Assertion.prototype, 'ok', function (_super) {

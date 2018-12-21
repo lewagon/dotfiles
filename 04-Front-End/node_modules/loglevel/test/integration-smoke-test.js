@@ -10,6 +10,7 @@ define(['../lib/loglevel', 'test/test-helpers'], function(log, testHelpers) {
                 log.setLevel(log.levels.SILENT);
                 log.trace("trace");
                 log.debug("debug");
+                log.log("log");
                 log.info("info");
                 log.warn("warn");
                 log.error("error");
@@ -24,6 +25,7 @@ define(['../lib/loglevel', 'test/test-helpers'], function(log, testHelpers) {
 
                 log.trace("trace");
                 log.debug("debug");
+                log.log("log");
                 log.info("info");
                 log.warn("warn");
                 log.error("error");

@@ -4,10 +4,14 @@ module.exports = (iterable, mapper, opts) => new Promise((resolve, reject) => {
 		concurrency: Infinity
 	}, opts);
 
+	if (typeof mapper !== 'function') {
+		throw new TypeError('Mapper function is required');
+	}
+
 	const concurrency = opts.concurrency;
 
-	if (concurrency < 1) {
-		throw new TypeError('Expected `concurrency` to be a number from 1 and up');
+	if (!(typeof concurrency === 'number' && concurrency >= 1)) {
+		throw new TypeError(`Expected \`concurrency\` to be a number from 1 and up, got \`${concurrency}\` (${typeof concurrency})`);
 	}
 
 	const ret = [];

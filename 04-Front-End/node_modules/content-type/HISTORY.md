@@ -1,3 +1,13 @@
+1.0.4 / 2017-09-11
+==================
+
+  * perf: skip parameter parsing when no parameters
+
+1.0.3 / 2017-09-10
+==================
+
+  * perf: remove argument reassignment
+
 1.0.2 / 2016-05-09
 ==================
 

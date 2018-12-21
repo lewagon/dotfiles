@@ -41,7 +41,25 @@ Or with promise (if Promise are supported) :
 
 If `portfinder.getPortPromise()` is called on a Node version without Promise (<4), it will throw an Error unless [Bluebird](http://bluebirdjs.com/docs/getting-started.html) or any Promise pollyfill is used.
 
-By default `portfinder` will start searching from `8000`. To change this simply set `portfinder.basePort`.
+### Ports search scope 
+
+By default `portfinder` will start searching from `8000` and scan until maximum port number (`65535`) is reached. 
+
+You can change this globally by setting:
+
+```js
+portfinder.basePort = 3000;    // default: 8000
+portfinder.highestPort = 3333; // default: 65535
+```
+
+or by passing optional options object on each invocation:
+
+```js
+portfinder.getPort({
+    port: 3000,    // minimum port
+    stopPort: 3333 // maximum port
+}, callback);
+```
 
 ## Run Tests
 ``` bash

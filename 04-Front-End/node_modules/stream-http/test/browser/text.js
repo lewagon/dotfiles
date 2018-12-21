@@ -10,8 +10,7 @@ var browser = (new UAParser()).setUA(navigator.userAgent).getBrowser()
 var browserName = browser.name
 var browserVersion = browser.major
 // Response urls don't work on many browsers
-var skipResponseUrl = ((browserName === 'Opera') ||
-	(browserName === 'IE') ||
+var skipResponseUrl = ((browserName === 'IE') ||
 	(browserName === 'Edge') ||
 	(browserName === 'Chrome' && browserVersion <= 36) ||
 	(browserName === 'Firefox' && browserVersion <= 31) ||

@@ -281,6 +281,17 @@ describing the error.
 Adds a callback to execute when the socket becomes closed. The `event` object
 has `code` and `reason` attributes.
 
+#### `driver.on('ping', function(event) {})`
+
+Adds a callback block to execute when a ping is received. You do not need to
+handle this by sending a pong frame yourself; the driver handles this for you.
+
+#### `driver.on('pong', function(event) {})`
+
+Adds a callback block to execute when a pong is received. If this was in
+response to a ping you sent, you can also handle this event via the
+`driver.ping(message, function() { ... })` callback.
+
 #### `driver.addExtension(extension)`
 
 Registers a protocol extension whose operation will be negotiated via the
@@ -357,27 +368,3 @@ Returns the WebSocket version in use as a string. Will either be `hixie-75`,
 Returns a string containing the selected subprotocol, if any was agreed upon
 using the `Sec-WebSocket-Protocol` mechanism. This value becomes available after
 `emit('open')` has fired.
-
-
-## License
-
-(The MIT License)
-
-Copyright (c) 2010-2016 James Coglan
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the 'Software'), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

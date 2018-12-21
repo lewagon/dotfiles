@@ -1,0 +1,13 @@
+{
+  "name": "@webassemblyjs/helper-fsm",
+  "version": "1.7.11",
+  "description": "FSM implementation",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "author": "Mauro Bringolf",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "4291990bfc4648bc6676091a955d12dc3c7e5909"
+}

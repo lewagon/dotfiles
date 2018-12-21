@@ -2,15 +2,17 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
+"use strict";
+
 var EventEmitter = require("events").EventEmitter;
-var async = require("async");
+var async = require("neo-async");
 var chokidar = require("chokidar");
 var fs = require("graceful-fs");
 var path = require("path");
 
 var watcherManager = require("./watcherManager");
 
-var FS_ACCURACY = 10000;
+var FS_ACCURACY = 1000;
 
 
 function withoutCase(str) {
@@ -23,6 +25,7 @@ function Watcher(directoryWatcher, filePath, startTime) {
 	this.directoryWatcher = directoryWatcher;
 	this.path = filePath;
 	this.startTime = startTime && +startTime;
+	// TODO this.data seem to be only read, weird
 	this.data = 0;
 }
 
@@ -46,6 +49,7 @@ function DirectoryWatcher(directoryPath, options) {
 	this.path = directoryPath;
 	this.files = Object.create(null);
 	this.directories = Object.create(null);
+	var interval = typeof options.poll === "number" ? options.poll : undefined;
 	this.watcher = chokidar.watch(directoryPath, {
 		ignoreInitial: true,
 		persistent: true,
@@ -56,7 +60,8 @@ function DirectoryWatcher(directoryPath, options) {
 		ignorePermissionErrors: true,
 		ignored: options.ignored,
 		usePolling: options.poll ? true : undefined,
-		interval: typeof options.poll === "number" ? options.poll : undefined,
+		interval: interval,
+		binaryInterval: interval,
 		disableGlobbing: true
 	});
 	this.watcher.on("add", this.onFileAdded.bind(this));
@@ -70,6 +75,7 @@ function DirectoryWatcher(directoryPath, options) {
 	this.initialScanRemoved = [];
 	this.doInitialScan();
 	this.watchers = Object.create(null);
+	this.parentWatcher = null;
 	this.refs = 0;
 }
 module.exports = DirectoryWatcher;
@@ -83,7 +89,7 @@ DirectoryWatcher.prototype.setFileTime = function setFileTime(filePath, mtime, i
 
 	this.files[filePath] = [initial ? Math.min(now, mtime) : now, mtime];
 
-	// we add the fs accurency to reach the maximum possible mtime
+	// we add the fs accuracy to reach the maximum possible mtime
 	if(mtime)
 		mtime = mtime + FS_ACCURACY;
 
@@ -97,7 +103,7 @@ DirectoryWatcher.prototype.setFileTime = function setFileTime(filePath, mtime, i
 				});
 			}
 		}
-	} else if(!initial && mtime && type !== "add") {
+	} else if(!initial && mtime) {
 		if(this.watchers[withoutCase(filePath)]) {
 			this.watchers[withoutCase(filePath)].forEach(function(w) {
 				w.emit("change", mtime, type);
@@ -140,6 +146,11 @@ DirectoryWatcher.prototype.setDirectory = function setDirectory(directoryPath, e
 						w.emit("change", directoryPath, w.data, initial ? "initial" : type);
 					});
 				}
+				if(this.watchers[withoutCase(directoryPath) + "#directory"]) {
+					this.watchers[withoutCase(directoryPath) + "#directory"].forEach(function(w) {
+						w.emit("change", w.data, initial ? "initial" : type);
+					});
+				}
 			}
 		} else {
 			if(!exist) {
@@ -148,6 +159,11 @@ DirectoryWatcher.prototype.setDirectory = function setDirectory(directoryPath, e
 				delete this.directories[directoryPath];
 				if(!initial && this.watchers[withoutCase(this.path)]) {
 					this.watchers[withoutCase(this.path)].forEach(function(w) {
+						w.emit("change", directoryPath, w.data, initial ? "initial" : type);
+					});
+				}
+				if(this.watchers[withoutCase(directoryPath) + "#directory"]) {
+					this.watchers[withoutCase(directoryPath) + "#directory"].forEach(function(w) {
 						w.emit("change", directoryPath, w.data, initial ? "initial" : type);
 					});
 				}
@@ -231,7 +247,7 @@ DirectoryWatcher.prototype.onFileAdded = function onFileAdded(filePath, stat) {
 	if(filePath.indexOf(this.path) !== 0) return;
 	if(/[\\\/]/.test(filePath.substr(this.path.length + 1))) return;
 
-	this.setFileTime(filePath, +stat.mtime, false, "add");
+	this.setFileTime(filePath, +stat.mtime || +stat.ctime || 1, false, "add");
 };
 
 DirectoryWatcher.prototype.onDirectoryAdded = function onDirectoryAdded(directoryPath /*, stat */) {
@@ -243,7 +259,7 @@ DirectoryWatcher.prototype.onDirectoryAdded = function onDirectoryAdded(director
 DirectoryWatcher.prototype.onChange = function onChange(filePath, stat) {
 	if(filePath.indexOf(this.path) !== 0) return;
 	if(/[\\\/]/.test(filePath.substr(this.path.length + 1))) return;
-	var mtime = +stat.mtime;
+	var mtime = +stat.mtime || +stat.ctime || 1;
 	ensureFsAccuracy(mtime);
 	this.setFileTime(filePath, mtime, false, "change");
 };
@@ -272,6 +288,14 @@ DirectoryWatcher.prototype.onWatcherError = function onWatcherError(/* err */) {
 DirectoryWatcher.prototype.doInitialScan = function doInitialScan() {
 	fs.readdir(this.path, function(err, items) {
 		if(err) {
+			this.parentWatcher = watcherManager.watchFile(this.path + "#directory", this.options, 1);
+			this.parentWatcher.on("change", function(mtime, type) {
+				if(this.watchers[withoutCase(this.path)]) {
+					this.watchers[withoutCase(this.path)].forEach(function(w) {
+						w.emit("change", this.path, mtime, type);
+					}, this);
+				}
+			}.bind(this));
 			this.initialScan = false;
 			return;
 		}
@@ -285,7 +309,7 @@ DirectoryWatcher.prototype.doInitialScan = function doInitialScan() {
 				}
 				if(stat.isFile()) {
 					if(!this.files[itemPath])
-						this.setFileTime(itemPath, +stat.mtime, true);
+						this.setFileTime(itemPath, +stat.mtime || +stat.ctime || 1, true);
 				} else if(stat.isDirectory()) {
 					if(!this.directories[itemPath])
 						this.setDirectory(itemPath, true, true);
@@ -338,6 +362,7 @@ DirectoryWatcher.prototype.close = function() {
 			this.directories[dir].close();
 		}, this);
 	}
+	if(this.parentWatcher) this.parentWatcher.close();
 	this.emit("closed");
 };
 
@@ -349,8 +374,4 @@ function ensureFsAccuracy(mtime) {
 		FS_ACCURACY = 10;
 	else if(FS_ACCURACY > 100 && mtime % 100 !== 0)
 		FS_ACCURACY = 100;
-	else if(FS_ACCURACY > 1000 && mtime % 1000 !== 0)
-		FS_ACCURACY = 1000;
-	else if(FS_ACCURACY > 2000 && mtime % 2000 !== 0)
-		FS_ACCURACY = 2000;
 }

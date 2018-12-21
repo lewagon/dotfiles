@@ -4,6 +4,16 @@ var path = require('path');
 var caller = require('./caller.js');
 var nodeModulesPaths = require('./node-modules-paths.js');
 
+var defaultIsFile = function isFile(file, cb) {
+    fs.stat(file, function (err, stat) {
+        if (!err) {
+            return cb(null, stat.isFile() || stat.isFIFO());
+        }
+        if (err.code === 'ENOENT' || err.code === 'ENOTDIR') return cb(null, false);
+        return cb(err);
+    });
+};
+
 module.exports = function resolve(x, options, callback) {
     var cb = callback;
     var opts = options || {};
@@ -18,34 +28,27 @@ module.exports = function resolve(x, options, callback) {
         });
     }
 
-    var isFile = opts.isFile || function (file, cb) {
-        fs.stat(file, function (err, stat) {
-            if (!err) {
-                return cb(null, stat.isFile() || stat.isFIFO());
-            }
-            if (err.code === 'ENOENT' || err.code === 'ENOTDIR') return cb(null, false);
-            return cb(err);
-        });
-    };
+    var isFile = opts.isFile || defaultIsFile;
     var readFile = opts.readFile || fs.readFile;
 
     var extensions = opts.extensions || ['.js'];
-    var y = opts.basedir || path.dirname(caller());
+    var basedir = opts.basedir || path.dirname(caller());
+    var parent = opts.filename || basedir;
 
     opts.paths = opts.paths || [];
 
     if (/^(?:\.\.?(?:\/|$)|\/|([A-Za-z]:)?[/\\])/.test(x)) {
-        var res = path.resolve(y, x);
+        var res = path.resolve(basedir, x);
         if (x === '..' || x.slice(-1) === '/') res += '/';
-        if (/\/$/.test(x) && res === y) {
+        if (/\/$/.test(x) && res === basedir) {
             loadAsDirectory(res, opts.package, onfile);
         } else loadAsFile(res, opts.package, onfile);
-    } else loadNodeModules(x, y, function (err, n, pkg) {
+    } else loadNodeModules(x, basedir, function (err, n, pkg) {
         if (err) cb(err);
         else if (n) cb(null, n, pkg);
         else if (core[x]) return cb(null, x);
         else {
-            var moduleError = new Error("Cannot find module '" + x + "' from '" + y + "'");
+            var moduleError = new Error("Cannot find module '" + x + "' from '" + parent + "'");
             moduleError.code = 'MODULE_NOT_FOUND';
             cb(moduleError);
         }
@@ -58,7 +61,7 @@ module.exports = function resolve(x, options, callback) {
             if (err) cb(err);
             else if (d) cb(null, d, pkg);
             else {
-                var moduleError = new Error("Cannot find module '" + x + "' from '" + y + "'");
+                var moduleError = new Error("Cannot find module '" + x + "' from '" + parent + "'");
                 moduleError.code = 'MODULE_NOT_FOUND';
                 cb(moduleError);
             }
@@ -183,12 +186,12 @@ module.exports = function resolve(x, options, callback) {
         var dir = dirs[0];
 
         var file = path.join(dir, x);
-        loadAsFile(file, undefined, onfile);
+        loadAsFile(file, opts.package, onfile);
 
         function onfile(err, m, pkg) {
             if (err) return cb(err);
             if (m) return cb(null, m, pkg);
-            loadAsDirectory(path.join(dir, x), undefined, ondir);
+            loadAsDirectory(path.join(dir, x), opts.package, ondir);
         }
 
         function ondir(err, n, pkg) {

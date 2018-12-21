@@ -43,15 +43,18 @@ assert.equal(undefined, mime.extension('unrecognized'));
 
 assert.equal('application/font-woff', mime.lookup('file.woff'));
 assert.equal('application/octet-stream', mime.lookup('file.buffer'));
-assert.equal('audio/mp4', mime.lookup('file.m4a'));
-assert.equal('font/opentype', mime.lookup('file.otf'));
+// TODO: Uncomment once #157 is resolved
+// assert.equal('audio/mp4', mime.lookup('file.m4a'));
+assert.equal('font/otf', mime.lookup('file.otf'));
 
 //
 // Test charsets
 //
 
 assert.equal('UTF-8', mime.charsets.lookup('text/plain'));
-assert.equal(undefined, mime.charsets.lookup(mime.types.js));
+assert.equal('UTF-8', mime.charsets.lookup(mime.types.js));
+assert.equal('UTF-8', mime.charsets.lookup(mime.types.json));
+assert.equal(undefined, mime.charsets.lookup(mime.types.bin));
 assert.equal('fallback', mime.charsets.lookup('application/octet-stream', 'fallback'));
 
 console.log('\nAll tests passed');

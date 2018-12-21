@@ -14,7 +14,8 @@ var Cell = function(tuple) {
 };
 
 Cell.prototype.pending = function(direction) {
-  this._functors[direction].pending += 1;
+  var functor = this._functors[direction];
+  if (!functor._stopped) functor.pending += 1;
 };
 
 Cell.prototype.incoming = function(error, message, callback, context) {

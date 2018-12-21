@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking form</title>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+
+        <div class="form-container">
+          <div class="header">
+            <div class="header-row">
+              <div class="big-bold" id="price" data-amount-cents="15000">150€</div>
+              <div class="small-light"> / PARTICIPANT</div>
+            </div>
+            <div class="header-row">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="flex-between">
+            Participants:
+            <div class="actions">
+              <a href="#" class="btn round-bordered incrementer minus" disabled data-offset="-1">-</a>
+              <span id="counter" data-count="1">1</span>
+              <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+            </div>
+          </div>
+
+          <form>
+            <input type="number" value="15000" disabled class="form-control" id="price-input" name="price-cents">
+            <input type="submit" value="Pay 150€" class="btn btn-primary" id="submit">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

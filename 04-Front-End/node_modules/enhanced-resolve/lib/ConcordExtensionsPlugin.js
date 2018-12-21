@@ -2,36 +2,39 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-var concord = require("./concord");
-var DescriptionFileUtils = require("./DescriptionFileUtils");
-var forEachBail = require("./forEachBail");
-var createInnerCallback = require("./createInnerCallback");
+"use strict";
 
-function ConcordExtensionsPlugin(source, options, target) {
-	this.source = source;
-	this.options = options;
-	this.target = target;
-}
-module.exports = ConcordExtensionsPlugin;
+const concord = require("./concord");
+const DescriptionFileUtils = require("./DescriptionFileUtils");
+const forEachBail = require("./forEachBail");
 
-ConcordExtensionsPlugin.prototype.apply = function(resolver) {
-	var target = this.target;
-	resolver.plugin(this.source, function(request, callback) {
-		var concordField = DescriptionFileUtils.getField(request.descriptionFileData, "concord");
-		if(!concordField) return callback();
-		var extensions = concord.getExtensions(request.context, concordField);
-		if(!extensions) return callback();
-		var topLevelCallback = callback;
-		forEachBail(extensions, function(appending, callback) {
-			var obj = Object.assign({}, request, {
-				path: request.path + appending,
-				relativePath: request.relativePath && (request.relativePath + appending)
+module.exports = class ConcordExtensionsPlugin {
+	constructor(source, options, target) {
+		this.source = source;
+		this.options = options;
+		this.target = target;
+	}
+
+	apply(resolver) {
+		const target = resolver.ensureHook(this.target);
+		resolver.getHook(this.source).tapAsync("ConcordExtensionsPlugin", (request, resolveContext, callback) => {
+			const concordField = DescriptionFileUtils.getField(request.descriptionFileData, "concord");
+			if(!concordField) return callback();
+			const extensions = concord.getExtensions(request.context, concordField);
+			if(!extensions) return callback();
+			forEachBail(extensions, (appending, callback) => {
+				const obj = Object.assign({}, request, {
+					path: request.path + appending,
+					relativePath: request.relativePath && (request.relativePath + appending)
+				});
+				resolver.doResolve(target, obj, "concord extension: " + appending, resolveContext, callback);
+			}, (err, result) => {
+				if(err) return callback(err);
+
+				// Don't allow other processing
+				if(result === undefined) return callback(null, null);
+				callback(null, result);
 			});
-			resolver.doResolve(target, obj, "concord extension: " + appending, createInnerCallback(callback, topLevelCallback));
-		}, function(err, result) {
-			if(arguments.length > 0) return callback(err, result);
-
-			callback(null, null);
 		});
-	});
+	}
 };

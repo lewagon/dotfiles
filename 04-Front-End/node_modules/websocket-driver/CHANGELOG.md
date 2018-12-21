@@ -1,3 +1,8 @@
+### 0.7.0 / 2017-09-11
+
+* Add `ping` and `pong` to the set of events users can listen to
+* Replace the bindings to Node's HTTP parser with `http-parser-js`
+
 ### 0.6.5 / 2016-05-20
 
 * Don't mutate buffers passed in by the application when masking

@@ -1,3 +1,13 @@
+0.3.19
+======
+
+  * Update `node-uuid` version #224
+  * Add `disable_cors` option to prevent CORS headers from being added to responses #218
+  * Add `dnt` header to whitelist #212
+  * Add `x-forwarded-host` and `x-forwarded-port` headers to whitelist #208
+  * Update `sockjs_url` default to latest 1.x target #223
+  * Updated hapi.js example #216
+
 0.3.18
 ======
 

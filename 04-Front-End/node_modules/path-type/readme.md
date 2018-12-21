@@ -13,9 +13,9 @@ $ npm install --save path-type
 ## Usage
 
 ```js
-var pathType = require('path-type');
+const pathType = require('path-type');
 
-pathType.file('package.json').then(function (isFile) {
+pathType.file('package.json').then(isFile => {
 	console.log(isFile);
 	//=> true
 })
@@ -28,15 +28,15 @@ pathType.file('package.json').then(function (isFile) {
 ### .dir(path)
 ### .symlink(path)
 
-Returns a promise that resolves to a boolean of whether the path is the checked type.
+Returns a `Promise` for a `boolean` of whether the path is the checked type.
 
 ### .fileSync(path)
 ### .dirSync(path)
 ### .symlinkSync(path)
 
-Returns a boolean of whether the path is the checked type.
+Returns a `boolean` of whether the path is the checked type.
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

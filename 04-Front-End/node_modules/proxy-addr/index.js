@@ -11,37 +11,37 @@
  * @public
  */
 
-module.exports = proxyaddr;
-module.exports.all = alladdrs;
-module.exports.compile = compile;
+module.exports = proxyaddr
+module.exports.all = alladdrs
+module.exports.compile = compile
 
 /**
  * Module dependencies.
  * @private
  */
 
-var forwarded = require('forwarded');
-var ipaddr = require('ipaddr.js');
+var forwarded = require('forwarded')
+var ipaddr = require('ipaddr.js')
 
 /**
  * Variables.
  * @private
  */
 
-var digitre = /^[0-9]+$/;
-var isip = ipaddr.isValid;
-var parseip = ipaddr.parse;
+var DIGIT_REGEXP = /^[0-9]+$/
+var isip = ipaddr.isValid
+var parseip = ipaddr.parse
 
 /**
  * Pre-defined IP ranges.
  * @private
  */
 
-var ipranges = {
+var IP_RANGES = {
   linklocal: ['169.254.0.0/16', 'fe80::/10'],
   loopback: ['127.0.0.1/8', '::1/128'],
   uniquelocal: ['10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16', 'fc00::/7']
-};
+}
 
 /**
  * Get all addresses in the request, optionally stopping
@@ -52,26 +52,26 @@ var ipranges = {
  * @public
  */
 
-function alladdrs(req, trust) {
+function alladdrs (req, trust) {
   // get addresses
-  var addrs = forwarded(req);
+  var addrs = forwarded(req)
 
   if (!trust) {
     // Return all addresses
-    return addrs;
+    return addrs
   }
 
   if (typeof trust !== 'function') {
-    trust = compile(trust);
+    trust = compile(trust)
   }
 
   for (var i = 0; i < addrs.length - 1; i++) {
-    if (trust(addrs[i], i)) continue;
+    if (trust(addrs[i], i)) continue
 
-    addrs.length = i + 1;
+    addrs.length = i + 1
   }
 
-  return addrs;
+  return addrs
 }
 
 /**
@@ -81,35 +81,35 @@ function alladdrs(req, trust) {
  * @private
  */
 
-function compile(val) {
+function compile (val) {
   if (!val) {
-    throw new TypeError('argument is required');
+    throw new TypeError('argument is required')
   }
 
-  var trust;
+  var trust
 
   if (typeof val === 'string') {
-    trust = [val];
+    trust = [val]
   } else if (Array.isArray(val)) {
-    trust = val.slice();
+    trust = val.slice()
   } else {
-    throw new TypeError('unsupported trust argument');
+    throw new TypeError('unsupported trust argument')
   }
 
   for (var i = 0; i < trust.length; i++) {
-    val = trust[i];
+    val = trust[i]
 
-    if (!ipranges.hasOwnProperty(val)) {
-      continue;
+    if (!IP_RANGES.hasOwnProperty(val)) {
+      continue
     }
 
     // Splice in pre-defined range
-    val = ipranges[val];
-    trust.splice.apply(trust, [i, 1].concat(val));
-    i += val.length - 1;
+    val = IP_RANGES[val]
+    trust.splice.apply(trust, [i, 1].concat(val))
+    i += val.length - 1
   }
 
-  return compileTrust(compileRangeSubnets(trust));
+  return compileTrust(compileRangeSubnets(trust))
 }
 
 /**
@@ -119,14 +119,14 @@ function compile(val) {
  * @private
  */
 
-function compileRangeSubnets(arr) {
-  var rangeSubnets = new Array(arr.length);
+function compileRangeSubnets (arr) {
+  var rangeSubnets = new Array(arr.length)
 
   for (var i = 0; i < arr.length; i++) {
-    rangeSubnets[i] = parseipNotation(arr[i]);
+    rangeSubnets[i] = parseipNotation(arr[i])
   }
 
-  return rangeSubnets;
+  return rangeSubnets
 }
 
 /**
@@ -136,14 +136,14 @@ function compileRangeSubnets(arr) {
  * @private
  */
 
-function compileTrust(rangeSubnets) {
+function compileTrust (rangeSubnets) {
   // Return optimized function based on length
-  var len = rangeSubnets.length;
+  var len = rangeSubnets.length
   return len === 0
     ? trustNone
     : len === 1
-    ? trustSingle(rangeSubnets[0])
-    : trustMulti(rangeSubnets);
+      ? trustSingle(rangeSubnets[0])
+      : trustMulti(rangeSubnets)
 }
 
 /**
@@ -153,46 +153,46 @@ function compileTrust(rangeSubnets) {
  * @private
  */
 
-function parseipNotation(note) {
-  var pos = note.lastIndexOf('/');
+function parseipNotation (note) {
+  var pos = note.lastIndexOf('/')
   var str = pos !== -1
     ? note.substring(0, pos)
-    : note;
+    : note
 
   if (!isip(str)) {
-    throw new TypeError('invalid IP address: ' + str);
+    throw new TypeError('invalid IP address: ' + str)
   }
 
-  var ip = parseip(str);
+  var ip = parseip(str)
 
   if (pos === -1 && ip.kind() === 'ipv6' && ip.isIPv4MappedAddress()) {
     // Store as IPv4
-    ip = ip.toIPv4Address();
+    ip = ip.toIPv4Address()
   }
 
   var max = ip.kind() === 'ipv6'
     ? 128
-    : 32;
+    : 32
 
   var range = pos !== -1
     ? note.substring(pos + 1, note.length)
-    : null;
+    : null
 
   if (range === null) {
-    range = max;
-  } else if (digitre.test(range)) {
-    range = parseInt(range, 10);
+    range = max
+  } else if (DIGIT_REGEXP.test(range)) {
+    range = parseInt(range, 10)
   } else if (ip.kind() === 'ipv4' && isip(range)) {
-    range = parseNetmask(range);
+    range = parseNetmask(range)
   } else {
-    range = null;
+    range = null
   }
 
   if (range <= 0 || range > max) {
-    throw new TypeError('invalid range on address: ' + note);
+    throw new TypeError('invalid range on address: ' + note)
   }
 
-  return [ip, range];
+  return [ip, range]
 }
 
 /**
@@ -202,13 +202,13 @@ function parseipNotation(note) {
  * @private
  */
 
-function parseNetmask(netmask) {
-  var ip = parseip(netmask);
-  var kind = ip.kind();
+function parseNetmask (netmask) {
+  var ip = parseip(netmask)
+  var kind = ip.kind()
 
   return kind === 'ipv4'
     ? ip.prefixLengthFromSubnetMask()
-    : null;
+    : null
 }
 
 /**
@@ -219,19 +219,19 @@ function parseNetmask(netmask) {
  * @public
  */
 
-function proxyaddr(req, trust) {
+function proxyaddr (req, trust) {
   if (!req) {
-    throw new TypeError('req argument is required');
+    throw new TypeError('req argument is required')
   }
 
   if (!trust) {
-    throw new TypeError('trust argument is required');
+    throw new TypeError('trust argument is required')
   }
 
-  var addrs = alladdrs(req, trust);
-  var addr = addrs[addrs.length - 1];
+  var addrs = alladdrs(req, trust)
+  var addr = addrs[addrs.length - 1]
 
-  return addr;
+  return addr
 }
 
 /**
@@ -240,8 +240,8 @@ function proxyaddr(req, trust) {
  * @private
  */
 
-function trustNone() {
-  return false;
+function trustNone () {
+  return false
 }
 
 /**
@@ -251,44 +251,44 @@ function trustNone() {
  * @private
  */
 
-function trustMulti(subnets) {
-  return function trust(addr) {
-    if (!isip(addr)) return false;
+function trustMulti (subnets) {
+  return function trust (addr) {
+    if (!isip(addr)) return false
 
-    var ip = parseip(addr);
-    var ipconv;
-    var kind = ip.kind();
+    var ip = parseip(addr)
+    var ipconv
+    var kind = ip.kind()
 
     for (var i = 0; i < subnets.length; i++) {
-      var subnet = subnets[i];
-      var subnetip = subnet[0];
-      var subnetkind = subnetip.kind();
-      var subnetrange = subnet[1];
-      var trusted = ip;
+      var subnet = subnets[i]
+      var subnetip = subnet[0]
+      var subnetkind = subnetip.kind()
+      var subnetrange = subnet[1]
+      var trusted = ip
 
       if (kind !== subnetkind) {
         if (subnetkind === 'ipv4' && !ip.isIPv4MappedAddress()) {
           // Incompatible IP addresses
-          continue;
+          continue
         }
 
         if (!ipconv) {
           // Convert IP to match subnet IP kind
           ipconv = subnetkind === 'ipv4'
             ? ip.toIPv4Address()
-            : ip.toIPv4MappedAddress();
+            : ip.toIPv4MappedAddress()
         }
 
-        trusted = ipconv;
+        trusted = ipconv
       }
 
       if (trusted.match(subnetip, subnetrange)) {
-        return true;
+        return true
       }
     }
 
-    return false;
-  };
+    return false
+  }
 }
 
 /**
@@ -298,30 +298,30 @@ function trustMulti(subnets) {
  * @private
  */
 
-function trustSingle(subnet) {
-  var subnetip = subnet[0];
-  var subnetkind = subnetip.kind();
-  var subnetisipv4 = subnetkind === 'ipv4';
-  var subnetrange = subnet[1];
+function trustSingle (subnet) {
+  var subnetip = subnet[0]
+  var subnetkind = subnetip.kind()
+  var subnetisipv4 = subnetkind === 'ipv4'
+  var subnetrange = subnet[1]
 
-  return function trust(addr) {
-    if (!isip(addr)) return false;
+  return function trust (addr) {
+    if (!isip(addr)) return false
 
-    var ip = parseip(addr);
-    var kind = ip.kind();
+    var ip = parseip(addr)
+    var kind = ip.kind()
 
     if (kind !== subnetkind) {
       if (subnetisipv4 && !ip.isIPv4MappedAddress()) {
         // Incompatible IP addresses
-        return false;
+        return false
       }
 
       // Convert IP to match subnet IP kind
       ip = subnetisipv4
         ? ip.toIPv4Address()
-        : ip.toIPv4MappedAddress();
+        : ip.toIPv4MappedAddress()
     }
 
-    return ip.match(subnetip, subnetrange);
-  };
+    return ip.match(subnetip, subnetrange)
+  }
 }

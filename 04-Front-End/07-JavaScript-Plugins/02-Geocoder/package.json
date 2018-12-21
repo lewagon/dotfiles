@@ -1,0 +1,6 @@
+{
+  "name": "02-Weather",
+  "version": "1.0.0",
+  "main": "lib/app.js",
+  "license": "UNLICENSED"
+}

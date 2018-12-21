@@ -1,6 +1,5 @@
 'use strict';
 
-var si =  require('set-immediate-shim');
 var stream = require('readable-stream');
 var util = require('util');
 
@@ -70,7 +69,7 @@ proto._done = function () {
 // within the initial event loop before any event listeners subscribed
 proto._handleError = function (err) {
   var self = this;
-  si(function () {
+  setImmediate(function () {
     if (self._paused) return self._warnings.push(err);
     if (!self._destroyed) self.emit('warn', err);
   });
@@ -78,7 +77,7 @@ proto._handleError = function (err) {
 
 proto._handleFatalError = function (err) {
   var self = this;
-  si(function () {
+  setImmediate(function () {
     if (self._paused) return self._errors.push(err);
     if (!self._destroyed) self.emit('error', err);
   });

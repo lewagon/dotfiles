@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Promo Chat</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <div id="chatroom">
+            <h1>CHAT-ROOM</h1>
+
+            <form action="#" id="comment-form">
+
+              <div class="form-group">
+                <label for="your-message">Your comment</label>
+                <textarea type="text" name="content" id="your-message" class="form-control" placeholder="Here is my message.."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="your-name">From</label>
+                <input type="text" name="content" id="your-name" class="form-control" placeholder="Bob">
+              </div>
+              <input type="submit" value="Send" class="btn btn-primary">
+            </form>
+
+            <div id="messages">
+              <ul class="list-unstyled">
+                <li>A sample message (posted <span class="date">10 minutes ago</span>) by John</li>
+              </ul>
+
+              <button class="btn btn-danger" id="refresh">Refresh Chat</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

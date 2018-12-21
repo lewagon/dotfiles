@@ -2,25 +2,27 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-var createInnerCallback = require("./createInnerCallback");
+"use strict";
 
-function ModuleKindPlugin(source, target) {
-	this.source = source;
-	this.target = target;
-}
-module.exports = ModuleKindPlugin;
+module.exports = class ModuleKindPlugin {
+	constructor(source, target) {
+		this.source = source;
+		this.target = target;
+	}
 
-ModuleKindPlugin.prototype.apply = function(resolver) {
-	var target = this.target;
-	resolver.plugin(this.source, function(request, callback) {
-		if(!request.module) return callback();
-		var obj = Object.assign({}, request);
-		delete obj.module;
-		resolver.doResolve(target, obj, "resolve as module", createInnerCallback(function(err, result) {
-			if(arguments.length > 0) return callback(err, result);
+	apply(resolver) {
+		const target = resolver.ensureHook(this.target);
+		resolver.getHook(this.source).tapAsync("ModuleKindPlugin", (request, resolveContext, callback) => {
+			if(!request.module) return callback();
+			const obj = Object.assign({}, request);
+			delete obj.module;
+			resolver.doResolve(target, obj, "resolve as module", resolveContext, (err, result) => {
+				if(err) return callback(err);
 
-			// Don't allow other alternatives
-			callback(null, null);
-		}, callback));
-	});
+				// Don't allow other alternatives
+				if(result === undefined) return callback(null, null);
+				callback(null, result);
+			});
+		});
+	}
 };

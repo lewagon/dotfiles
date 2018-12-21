@@ -1,6 +1,6 @@
 {
   "name": "function-bind",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Implementation of Function.prototype.bind",
   "keywords": [
     "function",
@@ -27,23 +27,19 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "tape": "^4.4.0",
+    "@ljharb/eslint-config": "^12.2.1",
     "covert": "^1.1.0",
-    "jscs": "^2.9.0",
-    "eslint": "^2.0.0",
-    "@ljharb/eslint-config": "^2.1.0"
+    "eslint": "^4.5.0",
+    "jscs": "^3.0.7",
+    "tape": "^4.8.0"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/Raynos/function-bind/raw/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "scripts": {
-    "test": "npm run lint && npm run tests-only && npm run coverage-quiet",
+    "pretest": "npm run lint",
+    "test": "npm run tests-only",
+    "posttest": "npm run coverage -- --quiet",
     "tests-only": "node test",
     "coverage": "covert test/*.js",
-    "coverage-quiet": "covert test/*.js --quiet",
     "lint": "npm run jscs && npm run eslint",
     "jscs": "jscs *.js */*.js",
     "eslint": "eslint *.js */*.js"
@@ -65,4 +61,3 @@
     ]
   }
 }
-

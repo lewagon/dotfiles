@@ -14,13 +14,6 @@ module.exports = vary
 module.exports.append = append
 
 /**
- * Regular expression to split on commas, trimming spaces
- * @private
- */
-
-var ARRAY_SPLIT_REGEXP = / *, */
-
-/**
  * RegExp to match field-name in RFC 7230 sec 3.2
  *
  * field-name    = token
@@ -101,7 +94,32 @@ function append (header, field) {
  */
 
 function parse (header) {
-  return header.trim().split(ARRAY_SPLIT_REGEXP)
+  var end = 0
+  var list = []
+  var start = 0
+
+  // gather tokens
+  for (var i = 0, len = header.length; i < len; i++) {
+    switch (header.charCodeAt(i)) {
+      case 0x20: /*   */
+        if (start === end) {
+          start = end = i + 1
+        }
+        break
+      case 0x2c: /* , */
+        list.push(header.substring(start, end))
+        start = end = i + 1
+        break
+      default:
+        end = i + 1
+        break
+    }
+  }
+
+  // final token
+  list.push(header.substring(start, end))
+
+  return list
 }
 
 /**

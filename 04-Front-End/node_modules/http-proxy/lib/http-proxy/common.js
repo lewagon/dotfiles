@@ -4,8 +4,7 @@ var common   = exports,
     required = require('requires-port');
 
 var upgradeHeader = /(^|,)\s*upgrade\s*($|,)/i,
-    isSSL = /^https|wss/,
-    cookieDomainRegex = /(;\s*domain=)([^;]+)/i;
+    isSSL = /^https|wss/;
 
 /**
  * Simple Regex for testing if protocol is https
@@ -40,7 +39,7 @@ common.setupOutgoing = function(outgoing, options, req, forward) {
     function(e) { outgoing[e] = options[forward || 'target'][e]; }
   );
 
-  outgoing.method = req.method;
+  outgoing.method = options.method || req.method;
   outgoing.headers = extend({}, req.headers);
 
   if (options.headers){
@@ -211,27 +210,27 @@ common.urlJoin = function() {
  *
  * @api private
  */
-common.rewriteCookieDomain = function rewriteCookieDomain(header, config) {
+common.rewriteCookieProperty = function rewriteCookieProperty(header, config, property) {
   if (Array.isArray(header)) {
     return header.map(function (headerElement) {
-      return rewriteCookieDomain(headerElement, config);
+      return rewriteCookieProperty(headerElement, config, property);
     });
   }
-  return header.replace(cookieDomainRegex, function(match, prefix, previousDomain) {
-    var newDomain;
-    if (previousDomain in config) {
-      newDomain = config[previousDomain];
+  return header.replace(new RegExp("(;\\s*" + property + "=)([^;]+)", 'i'), function(match, prefix, previousValue) {
+    var newValue;
+    if (previousValue in config) {
+      newValue = config[previousValue];
     } else if ('*' in config) {
-      newDomain = config['*'];
+      newValue = config['*'];
     } else {
-      //no match, return previous domain
+      //no match, return previous value
       return match;
     }
-    if (newDomain) {
-      //replace domain
-      return prefix + newDomain;
+    if (newValue) {
+      //replace value
+      return prefix + newValue;
     } else {
-      //remove domain
+      //remove value
       return '';
     }
   });

@@ -93,6 +93,9 @@ var instance = {
     this.statusCode = this._http.statusCode;
     this.headers    = this._http.headers;
 
+    if (this._http.error)
+      return this._failHandshake(this._http.error.message);
+
     if (this._http.statusCode !== 101)
       return this._failHandshake('Unexpected response code: ' + this._http.statusCode);
 

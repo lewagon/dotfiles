@@ -1,6 +1,6 @@
 # os-locale [![Build Status](https://travis-ci.org/sindresorhus/os-locale.svg?branch=master)](https://travis-ci.org/sindresorhus/os-locale)
 
-> Get the system [locale](http://en.wikipedia.org/wiki/Locale)
+> Get the system [locale](https://en.wikipedia.org/wiki/Locale_(computer_software))
 
 Useful for localizing your module or app.
 
@@ -10,33 +10,39 @@ POSIX systems: The returned locale refers to the [`LC_MESSAGE`](http://www.gnu.o
 ## Install
 
 ```
-$ npm install --save os-locale
+$ npm install os-locale
 ```
 
 
 ## Usage
 
 ```js
-var osLocale = require('os-locale');
+const osLocale = require('os-locale');
 
-osLocale(function (err, locale) {
-	console.log(locale);
+(async () => {
+	console.log(await osLocale());
 	//=> 'en_US'
-});
+})();
 ```
 
 
 ## API
 
-### osLocale([options], callback(error, locale))
+### osLocale([options])
+
+Returns a `Promise` for the locale.
 
 ### osLocale.sync([options])
 
 Returns the locale.
 
-#### options.spawn
+#### options
 
-Type: `boolean`  
+Type: `Object`
+
+##### spawn
+
+Type: `boolean`<br>
 Default: `true`
 
 Set to `false` to avoid spawning subprocesses and instead only resolve the locale from environment variables.
@@ -44,4 +50,4 @@ Set to `false` to avoid spawning subprocesses and instead only resolve the local
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

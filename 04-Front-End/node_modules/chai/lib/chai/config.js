@@ -90,5 +90,5 @@ module.exports = {
    * @api public
    */
 
-  proxyExcludedKeys: ['then', 'inspect', 'toJSON']
+  proxyExcludedKeys: ['then', 'catch', 'inspect', 'toJSON']
 };

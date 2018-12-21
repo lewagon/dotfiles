@@ -1,5 +1,5 @@
-var HPM  = require('./lib');
+var HPM = require('./lib')
 
-module.exports = function(context, opts) {
-    return new HPM(context, opts);
-};
+module.exports = function (context, opts) {
+  return new HPM(context, opts)
+}

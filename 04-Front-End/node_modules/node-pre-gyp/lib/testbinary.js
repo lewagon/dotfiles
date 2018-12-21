@@ -9,6 +9,7 @@ var path = require('path');
 var log = require('npmlog');
 var cp = require('child_process');
 var versioning = require('./util/versioning.js');
+var napi = require('./util/napi.js');
 var path = require('path');
 
 function testbinary(gyp, argv, callback) {
@@ -16,7 +17,8 @@ function testbinary(gyp, argv, callback) {
     var options = {};
     var shell_cmd = process.execPath;
     var package_json = JSON.parse(fs.readFileSync('./package.json'));
-    var opts = versioning.evaluate(package_json, gyp.opts);
+    var napi_build_version = napi.get_napi_build_version_from_command_args(argv);
+    var opts = versioning.evaluate(package_json, gyp.opts, napi_build_version);
     // skip validation for runtimes we don't explicitly support (like electron)
     if (opts.runtime &&
         opts.runtime !== 'node-webkit' &&

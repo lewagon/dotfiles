@@ -65,6 +65,41 @@ end
 
 Read about Views, Routing, `params` [here](https://github.com/lewagon/sinatra-101#views) before starting coding.
 
+## ERB
+
+Have you heard about **templating**? It's a way to write HTML in which you can inject data **dynamically** using code.
+
+In a Ruby framework like Sinatra, we can use **erb** which stands for embedded ruby.
+
+The syntax is the following:
+
+```erb
+<% first_name = "Boris" %>
+
+<h1>Hello, I'm <%= first_name %></h1>
+```
+
+Use `<% %>` for code you **don't want to display**, and `<%= %>` when you want to **inject** the output in the HTML.
+
+Commonly, you will define variables in your controller:
+
+```ruby
+get '/' do
+  @first_name = "Boris" # <-- notice the `@` to make it available in the view!
+  erb :home
+end
+```
+
+And use it in your `home.erb` view:
+
+```erb
+<h1>Hello, I'm <%= @first_name %></h1>
+```
+
+Make sure you define **instance variables with an `@`** in your controller for variables you want to use in your views!
+
+**Rails will use erb too!** So take the time to read [this section](https://github.com/lewagon/sinatra-101#passing-stuff-to-the-view) thoroughly.
+
 ## Specs
 
 This exercise is quite open, here are a few things you can start with:

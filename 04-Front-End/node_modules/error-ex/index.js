@@ -51,20 +51,28 @@ var errorEx = function errorEx(name, properties) {
 			}
 		});
 
+		var overwrittenStack = null;
+
 		var stackDescriptor = Object.getOwnPropertyDescriptor(this, 'stack');
 		var stackGetter = stackDescriptor.get;
 		var stackValue = stackDescriptor.value;
 		delete stackDescriptor.value;
 		delete stackDescriptor.writable;
 
+		stackDescriptor.set = function (newstack) {
+			overwrittenStack = newstack;
+		};
+
 		stackDescriptor.get = function () {
-			var stack = (stackGetter)
-				? stackGetter.call(this).split(/\r?\n+/g)
-				: stackValue.split(/\r?\n+/g);
+			var stack = (overwrittenStack || ((stackGetter)
+				? stackGetter.call(this)
+				: stackValue)).split(/\r?\n+/g);
 
 			// starting in Node 7, the stack builder caches the message.
 			// just replace it.
-			stack[0] = this.name + ': ' + this.message;
+			if (!overwrittenStack) {
+				stack[0] = this.name + ': ' + this.message;
+			}
 
 			var lineCount = 1;
 			for (var key in properties) {

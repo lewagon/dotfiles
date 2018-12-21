@@ -2,29 +2,32 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-var path = require("path");
-var concord = require("./concord");
-var DescriptionFileUtils = require("./DescriptionFileUtils");
+"use strict";
 
-function ConcordMainPlugin(source, options, target) {
-	this.source = source;
-	this.options = options;
-	this.target = target;
-}
-module.exports = ConcordMainPlugin;
+const path = require("path");
+const concord = require("./concord");
+const DescriptionFileUtils = require("./DescriptionFileUtils");
 
-ConcordMainPlugin.prototype.apply = function(resolver) {
-	var target = this.target;
-	resolver.plugin(this.source, function(request, callback) {
-		if(request.path !== request.descriptionFileRoot) return callback();
-		var concordField = DescriptionFileUtils.getField(request.descriptionFileData, "concord");
-		if(!concordField) return callback();
-		var mainModule = concord.getMain(request.context, concordField);
-		if(!mainModule) return callback();
-		var obj = Object.assign({}, request, {
-			request: mainModule
+module.exports = class ConcordMainPlugin {
+	constructor(source, options, target) {
+		this.source = source;
+		this.options = options;
+		this.target = target;
+	}
+
+	apply(resolver) {
+		const target = resolver.ensureHook(this.target);
+		resolver.getHook(this.source).tapAsync("ConcordMainPlugin", (request, resolveContext, callback) => {
+			if(request.path !== request.descriptionFileRoot) return callback();
+			const concordField = DescriptionFileUtils.getField(request.descriptionFileData, "concord");
+			if(!concordField) return callback();
+			const mainModule = concord.getMain(request.context, concordField);
+			if(!mainModule) return callback();
+			const obj = Object.assign({}, request, {
+				request: mainModule
+			});
+			const filename = path.basename(request.descriptionFilePath);
+			return resolver.doResolve(target, obj, "use " + mainModule + " from " + filename, resolveContext, callback);
 		});
-		var filename = path.basename(request.descriptionFilePath);
-		return resolver.doResolve(target, obj, "use " + mainModule + " from " + filename, callback);
-	});
+	}
 };

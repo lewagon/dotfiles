@@ -1,6 +1,16 @@
 const extensions = {
   '.babel.js': [
     {
+      module: '@babel/register',
+      register: function (module) {
+        module({
+          // register on .js extension due to https://github.com/joyent/node/blob/v0.12.0/lib/module.js#L353
+          // which only captures the final extension (.babel.js -> .js)
+          extensions: '.js'
+        });
+      }
+    },
+    {
       module: 'babel-register',
       register: function (module) {
         module({
@@ -31,8 +41,8 @@ const extensions = {
   '.cirru': 'cirru-script/lib/register',
   '.cjsx': 'node-cjsx/register',
   '.co': 'coco',
-  '.coffee': ['coffee-script/register', 'coffee-script', 'coffeescript/register', 'coffeescript'],
-  '.coffee.md': ['coffee-script/register', 'coffee-script', 'coffeescript/register', 'coffeescript'],
+  '.coffee': ['coffeescript/register', 'coffee-script/register', 'coffeescript', 'coffee-script'],
+  '.coffee.md': ['coffeescript/register', 'coffee-script/register', 'coffeescript', 'coffee-script'],
   '.csv': 'require-csv',
   '.eg': 'earlgrey/register',
   '.iced': ['iced-coffee-script/register', 'iced-coffee-script'],
@@ -42,6 +52,14 @@ const extensions = {
   '.json': null,
   '.json5': 'json5/lib/require',
   '.jsx': [
+    {
+      module: '@babel/register',
+      register: function (module) {
+        module({
+          extensions: '.jsx'
+        });
+      }
+    },
     {
       module: 'babel-register',
       register: function (module) {
@@ -76,7 +94,7 @@ const extensions = {
       }
     }
   ],
-  '.litcoffee': ['coffee-script/register', 'coffee-script', 'coffeescript/register', 'coffeescript'],
+  '.litcoffee': ['coffeescript/register', 'coffee-script/register', 'coffeescript', 'coffee-script'],
   '.liticed': 'iced-coffee-script/register',
   '.ls': ['livescript', 'LiveScript'],
   '.node': null,

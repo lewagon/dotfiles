@@ -2,7 +2,7 @@
   "name": "deep-extend",
   "description": "Recursive object extending",
   "license": "MIT",
-  "version": "0.4.2",
+  "version": "0.6.0",
   "homepage": "https://github.com/unclechu/node-deep-extend",
   "keywords": [
     "deep-extend",
@@ -38,26 +38,25 @@
     {
       "name": "Marshall Bowers",
       "url": "https://github.com/maxdeviant"
+    },
+    {
+      "name": "Misha Wakerman",
+      "url": "https://github.com/mwakerman"
     }
   ],
   "main": "lib/deep-extend.js",
   "engines": {
-    "node": ">=0.12.0",
-    "iojs": ">=1.0.0"
+    "node": ">=4.0.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
   "devDependencies": {
-    "mocha": "^2.2.1",
-    "should": "^5.2.0"
-  },
-  "directories": {
-    "lib": "./lib/",
-    "test": "./test/"
+    "mocha": "5.2.0",
+    "should": "13.2.1"
   },
   "files": [
-    "lib/deep-extend.js",
-    "index.js"
+    "index.js",
+    "lib/"
   ]
 }

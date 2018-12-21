@@ -24,15 +24,6 @@ exports['SL_Chrome'] = {
  };
 
 /*!
- * Opera
- */
-
-exports['SL_Opera'] = {
-    base: 'SauceLabs'
-  , browserName: 'opera'
-};
-
-/*!
  * Internet Explorer
  */
 

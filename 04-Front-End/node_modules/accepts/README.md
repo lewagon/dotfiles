@@ -6,22 +6,30 @@
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
-Higher level content negotiation based on [negotiator](https://www.npmjs.com/package/negotiator). Extracted from [koa](https://www.npmjs.com/package/koa) for general use.
+Higher level content negotiation based on [negotiator](https://www.npmjs.com/package/negotiator).
+Extracted from [koa](https://www.npmjs.com/package/koa) for general use.
 
 In addition to negotiator, it allows:
 
-- Allows types as an array or arguments list, ie `(['text/html', 'application/json'])` as well as `('text/html', 'application/json')`.
+- Allows types as an array or arguments list, ie `(['text/html', 'application/json'])`
+  as well as `('text/html', 'application/json')`.
 - Allows type shorthands such as `json`.
 - Returns `false` when no types match
 - Treats non-existent headers as `*`
 
 ## Installation
 
+This is a [Node.js](https://nodejs.org/en/) module available through the
+[npm registry](https://www.npmjs.com/). Installation is done using the
+[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+
 ```sh
-npm install accepts
+$ npm install accepts
 ```
 
 ## API
+
+<!-- eslint-disable no-unused-vars -->
 
 ```js
 var accepts = require('accepts')
@@ -88,11 +96,11 @@ server.
 var accepts = require('accepts')
 var http = require('http')
 
-function app(req, res) {
+function app (req, res) {
   var accept = accepts(req)
 
   // the order of this list is significant; should be server preferred order
-  switch(accept.type(['json', 'html'])) {
+  switch (accept.type(['json', 'html'])) {
     case 'json':
       res.setHeader('Content-Type', 'application/json')
       res.write('{"hello":"world!"}')
@@ -126,7 +134,7 @@ curl -I -H'Accept: text/html' http://localhost:3000/
 [npm-image]: https://img.shields.io/npm/v/accepts.svg
 [npm-url]: https://npmjs.org/package/accepts
 [node-version-image]: https://img.shields.io/node/v/accepts.svg
-[node-version-url]: http://nodejs.org/download/
+[node-version-url]: https://nodejs.org/en/download/
 [travis-image]: https://img.shields.io/travis/jshttp/accepts/master.svg
 [travis-url]: https://travis-ci.org/jshttp/accepts
 [coveralls-image]: https://img.shields.io/coveralls/jshttp/accepts/master.svg

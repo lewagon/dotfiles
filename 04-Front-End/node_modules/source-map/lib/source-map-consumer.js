@@ -11,19 +11,19 @@ var ArraySet = require('./array-set').ArraySet;
 var base64VLQ = require('./base64-vlq');
 var quickSort = require('./quick-sort').quickSort;
 
-function SourceMapConsumer(aSourceMap) {
+function SourceMapConsumer(aSourceMap, aSourceMapURL) {
   var sourceMap = aSourceMap;
   if (typeof aSourceMap === 'string') {
-    sourceMap = JSON.parse(aSourceMap.replace(/^\)\]\}'/, ''));
+    sourceMap = util.parseSourceMapInput(aSourceMap);
   }
 
   return sourceMap.sections != null
-    ? new IndexedSourceMapConsumer(sourceMap)
-    : new BasicSourceMapConsumer(sourceMap);
+    ? new IndexedSourceMapConsumer(sourceMap, aSourceMapURL)
+    : new BasicSourceMapConsumer(sourceMap, aSourceMapURL);
 }
 
-SourceMapConsumer.fromSourceMap = function(aSourceMap) {
-  return BasicSourceMapConsumer.fromSourceMap(aSourceMap);
+SourceMapConsumer.fromSourceMap = function(aSourceMap, aSourceMapURL) {
+  return BasicSourceMapConsumer.fromSourceMap(aSourceMap, aSourceMapURL);
 }
 
 /**
@@ -63,6 +63,8 @@ SourceMapConsumer.prototype._version = 3;
 
 SourceMapConsumer.prototype.__generatedMappings = null;
 Object.defineProperty(SourceMapConsumer.prototype, '_generatedMappings', {
+  configurable: true,
+  enumerable: true,
   get: function () {
     if (!this.__generatedMappings) {
       this._parseMappings(this._mappings, this.sourceRoot);
@@ -74,6 +76,8 @@ Object.defineProperty(SourceMapConsumer.prototype, '_generatedMappings', {
 
 SourceMapConsumer.prototype.__originalMappings = null;
 Object.defineProperty(SourceMapConsumer.prototype, '_originalMappings', {
+  configurable: true,
+  enumerable: true,
   get: function () {
     if (!this.__originalMappings) {
       this._parseMappings(this._mappings, this.sourceRoot);
@@ -141,9 +145,7 @@ SourceMapConsumer.prototype.eachMapping =
     var sourceRoot = this.sourceRoot;
     mappings.map(function (mapping) {
       var source = mapping.source === null ? null : this._sources.at(mapping.source);
-      if (source != null && sourceRoot != null) {
-        source = util.join(sourceRoot, source);
-      }
+      source = util.computeSourceURL(sourceRoot, source, this._sourceMapURL);
       return {
         source: source,
         generatedLine: mapping.generatedLine,
@@ -166,13 +168,16 @@ SourceMapConsumer.prototype.eachMapping =
  * The only argument is an object with the following properties:
  *
  *   - source: The filename of the original source.
- *   - line: The line number in the original source.
+ *   - line: The line number in the original source.  The line number is 1-based.
  *   - column: Optional. the column number in the original source.
+ *    The column number is 0-based.
  *
  * and an array of objects is returned, each with the following properties:
  *
- *   - line: The line number in the generated source, or null.
+ *   - line: The line number in the generated source, or null.  The
+ *    line number is 1-based.
  *   - column: The column number in the generated source, or null.
+ *    The column number is 0-based.
  */
 SourceMapConsumer.prototype.allGeneratedPositionsFor =
   function SourceMapConsumer_allGeneratedPositionsFor(aArgs) {
@@ -188,13 +193,10 @@ SourceMapConsumer.prototype.allGeneratedPositionsFor =
       originalColumn: util.getArg(aArgs, 'column', 0)
     };
 
-    if (this.sourceRoot != null) {
-      needle.source = util.relative(this.sourceRoot, needle.source);
-    }
-    if (!this._sources.has(needle.source)) {
+    needle.source = this._findSourceIndex(needle.source);
+    if (needle.source < 0) {
       return [];
     }
-    needle.source = this._sources.indexOf(needle.source);
 
     var mappings = [];
 
@@ -254,7 +256,7 @@ exports.SourceMapConsumer = SourceMapConsumer;
  * query for information about the original file positions by giving it a file
  * position in the generated source.
  *
- * The only parameter is the raw source map (either as a JSON string, or
+ * The first parameter is the raw source map (either as a JSON string, or
  * already parsed to an object). According to the spec, source maps have the
  * following attributes:
  *
@@ -277,12 +279,16 @@ exports.SourceMapConsumer = SourceMapConsumer;
  *       mappings: "AA,AB;;ABCDE;"
  *     }
  *
+ * The second parameter, if given, is a string whose value is the URL
+ * at which the source map was found.  This URL is used to compute the
+ * sources array.
+ *
  * [0]: https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?pli=1#
  */
-function BasicSourceMapConsumer(aSourceMap) {
+function BasicSourceMapConsumer(aSourceMap, aSourceMapURL) {
   var sourceMap = aSourceMap;
   if (typeof aSourceMap === 'string') {
-    sourceMap = JSON.parse(aSourceMap.replace(/^\)\]\}'/, ''));
+    sourceMap = util.parseSourceMapInput(aSourceMap);
   }
 
   var version = util.getArg(sourceMap, 'version');
@@ -299,6 +305,10 @@ function BasicSourceMapConsumer(aSourceMap) {
   // string rather than a number, so we use loose equality checking here.
   if (version != this._version) {
     throw new Error('Unsupported version: ' + version);
+  }
+
+  if (sourceRoot) {
+    sourceRoot = util.normalize(sourceRoot);
   }
 
   sources = sources
@@ -324,9 +334,14 @@ function BasicSourceMapConsumer(aSourceMap) {
   this._names = ArraySet.fromArray(names.map(String), true);
   this._sources = ArraySet.fromArray(sources, true);
 
+  this._absoluteSources = this._sources.toArray().map(function (s) {
+    return util.computeSourceURL(sourceRoot, s, aSourceMapURL);
+  });
+
   this.sourceRoot = sourceRoot;
   this.sourcesContent = sourcesContent;
   this._mappings = mappings;
+  this._sourceMapURL = aSourceMapURL;
   this.file = file;
 }
 
@@ -334,14 +349,42 @@ BasicSourceMapConsumer.prototype = Object.create(SourceMapConsumer.prototype);
 BasicSourceMapConsumer.prototype.consumer = SourceMapConsumer;
 
 /**
+ * Utility function to find the index of a source.  Returns -1 if not
+ * found.
+ */
+BasicSourceMapConsumer.prototype._findSourceIndex = function(aSource) {
+  var relativeSource = aSource;
+  if (this.sourceRoot != null) {
+    relativeSource = util.relative(this.sourceRoot, relativeSource);
+  }
+
+  if (this._sources.has(relativeSource)) {
+    return this._sources.indexOf(relativeSource);
+  }
+
+  // Maybe aSource is an absolute URL as returned by |sources|.  In
+  // this case we can't simply undo the transform.
+  var i;
+  for (i = 0; i < this._absoluteSources.length; ++i) {
+    if (this._absoluteSources[i] == aSource) {
+      return i;
+    }
+  }
+
+  return -1;
+};
+
+/**
  * Create a BasicSourceMapConsumer from a SourceMapGenerator.
  *
  * @param SourceMapGenerator aSourceMap
  *        The source map that will be consumed.
+ * @param String aSourceMapURL
+ *        The URL at which the source map can be found (optional)
  * @returns BasicSourceMapConsumer
  */
 BasicSourceMapConsumer.fromSourceMap =
-  function SourceMapConsumer_fromSourceMap(aSourceMap) {
+  function SourceMapConsumer_fromSourceMap(aSourceMap, aSourceMapURL) {
     var smc = Object.create(BasicSourceMapConsumer.prototype);
 
     var names = smc._names = ArraySet.fromArray(aSourceMap._names.toArray(), true);
@@ -350,6 +393,10 @@ BasicSourceMapConsumer.fromSourceMap =
     smc.sourcesContent = aSourceMap._generateSourcesContent(smc._sources.toArray(),
                                                             smc.sourceRoot);
     smc.file = aSourceMap._file;
+    smc._sourceMapURL = aSourceMapURL;
+    smc._absoluteSources = smc._sources.toArray().map(function (s) {
+      return util.computeSourceURL(smc.sourceRoot, s, aSourceMapURL);
+    });
 
     // Because we are modifying the entries (by converting string sources and
     // names to indices into the sources and names ArraySets), we have to make
@@ -396,9 +443,7 @@ BasicSourceMapConsumer.prototype._version = 3;
  */
 Object.defineProperty(BasicSourceMapConsumer.prototype, 'sources', {
   get: function () {
-    return this._sources.toArray().map(function (s) {
-      return this.sourceRoot != null ? util.join(this.sourceRoot, s) : s;
-    }, this);
+    return this._absoluteSources.slice();
   }
 });
 
@@ -579,8 +624,10 @@ BasicSourceMapConsumer.prototype.computeColumnSpans =
  * source's line and column positions provided. The only argument is an object
  * with the following properties:
  *
- *   - line: The line number in the generated source.
- *   - column: The column number in the generated source.
+ *   - line: The line number in the generated source.  The line number
+ *     is 1-based.
+ *   - column: The column number in the generated source.  The column
+ *     number is 0-based.
  *   - bias: Either 'SourceMapConsumer.GREATEST_LOWER_BOUND' or
  *     'SourceMapConsumer.LEAST_UPPER_BOUND'. Specifies whether to return the
  *     closest element that is smaller than or greater than the one we are
@@ -590,8 +637,10 @@ BasicSourceMapConsumer.prototype.computeColumnSpans =
  * and an object is returned with the following properties:
  *
  *   - source: The original source file, or null.
- *   - line: The line number in the original source, or null.
- *   - column: The column number in the original source, or null.
+ *   - line: The line number in the original source, or null.  The
+ *     line number is 1-based.
+ *   - column: The column number in the original source, or null.  The
+ *     column number is 0-based.
  *   - name: The original identifier, or null.
  */
 BasicSourceMapConsumer.prototype.originalPositionFor =
@@ -617,9 +666,7 @@ BasicSourceMapConsumer.prototype.originalPositionFor =
         var source = util.getArg(mapping, 'source', null);
         if (source !== null) {
           source = this._sources.at(source);
-          if (this.sourceRoot != null) {
-            source = util.join(this.sourceRoot, source);
-          }
+          source = util.computeSourceURL(this.sourceRoot, source, this._sourceMapURL);
         }
         var name = util.getArg(mapping, 'name', null);
         if (name !== null) {
@@ -666,12 +713,14 @@ BasicSourceMapConsumer.prototype.sourceContentFor =
       return null;
     }
 
-    if (this.sourceRoot != null) {
-      aSource = util.relative(this.sourceRoot, aSource);
+    var index = this._findSourceIndex(aSource);
+    if (index >= 0) {
+      return this.sourcesContent[index];
     }
 
-    if (this._sources.has(aSource)) {
-      return this.sourcesContent[this._sources.indexOf(aSource)];
+    var relativeSource = aSource;
+    if (this.sourceRoot != null) {
+      relativeSource = util.relative(this.sourceRoot, relativeSource);
     }
 
     var url;
@@ -681,15 +730,15 @@ BasicSourceMapConsumer.prototype.sourceContentFor =
       // many users. We can help them out when they expect file:// URIs to
       // behave like it would if they were running a local HTTP server. See
       // https://bugzilla.mozilla.org/show_bug.cgi?id=885597.
-      var fileUriAbsPath = aSource.replace(/^file:\/\//, "");
+      var fileUriAbsPath = relativeSource.replace(/^file:\/\//, "");
       if (url.scheme == "file"
           && this._sources.has(fileUriAbsPath)) {
         return this.sourcesContent[this._sources.indexOf(fileUriAbsPath)]
       }
 
       if ((!url.path || url.path == "/")
-          && this._sources.has("/" + aSource)) {
-        return this.sourcesContent[this._sources.indexOf("/" + aSource)];
+          && this._sources.has("/" + relativeSource)) {
+        return this.sourcesContent[this._sources.indexOf("/" + relativeSource)];
       }
     }
 
@@ -701,7 +750,7 @@ BasicSourceMapConsumer.prototype.sourceContentFor =
       return null;
     }
     else {
-      throw new Error('"' + aSource + '" is not in the SourceMap.');
+      throw new Error('"' + relativeSource + '" is not in the SourceMap.');
     }
   };
 
@@ -711,8 +760,10 @@ BasicSourceMapConsumer.prototype.sourceContentFor =
  * the following properties:
  *
  *   - source: The filename of the original source.
- *   - line: The line number in the original source.
- *   - column: The column number in the original source.
+ *   - line: The line number in the original source.  The line number
+ *     is 1-based.
+ *   - column: The column number in the original source.  The column
+ *     number is 0-based.
  *   - bias: Either 'SourceMapConsumer.GREATEST_LOWER_BOUND' or
  *     'SourceMapConsumer.LEAST_UPPER_BOUND'. Specifies whether to return the
  *     closest element that is smaller than or greater than the one we are
@@ -721,23 +772,22 @@ BasicSourceMapConsumer.prototype.sourceContentFor =
  *
  * and an object is returned with the following properties:
  *
- *   - line: The line number in the generated source, or null.
+ *   - line: The line number in the generated source, or null.  The
+ *     line number is 1-based.
  *   - column: The column number in the generated source, or null.
+ *     The column number is 0-based.
  */
 BasicSourceMapConsumer.prototype.generatedPositionFor =
   function SourceMapConsumer_generatedPositionFor(aArgs) {
     var source = util.getArg(aArgs, 'source');
-    if (this.sourceRoot != null) {
-      source = util.relative(this.sourceRoot, source);
-    }
-    if (!this._sources.has(source)) {
+    source = this._findSourceIndex(source);
+    if (source < 0) {
       return {
         line: null,
         column: null,
         lastColumn: null
       };
     }
-    source = this._sources.indexOf(source);
 
     var needle = {
       source: source,
@@ -781,7 +831,7 @@ exports.BasicSourceMapConsumer = BasicSourceMapConsumer;
  * that it takes "indexed" source maps (i.e. ones with a "sections" field) as
  * input.
  *
- * The only parameter is a raw source map (either as a JSON string, or already
+ * The first parameter is a raw source map (either as a JSON string, or already
  * parsed to an object). According to the spec for indexed source maps, they
  * have the following attributes:
  *
@@ -818,12 +868,16 @@ exports.BasicSourceMapConsumer = BasicSourceMapConsumer;
  *    }],
  *  }
  *
+ * The second parameter, if given, is a string whose value is the URL
+ * at which the source map was found.  This URL is used to compute the
+ * sources array.
+ *
  * [0]: https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit#heading=h.535es3xeprgt
  */
-function IndexedSourceMapConsumer(aSourceMap) {
+function IndexedSourceMapConsumer(aSourceMap, aSourceMapURL) {
   var sourceMap = aSourceMap;
   if (typeof aSourceMap === 'string') {
-    sourceMap = JSON.parse(aSourceMap.replace(/^\)\]\}'/, ''));
+    sourceMap = util.parseSourceMapInput(aSourceMap);
   }
 
   var version = util.getArg(sourceMap, 'version');
@@ -863,7 +917,7 @@ function IndexedSourceMapConsumer(aSourceMap) {
         generatedLine: offsetLine + 1,
         generatedColumn: offsetColumn + 1
       },
-      consumer: new SourceMapConsumer(util.getArg(s, 'map'))
+      consumer: new SourceMapConsumer(util.getArg(s, 'map'), aSourceMapURL)
     }
   });
 }
@@ -896,14 +950,18 @@ Object.defineProperty(IndexedSourceMapConsumer.prototype, 'sources', {
  * source's line and column positions provided. The only argument is an object
  * with the following properties:
  *
- *   - line: The line number in the generated source.
- *   - column: The column number in the generated source.
+ *   - line: The line number in the generated source.  The line number
+ *     is 1-based.
+ *   - column: The column number in the generated source.  The column
+ *     number is 0-based.
  *
  * and an object is returned with the following properties:
  *
  *   - source: The original source file, or null.
- *   - line: The line number in the original source, or null.
- *   - column: The column number in the original source, or null.
+ *   - line: The line number in the original source, or null.  The
+ *     line number is 1-based.
+ *   - column: The column number in the original source, or null.  The
+ *     column number is 0-based.
  *   - name: The original identifier, or null.
  */
 IndexedSourceMapConsumer.prototype.originalPositionFor =
@@ -987,13 +1045,17 @@ IndexedSourceMapConsumer.prototype.sourceContentFor =
  * the following properties:
  *
  *   - source: The filename of the original source.
- *   - line: The line number in the original source.
- *   - column: The column number in the original source.
+ *   - line: The line number in the original source.  The line number
+ *     is 1-based.
+ *   - column: The column number in the original source.  The column
+ *     number is 0-based.
  *
  * and an object is returned with the following properties:
  *
- *   - line: The line number in the generated source, or null.
+ *   - line: The line number in the generated source, or null.  The
+ *     line number is 1-based. 
  *   - column: The column number in the generated source, or null.
+ *     The column number is 0-based.
  */
 IndexedSourceMapConsumer.prototype.generatedPositionFor =
   function IndexedSourceMapConsumer_generatedPositionFor(aArgs) {
@@ -1002,7 +1064,7 @@ IndexedSourceMapConsumer.prototype.generatedPositionFor =
 
       // Only consider this section if the requested source is in the list of
       // sources of the consumer.
-      if (section.consumer.sources.indexOf(util.getArg(aArgs, 'source')) === -1) {
+      if (section.consumer._findSourceIndex(util.getArg(aArgs, 'source')) === -1) {
         continue;
       }
       var generatedPosition = section.consumer.generatedPositionFor(aArgs);
@@ -1041,15 +1103,16 @@ IndexedSourceMapConsumer.prototype._parseMappings =
         var mapping = sectionMappings[j];
 
         var source = section.consumer._sources.at(mapping.source);
-        if (section.consumer.sourceRoot !== null) {
-          source = util.join(section.consumer.sourceRoot, source);
-        }
+        source = util.computeSourceURL(section.consumer.sourceRoot, source, this._sourceMapURL);
         this._sources.add(source);
         source = this._sources.indexOf(source);
 
-        var name = section.consumer._names.at(mapping.name);
-        this._names.add(name);
-        name = this._names.indexOf(name);
+        var name = null;
+        if (mapping.name) {
+          name = section.consumer._names.at(mapping.name);
+          this._names.add(name);
+          name = this._names.indexOf(name);
+        }
 
         // The mappings coming from the consumer for the section have
         // generated positions relative to the start of the section, so we

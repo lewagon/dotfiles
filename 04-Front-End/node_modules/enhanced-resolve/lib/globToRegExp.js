@@ -2,6 +2,8 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
+"use strict";
+
 function globToRegExp(glob) {
 	// * [^\\\/]*
 	// /**/ /.+/
@@ -19,13 +21,13 @@ function globToRegExp(glob) {
 		// allow to pass an RegExp in brackets
 		return new RegExp(glob.substr(1, glob.length - 2));
 	}
-	var tokens = tokenize(glob);
-	var process = createRoot();
-	var regExpStr = tokens.map(process).join("");
+	const tokens = tokenize(glob);
+	const process = createRoot();
+	const regExpStr = tokens.map(process).join("");
 	return new RegExp("^" + regExpStr + "$");
 }
 
-var SIMPLE_TOKENS = {
+const SIMPLE_TOKENS = {
 	"@(": "one",
 	"?(": "zero-one",
 	"+(": "one-many",
@@ -43,10 +45,10 @@ var SIMPLE_TOKENS = {
 };
 
 function tokenize(glob) {
-	return glob.split(/([@?+*]\(|\/\*\*\/|\*\*|[?*]|\[[\!\^]?(?:[^\]\\]|\\.)+\]|\{|,|\/|[|)}])/g).map(function(item) {
+	return glob.split(/([@?+*]\(|\/\*\*\/|\*\*|[?*]|\[[\!\^]?(?:[^\]\\]|\\.)+\]|\{|,|\/|[|)}])/g).map(item => {
 		if(!item)
 			return null;
-		var t = SIMPLE_TOKENS[item];
+		const t = SIMPLE_TOKENS[item];
 		if(t) {
 			return {
 				type: t
@@ -75,9 +77,9 @@ function tokenize(glob) {
 }
 
 function createRoot() {
-	var inOr = [];
-	var process = createSeqment();
-	var initial = true;
+	const inOr = [];
+	const process = createSeqment();
+	let initial = true;
 	return function(token) {
 		switch(token.type) {
 			case "or":
@@ -103,16 +105,18 @@ function createRoot() {
 					throw new Error("Unmatched '{'");
 				return process(token, initial);
 			default:
-				var result = process(token, initial);
-				initial = false;
-				return result;
+				{
+					const result = process(token, initial);
+					initial = false;
+					return result;
+				}
 		}
 	};
 }
 
 function createSeqment() {
-	var inSeqment = [];
-	var process = createSimple();
+	const inSeqment = [];
+	const process = createSimple();
 	return function(token, initial) {
 		switch(token.type) {
 			case "one":
@@ -131,18 +135,20 @@ function createSeqment() {
 					}, initial);
 				}
 			case "closing-segment":
-				var segment = inSeqment.pop();
-				switch(segment) {
-					case "one":
-						return ")";
-					case "one-many":
-						return ")+";
-					case "zero-many":
-						return ")*";
-					case "zero-one":
-						return ")?";
+				{
+					const segment = inSeqment.pop();
+					switch(segment) {
+						case "one":
+							return ")";
+						case "one-many":
+							return ")+";
+						case "zero-many":
+							return ")*";
+						case "zero-one":
+							return ")?";
+					}
+					throw new Error("Unexcepted segment " + segment);
 				}
-				throw new Error("Unexcepted segment " + segment);
 			case "end":
 				if(inSeqment.length > 0) {
 					throw new Error("Unmatched segment, missing ')'");

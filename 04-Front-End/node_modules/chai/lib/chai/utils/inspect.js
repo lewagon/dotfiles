@@ -105,7 +105,7 @@ function formatValue(ctx, value, recurseTimes) {
 
   var name, nameSuffix;
 
-  // Some type of object without properties can be shortcutted.
+  // Some type of object without properties can be shortcut.
   // In IE, errors have a single `stack` property, or if they are vanilla `Error`,
   // a `stack` plus `description` property; ignore those for consistency.
   if (keys.length === 0 || (isError(value) && (
@@ -196,7 +196,6 @@ function formatValue(ctx, value, recurseTimes) {
   return reduceToSingleString(output, base, braces);
 }
 
-
 function formatPrimitive(ctx, value) {
   switch (typeof value) {
     case 'undefined':
@@ -226,11 +225,9 @@ function formatPrimitive(ctx, value) {
   }
 }
 
-
 function formatError(value) {
   return '[' + Error.prototype.toString.call(value) + ']';
 }
-
 
 function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
   var output = [];
@@ -334,12 +331,8 @@ function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
   return name + ': ' + str;
 }
 
-
 function reduceToSingleString(output, base, braces) {
-  var numLinesEst = 0;
   var length = output.reduce(function(prev, cur) {
-    numLinesEst++;
-    if (cur.indexOf('\n') >= 0) numLinesEst++;
     return prev + cur.length + 1;
   }, 0);
 

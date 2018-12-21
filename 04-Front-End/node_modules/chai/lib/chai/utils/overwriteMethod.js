@@ -13,7 +13,7 @@ var transferFlags = require('./transferFlags');
 /**
  * ### .overwriteMethod(ctx, name, fn)
  *
- * Overwites an already existing method and provides
+ * Overwrites an already existing method and provides
  * access to previous function. Must return function
  * to be used for name.
  *

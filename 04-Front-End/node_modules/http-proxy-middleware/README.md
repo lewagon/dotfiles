@@ -4,6 +4,7 @@
 [![Coveralls](https://img.shields.io/coveralls/chimurai/http-proxy-middleware.svg?style=flat-square)](https://coveralls.io/r/chimurai/http-proxy-middleware)
 [![dependency Status](https://img.shields.io/david/chimurai/http-proxy-middleware.svg?style=flat-square)](https://david-dm.org/chimurai/http-proxy-middleware#info=dependencies)
 [![dependency Status](https://snyk.io/test/npm/http-proxy-middleware/badge.svg)](https://snyk.io/test/npm/http-proxy-middleware)
+[![JavaScript Style Guide](https://img.shields.io/badge/codestyle-standard-brightgreen.svg)](https://standardjs.com)
 
 Node.js proxying made simple. Configure proxy middleware with ease for [connect](https://github.com/senchalabs/connect), [express](https://github.com/strongloop/express), [browser-sync](https://github.com/BrowserSync/browser-sync) and [many more](#compatible-servers).
 
@@ -130,7 +131,7 @@ var app = express();
 
 Providing an alternative way to decide which requests should be proxied; In case you are not able to use the server's [`path` parameter](http://expressjs.com/en/4x/api.html#app.use) to mount the proxy or when you need more flexibility.
 
-The [RFC 3986 `path`](https://tools.ietf.org/html/rfc3986#section-3.3) is be used for context matching.
+[RFC 3986 `path`](https://tools.ietf.org/html/rfc3986#section-3.3) is used for context matching.
 
 ```
          foo://example.com:8042/over/there?name=ferret#nose
@@ -419,18 +420,13 @@ Run the test suite:
 ```bash
 # install dependencies
 $ npm install
-```
 
-unit testing
+# linting
+$ npm run lint
 
-```bash
 # unit tests
 $ npm test
-```
 
-coverage
-
-```bash
 # code coverage
 $ npm run cover
 ```

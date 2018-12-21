@@ -9,7 +9,7 @@ NAN provides a `v8::Script` helpers as the API has changed over the supported ve
 <a name="api_nan_compile_script"></a>
 ### Nan::CompileScript()
 
-A wrapper around [`v8::Script::Compile()`](https://v8docs.nodesource.com/io.js-3.0/da/da5/classv8_1_1_script_compiler.html#a93f5072a0db55d881b969e9fc98e564b).
+A wrapper around [`v8::Script::Compile()`](https://v8docs.nodesource.com/io.js-3.3/da/da5/classv8_1_1_script_compiler.html#a93f5072a0db55d881b969e9fc98e564b).
 
 Note that `Nan::BoundScript` is an alias for `v8::Script`.
 

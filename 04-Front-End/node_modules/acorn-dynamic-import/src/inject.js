@@ -1,5 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 
+export const DynamicImportKey = 'Import';
+
 export default function injectDynamicImport(acorn) {
   const tt = acorn.tokTypes;
 
@@ -12,7 +14,7 @@ export default function injectDynamicImport(acorn) {
     if (this.type !== tt.parenL) {
       this.unexpected();
     }
-    return this.finishNode(node, 'Import');
+    return this.finishNode(node, DynamicImportKey);
   }
 
   function peekNext() {

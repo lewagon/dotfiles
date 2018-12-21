@@ -6,7 +6,8 @@
     "comma-dangle": "off",
     "quotes": "off",
     "no-unused-vars": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "class-methods-use-this": "off"
   },
   "env": {
     "node": true,

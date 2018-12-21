@@ -1,6 +1,6 @@
 {
   "name": "miller-rabin",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Miller Rabin algorithm for primality test",
   "main": "lib/mr.js",
   "bin": "bin/miller-rabin",

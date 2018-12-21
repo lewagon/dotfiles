@@ -1,5 +1,3 @@
-var config = require('../config');
-
 var fnLengthDesc = Object.getOwnPropertyDescriptor(function () {}, 'length');
 
 /*!

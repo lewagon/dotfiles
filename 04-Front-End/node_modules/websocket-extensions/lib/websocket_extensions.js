@@ -9,7 +9,7 @@ var Extensions = function() {
   this._byName   = {};
   this._inOrder  = [];
   this._sessions = [];
-  this._index    = {}
+  this._index    = {};
 };
 
 Extensions.MESSAGE_OPCODES = [1, 2];
@@ -89,9 +89,9 @@ var instance = {
   },
 
   generateResponse: function(header) {
-    var offers   = Parser.parseHeader(header),
-        sessions = [],
-        response = [];
+    var sessions = [],
+        response = [],
+        offers   = Parser.parseHeader(header);
 
     this._inOrder.forEach(function(ext) {
       var offer = offers.byName(ext.name);

@@ -77,6 +77,24 @@ module.exports = {
    * @api private
    */
   stream : function stream(req, socket, options, head, server, clb) {
+
+    var createHttpHeader = function(line, headers) {
+      return Object.keys(headers).reduce(function (head, key) {
+        var value = headers[key];
+
+        if (!Array.isArray(value)) {
+          head.push(key + ': ' + value);
+          return head;
+        }
+
+        for (var i = 0; i < value.length; i++) {
+          head.push(key + ': ' + value[i]);
+        }
+        return head;
+      }, [line])
+      .join('\r\n') + '\r\n\r\n';
+    }
+
     common.setupSocket(socket);
 
     if (head && head.length) socket.unshift(head);
@@ -93,7 +111,10 @@ module.exports = {
     proxyReq.on('error', onOutgoingError);
     proxyReq.on('response', function (res) {
       // if upgrade event isn't going to happen, close the socket
-      if (!res.upgrade) socket.end();
+      if (!res.upgrade) {
+        socket.write(createHttpHeader('HTTP/' + res.httpVersion + ' ' + res.statusCode + ' ' + res.statusMessage, res.headers));
+        res.pipe(socket);
+      }
     });
 
     proxyReq.on('upgrade', function(proxyRes, proxySocket, proxyHead) {
@@ -119,22 +140,7 @@ module.exports = {
       // Remark: Handle writing the headers to the socket when switching protocols
       // Also handles when a header is an array
       //
-      socket.write(
-        Object.keys(proxyRes.headers).reduce(function (head, key) {
-          var value = proxyRes.headers[key];
-
-          if (!Array.isArray(value)) {
-            head.push(key + ': ' + value);
-            return head;
-          }
-
-          for (var i = 0; i < value.length; i++) {
-            head.push(key + ': ' + value[i]);
-          }
-          return head;
-        }, ['HTTP/1.1 101 Switching Protocols'])
-        .join('\r\n') + '\r\n\r\n'
-      );
+      socket.write(createHttpHeader('HTTP/1.1 101 Switching Protocols', proxyRes.headers));
 
       proxySocket.pipe(socket).pipe(proxySocket);
 

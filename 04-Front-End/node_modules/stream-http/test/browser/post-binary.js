@@ -9,8 +9,7 @@ var browser = (new UAParser()).setUA(navigator.userAgent).getBrowser()
 var browserName = browser.name
 var browserVersion = browser.major
 // Binary request bodies don't work in a bunch of browsers
-var skipVerification = ((browserName === 'Opera' && browserVersion <= 11) ||
-	(browserName === 'IE' && browserVersion <= 10) ||
+var skipVerification = ((browserName === 'IE' && browserVersion <= 10) ||
 	(browserName === 'Safari' && browserVersion <= 5) ||
 	(browserName === 'WebKit' && browserVersion <= 534) || // Old mobile safari
 	(browserName === 'Android Browser' && browserVersion <= 4))

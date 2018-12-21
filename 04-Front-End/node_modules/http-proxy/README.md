@@ -2,15 +2,7 @@
   <img src="https://raw.github.com/nodejitsu/node-http-proxy/master/doc/logo.png"/>
 </p>
 
-node-http-proxy
-=======
-
-<p align="left">
- <a href="https://travis-ci.org/nodejitsu/node-http-proxy" target="_blank">
-  <img src="https://travis-ci.org/nodejitsu/node-http-proxy.png"/></a>&nbsp;&nbsp;
- <a href="https://coveralls.io/r/nodejitsu/node-http-proxy" target="_blank">
-  <img src="https://coveralls.io/repos/nodejitsu/node-http-proxy/badge.png"/></a>
-</p>
+# node-http-proxy [![Build Status](https://travis-ci.org/nodejitsu/node-http-proxy.svg?branch=master)](https://travis-ci.org/nodejitsu/node-http-proxy) [![codecov](https://codecov.io/gh/nodejitsu/node-http-proxy/branch/master/graph/badge.svg)](https://codecov.io/gh/nodejitsu/node-http-proxy)
 
 `node-http-proxy` is an HTTP programmable proxying library that supports
 websockets. It is suitable for implementing components such as reverse
@@ -53,7 +45,7 @@ Click [here](UPGRADING.md)
 ### Core Concept
 
 A new proxy is created by calling `createProxyServer` and passing
-an `options` object as argument ([valid properties are available here](lib/http-proxy.js#L33-L50))
+an `options` object as argument ([valid properties are available here](lib/http-proxy.js#L22-L50))
 
 ```javascript
 var httpProxy = require('http-proxy');
@@ -125,7 +117,7 @@ http.createServer(function (req, res) {
 **[Back to top](#table-of-contents)**
 
 #### Setup a stand-alone proxy server with custom server logic
-This example show how you can proxy a request using your own HTTP server
+This example shows how you can proxy a request using your own HTTP server
 and also you can put your own logic to handle the request.
 
 ```js
@@ -237,7 +229,7 @@ http.createServer(function (req, res) {
 **[Back to top](#table-of-contents)**
 
 #### Using HTTPS
-You can activate the validation of a secure SSL certificate to the target connection (avoid self signed certs), just set `secure: true` in the options.
+You can activate the validation of a secure SSL certificate to the target connection (avoid self-signed certs), just set `secure: true` in the options.
 
 ##### HTTPS -> HTTP
 
@@ -271,6 +263,24 @@ httpProxy.createServer({
   target: 'https://localhost:9010',
   secure: true // Depends on your needs, could be false.
 }).listen(443);
+```
+
+##### HTTP -> HTTPS (using a PKCS12 client certificate)
+
+```js
+//
+// Create an HTTP proxy server with an HTTPS target
+//
+httpProxy.createProxyServer({
+  target: {
+    protocol: 'https:',
+    host: 'my-domain-name',
+    port: 443,
+    pfx: fs.readFileSync('path/to/certificate.p12'),
+    passphrase: 'password',
+  },
+  changeOrigin: true,
+}).listen(8000);
 ```
 
 **[Back to top](#table-of-contents)**
@@ -341,7 +351,7 @@ proxyServer.listen(8015);
 *  **cookieDomainRewrite**: rewrites domain of `set-cookie` headers. Possible values:
    * `false` (default): disable cookie rewriting
    * String: new domain, for example `cookieDomainRewrite: "new.domain"`. To remove the domain, use `cookieDomainRewrite: ""`.
-   * Object: mapping of domains to new domains, use `"*"` to match all domains.  
+   * Object: mapping of domains to new domains, use `"*"` to match all domains.
      For example keep one domain unchanged, rewrite one domain and remove other domains:
      ```
      cookieDomainRewrite: {
@@ -350,8 +360,41 @@ proxyServer.listen(8015);
        "*": ""
      }
      ```
+*  **cookiePathRewrite**: rewrites path of `set-cookie` headers. Possible values:
+   * `false` (default): disable cookie rewriting
+   * String: new path, for example `cookiePathRewrite: "/newPath/"`. To remove the path, use `cookiePathRewrite: ""`. To set path to root use `cookiePathRewrite: "/"`.
+   * Object: mapping of paths to new paths, use `"*"` to match all paths.
+     For example, to keep one path unchanged, rewrite one path and remove other paths:
+     ```
+     cookiePathRewrite: {
+       "/unchanged.path/": "/unchanged.path/",
+       "/old.path/": "/new.path/",
+       "*": ""
+     }
+     ```
 *  **headers**: object with extra headers to be added to target requests.
-*  **proxyTimeout**: timeout (in millis) when proxy receives no response from target
+*  **proxyTimeout**: timeout (in millis) for outgoing proxy requests
+*  **timeout**: timeout (in millis) for incoming requests
+*  **followRedirects**: true/false, Default: false - specify whether you want to follow redirects
+*  **selfHandleResponse** true/false, if set to true, none of the webOutgoing passes are called and it's your responsibility to appropriately return the response by listening and acting on the `proxyRes` event
+*  **buffer**: stream of data to send as the request body.  Maybe you have some middleware that consumes the request stream before proxying it on e.g.  If you read the body of a request into a field called 'req.rawbody' you could restream this field in the buffer option:
+
+    ```
+    'use strict';
+
+    const streamify = require('stream-array');
+    const HttpProxy = require('http-proxy');
+    const proxy = new HttpProxy();
+
+    module.exports = (req, res, next) => {
+
+      proxy.web(req, res, {
+        target: 'http://localhost:4003/',
+        buffer: streamify(req.rawBody)
+      }, next);
+
+    };
+    ```
 
 **NOTE:**
 `options.ws` and `options.ssl` are optional.
@@ -361,6 +404,7 @@ If you are using the `proxyServer.listen` method, the following options are also
 
  *  **ssl**: object to be passed to https.createServer()
  *  **ws**: true/false, if you want to proxy websockets
+
 
 **[Back to top](#table-of-contents)**
 
@@ -442,6 +486,36 @@ proxy.close();
 
 ### Miscellaneous
 
+If you want to handle your own response after receiving the `proxyRes`, you can do
+so with `selfHandleResponse`. As you can see below, if you use this option, you
+are able to intercept and read the `proxyRes` but you must also make sure to
+reply to the `res` itself otherwise the original client will never receive any
+data.
+
+### Modify response
+
+```js
+
+    var option = {
+      target: target,
+      selfHandleResponse : true
+    };
+    proxy.on('proxyRes', function (proxyRes, req, res) {
+        var body = new Buffer('');
+        proxyRes.on('data', function (data) {
+            body = Buffer.concat([body, data]);
+        });
+        proxyRes.on('end', function () {
+            body = body.toString();
+            console.log("res from proxied server:", body);
+            res.end("my response to cli");
+        });
+    });
+    proxy.web(req, res, option);
+
+
+```
+
 #### ProxyTable API
 
 A proxy table API is available through this add-on [module](https://github.com/donasaur/http-proxy-rules), which lets you define a set of rules to translate matching routes to target routes that the reverse proxy will talk to.
@@ -460,6 +534,7 @@ Logo created by [Diego Pasquali](http://dribbble.com/diegopq)
 
 ### Contributing and Issues
 
+* Read carefully our [Code Of Conduct](https://github.com/nodejitsu/node-http-proxy/blob/master/CODE_OF_CONDUCT.md)
 * Search on Google/Github
 * If you can't find anything, open an issue
 * If you feel comfortable about fixing the issue, fork the repo

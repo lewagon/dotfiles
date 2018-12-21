@@ -30,25 +30,29 @@ We will first have a look at the CSS framework Bootstrap and everything it gives
 - Using flexboxes for horizontal or vertical alginment of components
 - Using CSS grid to build complex 2D layouts
 
-## `04 Middleman`
+## `04 JavaScript Basics`
 
-We'll introduce advanced concepts such as ERB, layout, and SASS. For that, we will use a nice frontend framework called [Middleman](https://middlemanapp.com) and we'll learn to organize our HTML and CSS code in a very DRY way.
+First day of the JavaScript submodule! JavaScript is THE programming language that is understood by browsers. It's still a programming language, like Ruby, with types, variables, functions etc. But the syntax in JavaScript is different from Ruby's, so you need to familiarise with it.
 
-It's normal to struggle a bit with Middleman. The good news is: Rails frontend will be very similar to Middleman. So it's a very good investment to work hard on it!
+For today's challenges, we'll leave the browser and go back to the terminal to play with algorithmics in JavaScript!
 
 Then, instead of the live-code it's Pitch Night! You will have 5 minutes to pitch your idea in front of the class. Have a look at `Front-End/Bootstrap/Pitch-Preparation` if you want a head-start on preparing.
 
-## `05 Javascript & the DOM`
+## `05 DOM & Events`
 
-Our morning talk will be an introduction to Javascript and the DOM. We'll look at what Javascript and Ruby have in common, and how they differ. Then, we will introduce the DOM – how the browser processes the webpage – and how we can use Javascript to interact with it.
+Now that we picked up the syntax, let's go back to the browser and use JavaScript as a frontend language. On this day, we will introduce the DOM – how the browser processes the HTML webpage – and how we can use Javascript to interact with it.
 
-## `06 DOM Events & AJAX`
+We will also have a look at the different user events we can listen to with JavaScript in order to build highly dynamic interfaces.
 
-We will have a look at the different user events we can listen to with Javascript in order to build highly dynamic websites. We will also discover how to fetch content dynamically using AJAX and Javascript without having to reload the page.
+## `06 HTTP & AJAX`
 
-## `07 Javascript Tooling`
+Let's rehearse the basics of the Web with HTTP requests / response cycles.
 
-In this lecture, we will have a look at how to use modern Javascript development tools, including package managers, Webpack to bundle our JS and babel to make it compatible with older browsers.
+We will discover how to fetch content dynamically using AJAX and JavaScript without having to reload the page.
+
+## `07 JavaScript Plugins`
+
+In this lecture, we will download external JavaScript packages with **[Yarn](https://yarnpkg.com/en/)** and use them in our interfaces. We'll also see how to organise our code in several files in a frontend app.
 
 ## `08 Product Design Sprint`
 

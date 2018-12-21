@@ -1,6 +1,6 @@
 {
   "name": "os-locale",
-  "version": "1.4.0",
+  "version": "3.0.1",
   "description": "Get the system locale",
   "license": "MIT",
   "repository": "sindresorhus/os-locale",
@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6"
   },
   "scripts": {
     "test": "xo && ava"
@@ -33,11 +33,13 @@
     "region"
   ],
   "dependencies": {
-    "lcid": "^1.0.0"
+    "execa": "^0.10.0",
+    "lcid": "^2.0.0",
+    "mem": "^4.0.0"
   },
   "devDependencies": {
     "ava": "*",
-    "require-uncached": "^1.0.2",
+    "import-fresh": "^2.0.0",
     "xo": "*"
   }
 }

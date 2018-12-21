@@ -5,6 +5,12 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 
 ## Unreleased
 
+## v2.2.0 - 2018-03-29
+### Changed
+- `parse`: attach node locations by default.
+- `moduleVisitor`: visitor now gets the full `import` statement node as a second
+  argument, so rules may report against the full statement / `require` call instead
+  of only the string literal node.
 
 ## v2.1.1 - 2017-06-22
 

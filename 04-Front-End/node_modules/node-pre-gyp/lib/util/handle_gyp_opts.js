@@ -4,6 +4,7 @@ module.exports = exports = handle_gyp_opts;
 
 var fs = require('fs');
 var versioning = require('./versioning.js');
+var napi = require('./napi.js');
 
 /*
 
@@ -44,6 +45,9 @@ var share_with_node_gyp = [
   'module',
   'module_name',
   'module_path',
+  'napi_version',
+  'node_abi_napi',
+  'napi_build_version'
 ];
 
 function handle_gyp_opts(gyp, argv, callback) {
@@ -51,13 +55,15 @@ function handle_gyp_opts(gyp, argv, callback) {
     // Collect node-pre-gyp specific variables to pass to node-gyp
     var node_pre_gyp_options = [];
     // generate custom node-pre-gyp versioning info
-    var opts = versioning.evaluate(JSON.parse(fs.readFileSync('./package.json')), gyp.opts);
+    var napi_build_version = napi.get_napi_build_version_from_command_args(argv);
+    var opts = versioning.evaluate(JSON.parse(fs.readFileSync('./package.json')), gyp.opts, napi_build_version);
     share_with_node_gyp.forEach(function(key) {
         var val = opts[key];
         if (val) {
             node_pre_gyp_options.push('--' + key + '=' + val);
         } else {
-            return callback(new Error("Option " + key + " required but not found by node-pre-gyp"));
+            if (key !== 'napi_version' && key !== 'node_abi_napi' && key !== 'napi_build_version')
+                return callback(new Error("Option " + key + " required but not found by node-pre-gyp"));
         }
     });
 

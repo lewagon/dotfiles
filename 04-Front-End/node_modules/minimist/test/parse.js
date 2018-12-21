@@ -42,6 +42,32 @@ test('comprehensive', function (t) {
     t.end();
 });
 
+test('nums', function (t) {
+    var argv = parse([
+        '-x', '1234',
+        '-y', '5.67',
+        '-z', '1e7',
+        '-w', '10f',
+        '--hex', '0xdeadbeef',
+        '789'
+    ]);
+    t.deepEqual(argv, {
+        x : 1234,
+        y : 5.67,
+        z : 1e7,
+        w : '10f',
+        hex : 0xdeadbeef,
+        _ : [ 789 ]
+    });
+    t.deepEqual(typeof argv.x, 'number');
+    t.deepEqual(typeof argv.y, 'number');
+    t.deepEqual(typeof argv.z, 'number');
+    t.deepEqual(typeof argv.w, 'string');
+    t.deepEqual(typeof argv.hex, 'number');
+    t.deepEqual(typeof argv._[0], 'number');
+    t.end();
+});
+
 test('flag boolean', function (t) {
     var argv = parse([ '-t', 'moo' ], { boolean: 't' });
     t.deepEqual(argv, { t : true, _ : [ 'moo' ] });
@@ -63,6 +89,42 @@ test('flag boolean value', function (t) {
     
     t.deepEqual(typeof argv.verbose, 'boolean');
     t.deepEqual(typeof argv.t, 'boolean');
+    t.end();
+});
+
+test('flag boolean default false', function (t) {
+    var argv = parse(['moo'], {
+        boolean: ['t', 'verbose'],
+        default: { verbose: false, t: false }
+    });
+    
+    t.deepEqual(argv, {
+        verbose: false,
+        t: false,
+        _: ['moo']
+    });
+    
+    t.deepEqual(typeof argv.verbose, 'boolean');
+    t.deepEqual(typeof argv.t, 'boolean');
+    t.end();
+
+});
+
+test('boolean groups', function (t) {
+    var argv = parse([ '-x', '-z', 'one', 'two', 'three' ], {
+        boolean: ['x','y','z']
+    });
+    
+    t.deepEqual(argv, {
+        x : true,
+        y : false,
+        z : true,
+        _ : [ 'one', 'two', 'three' ]
+    });
+    
+    t.deepEqual(typeof argv.x, 'boolean');
+    t.deepEqual(typeof argv.y, 'boolean');
+    t.deepEqual(typeof argv.z, 'boolean');
     t.end();
 });
 
@@ -121,29 +183,6 @@ test('empty strings', function(t) {
 });
 
 
-test('string and alias', function(t) {
-    var x = parse([ '--str',  '000123' ], {
-        string: 's',
-        alias: { s: 'str' }
-    });
-
-    t.equal(x.str, '000123');
-    t.equal(typeof x.str, 'string');
-    t.equal(x.s, '000123');
-    t.equal(typeof x.s, 'string');
-
-    var y = parse([ '-s',  '000123' ], {
-        string: 'str',
-        alias: { str: 's' }
-    });
-
-    t.equal(y.str, '000123');
-    t.equal(typeof y.str, 'string');
-    t.equal(y.s, '000123');
-    t.equal(typeof y.s, 'string');
-    t.end();
-});
-
 test('slashBreak', function (t) {
     t.same(
         parse([ '-I/foo/bar/baz' ]),
@@ -193,5 +232,87 @@ test('nested dotted objects', function (t) {
         }
     });
     t.same(argv.beep, { boop : true });
+    t.end();
+});
+
+test('boolean and alias with chainable api', function (t) {
+    var aliased = [ '-h', 'derp' ];
+    var regular = [ '--herp',  'derp' ];
+    var opts = {
+        herp: { alias: 'h', boolean: true }
+    };
+    var aliasedArgv = parse(aliased, {
+        boolean: 'herp',
+        alias: { h: 'herp' }
+    });
+    var propertyArgv = parse(regular, {
+        boolean: 'herp',
+        alias: { h: 'herp' }
+    });
+    var expected = {
+        herp: true,
+        h: true,
+        '_': [ 'derp' ]
+    };
+    
+    t.same(aliasedArgv, expected);
+    t.same(propertyArgv, expected); 
+    t.end();
+});
+
+test('boolean and alias with options hash', function (t) {
+    var aliased = [ '-h', 'derp' ];
+    var regular = [ '--herp', 'derp' ];
+    var opts = {
+        alias: { 'h': 'herp' },
+        boolean: 'herp'
+    };
+    var aliasedArgv = parse(aliased, opts);
+    var propertyArgv = parse(regular, opts);
+    var expected = {
+        herp: true,
+        h: true,
+        '_': [ 'derp' ]
+    };
+    t.same(aliasedArgv, expected);
+    t.same(propertyArgv, expected);
+    t.end();
+});
+
+test('boolean and alias using explicit true', function (t) {
+    var aliased = [ '-h', 'true' ];
+    var regular = [ '--herp',  'true' ];
+    var opts = {
+        alias: { h: 'herp' },
+        boolean: 'h'
+    };
+    var aliasedArgv = parse(aliased, opts);
+    var propertyArgv = parse(regular, opts);
+    var expected = {
+        herp: true,
+        h: true,
+        '_': [ ]
+    };
+
+    t.same(aliasedArgv, expected);
+    t.same(propertyArgv, expected); 
+    t.end();
+});
+
+// regression, see https://github.com/substack/node-optimist/issues/71
+test('boolean and --x=true', function(t) {
+    var parsed = parse(['--boool', '--other=true'], {
+        boolean: 'boool'
+    });
+
+    t.same(parsed.boool, true);
+    t.same(parsed.other, 'true');
+
+    parsed = parse(['--boool', '--other=false'], {
+        boolean: 'boool'
+    });
+    
+    t.same(parsed.boool, true);
+    t.same(parsed.other, 'false');
     t.end();
 });

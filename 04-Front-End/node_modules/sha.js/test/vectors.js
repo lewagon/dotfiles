@@ -1,8 +1,7 @@
 var tape = require('tape')
 var vectors = require('hash-test-vectors')
 // var from = require('bops/typedarray/from')
-var Buffer = require('buffer').Buffer
-var hexpp = require('../hexpp')
+var Buffer = require('safe-buffer').Buffer
 
 var createHash = require('../')
 
@@ -14,11 +13,10 @@ function makeTest (alg, i, verbose) {
       console.log(v)
       console.log('VECTOR', i)
       console.log('INPUT', v.input)
-      console.log(hexpp(new Buffer(v.input, 'base64')))
-      console.log(new Buffer(v.input, 'base64').toString('hex'))
+      console.log(Buffer.from(v.input, 'base64').toString('hex'))
     }
 
-    var buf = new Buffer(v.input, 'base64')
+    var buf = Buffer.from(v.input, 'base64')
     t.equal(createHash(alg).update(buf).digest('hex'), v[alg])
 
     i = ~~(buf.length / 2)
@@ -58,12 +56,10 @@ function makeTest (alg, i, verbose) {
       t.end()
     })
   })
-
 }
 
 if (process.argv[2]) {
   makeTest(process.argv[2], parseInt(process.argv[3], 10), true)
-
 } else {
   vectors.forEach(function (v, i) {
     makeTest('sha', i)

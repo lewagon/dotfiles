@@ -28,6 +28,24 @@ const ast = acorn.parse(code, {
 });
 ```
 
+To use the updated walk functionality the process is similar. You can require the default implementation as:
+
+```js
+import walk from 'acorn-dynamic-import/lib/walk';
+// or...
+const dynamicImportWalk = require('acorn-dynamic-import/lib/walk').default;
+```
+
+Or you can use the injectable version for injecting the new walk functionality into your own version of Acorn like this:
+
+```js
+import { inject } from 'acorn-dynamic-import/lib/walk';
+import acornWalk from 'acorn/dist/walk';
+
+const walk = inject(acornWalk);
+
+``` 
+
 ## License
 
 This plugin is issued under the [MIT license](./LICENSE).

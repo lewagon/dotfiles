@@ -1,12 +1,12 @@
-"use strict";
 /*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
+MIT License http://www.opensource.org/licenses/mit-license.php
+Author Tobias Koppers @sokra
 */
-const createInnerCallback = require("./createInnerCallback");
+"use strict";
+
 const DescriptionFileUtils = require("./DescriptionFileUtils");
 
-class DescriptionFilePlugin {
+module.exports = class DescriptionFilePlugin {
 	constructor(source, filenames, target) {
 		this.source = source;
 		this.filenames = [].concat(filenames);
@@ -14,19 +14,18 @@ class DescriptionFilePlugin {
 	}
 
 	apply(resolver) {
-		const filenames = this.filenames;
-		const target = this.target;
-		resolver.plugin(this.source, (request, callback) => {
+		const target = resolver.ensureHook(this.target);
+		resolver.getHook(this.source).tapAsync("DescriptionFilePlugin", (request, resolveContext, callback) => {
 			const directory = request.path;
-			DescriptionFileUtils.loadDescriptionFile(resolver, directory, filenames, ((err, result) => {
+			DescriptionFileUtils.loadDescriptionFile(resolver, directory, this.filenames, resolveContext, (err, result) => {
 				if(err) return callback(err);
 				if(!result) {
-					if(callback.missing) {
-						filenames.forEach((filename) => {
-							callback.missing.push(resolver.join(directory, filename));
+					if(resolveContext.missing) {
+						this.filenames.forEach((filename) => {
+							resolveContext.missing.add(resolver.join(directory, filename));
 						});
 					}
-					if(callback.log) callback.log("No description file found");
+					if(resolveContext.log) resolveContext.log("No description file found");
 					return callback();
 				}
 				const relativePath = "." + request.path.substr(result.directory.length).replace(/\\/g, "/");
@@ -36,16 +35,14 @@ class DescriptionFilePlugin {
 					descriptionFileRoot: result.directory,
 					relativePath: relativePath
 				});
-				resolver.doResolve(target, obj, "using description file: " + result.path + " (relative path: " + relativePath + ")", createInnerCallback((err, result) => {
+				resolver.doResolve(target, obj, "using description file: " + result.path + " (relative path: " + relativePath + ")", resolveContext, (err, result) => {
 					if(err) return callback(err);
-					if(result) return callback(null, result);
 
-					// Don't allow other description files or none at all
-					callback(null, null);
-				}, callback));
-			}));
+					// Don't allow other processing
+					if(result === undefined) return callback(null, null);
+					callback(null, result);
+				});
+			});
 		});
 	}
-}
-
-module.exports = DescriptionFilePlugin;
+};

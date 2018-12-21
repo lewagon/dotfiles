@@ -1,3 +1,3 @@
-var createECDH = require('crypto').createECDH;
+var createECDH = require('crypto').createECDH
 
-module.exports = createECDH || require('./browser');
+module.exports = createECDH || require('./browser')

@@ -55,6 +55,24 @@ execa.shell('exit 3').catch(error => {
 	}
 	*/
 });
+
+// example of catching an error with a sync method
+try {
+	execa.shellSync('exit 3');
+} catch (err) {
+	console.log(err);
+	/*
+	{
+		message: 'Command failed: /bin/sh -c exit 3'
+		code: 3,
+		signal: null,
+		cmd: '/bin/sh -c exit 3',
+		stdout: '',
+		stderr: '',
+		timedOut: false
+	}
+	*/
+}
 ```
 
 
@@ -252,6 +270,13 @@ Type: `string` `number` `Stream` `undefined` `null`<br>
 Default: `pipe`
 
 Same options as [`stdio`](https://nodejs.org/dist/latest-v6.x/docs/api/child_process.html#child_process_options_stdio).
+
+#### windowsVerbatimArguments
+
+Type: `boolean`<br>
+Default: `false`
+
+If `true`, no quoting or escaping of arguments is done on Windows. Ignored on other platforms. This is set to `true` automatically when the `shell` option is `true`.
 
 
 ## Tips
