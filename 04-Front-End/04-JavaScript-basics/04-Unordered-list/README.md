@@ -21,10 +21,10 @@ When the `listItem` function passes all the tests, go on and code the `unordered
 
 ```js
 > console.log(unorderedList([ 'milk', 'butter', 'bread' ]));
-// <ul class="group-list">
-//   <li class="group-list-item">milk</li>
-//   <li class="group-list-item">butter</li>
-//   <li class="group-list-item">bread</li>
+// <ul class="list-group">
+//   <li class="list-group-item">milk</li>
+//   <li class="list-group-item">butter</li>
+//   <li class="list-group-item">bread</li>
 // </ul>
 ```
 
