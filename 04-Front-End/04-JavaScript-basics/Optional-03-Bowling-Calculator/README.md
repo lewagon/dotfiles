@@ -22,6 +22,7 @@ The function should return the player score.
 
 The 10th frame is the last one, so it has _special rules_:
 
+- In case of spare or strike, no more bonus is added
 - if the last frame is a spare, player rolls 1 bonus ball (3 rolls total)
 - if the last frame is a strike, player rolls 2 bonus balls (3 rolls total)
 - if neither a spare, nor a strike is scored, the player does not get the 3rd roll
