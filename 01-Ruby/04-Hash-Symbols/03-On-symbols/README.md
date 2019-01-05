@@ -2,7 +2,7 @@
 
 ### Discuss with classmates
 
-- What is the differences between a String and a Symbol?
+- What are the differences between a String and a Symbol?
 - When should you use one vs the other?
 - Memory-wise, what's the behavior of each one?
 
