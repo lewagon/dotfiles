@@ -4,7 +4,7 @@ We want to build a simple airbnb clone (like [this one](https://rails-simple-air
 
 - As a user, I can see all the available flats on our website
 - As a user, I can post a flat to the website, specifying its name and address
-- As a user, I can see detailed information of a given flat, including a nice little map if I get lost 😊
+- As a user, I can see detailed information of a given flat
 - As a user, I can edit the details of a flat if I made a mistake
 - As a user, I can delete a flat from the website, in case I don't want to rent it anymore
 
@@ -73,8 +73,6 @@ Remember that to create a flat, we will need two routes. One route is there to d
 Time to add the correct action to show all the information of a single given flat. How can we know what flat the user wants to have a look at?
 
 Let's also update the `index.html.erb` view with the `link_to` helper to build the dynamic links.
-
-You can use the [Google Maps Static Map API](https://developers.google.com/maps/documentation/static-maps/intro) to incorporate a map in your show view. It works with basic addresses so no need to geocode. 😊
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show.png)
 
