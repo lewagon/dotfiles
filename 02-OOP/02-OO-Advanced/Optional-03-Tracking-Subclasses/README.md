@@ -15,4 +15,4 @@ Mother.phone_kids
 ```
 
 The specs provide you with two children classes of `Mother`, so you just have to implement
-the class method `phone_kids`. You may need to use the [`inherited`](http://www.ruby-doc.org/core-2.4.0/Class.html#method-i-inherited) method of `Class`.
+the class method `phone_kids`. You may need to use the [`inherited`](http://www.ruby-doc.org/core-2.5.3/Class.html#method-i-inherited) method of `Class`.

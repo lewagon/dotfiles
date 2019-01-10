@@ -66,5 +66,5 @@ You beat the bank! You win.
 
 ## Further suggestions & resources
 
-- You might want to use the [Random class](http://www.ruby-doc.org/core-2.4.0/Random.html).
+- You might want to use the [Random class](http://www.ruby-doc.org/core-2.5.3/Random.html).
 - When looping, you need a condition to make your game loop stop at some point.
