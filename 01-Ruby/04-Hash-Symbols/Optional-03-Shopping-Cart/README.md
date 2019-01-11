@@ -30,4 +30,4 @@ As an extra:
 
 ## Further suggestions & resources
 
-* Have a look at the methods from the [Enumerable doc](http://ruby-doc.org/core-2.4.0/Enumerable.html)!
+* Have a look at the methods from the [Enumerable doc](http://ruby-doc.org/core-2.5.3/Enumerable.html)!
