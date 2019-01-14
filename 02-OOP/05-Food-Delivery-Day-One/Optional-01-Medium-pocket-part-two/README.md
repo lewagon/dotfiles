@@ -126,7 +126,7 @@ class MediumScraper
     post = Post.new(post_attributes)
     # Scrape author
     # [...]
-    author = Post.new(author_attributes)
+    author = Author.new(author_attributes)
     return { post: post, author: author }
   end
 end
