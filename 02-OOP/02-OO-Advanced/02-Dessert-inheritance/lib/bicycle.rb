@@ -15,7 +15,7 @@ class Tandem < Bicycle
   end
 end
 
-def quizz
+def quiz
   answers = []
 
   b = Bicycle.new

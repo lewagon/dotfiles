@@ -1,9 +1,9 @@
 require "bicycle"
 
-describe "#quizz" do
+describe "#quiz" do
 
   it "should understand #super behavior" do
-    expect(quizz).to eq true
+    expect(quiz).to eq true
   end
 
 end
