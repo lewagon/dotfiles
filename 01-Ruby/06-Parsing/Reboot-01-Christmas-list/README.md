@@ -125,6 +125,7 @@ end
 ```
 
 Once your scraper works on your `results.html` local file, update it to connect to Etsy's results page for any keywords and scrape the online page:
+
 ```ruby
 require 'open-uri'
 require 'nokogiri'
