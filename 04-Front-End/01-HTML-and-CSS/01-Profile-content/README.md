@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-A simple challenge to manipulate basic HTML tags and create a profile page with headers, text, lists, images and tables.
+A simple challenge to manipulate basic HTML tags and create a profile card with headers, text, lists, and images.
 
 ## Setup
 
@@ -33,8 +33,8 @@ Build a simple HTML profile page with the following elements (use the right HTML
 - an image of yourself
 - a header and sub-header with your name and your job title (you can put programmer now 💻)
 - a description of yourself
+- a button
 - a list of your social links
-- a table showing your projects, favorite movies/programming languages/sport teams/recipes, etc. whatever you want.
 
 A picture is worth a thousand words, [so here is what you should build in this challenge](http://lewagon.github.io/html-css-challenges/01-profile-content/)
 
