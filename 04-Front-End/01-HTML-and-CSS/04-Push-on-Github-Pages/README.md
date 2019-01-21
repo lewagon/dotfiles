@@ -4,7 +4,7 @@ We don't want to keep your profile within `fullstack-challenges` because we want
 
 
 ```bash
-cp -r ../04-Advanced-selectors/profile ~/code/<user.github_nickname>
+cp -r ../03-Box-model-and-selectors/profile ~/code/<user.github_nickname>
 cd ~/code/<user.github_nickname>/profile
 ```
 
