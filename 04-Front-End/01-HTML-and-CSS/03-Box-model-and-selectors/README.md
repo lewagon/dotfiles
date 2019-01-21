@@ -79,6 +79,8 @@ And here is the **good version** of it:
 
 ## Further suggestions & resources
 
+### Container
+
 Here is the div centering technique for the main container:
 
 ```css
@@ -87,6 +89,8 @@ Here is the div centering technique for the main container:
   margin: 0 auto; /* This automatically sets left/right margins */
 }
 ```
+
+### Inline list
 
 To design your lists of icons, you'll have to change the `block` behavior of list items by **inlining them**. Here is the corresponding CSS rules.
 
