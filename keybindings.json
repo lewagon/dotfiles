@@ -1,0 +1,30 @@
+// these are my custom vscode shortcuts
+[
+  {
+    "key": "ctrl+shift+alt+cmd+e",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus && !editorReadonly"
+  },
+  {
+    "key": "tab",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editor.emmet.action.expandAbbreviation"
+  },
+  {
+    "key": "tab",
+    "command": "-editor.emmet.action.expandAbbreviation",
+    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+0",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+h",
+    "command": "editor.action.triggerParameterHints"
+  },
+]

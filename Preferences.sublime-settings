@@ -19,10 +19,18 @@
 		"public/packs",
 		"coverage"
 	],
+	"font_size": 14,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
+		"Baobab React ES6 Snippets",
+		"DashDoc",
+		"HTML Snippets",
+		"JavaScript",
+		"JavaScript Next Snippets",
+		"Material Theme",
+		"React ES6 Snippets",
 		"Vintage"
 	],
 	"remember_open_files": false,

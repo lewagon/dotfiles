@@ -9,11 +9,17 @@
 		"AdvancedNewFile",
 		"All Autocomplete",
 		"Babel",
+		"Babel Snippets",
 		"Emmet",
 		"ERB Snippets",
 		"Git",
 		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"JavaScript Completions",
+		"JavaScript Enhancements",
 		"Package Control",
+		"Pue Syntax Highlight",
+		"Pug",
 		"SCSS"
 	]
 }
