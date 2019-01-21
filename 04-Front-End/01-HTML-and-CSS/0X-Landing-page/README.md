@@ -31,6 +31,8 @@ If you're designing [this page](https://arthur-littm.github.io/startup-landing/)
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/startup-landing-drawing.png" alt="" width="100%">
 </div>
 
+⚠️ If you're not 100% certain to have the right structure drawn, call a teacher to confirm before starting to code!
+
 ## Specs
 
 Build landign page with the following elements:
