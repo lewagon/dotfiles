@@ -44,7 +44,10 @@ Build landign page with the following elements:
 ## Further suggestions & resources
 
 - [Flexbox](https://kitt.lewagon.com/knowledge/cheatsheets/flexbox)
-- [Frontend dev toolbet](http://webdesigner.world/)
+- [Good google fonts pairs](https://fontpair.co/)
+- [Startup illustrations](https://undraw.co/illustrations)
+- [Icons](https://www.flaticon.com/)
+- [Coolors](https://colorhunt.co/)
 
 ## Finished?
 
