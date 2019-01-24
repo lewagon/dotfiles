@@ -109,38 +109,6 @@ Even inline, a list `<ul>` has some `padding-left` that you will also have to ki
 
 From this exercise onwards, **it is critical that you use your developer tool (`inspect`)** to play with your CSS in the browser and test things out before you write the final code.
 
-## Make it responsive with media queries
-
-If you want a responsive design, you can add media queries in CSS. They work a bit like an `if` statement in ruby. Basically **you can define CSS rules that will only apply if the window is smaller than a given width**. For instance, if you want a responsive container, you can build it like this:
-
-
-```css
-@media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  .container {
-    width: 700px;
-  }
-}
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container {
-    width: 500px;
-  }
-}
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .container {
-    width: 300px;
-  }
-}
-```
-
-Try to resize your window to understand how media queries work.
-
-### ⚠️⚠️⚠️ Be careful with the order of your media queries ⚠️⚠️⚠️
-
-As with `if` statements in ruby, order matters! If several conditions are `true`, the last CSS rule will be applied.
-
 ## Finished?
 
 Once you've finished you can push this exercise and copy the content to the next exercise folder with this command:
@@ -152,6 +120,6 @@ git commit -m "Added div to my profile page"
 git push origin master
 
 # Copy folder into next exercise folder
-cp -r profile ../04-Advanced-selectors
+cp -r profile ../04-Responsive-profile
 ```
 
