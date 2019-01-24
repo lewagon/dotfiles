@@ -26,8 +26,6 @@ Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-mod
 <div class="container">
   <div class="card"></div>
   <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
 </div>
 ```
 
