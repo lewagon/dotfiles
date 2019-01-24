@@ -70,5 +70,5 @@ git commit -m "Added fonts & colors to my profile page"
 git push origin master
 
 # Copy folder into next exercise folder
-cp -r profile ../03-Box-model
+cp -r profile ../03-Finishing-profile
 ```
