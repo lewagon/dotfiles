@@ -42,7 +42,9 @@ A picture is worth a thousand words, [so here is what you should build in this c
 
 ### Find **good** pictures
 
-Prepare your profile image file before starting to code.
+Prepare your profile image file before starting to code. For this exercise You can use your **profile picture from Facebook**, and save it in the images folder.
+
+For when you are working with your own images in the future, always follow these rules 👇
 
 **Always use hi-res images**
 **Always use hi-res images**
@@ -52,7 +54,7 @@ Got it? 😉
 
 When looking for images online, go to [Google Images](https://www.google.com/imghp) and search for what you want. Then, under the menu bar, click on `Tools` ➡️ `Size` ➡️ `Large`. No more pixelation now!
 
-Finally, ensure your **profile image is square** (you can crop it to make it square).
+### HTML tips
 
 - Don't forget the basic skeleton tags `<html>`, `<body>`, `<head>`.
 - Don't forget the page `<title>` in the `<head>` section, and other important metatags like `<meta charset="utf-8">`.
