@@ -26,9 +26,11 @@ This is copying the `recipe.rb` file from the previous exercise, into the `lib` 
 
 ### Repository
 
-We now need another class that will act as a database, the `Repository`. We don't have a proper database yet, so we will use a class that acts like one (as we saw in the lecture). When a Ruby program exits, we lose all the data that we stored in variables. If we want to recuperate the data next time we run the program, we need to store them in a more persistent way, on the hard drive, in a CSV file.
+We now need another class that will act as a database, the `Repository`. We don't have a proper database yet, so we will use a class that acts like one (as we saw in the lecture). When a Ruby program exits, we lose all the data that we stored in variables. If we want to retrieve the data next time we run the program, we need to store them in a more persistent way, on the hard drive, in a CSV file.
 
-Implement a `Cookbook` class which will act as fake database. It should implement 4 methods:
+In the context of this challenge, the repository stores the recipes added by the user. In other words, it **is** the **cookbook**. Let's name the class `Cookbook` to write explicit and meaningful code, but keep in mind that it's the **repository** from this morning's diagram!
+
+Implement the `Cookbook` class with 4 methods:
 
 - `initialize(csv_file_path)` which loads existing `Recipe` from the CSV
 - `all` which returns all the recipes
