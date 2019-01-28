@@ -47,5 +47,5 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = f.hameau@gmail.com
-	name = François HAMEAU
+	email = zsh git_setup.s
+	name = cd ~/code/$GITHUB_USERNAME/dotfiles
