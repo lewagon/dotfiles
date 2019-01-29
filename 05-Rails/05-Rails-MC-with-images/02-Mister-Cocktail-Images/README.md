@@ -61,7 +61,7 @@ image should be displayed, but bigger!
 
 Even though it's a simple app, try your best to make something beautiful using Bootstrap, a few nice font, and all your creativity 🎨😊🎨
 
-**Hint**: You can always build on top of [lewagon/ui-components](http://lewagon.github.io/ui-components/)
+**Hint**: You can always build on top of [Le Wagon UI Kit](https://uikit.lewagon.com/)
 
 ### Cocktail Reviews (Optional)
 
