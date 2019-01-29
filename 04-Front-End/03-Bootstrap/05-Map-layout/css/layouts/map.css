@@ -3,5 +3,4 @@
 /* We just give you a Gmaps with random width/height */
 #map {
   width: 100%;
-  height: 700px;
 }

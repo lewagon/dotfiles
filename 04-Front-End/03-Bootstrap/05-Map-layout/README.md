@@ -9,18 +9,18 @@ Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/
 ## Starting the challenge
 
 1. Make sure you understand the code in `index.html`, and the design we give you for navbar and cards in `components/navbar.css` and `components/card.css`. If you don't understand it fully, raise a ticket and someone will explain it!
-2. Go back to lecture to rehearse how you can build a layout using **flexbox** and `position: sticky`
+2. Go back to the lecture to rehearse how you can build a layout using **flexbox** and `position: sticky`
 3. **Don't cheat by inspecting the code! 🔎** The goal of this challenge is to teach you how to build a layout by yourself. Take your time to think, ask teachers if you're stuck, but don't cheat 😉!
 
-To display the Google map, you need to launch a web server (not just open the HTML file in your browser):
+To display the MapBox map, you will need to [get a MapBox API key](https://www.mapbox.com/account/access-tokens/) and make sure you add your own key to the url in the `src` attribute of the `#map` element.
+
+To test your code and view your page in the browser, launch a web server (don't just open the HTML file in your browser) using the command below:
 
 ```
 serve
 ```
 
 NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
-
-In fact, we've loaded the map with a [Gmaps API key](https://developers.google.com/maps/documentation/javascript/get-api-key), and we've set up this key to only accept `localhost:8000` as a domain.
 
 ## New CSS organization
 
