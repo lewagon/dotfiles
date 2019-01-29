@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Practice using the Bootstrap classes. Prototype the restaurant page of Deliveroo using only bootstrap! (You're not allowed to write any CSS)
+Practice using the Bootstrap classes. Prototype the [restaurant page](http://lewagon.github.io/bootstrap-challenges/02-Bootstrap-prototyping) of Deliveroo using only bootstrap! (You're not allowed to write any CSS)
 
 ## Specs
 
@@ -20,3 +20,4 @@ To make this link a button you just have to add the class `btn btn-primary`:
 ## Further suggestions & resources
 
 - Make sure to use the [Bootstrap documentation](https://getbootstrap.com/docs/4.2), they have a lot more to offer than `btn` classes!
+- Have a look at the [final result](http://lewagon.github.io/bootstrap-challenges/02-Bootstrap-prototyping) to compare with your work.
