@@ -6,12 +6,12 @@ Build a [responsive signup form](http://lewagon.github.io/bootstrap-challenges/1
 
 ## Grid offset technique
 
-The best trick to make a form responsive is to inject it in a Bootstrap grid with an offset:
+The best trick to make a form responsive is to inject it in a Bootstrap grid into a row that has the `justify-content-center` alignment class. **Remember** each `.row` is a flexbox, and we can use the same alignment tricks we have used when working with flexbox to make our form responsive.
 
 ```html
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-4">
       <form action="">
         <!-- Your form content -->
       </form>
@@ -21,7 +21,7 @@ The best trick to make a form responsive is to inject it in a Bootstrap grid wit
 ```
 
 - The form will be full-size on mobile
-- On tablet and larger devices, it will be centered (thanks to the offset) and will take 33% of the screen.
+- On tablet and larger devices, it will be centered (thanks to the `justify-content-center` alignment class) and will take 33% of the screen.
 - You can make it even more responsive if you like (fullscreen on mobile, half-screen centered on tablet, 33%-screen centered on laptop etc.)
 
 
@@ -92,7 +92,7 @@ Example of Bootstrap form **without labels**:
 </form>
 ```
 
-Now if you want a horizontal form you can **add the `.form-inline` class to the `<form>`** (same as the `.list-inline` class for a list `<ul>`):
+Now if you want an [inline form](https://getbootstrap.com/docs/4.2/components/forms/#inline-forms) you can **add the `.form-inline` class to the `<form>`** (same as the `.list-inline` class for a list `<ul>`):
 
 ```html
 <form action="#" class="form-inline">
@@ -113,13 +113,13 @@ You can also inject a row inside a form. Here is an example with inputs for firs
 ```html
 <form action="">
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-6">
       <div class="form-group">
         <label for="first-name">First name</label>
         <input type="text" class="form-control" id="first-name" placeholder="Bob">
       </div>
     </div>
-    <div class="col-xs-6">
+    <div class="col-6">
       <div class="form-group">
         <label for="last-name">Last name</label>
         <input type="text" class="form-control" id="last-name" placeholder="Sponge">
