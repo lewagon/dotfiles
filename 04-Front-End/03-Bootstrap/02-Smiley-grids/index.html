@@ -7,7 +7,7 @@
 
     <title>Smiley Grid</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,23 +21,44 @@
 
     <h1>Smiley grid</h1>
 
-    <h2>Half-Half, all devices</h2>
-    <i class="fas fa-smile"></i>
-    <i class="fas fa-smile"></i>
+    <!-- 1. Mobile full-screen, laptop Half-Half -->
+    <div class="container">
+      <h2>Mobile full-screen, laptop Half-Half</h2>
 
-    <hr>
+      <div class="card bg-light">
+        <i class="fas fa-smile"></i>
+      </div>
 
-    <h2>Mobile full-screen, laptop Half-Half</h2>
-    <i class="fas fa-smile"></i>
-    <i class="fas fa-smile"></i>
+      <div class="card bg-light">
+        <i class="fas fa-smile"></i>
+      </div>
 
-    <hr>
+    </div>
 
-    <h2>Mobile full, tablet Half, laptop Quarter</h2>
-    <i class="fas fa-smile"></i>
-    <i class="fas fa-smile"></i>
-    <i class="fas fa-smile"></i>
-    <i class="fas fa-smile"></i>
+    <!-- 2. Mobile full-screen, tablet half-half, laptop 2/3 & 1/3 -->
+    <div class="container">
+      <h2>Mobile full-screen, tablet half-half, laptop 2/3 & 1/3</h2>
+
+      <div class="card bg-light">
+        <i class="fas fa-smile"></i>
+      </div>
+
+      <div class="card bg-light">
+        <i class="fas fa-smile"></i>
+      </div>
+
+    </div>
+
+    <!-- 3. centered div -->
+    <div class="container">
+      <h2>Mobile full-screen, laptop half centered</h2>
+
+      <div class="card bg-light">
+        <i class="fas fa-smile"></i>
+      </div>
+
+    </div>
+
 
     <!--  Don't look at style below.
           It's just for visualizing the grid in this challenge -->
@@ -47,21 +68,20 @@
         color: rgba(86,61,124,.3);
         margin-bottom: 25px;
       }
+      .card {
+        padding: 50px;
+        margin-bottom: 10px;
+      }
       i.fa-smile {
         font-size: 100px;
         opacity: 0.1;
         color: black;
       }
-      [class*="col-"] {
-        background-color: #eee;
-        background-color: rgba(86,61,124,.15);
-        border: 1px solid #ddd;
-        border: 1px solid rgba(86,61,124,.2);
-      }
     </style>
 
-    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Including Bootstrap JS (with its Popper.js / jQuery dependency) so that dynamic components work -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
   </body>
 </html>
