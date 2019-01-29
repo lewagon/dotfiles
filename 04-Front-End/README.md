@@ -15,10 +15,10 @@ The objective of this day is to build [your profile page](http://lewagon.github.
 We will go a bit further and make you code your own CSS component library. The objectives are:
 
 - Improve the way you organize and store components
-- Re-code your [own CSS library](https://uikit.lewagon.com)
+- Re-code your [own UI Kit](https://uikit.lewagon.com)
 - Build pages re-using components, like [Airbnb Home](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/) or [Product Hunt dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/)
 
-**Take-away**: Once you've finished, you'll be able to take HTML/CSS code directly from [Le Wagon components](https://uikit.lewagon.com).
+**Take-away**: Once you've finished, you'll be able to take HTML/CSS code directly from [Le Wagon UI Kit](https://uikit.lewagon.com).
 
 ## `03 Bootstrap, Grids & Layouts`
 
