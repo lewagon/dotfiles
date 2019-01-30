@@ -1,9 +1,9 @@
 ## Background & Objectives
 
-Build [a cool inbox](http://lewagon.github.io/html-css-challenges/13-inbox/).
+Build [an activity feed](http://lewagon.github.io/html-css-challenges/13-activity-feed/) like the [Dribbble](https://dribbble.com/activity) one.
 
 1. Create your avatar CSS component.
-2. Implement your tabs and your message design in `tabs.css` and `message.css`.
+2. Implement your tabs and your notification design in `tabs.css` and `notification.css`.
 
 But first, **read all the instructions**!
 
@@ -25,27 +25,27 @@ Once that is done:
 - You don't even need `space-between` or `align-items` here because the tabs already have the same `height`
 - You can also design the **active** and **hover** states of tabs using `.tab.active` & `.tab:hover`. You will probably need to play with the `opacity` and the `border-bottom` 😬
 
-## Message design
+## Notification design
 
-For the `.message` design, **go back to the slides!** This is a classic use case for flexbox here, with the body of the message pushing the other items thanks to a `flex-grow`.
+For the `.notification` design, **go back to the slides!** This is a classic use case for flexbox here, with the body of the notification pushing the other items thanks to a `flex-grow`.
 
 Once that is done, it's just a matter of fine-tuning your `margin`, `padding`, and playing with fonts and colors.
 
-So what are you waiting for? Time to make a cool inbox! 🚀📥🚀
+So what are you waiting for? Time to make a cool activity feed! 🚀🚀
 
 ## [Extra tip] First & last child selectors
 
-You can select first (or last message) with these selectors:
+You can select first (or last notification) with these selectors:
 
 ```css
-.message:first-child {
-  /* CSS code for the first element with class="message" */
+.notification:first-child {
+  /* CSS code for the first element with class="notification" */
 }
-.message:last-child {
-  /* CSS code for the last element with class="message" */
+.notification:last-child {
+  /* CSS code for the last element with class="notification" */
 }
 ```
 
-It can be useful to get rid of `border-bottom` on the last message of the inbox for instance!
+It can be useful to get rid of `border-bottom` on the last notification of the feed for instance!
 
 NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
