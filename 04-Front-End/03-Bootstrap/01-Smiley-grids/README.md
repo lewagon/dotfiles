@@ -4,7 +4,7 @@ Practice the Bootstrap grid. Learn how to build various grids with different res
 
 ## Specs
 
-Here are [the smiley grids](http://lewagon.github.io/bootstrap-challenges/01-Pure-Bootstrap-grid/) that you must reproduce in this challenge. Each of these 3 grids has the same starting point:
+Here are [the smiley grids](http://lewagon.github.io/bootstrap-challenges/01-New-Bootstrap-grid/) that you must reproduce in this challenge. Each of these 3 grids has the same starting point:
 
 ```html
 <div class="container">
