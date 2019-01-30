@@ -6,7 +6,7 @@ It's time to finalize Airbnb Home by injecting the cards for features and flats 
 
 Your task is to build [this final page](http://lewagon.github.io/bootstrap-challenges/09-Final-airbnb-home/index.html).
 
-- Get your avatar and card components from the [Le Wagon library](http://lewagon.github.io/ui-components/) and put the CSS code in `avatar.css` and `card.css`.
+- Get your avatar and card components from the [Le Wagon UI Kit](https://uikit.lewagon.com/) and put the CSS code in `avatar.css` and `card.css`.
 - Think about the responsive behavior of each grid before coding it. Don't forget to put wrapper around the container and cards inside the col if needed (like in today's second challenge).
 
 ## Further suggestions & resources
