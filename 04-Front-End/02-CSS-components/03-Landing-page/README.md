@@ -1,12 +1,12 @@
 ## Background & Objectives
 
-Any website has to have a **beautiful landing page**. They are an important as they're the first page visitors will see and it needs to be good enough to convert them into clients 💰.
-In this challenge you will learn how to browse the web for frontend inspiration, and then a professional looking page yourself!
+Now that we have had some practice building some basic components, lets see how we can use them and combine them to make a real landing page! Any website has to have a **beautiful landing page**. They are important as they're the first page visitors will see and it needs to be good enough to convert them into clients 💰.
+In this challenge you will learn how to browse the web for frontend inspiration, and then build a professional looking page yourself!
 
 Your landing page should **at least** include:
 
-- A **Hero / Banner** section presenting your product.
-- A **How it works** section.
+- A **Hero / Banner** section presenting your product with a call to action.
+- A **How it works** section (what componenets could be used to break down the different aspects of your product/service) .
 - A **Footer**.
 
 ## Find inspiration
@@ -31,11 +31,11 @@ If you're designing [this page](https://arthur-littm.github.io/startup-landing/)
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/startup-landing-drawing.png" alt="" width="100%">
 </div>
 
-⚠️ If you're not 100% certain to have the right structure drawn, call a teacher to confirm before starting to code!
+⚠️ If you're not 100% certain you have the right structure drawn, ask a teacher to confirm before starting to code!
 
 ## Specs
 
-Build landign page with the following elements:
+Build a landing page with the following elements:
 
 - A **Hero / Banner** section presenting your product.
 - A **How it works** section.
@@ -51,16 +51,24 @@ Build landign page with the following elements:
 
 ## Finished?
 
-Once you've finished you can push your page to [Github pages] once again and share it on you batch channel:
+Once you've finished you can push your page to [Github pages](https://pages.github.com) once again and share it on you batch channel:
 
-TODO snippet to copy it outside of `fullstack-challenges`
+First, copy the project out of `fullstack-challenges` so we can track it as a seperate `git` project:
 
 ```bash
-# Push to gihtub
-git add .
-git commit -m "Added content to my profile page"
-git push origin master
+cp -r ../03-Landing-page/landing ~/code/<user.github_nickname>
+cd ~/code/<user.github_nickname>/landing
 ```
 
+Then, start tracking the project with `git` and push to a `gh-pages` branch:
 
-
+```bash
+git init
+git add .
+git commit -m "my landing page"
+hub create
+git push origin master # push to master first
+# then puts to a `gh-pages` branch
+git co -b gh-pages
+git push origin gh-pages
+```
