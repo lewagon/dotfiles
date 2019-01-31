@@ -1,8 +1,8 @@
 ## Background & Objectives
 
-Build [an activity feed](http://lewagon.github.io/html-css-challenges/13-activity-feed/) like the [Dribbble](https://dribbble.com/activity) one.
+Build [an activity feed](http://lewagon.github.io/html-css-challenges/13-activity-feed/) similar to Dribbble's one.
 
-1. Create your avatar CSS component.
+1. Create your `avatar` CSS component.
 2. Implement your tabs and your notification design in `tabs.css` and `notification.css`.
 
 But first, **read all the instructions**!
@@ -32,6 +32,10 @@ For the `.notification` design, **go back to the slides!** This is a classic use
 Once that is done, it's just a matter of fine-tuning your `margin`, `padding`, and playing with fonts and colors.
 
 So what are you waiting for? Time to make a cool activity feed! 🚀🚀
+
+## [Extra tip] User Images
+
+For user images in your activity feed you can use a placeholder service that we have built to get any Kitt user's github image using their GitHub nickname. Just use this URL: `https://kitt.lewagon.com/placeholder/users/<user.github_nickname>`, and try it with a few different github handles.
 
 ## [Extra tip] First & last child selectors
 
