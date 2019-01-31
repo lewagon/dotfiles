@@ -23,7 +23,7 @@ If you haven't found anything online you can use [this page](https://arthur-litt
 
 ## Mockup
 
-Next friday you will learn how to mockup your pages like a pro using [Figma](https://www.figma.com/), but for today you can use a pen and paper to design the different sections of your page.
+In the coming weeks you will learn how to mockup your pages like a pro using [Figma](https://www.figma.com/), but for today you can use a pen and paper to design the different sections of your page.
 
 If you're designing [this page](https://arthur-littm.github.io/startup-landing/), you should have something like this.
 

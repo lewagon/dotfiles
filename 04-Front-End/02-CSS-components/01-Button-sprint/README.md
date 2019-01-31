@@ -56,3 +56,7 @@ Then you just need **one unique link to `style.css`** in your HTML file:
 ## Don't forget the hover
 
 Don't forget to design the `.btn:hover` state for each of your buttons.
+
+## Spacing around a link
+
+You might have noticed that `margin` does not apply on your links by default. This is because the `<a>` tag is an inline element. If you want apply spacing to links you will need to change their `display` property to `inline-block` or `block`.

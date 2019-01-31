@@ -4,31 +4,31 @@ Now let's move on to building a slightly more complex component. Work on buildin
 
 ```html
 <div class="card-category">
-  [   ]
+  <!-- [ ... ] -->
 </div>
 <div class="card-product">
-  [   ]
+  <!-- [ ... ] -->
 </div>
 <div class="card-trip">
-  [   ]
+  <!-- [ ... ] -->
 </div>
 ```
 
-Your job is now to add the content for each card and the associated CSS in `card.css`.
+Your job is now to add HTML inside each card, and the associated CSS in `cards.css` (the CSS for all three cards can go in the same file).
 
-NOTE: Try builiding the `card-trip` without the user avatar in the bottom right hand corner for now. We will add that after we complete our cards.
+**NOTE**: Try builiding the `card-trip` without the user avatar in the bottom right hand corner for now. We will add that after we complete our cards.
 
 Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
 
 ## Organize your CSS with component files
 
-Much like in the last exercise, we will use the new professional structure for our stlesheets. We can put all the css for our differenc card classes in one css file: `card.css`:
+Much like in the last exercise, we will use the new professional structure for our stlesheets. We can put all the css for our different card classes in one css file: `cards.css`:
 
 ```
 .
 ├── css
 │   ├── components
-│   │   └── card.css
+│   │   └── cards.css
 │   └── style.css
 └── index.html
 ```
@@ -36,17 +36,27 @@ Much like in the last exercise, we will use the new professional structure for o
 Then in `style.css`:
 
 ```css
-/* Importing all components file */
-@import url("components/card.css");
+/* Import fonts from Google Fonts */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700");
 
-/* General style rules for fonts and colors */
+/* Importing all components file */
+@import url("components/cards.css");
+
+/* General for fonts and colors */
 body {
-  margin: 0;
+  margin: 100px;
   font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3 {
   font-family: Raleway, Helvetica, sans-serif;
 }
+a {
+  text-decoration: none;
+}
+.text-center {
+  text-align: center;
+}
+
 ```
 
 Then you just need **one unique link to `style.css`** in your HTML file:
