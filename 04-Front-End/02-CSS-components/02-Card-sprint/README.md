@@ -76,7 +76,7 @@ Now that you have designed your three cards, lets update your last card `card-tr
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/position-relative.png)
 
 
-### Pin the inside div with `position: absolute` (pin relative to parent)
+### Pin a div inside with `position: absolute` (relative to parent)
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/position-top.png)
 
@@ -88,4 +88,7 @@ Be aware, if you add a negative value like `right: -20px`, this will shift the i
 
 Now you can play this technique to add a cool overlay avatar on your `.card-trip` like below.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-position.png)
+<div class="text-center">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-position.png" alt="" width="300">
+</div>
+
