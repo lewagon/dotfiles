@@ -89,6 +89,6 @@ Be aware, if you add a negative value like `right: -20px`, this will shift the i
 Now you can play this technique to add a cool overlay avatar on your `.card-trip` like below.
 
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-position.png" alt="" width="300">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-position.png" alt="" width="400">
 </div>
 

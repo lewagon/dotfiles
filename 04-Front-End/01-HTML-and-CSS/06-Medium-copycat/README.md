@@ -16,7 +16,7 @@ No need for an images folder this time as we will use placeholders from [unsplas
 
 ## Specs
 
-A Medium article looks [like this one](https://medium.com/le-wagon/from-bootstrapping-to-building-a-brand-that-scales-26b0eda92ddb) (upvote it!!!). We are going to code [a simplified version](https://lewagon.github.io/medium-copycat/).
+A Medium article looks [like this one](https://medium.com/le-wagon/from-bootstrapping-to-building-a-brand-that-scales-26b0eda92ddb). We are going to code [a simplified version](https://lewagon.github.io/medium-copycat/).
 
 Before you get started with the code, analyze the structure of the page and think about the different elements that make up the page. Think about the different classes you will need, and even better draw html structure on paper (it will help you code it). These are the elements we will need:
 - A banner with a background image, containing a title and description
