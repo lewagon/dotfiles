@@ -20,8 +20,10 @@ serve
 
 As you can see we already coded the `card` component for you, so all you have to do is:
 
-- Build a grid of `.cards` around the `.card`.
+- Build a grid of `.cards` around the `.card`s.
 - Build a horizontal layout to have the `.cards` on the left and the `#map` on the right.
+
+**[Tip]** Draw the HTML structure before you get started!
 
 NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
 
