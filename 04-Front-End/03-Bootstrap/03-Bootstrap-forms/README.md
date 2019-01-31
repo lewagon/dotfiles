@@ -106,27 +106,23 @@ Now if you want an [inline form](https://getbootstrap.com/docs/4.2/components/fo
 </form>
 ```
 
-## Injecting a `.row` into the form
+## Injecting a `.form-row` into the form
 
-You can also inject a row inside a form. Here is an example with inputs for first name and last name:
+You can also inject a row inside a form using the `.form-row` class. Here is an example to have 2 `input`s on the same row:
 
 ```html
-<form action="">
-  <div class="row">
-    <div class="col-6">
-      <div class="form-group">
-        <label for="first-name">First name</label>
-        <input type="text" class="form-control" id="first-name" placeholder="Bob">
-      </div>
+<form>
+  <div class="form-row">
+    <div class="col-6 form-group">
+      <label>First name</label>
+      <input type="text" class="form-control" placeholder="First name">
     </div>
-    <div class="col-6">
-      <div class="form-group">
-        <label for="last-name">Last name</label>
-        <input type="text" class="form-control" id="last-name" placeholder="Sponge">
-      </div>
+    <div class="col-6 form-group">
+      <label>Last name</label>
+      <input type="text" class="form-control" placeholder="Last name">
     </div>
   </div>
-  <!-- Rest of the form -->
+  <!-- rest of the form below -->
 </form>
 ```
 
