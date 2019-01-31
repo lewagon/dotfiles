@@ -32,6 +32,8 @@ Do NOT add boostrap grid classes on the same level as other CSS.
 ```
 
 Instead build a grid around the content, and insert it inside like this:
+
+
 ```html
 <div class="container">
   <div class="row">
