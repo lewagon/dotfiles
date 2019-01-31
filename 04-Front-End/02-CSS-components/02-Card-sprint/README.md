@@ -71,10 +71,21 @@ Then you just need **one unique link to `style.css`** in your HTML file:
 
 Now that you have designed your three cards, lets update your last card `card-trip` with a user avatar in the bottom right hand corner. For pinning an element to a specific position within another element, we will use the [Relative > Absolute pattern](https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/). Below are the steps for positioning an element using this pattern:
 
-1. Pin the main div with `position: relative`:
-TODO SKETCH
+### Set the main div as `position: relative`:
 
-2. Put the inside div in `position: absolute`. This will allow us to position the inside div in relation to the next parent div with position relative (the main div in our example) using the position attributes `top`, `bottom`, `left` and `right`. Be aware, if you add a style rule on the insed div of `top: 10px`, this will shift the inside div 10px **down** from where it would usually be.
-TODO SKETCH
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/position-relative.png)
 
-3. Now you can play with the inside `div`. Use this technique to position the user avatar in the bottom right and corner of our `card-trip`.
+
+### Pin the inside div with `position: absolute` (pin relative to parent)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/position-top.png)
+
+This will allow us to position the `.child` in relation to the `.parent` with `position: relative;`. You can then use the directional attributes `top`, `bottom`, `left` and `right` to move the `.child` around 📐.
+
+Be aware, if you add a negative value like `right: -20px`, this will shift the inside div 20px **outside** the parent div.
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/position-bottom.png)
+
+Now you can play this technique to add a cool overlay avatar on your `.card-trip` like below.
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-position.png)
