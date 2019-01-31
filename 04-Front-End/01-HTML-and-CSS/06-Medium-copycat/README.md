@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-Let's design a Medium article and deploy it with Github pages!
+Let's design a [Medium article](https://lewagon.github.io/medium-copycat/) and deploy it with Github pages!
 
 ## Setup
 
@@ -16,9 +16,9 @@ No need for an images folder this time as we will use placeholders from [unsplas
 
 ## Specs
 
-A Medium article looks [like this one](https://medium.com/le-wagon/web-design-for-engineers-2da68b62904f#.gjx5v834t) (upvote it!!!). We are going to code [a simplified version](https://lewagon.github.io/medium-copycat/).
+A Medium article looks [like this one](https://medium.com/le-wagon/from-bootstrapping-to-building-a-brand-that-scales-26b0eda92ddb) (upvote it!!!). We are going to code [a simplified version](https://lewagon.github.io/medium-copycat/).
 
-Before you get started with the code, analyze the structure of the page and think about the different elements that make up the page, and start to think about the different classes you will need:
+Before you get started with the code, analyze the structure of the page and think about the different elements that make up the page. Think about the different classes you will need, and even better draw html structure on paper (it will help you code it). These are the elements we will need:
 - A banner with a background image, containing a title and description
 - A centered container (with left/right automatic margin) for the article's content
 - Inside this container: headers, paragraphs and links
@@ -37,26 +37,19 @@ Before you get started with the code, analyze the structure of the page and thin
 - Container is not responsive yet:
   - Replace `width` by `max-width` (poor approach)
   - Add media queries (good approach)
-  - Show how the media queries apply when you resize the browser
+
+Here is an example of how you would re-size the container on any screen 992px wide or less:
 
 ```css
 /* Media queries */
-@media(max-width: 900px) {
+@media(max-width: 992px) {
   .container {
     width: 700px;
   }
 }
-@media(max-width: 750px) {
-  .container {
-    width: 450px;
-  }
-}
-@media(max-width: 500px) {
-  .container {
-    width: 350px;
-  }
-}
 ```
+
+Make sure to resize the container for all other screen sizes (`576px`, `768px`, `992px` and `1200px`).
 
 ## Optional - Push to Github pages
 
@@ -81,4 +74,4 @@ git checkout -b gh-pages
 git push origin gh-pages
 ```
 
-Go to `http://USERNAME.github.io/medium-copycat` to your medium copycat article online!
+Go to `http://<user.github_nickname>.github.io/medium-copycat` to your medium copycat article online!

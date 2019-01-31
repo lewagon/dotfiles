@@ -3,7 +3,7 @@
 We want to continue building our profile page. If you haven't already, let's copy our previous profile into this challenge's folder and add a CSS file to it:
 
 ```bash
-cp -r ../01-Profile-content/profile .
+cp -r ../01-Profile-content/profile . # don't forget the trailing dot!
 cd profile
 touch style.css
 ```
@@ -26,7 +26,7 @@ Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-he
 
 - Choose a nice `color` and `font-family` for headers (`<h1>`, `<h2>`, `<h3>`)
 - Choose harmonious `font-size` and `line-height` for headers
-- Hint: **small headers** are more elegant. If you check out any website (Medium, Airbnb, etc.), you'll see that the `font-size` of their headers is quite small.
+- Hint: **small headers** are more elegant. If you check out any website ([Medium](https://medium.com/), [Airbnb](https://www.airbnb.com), etc.), you'll see that the `font-size` of their headers is quite small.
 
 ### Links
 
@@ -37,14 +37,14 @@ Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-he
 
 - Find inspiration on [Coolors](http://coolors.co/) or [Color hunt](http://colorhunt.co/) to choose an awesome color scheme.
 - Pick your fonts on [Google fonts](https://www.google.com/fonts)
-- On Google fonts, **Open Sans** is the standard choice for the `body`. **Raleway**, **Varela**, **Montserrat**, **Roboto** are a few good ones you could use for `h1`, `h2`, `h3`.
+- On Google fonts, **Open Sans** is the standard choice for the `body`. **Raleway**, **Varela**, **Poppins**, **Roboto** are a few good ones you could use for `h1`, `h2`, `h3`.
 
-For instance, if you wanted to use Open-Sans and Montserrat (with different font-weights), you could add this in the `<head>` of your HTML:
+For instance, if you wanted to use Open-Sans and Poppins (with different font-weights), you could add this in the `<head>` of your HTML:
 
 
 ```html
  <!-- Google fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Montserrat:400,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:400,700">
 ```
 
 Then you can apply it in the CSS:

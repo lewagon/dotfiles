@@ -24,7 +24,7 @@ serve
 (it has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7))
 
 - You can now visit your files on [http://localhost:8000](http://localhost:8000)
-- /!\ Modern browsers cache the **file** returned by a given **url**. It keeps in memory a version of your HTML (`http://localhost:8000`), of your CSS (`http://localhost:8000/style.css`) and even of your images (`http://localhost:8000/images/logo.png`)! Sometimes, the older version remains and your newest code is not taken into consideration. To fix this, use `cmd + shift + r` to **hard refresh** your page (this clears the cache in the process) 👌
+- ⚠️ Modern browsers cache the **file** returned by a given **url**. It keeps in memory a version of your HTML (`http://localhost:8000`), of your CSS (`http://localhost:8000/style.css`) and even of your images (`http://localhost:8000/images/logo.png`)! Sometimes, the older version remains and your newest code is not taken into consideration. To fix this, use `cmd + shift + r` to **hard refresh** your page (this clears the cache in the process) 👌
 
 ## Specs
 
@@ -42,17 +42,7 @@ A picture is worth a thousand words, [so here is what you should build in this c
 
 ### Find **good** pictures
 
-Prepare your profile image file before starting to code. For this exercise You can use your **profile picture from Facebook**, and save it in the images folder.
-
-For when you are working with your own images in the future, always follow these rules 👇
-
-**Always use hi-res images**
-**Always use hi-res images**
-**Always use hi-res images**
-
-Got it? 😉
-
-When looking for images online, go to [Google Images](https://www.google.com/imghp) and search for what you want. Then, under the menu bar, click on `Tools` ➡️ `Size` ➡️ `Large`. No more pixelation now!
+Prepare your profile image file before starting to code. For this exercise You can use your **profile picture from Facebook**, and save it in the `images` folder.
 
 ### HTML tips
 
@@ -62,7 +52,7 @@ When looking for images online, go to [Google Images](https://www.google.com/img
 
 ```html
 <!-- Fontawesome Stylesheet -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 ```
 
 - You can use the `target="_blank"` attribute on your links to open them on new tabs once clicked.

@@ -10,7 +10,7 @@ cp -r ../03-Finishing-profile-design/profile .
 
 ## Make our page responsive with media queries
 
-Your profile is complete, but what happens if you re-size your browser window and make it smaller? Your page is not yet **responsive**.
+Your profile is complete, but what happens if you re-size your browser window and make it smaller? Your page is not yet **responsive** 😱.
 
 If you want a responsive design, you can add media queries in CSS. They work a bit like an `if` statement in ruby. Basically **you can define CSS rules that will only apply if the window is smaller than a given width**. For instance, if you want a responsive container, you can build it like this:
 
