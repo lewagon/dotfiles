@@ -32,6 +32,7 @@ Choose some characteristics of your class that you want to model. They will be y
 `initialize` is the instance method called when calling `new` on your class. For instance:
 
 ```ruby
+# lib/car.rb
 class Car
   def initialize(model, brand, kilometers)
     @model = model
@@ -39,13 +40,18 @@ class Car
     @kilometers = kilometers
   end
 end
+```
+Now define the `initialize` method on the class you chose!
+
+To test it you may want to create a `lib/interface.rb` file and call the `.new` constructor on your class with the relevant arguments, e.g:
+
+```ruby
+# lib/interface.rb
+require_relative "car"
 
 second_hand_panda = Car.new("Panda 4x4", "Renault", 30_000)
-
 new_testarossa    = Car.new("Testarossa", "Ferrari", 0)
 ```
-
-Now define the `initialize` method on the class you chose!
 
 ### Define an instance method
 
@@ -54,7 +60,9 @@ Time to add some **behavior** to your class with an **instance method**.
 Here's an example of how we might want to use a `start` instance method on a `Car` class:
 
 ```ruby
-require_relative "lib/car"
+# lib/interface.rb
+require_relative "car"
+
 car = Car.new("T", "Ford", 0)
 car.start
 ```
