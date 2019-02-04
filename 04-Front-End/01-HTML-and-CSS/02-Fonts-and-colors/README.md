@@ -16,7 +16,7 @@ Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your 
 
 ## Specs
 
-[This is an example](http://lewagon.github.io/html-css-challenges/02-fonts-colors/) of what you need to create. Here is a list of CSS rules to write:
+[This is an example](https://lewagon.github.io/html-css-challenges/02-fonts-colors-new/) of what you need to create. Here is a list of CSS rules to write:
 
 ### Body
 

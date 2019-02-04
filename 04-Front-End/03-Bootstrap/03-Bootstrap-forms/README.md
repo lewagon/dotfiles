@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Build a [responsive signup form](http://lewagon.github.io/bootstrap-challenges/10-Login/).
+Build a [responsive signup form](https://lewagon.github.io/bootstrap-challenges/10-Login-form/).
 
 **⚠️ Before starting, read all the instructions carefully.⚠️**. Forms are among the most important components in a website, so you need to know how to design them!
 

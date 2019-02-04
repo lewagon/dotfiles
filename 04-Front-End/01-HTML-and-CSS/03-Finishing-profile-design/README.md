@@ -16,7 +16,7 @@ Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your 
 
 ### Step 1: Box Model
 
-Here is [your objective](http://lewagon.github.io/html-css-challenges/03-box-model-and-selectors/).
+Here is [your objective](https://lewagon.github.io/html-css-challenges/03-box-model-and-selectors/).
 
 - You should start with the following structure for your page
 

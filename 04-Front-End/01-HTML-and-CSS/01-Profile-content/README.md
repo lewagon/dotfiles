@@ -36,7 +36,7 @@ Build a simple HTML profile page with the following elements (use the right HTML
 - a button
 - a list of your social links
 
-A picture is worth a thousand words, [so here is what you should build in this challenge](http://lewagon.github.io/html-css-challenges/01-profile-content/)
+A picture is worth a thousand words, [so here is what you should build in this challenge](https://lewagon.github.io/html-css-challenges/01-profile-content-new/)
 
 ## Further suggestions & resources
 
