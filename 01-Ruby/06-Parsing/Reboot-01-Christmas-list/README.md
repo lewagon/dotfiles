@@ -103,7 +103,7 @@ _Disclaimer: to prevent ip banishment from etsy, we won't scrape Etsy in real ti
 
 ```bash
 # Download the page to be scraped inside your working directory
-curl https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR > results.html
+curl "https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR" > results.html
 # get the path to the HTML file
 pwd
 ```
