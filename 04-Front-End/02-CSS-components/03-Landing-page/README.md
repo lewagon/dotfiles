@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now that we have had some practice building some basic components, lets see how we can use them and combine them to make a real landing page! Any website has to have a **beautiful landing page**. They are important as they're the first page visitors will see and it needs to be good enough to convert them into clients 💰.
+Now that we have had some practice building some basic components, let's see how we can use them and combine them to make a real landing page! Any website has to have a **beautiful landing page**. They are important as they're the first page visitors will see and it needs to be good enough to convert them into clients 💰.
 In this challenge you will learn how to browse the web for frontend inspiration, and then build a professional looking page yourself!
 
 Your landing page should **at least** include:
@@ -11,7 +11,7 @@ Your landing page should **at least** include:
 
 ## Find inspiration
 
-Don't blindly jump into coding, the first thing a frontend developer as to do is find inspiration! You're not stealing here, but looking online at what works to reproduce a nice user experience.
+Don't blindly jump into coding, the first thing a frontend developer has to do is find inspiration! You're not stealing here, but looking online at what works to reproduce a nice user experience.
 
 ⚠️ **Never start coding a page without knowing how it will look!**
 
@@ -51,7 +51,7 @@ Build a landing page with the following elements:
 
 ## Finished?
 
-Once you've finished you can push your page to [Github pages](https://pages.github.com) once again and share it on you batch channel:
+Once you've finished you can push your page to [Github pages](https://pages.github.com) once again and share it on your batch channel:
 
 First, copy the project out of `fullstack-challenges` so we can track it as a seperate `git` project:
 
