@@ -4,7 +4,7 @@ OK now that you've reproduced the designs we've given to you let's see how you m
 
 You will have to find a component that you like on Dribbble and try to reproduce it.
 
-When design a new component you always have follow the same flow:
+When designing a new component you always have follow the same flow:
 
 ### Step 1: Find inspiration 🤔
 
