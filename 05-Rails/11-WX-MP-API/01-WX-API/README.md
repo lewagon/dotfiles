@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-The objective of this challenge is to build a two-model Rails API  (such as restaurants and  reviews).
+The objective of this challenge is to build a two-model Rails API  (such as `Restaurant` and `Review`).
 This is similar to the [Yelp MVP](https://kitt.lewagon.com/camps/194/challenges?path=05-Rails/03-Rails-restaurant-reviews/02-Yelp-MVP) you built during Rails week
 
 
@@ -9,7 +9,7 @@ This is similar to the [Yelp MVP](https://kitt.lewagon.com/camps/194/challenges?
 
 There is no `rake` here, and do not create your Rails app in `fullstack-challenges` ⛔
 
-You are going to use the minimal . Here is the setup you need:
+You are going to use the minimal template. Here is the setup you need:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -24,7 +24,7 @@ hub create
 git push origin master
 ```
 
-Before starting to code your app, make sure you completed your WeChat Mini Program from [WeChat Frontend](https://kitt.lewagon.com/camps/194/challenges?path=04-Front-End/09-WX-MP-Frontend) course and all the user stories (CRUD). This is the frontend application for which you'll be making the API. 
+Before starting to code your app, make sure you completed your WeChat Mini Program from the WeChat Frontend course with all the user stories (CRUD). This is the frontend application for which you'll be making the API. 
 
 You can also use the [solution](https://github.com/dounan1/meal-match) from the WeChat Frontend course as the API's frontend.
 
@@ -54,7 +54,7 @@ Generate the `Comment` model (reviews are just visitor comments) - with the foll
 
 - `restaurant`, as `references` to link to the restaurant the comment is for
 
-Don't forget to add in has_many to link the models together in code as well as in the database. Some validations would be nice too!
+Don't forget to add `has_many` to link the models together in code as well as in the database. Some validations would be nice too!
 
 ### 2 - Seed
 
@@ -77,13 +77,13 @@ Do you remember why we use `.create!` instead of just `.create`? Ask around if y
 
 ### 3 - Controller & Routes
 
-We can start off by adding all CRUD routes in our `config/routes.rb` but do we need them all? What four actions are needed for CRUD with APIs? (hint: there is no need to send forms for `EDIT` or `CREATE`, look through the rest of the steps to get all the actions)
+We can start off by adding all CRUD routes in our `config/routes.rb` but do we need them all? What four actions are needed for CRUD with APIs? (hint: there is no need to send forms for `EDIT` or `CREATE`, look through the rest of the steps to get all the actions.)
 
 Generate the  `RestaurantsController` with the four API actions - using the rails generator, or creating them manually.
 
 Namespace the api endpoints properly:  eg: `/api/v1/restaurants` - there's a simple routing command for namespacing. You can also use it to specific the format of the request (html or json).
 
-Since we'll use restaurants endpoints to serve up comments, we won't need a `CommentsController`
+Since we'll use restaurants endpoints to serve up comments, we won't need a `CommentsController`.
 
 
 ### 4 - Restaurants Index Page
@@ -97,19 +97,20 @@ json.restaurants do
 end
 ```
 
-Tip: Get to know jbuilder by showing first  the first restaurant with the right fields for the endpoint (e.g. no created_at), then showing all the restaurants in an array
+Tip: Get to know jbuilder by just showing the first restaurant with the needed fields for the endpoint (e.g. no `created_at`).  After that, try to show all the restaurants in an array.
 
 Let's also update the frontend app's view (`index.js`)  to call the api to get the dynamic data:
 
 ```js
 wx.request({
-    url: YOUR_API_ROUTE,
-    method: AN_HTTP_VERB(like GET, POST, PUT, DELETE),
-    success(res) {
-    	// what to do with the API data
-        // 1. save it to a local variable
-        // 2. set page's data with that local variable
-    }
+  url: YOUR_API_ROUTE,
+  method: AN_HTTP_VERB(like GET, POST, PUT, DELETE),
+  success(res) {
+    // what to do with the API data
+    // 1. save it to a local variable
+    // 2. set page's data with that local variable
+  }
+})
 ```
 
 
@@ -163,6 +164,6 @@ For your routes, think about using nested routes to specifiy the restaurant the 
 Let's try to add a search bar to be able to filter restaurants in the index to find the perfect restaurant!
 
 - How can we find what the user is searching for?
-- What active record method can we use to build a simple search engine? This can get you started `@restaurants = restaurant.where("name LIKE '%garden%'")`, make sure you understand this statement before going any further.
+- What active record method can we use to build a simple search engine? This can get you started `@restaurants = Restaurant.where("name LIKE '%garden%'")`, make sure you understand this statement before going any further.
 - How can we make sure the index page still works like a traditional index, even if the user isn't searching anything?
 - How can we make sure the input is prefilled with the search query once the user searched?
