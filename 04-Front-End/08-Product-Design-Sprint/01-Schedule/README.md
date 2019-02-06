@@ -24,11 +24,14 @@ For your product pitch, persona and user journey, make a copy of our [UX Researc
 
 #### Figma Tutorial
 
+Tutorial in 🇬🇧
+
+<iframe src="https://player.vimeo.com/video/315676081" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 Tutorial in 🇫🇷
 
 <iframe src="https://player.vimeo.com/video/301271712" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Tutorial in 🇬🇧 (**coming soon**)
 
 #### Design resources
 
