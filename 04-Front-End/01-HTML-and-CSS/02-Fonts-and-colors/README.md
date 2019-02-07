@@ -39,15 +39,14 @@ Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-he
 - Pick your fonts on [Google fonts](https://www.google.com/fonts)
 - On Google fonts, **Open Sans** is the standard choice for the `body`. **Raleway**, **Varela**, **Poppins**, **Roboto** are a few good ones you could use for `h1`, `h2`, `h3`.
 
-For instance, if you wanted to use Open-Sans and Poppins (with different font-weights), you could add this in the `<head>` of your HTML:
+For instance, if you wanted to use Open-Sans and Poppins (with different font-weights), you could add this at the top of your `style.css`:
 
 
-```html
- <!-- Google fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:400,700">
+```css
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700")
 ```
 
-Then you can apply it in the CSS:
+Then you can apply it in the rest of your CSS:
 
 ```css
 body {
