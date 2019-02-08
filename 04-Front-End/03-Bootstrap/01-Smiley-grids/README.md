@@ -25,7 +25,7 @@ Do NOT add boostrap grid classes on the same level as other CSS.
   <div class="row">
     <!-- 👎 -->
     <div class="card bg-light col-6">
-      <i class="fas fa-smile"></i>
+      😀
     </div>
   </div>
 </div>
@@ -40,7 +40,7 @@ Instead build a grid around the content, and insert it inside like this:
     <!-- 👍 -->
     <div class="col-6">
       <div class="card bg-light">
-        <i class="fas fa-smile"></i>
+        😀
       </div>
     </div>
   </div>
