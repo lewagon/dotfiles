@@ -2,4 +2,24 @@
 
 Build a [copycat of Slack](https://lewagon.github.io/bootstrap-challenges/12-Slack/) using the techniques you have learned in this morning's lecture, and previous lectures.
 
-You can choose how to implement this layout, you just have to have the right components (messages, badges, sidebars, and the chat section where you see your messages on slack).
+For this challenge challenge you can use both your own css and [Bootstrap](https://getbootstrap.com/), as in the `head` we have both:
+
+```html
+ <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+```
+
+For this challenge the components you need are:
+- `sidebars.css`
+- `badges.css`
+- `channels.css`
+- `messages.css` (for the messages section)
+- `chat.css` (the white section where the `.message` will be placed + the `input` to write a message.)
+
+⚠️ **You are designing a static Slack page, no need to be able to switch conversation on the sidebar or actually post a message!**
+
+## Tips & Resources
+
+- [Bootstrap documentation](https://getbootstrap.com/)
