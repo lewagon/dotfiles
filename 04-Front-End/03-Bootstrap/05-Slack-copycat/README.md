@@ -16,7 +16,7 @@ For this challenge the components you need are:
 - `sidebars.css`
 - `badges.css`
 - `channels.css`
-- `messages.css` (for the messages section)
+- `messages.css` (for the individual `.message` design )
 - `chat.css` (the white section where the `.message` will be placed + the `input` to write a message.)
 
 And you will have one `layout`:
