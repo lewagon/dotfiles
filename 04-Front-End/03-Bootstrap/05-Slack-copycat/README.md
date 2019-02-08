@@ -18,6 +18,9 @@ For this challenge the components you need are:
 - `messages.css` (for the messages section)
 - `chat.css` (the white section where the `.message` will be placed + the `input` to write a message.)
 
+And you will have one `layout`
+- `slack.css` (for the general layout structure of the page).
+
 ⚠️ **You are designing a static Slack page, no need to be able to switch conversation on the sidebar or actually post a message!**
 
 ## Tips & Resources
