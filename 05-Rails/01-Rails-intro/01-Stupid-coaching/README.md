@@ -1,7 +1,7 @@
 ## Warning
 
 ⚠️ **Never do `sudo gem install rails` even if the terminal tells you so!** ⚠️
-> Open a ticket if it happens
+> Restart your terminal if it happens (`cmd + q` or `ctrl + q`) - or create a ticket
 
 This is the proper way to install rails:
 
