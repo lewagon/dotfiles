@@ -13,7 +13,7 @@ Before you start:
 - **11:15am - 12:00am** (45 min) 👉 write down your core user journey and translate it into a user flow with [Whimsical](https://whimsical.co)
 - **12:00am - 1pm** (60 min) 👉 build your UI kit and start working on your wireframe
 
-For your product pitch, persona and user journey, make a copy of our [UX Research spreadsheet](https://docs.google.com/spreadsheets/d/1OGCJLizpcROt0WwbGV_bCOxBktHO9XPdNHkXcZIyX1o/edit?usp=sharing) and complete the different templates.
+For your product pitch, persona and user journey, make a copy of our <a href="https://docs.google.com/spreadsheets/d/1OGCJLizpcROt0WwbGV_bCOxBktHO9XPdNHkXcZIyX1o/edit?usp=sharing" target="_blank">UX Research spreadsheet</a> and complete the different templates.
 
 ### Afternoon
 
