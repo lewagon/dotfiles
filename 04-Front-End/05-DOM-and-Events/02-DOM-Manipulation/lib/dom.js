@@ -52,7 +52,7 @@ module.exports = function runChallenges(check) {
   };
 
 
-  // Ex 8. Change the background color of all table header cells to #DDF4FF
+  // Ex 8. Change the background color of all `<th>` cells to #DDF4FF
 
 
 

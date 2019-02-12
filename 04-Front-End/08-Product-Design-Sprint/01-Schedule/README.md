@@ -17,10 +17,23 @@ For your product pitch, persona and user journey, make a copy of our [UX Researc
 
 ### Afternoon
 
-- **2pm to 2:15pm**: Lecture
+- **2pm to 2:30pm**: Learn to integrate a visual identity to your wireframe (see video tutorial below 👇)
 - **2:30pm to 5:30pm**: finish your prototype and start adding the visual identity **only if you have time**. It's more strategic to have a kickass prototype in black and white rather than a poor mockup with lots of pictures and colors but that no one understands 😬.
 
-Resources for design assets:
+### Resources for visual identity
+
+#### Figma Tutorial
+
+Tutorial in 🇬🇧
+
+<iframe src="https://player.vimeo.com/video/315676081" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+Tutorial in 🇫🇷
+
+<iframe src="https://player.vimeo.com/video/301271712" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+#### Design resources
 
 - **Fonts**: download and install `.ttf` fonts from [Google fonts](https://fonts.google.com/) or [getthefont](https://www.getthefont.com/)
 - **Colors**: find them on [Color Hunt](https://colorhunt.co/) or use a color picker like [Colorzilla](http://www.colorzilla.com/)
