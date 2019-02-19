@@ -61,13 +61,18 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rake                             # Launch tests
 ```
 
-Before starting to code, don't forget to setup your Rails app for Frontend, like in this morning's lecture let's add the gems we're going to need:
+Before starting to code, don't forget to setup your Rails app for Frontend, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
+
+```bash
+yarn add bootstrap jquery popper.js
+```
+
+And add the gems we're going to need:
 
 ```ruby
 # Gemfile
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass', '~> 3.3.7'
-gem 'font-awesome-sass', '~> 5.0.9'
+gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 ```
 
@@ -98,25 +103,22 @@ To enable Bootstrap responsiveness you will also need to add the following to yo
   <!-- [...] -->
 ```
 
-Finally let's also add the Bootstrap JavaScript library:
-
-```bash
-# In the terminal:
-yarn add jquery bootstrap@3
-```
+Finally let's import Boostrap JS library using webpack:
 
 ```js
 // config/webpack/environment.js
 const { environment } = require('@rails/webpacker')
 
-// Bootstrap 3 has a dependency over jQuery:
+// Bootstrap 4 has a dependency over jQuery & Popper.js:
 const webpack = require('webpack')
 environment.plugins.prepend('Provide',
   new webpack.ProvidePlugin({
     $: 'jquery',
-    jQuery: 'jquery'
+    jQuery: 'jquery',
+    Popper: ['popper.js', 'default']
   })
 )
+
 module.exports = environment
 ```
 ```js
