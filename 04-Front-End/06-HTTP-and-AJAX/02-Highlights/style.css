@@ -6,12 +6,6 @@ body {
   align-items: center;
 }
 
-.flex-wrap-center {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .clickable {
   padding: 40px;
   width: 180px;
