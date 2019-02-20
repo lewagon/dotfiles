@@ -85,9 +85,8 @@ Then let's download the Le Wagon's stylesheets:
 
 ```bash
 rm -rf app/assets/stylesheets
-curl -L https://github.com/lewagon/rails-stylesheets/archive/master.zip > stylesheets.zip
-unzip stylesheets.zip -d app/assets && rm -f stylesheets.zip && rm -f app/assets/rails-stylesheets-master/README.md
-mv app/assets/rails-stylesheets-master app/assets/stylesheets
+curl -L https://github.com/lewagon/stylesheets/archive/new-frontend.zip > stylesheets.zip
+unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-new-frontend app/assets/stylesheets
 ```
 
 To enable Bootstrap responsiveness you will also need to add the following to your `<head>`:
