@@ -58,7 +58,7 @@ You'll be able to test your code with:
 
 ```bash
 rails db:migrate RAILS_ENV=test  # If you added a migration
-rake                             # Launch tests
+rspec spec/models                # Launch tests
 ```
 
 Before starting to code, don't forget to setup your Rails app for Frontend, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
