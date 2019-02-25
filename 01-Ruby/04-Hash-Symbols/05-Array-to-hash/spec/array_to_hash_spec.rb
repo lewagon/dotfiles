@@ -8,7 +8,7 @@ describe "#array_to_hash" do
   end
 
   it "should build hash keys executing block on array indices" do
-    expect(array_to_hash(array) { |index| "key#{index + 1}" }).to eq({ "key1" => "a", "key2" => "b", "key3" => "c" })
+    expect(array_to_hash(array) { |index| "key#{index + 1}" }).to eq({ "key0" => "a", "key1" => "b", "key2" => "c" })
   end
 
 end
