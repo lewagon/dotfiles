@@ -59,9 +59,14 @@ upload an image that will then be displayed on the `index` view
 of `Cocktail` as a thumbnail. On the `show` view of `Cocktail`, the same
 image should be displayed, but bigger!
 
+
 Even though it's a simple app, try your best to make something beautiful using Bootstrap, a few nice font, and all your creativity 🎨😊🎨
 
 **Hint**: You can always build on top of [Le Wagon UI Kit](https://uikit.lewagon.com/)
+
+Remember, until yesterday we used `image_tag` which creats an html `img` tag with the images from our assets. When using the UI components, you will use background pictures in your html. There you need another rails helper - `image_path`! It will create the path for the image which is needed by the `background-image` property when you use it in html. If you use the `background-image` property in css, you can use the `asset-url` helper.
+
+For the exercise however, we don't only want to access static images, but we want to give the user the possibility to upload their own pictures and show those for the cocktails.
 
 ### Cocktail Reviews (Optional)
 
