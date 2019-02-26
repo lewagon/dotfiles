@@ -66,7 +66,24 @@ Even though it's a simple app, try your best to make something beautiful using B
 
 Remember, until yesterday we used `image_tag` which creates an html `img` tag with the images from our assets. When using the UI components you need another rails helper - `image_path`! It will create the path for the image which is needed by the `background-image` property when you use it in html. If you use the `background-image` property in css, you can use the `asset-url` helper as shown in yesterday's lecture.
 
+
+```erb
+<%= image_tag "logo.png" %>
+```
+
+generates:
+
+```html
+<img src="assets/images/logo-d0667407[...]xazok09.png" />
+```
+
+```ruby
+image_path("logo.png")
+# => "assets/images/logo-d0667407[...]xazok09.png"
+```
+
 For the exercise however, we don't only want to access static images, but we want to give the user the possibility to upload their own pictures and show those for the cocktails. In order to include images from cloudinary you will need the 'cl_image_tag'.
+
 
 ### Cocktail Reviews (Optional)
 
