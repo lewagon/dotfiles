@@ -5,7 +5,7 @@
 @import url("components/sidebars.css");
 @import url("components/badges.css");
 @import url("components/chat.css");
-@import url("components/message.css");
+@import url("components/messages.css");
 
 /* Importing layouts */
 @import url("layouts/slack.css");
