@@ -9,16 +9,6 @@ Your landing page should **at least** include:
 - A **How it works** section (what components could be used to break down the different aspects of your product/service) .
 - A **Footer**.
 
-## Find inspiration
-
-Don't blindly jump into coding, the first thing a frontend developer has to do is find inspiration! You're not stealing here, but looking online at what works to reproduce a nice user experience.
-
-
-To find inspiration you can use one of these resources:
-- [pages.xyz](https://www.pages.xyz/)
-- [Bootstrap themes](https://themes.getbootstrap.com/)
-
-
 ## Mockup
 
 ⚠️ **Never start coding a page without knowing how it will look!**
