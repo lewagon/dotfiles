@@ -59,13 +59,11 @@ upload an image that will then be displayed on the `index` view
 of `Cocktail` as a thumbnail. On the `show` view of `Cocktail`, the same
 image should be displayed, but bigger!
 
-
 Even though it's a simple app, try your best to make something beautiful using Bootstrap, a few nice font, and all your creativity 🎨😊🎨
 
 **Hint**: You can always build on top of [Le Wagon UI Kit](https://uikit.lewagon.com/)
 
 For an overview about all the image helpers rails provides (`img_tag`, `image_path`, `asset-url`, ...) check out the [cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/rails_image_helpers) 👈
-
 
 ### Cocktail Reviews (Optional)
 
