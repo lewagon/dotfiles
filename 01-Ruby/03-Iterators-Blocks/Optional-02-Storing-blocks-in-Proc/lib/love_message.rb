@@ -7,7 +7,7 @@ def tell_mum(&message_blk)
   # => Should call #tell of course
 end
 
-# Example
+# Example:
 # tell_mum {"I love you"}
 
 def tell_with_proc(who, message_blk)
@@ -20,6 +20,6 @@ def tell_mum_with_proc(message_blk)
   # => Should call #tell_with_proc of course
 end
 
-# Example
+# Example:
 # love_block = Proc.new {"I love you"}
 # tell_mum_with_proc(love_block)
