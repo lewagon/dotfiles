@@ -10,6 +10,6 @@ to be building for the next 2 weeks. The goal of the day is the same as Airbnb -
 
 For **each step**, ask a teacher to validate it. Rushing straight into the code is the best way to break stuff!
 
-When starting your rails app, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates/tree/frontend-new). It'll get you up and running faster.
+When starting your rails app, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates). It'll get you up and running faster.
 
 Please download and **print** [this template for your User Stories](https://github.com/lewagon/fullstack-images/raw/master/rails/rails-user-stories.pdf) (or ask a teacher!)
