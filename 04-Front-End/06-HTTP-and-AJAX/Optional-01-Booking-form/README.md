@@ -54,5 +54,5 @@ There aren't any tests for this exercise, but we check your style! So run `rake`
 
 ## Resources
 
-- To add / remove an HTML attribute to / from an element, you may want to look at [`removeAttribute`](https://developer.mozilla.org/fr/docs/Web/API/Element/removeAttribute) and [`setAttribute`](https://developer.mozilla.org/fr/docs/Web/API/Element/setAttribute)
+- To add / remove an HTML attribute to / from an element, you may want to look at [`removeAttribute`](https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute) and [`setAttribute`](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 - You can get all the attributes of an HTML element by calling the [`.attributes` property](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) on the element

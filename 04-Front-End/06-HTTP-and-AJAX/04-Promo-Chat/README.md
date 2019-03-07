@@ -13,7 +13,7 @@ In the `index.html` file of the challenge, you'll find an HTML form `#comment-fo
 
 This is a basic DOM exercise, no AJAX involved yet! **Hint**: You'll have to prevent the default behavior of the form submission (using the `preventDefault()` method).
 
-Code your javascript in `lib/app.js`.
+Code your javascript in `lib/index.js`.
 
 ### Fetch recent messages
 
