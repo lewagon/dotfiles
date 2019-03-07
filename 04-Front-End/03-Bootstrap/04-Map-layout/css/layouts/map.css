@@ -1,0 +1,6 @@
+/* TODO: design your flexbox layout with a sticky map */
+
+/* We just give you a Gmaps with random width/height */
+#map {
+  width: 100%;
+}

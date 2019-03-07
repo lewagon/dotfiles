@@ -24,4 +24,9 @@ Open the `lib/validation.js` file. This is where you'll code the validation logi
 
 ## Further suggestions
 
-Use [bootstrap validation state classes](http://getbootstrap.com/css/#forms-control-validation) to add a red background when a field is not properly filled.
+To display that an input is valid or invalid you can use the `.is-valid` & `.is-invalid` on your `input` from [Bootstrap server side validation classes](https://getbootstrap.com/docs/4.3/components/forms/#server-side) like this:
+
+```html
+<input type="text" class="form-control is-valid">
+<input type="text" class="form-control is-invalid">
+```

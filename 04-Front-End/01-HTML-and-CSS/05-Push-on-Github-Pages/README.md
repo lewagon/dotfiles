@@ -3,7 +3,7 @@
 We don't want to keep your profile within `fullstack-challenges` because we want to version it with `git` as a separate project. So let's copy your profile as an independent folder and jump into it:
 
 ```bash
-cd ~/code/<user.github_nickname>/04-Front-End/01-HTML-and-CSS/04-Advanced-selectors/profile
+cd ~/code/<user.github_nickname>/04-Front-End/01-HTML-and-CSS/04-Responsive-profile/profile
 cp -r . ~/code/<user.github_nickname>
 cd ~/code/<user.github_nickname>/profile
 ```
