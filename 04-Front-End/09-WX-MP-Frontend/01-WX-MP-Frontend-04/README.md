@@ -1,6 +1,8 @@
 ### Challenge 4
 Wireframe:
-  ![](https://github.com/pitipon/MP-Lecture-Image/blob/master/challenge2.png?raw=true)
+
+![](https://github.com/pitipon/MP-Lecture-Image/blob/master/challenge2.png?raw=true)
+
 - Store the FMC Stories given to you into `globalData`
 - Use `wx:for` to show all the FMC Stories on the stories page
 - Design Post Page (consult WeChat UI elements)
