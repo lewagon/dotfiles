@@ -1,10 +1,19 @@
 require "buddy"
 
-describe "#buddy" do
+describe "#today_my_buddys_github_nickname_is" do
+
+  it "should not take any parameters" do
+    expect(method(:today_my_buddys_github_nickname_is).arity).to eq(0)
+  end
 
   let(:buddy) { today_my_buddys_github_nickname_is }
 
-  it "should not be blank and be a real github username" do
+  it "should not return blank" do
+    expect(buddy).not_to be_nil
+    expect(buddy).not_to eq('')
+  end
+
+  it "should return a real github username" do
     expect(buddy).not_to be_nil
     expect(buddy).not_to eq('')
 
