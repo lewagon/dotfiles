@@ -1,0 +1,14 @@
+[
+  { "keys": ["ctrl+7"], "command": "toggle_comment", "args": {
+      "block": false
+    }
+  },
+  { "keys": ["ctrl+shift+7"], "command": "toggle_comment", "args": {
+      "block": true }
+  },
+  {
+    "keys": ["alt+shift+f"], "command": "reindent", "args": {
+      "single_line": false
+    }
+  },
+]

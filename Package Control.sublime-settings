@@ -21,6 +21,7 @@
 		"SideBarEnhancements",
 		"Skins",
 		"SublimeLinter",
-		"SublimeLinter-rubocop"
+		"SublimeLinter-rubocop",
+		"Terminal"
 	]
 }
