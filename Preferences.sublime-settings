@@ -19,7 +19,7 @@
 		"public/packs",
 		"coverage"
 	],
-	"font_size": 24,
+	"font_size": 19,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":

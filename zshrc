@@ -23,6 +23,9 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
+### Install the macvim shell
+export PATH="${PATH}:/Applications/MacVim.app/Contents/bin"
+
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
