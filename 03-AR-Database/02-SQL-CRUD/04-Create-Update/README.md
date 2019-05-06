@@ -11,7 +11,7 @@ You can still use the `test.rb` file to test your methods.
 
 ## Specs
 
-In this third exercise, we'll focus on the **C**reate and the **U**pdate of `CRUD`.
+In this fourth exercise, we'll focus on the **C**reate and the **U**pdate of `CRUD`.
 Why are we doing the `C` and the `U` together? It's because the process is very similar. When manipulating object instances, if we call `save` on something and it doesn't exist in our DB yet, it will get **C**reated. If it already exists, it will just get **U**pdated.
 
 ### `save`
