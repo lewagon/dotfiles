@@ -43,7 +43,7 @@ For instance, if you wanted to use Open-Sans and Poppins (with different font-we
 
 
 ```css
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700")
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
 ```
 
 Then you can apply it in the rest of your CSS:
