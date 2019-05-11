@@ -12,8 +12,11 @@ Plugin 'gmarik/Vundle.vim'  " Nécessaire
 " C'est ici que vous allez placer la liste des plugins que Vundle doit gérer
 "
 
-Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire

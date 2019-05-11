@@ -47,8 +47,22 @@ Host *
 
 Plugin list
 
-* [Vundle](https://github.com/VundleVim/Vundle.vim)
-* Vim Rails
-* Control P
-* Tabular
-* Surronder
+* [Vundle](https://github.com/VundleVim/Vundle.vim) ou [Vim Pathogen](https://github.com/tpope/vim-pathogen)
+* [Vim Rails](https://github.com/tpope/vim-rails)
+* [Surrounder](https://github.com/tpope/vim-surround)
+* [Control P](https://github.com/ctrlpvim/ctrlp.vim)
+* [Tabular](https://github.com/godlygeek/tabular)
+
+First of all you need to install Vundle to manage your plugin.
+
+The you can add the plugin to your `vimrc`
+
+```
+vim ~/.vimrc
+```
+
+At the end run
+
+```
+vim +PluginInstall +qall
+```
