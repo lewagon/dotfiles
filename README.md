@@ -42,3 +42,13 @@ Host *
   AddKeysToAgent yes
   UseKeychain yes
 ```
+
+## VIM
+
+Plugin list
+
+* [Vundle](https://github.com/VundleVim/Vundle.vim)
+* Vim Rails
+* Control P
+* Tabular
+* Surronder
