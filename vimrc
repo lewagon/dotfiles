@@ -17,6 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'godlygeek/tabular'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire

@@ -52,6 +52,7 @@ Plugin list
 * [Surrounder](https://github.com/tpope/vim-surround)
 * [Control P](https://github.com/ctrlpvim/ctrlp.vim)
 * [Tabular](https://github.com/godlygeek/tabular)
+* [Emmet](https://www.vim.org/scripts/script.php?script_id=2981)
 
 First of all you need to install Vundle to manage your plugin.
 
@@ -66,3 +67,6 @@ At the end run
 ```
 vim +PluginInstall +qall
 ```
+
+
+To install Emmet vim you can follow [this instructions](https://vimawesome.com/plugin/emmet-vim)
