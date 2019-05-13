@@ -2,7 +2,7 @@
 
 Build a [copycat of Slack](https://lewagon.github.io/bootstrap-challenges/12-Slack/) using the techniques you have learned in this morning's lecture, and previous lectures.
 
-For this challenge challenge you can use both your own css and [Bootstrap](https://getbootstrap.com/), as in the `head` we have both:
+For this challenge you can use both your own css and [Bootstrap](https://getbootstrap.com/), as in the `head` we have both:
 
 ```html
  <!-- Bootstrap CSS -->
