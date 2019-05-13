@@ -191,7 +191,7 @@ Ingredient.create(name: "mint leaves")
 
 **Optional**: have fun and seed real ingredients using [this JSON list](http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list) (with `open-uri` and `json` ruby libs).
 
-### 3 - Routing, Controller, Views for Cockatils
+### 3 - Routing, Controller, Views for Cocktails
 
 **Important**
 Don't use `rake` to code the applicative part. It's time to launch a `rails s` in your terminal and open a browser at [http://localhost:3000/](http://localhost:3000/). Always code in silo:
