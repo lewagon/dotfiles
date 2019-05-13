@@ -47,7 +47,7 @@ describe BankAccount do
     end
 
     it 'returns a message containing the withdrawn amount' do
-      account.withdraw(150).match /150/
+      expect(account.withdraw(150)).to match /150/
     end
   end
 
