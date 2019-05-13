@@ -6,7 +6,7 @@
 
 ## Pseudo-code
 
-How should your program work when your launch it? **Let's write the pseudo code**
+How should your program work when you launch it? **Let's write the pseudo code**
 
 ```ruby
 # interface.rb
