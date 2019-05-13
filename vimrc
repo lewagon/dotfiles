@@ -18,6 +18,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire
