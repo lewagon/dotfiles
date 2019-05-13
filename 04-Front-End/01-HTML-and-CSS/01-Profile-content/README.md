@@ -116,7 +116,7 @@ git commit -m "Added content to my profile page"
 git push origin master
 
 # Copy folder into next exercise folder
-cp -r profile ../02-Fonts-and-colors
+cp -r ../profile ../../02-Fonts-and-colors
 ```
 
 
