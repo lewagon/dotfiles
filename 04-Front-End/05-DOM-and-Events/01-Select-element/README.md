@@ -2,6 +2,27 @@
 
 In this first challenge, we are going to select an element from the DOM!
 
+### Install yarn
+
+You should already have Node installed. Check with `node -v`.
+
+Install yarn with one of the following:
+
+```bash
+# OSX
+brew install yarn
+```
+
+<br>
+
+```bash
+# Ubuntu
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
+
 ## Specs
 
 First, let's launch a local webserver by running in the terminal:
