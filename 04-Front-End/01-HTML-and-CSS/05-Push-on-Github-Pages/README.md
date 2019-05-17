@@ -52,7 +52,7 @@ git push origin gh-pages
 
 ## Submit your code to Kitt
 
-Has you weren't in `fullstack-challenges` your work won't be submited on Kitt, if you want to mark this challenge as complete you can do the following:
+As you weren't in `fullstack-challenges` your work won't be submitted on Kitt, if you want to mark this challenge as complete you can do the following:
 
 ```bash
 cd ~/code/<user.github_nickname>/fullstack-challenges/04-Front-End/01-HTML-and-CSS/05-Push-on-Github-Pages
