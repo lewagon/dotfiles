@@ -30,7 +30,7 @@ The page displays a booking form that we want to make **dynamic**. When the user
 
 To do so, take a good look at the `index.html` file, especially **the `data-` attributes** that hold precious values to help you!
 
-### Enable the `-`
+### Enable the minus (`-`)
 
 The `-` button is `disabled` for now. This was made possible by removing the `href` HTML attribute:
 
