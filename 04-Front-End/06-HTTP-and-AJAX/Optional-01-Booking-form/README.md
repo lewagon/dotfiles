@@ -32,20 +32,18 @@ To do so, take a good look at the `index.html` file, especially **the `data-` at
 
 ### Enable the `-`
 
-The `-` button is `disabled` for now. This was made possible with the `disabled` HTML attribute:
+The `-` button is `disabled` for now. This was made possible by removing the `href` HTML attribute:
 
 ```html
 <a
-  href="#"
   class="btn round-bordered incrementer minus"
   data-offset="-1"
-  disabled // <-- this one
 >-</a>
 ```
 
 Improve your form's UX by:
 
-- Toggling the `disabled` attribute on the `-` link: **enable** the link when the number of participants is **`>= 2`** and **disable** it otherwise (the counter should never reach `0` nor negative values)!
+- Toggling the `href` attribute on the `-` link: **enable** the link when the number of participants is **`>= 2`** and **disable** it otherwise (the counter should never reach `0` nor negative values)!
 - Hiding the input (you may want to look into [input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)), it should not be visible to your users in your form's final version!
 
 This challenge is **hard**, discuss it with your buddy and do it step by step, with pseudo-code!
