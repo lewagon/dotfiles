@@ -6,7 +6,7 @@ Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/
 
 ## Starting the challenge
 
-1. Make sure you understand the code in `index.html`, and the design we give you for navbar and cards in `components/navbar.css` and `components/card.css`. If you don't understand it fully, raise a ticket and someone will explain it!
+1. Make sure you understand the code in `campuses.html`, and the design we give you for navbar and cards in `components/navbar.css` and `components/card.css`. If you don't understand it fully, raise a ticket and someone will explain it!
 2. Go back to the lecture to rehearse how you can build a layout using `flexbox` and `position: sticky`.
 3. **Don't cheat by inspecting the code! 🔎** The goal of this challenge is to teach you how to build a layout by yourself. Take your time to think, ask teachers if you're stuck, but don't cheat 😉!
 
@@ -32,7 +32,7 @@ NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear y
 Notice that we now have **two folders** in our CSS:
 
 - `components` to code all our graphical components.
-- `layouts` to code the different layouts of our website.
+- `pages` to code the layouts of the different pages on our website.
 
 As usual, `style.css` is importing all the other stylesheets and is then linked in the HTML.
 
