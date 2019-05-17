@@ -49,3 +49,17 @@ git add .
 git commit -m "make my profile prettier"
 git push origin gh-pages
 ```
+
+## Submit your code to Kitt
+
+Has you weren't in `fullstack-challenges` your work won't be submited on Kitt, if you want to mark this challenge as complete you can do the following:
+
+```bash
+cd ~/code/<user.github_nickname>/fullstack-challenges/04-Front-End/01-HTML-and-CSS/05-Push-on-Github-Pages
+cp -r ~/code/<user.github_nickname>/profile .
+rm -rf profile/.git
+git add .
+git commit -m "Submitting my work to Kitt"
+git push origin master
+
+```
