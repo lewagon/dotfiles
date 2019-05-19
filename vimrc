@@ -21,6 +21,20 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 
+let mapleader=","
+let localmapleader=","
+
+map <Leader>, :CtrlPMRU<CR>
+
+noremap \= :Tabularize /=<CR>
+noremap \: :Tabularize /^[^:]*:\zs/l0l1<CR>
+noremap \> :Tabularize /=><CR>
+noremap \, :Tabularize /,\zs/l0l1<CR>
+noremap \{ :Tabularize /{<CR>
+noremap \\| :Tabularize /\|<CR>
+noremap \& :Tabularize /\(&\\|\\\\\)<CR>
+
+nnoremap <Leader>t :TagbarOpen fjc<CR>
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire
