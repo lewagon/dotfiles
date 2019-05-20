@@ -12,16 +12,11 @@ describe "quiz" do
                           "patch '/restaurants/:id', to: 'restaurants#update'",
                           "delete '/restaurants/:id', to: 'restaurants#destroy'",
                         ]
-      second_correct_actions = [
-                          "get '/restaurants', to: 'restaurants#index'",
-                          "post '/restaurants', to: 'restaurants#create'",
-                          "get '/restaurants/new', to: 'restaurants#new'",
-                          "get '/restaurants/:id/edit', to: 'restaurants#edit'",
-                          "get '/restaurants/:id', to: 'restaurants#show'",
-                          "put '/restaurants/:id', to: 'restaurants#update'",
-                          "delete '/restaurants/:id', to: 'restaurants#destroy'",
-                        ]
-      expect([correct_actions.sort, second_correct_actions.sort]).to include(restaurants_resources_routes.sort)
+      second_correct_actions = correct_actions + ["put '/restaurants/:id', to: 'restaurants#update'"]
+      third_correct_actions = second_correct_actions - ["patch '/restaurants/:id', to: 'restaurants#update'"]
+      possible_answers = [correct_actions.sort, second_correct_actions.sort, third_correct_actions.sort]
+      
+      expect(possible_answers).to include(restaurants_resources_routes.sort)
     end
   end
 
