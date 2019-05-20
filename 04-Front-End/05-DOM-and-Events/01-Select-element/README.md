@@ -6,7 +6,9 @@ In this first challenge, we are going to select an element from the DOM!
 
 You should already have Node installed. Check with `node -v`.
 
-Install yarn with one of the following:
+Later this week we will also be using `yarn`, a JavaScript package manager.
+
+To install it run one of the following in the terminal:
 
 ```bash
 # OSX
