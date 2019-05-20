@@ -41,7 +41,7 @@ Tutorial in 🇫🇷
 - **Icons**: download and use [Nucleo app](https://nucleoapp.com/) for utility icons
 
 ### Demo
-When you are done, copy / paste your prototype URL in Kitt. To get the prototype URL, first play your prototype and then click on the `Share  Prototype` button like below:
+When you are done, copy / paste your prototype URL on your product's page in Kitt. To get the prototype URL, first play your prototype and then click on the `Share  Prototype` button like below:
 
 <figure style="width: 100%">
   <img alt="Screen Shot 2018-10-28 at 13.36.39.png" src="https://wagon-rc3.s3.eu-west-1.amazonaws.com/p23uzJ9h6DUHZzG1E1dNyAWA">
