@@ -21,6 +21,11 @@ describe "Seed" do
     seed
     expect(Post.count).to be <= 50
     expect(Post.count).to be >= 25
+
+    User.all.each do |user|
+      expect(user.posts.count).to be >= 5
+      expect(user.posts.count).to be <= 10
+    end
   end
 
   it "should insert posts with a user set. A post with a nil user is not valid!" do
