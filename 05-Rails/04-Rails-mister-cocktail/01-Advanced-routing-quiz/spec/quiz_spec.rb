@@ -1,7 +1,7 @@
 require "quiz"
 
 describe "quiz" do
-  describe "#plants_resources_routes" do
+  describe "#restaurants_resources_routes" do
     it "should return the correct answer" do
       correct_actions = [
                           "get '/restaurants', to: 'restaurants#index'",
@@ -12,7 +12,11 @@ describe "quiz" do
                           "patch '/restaurants/:id', to: 'restaurants#update'",
                           "delete '/restaurants/:id', to: 'restaurants#destroy'",
                         ]
-      expect(plants_resources_routes.sort).to eq(correct_actions.sort)
+      second_correct_actions = correct_actions + ["put '/restaurants/:id', to: 'restaurants#update'"]
+      third_correct_actions = second_correct_actions - ["patch '/restaurants/:id', to: 'restaurants#update'"]
+      possible_answers = [correct_actions.sort, second_correct_actions.sort, third_correct_actions.sort]
+      
+      expect(possible_answers).to include(restaurants_resources_routes.sort)
     end
   end
 
