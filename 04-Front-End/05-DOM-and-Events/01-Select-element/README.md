@@ -30,6 +30,7 @@ sudo apt-get update && sudo apt-get install yarn
 First, let's launch a local webserver by running in the terminal:
 
 ```bash
+yarn install
 rake webpack
 ```
 
