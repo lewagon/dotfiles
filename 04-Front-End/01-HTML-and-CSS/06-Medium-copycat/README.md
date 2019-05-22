@@ -28,8 +28,8 @@ Before you get started with the code, analyze the structure of the page and thin
 
 ### Fancy Links
 
-- Inspect Medium's css properties on links => we see that a class `is-targeted` is added on `hover` (with javascript), inspect its css (`background-image: linear-gradient ...`)
-- Add a `linear-gradient` on `a`, and a darker one on `a:hover` to reproduce exactly Medium links.
+- Inspect the links in the [Medium example](https://lewagon.github.io/medium-copycat/) => we see how on `hover` the css changes (`background-image: linear-gradient ...`)?
+- Add a `linear-gradient` on `a`, and a darker one on `a:hover` to reproduce those fancy links.
 
 ### Container
 
