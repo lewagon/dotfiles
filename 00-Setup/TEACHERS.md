@@ -94,7 +94,7 @@ Project the calendar on the screen to go through the program with the class, wee
   - Yoga lessons are **strongly recommended** to relax from long hours focusing on your screens
   - You'll come back with a fresh and reloaded mind, and you'll be **more productive**!
   - Yoga and Code get along pretty well! 😊
-- _Paris_ apero-talks on Thursdays (7 PM) organized by our CM: **Edouard** (let him introduce himself and mention coming events)
+- _Paris_ apero-talks on Thursdays (7 PM) organized by our CM: **Edouard** (let her/him introduce himself and mention coming events)
   - **You** get to run the interview of a guest (CEOs, actors of the Tech scene, entrepreneurs...)
   - One "animator" sits next to our guest and leads the interview - prepare an agenda
   - Other students prepare questions
