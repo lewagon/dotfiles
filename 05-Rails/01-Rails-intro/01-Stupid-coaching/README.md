@@ -35,7 +35,7 @@ git push origin master
 **Objective**: We will implement a simple Rails application with 2 pages:
 
 1. First page is a form with an input, where a user can type a question to ask the Coach
-2. After submitting the form, the user is redirected to a new page where he will see his question and the coach answer.
+2. After submitting the form, the user is redirected to a new page where she/he will see his question and the coach answer.
 
 That's it!
 
@@ -83,7 +83,7 @@ If you don't remember about the coach (poor) logic, here it is:
 
 1. If the message is `I am going to work`, the coach will answer `Great!`
 2. If the message has a question mark `?` at the end, the coach will answer `Silly question, get dressed and go to work!`.
-3. Otherwise he will answer `I don't care, get dressed and go to work!`
+3. Otherwise she/he will answer `I don't care, get dressed and go to work!`
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/hello_there.png)
 
