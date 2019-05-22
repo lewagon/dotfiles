@@ -63,6 +63,8 @@ Now let's implement an enhanced version of the coach, with the method `coach_ans
 
 If you're getting stuck in an **infinite loop**, just hit `Ctrl` + `C`! It will kill the process.
 
+⚠️ For this exercise you're not finished when rake is 100% green! You need to make sure that you can actually ask questions to your coach by running ruby lib/interface.rb 😉
+
 ## Key learning points
 
 - What's the usual flow of a program?
