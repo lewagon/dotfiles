@@ -411,4 +411,4 @@ puts "#{frechont.restaurant.name}'s chief is #{frechont.name}"
 puts "He's been cooking for about #{frechont.years} years"
 ```
 
-As you see, here we need `self` in `Restaurant#initialize` in order to build a chief who is aware of the restaurant he cooks for! Otherwise it would be a terrible chief..
+As you see, here we need `self` in `Restaurant#initialize` in order to build a chief who is aware of the restaurant she/he cooks for! Otherwise it would be a terrible chief..

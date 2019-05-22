@@ -25,6 +25,6 @@ Our program has 7 modules
 - **9h00-10h30**: morning lecture by the lead-coach with lots of live-demo to help you understand the concepts using practical examples.
 - **10h30-12h30**: pair-programming session, work on the challenges & push your attempts.
 - **14h00-17h30**: finish your challenges of the day with your buddy.
--  **17h30-19h00**: "live-code session". A teacher (or sometimes a motivated student) chooses an interesting challenge of the day, or invents a new one. Then he will code the solution **from scratch** in front of the class on the projector. Doing so, he should interact with the class and ask them what to do. One of the most important moments of the day, don't miss it!
+-  **17h30-19h00**: "live-code session". A teacher (or sometimes a motivated student) chooses an interesting challenge of the day, or invents a new one. Then she/he will code the solution **from scratch** in front of the class on the projector. Doing so, she/he should interact with the class and ask them what to do. One of the most important moments of the day, don't miss it!
 
 Every day, there's 5 to 10 different challenges with their own test suite, and additional optional exercises for the fastest among you.
