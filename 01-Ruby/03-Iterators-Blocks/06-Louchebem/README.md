@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-You are having a drink with a french entrepreneur and he tells you "I've this great idea: I want to get people speaking louchebem again!" Now you have to help him 😊
+You are having a drink with a french entrepreneur and she/he tells you "I've this great idea: I want to get people speaking louchebem again!" Now you have to help her/him 😊
 
 ### A bit of research
 

@@ -3,6 +3,7 @@ require "check_phone"
 describe "#french_phone_number?" do
   FIXTURES = {
     "0665363636" => true,
+    "0165363636" => true,
     "06 65 36 36 36" => true,
     "06-65-36-36-36" => true,
     "+33 6 65 36 36 36" => true,
