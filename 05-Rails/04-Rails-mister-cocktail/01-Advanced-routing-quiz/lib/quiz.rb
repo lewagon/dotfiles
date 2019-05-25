@@ -2,7 +2,7 @@
 # and make sure each of the methods `return` the correct answer.
 # ⚠️ Try and answer them before running `rake`.
 
-def plants_resources_routes
+def restaurants_resources_routes
   # TODO: Return an `Array` with the 7 `routes` that `resources :restaurants` would generate for you.
   routes = []
 

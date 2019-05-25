@@ -51,7 +51,7 @@ To associate a post to its author, consider coding the following:
 ```ruby
 # lib/models/author
 class Author
-  [...]
+  # [...]
   def add_post(post)
     @posts << post
     post.author = self  # <-- what do you need in your Post class to write this?

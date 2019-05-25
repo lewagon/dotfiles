@@ -116,7 +116,7 @@ First, you need to make sure you have a **recent** version of Chrome on your sys
 
 ```bash
  # OSX
-brew install chromedriver
+brew cask install chromedriver
 
 # Ubuntu
 gem install chromedriver-helper

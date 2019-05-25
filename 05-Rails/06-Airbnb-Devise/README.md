@@ -132,7 +132,7 @@ When you work on a feature, work on it **conscientiously from the database to th
 - I will add a link to the `bookings#index`page in the navbar.
 
 *HTML/CSS*:
-- My booking form is clean with the correct Bootsrap classes for the inputs and buttons.
+- My booking form is clean with the correct Bootstrap classes for the inputs and buttons.
 - My new bookings page is clean with a `container` to center the content, clear headers, and a clean design for each booking.
 - I will take time to refactor my HTML using partials if my HTML code is too long and hard to read.
 

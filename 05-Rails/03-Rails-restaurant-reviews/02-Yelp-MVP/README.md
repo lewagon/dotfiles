@@ -23,7 +23,7 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure you can use simple form, Bootstrap, and have a cool stylesheets folder.
+Before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure you can use simple form, Bootstrap, and have a cool stylesheets folder (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that tomorrow!).
 
 ### Testing your code
 
@@ -125,20 +125,20 @@ Asking yourself what routes you need is a very important step in your web-app bu
 ```
 GET "restaurants"
 ```
-- He can add a new restaurant, and be redirected to the `show view` of that new restaurant.
+- She/He can add a new restaurant, and be redirected to the `show view` of that new restaurant.
 
 ```
 GET "restaurants/new"
 POST "restaurants"
 ```
 
-- He can see the details of a restaurant, with all the reviews related to the restaurant.
+- She/He can see the details of a restaurant, with all the reviews related to the restaurant.
 
 ```
 GET "restaurants/38"
 ```
 
-- He can add a new review to a restaurant
+- She/He can add a new review to a restaurant
 
 ```
 GET "restaurants/38/reviews/new"
@@ -158,7 +158,7 @@ Now, it's time to implement all the routes you need to build this product!
 
 ### Views
 
-Let's turn our attention to frontend, because that is what our users are going to see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to set up your Rails frontend.
+Let's turn our attention to frontend, because that is what our users are going to see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to set up your Rails frontend if you haven't done it at the beginning of the challenge (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that tomorrow!).
 
 #### Layout / partials
 

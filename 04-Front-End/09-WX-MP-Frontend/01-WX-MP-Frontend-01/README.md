@@ -62,8 +62,3 @@ Let's use some `inline CSS` through the style="" attribute:
 </view>
 ```
 
-Finally, let's throw some content inside:
-
-- an "H1" view
-- a "P" view
-- and a `<navigator>` component [(documentation)](https://developers.weixin.qq.com/miniprogram/en/dev/component/navigator.html) as we want our users to navigate to the next page of this app.

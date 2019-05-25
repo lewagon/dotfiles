@@ -31,7 +31,7 @@ Once that's done, use the `submit` event to catch the moment the form is posted 
 
 As always when you fetch data from an API, start by `console.log()`ing what you get back from MapBox. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
 
-HINT: Mapbox returns coordinates with longitude first, and latitude sencond!
+HINT: Mapbox returns coordinates with longitude first, and latitude second!
 
 ### [OPTIONAL] Displaying a map
 
@@ -51,7 +51,7 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 
 To easily build the map and add a marker to it, we'll use [npm's mapbox-gl package](https://yarnpkg.com/en/package/mapbox-gl).
 
-You already have a `package.json` so you just need to `yarn add mapbox-gl` to download it locally in `01-Geocoder/node_modules`.
+You already have a `package.json` so you just need to `yarn add mapbox-gl` to download it locally in `02-Geocoder/node_modules`.
 
 To display a map in your `#map` with the `mapbox-gl` package you can use these lines:
 

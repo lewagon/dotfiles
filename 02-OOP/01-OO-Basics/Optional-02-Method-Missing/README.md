@@ -31,8 +31,8 @@ If you try to call an instance method that wasn't defined in the class, ruby cal
 
 To prevent the `NoMethodError` to be raised, you can define **your own** `method_missing` instance method in your class, and implement it to do whatever you want!
 
-You can read [this article](http://rubylearning.com/satishtalim/ruby_method_missing.html) to get a sense of how and when ruby calls `method_missing`.
+You can read [this article](http://rubylearning.com/satishtalim/ruby_method_missing.html) to get a sense of how and when ruby calls `method_missing` ([docs here](https://ruby-doc.org/core-2.5.3/BasicObject.html#method-i-method_missing)).
 
-You may also want to read how Ruby lets you dynamically [get](https://apidock.com/ruby/Object/instance_variable_get) or [set](https://apidock.com/ruby/Object/instance_variable_set) an instance variable.
+You may also want to read how Ruby lets you dynamically [get](https://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_get) or [set](https://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_set) an instance variable.
 
 Good luck!

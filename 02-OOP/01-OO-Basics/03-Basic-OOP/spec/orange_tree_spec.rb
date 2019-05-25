@@ -73,7 +73,7 @@ describe OrangeTree do
     expect(orange_tree.height).to eq 10
   end
 
-  it "should not be able to live until more than 100 years old" do
+  it "should not be able to live more than 100 years old" do
     100.times do
       orange_tree.one_year_passes!
     end
@@ -124,9 +124,7 @@ describe OrangeTree do
     10.times do
       orange_tree.one_year_passes!
     end
-    # There should be 200 fruits
-
-    fruit_count = orange_tree.fruits
+    
     orange_tree.pick_a_fruit!
     expect(orange_tree.fruits).to eq 199
   end

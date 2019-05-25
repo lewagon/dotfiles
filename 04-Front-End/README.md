@@ -8,7 +8,7 @@ You'll cover a lot of HTML & CSS concepts in the next few days, such as:
 - CSS simple and advanced selectors
 - Web-design resources for fonts & colors (google fonts, fontawesome, etc.)
 
-The objective of this day is to build [your profile page](http://lewagon.github.io/html-css-challenges/04-advanced-selectors/) and put it online using [Github Pages](https://pages.github.com/).
+The objective of this day is to build [your profile page](https://papillard.github.io/my-profile/) and put it online using [Github Pages](https://pages.github.com/).
 
 ## `02 CSS Components`
 
@@ -16,7 +16,6 @@ We will go a bit further and make you code your own CSS component library. The o
 
 - Improve the way you organize and store components
 - Re-code your [own UI Kit](https://uikit.lewagon.com)
-- Build pages re-using components, like [Airbnb Home](http://lewagon.github.io/html-css-challenges/10-homepage-with-cards/) or [Product Hunt dashboard](http://lewagon.github.io/html-css-challenges/12-profile-with-products/)
 
 **Take-away**: Once you've finished, you'll be able to take HTML/CSS code directly from [Le Wagon UI Kit](https://uikit.lewagon.com).
 
@@ -26,9 +25,9 @@ We will first have a look at the CSS framework Bootstrap and everything it gives
 
 - For rich components, we've now built our own CSS library
 - For standard ones, let's not re-invent the wheel! We'll be using built-in Bootstrap classes
-- Using the Bootstrap grid for funtional responsive layours
+- Using the Bootstrap grid for funtional responsive layouts
 - Using flexboxes for horizontal or vertical alginment of components
-- Using CSS grid to build complex 2D layouts
+- Using CSS grid to build mosaic of cards
 
 ## `04 JavaScript Basics`
 

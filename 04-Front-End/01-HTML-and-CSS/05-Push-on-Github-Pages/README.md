@@ -2,9 +2,9 @@
 
 We don't want to keep your profile within `fullstack-challenges` because we want to version it with `git` as a separate project. So let's copy your profile as an independent folder and jump into it:
 
-
 ```bash
-cp -r ../04-Advanced-selectors/profile ~/code/<user.github_nickname>
+cd ~/code/<user.github_nickname>/fullstack-challenges/04-Front-End/01-HTML-and-CSS/04-Responsive-profile
+cp -r profile ~/code/<user.github_nickname>
 cd ~/code/<user.github_nickname>/profile
 ```
 
@@ -48,4 +48,18 @@ From now and until the end of the day, you can keep working in your `~/code/<use
 git add .
 git commit -m "make my profile prettier"
 git push origin gh-pages
+```
+
+## Submit your code to Kitt
+
+As you weren't in `fullstack-challenges` your work won't be submitted on Kitt, if you want to mark this challenge as complete you can do the following:
+
+```bash
+cd ~/code/<user.github_nickname>/fullstack-challenges/04-Front-End/01-HTML-and-CSS/05-Push-on-Github-Pages
+cp -r ~/code/<user.github_nickname>/profile .
+rm -rf profile/.git
+git add .
+git commit -m "Submitting my work to Kitt"
+git push origin master
+
 ```

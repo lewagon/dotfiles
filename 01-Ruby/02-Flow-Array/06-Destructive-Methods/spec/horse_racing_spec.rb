@@ -10,9 +10,9 @@ describe "#horse_racing_format!" do
   end
 
   it "should follow the horse racing formatting style" do
-    horse_race = ["Abricot du Laudot", "Black Caviar", "Brigadier Gerard", "Coup de Folie"]
+    horse_race = ["Abricot du Laudot", "Black Caviar", "Coup de Folie", "Brigadier Gerard"]
     horse_racing_format!(horse_race)
-    expect(horse_race).to eq ["4-Coup de Folie!", "3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]
+    expect(horse_race).to eq ["4-Brigadier Gerard!", "3-Coup de Folie!", "2-Black Caviar!", "1-Abricot du Laudot!"]
   end
 
 end

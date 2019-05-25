@@ -22,10 +22,10 @@ describe("Exercise 3", () => {
       const soldierMap = buildSoldierMap(battlefield);
       assert.equal(soldierMap.size, 7);
       assert.equal(soldierMap.get("Humans"), undefined);
-      assert.equal(soldierMap.get("Hobbits"), 1);
-      assert.equal(soldierMap.get("Elves"), 2);
-      assert.equal(soldierMap.get("Dwarves"), 3);
-      assert.equal(soldierMap.get("Goblins"), 7);
+      assert.strictEqual(soldierMap.get("Hobbits"), 1);
+      assert.strictEqual(soldierMap.get("Elves"), 2);
+      assert.strictEqual(soldierMap.get("Dwarves"), 3);
+      assert.strictEqual(soldierMap.get("Goblins"), 7);
     });
   });
 

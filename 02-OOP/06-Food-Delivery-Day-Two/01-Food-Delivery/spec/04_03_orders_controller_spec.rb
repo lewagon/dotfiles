@@ -104,7 +104,7 @@ describe "OrdersController", :_order do
     it "should list John's undelivered orders" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
       ringo = employee_repository.find(3)  # ringo is a delivery guy
-      expect(STDOUT).to receive(:puts).with(/Paul McCartney.*Calzone/)
+      expect(STDOUT).to receive(:puts).with(/Paul McCartney.*Calzone/m)
       controller.list_my_orders(ringo)
     end
   end
@@ -114,7 +114,7 @@ describe "OrdersController", :_order do
       expect(OrdersController.instance_method(:mark_as_delivered).arity).to eq(1)
     end
 
-    it "should ask the delivery guy for an order id and mark it as delivered" do
+    it "should ask the delivery guy for an order id, mark it as delivered, and save the relevant data to the CSV file" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
       # Ringo wants to mark as delivered number 4.
       Object.any_instance.stub(gets: '4')
