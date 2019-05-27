@@ -3,8 +3,7 @@
 
 def http_stands_for
   # TODO: Return a `string` with the full meaning of the acronym `HTTP`.
-  # Hint: Capitalize the first letter of every word, and the first two
-  # words are joined with a `-`
+  # Hint, the format should look like this:  Hxxx-Txxx Txxx Pxxx
   return ''
 end
 
