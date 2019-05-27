@@ -8,9 +8,9 @@ You will also discover new components such as a **form** and a **tab bar** for n
 
 ### 1. From Global to Local
 
-Each Page (e.g stories.js) has its own separate *local* data to render in its view.
+Each Page (e.g `stories.js`) has its own separate *local* data to render in its view.
 
-Fortunately, the whole App (app.js) shares a *global* data storage we can access everywhere. That's where you want to save anything to re-use. Example: your user information!
+Fortunately, the whole App (`app.js`) shares a *global* data storage we can access everywhere. That's where you want to save anything to re-use. Example: your user information!
 
 Although the [documentation here](https://developers.weixin.qq.com/miniprogram/en/dev/framework/app-service/app.html) says very little about it, note that WXML can't directly access the *global* data storage. You'll have to go through the *local* data first!
 
@@ -103,8 +103,8 @@ Go ahead and **implement this function**:
 
 - taking the values of your form inputs
 - saving them inside your App's `globalData`*
-- switching the user back to the stories page thanks to the [wx.switchTab](https://developers.weixin.qq.com/miniprogram/en/dev/api/ui-navigate.html#wxswitchtabobject) API
+- switching the user back to the stories page thanks to the [`wx.switchTab`](https://developers.weixin.qq.com/miniprogram/en/dev/api/ui-navigate.html#wxswitchtabobject) API
 
-*👉 *tip: remember how we've used getApp() to get an instance of the App inside our page!*
+*👉 *tip: remember how we've used `getApp()` to get an instance of the App inside our page!*
 
 **Test and test again!** use console.log at every step! 🤓

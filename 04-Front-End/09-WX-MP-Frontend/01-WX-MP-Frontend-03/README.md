@@ -13,14 +13,14 @@ We want to show more than one story in the **stories page** without repeating th
 ```js
 //stories.js
 data: {
-	stories: []
+  stories: []
 }
 ```
 
 - Each story will be a **new object** stored inside the `stories` array.
 - Each story will have a **content** and **name**.
 
-```
+```js
 { content: "Building a mini program is fun!!! FMC.", name: "Yinghui" },
 ```
 
@@ -28,7 +28,7 @@ You want to create 2-5 stories. After saving this local data succesfully, you ca
 
 ### 2. Render a list
 
-We can now render our list of stories using the [WX:FOR](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/list.html) control attribute.
+We can now render our list of stories using the [`WX:FOR`](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/list.html) control attribute.
 
 In your **stories.wxml** page:
 
@@ -37,13 +37,14 @@ In your **stories.wxml** page:
 - Use `wx:for-item` to specify the variable name of the current element of the array
 - Use some `{{mustache}}` syntax inside your card, to display the **content** and **name** keys of your stories!
 
-### 3. With conditions 
+### 3. With conditions
 
 What if we had **no stories to show**? An empty page wouldn't be so nice! 😱
 
-We can use the [WX:IF](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/conditional.html) control attribute to anticipate this case.
+We can use the [`WX:IF`](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/conditional.html) control attribute to anticipate this case.
 
 - Make a card with a welcome message: "*There's nothing here yet!*"
-- Render this card IF if the ``stories`` array is empty! 
+- Render this card IF if the ``stories`` array is empty!
 
 👉 Tip: an empty array has a length equal to 0
+
