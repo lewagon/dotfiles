@@ -1,19 +1,18 @@
 ## Background & Objectives
 
-Before we move on to building our first Rails apps and looking at the router, controllers and views, lets revisit some topics that will be vital in your rails development.
+Before we move on to building our first Rails apps and looking at the router, controllers and views, let's revisit some topics that will be vital in your rails development.
 
 ## Specs
 
 Look at the `lib/quiz.rb` file. You will find a quiz with a few methods
 to test your HTTP and MVC basic knowledge. Make sure each of the methods returns
-the correct information to pass the quiz!
-⚠️ Try and answer them before running `rake`.
+the correct information to pass the quiz! ⚠️ Try and answer them before running `rake`.
 
 ### Question 1
 
 Return a `String` with what **HTTP** stands for. Remember, HTTP is the protocol that
 allows a client (a browser running on a computer) to communicate with a remote server
-so that it can send requests, and recieve back files (html, css, js, etc.).
+so that it can send requests, and receive back files (html, css, js, etc.).
 
 ### Question 2
 
