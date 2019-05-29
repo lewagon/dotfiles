@@ -25,5 +25,5 @@ def view_responsibility
   b = 'allows us to define data types in our application'
   c = 'displays information to users'
 
-  return  # Return the correct variable, `a`, `b` or `c` 
+  return  # Return the correct variable, `a`, `b` or `c`
 end
