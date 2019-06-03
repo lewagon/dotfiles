@@ -1,49 +1,64 @@
-### Your take away:
+## Your take away
 
-The day is split into four challenges. By completing all of the challenges you should be able to ship a WeChat Mini Program today similar to "F** My Code" in the lecture
+This day is split into **four challenges**. By completing all of the challenges you should be able to ship your first WeChat Mini Program today: _"F*** My Code"._
 
-The lecturer will demonstrate the challenges during lecture. After each challenge, you will write your own solution to the challenge.
+Have you heard of [Fmylife.com](fmylife.com)? Visitors share personal stories of some funny sh*t they have been through. Every message ends with "FML". We're going to make a copy cat, but about your new life as programmers 😆
 
-**Challenges**
+After each demonstration by your lead teacher, you will write your own solution to the challenge!
 
-1. Create a Landing Page
-2. Create a View Page
-3. Improve Our View page
+**Morning challenges**
 
-**Advanced Challenges**
+1. Create a Landing Page to greet users
+2. Create a View Page to display our FMC stories
+3. Improve the View page with advanced WXML
 
-4. Create a Post Page
+**Afternoon challenges**
 
-Optionals:  Practice WeChat Functions with WeChat API
+4. Create a Post Page and use global data
+5. Optional: Using the cache
+6. Optional: Login users
+
+---
+
+### Challenge 1: Create a Landing Page to greet users
+
+## Background & objectives
+
+The goal of this first challenge is to understand the basic structure of an app, and in particular the view layer written in WXML/WXSS.
+
+## Specs
+
+### 1. Setup your app
+
+Create a new WeChat Mini Program and name it FMC. Using its setup file `app.json`, customize the **navigation bar** with a better name and style.
+
+### 2. Use the Pages array
+
+Use the setup file `app.json` to add a new route inside the array `pages:[]`:
+
+```
+"pages/landing/landing"
+```
+
+⚠️ Warning: don't forget to separate each route by a comma! If you break the array `pages:[]`, your app is down...
+
+When you save this file, WeChat's IDE will generate a new page folder for you. All files inside are a boilerplate for you to use! 👏
 
 
-### Solutions of all the challenges
-Try the challenge without copying code from solutions!
-Learn by trial and error and learn to hack together a solution from all you've learned today - it will be very rewarding!
+### 3. Build a quick landing page
 
-- [Solution for challenges 1&2](https://github.com/pitipon/MP-FMC-V1)
-- [Solution for challenge 3](https://github.com/pitipon/MP-FMC-V2)
-- [Solution for challenge 4](https://github.com/pitipon/MP-FMC-V3)
+This window will greet your users and explain the concept behind FMC app. You want to make a great first impression!
+
+Save time by transforming the [Banner Component from Le Wagon UI](https://uikit.lewagon.com/documentation#banners) into a quick landing page.
+
+**Tip**: WeChat Mini Programs CAN’T load a CSS `background-image` with a `local file` (inside your directory)...
+It’s a restriction of the framework, to *keep your app lightweight.* Instead, you must load a `remote file` 🌏, and it must come through HTTPs!
+
+Let's use some `inline CSS` through the style="" attribute:
 
 
-
-### Challenge 1:
-
-- Create a new WeChat Mini Program with customized navbar and background color
-- Create a Landing page
-- Transform the Banner Component from Le Wagon UI into the Landing Page
-
-### Solution 1: Landing Page
-
-```html
-<view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/ berlin');">
-<view class="banner-content">
-  <view class='title'>Fuck my code</view>
-  <text class='teaser'>Fighting with bugs everyday</text>
-  <view class='margin'/>
-    <button>Start now</button>
-  </view>
+```
+<view class="banner" style="height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.lewagon.com/api/v1/cities/shenzhen/cover?width=1200);">
 </view>
 ```
 
-Don't copy-paste solution or you won't learn as much as you could! Do the challenge on your own and adapt it to your own UI design!

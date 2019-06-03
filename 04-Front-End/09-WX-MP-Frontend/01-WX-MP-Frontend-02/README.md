@@ -1,25 +1,43 @@
-### Challenge 2:
+## Background & objectives
 
-- Create a new Story page
-- Transform the Le Wagon UI card component or create your own card with WXSS
-- Use your banner & card components to create a page to display a single story
+The goal of this challenge is to practice with more WeChat's template language.
 
-Wireframe:
-![](https://github.com/pitipon/MP-Lecture-Image/blob/master/challenge1.png?raw=true)
+## Specs
 
-### Solution 2: Story Page
 
-An example of the Le Wagon UI in action: [https://github.com/pitipon/MP-FMC-V1](https://github.com/pitipon/MP-FMC-V1)
+### 1. Setup one more page in your app
 
-### Practice 1:
+Use the setup file `app.json` to add again a new route inside the array `pages:[]`:
 
-- Store ‘Who is here?’ inside a text variable in the `index.js` page data
-- Display the text inside the `index.wxml` page
+```
+"pages/stories/stories"
+```
 
-### Solution Practice 1:
+### 2. Create a small header to begin
+
+Let's re-use the same [Banner Component](https://uikit.lewagon.com/documentation#banners) than on our landing page, and turn it into a nice header! We can use the `inline CSS` again to customize its size... e.g 100px height.
+
+### 3. Then a card for our stories...
+
+We'll want a card component to display our FMC stories: each card will host **content** and **author**.
+
+Once again we can save time using [Le Wagon's card component](https://uikit.lewagon.com/documentation#card_product) (but no need of a product image).
+
+Just one story is enough, we're just templating here.
+
+### 4. Data binding introduction
+
+WXML is much more than HTML: it's a **templating language** allowing us to [inject javascript variables and even loop through our local data](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/data.html)! The magic happens when you use this syntax: `{{variable or operation}}`. 
+
+We call it the **mustache syntax** 👨‍🦰 and it connects JS and HTML both ways...
+
+**From JS to WXML ➡️**
+
+- Store ‘Who is here?’ inside a `text` variable in the `stories.js` page data
+
 
 ```js
-//index.js
+//stories.js
 Page({
   data: {
     text: 'Who is here?'
@@ -27,50 +45,49 @@ Page({
 })
 ```
 
-```xml
-<!—index.wxml-->
+- Display the text inside your `stories.wxml` page
+
+
+```html
+<!— stories.wxml -->
 <view>{{text}}</view>
 ```
 
-### Practice 2:
+Any string stored inside `text` will dynamically show in your view 🤓
 
-- console.log the text stored in the data of the page with `onReady`
-- Bonus: set the text to something different with `onReady` and `setData`
+**From WXML to JS ⬅️**
 
-### Solution Practice 2:
+- Create a button with the "bindtap" attribute and a function name as a value
+ 
+```html
+<!— stories.wxml -->
+<button bindtap="clickMe">{{text}}</button>
+```
+
+- Define this new function in your Page object:
 
 ```js
-//index.js
+//stories.js
 Page({
-  data: {
-    text: ‘Who is here?’
-  },
-  onReady: function () {
-    console.log(this.data.text)
+  clickMe: function() {
+    this.setData({ text: "Hello World" })
   }
 })
 ```
 
-### Practice 3:
+Well done! Now you have a button firing a a "bindtap" event to the logical layer (the javascript file), and a function that re-sets the local data to another string... immediately rendered in the view. 
 
-- Create a button on the landing page and use it to route to the stories page
-- Bonus: create another button that changes the text on the landing page when clicked
+⚠️ Do not break the Page object! **Each key-value pair is chained with a comma.** Notice how the Page object contains different keys provided by the framework: `onReady`, `onShow` etc. We call them [lifestyle functions](https://developers.weixin.qq.com/miniprogram/en/dev/framework/app-service/page.html).
 
-[`navigateTo` documentation](https://developers.weixin.qq.com/miniprogram/dev/api/ui-navigate.html#wxnavigatetoobject)
+### Bonus action:
 
-### Solution Practice 3:
+Transform your `<navigator>` from the landing page into a `<button>` element, calling this function on **bindtap**:
 
 ```js
-//index.js
+//landing.js
 goToStoriesPage: function() {
   wx.navigateTo({
     url: '/pages/stories/stories'
   })
 }
-```
-
-```xml
-<!-- index.wxml -->
-<view>{{text}}</view>
-<button bindtap="goToStoriesPage">Go to the Stories page</button>
 ```
