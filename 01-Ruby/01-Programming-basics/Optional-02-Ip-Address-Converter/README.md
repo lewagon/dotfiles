@@ -39,18 +39,20 @@ This is how we represent 8-bit in binary:
 11111111
 # => 255
 ```
+
+How do we go from binary to decimal? We use the power of 2.
+```ruby
+2^7 | 2^6 | 2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0 |
+128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
+```
+
+
 So a 32-bit ip address would be:
 ```ruby
 00000000.00000000.00000000.00000000
 # => 0.0.0.0
 11111111.11111111.11111111.11111111
 # => 255.255.255.255
-```
-
-How do we go from binary to decimal? We use the power of 2.
-```ruby
-2^7 | 2^6 | 2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0 |
-128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
 ```
 
 Example:
@@ -103,7 +105,7 @@ Repeat for the other three 8-bit numbers and you'll get the full ip in binary.
 ```113``` is ```01110001``` in binary! (```64 + 32 + 16 + 1```).
 ```170``` is ```10101010``` in binary! (```128 + 32 + 8 + 2```).
 
-Remove the ```.``` to get ```00100101101000000111000110101010``` and apply our method to it: ```536870912 (2^29) + 67108864 (2^26) + 16777216 (2^24) + 8388608 (2^23) + 2097152 (2^21) + 16384 (2^14) + 8192 (2^13) + 4096 (2^12) + 256 (2^8) + 128 (2^7) + 32 (2^5) + 8 (2^3) + 2 (2^1)  = 631271850```.
+Remove the ```.``` to get ```00100101101000000111000110101010``` and apply our method to it: ```536870912 (2 power 29) + 67108864 (2 power 26) + 16777216 (2 power 24) + 8388608 (2 power 23) + 2097152 (2 power 21) + 16384 (2 power 14) + 8192 (2 power 13) + 4096 (2 power 12) + 256 (2 power 8) + 128 (2 power 7) + 32 (2 power 5) + 8 (2 power 3) + 2 (2 power 1)  = 631271850```.
 
 So ```631271850``` is the decimal number for the ip address ```37.160.113.170```.
 
