@@ -32,8 +32,6 @@ MutableConstant:
   Enabled: false
 SignalException:
   Enabled: false
-Casecmp:
-  Enabled: false
 CyclomaticComplexity:
   Enabled: false
 MethodMissingSuper:
