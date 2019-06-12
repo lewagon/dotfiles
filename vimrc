@@ -39,7 +39,7 @@ nnoremap <Leader>t :TagbarOpen fjc<CR>
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire
-set number
+set relativenumber
 syntax on
 set backspace=indent,eol,start
 set tabstop=2 shiftwidth=2 expandtab
