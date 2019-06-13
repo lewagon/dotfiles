@@ -15,7 +15,6 @@ You are going to use the minimal template. Here is the setup you need:
 cd ~/code/<user.github_nickname>
 rails new \
   --database postgresql \
-  -m "https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb" \
   stories-api
 cd stories-api
 git add .
@@ -24,7 +23,7 @@ hub create
 git push origin master
 ```
 
-Before starting to code your app, make sure you completed your WeChat Mini Program from the WeChat Frontend course with all the user stories (CRUD). This is the frontend application for which you'll be making the API. 
+Before starting to code your app, make sure you completed your WeChat Mini Program from the WeChat Frontend course with all the user stories specified in the [challenges of that day](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). This is the frontend application for which you'll be making the API. 
 
 ## Specs
 
@@ -52,6 +51,7 @@ This will help us to get started designing the api endpoints to show in the fron
 In the `db/seeds.rb` file, let's create around some stories with comments. 
 
 Tip: Use the [Faker](https://github.com/stympy/faker/) gem to spice up your data 🌶️🌶️🌶️  For example:
+
 ```ruby
 Faker::TvShows::GameOfThrones.character #=> "Tyrion Lannister"
 
@@ -60,7 +60,7 @@ Faker::TvShows::GameOfThrones.quote #=> "Never forget who you are. The rest of t
 
 ### 3 - Controller & Routes
 
-We can start off by adding all CRUD routes in our `config/routes.rb` but do we need them all? What four actions are needed for CRUD with APIs? (hint: there is no need to send forms for `EDIT` or `CREATE`, look through the rest of the steps to get all the actions.)
+We can start off by adding all CRUD routes in our `config/routes.rb` but do we need them all? What four actions are needed for CRUD with APIs? (hint: there is no need to send forms for `EDIT` or `NEW`, look through the rest of the steps to get all the actions.)
 
 Generate the  `StoriesController` with the four API actions - using the rails generator, or creating them manually.
 
