@@ -21,6 +21,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
+Plugin 'vim-scripts/snippetsEmu'
 
 let mapleader=","
 let localmapleader=","
