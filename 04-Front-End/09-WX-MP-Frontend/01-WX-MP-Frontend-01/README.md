@@ -9,8 +9,8 @@ After each demonstration by your lead teacher, you will write your own solution 
 **Morning challenges**
 
 1. Create a Landing Page to greet users
-2. Create a View Page to display our FMC stories
-3. Improve the View page with advanced WXML
+2. Create a Stories Page to display our FMC stories
+3. Improve the Stories page with advanced WXML
 
 **Afternoon challenges**
 
@@ -49,7 +49,7 @@ When you save this file, WeChat's IDE will generate a new page folder for you. A
 
 This window will greet your users and explain the concept behind FMC app. You want to make a great first impression!
 
-Save time by transforming the [Banner Component from Le Wagon UI](https://uikit.lewagon.com/documentation#banners) into a quick landing page.
+Save time by transforming the [Banner Component from Le Wagon UI](https://uikit.lewagon.com/documentation#banner) into a quick landing page.
 
 **Tip**: WeChat Mini Programs CAN’T load a CSS `background-image` with a `local file` (inside your directory)...
 It’s a restriction of the framework, to *keep your app lightweight.* Instead, you must load a `remote file` 🌏, and it must come through HTTPs!
