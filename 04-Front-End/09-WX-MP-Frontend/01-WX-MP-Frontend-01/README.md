@@ -9,8 +9,8 @@ After each demonstration by your lead teacher, you will write your own solution 
 **Morning challenges**
 
 1. Create a Landing Page to greet users
-2. Create a View Page to display our FMC stories
-3. Improve the View page with advanced WXML
+2. Create a Stories Page to display our FMC stories
+3. Improve the Stories page with advanced WXML
 
 **Afternoon challenges**
 
