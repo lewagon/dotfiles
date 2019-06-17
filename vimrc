@@ -25,6 +25,7 @@ Plugin 'vim-scripts/snippetsEmu'
 
 let mapleader=","
 let localmapleader=","
+let g:NERDTreeWinPos = "left"
 
 map <Leader>, :CtrlPMRU<CR>
 
