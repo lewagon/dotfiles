@@ -1,12 +1,12 @@
 ## Background & Objectives
 
-Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/flexbox-grid-layout.html) like in the lecture. For this exercise, notice we have not imported Bootstrap anywhere in the `index.html`! You will need to implement this layout in the `layout/map.css` file without using Bootstrap:
+Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/flexbox-grid-layout.html) like in the lecture. For this exercise, notice we have not imported Bootstrap anywhere in the `index.html`! You will need to implement this layout in the `pages/map.css` file without using Bootstrap:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/map-example.png)
 
 ## Starting the challenge
 
-1. Make sure you understand the code in `campuses.html`, and the design we give you for navbar and cards in `components/navbar.css` and `components/card.css`. If you don't understand it fully, raise a ticket and someone will explain it!
+1. Make sure you understand the code in `index.html`, and the design we give you for navbar and cards in `components/navbar.css` and `components/card.css`. If you don't understand it fully, raise a ticket and someone will explain it!
 2. Go back to the lecture to rehearse how you can build a layout using `flexbox` and `position: sticky`.
 3. **Don't cheat by inspecting the code! 🔎** The goal of this challenge is to teach you how to build a layout by yourself. Take your time to think, ask teachers if you're stuck, but don't cheat 😉!
 
