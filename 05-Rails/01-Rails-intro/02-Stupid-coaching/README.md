@@ -9,6 +9,8 @@ This is the proper way to install rails:
 gem install rails -v 5.2
 ```
 
+Now quit the Terminal, and restart it.
+
 ## Background & Objectives
 
 Remember your first weeks of Ruby? We only had the terminal for the program user interface. Those days are over, we will now use Rails! This means:
