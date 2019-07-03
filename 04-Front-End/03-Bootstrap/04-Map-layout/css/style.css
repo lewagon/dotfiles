@@ -6,7 +6,7 @@
 @import url("components/navbar.css");
 
 /* Importing layouts */
-@import url("pages/campuses.css");
+@import url("pages/map.css");
 
 body {
   margin: 0;
