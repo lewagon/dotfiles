@@ -68,5 +68,8 @@ At the end run
 vim +PluginInstall +qall
 ```
 
-
 To install Emmet vim you can follow [this instructions](https://vimawesome.com/plugin/emmet-vim)
+
+## Un lien utile pour le setup de son mac
+
+[Ici](https://sourabhbajaj.com/mac-setup/)
