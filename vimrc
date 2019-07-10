@@ -38,6 +38,8 @@ noremap \\| :Tabularize /\|<CR>
 noremap \& :Tabularize /\(&\\|\\\\\)<CR>
 
 nnoremap <Leader>t :TagbarOpen fjc<CR>
+nnoremap <C-g> :NERDTreeToggle<cr>
+nnoremap <C-n> :set number! relativenumber!<cr>
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire
