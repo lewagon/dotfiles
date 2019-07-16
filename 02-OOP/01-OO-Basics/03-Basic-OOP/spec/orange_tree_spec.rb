@@ -1,5 +1,25 @@
 require "orange_tree"
 
+BONUS = <<-eos
+
+
+                  &&& &&  & &&
+              && &\/&\|& ()|/ @, &&
+              &\/(/&/&||/& /_/)_&/_&
+           &() &\/&|()|/&\/ '%" & ()
+          &_\_&&_\ |& |&&/&__%_/_& &&
+        &&   && & &| &| /& & % ()& /&&
+         ()&_---()&\&\|&&-&&--%---()~
+             &&     \|||
+                     |||
+                     |||
+                     |||
+               , -=-~  .-^- _
+                      `
+
+
+eos
+
 describe OrangeTree do
   let(:orange_tree) { OrangeTree.new }
 
@@ -124,7 +144,7 @@ describe OrangeTree do
     10.times do
       orange_tree.one_year_passes!
     end
-    
+
     orange_tree.pick_a_fruit!
     expect(orange_tree.fruits).to eq 199
   end
