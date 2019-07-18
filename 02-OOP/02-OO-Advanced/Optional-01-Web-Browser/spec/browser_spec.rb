@@ -46,14 +46,14 @@ describe "Browser" do
   end
 
   describe "#fetch_content" do
-    let(:content) { browser.fetch_content("http://www.perdu.com") }
+    let(:content) { browser.fetch_content("http://motherfuckingwebsite.com/") }
 
     it 'should return a String' do
       expect(content).to be_kind_of(String)
     end
 
-    it "should return a string for http://www.perdu.com" do
-      expect(content).to match /Perdu sur l'Internet/
+    it "should return a string for http://motherfuckingwebsite.com/" do
+      expect(content).to match /This is a motherfucking website/
     end
 
     it "should not contain HTML tags" do
