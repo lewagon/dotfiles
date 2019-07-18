@@ -1,5 +1,20 @@
 require_relative 'cookbook_helper'
 
+BONUS = <<-eos
+
+      _.--._  _.--._
+\\\\\\\:;:;:;:;:;\\:;:;:;:;:;\\
+ \\\\\\\:;:;:;:;:;\\:;:;:;:;:;\\
+  \\\\\\\:;:;:;:;:;\\:;:;:;:;:;\\
+   \\\\\\\:;:;:;:;:;\\:;::;:;:;:\\
+    \\\\\\\;:;::;:;:;\\:;:;:;::;:\\
+     \\\\\\\;;:;:_:--:\\:_:--:_;:;\\
+      \\\\\\\_.-"      :      "-._\\
+       \\`_..--""--.;.--""--.._=>
+
+
+eos
+
 begin
   require "controller"
 rescue LoadError
@@ -11,7 +26,7 @@ cookbook_helper = CookbookHelper.new(
 )
 
 describe "Controller", unless: cookbook_helper.file_and_class_valid? do
-  it '`controller.rb` file should exist' do 
+  it '`controller.rb` file should exist' do
     expect(cookbook_helper.file_exists?).to be(true)
   end
 

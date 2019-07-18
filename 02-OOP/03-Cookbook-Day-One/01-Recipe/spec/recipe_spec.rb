@@ -1,5 +1,17 @@
 require_relative 'recipe_helper'
 
+BONUS = <<-eos
+
+      ______ ______
+    _/      Y      \\_
+   // ~~ ~~ | ~~ ~  \\\\
+  // ~ ~ ~~ | ~~~ ~~ \\\\
+ //________.|.________\\\\
+`----------`-'----------'
+
+
+eos
+
 recipe_helper = RecipeHelper.new
 
 describe 'lib folder', unless: recipe_helper.file_exists? do

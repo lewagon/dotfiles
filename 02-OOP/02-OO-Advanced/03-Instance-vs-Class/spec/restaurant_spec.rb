@@ -1,5 +1,21 @@
 require "restaurant"
 
+BONUS = <<-eos
+
+       .--,--.
+       `.  ,.'
+        |___|
+        :o o:   O
+       _`~^~'_  |
+     /'   ^   `\\=)
+   .'  _______ '~|
+   `(<=|     |= /'
+       |     |
+       |_____|
+~~~~~~~ ===== ~~~~~~~~
+
+eos
+
 describe Restaurant do
 
   let(:jules_verne) { Restaurant.new("paris", "Jules Verne") }

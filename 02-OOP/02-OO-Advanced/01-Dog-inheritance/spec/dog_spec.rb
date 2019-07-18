@@ -1,5 +1,15 @@
 require 'dog'
 
+BONUS = <<-eos
+
+   __
+o-''|\\_____/)
+ \\_/|_)     )
+    \\  __  /
+    (_/ (_/
+
+eos
+
 describe GermanShepherd do
 
   describe 'inheritance' do
