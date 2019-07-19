@@ -7,7 +7,7 @@ Stack Overflow to get a sense of the class hierarchy.
 ## Specs
 
 For this exercise, we want to do the opposite. We have a `Mother` class that should be able to call
-its descendants. Say you have two classes `Daugther` and `Son` with class method `phone`, then:
+its descendants. Say you have two classes `Daughter` and `Son` with class method `phone`, then:
 
 ```ruby
 Mother.phone_kids
