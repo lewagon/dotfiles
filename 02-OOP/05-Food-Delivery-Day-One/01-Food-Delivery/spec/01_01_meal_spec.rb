@@ -12,17 +12,6 @@ rescue LoadError => e
   end
 end
 
-BONUS = <<-eos
-
-        (_\\
-       / \\
-  `== / /\\=,_
-   ;--==\\\\  \\\\o
-   /____//__/__\\
- @=`(0)     (0)
-
-eos
-
 describe "Meal", :meal do
   it "should be initialized with a hash of properties" do
     properties = { id: 1, name: "Margherita", price: 8 }
