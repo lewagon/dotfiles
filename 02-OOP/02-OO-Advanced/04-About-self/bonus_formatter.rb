@@ -8,3 +8,18 @@ class BonusFormatter < RSpec::Core::Formatters::DocumentationFormatter
     super notification
   end
 end
+
+BONUS = "
+
+     #####
+    #### _\\_  ________
+    ##=-[.].]| \\      \\
+    #(    _\\ |  |------|
+     #   __| |  ||||||||
+      \\  _/  |  ||||||||
+   .--'--'-. |  | ____ |
+  / __      `|__|[o__o]|
+_(_____________ /____\\____
+
+
+"
