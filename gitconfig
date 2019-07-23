@@ -49,8 +49,8 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = alexandre.b2506@gmail.com
-	name = alexandrebk
+	email = alexandre@peersandpeers.com
+	name = Alexandre Bouvier
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

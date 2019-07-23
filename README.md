@@ -70,6 +70,13 @@ vim +PluginInstall +qall
 
 To install Emmet vim you can follow [this instructions](https://vimawesome.com/plugin/emmet-vim)
 
+## Brew
+
+```
+brew install rename
+brew install tree
+brew install ack
+```
 ## Un lien utile pour le setup de son mac
 
 [Ici](https://sourabhbajaj.com/mac-setup/)
