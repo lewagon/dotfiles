@@ -1,35 +1,33 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look at https://github.com/robbyrussell/oh-my-zsh/wiki/themes for alternatives
+# You can change the theme with another one:
+#   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+# Useful plugins for Rails development with Sublime Text
+plugins=(gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git sublime zsh-syntax-highlighting zsh-history-substring-search)
+# Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
+export HOMEBREW_NO_ANALYTICS=1
 
-source $ZSH/oh-my-zsh.sh
-export PATH='~/.rbenv/shims:/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/usr/texbin:~/bin'
+# Actually load Oh-My-Zsh
+source "${ZSH}/oh-my-zsh.sh"
+unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
-# Disable zsh correction
-unsetopt correct_all
+# Load rbenv if installed
+export PATH="${HOME}/.rbenv/bin:${PATH}"
+type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
-# To use Homebrew's directories rather than ~/.rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-export PATH="${RBENV_ROOT}/bin:${PATH}"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# Rails and Ruby uses the local `bin` folder to store binstubs.
+# So instead of running `bin/rails` like the doc says, just run `rails`
+# Same for `./node_modules/.bin` and nodejs
+export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
-# Gather handy aliases
+# Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
-# Enhance history with substring search and purple highlighting
-bindkey '^[OA' history-substring-search-up
-bindkey '^[OB' history-substring-search-down
-
-# UTF-8 is our default encoding
+# Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"

@@ -5,11 +5,3 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
-
-# Rails bundler shorter
-alias be='bundle exec'
-alias bi='bundle install'
-
-# Open Sublime Text with a very short command!
-alias s='st .'
-

@@ -1,35 +1,8 @@
-Install
--------
+This repository is used by [Le Wagon](https://www.lewagon.com) students during our 9-week [coding bootcamp](https://www.lewagon.com).
 
-Your dotfiles are personal. [Fork this repo](https://github.com/lewagon/dotfiles/fork) on Github,
-and then clone it on your computer.
+## Toolset
 
-```bash
-$ GITHUB_USERNAME=<put_your_github_username_here>
-
-# Then execute the 3 following lines without changing anything
-$ mkdir -p ~/code/${GITHUB_USERNAME} && cd $_
-$ git clone git@github.com:${GITHUB_USERNAME}/dotfiles.git
-$ cd dotfiles
-```
-
-Open and edit the `[user]`'s section of the `gitconfig` file. When you're done, save these config (that's why you forked the repo) and pushed it on GitHub.
-
-```bash
-$ git add gitconfig
-$ git commit --message "My identity in the gitconfig"
-$ git push origin master
-```
-
-Now you can run the install script. It will not override existing config files, just
-rename them as ```#{file}.backup```.
-Assumption: you have [`oh-my-zsh`](http://ohmyz.sh/) is already installed.
-
-```bash
-$ ./install.sh
-```
-
-Customization
--------------
-
-You can open `~/.aliases` and add your own shortcuts
+- [oh-my-zsh](http://ohmyz.sh/)
+- [Sublime Text](https://www.sublimetext.com/)
+- [git](https://git-scm.com/)
+- Ruby via [`rbenv`](https://github.com/rbenv/rbenv)
