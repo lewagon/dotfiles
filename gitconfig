@@ -49,10 +49,12 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = alexandre@peersandpeers.com
+	email = alexandre.b2506@gmail.com
 	name = Alexandre Bouvier
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+	template = /Users/alexandrebouvier/.gitmessage.txt
