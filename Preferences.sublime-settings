@@ -1,39 +1,39 @@
 {
-  "detect_indentation": false,
-  "draw_white_space": true,
-  "ensure_newline_at_eof_on_save": true,
-  "update_check": false,
-  "folder_exclude_patterns":
-  [
-    "tmp",
-    "log",
-    ".git",
-    ".svn",
-    "_site",
-    ".bundle",
-    ".sass-cache",
-    ".asset-cache",
-    "build",
-    "node_modules",
-    "dist",
-    "public/packs",
-    "coverage"
-  ],
-  "highlight_modified_tabs": true,
-  "hot_exit": false,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "remember_open_files": false,
-  "rulers":
-  [
-    80
-  ],
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "trim_automatic_white_space": true,
-  "trim_trailing_white_space_on_save": true,
-  "use_tab_stops": true,
-  "wordWrap": false
+	"detect_indentation": false,
+	"draw_white_space": true,
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		"tmp",
+		"log",
+		".git",
+		".svn",
+		"_site",
+		".bundle",
+		".sass-cache",
+		".asset-cache",
+		"build",
+		"node_modules",
+		"dist",
+		"public/packs",
+		"coverage"
+	],
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"remember_open_files": false,
+	"rulers":
+	[
+		80
+	],
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"update_check": false,
+	"use_tab_stops": true,
+	"wordWrap": false
 }
