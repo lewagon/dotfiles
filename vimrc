@@ -40,6 +40,7 @@ noremap \& :Tabularize /\(&\\|\\\\\)<CR>
 nnoremap <Leader>t :TagbarOpen fjc<CR>
 nnoremap <C-g> :NERDTreeToggle<cr>
 nnoremap <C-n> :set number! relativenumber!<cr>
+nnoremap <C-i> ggVG=
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire
