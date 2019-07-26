@@ -2,7 +2,7 @@
 
 This day is split into **four challenges**. By completing all of the challenges you should be able to ship your first WeChat Mini Program today: _"F*** My Code"._
 
-Have you heard of [Fmylife.com](fmylife.com)? Visitors share personal stories of some funny sh*t they have been through. Every message ends with "FML". We're going to make a copy cat, but about your new life as programmers 😆
+Have you heard of [Fmylife.com](https://fmylife.com)? Visitors share personal stories of some funny sh*t they have been through. Every message ends with "FML". We're going to make a copy cat, but about your new life as programmers 😆
 
 After each demonstration by your lead teacher, you will write your own solution to the challenge!
 
