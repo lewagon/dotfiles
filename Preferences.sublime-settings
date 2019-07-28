@@ -19,7 +19,7 @@
 		"public/packs",
 		"coverage"
 	],
-	"font_size": 14,
+	"font_size": 17,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
@@ -28,6 +28,7 @@
 		"DashDoc",
 		"HTML Snippets",
 		"JavaScript",
+		"JavaScript Completions",
 		"JavaScript Next Snippets",
 		"Material Theme",
 		"React ES6 Snippets",
