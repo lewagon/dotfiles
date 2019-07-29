@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	editor = subl -n -w  >/dev/null 2>&1
 
 [alias]
   co = checkout
@@ -48,4 +48,4 @@
   mergeoptions = --no-edit
 [user]
 	email = giakethien@gmail.com
-	name = Ke Thien Nguyen
+	name = KeThien Nguyen
