@@ -80,3 +80,15 @@ brew install ack
 ## Un lien utile pour le setup de son mac
 
 [Ici](https://sourabhbajaj.com/mac-setup/)
+
+## Snippets on vim
+
+To install snippets on vim you can create symbolic link to your dotfiles
+
+```
+ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/markdown_snippets.vim /Users/alexandrebouvier/.vim/after/ftplugin/markdown_snippets.vim
+ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/ruby_snippets.vim /Users/alexandrebouvier/.vim/after/ftplugin/ruby_snippets.vim
+ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/javascript_snippets.vim /Users/alexandrebouvier/.vim/after/ftplugin/javascript_snippets.vim
+ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/html_snippets.vim /Users/alexandrebouvier/.vim/after/ftplugin/html_snippets.vim
+ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/text_snippets.vim /Users/alexandrebouvier/.vim/after/ftplugin/text_snippets.vim
+```
