@@ -22,6 +22,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'vim-scripts/snippetsEmu'
+Plugin 'altercation/vim-colors-solarized'
 
 let mapleader=","
 let localmapleader=","
@@ -48,6 +49,13 @@ set relativenumber
 syntax on
 set backspace=indent,eol,start
 set tabstop=2 shiftwidth=2 expandtab
+
+" For altercation/vim-colors-solarized
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
 if has("multi_byte")
   set encoding=utf-8
   setglobal fileencoding=utf-8
