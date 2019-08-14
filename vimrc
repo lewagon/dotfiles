@@ -15,6 +15,7 @@ Plugin 'gmarik/Vundle.vim'  " Nécessaire
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'godlygeek/tabular'
@@ -49,6 +50,7 @@ set relativenumber
 syntax on
 set backspace=indent,eol,start
 set tabstop=2 shiftwidth=2 expandtab
+set tags=tags
 
 " For altercation/vim-colors-solarized
 syntax enable

@@ -36,3 +36,5 @@ export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bi
 
 # For tmuxinator
 export EDITOR=vim
+
+ctags=/usr/local/bin/ctags
