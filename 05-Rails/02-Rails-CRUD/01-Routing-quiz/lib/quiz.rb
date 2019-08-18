@@ -3,7 +3,7 @@
 
 def launching_a_rails_server
   # TODO: Return a `string` with the command you would run in your terminal
-  # to launch a rails server so that you could visit your your app in development
+  # to launch a rails server so that you could visit your app in development
   # at `http://localhost:3000`.
 end
 
