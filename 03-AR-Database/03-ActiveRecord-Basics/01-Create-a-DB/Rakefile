@@ -35,7 +35,7 @@ db_namespace = namespace :db do
   desc 'migrate the database (options: VERSION=x).'
   task :migrate do
     require_relative "../../utils"
-    FullStackChallengesUtils.rake_migrate(db_namespace)
+    FullStackChallengesUtils.rake_migrate(db_namespace, File.dirname(__FILE__))
   end
 
   desc 'Retrieves the current schema version number'

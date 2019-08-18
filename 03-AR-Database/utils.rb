@@ -1,6 +1,6 @@
 class FullStackChallengesUtils
-  def self.rake_migrate(db_namespace)
-    ActiveRecord::Migrator.migrations_paths << File.dirname(__FILE__) + 'db/migrate'
+  def self.rake_migrate(db_namespace, file)
+    ActiveRecord::Migrator.migrations_paths << File.expand_path(file, 'db/migrate')
     ActiveRecord::Migration.verbose = true
     version = ENV['VERSION'] ? ENV['VERSION'].to_i : nil
     args = [ActiveRecord::Migrator.migrations_paths]
