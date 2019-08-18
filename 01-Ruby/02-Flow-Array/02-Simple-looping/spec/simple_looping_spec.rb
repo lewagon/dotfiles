@@ -15,9 +15,14 @@ end
 
 describe "#sum_with_while" do
 
-  it "should return the correct sum" do
+  it "should return the correct sum (1 -> 500)" do
     sum = sum_with_while(1, 100)
     expect(sum).to eq 5050
+  end
+
+  it "should return the correct sum (7 -> 42)" do
+    sum = sum_with_while(7, 42)
+    expect(sum).to eq 882
   end
 
   it "should return -1 if min number > max number" do
