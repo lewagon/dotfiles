@@ -27,10 +27,15 @@ sudo apt-get update && sudo apt-get install yarn
 
 ## Specs
 
-First, let's launch a local webserver by running in the terminal:
+Let's make sure that all dependencies for this exercise are installed with the following:
 
 ```bash
 yarn install
+```
+
+Let's launch a local webserver by running:
+
+```bash
 rake webpack
 ```
 
