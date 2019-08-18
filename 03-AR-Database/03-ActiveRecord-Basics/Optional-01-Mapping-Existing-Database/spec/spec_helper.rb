@@ -2,15 +2,8 @@ require_relative "../config/application"
 ActiveRecord::Base.logger = nil
 
 def migrate(version = nil)
-  ActiveRecord::Migration.verbose = false
-  ActiveRecord::Migrator.migrations_paths << File.expand_path(File.dirname(__FILE__), '../db/migrate')
-  if defined?(ActiveRecord::MigrationContext)
-    ActiveRecord::MigrationContext
-      .new(ActiveRecord::Migrator.migrations_paths)
-      .migrate(version)
-  else
-    ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths, version)
-  end
+  require_relative "../../../utils"
+  FullStackChallengesUtils.spec_helper_migrate(version, File.dirname(__FILE__))
 end
 
 def create_db
