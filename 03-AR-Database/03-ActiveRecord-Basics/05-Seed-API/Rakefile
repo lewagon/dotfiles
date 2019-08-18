@@ -19,7 +19,7 @@ task :console do
 end
 
 ## Active Record related rake tasks
-namespace :db do
+db_namespace = namespace :db do
   desc 'create the database'
   task :create do
     puts "Creating #{db_path}..."
