@@ -53,6 +53,19 @@ db_namespace = namespace :db do
     puts DateTime.now.strftime('%Y%m%d%H%M%S')
   end
 
+  namespace :schema do
+     desc 'Create a db/schema.rb file that can be portably used against any DB supported by AR'
+     task :dump do
+
+       require 'active_record/schema_dumper'
+       filename = 'db/schema.rb'
+
+       File.open(filename, "w:utf-8") do |file|
+         ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
+       end
+     end
+   end
+
   private
 
   def db_path
