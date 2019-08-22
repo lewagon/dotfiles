@@ -40,6 +40,6 @@ because the [HTML source](https://support.mozilla.org/en-US/questions/873324) wa
 
 ## Specs
 
-We would like to scrape **antiques** listed on [Craiglist](http://www.craiglist.com) for a given city. Open the `lib/scraper.rb` and implement the `scrape_craiglist_antiques` method. It should **return** an `Array` of antiques found on the website.
+We would like to scrape **antiques** listed on [craigslist](https://craigslist.org/) for a given city. Open the `lib/scraper.rb` and implement the `scrape_craiglist_antiques` method. It should **return** an `Array` of antiques found on the website.
 
 This method should scrape successfully for London, Paris and New York. Therefore `scrape_craiglist_antiques("london")`, `scrape_craiglist_antiques("paris")` and `scrape_craiglist_antiques("newyork")` should all return results. Are the craiglist urls for all the cities the same?
