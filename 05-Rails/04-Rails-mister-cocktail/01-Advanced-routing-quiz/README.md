@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Before we move on to looking the Mister Cocktail challenge let's review some of the principles we saw yeserday when we looked at advanced routing.
+Before we move on to looking the Mister Cocktail challenge let's review some of the principles we saw yesterday when we looked at advanced routing.
 
 ## Specs
 
