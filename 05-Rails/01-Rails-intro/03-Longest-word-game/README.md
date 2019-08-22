@@ -1,10 +1,14 @@
 ## Background & Objectives
 
-Time to re-implement your "Longest-word game" with a cool web-interface!
+Time to implement a "Longest-word game" with a cool web-interface! For some of you, it will seem familiar.
+
+Before jumping into the exercise, [read the rules](https://github.com/lewagon/fullstack-challenges/tree/master/01-Ruby/06-Parsing/02-Numbers-and-Letters).
+
+⛔️ If you worked on that exercise, please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
+
+## Setup
 
 There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
-
-⛔️ Please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
 
 ```bash
 cd ~/code/<user.github_nickname>
