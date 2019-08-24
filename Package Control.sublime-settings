@@ -1,16 +1,29 @@
 {
-  "installed_packages":
-  [
-    "AdvancedNewFile",
-    "All Autocomplete",
-    "Babel",
-    "Emmet",
-    "ERB Snippets",
-    "Git",
-    "GitGutter",
-    "Package Control",
-    "SCSS",
-    "SublimeLinter",
-    "SublimeLinter-rubocop"
-  ]
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"10% Too Dull for My Tastes Color Scheme",
+		"A File Icon",
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ayu",
+		"Babel",
+		"BracketHighlighter",
+		"Color Highlight",
+		"Color Highlighter",
+		"Emmet",
+		"ERB Snippets",
+		"Git",
+		"GitGutter",
+		"Material Theme",
+		"Package Control",
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
+		"SublimeLinter-rubocop",
+		"Theme - Afterglow"
+	]
 }

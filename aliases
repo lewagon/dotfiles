@@ -5,3 +5,57 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
+alias toto='say "hello zééé partiiiiii"'
+
+
+# Custom aliases
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit -m'
+alias gm='git push origin master'
+alias i='istats'
+alias rk='rake'
+alias ry='ruby'
+alias cr='clear'
+alias ne='node'
+
+# rails shortcut 
+
+alias rs='rails s'
+alias dd='rails db:drop'
+alias dc='rails db:create'
+alias dm='rails db:migrate'
+alias ds='rails db:seed'
+alias da='rails db:drop db:create db:migrate db:seed'
+alias rc='rails c'
+
+#github shortcut qd on est plusieurs
+
+alias gb='git branch'
+alias gp='git push origin'
+alias gl='git pull origin master'
+
+
+
+
+
+
+
+
+
+
+
+# Open slack
+alias slk="open -a 'slack'"
+
+# Open chrome
+alias crm="open -a 'Google Chrome'"
+
+# Open Spotify
+alias sy="open -a 'Spotify'"
+
+# Open Brave
+alias bb="open -a 'Brave Browser'"
+
+
