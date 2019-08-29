@@ -7,7 +7,7 @@ The first function `isGood` takes a soldier type (`String`) as a parameter and s
 - `isGood("Hobbits")` should return `true`
 - `isGood("Uruk Hai")` should return `false`
 
-The second function `buildSoldierMap` takes a `battlefield` (`String`) as a parameter and should return a `Map`. The map `keys` will be the **soldier type**, and the `values` will be the **number of soldiers of this type on the battlefield**. Here are some examples of battlefield strings you need to parse (and convert to a Map):
+The second function `buildSoldierData` takes a `battlefield` (`String`) as a parameter and should return a Javascript `object`. The object `keys` will be the **soldier type**, and the `values` will be the **number of soldiers of this type on the battlefield**. Here are some examples of battlefield strings you need to parse (and convert to an object):
 
 - `Elves:5,Orcs:4`
 - `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk Hai:1`
@@ -16,31 +16,27 @@ So for example:
 
 ```js
 const battlefield = "Elves:3,Orcs:2"
-buildSoldierMap(battlefield)  //=> { "Elves" => 3, "Orcs" => 2 }
+buildSoldierData(battlefield)  //=> { "Elves" => 3, "Orcs" => 2 }
 ```
 
-Here is how to use a JavaScript [Map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map):
+Here is a reminder on how to use objects in Javascript:
 
 ```js
-const beatles = new Map();
+const beatles = {}
 
 // Create
-beatles.set("john", "guitar");
-beatles.set("paul", "bass");
+beatles.john = "guitar"; // OR beatles["john"] = "guitar"
+beatles.paul = "bass";
 
 // Read
-console.log(beatles.get("paul"));
+console.log(beatles.paul);
 
 // Update
-beatles.set("paul", "bass guitar");
+beatles.paul = "bass guitar"; // OR beatles["paul"] = "bass guitar"
 
 // Delete
-beatles.delete("paul");
+delete beatles.paul
 
-// Loop
-beatles.forEach((value, key) => {
-  console.log(`${key} played the ${value}`);
-});
 ```
 
 The third function `whoWinsTheWar` will tie everything together. Given a `battlefield` parameter (`String`), it will return a `String` revealing the outcome of the war:
