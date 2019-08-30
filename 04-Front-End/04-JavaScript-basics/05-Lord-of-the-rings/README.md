@@ -7,7 +7,7 @@ The first function `isGood` takes a soldier type (`String`) as a parameter and s
 - `isGood("Hobbits")` should return `true`
 - `isGood("Uruk Hai")` should return `false`
 
-The second function `buildSoldierData` takes a `battlefield` (`String`) as a parameter and should return a Javascript `object`. The object `keys` will be the **soldier type**, and the `values` will be the **number of soldiers of this type on the battlefield**. Here are some examples of battlefield strings you need to parse (and convert to an object):
+The second function `buildSoldierObject` takes a `battlefield` (`String`) as a parameter and should return a Javascript `object`. The object `keys` will be the **soldier type**, and the `values` will be the **number of soldiers of this type on the battlefield**. Here are some examples of battlefield strings you need to parse (and convert to an object):
 
 - `Elves:5,Orcs:4`
 - `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk Hai:1`
@@ -16,7 +16,7 @@ So for example:
 
 ```js
 const battlefield = "Elves:3,Orcs:2"
-buildSoldierData(battlefield)  //=> { "Elves" => 3, "Orcs" => 2 }
+buildSoldierObject(battlefield)  //=> { "Elves" => 3, "Orcs" => 2 }
 ```
 
 Here is a reminder on how to use objects in Javascript:
