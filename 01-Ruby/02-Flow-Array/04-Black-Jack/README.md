@@ -14,7 +14,7 @@ We will implement a *simplified* version of Black Jack:
 - The player starts with no cards (score of 0)
 - The bank starts with a score between 16 and 21
 - For each round, the player can:
-  - Draw a card with a random value between 1 and 11. This number will be added to his score.
+  - Draw a card with a random value between 1 and 11. This number will be added to his/her score.
   - Draw another, or stick with the current score and finish the game.
 - In the end, there are 5 possibilities:
   - If the player's score is > 21, they lose (bust).
