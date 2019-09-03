@@ -40,7 +40,7 @@ To display a MapBox Map with a marker at the specified address, we'll use a seco
 To use it, add this line in the `head` of your HTML file, so you can use MapBox's stylesheet for your map:
 
 ```html
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.css' rel='stylesheet' />
 ```
 
 To add a map, you'll need an empty supporting HTML element. For instance:
