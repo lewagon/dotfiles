@@ -11,6 +11,14 @@ describe BankAccount do
     it 'has a way to access the account balance' do
       expect(account.balance).to be_a Integer
     end
+
+    it 'denies public access to the account full iban' do
+      expect(account.respond_to? :iban=).to be false
+    end
+
+    it 'denies public access to the account password' do
+      expect {account.password}.to raise_error(NoMethodError)
+    end
   end
 
   describe '#add_transaction (private)' do
