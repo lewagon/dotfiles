@@ -5,25 +5,42 @@ This API will allow you to chat and gossip with your wagon-mates 😉
 
 During this exercise, you'll have to make `GET` and `POST` requests to an API code. You'll use AJAX calls to implement a dynamic chat-room where you can instantly view the latest messages and post new ones.
 
+## Resources
+The [documentation of the wagon-chat API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md)
+
 ## Specs
 
 ### View logic
 
-In the `index.html` file of the challenge, you'll find an HTML form `#comment-form` with two inputs (`#your-message` and `#your-name`). Start by coding a simple script to dynamically insert a new comment to the top of the comments' list, without reloading the page.
+In the `index.html` file of the challenge, you'll find a page structured into two main parts:
 
-This is a basic DOM exercise, no AJAX involved yet! **Hint**: You'll have to prevent the default behavior of the form submission (using the `preventDefault()` method).
+* A **send button** with a form, to push your messages to the chat API.
+* A **refresh button** with a placeholder, where you will display all the new messages.
+
+Start by reading the [documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md). How many endpoints can you spot? Can you figure out which endpoint is related to the form? And which one is related to the refresh button?
 
 Code your javascript in `lib/index.js`.
 
-### Fetch recent messages
+### Refresh button: fetch recent messages
 
-In the markup, you'll find a `#refresh` button. We want to make it show all the latest comments from everyone your batch. Implement the JS code to do this. You will have to make a `GET` request to the API in JS using `fetch`. Again, you have to read [the documentation of the API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return.
+In the markup, you'll find the `#refresh` button. When clicked, we want to display all the latest comments from everyone in your batch!
 
-### Push your messages to the API
+You will have to make a `GET` request to the API in JS using `fetch`: read the [documentation](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return. Find the messages in the data you receive, and display each one of them in the DOM.
 
-It's fun seeing the new messages without reloading all the HTML. But try refreshing your page... The comments are gone!
+Here is a sample message:
+```html
+<li>A sample message (posted <span class="date">10 minutes ago</span>) by John</li>
+```
 
-All your smart code is on the client-side. It does not post any data on the server for the moment. To do that, you have to enhance your javascript code by adding a `POST` request to send data to be stored on the API's database. Read [the documentation](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to figure out how to build your request using `fetch`.
+### Send button: push your messages to the API
+
+Time to take part to the chat and post your own messages!
+
+The form `#comment-form` has two inputs (`#your-message` and `#your-name`). Start by coding a simple script to  retrieve the input values. At first, you can just `console.log()` the values to make sure everything works as expected. This is a basic DOM exercise, no AJAX involved yet!
+
+**Hint**: You'll have to prevent the default behavior of the form submission (using the `preventDefault()` method).
+
+Your code does not post any data to the server for the moment. To do that, you have to enhance your javascript code by adding a `POST` request to send data to be stored in the API's database. Read the [documentation](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to figure out how to build your request using `fetch`.
 
 Here is an example on using `fetch` on the [JSON Placehoder API](https://jsonplaceholder.typicode.com/):
 
