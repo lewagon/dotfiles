@@ -31,7 +31,7 @@ Replace `Johnny` and `Boris` with the real information from your form.
 
 ### Returns
 
-A Hash of information containing the id of the game and the players like:
+A JSON Object containing the id of the game and the players like:
 
     {
        "session_id": 2,
@@ -68,7 +68,7 @@ Replace `2` with the id of the winner player and 28 with the time spent playing 
 
 ### Returns
 
-A Hash of information about the Game like:
+A JSON Object containing information about the Game like:
 
     {
        "session_id": 2,
@@ -96,7 +96,7 @@ A Hash of information about the Game like:
 
 ### Returns
 
-It returns an Hash of information about the Game like:
+It returns an JSON Object containing information about the Game like:
 
     {
        "session_id": 2,
@@ -124,7 +124,7 @@ It returns an Hash of information about the Game like:
 
 ### Returns
 
-A Hash with a list of the games ids like:
+A JSON Object containing a list of the games ids like:
 
     {
       "session_id": 2,
