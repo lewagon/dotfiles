@@ -153,6 +153,7 @@ We want to be able to retrieve the gift list any time we launch the app.
 Create a file `gifts.csv` to persist your data locally.
 
 Parsing CSV
+
 ```ruby
 require 'csv'
 
@@ -165,6 +166,7 @@ end
 ```
 
 Storing CSV
+
 ```ruby
 require 'csv'
 
