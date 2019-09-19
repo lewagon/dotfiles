@@ -32,6 +32,7 @@ In this kata, you will create the function `ip_to_num` that takes an ip address 
 
 
 This is how we represent 8-bit in binary:
+
 ```ruby
 00000000
 # => 0
@@ -41,6 +42,7 @@ This is how we represent 8-bit in binary:
 ```
 
 How do we go from binary to decimal? We use the power of 2.
+
 ```ruby
 2^7 | 2^6 | 2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0 |
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
@@ -48,6 +50,7 @@ How do we go from binary to decimal? We use the power of 2.
 
 
 So a 32-bit ip address would be:
+
 ```ruby
 00000000.00000000.00000000.00000000
 # => 0.0.0.0
@@ -57,55 +60,64 @@ So a 32-bit ip address would be:
 
 Example:
 
-If we take ```37.160.113.170```.
-We have to start with the first 8-bit : ```37```.
-Can I susbstract ```128``` from ```37```? No, so we assign  ```0``` to ```128```.
+If we take `37.160.113.170`.
+We have to start with the first 8-bit : `37`.
+Can I susbstract `128` from `37`? No, so we assign  `0` to `128`.
+
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |
 ```
-Can I substract ```64``` from ```37```? No, so we assign ```0``` to ```64```.
+Can I substract `64` from `37`? No, so we assign `0` to `64`.
+
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0
 ```
-Can I substract ```32``` from ```37```? Yes, so we assign ```1``` to ```32``` and our reminder is now ```5```.
+Can I substract `32` from `37`? Yes, so we assign `1` to `32` and our remainder is now `5`.
+
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |
 ```
-Can I substract ```16``` from ```5```? No, so we assign ```0``` to ```16```.
+Can I substract `16` from `5`? No, so we assign `0` to `16`.
+
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |   0 |
 ```
-Can I substract ```8``` from ```5```? No, so we assign ```0``` to ```8```.
+Can I substract `8` from `5`? No, so we assign `0` to `8`.
+
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |  0  |  0  |
 ```
-Can I substract ```4``` from ```5```? Yes, so we assign ```1``` to ```4``` and our reminder is now ```1```.
+Can I substract `4` from `5`? Yes, so we assign `1` to `4` and our remainder is now `1`.
+
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |  0  |  0  |  1  |
 ```
-Can I substract ```2``` from ```1```? No, so we assign ```0``` to ```2```.
+Can I substract `2` from `1`? No, so we assign `0` to `2`.
+
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |  0  |  0  |  1  |  0  |
 ```
-Can I substract ```1``` from ```1```? Yes, so we assign ```1``` to ```1``` and our reminder is ```0```.
+Can I substract `1` from `1`? Yes, so we assign `1` to `1` and our remainder is `0`.
+
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |  0  |  0  |  1  |  0  |  1  |
 ```
-So ```37``` is ```00100101``` in binary! (```32 + 4 + 1```).
+- So `37` is `00100101` in binary! (`32 + 4 + 1`).
 Repeat for the other three 8-bit numbers and you'll get the full ip in binary.
-```160``` is ```10100000``` in binary! (```128 + 32```).
-```113``` is ```01110001``` in binary! (```64 + 32 + 16 + 1```).
-```170``` is ```10101010``` in binary! (```128 + 32 + 8 + 2```).
 
-Remove the ```.``` to get ```00100101101000000111000110101010``` and apply our method to it: ```536870912 (2 power 29) + 67108864 (2 power 26) + 16777216 (2 power 24) + 8388608 (2 power 23) + 2097152 (2 power 21) + 16384 (2 power 14) + 8192 (2 power 13) + 4096 (2 power 12) + 256 (2 power 8) + 128 (2 power 7) + 32 (2 power 5) + 8 (2 power 3) + 2 (2 power 1)  = 631271850```.
+- `160` is `10100000` in binary! (`128 + 32`).
+- `113` is `01110001` in binary! (`64 + 32 + 16 + 1`).
+- `170` is `10101010` in binary! (`128 + 32 + 8 + 2`).
+
+Remove the `.` to get `00100101101000000111000110101010` and apply our method to it: `536870912 (2 power 29) + 67108864 (2 power 26) + 16777216 (2 power 24) + 8388608 (2 power 23) + 2097152 (2 power 21) + 16384 (2 power 14) + 8192 (2 power 13) + 4096 (2 power 12) + 256 (2 power 8) + 128 (2 power 7) + 32 (2 power 5) + 8 (2 power 3) + 2 (2 power 1)  = 631271850`.
 
 So ```631271850``` is the decimal number for the ip address ```37.160.113.170```.
 
