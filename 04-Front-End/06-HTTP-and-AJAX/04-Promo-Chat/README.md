@@ -5,6 +5,9 @@ This API will allow you to chat and gossip with your wagon-mates 😉
 
 During this exercise, you'll have to make `GET` and `POST` requests to an API code. You'll use AJAX calls to implement a dynamic chat-room where you can instantly view the latest messages and post new ones.
 
+
+![Highlights Gif](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/chat-room.gif)
+
 ## Resources
 The [documentation of the wagon-chat API](https://github.com/lewagon/wagon-chat-api/blob/master/README.md)
 
