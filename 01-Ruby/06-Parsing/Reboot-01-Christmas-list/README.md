@@ -22,7 +22,7 @@ First things first, let's brainstorm the **pseudo-code** together:
 
 Start by building the main loop displaying the actions and getting user's input:
 
-```
+```bash
 ruby interface.rb
 
 > Welcome to your Christmas gift list
@@ -53,7 +53,7 @@ Now let's implement the simple actions (`list`, `add`, `delete`).
 
 We want to be able to mark any item as bought:
 
-```
+```bash
 ruby interface.rb
 
 > Welcome to your Christmas gift list
@@ -83,7 +83,7 @@ Again, **discuss with your teacher**
 You are out of ideas for Christmas and you want to find inspiration from [Etsy](https://www.etsy.com).
 Add a new action `idea` to your menu (additionally to the `list`, `add`, `delete` and `mark` actions). Here is how this action could work:
 
-```
+```bash
 What are you looking for on Etsy?
 > Jeans
 Here are Etsy results for "Jeans":
@@ -99,7 +99,7 @@ Pick one to add to your list (give the number)
 
 For the scraper, here is a starting script to help you extract the data:
 
-_Disclaimer: to prevent ip banishment from etsy, we won't scrape Etsy in real time but we will download a html page and scrape it locally_
+_Disclaimer: to prevent ip banishment from Etsy, we won't scrape Etsy in real time but we will download a html page and scrape it locally_
 
 ```bash
 # Download the page to be scraped inside your working directory
@@ -147,3 +147,38 @@ end
 
 - Feel free to scrape another website adapting this script.
 - Also, you can scrape other information than just the name (for example the price of the item).
+
+## [OPTIONAL] Save gifts in a CSV file 🎁🎁🎁🎁🎁
+We want to be able to retrieve the gift list any time we launch the app.
+Create a file `gifts.csv` to persist your data locally.
+
+Parsing CSV
+
+```ruby
+require 'csv'
+
+csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+filepath    = 'gifts.csv'
+
+CSV.foreach(filepath, csv_options) do |row|
+  # TODO: build new gift from information stored in each row
+end
+```
+
+Storing CSV
+
+```ruby
+require 'csv'
+
+csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
+filepath    = 'gifts.csv'
+
+CSV.open(filepath, 'wb', csv_options) do |csv|
+  # We had headers to the CSV
+  csv << ['name', 'price', 'bought']
+  #TODO: store each gift
+end
+```
+
+- Find the best moment to load the gifts.
+- When do you need to save the gifts? 
