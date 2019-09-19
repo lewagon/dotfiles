@@ -31,6 +31,7 @@ In the markup, you'll find the `#refresh` button. When clicked, we want to displ
 You will have to make a `GET` request to the API in JS using `fetch`: read the [documentation](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to see how this request is structured and what the API will return. Find the messages in the data you receive, and display each one of them in the DOM.
 
 Here is a sample message:
+
 ```html
 <li>A sample message (posted <span class="date">10 minutes ago</span>) by John</li>
 ```
