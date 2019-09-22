@@ -1,6 +1,7 @@
 begin
   require 'rubygems'
   require 'pry'
+  require 'awesome_print'
 rescue LoadError
 end
 
