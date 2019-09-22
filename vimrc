@@ -24,7 +24,6 @@ Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'vim-scripts/snippetsEmu'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-scripts/code_complete'
 
 let mapleader=","
 let localmapleader=","
