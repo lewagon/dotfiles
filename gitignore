@@ -3,3 +3,5 @@
 
 # Figaro gem
 config/application.yml
+
+test.rb
