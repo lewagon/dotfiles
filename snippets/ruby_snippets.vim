@@ -5,6 +5,7 @@ Snippet get           get '<{}>', to: 'controller#action', as: 'prefix', on: :me
 Snippet post          post '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
 Snippet put           put '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
 Snippet route         <{verb}> '<{name}>', to: '<{controller}>#<{action}>', as: '<{action}>', on: :member, on: :collection
+
 Snippet controller    class <{}>sController < ApplicationController<CR><{}>
 Snippet def           def <{}><CR><{}><CR>end
 Snippet defupdate     def update<CR>@<{var}> = <{var}>.find(params[:id])<CR>@<{var}>.update(<{var}>_params)<CR>end
@@ -17,13 +18,16 @@ Snippet find          @<{var}> = <{var:substitute(@z,'.?','\u&','g')}>.find(para
 Snippet all           @<{var}> = <{var:substitute(@z,'.?','\u&','g')}>.all
 Snippet new           @<{var}> = <{var:substitute(@z,'.?','\u&','g')}>.new
 Snippet update        @<{var}>.update(<{var}>_params)<CR><{}>
+
 Snippet addcolumn     add_column :<{table}>, :<{var}>, :<{type}>
 Snippet addref        add_reference :<{table}>, :<{var}>, foreign_key: true
 Snippet bt            belongs_to :<{}><CR><{}>
 Snippet hm            has_many :<{}>s<CR><{}>
 Snippet hmt           has_many :<{}>s, through: :<{}><CR><{}>
+
 Snippet it            it "<{}>" do<CR><{}><CR>end<CR>
 Snippet rspec         require 'rails_helper'<CR><CR>RSpec.describe "" do<CR>  let(:<{instance}>) { create(:<{instance}>) }<CR><CR>  before { <{}> }<CR><CR>  it "<{}>" do<CR><{}><CR>end<CR>end
+
 Snippet ?             <{}>? <{}> : <{}>
 Snippet each          each { |<{}>| <{}> }
 Snippet eacho         each do |<{}>|<CR><{}><CR>end
