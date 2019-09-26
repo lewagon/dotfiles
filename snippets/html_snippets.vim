@@ -23,4 +23,4 @@ Snippet i18n        <%= t("<{}>.<{}>") %>
 Snippet f.input     <%= f.input :<{}> %>
 Snippet input       <%= f.input :<{}> %>
 Snippet simple_form <%= simple_form_for [@<{}>] do |f| %><CR><%= f.input :<{}> %><CR><%= f.button :submit %><CR><% end %>
-Snippet stringfortime strftime("%d/%m/%Y<{ - %Hh%M}>")
+Snippet stringfortime strftime("%d/%m/%Y<{}> - %Hh%M}>")
