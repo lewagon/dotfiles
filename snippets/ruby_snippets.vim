@@ -1,10 +1,10 @@
+Snippet route         <{verb}> '<{name}>', to: '<{controller}>#<{action}>', as: '<{action}>', on: :member, on: :collection
 Snippet namespace     namespace :<{}> do<CR><{}><CR>end
 Snippet res           resources :<{}>, only: [:<{}>]
 Snippet delete        delete '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
 Snippet get           get '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
 Snippet post          post '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
 Snippet put           put '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
-Snippet route         <{verb}> '<{name}>', to: '<{controller}>#<{action}>', as: '<{action}>', on: :member, on: :collection
 
 Snippet controller    class <{}>sController < ApplicationController<CR><{}>
 Snippet def           def <{}><CR><{}><CR>end
@@ -19,14 +19,16 @@ Snippet all           @<{var}> = <{var:substitute(@z,'.?','\u&','g')}>.all
 Snippet new           @<{var}> = <{var:substitute(@z,'.?','\u&','g')}>.new
 Snippet update        @<{var}>.update(<{var}>_params)<CR><{}>
 
+Snippet model         class <{name}> < ApplicationRecord<CR>end
+Snippet addcol        add_column :<{table}>, :<{var}>, :<{type}>
 Snippet addcolumn     add_column :<{table}>, :<{var}>, :<{type}>
 Snippet addref        add_reference :<{table}>, :<{var}>, foreign_key: true
 Snippet bt            belongs_to :<{}><CR><{}>
 Snippet hm            has_many :<{}>s<CR><{}>
 Snippet hmt           has_many :<{}>s, through: :<{}><CR><{}>
 
-Snippet it            it "<{}>" do<CR><{}><CR>end<CR>
 Snippet rspec         require 'rails_helper'<CR><CR>RSpec.describe "" do<CR>  let(:<{instance}>) { create(:<{instance}>) }<CR><CR>  before { <{}> }<CR><CR>  it "<{}>" do<CR><{}><CR>end<CR>end
+Snippet it            it "<{}>" do<CR><{}><CR>end<CR>
 
 Snippet ?             <{}>? <{}> : <{}>
 Snippet each          each { |<{}>| <{}> }
