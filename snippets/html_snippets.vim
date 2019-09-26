@@ -1,13 +1,16 @@
-Iabbr lt          <%= link_to <{}>,  %>
-Iabbr it          <%= image_tag <{}>, alt: "alttext" %>
-Iabbr pe          <%= <{}> %>
-Iabbr er          <% <{}> %>
-Iabbr if          <% if <{}> %> <CR> <% end %>
-Iabbr else        <% else %>
-Iabbr elsif       <% elsif <{}> %>
-Iabbr end         <% end %>
-Iabbr div         <div><CR><{}><CR></div>
-Iabbr div.        <div class="<{}>"><CR><{}><CR></div>
-Iabbr p           <p><{}></p>
-Iabbr simple_form <%= simple_form_for [@<{}>] do |f| %><CR><% end %>
-Iabbr input       <%= f.input :<{}> %>
+Snippet lt          <%= link_to <{}>,  %>
+Snippet ltdo        <%= link_to <{}> do %><CR><{}><CR><% end %>
+Snippet it          <%= image_tag <{}>, alt: "alttext" %>
+Snippet pe          <%= <{}> %>
+Snippet er          <% <{}> %>
+Snippet if          <% if <{}> %><CR><% end %>
+Snippet else        <% else %>
+Snippet elsif       <% elsif <{}> %>
+Snippet end         <% end %>
+Snippet div         <div><CR><{}><CR></div>
+Snippet div.        <div class="<{}>"><CR><{}><CR></div>
+Snippet p           <p><{}></p>
+Snippet f.input     <%= f.input :<{}> %>
+Snippet input       <%= f.input :<{}> %>
+Snippet simple_form <%= simple_form_for [@<{}>] do |f| %><CR><%= f.input :<{}> %><CR><%= f.button :submit %><CR><% end %>
+Snippet stringfortime strftime("%d/%m/%Y<{ - %Hh%M}>")

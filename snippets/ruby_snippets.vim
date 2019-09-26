@@ -17,3 +17,6 @@ Iabbr @              @<{var}> = <{var:substitute(@z,'.?','\u&','g')}>.find(param
 Snippet map          map { |<{element}>| <{element}>.<{}> }<CR>
 Snippet mapo         map do |<{element}>|<CR><{element}>.<{}><CR>end<CR>
 Snippet it           it "<{}>" do<CR><{}><CR>end<CR>
+Snippet update       def update<CR>@<{var}> = <{var}>.find(params[:id])<CR>@<{var}>.update(<{var}>_params)<CR>end
+Snippet debug        p "*"*30<CR>
+Snippet rspec        require 'rails_helper'<CR><CR>RSpec.describe "" do<CR>  let(:<{instance}>) { create(:<{instance}>) }<CR><CR>  before { <{}> }<CR><CR>  it "<{}>" do<CR><{}><CR>end<CR>end
