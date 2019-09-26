@@ -1,9 +1,3 @@
-# Vim Cheat Sheet
-
-Ctrl + i --> indentation
-
-Ctrl + n --> set/unset relative number
-
 ## Plugin Vim Rails
 
 Action | Snippet |
@@ -25,9 +19,9 @@ Faire tourner les tests | `:Rails` |
 
 Action | Snippet |
 --- | --- |
-comment line | `gcc` |
-comment paragraph | `gcap` |
-comment specific line | `:7,17Commentary` |
+Comment line | `gcc` |
+Comment paragraph | `gcap` |
+Comment specific line | `:7,17Commentary` |
 
 ## Plugin Vim Surround
 
@@ -67,3 +61,11 @@ Open NerdTree | `:NERDTreeToggle` |
 Open NerdTree | `ctrl + g` |
 Refresh the current directory with new files | `r` |
 Refresh the NerdTree directory with new files | `R` |
+
+## Command
+
+Ctrl + i --> indentation
+
+Ctrl + n --> set/unset relative number
+
+Ctrl + g --> open NerdTree

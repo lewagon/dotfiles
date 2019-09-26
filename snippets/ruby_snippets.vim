@@ -35,6 +35,8 @@ Snippet each          each { |<{}>| <{}> }
 Snippet eacho         each do |<{}>|<CR><{}><CR>end
 Snippet map           map { |<{element}>| <{element}>.<{}> }<CR>
 Snippet mapo          map do |<{element}>|<CR><{element}>.<{}><CR>end<CR>
+Snippet block         do<CR><{}><CR>end
+Snippet blockargs     do |<{args}>|<CR><{}><CR>end
 Snippet if            if <{}><CR><{}><CR>else<CR><{}><CR>end
 Snippet bq            `<{}>`<{}>
 Snippet dq            "<{}>"<{}>
