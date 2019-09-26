@@ -1,7 +1,7 @@
-Iabbr pq   pourquoi<{}>
-Iabbr ruby ```ruby<{}>
-Iabbr erb  ```erb<{}>
-Iabbr code ```<{}>
-Iabbr bq   `<{}>`<{}>
-Iabbr dq   "<{}>"<{}>
-Iabbr sq   '<{}>'<{}>
+Snippet pq   pourquoi<{}>
+Snippet ruby ```ruby<{}><CR>```
+Snippet erb  ```erb<{}><CR>```
+Snippet code ```<CR><{}><CR>```
+Snippet sq   '<{}>'<{}>
+Snippet dq   "<{}>"<{}>
+Snippet bq   `<{}>`<{}>
