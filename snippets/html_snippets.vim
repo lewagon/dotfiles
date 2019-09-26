@@ -2,10 +2,7 @@ Snippet div         <div><CR><{}><CR></div>
 Snippet div.        <div class="<{}>"><CR><{}><CR></div>
 Snippet p           <p><{}></p>
 Snippet h           <h<{number}>><{}></<{number}>>
-Snippet lt          <%= link_to "<{}>", <{}>_path %><CR><{}>
-Snippet ltdo        <%= link_to <{}> do %><CR><{}><CR><% end %>
-Snippet it          <%= image_tag <{}>, alt: "alttext" %>
-Snippet env         ENV['<{}>']<{}>
+
 Snippet ?           <%= <{}>? <{}> : <{}> %><{}>
 Snippet #           #{<{}>}<{}>
 Snippet pe          <%= <{}> %>
@@ -15,8 +12,13 @@ Snippet unless      <% unless <{}> %><CR><% end %>
 Snippet else        <% else %>
 Snippet elsif       <% elsif <{}> %>
 Snippet end         <% end %>
-Snippet render      <%= render "<{name}>", <{var}>: @<{var}> %><CR><{}>
 Snippet each        <% @<{}>s.each do |<{}>| %><CR><{}><CR><% end %>
+
+Snippet lt          <%= link_to "<{}>", <{}>_path %><CR><{}>
+Snippet ltdo        <%= link_to <{}> do %><CR><{}><CR><% end %>
+Snippet it          <%= image_tag <{}>, alt: "alttext" %>
+Snippet render      <%= render "<{name}>", <{var}>: @<{var}> %><CR><{}>
+Snippet env         ENV['<{}>']<{}>
 Snippet i18n        <%= t("<{}>.<{}>") %>
 Snippet f.input     <%= f.input :<{}> %>
 Snippet input       <%= f.input :<{}> %>
