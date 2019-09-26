@@ -5,3 +5,4 @@ Snippet code ```<CR><{}><CR>```
 Snippet sq   '<{}>'<{}>
 Snippet dq   "<{}>"<{}>
 Snippet bq   `<{}>`<{}>
+Snippet lien [<{}>](<{}>)
