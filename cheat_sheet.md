@@ -69,3 +69,55 @@ Ctrl + i --> indentation
 Ctrl + n --> set/unset relative number
 
 Ctrl + g --> open NerdTree
+
+Verb | Command |
+--- | --- |
+delete | `d` |
+change | `c` |
+select (visually) | `v` |
+yank (copy) | `y` |
+indent | `>` or `<` |
+
+Nouns | Command |
+--- | --- |
+inner word | `iw` |
+inner tag | `it` |
+innner quote | `i"` |
+inner paragraph | `ip` |
+inner a sentence | `as` |
+
+Action | Command |
+--- | --- |
+Aller dans le fichier | `gf` |
+Next Tab | `gt` |
+Previous Tab | `gT` |
+
+## GitHub Shortcut
+
+### Navigation
+
+Action | Snippet |
+--- | --- |
+Search | `s` ou `/` |
+Allez voir ses notifications | `gn` |
+Allez sur la page du code | `gc` |
+Allez voir les issues | `gi` |
+Allez voir les pulls request | `gp` |
+Allez voir les projets (board) | `gb` |
+
+### Source code browsing
+
+Action | Snippet |
+--- | --- |
+Activate the file finder | `t` |
+Jume to line inyour code | `l` |
+Switch to a new branch or tag | `w` |
+Expend a url to its cannonical form | `y` |
+Show or hide comments on diff | `i` |
+Open blame view to see who commit | `b` |
+
+### Draft
+
+Action | Snippet |
+--- | --- |
+| `` |
