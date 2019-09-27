@@ -62,13 +62,7 @@ Open NerdTree | `ctrl + g` |
 Refresh the current directory with new files | `r` |
 Refresh the NerdTree directory with new files | `R` |
 
-## Command
-
-Ctrl + i --> indentation
-
-Ctrl + n --> set/unset relative number
-
-Ctrl + g --> open NerdTree
+## Normal mode
 
 Verb | Command |
 --- | --- |
@@ -86,11 +80,70 @@ innner quote | `i"` |
 inner paragraph | `ip` |
 inner a sentence | `as` |
 
+Exemple:
+
+* `ctL` --> change to L
+* `c/other` --> change to "other"
+* `ci6j` --> change inside 6 lines
+
+## Se déplacer
+
 Action | Command |
 --- | --- |
 Aller dans le fichier | `gf` |
 Next Tab | `gt` |
 Previous Tab | `gT` |
+
+## Control
+
+Ctrl + i --> indentation
+Ctrl + n --> set/unset relative number
+Ctrl + g --> open NerdTree
+Ctrl + o --> revenir en arrière
+Ctrl + a --> incrémente le premier nombre
+Ctrl + x --> décrémente le premier nombre
+
+Ctrl + e --> Scroll up 1 line
+Ctrl + y --> Scroll down 1 line
+Ctrl + u --> Scroll up half screen
+Ctrl + d --> Scroll down half screen
+Ctrl + b --> Scroll up 1 full page
+Ctrl + f --> Scroll down 1 full page
+
+### Window
+
+Ctrl + w puis s --> split windows with same file
+Ctrl + w puis v --> split windows vertically
+Ctrl + w puis q --> Close window
+
+
+
+## Command mode
+
+Action | Command |
+--- | --- |
+Open and edit file in a new tab | `:tabe name` |
+Merging file to current on | `:r file` |
+Ouvre le fichier en vertical split | `:vsp name.rb` |
+Ouvre le fichier en split | `:sp name.rb` |
+
+### Multi-lines
+
+Action | Command |
+--- | --- |
+Déplacer les lignes 40 à 50 à la 30 | `:40,50m30` |
+Copier les lignes 30 à 40 | `:30,70y` |
+Supprimez les lignes 40 à 50 | `:16,20d` |
+
+## Visual mode
+
+Action | Command |
+--- | --- |
+Cacher les lignes selectionnées | `zf` |
+Cursor on top | `zt` |
+Cursor on middle | `zz` |
+Cursor on bottom | `zb` |
+
 
 ## GitHub Shortcut
 
@@ -115,6 +168,15 @@ Switch to a new branch or tag | `w` |
 Expend a url to its cannonical form | `y` |
 Show or hide comments on diff | `i` |
 Open blame view to see who commit | `b` |
+
+## GitLab Shortcut
+
+Action | Snippet |
+--- | --- |
+Next file| `j` |
+Previous file| `k` |
+Next unresolved comment | `n` |
+Previous unresolved comment | `P` |
 
 ### Draft
 

@@ -17,7 +17,8 @@ Snippet each        <% @<{}>s.each do |<{}>| %><CR><{}><CR><% end %>
 Snippet lt          <%= link_to "<{}>", <{}>_path %><CR><{}>
 Snippet ltdo        <%= link_to <{}> do %><CR><{}><CR><% end %>
 Snippet it          <%= image_tag <{}>, alt: "alttext" %>
-Snippet render      <%= render "<{name}>", <{var}>: @<{var}> %><CR><{}>
+Snippet render      <%= render "<{path}>" %><CR><{}>
+Snippet rendervar   <%= render "<{path}>", <{var}>: @<{var}> %><CR><{}>
 Snippet env         ENV['<{}>']<{}>
 Snippet i18n        <%= t("<{}>.<{}>") %>
 Snippet f.input     <%= f.input :<{}> %>

@@ -1,13 +1,14 @@
-Snippet route         <{verb}> '<{name}>', to: '<{controller}>#<{action}>', as: '<{action}>', on: :member, on: :collection
+Snippet route         <{verb}> <{name}>, to: '<{controller}>#<{action}>', as: '<{action}>', on: :member, on: :collection
 Snippet namespace     namespace :<{}> do<CR><{}><CR>end
-Snippet res           resources :<{}>, only: [:<{}>]
-Snippet delete        delete '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
-Snippet get           get '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
-Snippet post          post '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
-Snippet put           put '<{}>', to: 'controller#action', as: 'prefix', on: :member, on: :collection
+Snippet res           resource<{s}> :<{}>, only: [:<{}>]
+Snippet ress          resources :<{}>, only: [:<{}>]
+Snippet delete        delete <{}>, to: 'controller#action', as: 'prefix', on: :member, on: :collection
+Snippet get           get <{}>, to: 'controller#action', as: 'prefix', on: :member, on: :collection
+Snippet post          post <{}>, to: 'controller#action', as: 'prefix', on: :member, on: :collection
+Snippet put           put <{}>, to: 'controller#action', as: 'prefix', on: :member, on: :collection
 
 Snippet controller    class <{}>sController < ApplicationController<CR><{}>
-Snippet def           def <{}><CR><{}><CR>end
+Snippet defnew        def new<CR>@<{var}> = <{var}>.new<CR>end
 Snippet defupdate     def update<CR>@<{var}> = <{var}>.find(params[:id])<CR>@<{var}>.update(<{var}>_params)<CR>end
 Snippet defparams     def <{var}>_params<CR>params.require(:<{var}>).permit(:<{}>)<CR>end
 Snippet params        params[:<{id}>]
@@ -30,6 +31,7 @@ Snippet hmt           has_many :<{}>s, through: :<{}><CR><{}>
 Snippet rspec         require 'rails_helper'<CR><CR>RSpec.describe "" do<CR>  let(:<{instance}>) { create(:<{instance}>) }<CR><CR>  before { <{}> }<CR><CR>  it "<{}>" do<CR><{}><CR>end<CR>end
 Snippet it            it "<{}>" do<CR><{}><CR>end<CR>
 
+Snippet def           def <{}><CR><{}><CR>end
 Snippet ?             <{}>? <{}> : <{}>
 Snippet each          each { |<{}>| <{}> }
 Snippet eacho         each do |<{}>|<CR><{}><CR>end

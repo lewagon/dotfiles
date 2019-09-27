@@ -46,7 +46,7 @@ nnoremap <C-i> ggVG=
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire
-set relativenumber
+set number
 syntax on
 set backspace=indent,eol,start
 set tabstop=2 shiftwidth=2 expandtab
