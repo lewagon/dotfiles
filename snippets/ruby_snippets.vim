@@ -32,7 +32,7 @@ Snippet rspec         require 'rails_helper'<CR><CR>RSpec.describe "" do<CR>  le
 Snippet it            it "<{}>" do<CR><{}><CR>end<CR>
 
 Snippet def           def <{}><CR><{}><CR>end
-Snippet ?             <{}>? <{}> : <{}>
+Snippet ?             <{}> ? <{}> : <{}>
 Snippet each          each { |<{}>| <{}> }
 Snippet eacho         each do |<{}>|<CR><{}><CR>end
 Snippet map           map { |<{element}>| <{element}>.<{}> }<CR>

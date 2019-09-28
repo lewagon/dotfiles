@@ -62,7 +62,7 @@ Open NerdTree | `ctrl + g` |
 Refresh the current directory with new files | `r` |
 Refresh the NerdTree directory with new files | `R` |
 
-## Normal mode
+## Normal mode in Vim
 
 Verb | Command |
 --- | --- |
@@ -86,7 +86,7 @@ Exemple:
 * `c/other` --> change to "other"
 * `ci6j` --> change inside 6 lines
 
-## Se déplacer
+## Move in Vim
 
 Action | Command |
 --- | --- |
@@ -94,7 +94,7 @@ Aller dans le fichier | `gf` |
 Next Tab | `gt` |
 Previous Tab | `gT` |
 
-## Control
+## Control in Vim
 
 Ctrl + i --> indentation
 Ctrl + n --> set/unset relative number
@@ -116,9 +116,7 @@ Ctrl + w puis s --> split windows with same file
 Ctrl + w puis v --> split windows vertically
 Ctrl + w puis q --> Close window
 
-
-
-## Command mode
+## Command mode in Vim
 
 Action | Command |
 --- | --- |
@@ -135,7 +133,7 @@ Déplacer les lignes 40 à 50 à la 30 | `:40,50m30` |
 Copier les lignes 30 à 40 | `:30,70y` |
 Supprimez les lignes 40 à 50 | `:16,20d` |
 
-## Visual mode
+## Visual mode in Vim
 
 Action | Command |
 --- | --- |
@@ -143,7 +141,6 @@ Cacher les lignes selectionnées | `zf` |
 Cursor on top | `zt` |
 Cursor on middle | `zz` |
 Cursor on bottom | `zb` |
-
 
 ## GitHub Shortcut
 
@@ -171,14 +168,46 @@ Open blame view to see who commit | `b` |
 
 ## GitLab Shortcut
 
-Action | Snippet |
+Action | Shortcut |
 --- | --- |
 Next file| `j` |
 Previous file| `k` |
 Next unresolved comment | `n` |
 Previous unresolved comment | `P` |
 
-### Draft
+## Gmail Shortcut
+
+Action | Shortcut |
+--- | --- |
+Naviguer entre les messages rédigés | `ctrl + ,` |
+Sélectionner une conversation | `x` |
+Signaler comme spam | `!` |
+Supprimer | `#` |
+Répondre (reply) | `r` |
+Répondre à tous | `a` |
+Transférer (forward) | `f` |
+Mettre à jour la conversation | `maj + n` |
+Marquer comme lu | `maj + i` |
+Développer toute la conversation | `;` |
+Ajouter aux tâches Google | `maj + t` |
+Aller dans la boîte de réception | `gi` |
+Ouvrir le dossier Message envoyé | `gt` |
+Ouvrir le dossier Brouillons (draft) | `gd` |
+Ouvrir le dossier Tous les messages | `ga` |
+Accéder à la liste des tâches | `gk` |
+Ouvrir le menu plus | `.` |
+Ouvrir le menu libellé | `l` |
+Ouvrir le menu Déplcer vers | `v` |
+Sélectionner toutes les conversations | `*a` |
+Sélectionner les conversations non lues | `*u` |
+Ouvrir la converstation | `o` |
+Nouveau message | `c` |
+Message dans un nouvel onglet | `d` |
+Ouvrir le menu d'aide | `?` |
+
+Crtl + Alt ( ou maj) + m --> transformer le markdown
+
+#### Draft
 
 Action | Snippet |
 --- | --- |
