@@ -8,8 +8,8 @@ Snippet post          post <{}>, to: 'controller#action', as: 'prefix', on: :mem
 Snippet put           put <{}>, to: 'controller#action', as: 'prefix', on: :member, on: :collection
 
 Snippet controller    class <{}>sController < ApplicationController<CR><{}><CR>end
-Snippet defnew        def new<CR>@<{var}> = <{var}>.new<CR>end
-Snippet defupdate     def update<CR>@<{var}> = <{var}>.find(params[:id])<CR>@<{var}>.update(<{var}>_params)<CR>end
+Snippet defnew        def new<CR>@<{var}> = <{var:substitute(@z,'.*','\u&','g')}>.new<CR>end
+Snippet defupdate     def update<CR>@<{var}> = <{var:substitute(@z,'.*','\u&','g')}>.find(params[:id])<CR>@<{var}>.update(<{var}>_params)<CR>end
 Snippet defparams     def <{var}>_params<CR>params.require(:<{var}>).permit(:<{}>)<CR>end
 Snippet params        params[:<{id}>]
 Snippet ba            before_action :set_<{}>_instance_variable , only: [:<{}>]

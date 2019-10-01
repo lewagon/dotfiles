@@ -96,25 +96,25 @@ Previous Tab | `gT` |
 
 ## Control in Vim
 
-Ctrl + i --> indentation
-Ctrl + n --> set/unset relative number
-Ctrl + g --> open NerdTree
-Ctrl + o --> revenir en arrière
-Ctrl + a --> incrémente le premier nombre
-Ctrl + x --> décrémente le premier nombre
+* Ctrl + i --> indentation
+* Ctrl + n --> set/unset relative number
+* Ctrl + g --> open NerdTree
+* Ctrl + o --> revenir en arrière
+* Ctrl + a --> incrémente le premier nombre
+* Ctrl + x --> décrémente le premier nombre
 
-Ctrl + e --> Scroll up 1 line
-Ctrl + y --> Scroll down 1 line
-Ctrl + u --> Scroll up half screen
-Ctrl + d --> Scroll down half screen
-Ctrl + b --> Scroll up 1 full page
-Ctrl + f --> Scroll down 1 full page
+* Ctrl + e --> Scroll up 1 line
+* Ctrl + y --> Scroll down 1 line
+* Ctrl + u --> Scroll up half screen
+* Ctrl + d --> Scroll down half screen
+* Ctrl + b --> Scroll up 1 full page
+* Ctrl + f --> Scroll down 1 full page
 
 ### Window
 
-Ctrl + w puis s --> split windows with same file
-Ctrl + w puis v --> split windows vertically
-Ctrl + w puis q --> Close window
+* Ctrl + w puis s --> split windows with same file
+* Ctrl + w puis v --> split windows vertically
+* Ctrl + w puis q --> Close window
 
 ## Command mode in Vim
 
