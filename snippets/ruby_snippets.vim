@@ -1,7 +1,7 @@
 Snippet route         <{verb}> <{name}>, to: '<{controller}>#<{action}>', as: '<{action}>', on: :member, on: :collection
 Snippet namespace     namespace :<{}> do<CR><{}><CR>end
-Snippet res           resource<{s}> :<{}>, only: [:<{}>]
-Snippet ress          resources :<{}>, only: [:<{}>]
+Snippet res           resource :<{}>, only: [:<{}>]<{}>
+Snippet ress          resources :<{}>, only: [:<{}>]<{}>
 Snippet delete        delete <{}>, to: 'controller#action', as: 'prefix', on: :member, on: :collection
 Snippet get           get <{}>, to: 'controller#action', as: 'prefix', on: :member, on: :collection
 Snippet post          post <{}>, to: 'controller#action', as: 'prefix', on: :member, on: :collection
@@ -17,8 +17,8 @@ Snippet rt            redirect_to <{}>_path<{}>
 Snippet cu            current_user
 Snippet find          @<{var}> = <{var:substitute(@z,'.*','\u&','g')}>.find(params[:id])
 Snippet all           @<{var}> = <{var:substitute(@z,'.*','\u&','g')}>.all
-Snippet new           @<{var}> = <{var:substitute(@z,'.*','\u&','g')}>.new
-Snippet update        @<{var}>.update(<{var}>_params)<CR><{}>
+Snippet nw            @<{var}> = <{var:substitute(@z,'.*','\u&','g')}>.new
+Snippet updat         @<{var}>.update(<{var}>_params)<CR><{}>
 
 Snippet model         class <{name}> < ApplicationRecord<CR>end
 Snippet addcol        add_column :<{table}>, :<{var}>, :<{type}>
