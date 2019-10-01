@@ -102,7 +102,6 @@ Previous Tab | `gT` |
 * Ctrl + o --> revenir en arrière
 * Ctrl + a --> incrémente le premier nombre
 * Ctrl + x --> décrémente le premier nombre
-
 * Ctrl + e --> Scroll up 1 line
 * Ctrl + y --> Scroll down 1 line
 * Ctrl + u --> Scroll up half screen
