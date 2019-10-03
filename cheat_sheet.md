@@ -9,6 +9,7 @@ Ouvrir les routes | `:Einit` |
 Met le code dans une partial | `:Extract name` |
 Create model | `:Emodel name!` |
 Aller dans le controlleur | `:Econ names` |
+Aller dans le controlleur avec un vertical split | `:Vcon names` |
 Create controller | `:Generate controller Blog` |
 Console | `:Rails console` |
 Aller dans les vues | `:Eview floder/files` |
@@ -173,6 +174,13 @@ Next file| `j` |
 Previous file| `k` |
 Next unresolved comment | `n` |
 Previous unresolved comment | `P` |
+
+## Git command
+
+```
+git merge --squash branch_name
+git pull origin --rebase master
+```
 
 ## Gmail Shortcut
 

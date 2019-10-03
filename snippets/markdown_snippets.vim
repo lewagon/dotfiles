@@ -1,7 +1,5 @@
 Snippet pq   pourquoi<{}>
-Snippet ruby ```ruby<{}><CR>```
-Snippet erb  ```erb<{}><CR>```
-Snippet code ```<CR><{}><CR>```
+Snippet tbq  ```<{}>
 Snippet sq   '<{}>'<{}>
 Snippet dq   "<{}>"<{}>
 Snippet bq   `<{}>`<{}>
