@@ -1,13 +1,15 @@
 {
   "installed_packages":
   [
+    "A File Icon",
     "AdvancedNewFile",
     "All Autocomplete",
     "Babel",
     "Emmet",
     "ERB Snippets",
     "Git",
-    "GitGutter",
+    "Latest Migration",
+    "MagicPython",
     "Package Control",
     "SCSS",
     "SublimeLinter",
