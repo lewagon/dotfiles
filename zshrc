@@ -14,9 +14,16 @@ export HOMEBREW_NO_ANALYTICS=1
 source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
-# Load rbenv if installed
+# Load rbenv if installed (To manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}"
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
+
+# Load nvm if installed (To manage your Node versions)
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+
+# Anaconda binaries (python, pip, conda, jupyter, pytest, pylint etc.)
+export PATH="${HOME}/anaconda3/bin:${PATH}"
 
 # Rails and Ruby uses the local `bin` folder to store binstubs.
 # So instead of running `bin/rails` like the doc says, just run `rails`
