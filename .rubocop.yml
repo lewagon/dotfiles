@@ -1,42 +1,42 @@
-FrozenStringLiteralComment:
+Style/FrozenStringLiteralComment:
   Enabled: false
-ConditionalAssignment:
+Style/ConditionalAssignment:
   Enabled: false
-StringLiterals:
+Style/StringLiterals:
   Enabled: false
-TrailingBlankLines:
+Layout/TrailingBlankLines:
   Enabled: false
-LineLength:
+Metrics/LineLength:
   Max: 120
-UnusedMethodArgument:
+Lint/UnusedMethodArgument:
   Enabled: false
-EmptyLines:
+Layout/EmptyLines:
   Enabled: false
-RedundantReturn:
+Style/RedundantReturn:
   Enabled: false
-SelfAssignment:
+Style/SelfAssignment:
   Enabled: false
-Documentation:
+Style/Documentation:
   Enabled: false
-RegexpLiteral:
+Style/RegexpLiteral:
   Enabled: false
-GuardClause:
+Style/GuardClause:
   Enabled: false
-WordArray:
+Style/WordArray:
   Enabled: false
-SymbolProc:
+Style/SymbolProc:
   Enabled: false
-AbcSize:
+Metrics/AbcSize:
   Enabled: false
-MutableConstant:
+Style/MutableConstant:
   Enabled: false
-SignalException:
+Style/SignalException:
   Enabled: false
-CyclomaticComplexity:
+Metrics/CyclomaticComplexity:
   Enabled: false
-MethodMissingSuper:
+Style/MethodMissingSuper:
   Enabled: false
-MissingRespondToMissing:
+Style/MissingRespondToMissing:
   Enabled: false
 Security/Open:
   Enabled: false
