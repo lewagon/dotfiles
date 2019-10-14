@@ -6,3 +6,7 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
+
+# GIT
+alias gfix="git commit -a --amend --no-edit"
+alias gwip="git commit -m 'WIP'"
