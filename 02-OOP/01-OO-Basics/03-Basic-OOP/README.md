@@ -35,6 +35,8 @@ end
 - At the end of each year, the fruits which have not been picked **will fall off**.
 - You should be able to find out how many fruits are left hanging on the tree.
 
+To test it, launch the interface (`ruby lib/interface.rb`) and see what happens ;).
+
 ## Key learning points
 
 - What are the instance variables of the `OrangeTree` class?
