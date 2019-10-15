@@ -2,13 +2,13 @@
 
 You managed your way through the first part of the Food Delivery challenge, kudoz!
 
-In this challenge, we are going to extend the Medium Pocket challenge (Cookbook Day One's optional challenge), with an `Author` model. We are going to model the following relation between `Post` and `Author`:
+In this challenge, we are going to extend the DEV Pocket challenge (Cookbook Day One's optional challenge), with an `Author` model. We are going to model the following relation between `Post` and `Author`:
 
-![Medium tables](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/medium_pocket_tables.png)
+![Database schema](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/pocket_reader.png)
 
 We want to extend the user actions to:
 
-```
+```bash
 1. List posts
 2. Save post for later
 3. Read post
@@ -23,7 +23,7 @@ As you probably imagine, the info about authors will be scraped when a post is s
 
 ## Specs
 
-Start by navigating to Cookbook day one's Medium Pocket optional challenge and download the solution. This will be your starting point for coding this extended version.
+Start by navigating to Cookbook day one's DEV Pocket optional challenge and download the solution. This will be your starting point for coding this extended version.
 
 ### Models
 
@@ -92,8 +92,8 @@ Before coding any new user stories, try running the existing ones. You'll find a
 
 The hardest part of the challenge is just around the corner. We said we wanted to scrape details about the post's author when saving it to our Pocket app.
 
-We already know how to scrape a post. We need to update our scraping script to get the author's **medium nickname** on the post's page.
-Thanks to the medium nickname, you should be able to open the author's page and scrape the information detailed in the schema.
+We already know how to scrape a post. We need to update our scraping script to get the author's **nickname** on the post's page.
+Thanks to the nickname, you should be able to open the author's page and scrape the information detailed in the schema.
 
 Once you have all the data needed to create a post, go ahead and instantiate a `Post.new`. Same thing for the `Author.new`. Let's pause a minute before adding them to our repositories.
 
@@ -114,8 +114,8 @@ end
 Code everything in the `PostsController` until the action works fine. Then you might consider extracting the scraping part in a service object. A fine candidate would be:
 
 ```ruby
-# lib/services/medium_scraper.rb
-class MediumScraper
+# lib/services/reader_scraper.rb
+class ReaderScraper
   def initialize(post_path)
     @post_path = post_path
   end
@@ -141,8 +141,8 @@ Phew, the hardest part is behind us. This one is an easy one. We want to list au
 It will need to access the author repo and an authors view. The view must display authors names and associated unread posts in an indexed list:
 
 ```
-1. Boris Paillard (1 unread)
-2. Rebecca Menat
+1. Magnus Skog 
+2. Molly Struve (2 unread)
 ```
 
 **List authors posts**
@@ -153,20 +153,19 @@ Our work on the models should make this one pretty easy. We can access all posts
 
 As always, start by breaking down the action in small steps in pseudo-code, then translate line by line in ruby and test regularly.
 
-Our user must see the following in the terminal when choosing Boris:
+Our user must see the following in the terminal when choosing Molly Struve:
 
 ```
-1. Boris Paillard (3 unread)
-2. Rebecca Menat (1 unread)
-3. Le Wagon Montréal
+1. Magnus Skog 
+2. Molly Struve (2 unread)
 Index?
-> 1
+> 2
 
-Boris Paillard (@papillard)
+Molly Struve (molly_struve)
 
-CEO at Le Wagon. Bringing tech skills to creative people and entrepreneurs.
+Elasticsearch wrangler. Speaker. Runner. Show Jumper. Always Ambitious. Never Satisfied.
 
-71 following - 753 followers
+54 posts published - 442 comments written
 ```
 
 Happy modeling!

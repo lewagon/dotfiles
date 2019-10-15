@@ -1,8 +1,8 @@
 ## Background and Objectives
 
-Congratulations, you outperformed the Cookbook challenge! If you don't want to watch the correction during tonight's livecode, this challenge should keep you busy meanwhile.
+Congratulations, you outperformed the Cookbook challenge!
 
-Let's start over and code another entire MVC app. This time we'll create an app to save [Medium](https://medium.com) posts and read them later:
+Let's start over and code another entire MVC app. This time we'll create an app to save [DEV](https://dev.to) posts and read them later:
 
 ```
 As a user, I can list all posts I saved
@@ -15,10 +15,10 @@ A demo's worth a thousand words, so this is the app we want to code:
 
 #### List posts
 
-```
-------------------------------------
-Welcome to your Medium pocket reader
-------------------------------------
+```bash
+---------------------------------
+Welcome to your DEV Pocket Reader
+---------------------------------
 
 ----------------------------
 What do you want to do next?
@@ -30,13 +30,13 @@ What do you want to do next?
 5. Exit
 > 1
 
-1. [x] - What’s your goal for learning to code? (Boris Paillard)
-2. [ ] - Teaching Programming is Hard (Boris Paillard)
+1. [x] - Visual Studio Code plugins for Ruby and Rails (Magnus Skog)
+2. [ ] - Level Up Your Ruby Skillz: Working With Arrays (Molly Struve)
 ```
 
 #### Save post for later
 
-```
+```bash
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -48,16 +48,16 @@ What do you want to do next?
 > 2
 
 Path?
-> le-wagon/this-is-what-a-developer-looks-like-379c261db24d
+> molly_struve/level-up-your-ruby-skillz-working-with-hashes-4bid
 
-1. [x] - What’s your goal for learning to code? (Boris Paillard)
-2. [ ] - Teaching Programming is Hard (Boris Paillard)
-3. [ ] - This is what a developer looks like (Rebecca Menat)
+1. [x] - Visual Studio Code plugins for Ruby and Rails (Magnus Skog)
+2. [ ] - Level Up Your Ruby Skillz: Working With Arrays (Molly Struve)
+3. [ ] - Level Up Your Ruby Skillz: Working With Hashes (Molly Struve)
 ```
 
 #### Read post
 
-```
+```bash
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -68,9 +68,9 @@ What do you want to do next?
 5. Exit
 > 3
 
-1. [x] - What’s your goal for learning to code? (Boris Paillard)
-2. [ ] - Teaching Programming is Hard (Boris Paillard)
-3. [ ] - This is what a developer looks like (Rebecca Menat)
+1. [x] - Visual Studio Code plugins for Ruby and Rails (Magnus Skog)
+2. [ ] - Level Up Your Ruby Skillz: Working With Arrays (Molly Struve)
+3. [ ] - Level Up Your Ruby Skillz: Working With Hashes (Molly Struve)
 Index?
 > 2
 
@@ -79,7 +79,7 @@ Index?
 
 #### Mark post as read
 
-```
+```bash
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -90,20 +90,20 @@ What do you want to do next?
 5. Exit
 > 4
 
-1. [x] - What’s your goal for learning to code? (Boris Paillard)
-2. [ ] - Teaching Programming is Hard (Boris Paillard)
-3. [ ] - This is what a developer looks like (Rebecca Menat)
+1. [x] - Visual Studio Code plugins for Ruby and Rails (Magnus Skog)
+2. [ ] - Level Up Your Ruby Skillz: Working With Arrays (Molly Struve)
+3. [ ] - Level Up Your Ruby Skillz: Working With Hashes (Molly Struve)
 Index?
 > 2
 
-1. [x] - What’s your goal for learning to code? (Boris Paillard)
-2. [x] - Teaching Programming is Hard (Boris Paillard)
-3. [ ] - This is what a developer looks like (Rebecca Menat)
+1. [x] - Visual Studio Code plugins for Ruby and Rails (Magnus Skog)
+2. [x] - Level Up Your Ruby Skillz: Working With Arrays (Molly Struve)
+3. [ ] - Level Up Your Ruby Skillz: Working With Hashes (Molly Struve)
 ```
 
 #### Exit gracefully
 
-```
+```bash
 ----------------------------
 What do you want to do next?
 ----------------------------
@@ -117,9 +117,9 @@ What do you want to do next?
 Bye bye!
 ```
 
-As you can see, the user only types the `path` of the Medium article. The `path` is the text that comes after the domain name in a url.
+As you can see, the user only types the `path` of the DEV article. The `path` is the text that comes after the domain name in a url.
 
-For instance, to save [this article](https://medium.com/le-wagon/this-is-what-a-developer-looks-like-379c261db24d), the path our users need to enter is everything that is after `https://medium.com/` i.e. `le-wagon/this-is-what-a-developer-looks-like-379c261db24d`.
+For instance, to save [this article](https://dev.to/iriskatastic/ruby-peculiarities-tips-and-tools-5em0), the path our users need to enter is everything that is after `https://dev.to/` i.e. `iriskatastic/ruby-peculiarities-tips-and-tools-5em0`.
 
 So how are we going to retrieve the post's author, title and content...?
 
@@ -139,7 +139,7 @@ Feel free to try and do TDD on this challenge, with help from the previous days 
 
 As you know now, you should always start with your model. The model is the ruby class we need in order to manipulate the data in our program.
 
-Here we want to play around with Medium **posts**, so let's go ahead and create a `Post` class. Before coding it, take the time to ask yourself about:
+Here we want to play around with DEV **posts**, so let's go ahead and create a `Post` class. Before coding it, take the time to ask yourself about:
 
 Its state:
 
@@ -235,6 +235,4 @@ But when we instantiate the `post`, we want it to be automatically populated wit
 
 Let's imagine that we add an `Author` model in the picture, and that we want to scrape info about the post's author when scraping the post. The `Post#initialize` method wouldn't be a good choice anymore... Leaving it in the **controller** (where we have access to models and repositories) would be a necessity, so let's code it there and prepare for an extended version of this challenge!
 
-Monday we'll see how we can plug a `Service` class to the MVC pattern if we want to extract this kind of specific features from the pattern.
-
-Have a nice weekend 💪
+Next session we'll see how we can plug a `Service` class to the MVC pattern if we want to extract this kind of specific features from the pattern.
