@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/LineLength
 require_relative 'orange_tree'
 require_relative 'helpers'
 
@@ -21,3 +22,4 @@ until orange_tree.dead?
   sleep(0.1)
   puts ""
 end
+# rubocop:enable Metrics/LineLength
