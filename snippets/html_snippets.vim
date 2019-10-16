@@ -12,9 +12,9 @@ Snippet unless      <% unless <{}> %><CR><% end %>
 Snippet else        <% else %>
 Snippet elsif       <% elsif <{}> %>
 Snippet end         <% end %>
-Snippet each        <% @<{}>s.each do |<{}>| %><CR><{}><CR><% end %>
+Snippet eachdo      <% @<{}>s.each do |<{}>| %><CR><{}><CR><% end %>
 
-Snippet lt          <%= link_to "<{}>", <{}>_path %><CR><{}>
+Snippet lt          <%= link_to "<{}>", <{}>_path %>
 Snippet ltdo        <%= link_to <{}> do %><CR><{}><CR><% end %>
 Snippet lto         <%= link_to <{}> do %><CR><{}><CR><% end %>
 Snippet it          <%= image_tag <{}>, alt: "alttext" %>

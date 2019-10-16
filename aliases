@@ -7,6 +7,13 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
 
+# RAILS
+
+alias railss="rails server"
+
 # GIT
 alias gfix="git commit -a --amend --no-edit"
 alias gwip="gaa && git commit -m 'WIP'"
+alias gpush='NAME=$(git symbolic-ref HEAD | sed -e "s,.*/\(.*\),\1,") && git push origin "$NAME"'
+alias gitm="git checkout master"
+alias gitcreate="git checkout -b"
