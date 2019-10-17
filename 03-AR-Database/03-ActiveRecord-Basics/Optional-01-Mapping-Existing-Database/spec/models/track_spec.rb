@@ -13,7 +13,7 @@ describe "Track" do
 
   describe "#seconds" do
     it "should return the rounded number of seconds for the track" do
-      expect(track.seconds).to eq 343
+      expect(track.seconds).to eq 344
     end
   end
 
