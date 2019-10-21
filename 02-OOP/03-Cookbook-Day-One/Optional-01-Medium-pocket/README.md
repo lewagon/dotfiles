@@ -4,12 +4,10 @@ Congratulations, you outperformed the Cookbook challenge!
 
 Let's start over and code another entire MVC app. This time we'll create an app to save [DEV](https://dev.to) posts and read them later:
 
-```
-As a user, I can list all posts I saved
-As a user, I can add a post I want to read later
-As a user, I can read a post I saved
-As a user, I can mark a post as read
-```
+- As a user, I can list all posts I saved
+- As a user, I can add a post I want to read later
+- As a user, I can read a post I saved
+- As a user, I can mark a post as read
 
 A demo's worth a thousand words, so this is the app we want to code:
 
@@ -173,12 +171,10 @@ CSV.foreach("posts.csv", encoding: 'ISO-8859-1') do |row|
 
 The controller serves the user stories. Let's have a look at them:
 
-```
-As a user, I can list all posts I saved
-As a user, I can add a post I want to read later
-As a user, I can read a post I saved
-As a user, I can mark a post as read
-```
+- As a user, I can list all posts I saved
+- As a user, I can add a post I want to read later
+- As a user, I can read a post I saved
+- As a user, I can mark a post as read
 
 Remember that the controller has a role of pivot in the MVC pattern. Having access to the repo and the view from within every action is a necessity (this should help you define instance variables).
 
