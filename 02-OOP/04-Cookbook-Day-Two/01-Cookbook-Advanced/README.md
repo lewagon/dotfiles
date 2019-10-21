@@ -27,7 +27,7 @@ ruby lib/app.rb
 
 You can scrape from any recipe website that you know, but good ones are [LetsCookFrench](http://www.letscookfrench.com/recipes/find-recipe.aspx) and [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
 
-```
+```bash
 -- My CookBook --
 What do you want to do?
 
@@ -140,7 +140,7 @@ This new property should be:
 
 Once you're done with the "Search", try to add a feature to mark a recipe as done:
 
-```
+```bash
 -- Here are all your recipes --
 
 1. [X] Crumpets (15 min)
