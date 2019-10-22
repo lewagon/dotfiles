@@ -85,7 +85,7 @@ describe "OrdersController", :_order do
   describe "#add" do
     it "should ask the user for a meal id, a customer id and an employee id to be assigned" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
-      Object.any_instance.stub(gets: '2')
+      allow_any_instance_of(Object).to receive(:gets).and_return('2')
 
       controller.add
 
@@ -117,7 +117,7 @@ describe "OrdersController", :_order do
     it "should ask the delivery guy for an order id, mark it as delivered, and save the relevant data to the CSV file" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
       # Ringo wants to mark as delivered number 4.
-      Object.any_instance.stub(gets: '4')
+      allow_any_instance_of(Object).to receive(:gets).and_return('4')
       ringo = employee_repository.find(3)  # ringo is a delivery guy
       controller.mark_as_delivered(ringo)
       # Reload from CSV

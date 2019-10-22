@@ -46,7 +46,7 @@ describe "CustomersController", :customer do
   describe "#add" do
     it "should ask the user for a name and address, then store the new customer" do
       controller = CustomersController.new(repository)
-      Object.any_instance.stub(gets: "Le Wagon")
+      allow_any_instance_of(Object).to receive(:gets).and_return("Le Wagon")
 
       controller.add
 
