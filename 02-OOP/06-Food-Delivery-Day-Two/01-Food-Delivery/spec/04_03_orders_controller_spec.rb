@@ -85,7 +85,7 @@ describe "OrdersController", :_order do
   describe "#add" do
     it "should ask the user for a meal id, a customer id and an employee id to be assigned" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
-      allow_any_instance_of(Object).to receive(:gets).and_return('2')
+      allow_any_instance_of(Object).to receive(:gets).and_return("2")
 
       controller.add
 

@@ -49,7 +49,7 @@ describe "MealsController", :meal do
     it "should ask the user for a name and price, then store the new meal" do
       controller = MealsController.new(repository)
 
-      allow_any_instance_of(Object).to receive(:gets).and_return('12')
+      allow_any_instance_of(Object).to receive(:gets).and_return("12")
       controller.add
 
       expect(repository.all.length).to eq(6)
