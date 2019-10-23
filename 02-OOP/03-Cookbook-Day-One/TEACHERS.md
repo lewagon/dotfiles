@@ -56,48 +56,52 @@
   - Responsibility: serve user actions
   - State? Hard to guess here (not concrete enough). We’ll discover it when we code the actions.
   - Behavior? ACTIONS: `#list`, `#create`, `#mark_as_done`, `#destroy`
-    - **List**
-      - Pseudo code
-        - # Fetch array of tasks from repo
-        - # Send it to view to display them
-      - Code action in controller
-        - Necessity to define `@repo` and `@view`
-        - Necessity to define `Repository#all`
-      - Create `test.rb` file to test
-      - Improve `View#display(tasks)` with `“[x]” : “[ ]”`
-      - Add `#done?` in `Task`
-      - Test => OK
-    - **Create**
-      - Pseudo code
-        - Get description from `@view`
-        - Create new task with description
-        - Store it in `@repo`
-      - Code
-        - Necessity to code `View#ask_user_for_description`
-      - Add `controller.create` in `test.rb`
-      - Test => OK
-    - **Mark as done**
-      - Pseudo code
-        - Display tasks
-        - Ask user for index
-        - Fetch task
-        - Mark task as done
-      - Code
-        - Refacto private `Controller#display` with the 2 steps from `#list`
-        - Necessity to enhance `View#display(tasks)` with indices
-        - Code `View#ask_user_for_index`
-        - Necessity to code `Repository#find(index)`
-      - Add action in `test.rb`
-      - Test => OK
-    - **Destroy** (if there’s enough time left)
-      - Pseudo code
-        - Display tasks
-        - Ask user for index
-        - Remove it from repo
-      - Code
-        - Replace `#remove(task)` by `#remove(task_index)` (better UX)
-      - Add action in `test.rb`
-      - Test => OK
+
+  **List**
+  - Pseudo code
+    - Fetch array of tasks from repo
+    - Send it to view to display them
+  - Code action in controller
+    - Necessity to define `@repo` and `@view`
+    - Necessity to define `Repository#all`
+  - Create `test.rb` file to test
+  - Improve `View#display(tasks)` with `“[x]” : “[ ]”`
+  - Add `#done?` in `Task`
+  - Test => OK
+
+  **Create**
+  - Pseudo code
+    - Get description from `@view`
+    - Create new task with description
+    - Store it in `@repo`
+  - Code
+    - Necessity to code `View#ask_user_for_description`
+  - Add `controller.create` in `test.rb`
+  - Test => OK
+
+  **Mark as done**
+  - Pseudo code
+    - Display tasks
+    - Ask user for index
+    - Fetch task
+    - Mark task as done
+  - Code
+    - Refacto private `Controller#display` with the 2 steps from `#list`
+    - Necessity to enhance `View#display(tasks)` with indices
+    - Code `View#ask_user_for_index`
+    - Necessity to code `Repository#find(index)`
+  - Add action in `test.rb`
+  - Test => OK
+
+  **Destroy** (if there’s enough time left)
+  - Pseudo code
+    - Display tasks
+    - Ask user for index
+    - Remove it from repo
+  - Code
+    - Replace `#remove(task)` by `#remove(task_index)` (better UX)
+  - Add action in `test.rb`
+  - Test => OK
 - Class to route user’s request to the right controller’s action: **Router**
   - State? No guess here either => we’ll see as we code
   - Behavior? `#run`
