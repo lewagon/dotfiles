@@ -69,19 +69,19 @@
       - Test => OK
     - **Create**
       - Pseudo code
-        - # Get description from `@view`
-        - # Create new task with description
-        - # Store it in `@repo`
+        - Get description from `@view`
+        - Create new task with description
+        - Store it in `@repo`
       - Code
         - Necessity to code `View#ask_user_for_description`
       - Add `controller.create` in `test.rb`
       - Test => OK
     - **Mark as done**
       - Pseudo code
-        - # Display tasks
-        - # Ask user for index
-        - # Fetch task
-        - # Mark task as done
+        - Display tasks
+        - Ask user for index
+        - Fetch task
+        - Mark task as done
       - Code
         - Refacto private `Controller#display` with the 2 steps from `#list`
         - Necessity to enhance `View#display(tasks)` with indices
@@ -91,9 +91,9 @@
       - Test => OK
     - **Destroy** (if there’s enough time left)
       - Pseudo code
-        - # Display tasks
-        - # Ask user for index
-        - # Remove it from repo
+        - Display tasks
+        - Ask user for index
+        - Remove it from repo
       - Code
         - Replace `#remove(task)` by `#remove(task_index)` (better UX)
       - Add action in `test.rb`
