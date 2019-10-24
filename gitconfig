@@ -14,6 +14,7 @@
 	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 
 [alias]
+  g = git
   co = checkout
   st = status -sb
   br = branch
@@ -48,4 +49,4 @@
   mergeoptions = --no-edit
 [user]
 	email = bryan.leigh77@gmail.com
-	name = Bryan Leighton
+	name = bryan leighton
