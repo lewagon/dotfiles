@@ -5,7 +5,7 @@
 	"folder_exclude_patterns":
 	[
 		"tmp",
-		"log",
+		// "log",
 		".git",
 		".svn",
 		"_site",
