@@ -13,11 +13,12 @@
 		".sass-cache",
 		".asset-cache",
 		"build",
-		"node_modules",
+		// "node_modules",
 		"dist",
 		"public/packs",
 		"coverage"
 	],
+	"font_size": 13,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":

@@ -8,12 +8,18 @@
 		"AdvancedNewFile",
 		"All Autocomplete",
 		"Babel",
+		"Babel Snippets",
+		"BeautifyRuby",
 		"Emmet",
 		"ERB Snippets",
+		"FileOpTabContextMenu",
 		"Git",
 		"GitGutter",
+		"HTML Boilerplate",
 		"Package Control",
 		"SCSS",
+		"SideBarEnhancements",
+		"SideBarMenuAdvanced",
 		"SublimeLinter",
 		"SublimeLinter-rubocop"
 	]
