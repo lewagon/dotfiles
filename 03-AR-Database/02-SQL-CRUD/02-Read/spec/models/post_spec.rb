@@ -54,19 +54,19 @@ describe Post do
 
   describe "self.find (class method)" do
     before do
-      DB.execute("INSERT INTO `posts` (title) VALUES ('Hello world')")
+      DB.execute("INSERT INTO `posts` (title, url, votes) VALUES ('Hello world', 'https://www.lewagon.com', 10000)")
     end
-
-    it "should return nil if post is not found in database" do
-      expect(Post.find(42)).to be_nil
-    end
-
-    it "should load a post from the database" do
+    
+    it "should return a Post built with data from the database" do
       post = Post.find(1)
       expect(post).to_not be_nil
       expect(post).to be_a Post
       expect(post.id).to eq 1
       expect(post.title).to eq 'Hello world'
+    end
+    
+    it "should return nil if post is not found in database" do
+      expect(Post.find(42)).to be_nil
     end
 
     it "should resist SQL injections" do
@@ -77,21 +77,21 @@ describe Post do
   end
 
   describe "self.all (class method)" do
-    it "should return an empty array if the database is empty" do
-      posts = Post.all
-      expect(posts).to eq []
-    end
-
-    it "should load a post from the database" do
+    it "should return an array of Post built with data from the database" do
       DB.execute("INSERT INTO `posts` (title) VALUES ('Article 1')")
       DB.execute("INSERT INTO `posts` (title) VALUES ('Article 2')")
-
+      
       posts = Post.all
       expect(posts.length).to eq 2
       expect(posts).to be_a Array
       expect(posts.first).to be_a Post
       expect(posts.first.title).to eq 'Article 1'
       expect(posts.last.title).to eq 'Article 2'
+    end
+
+    it "should return an empty array if the database is empty" do
+      posts = Post.all
+      expect(posts).to eq []
     end
   end
 
