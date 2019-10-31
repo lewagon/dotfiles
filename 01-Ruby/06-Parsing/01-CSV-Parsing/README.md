@@ -18,7 +18,7 @@ There are loads more useful ones in there too, so make sure you have a read!
 
 ## Specs
 
-- implement `#most_successful` that returns the number of movies published prior to a given year, with associated earnings.
+- implement `#most_successful` that returns the movies (a certain `number` passed as a parameter) published prior to a given year, with associated earnings.
 - **constraint**: the returned list should be an array of movies. Each movie should be represented by a hash with keys `name`, `year` and `earnings`. Ex: `{ name: "Avatar", year: 2009, earnings: 760505847 }`
 
 ## Further suggestions & resources
