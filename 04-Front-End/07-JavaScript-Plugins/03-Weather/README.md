@@ -85,7 +85,7 @@ Now we want to inject a list of cities without touching the HTML file. Thankfull
 Copy-paste this array in your code to pass it to your `select2`:
 
 ```js
-const cities = ["Amsterdam","Bali","Barcelona","Belo Horizonte","Berlin","Bordeaux","Brussels","Buenos Aires","Casablanca","Chengdu","Copenhagen","Kyoto","Lausanne","Lille","Lisbon","London","Lyon","Marseille","Melbourne","Mexico","Milan","Montréal","Nantes","Paris","Rio de Janeiro","São Paulo","Shanghai","Shenzhen","Tel Aviv","Tokyo"];
+const cities = ["Amsterdam","Bali","Barcelona","Belo Horizonte","Berlin","Bordeaux","Brussels","Buenos Aires","Casablanca","Chengdu","Copenhagen","Kyoto","Lausanne","Lille","Lisbon","London","Lyon","Madrid","Marseille","Melbourne","Mexico","Milan","Montréal","Nantes","Oslo","Paris","Rio de Janeiro","Rennes","Rome","São Paulo","Seoul","Shanghai","Shenzhen","Singapore","Stockholm","Tel Aviv","Tokyo"];
 
 $('#city-input').select2({ data: cities }); // <-- add the `data` option
 ```
