@@ -25,7 +25,7 @@ Before writing any code, break down the problem in small steps using pseudo-code
 
 There aren't any tests for this exercise, but we check your style! So run `rake`.
 
-## Refactoring
+## Refactoring (optional)
 
 Once the highlighting works as expected, let's make the code more readable.
 
@@ -36,8 +36,10 @@ Good news, in JavaScript, you can store **functions** in variables! That way you
 For instance, you can refactor this code:
 
 ```js
-button.addEventListener('click', (event) => {
-  console.log(event.currentTarget);
+buttons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    console.log(event.currentTarget);
+  });
 });
 ```
 
@@ -48,12 +50,16 @@ const displayClickedElement = (event) => {
   console.log(event.currentTarget);
 };
 
-button.addEventListener('click', displayClickedElement);
+const bindButtonToClick = (button) => {
+  button.addEventListener('click', displayClickedElement);
+}
+
+buttons.forEach(bindButtonToClick);
 ```
 
 Your turn to extract:
 
-- the binding logic in a `toggleActiveOnClick` arrow function,
+- the binding logic in a `bindSportToClick` arrow function,
 - the click callback in a `toggleActiveClass` arrow function.
 
 At the end, your code should be easily readable and have no more than 1 indentation level!
