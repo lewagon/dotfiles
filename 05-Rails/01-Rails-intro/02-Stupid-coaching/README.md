@@ -32,6 +32,8 @@ hub create
 git push origin master
 ```
 
+We add the flag `--skip-active-storage` to avoid the installation of [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilitates uploading files to a cloud storage service, but we don't need it for the moment.
+
 `hub` is a gem that we installed on the first day that created a repo on github for us so that we can `git push`. 😊
 
 **Objective**: We will implement a simple Rails application with 2 pages:
