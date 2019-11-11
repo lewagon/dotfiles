@@ -32,7 +32,6 @@ Use Le Wagon's minimal template, which already has a good frontend setup:
 ```bash
 cd ~/code/<user.github_nickname>
 rails new \
-  --skip-active-storage \
   --database postgresql \
   --webpack \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
