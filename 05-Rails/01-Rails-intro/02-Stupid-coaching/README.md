@@ -61,7 +61,7 @@ For that first user story, we want the `GET /ask` HTTP request to trigger the `a
 - open [localhost:3000/ask](http://localhost:3000/ask)
 - read the error message
 
-As we expected, the first entity of the MVC pattern involved in serving the request is **the router**.
+As expected, the first entity of the MVC pattern involved in serving the request is **the router**.
 
 **Route**
 
@@ -134,7 +134,7 @@ And make sure you refresh your page frequently in your browser to let Rails' flo
 The `answer.html.erb` will display the question you ask your coach as well as his answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
 
 - [localhost:3000/answer?question=hello](http://localhost:3000/answer?question=hello)
-- [localhost:3000/answer?question=what+time+is+it%3F](http://localhost:3000/answer?question=what time is it?)
+- [localhost:3000/answer?question=what time is it?](http://localhost:3000/answer?question=what time is it?)
 
 If you don't remember about the coach (poor) logic, here it is:
 
