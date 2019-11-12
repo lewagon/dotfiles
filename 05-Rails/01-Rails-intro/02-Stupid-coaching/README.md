@@ -124,12 +124,12 @@ Here we want the form to trigger our **second user story**: `answer`, which shou
 
 ### 2. Display the Coach's Answer
 
-Time to implement the logic in the `answer` action (second step of the user journey). For this second user story, follow the same methodology as for the first one (make sure you don't generate the questions controller a second time though :wink:):
+Time to implement the logic in the `answer` action (second step of the user journey). For this second user story, follow the same methodology as in `1. Display the form` (make sure you don't generate the questions controller a second time though :wink:):
 - code the **route**
 - code the **action**
 - code the **view**
 
-And make sure you refresh your page frequently in your browser to follow Rails' flow to drive your development!
+And make sure you refresh your page frequently in your browser to let Rails' flow drive your development!
 
 The `answer.html.erb` will display the question you ask your coach as well as his answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
 
