@@ -20,8 +20,6 @@ Remember your first weeks of Ruby? We only had the terminal for the program user
 
 There is no `rake` here. Also, do not create your Rails app in `fullstack-challenges`.
 
-⛔ Please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
-
 ```bash
 cd ~/code/<user.github_nickname>
 rails new rails-stupid-coaching
@@ -37,7 +35,7 @@ git push origin master
 **Objective**: We will implement a simple Rails application with 2 pages:
 
 1. First page is a form with an input, where a user can type a question to ask the Coach
-2. After submitting the form, the user is redirected to a new page where she/he will see her/his question and the coach answer.
+1. After submitting the form, the user is redirected to another page where she/he will see her/his question and the coach answer.
 
 That's it!
 
@@ -46,40 +44,97 @@ That's it!
 Get familiar with [Rails command line basics](http://guides.rubyonrails.org/command_line.html#command-line-basics). For this exercise, you should know at least how to:
 
 - Create a new Rails app
-- Launch a web server to test your app locally
+- Launch a web server to open your app locally
 - Generate a new controller from the command line
 - Check your routes with the relevant `rails` command
 
-### 1 - Routing
+### Launch a rails server
 
-Open your `routes.rb` file and add the two routes needed for your Stupid Coaching web application.
+Every web developer starts their working sessions by launching a server and opening a tab in a web browser to test **live** the features they code. Go ahead and launch a server in your terminal (make sure you're at the right place), and open a tab at [localhost:3000](http://localhost:3000) in your favourite web browser! You should see Rails' welcome page.
 
-Check the routes are defined with the following command:
+### 1. Display the form
+
+First we want to display a page with a `<form>` to our users. In Rails, this counts as a **user story**, so we need more than an HTML file to make it happen. For every user action in Rails, we need to code **(i) a route, (ii) an action, and (iii) a view**. Remember the MVC pattern?
+
+For that first user story, we want the `GET /ask` HTTP request to trigger the `ask` action of a `QuestionsController`. Let's drive our development in the browser:
+
+- open [localhost:3000/ask](http://localhost:3000/ask)
+- read the error message
+
+As we expected, the first entity of the MVC pattern involved in serving the request is **the router**.
+
+**Route**
+
+Go ahead and open your `config/routes.rb` file and write a simple route to serve the `GET /ask` HTTP request to the `ask` action of a `question` controller.
+
+As a reminder, here is the pattern of a route coded in Rails:
+
+```ruby
+verb "url", to: "controller#action"
+```
+
+When you're done with the route, go back to your browser and refresh the page... Of course you still get an error message, there's no `QuestionsController` yet!
+
+**Controller**
+
+After setting the **route**, it's time to code the **action**. And to write an action, we need a **controller**. Go ahead and generate your questions controller with the relevant `rails` command!
+
+Depending on how many arguments you generated your controller with, you may have added an extra route to the `config/routes.rb` file! Let's clean it up and only keep the one you wrote in the previous section.
+
+Oh and by the way, do you remember how to display your routes in the terminal?
+
+<details><summary markdown='span'>View solution
+</summary>
 
 ```bash
 rails routes
 ```
+You should see the following:
 
-It should look like this:
-
-```bash
-  Prefix Verb URI Pattern       Controller#Action
-     ask GET  /ask(.:format)    questions#ask
-  answer GET  /answer(.:format) questions#answer
+```
+Prefix Verb URI Pattern       Controller#Action
+   ask GET  /ask(.:format)    question#ask
 ```
 
-### 2 - Controller
+**N.B:** Since rails versions > 5.2, you may also get routes related to **active storage**, you can safely ignore them :ok_hand:
+</details>
 
-Generate a new `QuestionsController`, using the correct rails generator on the command line. This controller will have two actions, `ask` and `answer`. Open the `routes.rb` file and delete the duplicated routes if they got generated.
+Now that your `app/controllers/questions_controller.rb` exists, open it in Sublime Text and add the `ask` action. Do we need to define instance variables? Let's start coding the view to figure it out!
 
-### 3 - Coach Answer Page
+**View**
 
-Time to implement the logic in the `answer` action (second step of the user story). The `answer.html.erb` will display the question you ask your coach as well as his answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
+Again, depending on how you generated your controller, there may already be an `app/views/questions/ask.html.erb` file in your project. To check it out, you can refresh your browser at [localhost:3000/ask](http://localhost:3000/ask)! If it's not there yet, go ahead and create it. If it's already there, just open it in Sublime Text.
+
+In that view, we want to display a `<form>`. Remember the syntax of a form?
+
+```html
+<form action="???">
+  <input type="text" name="???">
+  <input type="submit" value="Ask!">
+</form>
+```
+
+The native behaviour of a `<form>` tag is to generate the HTTP request defined by the `method` and `action` attributes.
+- the `method` attribute holds the HTTP **verb** (`GET` by default)
+- the `action` attribute holds the **url** of the request it triggers on submit
+
+In the `<input>`, the `name` attribute enables you to set the **key** of the corresponding parameter.
+
+Here we want the form to trigger our **second user story**: `answer`, which should be routed on `/answer`. Go ahead and replace the `???` above and try to submit the form.
+
+### 2. Display the Coach's Answer
+
+Time to implement the logic in the `answer` action (second step of the user journey). For this second user story, follow the same methodology as for the first one (make sure you don't generate the questions controller a second time though :wink:):
+- code the **route**
+- code the **action**
+- code the **view**
+
+And make sure you refresh your page frequently in your browser to follow Rails' flow to drive your development!
+
+The `answer.html.erb` will display the question you ask your coach as well as his answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
 
 - [localhost:3000/answer?question=hello](http://localhost:3000/answer?question=hello)
-- [localhost:3000/answer?question=what+time+is+it%3F](http://localhost:3000/answer?question=what+time+is+it%3F)
-
-⚠️ Don't try to work on the form yet! Click on the links above and make your Answer page work!
+- [localhost:3000/answer?question=what+time+is+it%3F](http://localhost:3000/answer?question=what time is it?)
 
 If you don't remember about the coach (poor) logic, here it is:
 
@@ -91,33 +146,15 @@ If you don't remember about the coach (poor) logic, here it is:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/can_i_go.png)
 
-### 4 - Question Form Page
-
-Let's implement the `ask` action. On this page, we should build a form with an input where the user can type in a question.
-
-```html
-<form action="???">
-  <input type="text" name="???">
-  <input type="submit" value="Ask!">
-</form>
-```
-
-Notice the important HTML attributes in the form:
-
-- `action` specifies the URL that will be used when submitting the form
-- `name` enables you to name each parameter corresponding to each input of the form.
-
-Replace the `???` so that your form send a request to `QuestionsController#answer` with a good parameter name.
-
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/ask.png)
 
-### 5 - Backlink from `/answer` to `/ask`
+### Backlink from `/answer` to `/ask`
 
 - Add a link to `/ask` on the `answer.html.erb` view using the `link_to` Rails helper.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/bottom_link.png)
 
-### 6 - Make it look nice!
+### Make it look nice!
 
 We have not covered the Front-End aspect of a Rails project, but you can start on your own!
 
@@ -162,7 +199,7 @@ In a few days, we'll also see how to organize our stylesheets in multiple files,
 
 For now, just open (or create) the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
 
-### 7 - Testing (Optional)
+### Testing (Optional)
 
 ⚠️ Please skip this section if you don't feel at ease yet with Rails internal. You can always come back here later in the day after completing the Longest Word Game exercise.
 
