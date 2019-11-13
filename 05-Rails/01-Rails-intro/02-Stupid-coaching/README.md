@@ -22,7 +22,7 @@ There is no `rake` here. Also, do not create your Rails app in `fullstack-challe
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-stupid-coaching
+rails new rails-stupid-coaching --skip-active-storage
 cd rails-stupid-coaching
 git add .
 git commit -m "rails new"
@@ -95,8 +95,6 @@ You should see the following:
 Prefix Verb URI Pattern       Controller#Action
    ask GET  /ask(.:format)    question#ask
 ```
-
-**N.B:** Since rails versions > 5.2, you may also get routes related to **active storage**, you can safely ignore them :ok_hand:
 </details>
 
 Now that your `app/controllers/questions_controller.rb` exists, open it in Sublime Text and add the `ask` action. Do we need to define instance variables? Let's start coding the view to figure it out!
