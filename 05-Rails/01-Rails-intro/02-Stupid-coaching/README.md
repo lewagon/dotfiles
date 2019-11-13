@@ -120,11 +120,13 @@ In the `<input>`, the `name` attribute enables you to set the **key** of the cor
 
 Here we want the form to trigger our **second user story**: `answer`, which should be routed on `/answer`. Go ahead and replace the `???` above and try to submit the form.
 
+You should get a **Routing Error**, because we didn't code this feature yet!
+
 ### 2. Display the Coach's Answer
 
 Time to implement the logic in the `answer` action (second step of the user journey). For this second user story, follow the same methodology as in `1. Display the form` (make sure you don't generate the questions controller a second time though :wink:):
 - code the **route**
-- code the **action**
+- code the **action** (in the controller)
 - code the **view**
 
 And make sure you refresh your page frequently in your browser to let Rails' flow drive your development!
