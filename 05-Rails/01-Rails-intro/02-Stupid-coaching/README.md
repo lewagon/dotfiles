@@ -50,38 +50,36 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 
 ### Launch a rails server
 
-Every web developer starts their working sessions by launching a server and opening a tab in a web browser to test **live** the features they code. Go ahead and launch a server in your terminal (make sure you're at the right place), and open a tab at [localhost:3000](http://localhost:3000) in your favourite web browser! You should see Rails' welcome page.
+Every web developer starts working by launching a server and opening a browser to test **live** the features they code. Go ahead:
+- launch a server in your terminal
+- open [localhost:3000](http://localhost:3000) in your favourite web browser!
 
-### 1. Display the form
+You should see Rails' welcome page.
 
-First we want to display a page with a `<form>` to our users. In Rails, this counts as a **user story**, so we need more than an HTML file to make it happen. For every user action in Rails, we need to code **(i) a route, (ii) an action in a controller, and (iii) a view**. Remember the MVC pattern?
+### 1. Display the form: `/ask`
 
-For that first user story, we want the `GET /ask` HTTP request to trigger the `ask` action of a `QuestionsController`. Let's drive our development in the browser:
+First, we want to display a page with a `<form>` to our users. In Rails, this counts as a **user story**, so we need more than an HTML file to make it happen. For every user action in Rails, we need to code **(i) a route, (ii) an action in a controller, and (iii) a view**. Remember the MVC pattern?
 
-- open [localhost:3000/ask](http://localhost:3000/ask)
-- read the error message
-
-As expected, the first entity of the MVC pattern involved in serving the request is **the router**.
+- Open [localhost:3000/ask](http://localhost:3000/ask)
+- Read the error message: it is a **routing error**
 
 **Route**
 
-Go ahead and open your `config/routes.rb` file and write a simple route to serve the `GET /ask` HTTP request to the `ask` action of a `question` controller.
-
-As a reminder, here is the pattern of a route coded in Rails:
+Write a simple route to serve `GET /ask` HTTP request to the `ask` action of a `questions` controller. As a reminder, here is the pattern of a route coded in Rails:
 
 ```ruby
 verb "url", to: "controller#action"
 ```
 
-When you're done with the route, go back to your browser and refresh the page... Of course you still get an error message, there's no `QuestionsController` yet!
+When you're done with the route, go back to your browser and refresh the page. The error message changed: there's no `QuestionsController` yet!
 
 **Controller**
 
-After setting the **route**, it's time to code the **action**. And to write an action, we need a **controller**. Go ahead and generate your questions controller with the relevant `rails` command!
+After setting the **route**, it's time to code the **action**. And to code an action, we need a **controller**. Go ahead and generate your questions controller with the relevant `rails` command!
 
-Depending on how many arguments you generated your controller with, you may have added an extra route to the `config/routes.rb` file! Let's clean it up and only keep the one you wrote in the previous section.
+_Depending on how many arguments you generated your controller with, you may have added an extra route to the `config/routes.rb` file! Let's clean it up and only keep the one you wrote in the previous section._
 
-Oh and by the way, do you remember how to display your routes in the terminal?
+Oh and by the way, do you remember how to display all your routes in the terminal?
 
 <details><summary markdown='span'>View solution
 </summary>
@@ -93,17 +91,19 @@ You should see the following:
 
 ```
 Prefix Verb URI Pattern       Controller#Action
-   ask GET  /ask(.:format)    question#ask
+   ask GET  /ask(.:format)    questions#ask
 ```
 </details>
 
-Now that your `app/controllers/questions_controller.rb` exists, open it in Sublime Text and add the `ask` action. Do we need to define instance variables? Let's start coding the view to figure it out!
+If you refresh your browser, you'll see that the error message has changed again. The `QuestionsController` exists, but it's still missing the `ask` action.
+
+Open your controller in Sublime Text and add the `ask` action. Do we need to define an instance variable here? We'll figure it out while coding the view!
 
 **View**
 
 Again, depending on how you generated your controller, there may already be an `app/views/questions/ask.html.erb` file in your project. To check it out, you can refresh your browser at [localhost:3000/ask](http://localhost:3000/ask)! If it's not there yet, go ahead and create it. If it's already there, just open it in Sublime Text.
 
-In that view, we want to display a `<form>`. Remember the syntax of a form?
+In that view, we want to display a `<form>`. Remember the syntax?
 
 ```html
 <form action="???">
@@ -120,16 +120,16 @@ In the `<input>`, the `name` attribute enables you to set the **key** of the cor
 
 Here we want the form to trigger our **second user story**: `answer`, which should be routed on `/answer`. Go ahead and replace the `???` above and try to submit the form.
 
-You should get a **Routing Error**, because we didn't code this feature yet!
+You should get a **routing error**, let's code the answer now!
 
-### 2. Display the Coach's Answer
+### 2. Display the Coach's Answer: `/answer`
 
-Time to implement the logic in the `answer` action (second step of the user journey). For this second user story, follow the same methodology as in `1. Display the form` (make sure you don't generate the questions controller a second time though :wink:):
+Time to implement the logic in the `answer` action (second step of the user journey). For this second user story, follow the same methodology as in `1. Display the form`:
 - code the **route**
 - code the **action** (in the controller)
 - code the **view**
 
-And make sure you refresh your page frequently in your browser to let Rails' flow drive your development!
+And make sure you refresh your page frequently in your browser to let Rails' execution flow drive your development!
 
 The `answer.html.erb` will display the question you ask your coach as well as his answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
 
@@ -140,7 +140,7 @@ If you don't remember about the coach (poor) logic, here it is:
 
 1. If the message is `I am going to work`, the coach will answer `Great!`
 2. If the message has a question mark `?` at the end, the coach will answer `Silly question, get dressed and go to work!`.
-3. Otherwise she/he will answer `I don't care, get dressed and go to work!`
+3. Otherwise the coach will answer `I don't care, get dressed and go to work!`
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/stupid-coaching/hello_there.png)
 
