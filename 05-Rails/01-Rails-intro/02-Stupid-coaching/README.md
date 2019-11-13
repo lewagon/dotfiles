@@ -54,7 +54,7 @@ Every web developer starts their working sessions by launching a server and open
 
 ### 1. Display the form
 
-First we want to display a page with a `<form>` to our users. In Rails, this counts as a **user story**, so we need more than an HTML file to make it happen. For every user action in Rails, we need to code **(i) a route, (ii) an action, and (iii) a view**. Remember the MVC pattern?
+First we want to display a page with a `<form>` to our users. In Rails, this counts as a **user story**, so we need more than an HTML file to make it happen. For every user action in Rails, we need to code **(i) a route, (ii) an action in a controller, and (iii) a view**. Remember the MVC pattern?
 
 For that first user story, we want the `GET /ask` HTTP request to trigger the `ask` action of a `QuestionsController`. Let's drive our development in the browser:
 
