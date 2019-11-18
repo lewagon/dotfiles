@@ -125,7 +125,7 @@ When you work on a feature, work on it **conscientiously from the database to th
 - I will implement these two actions.
 
 *Views modification*:
-- I will embed the booking form in the existing `views/flats/new.html.erb`
+- I will embed the booking form in the existing `views/flats/show.html.erb`
 - I will list all current user's bookings on a new page `views/bookings/index.html.erb`.
 
 *Links*:
