@@ -24,13 +24,15 @@ There is no `rake` here. Also, do not create your Rails app in `fullstack-challe
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-stupid-coaching
+rails new rails-stupid-coaching --skip-active-storage
 cd rails-stupid-coaching
 git add .
 git commit -m "rails new"
 hub create
 git push origin master
 ```
+
+We add the flag `--skip-active-storage` to avoid the installation of [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilitates uploading files to a cloud storage service, but we don't need it for the moment, and it will add to your app unnecessary routes.
 
 `hub` is a gem that we installed on the first day that created a repo on github for us so that we can `git push`. 😊
 
