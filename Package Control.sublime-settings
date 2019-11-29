@@ -17,6 +17,8 @@
 		"GitGutter",
 		"JavaScript & NodeJS Snippets",
 		"Package Control",
-		"SCSS"
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-rubocop"
 	]
 }
