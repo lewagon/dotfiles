@@ -34,10 +34,13 @@ We will implement a *simplified* version of Black Jack:
 
 - Implement the `#state_of_the_game` method which builds a message containing the bank and player's scores.
 - Implement the `#end_game_message` method to be called at the end of the game, containing the game outcome (win/lost/push)
-- Implement the main `#play_game` method which runs a Black Jack game from the terminal. It should work this way:
+
+### `interface.rb`
+
+- Implement the main method which runs a Black Jack game from the terminal. It should work this way:
 
 ```bash
-ruby lib/run_game.rb
+ruby lib/interface.rb
 
 Card? 'y' or 'yes' to get a new card
 > yes
@@ -56,7 +59,7 @@ Card? 'y' or 'yes' to get a new card
 You beat the bank! You win.
 ```
 
-⚠️ For this exercise you're not finished when `rake` is 100% green! You need to make sure that you can actually play the game by running `ruby lib/run_game.rb` 😉
+⚠️ For this exercise you're not finished when `rake` is 100% green! You need to make sure that you can actually play the game by running `ruby lib/interface.rb` 😉
 
 ## Key learning points
 
