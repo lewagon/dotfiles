@@ -17,7 +17,6 @@ Take the time to think about the data structures that will best describe a store
 - don't forget to initialize the `cart` variable in `interface.rb`!
 - check that all tests pass
 
-`#store_items`
 Here's the list of the products and their prices, that should be available in the store:
 - yogurts: 2€
 - meat: 7€
