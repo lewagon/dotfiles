@@ -28,14 +28,13 @@ Tomorrow all the students will write their first lines of Ruby."
 
 
 
-def find_nth_word(n, sentence)
-  sentence.match(/(?:\w+\s){#{n-1}}(\w+)/)[1]
+def find_nth_word(index, sentence)
+  sentence.match(/(?:\w+\s){#{index - 1}}(\w+)/)[1]
 end
 
 def ruby_is
   result = SENTENCES.split(".").map do |sentence|
     find_nth_word(6, sentence)
   end
-  
   result.join(' ')
 end
