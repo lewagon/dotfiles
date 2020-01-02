@@ -10,6 +10,9 @@ test('core modules', function (t) {
 
         st.ok(!resolve.isCore('seq'));
         st.ok(!resolve.isCore('../'));
+
+        st.ok(!resolve.isCore('toString'));
+
         st.end();
     });
 

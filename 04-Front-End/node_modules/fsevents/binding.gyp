@@ -5,7 +5,7 @@
   "conditions": [
     ['OS=="mac"', {
       "targets": [{
-        "target_name": "<(module_name)",
+        "target_name": "fse",
         "sources": ["fsevents.cc"],
         "xcode_settings": {
           "OTHER_LDFLAGS": [
@@ -15,14 +15,6 @@
         "include_dirs": [
           "<!(node -e \"require('nan')\")"
         ]
-      }, {
-        "target_name": "action_after_build",
-        "type": "none",
-        "dependencies": ["<(module_name)"],
-        "copies": [{
-          "files": ["<(PRODUCT_DIR)/<(module_name).node"],
-          "destination": "<(module_path)"
-        }]
       }]
     }]
   ]

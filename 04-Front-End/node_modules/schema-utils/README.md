@@ -27,13 +27,32 @@ npm i schema-utils
 
 ### `validateOptions`
 
-**schema.json**
+**`schema.json`**
 ```js
 {
   "type": "object",
   "properties": {
     // Options...
   },
+  "additionalProperties": false
+}
+```
+
+#### Error Messages (Custom)
+
+**`schema.json`**
+```js
+{
+  "type": "object",
+  "properties": {
+    "option": {
+      "type": [ "boolean" ]
+    }
+  },
+  // Overrides the default err.message for option
+  "errorMessage": {
+    "option": "should be {Boolean} (https:/github.com/org/repo#anchor)"
+  }
   "additionalProperties": false
 }
 ```

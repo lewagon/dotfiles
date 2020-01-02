@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.11 - 2019-08-10
+
+### Fixed
+
+* License metadata in `package.json` now in standard SPDX format
+
 ## 2.0.10 - 2018-04-18
 
 ### Fixed

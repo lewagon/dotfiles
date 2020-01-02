@@ -1,7 +1,7 @@
 # compressible
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Downloads][npm-downloads-image]][npm-url]
 [![Node.js Version][node-version-image]][node-version-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
@@ -50,13 +50,12 @@ compressible('image/png') // => false
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/compressible.svg
-[npm-url]: https://npmjs.org/package/compressible
-[node-version-image]: https://img.shields.io/node/v/compressible.svg
-[node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://img.shields.io/travis/jshttp/compressible/master.svg
-[travis-url]: https://travis-ci.org/jshttp/compressible
-[coveralls-image]: https://img.shields.io/coveralls/jshttp/compressible/master.svg
+[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/compressible/master
 [coveralls-url]: https://coveralls.io/r/jshttp/compressible?branch=master
-[downloads-image]: https://img.shields.io/npm/dm/compressible.svg
-[downloads-url]: https://npmjs.org/package/compressible
+[node-version-image]: https://badgen.net/npm/node/compressible
+[node-version-url]: https://nodejs.org/en/download
+[npm-downloads-image]: https://badgen.net/npm/dm/compressible
+[npm-url]: https://npmjs.org/package/compressible
+[npm-version-image]: https://badgen.net/npm/v/compressible
+[travis-image]: https://badgen.net/travis/jshttp/compressible/master
+[travis-url]: https://travis-ci.org/jshttp/compressible

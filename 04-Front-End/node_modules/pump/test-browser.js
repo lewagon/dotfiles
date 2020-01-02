@@ -46,10 +46,14 @@ rs.on('end', function () {
   check()
 })
 
-pump(rs, toHex(), toHex(), toHex(), ws, function () {
+var res = pump(rs, toHex(), toHex(), toHex(), ws, function () {
   callbackCalled = true
   check()
 })
+
+if (res !== ws) {
+  throw new Error('should return last stream')
+}
 
 setTimeout(function () {
   rs.push(null)

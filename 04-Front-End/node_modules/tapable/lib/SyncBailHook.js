@@ -8,13 +8,14 @@ const Hook = require("./Hook");
 const HookCodeFactory = require("./HookCodeFactory");
 
 class SyncBailHookCodeFactory extends HookCodeFactory {
-	content({ onError, onResult, onDone, rethrowIfPossible }) {
+	content({ onError, onResult, resultReturns, onDone, rethrowIfPossible }) {
 		return this.callTapsSeries({
 			onError: (i, err) => onError(err),
 			onResult: (i, result, next) =>
 				`if(${result} !== undefined) {\n${onResult(
 					result
 				)};\n} else {\n${next()}}\n`,
+			resultReturns,
 			onDone,
 			rethrowIfPossible
 		});

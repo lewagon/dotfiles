@@ -75,11 +75,14 @@ var OnErrorResumeNextSubscriber = (function (_super) {
     };
     OnErrorResumeNextSubscriber.prototype.subscribeToNextSource = function () {
         var next = this.nextSources.shift();
-        if (next) {
+        if (!!next) {
             var innerSubscriber = new InnerSubscriber_1.InnerSubscriber(this, undefined, undefined);
             var destination = this.destination;
             destination.add(innerSubscriber);
-            subscribeToResult_1.subscribeToResult(this, next, undefined, undefined, innerSubscriber);
+            var innerSubscription = subscribeToResult_1.subscribeToResult(this, next, undefined, undefined, innerSubscriber);
+            if (innerSubscription !== innerSubscriber) {
+                destination.add(innerSubscription);
+            }
         }
         else {
             this.destination.complete();

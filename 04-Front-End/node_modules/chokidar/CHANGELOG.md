@@ -1,3 +1,30 @@
+# Chokidar 2.1.5 (Mar 22, 2019)
+* Revert 2.1.3 atomic writing changes.
+
+# Chokidar 2.1.4 (Mar 22, 2019)
+* Improve TypeScript type definitions for `on` method.
+
+# Chokidar 2.1.3 (Mar 22, 2019)
+* Improve atomic writes handling
+
+# Chokidar 2.1.2 (Feb 18, 2019)
+* Add TypeScript type definitions
+* More fixes for accessTime behavior (#800)
+
+# Chokidar 2.1.1 (Feb 8, 2019)
+* Handle simultaneous change of LastAccessTime and ModifiedTime (#793)
+
+# Chokidar 2.1.0 (Feb 5, 2019)
+* Ignore accessTime updates caused by read operations (#762).
+* Updated dependencies. Removed `lodash.debounce`.
+
+# Chokidar 2.0.4 (Jun 18, 2018)
+* Prevent watcher.close() from crashing (#730).
+
+# Chokidar 2.0.3 (Mar 22, 2018)
+* Fixes an issue that using fd = 0 is not closed in case
+Windows is used and a `EPERM` error is triggered.
+
 # Chokidar 2.0.2 (Feb 14, 2018)
 * Allow semver range updates for upath dependency
 

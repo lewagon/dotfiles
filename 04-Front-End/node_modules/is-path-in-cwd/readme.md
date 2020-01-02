@@ -1,19 +1,19 @@
 # is-path-in-cwd [![Build Status](https://travis-ci.org/sindresorhus/is-path-in-cwd.svg?branch=master)](https://travis-ci.org/sindresorhus/is-path-in-cwd)
 
-> Check if a path is in the [current working directory](http://en.wikipedia.org/wiki/Working_directory)
+> Check if a path is in the [current working directory](https://en.wikipedia.org/wiki/Working_directory)
 
 
 ## Install
 
-```sh
-$ npm install --save is-path-in-cwd
+```
+$ npm install is-path-in-cwd
 ```
 
 
 ## Usage
 
 ```js
-var isPathInCwd = require('is-path-in-cwd');
+const isPathInCwd = require('is-path-in-cwd');
 
 isPathInCwd('unicorn');
 //=> true
@@ -28,4 +28,4 @@ isPathInCwd('.');
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

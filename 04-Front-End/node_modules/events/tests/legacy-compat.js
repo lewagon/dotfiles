@@ -12,7 +12,5 @@ for (var i=0 ; i<fns.length ; ++i) {
 }
 
 if (!Array.isArray) {
-    Array.isArray = function(arr) {
-        return Object.prototype.toString.call(arr) === '[object Array]';
-    }
+    Array.isArray = require('isarray');
 }

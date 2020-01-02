@@ -22,59 +22,112 @@
 var common = require('./common');
 var assert = require('assert');
 var events = require('../');
-
-var after_checks = [];
-after(function() {
-  for (var i=0 ; i<after_checks.length ; ++i) {
-    after_checks[i]();
-  }
-});
+var test = require('tape');
 
 function expect(expected) {
   var actual = [];
-  after_checks.push(function() {
-    assert.deepEqual(actual.sort(), expected.sort());
+  test.onFinish(function() {
+    var sortedActual = actual.sort();
+    var sortedExpected = expected.sort();
+    assert.strictEqual(sortedActual.length, sortedExpected.length);
+    for (var index = 0; index < sortedActual.length; index++) {
+      var value = sortedActual[index];
+      assert.strictEqual(value, sortedExpected[index]);
+    }
   });
-
   function listener(name) {
-    actual.push(name)
+    actual.push(name);
   }
   return common.mustCall(listener, expected.length);
 }
 
-function listener() {}
+{
+  var ee = new events.EventEmitter();
+  var noop = common.mustNotCall();
+  ee.on('foo', noop);
+  ee.on('bar', noop);
+  ee.on('baz', noop);
+  ee.on('baz', noop);
+  var fooListeners = ee.listeners('foo');
+  var barListeners = ee.listeners('bar');
+  var bazListeners = ee.listeners('baz');
+  ee.on('removeListener', expect(['bar', 'baz', 'baz']));
+  ee.removeAllListeners('bar');
+  ee.removeAllListeners('baz');
 
-var e1 = new events.EventEmitter();
-e1.on('foo', listener);
-e1.on('bar', listener);
-e1.on('baz', listener);
-e1.on('baz', listener);
-var fooListeners = e1.listeners('foo');
-var barListeners = e1.listeners('bar');
-var bazListeners = e1.listeners('baz');
-e1.on('removeListener', expect(['bar', 'baz', 'baz']));
-e1.removeAllListeners('bar');
-e1.removeAllListeners('baz');
-assert.deepEqual(e1.listeners('foo'), [listener]);
-assert.deepEqual(e1.listeners('bar'), []);
-assert.deepEqual(e1.listeners('baz'), []);
-// after calling removeAllListeners,
-// the old listeners array should stay unchanged
-assert.deepEqual(fooListeners, [listener]);
-assert.deepEqual(barListeners, [listener]);
-assert.deepEqual(bazListeners, [listener, listener]);
-// after calling removeAllListeners,
-// new listeners arrays are different from the old
-assert.notEqual(e1.listeners('bar'), barListeners);
-assert.notEqual(e1.listeners('baz'), bazListeners);
+  var listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 1);
+  assert.strictEqual(listeners[0], noop);
 
-var e2 = new events.EventEmitter();
-e2.on('foo', listener);
-e2.on('bar', listener);
-// expect LIFO order
-e2.on('removeListener', expect(['foo', 'bar', 'removeListener']));
-e2.on('removeListener', expect(['foo', 'bar']));
-e2.removeAllListeners();
-console.error(e2);
-assert.deepEqual([], e2.listeners('foo'));
-assert.deepEqual([], e2.listeners('bar'));
+  listeners = ee.listeners('bar');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 0);
+  listeners = ee.listeners('baz');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 0);
+  // After calling removeAllListeners(),
+  // the old listeners array should stay unchanged.
+  assert.strictEqual(fooListeners.length, 1);
+  assert.strictEqual(fooListeners[0], noop);
+  assert.strictEqual(barListeners.length, 1);
+  assert.strictEqual(barListeners[0], noop);
+  assert.strictEqual(bazListeners.length, 2);
+  assert.strictEqual(bazListeners[0], noop);
+  assert.strictEqual(bazListeners[1], noop);
+  // After calling removeAllListeners(),
+  // new listeners arrays is different from the old.
+  assert.notStrictEqual(ee.listeners('bar'), barListeners);
+  assert.notStrictEqual(ee.listeners('baz'), bazListeners);
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee.on('foo', common.mustNotCall());
+  ee.on('bar', common.mustNotCall());
+  // Expect LIFO order
+  ee.on('removeListener', expect(['foo', 'bar', 'removeListener']));
+  ee.on('removeListener', expect(['foo', 'bar']));
+  ee.removeAllListeners();
+
+  var listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 0);
+  listeners = ee.listeners('bar');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 0);
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee.on('removeListener', common.mustNotCall());
+  // Check for regression where removeAllListeners() throws when
+  // there exists a 'removeListener' listener, but there exists
+  // no listeners for the provided event type.
+  assert.doesNotThrow(function () { ee.removeAllListeners(ee, 'foo') });
+}
+
+{
+  var ee = new events.EventEmitter();
+  var expectLength = 2;
+  ee.on('removeListener', function() {
+    assert.strictEqual(expectLength--, this.listeners('baz').length);
+  });
+  ee.on('baz', common.mustNotCall());
+  ee.on('baz', common.mustNotCall());
+  ee.on('baz', common.mustNotCall());
+  assert.strictEqual(ee.listeners('baz').length, expectLength + 1);
+  ee.removeAllListeners('baz');
+  assert.strictEqual(ee.listeners('baz').length, 0);
+}
+
+{
+  var ee = new events.EventEmitter();
+  assert.strictEqual(ee, ee.removeAllListeners());
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee._events = undefined;
+  assert.strictEqual(ee, ee.removeAllListeners());
+}

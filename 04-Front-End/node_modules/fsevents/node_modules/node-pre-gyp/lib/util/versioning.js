@@ -192,7 +192,7 @@ var required_parameters = [
     'host'
 ];
 
-function validate_config(package_json) {
+function validate_config(package_json,opts) {
     var msg = package_json.name + ' package.json is not node-pre-gyp ready:\n';
     var missing = [];
     if (!package_json.main) {
@@ -226,7 +226,7 @@ function validate_config(package_json) {
             throw new Error("'host' protocol ("+protocol+") is invalid - only 'https:' is accepted");
         }
     }
-    napi.validate_package_json(package_json);
+    napi.validate_package_json(package_json,opts);
 }
 
 module.exports.validate_config = validate_config;
@@ -276,7 +276,7 @@ var default_remote_path = '';
 
 module.exports.evaluate = function(package_json,options,napi_build_version) {
     options = options || {};
-    validate_config(package_json);
+    validate_config(package_json,options); // options is a suitable substitute for opts in this case
     var v = package_json.version;
     var module_version = semver.parse(v);
     var runtime = options.runtime || get_process_runtime(process.versions);
@@ -293,9 +293,10 @@ module.exports.evaluate = function(package_json,options,napi_build_version) {
         patch: module_version.patch,
         runtime: runtime,
         node_abi: get_runtime_abi(runtime,options.target),
-        node_abi_napi: napi.get_napi_version() ? 'napi' : get_runtime_abi(runtime,options.target),
-        napi_version: napi.get_napi_version(), // non-zero numeric, undefined if unsupported
-        napi_build_version: napi_build_version, // undefined if not specified
+        node_abi_napi: napi.get_napi_version(options.target) ? 'napi' : get_runtime_abi(runtime,options.target),
+        napi_version: napi.get_napi_version(options.target), // non-zero numeric, undefined if unsupported
+        napi_build_version: napi_build_version || '',
+        node_napi_label: napi_build_version ? 'napi-v' + napi_build_version : get_runtime_abi(runtime,options.target),
         target: options.target || '',
         platform: options.target_platform || process.platform,
         target_platform: options.target_platform || process.platform,

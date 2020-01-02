@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.1"></a>
+## [6.0.1](https://github.com/zkat/ssri/compare/v6.0.0...v6.0.1) (2018-08-27)
+
+
+### Bug Fixes
+
+* **opts:** use figgy-pudding to specify consumed opts ([cf86553](https://github.com/zkat/ssri/commit/cf86553))
+
+
+
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/zkat/ssri/compare/v5.3.0...v6.0.0) (2018-04-09)
+
+
+### Bug Fixes
+
+* **docs:** minor typo ([b71ef17](https://github.com/zkat/ssri/commit/b71ef17))
+
+
+### meta
+
+* drop support for node@4 ([d9bf359](https://github.com/zkat/ssri/commit/d9bf359))
+
+
+### BREAKING CHANGES
+
+* node@4 is no longer supported
+
+
+
 <a name="5.3.0"></a>
 # [5.3.0](https://github.com/zkat/ssri/compare/v5.2.4...v5.3.0) (2018-03-13)
 

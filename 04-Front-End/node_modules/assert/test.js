@@ -179,7 +179,7 @@ function tests (assert, what) {
       throw new errorConstructor('test');
     }
 
-    test('assert - Testing the throwing', function () {
+    test('assert - testing the throwing', function () {
       var aethrow = makeBlock(thrower, assert.AssertionError);
       aethrow = makeBlock(thrower, assert.AssertionError);
 
@@ -247,11 +247,11 @@ function tests (assert, what) {
       assert.ok(threw, 'wrong constructor validation');
     });
 
-    test('assert -  use a RegExp to validate error message', function () {
+    test('assert - use a RegExp to validate error message', function () {
       assert.throws(makeBlock(thrower, TypeError), /test/);
     });
 
-    test('assert - se a fn to validate error object', function () {
+    test('assert - use a fn to validate error object', function () {
       assert.throws(makeBlock(thrower, TypeError), function(err) {
         if ((err instanceof TypeError) && /test/.test(err)) {
           return true;
@@ -259,7 +259,7 @@ function tests (assert, what) {
       });
     });
 
-    test('assert - Make sure deepEqual doesn\'t loop forever on circular refs', function () {
+    test('assert - make sure deepEqual doesn\'t loop forever on circular refs', function () {
       var b = {};
       b.b = b;
 
@@ -276,7 +276,7 @@ function tests (assert, what) {
       assert.ok(gotError || !equal, gotError ? 'got error': 'are equal');
     });
 
-    test('assert - Ensure reflexivity of deepEqual with `arguments` objects', function() {
+    test('assert - ensure reflexivity of deepEqual with `arguments` objects', function() {
         var args = (function() { return arguments; })();
         assert.throws(makeBlock(assert.deepEqual, [], args), assert.AssertionError);
         assert.throws(makeBlock(assert.deepEqual, args, []), assert.AssertionError);
@@ -341,5 +341,20 @@ function tests (assert, what) {
       } catch (e) {
         assert.equal(e.toString().split('\n')[0], 'AssertionError: oh no');
       }
+    });
+
+    test('assert - strict mode', function () {
+      var assertStrict = assert.strict;
+
+      assertStrict.throws(makeBlock(assertStrict.equal, 1, true), assertStrict.AssertionError);
+      assertStrict.notEqual(0, false);
+      assertStrict.throws(makeBlock(assertStrict.deepEqual, 1, true), assertStrict.AssertionError);
+      assertStrict.notDeepEqual(0, false);
+      assertStrict.equal(assertStrict.strict, assertStrict.strict.strict);
+      assertStrict.equal(assertStrict.equal, assertStrict.strictEqual);
+      assertStrict.equal(assertStrict.deepEqual, assertStrict.deepStrictEqual);
+      assertStrict.equal(assertStrict.notEqual, assertStrict.notStrictEqual);
+      assertStrict.equal(assertStrict.notDeepEqual, assertStrict.notDeepStrictEqual);
+      assertStrict.equal(Object.keys(assertStrict).length, Object.keys(assert).length);
     });
 }

@@ -1,15 +1,14 @@
-# Chokidar [![Mac/Linux Build Status](https://img.shields.io/travis/paulmillr/chokidar/master.svg?label=Mac%20OSX%20%26%20Linux)](https://travis-ci.org/paulmillr/chokidar) [![Windows Build status](https://img.shields.io/appveyor/ci/paulmillr/chokidar/master.svg?label=Windows)](https://ci.appveyor.com/project/paulmillr/chokidar/branch/master) [![Coverage Status](https://coveralls.io/repos/paulmillr/chokidar/badge.svg)](https://coveralls.io/r/paulmillr/chokidar) [![Join the chat at https://gitter.im/paulmillr/chokidar](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/paulmillr/chokidar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Chokidar [![Weekly downloads](https://img.shields.io/npm/dw/chokidar.svg)](https://github.com/paulmillr/chokidar) [![Yearly downloads](https://img.shields.io/npm/dy/chokidar.svg)](https://github.com/paulmillr/chokidar) [![Mac/Linux Build Status](https://img.shields.io/travis/paulmillr/chokidar/master.svg?label=Mac%20OSX%20%26%20Linux)](https://travis-ci.org/paulmillr/chokidar) [![Windows Build status](https://img.shields.io/appveyor/ci/paulmillr/chokidar/master.svg?label=Windows)](https://ci.appveyor.com/project/paulmillr/chokidar/branch/master) [![Coverage Status](https://coveralls.io/repos/paulmillr/chokidar/badge.svg)](https://coveralls.io/r/paulmillr/chokidar)
 
-> A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.
+> A neat wrapper around node.js fs.watch / fs.watchFile / FSEvents.
 
-[![NPM](https://nodei.co/npm-dl/chokidar.png)](https://nodei.co/npm/chokidar/)
-[![NPM](https://nodei.co/npm/chokidar.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/chokidar/)
+[![NPM](https://nodei.co/npm/chokidar.png)](https://www.npmjs.com/package/chokidar)
 
 ## Why?
 Node.js `fs.watch`:
 
-* Doesn't report filenames on OS X.
-* Doesn't report events at all when using editors like Sublime on OS X.
+* Doesn't report filenames on MacOS.
+* Doesn't report events at all when using editors like Sublime on MacOS.
 * Often reports events twice.
 * Emits most changes as `rename`.
 * Has [a lot of other issues](https://github.com/nodejs/node/search?q=fs.watch&type=Issues)
@@ -23,7 +22,7 @@ Node.js `fs.watchFile`:
 
 Chokidar resolves these problems.
 
-Initially made for [brunch](http://brunch.io) (an ultra-swift web app build tool), it is now used in
+Initially made for **[Brunch](http://brunch.io)** (an ultra-swift web app build tool), it is now used in
 [gulp](https://github.com/gulpjs/gulp/),
 [karma](http://karma-runner.github.io),
 [PM2](https://github.com/Unitech/PM2),
@@ -39,7 +38,7 @@ Chokidar does still rely on the Node.js core `fs` module, but when using
 `fs.watch` and `fs.watchFile` for watching, it normalizes the events it
 receives, often checking for truth by getting file stats and/or dir contents.
 
-On Mac OS X, chokidar by default uses a native extension exposing the Darwin
+On MacOS, chokidar by default uses a native extension exposing the Darwin
 `FSEvents` API. This provides very efficient recursive watching compared with
 implementations like `kqueue` available on most \*nix platforms. Chokidar still
 does have to do some work to normalize the events received that way as well.
@@ -53,7 +52,9 @@ more than needed.
 ## Getting started
 Install with npm:
 
-    npm install chokidar --save
+```sh
+npm install chokidar
+```
 
 Then `require` and use it in your code:
 
@@ -179,19 +180,19 @@ Whether to use fs.watchFile (backed by polling), or fs.watch. If polling
 leads to high CPU utilization, consider setting this to `false`. It is
 typically necessary to **set this to `true` to successfully watch files over
 a network**, and it may be necessary to successfully watch files in other
-non-standard situations. Setting to `true` explicitly on OS X overrides the
+non-standard situations. Setting to `true` explicitly on MacOS overrides the
 `useFsEvents` default. You may also set the CHOKIDAR_USEPOLLING env variable
 to true (1) or false (0) in order to override this option.
 * _Polling-specific settings_ (effective when `usePolling: true`)
-  * `interval` (default: `100`). Interval of file system polling. You may also 
+  * `interval` (default: `100`). Interval of file system polling. You may also
     set the CHOKIDAR_INTERVAL env variable to override this option.
   * `binaryInterval` (default: `300`). Interval of file system
   polling for binary files.
   ([see list of binary extensions](https://github.com/sindresorhus/binary-extensions/blob/master/binary-extensions.json))
-* `useFsEvents` (default: `true` on OS X). Whether to use the
+* `useFsEvents` (default: `true` on MacOS). Whether to use the
 `fsevents` watching interface if available. When set to `true` explicitly
 and `fsevents` is available this supercedes the `usePolling` setting. When
-set to `false` on OS X, `usePolling: true` becomes the default.
+set to `false` on MacOS, `usePolling: true` becomes the default.
 * `alwaysStat` (default: `false`). If relying upon the
 [`fs.Stats`](http://nodejs.org/api/fs.html#fs_class_fs_stats)
 object that may get passed with `add`, `addDir`, and `change` events, set
@@ -272,7 +273,7 @@ execute a command on each change, or get a stdio stream of change events.
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Paul Miller (http://paulmillr.com) & Elan Shanker
+Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com) & Elan Shanker
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal

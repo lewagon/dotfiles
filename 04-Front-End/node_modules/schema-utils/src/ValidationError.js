@@ -1,5 +1,6 @@
 /* eslint-disable
-  strict
+  strict,
+  no-param-reassign
 */
 
 'use strict';
@@ -12,11 +13,15 @@ class ValidationError extends Error {
 
     this.message = `${name || ''} Invalid Options\n\n`;
 
-    errors.forEach((err) => {
-      this.message += `options${err.dataPath} ${err.message}\n`;
+    this.errors = errors.map((err) => {
+      err.dataPath = err.dataPath.replace(/\//g, '.');
+
+      return err;
     });
 
-    this.errors = errors;
+    this.errors.forEach((err) => {
+      this.message += `options${err.dataPath} ${err.message}\n`;
+    });
 
     Error.captureStackTrace(this, this.constructor);
   }

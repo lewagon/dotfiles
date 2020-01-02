@@ -12,10 +12,12 @@ module.exports = function diffOperations(actual, expected, expectedMissing) {
 	forEach(actualKeys, function (op) {
 		if (!(op in expected)) {
 			extra.push(op);
+		} else if (expectedMissing.indexOf(op) !== -1) {
+			extra.push(op);
 		}
 	});
 	forEach(expectedKeys, function (op) {
-		if (!(op in actual) && expectedMissing.indexOf(op) === -1) {
+		if (typeof actual[op] !== 'function' && expectedMissing.indexOf(op) === -1) {
 			missing.push(op);
 		}
 	});

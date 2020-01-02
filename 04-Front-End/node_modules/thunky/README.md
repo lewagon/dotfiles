@@ -76,6 +76,22 @@ fails(function (err) { // inner function is called again as it returned an error
 })
 ```
 
+## Promise version
+
+A promise version is available as well
+
+``` js
+var thunkyp = require('thunky/promise')
+
+var ready = thunkyp(async function () {
+  // ... do async stuff
+  return 42
+})
+
+// same semantics as the callback version
+await ready()
+```
+
 ## License
 
 MIT

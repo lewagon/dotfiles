@@ -76,7 +76,7 @@ Parser.prototype.execute = function execute (buffer, callback) {
 Parser.prototype.executePartial = function executePartial (buffer, callback) {
   var header = this.pendingHeader
 
-  assert.equal(header.flags & constants.flags.PADDED, 0)
+  assert.strictEqual(header.flags & constants.flags.PADDED, 0)
 
   if (this.window) { this.window.recv.update(-buffer.size) }
 
@@ -93,7 +93,7 @@ Parser.prototype.executePartial = function executePartial (buffer, callback) {
 Parser.prototype.onPreface = function onPreface (buffer, callback) {
   if (buffer.take(buffer.size).toString() !== constants.PREFACE) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid preface'))
+      'Invalid preface'))
   }
 
   this.skipPreface()
@@ -111,7 +111,7 @@ Parser.prototype.onFrameHead = function onFrameHead (buffer, callback) {
 
   if (header.length > this.maxFrameSize) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'Frame length OOB'))
+      'Frame length OOB'))
   }
 
   header.control = header.type !== constants.frameType.DATA
@@ -162,7 +162,7 @@ Parser.prototype.onFrameBody = function onFrameBody (header, buffer, callback) {
 Parser.prototype.onUnknownFrame = function onUnknownFrame (header, buffer, callback) {
   if (this._lastHeaderBlock !== null) {
     callback(this.error(constants.error.PROTOCOL_ERROR,
-                        'Received unknown frame in the middle of a header block'))
+      'Received unknown frame in the middle of a header block'))
     return
   }
   callback(null, { type: 'unknown: ' + header.type })
@@ -175,13 +175,13 @@ Parser.prototype.unpadData = function unpadData (header, body, callback) {
 
   if (!body.has(1)) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'Not enough space for padding'))
+      'Not enough space for padding'))
   }
 
   var pad = body.readUInt8()
   if (!body.has(pad)) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid padding size'))
+      'Invalid padding size'))
   }
 
   var contents = body.clone(body.size - pad)
@@ -194,7 +194,7 @@ Parser.prototype.onDataFrame = function onDataFrame (header, body, callback) {
 
   if (header.id === 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Received DATA frame with stream=0'))
+      'Received DATA frame with stream=0'))
   }
 
   // Count received bytes
@@ -217,12 +217,12 @@ Parser.prototype.onDataFrame = function onDataFrame (header, body, callback) {
 }
 
 Parser.prototype.initHeaderBlock = function initHeaderBlock (header,
-                                                            frame,
-                                                            block,
-                                                            callback) {
+  frame,
+  block,
+  callback) {
   if (this._lastHeaderBlock) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Duplicate Stream ID'))
+      'Duplicate Stream ID'))
   }
 
   this._lastHeaderBlock = {
@@ -236,13 +236,13 @@ Parser.prototype.initHeaderBlock = function initHeaderBlock (header,
 }
 
 Parser.prototype.queueHeaderBlock = function queueHeaderBlock (header,
-                                                              block,
-                                                              callback) {
+  block,
+  callback) {
   var self = this
   var item = this._lastHeaderBlock
   if (!this._lastHeaderBlock || item.id !== header.id) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'No matching stream for continuation'))
+      'No matching stream for continuation'))
   }
 
   var fin = (header.flags & constants.flags.END_HEADERS) !== 0
@@ -256,7 +256,7 @@ Parser.prototype.queueHeaderBlock = function queueHeaderBlock (header,
 
   if (item.size >= self.maxHeaderListSize) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Compressed header list is too large'))
+      'Compressed header list is too large'))
   }
 
   if (!fin) { return callback(null, null) }
@@ -265,7 +265,7 @@ Parser.prototype.queueHeaderBlock = function queueHeaderBlock (header,
   this.decompress.write(item.queue, function (err, chunks) {
     if (err) {
       return callback(self.error(constants.error.COMPRESSION_ERROR,
-                                 err.message))
+        err.message))
     }
 
     var headers = {}
@@ -276,12 +276,12 @@ Parser.prototype.queueHeaderBlock = function queueHeaderBlock (header,
       size += header.name.length + header.value.length + 32
       if (size >= self.maxHeaderListSize) {
         return callback(self.error(constants.error.PROTOCOL_ERROR,
-                                   'Header list is too large'))
+          'Header list is too large'))
       }
 
       if (/[A-Z]/.test(header.name)) {
         return callback(self.error(constants.error.PROTOCOL_ERROR,
-                                   'Header name must be lowercase'))
+          'Header name must be lowercase'))
       }
 
       utils.addHeaderLine(header.name, header.value, headers)
@@ -295,13 +295,13 @@ Parser.prototype.queueHeaderBlock = function queueHeaderBlock (header,
 }
 
 Parser.prototype.onHeadersFrame = function onHeadersFrame (header,
-                                                          body,
-                                                          callback) {
+  body,
+  callback) {
   var self = this
 
   if (header.id === 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid stream id for HEADERS'))
+      'Invalid stream id for HEADERS'))
   }
 
   this.unpadData(header, body, function (err, data) {
@@ -310,7 +310,7 @@ Parser.prototype.onHeadersFrame = function onHeadersFrame (header,
     var isPriority = (header.flags & constants.flags.PRIORITY) !== 0
     if (!data.has(isPriority ? 5 : 0)) {
       return callback(self.error(constants.error.FRAME_SIZE_ERROR,
-                                 'Not enough data for HEADERS'))
+        'Not enough data for HEADERS'))
     }
 
     var exclusive = false
@@ -327,7 +327,7 @@ Parser.prototype.onHeadersFrame = function onHeadersFrame (header,
 
     if (dependency === header.id) {
       return callback(self.error(constants.error.PROTOCOL_ERROR,
-                                 'Stream can\'t dependend on itself'))
+        'Stream can\'t dependend on itself'))
     }
 
     var streamInfo = {
@@ -349,20 +349,20 @@ Parser.prototype.onHeadersFrame = function onHeadersFrame (header,
 }
 
 Parser.prototype.onContinuationFrame = function onContinuationFrame (header,
-                                                                    body,
-                                                                    callback) {
+  body,
+  callback) {
   this.queueHeaderBlock(header, body, callback)
 }
 
 Parser.prototype.onRSTFrame = function onRSTFrame (header, body, callback) {
   if (body.size !== 4) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'RST_STREAM length not 4'))
+      'RST_STREAM length not 4'))
   }
 
   if (header.id === 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid stream id for RST_STREAM'))
+      'Invalid stream id for RST_STREAM'))
   }
 
   callback(null, {
@@ -377,38 +377,38 @@ Parser.prototype._validateSettings = function _validateSettings (settings) {
       settings['enable_push'] !== 0 &&
       settings['enable_push'] !== 1) {
     return this.error(constants.error.PROTOCOL_ERROR,
-                      'SETTINGS_ENABLE_PUSH must be 0 or 1')
+      'SETTINGS_ENABLE_PUSH must be 0 or 1')
   }
 
   if (settings['initial_window_size'] !== undefined &&
       (settings['initial_window_size'] > constants.MAX_INITIAL_WINDOW_SIZE ||
        settings['initial_window_size'] < 0)) {
     return this.error(constants.error.FLOW_CONTROL_ERROR,
-                      'SETTINGS_INITIAL_WINDOW_SIZE is OOB')
+      'SETTINGS_INITIAL_WINDOW_SIZE is OOB')
   }
 
   if (settings['max_frame_size'] !== undefined &&
       (settings['max_frame_size'] > constants.ABSOLUTE_MAX_FRAME_SIZE ||
        settings['max_frame_size'] < constants.INITIAL_MAX_FRAME_SIZE)) {
     return this.error(constants.error.PROTOCOL_ERROR,
-                      'SETTINGS_MAX_FRAME_SIZE is OOB')
+      'SETTINGS_MAX_FRAME_SIZE is OOB')
   }
 
   return undefined
 }
 
 Parser.prototype.onSettingsFrame = function onSettingsFrame (header,
-                                                            body,
-                                                            callback) {
+  body,
+  callback) {
   if (header.id !== 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid stream id for SETTINGS'))
+      'Invalid stream id for SETTINGS'))
   }
 
   var isAck = (header.flags & constants.flags.ACK) !== 0
   if (isAck && body.size !== 0) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'SETTINGS with ACK and non-zero length'))
+      'SETTINGS with ACK and non-zero length'))
   }
 
   if (isAck) {
@@ -417,7 +417,7 @@ Parser.prototype.onSettingsFrame = function onSettingsFrame (header,
 
   if (body.size % 6 !== 0) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'SETTINGS length not multiple of 6'))
+      'SETTINGS length not multiple of 6'))
   }
 
   var settings = {}
@@ -443,11 +443,11 @@ Parser.prototype.onSettingsFrame = function onSettingsFrame (header,
 }
 
 Parser.prototype.onPushPromiseFrame = function onPushPromiseFrame (header,
-                                                                  body,
-                                                                  callback) {
+  body,
+  callback) {
   if (header.id === 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid stream id for PUSH_PROMISE'))
+      'Invalid stream id for PUSH_PROMISE'))
   }
 
   var self = this
@@ -458,7 +458,7 @@ Parser.prototype.onPushPromiseFrame = function onPushPromiseFrame (header,
 
     if (!data.has(4)) {
       return callback(self.error(constants.error.FRAME_SIZE_ERROR,
-                                 'PUSH_PROMISE length less than 4'))
+        'PUSH_PROMISE length less than 4'))
     }
 
     var streamInfo = {
@@ -477,12 +477,12 @@ Parser.prototype.onPushPromiseFrame = function onPushPromiseFrame (header,
 Parser.prototype.onPingFrame = function onPingFrame (header, body, callback) {
   if (body.size !== 8) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'PING length != 8'))
+      'PING length != 8'))
   }
 
   if (header.id !== 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid stream id for PING'))
+      'Invalid stream id for PING'))
   }
 
   var ack = (header.flags & constants.flags.ACK) !== 0
@@ -490,16 +490,16 @@ Parser.prototype.onPingFrame = function onPingFrame (header, body, callback) {
 }
 
 Parser.prototype.onGoawayFrame = function onGoawayFrame (header,
-                                                        body,
-                                                        callback) {
+  body,
+  callback) {
   if (!body.has(8)) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'GOAWAY length < 8'))
+      'GOAWAY length < 8'))
   }
 
   if (header.id !== 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid stream id for GOAWAY'))
+      'Invalid stream id for GOAWAY'))
   }
 
   var frame = {
@@ -514,16 +514,16 @@ Parser.prototype.onGoawayFrame = function onGoawayFrame (header,
 }
 
 Parser.prototype.onPriorityFrame = function onPriorityFrame (header,
-                                                            body,
-                                                            callback) {
+  body,
+  callback) {
   if (body.size !== 5) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'PRIORITY length != 5'))
+      'PRIORITY length != 5'))
   }
 
   if (header.id === 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid stream id for PRIORITY'))
+      'Invalid stream id for PRIORITY'))
   }
 
   var dependency = body.readUInt32BE()
@@ -533,7 +533,7 @@ Parser.prototype.onPriorityFrame = function onPriorityFrame (header,
 
   if (dependency === header.id) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Stream can\'t dependend on itself'))
+      'Stream can\'t dependend on itself'))
   }
 
   callback(null, {
@@ -548,17 +548,17 @@ Parser.prototype.onPriorityFrame = function onPriorityFrame (header,
 }
 
 Parser.prototype.onWindowUpdateFrame = function onWindowUpdateFrame (header,
-                                                                    body,
-                                                                    callback) {
+  body,
+  callback) {
   if (body.size !== 4) {
     return callback(this.error(constants.error.FRAME_SIZE_ERROR,
-                               'WINDOW_UPDATE length != 4'))
+      'WINDOW_UPDATE length != 4'))
   }
 
   var delta = body.readInt32BE()
   if (delta === 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'WINDOW_UPDATE delta == 0'))
+      'WINDOW_UPDATE delta == 0'))
   }
 
   callback(null, {
@@ -569,8 +569,8 @@ Parser.prototype.onWindowUpdateFrame = function onWindowUpdateFrame (header,
 }
 
 Parser.prototype.onXForwardedFrame = function onXForwardedFrame (header,
-                                                                body,
-                                                                callback) {
+  body,
+  callback) {
   callback(null, {
     type: 'X_FORWARDED_FOR',
     host: body.take(body.size).toString()

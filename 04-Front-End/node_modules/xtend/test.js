@@ -81,3 +81,23 @@ test("null prototype mutable", function (assert) {
     assert.equal(a.bar, "baz")
     assert.end()
 })
+
+test("prototype pollution", function (assert) {
+    var a = {}
+    var maliciousPayload = '{"__proto__":{"oops":"It works!"}}'
+
+    assert.strictEqual(a.oops, undefined)
+    extend({}, maliciousPayload)
+    assert.strictEqual(a.oops, undefined)
+    assert.end()
+})
+
+test("prototype pollution mutable", function (assert) {
+    var a = {}
+    var maliciousPayload = '{"__proto__":{"oops":"It works!"}}'
+
+    assert.strictEqual(a.oops, undefined)
+    mutableExtend({}, maliciousPayload)
+    assert.strictEqual(a.oops, undefined)
+    assert.end()
+})

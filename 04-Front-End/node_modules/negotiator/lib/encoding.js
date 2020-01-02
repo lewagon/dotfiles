@@ -74,8 +74,8 @@ function parseEncoding(str, i) {
   var q = 1;
   if (match[2]) {
     var params = match[2].split(';');
-    for (var i = 0; i < params.length; i ++) {
-      var p = params[i].trim().split('=');
+    for (var j = 0; j < params.length; j++) {
+      var p = params[j].trim().split('=');
       if (p[0] === 'q') {
         q = parseFloat(p[1]);
         break;

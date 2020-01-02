@@ -2,7 +2,7 @@
 exports.__esModule = true
 
 
-const pattern = /(^|;)\s*(export|import)((\s+\w)|(\s*[{*]))/m
+const pattern = /(^|;)\s*(export|import)((\s+\w)|(\s*[{*=]))/m
 /**
  * detect possible imports/exports without a full parse.
  *
@@ -18,7 +18,7 @@ exports.test = function isMaybeUnambiguousModule(content) {
 }
 
 // future-/Babel-proof at the expense of being a little loose
-const unambiguousNodeType = /^(Exp|Imp)ort.*Declaration$/
+const unambiguousNodeType = /^(?:(?:Exp|Imp)ort.*Declaration|TSExportAssignment)$/
 
 /**
  * Given an AST, return true if the AST unambiguously represents a module.

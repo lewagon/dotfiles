@@ -94,6 +94,7 @@ proto._getCreateSocket = function _getCreateSocket () {
 }
 
 proto._connect = function _connect (options, callback) {
+  var self = this
   var state = this._spdyState
 
   var protocols = state.options.protocols || [
@@ -142,6 +143,11 @@ proto._connect = function _connect (options, callback) {
       protocol: /spdy/.test(protocol) ? 'spdy' : 'http2',
       isServer: false
     }, state.options.connection || {}))
+
+    // Pass connection level errors are passed to the agent.
+    connection.on('error', function (err) {
+      self.emit('error', err)
+    })
 
     // Set version when we are certain
     if (protocol === 'h2') {

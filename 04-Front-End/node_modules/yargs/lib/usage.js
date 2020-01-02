@@ -161,13 +161,7 @@ module.exports = function usage (yargs, y18n) {
     keys = keys.concat(Object.keys(demandedOptions))
     keys = keys.concat(Object.keys(demandedCommands))
     keys = keys.concat(Object.keys(options.default))
-    keys = keys.filter(key => {
-      if (options.hiddenOptions.indexOf(key) < 0) {
-        return true
-      } else if (yargs.parsed.argv[options.showHiddenOpt]) {
-        return true
-      }
-    })
+    keys = keys.filter(filterHiddenOptions)
     keys = Object.keys(keys.reduce((acc, key) => {
       if (key !== '_') acc[key] = true
       return acc
@@ -251,17 +245,19 @@ module.exports = function usage (yargs, y18n) {
     Object.keys(groups).forEach((groupName) => {
       if (!groups[groupName].length) return
 
-      ui.div(__(groupName))
-
       // if we've grouped the key 'f', but 'f' aliases 'foobar',
       // normalizedKeys should contain only 'foobar'.
-      const normalizedKeys = groups[groupName].map((key) => {
+      const normalizedKeys = groups[groupName].filter(filterHiddenOptions).map((key) => {
         if (~aliasKeys.indexOf(key)) return key
         for (let i = 0, aliasKey; (aliasKey = aliasKeys[i]) !== undefined; i++) {
           if (~(options.alias[aliasKey] || []).indexOf(key)) return aliasKey
         }
         return key
       })
+
+      if (normalizedKeys.length < 1) return
+
+      ui.div(__(groupName))
 
       // actually generate the switches string --foo, -f, --bar.
       const switches = normalizedKeys.reduce((acc, key) => {
@@ -418,6 +414,10 @@ module.exports = function usage (yargs, y18n) {
       }
     })
     return groupedKeys
+  }
+
+  function filterHiddenOptions (key) {
+    return yargs.getOptions().hiddenOptions.indexOf(key) < 0 || yargs.parsed.argv[yargs.getOptions().showHiddenOpt]
   }
 
   self.showHelp = (level) => {

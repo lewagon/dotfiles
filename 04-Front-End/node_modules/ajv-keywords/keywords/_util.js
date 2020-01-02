@@ -4,7 +4,7 @@ module.exports = {
   metaSchemaRef: metaSchemaRef
 };
 
-var META_SCHEMA_ID = 'http://json-schema.org/draft-06/schema';
+var META_SCHEMA_ID = 'http://json-schema.org/draft-07/schema';
 
 function metaSchemaRef(ajv) {
   var defaultMeta = ajv._opts.defaultMeta;

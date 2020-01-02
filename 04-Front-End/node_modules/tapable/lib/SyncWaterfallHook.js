@@ -8,7 +8,7 @@ const Hook = require("./Hook");
 const HookCodeFactory = require("./HookCodeFactory");
 
 class SyncWaterfallHookCodeFactory extends HookCodeFactory {
-	content({ onError, onResult, onDone, rethrowIfPossible }) {
+	content({ onError, onResult, resultReturns, rethrowIfPossible }) {
 		return this.callTapsSeries({
 			onError: (i, err) => onError(err),
 			onResult: (i, result, next) => {
@@ -20,6 +20,7 @@ class SyncWaterfallHookCodeFactory extends HookCodeFactory {
 				return code;
 			},
 			onDone: () => onResult(this._args[0]),
+			doneReturns: resultReturns,
 			rethrowIfPossible
 		});
 	}

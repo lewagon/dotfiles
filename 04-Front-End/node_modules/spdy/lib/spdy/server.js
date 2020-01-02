@@ -10,7 +10,6 @@ var selectHose = require('select-hose')
 var transport = require('spdy-transport')
 var debug = require('debug')('spdy:server')
 var EventEmitter = require('events').EventEmitter
-var Buffer = require('safe-buffer').Buffer
 
 // Node.js 0.8, 0.10 and 0.12 support
 Object.assign = process.versions.modules >= 46

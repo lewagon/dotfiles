@@ -9,7 +9,7 @@ module.exports = function defFunc(ajv) {
       var schemas = [];
       for (var pointer in schema)
         schemas.push(getSchema(pointer, schema[pointer]));
-      return { 'allOf': schemas };
+      return {'allOf': schemas};
     },
     metaSchema: {
       type: 'object',

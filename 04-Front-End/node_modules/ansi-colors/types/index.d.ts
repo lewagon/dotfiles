@@ -133,8 +133,8 @@ export const bgMagentaBright: StyleFunction;
 export const bgCyanBright: StyleFunction;
 export const bgWhiteBright: StyleFunction;
 
-export const enabled: boolean;
-export const visible: boolean;
+export let enabled: boolean;
+export let visible: boolean;
 export const ansiRegex: RegExp;
 
 /**

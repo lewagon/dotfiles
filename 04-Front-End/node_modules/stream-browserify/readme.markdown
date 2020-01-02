@@ -2,7 +2,7 @@
 
 the stream module from node core, for browsers!
 
-[![build status](https://secure.travis-ci.org/substack/stream-browserify.svg)](http://travis-ci.org/substack/stream-browserify)
+[![build status](https://secure.travis-ci.org/browserify/stream-browserify.svg)](http://travis-ci.org/browserify/stream-browserify)
 
 # methods
 

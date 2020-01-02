@@ -251,8 +251,8 @@ var x509CertificateValidator = {
       constructed: true,
       captureAsn1: 'certSubject'
     },
-      // SubjectPublicKeyInfo
-      publicKeyValidator,
+    // SubjectPublicKeyInfo
+    publicKeyValidator,
     {
       // issuerUniqueID (optional)
       name: 'Certificate.TBSCertificate.issuerUniqueID',
@@ -464,32 +464,33 @@ var certificationRequestValidator = {
   captureAsn1: 'csr',
   value: [
     certificationRequestInfoValidator, {
-    // AlgorithmIdentifier (signature algorithm)
-    name: 'CertificationRequest.signatureAlgorithm',
-    tagClass: asn1.Class.UNIVERSAL,
-    type: asn1.Type.SEQUENCE,
-    constructed: true,
-    value: [{
-      // algorithm
-      name: 'CertificationRequest.signatureAlgorithm.algorithm',
+      // AlgorithmIdentifier (signature algorithm)
+      name: 'CertificationRequest.signatureAlgorithm',
       tagClass: asn1.Class.UNIVERSAL,
-      type: asn1.Type.OID,
-      constructed: false,
-      capture: 'csrSignatureOid'
+      type: asn1.Type.SEQUENCE,
+      constructed: true,
+      value: [{
+        // algorithm
+        name: 'CertificationRequest.signatureAlgorithm.algorithm',
+        tagClass: asn1.Class.UNIVERSAL,
+        type: asn1.Type.OID,
+        constructed: false,
+        capture: 'csrSignatureOid'
+      }, {
+        name: 'CertificationRequest.signatureAlgorithm.parameters',
+        tagClass: asn1.Class.UNIVERSAL,
+        optional: true,
+        captureAsn1: 'csrSignatureParams'
+      }]
     }, {
-      name: 'CertificationRequest.signatureAlgorithm.parameters',
+      // signature
+      name: 'CertificationRequest.signature',
       tagClass: asn1.Class.UNIVERSAL,
-      optional: true,
-      captureAsn1: 'csrSignatureParams'
-    }]
-  }, {
-    // signature
-    name: 'CertificationRequest.signature',
-    tagClass: asn1.Class.UNIVERSAL,
-    type: asn1.Type.BITSTRING,
-    constructed: false,
-    captureBitStringValue: 'csrSignature'
-  }]
+      type: asn1.Type.BITSTRING,
+      constructed: false,
+      captureBitStringValue: 'csrSignature'
+    }
+  ]
 };
 
 /**
@@ -709,13 +710,15 @@ pki.certificateFromPem = function(pem, computeHash, strict) {
   if(msg.type !== 'CERTIFICATE' &&
     msg.type !== 'X509 CERTIFICATE' &&
     msg.type !== 'TRUSTED CERTIFICATE') {
-    var error = new Error('Could not convert certificate from PEM; PEM header type ' +
+    var error = new Error(
+      'Could not convert certificate from PEM; PEM header type ' +
       'is not "CERTIFICATE", "X509 CERTIFICATE", or "TRUSTED CERTIFICATE".');
     error.headerType = msg.type;
     throw error;
   }
   if(msg.procType && msg.procType.type === 'ENCRYPTED') {
-    throw new Error('Could not convert certificate from PEM; PEM is encrypted.');
+    throw new Error(
+      'Could not convert certificate from PEM; PEM is encrypted.');
   }
 
   // convert DER to ASN.1 object
@@ -822,14 +825,14 @@ pki.getPublicKeyFingerprint = function(key, options) {
 
   var bytes;
   switch(type) {
-  case 'RSAPublicKey':
-    bytes = asn1.toDer(pki.publicKeyToRSAPublicKey(key)).getBytes();
-    break;
-  case 'SubjectPublicKeyInfo':
-    bytes = asn1.toDer(pki.publicKeyToAsn1(key)).getBytes();
-    break;
-  default:
-    throw new Error('Unknown fingerprint type "' + options.type + '".');
+    case 'RSAPublicKey':
+      bytes = asn1.toDer(pki.publicKeyToRSAPublicKey(key)).getBytes();
+      break;
+    case 'SubjectPublicKeyInfo':
+      bytes = asn1.toDer(pki.publicKeyToAsn1(key)).getBytes();
+      break;
+    default:
+      throw new Error('Unknown fingerprint type "' + options.type + '".');
   }
 
   // hash public key bytes
@@ -1062,7 +1065,8 @@ pki.createCertificate = function() {
     if(!cert.issued(child)) {
       var issuer = child.issuer;
       var subject = cert.subject;
-      var error = new Error('The parent certificate did not issue the given child ' +
+      var error = new Error(
+        'The parent certificate did not issue the given child ' +
         'certificate; the child certificate\'s issuer does not match the ' +
         'parent\'s subject.');
       error.expectedIssuer = issuer.attributes;
@@ -1076,24 +1080,24 @@ pki.createCertificate = function() {
       if(child.signatureOid in oids) {
         var oid = oids[child.signatureOid];
         switch(oid) {
-        case 'sha1WithRSAEncryption':
-          md = forge.md.sha1.create();
-          break;
-        case 'md5WithRSAEncryption':
-          md = forge.md.md5.create();
-          break;
-        case 'sha256WithRSAEncryption':
-          md = forge.md.sha256.create();
-          break;
-        case 'sha384WithRSAEncryption':
-          md = forge.md.sha384.create();
-          break;
-        case 'sha512WithRSAEncryption':
-          md = forge.md.sha512.create();
-          break;
-        case 'RSASSA-PSS':
-          md = forge.md.sha256.create();
-          break;
+          case 'sha1WithRSAEncryption':
+            md = forge.md.sha1.create();
+            break;
+          case 'md5WithRSAEncryption':
+            md = forge.md.md5.create();
+            break;
+          case 'sha256WithRSAEncryption':
+            md = forge.md.sha256.create();
+            break;
+          case 'sha384WithRSAEncryption':
+            md = forge.md.sha384.create();
+            break;
+          case 'sha512WithRSAEncryption':
+            md = forge.md.sha512.create();
+            break;
+          case 'RSASSA-PSS':
+            md = forge.md.sha256.create();
+            break;
         }
       }
       if(md === null) {
@@ -1113,44 +1117,44 @@ pki.createCertificate = function() {
       var scheme;
 
       switch(child.signatureOid) {
-      case oids.sha1WithRSAEncryption:
-        scheme = undefined;  /* use PKCS#1 v1.5 padding scheme */
-        break;
-      case oids['RSASSA-PSS']:
-        var hash, mgf;
+        case oids.sha1WithRSAEncryption:
+          scheme = undefined; /* use PKCS#1 v1.5 padding scheme */
+          break;
+        case oids['RSASSA-PSS']:
+          var hash, mgf;
 
-        /* initialize mgf */
-        hash = oids[child.signatureParameters.mgf.hash.algorithmOid];
-        if(hash === undefined || forge.md[hash] === undefined) {
-          var error = new Error('Unsupported MGF hash function.');
-          error.oid = child.signatureParameters.mgf.hash.algorithmOid;
-          error.name = hash;
-          throw error;
-        }
+          /* initialize mgf */
+          hash = oids[child.signatureParameters.mgf.hash.algorithmOid];
+          if(hash === undefined || forge.md[hash] === undefined) {
+            var error = new Error('Unsupported MGF hash function.');
+            error.oid = child.signatureParameters.mgf.hash.algorithmOid;
+            error.name = hash;
+            throw error;
+          }
 
-        mgf = oids[child.signatureParameters.mgf.algorithmOid];
-        if(mgf === undefined || forge.mgf[mgf] === undefined) {
-          var error = new Error('Unsupported MGF function.');
-          error.oid = child.signatureParameters.mgf.algorithmOid;
-          error.name = mgf;
-          throw error;
-        }
+          mgf = oids[child.signatureParameters.mgf.algorithmOid];
+          if(mgf === undefined || forge.mgf[mgf] === undefined) {
+            var error = new Error('Unsupported MGF function.');
+            error.oid = child.signatureParameters.mgf.algorithmOid;
+            error.name = mgf;
+            throw error;
+          }
 
-        mgf = forge.mgf[mgf].create(forge.md[hash].create());
+          mgf = forge.mgf[mgf].create(forge.md[hash].create());
 
-        /* initialize hash function */
-        hash = oids[child.signatureParameters.hash.algorithmOid];
-        if(hash === undefined || forge.md[hash] === undefined) {
-          throw {
-            message: 'Unsupported RSASSA-PSS hash function.',
-            oid: child.signatureParameters.hash.algorithmOid,
-            name: hash
-          };
-        }
+          /* initialize hash function */
+          hash = oids[child.signatureParameters.hash.algorithmOid];
+          if(hash === undefined || forge.md[hash] === undefined) {
+            throw {
+              message: 'Unsupported RSASSA-PSS hash function.',
+              oid: child.signatureParameters.hash.algorithmOid,
+              name: hash
+            };
+          }
 
-        scheme = forge.pss.create(forge.md[hash].create(), mgf,
-          child.signatureParameters.saltLength);
-        break;
+          scheme = forge.pss.create(forge.md[hash].create(), mgf,
+            child.signatureParameters.saltLength);
+          break;
       }
 
       // verify signature on cert using public key
@@ -1334,24 +1338,24 @@ pki.certificateFromAsn1 = function(obj, computeHash) {
     if(cert.signatureOid in oids) {
       var oid = oids[cert.signatureOid];
       switch(oid) {
-      case 'sha1WithRSAEncryption':
-        cert.md = forge.md.sha1.create();
-        break;
-      case 'md5WithRSAEncryption':
-        cert.md = forge.md.md5.create();
-        break;
-      case 'sha256WithRSAEncryption':
-        cert.md = forge.md.sha256.create();
-        break;
-      case 'sha384WithRSAEncryption':
-        cert.md = forge.md.sha384.create();
-        break;
-      case 'sha512WithRSAEncryption':
-        cert.md = forge.md.sha512.create();
-        break;
-      case 'RSASSA-PSS':
-        cert.md = forge.md.sha256.create();
-        break;
+        case 'sha1WithRSAEncryption':
+          cert.md = forge.md.sha1.create();
+          break;
+        case 'md5WithRSAEncryption':
+          cert.md = forge.md.md5.create();
+          break;
+        case 'sha256WithRSAEncryption':
+          cert.md = forge.md.sha256.create();
+          break;
+        case 'sha384WithRSAEncryption':
+          cert.md = forge.md.sha384.create();
+          break;
+        case 'sha512WithRSAEncryption':
+          cert.md = forge.md.sha512.create();
+          break;
+        case 'RSASSA-PSS':
+          cert.md = forge.md.sha256.create();
+          break;
       }
     }
     if(cert.md === null) {
@@ -1598,24 +1602,24 @@ pki.certificateExtensionFromAsn1 = function(ext) {
 
         // Note: Support for types 1,2,6,7,8
         switch(gn.type) {
-        // rfc822Name
-        case 1:
-        // dNSName
-        case 2:
-        // uniformResourceIdentifier (URI)
-        case 6:
-          break;
-        // IPAddress
-        case 7:
-          // convert to IPv4/IPv6 string representation
-          altName.ip = forge.util.bytesToIP(gn.value);
-          break;
-        // registeredID
-        case 8:
-          altName.oid = asn1.derToOid(gn.value);
-          break;
-        default:
-          // unsupported
+          // rfc822Name
+          case 1:
+          // dNSName
+          case 2:
+          // uniformResourceIdentifier (URI)
+          case 6:
+            break;
+          // IPAddress
+          case 7:
+            // convert to IPv4/IPv6 string representation
+            altName.ip = forge.util.bytesToIP(gn.value);
+            break;
+          // registeredID
+          case 8:
+            altName.oid = asn1.derToOid(gn.value);
+            break;
+          default:
+            // unsupported
         }
       }
     } else if(e.name === 'subjectKeyIdentifier') {
@@ -1678,24 +1682,24 @@ pki.certificationRequestFromAsn1 = function(obj, computeHash) {
     if(csr.signatureOid in oids) {
       var oid = oids[csr.signatureOid];
       switch(oid) {
-      case 'sha1WithRSAEncryption':
-        csr.md = forge.md.sha1.create();
-        break;
-      case 'md5WithRSAEncryption':
-        csr.md = forge.md.md5.create();
-        break;
-      case 'sha256WithRSAEncryption':
-        csr.md = forge.md.sha256.create();
-        break;
-      case 'sha384WithRSAEncryption':
-        csr.md = forge.md.sha384.create();
-        break;
-      case 'sha512WithRSAEncryption':
-        csr.md = forge.md.sha512.create();
-        break;
-      case 'RSASSA-PSS':
-        csr.md = forge.md.sha256.create();
-        break;
+        case 'sha1WithRSAEncryption':
+          csr.md = forge.md.sha1.create();
+          break;
+        case 'md5WithRSAEncryption':
+          csr.md = forge.md.md5.create();
+          break;
+        case 'sha256WithRSAEncryption':
+          csr.md = forge.md.sha256.create();
+          break;
+        case 'sha384WithRSAEncryption':
+          csr.md = forge.md.sha384.create();
+          break;
+        case 'sha512WithRSAEncryption':
+          csr.md = forge.md.sha512.create();
+          break;
+        case 'RSASSA-PSS':
+          csr.md = forge.md.sha256.create();
+          break;
       }
     }
     if(csr.md === null) {
@@ -1848,28 +1852,29 @@ pki.createCertificationRequest = function() {
         // TODO: create DRY `OID to md` function
         var oid = oids[csr.signatureOid];
         switch(oid) {
-        case 'sha1WithRSAEncryption':
-          md = forge.md.sha1.create();
-          break;
-        case 'md5WithRSAEncryption':
-          md = forge.md.md5.create();
-          break;
-        case 'sha256WithRSAEncryption':
-          md = forge.md.sha256.create();
-          break;
-        case 'sha384WithRSAEncryption':
-          md = forge.md.sha384.create();
-          break;
-        case 'sha512WithRSAEncryption':
-          md = forge.md.sha512.create();
-          break;
-        case 'RSASSA-PSS':
-          md = forge.md.sha256.create();
-          break;
+          case 'sha1WithRSAEncryption':
+            md = forge.md.sha1.create();
+            break;
+          case 'md5WithRSAEncryption':
+            md = forge.md.md5.create();
+            break;
+          case 'sha256WithRSAEncryption':
+            md = forge.md.sha256.create();
+            break;
+          case 'sha384WithRSAEncryption':
+            md = forge.md.sha384.create();
+            break;
+          case 'sha512WithRSAEncryption':
+            md = forge.md.sha512.create();
+            break;
+          case 'RSASSA-PSS':
+            md = forge.md.sha256.create();
+            break;
         }
       }
       if(md === null) {
-        var error = new Error('Could not compute certification request digest. ' +
+        var error = new Error(
+          'Could not compute certification request digest. ' +
           'Unknown signature OID.');
         error.signatureOid = csr.signatureOid;
         throw error;
@@ -1886,43 +1891,43 @@ pki.createCertificationRequest = function() {
       var scheme;
 
       switch(csr.signatureOid) {
-      case oids.sha1WithRSAEncryption:
-        /* use PKCS#1 v1.5 padding scheme */
-        break;
-      case oids['RSASSA-PSS']:
-        var hash, mgf;
+        case oids.sha1WithRSAEncryption:
+          /* use PKCS#1 v1.5 padding scheme */
+          break;
+        case oids['RSASSA-PSS']:
+          var hash, mgf;
 
-        /* initialize mgf */
-        hash = oids[csr.signatureParameters.mgf.hash.algorithmOid];
-        if(hash === undefined || forge.md[hash] === undefined) {
-          var error = new Error('Unsupported MGF hash function.');
-          error.oid = csr.signatureParameters.mgf.hash.algorithmOid;
-          error.name = hash;
-          throw error;
-        }
+          /* initialize mgf */
+          hash = oids[csr.signatureParameters.mgf.hash.algorithmOid];
+          if(hash === undefined || forge.md[hash] === undefined) {
+            var error = new Error('Unsupported MGF hash function.');
+            error.oid = csr.signatureParameters.mgf.hash.algorithmOid;
+            error.name = hash;
+            throw error;
+          }
 
-        mgf = oids[csr.signatureParameters.mgf.algorithmOid];
-        if(mgf === undefined || forge.mgf[mgf] === undefined) {
-          var error = new Error('Unsupported MGF function.');
-          error.oid = csr.signatureParameters.mgf.algorithmOid;
-          error.name = mgf;
-          throw error;
-        }
+          mgf = oids[csr.signatureParameters.mgf.algorithmOid];
+          if(mgf === undefined || forge.mgf[mgf] === undefined) {
+            var error = new Error('Unsupported MGF function.');
+            error.oid = csr.signatureParameters.mgf.algorithmOid;
+            error.name = mgf;
+            throw error;
+          }
 
-        mgf = forge.mgf[mgf].create(forge.md[hash].create());
+          mgf = forge.mgf[mgf].create(forge.md[hash].create());
 
-        /* initialize hash function */
-        hash = oids[csr.signatureParameters.hash.algorithmOid];
-        if(hash === undefined || forge.md[hash] === undefined) {
-          var error = new Error('Unsupported RSASSA-PSS hash function.');
-          error.oid = csr.signatureParameters.hash.algorithmOid;
-          error.name = hash;
-          throw error;
-        }
+          /* initialize hash function */
+          hash = oids[csr.signatureParameters.hash.algorithmOid];
+          if(hash === undefined || forge.md[hash] === undefined) {
+            var error = new Error('Unsupported RSASSA-PSS hash function.');
+            error.oid = csr.signatureParameters.hash.algorithmOid;
+            error.name = hash;
+            throw error;
+          }
 
-        scheme = forge.pss.create(forge.md[hash].create(), mgf,
-          csr.signatureParameters.saltLength);
-        break;
+          scheme = forge.pss.create(forge.md[hash].create(), mgf,
+            csr.signatureParameters.saltLength);
+          break;
       }
 
       // verify signature on csr using its public key
@@ -2272,6 +2277,15 @@ function _fillMissingExtensionFields(e, options) {
         asn1.Class.CONTEXT_SPECIFIC, altName.type, false,
         value));
     }
+  } else if(e.name === 'nsComment' && options.cert) {
+    // sanity check value is ASCII (req'd) and not too big
+    if(!(/^[\x00-\x7F]*$/.test(e.comment)) ||
+      (e.comment.length < 1) || (e.comment.length > 128)) {
+      throw new Error('Invalid "nsComment" content.');
+    }
+    // IA5STRING opaque comment
+    e.value = asn1.create(
+      asn1.Class.UNIVERSAL, asn1.Type.IA5STRING, false, e.comment);
   } else if(e.name === 'subjectKeyIdentifier' && options.cert) {
     var ski = options.cert.generateSubjectKeyIdentifier();
     e.subjectKeyIdentifier = ski.toHex();
@@ -2308,15 +2322,17 @@ function _fillMissingExtensionFields(e, options) {
       seq.push(
         asn1.create(asn1.Class.CONTEXT_SPECIFIC, 2, false, serialNumber));
     }
-  } else if (e.name === 'cRLDistributionPoints') {
+  } else if(e.name === 'cRLDistributionPoints') {
     e.value = asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, []);
     var seq = e.value.value;
 
     // Create sub SEQUENCE of DistributionPointName
-    var subSeq = asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, []);
+    var subSeq = asn1.create(
+      asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, []);
 
     // Create fullName CHOICE
-    var fullNameGeneralNames = asn1.create(asn1.Class.CONTEXT_SPECIFIC, 0, true, []);
+    var fullNameGeneralNames = asn1.create(
+      asn1.Class.CONTEXT_SPECIFIC, 0, true, []);
     var altName;
     for(var n = 0; n < e.altNames.length; ++n) {
       altName = e.altNames[n];
@@ -2345,7 +2361,8 @@ function _fillMissingExtensionFields(e, options) {
     }
 
     // Add to the parent SEQUENCE
-    subSeq.value.push(asn1.create(asn1.Class.CONTEXT_SPECIFIC, 0, true, [fullNameGeneralNames]));
+    subSeq.value.push(asn1.create(
+      asn1.Class.CONTEXT_SPECIFIC, 0, true, [fullNameGeneralNames]));
     seq.push(subSeq);
   }
 
@@ -2368,44 +2385,44 @@ function _fillMissingExtensionFields(e, options) {
  */
 function _signatureParametersToAsn1(oid, params) {
   switch(oid) {
-  case oids['RSASSA-PSS']:
-    var parts = [];
+    case oids['RSASSA-PSS']:
+      var parts = [];
 
-    if(params.hash.algorithmOid !== undefined) {
-      parts.push(asn1.create(asn1.Class.CONTEXT_SPECIFIC, 0, true, [
-        asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, [
-          asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OID, false,
-            asn1.oidToDer(params.hash.algorithmOid).getBytes()),
-          asn1.create(asn1.Class.UNIVERSAL, asn1.Type.NULL, false, '')
-        ])
-      ]));
-    }
-
-    if(params.mgf.algorithmOid !== undefined) {
-      parts.push(asn1.create(asn1.Class.CONTEXT_SPECIFIC, 1, true, [
-        asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, [
-          asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OID, false,
-            asn1.oidToDer(params.mgf.algorithmOid).getBytes()),
+      if(params.hash.algorithmOid !== undefined) {
+        parts.push(asn1.create(asn1.Class.CONTEXT_SPECIFIC, 0, true, [
           asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, [
             asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OID, false,
-              asn1.oidToDer(params.mgf.hash.algorithmOid).getBytes()),
+              asn1.oidToDer(params.hash.algorithmOid).getBytes()),
             asn1.create(asn1.Class.UNIVERSAL, asn1.Type.NULL, false, '')
           ])
-        ])
-      ]));
-    }
+        ]));
+      }
 
-    if(params.saltLength !== undefined) {
-      parts.push(asn1.create(asn1.Class.CONTEXT_SPECIFIC, 2, true, [
-        asn1.create(asn1.Class.UNIVERSAL, asn1.Type.INTEGER, false,
-          asn1.integerToDer(params.saltLength).getBytes())
-      ]));
-    }
+      if(params.mgf.algorithmOid !== undefined) {
+        parts.push(asn1.create(asn1.Class.CONTEXT_SPECIFIC, 1, true, [
+          asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, [
+            asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OID, false,
+              asn1.oidToDer(params.mgf.algorithmOid).getBytes()),
+            asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, [
+              asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OID, false,
+                asn1.oidToDer(params.mgf.hash.algorithmOid).getBytes()),
+              asn1.create(asn1.Class.UNIVERSAL, asn1.Type.NULL, false, '')
+            ])
+          ])
+        ]));
+      }
 
-    return asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, parts);
+      if(params.saltLength !== undefined) {
+        parts.push(asn1.create(asn1.Class.CONTEXT_SPECIFIC, 2, true, [
+          asn1.create(asn1.Class.UNIVERSAL, asn1.Type.INTEGER, false,
+            asn1.integerToDer(params.saltLength).getBytes())
+        ]));
+      }
 
-  default:
-    return asn1.create(asn1.Class.UNIVERSAL, asn1.Type.NULL, false, '');
+      return asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, parts);
+
+    default:
+      return asn1.create(asn1.Class.UNIVERSAL, asn1.Type.NULL, false, '');
   }
 }
 
@@ -2465,6 +2482,29 @@ function _CRIAttributesToAsn1(csr) {
   return rval;
 }
 
+var jan_1_1950 = new Date('1950-01-01T00:00:00Z');
+var jan_1_2050 = new Date('2050-01-01T00:00:00Z');
+
+/**
+ * Converts a Date object to ASN.1
+ * Handles the different format before and after 1st January 2050
+ *
+ * @param date date object.
+ *
+ * @return the ASN.1 object representing the date.
+ */
+function _dateToAsn1(date) {
+  if(date >= jan_1_1950 && date < jan_1_2050) {
+    return asn1.create(
+      asn1.Class.UNIVERSAL, asn1.Type.UTCTIME, false,
+      asn1.dateToUtcTime(date));
+  } else {
+    return asn1.create(
+      asn1.Class.UNIVERSAL, asn1.Type.GENERALIZEDTIME, false,
+      asn1.dateToGeneralizedTime(date));
+  }
+}
+
 /**
  * Gets the ASN.1 TBSCertificate part of an X.509v3 certificate.
  *
@@ -2474,6 +2514,8 @@ function _CRIAttributesToAsn1(csr) {
  */
 pki.getTBSCertificate = function(cert) {
   // TBSCertificate
+  var notBefore = _dateToAsn1(cert.validity.notBefore);
+  var notAfter = _dateToAsn1(cert.validity.notAfter);
   var tbs = asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, [
     // version
     asn1.create(asn1.Class.CONTEXT_SPECIFIC, 0, true, [
@@ -2497,12 +2539,8 @@ pki.getTBSCertificate = function(cert) {
     _dnToAsn1(cert.issuer),
     // validity
     asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, [
-      // notBefore
-      asn1.create(asn1.Class.UNIVERSAL, asn1.Type.UTCTIME, false,
-        asn1.dateToUtcTime(cert.validity.notBefore)),
-      // notAfter
-      asn1.create(asn1.Class.UNIVERSAL, asn1.Type.UTCTIME, false,
-        asn1.dateToUtcTime(cert.validity.notAfter))
+      notBefore,
+      notAfter
     ]),
     // subject
     _dnToAsn1(cert.subject),
@@ -2749,7 +2787,7 @@ pki.createCaStore = function(certs) {
 
     ensureSubjectHasHash(cert.subject);
 
-    if(!caStore.hasCertificate(cert)) {  // avoid duplicate certificates in store
+    if(!caStore.hasCertificate(cert)) { // avoid duplicate certificates in store
       if(cert.subject.hash in caStore.certs) {
         // subject hash already exists, append to array
         var tmp = caStore.certs[cert.subject.hash];
@@ -2874,7 +2912,7 @@ pki.createCaStore = function(certs) {
     // produce subject hash if it doesn't exist
     if(!subject.hash) {
       var md = forge.md.sha1.create();
-      subject.attributes =  pki.RDNAttributesAsArray(_dnToAsn1(subject), md);
+      subject.attributes = pki.RDNAttributesAsArray(_dnToAsn1(subject), md);
       subject.hash = md.digest().toHex();
     }
   }
@@ -2910,7 +2948,13 @@ pki.certificateError = {
  * @param caStore a certificate store to verify against.
  * @param chain the certificate chain to verify, with the root or highest
  *          authority at the end (an array of certificates).
- * @param verify called for every certificate in the chain.
+ * @param options a callback to be called for every certificate in the chain or
+ *                  an object with:
+ *                  verify a callback to be called for every certificate in the
+ *                    chain
+ *                  validityCheckDate the date against which the certificate
+ *                    validity period should be checked. Pass null to not check
+ *                    the validity period. By default, the current date is used.
  *
  * The verify callback has the following signature:
  *
@@ -2926,7 +2970,7 @@ pki.certificateError = {
  *
  * @return true if successful, error thrown if not.
  */
-pki.verifyCertificateChain = function(caStore, chain, verify) {
+pki.verifyCertificateChain = function(caStore, chain, options) {
   /* From: RFC3280 - Internet X.509 Public Key Infrastructure Certificate
     Section 6: Certification Path Validation
     See inline parentheticals related to this particular implementation.
@@ -3056,13 +3100,26 @@ pki.verifyCertificateChain = function(caStore, chain, verify) {
        CAs that may appear below a CA before only end-entity certificates
        may be issued. */
 
+  // if a verify callback is passed as the third parameter, package it within
+  // the options object. This is to support a legacy function signature that
+  // expected the verify callback as the third parameter.
+  if(typeof options === 'function') {
+    options = {verify: options};
+  }
+  options = options || {};
+
   // copy cert chain references to another array to protect against changes
   // in verify callback
   chain = chain.slice(0);
   var certs = chain.slice(0);
 
-  // get current date
-  var now = new Date();
+  var validityCheckDate = options.validityCheckDate;
+  // if no validityCheckDate is specified, default to the current date. Make
+  // sure to maintain the value null because it indicates that the validity
+  // period should not be checked.
+  if(typeof validityCheckDate === 'undefined') {
+    validityCheckDate = new Date();
+  }
 
   // verify each cert in the chain using its parent, where the parent
   // is either the next in the chain or from the CA store
@@ -3074,15 +3131,20 @@ pki.verifyCertificateChain = function(caStore, chain, verify) {
     var parent = null;
     var selfSigned = false;
 
-    // 1. check valid time
-    if(now < cert.validity.notBefore || now > cert.validity.notAfter) {
-      error = {
-        message: 'Certificate is not valid yet or has expired.',
-        error: pki.certificateError.certificate_expired,
-        notBefore: cert.validity.notBefore,
-        notAfter: cert.validity.notAfter,
-        now: now
-      };
+    if(validityCheckDate) {
+      // 1. check valid time
+      if(validityCheckDate < cert.validity.notBefore ||
+         validityCheckDate > cert.validity.notAfter) {
+        error = {
+          message: 'Certificate is not valid yet or has expired.',
+          error: pki.certificateError.certificate_expired,
+          notBefore: cert.validity.notBefore,
+          notAfter: cert.validity.notAfter,
+          // TODO: we might want to reconsider renaming 'now' to
+          // 'validityCheckDate' should this API be changed in the future.
+          now: validityCheckDate
+        };
+      }
     }
 
     // 2. verify with parent from chain or CA store
@@ -3229,7 +3291,7 @@ pki.verifyCertificateChain = function(caStore, chain, verify) {
 
     // call application callback
     var vfd = (error === null) ? true : error.error;
-    var ret = verify ? verify(vfd, depth, certs) : vfd;
+    var ret = options.verify ? options.verify(vfd, depth, certs) : vfd;
     if(ret === true) {
       // clear any set error
       error = null;
@@ -3247,7 +3309,7 @@ pki.verifyCertificateChain = function(caStore, chain, verify) {
         // set custom message and error
         if(typeof ret === 'object' && !forge.util.isArray(ret)) {
           if(ret.message) {
-             error.message = ret.message;
+            error.message = ret.message;
           }
           if(ret.error) {
             error.error = ret.error;

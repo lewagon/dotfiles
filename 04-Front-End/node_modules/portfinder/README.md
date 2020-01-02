@@ -1,4 +1,4 @@
-# node-portfinder [![Build Status](https://api.travis-ci.org/indexzero/node-portfinder.svg)](https://travis-ci.org/indexzero/node-portfinder)
+# node-portfinder [![Build Status](https://api.travis-ci.org/http-party/node-portfinder.svg)](https://travis-ci.org/http-party/node-portfinder)
 
 ## Installation
 

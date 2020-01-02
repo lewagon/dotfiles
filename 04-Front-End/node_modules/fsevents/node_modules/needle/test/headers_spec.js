@@ -2,7 +2,7 @@ var http    = require('http'),
     helpers = require('./helpers'),
     should  = require('should');
 
-var port = 5432;
+var port = 54321;
 
 describe('request headers', function() {
 

@@ -3,7 +3,12 @@
 
 	"extends": "@ljharb",
 
-	"rules": {
-		"max-statements": [2, 14]
-	}
+	"overrides": [
+		{
+			"files": "test/**",
+			"rules": {
+				"no-restricted-properties": 0,
+			},
+		},
+	],
 }

@@ -30,10 +30,11 @@ var map = {
   kb: 1 << 10,
   mb: 1 << 20,
   gb: 1 << 30,
-  tb: ((1 << 30) * 1024)
+  tb: Math.pow(1024, 4),
+  pb: Math.pow(1024, 5),
 };
 
-var parseRegExp = /^((-|\+)?(\d+(?:\.\d+)?)) *(kb|mb|gb|tb)$/i;
+var parseRegExp = /^((-|\+)?(\d+(?:\.\d+)?)) *(kb|mb|gb|tb|pb)$/i;
 
 /**
  * Convert the given value in bytes into a string or parse to string to an integer in bytes.
@@ -93,7 +94,9 @@ function format(value, options) {
   var unit = (options && options.unit) || '';
 
   if (!unit || !map[unit.toLowerCase()]) {
-    if (mag >= map.tb) {
+    if (mag >= map.pb) {
+      unit = 'PB';
+    } else if (mag >= map.tb) {
       unit = 'TB';
     } else if (mag >= map.gb) {
       unit = 'GB';

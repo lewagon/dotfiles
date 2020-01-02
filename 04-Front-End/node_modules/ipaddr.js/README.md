@@ -173,7 +173,7 @@ addr.octets // => [192, 168, 1, 1]
 ```
 
 `prefixLengthFromSubnetMask()` will return a CIDR prefix length for a valid IPv4 netmask or
-false if the netmask is not valid.
+null if the netmask is not valid.
 
 ```js
 ipaddr.IPv4.parse('255.255.255.240').prefixLengthFromSubnetMask() == 28

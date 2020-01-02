@@ -14,7 +14,8 @@ class Source {
 	}
 
 	size() {
-		return this.source().length;
+		if(Buffer.from.length === 1) return new Buffer(this.source()).length;
+		return Buffer.byteLength(this.source())
 	}
 
 	map(options) {

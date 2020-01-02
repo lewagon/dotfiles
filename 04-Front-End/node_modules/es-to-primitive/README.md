@@ -42,8 +42,6 @@ Simply clone the repo, `npm install`, and run `npm test`
 [deps-url]: https://david-dm.org/ljharb/es-to-primitive
 [dev-deps-svg]: https://david-dm.org/ljharb/es-to-primitive/dev-status.svg
 [dev-deps-url]: https://david-dm.org/ljharb/es-to-primitive#info=devDependencies
-[testling-svg]: https://ci.testling.com/ljharb/es-to-primitive.png
-[testling-url]: https://ci.testling.com/ljharb/es-to-primitive
 [npm-badge-png]: https://nodei.co/npm/es-to-primitive.png?downloads=true&stars=true
 [license-image]: http://img.shields.io/npm/l/es-to-primitive.svg
 [license-url]: LICENSE

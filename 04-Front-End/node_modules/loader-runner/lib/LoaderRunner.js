@@ -123,9 +123,9 @@ function runSyncOrAsync(fn, context, args, callback) {
 			if(result === undefined)
 				return callback();
 			if(result && typeof result === "object" && typeof result.then === "function") {
-				return result.catch(callback).then(function(r) {
+				return result.then(function(r) {
 					callback(null, r);
-				});
+				}, callback);
 			}
 			return callback(null, result);
 		}
@@ -167,7 +167,10 @@ function iteratePitchingLoaders(options, loaderContext, callback) {
 
 	// load loader module
 	loadLoader(currentLoaderObject, function(err) {
-		if(err) return callback(err);
+		if(err) {
+			loaderContext.cacheable(false);
+			return callback(err);
+		}
 		var fn = currentLoaderObject.pitch;
 		currentLoaderObject.pitchExecuted = true;
 		if(!fn) return iteratePitchingLoaders(options, loaderContext, callback);

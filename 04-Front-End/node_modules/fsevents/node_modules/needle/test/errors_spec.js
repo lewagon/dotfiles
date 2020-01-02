@@ -39,9 +39,9 @@ describe('errors', function() {
         })
       })
 
-      it('error should be ENOTFOUND', function(done) {
+      it('error should be ENOTFOUND or EADDRINFO or EAI_AGAIN', function(done) {
         needle.get(url, function(err) {
-          err.code.should.match(/ENOTFOUND|EADDRINFO/)
+          err.code.should.match(/ENOTFOUND|EADDRINFO|EAI_AGAIN/)
           done();
         })
       })
@@ -90,7 +90,7 @@ describe('errors', function() {
         }, 200)
       })
 
-      it('error should be ENOTFOUND or EADDRINFO', function(done) {
+      it('error should be ENOTFOUND or EADDRINFO or EAI_AGAIN', function(done) {
         var errorific,
             stream = needle.get(url);
 
@@ -100,7 +100,7 @@ describe('errors', function() {
 
         setTimeout(function() {
           should.exist(errorific);
-          errorific.code.should.match(/ENOTFOUND|EADDRINFO/)
+          errorific.code.should.match(/ENOTFOUND|EADDRINFO|EAI_AGAIN/)
           done();
         }, 200)
       })

@@ -19,11 +19,13 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+require('./common');
 var assert = require('assert');
 var events = require('../');
 
-var e = new events.EventEmitter;
+var e = new events.EventEmitter();
 
-assert.deepEqual(e._events, {});
+if (Object.create) assert.ok(!(e._events instanceof Object));
+assert.strictEqual(Object.keys(e._events).length, 0);
 e.setMaxListeners(5);
-assert.deepEqual(e._events, {});
+assert.strictEqual(Object.keys(e._events).length, 0);

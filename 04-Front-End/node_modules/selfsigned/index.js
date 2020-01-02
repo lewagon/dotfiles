@@ -177,7 +177,7 @@ exports.generate = function generate(attrs, options, done) {
       try {
         return done(null, generatePem(keyPair));
       } catch (ex) {
-        return done(err);
+        return done(ex);
       }
     });
   }

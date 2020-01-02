@@ -1,6 +1,7 @@
 'use strict';
 
-var crypto     = require('crypto'),
+var Buffer     = require('safe-buffer').Buffer,
+    crypto     = require('crypto'),
     url        = require('url'),
     util       = require('util'),
     HttpParser = require('../http_parser'),
@@ -9,7 +10,7 @@ var crypto     = require('crypto'),
     Proxy      = require('./proxy');
 
 var Client = function(_url, options) {
-  this.version = 'hybi-13';
+  this.version = 'hybi-' + Hybi.VERSION;
   Hybi.call(this, null, _url, options);
 
   this.readyState = -1;
@@ -18,7 +19,7 @@ var Client = function(_url, options) {
   this._http      = new HttpParser('response');
 
   var uri  = url.parse(this.url),
-      auth = uri.auth && new Buffer(uri.auth, 'utf8').toString('base64');
+      auth = uri.auth && Buffer.from(uri.auth, 'utf8').toString('base64');
 
   if (this.VALID_PROTOCOLS.indexOf(uri.protocol) < 0)
     throw new Error(this.url + ' is not a valid WebSocket URL');
@@ -29,7 +30,7 @@ var Client = function(_url, options) {
   this._headers.set('Upgrade', 'websocket');
   this._headers.set('Connection', 'Upgrade');
   this._headers.set('Sec-WebSocket-Key', this._key);
-  this._headers.set('Sec-WebSocket-Version', '13');
+  this._headers.set('Sec-WebSocket-Version', Hybi.VERSION);
 
   if (this._protocols.length > 0)
     this._headers.set('Sec-WebSocket-Protocol', this._protocols.join(', '));
@@ -79,7 +80,7 @@ var instance = {
     var start   = 'GET ' + this._pathname + ' HTTP/1.1',
         headers = [start, this._headers.toString(), ''];
 
-    return new Buffer(headers.join('\r\n'), 'utf8');
+    return Buffer.from(headers.join('\r\n'), 'utf8');
   },
 
   _failHandshake: function(message) {

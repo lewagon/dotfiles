@@ -2,7 +2,7 @@ var needle = require('./../');
 
 var url  = 'http://posttestserver.com/post.php?dir=needle';
 
-var black_pixel = new Buffer("R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=", 'base64');
+var black_pixel = Buffer.from("R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=", 'base64');
 
 var data = {
   foo: 'bar',

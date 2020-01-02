@@ -1,8 +1,8 @@
 # proxy-addr
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
-[![Node.js Version][node-version-image]][node-version-url]
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Downloads][npm-downloads-image]][npm-url]
+[![Node.js Version][node-image]][node-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
@@ -144,13 +144,12 @@ $ npm run-script bench
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/proxy-addr.svg
-[npm-url]: https://npmjs.org/package/proxy-addr
-[node-version-image]: https://img.shields.io/node/v/proxy-addr.svg
-[node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://img.shields.io/travis/jshttp/proxy-addr/master.svg
-[travis-url]: https://travis-ci.org/jshttp/proxy-addr
-[coveralls-image]: https://img.shields.io/coveralls/jshttp/proxy-addr/master.svg
+[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/proxy-addr/master
 [coveralls-url]: https://coveralls.io/r/jshttp/proxy-addr?branch=master
-[downloads-image]: https://img.shields.io/npm/dm/proxy-addr.svg
-[downloads-url]: https://npmjs.org/package/proxy-addr
+[node-image]: https://badgen.net/npm/node/proxy-addr
+[node-url]: https://nodejs.org/en/download
+[npm-downloads-image]: https://badgen.net/npm/dm/proxy-addr
+[npm-url]: https://npmjs.org/package/proxy-addr
+[npm-version-image]: https://badgen.net/npm/v/proxy-addr
+[travis-image]: https://badgen.net/travis/jshttp/proxy-addr/master
+[travis-url]: https://travis-ci.org/jshttp/proxy-addr

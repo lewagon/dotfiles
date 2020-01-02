@@ -1,7 +1,4 @@
-
-
 declare module "ipaddr.js" {
-
     type IPv4Range = 'unicast' | 'unspecified' | 'broadcast' | 'multicast' | 'linkLocal' | 'loopback' | 'carrierGradeNat' | 'private' | 'reserved';
     type IPv6Range = 'unicast' | 'unspecified' | 'linkLocal' | 'multicast' | 'loopback' | 'uniqueLocal' | 'ipv4Mapped' | 'rfc6145' | 'rfc6052' | '6to4' | 'teredo' | 'reserved';
 
@@ -9,23 +6,20 @@ declare module "ipaddr.js" {
         [name: string]: [T, number] | [T, number][];
     }
 
-
     // Common methods/properties for IPv4 and IPv6 classes.
     class IP {
-
-        prefixLengthFromSubnetMask(): number | false;
+        prefixLengthFromSubnetMask(): number | null;
         toByteArray(): number[];
         toNormalizedString(): string;
         toString(): string;
     }
 
     namespace Address {
-
         export function isValid(addr: string): boolean;
         export function fromByteArray(bytes: number[]): IPv4 | IPv6;
         export function parse(addr: string): IPv4 | IPv6;
         export function parseCIDR(mask: string): [IPv4 | IPv6, number];
-        export function process(address: string): IPv4 | IPv6;
+        export function process(addr: string): IPv4 | IPv6;
         export function subnetMatch(addr: IPv4, rangeList: RangeList<IPv4>, defaultName?: string): string;
         export function subnetMatch(addr: IPv6, rangeList: RangeList<IPv6>, defaultName?: string): string;
 
@@ -39,6 +33,7 @@ declare module "ipaddr.js" {
             static parseCIDR(addr: string): [IPv4, number];
             static subnetMaskFromPrefixLength(prefix: number): IPv4;
             constructor(octets: number[]);
+            octets: number[]
 
             kind(): 'ipv4';
             match(addr: IPv4, bits: number): boolean;
@@ -55,7 +50,9 @@ declare module "ipaddr.js" {
             static parse(addr: string): IPv6;
             static parseCIDR(addr: string): [IPv6, number];
             static subnetMaskFromPrefixLength(prefix: number): IPv6;
-            constructor(octets: number[]);
+            constructor(parts: number[]);
+            parts: number[]
+            zoneId?: string
 
             isIPv4MappedAddress(): boolean;
             kind(): 'ipv6';

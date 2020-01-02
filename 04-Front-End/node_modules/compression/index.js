@@ -85,7 +85,7 @@ function compression (options) {
       }
 
       return stream
-        ? stream.write(Buffer.from(chunk, encoding))
+        ? stream.write(toBuffer(chunk, encoding))
         : _write.call(this, chunk, encoding)
     }
 
@@ -112,7 +112,7 @@ function compression (options) {
 
       // write Buffer for Node.js 0.8
       return chunk
-        ? stream.end(Buffer.from(chunk, encoding))
+        ? stream.end(toBuffer(chunk, encoding))
         : stream.end()
     }
 
@@ -274,4 +274,15 @@ function shouldTransform (req, res) {
   // https://tools.ietf.org/html/rfc7234#section-5.2.2.4
   return !cacheControl ||
     !cacheControlNoTransformRegExp.test(cacheControl)
+}
+
+/**
+ * Coerce arguments to Buffer
+ * @private
+ */
+
+function toBuffer (chunk, encoding) {
+  return !Buffer.isBuffer(chunk)
+    ? Buffer.from(chunk, encoding)
+    : chunk
 }

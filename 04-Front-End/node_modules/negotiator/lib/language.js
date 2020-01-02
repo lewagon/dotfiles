@@ -32,10 +32,10 @@ function parseAcceptLanguage(accept) {
   var accepts = accept.split(',');
 
   for (var i = 0, j = 0; i < accepts.length; i++) {
-    var langauge = parseLanguage(accepts[i].trim(), i);
+    var language = parseLanguage(accepts[i].trim(), i);
 
-    if (langauge) {
-      accepts[j++] = langauge;
+    if (language) {
+      accepts[j++] = language;
     }
   }
 
@@ -55,16 +55,16 @@ function parseLanguage(str, i) {
   if (!match) return null;
 
   var prefix = match[1],
-      suffix = match[2],
-      full = prefix;
+    suffix = match[2],
+    full = prefix;
 
   if (suffix) full += "-" + suffix;
 
   var q = 1;
   if (match[3]) {
     var params = match[3].split(';')
-    for (var i = 0; i < params.length; i ++) {
-      var p = params[i].split('=');
+    for (var j = 0; j < params.length; j++) {
+      var p = params[j].split('=');
       if (p[0] === 'q') q = parseFloat(p[1]);
     }
   }

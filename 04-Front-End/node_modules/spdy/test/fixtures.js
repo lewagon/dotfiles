@@ -59,7 +59,7 @@ function expectData (stream, expected, callback) {
     actual += chunk
   })
   stream.on('end', function () {
-    assert.equal(actual, expected)
+    assert.strictEqual(actual, expected)
     callback()
   })
 }
@@ -67,28 +67,28 @@ exports.expectData = expectData
 
 exports.everyProtocol = function everyProtocol (body) {
   var protocols = [
-    { protocol: 'http2', npn: 'h2', version: 4 },
-    { protocol: 'spdy', npn: 'spdy/3.1', version: 3.1 },
-    { protocol: 'spdy', npn: 'spdy/3', version: 3 },
-    { protocol: 'spdy', npn: 'spdy/2', version: 2 }
+    { protocol: 'http2', alpn: 'h2', version: 4 },
+    { protocol: 'spdy', alpn: 'spdy/3.1', version: 3.1 },
+    { protocol: 'spdy', alpn: 'spdy/3', version: 3 },
+    { protocol: 'spdy', alpn: 'spdy/2', version: 2 }
   ]
 
   protocols.forEach(function (protocol) {
-    describe(protocol.npn, function () {
-      body(protocol.protocol, protocol.npn, protocol.version)
+    describe(protocol.alpn, function () {
+      body(protocol.protocol, protocol.alpn, protocol.version)
     })
   })
 }
 
 exports.everyConfig = function everyConfig (body) {
-  exports.everyProtocol(function (protocol, npn, version) {
-    if (npn === 'spdy/2') {
+  exports.everyProtocol(function (protocol, alpn, version) {
+    if (alpn === 'spdy/2') {
       return
     }
 
-    [ false, true ].forEach(function (plain) {
+    [false, true].forEach(function (plain) {
       describe(plain ? 'plain mode' : 'ssl mode', function () {
-        body(protocol, npn, version, plain)
+        body(protocol, alpn, version, plain)
       })
     })
   })

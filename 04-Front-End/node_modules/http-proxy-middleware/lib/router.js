@@ -5,7 +5,7 @@ module.exports = {
   getTarget: getTarget
 }
 
-function getTarget (req, config) {
+function getTarget(req, config) {
   var newTarget
   var router = config.router
 
@@ -18,22 +18,24 @@ function getTarget (req, config) {
   return newTarget
 }
 
-function getTargetFromProxyTable (req, table) {
+function getTargetFromProxyTable(req, table) {
   var result
   var host = req.headers.host
   var path = req.url
 
   var hostAndPath = host + path
 
-  _.forIn(table, function (value, key) {
+  _.forIn(table, function(value, key) {
     if (containsPath(key)) {
-      if (hostAndPath.indexOf(key) > -1) { // match 'localhost:3000/api'
+      if (hostAndPath.indexOf(key) > -1) {
+        // match 'localhost:3000/api'
         result = table[key]
         logger.debug('[HPM] Router table match: "%s"', key)
         return false
       }
     } else {
-      if (key === host) { // match 'localhost:3000'
+      if (key === host) {
+        // match 'localhost:3000'
         result = table[key]
         logger.debug('[HPM] Router table match: "%s"', host)
         return false
@@ -44,6 +46,6 @@ function getTargetFromProxyTable (req, table) {
   return result
 }
 
-function containsPath (v) {
+function containsPath(v) {
   return v.indexOf('/') > -1
 }

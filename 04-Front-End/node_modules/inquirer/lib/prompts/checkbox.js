@@ -29,7 +29,6 @@ class CheckboxPrompt extends Base {
     }
 
     this.pointer = 0;
-    this.firstRender = true;
 
     // Make sure no default is set (so it won't be printed)
     this.opt.default = null;
@@ -87,7 +86,7 @@ class CheckboxPrompt extends Base {
     var message = this.getQuestion();
     var bottomContent = '';
 
-    if (this.firstRender) {
+    if (!this.spaceKeyPressed) {
       message +=
         '(Press ' +
         chalk.cyan.bold('<space>') +
@@ -162,10 +161,12 @@ class CheckboxPrompt extends Base {
       this.pointer = input - 1;
       this.toggleChoice(this.pointer);
     }
+
     this.render();
   }
 
   onSpaceKey() {
+    this.spaceKeyPressed = true;
     this.toggleChoice(this.pointer);
     this.render();
   }

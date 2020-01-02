@@ -14,6 +14,7 @@
         "func-style": 0,
         "global-require": 0,
         "id-length": [2, { "min": 1, "max": 30 }],
+        "max-lines-per-function": 0,
         "max-nested-callbacks": 0,
         "max-params": 0,
         "max-statements-per-line": [2, { "max": 2 }],
@@ -26,5 +27,13 @@
         "object-curly-newline": 0,
         "operator-linebreak": [2, "before"],
         "sort-keys": 0,
-    }
+    },
+    "overrides": [
+        {
+            "files": "test/resolver/nested_symlinks/mylib/*.js",
+            "rules": {
+                "no-throw-literal": 0,
+            },
+        },
+    ],
 }

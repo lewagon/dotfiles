@@ -14,7 +14,7 @@ Also see the V8 Embedders Guide section on [Handles and Garbage Collection](http
 <a name="api_nan_handle_scope"></a>
 ### Nan::HandleScope
 
-A simple wrapper around [`v8::HandleScope`](https://v8docs.nodesource.com/io.js-3.3/d3/d95/classv8_1_1_handle_scope.html).
+A simple wrapper around [`v8::HandleScope`](https://v8docs.nodesource.com/node-8.11/d3/d95/classv8_1_1_handle_scope.html).
 
 Definition:
 

@@ -4,6 +4,8 @@
 // * https://dom.spec.whatwg.org/#interface-eventtarget
 // * https://dom.spec.whatwg.org/#interface-event
 
+'use strict';
+
 var util   = require('util'),
     driver = require('websocket-driver'),
     API    = require('./websocket/api');

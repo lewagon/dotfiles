@@ -1,13 +1,14 @@
 'use strict';
 
-var Stream     = require('stream').Stream,
+var Buffer     = require('safe-buffer').Buffer,
+    Stream     = require('stream').Stream,
     url        = require('url'),
     util       = require('util'),
     Base       = require('./base'),
     Headers    = require('./headers'),
     HttpParser = require('../http_parser');
 
-var PORTS = {'ws:': 80, 'wss:': 443};
+var PORTS = { 'ws:': 80, 'wss:': 443 };
 
 var Proxy = function(client, origin, options) {
   this._client  = client;
@@ -25,7 +26,7 @@ var Proxy = function(client, origin, options) {
   this._headers.set('Connection', 'keep-alive');
   this._headers.set('Proxy-Connection', 'keep-alive');
 
-  var auth = this._url.auth && new Buffer(this._url.auth, 'utf8').toString('base64');
+  var auth = this._url.auth && Buffer.from(this._url.auth, 'utf8').toString('base64');
   if (auth) this._headers.set('Proxy-Authorization', 'Basic ' + auth);
 };
 util.inherits(Proxy, Stream);
@@ -47,7 +48,7 @@ var instance = {
 
     var headers = [start, this._headers.toString(), ''];
 
-    this.emit('data', new Buffer(headers.join('\r\n'), 'utf8'));
+    this.emit('data', Buffer.from(headers.join('\r\n'), 'utf8'));
     return true;
   },
 

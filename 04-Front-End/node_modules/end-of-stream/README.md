@@ -4,6 +4,8 @@ A node module that calls a callback when a readable/writable/duplex stream has c
 
 	npm install end-of-stream
 
+[![Build status](https://travis-ci.org/mafintosh/end-of-stream.svg?branch=master)](https://travis-ci.org/mafintosh/end-of-stream)
+
 ## Usage
 
 Simply pass a stream and a callback to the `eos`.

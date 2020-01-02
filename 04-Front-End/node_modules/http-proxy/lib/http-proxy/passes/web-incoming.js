@@ -82,7 +82,7 @@ module.exports = {
         values[header];
     });
 
-    req.headers['x-forwarded-host'] = req.headers['host'] || '';
+    req.headers['x-forwarded-host'] = req.headers['x-forwarded-host'] || req.headers['host'] || '';
   },
 
   /**

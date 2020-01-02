@@ -1,11 +1,16 @@
+var LoaderLoadingError = require("./LoaderLoadingError");
+
 module.exports = function loadLoader(loader, callback) {
 	if(typeof System === "object" && typeof System.import === "function") {
 		System.import(loader.path).catch(callback).then(function(module) {
 			loader.normal = typeof module === "function" ? module : module.default;
 			loader.pitch = module.pitch;
 			loader.raw = module.raw;
-			if(typeof loader.normal !== "function" && typeof loader.pitch !== "function")
-				throw new Error("Module '" + loader.path + "' is not a loader (must have normal or pitch function)");
+			if(typeof loader.normal !== "function" && typeof loader.pitch !== "function") {
+				return callback(new LoaderLoadingError(
+					"Module '" + loader.path + "' is not a loader (must have normal or pitch function)"
+				));
+			}
 			callback();
 		});
 	} else {
@@ -26,13 +31,19 @@ module.exports = function loadLoader(loader, callback) {
 			}
 			return callback(e);
 		}
-		if(typeof loader !== "function" && typeof loader !== "object")
-			throw new Error("Module '" + loader.path + "' is not a loader (export function or es6 module))");
+		if(typeof module !== "function" && typeof module !== "object") {
+			return callback(new LoaderLoadingError(
+				"Module '" + loader.path + "' is not a loader (export function or es6 module)"
+			));
+		}
 		loader.normal = typeof module === "function" ? module : module.default;
 		loader.pitch = module.pitch;
 		loader.raw = module.raw;
-		if(typeof loader.normal !== "function" && typeof loader.pitch !== "function")
-			throw new Error("Module '" + loader.path + "' is not a loader (must have normal or pitch function)");
+		if(typeof loader.normal !== "function" && typeof loader.pitch !== "function") {
+			return callback(new LoaderLoadingError(
+				"Module '" + loader.path + "' is not a loader (must have normal or pitch function)"
+			));
+		}
 		callback();
 	}
 };

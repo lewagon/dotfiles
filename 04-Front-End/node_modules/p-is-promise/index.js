@@ -1,10 +1,15 @@
 'use strict';
-module.exports = x => (
-	x instanceof Promise ||
+
+const isPromise = input => (
+	input instanceof Promise ||
 	(
-		x !== null &&
-		typeof x === 'object' &&
-		typeof x.then === 'function' &&
-		typeof x.catch === 'function'
+		input !== null &&
+		typeof input === 'object' &&
+		typeof input.then === 'function' &&
+		typeof input.catch === 'function'
 	)
 );
+
+module.exports = isPromise;
+// TODO: Remove this for the next major release
+module.exports.default = isPromise;

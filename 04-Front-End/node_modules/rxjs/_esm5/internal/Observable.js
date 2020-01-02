@@ -1,7 +1,7 @@
-/** PURE_IMPORTS_START _util_canReportError,_util_toSubscriber,_internal_symbol_observable,_util_pipe,_config PURE_IMPORTS_END */
+/** PURE_IMPORTS_START _util_canReportError,_util_toSubscriber,_symbol_observable,_util_pipe,_config PURE_IMPORTS_END */
 import { canReportError } from './util/canReportError';
 import { toSubscriber } from './util/toSubscriber';
-import { observable as Symbol_observable } from '../internal/symbol/observable';
+import { observable as Symbol_observable } from './symbol/observable';
 import { pipeFromArray } from './util/pipe';
 import { config } from './config';
 var Observable = /*@__PURE__*/ (function () {
@@ -21,7 +21,7 @@ var Observable = /*@__PURE__*/ (function () {
         var operator = this.operator;
         var sink = toSubscriber(observerOrNext, error, complete);
         if (operator) {
-            operator.call(sink, this.source);
+            sink.add(operator.call(sink, this.source));
         }
         else {
             sink.add(this.source || (config.useDeprecatedSynchronousErrorHandling && !sink.syncErrorThrowable) ?

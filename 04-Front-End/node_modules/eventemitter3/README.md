@@ -16,7 +16,7 @@ differences:
 - The `newListener` and `removeListener` events have been removed as they
   are useful only in some uncommon use-cases.
 - The `setMaxListeners`, `getMaxListeners`, `prependListener` and
-  `preperndOnceListener` methods are not available.
+  `prependOnceListener` methods are not available.
 - Support for custom context for events so there is no need to use `fn.bind`.
 - The `removeListener` method removes all matching listeners, not only the
   first.

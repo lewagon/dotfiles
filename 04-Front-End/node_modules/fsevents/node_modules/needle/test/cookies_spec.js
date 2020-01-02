@@ -129,7 +129,7 @@ describe('cookies', function() {
         needle.get(TEST_HOST + ':' + ALL_COOKIES_TEST_PORT, function(error, response) {
           should.not.exist(error)
           var whatever = 'efbfbdefbfbdefbfbdefbfbdefbfbd2defbfbdefbfbdefbfbdefbfbdefbfbdefbfbdefbfbdefbfbdefbfbd';
-          new Buffer(response.cookies.geo_city).toString('hex').should.eql(whatever)
+          Buffer.from(response.cookies.geo_city).toString('hex').should.eql(whatever)
           done();
         });
       })

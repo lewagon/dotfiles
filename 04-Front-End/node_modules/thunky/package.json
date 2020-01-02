@@ -1,6 +1,6 @@
 {
   "name": "thunky",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "delay the evaluation of a paramless async function and cache the result",
   "main": "index.js",
   "devDependencies": {
