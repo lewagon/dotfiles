@@ -16,7 +16,7 @@ Let's set up your workstation:
 
 You now have all the tools you need to successfully work your way through the bootcamp during these 9 weeks. Remember, your new best friends on your computer are:
 
-- **Sublime Text**, the text editor you will use write Ruby code (and more!)
+- **Sublime Text**, the text editor you will use to write Ruby code (and more!)
 - The **Terminal**, also called a shell, where you'll type commands.
 - **git**, the version control tool you'll use to watch your code, snapshot, and thus submit your attempts to Kitt!
 
