@@ -5,7 +5,6 @@ This concept is a big chapter in Computer Science, it is called **time complexit
 
 
 ## Specs
-
 ### View Logic
 
 You'll start by writing an algorithm to find a book on a shelf among a small dozen of books. Then you'll move into a huge library and you'll test your algorithm against a massive amount of books.
@@ -13,14 +12,13 @@ You'll start by writing an algorithm to find a book on a shelf among a small doz
 We only know the title of our book, we want to find its index in the array of books.
 
 ### Find a book on a shelf
-
 ![Shelf](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/shelf.png)
 
 Write the function `find_book` to pick a book from an array, looping through the array with `each_with_index`.
 
 - the function takes two parameters: an array of books and the name of the book you're looking for.
 - it should return the index of the book in the array.
-- it should return **Not found** when the book doesn't exist
+- it should return `nil` when the book doesn't exist
 - use `each_with_index`
 
 ```ruby
@@ -55,13 +53,10 @@ Let's figure out the library, we'll think of a method to reduce the iterations.
 Code the `find_book_enhanced` function:
 
 1. Pick the book in the middle of the array.
-
 1. Compare this book with the title you're looking for:
 	- Is it your book? Return the index, you're done!
 	- Is your book before or after the pivot book? Follow up to step 3!
-
 1. Select the section of the array where your book is.
-
 1. Do the whole process all over again.
 
 ## Time Complexity

@@ -9,8 +9,8 @@ describe "#find_book" do
     expect(find_book(BOOKS_10, "Github Explained")).to eq 5
   end
 
-  it "should return *Not found* when the book doesn't exist" do
-    expect(find_book(BOOKS_10, "Great Start")).to eq "Not found"
+  it "should return `nil` when the book doesn't exist" do
+    expect(find_book(BOOKS_10, "Great Start")).to eq nil
   end
 end
 
@@ -19,8 +19,8 @@ describe "#find_book_enhanced" do
     expect(find_book_enhanced(BOOKS_10, "Github Explained")).to eq 5
   end
 
-  it "should return *Not found* when the book doesn't exist" do
-    expect(find_book_enhanced(BOOKS_10, "Great Start")).to eq "Not found"
+  it "should return `nil` when the book doesn't exist" do
+    expect(find_book_enhanced(BOOKS_10, "Great Start")).to eq nil
   end
 end
 
@@ -45,7 +45,7 @@ describe "performance" do
     end
 
     display_graph(dots)
-  
+
     expect(elapsed_binary.total).to be < elapsed_linear.total
   end
 end
