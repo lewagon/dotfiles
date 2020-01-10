@@ -45,7 +45,7 @@ There must be a more effective way.
 
 ![Library](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/library.png)
 
-Now let's imagine ourselved in a huge library. It would take days for us to browse each book one by one until we find the right one with the previous technique. Thankfully, in a library, the books are already **sorted alphabetically**. So instead of using the same technique, we can start looking in the middle of the library, check which letter the books start with there, and repeat until we find the right one. This will highly reduce the number of iterations!
+Now let's imagine ourselves in a huge library. It would take days for us to browse each book one by one until we find the right one with the previous technique. Thankfully, in a library, the books are already **sorted alphabetically**. So instead of using the same technique, we can start looking in the middle of the library, check which letter the books start with there, and repeat until we find the right one. This will highly reduce the number of iterations!
 
 Code the `find_book_enhanced` method:
 
