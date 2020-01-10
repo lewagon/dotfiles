@@ -5,57 +5,54 @@ This concept is a big chapter in Computer Science, it is called **time complexit
 
 
 ## Specs
-### View Logic
 
-You'll start by writing an algorithm to find a book on a shelf among a small dozen of books. Then you'll move into a huge library and you'll test your algorithm against a massive amount of books.
-
-We only know the title of our book, we want to find its index in the array of books.
+We only know the title of a book we are looking for, and we want to find its index in a small sample of books, then in a (much) bigger one.
 
 ### Find a book on a shelf
 ![Shelf](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/shelf.png)
 
-Write the function `find_book` to pick a book from an array, looping through the array with `each_with_index`.
+Imagine yourself at home, looking for a book on a shelf which contains a dozen unordered books. You will probably browse each book one by one, from left to right, until you find the right one. Let's code this behaviour!
 
-- the function takes two parameters: an array of books and the name of the book you're looking for.
-- it should return the index of the book in the array.
-- it should return `nil` when the book doesn't exist
-- use `each_with_index`
+Write the `find_book` method to find `book_to_find` in an array of `books`, looping through the array with `each_with_index`.
+
+- the method takes two parameters: an array of books and the name of the book you're looking for
+- it returns the index of the book in the array
+- you should use `each_with_index`
 
 ```ruby
 # books sample you can use to test your method
 books = [
-	"A Smarter Way to Learn",
-	"Advanced Ruby",
- 	"Component-Based Applications",
-	"Computer Science Distilled",
-	"Eloquent JavaScript",
-	"Github Explained",
-	"Lead the Way",
-	"Learn Ruby On Rails",
-	"Markdown Guide",
-	"Open Source",
-	"Remote",
-	"The Foundational Concepts"
+  "A Smarter Way to Learn",
+  "Advanced Ruby",
+  "Component-Based Applications",
+  "Computer Science Distilled",
+  "Eloquent JavaScript",
+  "Github Explained",
+  "Lead the Way",
+  "Learn Ruby On Rails",
+  "Markdown Guide",
+  "Open Source",
+  "Remote",
+  "The Foundational Concepts"
 ]
 ```
 
-In this example, we manipulate a dozen books. The iteration will run 12 times **at the most**, which takes around 0.01ms.
+In this example, we manipulate a dozen books. The iteration will run 12 times **at most**, which takes around 0.01ms.
 But what would happen if we use the same algorithm to find a book among a million? Are we going to iterate a million times?!
 There must be a more effective way.
 
 ### Find a book in a library
 
-Let's figure out the library, we'll think of a method to reduce the iterations.
-**The books are already sorted alphabetically (it's important!)**.
-
 ![Library](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/library.png)
 
-Code the `find_book_enhanced` function:
+Now let's imagine ourselved in a huge library. It would take days for us to browse each book one by one until we find the right one with the previous technique. Thankfully, in a library, the books are already **sorted alphabetically**. So instead of using the same technique, we can start looking in the middle of the library, check which letter the books start with there, and repeat until we find the right one. This will highly reduce the number of iterations!
+
+Code the `find_book_enhanced` method:
 
 1. Pick the book in the middle of the array.
 1. Compare this book with the title you're looking for:
-	- Is it your book? Return the index, you're done!
-	- Is your book before or after the pivot book? Follow up to step 3!
+  - Is it your book? Return the index, you're done!
+  - Is your book before or after the pivot book? Follow up to step 3!
 1. Select the section of the array where your book is.
 1. Do the whole process all over again.
 
@@ -78,7 +75,5 @@ This process is called **binary search** and is a very optimized way to reduce c
 ## Further suggestions & resources
 
 - If you want to become a developer, you'll likely have questions about Time Complexity during interviews.
-
 - Ruby implements [native binary search](https://ruby-doc.org/core-2.6.5/Array.html#method-i-bsearch)
-
 - Read more: [WTF is time complexity?](https://remimercier.com/wtf-time-complexity), written by [Rémi Mercier](https://kitt.lewagon.com/alumni/merciremi)
