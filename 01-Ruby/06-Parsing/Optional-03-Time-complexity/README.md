@@ -64,9 +64,9 @@ It is noted **O** and specified with **n**, where **n** is the number of items.
 
 Example:
 
-- The function `find_book` is O(n): for every book, there is one possible instruction. The more books, the more iterations. The worst case performance takes n iterations. This method is called **linear search**.
+The function `find_book` is O(n): for every book, there is one possible instruction. The more books, the more iterations. The worst case performance takes n iterations. This method is called **linear search**.
 
-- The function `find_book_enhanced` is O(log2 n): for every search, there are twice least possibilities than the previous. On a larger library, the number of instructions increases slowly. What is happening here? We built a loop in which we cut possibilities by two every iteration. We started with one million books, then there was only 500K left, then 250K and so on. Every time, we only check if the pivot book is the one.
+The function `find_book_enhanced` is O(log2 n): for every search, there are twice least possibilities than the previous. On a larger library, the number of instructions increases slowly. What is happening here? We built a loop in which we cut possibilities by two every iteration. We started with one million books, then there was only 500K left, then 250K and so on. Every time, we only check if the pivot book is the one.
 This process is called **binary search** and is a very optimized way to reduce computation time.
 
 ![Equations](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/equations.png)
