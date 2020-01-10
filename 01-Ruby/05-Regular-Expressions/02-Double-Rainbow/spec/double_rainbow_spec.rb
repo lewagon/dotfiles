@@ -7,7 +7,7 @@ describe "#color_of_heroku" do
     display_colorized("Heroku", 53)
   end
   it "should use a valid regex" do
-    test_string = "209YOU56"
+    test_string = "209YOU56ME"
     expect(color_of_heroku(test_string)).to eq "YOU"
   end
 end
