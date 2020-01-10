@@ -6,13 +6,21 @@ describe "#color_of_heroku" do
     expect(color_of_heroku(sentence)).to eq "purple"
     display_colorized("Heroku", 53)
   end
+  it "should use a valid regex" do
+    test_string = "209YOU56"
+    expect(color_of_heroku(test_string)).to eq "YOU"
+  end
 end
 
 describe "#color_of_postgresql" do
   it "should return the color of the postgresql logo" do
-    sentence = "somewherebetweenblueandindigo"
+    sentence = "somewhatbetweenblueandindigo"
     expect(color_of_postgresql(sentence)).to eq "indigo"
     display_colorized("postgresql", 25)
+  end
+  it "should use a valid regex" do
+    test_string = "abcdefghijklmn" 
+    expect(color_of_postgresql(test_string)).to eq "ijklmn"
   end
 end
 
@@ -27,6 +35,10 @@ describe "#color_of_css3" do
     expect(color_of_css3(sentence)).to eq "blue"
     display_colorized("CSS3", 27)
   end
+  it "should use a valid regex" do
+    test_string = " aaaa bbbb, ,cccc"
+    expect(color_of_css3(test_string)).to eq "bbbb"
+  end
 end
 
 describe "#color_of_rake" do
@@ -35,6 +47,10 @@ describe "#color_of_rake" do
     expect(color_of_rake(sentence)).to eq "green"
     display_colorized("rake", 36)
   end
+  it "should use a valid regex" do
+    test_string = "me? you!"
+    expect(color_of_rake(test_string)).to eq "me"
+  end
 end
 
 describe "#color_of_javascript" do
@@ -42,6 +58,10 @@ describe "#color_of_javascript" do
     sentence = "black letters on a yellow background"
     expect(color_of_javascript(sentence)).to eq "yellow"
     display_colorized("Javascript", 226)
+  end
+  it "should use a valid regex" do
+    test_string = "hello from thes specs"
+    expect(color_of_javascript(test_string)).to eq "hello"
   end
 end
 
@@ -54,6 +74,10 @@ describe "#color_of_html5" do
     expect(color_of_html5(sentence)).to eq "orange"
     display_colorized("HTML5", 202)
   end
+  it "should use a valid regex" do
+    test_string = "egnaro is spelled backward"
+    expect(color_of_html5(test_string)).to eq "egnaro"
+  end
 end
 
 describe "#color_of_ruby" do
@@ -64,6 +88,10 @@ describe "#color_of_ruby" do
     })
     expect(color_of_ruby(sentence)).to eq "RED"
     display_colorized("Ruby", 196)
+  end
+  it "should use a valid regex" do
+    test_string = "ManY COLORS"
+    expect(color_of_ruby(test_string)).to eq "MYCOLORS"
   end
 end
 

@@ -3,7 +3,7 @@ def color_of_heroku(sentence)
 end
 
 def color_of_postgresql(sentence)
-  # TODO: return the last 6 characters of the string
+  # TODO: return the last 6 characters of the sentence
 end
 
 def color_of_css3(sentence)
@@ -23,10 +23,10 @@ end
 def color_of_html5(sentence)
   # TODO: return the following word:
   # - it contains exactly 6 letters
-  # - it's composed of letters only from a to r
+  # - it's composed of letters from "a" to "r"
 end
 
 def color_of_ruby(sentence)
   # TODO: capture all the capital letters in the sentence
-  # return a String formed with the letters you found
+  # return a string formed with the letters you found
 end
