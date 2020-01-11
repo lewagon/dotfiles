@@ -2,8 +2,7 @@ require "double_rainbow"
 
 describe "#color_of_heroku" do
   it "should return the color of the Heroku logo" do
-    sentence = "purple79589"
-    expect(color_of_heroku(sentence)).to eq "purple"
+    expect(color_of_heroku()).to eq "purple"
     display_colorized("Heroku", 53)
   end
   it "should use a valid regex" do
@@ -14,8 +13,7 @@ end
 
 describe "#color_of_postgresql" do
   it "should return the color of the postgresql logo" do
-    sentence = "somewhatbetweenblueandindigo"
-    expect(color_of_postgresql(sentence)).to eq "indigo"
+    expect(color_of_postgresql()).to eq "indigo"
     display_colorized("postgresql", 25)
   end
   it "should use a valid regex" do
@@ -26,13 +24,7 @@ end
 
 describe "#color_of_css3" do
   it "should return the color of the CSS3 logo" do
-    sentence = %({
-      Roses are red,
-      Violets are blue,
-      Sugar is sweet,
-      And so are you.
-    })
-    expect(color_of_css3(sentence)).to eq "blue"
+    expect(color_of_css3()).to eq "blue"
     display_colorized("CSS3", 27)
   end
   it "should use a valid regex" do
@@ -43,8 +35,7 @@ end
 
 describe "#color_of_rake" do
   it "should return the color of a perfect rake" do
-    sentence = "red or green?"
-    expect(color_of_rake(sentence)).to eq "green"
+    expect(color_of_rake()).to eq "green"
     display_colorized("rake", 36)
   end
   it "should use a valid regex" do
@@ -55,8 +46,7 @@ end
 
 describe "#color_of_javascript" do
   it "should return the color of the Javascript logo" do
-    sentence = "black letters on a yellow background"
-    expect(color_of_javascript(sentence)).to eq "yellow"
+    expect(color_of_javascript()).to eq "yellow"
     display_colorized("Javascript", 226)
   end
   it "should use a valid regex" do
@@ -67,11 +57,7 @@ end
 
 describe "#color_of_html5" do
   it "should return the color of the HTML5 logo" do
-    sentence = %({
-      The new logo of Firefox has evolved to a more iconized style.
-      The color scheme stays the same, with red, orange and yellow shades.
-    })
-    expect(color_of_html5(sentence)).to eq "orange"
+    expect(color_of_html5()).to eq "orange"
     display_colorized("HTML5", 202)
   end
   it "should use a valid regex" do
@@ -82,11 +68,7 @@ end
 
 describe "#color_of_ruby" do
   it "should return the color of the Ruby logo" do
-    sentence = %({
-      Ruby is a dynamic open source programming language.
-      Elegant syntax, easy to write...Definitely a progammer's best friend.
-    })
-    expect(color_of_ruby(sentence)).to eq "RED"
+    expect(color_of_ruby()).to eq "RED"
     display_colorized("Ruby", 196)
   end
   it "should use a valid regex" do

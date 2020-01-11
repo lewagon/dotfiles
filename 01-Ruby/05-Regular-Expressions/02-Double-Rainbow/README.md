@@ -10,11 +10,21 @@ This challenge is a regex game to reveal their colors.
 
 ## Specs
 
-So, what colors are the logos? The information have been hidden in sentences, by our best secret agents. Your mission is to build regex to reveal the tricks!
+So, what colors are the logos? All color names are hidden in **secret messages**. Your mission is to build the correct regexes to extract them!
 
-Open `lib/double_rainbow.rb` where a series of functions await you!
+Open `lib/double_rainbow.rb` where a series of methods await you, each one is an enigma to solve.
 
-- Follow hints and instructions to **return a string**
-- **Use a regex** to extract that string from the `sentence` variable
+- **Use a regex** to extract the color name from `secret_message`
+- Follow hints and instructions to build the regex
+- Each method **returns a string**
 
-You can test your regex in [Rubular](http://rubular.com/)
+**Example**
+
+```ruby
+secret_message = "123goodLUCK"
+secret_message.match(/\D+/)[0]
+
+# => "goodLUCK"
+```
+
+Get help with [Rubular](http://rubular.com/)
