@@ -14,9 +14,11 @@ source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
 # Load rbenv if installed (To manage your Ruby versions)
+export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (To manage your Python versions)
+export PATH="${HOME}/.pyenv/bin:${PATH}" # Needed for Linux/WSL
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
 
 # Load nvm if installed (To manage your Node versions)
