@@ -31,6 +31,8 @@ When you are done, copy / paste your prototype URL on your product's page in Kit
 
 At the end of the day, you will pitch your product by showcasing your prototype.
 
+Good luck 🚀🚀🚀!
+
 
 ## Resources for visual identity
 
@@ -51,6 +53,3 @@ Tutorial in 🇫🇷
 - **Colors**: find them on [Color Hunt](https://colorhunt.co/) or use a color picker like [Colorzilla](http://www.colorzilla.com/)
 - **Pictures**: you can use [unsplash](https://unsplash.com/)
 - **Icons**: download and use [Nucleo app](https://nucleoapp.com/) for utility icons
-
-
-Good luck 🚀🚀🚀!
