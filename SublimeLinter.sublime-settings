@@ -1,0 +1,10 @@
+{
+  "paths": {
+    "linux": [
+      "~/.rbenv/shims"
+    ],
+    "osx": [
+      "~/.rbenv/shims"
+    ]
+  }
+}

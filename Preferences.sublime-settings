@@ -5,15 +5,24 @@
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
-	[
-		"tmp",
-		"log",
-		".git",
-		"_site",
-		".bundle",
-		".sass-cache",
-		"build"
-	],
+  [
+    "tmp",
+    "log",
+    ".git",
+    ".svn",
+    "_site",
+    ".bundle",
+    ".sass-cache",
+    ".asset-cache",
+    "build",
+    "node_modules",
+    "dist",
+    "public/packs",
+    "coverage",
+    ".ipynb_checkpoints",
+    ".pytest_cache",
+    "__pycache__"
+  ],
 	"font_face": "JetBrains Mono",
 	"font_size": 13,
 	"highlight_modified_tabs": true,
