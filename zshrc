@@ -6,7 +6,7 @@ export TERM="xterm-256color"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Useful plugins for Rails development with Sublime Text
-plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search kubectl) 
+plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search kubectl)
 
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
@@ -30,12 +30,8 @@ source ~/.iterm2_shell_integration.`basename $SHELL`
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
-# python
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
-source /usr/local/bin/virtualenvwrapper.sh
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -46,13 +42,6 @@ eval "$(rbenv init -)"
 export PATH=/usr/local/bin:$PATH
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# Twyla config variables
-export TWYLA_XPI_CONF=/Users/nathankuik/code/twyla/xpi/config/local.yml
-export TWYLA_CLIENTAPP_CONF=/Users/nathankuik/code/twyla/clientapp/config/local.yml
-
-export DANISH_AMAZON_ENV="dev"
-export DANISH_AMAZON_CONFIG=/Users/nathankuik/code/danish-amazon/config/local.yml
 
 function kubeon {
     if [ "${1}" ]; then
@@ -85,3 +74,13 @@ function podname { kubectl get pods | grep $1  | awk '{print $1}'; }
 function kc-debugger { kubectl exec -ti $(podname debugger) bash; };
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/Applications/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Applications/google-cloud-sdk/completion.zsh.inc'; fi
+
+export NVM_DIR="/Users/nathankuik/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+

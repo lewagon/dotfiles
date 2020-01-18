@@ -1,6 +1,6 @@
 {
 	"auto_complete": false,
-	"color_scheme": "Packages/Seti_UX/Seti.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -14,6 +14,7 @@
 		".sass-cache",
 		"build"
 	],
+	"font_face": "JetBrains Mono",
 	"font_size": 13,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
