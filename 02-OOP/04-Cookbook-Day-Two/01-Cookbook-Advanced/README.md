@@ -34,14 +34,14 @@ What do you want to do?
 1. List all recipes
 2. Add a recipe
 3. Delete a recipe
-4. Import recipes from Internet
+4. Import recipes from the Internet
 5. Exit
 
 > 4
 What ingredient would you like a recipe for?
 > strawberry
 
-Looking for "strawberry" on Internet...
+Looking for "strawberry" recipes on the Internet...
 
 1. Strawberry shortcake
 2. Strawberry slushie
