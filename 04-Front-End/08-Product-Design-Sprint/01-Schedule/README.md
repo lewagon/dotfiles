@@ -13,14 +13,14 @@ After the morning lecture, you will work with your team to define your product:
 
 - **Product pitch** (45 min) 👉 define your product pitch and primary persona
 - **User journey** (45 min) 👉 write down your core user journey and translate it into a user flow with [Whimsical](https://whimsical.co)
-- **Prototype** (60 min) 👉 build your UI kit and start working on your wireframe
+- **Prototype** (60 min) 👉 build your UI kit and start working on your wireframe (if you're late you can skip building the UI Kit pick in the one listed in the resources at the end of the guidelines)
 
 For your product pitch, persona and user journey, make a copy of our <a href="https://docs.google.com/spreadsheets/d/1OGCJLizpcROt0WwbGV_bCOxBktHO9XPdNHkXcZIyX1o/edit?usp=sharing" target="_blank">UX Research spreadsheet</a> and complete the different templates.
 
 ### Afternoon
 
 - **Visual identity** (30 min) 👉 Learn to integrate a visual identity to your wireframe (see video tutorial below 👇)
-- **Prototype** 👉 finish your prototype and start adding the visual identity **only if you have time**. It's more strategic to have a kickass prototype in black and white rather than a poor mockup with lots of pictures and colors but that no one understands 😬.
+- **Prototype** 👉 finish your prototype and start adding the visual identity **only if you have time**. It's more strategic to have a kickass prototype in black and white rather than a poor mockup with lots of pictures and colors but that no one understands 😬. 
 
 ### Demo
 When you are done, copy / paste your prototype URL on your product's page in Kitt. To get the prototype URL, first play your prototype and then click on the `Share  Prototype` button like below:
