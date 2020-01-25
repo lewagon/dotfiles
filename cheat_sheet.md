@@ -48,6 +48,17 @@ Aligner après un égale | `:Tab /=.*` |
 Aligner après un égale | `\=` |
 Aligner du css | `\:` |
 
+## Plugin Vim Fugitive
+
+Action | Snippet |
+--- | --- |
+Git status | `:G` |
+Afficher la différence | `:Gdiffsplit` |
+Faire un commit | `:Gcommit` |
+Faire un push | `:Gpush` |
+
+More infos [here](https://github.com/tpope/vim-fugitive)
+
 ## Plugin NerdTree
 
 Action | Snippet |

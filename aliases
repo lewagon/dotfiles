@@ -16,7 +16,8 @@ alias railss="rails server"
 # GIT
 
 alias gfix="git commit -a --amend --no-edit"
-alias gwip="gaa && git commit -m 'WIP'"
+alias gwip="gaa && git commit -m 'Minor changes' && gpush"
+alias grefacto="gaa && git commit -m 'Refacto'"
 alias gpush='NAME=$(git symbolic-ref HEAD | sed -e "s,.*/\(.*\),\1,") && git push origin "$NAME"'
 alias gitm="git checkout master"
 alias gitcreate="git checkout -b"
