@@ -34,15 +34,16 @@ describe "#group_by_tld" do
 end
 
 
-describe "#extract_data" do
+describe "#compose_mail" do
   it "should return a Hash with all the informations stored in the email" do
-    expect(extract_data("seb@lewagon.fr")).to eq ({ username:"seb", domain:"lewagon", tld:"fr" })
+    expect(compose_mail("seb@lewagon.fr")).to eq ({ username: "seb", domain: "lewagon", tld: "fr" })
+    expect(compose_mail("dimitri@lewagon.de")).to eq ({ username: "dimitri", domain: "lewagon", tld: "de"})
   end
 end
 
-describe "#compose_mail" do
+describe "#compose_mail_translated" do
   it "should return a Hash with the message informations in french for a .fr mail" do
-    email = compose_mail({ username: "julien", domain: "lewagon", tld: "fr" })
+    email = compose_mail_translated({ username: "julien", domain: "lewagon", tld: "fr" })
     expect(email).to eq ({
                                 email: "julien@lewagon.fr",
                                 username: "Julien",
@@ -55,7 +56,7 @@ describe "#compose_mail" do
   end
   
   it "should return a Hash with the message informations in german for a .de mail" do
-    email = compose_mail({ username: "dimitri", domain: "lewagon", tld: "de" })
+    email = compose_mail_translated({ username: "dimitri", domain: "lewagon", tld: "de" })
     expect(email).to eq ({
                                 email: "dimitri@lewagon.de",
                                 username: "Dimitri",
@@ -68,7 +69,7 @@ describe "#compose_mail" do
   end
 
   it "should return a Hash with the message informations in english for any other ccTlD mail" do
-    email = compose_mail({ username: "boris", domain: "lewagon", tld: "com" })
+    email = compose_mail_translated({ username: "boris", domain: "lewagon", tld: "com" })
     expect(email).to eq ({
                                 email: "boris@lewagon.com",
                                 username: "Boris",
