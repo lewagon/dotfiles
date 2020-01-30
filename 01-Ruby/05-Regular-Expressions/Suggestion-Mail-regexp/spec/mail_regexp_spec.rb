@@ -43,10 +43,11 @@ end
 
 describe "#compose_mail_translated" do
   it "should return a Hash with the message informations in french for a .fr mail" do
-    email = compose_mail_translated({ username: "julien", domain: "lewagon", tld: "fr" })
+    email = compose_mail_translated("julien@lewagon.fr")
     expect(email).to eq ({
-                                email: "julien@lewagon.fr",
-                                username: "Julien",
+                                username: "julien",
+                                domain: "lewagon",
+                                tld: "fr",
                                 subject: "Notre site est en ligne",
                                 body: "Venez nous rendre visite !",
                                 cheers: "A bientot",
@@ -56,10 +57,11 @@ describe "#compose_mail_translated" do
   end
   
   it "should return a Hash with the message informations in german for a .de mail" do
-    email = compose_mail_translated({ username: "dimitri", domain: "lewagon", tld: "de" })
+    email = compose_mail_translated("dimitri@berlin.de")
     expect(email).to eq ({
-                                email: "dimitri@lewagon.de",
-                                username: "Dimitri",
+                                username: "dimitri",
+                                domain: "berlin",
+                                tld: "de",
                                 subject: "Unsere Website ist jetzt online",
                                 body: "Komm und besuche uns!",
                                 cheers: "Prost",
@@ -69,10 +71,11 @@ describe "#compose_mail_translated" do
   end
 
   it "should return a Hash with the message informations in english for any other ccTlD mail" do
-    email = compose_mail_translated({ username: "boris", domain: "lewagon", tld: "com" })
+    email = compose_mail_translated("boris@lewagon.com")
     expect(email).to eq ({
-                                email: "boris@lewagon.com",
-                                username: "Boris",
+                                username: "boris",
+                                domain: "lewagon",
+                                tld: "com",
                                 subject: "Our website is online",
                                 body: "Come and visit us!",
                                 cheers: "Cheers",
@@ -85,19 +88,20 @@ end
 
 
 def display_email(message)
+  email = "#{message[:username]}@#{message[:domain]}.#{message[:tld]}"
   puts <<-HEREDOC
 
     ┌──────────────────────────────────────────┐
     │  ===================================== x │
     │                                          │
     │                                          │
-    │  To: #{(message[:username]).ljust(36)}│
+    │  To: #{email.ljust(36)}│
     │  Subject: #{message[:subject].ljust(31)}│
     │                                          │
     │  ──────────────────────────────────────  │
     │                                          │
     │                                          │
-    │  #{message[:username].ljust(40)}│
+    │  #{message[:username].capitalize.ljust(40)}│
     │                                          │
     │  #{message[:body].ljust(40)}│
     │                                          │
