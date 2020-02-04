@@ -101,7 +101,7 @@ def display_email(message)
     │  ──────────────────────────────────────  │
     │                                          │
     │                                          │
-    │  #{message[:username].capitalize.ljust(40)}│
+    │  Dear #{message[:username].capitalize.ljust(35)}│
     │                                          │
     │  #{message[:body].ljust(40)}│
     │                                          │

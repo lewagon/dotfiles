@@ -54,10 +54,9 @@ def translate(word, language)
   return translations[word]
 end
 
-
 def compose_mail_translated(email)
   # TODO: return a Hash with username, domain and tld extracted from email
-  # TODO: translate text
+  # TODO: translate subject, body, cheers and signature, according to TLD
   match_data = email.match(/^(?<name>\w+)@(?<domain>\w+).(?<tld>\w+)$/)
   language = match_data[:tld].to_sym
   return {
