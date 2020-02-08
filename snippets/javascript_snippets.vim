@@ -8,7 +8,7 @@ Snippet getid     document.getElementById("<()>");
 Snippet const     const <{}> = <{}>;
 Snippet let       let <{}> = <{}>;
 Snippet interp    ${<{}>}
-Snippet ?         <{}> ? <{}> : <{}>
+Snippet ternary   <{}> ? <{}> : <{}>
 Snippet each      <{}>.forEach((<{}>) => {<CR><{}>;<CR>});
 Snippet add       <{element}>.classList.add("<{}>");
 Snippet remove    <{element}>.classList.remove("<{}>");
