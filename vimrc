@@ -1,3 +1,4 @@
+" This needs to be off for Vundle, turned back on after
 set nocompatible      " Nécessaire
 filetype off          " Nécessaire
 
@@ -8,26 +9,56 @@ call vundle#begin()
 " On indique à Vundle de s'auto-gérer :)
 Plugin 'gmarik/Vundle.vim'  " Nécessaire
 
-"
-" C'est ici que vous allez placer la liste des plugins que Vundle doit gérer
-"
-
+" Vim Plugins
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'godlygeek/tabular'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/quickfixsigns_vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'vim-scripts/snippetsEmu'
-Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/snippetsEmu'
+
+" Display options
+set number
+syntax on
+set backspace=indent,eol,start
+set tabstop=2 shiftwidth=2 expandtab
+set tags=tags
+set nowrap
+
+" When opening a file, always jump to the last cursor position
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \     exe "normal g'\"zz" |
+    \ endif |
+
+
+" Keybindings
 let mapleader=","
 let localmapleader=","
 let g:NERDTreeWinPos = "left"
+
+
+
+nnoremap <C-n> :set number! relativenumber!<cr>
+nnoremap <C-i> ggVG=
+
+" Resize window splits
+" TODO Fix mousewheel
+nnoremap <Up>    3<C-w>-
+nnoremap <Down>  3<C-w>+
+nnoremap <Left>  3<C-w><
+nnoremap <Right> 3<C-w>>
+
+" TODO Merge the NERDTreeFind with Toggle inteilligently.
+nnoremap <C-g> :NERDTreeToggle<cr>
 
 map <Leader>, :CtrlPMRU<CR>
 
@@ -40,18 +71,12 @@ noremap \\| :Tabularize /\|<CR>
 noremap \& :Tabularize /\(&\\|\\\\\)<CR>
 
 nnoremap <Leader>t :TagbarOpen fjc<CR>
-nnoremap <C-g> :NERDTreeToggle<cr>
-nnoremap <C-n> :set number! relativenumber!<cr>
-nnoremap <C-i> ggVG=
+
+map <C-\> :ScreenShellVertical<CR>
 
 call vundle#end()            " Nécessaire
 filetype plugin indent on    " Nécessaire
-set number
-syntax on
-set backspace=indent,eol,start
-set tabstop=2 shiftwidth=2 expandtab
-set tags=tags
-set nowrap
+
 
 " For altercation/vim-colors-solarized
 syntax enable
