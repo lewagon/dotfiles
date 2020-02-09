@@ -54,32 +54,29 @@ Get familiar with [Rails command line basics](http://guides.rubyonrails.org/comm
 
 Every web developer starts working by launching a server and opening a browser to test **live** the features they code. Go ahead:
 - launch a server in your terminal
-- open [localhost:3000](http://localhost:3000) in your favourite web browser!
+- open [localhost:3000](http://localhost:3000) in your favourite web browser! You should see Rails' welcome page.
 
-You should see Rails' welcome page.
+Every time you write some code in a file, save it and refresh your browser. You will get many error messages, but it is important to get familiar with them. This way, you will understand Rails' execution flow and learn how to fix them!
 
-### 1. Display the form: `/ask`
+### 1. Generate controller
 
-First, we want to display a page with a `<form>` to our users. In Rails, this counts as a **user story**, so we need more than an HTML file to make it happen. For every user action in Rails, we need to code **(i) a route, (ii) an action in a controller, and (iii) a view**. Remember the MVC pattern?
+First things first, let's generate a `QuestionsController` we'll use for our two pages. Remember the `rails` command to do that?
 
-- Open [localhost:3000/ask](http://localhost:3000/ask)
-- Read the error message: it is a **routing error**
+### 2. Display the form: `/ask`
+
+We want to display a page with a `<form>` to our users at [localhost:3000/ask](http://localhost:3000/ask). In Rails, this counts as a user story, so we need more than an HTML file to make it happen. For every user action in Rails, we need to code **(i) a route, (ii) an action, and (iii) a view**. Remember the MVC pattern?
 
 **Route**
 
-Write a simple route to serve `GET /ask` HTTP request to the `ask` action of a `questions` controller. As a reminder, here is the pattern of a route coded in Rails:
+Write a simple route to serve the `GET /ask` HTTP request to the `ask` action of the questions controller. As a reminder, here is the pattern of a route coded in Rails:
 
 ```ruby
 verb "url", to: "controller#action"
 ```
 
-When you're done with the route, go back to your browser and refresh the page. The error message changed: there's no `QuestionsController` yet!
-
 **Controller**
 
-After setting the **route**, it's time to code the **action**. And to code an action, we need a **controller**. Go ahead and generate your questions controller with the relevant `rails` command!
-
-_Depending on how many arguments you generated your controller with, you may have added an extra route to the `config/routes.rb` file! Let's clean it up and only keep the one you wrote in the previous section._
+After setting up the **route**, it's time to code the **action**. Go ahead and add an `ask` action in your `QuestionsController`! Do we need to define an instance variable here? We'll figure it out while coding the view!
 
 Oh and by the way, do you remember how to display all your routes in the terminal?
 
@@ -97,15 +94,9 @@ Prefix Verb URI Pattern       Controller#Action
 ```
 </details>
 
-If you refresh your browser, you'll see that the error message has changed again. The `QuestionsController` exists, but it's still missing the `ask` action.
-
-Open your controller in Sublime Text and add the `ask` action. Do we need to define an instance variable here? We'll figure it out while coding the view!
-
 **View**
 
-Again, depending on how you generated your controller, there may already be an `app/views/questions/ask.html.erb` file in your project. To check it out, you can refresh your browser at [localhost:3000/ask](http://localhost:3000/ask)! If it's not there yet, go ahead and create it. If it's already there, just open it in Sublime Text.
-
-In that view, we want to display a `<form>`. Remember the syntax?
+Last step to display the form, let's create a view! Do you remember in which folder it should be and how it should be named? That's one of Rails' conventions, the [Action View convention](https://kitt.lewagon.com/karr/karr.kitt/lectures/rails/rails-intro-6/index.html?title=Rails+Basics&program_id=13#/6/6). Refresh the page at [localhost:3000/ask](http://localhost:3000/ask), if you named your file properly you should finally see a page without an error! For now it's empty, let's finally add the `<form>`. Remember the syntax?
 
 ```html
 <form action="???">
