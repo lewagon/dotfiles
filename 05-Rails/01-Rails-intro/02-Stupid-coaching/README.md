@@ -115,7 +115,7 @@ Here we want the form to trigger our **second user story**: `answer`, which shou
 
 You should get a **routing error**, let's code the answer now!
 
-### 2. Display the Coach's Answer: `/answer`
+### 3. Display the Coach's Answer: `/answer`
 
 Time to implement the logic in the `answer` action (second step of the user journey). For this second user story, follow the same methodology as in `1. Display the form`:
 - code the **route**
