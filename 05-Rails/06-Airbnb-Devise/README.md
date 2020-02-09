@@ -50,7 +50,7 @@ git push origin master
 
 #### 3. Add your team mates as collaborators on the Github repo
 
-Go to [github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration](https://github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration) and add your teammates as **collaborators** to the repo.
+Go to [your Github repo settings](https://github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration) and add your teammates as **collaborators** to the repo.
 
 The other teammates can now **clone** the project. ⚠️**Be careful, use `SSH` url**⚠️
 
@@ -125,7 +125,7 @@ When you work on a feature, work on it **conscientiously from the database to th
 - I will implement these two actions.
 
 *Views modification*:
-- I will embed the booking form in the existing `views/flats/new.html.erb`
+- I will embed the booking form in the existing `views/flats/show.html.erb`
 - I will list all current user's bookings on a new page `views/bookings/index.html.erb`.
 
 *Links*:

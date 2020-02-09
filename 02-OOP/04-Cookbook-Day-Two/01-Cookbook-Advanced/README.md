@@ -1,7 +1,7 @@
 ⚠️ There's **no `rake`** for this exercise. Sorry 😉
 
 So now we want to enhance our cookbook by finding recipes online. We will use
-[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 LetsCookFrench](http://www.letscookfrench.com/recipes/find-recipe.aspx), because their markup structure is pretty clean (making them good candidates for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
+[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 BBCGoodFood](https://www.bbcgoodfood.com/search/recipes), because their markup structure is pretty clean (making them good candidates for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
@@ -25,7 +25,7 @@ ruby lib/app.rb
 
 ## 1 - Import recipes from the web
 
-You can scrape from any recipe website that you know, but good ones are [LetsCookFrench](http://www.letscookfrench.com/recipes/find-recipe.aspx) and [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
+You can scrape from any recipe website that you know, but good ones are [BBCGoodFood](https://www.bbcgoodfood.com/search/recipes) and [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
 
 ```bash
 -- My CookBook --
@@ -34,14 +34,14 @@ What do you want to do?
 1. List all recipes
 2. Add a recipe
 3. Delete a recipe
-4. Import recipes from LetsCookFrench
+4. Import recipes from the Internet
 5. Exit
 
 > 4
 What ingredient would you like a recipe for?
 > strawberry
 
-Looking for "strawberry" on LetsCookFrench...
+Looking for "strawberry" recipes on the Internet...
 
 1. Strawberry shortcake
 2. Strawberry slushie
@@ -72,12 +72,12 @@ You can download an HTML document on your computer with the `curl` command. Get 
 
 ```bash
 curl --silent 'https://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
-curl --silent 'http://www.letscookfrench.com/recipes/find-recipe.aspx?aqt=strawberry' > strawberry.html
+curl --silent 'https://www.bbcgoodfood.com/search/recipes?query=strawberry' > strawberry.html
 ```
 
 👆 **This step is really important**!
 
-The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to Marmiton/LetsCookFrench every time (that would probably also get us blacklisted).
+The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to Marmiton/BBCGoodFood every time (that would probably also get us blacklisted).
 
 ### Parsing with Nokogiri
 
@@ -161,7 +161,7 @@ Try modifying the web-import feature so that you can import recipes with a given
 Try to extract the **parsing** logic out of the controller and put it into a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
 ```ruby
-class ScrapeLetsCookFrenchService # or ScrapeMarmitonService
+class ScrapeBbcGoodFoodService # or ScrapeMarmitonService
   def initialize(keyword)
     @keyword = keyword
   end
