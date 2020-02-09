@@ -10,28 +10,93 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'  " Nécessaire
 
 " Vim Plugins
+" Bundle 'AndrewRadev/vim-eco'
+" Bundle 'Lokaltog/vim-powerline'
 Plugin 'altercation/vim-colors-solarized'
+" Bundle 'cakebaker/scss-syntax.vim'
+" Bundle 'ervandew/screen'
+" Bundle 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
+" Bundle 'groenewege/vim-less'
+" Bundle 'isRuslan/vim-es6'
+" Bundle 'kchmck/vim-coffee-script'
+" Bundle 'pangloss/vim-javascript'
+" Bundle 'mxw/vim-jsx'
+Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
-Plugin 'kien/ctrlp.vim'
+" Bundle 'mileszs/ack.vim'
+" Bundle 'nviennot/molokai'
+" Bundle 'othree/html5.vim'
+" Bundle 'quentindecock/vim-cucumber-align-pipes'
+" Bundle 'rking/ag.vim'
+" Bundle 'rodjek/vim-puppet'
+" Bundle 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+" Bundle 'scrooloose/syntastic'
+" Bundle 'sjl/gundo.vim'
 Plugin 'tomtom/quickfixsigns_vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
+" Bundle 'tpope/vim-unimpaired'
+" Bundle 'tpope/vim-repeat'
+" Bundle 'vim-scripts/YankRing.vim'
+" Bundle 'yaymukund/vim-rabl'
+" Bundle 'slim-template/vim-slim'
+" Bundle 'elixir-lang/vim-elixir'
 
+Plugin 'tpope/vim-commentary'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/snippetsEmu'
 
+"""""""""""""""""""""""""
+" Basic features
+"""""""""""""""""""""""""
+
 " Display options
-set number
 syntax on
+" set nocursorline
+set number
+" set encoding=utf-8
+" set fileencoding=utf-8
+" set list!
+" set listchats=tab:▸\ ,trail:•,extends:»,precedes:«
 set backspace=indent,eol,start
-set tabstop=2 shiftwidth=2 expandtab
 set tags=tags
 set nowrap
+"colorscheme molokai
+
+" Misc
+" filetype plugin indent on
+" set hiddent
+
+" up/down on displayed lines, not real lines. More useful than painful.
+noremap k gk
+noremap j gj
+
+" shift+k -> like shift+j, but no extra space
+" noremap <S-k> gJ
+
+" Formatting, indentation and tabbing
+" set autoindent smartindent
+" set smarttab                    " Make <tab> and <backspace> smarter
+set expandtab
+set tabstop=2
+set shiftwidth=2
+" set textwidth=80
+" set formatoptions-=t formatoptions+=croql
+
+" viminfo:
+
+" ctags:
+
+" Undo
+"
+
+" Search settings
+
+" to_html settings
 
 " When opening a file, always jump to the last cursor position
 autocmd BufReadPost *
@@ -39,8 +104,13 @@ autocmd BufReadPost *
     \     exe "normal g'\"zz" |
     \ endif |
 
-
+"""""""""""""""""""""""""
 " Keybindings
+"""""""""""""""""""""""""
+
+" After 4s of inactivity, check for external file modifications on next keyrpress
+" au CursorHold * checktime
+
 let mapleader=","
 let localmapleader=","
 let g:NERDTreeWinPos = "left"
@@ -48,7 +118,7 @@ let g:NERDTreeWinPos = "left"
 
 
 nnoremap <C-n> :set number! relativenumber!<cr>
-nnoremap <C-i> ggVG=
+nnoremap <C-i> ggVG=`.
 
 " Resize window splits
 " TODO Fix mousewheel
