@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	editor = subl -n -w  >/dev/null 2>&1
 
 [alias]
   g = git
@@ -49,4 +49,4 @@
   mergeoptions = --no-edit
 [user]
 	email = bryan.leigh77@gmail.com
-	name = Bryan Leighton
+	name = bryan leighton
