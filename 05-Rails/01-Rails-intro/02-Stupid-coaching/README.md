@@ -170,32 +170,6 @@ For now, just open (or create) the `app/assets/stylesheets/questions.scss` file.
 
 First, delete the `test/controllers/questions_controller_test.rb` file if it got generated. We will be doing [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). The goal of this kind of testing is to automate all the manual testing of "code editing / go to the browser / reload the page / check if this is working". Everything you did manually in the browser can be done _via_ code!
 
-First, you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu. Then you need to install `chromedriver` on your machine:
-
-```bash
-# OSX
-brew install chromedriver
-
-# Ubuntu
-gem install chromedriver-helper
-```
-
-Last, in your `Gemfile`, you need the following gems:
-
-```ruby
-# Gemfile
-# [...]
-group :test do
-  # [...]
-  gem 'capybara'             # should be there already
-  gem 'selenium-webdriver'   # should be there already
-  gem 'chromedriver-helper'  # add it!
-  gem 'launchy'              # useful for screenshots, add it too!
-end
-```
-
-and run `bundle install`!
-
 We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. To do that, open the following file and replace **all** its content with:
 
 ```ruby
