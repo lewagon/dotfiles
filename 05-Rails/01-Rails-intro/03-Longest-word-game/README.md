@@ -49,7 +49,13 @@ Have a look at your old Ruby code. How did you generate an `Array` of random let
 
 We need to add a form below the letters so that the user can fill a suggestion and submit it.
 
-Go ahead and add a `<form />` to your view. It should `POST` to the `/score` action in the `GamesController`. Remember about the `:authenticity_token` (see Lecture slides)!
+Go ahead and add a `<form />` to your view. It should `POST` to the `/score` action in the `GamesController`.
+
+You will need to add the line below into you're `form`:
+```erb
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+```
+This will add a hidden input field to store the `authenticity_token` that ensure `POST` request are coming from your website and not from another.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game_with_form.png)
 
