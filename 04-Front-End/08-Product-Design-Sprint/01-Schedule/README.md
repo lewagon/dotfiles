@@ -5,7 +5,7 @@ Before you start:
 - Sign up to [Figma](https://www.figma.com/) and install the desktop app from [this page](https://www.figma.com/downloads/)
 
 
-## Shedule
+## Schedule
 
 ### Morning
 
