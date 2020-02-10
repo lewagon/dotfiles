@@ -241,10 +241,26 @@ end
 
 Intrigued about this syntax? This is the **capybara** gem! Very helpful in this testing context where we need to automate clicking on links, buttons, or filling forms. Have a look at [its DSL](https://github.com/teamcapybara/capybara#the-dsl).
 
-Now your turn ✌️. Try to implement other scenarios in your system tests. The equivalent of `binding.pry` in the test world is the following in the Ruby code:
+Now your turn ✌️. Try to implement other scenarios in your system tests. 
+
+**Screenshots**
+
+The equivalent of `binding.pry` in the test world is to take screenshots. Let's add the `launchy` gem to the `Gemfile` (in the `:test` group):
+
+```ruby
+# Gemfile
+group :test do	
+  # [...]	
+  gem 'launchy'
+end
+```
+
+And run `bundle install`. In your code you just have to write the following:
+
 
 ```bash
 take_screenshot
 ```
 
 It will take screenshots in the _Headless Chrome_. They will go in the `tmp/screenshots` folder.
+
