@@ -6,7 +6,7 @@
 This is the proper way to install rails:
 
 ```bash
-gem install rails -v 5.2
+gem install rails -v 6.0
 ```
 
 Now quit the Terminal, and restart it.
