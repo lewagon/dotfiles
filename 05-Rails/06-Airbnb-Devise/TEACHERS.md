@@ -81,7 +81,7 @@ Don't let students waste time and creating their Rails app from scratch. Use our
 cd ~/code/<user.github_nickname>
 rails new \
   --database postgresql \
-  --skip-action-mailer \
+  --skip-action-mailbox \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   APP_NAME
 ```

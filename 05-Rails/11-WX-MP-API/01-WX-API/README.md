@@ -15,7 +15,7 @@ You are going to use the minimal template. Here is the setup you need:
 cd ~/code/<user.github_nickname>
 rails new \
   --database postgresql \
-  --skip-action-mailer \
+  --skip-action-mailbox \
   stories-api
 cd stories-api
 git add .
