@@ -22,7 +22,7 @@ sudo apt-get update && sudo apt-get install yarn
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-mister-cocktail -T --webpack --database=postgresql
+rails new rails-mister-cocktail --database=postgresql --skip-action-mailbox
 cd rails-mister-cocktail
 ```
 

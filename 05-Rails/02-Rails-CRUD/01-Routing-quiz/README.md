@@ -36,7 +36,7 @@ generate a `pages` controller, with an `about` action.
 
 ### Question 5
 
-Return a `String` with the file path (from the root of you rails
+Return a `String` with the file path (from the root of your rails
 application) to the view corresponding to the controller action generated
 in the question above (the `about` action, in the `pages` controller).
 
