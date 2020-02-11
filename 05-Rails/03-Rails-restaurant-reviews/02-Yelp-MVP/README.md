@@ -9,7 +9,7 @@ You are going to use external specs written by the teachers to test your rails a
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new --webpack -T rails-yelp-mvp
+rails new rails-yelp-mvp --skip-active-storage --skip-action-mailer
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"

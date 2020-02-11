@@ -14,7 +14,7 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-task-manager
+rails new rails-task-manager --skip-active-storage --skip-action-mailer
 cd rails-task-manager
 git add .
 git commit -m "rails new"

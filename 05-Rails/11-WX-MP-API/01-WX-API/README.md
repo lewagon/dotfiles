@@ -15,6 +15,7 @@ You are going to use the minimal template. Here is the setup you need:
 cd ~/code/<user.github_nickname>
 rails new \
   --database postgresql \
+  --skip-action-mailer \
   stories-api
 cd stories-api
 git add .
@@ -23,7 +24,7 @@ hub create
 git push origin master
 ```
 
-Before starting to code your app, make sure you completed your WeChat Mini Program from the WeChat Frontend course with all the user stories specified in the [challenges of that day](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). This is the frontend application for which you'll be making the API. 
+Before starting to code your app, make sure you completed your WeChat Mini Program from the WeChat Frontend course with all the user stories specified in the [challenges of that day](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). This is the frontend application for which you'll be making the API.
 
 ## Specs
 
@@ -44,11 +45,11 @@ Don't forget to add `has_many` to link the models together in code as well as in
 
 ### 2 - Seed
 
-Let's create some stories in the `rails console` or even better, let's build a little seed for our app. 
+Let's create some stories in the `rails console` or even better, let's build a little seed for our app.
 
-This will help us to get started designing the api endpoints to show in the frontend app, even though we can't actually add a comment through our frontend (yet). 
+This will help us to get started designing the api endpoints to show in the frontend app, even though we can't actually add a comment through our frontend (yet).
 
-In the `db/seeds.rb` file, let's create around some stories with comments. 
+In the `db/seeds.rb` file, let's create around some stories with comments.
 
 Tip: Use the [Faker](https://github.com/stympy/faker/) gem to spice up your data 🌶️🌶️🌶️  For example:
 
@@ -105,7 +106,7 @@ Comments will be included along with the story's data:
 
 ```ruby
 # app/views/api/v1/stories/show.json.jbuilder
-json.extract! @story #... the story data 
+json.extract! @story #... the story data
 json.comments @story.comments do |comment|
    #... the comment data
 end
@@ -117,7 +118,7 @@ Let's also update the frontend app's view (`show.js`)  to call the api to get th
 
 ### 6 - Story Create Page
 
-Remember that to create a story in an API, we will need only one route. We do not need a new route to display the new story form, only a new route to handle the `POST` request generated when submitting this form. 
+Remember that to create a story in an API, we will need only one route. We do not need a new route to display the new story form, only a new route to handle the `POST` request generated when submitting this form.
 
 Let's also update the frontend app's view (`create.js`)  to call the api to send the user generated data. What HTTP verb is appropriate for creating data? (GET, POST, PUT, or DELETE)
 
@@ -137,7 +138,7 @@ Once again, also update the show view to put in this destroy button.
 
 ### 9 - Adding Comments  (Optional)
 
-Let's add an API endpoint to create comments from the stories controller (storing the story of the comment as the story the endpoint belongs to). Lets update our show page with a button to allow the user to add a comment with his/her name and picture to be displayed next to the comment. We can also add a new page in the frontend for a form that will use this create comments endpoint. 
+Let's add an API endpoint to create comments from the stories controller (storing the story of the comment as the story the endpoint belongs to). Lets update our show page with a button to allow the user to add a comment with his/her name and picture to be displayed next to the comment. We can also add a new page in the frontend for a form that will use this create comments endpoint.
 
 For your routes, think about using nested routes to specifiy the story the new comment belongs to.
 
