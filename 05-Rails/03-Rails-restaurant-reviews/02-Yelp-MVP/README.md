@@ -148,7 +148,7 @@ POST "restaurants/38/reviews"
 - And that's it!
 
 
-In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) - no need to generate a new controller through `namespace :admin` routes, as a developer you have the power to manipulate the DB from the `rails console` if you want to update / delete any record.
+In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) - as a developer you have the power to manipulate the DB from the `rails console` if you want to update / delete any record.
 
 We know it's a pretty basic MVP, but we just need you to understand that **each route is the embodiment of a user-story**. Don't just blindly write 7 CRUD routes for every model in your app. It's the best way to get confused by your own product and forget what your MVP really is.
 
