@@ -15,7 +15,7 @@ git add .
 git commit -m "rails new"
 hub create
 git push origin master
-echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 git submodule add git@github.com:lewagon/fullstack-challenges-03-Rails-restaurant-reviews-specs.git spec
