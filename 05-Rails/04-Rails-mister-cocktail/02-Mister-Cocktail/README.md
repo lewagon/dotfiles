@@ -44,7 +44,7 @@ git push origin master
 Let's import the teacher's spec to be able to `rake` our progress.
 
 ```bash
-echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 rails db:migrate
@@ -72,7 +72,7 @@ And add the gems we're going to need:
 ```ruby
 # Gemfile
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 ```
 
@@ -229,7 +229,7 @@ POST "cocktails"
 ### 4 - Routing, Controller, Views for Doses
 
 - A user can add a new dose (ingredient/description pair) to an existing cocktail
-- Checkout `simple_form` [docs](https://github.com/plataformatec/simple_form#associations) about `f.association` to easily create a select dropdown for our list of ingredients.
+- Checkout `simple_form` [docs](https://github.com/heartcombo/simple_form#associations) about `f.association` to easily create a select dropdown for our list of ingredients.
 
 ```
 GET "cocktails/42/doses/new"
