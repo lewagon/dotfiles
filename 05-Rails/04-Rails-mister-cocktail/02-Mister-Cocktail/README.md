@@ -124,16 +124,6 @@ module.exports = environment
 // app/javascript/packs/application.js
 import 'bootstrap';
 ```
-Make sure you are importing the JavaScript in the `application.html.erb`, note that the JS scripts should be a the bottom of the file (for performance and only when the DOM is loaded), also you can create several packs and import them where you need them!
-
-```html
-<!-- app/views/layouts/application.html.erb -->
-
-  <!-- [...] -->
-
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
-</body>
-```
 
 Don't forget to `commit` and `push` your work often.
 
