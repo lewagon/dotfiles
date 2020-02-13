@@ -131,7 +131,6 @@ Make sure you are importing the JavaScript in the `application.html.erb`, note t
 
   <!-- [...] -->
 
-  <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
   <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
 </body>
 ```
