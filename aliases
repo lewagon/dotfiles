@@ -5,3 +5,95 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
+
+
+kill port processes
+alias kp='npx kill-port' #<PortNumber>
+
+#List running server
+alias wsr='lsof -nP +c 15 | grep LISTEN'
+
+# Server port 3000
+alias s3='rails s'
+
+# Server port 4000
+alias s4='rails s -p 4000'
+
+# Server port 5000
+alias s5='rails s -p 5000'
+
+# Server port 6000
+alias s6='rails s -p 6000' s
+
+# Server port 7000
+alias s7='rails s -p 7000'
+
+# Server port 8000
+alias s8='rails s -p 8000'
+
+
+# Webpack compile
+alias wpc='webpack-dev-server'
+
+#open ngrok
+Alias ngrok='./ngrok'
+
+
+# rails db:drop
+alias rdd='rails db:drop'
+
+# rails db:create
+alias rdc='rails db:create'
+
+# rails db:migrate
+alias rdm='rails db:migrate'
+
+# rails db:seed
+alias rds='rails db:seed'
+
+
+# rails db:seed db:create db:migrate
+alias rdb='rdd rdc rdm'
+
+
+#Push your code to Heroku
+alias gph='git push heroku master'
+
+# git add .
+alias ga='git add .'
+
+# git pull
+alias gp='git pull'
+
+
+#git checkout master
+alias gcm='git checkout master'
+
+#git checkout branch
+alias gcb='git checkout'
+
+# git push origin
+alias gpo='git push origin'
+
+
+#git commit -m ....
+alias gcom='git commit -m'
+
+#git push origin ....
+alias gor='git push origin'
+
+
+
+# open in visual studio
+alias vsc='code .'
+
+# open in terminal
+alias term='code .'
+
+
+# go to code folder in cloud
+alias cc='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs/code'
+
+# go to mobeetravel folder in cloud
+alias mt='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs/code/Mobeetravel'
+
