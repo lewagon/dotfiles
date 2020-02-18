@@ -39,8 +39,4 @@ pyenv activate lewagon 2>/dev/null && echo "🐍 Loading 'lewagon' virtualenv"
 
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
-<<<<<<< HEAD
 export LC_ALL=en_US.UTF-8
-=======
-export LC_ALL=en_US.UTF-8
->>>>>>> a63c50ebb026dcb5bdee2b27a5e7439b47249cd1
