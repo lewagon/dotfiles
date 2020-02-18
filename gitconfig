@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = subl -n -w  >/dev/null 2>&1
+	
 
 [alias]
   co = checkout
@@ -22,6 +22,13 @@
   d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
+  dammit = !BRANCH=$(git rev-parse --abbrev-ref HEAD) \
+    && git fetch origin $BRANCH \
+    && git reset --hard origin/$BRANCH
+  fixup = !sh -c 'SHA=$(git rev-parse $1) \
+       && git commit --fixup $SHA \
+       && git rebase -i --autosquash $SHA~' -
+  pushf = push --force-with-lease
 
   # Clean merged branches
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
@@ -48,4 +55,4 @@
   mergeoptions = --no-edit
 [user]
 	email = ch.alexandre.reed@gmail.com
-	name = Alex
+	name = Alexandre Reed
