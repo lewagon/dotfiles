@@ -48,5 +48,5 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = bryan.leigh77@gmail.com
-	name = bryan leighton
+	email = leighton
+	name = bryan

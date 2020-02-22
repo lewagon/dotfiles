@@ -8,7 +8,7 @@ ZSH_THEME="agnoster"
 VSCODE=code-insiders
 
 # Useful plugins for Rails development with Sublime Text
-plugins=(gitfast git last-working-dir common-aliases sublime vscode zsh-syntax-highlighting history-substring-search)
+plugins=(gitfast git last-working-dir common-aliases sublime vscode zsh-syntax-highlighting history-substring-search ssh-agent kubectl)
 
 # Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -49,4 +49,6 @@ prompt_context() {
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export DISPLAY=:0
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
