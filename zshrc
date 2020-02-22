@@ -8,13 +8,14 @@ ZSH_THEME="agnoster"
 VSCODE=code-insiders
 
 # Useful plugins for Rails development with Sublime Text
-plugins=(gitfast git last-working-dir common-aliases sublime vscode zsh-syntax-highlighting history-substring-search ssh-agent kubectl)
+plugins=(gitfast git last-working-dir common-aliases sublime vscode zsh-syntax-highlighting history-substring-search ssh-agent kubectl kube-ps1)
 
 # Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
 
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
+PROMT=$PROMT'$(kube_ps1) '
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
 # Load rbenv if installed
