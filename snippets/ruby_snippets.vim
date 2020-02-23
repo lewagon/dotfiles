@@ -33,7 +33,7 @@ Snippet removecol     remove_column :<{table}>, :<{var}>
 Snippet changecol     rename_column :<{table}>, :<{old_column}>, :<{new_column}>
 
 
-Snippet rspec         require 'rails_helper'<CR><CR>RSpec.describe "<{}>" do<CR>  let(:<{instance}>) { create(:<{instance}>) }<CR><CR>  before { <{}> }<CR><CR>  it "<{}>" do<CR><{}><CR>end<CR>end
+Snippet rspec         require 'rails_helper'<CR><CR>RSpec.describe "<{}>" do<CR><CR>before { <{}> }<CR><CR>it "<{}>" do<{}><CR>end<CR>end
 Snippet it            it "<{}>" do<{}><CR>end
 Snippet context       context "<{}>" do<{}><CR>end
 Snippet fillin        fill_in "<{field}>", with: "<{text}>"<{}>
@@ -54,4 +54,4 @@ Snippet bt            `<{}>`<{}>
 Snippet dq            "<{}>"<{}>
 Snippet sq            '<{}>'<{}>
 Snippet hash          {<CR><{}>: <{}>,<CR>"<{}>" => <{}>,<CR>}
-Snippet debug         p "*"*30<{}>
+Snippet debug         puts "*"*30<{}>

@@ -1,7 +1,7 @@
 Snippet div         <div><CR><{}><CR></div>
 Snippet div.        <div class="<{}>"><CR><{}><CR></div>
 Snippet p           <p><{}></p>
-Snippet h           <h<{number}>><{}></<{number}>>
+Snippet h           <h<{number}>><{}></<h{number}>>
 
 Snippet pe          <%= <{}> %>
 Snippet er          <% <{}> %>
@@ -29,6 +29,8 @@ Snippet i18n        <%= t("<{}>") %><{}>
 Snippet f.input     <%= f.input :<{}> %><{}>
 Snippet input       <%= f.input :<{}> %><{}>
 Snippet simple_form <%= simple_form_for [<{}>] <{}>do |f| %><CR><{}><CR><%= f.button :submit %><CR><% end %>
+
+Snippet d-flex      d-flex justify-content-between align-items-center<{}>
 
 Snippet stringfortime strftime("%d/%m/%Y<{}> - %Hh%M}>")
 Snippet interpolation #{<{}>}<{}>

@@ -19,13 +19,12 @@
 		"public/packs",
 		"coverage"
 	],
-	"font_size": 12,
+	"font_size": 23,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage",
-		"zzz A File Icon zzz"
+		"Vintage"
 	],
 	"remember_open_files": false,
 	"rulers":

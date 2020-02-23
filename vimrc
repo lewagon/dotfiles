@@ -13,7 +13,7 @@ Plugin 'gmarik/Vundle.vim'  " Nécessaire
 " Bundle 'AndrewRadev/vim-eco'
 " Bundle 'Lokaltog/vim-powerline'
 Plugin 'altercation/vim-colors-solarized'
-" Bundle 'cakebaker/scss-syntax.vim'
+Plugin 'cakebaker/scss-syntax.vim'
 " Bundle 'ervandew/screen'
 " Bundle 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
