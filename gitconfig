@@ -47,5 +47,5 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = sam.jenko@hotmail.com
+	email = sam-jenkins@cookpad.com
 	name = Sam Jenkins
