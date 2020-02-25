@@ -1,8 +1,6 @@
 ## Background & Objectives
 
-Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to
-many relationship (`n:n`). So what's the deal? Well, it's time to build a cocktail
-manager. We want to store our favourite cocktails, and their recipes.
+Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to many relationship (`n:n`). So what's the deal? Well, it's time to build a cocktail manager. We want to store our favourite cocktails recipes.
 
 ## Rails app generation
 
@@ -61,7 +59,7 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Before starting to code, don't forget to setup your Rails app for Frontend, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
+Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
 
 ```bash
 yarn add bootstrap jquery popper.js
@@ -144,6 +142,8 @@ Don't forget to `commit` and `push` your work often.
 
 Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
 we need are `cocktails`, `ingredients` and `doses`. Think about the relations between the tables and who is storing the *references*. 😉
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/db.png)
 
 **Important**
 Don't use `rake` but:
