@@ -1,5 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
+
 # You can change the theme with another one:
 #   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="agnoster"
@@ -26,6 +27,9 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 # So instead of running `bin/rails` like the doc says, just run `rails`
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
+
+# autoload compinit for kubectx and kubens
+autoload -U compinit && compinit
 
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
