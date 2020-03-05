@@ -34,7 +34,7 @@ One way is via the ARGV constant which comes pre-defined in every Ruby program. 
 
 ```ruby
 puts "*** Command line arguments ***"
-puts ARGV.inspect
+p ARGV
 ```
 
 Now run it in the terminal this ways
