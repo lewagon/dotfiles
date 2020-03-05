@@ -32,13 +32,13 @@ stats_on(db, "Rock")
 ### Top 5
 
 Find the top 5 artists that made the most songs in a given genre. This method should return an
-array of arrays with the artist name and the number of songs of the given genre for each artist.
+array of arrays with this artist id, the artist name and the number of songs of the given genre for each artist.
 
 ```ruby
 top_five_artists(db, 'Rock')
 # => [
-#      [ 'Led Zeppelin', 114 ],  # Led Zeppelin has 114 Rock songs.
-#      [ 'U2',           112 ]
+#      [ 22,  'Led Zeppelin', 114 ],  # Led Zeppelin has 114 Rock songs.
+#      [ 150, 'U2',           112 ]
 #      # etc.
 #    ]
 ```
