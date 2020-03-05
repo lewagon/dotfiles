@@ -149,13 +149,15 @@ describe OrangeTree do
 
     loop_counter = 0
 
-    until orange_tree.dead?
+    is_dead = orange_tree.dead?
+    until is_dead
       orange_tree.one_year_passes!
       loop_counter += 1
+      is_dead = orange_tree.dead?
       orange_tree.instance_variable_set(:@age, 50) if orange_tree.age == 99
       break if loop_counter == 10000
     end
 
-    expect(orange_tree.dead?).to eq true
+    expect(is_dead).to eq true
   end
 end
