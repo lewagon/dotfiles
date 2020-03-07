@@ -22,5 +22,6 @@ until is_dead
   end
   sleep(0.1)
   puts ""
+  is_dead = orange_tree.dead?
 end
 # rubocop:enable Metrics/LineLength
