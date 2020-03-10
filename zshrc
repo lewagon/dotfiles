@@ -6,8 +6,9 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
 # DEFAULT_USER="Bryan Leighton"prompt_context(){}
 
-VSCODE=code-insiders
+VSCODE=code
 
+alias code="code ."
 # Useful plugins for Rails development with Sublime Text
 plugins=(gitfast git last-working-dir common-aliases sublime vscode zsh-syntax-highlighting history-substring-search ssh-agent kubectl kube-ps1)
 
