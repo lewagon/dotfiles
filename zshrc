@@ -1,3 +1,4 @@
+
 ZSH=$HOME/.oh-my-zsh
 
 
@@ -57,4 +58,4 @@ export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bi
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export DISPLAY=:0
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"
