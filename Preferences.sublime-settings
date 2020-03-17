@@ -5,7 +5,6 @@
 	"folder_exclude_patterns":
 	[
 		"tmp",
-		// "log",
 		".git",
 		".svn",
 		"_site",
@@ -13,7 +12,6 @@
 		".sass-cache",
 		".asset-cache",
 		"build",
-		// "node_modules",
 		"dist",
 		"public/packs",
 		"coverage"

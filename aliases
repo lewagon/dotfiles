@@ -9,6 +9,9 @@ alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 #pyton vitual env activated Le Wagon
 alias penv='pyenv activate lewagon'
 
+#open jupyter notebook
+alias jnote='jupyter notebook'
+
 
 #kill port processes
 alias kp='npx kill-port' #<PortNumber>
@@ -42,6 +45,8 @@ alias wpc='webpack-dev-server'
 Alias ngrok='./ngrok'
 
 
+# RoR
+
 # rails db:drop
 alias rdd='rails db:drop'
 
@@ -61,6 +66,12 @@ alias rdb='rdd rdc rdm'
 
 #Push your code to Heroku
 alias gph='git push heroku master'
+
+
+# GIT 
+
+#git log --oneline
+alias com='git log --oneline'
 
 # git add .
 alias ga='git add .'
@@ -88,14 +99,14 @@ alias gor='git push origin'
 
 
 # open in visual studio
-alias vsc='code .'
+alias vsc='open . -a "Visual Studio Code"'
 
 # open in terminal
 alias term='code .'
 
 
 # go to code folder in cloud
-alias cc='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs/code'
+alias icloud='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs'
 
 # go to mobeetravel folder in cloud
 alias mt='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs/code/Mobeetravel'
