@@ -101,10 +101,10 @@ describe "OrdersController", :_order do
       expect(OrdersController.instance_method(:list_my_orders).arity).to eq(1)
     end
 
-    it "should list John's undelivered orders" do
+    it "should list Ringo's undelivered orders" do
       controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
       ringo = employee_repository.find(3)  # ringo is a delivery guy
-      expect(STDOUT).to receive(:puts).with(/Paul McCartney.*Calzone/m)
+      expect(STDOUT).to receive(:puts).with(/(Paul McCartney||Calzone).*(Calzone||Paul McCartney)/)
       controller.list_my_orders(ringo)
     end
   end
