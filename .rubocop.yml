@@ -40,6 +40,12 @@ Security/Open:
   Enabled: false
 Bundler/OrderedGems:
   Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
 
 AllCops:
   TargetRubyVersion: 2.6
