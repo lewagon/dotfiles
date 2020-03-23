@@ -70,6 +70,9 @@ alias gph='git push heroku master'
 
 # GIT 
 
+#git remote remove origin
+alias grr='git remote remove origin'
+
 #git log --oneline
 alias com='git log --oneline'
 
