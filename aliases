@@ -74,7 +74,7 @@ alias gph='git push heroku master'
 alias repo='git init; hub create -p; find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;echo .DS_Store >> .gitignore;git add .gitignore;git commit -m ".DS_Store banished!";git push origin master'
 
 #git generic commit
-alias nocom='git push --set-upstream origin ; git rev-parse --abbrev-ref HEAD'
+alias nocom='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 #'ga;gcom "generic commit either for test purpose or just lasy...";gor'
 
@@ -105,7 +105,7 @@ alias gpo='git push origin'
 alias gcom='git commit -m'
 
 #git push origin ....
-alias gor='git push origin'
+alias gor='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 
 
