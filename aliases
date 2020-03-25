@@ -76,6 +76,9 @@ alias repo='git init; hub create -p; find . -name .DS_Store -print0 | xargs -0 g
 #git generic commit
 alias nocom='ga;gcom "generic commit either for test purpose or just lasy...";gor'
 
+#git ignore DS_Store
+alias ds=' find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;echo .DS_Store >> .gitignore;git add .gitignore;git commit -m ".DS_Store banished!";git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+
 
 
 
