@@ -76,6 +76,9 @@ alias repo='git init; hub create -p; find . -name .DS_Store -print0 | xargs -0 g
 #git generic commit
 alias nocom='ga;gcom "generic commit either for test purpose or just lasy...";gor'
 
+
+
+
 #git remote remove origin
 alias grr='git remote remove origin'
 
