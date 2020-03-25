@@ -1,4 +1,5 @@
 {
+
 	"bootstrapped": true,
 	"in_process_packages":
 	[
@@ -24,4 +25,6 @@
 		"SublimeLinter",
 		"SublimeLinter-rubocop"
 	]
+
+
 }
