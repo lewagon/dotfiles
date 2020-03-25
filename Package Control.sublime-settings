@@ -7,21 +7,25 @@
 	[
 		"AdvancedNewFile",
 		"All Autocomplete",
-		"Babel",
 		"Babel Snippets",
 		"BeautifyRuby",
-		"Emmet",
-		"ERB Snippets",
 		"FileOpTabContextMenu",
 		"Git",
 		"GitGutter",
 		"HTML Boilerplate",
 		"IPython Notebook",
-		"Package Control",
-		"SCSS",
 		"SideBarEnhancements",
 		"SideBarMenuAdvanced",
-		"SublimeLinter",
-		"SublimeLinter-rubocop"
+		"A File Icon",
+		"Babel",
+    	"Emmet",
+    	"ERB Snippets",
+    	"Latest Migration",
+    	"MagicPython",
+    	"Package Control",
+    	"SCSS",
+    	"SublimeLinter",
+    	"SublimeLinter-rubocop",
+    	"BracketHighlighter"
 	]
 }
