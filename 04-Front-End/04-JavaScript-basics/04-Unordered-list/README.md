@@ -20,7 +20,7 @@ Make sure you use [ES6 Template literals](https://developer.mozilla.org/en-US/do
 When the `listItem` function passes all the tests, go on and code the `unorderedList` function which takes one `items` parameter (`Array`) and returns the whole `<ul>`'s HTML:
 
 ```js
-> console.log(unorderedList([ 'milk', 'butter', 'bread' ]));
+> console.log(unorderedList(['milk', 'butter', 'bread']));
 // <ul class="list-group">
 //   <li class="list-group-item">milk</li>
 //   <li class="list-group-item">butter</li>
