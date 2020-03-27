@@ -16,11 +16,11 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--webpack` option! Let's also add a `--database=postgresql` (we will talk about this tomorrow). 😉
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-mister-cocktail -T --webpack --database=postgresql
+rails new rails-mister-cocktail --database=postgresql --skip-action-mailbox -T
 cd rails-mister-cocktail
 ```
 
@@ -42,7 +42,7 @@ git push origin master
 Let's import the teacher's spec to be able to `rake` our progress.
 
 ```bash
-echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 rails db:migrate
@@ -70,7 +70,7 @@ And add the gems we're going to need:
 ```ruby
 # Gemfile
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 ```
 
@@ -121,17 +121,6 @@ module.exports = environment
 ```js
 // app/javascript/packs/application.js
 import 'bootstrap';
-```
-Make sure you are importing the JavaScript in the `application.html.erb`, note that the JS scripts should be a the bottom of the file (for performance and only when the DOM is loaded), also you can create several packs and import them where you need them!
-
-```html
-<!-- app/views/layouts/application.html.erb -->
-
-  <!-- [...] -->
-
-  <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
-</body>
 ```
 
 Don't forget to `commit` and `push` your work often.
@@ -229,7 +218,7 @@ POST "cocktails"
 ### 4 - Routing, Controller, Views for Doses
 
 - A user can add a new dose (ingredient/description pair) to an existing cocktail
-- Checkout `simple_form` [docs](https://github.com/plataformatec/simple_form#associations) about `f.association` to easily create a select dropdown for our list of ingredients.
+- Checkout `simple_form` [docs](https://github.com/heartcombo/simple_form#associations) about `f.association` to easily create a select dropdown for our list of ingredients.
 
 ```
 GET "cocktails/42/doses/new"
