@@ -18,14 +18,14 @@
 		"SideBarMenuAdvanced",
 		"A File Icon",
 		"Babel",
-    	"Emmet",
-    	"ERB Snippets",
-    	"Latest Migration",
-    	"MagicPython",
-    	"Package Control",
-    	"SCSS",
-    	"SublimeLinter",
-    	"SublimeLinter-rubocop",
-    	"BracketHighlighter"
+		"Emmet",
+		"ERB Snippets",
+		"Latest Migration",
+		"MagicPython",
+		"Package Control",
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-rubocop",
+		"BracketHighlighter"
 	]
 }
