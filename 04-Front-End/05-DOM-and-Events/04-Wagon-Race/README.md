@@ -19,15 +19,15 @@ and go to http://localhost:8080
 You will start by building a simple two-player board in HTML. There are a few different ways of doing it, but here's one example:
 
 ```html
-<table class="racer_table">
-  <tr id="player1_race">
+<table class="racer-table">
+  <tr id="player1-race">
     <td></td>
     <td class="active"></td>
     <td></td>
     <td></td>
     etc.
   </tr>
-  <tr id="player2_race">
+  <tr id="player2-race">
     <td></td>
     <td></td>
     <td></td>
@@ -42,18 +42,18 @@ You will start by building a simple two-player board in HTML. There are a few di
 Once your HTML is finished, switch to CSS and design your race track! Example:
 
 ```css
-.racer_table td {
+.racer-table td {
   height: 40px;
   width: 40px;
 }
-.racer_table td.active {
+.racer-table td.active {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-#player1_race td.active {
+#player1-race td.active {
   background-image: url("images/player_1.png");
 }
-#player2_race td.active {
+#player2-race td.active {
   background-image: url("images/player_2.png");
 }
 ```
