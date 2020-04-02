@@ -92,7 +92,7 @@ sum(3, 6, 1) # => 10
 sum(4, 2)    # => 6
 ```
 
-Here, the thrid argument is worth `0` if we call `sum` with only two arguments.
+Here, the third argument is worth `0` if we call `sum` with only two arguments.
 
 ## Key learning points
 
