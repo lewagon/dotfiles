@@ -7,7 +7,7 @@ class InitWorld < ActiveRecord::Migration[5.2]
     end
 
     create_table :posts do |t|
-      t.string :name
+      t.string :title
       t.string :url
       t.integer :votes, default: 0
       t.references :user, foreign_key: true

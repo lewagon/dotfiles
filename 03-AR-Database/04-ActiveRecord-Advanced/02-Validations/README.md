@@ -23,9 +23,9 @@ rake db:migrate
 
 ### Add validations to the `Post` model
 
-- A post should have a `name`, `url` (in the right format!) and a user
-- A post `name` should be at least 5 characters long
-- Each post should have a unique `name` (case insensitive)
+- A post should have a `title`, `url` (in the right format!) and a user
+- A post `title` should be at least 5 characters long
+- Each post should have a unique `title` (case insensitive)
 
 ### Bonus: Callbacks
 
