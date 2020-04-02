@@ -38,6 +38,22 @@ describe "Migration" do
       expect(post[2]).to eq "http://www.lewagon.com"
       expect(post[5]).to eq 42
     end
+
+    it "should have added 0 as a default value for the column" do
+      migrate
+
+      now = Time.now.to_i
+      expect { db.execute("
+        INSERT INTO posts (title, url, created_at, updated_at)
+        VALUES ('Le Wagon', 'http://www.lewagon.com', '#{now}', #{now})
+      ") }.not_to raise_error
+
+      post = db.execute("SELECT * FROM posts").first
+      expect(post[0]).to eq 1  # id
+      expect(post[1]).to eq "Le Wagon"
+      expect(post[2]).to eq "http://www.lewagon.com"
+      expect(post[5]).to eq 0
+    end
   end
 end
 
