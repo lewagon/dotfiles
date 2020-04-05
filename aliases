@@ -78,7 +78,7 @@ alias gph='git push heroku master'
 # GIT 
 
 #git create repo + ignore DS_Store
-alias repo='rm -rf .git; git init; hub create -p; find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;echo .DS_Store >> .gitignore;git add .gitignore;git commit -m ".DS_Store banished!";git push origin master'
+alias repo='rm -rf .git; git init; hub create -p; find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;echo .DS_Store >> .gitignore;git add .gitignore;git commit -m ".DS_Store banished!";git push origin master; ga; gcom "first push on repo"; gor'
 
 #git generic commit
 alias nocom='ga;gcom "generic commit either for test purpose or just lasy...";gor'
