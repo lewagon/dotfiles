@@ -5,27 +5,28 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"AdvancedNewFile",
 		"All Autocomplete",
+		"Babel",
 		"Babel Snippets",
 		"BeautifyRuby",
+		"BracketHighlighter",
+		"Emmet",
+		"ERB Snippets",
 		"FileOpTabContextMenu",
 		"Git",
 		"GitGutter",
 		"HTML Boilerplate",
 		"IPython Notebook",
-		"SideBarEnhancements",
-		"SideBarMenuAdvanced",
-		"A File Icon",
-		"Babel",
-		"Emmet",
-		"ERB Snippets",
 		"Latest Migration",
 		"MagicPython",
 		"Package Control",
 		"SCSS",
+		"SideBarEnhancements",
+		"SideBarMenuAdvanced",
 		"SublimeLinter",
 		"SublimeLinter-rubocop",
-		"BracketHighlighter"
+		"Terminus"
 	]
 }
