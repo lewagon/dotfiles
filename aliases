@@ -96,7 +96,9 @@ alias ds=' find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;
 alias grr='git remote remove origin'
 
 #git log --oneline
-alias com='git log --oneline'
+#alias com='git log --oneline'
+#or
+alias com='git lg'
 
 # git add .
 alias ga='git add .'
