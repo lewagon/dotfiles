@@ -9,13 +9,13 @@ You are going to use external specs written by the teachers to test your rails a
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new --webpack -T rails-yelp-mvp
+rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"
 hub create
 git push origin master
-echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 git submodule add git@github.com:lewagon/fullstack-challenges-03-Rails-restaurant-reviews-specs.git spec
@@ -148,7 +148,7 @@ POST "restaurants/38/reviews"
 - And that's it!
 
 
-In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) - no need to generate a new controller through `namespace :admin` routes, as a developer you have the power to manipulate the DB from the `rails console` if you want to update / delete any record.
+In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) - as a developer you have the power to manipulate the DB from the `rails console` if you want to update / delete any record.
 
 We know it's a pretty basic MVP, but we just need you to understand that **each route is the embodiment of a user-story**. Don't just blindly write 7 CRUD routes for every model in your app. It's the best way to get confused by your own product and forget what your MVP really is.
 

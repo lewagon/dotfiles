@@ -4,7 +4,7 @@ Style/ConditionalAssignment:
   Enabled: false
 Style/StringLiterals:
   Enabled: false
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 Lint/UnusedMethodArgument:
   Enabled: false
@@ -45,6 +45,10 @@ Style/HashEachMethods:
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
+  Enabled: false
+Lint/RaiseException:
+  Enabled: false
+Lint/StructNewOverride:
   Enabled: false
 
 AllCops:

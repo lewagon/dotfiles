@@ -1,6 +1,6 @@
-## Upload your pitch this weekend
+## Upload your pitch
 
-**Important Reminder** - you have homework this weekend! On Monday at 5pm, it's Pitch Night, which means you need to [upload your pitch on kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) on Sunday!
+**Important Reminder** - you have homework! On the next session, instead of livecode, it's Pitch Night, which means you need to [upload your pitch on kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) before!
 
 Remember the key points:
 

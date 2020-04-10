@@ -12,7 +12,7 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-longest-word-game --skip-active-storage
+rails new rails-longest-word-game --skip-active-storage --skip-action-mailbox
 cd rails-longest-word-game
 git add .
 git commit -m "rails new"
@@ -49,7 +49,14 @@ Have a look at your old Ruby code. How did you generate an `Array` of random let
 
 We need to add a form below the letters so that the user can fill a suggestion and submit it.
 
-Go ahead and add a `<form />` to your view. It should `POST` to the `/score` action in the `GamesController`. Remember about the `:authenticity_token` (see Lecture slides)!
+Go ahead and add a `<form />` to your view. It should `POST` to the `/score` action in the `GamesController`.
+
+You will need to add the line below into your `form`:
+
+```erb
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+```
+This will add a hidden input field with an `authenticity_token` that ensures the `POST` request is coming from your website and not from another. Read [this stack overflow thread](https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token) if you want to learn more about [CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) and why Rails adds this security layer by default!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game_with_form.png)
 
