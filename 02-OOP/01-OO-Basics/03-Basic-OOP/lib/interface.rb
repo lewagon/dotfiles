@@ -15,6 +15,7 @@ until is_dead
   sleep(0.05)
   puts "."
   sleep(0.05)
+  is_dead = orange_tree.dead?
   if is_dead
     puts "Your orange tree is dead :("
   else
@@ -22,6 +23,5 @@ until is_dead
   end
   sleep(0.1)
   puts ""
-  is_dead = orange_tree.dead?
 end
 # rubocop:enable Metrics/LineLength
