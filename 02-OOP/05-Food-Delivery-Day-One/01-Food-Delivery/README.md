@@ -1,10 +1,10 @@
 Let's build a Food Delivery program for a restaurant!
 
-Here are the main user stories of our software:
+Here are the main **user stories** of our software:
 - As an employee (manager or delivery guy), I can log in
-- As a manager, I can create a meal with a name and a price
+- As a manager, I can create a meal with its name and its price
 - As a manager, I can read all the meals
-- As a manager, I can create a customer with name and an address
+- As a manager, I can create a customer with its name and its address
 - As a manager, I can read all the customers
 - As a manager, I can create an order with a meal, for a customer and assigned to a delivery guy
 - As a manager, I can read all the undelivered orders
@@ -61,31 +61,26 @@ There is no rake for this part. Launch your app by running this command in the t
 ruby app.rb
 ```
 
-Everything is working? Good! Time to `commit` and `push`.
+Everything is working? Good! Time to `git add`, `commit` and `push`.
 
 ### 1.4 - `Meal` controller
 
-Then let's move to the controller. Here are the **user actions** we want to implement:
+Let's move to the controller. Here are the **user actions** we want to implement:
+- `Add`, to create a new meal with its name and its price
+- `List`, to read all the meals
 
-- `List` all meals available in the restaurant
-- `Add` a new meal
+Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and view)!
 
-The `rake` should help you go through all these steps. Follow your guide!
+Start by writing the **pseudo code**, breaking each user action into elementary steps and delegating each step to a component (model, repository or view). Then write the code to implement each step.
 
-To launch `rake` for just the meal section, use `rspec -t meal`
+To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
+```bash
+ruby app.rb
+```
 
-Done? Good! Time to `commit` and `push`.
+`rake meal` should also help you go through all these steps. Follow your guide!
 
-### 1.5 - App
-
-
-Make sure that you can run the two meal-related user actions when launching the program:
-
-
-
-
-
-
+All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 2 - `Customer`
 ### 2.1 - `Customer` model
