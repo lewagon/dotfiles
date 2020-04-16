@@ -4,10 +4,10 @@ The software is designed for **one restaurant only**, so no need to cater (no pu
 
 The main components are:
 
-- **Employees** (managers, delivery guys)
-- **Customers** of the Restaurant
 - **Meals** that can be ordered
-- **Orders** made by customers, and assigned to a given delivery guy.
+- **Customers** than order meals
+- **Employees** (managers or delivery guys)
+- **Orders** which are meals asked by customers, and assigned to a given delivery guy.
 
 ## 1 - (`Meal`)
 
