@@ -1,6 +1,6 @@
 Let's build a Food Delivery program for a restaurant!
 
-Here are the main **user stories** of our software:
+Here are the **user stories** of our software:
 - As an employee (manager or delivery guy), I can log in
 - As a manager, I can create a meal with its name and its price
 - As a manager, I can read all the meals
@@ -31,7 +31,7 @@ Our restaurant sells meals, so we need a way to represent what a meal is.
 
 Each meal has an id, a name and a price.
 
-Write some code to model this and crash-test your model in `irb`. Then test your code by running `rake meal`.
+Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake meal`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -44,7 +44,7 @@ This repository is initialized with a CSV file path. It read/write the meals fro
 - Get all the meals from the repository
 - Find a specific meal thanks to its id
 
-Write some code to implement this. Then test your code by running `rake meal`.
+Write some code to implement this and crash-test your repository in irb. You can create your own `meals.csv` CSV file inside the `data` folder. Then test your code by running `rake meal`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -71,7 +71,7 @@ Let's move to the controller. Here are the **user actions** we want to implement
 
 Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and view)!
 
-Start by writing the **pseudo code**, breaking each user action into elementary steps and delegating each step to a component (model, repository or view). Then write the code to implement each step.
+Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or view). Then write the code to implement each step. Create the view and code it step by step.
 
 To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
 ```bash
@@ -80,104 +80,63 @@ ruby app.rb
 
 `rake meal` should also help you go through all these steps. Follow your guide!
 
+Make sure your two meal user stories work before moving on to the next feature.
+
 All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 2 - `Customer`
-### 2.1 - `Customer` model
+
+### 1.1 - `Customer` model
+
+Our restaurant sells to customers, so we need a way to represent what a customer is.
+
+Each customer has an id, a name and an address.
+
+Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake customer`.
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
 ### 2.2 - `Customer` repository
-### 2.3 - Router
-### 2.4 - `Customer` controller
-### 2.5 - App
-## 3 - Optionals
-### 3.1 - refactor repos with inheritance
-### 3.2 - entire CRUD for meal and customer
 
+Now that we have a model representing our customers, we need a repository to store them.
 
-## 3 - (`Customer`)
+This repository is initialized with a CSV file path. It read/write the customers from the CSV file and store them in memory. The interface of this repository allows to:
+- Add a new customer to the repository
+- Get all the customers from the repository
+- Find a specific customer thanks to its id
 
-We need to keep a list of all our customers. When a new customer calls to order, the first thing we need to do is add them to our list. Each customer has a name and an address. Work on the model, the repository to store the CSV (it's a different file than `meals.csv`!) and finally the controller to implement the following user actions:
+Write some code to implement this and crash-test your repository in irb. You can create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
 
-- `List` all customers available in the restaurant
-- `Add` a new customer
+All green? Good! Time to `git add`, `commit` and `push`.
 
-Once your controller methods are implemented, add them to the router! Make sure your 4 user actions work before moving on to the next feature.
+### 2.3 - `Customer` controller
 
+Let's move to the controller. Here are the **user actions** we want to implement:
+- `Add`, to create a new customer with its name and its address
+- `List`, to read all the customers
+
+Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and view)!
+
+Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or view). Then write the code to implement each step. Create the view and code it step by step.
+
+To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
 ```bash
 ruby app.rb
 ```
 
-To launch `rake` for just the customer tests, use `rspec -t customer`
+`rake customer` should also help you go through all these steps. Follow your guide!
 
-Done? Boom! Don't forget to `commit` and `push`.
+Make sure your two customer user stories work before moving on to the next feature.
+
+## 3 - Optionals
+### 3.1 - refactor repos with inheritance
+### 3.2 - entire CRUD for meal and customer
 
 ## 4 - (Optional) Inheritance to the rescue
 
 `MealRepository` and `CustomerRepository` have a lot of similarities don't they? We should always stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), so it's time to introduce a parent class, `BaseRepository`, which will hold all of the shared behavior.
 
 Reminder: this is an optional section, so you can skip it and come back to it later if you want.
-
-## 5 - (`Employee`)
-
-The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeeRepository` from a CSV file that we fill manually (no need for an `add` action).
-
-Open your `employees.csv` file and manually add some employees:
-
-```bash
-id,username,password,role
-1,paul,secret,manager
-2,john,secret,delivery_guy
-```
-
-With that information, we can implement a **login** logic in our app to have two dashboards in the router depending on the user role: one dashboard for the manager, and another dashboard for the delivery guy (with fewer user actions available).
-
-To handle that, we'll introduce the notion of a **session**. At the router level, we'll store the logged-in user in a session.
-
-The sign sequence should go like this:
-
-```bash
-> username?
-paul
-> password?
-blablabla
-Wrong credentials... Try again!
-> username?
-paul
-> password?
-secret
-Welcome Paul!
-```
-
-Now when you run the food delivery app, the first thing you can do is to **sign in**. The dashboard that you then see should be **dependent on your role**:
-
-```bash
-ruby app.rb
-```
-Optional: At the moment, a user's password is stored straight in the CSV and is visible to anyone. Is that a good idea? What could we do instead?
-
-To launch only employee tests, use `rspec -t employee`
-
-Finished? Great work :) Remember to `commit` and `push`.
-
-
-## 6 - (`Order`) Time to link all the models!
-
-An order is taken for a **customer**, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **delivery guy**. Finally, the `Order` model needs to record whether or not the meal has been delivered.
-
-Here's where our models link up. First, write the `Order` model class and its repository.
-
-Then, make sure that the following **user stories** are implemented in your program:
-
-- As an employee, I can log in
-- As a manager, I can add a meal
-- As a manager, I can view all the meals
-- As a manager, I can add a customer
-- As a manager, I can view all the customers
-- As a manager, I can view all the undelivered orders
-- As a manager, I can add an order for a customer and assign it to a delivery guy
-- As a delivery guy, I can view my undelivered orders
-- As a delivery guy, I can mark an order as delivered
-
-Again, to launch just the order tests, use `rspec -t _order`
 
 ## 7 - (Optional) - `Destroy` actions
 
