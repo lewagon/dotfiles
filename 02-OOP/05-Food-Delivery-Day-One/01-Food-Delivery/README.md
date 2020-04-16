@@ -37,7 +37,7 @@ This repository is initialized with a CSV file path. It read/write the meals fro
 - Get all the meals from the repository
 - Find a specific meal thanks to its id
 
-Write some code to implement this and crash-test your repository in irb. You can create your own `meals.csv` CSV file inside the `data` folder. Then test your code by running `rake meal`.
+Write some code to implement this and crash-test your repository in irb. You should create your own `meals.csv` CSV file inside the `data` folder. Then test your code by running `rake meal`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -45,7 +45,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 We haven't launched our app yet. To do this, we need a router and we need to fill in the `app.rb` file.
 
-The router is responsible for displaying the tasks that the user can do and routing his choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instanciating a router and executing its run method to launch the app.
+The router is responsible for displaying the tasks that the user can do and routing the user's choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instanciating a router and executing its run method to launch the app.
 
 Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/400/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instanciate the router with a controller** has we don't have it yet. Just print `TODO` for the moment when the user select a task.
 
@@ -98,7 +98,7 @@ This repository is initialized with a CSV file path. It read/write the customers
 - Get all the customers from the repository
 - Find a specific customer thanks to its id
 
-Write some code to implement this and crash-test your repository in irb. You can create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
+Write some code to implement this and crash-test your repository in irb. You should create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
