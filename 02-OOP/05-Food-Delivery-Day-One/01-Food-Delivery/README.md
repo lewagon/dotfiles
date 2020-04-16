@@ -1,10 +1,21 @@
 Time to build a Food Delivery program for a restaurant.
 
+Here are the main user stories of our software:
+- As an employee (manager or delivery guy), I can log in
+- As a manager, I can create a meal with a name and a price
+- As a manager, I can read all the meals
+- As a manager, I can create a customer with name and an address
+- As a manager, I can read all the customers
+- As a manager, I can create an order with a meal, for a customer and assigned to a delivery guy
+- As a manager, I can read all the undelivered orders
+- As a delivery guy, I can real all my undelivered orders
+- As a delivery guy, I can mark one of my orders as delivered
+
+
 The software is designed for **one restaurant only**, so no need to cater (no pun intended 😉) for a multi-restaurant one (e.g. you don't need a `Restaurant` model).
 
-The main components are:
-
-- **Meals** that can be ordered
+**Employees** (managers or delivery guys) can log in the software. Managers
+**Meals** that can be ordered
 - **Customers** than order meals
 - **Employees** (managers or delivery guys)
 - **Orders** which are meals asked by customers, and assigned to a given delivery guy.
