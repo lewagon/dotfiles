@@ -13,7 +13,7 @@ Here are the main user stories of our software:
 
 **WARNINGS**
 
-The software is designed for **one restaurant only**, so no need to cater (no pun intended 😉) for a multi-restaurant one (e.g. you don't need a `Restaurant` model).
+The software is designed for **one restaurant only**, so no need to cater (no pun intended 😉) for a multi-restaurant one (e.g. we don't need a `Restaurant` model).
 
 The software is designed for **the restaurant's staff only** (back office), so no need to design a login interface for customers.
 
@@ -27,7 +27,9 @@ Hence,the main components of our software are:
 
 ### 1.1 - `Meal` model
 
-Your restaurant sells food, so you need a way to represent the meals that can be ordered. Each meal has an id, a name and a price.
+Our restaurant sells meals, so we need a way to represent what a meal is.
+
+Each meal has an id, a name and a price.
 
 Write some code to model this and crash-test your model in `irb`. Then test your code by running `rake meal`.
 
@@ -35,7 +37,26 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 ### 1.2 - `Meal` repository
 
-and create a repository that will read/write the meals from a CSV.
+Now that we have a model representing our meals, we need a repository to store them.
+
+This repository is initialized with a CSV file path. It read/write the meals from the CSV file and store them in memory. The interface of this repository allows to:
+- Add a new meal to the repository
+- Get all the meals from the repository
+- Find a specific meal thanks to its id
+
+Write some code to implement this. Then test your code by running `rake meal`.
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
+### 1.3 - Router
+
+We haven't launched our app code yet. To do this, we need a router and a `run` method. If you're stuck, go back to the **Cookbook** code to get some inspiration. Make sure that you can run the two meal-related user actions when launching the program:
+
+```bash
+ruby app.rb
+```
+
+Done? Good! Time to `commit` and `push`.
 
 Then let's move to the controller. Here are the **user actions** we want to implement:
 
@@ -47,7 +68,6 @@ The `rake` should help you go through all these steps. Follow your guide!
 To launch `rake` for just the meal section, use `rspec -t meal`
 
 Done? Good! Time to `commit` and `push`.
-### 1.3 - Router
 ### 1.4 - `Meal` controller
 ### 1.5 - App
 ## 2 - `Customer`
@@ -63,13 +83,6 @@ Done? Good! Time to `commit` and `push`.
 
 ## 2 - We need a router!
 
-We haven't launched our app code yet. To do this, we need a router and a `run` method. If you're stuck, go back to the **Cookbook** code to get some inspiration. Make sure that you can run the two meal-related user actions when launching the program:
-
-```bash
-ruby app.rb
-```
-
-Done? Good! Time to `commit` and `push`.
 
 ## 3 - (`Customer`)
 
