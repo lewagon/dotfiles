@@ -1,4 +1,4 @@
-Time to build a Food Delivery program for a restaurant.
+Let's build a Food Delivery program for a restaurant!
 
 Here are the main user stories of our software:
 - As an employee (manager or delivery guy), I can log in
@@ -12,7 +12,9 @@ Here are the main user stories of our software:
 - As a delivery guy, I can mark one of my orders as delivered
 
 **WARNINGS**
+
 The software is designed for **one restaurant only**, so no need to cater (no pun intended 😉) for a multi-restaurant one (e.g. you don't need a `Restaurant` model).
+
 The software is designed for **the restaurant's staff only** (back office), so no need to design a login interface for customers.
 
 Hence,the main components of our software are:
@@ -21,9 +23,19 @@ Hence,the main components of our software are:
 - **Employees**
 - **Orders**
 
-## 1 - `Meal` model
+## 1 - `Meal`
 
-Your restaurant sells food, so you need a way to store the meals that can be ordered. Each meal has a name and a price. Write some code to model this, and create a repository that will read/write the meals from a CSV.
+### 1.1 - `Meal` model
+
+Your restaurant sells food, so you need a way to represent the meals that can be ordered. Each meal has an id, a name and a price.
+
+Write some code to model this and crash-test your model in `irb`. Then test your code by running `rake meal`.
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
+### 1.2 - `Meal` repository
+
+and create a repository that will read/write the meals from a CSV.
 
 Then let's move to the controller. Here are the **user actions** we want to implement:
 
@@ -35,6 +47,19 @@ The `rake` should help you go through all these steps. Follow your guide!
 To launch `rake` for just the meal section, use `rspec -t meal`
 
 Done? Good! Time to `commit` and `push`.
+### 1.3 - Router
+### 1.4 - `Meal` controller
+### 1.5 - App
+## 2 - `Customer`
+### 2.1 - `Customer` model
+### 2.2 - `Customer` repository
+### 2.3 - Router
+### 2.4 - `Customer` controller
+### 2.5 - App
+## 3 - Optionals
+### 3.1 - refactor repos with inheritance
+### 3.2 - entire CRUD for meal and customer
+
 
 ## 2 - We need a router!
 
