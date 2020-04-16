@@ -1,15 +1,10 @@
 Let's build a Food Delivery program for a restaurant!
 
-Here are the **user stories** of our software:
-- As an employee (manager or delivery guy), I can log in
-- As a manager, I can create a meal with its name and its price
-- As a manager, I can read all the meals
-- As a manager, I can create a customer with its name and its address
-- As a manager, I can read all the customers
-- As a manager, I can create an order with a meal, for a customer and assigned to a delivery guy
-- As a manager, I can read all the undelivered orders
-- As a delivery guy, I can real all my undelivered orders
-- As a delivery guy, I can mark one of my orders as delivered
+Here are the first **user stories** of our software:
+- As a user, I can create a meal with its name and its price
+- As a user, I can read all the meals
+- As a user, I can create a customer with its name and its address
+- As a user, I can read all the customers
 
 **WARNINGS**
 
@@ -17,11 +12,9 @@ The software is designed for **one restaurant only**, so no need to cater (no pu
 
 The software is designed for **the restaurant's staff only** (back office), so no need to design a login interface for customers.
 
-Hence,the main components of our software are:
+Hence,the first components of our software are:
 - **Meals**
 - **Customers**
-- **Employees**
-- **Orders**
 
 ## 1 - `Meal`
 
@@ -129,18 +122,21 @@ ruby app.rb
 Make sure your two customer user stories work before moving on to the next feature.
 
 ## 3 - Optionals
-### 3.1 - refactor repos with inheritance
-### 3.2 - entire CRUD for meal and customer
 
-## 4 - (Optional) Inheritance to the rescue
+### 3.1 - Refactor repositories with inheritance
 
-`MealRepository` and `CustomerRepository` have a lot of similarities don't they? We should always stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), so it's time to introduce a parent class, `BaseRepository`, which will hold all of the shared behavior.
+`MealRepository` and `CustomerRepository` have a lot of similarities don't they? In order to stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), we need to define a parent class, `BaseRepository`, which will hold all of the shared behavior and from which `MealRepository` and `CustomerRepository` will inherit.
 
-Reminder: this is an optional section, so you can skip it and come back to it later if you want.
+Write some code to implement this. It's a refactoring process so there is no new test for this part. If your `rake` was all green before, it should be all green after!
 
-## 7 - (Optional) - `Destroy` actions
+Done? Time to `git add`, `commit` and `push`.
 
-We haven't done any **deleting** yet. How would you implement these additional user stories?
+### 3.2 - Implement update and destroy actions for meal and customer
 
-- As a manager, I can delete a meal
-- As a manager, I can delete a customer
+In our app, a user can't update or destroy an existing meal or customer.
+
+Implement these additional user stories:
+- As a user, I can update an existing meal
+- As a user, I can delete an existing meal
+- As a user, I can update an existing customer
+- As a user, I can delete an existing customer
