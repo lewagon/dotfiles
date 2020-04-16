@@ -41,7 +41,7 @@ describe "CustomerRepository", :customer do
     end
 
     it "should not crash if the CSV path does not exist yet. Hint: use File.exist?" do
-      expect { CustomerRepository.new('unexisting_file.csv') }.not_to raise_error
+      expect { CustomerRepository.new("unexisting_file.csv") }.not_to raise_error
     end
 
     it "should store customers in memory in an instance variable `@customers` or `@elements`" do
@@ -82,27 +82,27 @@ describe "CustomerRepository", :customer do
   describe "#add" do
     it "should add a customer to the in-memory list" do
       repo = CustomerRepository.new(csv_path)
-      new_customer = Customer.new(address: "Gary", name: 'Michael Jackson')
+      new_customer = Customer.new(address: "Gary", name: "Michael Jackson")
       repo.add(new_customer)
       expect(repo.all.length).to eq(4)
     end
 
     it "should set the new customer id" do
       repo = CustomerRepository.new(csv_path)
-      hawaii_customer = Customer.new(address: "Gary", name: 'Michael Jackson')
+      hawaii_customer = Customer.new(address: "Gary", name: "Michael Jackson")
       repo.add(hawaii_customer)
       expect(hawaii_customer.id).to eq(4)
-      rucola_customer = Customer.new(address: "Stone Town", name: 'Freddie Mercury')
+      rucola_customer = Customer.new(address: "Stone Town", name: "Freddie Mercury")
       repo.add(rucola_customer)
       expect(rucola_customer.id).to eq(5)
     end
 
     it "should start auto-incremting at 1 if it is the first customer added" do
-      csv_path = 'unexisting_empty_customers.csv'
+      csv_path = "unexisting_empty_customers.csv"
       FileUtils.remove_file(csv_path, force: true)
 
       repo = CustomerRepository.new(csv_path)
-      hawaii_customer = Customer.new(address: "Gary", name: 'Michael Jackson')
+      hawaii_customer = Customer.new(address: "Gary", name: "Michael Jackson")
       repo.add(hawaii_customer)
       expect(hawaii_customer.id).to eq(1)
 
@@ -110,11 +110,11 @@ describe "CustomerRepository", :customer do
     end
 
     it "should save each new customer in the CSV (first row = headers)" do
-      csv_path = 'spec/support/empty_customers.csv'
+      csv_path = "spec/support/empty_customers.csv"
       FileUtils.remove_file(csv_path, force: true)
 
       repo = CustomerRepository.new(csv_path)
-      hawaii_customer = Customer.new(address: "Gary", name: 'Michael Jackson')
+      hawaii_customer = Customer.new(address: "Gary", name: "Michael Jackson")
       repo.add(hawaii_customer)
 
       repo = CustomerRepository.new(csv_path)
@@ -123,7 +123,7 @@ describe "CustomerRepository", :customer do
       expect(repo.all[0].name).to eq("Michael Jackson")
       expect(repo.all[0].address).to eq("Gary")
 
-      rucola_customer = Customer.new(address: 'Stone Town', name: 'Freddie Mercury')
+      rucola_customer = Customer.new(address: "Stone Town", name: "Freddie Mercury")
       repo.add(rucola_customer)
       expect(rucola_customer.id).to eq(2)
 
