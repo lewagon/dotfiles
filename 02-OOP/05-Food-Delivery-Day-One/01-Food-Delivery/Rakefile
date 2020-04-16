@@ -1,4 +1,4 @@
-require 'rspec/core/rake_task'
+require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec) do |t|
   t.rspec_opts = "--require ./bonus_formatter.rb --format BonusFormatter"
 end
