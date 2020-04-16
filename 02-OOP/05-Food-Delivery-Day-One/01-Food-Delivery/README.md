@@ -48,15 +48,22 @@ Write some code to implement this. Then test your code by running `rake meal`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-### 1.3 - Router
+### 1.3 - Router and app
 
-We haven't launched our app code yet. To do this, we need a router and a `run` method. If you're stuck, go back to the **Cookbook** code to get some inspiration. Make sure that you can run the two meal-related user actions when launching the program:
+We haven't launched our app yet. To do this, we need a router and we need to fill in the `app.rb` file.
 
+The router is responsible for displaying the tasks that the user can do and routing his choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instanciating a router and executing its run method to launch the app.
+
+Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/400/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instanciate the router with a controller** has we don't have it yet. Just print `TODO` for the moment when the user select a task.
+
+There is no rake for this part. Launch your app by running this command in the terminal:
 ```bash
 ruby app.rb
 ```
 
-Done? Good! Time to `commit` and `push`.
+Everything is working? Good! Time to `commit` and `push`.
+
+### 1.4 - `Meal` controller
 
 Then let's move to the controller. Here are the **user actions** we want to implement:
 
@@ -68,8 +75,18 @@ The `rake` should help you go through all these steps. Follow your guide!
 To launch `rake` for just the meal section, use `rspec -t meal`
 
 Done? Good! Time to `commit` and `push`.
-### 1.4 - `Meal` controller
+
 ### 1.5 - App
+
+
+Make sure that you can run the two meal-related user actions when launching the program:
+
+
+
+
+
+
+
 ## 2 - `Customer`
 ### 2.1 - `Customer` model
 ### 2.2 - `Customer` repository
@@ -79,9 +96,6 @@ Done? Good! Time to `commit` and `push`.
 ## 3 - Optionals
 ### 3.1 - refactor repos with inheritance
 ### 3.2 - entire CRUD for meal and customer
-
-
-## 2 - We need a router!
 
 
 ## 3 - (`Customer`)
