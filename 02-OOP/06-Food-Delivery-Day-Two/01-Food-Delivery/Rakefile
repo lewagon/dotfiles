@@ -25,7 +25,7 @@ end
 
 desc "Launch tests for the order namespace only"
 task :int_order do
-  sh "rspec -t order"
+  sh "rspec -t _order"
 end
 
 task default: [:rubocop, :spec]

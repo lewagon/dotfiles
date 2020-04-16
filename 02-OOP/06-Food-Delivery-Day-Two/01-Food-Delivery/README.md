@@ -88,11 +88,36 @@ ruby app.rb
 
 Everything is working? Good! Time to `git add`, `commit` and `push`.
 
-## 6 - `Order` Time to link all the models!
+## 2 - `Order`
 
-An order is taken for a **customer**, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **delivery guy**. Finally, the `Order` model needs to record whether or not the meal has been delivered.
+### 2.1 - `Order` model
 
-Here's where our models link up. First, write the `Order` model class and its repository.
+Our restaurant take orders, so wee need a way to represent what an order is.
+
+
+An order is what ties everything together. Each order has an id, a meal, a customer, an employee plus a `delivered` boolean to record whether or not the order has been delivered.
+
+Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake order`.
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
+### 2.2 - `Order` repository
+
+Now that we have a model representing our orders, we need a repository to store them.
+
+This repository is initialized with a CSV file path. It read/write the orders from the CSV file and store them in memory. The interface of this repository allows to:
+- Add a new order to the repository
+- Get all the undelivered orders from the repository
+
+Since an order has a `meal`, a `customer` and an `employee` **instances**, we need to instanciate
+
+Write some code to implement this and crash-test your repository in irb. You should create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
+
+
+
 
 Then, make sure that the following **user stories** are implemented in your program:
 
