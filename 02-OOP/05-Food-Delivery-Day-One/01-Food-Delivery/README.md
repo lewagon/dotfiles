@@ -11,16 +11,17 @@ Here are the main user stories of our software:
 - As a delivery guy, I can real all my undelivered orders
 - As a delivery guy, I can mark one of my orders as delivered
 
-
+**WARNINGS**
 The software is designed for **one restaurant only**, so no need to cater (no pun intended 😉) for a multi-restaurant one (e.g. you don't need a `Restaurant` model).
+The software is designed for **the restaurant's staff only** (back office), so no need to design a login interface for customers.
 
-**Employees** (managers or delivery guys) can log in the software. Managers
-**Meals** that can be ordered
-- **Customers** than order meals
-- **Employees** (managers or delivery guys)
-- **Orders** which are meals asked by customers, and assigned to a given delivery guy.
+Hence,the main components of our software are:
+- **Meals**
+- **Customers**
+- **Employees**
+- **Orders**
 
-## 1 - (`Meal`)
+## 1 - `Meal` model
 
 Your restaurant sells food, so you need a way to store the meals that can be ordered. Each meal has a name and a price. Write some code to model this, and create a repository that will read/write the meals from a CSV.
 
