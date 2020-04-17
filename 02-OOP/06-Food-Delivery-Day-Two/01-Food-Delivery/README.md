@@ -16,16 +16,16 @@ Now continue with your own code and keep adding features to the router / making 
 
 Let's add more features to our Food Delivery program!
 
-Here are all the **user stories** of our software:
+Here are all the **user actions** of our app:
 [ ] As an employee, I can log in
-[X] As a manager, I can create a meal with its name and price
-[X] As a manager, I can read all the meals
-[X] As a manager, I can create a customer with its name and address
-[X] As a manager, I can read all the customers
-[ ] As a manager, I can create an order with a meal, for a customer and assigned to a delivery guy
-[ ] As a manager, I can read all the undelivered orders
-[ ] As a delivery guy, I read all my undelivered orders
+[X] As a manager, I can add a new meal
+[X] As a manager, I can list all the meals
+[X] As a manager, I can add a new customer
+[X] As a manager, I can list all the customers
+[ ] As a manager, I can add a new order
+[ ] As a manager, I can list all the undelivered orders
 [ ] As a delivery guy, I can mark one of my orders as delivered
+[ ] As a delivery guy, I list all my undelivered orders
 
 Hence,there are two new components:
 - **Employees**
@@ -80,7 +80,6 @@ After signing in, the dashboard that you see should be **dependent on your role*
 
 Write some code to implement this behavior.
 
-
 There is no rake for this part. Launch your app by running this command in the terminal:
 ```bash
 ruby app.rb
@@ -130,10 +129,10 @@ All green? Good! Time to `git add`, `commit` and `push`.
 ### 2.3 - `Order` controller
 
 Let's move to the controller. Here are the **user actions** we want to implement:
-- As a manager, I can view all the undelivered orders
-- As a manager, I can add an order for a customer and assign it to a delivery guy
-- As a delivery guy, I can view my undelivered orders
-- As a delivery guy, I can mark an order as delivered
+- As a manager, I can add a new order
+- As a manager, I can list all the undelivered orders
+- As a delivery guy, I can mark one of my orders as delivered
+- As a delivery guy, I list all my undelivered orders
 
 Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and views)!
 
