@@ -9,7 +9,7 @@ On most websites, they are the keys to create an account. If the email is misspe
 
 In this challenge, let's assume you're launching an application in a few weeks. You'll notify everyone with a great emailing campaign as soon as your website is online! In the meantime, you prepared a landing page to collect visitors' emails. 
 
-![Scenario](<https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-scenario.svg?sanitize=true>)
+![Scenario](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-scenario.svg?sanitize=true)
 
 
 
@@ -18,21 +18,21 @@ In this challenge, let's assume you're launching an application in a few weeks. 
 
 ### Collect valid emails
 
-![Collect valid emails](<https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step1.svg?sanitize=true>)
+![Collect valid emails](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step1.svg?sanitize=true)
 
 Your landing page is ready. You want to make sure the visitors leave a valid email with no errors.
 
 Code the `valid?` function:
-- it should return true if the email is valid, and false otherwise.
+- it should return `true` if the email is valid, and `false` otherwise.
 - identify the different parts of the email and code a regex to match the pattern of a classic email.
-- code the regex yourself. You'll probably find a lot of advanced regex to match every email configuration on the web, but take time to code yours.
+- code the regex yourself. You'll probably find a lot of advanced regex to match every email configuration on the web, but take the time to code yours.
 
 
 #### Pattern of an email address
 
 Every email address is the association of a **username** with a **domain name**. It follows the pattern below:
 
-![Pattern of an email address](<https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email.svg?sanitize=true>)
+![Pattern of an email address](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email.svg?sanitize=true)
 
 
 ##### About domain names
@@ -49,7 +49,7 @@ But there are many [more](https://en.wikipedia.org/wiki/List_of_Internet_top-lev
 
 ### Clean the database
 
-![Clean the database](<https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step2.svg?sanitize=true>)
+![Clean the database](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step2.svg?sanitize=true)
 
 Few days have passed and your database is already filled with some useful contacts. Your marketing team acquire more data from a professional to broaden the audience.
 Before launching the emailing campaign, you'll clean the database and filter out any invalid email.
@@ -61,7 +61,7 @@ Code the `clean_database` function:
 
 ### Build statistics
 
-![Build statistics](<https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step3.svg?sanitize=true>)
+![Build statistics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step3.svg?sanitize=true)
 
 Your landing page includes a very simple form to collect only contact emails. You don't know very much about your customers but you can infer some informations from the email addresses. You decide to make statistics about TLD (Top Level Domains).
 
@@ -73,8 +73,8 @@ Example:
 ```ruby
 {
 	com:	["julien@mdn.com"], 
-	de:		["dimitri@berlin.de"],
-	fr:		["kevin@yahoo.fr", "edward@gmail.fr"]
+	de:	["dimitri@berlin.de"],
+	fr:	["kevin@yahoo.fr", "edward@gmail.fr"]
 }
 
 ```
@@ -82,7 +82,7 @@ Example:
 
 ### Emailing campaign
 
-![Emailing campaign](<https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step4.svg?sanitize=true>)
+![Emailing campaign](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step4.svg?sanitize=true)
 
 You're now working on the email text. You're thinking of adding a bit of personalisation. Starting an email by "Dear customer" doesn't sound good, you'd rather extract the username from the email and start by something like `Dear Seb`.
 
