@@ -1,16 +1,16 @@
 Let's build a Food Delivery program for a restaurant!
 
-Here are the first **user stories** of our software:
-- As a user, I can create a meal with its name and its price
-- As a user, I can read all the meals
-- As a user, I can create a customer with its name and its address
-- As a user, I can read all the customers
+Here are the first **user actions** of our app:
+- As an employee, I can add a new meal
+- As an employee, I can list all the meals
+- As an employee, I can add a new customer
+- As an employee, I can list all the customers
 
 **WARNINGS**
 
 The software is designed for **one restaurant only**, so no need to cater (no pun intended 😉) for a multi-restaurant one (e.g. we don't need a `Restaurant` model).
 
-The software is designed for **the restaurant's staff only** (back office), so no need to design a login interface for customers.
+The software is designed for **the restaurant's staff only**, so no need to design a login interface for customers.
 
 Hence,the first components of our software are:
 - **Meals**
@@ -59,8 +59,8 @@ Everything is working? Good! Time to `git add`, `commit` and `push`.
 ### 1.4 - `Meal` controller
 
 Let's move to the controller. Here are the **user actions** we want to implement:
-- `Add`, to create a new meal with its name and its price
-- `List`, to read all the meals
+- `add` a new meal
+- `list` all meals
 
 Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and view)!
 
@@ -73,7 +73,7 @@ ruby app.rb
 
 `rake meal` should also help you go through all these steps. Follow your guide!
 
-Make sure your two meal user stories work before moving on to the next feature.
+Make sure your two meal user actions work before moving on to the next feature.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -105,8 +105,8 @@ All green? Good! Time to `git add`, `commit` and `push`.
 ### 2.3 - `Customer` controller
 
 Let's move to the controller. Here are the **user actions** we want to implement:
-- `Add`, to create a new customer with its name and its address
-- `List`, to read all the customers
+- `add` a new customer
+- `list` all customers
 
 Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and view)!
 
@@ -119,7 +119,7 @@ ruby app.rb
 
 `rake customer` should also help you go through all these steps. Follow your guide!
 
-Make sure your two customer user stories work before moving on to the next feature.
+Make sure your two customer user actions work before moving on to the next feature.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
