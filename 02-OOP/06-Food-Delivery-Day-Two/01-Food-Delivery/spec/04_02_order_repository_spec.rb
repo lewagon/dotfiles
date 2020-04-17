@@ -51,10 +51,10 @@ describe "OrderRepository", :_order do
 
   let(:orders) do
     [
-      [ "id", "delivered", "meal_id", "employee_id", "customer_id" ],
-      [ 1, true,  1, 2, 1 ],
-      [ 2, false, 1, 2, 2 ],
-      [ 3, false, 2, 2, 3 ],
+      [ "id", "meal_id", "employee_id", "customer_id", "delivered"],
+      [ 1, 1, 2, 1, true ],
+      [ 2, 1, 2, 2, false ],
+      [ 3, 2, 2, 3, false ],
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }
@@ -82,25 +82,25 @@ describe "OrderRepository", :_order do
     end
 
     it "store the 3 auxiliary repositories in instance variables" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       expect(repo.instance_variable_get(:@meal_repository)).to be_a(MealRepository)
       expect(repo.instance_variable_get(:@employee_repository)).to be_a(EmployeeRepository)
       expect(repo.instance_variable_get(:@customer_repository)).to be_a(CustomerRepository)
     end
 
     it "store orders in memory in an instance variable `@orders` or `@elements`" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       expect(elements(repo)).to be_a(Array)
     end
 
     it "should load existing orders from the CSV" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       loaded_orders = elements(repo) || []
       expect(loaded_orders.length).to eq(3)
     end
 
     it "should fill the `@orders` with instance of `Order`, setting the correct types on each property" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       loaded_orders = elements(repo) || []
       fail if loaded_orders.empty?
       loaded_orders.each do |order|
@@ -117,7 +117,7 @@ describe "OrderRepository", :_order do
 
   describe "#undelivered_orders" do
     it "should return all the undelivered orders" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       expect(repo.undelivered_orders).to be_a(Array)
       expect(repo.undelivered_orders.length).to eq(2)
       expect(repo.undelivered_orders[0]).to be_a(Order)
@@ -127,14 +127,14 @@ describe "OrderRepository", :_order do
     end
 
     it "OrderRepository should not expose the @orders through a reader/method" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       expect(repo).not_to respond_to(:orders)
     end
   end
 
   describe "#add" do
     it "should add an order to the in-memory list" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       new_order = Order.new({
         meal: meal_repository.find(1),
         customer: customer_repository.find(1),
@@ -145,7 +145,7 @@ describe "OrderRepository", :_order do
     end
 
     it "should set the new order id" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       new_order = Order.new({
         meal: meal_repository.find(1),
         customer: customer_repository.find(1),
@@ -159,7 +159,7 @@ describe "OrderRepository", :_order do
       orders_csv_path = "unexisting_empty_orders.csv"
       FileUtils.remove_file(orders_csv_path, force: true)
 
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       new_order = Order.new({
         meal: meal_repository.find(1),
         customer: customer_repository.find(1),
@@ -175,7 +175,7 @@ describe "OrderRepository", :_order do
       orders_csv_path = "spec/support/empty_orders.csv"
       FileUtils.remove_file(orders_csv_path, force: true)
 
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       new_order = Order.new({
         meal: meal_repository.find(1),
         customer: customer_repository.find(1),
@@ -184,7 +184,7 @@ describe "OrderRepository", :_order do
       repo.add(new_order)
 
       # Reload from the CSV
-      repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       expect(repo.undelivered_orders.length).to eq(1)
       expect(repo.undelivered_orders[0].id).to eq(1)
       expect(repo.undelivered_orders[0].meal).to be_a(Meal)

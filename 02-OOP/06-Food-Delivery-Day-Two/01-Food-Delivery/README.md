@@ -109,49 +109,75 @@ This repository is initialized with a CSV file path. It read/write the orders fr
 - Add a new order to the repository
 - Get all the undelivered orders from the repository
 
-Since an order has a `meal`, a `customer` and an `employee` **instances**, we need to instanciate
+Since an order has a `meal`, a `customer` and an `employee` **instances**, we also need to initialize our order repository with a meal repository, a customer repository and an employee repository.
 
-Write some code to implement this and crash-test your repository in irb. You should create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
+Write some code to implement this and crash-test your repository in irb. You should create your own `orders.csv` CSV file inside the `data` folder. Then test your code by running `rake order`.
+
+**Important**: the `order_repository` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
+
+```ruby
+class OrderRepository
+  def initialize(orders_csv_path, meal_repository, customer_repository, employee_repository)
+    # [...]
+  end
+
+  # [...]
+end
+```
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
+### 2.3 - `Order` controller
 
-
-
-
-Then, make sure that the following **user stories** are implemented in your program:
-
-- As an employee, I can log in
-- As a manager, I can add a meal
-- As a manager, I can view all the meals
-- As a manager, I can add a customer
-- As a manager, I can view all the customers
+Let's move to the controller. Here are the **user actions** we want to implement:
 - As a manager, I can view all the undelivered orders
 - As a manager, I can add an order for a customer and assign it to a delivery guy
 - As a delivery guy, I can view my undelivered orders
 - As a delivery guy, I can mark an order as delivered
 
-Again, to launch just the order tests, use `rspec -t _order`
+Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and views)!
 
-**Important**: the `order_repository` and `orders_controller` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
+Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or views). Then write the code to implement each step. Create the view and code it step by step.
 
-```ruby
-class OrderRepository
-  def initialize(orders_csv_path, meal_repository, employee_repository, customer_repository)
-    # [...]
-  end
-
-  # [...]
-end
+To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
+```bash
+ruby app.rb
 ```
+
+`rake order` should also help you go through all these steps. Follow your guide!
+
+Make sure your four order user actions work before moving on to the next feature.
+
+**Important**: the `orders_controller` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
 
 ```ruby
 class OrdersController
-  def initialize(meal_repository, employee_repository, customer_repository, order_repository)
+  def initialize(meal_repository, customer_repository, employee_repository, order_repository)
     # [...]
   end
 
   # [...]
 end
 ```
-Optional: At the moment, a user's password is stored straight in the CSV and is visible to anyone. Is that a good idea? What could we do instead?
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
+## 3 - Optionals
+
+### 3.1 - Implement update and destroy actions for meal and customer
+
+In our app, a manager can't update or destroy an existing order.
+
+Implement these additional user actions:
+- As a manager, I can update an existing order
+- As a manager, I can delete an existing order
+
+Done? Time to `git add`, `commit` and `push`.
+
+### 3.2 - Hide the user's password
+
+At the moment, a user's password is stored straight in the CSV and is visible to anyone. Is that a good idea? What could we do instead?
+
+Done? Time to `git add`, `commit` and `push`.
+
+You're done with Food Delivery!

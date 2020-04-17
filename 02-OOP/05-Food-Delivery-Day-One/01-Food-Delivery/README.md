@@ -121,9 +121,23 @@ ruby app.rb
 
 Make sure your two customer user stories work before moving on to the next feature.
 
+All green? Good! Time to `git add`, `commit` and `push`.
+
 ## 3 - Optionals
 
-### 3.1 - Refactor repositories with inheritance
+### 3.1 - Implement update and destroy actions for meal and customer
+
+In our app, a user can't update or destroy an existing meal or customer.
+
+Implement these additional user actions:
+- As a user, I can update an existing meal
+- As a user, I can delete an existing meal
+- As a user, I can update an existing customer
+- As a user, I can delete an existing customer
+
+Done? Time to `git add`, `commit` and `push`.
+
+### 3.2 - Refactor repositories with inheritance
 
 `MealRepository` and `CustomerRepository` have a lot of similarities don't they? In order to stay [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), we need to define a parent class, `BaseRepository`, which will hold all of the shared behavior and from which `MealRepository` and `CustomerRepository` will inherit.
 
@@ -131,12 +145,4 @@ Write some code to implement this. It's a refactoring process so there is no new
 
 Done? Time to `git add`, `commit` and `push`.
 
-### 3.2 - Implement update and destroy actions for meal and customer
-
-In our app, a user can't update or destroy an existing meal or customer.
-
-Implement these additional user stories:
-- As a user, I can update an existing meal
-- As a user, I can delete an existing meal
-- As a user, I can update an existing customer
-- As a user, I can delete an existing customer
+You're done for today!
