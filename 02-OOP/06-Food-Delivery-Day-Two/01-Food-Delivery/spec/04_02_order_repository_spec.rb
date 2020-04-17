@@ -78,7 +78,7 @@ describe "OrderRepository", :_order do
     end
 
     it "should not crash if the CSV path does not exist yet. Hint: use File.exist?" do
-      expect { OrderRepository.new('unexisting_file.csv', meal_repository, employee_repository, customer_repository) }.not_to raise_error
+      expect { OrderRepository.new("unexisting_file.csv", meal_repository, employee_repository, customer_repository) }.not_to raise_error
     end
 
     it "store the 3 auxiliary repositories in instance variables" do
@@ -156,7 +156,7 @@ describe "OrderRepository", :_order do
     end
 
     it "should start auto-incrementing at 1 if it is the first order added" do
-      orders_csv_path = 'unexisting_empty_orders.csv'
+      orders_csv_path = "unexisting_empty_orders.csv"
       FileUtils.remove_file(orders_csv_path, force: true)
 
       repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
@@ -172,7 +172,7 @@ describe "OrderRepository", :_order do
     end
 
     it "should save each new order in the CSV (first row = headers)" do
-      orders_csv_path = 'spec/support/empty_orders.csv'
+      orders_csv_path = "spec/support/empty_orders.csv"
       FileUtils.remove_file(orders_csv_path, force: true)
 
       repo = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)

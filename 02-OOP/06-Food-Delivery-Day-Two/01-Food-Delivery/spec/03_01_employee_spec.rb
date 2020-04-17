@@ -14,7 +14,7 @@ end
 
 describe "Employee", :employee do
   it "should be initialized with a hash of properties" do
-    properties = { id: 1, username: "paul", password: 'secret', role: 'manager' }
+    properties = { id: 1, username: "paul", password: "secret", role: "manager" }
     employee = Employee.new(properties)
     expect(employee).to be_a(Employee)
   end
@@ -43,38 +43,38 @@ describe "Employee", :employee do
 
   describe "#password" do
     it "should return the password of the Employee" do
-      employee = Employee.new({ password: 'secret' })
-      expect(employee.password).to eq('secret')
+      employee = Employee.new({ password: "secret" })
+      expect(employee.password).to eq("secret")
     end
   end
 
   describe "#role" do
     it "should return the role of the Employee" do
-      employee = Employee.new({ role: 'delivery_guy' })
-      expect(employee.role).to eq('delivery_guy')
+      employee = Employee.new({ role: "delivery_guy" })
+      expect(employee.role).to eq("delivery_guy")
     end
   end
 
   describe "#manager?" do
     it "should return true if the employee is a manager" do
-      employee = Employee.new({ role: 'manager' })
+      employee = Employee.new({ role: "manager" })
       expect(employee.manager?).to be true
     end
 
     it "should return false if the employee is a delivery guy" do
-      employee = Employee.new({ role: 'delivery_guy' })
+      employee = Employee.new({ role: "delivery_guy" })
       expect(employee.manager?).to be false
     end
   end
 
   describe "#delivery_guy?" do
     it "should return true if the employee is a delivery guy" do
-      employee = Employee.new({ role: 'delivery_guy' })
+      employee = Employee.new({ role: "delivery_guy" })
       expect(employee.delivery_guy?).to be true
     end
 
     it "should return false if the employee is a manager" do
-      employee = Employee.new({ role: 'manager' })
+      employee = Employee.new({ role: "manager" })
       expect(employee.delivery_guy?).to be false
     end
   end
