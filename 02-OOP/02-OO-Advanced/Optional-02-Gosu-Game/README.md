@@ -30,7 +30,7 @@ Restart your terminal.
 
 Install [Xming](https://sourceforge.net/projects/xming/).
 Start XLaunch, leaving default settings but **add the following optional parameters** `-ac`.
-![xlaunch.jpg](xlaunch.jpg)
+![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
 
 If you get the error `could not initialize SDL` when running your game, you need to add an exception in your Windows Defender to allow Xming public incomming traffic over UDP and TCP protocols. You can follow this [documentation](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule).
 
