@@ -164,11 +164,12 @@ function vnc() {
  function question() {
      git add .
      gst
-     read REPLY\?"Enter COMMIT?"
+     read REPLY\?"Type commit =>"
      print ""
      print ">>  commit is: ${REPLY}"
      print ""
      git commit -m "${REPLY}"
+     gor
      
  }
 
