@@ -112,6 +112,9 @@ alias ga='git add .'
 # git pull
 alias gp='git pull'
 
+# git fetch
+alias gf='git fetch'
+
 
 #git checkout master
 alias gcm='git checkout master'
