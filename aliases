@@ -121,7 +121,7 @@ alias ga='git add .'
 #git commit -m ....
 alias comthis='git commit -m'
 
-#Git commit with question prompt in terminal
+#Git add/status/commit with question prompt in terminal
 function gcom() {
      git add .
      gst
@@ -130,6 +130,18 @@ function gcom() {
      print ">>  commit is: \"${REPLY}\""
      print ""
      git commit -m "${REPLY}"
+ }
+
+#Git add/status/commit/push with question prompt in terminal
+function gcomgor() {
+     git add .
+     gst
+     read REPLY\?"Type commit => "
+     print ""
+     print ">>  commit is: \"${REPLY}\""
+     print ""
+     git commit -m "${REPLY}"
+     gor
  }
 
 # git status then git add . then git status 
