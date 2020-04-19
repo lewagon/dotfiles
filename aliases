@@ -133,7 +133,7 @@ function gcom() {
  }
 
 #Git add/status/commit/push with question prompt in terminal
-function gcomgor() {
+function cg() {
      git add .
      gst
      read REPLY\?"Type commit => "
