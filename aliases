@@ -170,7 +170,7 @@ alias gor='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 #reset git ignore
 
-alias resig='git rm -r --cached .; git add .gitignore; git commit -m "fixed untracked files"; gst'
+alias resig='git rm -r --cached .; git add .; git commit -m "fixed untracked files"; gst'
 
 
 #LOCAL
