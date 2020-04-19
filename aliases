@@ -119,7 +119,7 @@ alias ga='git add .'
 alias gcom='git commit -m'
 
 # git status > git add . > git status 
-alias gsab='gst && ga && gst'
+alias gsa='gst; ga ;gst'
 
 
 #git checkout master
@@ -161,4 +161,9 @@ alias mt='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs/code/Mobee
 function vnc() {
     open vnc://"$USER"@"$1"
 }
+ function question() {
+     read -q "REPLY?This is the question I want to ask?"
+ }
 
+#ZSH Interpolation
+TMP=" hello ${:-=cat}"
