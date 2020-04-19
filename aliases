@@ -165,8 +165,9 @@ function vnc() {
      git add .
      gst
      read REPLY\?"Enter COMMIT?"
-     print ">> "
-     print "commit is: ${REPLY}"
+     print ""
+     print ">>  commit is: ${REPLY}"
+     print ""
      git commit -m "${REPLY}"
      
  }
