@@ -53,7 +53,7 @@ Alias ngrok='./ngrok'
 
 # Ruby
 
-alias ru='ruby'
+alias ru='ruby cd \"${fileDirname}\"\u000D'
 
 
 # RoR
@@ -180,7 +180,7 @@ alias al='cat /Users/cez/code/AzCez/dotfiles/aliases'
 alias vsc='open . -a "Visual Studio Code"'
 
 # go to Local to CODE folder 
-alias code='cd /Users/cez/code'
+alias codef='cd /Users/cez/code'
 
 
 # go to code folder in cloud
