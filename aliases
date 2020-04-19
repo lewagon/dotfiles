@@ -168,7 +168,9 @@ alias gpo='git push origin'
 #git push origin ....
 alias gor='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
+#reset git ignore
 
+alias resetignore='git rm -r --cached .; git add .; git commit -m "fixed untracked files"; gor'
 
 
 #LOCAL
@@ -204,6 +206,13 @@ function vnc() {
      print ""
      git commit -m "${REPLY}"
  }
+
+
+
+
+
+
+
 
 #ZSH Interpolation
 #TMP=" hello ${:-=cat}"
