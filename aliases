@@ -132,8 +132,12 @@ function gcom() {
      git commit -m "${REPLY}"
  }
 
-# git status > git add . > git status 
-alias gsa='gst; ga; gst'
+# git status then git add . then git status 
+function gsa() {
+    gst
+    ga 
+    gst
+}
 
 
 #git checkout master
