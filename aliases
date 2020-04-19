@@ -106,11 +106,14 @@ alias grr='git remote remove origin'
 #or
 alias com='git lg'
 
+# git fetch
+alias gf='git fetch'
+
 # git pull
 alias gp='git pull'
 
-# git fetch
-alias gf='git fetch'
+# git fetch then pull
+alias gfp='gf; gp'
 
 # git add .
 alias ga='git add .'
@@ -130,7 +133,7 @@ function gcom() {
  }
 
 # git status > git add . > git status 
-alias gsa='gst; ga ;gst'
+alias gsa='gst; ga; gst'
 
 
 #git checkout master
