@@ -125,7 +125,7 @@ alias comthis='git commit -m'
 function gcom() {
      git add .
      gst
-     read REPLY\?"Type commit =>"
+     read REPLY\?"Type commit => "
      print ""
      print ">>  commit is: \"${REPLY}\""
      print ""
