@@ -147,3 +147,10 @@ alias icloud='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs'
 # go to mobeetravel folder in cloud
 alias mt='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs/code/Mobeetravel'
 
+
+#ZSH test
+
+function vnc() {
+    open vnc://"$USER"@"$1"
+}
+
