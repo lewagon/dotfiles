@@ -119,7 +119,7 @@ alias ga='git add .'
 alias gcom='git commit -m'
 
 # git status > git add . > git status 
-alias gsa='gst, ga'
+alias gsa='gst'
 
 
 #git checkout master
@@ -139,9 +139,12 @@ alias gor='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 #LOCAL
 
+# Show alias file content in terminal
+alias al='cat /Users/cez/code/AzCez/dotfiles/aliases'
+
 # open in visual studio
 alias vsc='open . -a "Visual Studio Code"'
-ß
+
 # go to Local to CODE folder 
 alias code='cd /Users/cez/code'
 
