@@ -51,8 +51,14 @@ alias wpc='webpack-dev-server'
 #open ngrok
 Alias ngrok='./ngrok'
 
+# Ruby
+
+alias ru='ruby'
+
 
 # RoR
+
+
 
 # rails db:drop
 alias rdd='rails db:drop'
@@ -125,11 +131,14 @@ alias gor='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 
 
+
+#LOCAL
+
 # open in visual studio
 alias vsc='open . -a "Visual Studio Code"'
-
-# open in terminal
-alias term='code .'
+ß
+# go to Local to CODE folder 
+alias code='cd /Users/cez/code'
 
 
 # go to code folder in cloud
