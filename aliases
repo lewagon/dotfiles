@@ -162,8 +162,15 @@ function vnc() {
     open vnc://"$USER"@"$1"
 }
  function question() {
-     read -q "REPLY?This is the question I want to ask?"
+     read REPLY\?"Enter COMMIT?"
+     print "reply is: ${REPLY}"
+     git commit -m "reply is: ${REPLY}"
+     
  }
 
 #ZSH Interpolation
-TMP=" hello ${:-=cat}"
+#TMP=" hello ${:-=cat}"
+#$ TMP="${:-=cat}"
+#$ print -rl -- $TMP
+#=>cat
+# question code snippet :  #read -q "REPLY?Enter COMMIT?"
