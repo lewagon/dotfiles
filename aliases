@@ -163,8 +163,8 @@ function vnc() {
 }
  function question() {
      read REPLY\?"Enter COMMIT?"
-     print "reply is: ${REPLY}"
-     git commit -m "reply is: ${REPLY}"
+     print "commit is: ${REPLY}"
+     git commit -m "${REPLY}"
      
  }
 
