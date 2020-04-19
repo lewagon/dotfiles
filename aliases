@@ -87,10 +87,10 @@ alias gph='git push heroku master'
 alias rmgit='rm -rf .git'
 
 #git create repo + ignore DS_Store
-alias repo='git init; hub create -p; find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;echo .DS_Store >> .gitignore;git add .gitignore;git commit -m ".DS_Store banished!";git push origin master; ga; gcom "first push on repo"; gor'
+alias repo='git init; hub create -p; find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;echo .DS_Store >> .gitignore;git add .gitignore;git commit -m ".DS_Store banished!";git push origin master; ga; comthis "first push on repo"; gor'
 
 #git generic commit
-alias nocom='ga;gcom "generic commit either for test purpose or just lasy...";gor'
+alias nocom='ga;comthis "generic commit either for test purpose or just lasy...";gor'
 
 #git ignore DS_Store
 alias ds=' find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;echo .DS_Store >> .gitignore;git add .gitignore;git commit -m ".DS_Store banished!";git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
@@ -116,7 +116,18 @@ alias gf='git fetch'
 alias ga='git add .'
 
 #git commit -m ....
-alias gcom='git commit -m'
+alias comthis='git commit -m'
+
+#Git commit with question prompt in terminal
+function gcom() {
+     git add .
+     gst
+     read REPLY\?"Type commit =>"
+     print ""
+     print ">>  commit is: ${REPLY}"
+     print ""
+     git commit -m "${REPLY}"
+ }
 
 # git status > git add . > git status 
 alias gsa='gst; ga ;gst'
@@ -169,8 +180,6 @@ function vnc() {
      print ">>  commit is: ${REPLY}"
      print ""
      git commit -m "${REPLY}"
-     gor
-     
  }
 
 #ZSH Interpolation
