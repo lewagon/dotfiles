@@ -141,7 +141,7 @@ function gcomgor() {
      print ">>  commit is: \"${REPLY}\""
      print ""
      git commit -m "${REPLY}"
-     gor
+     git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
  }
 
 # git status then git add . then git status 
