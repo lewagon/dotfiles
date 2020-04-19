@@ -124,7 +124,7 @@ function gcom() {
      gst
      read REPLY\?"Type commit =>"
      print ""
-     print ">>  commit is: ${REPLY}"
+     print ">>  commit is: \"${REPLY}\""
      print ""
      git commit -m "${REPLY}"
  }
