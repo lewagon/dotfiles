@@ -162,6 +162,8 @@ function vnc() {
     open vnc://"$USER"@"$1"
 }
  function question() {
+     git add .
+     gst
      read REPLY\?"Enter COMMIT?"
      print "commit is: ${REPLY}"
      git commit -m "${REPLY}"
