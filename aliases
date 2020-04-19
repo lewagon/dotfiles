@@ -106,14 +106,20 @@ alias grr='git remote remove origin'
 #or
 alias com='git lg'
 
-# git add .
-alias ga='git add .'
-
 # git pull
 alias gp='git pull'
 
 # git fetch
 alias gf='git fetch'
+
+# git add .
+alias ga='git add .'
+
+#git commit -m ....
+alias gcom='git commit -m'
+
+# git status > git add . > git status 
+alias gsa='gst, ga'
 
 
 #git checkout master
@@ -124,10 +130,6 @@ alias gcb='git checkout'
 
 # git push origin
 alias gpo='git push origin'
-
-
-#git commit -m ....
-alias gcom='git commit -m'
 
 #git push origin ....
 alias gor='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
