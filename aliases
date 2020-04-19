@@ -119,7 +119,7 @@ alias ga='git add .'
 alias gcom='git commit -m'
 
 # git status > git add . > git status 
-alias gsa='gst'
+alias gsab='gst && ga && gst'
 
 
 #git checkout master
