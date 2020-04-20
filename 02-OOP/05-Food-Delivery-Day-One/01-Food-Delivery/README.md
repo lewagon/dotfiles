@@ -24,7 +24,7 @@ Our restaurant sells meals, so we need a way to represent what a meal is.
 
 Each meal has an id, a name and a price.
 
-Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake meal`.
+Write some code to implement this and crash-test your model. Then test your code by running `rake meal`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -32,12 +32,12 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 Now that we have a model representing our meals, we need a repository to store them.
 
-This repository is initialized with a CSV file path. It read/write the meals from the CSV file and store them in memory. The interface of this repository allows to:
-- Add a new meal to the repository
-- Get all the meals from the repository
+This repository is initialized with a CSV file path. It reads/writes the meals from the CSV file and holds them as objects in an array. The behavior we wnat for the repository is to:
+- Add a new meal
+- Get all the meals
 - Find a specific meal thanks to its id
 
-Write some code to implement this and crash-test your repository in irb. You should create your own `meals.csv` CSV file inside the `data` folder. Then test your code by running `rake meal`.
+Write some code to implement this and crash-test your repository. You should create your own `meals.csv` CSV file inside the `data` folder. Then test your code by running `rake meal`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -45,11 +45,12 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 We haven't launched our app yet. To do this, we need a router and we need to fill in the `app.rb` file.
 
-The router is responsible for displaying the tasks that the user can do and routing the user's choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instanciating a router and executing its run method to launch the app.
+The router is responsible for displaying the tasks that the user can do and routing the user's choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instanciating a router and executing its `run` method to launch the app.
 
-Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/400/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instanciate the router with a controller** has we don't have it yet. Just print `TODO` for the moment when the user select a task.
+Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you can go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instanciate the router with a controller** has we don't have it yet. Just print `TODO` for the moment when the user select a task.
 
 There is no rake for this part. Launch your app by running this command in the terminal:
+
 ```bash
 ruby app.rb
 ```
@@ -62,11 +63,12 @@ Let's move to the controller. Here are the **user actions** we want to implement
 - `add` a new meal
 - `list` all meals
 
-Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and view)!
+Remember that the role of the controller is to delegate and coordinate the work to the other components of our app (model, repository and view)!
 
 Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or view). Then write the code to implement each step. Create the view and code it step by step.
 
 To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
+
 ```bash
 ruby app.rb
 ```
@@ -85,7 +87,7 @@ Our restaurant sells to customers, so we need a way to represent what a customer
 
 Each customer has an id, a name and an address.
 
-Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake customer`.
+Write some code to implement this and crash-test your model. Then test your code by running `rake customer`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -93,12 +95,12 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 Now that we have a model representing our customers, we need a repository to store them.
 
-This repository is initialized with a CSV file path. It read/write the customers from the CSV file and store them in memory. The interface of this repository allows to:
-- Add a new customer to the repository
-- Get all the customers from the repository
+This repository is initialized with a CSV file path. It reads/writes the customers from the CSV file and holds them as objects in an array. The behavior we wnat for the repository is to:
+- Add a new customer
+- Get all the customers
 - Find a specific customer thanks to its id
 
-Write some code to implement this and crash-test your repository in irb. You should create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
+Write some code to implement this and crash-test your repository. You should create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -113,6 +115,7 @@ Remember that the role of the controller is to delegate the work to the other co
 Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or view). Then write the code to implement each step. Create the view and code it step by step.
 
 To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
+
 ```bash
 ruby app.rb
 ```
