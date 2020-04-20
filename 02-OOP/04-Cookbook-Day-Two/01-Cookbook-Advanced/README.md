@@ -105,7 +105,9 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 
 You can work in a temporary file -- `parsing.rb` for instance -- to find the right selectors and the ruby code to get all the data you want to extract from the HTML. You can start by just displaying the information extracted with `puts`. Once you found all the selectors you need, go on and code the action in your cookbook.
 
-**Resource**: here's a [good starting point for Nokogiri](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
+For today you will be using the Nokogiri `.search()` method, which takes a CSS selector as a parameter. If you don't remember the syntax have a look at this section of the [parsing lecture](https://kitt.lewagon.com/karr/karr.kitt/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data&program_id=1#/3/6). 
+
+**Resource**: Want to dive deeper in Nokogiri? Here's a [good Nokogiri scraping guide](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
 
 ### Get response HTML data using `open-uri`
 
