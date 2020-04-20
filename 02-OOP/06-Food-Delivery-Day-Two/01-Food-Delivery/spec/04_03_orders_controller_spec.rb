@@ -49,15 +49,15 @@ describe "OrdersController", :_order do
 
   let(:orders) do
     [
-      [ "id", "delivered", "meal_id", "employee_id", "customer_id" ],
-      [ 1, true,  1, 2, 1 ],
-      [ 2, false, 1, 2, 2 ],
-      [ 3, false, 2, 2, 3 ],
-      [ 4, false, 5, 3, 1 ]
+      [ "id", "meal_id", "employee_id", "customer_id", "delivered" ],
+      [ 1, 1, 2, 1, true ],
+      [ 2, 1, 2, 2, false ],
+      [ 3, 2, 2, 3, false ],
+      [ 4, 5, 3, 1, false ]
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }
-  let(:order_repository) { OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository) }
+  let(:order_repository) { OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository) }
 
   before(:each) do
     CsvHelper.write_csv(meals_csv_path, meals)
@@ -71,28 +71,27 @@ describe "OrdersController", :_order do
     expect(controller).to be_a(OrdersController)
   end
 
-  describe "#list_undelivered_orders" do
-    it "should list undelivered orders (with meal, employee assigned and customer info)" do
-      controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
-
-      orders.drop(2).each do |order|
-        expect(STDOUT).to receive(:puts).with(/#{customer_repository.find(order[4]).name}/)
-      end
-      controller.list_undelivered_orders
-    end
-  end
-
   describe "#add" do
     it "should ask the user for a meal id, a customer id and an employee id to be assigned" do
-      controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
+      controller = OrdersController.new(meal_repository, customer_repository, employee_repository, order_repository)
       allow_any_instance_of(Object).to receive(:gets).and_return("2")
 
       controller.add
 
       expect(order_repository.undelivered_orders.length).to eq(4)
       expect(order_repository.undelivered_orders[3].meal.name).to eq("Capricciosa")
-      expect(order_repository.undelivered_orders[3].employee.username).to eq("john")
+      expect(order_repository.undelivered_orders[3].employee.username).to eq("ringo")
       expect(order_repository.undelivered_orders[3].customer.name).to eq("John Bonham")
+    end
+  end
+
+  describe "#list_undelivered_orders" do
+    it "should list undelivered orders (with meal, employee assigned and customer info)" do
+      controller = OrdersController.new(meal_repository, customer_repository, employee_repository, order_repository)
+      orders.drop(2).each do |order|
+        expect(STDOUT).to receive(:puts).with(/#{customer_repository.find(order[3]).name}/)
+      end
+      controller.list_undelivered_orders
     end
   end
 
@@ -102,7 +101,7 @@ describe "OrdersController", :_order do
     end
 
     it "should list Ringo's undelivered orders" do
-      controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
+      controller = OrdersController.new(meal_repository, customer_repository, employee_repository, order_repository)
       ringo = employee_repository.find(3)  # ringo is a delivery guy
       expect(STDOUT).to receive(:puts).with(/(Paul McCartney||Calzone).*(Calzone||Paul McCartney)/)
       controller.list_my_orders(ringo)
@@ -115,13 +114,13 @@ describe "OrdersController", :_order do
     end
 
     it "should ask the delivery guy for an order id, mark it as delivered, and save the relevant data to the CSV file" do
-      controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
+      controller = OrdersController.new(meal_repository, customer_repository, employee_repository, order_repository)
       # Ringo wants to mark as delivered number 4.
-      allow_any_instance_of(Object).to receive(:gets).and_return("4")
+      allow_any_instance_of(Object).to receive(:gets).and_return("1")
       ringo = employee_repository.find(3)  # ringo is a delivery guy
       controller.mark_as_delivered(ringo)
       # Reload from CSV
-      new_order_repository = OrderRepository.new(orders_csv_path, meal_repository, employee_repository, customer_repository)
+      new_order_repository = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       expect(new_order_repository.undelivered_orders.map(&:id)).not_to include(4)
     end
   end

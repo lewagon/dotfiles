@@ -29,20 +29,13 @@ describe "MealsController", :meal do
   let(:csv_path) { "spec/support/meals.csv" }
   let(:repository) { MealRepository.new(csv_path) }
 
+  before(:each) do
+    CsvHelper.write_csv(csv_path, meals)
+  end
+
   it "should be initialized with a `MealRepository` instance" do
     controller = MealsController.new(repository)
     expect(controller).to be_a(MealsController)
-  end
-
-  describe "#list" do
-    it "should grab meals from the repo and display them" do
-      controller = MealsController.new(repository)
-      meals.drop(1).each do |meal_array|
-        expect(STDOUT).to receive(:puts).with(/#{meal_array[1]}/)
-      end
-
-      controller.list
-    end
   end
 
   describe "#add" do
@@ -55,6 +48,17 @@ describe "MealsController", :meal do
       expect(repository.all.length).to eq(6)
       expect(repository.all[5].name).to eq("12")
       expect(repository.all[5].price).to eq(12)
+    end
+  end
+
+  describe "#list" do
+    it "should grab meals from the repo and display them" do
+      controller = MealsController.new(repository)
+      meals.drop(1).each do |meal_array|
+        expect(STDOUT).to receive(:puts).with(/#{meal_array[1]}/)
+      end
+
+      controller.list
     end
   end
 end

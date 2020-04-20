@@ -40,7 +40,7 @@ describe "EmployeeRepository", :employee do
     end
 
     it "should not crash if the CSV path does not exist yet. Hint: use File.exist?" do
-      expect { EmployeeRepository.new('unexisting_file.csv') }.not_to raise_error
+      expect { EmployeeRepository.new("unexisting_file.csv") }.not_to raise_error
     end
 
     it "should store employees in memory in an instance variable `@employees` or `@elements`" do

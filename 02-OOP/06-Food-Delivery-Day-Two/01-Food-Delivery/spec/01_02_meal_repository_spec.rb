@@ -43,7 +43,7 @@ describe "MealRepository", :meal do
     end
 
     it "should not crash if the CSV path does not exist yet. Hint: use File.exist?" do
-      expect { MealRepository.new('unexisting_file.csv') }.not_to raise_error
+      expect { MealRepository.new("unexisting_file.csv") }.not_to raise_error
     end
 
     it "store meals in memory in an instance variable `@meals` or `@elements`" do
@@ -85,27 +85,27 @@ describe "MealRepository", :meal do
   describe "#add" do
     it "should add a meal to the in-memory list" do
       repo = MealRepository.new(csv_path)
-      new_meal = Meal.new(price: 12, name: 'Hawaii')
+      new_meal = Meal.new(price: 12, name: "Hawaii")
       repo.add(new_meal)
       expect(repo.all.length).to eq(6)
     end
 
     it "should set the new meal id" do
       repo = MealRepository.new(csv_path)
-      hawaii_meal = Meal.new(price: 11, name: 'Hawaii')
+      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
       repo.add(hawaii_meal)
       expect(hawaii_meal.id).to eq(6)
-      rucola_meal = Meal.new(price: 12, name: 'Rucola')
+      rucola_meal = Meal.new(price: 12, name: "Rucola")
       repo.add(rucola_meal)
       expect(rucola_meal.id).to eq(7)
     end
 
     it "should start auto-incrementing at 1 if it is the first meal added" do
-      csv_path = 'unexisting_empty_meals.csv'
+      csv_path = "unexisting_empty_meals.csv"
       FileUtils.remove_file(csv_path, force: true)
 
       repo = MealRepository.new(csv_path)
-      hawaii_meal = Meal.new(price: 11, name: 'Hawaii')
+      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
       repo.add(hawaii_meal)
       expect(hawaii_meal.id).to eq(1)
 
@@ -113,11 +113,11 @@ describe "MealRepository", :meal do
     end
 
     it "every new added meal should be saved in a row in the CSV (first row = headers)" do
-      csv_path = 'spec/support/empty_meals.csv'
+      csv_path = "spec/support/empty_meals.csv"
       FileUtils.remove_file(csv_path, force: true)
 
       repo = MealRepository.new(csv_path)
-      hawaii_meal = Meal.new(price: 11, name: 'Hawaii')
+      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
       repo.add(hawaii_meal)
 
       repo = MealRepository.new(csv_path)
@@ -126,7 +126,7 @@ describe "MealRepository", :meal do
       expect(repo.all[0].name).to eq("Hawaii")
       expect(repo.all[0].price).to eq(11)
 
-      rucola_meal = Meal.new(price: 12, name: 'Rucola')
+      rucola_meal = Meal.new(price: 12, name: "Rucola")
       repo.add(rucola_meal)
       expect(rucola_meal.id).to eq(2)
 
