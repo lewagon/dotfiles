@@ -3,11 +3,13 @@ Make sure you execute the commands above 👆
 **IMPORTANT** 👇
 
 Copy the code from yesterday:
+
 ```bash
 cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
 ```
 
 Then, before you start, check that it still works:
+
 ```bash
 rake
 ```
@@ -63,6 +65,7 @@ We want to have two menus in the router: one listing the tasks for managers and 
 To handle that, we'll introduce the notion of a **session**. At the router level, we'll store the logged-in user in a session.
 
 The sign-in sequence should go like this:
+
 ```bash
 > username?
 paul
@@ -81,6 +84,7 @@ After signing in, the dashboard that you see should be **dependent on your role*
 Write some code to implement this behavior.
 
 There is no rake for this part. Launch your app by running this command in the terminal:
+
 ```bash
 ruby app.rb
 ```
@@ -91,7 +95,7 @@ Everything is working? Good! Time to `git add`, `commit` and `push`.
 
 ### 2.1 - `Order` model
 
-Our restaurant take orders, so wee need a way to represent what an order is.
+Our restaurant takes orders, so we need a way to represent what an order is.
 
 
 An order is what ties everything together. Each order has an id, a meal, a customer, an employee plus a `delivered` boolean to record whether or not the order has been delivered.
@@ -139,6 +143,7 @@ Remember that the role of the controller is to delegate the work to the other co
 Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or views). Then write the code to implement each step. Create the view and code it step by step.
 
 To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
+
 ```bash
 ruby app.rb
 ```
