@@ -9,7 +9,7 @@ class BonusFormatter < RSpec::Core::Formatters::DocumentationFormatter
   end
 end
 
-# rubocop:disable LineLength
+# rubocop:disable Layout/LineLength
 BONUS = "
 
 
@@ -27,4 +27,4 @@ BONUS = "
 
 
 "
-# rubocop:enable LineLength
+# rubocop:enable Layout/LineLength
