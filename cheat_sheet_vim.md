@@ -1,10 +1,10 @@
 # Vim Shortcut
 
-- (Plugin Vim Rails)[#plugin-vim-rails]
-- (Plugin Vim Commentary)[#plugin-vim-commentary]
-- (Plugin Vim surround)[#plugin-vim-surround]
-- (Plugin Vim tabularize)[#plugin-vim-tabularize]
-- (Plugin Vim fugitive)[#plugin-vim-fugitive]
+- [Plugin Vim Rails](#plugin-vim-rails)
+- [Plugin Vim Commentary](#plugin-vim-commentary)
+- [Plugin Vim surround](#plugin-vim-surround)
+- [Plugin Vim tabularize](#plugin-vim-tabularize)
+- [Plugin Vim fugitive](#plugin-vim-fugitive)
 
 ---
 
@@ -26,6 +26,8 @@ Aller dans les vues | `:Eview floder/files` |
 Related files | `:R` |
 Faire tourner les tests | `:Rails` |
 
+---
+
 ### Plugin Vim Commentary
 
 Action | Snippet |
@@ -33,6 +35,8 @@ Action | Snippet |
 Comment line | `gcc` |
 Comment paragraph | `gcap` |
 Comment specific line | `:7,17Commentary` |
+
+---
 
 ### Plugin Vim Surround
 
@@ -46,6 +50,8 @@ Change surrounding word with `"` | `csiw"` |
 Surrounding word with `"` | `ysiw"` |
 In visual mode | `s` |
 
+---
+
 ### Plugin Vim Tabularize
 
 Before always select lines in visual mode
@@ -58,6 +64,8 @@ Aligner après un égale | `:Tab /=.*` |
 Aligner après un égale | `\=` |
 Aligner du css | `\:` |
 
+---
+
 ### Plugin Vim Fugitive
 
 Action | Snippet |
@@ -68,6 +76,8 @@ Faire un commit | `:Gcommit` |
 Faire un push | `:Gpush` |
 
 More infos [here](https://github.com/tpope/vim-fugitive)
+
+---
 
 ### Plugin NerdTree
 
@@ -83,6 +93,8 @@ Open NerdTree | `:NERDTreeToggle` |
 Open NerdTree | `ctrl + g` |
 Refresh the current directory with new files | `r` |
 Refresh the NerdTree directory with new files | `R` |
+
+---
 
 ### Normal mode in Vim
 
@@ -108,6 +120,8 @@ Exemple:
 * `c/other` --> change to "other"
 * `ci6j` --> change inside 6 lines
 
+---
+
 ### Move in Vim
 
 Action | Command |
@@ -115,6 +129,8 @@ Action | Command |
 Aller dans le fichier | `gf` |
 Next Tab | `gt` |
 Previous Tab | `gT` |
+
+---
 
 ### Control in Vim
 
@@ -131,11 +147,15 @@ Previous Tab | `gT` |
 * Ctrl + b --> Scroll up 1 full page
 * Ctrl + f --> Scroll down 1 full page
 
+---
+
 #### Window
 
 * Ctrl + w puis s --> split windows with same file
 * Ctrl + w puis v --> split windows vertically
 * Ctrl + w puis q --> Close window
+
+---
 
 ### Command mode in Vim
 
@@ -146,6 +166,8 @@ Merging file to current on | `:r file` |
 Ouvre le fichier en vertical split | `:vsp name.rb` |
 Ouvre le fichier en split | `:sp name.rb` |
 
+---
+
 #### Multi-lines
 
 Action | Command |
@@ -153,12 +175,17 @@ Action | Command |
 Déplacer les lignes 40 à 50 à la 30 | `:40,50m30` |
 Copier les lignes 30 à 40 | `:30,70y` |
 Supprimez les lignes 40 à 50 | `:16,20d` |
-#
-## Visual mode in Vim
+
+---
+
+### Visual mode in Vim
 
 Action | Command |
 --- | --- |
 Cacher les lignes selectionnées | `zf` |
-Cursor on top | `zt` |
+Cursor on top    | `zt` |
 Cursor on middle | `zz` |
 Cursor on bottom | `zb` |
+High             | `H` |
+Middle           | `M` |
+Low              | `L` |
