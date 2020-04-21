@@ -1,10 +1,10 @@
 Let's build a Food Delivery program for a restaurant!
 
 Here are the first **user actions** of our app:
-- As an employee, I can add a new meal
-- As an employee, I can list all the meals
-- As an employee, I can add a new customer
-- As an employee, I can list all the customers
+- As a user, I can add a new meal
+- As a user, I can list all the meals
+- As a user, I can add a new customer
+- As a user, I can list all the customers
 
 **WARNINGS**
 
@@ -16,9 +16,9 @@ Hence,the first components of our software are:
 - **Meals**
 - **Customers**
 
-## 1 - `Meal`
+## 1 - Meals
 
-### 1.1 - `Meal` model
+### 1.1 - Meal model
 
 Our restaurant sells meals, so we need a way to represent what a meal is.
 
@@ -28,7 +28,7 @@ Write some code to implement this and crash-test your model. Then test your code
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-### 1.2 - `Meal` repository
+### 1.2 - Meal repository
 
 Now that we have a model representing our meals, we need a repository to store them.
 
@@ -47,7 +47,7 @@ We haven't launched our app yet. To do this, we need a router and we need to fil
 
 The router is responsible for displaying the tasks that the user can do and routing the user's choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instanciating a router and executing its `run` method to launch the app.
 
-Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you can go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instanciate the router with a controller** has we don't have it yet. Just print `TODO` for the moment when the user select a task.
+Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you can go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instanciate the router with a controller** as we don't have it yet. Just print `TODO` for the moment when the user selects a task.
 
 There is no rake for this part. Launch your app by running this command in the terminal:
 
@@ -57,7 +57,7 @@ ruby app.rb
 
 Everything is working? Good! Time to `git add`, `commit` and `push`.
 
-### 1.4 - `Meal` controller
+### 1.4 - Meals controller
 
 Let's move to the controller. Here are the **user actions** we want to implement:
 - `add` a new meal
@@ -67,7 +67,7 @@ Remember that the role of the controller is to delegate and coordinate the work 
 
 Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or view). Then write the code to implement each step. Create the view and code it step by step.
 
-To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
+To test your controller, link it to your app by instantiating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
 
 ```bash
 ruby app.rb
@@ -79,9 +79,9 @@ Make sure your two meal user actions work before moving on to the next feature.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-## 2 - `Customer`
+## 2 - Customers
 
-### 1.1 - `Customer` model
+### 1.1 - Customer model
 
 Our restaurant sells to customers, so we need a way to represent what a customer is.
 
@@ -91,11 +91,11 @@ Write some code to implement this and crash-test your model. Then test your code
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-### 2.2 - `Customer` repository
+### 2.2 - Customer repository
 
 Now that we have a model representing our customers, we need a repository to store them.
 
-This repository is initialized with a CSV file path. It reads/writes the customers from the CSV file and holds them as objects in an array. The behavior we wnat for the repository is to:
+This repository is initialized with a CSV file path. It reads/writes the customers from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
 - Add a new customer
 - Get all the customers
 - Find a specific customer thanks to its id
@@ -104,7 +104,7 @@ Write some code to implement this and crash-test your repository. You should cre
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-### 2.3 - `Customer` controller
+### 2.3 - Customers controller
 
 Let's move to the controller. Here are the **user actions** we want to implement:
 - `add` a new customer
@@ -128,7 +128,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 3 - Optionals
 
-### 3.1 - Implement update and destroy actions for meal and customer
+### 3.1 - Implement `update` and `destroy` actions for meal and customer
 
 In our app, a user can't update or destroy an existing meal or customer.
 
