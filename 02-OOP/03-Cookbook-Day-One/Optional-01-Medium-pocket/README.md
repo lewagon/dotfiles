@@ -117,7 +117,7 @@ Bye bye!
 
 As you can see, the user only types the `path` of the DEV article. The `path` is the text that comes after the domain name in a url.
 
-For instance, to save [this article](https://dev.to/iriskatastic/ruby-peculiarities-tips-and-tools-5em0), the path our users need to enter is everything that is after `https://dev.to/` i.e. `iriskatastic/ruby-peculiarities-tips-and-tools-5em0`.
+For instance, to save [this article](https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc), the path our users need to enter is everything that is after `https://dev.to/` i.e. `unseenwizzard/learn-git-concepts-not-commands-4gjc`.
 
 So how are we going to retrieve the post's author, title and content...?
 
