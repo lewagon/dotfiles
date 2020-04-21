@@ -1,3 +1,4 @@
+runtime macros/matchit.vim
 " This needs to be off for Vundle, turned back on after
 set nocompatible      " Nécessaire
 filetype off          " Nécessaire
