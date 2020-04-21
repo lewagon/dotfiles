@@ -4,6 +4,11 @@
 - [Plugin Vim Commentary](#plugin-vim-commentary)
 - [Plugin Vim surround](#plugin-vim-surround)
 - [Plugin Vim tabularize](#plugin-vim-tabularize)
+- [Plugin NerdTree](#plugin-nerd-tree)
+- [Mode Normal](#mode-normal)
+- [Move between files](#move-between-files)
+- [Move inside file](#move-inside-file)
+- [Mode Normal](#mode-normal)
 - [Plugin Vim fugitive](#plugin-vim-fugitive)
 
 ---
@@ -52,9 +57,7 @@ In visual mode | `s` |
 
 ---
 
-### Plugin Vim Tabularize
-
-Before always select lines in visual mode
+### Plugin Vim Tabularize (always select lines in visual mode before)
 
 Action | Snippet |
 --- | --- |
@@ -63,19 +66,6 @@ Aligner avec une regex | `:Tab /regex` |
 Aligner après un égale | `:Tab /=.*` |
 Aligner après un égale | `\=` |
 Aligner du css | `\:` |
-
----
-
-### Plugin Vim Fugitive
-
-Action | Snippet |
---- | --- |
-Git status | `:G` |
-Afficher la différence | `:Gdiffsplit` |
-Faire un commit | `:Gcommit` |
-Faire un push | `:Gpush` |
-
-More infos [here](https://github.com/tpope/vim-fugitive)
 
 ---
 
@@ -96,7 +86,7 @@ Refresh the NerdTree directory with new files | `R` |
 
 ---
 
-### Normal mode in Vim
+### Mode Normal
 
 Verb | Command |
 --- | --- |
@@ -122,13 +112,31 @@ Exemple:
 
 ---
 
-### Move in Vim
+### Move between files
 
 Action | Command |
 --- | --- |
+Tab Next | `gt` |
+Tab Previous | `gT` |
+Tab Open and edit file in a new tab | `:tabe name` |
 Aller dans le fichier | `gf` |
-Next Tab | `gt` |
-Previous Tab | `gT` |
+Merging file to current on | `:r file` |
+Ouvre le fichier en vertical split | `:vsp name.rb` |
+Ouvre le fichier en split | `:sp name.rb` |
+
+---
+
+### Move inside file
+
+Action | Command |
+--- | --- |
+Cacher les lignes selectionnées | `zf` |
+Cursor on top    | `zt` |
+Cursor on middle | `zz` |
+Cursor on bottom | `zb` |
+High             | `H` |
+Middle           | `M` |
+Low              | `L` |
 
 ---
 
@@ -157,17 +165,6 @@ Previous Tab | `gT` |
 
 ---
 
-### Command mode in Vim
-
-Action | Command |
---- | --- |
-Open and edit file in a new tab | `:tabe name` |
-Merging file to current on | `:r file` |
-Ouvre le fichier en vertical split | `:vsp name.rb` |
-Ouvre le fichier en split | `:sp name.rb` |
-
----
-
 #### Multi-lines
 
 Action | Command |
@@ -178,14 +175,13 @@ Supprimez les lignes 40 à 50 | `:16,20d` |
 
 ---
 
-### Visual mode in Vim
+### Plugin Vim Fugitive
 
-Action | Command |
+Action | Snippet |
 --- | --- |
-Cacher les lignes selectionnées | `zf` |
-Cursor on top    | `zt` |
-Cursor on middle | `zz` |
-Cursor on bottom | `zb` |
-High             | `H` |
-Middle           | `M` |
-Low              | `L` |
+Git status | `:G` |
+Afficher la différence | `:Gdiffsplit` |
+Faire un commit | `:Gcommit` |
+Faire un push | `:Gpush` |
+
+More infos [here](https://github.com/tpope/vim-fugitive)
