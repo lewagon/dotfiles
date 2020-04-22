@@ -80,7 +80,7 @@ describe "OrdersController", :_order do
 
       expect(order_repository.undelivered_orders.length).to eq(4)
       expect(order_repository.undelivered_orders[3].meal.name).to eq("Capricciosa")
-      expect(order_repository.undelivered_orders[3].employee.username).to eq("john")
+      expect(order_repository.undelivered_orders[3].employee.username).to eq("ringo")
       expect(order_repository.undelivered_orders[3].customer.name).to eq("John Bonham")
     end
   end
