@@ -10,21 +10,37 @@ This challenge is a regex game to reveal their colors.
 
 ## Specs
 
-So, what colors are the logos? All color names are hidden in **secret messages**. Your mission is to build the correct regexes to extract them!
+So, what colors are the logos? All their names are hidden in a **secret message**. Your mission is to build the correct regexes to extract them!
 
-Open `lib/double_rainbow.rb` where a series of methods await you, each one is an enigma to solve.
+#####The secret message:
 
-- **Use a regex** to extract the color name from `secret_message`
-- Follow hints and instructions to build the regex
-- Each method **returns a string**
+*Reveal the logos' colors:
+Elegant shapes, some have evolved to a very iconized style.
+Definitely a vivid color scheme with bright orange and shiny yellow,
+many shades of blue, oscillating between purple and indigo! but not much green*
 
-**Example**
+#### Code the regexes
+Open `lib/double_rainbow.rb` where a series of methods await you, each one is designed to pick one word in the secret message:
+- Follow hints and instructions to build a regex.
+- Each method **takes a string** as a parameter and **returns a string**
+
+When your regex is correct, it will pick a color and unlock a badge.
+
+
+#### Test your code
+You can test your code by a passing a string to your methods
 
 ```ruby
-secret_message = "123goodLUCK"
-secret_message.match(/\D+/)[0]
+secret_message = %({
+    Reveal the logos' colors:
+    Elegant shapes, some have evolved to a very iconized style.
+    Definitely a vivid color scheme with bright orange and shiny yellow,
+    many shades of blue, oscillating between purple and indigo! but not much green
+    })
 
-# => "goodLUCK"
+
+p last_5_characters(secret_message)
 ```
+
 
 Get help with [Rubular](http://rubular.com/)
