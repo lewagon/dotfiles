@@ -67,7 +67,7 @@ describe "OrdersController", :_order do
   end
 
   it "should be initialized with 4 repository instances" do
-    controller = OrdersController.new(meal_repository, employee_repository, customer_repository, order_repository)
+    controller = OrdersController.new(meal_repository, customer_repository, employee_repository, order_repository)
     expect(controller).to be_a(OrdersController)
   end
 
