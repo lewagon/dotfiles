@@ -45,8 +45,8 @@ describe "Post" do
     post = Post.new(title: "Le Wagon", url: "http://www.lewagon.com", user: valid_user)
     expect(post.valid?).to eq true
 
-    post_long_URL = Post.new(title: "Le Wagon", url: "http://www.lewagon.com/paris", user: valid_user)
-    expect(post_long_URL.valid?).to eq true
+    post_long_url = Post.new(title: "Le Wagon", url: "http://www.lewagon.com/paris", user: valid_user)
+    expect(post_long_url.valid?).to eq true
   end
 
   it "is invalid if the title is too short (5 characters minimum)" do
