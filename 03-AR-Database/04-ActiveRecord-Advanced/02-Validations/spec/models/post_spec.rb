@@ -42,7 +42,7 @@ describe "Post" do
       fail NotImplementedError, "Please implement a format validation on url column"
     end
 
-    post = Post.new(title: "Le Wagon", url: "http://www.lewagon.com", user: valid_user)
+    post = Post.new(title: "Le Wagon", url: "http://www.lewagon.com/paris", user: valid_user)
     expect(post.valid?).to eq true
   end
 
