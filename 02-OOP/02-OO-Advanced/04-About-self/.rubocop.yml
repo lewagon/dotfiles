@@ -1,5 +1,5 @@
 inherit_from:
   - ../../../.rubocop.yml
 
-TrivialAccessors:
+Style/TrivialAccessors:
   Enabled: false
