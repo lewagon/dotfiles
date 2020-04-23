@@ -1,7 +1,7 @@
 ## Background & Objectives
 
-During your journey at Le Wagon, you'll learn a lot of tools, services and languages.
-Here are the logos of the main ones, but they are all black and white at the moment!
+During your journey at Le Wagon, you'll discover a lot of tools, services and languages.
+Here are the logos of the main ones, but they are all in black and white at the moment!
 This challenge is a regex game to reveal their colors.
 
 ![Logos](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/double-rainbow_logos.png)
@@ -12,7 +12,7 @@ This challenge is a regex game to reveal their colors.
 
 So, what colors are the logos? All their names are hidden in a **secret message**. Your mission is to build the correct regexes to extract them!
 
-#####The secret message:
+#### The secret message
 
 *Reveal the logos' colors:
 Elegant shapes, some have evolved to a very iconized style.
@@ -31,15 +31,12 @@ When your regex is correct, it will pick a color and unlock a badge.
 You can test your code by a passing a string to your methods
 
 ```ruby
-secret_message = %({
-    Reveal the logos' colors:
-    Elegant shapes, some have evolved to a very iconized style.
-    Definitely a vivid color scheme with bright orange and shiny yellow,
-    many shades of blue, oscillating between purple and indigo! but not much green
-    })
+secret_message = "Reveal the logos' colors:\
+    Elegant shapes, some have evolved to a very iconized style.\
+    Definitely a vivid color scheme with bright orange and shiny yellow,\
+    many shades of blue, oscillating between purple and indigo! but not much green"
 
-
-p last_5_characters(secret_message)
+p last_five_letters(secret_message)
 ```
 
 
