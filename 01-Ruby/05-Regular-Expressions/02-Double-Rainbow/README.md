@@ -32,9 +32,9 @@ You can test your code by a passing a string to your methods
 
 ```ruby
 secret_message = "Reveal the logos' colors:\
-    Elegant shapes, some have evolved to a very iconized style.\
-    Definitely a vivid color scheme with bright orange and shiny yellow,\
-    many shades of blue, oscillating between purple and indigo! but not much green"
+ Elegant shapes, some have evolved to a very iconized style.\
+ Definitely a vivid color scheme with bright orange and shiny yellow,\
+ many shades of blue, oscillating between purple and indigo! but not much green"
 
 p last_five_letters(secret_message)
 ```

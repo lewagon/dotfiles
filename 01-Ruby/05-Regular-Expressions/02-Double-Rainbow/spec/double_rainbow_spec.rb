@@ -10,9 +10,9 @@ ruby_test = false
 describe "Double Rainbow" do
   before(:all) do
     @secret_message = "Reveal the logos' colors:\
-    Elegant shapes, some have evolved to a very iconized style.\
-    Definitely a vivid color scheme with bright orange and shiny yellow,\
-    many shades of blue, oscillating between purple and indigo! but not much green"
+ Elegant shapes, some have evolved to a very iconized style.\
+ Definitely a vivid color scheme with bright orange and shiny yellow,\
+ many shades of blue, oscillating between purple and indigo! but not much green"
   end
 
   describe "#word_contains_two_p" do
@@ -26,7 +26,7 @@ describe "Double Rainbow" do
   end
   
   describe "#word_before_exclamation_mark" do
-    it "should return the word located before a question mark" do
+    it "should return the word located before an exclamation mark" do
       test_string = "you? me!"
       expect(word_before_exclamation_mark(@secret_message)).to eq "indigo"
       expect(word_before_exclamation_mark(test_string)).to eq "me"
