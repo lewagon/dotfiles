@@ -19,7 +19,7 @@ result = size_splitter(words, 3)
 
 ### (Advanced) Block Splitter
 
-In the previous exercise, the abritrary rule was fixed. What if we wanted to let the method caller choose which rule to apply? We can do so with the power of blocks and `yield`!
+In the previous exercise, the arbitrary rule was fixed. What if we wanted to let the method caller choose which rule to apply? We can do so with the power of blocks and `yield`!
 
 Write a `block_splitter` method so that the following example works:
 
