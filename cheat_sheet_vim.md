@@ -8,7 +8,6 @@
 - [Mode Normal](#mode-normal)
 - [Move between files](#move-between-files)
 - [Move inside file](#move-inside-file)
-- [Mode Normal](#mode-normal)
 - [Plugin Vim fugitive](#plugin-vim-fugitive)
 
 ---
@@ -157,7 +156,7 @@ Low              | `L` |
 
 ---
 
-#### Window
+### Window
 
 * Ctrl + w puis s --> split windows with same file
 * Ctrl + w puis v --> split windows vertically
@@ -165,7 +164,7 @@ Low              | `L` |
 
 ---
 
-#### Multi-lines
+### Multi-lines
 
 Action | Command |
 --- | --- |

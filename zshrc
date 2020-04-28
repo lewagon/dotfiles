@@ -1,5 +1,8 @@
 ZSH=$HOME/.oh-my-zsh
 
+# Good article on alias
+# https://medium.com/committed-engineers/why-i-dont-use-any-aliases-44cf1c001f75
+
 # You can change the theme with another one:
 #   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"

@@ -50,31 +50,62 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/snippetsEmu'
+Plugin 'chrisbra/matchit'                        "jump to closing tag with % in html
+"""""""""""""""""""
+" MAP
+"""""""""""""""""""
+let mapleader = ","
+let localmapleader = ","
+"let mapleader = "\<Space>"
+"let localmapleader = "\<Space>"
+nmap à ^
+imap jk <ESC>:w<CR>
+imap kj <ESC>:w<CR>
+map <Leader>, :CtrlPMRU<CR>
+map <Leader>vr :tabe $MYVIMRC<CR>
+map <Leader>vimrc :tabe $MYVIMRC<CR>
+map <Leader>routes :tabe db/schema.rb<CR>
+map <Leader>so :source $MYVIMRC<CR>
+map <Leader>sc :tabe db/schema.rb<CR>
+map <Leader>sa :w<CR>
+map <Leader>gitdif :Gdiffsplit<CR>
+map <Leader>h <C-w>h
+map <Leader>j <C-w>j
+map <Leader>k <C-w>k
+map <Leader>l <C-w>l
+map <Leader>H <C-w>H
+map <Leader>J <C-w>J
+map <Leader>K <C-w>K
+map <Leader>L <C-w>L
+map <Leader>nm ]m
+map <Leader>pm [m
 
 """""""""""""""""""""""""
 " Basic features
 """""""""""""""""""""""""
 
-" Display options
+" SET and Display options
 syntax on
-" set nocursorline
 set number
+set backspace=indent,eol,start
+set tags=tags
+set wrap                         " not wrapping lines
+set cursorline                   " set line under cursor
+set cursorcolumn                   " set line under cursor
+" set nocursorline
 " set encoding=utf-8
 " set fileencoding=utf-8
 " set list!
 " set listchats=tab:▸\ ,trail:•,extends:»,precedes:«
-set backspace=indent,eol,start
-set tags=tags
-set nowrap
 "colorscheme molokai
+
 
 " Misc
 " filetype plugin indent on
 " set hiddent
 
-" up/down on displayed lines, not real lines. More useful than painful.
-noremap k gk
-noremap j gj
+" let g:netrw_cursorline=0
+
 
 " shift+k -> like shift+j, but no extra space
 " noremap <S-k> gJ
@@ -112,26 +143,15 @@ autocmd BufReadPost *
 " After 4s of inactivity, check for external file modifications on next keyrpress
 " au CursorHold * checktime
 
-let mapleader=","
-let localmapleader=","
-let g:NERDTreeWinPos = "left"
-
-
-
+let g:NERDTreeWinPos = "left"                                    " Nerd Tree positioning at left
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'        " custom ignores files for ctrlP
 nnoremap <C-n> :set number! relativenumber!<cr>
 nnoremap <C-i> ggVG=`.
-
-" Resize window splits
-" TODO Fix mousewheel
 nnoremap <Up>    3<C-w>-
 nnoremap <Down>  3<C-w>+
 nnoremap <Left>  3<C-w><
 nnoremap <Right> 3<C-w>>
-
-" TODO Merge the NERDTreeFind with Toggle inteilligently.
 nnoremap <C-g> :NERDTreeToggle<cr>
-
-map <Leader>, :CtrlPMRU<CR>
 
 noremap \= :Tabularize /=<CR>
 noremap \: :Tabularize /^[^:]*:\zs/l0l1<CR>
@@ -140,8 +160,6 @@ noremap \, :Tabularize /,\zs/l0l1<CR>
 noremap \{ :Tabularize /{<CR>
 noremap \\| :Tabularize /\|<CR>
 noremap \& :Tabularize /\(&\\|\\\\\)<CR>
-
-nnoremap <Leader>t :TagbarOpen fjc<CR>
 
 map <C-\> :ScreenShellVertical<CR>
 
@@ -374,3 +392,6 @@ if &t_Co > 255
    hi LineNr          ctermfg=250 ctermbg=234
    hi NonText         ctermfg=250 ctermbg=234
 end
+
+hi CursorLine gui=underline cterm=underline "add
+hi Normal ctermbg=16
