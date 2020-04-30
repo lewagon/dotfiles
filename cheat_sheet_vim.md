@@ -19,14 +19,12 @@ Action | Snippet |
 In a model file go to the schema | `:R` |
 In a model file go to the test | `:A` |
 Ouvrir le model dans les tests | `:RVmodel` |
-Ouvrir les routes | `:Einit` |
 Met le code dans une partial | `:Extract name` |
 Create model | `:Emodel name!` |
 Aller dans le controlleur | `:Econ names` |
 Aller dans le controlleur avec un vertical split | `:Vcon names` |
 Create controller | `:Generate controller Blog` |
-Console | `:Rails console` |
-Aller dans les vues | `:Eview floder/files` |
+Aller dans les vues | `:Eview folder/files` |
 Related files | `:R` |
 Faire tourner les tests | `:Rails` |
 
@@ -63,8 +61,6 @@ Action | Snippet |
 Aligner avec une regex | `:Tabularize /regex` |
 Aligner avec une regex | `:Tab /regex` |
 Aligner après un égale | `:Tab /=.*` |
-Aligner après un égale | `\=` |
-Aligner du css | `\:` |
 
 ---
 

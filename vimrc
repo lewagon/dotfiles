@@ -50,7 +50,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/snippetsEmu'
-Plugin 'chrisbra/matchit'                        "jump to closing tag with % in html
+Plugin 'chrisbra/matchit'                        " jump to closing tag with % in html
+Plugin 'thoughtbot/vim-rspec'                    " run specific spec
+
 """""""""""""""""""
 " MAP
 """""""""""""""""""
@@ -62,13 +64,10 @@ nmap à ^
 imap jk <ESC>:w<CR>
 imap kj <ESC>:w<CR>
 map <Leader>, :CtrlPMRU<CR>
-map <Leader>vr :tabe $MYVIMRC<CR>
-map <Leader>vimrc :tabe $MYVIMRC<CR>
-map <Leader>routes :tabe db/schema.rb<CR>
-map <Leader>so :source $MYVIMRC<CR>
-map <Leader>sc :tabe db/schema.rb<CR>
-map <Leader>sa :w<CR>
 map <Leader>gitdif :Gdiffsplit<CR>
+map <Leader>o <C-w>o<Esc>
+map <Leader>O <C-w>O<Esc>
+" Moving between windows
 map <Leader>h <C-w>h
 map <Leader>j <C-w>j
 map <Leader>k <C-w>k
@@ -79,6 +78,27 @@ map <Leader>K <C-w>K
 map <Leader>L <C-w>L
 map <Leader>nm ]m
 map <Leader>pm [m
+" Open new file
+map <Leader>vr :tabe $MYVIMRC<CR>
+map <Leader>vimrc :tabe $MYVIMRC<CR>
+map <Leader>routes :tabe db/schema.rb<CR>
+map <Leader>so :source $MYVIMRC<CR>
+map <Leader>sc :tabe db/schema.rb<CR>
+map <Leader>tree :e .<CR>
+map <Leader>spec :e spec<CR>jjjj
+map <Leader>model :e app/models<CR>jjjj
+map <Leader>con :e app/controllers<CR>jjjj
+map <Leader>view :e app/views<CR>jjjj
+map <Leader>railsc :!rails console<CR>
+" RSpec.vim mappings
+map <Leader>file :call RunCurrentSpecFile()<CR>
+map <Leader>nearest :call RunNearestSpec()<CR>
+map <Leader>last :call RunLastSpec()<CR>
+map <Leader>all :call RunAllSpecs()<CR>
+map <Leader>= :Tabularize /=<CR>
+map <Leader>: :Tabularize /^[^:]*:\zs/l0l1<CR>
+
+let g:rspec_command = "!bundle exec rspec {spec}"
 
 """""""""""""""""""""""""
 " Basic features
@@ -153,6 +173,7 @@ nnoremap <Left>  3<C-w><
 nnoremap <Right> 3<C-w>>
 nnoremap <C-g> :NERDTreeToggle<cr>
 
+" Tabularize mapping
 noremap \= :Tabularize /=<CR>
 noremap \: :Tabularize /^[^:]*:\zs/l0l1<CR>
 noremap \> :Tabularize /=><CR>
