@@ -14,6 +14,16 @@ brew install sdl2
 gem install gosu
 ```
 
+### Linux
+
+```bash
+sudo apt-get update
+sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
+  libpango1.0-dev libgl1-mesa-dev libfreeimage-dev libopenal-dev\
+  libsndfile-dev libmpg123-dev
+gem install gosu
+```
+
 ### Windows
 
 Copy the following commands in your Ubuntu terminal one line at a time:
