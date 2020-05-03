@@ -24,3 +24,11 @@ alias gitcreate="git checkout -b"
 alias gitb='git checkout -b'
 alias gpull='git pull origin master'
 alias gmsg='git commit --message'
+
+# CD
+
+alias home='cd ~'
+alias mrp='cd ~/gitlab.peersandpeers/mrpeinture/mrpeinture  '
+alias anx='cd ~/gitlab.peersandpeers/lesateliersnx/lesateliersnx'
+alias alexandrebk='cd ~/code/alexandrebk'
+alias dotfiles='cd ~/code/alexandrebk/dotfiles'

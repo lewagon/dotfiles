@@ -9,7 +9,6 @@ call vundle#begin()
 
 " On indique à Vundle de s'auto-gérer :)
 Plugin 'gmarik/Vundle.vim'  " Nécessaire
-
 " Vim Plugins
 " Bundle 'AndrewRadev/vim-eco'
 " Bundle 'Lokaltog/vim-powerline'
@@ -20,8 +19,6 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'godlygeek/tabular'
 " Bundle 'groenewege/vim-less'
 " Bundle 'isRuslan/vim-es6'
-" Bundle 'kchmck/vim-coffee-script'
-" Bundle 'pangloss/vim-javascript'
 " Bundle 'mxw/vim-jsx'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/gist-vim'
@@ -29,7 +26,6 @@ Plugin 'mattn/webapi-vim'
 " Bundle 'mileszs/ack.vim'
 " Bundle 'nviennot/molokai'
 " Bundle 'othree/html5.vim'
-" Bundle 'quentindecock/vim-cucumber-align-pipes'
 " Bundle 'rking/ag.vim'
 " Bundle 'rodjek/vim-puppet'
 " Bundle 'scrooloose/nerdcommenter'
@@ -40,33 +36,35 @@ Plugin 'tomtom/quickfixsigns_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
-" Bundle 'tpope/vim-unimpaired'
-" Bundle 'tpope/vim-repeat'
 " Bundle 'vim-scripts/YankRing.vim'
 " Bundle 'yaymukund/vim-rabl'
-" Bundle 'slim-template/vim-slim'
-" Bundle 'elixir-lang/vim-elixir'
 
+" Bundle 'tpope/vim-unimpaired'
+" Bundle 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/snippetsEmu'
 Plugin 'chrisbra/matchit'                        " jump to closing tag with % in html
-Plugin 'thoughtbot/vim-rspec'                    " run specific spec
 
 """""""""""""""""""
 " MAP
 """""""""""""""""""
+" Normal Mode Mapping
+nmap § >
+nmap è %
+nmap ç /
+nmap à .
+nmap ù %
+
 let mapleader = ","
 let localmapleader = ","
 "let mapleader = "\<Space>"
 "let localmapleader = "\<Space>"
-nmap à ^
-imap jk <ESC>:w<CR>
-imap kj <ESC>:w<CR>
 map <Leader>, :CtrlPMRU<CR>
 map <Leader>gitdif :Gdiffsplit<CR>
 map <Leader>o <C-w>o<Esc>
 map <Leader>O <C-w>O<Esc>
+
 " Moving between windows
 map <Leader>h <C-w>h
 map <Leader>j <C-w>j
@@ -78,27 +76,43 @@ map <Leader>K <C-w>K
 map <Leader>L <C-w>L
 map <Leader>nm ]m
 map <Leader>pm [m
+
 " Open new file
-map <Leader>vr :tabe $MYVIMRC<CR>
+map <Leader>snippet :tabe ~/code/alexandrebk/dotfiles/snippets<CR>
 map <Leader>vimrc :tabe $MYVIMRC<CR>
-map <Leader>routes :tabe db/schema.rb<CR>
+map <Leader>routes :tabe config/routes.rb<CR>
 map <Leader>so :source $MYVIMRC<CR>
 map <Leader>sc :tabe db/schema.rb<CR>
-map <Leader>tree :e .<CR>
-map <Leader>spec :e spec<CR>jjjj
-map <Leader>model :e app/models<CR>jjjj
-map <Leader>con :e app/controllers<CR>jjjj
-map <Leader>view :e app/views<CR>jjjj
+map <Leader>tree :tabe .<CR>jjjj
+map <Leader>new :tabe .<CR>jjjj
+map <Leader>spec :tabe spec<CR>jjjj
+map <Leader>model :tabe app/models<CR>jjjj
+map <Leader>con :tabe app/controllers<CR>jjjj
+map <Leader>view :tabe app/views<CR>jjjj
+map <Leader>mailer :tabe app/mailers<CR>jjjj
+map <Leader>db :tabe db<CR>jjjj
+map <Leader>javascript :tabe app/javascript<CR>jjjj
 map <Leader>railsc :!rails console<CR>
-" RSpec.vim mappings
-map <Leader>file :call RunCurrentSpecFile()<CR>
-map <Leader>nearest :call RunNearestSpec()<CR>
-map <Leader>last :call RunLastSpec()<CR>
-map <Leader>all :call RunAllSpecs()<CR>
+map <Leader>migration :!rails g migration
+
+" RSpec mapping
+map <Leader>rspecall :! bundle exec rspec<CR>
+map <Leader>rspecfile :! bundle exec rspec %<CR>
+map <Leader>rspecnear :! bundle exec rspec %:<C-r>=line('.')<CR><CR>
+
 map <Leader>= :Tabularize /=<CR>
 map <Leader>: :Tabularize /^[^:]*:\zs/l0l1<CR>
 
-let g:rspec_command = "!bundle exec rspec {spec}"
+" Insert Mode Mapping
+imap jk <ESC>:w<CR>
+imap kj <ESC>:w<CR>
+imap § #{}
+imap "<Tab> ""<Left>
+imap '<Tab> ''<Left>
+autocmd FileType ruby          imap debug<Tab> puts "-"*30<CR>
+autocmd FileType eruby         imap er<Tab> <%  %><Left><Left><Left>
+autocmd FileType eruby         imap pe<Tab> <%=  %><Left><Left><Left>
+
 
 """""""""""""""""""""""""
 " Basic features
