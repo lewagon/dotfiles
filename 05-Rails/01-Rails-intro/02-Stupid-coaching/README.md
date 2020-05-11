@@ -211,7 +211,7 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     Capybara::Selenium::Driver.new app,
       browser: :chrome, desired_capabilities: capabilities
   end
-  driven_by :headless_chrome
+  driven_by :selenium, using: :headless_chrome
 end
 ```
 
