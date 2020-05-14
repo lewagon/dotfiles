@@ -41,6 +41,9 @@ az keyvault secret set --vault-name $KEYVAULT_NAME --name storageToken --value $
 export SP_CLIENT_ID=$(az ad sp create-for-rbac --name "$RG_NAME-sp" --role="Contributor" --scopes $KEYVAULT_ID --query "{appId: appId}" -o tsv)
 export SP_CLIENT_SECRET=$(az ad sp credential reset --name $RG_NAME-sp --credential-description $RG_NAME --query password -o tsv)
 
+# Add credentials to K8s cluster
+kubectl create secret generic secrets-store-creds --from-literal clientid=$SP_CLIENT_ID --from-literal clientsecret=$SP_CLIENT_SECRET
+
 # assign roles and policies
 az role assignment create --role Reader --assignee $SP_CLIENT_ID --scope $KEYVAULT_ID
 
