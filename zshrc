@@ -13,12 +13,18 @@ alias code="code ."
 # Useful plugins for Rails development with Sublime Text
 plugins=(gitfast git last-working-dir common-aliases sublime vscode zsh-syntax-highlighting history-substring-search ssh-agent kubectl kube-ps1)
 
+
+# kube ps1 
+export KUBE_PS1_ENABLED="true"
+# export KUBE_PS1_COLOR_SYMBOL="%{\e[38;5;27m%}"
+# export KUBE_PS1_COLOR_CONTEXT="%{$fg[black]%}"
+# export KUBE_PS1_COLOR_NS="%{$fg[black]%}"
+PROMPT=$PROMPT'$(kube_ps1) '
 # Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
 
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
-PROMT=$PROMT'$(kube_ps1) '
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
 # Load rbenv if installed
@@ -29,6 +35,8 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 # So instead of running `bin/rails` like the doc says, just run `rails`
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
+export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
 
 # autoload compinit for kubectx and kubens
 autoload -U compinit && compinit
@@ -39,23 +47,17 @@ autoload -U compinit && compinit
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     # prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
-export DISPLAY=:0
 export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"
+
+# BROWSER DIAPLY
+export DISPLAY=:0
+export BROWSER="/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
