@@ -5,20 +5,16 @@ require 'string'
 
 RSpec::Matchers.define :be_ordered_burger do |expected|
   match do |actual|
-    actual_burger = cook_burger(actual, "~ Actual ~")
-    expected_burger = cook_burger(expected, "~ Expected ~")
-    <<-HEREDOC
-    expected that #{actual} would be #{expected}
-    #{display_burger(actual_burger, expected_burger)}
-    HEREDOC
     actual == expected
   end
   
-  description do |actual|
-  end
-
   failure_message do |actual|
-    "expected #{actual} to be ordered burger #{expected}"
+    <<~MESSAGE
+      expected:   #{expected}
+      got:        #{actual}
+
+      -
+    MESSAGE
   end
 end
 
@@ -28,6 +24,8 @@ MARGIN = " " * 10
 EMPTY = " " * CHARACTERS
 MARGINS = Array.new(LINES) { |m| MARGIN }
 SPACER =  (" " * ((CHARACTERS - 10) / 2)).brown
+NEUTRAL = 240
+
 
 INGREDIENTS = {
   top_bread: [" ⎽-°-°°-°-⎽ ".center(CHARACTERS, " ").brown, "(__________)".center(CHARACTERS, " ").brown],
@@ -35,14 +33,30 @@ INGREDIENTS = {
 }
 
 
-def cook_burger(ingredients, message = "")
+def diff_colors (actual, expected, colors)
+  a = actual - ["bread", "bread"]
+  e = expected - ["bread", "bread"]
+  # colors.map.with_index { |color, index| e[index] == a[index] ? color : NEUTRAL }
+  a.map do |ingredient|
+    if(e.find_index(ingredient))
+      colors[e.find_index(ingredient)]
+    else
+      NEUTRAL
+    end
+  end
+end
+
+def illustrate_burger(ingredients, message = "", colors)
+  ingredient_index = -1
   burger = ingredients.reverse
+  colors = colors.reverse
   burger[0] = "top_bread" if burger[0] == "bread"
   burger.map!.with_index do |ingredient, index|
     if INGREDIENTS[ingredient.to_sym]
       INGREDIENTS[ingredient.to_sym]
     else
-     SPACER + ingredient.center(10, "∙").style(255, [22, 208, 124, 52][index]) + SPACER
+      ingredient_index += 1
+      SPACER + ingredient.center(10, "∙").style(255, colors[ingredient_index] || NEUTRAL) + SPACER
     end
   end
 
@@ -66,10 +80,11 @@ def combine(*args)
 end
 
 
-def display_burger(actual, expected)
-  combined = combine(MARGINS, actual, MARGINS, expected)
-  
-  combined.to_a.each do |row|
-    puts row.join
-  end
+def display_burgers(actual, expected, colors)
+  diff = diff_colors(actual, expected, colors)
+  actual_illustration = illustrate_burger(actual, "~ Actual ~", diff)
+  expected_illustration = illustrate_burger(expected, "~ Expected ~", colors)
+
+  combined = combine(MARGINS, actual_illustration, MARGINS, expected_illustration)
+  combined.to_a.each { |row| puts row.join }
 end
