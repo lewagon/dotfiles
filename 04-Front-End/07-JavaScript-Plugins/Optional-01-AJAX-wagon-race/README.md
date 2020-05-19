@@ -13,7 +13,7 @@ bundle install
 **For the API:**
 
 * You can read the [API documentation](https://github.com/lewagon/fullstack-challenges/blob/master/04-Front-End/07-JavaScript-Plugins/Optional-01-AJAX-wagon-race/API.md)
-* Start the API by calling the `bundle exec rake api` command in the exercise forlder
+* Start the API by calling the `bundle exec rake api` command in the exercise folder
 * The API will be accessible on http://localhost:4567
 
 NB: If you have trouble launching the api, try to run `bundle exec rake db_reset`.
