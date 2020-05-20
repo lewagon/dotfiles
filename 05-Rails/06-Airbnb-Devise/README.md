@@ -14,7 +14,10 @@ Work on the following steps and validate them with a coach on Monday morning bef
 
 Duplicate this [spreadsheet](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) (1 per team) and invite your teammates to collaborate.
 
-Start by defining the **user journeys** you will showcase during the demo. The core journeys for the MVP of an Airbnb clone are...
+![duplicate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/duplicate.png)
+![rename](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/rename.png)
+
+Start by thinking of the **user journeys** you will showcase during the demo. There are lots of possible use cases for a product like Airbnb, but try to narrow them down to the minimum viable journeys to make it work.
 
 <details><summary markdown='span'>View solution
 </summary>
