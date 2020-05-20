@@ -11,8 +11,6 @@ Duplicate this [spreadsheet](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5
 ![duplicate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/duplicate.png)
 ![rename](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/rename.png)
 
-![user stories spreadsheet](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/area-circle.png)
-
 Write your **user stories** down. You should have no more than 15. Group them by user journey.
 
 #### Database
