@@ -29,21 +29,21 @@ end
 classical_burger = cook_burger("steak", "ketchup", "onions")
 
 
-nuggets_burger = cook_burger("NUGGETS", "CAESAR", "ONIONS") do |ingredient|
-  ingredient.downcase
+bigger_classical_burger = cook_burger("STEAK", "ketchup", "onions") do |ingredient|
+  ingredient.upcase
 end
 
-mayo_burger = cook_burger("chicken", "barbecue", "onions") do |ingredient|
+
+classical_burger_with_mayo = cook_burger("steak", "ketchup", "onions") do |ingredient|
   ingredient.tr("aeiou", "~")
 end
 
-spicy_burger = cook_burger("fish", "cream", "tomato") do |ingredient|
-  "* #{ingredient.upcase} *"
+
+vegan_burger = cook_burger("steak", "ketchup", "onions") do |ingredient|
+  ingredient == "steak" ? "tofu" : ingredient
 end
 
-vegan_burger = cook_burger("steak", "ketchup", "tomato") do |ingredient|
-  (ingredient == "steak") ? "tofu" : ingredient
-end
+
 
 
 

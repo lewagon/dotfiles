@@ -1,88 +1,79 @@
 ## Background & Objectives
 
-This challenge is all about syntax. The first encounter with `Blocks`, `Procs` and `yield` might be puzzling at first, let's practice to be confident with the syntax.
+This challenge is all about syntax. The first encounter with `Blocks` and `yield` might be puzzling at first, let's practice the syntax.
 
-On this journey, you're about to open a **burger restaurant**. You're expecting your first customers today! It's time to prepare every ~~~~~~~~~~~ Let's see how you deal with them.
+On this journey, you're about to open a **burger restaurant**. You and the chief are very confident with the organisation but things won't turn out as planned, let's see how you deal with the situation!
+
+
 
 ## Specs
 
-### Function basics 
+### Methods basics
 
-#### `cook_burger`
-First, your chef needs to implement a function that cooks on-demand burgers. It will picks up 3 ingredients and layer them between 2 slices of bread.
+#### Declare a method
+The chief is in the kitchen, help him write a method that cooks burgers with 3 ingredients between 2 slices of bread.
 
 Open `burger_factory.rb` and declare a method named `cook_burger`:
-- it takes 3 string parameters: `recipe`, `sauce`, and `topping`.
-- it returns an array with the 3 ingredients listed above, between 2 strings "bread".
-
-example:
+- it takes 3 string arguments: `recipe`, `sauce`, and `topping`.
+- it returns an array with the 3 ingredients listed above, between 2 strings of "bread".
 
 ```ruby
     cook_burger("fish", "mayo", "avocado")
     # => ["bread", "fish", "mayo", "avocado", "bread"]
 ```
 
-#### `classical_burger`
 
-There we are, your first customer enters the restaurant! He chooses you a burger whose main recipe is "steak", a "ketchup" sauce and "tomato" as topping.
+#### Call a method
 
-In `burger_factory.rb`, call the method `cook_burger` with the chosen ingredients, and store the result in a variable named `classical_burger`.
+There we are, the grand opening! On your very first day, you only have a few ingredients in your stocks and can only sell classical burgers with "steak", "ketchup" and "onions".
+
+Cook your first burger:  
+In `burger_factory.rb`, call the method `cook_burger` with "steak", "ketchup" and "onions". Store the result in the variable named `classical_burger`.
 
 
-So far, we've rehearsed function basics: declare a function with arguments, then call it. If this section is not clear, please ask a TA for help before moving on.
+So far, we've rehearsed method basics, if this section is not clear, please ask a TA for help before continuing.
 
 
 ### Implement Yield
 
-Your second customer is a very young kid, he wants a huge burger with the biggest ingredients of the restaurant. You are about to send the list to the chief, when the parents come politely to the counter, and ask you if you could downsize the portions a little bit. 
+The first customer is very hungry, he'd like a bigger portion of everything!  
+Wow, you didn't expect a custom order today... Your method only deals with standard orders for now. It's time to make it modular and able to get new instructions on the fly. Here is the plan:
+- When you get a special order, you'll write a side note with custom instructions (**block**).
+- The chief applys those instructions anytime he layers an ingredient in the burger (**yield**).
+![Side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-factory-side-note.svg?sanitize=true)
 
-Think about it: this is your very first custom command!
+Update `cook_burger` to welcome a block: 
+- Use `yield` to call the block on every ingredient (except "bread").
+- The method must work **with or without a block**. Use the helper [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) to apply yield only when a block is given.
 
-Your processes are not tailored for this kind of situation so what are your options now? A quick meeting with the chief will fix it:
-- You could create a function each time a new customer wants something special, but you both decide to rule out this option. It's too much work, too much maintenance and a bit messy. 
-- Another idea would be to make your operation modular and able to get new instructions on the fly. Sounds good! You two quickly come up with a plan:
-
-~~~~~~~~~~ ILLUSTRATION SIDE NOTE ~~~~~~~~~~~~
-- You'll write a side note with custom instructions when needed, and handle it to the chief (block).
-- The chief will apply those instructions anytime he layers an ingredient in the burger (yield).
-
-#### `cook_burger` with yield
-
-Update the `cook_burger` function to welcome a block: 
-- Use `yield` to apply the block on every ingredient (except "bread").
-- The function must work **with or without a block**. ~~~~~~~~~~ Use `block_given?` to write a condition statement.
-
-You're ready to cook the kid's burger and add blocks to your method calls.
+You're ready to cook on-demand custom orders!
 
 
 ### Create Blocks
 
-Practice with blocks, we'll help you with the first steps. ~~~~~~~~ we'll give you fewer instructions each time. 
+Cook more burgers to practice with blocks, we'll give you fewer instructions each time.
 
-#### `nuggets_burger`
+#### `bigger_classical_burger`
 
-1. Call your method `cook_burger` with "NUGGETS", "CAESAR", "ONIONS", all capital letters, and store the result in a variable named `nuggets_burger`.
+The second customer asked for bigger portions, remember? Transform your classical burger into a bigger burger for him, write a block to transform all the ingredients to uppercase:
 
-2. Now prepare a block (side note) with the parents' instruction:
+1. Call the method `cook_burger` with "steak", "ketchup" and "onions", **all lowercase letters**, and store the result in the variable `bigger_classical_burger`.
+
+2. Append a block (side note in our story) with the custom instructions:
 	- it takes a string as an argument
-	- it downcases the string
+	- it transforms the string to uppercase
 
-3. Append the block at the end of the function call and you're done
+![Yield](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-factory-yield.svg?sanitize=true)
 
-**Anatomy of a block:**
 
-```ruby
-do |arg|
-	# here 
-end
-```
+#### `classical_burger_with_mayo`
 
-#### `mayo_burger`
+The third customer would like mayo on each ingredient.
+Pass "steak", "ketchup" and "onions" to `cook_burger`. Add a block to replace any vowel by the sign "~".
 
-Pass "chicken", "barbecue" and "onions" to `cook_burger`. Add a block to replace any vowel by the sign "~".
 
- = cook_burger("chicken", "barbecue", "onions") do |ingredient|
-  ingredient.tr("aeiou", "~")
-end
+#### `vegan_burger`
 
-### Advanced: Procs
+The last customer wants a classical burger, but asks for a vegan option. The chief receives a side note: please replace "steak" by "tofu" at the last minute in this burger.
+Make it happen!
+
