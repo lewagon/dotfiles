@@ -44,4 +44,4 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 sudo /etc/init.d/postgresql start
 export BROWSER=/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
-export DISPLAY=:0
+export DISPLAY=:0export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
