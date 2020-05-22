@@ -87,7 +87,7 @@ Copy-paste this array in your code to pass it to your `select2`:
 ```js
 const cities = ["Amsterdam","Bali","Barcelona","Belo Horizonte","Berlin","Bordeaux","Brussels","Buenos Aires","Casablanca","Chengdu","Copenhagen","Kyoto","Lausanne","Lille","Lisbon","London","Lyon","Madrid","Marseille","Melbourne","Mexico","Milan","Montréal","Nantes","Oslo","Paris","Rio de Janeiro","Rennes","Rome","São Paulo","Seoul","Shanghai","Shenzhen","Singapore","Stockholm","Tel Aviv","Tokyo"];
 
-$('#city-input').select2({ data: cities }); // <-- add the `data` option
+$('#city-input').select2({ data: cities, width: '100%' }); // <-- add the `data` and `width` options
 ```
 
 You should see the cities appear on the select, but not really well designed. That's normal, we did not include select2's css in the code yet! To do so, add this in your HTML's `<head>`:
