@@ -8,9 +8,9 @@ git config --global user.email $email
 git config --global user.name $full_name
 
 git add .
-git commit --message "My identity for @lewagon in the gitconfig"
+git commit --message "Created my dotfiles"
 git push origin master
 
-git remote add upstream git@github.com:lewagon/dotfiles.git
+git remote add upstream git@github.com:arnaudaprahamian/dotfiles.git
 
 echo "👌 Awesome, all set."
