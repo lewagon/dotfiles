@@ -1,15 +1,25 @@
 ## Projects - Day One
 
 You should now belong to a team of 3 to 4 people, with a clear concept for the MVP you're going
-to be building for the next 2 weeks. The goal of the day is the same as Airbnb - Day 1:
+to be building for the next 2 weeks. The goal of the day is the same as Airbnb - Day 1.
 
-- Write **user stories** down. You should have no more than 15. We recommend setting up a [Trello](http://trello.com) board to coordinate tasks between team members
-- Open [db.lewagon.com](http://db.lewagon.com) and figure out the **database schema**
-- Draw **mock-ups** of *every* screen your app needs. Draw arrows between them to show how your user will move between them. This will help give you to the **unique value proposition** of your app.
-- From the mock-ups, figure out the **routes**
+For **each step**, ask a teacher to validate it. Rushing straight into the code is the best way to waste time writing code that you won't use!
 
-For **each step**, ask a teacher to validate it. Rushing straight into the code is the best way to break stuff!
+#### User stories
+Duplicate this [spreadsheet](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) (1 per team) and invite your teammates to collaborate.
 
-When starting your rails app, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates). It'll get you up and running faster.
+![duplicate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/duplicate.png)
+![rename](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/rename.png)
 
-Please download and **print** [this template for your User Stories](https://github.com/lewagon/fullstack-images/raw/master/rails/rails-user-stories.pdf) (or ask a teacher!)
+Write your **user stories** down. You should have no more than 15. Group them by user journey.
+
+#### Database
+Open [Kitt's DB schema builder](https://kitt.lewagon.com/db) and figure out the **database schema** needed for your user stories
+
+#### Mockup & Routes
+Open your figma from the Product Design Sprint and make sure it still matches the demo you have in mind for Demoday! If it doesn't, take some time to think about it as a team, and rework your wireframe.
+
+From there, figure out the **routes** and add them to your spreadsheet, along with the corresponding **controller** and **action**.
+
+#### Rails New
+When starting your rails app, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates/tree/rails-six). Make sure you use the [Devise template](https://github.com/lewagon/rails-templates/tree/rails-six#devise) if you need a `User` model!
