@@ -1,6 +1,7 @@
 'use strict';
 
-var crypto     = require('crypto'),
+var Buffer     = require('safe-buffer').Buffer,
+    crypto     = require('crypto'),
     util       = require('util'),
     Extensions = require('websocket-extensions'),
     Base       = require('./base'),
@@ -22,24 +23,19 @@ var Hybi = function(request, url, options) {
 
   if (!this._request) return;
 
-  var secKey    = this._request.headers['sec-websocket-key'],
-      protos    = this._request.headers['sec-websocket-protocol'],
-      version   = this._request.headers['sec-websocket-version'],
+  var protos    = this._request.headers['sec-websocket-protocol'],
       supported = this._protocols;
-
-  this._headers.set('Upgrade', 'websocket');
-  this._headers.set('Connection', 'Upgrade');
-  this._headers.set('Sec-WebSocket-Accept', Hybi.generateAccept(secKey));
 
   if (protos !== undefined) {
     if (typeof protos === 'string') protos = protos.split(/ *, */);
     this.protocol = protos.filter(function(p) { return supported.indexOf(p) >= 0 })[0];
-    if (this.protocol) this._headers.set('Sec-WebSocket-Protocol', this.protocol);
   }
 
-  this.version = 'hybi-' + version;
+  this.version = 'hybi-' + Hybi.VERSION;
 };
 util.inherits(Hybi, Base);
+
+Hybi.VERSION = '13';
 
 Hybi.mask = function(payload, mask, offset) {
   if (!mask || mask.length === 0) return payload;
@@ -192,7 +188,7 @@ var instance = {
     if (this.readyState <= 0) return this._queue([buffer, type, code]);
     if (this.readyState > 2) return false;
 
-    if (buffer instanceof Array)    buffer = new Buffer(buffer);
+    if (buffer instanceof Array)    buffer = Buffer.from(buffer);
     if (typeof buffer === 'number') buffer = buffer.toString();
 
     var message = new Message(),
@@ -202,11 +198,11 @@ var instance = {
     message.rsv1   = message.rsv2 = message.rsv3 = false;
     message.opcode = this.OPCODES[type || (isText ? 'text' : 'binary')];
 
-    payload = isText ? new Buffer(buffer, 'utf8') : buffer;
+    payload = isText ? Buffer.from(buffer, 'utf8') : buffer;
 
     if (code) {
       copy = payload;
-      payload = new Buffer(2 + copy.length);
+      payload = Buffer.allocUnsafe(2 + copy.length);
       payload.writeUInt16BE(code, 0);
       copy.copy(payload, 2);
     }
@@ -244,7 +240,7 @@ var instance = {
     var length = frame.length,
         header = (length <= 125) ? 2 : (length <= 65535 ? 4 : 10),
         offset = header + (frame.masked ? 4 : 0),
-        buffer = new Buffer(offset + length),
+        buffer = Buffer.allocUnsafe(offset + length),
         masked = frame.masked ? this.MASK : 0;
 
     buffer[0] = (frame.final ? this.FIN : 0) |
@@ -275,18 +271,28 @@ var instance = {
   },
 
   _handshakeResponse: function() {
-    try {
-      var extensions = this._extensions.generateResponse(this._request.headers['sec-websocket-extensions']);
-    } catch (e) {
-      return this._fail('protocol_error', e.message);
-    }
+    var secKey  = this._request.headers['sec-websocket-key'],
+        version = this._request.headers['sec-websocket-version'];
 
+    if (version !== Hybi.VERSION)
+      throw new Error('Unsupported WebSocket version: ' + version);
+
+    if (typeof secKey !== 'string')
+      throw new Error('Missing handshake request header: Sec-WebSocket-Key');
+
+    this._headers.set('Upgrade', 'websocket');
+    this._headers.set('Connection', 'Upgrade');
+    this._headers.set('Sec-WebSocket-Accept', Hybi.generateAccept(secKey));
+
+    if (this.protocol) this._headers.set('Sec-WebSocket-Protocol', this.protocol);
+
+    var extensions = this._extensions.generateResponse(this._request.headers['sec-websocket-extensions']);
     if (extensions) this._headers.set('Sec-WebSocket-Extensions', extensions);
 
     var start   = 'HTTP/1.1 101 Switching Protocols',
         headers = [start, this._headers.toString(), ''];
 
-    return new Buffer(headers.join('\r\n'), 'utf8');
+    return Buffer.from(headers.join('\r\n'), 'utf8');
   },
 
   _shutdown: function(code, reason, error) {

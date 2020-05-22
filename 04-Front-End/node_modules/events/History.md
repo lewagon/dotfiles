@@ -1,3 +1,31 @@
+# 3.0.0 (2018-05-25)
+
+**This version drops support for IE8.** `events` no longer includes polyfills
+for ES5 features. If you need to support older environments, use an ES5 shim
+like [es5-shim](https://npmjs.com/package/es5-shim). Both the shim and sham
+versions of es5-shim are necessary.
+
+  - Update to events code from Node.js 10.x
+    - (semver major) Adds `off()` method
+  - Port more tests from Node.js
+  - Switch browser tests to airtap, making things more reliable
+
+# 2.1.0 (2018-05-25)
+
+  - add Emitter#rawListeners from Node.js v9.4
+
+# 2.0.0 (2018-02-02)
+
+  - Update to events code from node.js 8.x
+    - Adds `prependListener()` and `prependOnceListener()`
+    - Adds `eventNames()` method
+    - (semver major) Unwrap `once()` listeners in `listeners()`
+  - copy tests from node.js
+
+Note that this version doubles the gzipped size, jumping from 1.1KB to 2.1KB,
+due to new methods and runtime performance improvements. Be aware of that when
+upgrading.
+
 # 1.1.1 (2016-06-22)
 
   - add more context to errors if they are not instanceof Error

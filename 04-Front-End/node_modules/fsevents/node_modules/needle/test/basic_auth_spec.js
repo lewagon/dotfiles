@@ -19,7 +19,7 @@ describe('Basic Auth', function() {
 
   var get_auth = function(header) {
     var token  = header.split(/\s+/).pop();
-    return token && new Buffer(token, 'base64').toString().split(':');
+    return token && Buffer.from(token, 'base64').toString().split(':');
   }
 
   describe('when neither username or password are passed', function() {

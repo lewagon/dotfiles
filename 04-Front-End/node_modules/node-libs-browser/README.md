@@ -2,6 +2,8 @@
 
 The node core libs for in-browser usage.
 
+NOTE: This library is deprecated and won't accept Pull Requests that include Breaking Changes or new Features. Only bugfixes are accepted.
+
 [![dependencies status](http://david-dm.org/webpack/node-libs-browser.png)](http://david-dm.org/webpack/node-libs-browser)
 
 Exports a hash [object] of absolute paths to each lib, keyed by lib names. Modules without browser replacements are `null`.

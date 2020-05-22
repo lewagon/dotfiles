@@ -23,18 +23,18 @@ function exhaustMap(project, resultSelector) {
         return function (source) { return source.pipe(exhaustMap(function (a, i) { return from_1.from(project(a, i)).pipe(map_1.map(function (b, ii) { return resultSelector(a, b, i, ii); })); })); };
     }
     return function (source) {
-        return source.lift(new ExhauseMapOperator(project));
+        return source.lift(new ExhaustMapOperator(project));
     };
 }
 exports.exhaustMap = exhaustMap;
-var ExhauseMapOperator = (function () {
-    function ExhauseMapOperator(project) {
+var ExhaustMapOperator = (function () {
+    function ExhaustMapOperator(project) {
         this.project = project;
     }
-    ExhauseMapOperator.prototype.call = function (subscriber, source) {
+    ExhaustMapOperator.prototype.call = function (subscriber, source) {
         return source.subscribe(new ExhaustMapSubscriber(subscriber, this.project));
     };
-    return ExhauseMapOperator;
+    return ExhaustMapOperator;
 }());
 var ExhaustMapSubscriber = (function (_super) {
     __extends(ExhaustMapSubscriber, _super);
@@ -65,10 +65,13 @@ var ExhaustMapSubscriber = (function (_super) {
         this._innerSub(result, value, index);
     };
     ExhaustMapSubscriber.prototype._innerSub = function (result, value, index) {
-        var innerSubscriber = new InnerSubscriber_1.InnerSubscriber(this, undefined, undefined);
+        var innerSubscriber = new InnerSubscriber_1.InnerSubscriber(this, value, index);
         var destination = this.destination;
         destination.add(innerSubscriber);
-        subscribeToResult_1.subscribeToResult(this, result, value, index, innerSubscriber);
+        var innerSubscription = subscribeToResult_1.subscribeToResult(this, result, undefined, undefined, innerSubscriber);
+        if (innerSubscription !== innerSubscriber) {
+            destination.add(innerSubscription);
+        }
     };
     ExhaustMapSubscriber.prototype._complete = function () {
         this.hasCompleted = true;

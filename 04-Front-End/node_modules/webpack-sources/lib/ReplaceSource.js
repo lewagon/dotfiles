@@ -6,9 +6,6 @@
 
 var Source = require("./Source");
 var SourceNode = require("source-map").SourceNode;
-var SourceListMap = require("source-list-map").SourceListMap;
-var fromStringWithSourceMap = require("source-list-map").fromStringWithSourceMap;
-var SourceMapConsumer = require("source-map").SourceMapConsumer;
 
 class Replacement {
 	constructor(start, end, content, insertIndex, name) {

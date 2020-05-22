@@ -30,15 +30,13 @@ assert(isSymbol(Object(Symbol('foo'))));
 Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/is-symbol
-[2]: http://versionbadg.es/ljharb/is-symbol.svg
-[3]: https://travis-ci.org/ljharb/is-symbol.svg
-[4]: https://travis-ci.org/ljharb/is-symbol
-[5]: https://david-dm.org/ljharb/is-symbol.svg
-[6]: https://david-dm.org/ljharb/is-symbol
-[7]: https://david-dm.org/ljharb/is-symbol/dev-status.svg
-[8]: https://david-dm.org/ljharb/is-symbol#info=devDependencies
-[9]: https://ci.testling.com/ljharb/is-symbol.png
-[10]: https://ci.testling.com/ljharb/is-symbol
+[2]: http://versionbadg.es/inspect-js/is-symbol.svg
+[3]: https://travis-ci.org/inspect-js/is-symbol.svg
+[4]: https://travis-ci.org/inspect-js/is-symbol
+[5]: https://david-dm.org/inspect-js/is-symbol.svg
+[6]: https://david-dm.org/inspect-js/is-symbol
+[7]: https://david-dm.org/inspect-js/is-symbol/dev-status.svg
+[8]: https://david-dm.org/inspect-js/is-symbol#info=devDependencies
 [11]: https://nodei.co/npm/is-symbol.png?downloads=true&stars=true
 [license-image]: http://img.shields.io/npm/l/is-symbol.svg
 [license-url]: LICENSE

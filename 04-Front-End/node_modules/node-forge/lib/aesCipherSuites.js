@@ -16,7 +16,7 @@ var tls = module.exports = forge.tls;
  * Supported cipher suites.
  */
 tls.CipherSuites['TLS_RSA_WITH_AES_128_CBC_SHA'] = {
-  id: [0x00,0x2f],
+  id: [0x00, 0x2f],
   name: 'TLS_RSA_WITH_AES_128_CBC_SHA',
   initSecurityParameters: function(sp) {
     sp.bulk_cipher_algorithm = tls.BulkCipherAlgorithm.aes;
@@ -32,7 +32,7 @@ tls.CipherSuites['TLS_RSA_WITH_AES_128_CBC_SHA'] = {
   initConnectionState: initConnectionState
 };
 tls.CipherSuites['TLS_RSA_WITH_AES_256_CBC_SHA'] = {
-  id: [0x00,0x35],
+  id: [0x00, 0x35],
   name: 'TLS_RSA_WITH_AES_256_CBC_SHA',
   initSecurityParameters: function(sp) {
     sp.bulk_cipher_algorithm = tls.BulkCipherAlgorithm.aes;
@@ -199,10 +199,8 @@ function decrypt_aes_cbc_sha1_padding(blockSize, output, decrypt) {
  *
  * @return true on success, false on failure.
  */
-var count = 0;
 function decrypt_aes_cbc_sha1(record, s) {
   var rval = false;
-  ++count;
 
   var iv;
   if(record.version.minor === tls.Versions.TLS_1_0.minor) {

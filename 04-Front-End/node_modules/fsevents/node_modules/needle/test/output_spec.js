@@ -180,7 +180,7 @@ describe('with output option', function() {
 
     describe('for a binary file', function() {
 
-      var pixel = new Buffer("base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs", "base64");
+      var pixel = Buffer.from("base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs", "base64");
 
       before(function() {
         handler = function(req, res) {

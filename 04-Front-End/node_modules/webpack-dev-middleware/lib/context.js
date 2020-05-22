@@ -10,7 +10,7 @@ module.exports = function ctx(compiler, options) {
     options,
     compiler,
     watching: null,
-    forceRebuild: false
+    forceRebuild: false,
   };
 
   if (options.logger) {
@@ -19,7 +19,7 @@ module.exports = function ctx(compiler, options) {
     context.log = weblog({
       level: options.logLevel || 'info',
       name: 'wdm',
-      timestamp: options.logTime
+      timestamp: options.logTime,
     });
   }
 
@@ -42,7 +42,7 @@ module.exports = function ctx(compiler, options) {
       context.options.reporter(context.options, {
         log,
         state: true,
-        stats
+        stats,
       });
 
       // execute callback that are delayed
@@ -64,7 +64,7 @@ module.exports = function ctx(compiler, options) {
     if (context.state) {
       context.options.reporter(context.options, {
         log,
-        state: false
+        state: false,
       });
     }
 
@@ -95,9 +95,12 @@ module.exports = function ctx(compiler, options) {
   context.compiler.hooks.invalid.tap('WebpackDevMiddleware', invalid);
   context.compiler.hooks.run.tap('WebpackDevMiddleware', invalid);
   context.compiler.hooks.done.tap('WebpackDevMiddleware', done);
-  context.compiler.hooks.watchRun.tap('WebpackDevMiddleware', (comp, callback) => {
-    invalid(callback);
-  });
+  context.compiler.hooks.watchRun.tap(
+    'WebpackDevMiddleware',
+    (comp, callback) => {
+      invalid(callback);
+    }
+  );
 
   return context;
 };

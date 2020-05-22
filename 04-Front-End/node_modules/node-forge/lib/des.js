@@ -7,7 +7,8 @@
  * Paul Tero, July 2001
  * http://www.tero.co.uk/des/
  *
- * Optimised for performance with large blocks by Michael Hayworth, November 2001
+ * Optimised for performance with large blocks by
+ * Michael Hayworth, November 2001
  * http://www.netdealing.com
  *
  * THIS SOFTWARE IS PROVIDED "AS IS" AND

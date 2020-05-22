@@ -1,7 +1,7 @@
 {
   "name": "sockjs-client",
   "description": "SockJS-client is a browser JavaScript library that provides a WebSocket-like object.",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "author": "Bryce Kahle",
   "jsdelivr": "dist/sockjs.min.js",
   "browser": {
@@ -33,19 +33,19 @@
     "url-parse": "^1.4.3"
   },
   "devDependencies": {
-    "browserify": "^16.2.2",
+    "browserify": "^16.2.3",
     "envify": "^4.0.0",
-    "eslint": "^5.6.0",
+    "eslint": "^6.2.1",
     "expect.js": "~0.3.1",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-header": "^2.0.5",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.1",
-    "karma": "^3.0.0",
-    "karma-browserify": "^5.3.0",
-    "karma-browserstack-launcher": "git+https://git@github.com/karma-runner/karma-browserstack-launcher.git#310c22835987b50a908b99d0995fc1655a7e06f5",
+    "gulp-uglify": "^3.0.2",
+    "karma": "^4.2.0",
+    "karma-browserify": "^6.1.0",
+    "karma-browserstack-launcher": "^1.5.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-mocha": "^1.3.0",
     "mocha": "^5.2.0",
@@ -74,7 +74,7 @@
     "test:browser_remote": "npm run test:bundle && npx karma start",
     "gulp": "gulp",
     "lint": "eslint .",
-    "version": "gulp release && git add -A dist lib/version.js",
+    "version": "gulp release && git add -A dist lib/version.js Changelog.md",
     "postversion": "npm publish",
     "postpublish": "git push origin --all && git push origin --tags"
   }

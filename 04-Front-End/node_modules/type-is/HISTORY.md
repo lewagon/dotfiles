@@ -1,3 +1,26 @@
+1.6.18 / 2019-04-26
+===================
+
+  * Fix regression passing request object to `typeis.is`
+
+1.6.17 / 2019-04-25
+===================
+
+  * deps: mime-types@~2.1.24
+    - Add Apple file extensions from IANA
+    - Add extension `.csl` to `application/vnd.citationstyles.style+xml`
+    - Add extension `.es` to `application/ecmascript`
+    - Add extension `.nq` to `application/n-quads`
+    - Add extension `.nt` to `application/n-triples`
+    - Add extension `.owl` to `application/rdf+xml`
+    - Add extensions `.siv` and `.sieve` to `application/sieve`
+    - Add extensions from IANA for `image/*` types
+    - Add extensions from IANA for `model/*` types
+    - Add extensions to HEIC image types
+    - Add new mime types
+    - Add `text/mdx` with extension `.mdx`
+  * perf: prevent internal `throw` on invalid type
+
 1.6.16 / 2018-02-16
 ===================
 

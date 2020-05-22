@@ -12,7 +12,7 @@ Can be useful if you need to create a fast path for a synchronous operation.
 ## Install
 
 ```
-$ npm install --save p-is-promise
+$ npm install p-is-promise
 ```
 
 

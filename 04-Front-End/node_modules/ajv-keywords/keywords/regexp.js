@@ -11,7 +11,7 @@ module.exports = function defFunc(ajv) {
           if (typeof schema == 'object')
             return new RegExp(schema.pattern, schema.flags);
 
-          var rx = schema.match(/^\/(.*)\/([gimy]*)$/);
+          var rx = schema.match(/^\/(.*)\/([gimuy]*)$/);
           if (rx) return new RegExp(rx[1], rx[2]);
           throw new Error('cannot parse string into RegExp');
         } catch(e) {

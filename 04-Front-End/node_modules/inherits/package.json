@@ -1,7 +1,7 @@
 {
   "name": "inherits",
   "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "keywords": [
     "inheritance",
     "class",
@@ -17,10 +17,10 @@
   "repository": "git://github.com/isaacs/inherits",
   "license": "ISC",
   "scripts": {
-    "test": "node test"
+    "test": "tap"
   },
   "devDependencies": {
-    "tap": "^7.1.0"
+    "tap": "^14.2.4"
   },
   "files": [
     "inherits.js",

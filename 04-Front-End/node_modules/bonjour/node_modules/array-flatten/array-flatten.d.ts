@@ -1,7 +1,7 @@
 declare function flatten <T> (array: flatten.NestedArray<T>): T[];
 
 declare namespace flatten {
-  export interface NestedArray <T> extends Array<T | NestedArray<T>> {}
+  export interface NestedArray <T> extends ReadonlyArray<T | NestedArray<T>> {}
 
   export interface NestedList <T> {
     [index: number]: T | NestedList<T>;

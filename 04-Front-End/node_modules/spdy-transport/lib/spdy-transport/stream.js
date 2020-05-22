@@ -9,7 +9,6 @@ var debug = {
   client: require('debug')('spdy:stream:client'),
   server: require('debug')('spdy:stream:server')
 }
-var Buffer = require('safe-buffer').Buffer
 var Duplex = require('readable-stream').Duplex
 
 function Stream (connection, options) {
@@ -359,7 +358,7 @@ Stream.prototype._onFinish = function _onFinish () {
       id: this.id,
       priority: state.priority.getPriority(),
       fin: true,
-      data: new Buffer(0)
+      data: Buffer.alloc(0)
     })
   }
 
@@ -607,7 +606,7 @@ Stream.prototype.sendHeaders = function sendHeaders (headers, callback) {
   })
 }
 
-Stream.prototype.destroy = function destroy () {
+Stream.prototype._destroy = function destroy () {
   this.abort()
 }
 

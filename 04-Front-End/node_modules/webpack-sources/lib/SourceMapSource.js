@@ -10,15 +10,17 @@ var SourceMapGenerator = require("source-map").SourceMapGenerator;
 var SourceListMap = require("source-list-map").SourceListMap;
 var fromStringWithSourceMap = require("source-list-map").fromStringWithSourceMap;
 var Source = require("./Source");
+var applySourceMap = require("./applySourceMap");
 
 class SourceMapSource extends Source {
-	constructor(value, name, sourceMap, originalSource, innerSourceMap) {
+	constructor(value, name, sourceMap, originalSource, innerSourceMap, removeOriginalSource) {
 		super();
 		this._value = value;
 		this._name = name;
 		this._sourceMap = sourceMap;
 		this._originalSource = originalSource;
 		this._innerSourceMap = innerSourceMap;
+		this._removeOriginalSource = removeOriginalSource;
 	}
 
 	source() {
@@ -26,17 +28,14 @@ class SourceMapSource extends Source {
 	}
 
 	node(options) {
-		var innerSourceMap = this._innerSourceMap;
 		var sourceMap = this._sourceMap;
+		var node = SourceNode.fromStringWithSourceMap(this._value, new SourceMapConsumer(sourceMap));
+		node.setSourceContent(this._name, this._originalSource);
+		var innerSourceMap = this._innerSourceMap;
 		if(innerSourceMap) {
-			sourceMap = SourceMapGenerator.fromSourceMap(new SourceMapConsumer(sourceMap));
-			if(this._originalSource)
-				sourceMap.setSourceContent(this._name, this._originalSource);
-			innerSourceMap = new SourceMapConsumer(innerSourceMap);
-			sourceMap.applySourceMap(innerSourceMap, this._name);
-			sourceMap = sourceMap.toJSON();
+			node = applySourceMap(node, new SourceMapConsumer(innerSourceMap), this._name, this._removeOriginalSource);
 		}
-		return SourceNode.fromStringWithSourceMap(this._value, new SourceMapConsumer(sourceMap));
+		return node;
 	}
 
 	listMap(options) {

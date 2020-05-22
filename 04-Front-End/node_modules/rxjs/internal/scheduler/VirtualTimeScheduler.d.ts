@@ -29,5 +29,5 @@ export declare class VirtualAction<T> extends AsyncAction<T> {
     protected requestAsyncId(scheduler: VirtualTimeScheduler, id?: any, delay?: number): any;
     protected recycleAsyncId(scheduler: VirtualTimeScheduler, id?: any, delay?: number): any;
     protected _execute(state: T, delay: number): any;
-    static sortActions<T>(a: VirtualAction<T>, b: VirtualAction<T>): 1 | -1 | 0;
+    static sortActions<T>(a: VirtualAction<T>, b: VirtualAction<T>): 1 | 0 | -1;
 }

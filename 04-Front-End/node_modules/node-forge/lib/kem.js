@@ -53,14 +53,14 @@ forge.kem.rsa.create = function(kdf, options) {
    *   key: the secret key to use for encrypting a message.
    */
   kem.encrypt = function(publicKey, keyLength) {
-    // generate a random r where 1 > r > n
+    // generate a random r where 1 < r < n
     var byteLength = Math.ceil(publicKey.n.bitLength() / 8);
     var r;
     do {
       r = new BigInteger(
         forge.util.bytesToHex(prng.getBytesSync(byteLength)),
         16).mod(publicKey.n);
-    } while(r.equals(BigInteger.ZERO));
+    } while(r.compareTo(BigInteger.ONE) <= 0);
 
     // prepend r with zeros
     r = forge.util.hexToBytes(r.toString(16));

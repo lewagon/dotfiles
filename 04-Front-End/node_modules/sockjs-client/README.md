@@ -4,6 +4,14 @@
 [![npm version](https://img.shields.io/npm/v/sockjs-client.svg?style=flat-square)](https://www.npmjs.com/package/sockjs-client)[![Build Status](https://img.shields.io/travis/sockjs/sockjs-client/master.svg?style=flat-square)](https://travis-ci.org/sockjs/sockjs-client)[![Dependencies](https://img.shields.io/david/sockjs/sockjs-client.svg?style=flat-square)](https://david-dm.org/sockjs/sockjs-client)[![Chat](https://img.shields.io/badge/Chat-gitter.im-blue.svg?style=flat-square)](https://gitter.im/sockjs/sockjs-client)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=dW9YdlFsSEI5VzNBVVk5ZS9XT0xaTjJVQkhQMkRkNlZBQURiSWNWMC9jaz0tLXRJM05RbW1tTCt5TlhHaVgycFJUYmc9PQ==--e3ef9b9a9fa071084e6d87874b5fc65b71273821)](https://www.browserstack.com/automate/public-build/dW9YdlFsSEI5VzNBVVk5ZS9XT0xaTjJVQkhQMkRkNlZBQURiSWNWMC9jaz0tLXRJM05RbW1tTCt5TlhHaVgycFJUYmc9PQ==--e3ef9b9a9fa071084e6d87874b5fc65b71273821)
 
+# Supporting SockJS
+
+Tidelift gives software development teams a single source for purchasing and maintaining their software, with professional grade assurances from the experts who know it best, while seamlessly integrating with existing tools.
+
+[Get supported sockjs-client with the Tidelift Subscription](https://tidelift.com/subscription/pkg/npm-sockjs-client?utm_source=npm-sockjs-client&utm_medium=referral&utm_campaign=readme) 
+
+# Summary
+
 SockJS is a browser JavaScript library that provides a WebSocket-like
 object. SockJS gives you a coherent, cross-browser, Javascript API
 which creates a low latency, full duplex, cross-domain communication
@@ -48,7 +56,7 @@ Subscribe to
 [SockJS mailing list](https://groups.google.com/forum/#!forum/sockjs) for
 discussions and support.
 
-SockJS family:
+# SockJS family
 
   * [SockJS-client](https://github.com/sockjs/sockjs-client) JavaScript client library
   * [SockJS-node](https://github.com/sockjs/sockjs-node) Node.js server
@@ -73,9 +81,9 @@ Work in progress:
   * [wai-SockJS](https://github.com/Palmik/wai-sockjs)
   * [SockJS-perl](https://github.com/vti/sockjs-perl)
   * [SockJS-go](https://github.com/igm/sockjs-go/)
+  * [syp.biz.SockJS.NET](https://github.com/sypbiz/SockJS.NET) - .NET port of the SockJS client
 
-Getting Started
--------
+# Getting Started
 
 SockJS mimics the [WebSockets API](https://www.w3.org/TR/websockets/),
 but instead of `WebSocket` there is a `SockJS` Javascript object.
@@ -108,10 +116,9 @@ SockJS server. Here's a simple example:
 
 ```
 
-SockJS-client API
------------------
+# SockJS-client API
 
-### SockJS class
+## SockJS class
 
 Similar to the 'WebSocket' API, the 'SockJS' constructor takes one, or more arguments:
 
@@ -145,6 +152,13 @@ Where `options` is a hash which can contain:
     If you don't specify this option, the default is to use the default random
     string generator to generate 8-character long session ids.
 
+  * **timeout (number)**
+
+    Specify a minimum timeout in milliseconds to use for the transport connections.
+    By default this is dynamically calculated based on the measured RTT and
+    the number of expected round trips. This setting will establish a minimum,
+    but if the calculated timeout is higher, that will be used.
+
 Although the 'SockJS' object tries to emulate the 'WebSocket'
 behaviour, it's impossible to support all of its features. An
 important SockJS limitation is the fact that you're not allowed to
@@ -161,8 +175,7 @@ bad practice. If you absolutely must do it, you can use
 multiple subdomains, using a different subdomain for every
 SockJS connection.
 
-Supported transports, by browser (html served from http:// or https://)
------------------------------------------------------------------------
+# Supported transports, by browser (html served from http:// or https://)
 
 _Browser_       | _Websockets_     | _Streaming_ | _Polling_
 ----------------|------------------|-------------|-------------------
@@ -191,8 +204,7 @@ Konqueror       | no               | no          | jsonp-polling
      Websockets "hixie-76". They can still be enabled by manually
      changing a browser setting.
 
-Supported transports, by browser (html served from file://)
------------------------------------------------------------
+# Supported transports, by browser (html served from file://)
 
 Sometimes you may want to serve your html from "file://" address - for
 development or if you're using PhoneGap or similar technologies. But
@@ -206,8 +218,7 @@ _Browser_       | _Websockets_  | _Streaming_        | _Polling_
 IE 8, 9         | same as above | iframe-htmlfile    | iframe-xhr-polling
 Other           | same as above | iframe-eventsource | iframe-xhr-polling
 
-Supported transports, by name
------------------------------
+# Supported transports, by name
 
 _Transport_          | _References_
 ---------------------|---------------
@@ -238,8 +249,7 @@ jsonp-polling        | Slow and old fashioned [JSONP polling][^6]. This transpor
 [^10]: https://www.rfc-editor.org/rfc/rfc6455.txt
 
 
-Connecting to SockJS without the client
----------------------------------------
+# Connecting to SockJS without the client
 
 Although the main point of SockJS is to enable browser-to-server
 connectivity, it is possible to connect to SockJS from an external
@@ -255,8 +265,7 @@ third party code or even a browser (though I don't know why you would
 want to do so).
 
 
-Deployment
-----------
+# Deployment
 
 You should use a version of sockjs-client
 that supports the protocol used by your server. For example:
@@ -271,8 +280,7 @@ session stickiness, take a look at the
 [SockJS-node readme](https://github.com/sockjs/sockjs-node#readme).
 
 
-Development and testing
------------------------
+# Development and testing
 
 SockJS-client needs [node.js](https://nodejs.org/) for running a test
 server and JavaScript minification. If you want to work on
@@ -292,7 +300,7 @@ To generate minified JavaScript, run:
 
 Both commands output into the `build` directory.
 
-### Testing
+## Testing
 
 Automated testing provided by:
 
@@ -305,8 +313,7 @@ pass all the tests.
 
 This will start [karma](https://karma-runner.github.io) and a test support server.
 
-Browser Quirks
---------------
+# Browser Quirks
 
 There are various browser quirks which we don't intend to address:
 

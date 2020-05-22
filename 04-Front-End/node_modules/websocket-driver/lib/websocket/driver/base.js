@@ -1,6 +1,7 @@
 'use strict';
 
-var Emitter = require('events').EventEmitter,
+var Buffer  = require('safe-buffer').Buffer,
+    Emitter = require('events').EventEmitter,
     util    = require('util'),
     streams = require('../streams'),
     Headers = require('./headers'),
@@ -24,6 +25,15 @@ var Base = function(request, url, options) {
   this._bindEventListeners();
 };
 util.inherits(Base, Emitter);
+
+Base.isWebSocket = function(request) {
+  var connection = request.headers.connection || '',
+      upgrade    = request.headers.upgrade || '';
+
+  return request.method === 'GET' &&
+         connection.toLowerCase().split(/ *, */).indexOf('upgrade') >= 0 &&
+         upgrade.toLowerCase() === 'websocket';
+};
 
 Base.validateOptions = function(options, validKeys) {
   for (var key in options) {
@@ -79,11 +89,33 @@ var instance = {
 
   start: function() {
     if (this.readyState !== 0) return false;
-    var response = this._handshakeResponse();
-    if (!response) return false;
+
+    if (!Base.isWebSocket(this._request))
+      return this._failHandshake(new Error('Not a WebSocket request'));
+
+    var response;
+
+    try {
+      response = this._handshakeResponse();
+    } catch (error) {
+      return this._failHandshake(error);
+    }
+
     this._write(response);
     if (this._stage !== -1) this._open();
     return true;
+  },
+
+  _failHandshake: function(error) {
+    var headers = new Headers();
+    headers.set('Content-Type', 'text/plain');
+    headers.set('Content-Length', Buffer.byteLength(error.message, 'utf8'));
+
+    headers = ['HTTP/1.1 400 Bad Request', headers.toString(), error.message];
+    this._write(Buffer.from(headers.join('\r\n'), 'utf8'));
+    this._fail('protocol_error', error.message);
+
+    return false;
   },
 
   text: function(message) {
@@ -124,6 +156,12 @@ var instance = {
   _write: function(chunk) {
     var io = this.io;
     if (io.readable) io.emit('data', chunk);
+  },
+
+  _fail: function(type, message) {
+    this.readyState = 2;
+    this.emit('error', new Error(message));
+    this.close();
   }
 };
 

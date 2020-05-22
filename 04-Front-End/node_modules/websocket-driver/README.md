@@ -10,21 +10,21 @@ pluggable I/O.
 Due to this design, you get a lot of things for free. In particular, if you hook
 this module up to some I/O object, it will do all of this for you:
 
-* Select the correct server-side driver to talk to the client
-* Generate and send both server- and client-side handshakes
-* Recognize when the handshake phase completes and the WS protocol begins
-* Negotiate subprotocol selection based on `Sec-WebSocket-Protocol`
-* Negotiate and use extensions via the
+- Select the correct server-side driver to talk to the client
+- Generate and send both server- and client-side handshakes
+- Recognize when the handshake phase completes and the WS protocol begins
+- Negotiate subprotocol selection based on `Sec-WebSocket-Protocol`
+- Negotiate and use extensions via the
   [websocket-extensions](https://github.com/faye/websocket-extensions-node)
   module
-* Buffer sent messages until the handshake process is finished
-* Deal with proxies that defer delivery of the draft-76 handshake body
-* Notify you when the socket is open and closed and when messages arrive
-* Recombine fragmented messages
-* Dispatch text, binary, ping, pong and close frames
-* Manage the socket-closing handshake process
-* Automatically reply to ping frames with a matching pong
-* Apply masking to messages sent by the client
+- Buffer sent messages until the handshake process is finished
+- Deal with proxies that defer delivery of the draft-76 handshake body
+- Notify you when the socket is open and closed and when messages arrive
+- Recombine fragmented messages
+- Dispatch text, binary, ping, pong and close frames
+- Manage the socket-closing handshake process
+- Automatically reply to ping frames with a matching pong
+- Apply masking to messages sent by the client
 
 This library was originally extracted from the [Faye](http://faye.jcoglan.com)
 project but now aims to provide simple WebSocket support for any Node-based
@@ -153,8 +153,8 @@ driver.messages.on('data', function(message) {
 Client drivers have two additional properties for reading the HTTP data that was
 sent back by the server:
 
-* `driver.statusCode` - the integer value of the HTTP status code
-* `driver.headers` - an object containing the response headers
+- `driver.statusCode` - the integer value of the HTTP status code
+- `driver.headers` - an object containing the response headers
 
 
 ### HTTP Proxies
@@ -177,7 +177,7 @@ var driver = websocket.client('ws://www.example.com/socket'),
     proxy  = driver.proxy('http://username:password@proxy.example.com'),
     tcp    = net.connect(80, 'proxy.example.com');
 
-tcp.pipe(proxy).pipe(tcp, {end: false});
+tcp.pipe(proxy).pipe(tcp, { end: false });
 
 tcp.on('connect', function() {
   proxy.start();
@@ -235,18 +235,18 @@ masking enabled on outgoing frames.
 The `options` argument is optional, and is an object. It may contain the
 following fields:
 
-* `maxLength` - the maximum allowed size of incoming message frames, in bytes.
+- `maxLength` - the maximum allowed size of incoming message frames, in bytes.
   The default value is `2^26 - 1`, or 1 byte short of 64 MiB.
-* `protocols` - an array of strings representing acceptable subprotocols for use
+- `protocols` - an array of strings representing acceptable subprotocols for use
   over the socket. The driver will negotiate one of these to use via the
   `Sec-WebSocket-Protocol` header if supported by the other peer.
 
 A driver has two duplex streams attached to it:
 
-* <b>`driver.io`</b> - this stream should be attached to an I/O socket like a
-  TCP stream. Pipe incoming TCP chunks to this stream for them to be parsed, and
+- **`driver.io`** - this stream should be attached to an I/O socket like a TCP
+  stream. Pipe incoming TCP chunks to this stream for them to be parsed, and
   pipe this stream back into TCP to send outgoing frames.
-* <b>`driver.messages`</b> - this stream emits messages received over the
+- **`driver.messages`** - this stream emits messages received over the
   WebSocket.  Writing to it sends messages to the other peer by emitting frames
   via the `driver.io` stream.
 

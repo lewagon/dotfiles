@@ -1,4 +1,5 @@
 import { Subscription } from '../Subscription';
+import { InnerSubscriber } from '../InnerSubscriber';
 import { OuterSubscriber } from '../OuterSubscriber';
-import { Subscriber } from '../Subscriber';
-export declare function subscribeToResult<T, R>(outerSubscriber: OuterSubscriber<T, R>, result: any, outerValue?: T, outerIndex?: number, destination?: Subscriber<any>): Subscription;
+export declare function subscribeToResult<T, R>(outerSubscriber: OuterSubscriber<T, R>, result: any, outerValue: undefined, outerIndex: undefined, innerSubscriber: InnerSubscriber<T, R>): Subscription | undefined;
+export declare function subscribeToResult<T, R>(outerSubscriber: OuterSubscriber<T, R>, result: any, outerValue?: T, outerIndex?: number): Subscription | undefined;

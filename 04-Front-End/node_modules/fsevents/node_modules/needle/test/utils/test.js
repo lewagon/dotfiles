@@ -46,7 +46,7 @@ function multipart_post(url){
 	var data = 'Plain text data.\nLorem ipsum dolor sit amet.\nBla bla bla.\n';
 	fs.writeFileSync(filename, data);
 
-	var black_pixel = new Buffer("data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=".replace(/^data:image\/\w+;base64,/, ""), "base64");
+	var black_pixel = Buffer.from("data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=".replace(/^data:image\/\w+;base64,/, ""), "base64");
 
 	var data = {
 		foo: 'bar',

@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 exports.__esModule = true
 
 const extname = require('path').extname
@@ -24,13 +24,17 @@ function makeValidExtensionSet(settings) {
   // all alternate parser extensions are also valid
   if ('import/parsers' in settings) {
     for (let parser in settings['import/parsers']) {
-      settings['import/parsers'][parser]
-        .forEach(ext => exts.add(ext))
+      const parserSettings = settings['import/parsers'][parser]
+      if (!Array.isArray(parserSettings)) {
+        throw new TypeError('"settings" for ' + parser + ' must be an array')
+      }
+      parserSettings.forEach(ext => exts.add(ext))
     }
   }
 
   return exts
 }
+exports.getFileExtensions = makeValidExtensionSet
 
 exports.default = function ignore(path, context) {
   // check extension whitelist first (cheap)

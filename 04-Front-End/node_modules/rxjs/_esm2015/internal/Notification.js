@@ -1,6 +1,12 @@
 import { empty } from './observable/empty';
 import { of } from './observable/of';
 import { throwError } from './observable/throwError';
+export var NotificationKind;
+(function (NotificationKind) {
+    NotificationKind["NEXT"] = "N";
+    NotificationKind["ERROR"] = "E";
+    NotificationKind["COMPLETE"] = "C";
+})(NotificationKind || (NotificationKind = {}));
 export class Notification {
     constructor(kind, value, error) {
         this.kind = kind;

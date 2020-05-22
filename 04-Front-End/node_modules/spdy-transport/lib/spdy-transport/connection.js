@@ -2,7 +2,6 @@
 
 var util = require('util')
 var transport = require('../spdy-transport')
-var Buffer = require('safe-buffer').Buffer
 
 var debug = {
   server: require('debug')('spdy:connection:server'),
@@ -177,11 +176,15 @@ Connection.prototype._init = function init () {
     self.emit('error', e)
   })
 
-  this.socket.once('close', function onclose () {
-    var err = new Error('socket hang up')
-    err.code = 'ECONNRESET'
+  this.socket.once('close', function onclose (hadError) {
+    var err
+    if (hadError) {
+      err = new Error('socket hang up')
+      err.code = 'ECONNRESET'
+    }
+
     self.destroyStreams(err)
-    self.emit('close', err)
+    self.emit('close')
 
     if (state.pair) {
       pool.put(state.pair)
@@ -449,8 +452,10 @@ Connection.prototype._handleHeaders = function _handleHeaders (frame) {
     return
   }
 
-  state.stream.lastId.received = Math.max(state.stream.lastId.received,
-                                          stream.id)
+  state.stream.lastId.received = Math.max(
+    state.stream.lastId.received,
+    stream.id
+  )
 
   // TODO(indutny) handle stream limit
   if (!this.emit('stream', stream)) {
@@ -753,8 +758,10 @@ Connection.prototype.destroyStreams = function destroyStreams (err) {
   Object.keys(state.stream.map).forEach(function (id) {
     var stream = state.stream.map[id]
 
-    stream.abort()
-    stream.emit('error', err)
+    stream.destroy()
+    if (err) {
+      stream.emit('error', err)
+    }
   })
 }
 
@@ -807,7 +814,7 @@ Connection.prototype.pushPromise = function pushPromise (parent, uri, callback) 
 
   if (uri.push && !state.acceptPush) {
     err = new Error(
-        'Can\'t send PUSH_PROMISE, other side won\'t accept it')
+      'Can\'t send PUSH_PROMISE, other side won\'t accept it')
     process.nextTick(function () {
       if (callback) { callback(err) } else {
         stream.emit('error', err)

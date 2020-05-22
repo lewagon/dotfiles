@@ -22,6 +22,8 @@
 npm install ieee754
 ```
 
+[Get supported ieee754 with the Tidelift Subscription](https://tidelift.com/subscription/pkg/npm-ieee754?utm_source=npm-ieee754&utm_medium=referral&utm_campaign=readme)
+
 ## methods
 
 `var ieee754 = require('ieee754')`

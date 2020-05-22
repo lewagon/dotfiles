@@ -6,14 +6,14 @@
 ## Install
 
 ```
-$ npm install --save is-path-inside
+$ npm install is-path-inside
 ```
 
 
 ## Usage
 
 ```js
-var isPathInside = require('is-path-inside');
+const isPathInside = require('is-path-inside');
 
 isPathInside('a/b/c', 'a/b');
 //=> true
@@ -31,4 +31,4 @@ isPathInside('/Users/sindresorhus/dev/unicorn', '/Users/sindresorhus');
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

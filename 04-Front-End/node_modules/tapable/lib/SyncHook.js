@@ -8,7 +8,7 @@ const Hook = require("./Hook");
 const HookCodeFactory = require("./HookCodeFactory");
 
 class SyncHookCodeFactory extends HookCodeFactory {
-	content({ onError, onResult, onDone, rethrowIfPossible }) {
+	content({ onError, onDone, rethrowIfPossible }) {
 		return this.callTapsSeries({
 			onError: (i, err) => onError(err),
 			onDone,

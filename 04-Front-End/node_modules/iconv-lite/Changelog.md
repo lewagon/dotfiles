@@ -1,3 +1,7 @@
+# 0.4.24 / 2018-08-22
+
+  * Added MIK encoding (#196, by @Ivan-Kalatchev)
+
 
 # 0.4.23 / 2018-05-07
 

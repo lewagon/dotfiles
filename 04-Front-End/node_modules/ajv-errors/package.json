@@ -1,6 +1,6 @@
 {
   "name": "ajv-errors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom error messages in JSON-Schema for Ajv validator",
   "main": "index.js",
   "files": [

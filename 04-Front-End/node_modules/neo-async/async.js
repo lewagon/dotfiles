@@ -1,12 +1,14 @@
-(function (global, factory) {
+(function(global, factory) {
   /*jshint -W030 */
   'use strict';
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  global.async ? factory(global.neo_async = global.neo_async || {}) :
-  factory(global.async = global.async || {});
-}(this, function(exports) {
-
+  typeof exports === 'object' && typeof module !== 'undefined'
+    ? factory(exports)
+    : typeof define === 'function' && define.amd
+    ? define(['exports'], factory)
+    : global.async
+    ? factory((global.neo_async = global.neo_async || {}))
+    : factory((global.async = global.async || {}));
+})(this, function(exports) {
   'use strict';
 
   var noop = function noop() {};
@@ -1964,11 +1966,11 @@
   var dir = createLogger('dir');
 
   /**
-   * @version 2.6.0
+   * @version 2.6.1
    * @namespace async
    */
   var index = {
-    VERSION: '2.6.0',
+    VERSION: '2.6.1',
 
     // Collections
     each: each,
@@ -2095,9 +2097,13 @@
   };
 
   exports['default'] = index;
-  baseEachSync(index, function(func, key) {
-    exports[key] = func;
-  }, nativeKeys(index));
+  baseEachSync(
+    index,
+    function(func, key) {
+      exports[key] = func;
+    },
+    nativeKeys(index)
+  );
 
   /**
    * @private
@@ -2181,7 +2187,6 @@
     return result;
   }
 
-
   /**
    * Create an array with all falsey values removed.
    *
@@ -2241,7 +2246,7 @@
     var index = -1;
     var size = array.length;
 
-    while(++index < size) {
+    while (++index < size) {
       if (array[index] === target) {
         return false;
       }
@@ -2832,7 +2837,6 @@
    * @param {Function} baseEach
    */
   function createEach(arrayEach, baseEach, symbolEach) {
-
     return function each(collection, iterator, callback) {
       callback = once(callback || noop);
       var size, keys;
@@ -2874,7 +2878,6 @@
    * @param {Function} symbolEach
    */
   function createMap(arrayEach, baseEach, symbolEach, useArray) {
-
     var init, clone;
     if (useArray) {
       init = Array;
@@ -2940,7 +2943,6 @@
    * @param {boolean} bool
    */
   function createFilter(arrayEach, baseEach, symbolEach, bool) {
-
     return function(collection, iterator, callback) {
       callback = callback || noop;
       var size, keys, result;
@@ -2993,7 +2995,6 @@
    * @param {boolean} bool
    */
   function createFilterSeries(bool) {
-
     return function(collection, iterator, callback) {
       callback = onlyOnce(callback || noop);
       var size, key, value, keys, iter, item, iterate;
@@ -3080,7 +3081,6 @@
    * @param {boolean} bool
    */
   function createFilterLimit(bool) {
-
     return function(collection, limit, iterator, callback) {
       callback = callback || noop;
       var size, index, key, value, keys, iter, item, iterate, result;
@@ -3129,7 +3129,7 @@
         if (item.done === false) {
           value = item.value;
           iterator(value, createCallback(value, started++));
-        } else if (completed >= collection.size && iterator !== noop) {
+        } else if (completed === started && iterator !== noop) {
           iterator = noop;
           callback(null, compact(result));
         }
@@ -3140,7 +3140,7 @@
         if (item.done === false) {
           value = item.value;
           iterator(value, started, createCallback(value, started++));
-        } else if (completed >= collection.size && iterator !== noop) {
+        } else if (completed === started && iterator !== noop) {
           iterator = noop;
           callback(null, compact(result));
         }
@@ -3478,8 +3478,9 @@
     function symbolIterator() {
       item = iter.next();
       if (item.done === false) {
+        started++;
         iterator(item.value, done);
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null);
       }
@@ -3489,7 +3490,7 @@
       item = iter.next();
       if (item.done === false) {
         iterator(item.value, started++, done);
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null);
       }
@@ -3792,7 +3793,7 @@
       item = iter.next();
       if (item.done === false) {
         iterator(item.value, createCallback(started++));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, result);
       }
@@ -3802,7 +3803,7 @@
       item = iter.next();
       if (item.done === false) {
         iterator(item.value, started, createCallback(started++));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, result);
       }
@@ -4118,7 +4119,7 @@
       item = iter.next();
       if (item.done === false) {
         iterator(item.value, createCallback(started++));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, result);
       }
@@ -4128,7 +4129,7 @@
       item = iter.next();
       if (item.done === false) {
         iterator(item.value, started, createCallback(started++));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, result);
       }
@@ -4185,7 +4186,6 @@
    * @param {boolean} bool
    */
   function createDetect(arrayEach, baseEach, symbolEach, bool) {
-
     return function(collection, iterator, callback) {
       callback = callback || noop;
       var size, keys;
@@ -4233,7 +4233,6 @@
    * @param {boolean} bool
    */
   function createDetectSeries(bool) {
-
     return function(collection, iterator, callback) {
       callback = onlyOnce(callback || noop);
       var size, key, value, keys, iter, item, iterate;
@@ -4316,7 +4315,6 @@
    * @param {boolean} bool
    */
   function createDetectLimit(bool) {
-
     return function(collection, limit, iterator, callback) {
       callback = callback || noop;
       var size, index, key, value, keys, iter, item, iterate;
@@ -4361,9 +4359,10 @@
       function symbolIterator() {
         item = iter.next();
         if (item.done === false) {
+          started++;
           value = item.value;
           iterator(value, createCallback(value));
-        } else if (completed >= collection.size && iterator !== noop) {
+        } else if (completed === started && iterator !== noop) {
           iterator = noop;
           callback(null);
         }
@@ -4374,7 +4373,7 @@
         if (item.done === false) {
           value = item.value;
           iterator(value, started++, createCallback(value));
-        } else if (completed >= collection.size && iterator !== noop) {
+        } else if (completed === started && iterator !== noop) {
           iterator = noop;
           callback(null);
         }
@@ -4433,7 +4432,6 @@
    * @param {boolean} bool
    */
   function createPick(arrayEach, baseEach, symbolEach, bool) {
-
     return function(collection, iterator, callback) {
       callback = callback || noop;
       var size, keys;
@@ -4484,7 +4482,6 @@
    * @param {boolean} bool
    */
   function createPickSeries(bool) {
-
     return function(collection, iterator, callback) {
       callback = onlyOnce(callback || noop);
       var size, key, value, keys, iter, item, iterate;
@@ -4509,7 +4506,6 @@
         return callback(null, {});
       }
       iterate();
-
 
       function arrayIterator() {
         key = completed;
@@ -4576,7 +4572,6 @@
    * @param {boolean} bool
    */
   function createPickLimit(bool) {
-
     return function(collection, limit, iterator, callback) {
       callback = callback || noop;
       var size, index, key, value, keys, iter, item, iterate;
@@ -4624,7 +4619,7 @@
         if (item.done === false) {
           value = item.value;
           iterator(value, createCallback(value, started++));
-        } else if (completed >= collection.size && iterator !== noop) {
+        } else if (completed === started && iterator !== noop) {
           iterator = noop;
           callback(null, result);
         }
@@ -4635,7 +4630,7 @@
         if (item.done === false) {
           value = item.value;
           iterator(value, started, createCallback(value, started++));
-        } else if (completed >= collection.size && iterator !== noop) {
+        } else if (completed === started && iterator !== noop) {
           iterator = noop;
           callback(null, result);
         }
@@ -4763,7 +4758,7 @@
    */
   function reduce(collection, result, iterator, callback) {
     callback = onlyOnce(callback || noop);
-    var size, key, keys, iter, iterate;
+    var size, key, keys, iter, item, iterate;
     var sync = false;
     var completed = 0;
 
@@ -4772,7 +4767,7 @@
       iterate = iterator.length === 4 ? arrayIteratorWithIndex : arrayIterator;
     } else if (!collection) {
     } else if (iteratorSymbol && collection[iteratorSymbol]) {
-      size = collection.size;
+      size = Infinity;
       iter = collection[iteratorSymbol]();
       iterate = iterator.length === 4 ? symbolIteratorWithKey : symbolIterator;
     } else if (typeof collection === obj) {
@@ -4793,12 +4788,14 @@
       iterator(result, collection[completed], completed, done);
     }
 
-    function symbolIterator() {
-      iterator(result, iter.next().value, done);
+    function symbolIterator(result) {
+      item = iter.next();
+      item.done ? callback(null, result) : iterator(result, item.value, done);
     }
 
-    function symbolIteratorWithKey() {
-      iterator(result, iter.next().value, completed, done);
+    function symbolIteratorWithKey(result) {
+      item = iter.next();
+      item.done ? callback(null, result) : iterator(result, item.value, completed, done);
     }
 
     function objectIterator(result) {
@@ -4910,14 +4907,14 @@
       iterate = iterator.length === 4 ? arrayIteratorWithIndex : arrayIterator;
     } else if (!collection) {
     } else if (iteratorSymbol && collection[iteratorSymbol]) {
-      resIndex = collection.size;
-      col = Array(resIndex);
+      col = [];
       iter = collection[iteratorSymbol]();
       index = -1;
       while ((item = iter.next()).done === false) {
         col[++index] = item.value;
       }
       collection = col;
+      resIndex = col.length;
       iterate = iterator.length === 4 ? arrayIteratorWithIndex : arrayIterator;
     } else if (typeof collection === obj) {
       keys = nativeKeys(collection);
@@ -4971,7 +4968,6 @@
    * @param {Function} symbolEach
    */
   function createTransform(arrayEach, baseEach, symbolEach) {
-
     return function transform(collection, accumulator, iterator, callback) {
       if (arguments.length === 3) {
         callback = iterator;
@@ -5108,7 +5104,7 @@
       iterate = iterator.length === 4 ? arrayIteratorWithIndex : arrayIterator;
     } else if (!collection) {
     } else if (iteratorSymbol && collection[iteratorSymbol]) {
-      size = collection.size;
+      size = Infinity;
       iter = collection[iteratorSymbol]();
       result = accumulator !== undefined ? accumulator : {};
       iterate = iterator.length === 4 ? symbolIteratorWithKey : symbolIterator;
@@ -5293,8 +5289,9 @@
     function symbolIterator() {
       item = iter.next();
       if (item.done === false) {
+        started++;
         iterator(result, item.value, onlyOnce(done));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, result);
       }
@@ -5304,7 +5301,7 @@
       item = iter.next();
       if (item.done === false) {
         iterator(result, item.value, started++, onlyOnce(done));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, result);
       }
@@ -5350,7 +5347,6 @@
    * @param {function} symbolEach
    */
   function createSortBy(arrayEach, baseEach, symbolEach) {
-
     return function sortBy(collection, iterator, callback) {
       callback = callback || noop;
       var size, array, criteria;
@@ -5682,7 +5678,7 @@
         value = item.value;
         array[started] = value;
         iterator(value, createCallback(value, started++));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, sortByCriteria(array, criteria));
       }
@@ -5694,7 +5690,7 @@
         value = item.value;
         array[started] = value;
         iterator(value, started, createCallback(value, started++));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, sortByCriteria(array, criteria));
       }
@@ -5999,7 +5995,6 @@
    * @param {Function} symbolEach
    */
   function createEvery(arrayEach, baseEach, symbolEach) {
-
     var deny = createDetect(arrayEach, baseEach, symbolEach, false);
 
     return function every(collection, iterator, callback) {
@@ -6019,7 +6014,6 @@
    * @private
    */
   function createEverySeries() {
-
     var denySeries = createDetectSeries(false);
 
     return function everySeries(collection, iterator, callback) {
@@ -6039,7 +6033,6 @@
    * @private
    */
   function createEveryLimit() {
-
     var denyLimit = createDetectLimit(false);
 
     return function everyLimit(collection, limit, iterator, callback) {
@@ -6062,7 +6055,6 @@
    * @param {Function} symbolEach
    */
   function createConcat(arrayEach, baseEach, symbolEach) {
-
     return function concat(collection, iterator, callback) {
       callback = callback || noop;
       var size, result;
@@ -6383,7 +6375,7 @@
       item = iter.next();
       if (item.done === false) {
         iterator(item.value, createCallback(started++));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, makeConcatResult(result));
       }
@@ -6393,7 +6385,7 @@
       item = iter.next();
       if (item.done === false) {
         iterator(item.value, started, createCallback(started++));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, makeConcatResult(result));
       }
@@ -6464,7 +6456,6 @@
    * @param {Function} symbolEach
    */
   function createGroupBy(arrayEach, baseEach, symbolEach) {
-
     return function groupBy(collection, iterator, callback) {
       callback = callback || noop;
       var size;
@@ -6783,9 +6774,10 @@
     function symbolIterator() {
       item = iter.next();
       if (item.done === false) {
+        started++;
         value = item.value;
         iterator(value, createCallback(value));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, result);
       }
@@ -6796,7 +6788,7 @@
       if (item.done === false) {
         value = item.value;
         iterator(value, started++, createCallback(value));
-      } else if (completed >= collection.size && iterator !== noop) {
+      } else if (completed === started && iterator !== noop) {
         iterator = noop;
         callback(null, result);
       }
@@ -6855,7 +6847,6 @@
    * @param {Function} baseEach
    */
   function createParallel(arrayEach, baseEach) {
-
     return function parallel(tasks, callback) {
       callback = callback || noop;
       var size, keys, result;
@@ -7268,7 +7259,6 @@
     return true;
   }
 
-
   /**
    * check for waterfall tasks
    * @private
@@ -7297,7 +7287,6 @@
         return func.apply(null, args);
     }
   }
-
 
   /**
    * @memberof async
@@ -7810,11 +7799,10 @@
    * @memberof async
    * @namespace seq
    */
-  function seq( /* functions... */ ) {
+  function seq(/* functions... */) {
     var fns = createArray(arguments);
 
     return function() {
-
       var self = this;
       var args = createArray(arguments);
       var callback = args[args.length - 1];
@@ -7843,9 +7831,7 @@
   }
 
   function createApplyEach(func) {
-
-    return function applyEach(fns /* arguments */ ) {
-
+    return function applyEach(fns /* arguments */) {
       var go = function() {
         var self = this;
         var args = createArray(arguments);
@@ -7880,7 +7866,7 @@
     if (prev) {
       prev.next = next;
     } else {
-     this.head = next;
+      this.head = next;
     }
     if (next) {
       next.prev = prev;
@@ -7934,7 +7920,7 @@
   };
 
   DLL.prototype.shift = function() {
-      return this.head && this._removeLink(this.head);
+    return this.head && this._removeLink(this.head);
   };
 
   DLL.prototype.splice = function(end) {
@@ -7948,7 +7934,7 @@
 
   DLL.prototype.remove = function(test) {
     var node = this.head;
-    while(node) {
+    while (node) {
       if (test(node)) {
         this._removeLink(node);
       }
@@ -8065,7 +8051,11 @@
           task = tasks[taskIndex];
           while (++index < size) {
             if (workersList[index] === task) {
-              workersList.splice(index, 1);
+              if (index === 0) {
+                workersList.shift();
+              } else {
+                workersList.splice(index, 1);
+              }
               index = size;
               size--;
             }
@@ -8279,7 +8269,13 @@
       while (++index < dependencySize) {
         var dependencyName = task[index];
         if (notInclude(keys, dependencyName)) {
-          var msg = 'async.auto task `' + key + '` has non-existent dependency `' + dependencyName + '` in ' + task.join(', ');
+          var msg =
+            'async.auto task `' +
+            key +
+            '` has non-existent dependency `' +
+            dependencyName +
+            '` in ' +
+            task.join(', ');
           throw new Error(msg);
         }
         var taskListeners = listeners[dependencyName];
@@ -8350,7 +8346,7 @@
   var FN_ARGS = /^(function)?\s*[^\(]*\(\s*([^\)]*)\)/m;
   var FN_ARG_SPLIT = /,/;
   var FN_ARG = /(=.+)?(\s*)$/;
-  var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
+  var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/gm;
 
   /**
    * parse function arguments for `autoInject`
@@ -8361,7 +8357,7 @@
     func = func.toString().replace(STRIP_COMMENTS, '');
     func = func.match(FN_ARGS)[2].replace(' ', '');
     func = func ? func.split(FN_ARG_SPLIT) : [];
-    func = func.map(function (arg) {
+    func = func.map(function(arg) {
       return arg.replace(FN_ARG, '').trim();
     });
     return func;
@@ -8420,7 +8416,7 @@
             break;
           default:
             var i = -1;
-            while(++i < taskLength) {
+            while (++i < taskLength) {
               params[i] = results[params[i]];
             }
             params[i] = done;
@@ -8461,11 +8457,13 @@
             case 'string':
             case 'number':
               interval = +interval;
-              intervalFunc = interval ? function() {
-                return interval;
-              } : function() {
-                return DEFAULT_INTERVAL;
-              };
+              intervalFunc = interval
+                ? function() {
+                    return interval;
+                  }
+                : function() {
+                    return DEFAULT_INTERVAL;
+                  };
               break;
           }
           times = +opts.times || DEFAULT_TIMES;
@@ -8495,7 +8493,7 @@
     }
 
     function simpleCallback(err, res) {
-      if (++count === times || !err || errorFilter && !errorFilter(err)) {
+      if (++count === times || !err || (errorFilter && !errorFilter(err))) {
         if (arguments.length <= 2) {
           return callback(err, res);
         }
@@ -8510,7 +8508,7 @@
     }
 
     function intervalCallback(err, res) {
-      if (++count === times || !err || errorFilter && !errorFilter(err)) {
+      if (++count === times || !err || (errorFilter && !errorFilter(err))) {
         if (arguments.length <= 2) {
           return callback(err, res);
         }
@@ -8595,7 +8593,7 @@
         return fn.next();
       };
       fn.next = function() {
-        return (index < size - 1) ? makeCallback(index + 1) : null;
+        return index < size - 1 ? makeCallback(index + 1) : null;
       };
       return fn;
     }
@@ -8669,7 +8667,7 @@
     }
 
     function simpleApply(func, args) {
-      switch(args.length) {
+      switch (args.length) {
         case 0:
           func();
           break;
@@ -8940,9 +8938,11 @@
    * @namespace memoize
    */
   function memoize(fn, hasher) {
-    hasher = hasher || function(hash) {
-      return hash;
-    };
+    hasher =
+      hasher ||
+      function(hash) {
+        return hash;
+      };
 
     var memo = {};
     var queues = {};
@@ -8999,7 +8999,7 @@
    * @namespace ensureAsync
    */
   function ensureAsync(fn) {
-    return function( /* ...args, callback */ ) {
+    return function(/* ...args, callback */) {
       var args = createArray(arguments);
       var lastIndex = args.length - 1;
       var callback = args[lastIndex];
@@ -9025,7 +9025,7 @@
    * @memberof async
    * @namespace constant
    */
-  function constant( /* values... */ ) {
+  function constant(/* values... */) {
     var args = [null].concat(createArray(arguments));
     return function(callback) {
       callback = arguments[arguments.length - 1];
@@ -9034,7 +9034,7 @@
   }
 
   function asyncify(fn) {
-    return function( /* args..., callback */ ) {
+    return function(/* args..., callback */) {
       var args = createArray(arguments);
       var callback = args.pop();
       var result;
@@ -9044,11 +9044,14 @@
         return callback(e);
       }
       if (result && typeof result.then === func) {
-        result.then(function(value) {
-          invokeCallback(callback, null, value);
-        }, function(err) {
-          invokeCallback(callback, err && err.message ? err : new Error(err));
-        });
+        result.then(
+          function(value) {
+            invokeCallback(callback, null, value);
+          },
+          function(err) {
+            invokeCallback(callback, err && err.message ? err : new Error(err));
+          }
+        );
       } else {
         callback(null, result);
       }
@@ -9074,7 +9077,7 @@
    * @return {Function}
    */
   function reflect(func) {
-    return function( /* args..., callback */ ) {
+    return function(/* args..., callback */) {
       var callback;
       switch (arguments.length) {
         case 1:
@@ -9176,5 +9179,4 @@
     createImmediate(false);
     return exports;
   }
-
-}));
+});

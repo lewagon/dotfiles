@@ -1,7 +1,6 @@
-var core = require('./lib/core');
 var async = require('./lib/async');
-async.core = core;
-async.isCore = function isCore(x) { return core[x]; };
+async.core = require('./lib/core');
+async.isCore = require('./lib/is-core');
 async.sync = require('./lib/sync');
 
 exports = async;

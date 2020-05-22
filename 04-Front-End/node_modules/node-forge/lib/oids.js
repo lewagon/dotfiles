@@ -34,6 +34,8 @@ _IN('1.2.840.113549.1.1.10', 'RSASSA-PSS');
 _IN('1.2.840.113549.1.1.11', 'sha256WithRSAEncryption');
 _IN('1.2.840.113549.1.1.12', 'sha384WithRSAEncryption');
 _IN('1.2.840.113549.1.1.13', 'sha512WithRSAEncryption');
+// Edwards-curve Digital Signature Algorithm (EdDSA) Ed25519
+_IN('1.3.101.112', 'EdDSA25519');
 
 _IN('1.2.840.10040.4.3', 'dsa-with-sha1');
 
@@ -106,11 +108,18 @@ _IN('2.5.4.5', 'serialName');
 _IN('2.5.4.6', 'countryName');
 _IN('2.5.4.7', 'localityName');
 _IN('2.5.4.8', 'stateOrProvinceName');
+_IN('2.5.4.9', 'streetAddress');
 _IN('2.5.4.10', 'organizationName');
 _IN('2.5.4.11', 'organizationalUnitName');
+_IN('2.5.4.13', 'description');
+_IN('2.5.4.15', 'businessCategory');
+_IN('2.5.4.17', 'postalCode');
+_IN('1.3.6.1.4.1.311.60.2.1.2', 'jurisdictionOfIncorporationStateOrProvinceName');
+_IN('1.3.6.1.4.1.311.60.2.1.3', 'jurisdictionOfIncorporationCountryName');
 
 // X.509 extension OIDs
 _IN('2.16.840.1.113730.1.1', 'nsCertType');
+_IN('2.16.840.1.113730.1.13', 'nsComment'); // deprecated in theory; still widely used
 _I_('2.5.29.1', 'authorityKeyIdentifier'); // deprecated, use .35
 _I_('2.5.29.2', 'keyAttributes'); // obsolete use .37 or .15
 _I_('2.5.29.3', 'certificatePolicies'); // deprecated, use .32

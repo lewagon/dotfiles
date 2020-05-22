@@ -7,6 +7,11 @@ var nodeModulesPaths = require('../lib/node-modules-paths');
 
 var verifyDirs = function verifyDirs(t, start, dirs, moduleDirectories, paths) {
     var moduleDirs = [].concat(moduleDirectories || 'node_modules');
+    if (paths) {
+        for (var k = 0; k < paths.length; ++k) {
+            moduleDirs.push(path.basename(paths[k]));
+        }
+    }
 
     var foundModuleDirs = {};
     var uniqueDirs = {};
@@ -20,7 +25,7 @@ var verifyDirs = function verifyDirs(t, start, dirs, moduleDirectories, paths) {
     }
     t.equal(keys(parsedDirs).length >= start.split(path.sep).length, true, 'there are >= dirs than "start" has');
     var foundModuleDirNames = keys(foundModuleDirs);
-    t.deepEqual(foundModuleDirNames, moduleDirs.concat(paths || []), 'all desired module dirs were found');
+    t.deepEqual(foundModuleDirNames, moduleDirs, 'all desired module dirs were found');
     t.equal(keys(uniqueDirs).length, dirs.length, 'all dirs provided were unique');
 
     var counts = {};
@@ -49,13 +54,36 @@ test('node-modules-paths', function (t) {
         t.end();
     });
 
-    t.test('with paths option', function (t) {
+    t.test('with paths=array option', function (t) {
         var start = path.join(__dirname, 'resolver');
         var paths = ['a', 'b'];
         var dirs = nodeModulesPaths(start, { paths: paths });
 
         verifyDirs(t, start, dirs, null, paths);
 
+        t.end();
+    });
+
+    t.test('with paths=function option', function (t) {
+        var paths = function paths(request, absoluteStart, getNodeModulesDirs, opts) {
+            return getNodeModulesDirs().concat(path.join(absoluteStart, 'not node modules', request));
+        };
+
+        var start = path.join(__dirname, 'resolver');
+        var dirs = nodeModulesPaths(start, { paths: paths }, 'pkg');
+
+        verifyDirs(t, start, dirs, null, [path.join(start, 'not node modules', 'pkg')]);
+
+        t.end();
+    });
+
+    t.test('with paths=function skipping node modules resolution', function (t) {
+        var paths = function paths(request, absoluteStart, getNodeModulesDirs, opts) {
+            return [];
+        };
+        var start = path.join(__dirname, 'resolver');
+        var dirs = nodeModulesPaths(start, { paths: paths });
+        t.deepEqual(dirs, [], 'no node_modules was computed');
         t.end();
     });
 
@@ -87,6 +115,28 @@ test('node-modules-paths', function (t) {
         var dirs = nodeModulesPaths(start, { paths: paths, moduleDirectory: moduleDirectories });
 
         verifyDirs(t, start, dirs, moduleDirectories, paths);
+
+        t.end();
+    });
+
+    t.test('combine paths correctly on Windows', function (t) {
+        var start = 'C:\\Users\\username\\myProject\\src';
+        var paths = [];
+        var moduleDirectories = ['node_modules', start];
+        var dirs = nodeModulesPaths(start, { paths: paths, moduleDirectory: moduleDirectories });
+
+        t.equal(dirs.indexOf(path.resolve(start)) > -1, true, 'should contain start dir');
+
+        t.end();
+    });
+
+    t.test('combine paths correctly on non-Windows', { skip: process.platform === 'win32' }, function (t) {
+        var start = '/Users/username/git/myProject/src';
+        var paths = [];
+        var moduleDirectories = ['node_modules', '/Users/username/git/myProject/src'];
+        var dirs = nodeModulesPaths(start, { paths: paths, moduleDirectory: moduleDirectories });
+
+        t.equal(dirs.indexOf(path.resolve(start)) > -1, true, 'should contain start dir');
 
         t.end();
     });

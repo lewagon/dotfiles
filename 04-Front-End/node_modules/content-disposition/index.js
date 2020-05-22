@@ -1,6 +1,6 @@
 /*!
  * content-disposition
- * Copyright(c) 2014 Douglas Christopher Wilson
+ * Copyright(c) 2014-2017 Douglas Christopher Wilson
  * MIT Licensed
  */
 
@@ -8,6 +8,7 @@
 
 /**
  * Module exports.
+ * @public
  */
 
 module.exports = contentDisposition
@@ -15,18 +16,22 @@ module.exports.parse = parse
 
 /**
  * Module dependencies.
+ * @private
  */
 
 var basename = require('path').basename
+var Buffer = require('safe-buffer').Buffer
 
 /**
  * RegExp to match non attr-char, *after* encodeURIComponent (i.e. not including "%")
+ * @private
  */
 
 var ENCODE_URL_ATTR_CHAR_REGEXP = /[\x00-\x20"'()*,/:;<=>?@[\\\]{}\x7f]/g // eslint-disable-line no-control-regex
 
 /**
  * RegExp to match percent encoding escape.
+ * @private
  */
 
 var HEX_ESCAPE_REGEXP = /%[0-9A-Fa-f]{2}/
@@ -34,6 +39,7 @@ var HEX_ESCAPE_REPLACE_REGEXP = /%([0-9A-Fa-f]{2})/g
 
 /**
  * RegExp to match non-latin1 characters.
+ * @private
  */
 
 var NON_LATIN1_REGEXP = /[^\x20-\x7e\xa0-\xff]/g
@@ -43,12 +49,14 @@ var NON_LATIN1_REGEXP = /[^\x20-\x7e\xa0-\xff]/g
  *
  * quoted-pair = "\" CHAR
  * CHAR        = <any US-ASCII character (octets 0 - 127)>
+ * @private
  */
 
-var QESC_REGEXP = /\\([\u0000-\u007f])/g
+var QESC_REGEXP = /\\([\u0000-\u007f])/g // eslint-disable-line no-control-regex
 
 /**
  * RegExp to match chars that must be quoted-pair in RFC 2616
+ * @private
  */
 
 var QUOTE_REGEXP = /([\\"])/g
@@ -75,6 +83,7 @@ var QUOTE_REGEXP = /([\\"])/g
  * HT            = <US-ASCII HT, horizontal-tab (9)>
  * CTL           = <any US-ASCII control character (octets 0 - 31) and DEL (127)>
  * OCTET         = <any 8-bit sequence of data>
+ * @private
  */
 
 var PARAM_REGEXP = /;[\x09\x20]*([!#$%&'*+.0-9A-Z^_`a-z|~-]+)[\x09\x20]*=[\x09\x20]*("(?:[\x20!\x23-\x5b\x5d-\x7e\x80-\xff]|\\[\x20-\x7e])*"|[!#$%&'*+.0-9A-Z^_`a-z|~-]+)[\x09\x20]*/g // eslint-disable-line no-control-regex
@@ -100,6 +109,7 @@ var TOKEN_REGEXP = /^[!#$%&'*+.0-9A-Z^_`a-z|~-]+$/
  * attr-char     = ALPHA / DIGIT
  *               / "!" / "#" / "$" / "&" / "+" / "-" / "."
  *               / "^" / "_" / "`" / "|" / "~"
+ * @private
  */
 
 var EXT_VALUE_REGEXP = /^([A-Za-z0-9!#$%&+\-^_`{}~]+)'(?:[A-Za-z]{2,3}(?:-[A-Za-z]{3}){0,3}|[A-Za-z]{4,8}|)'((?:%[0-9A-Fa-f]{2}|[A-Za-z0-9!#$&+.^_`|~-])+)$/
@@ -115,6 +125,7 @@ var EXT_VALUE_REGEXP = /^([A-Za-z0-9!#$%&+\-^_`{}~]+)'(?:[A-Za-z]{2,3}(?:-[A-Za-
  * disp-ext-parm    = token "=" value
  *                  | ext-token "=" ext-value
  * ext-token        = <the characters in token, followed by "*">
+ * @private
  */
 
 var DISPOSITION_TYPE_REGEXP = /^([!#$%&'*+.0-9A-Z^_`a-z|~-]+)[\x09\x20]*(?:$|;)/ // eslint-disable-line no-control-regex
@@ -127,7 +138,7 @@ var DISPOSITION_TYPE_REGEXP = /^([!#$%&'*+.0-9A-Z^_`a-z|~-]+)[\x09\x20]*(?:$|;)/
  * @param {string} [options.type=attachment]
  * @param {string|boolean} [options.fallback=true]
  * @return {string}
- * @api public
+ * @public
  */
 
 function contentDisposition (filename, options) {
@@ -149,7 +160,7 @@ function contentDisposition (filename, options) {
  * @param {string} [filename]
  * @param {string|boolean} [fallback=true]
  * @return {object}
- * @api private
+ * @private
  */
 
 function createparams (filename, fallback) {
@@ -210,7 +221,7 @@ function createparams (filename, fallback) {
  * @param {string} obj.type
  * @param {object} [obj.parameters]
  * @return {string}
- * @api private
+ * @private
  */
 
 function format (obj) {
@@ -248,7 +259,7 @@ function format (obj) {
  *
  * @param {string} str
  * @return {string}
- * @api private
+ * @private
  */
 
 function decodefield (str) {
@@ -270,7 +281,7 @@ function decodefield (str) {
       value = getlatin1(binary)
       break
     case 'utf-8':
-      value = new Buffer(binary, 'binary').toString('utf8')
+      value = Buffer.from(binary, 'binary').toString('utf8')
       break
     default:
       throw new TypeError('unsupported charset in extended field')
@@ -284,7 +295,7 @@ function decodefield (str) {
  *
  * @param {string} val
  * @return {string}
- * @api private
+ * @private
  */
 
 function getlatin1 (val) {
@@ -297,7 +308,7 @@ function getlatin1 (val) {
  *
  * @param {string} string
  * @return {object}
- * @api private
+ * @public
  */
 
 function parse (string) {
@@ -378,7 +389,7 @@ function parse (string) {
  * @param {string} str
  * @param {string} hex
  * @return {string}
- * @api private
+ * @private
  */
 
 function pdecode (str, hex) {
@@ -390,17 +401,14 @@ function pdecode (str, hex) {
  *
  * @param {string} char
  * @return {string}
- * @api private
+ * @private
  */
 
 function pencode (char) {
-  var hex = String(char)
+  return '%' + String(char)
     .charCodeAt(0)
     .toString(16)
     .toUpperCase()
-  return hex.length === 1
-    ? '%0' + hex
-    : '%' + hex
 }
 
 /**
@@ -408,7 +416,7 @@ function pencode (char) {
  *
  * @param {string} val
  * @return {string}
- * @api private
+ * @private
  */
 
 function qstring (val) {
@@ -422,7 +430,7 @@ function qstring (val) {
  *
  * @param {string} val
  * @return {string}
- * @api private
+ * @private
  */
 
 function ustring (val) {
@@ -437,6 +445,11 @@ function ustring (val) {
 
 /**
  * Class for parsed Content-Disposition header for v8 optimization
+ *
+ * @public
+ * @param {string} type
+ * @param {object} parameters
+ * @constructor
  */
 
 function ContentDisposition (type, parameters) {

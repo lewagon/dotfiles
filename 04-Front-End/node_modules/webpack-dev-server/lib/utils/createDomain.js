@@ -1,22 +1,16 @@
 'use strict';
 
-/* eslint-disable
-  no-nested-ternary,
-  multiline-ternary,
-  space-before-function-paren
-*/
 const url = require('url');
 const ip = require('internal-ip');
 
-function createDomain (options, server) {
+function createDomain(options, server) {
   const protocol = options.https ? 'https' : 'http';
-  const hostname = options.useLocalIp ? ip.v4.sync() || 'localhost' : options.host;
+  const hostname = options.useLocalIp
+    ? ip.v4.sync() || 'localhost'
+    : options.host || 'localhost';
 
-  const port = options.socket
-    ? 0
-    : server
-      ? server.address().port
-      : 0;
+  // eslint-disable-next-line no-nested-ternary
+  const port = options.socket ? 0 : server ? server.address().port : 0;
   // use explicitly defined public url
   // (prefix with protocol if not explicitly given)
   if (options.public) {
@@ -28,7 +22,7 @@ function createDomain (options, server) {
   return url.format({
     protocol,
     hostname,
-    port
+    port,
   });
 }
 

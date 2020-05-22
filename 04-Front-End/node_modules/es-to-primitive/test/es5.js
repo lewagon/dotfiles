@@ -6,6 +6,7 @@ var is = require('object-is');
 var forEach = require('foreach');
 var functionName = require('function.prototype.name');
 var debug = require('object-inspect');
+var hasSymbols = require('has-symbols')();
 
 test('function properties', function (t) {
 	t.equal(toPrimitive.length, 1, 'length is 1');
@@ -22,6 +23,29 @@ test('primitives', function (t) {
 		t.ok(is(toPrimitive(i, String), i), 'toPrimitive(' + debug(i) + ', String) returns the same value');
 		t.ok(is(toPrimitive(i, Number), i), 'toPrimitive(' + debug(i) + ', Number) returns the same value');
 	});
+	t.end();
+});
+
+test('Symbols', { skip: !hasSymbols }, function (t) {
+	var symbols = [
+		Symbol('foo'),
+		Symbol.iterator,
+		Symbol['for']('foo') // eslint-disable-line no-restricted-properties
+	];
+	forEach(symbols, function (sym) {
+		t.equal(toPrimitive(sym), sym, 'toPrimitive(' + debug(sym) + ') returns the same value');
+		t.equal(toPrimitive(sym, String), sym, 'toPrimitive(' + debug(sym) + ', String) returns the same value');
+		t.equal(toPrimitive(sym, Number), sym, 'toPrimitive(' + debug(sym) + ', Number) returns the same value');
+	});
+
+	var primitiveSym = Symbol('primitiveSym');
+	var stringSym = Symbol.prototype.toString.call(primitiveSym);
+	var objectSym = Object(primitiveSym);
+	t.equal(toPrimitive(objectSym), primitiveSym, 'toPrimitive(' + debug(objectSym) + ') returns ' + debug(primitiveSym));
+
+	// This is different from ES2015, as the ES5 algorithm doesn't account for the existence of Symbols:
+	t.equal(toPrimitive(objectSym, String), stringSym, 'toPrimitive(' + debug(objectSym) + ', String) returns ' + debug(stringSym));
+	t.equal(toPrimitive(objectSym, Number), primitiveSym, 'toPrimitive(' + debug(objectSym) + ', Number) returns ' + debug(primitiveSym));
 	t.end();
 });
 

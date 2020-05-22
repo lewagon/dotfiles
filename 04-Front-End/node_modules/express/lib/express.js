@@ -77,7 +77,9 @@ exports.Router = Router;
 
 exports.json = bodyParser.json
 exports.query = require('./middleware/query');
+exports.raw = bodyParser.raw
 exports.static = require('serve-static');
+exports.text = bodyParser.text
 exports.urlencoded = bodyParser.urlencoded
 
 /**

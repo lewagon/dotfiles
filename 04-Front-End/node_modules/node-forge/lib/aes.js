@@ -648,7 +648,7 @@ function initialize() {
  * of Nb*(Nr + 1) words: the algorithm requires an initial set of Nb words,
  * and each of the Nr rounds requires Nb words of key data. The resulting
  * key schedule consists of a linear array of 4-byte words, denoted [wi ],
- * with i in the range 0 ≤ i < Nb(Nr + 1).
+ * with i in the range 0 <= i < Nb(Nr + 1).
  *
  * KeyExpansion(byte key[4*Nk], word w[Nb*(Nr+1)], Nk)
  * AES-128 (Nb=4, Nk=4, Nr=10)
@@ -704,7 +704,7 @@ function _expandKey(key, decrypt) {
     w[i] = w[i - Nk] ^ temp;
   }
 
-   /* When we are updating a cipher block we always use the code path for
+  /* When we are updating a cipher block we always use the code path for
      encryption whether we are decrypting or not (to shorten code and
      simplify the generation of look up tables). However, because there
      are differences in the decryption algorithm, other than just swapping
@@ -805,7 +805,7 @@ function _updateBlock(w, input, output, decrypt) {
     byte state[4,Nb]
     state = in
     AddRoundKey(state, w[0, Nb-1])
-    for round = 1 step 1 to Nr–1
+    for round = 1 step 1 to Nr-1
       SubBytes(state)
       ShiftRows(state)
       MixColumns(state)
@@ -1017,7 +1017,7 @@ function _updateBlock(w, input, output, decrypt) {
     InvSubBytes(state)
     AddRoundKey(state, w[0, Nb-1])
    */
-   // Note: rows are shifted inline
+  // Note: rows are shifted inline
   output[0] =
     (sub[a >>> 24] << 24) ^
     (sub[b >>> 16 & 255] << 16) ^

@@ -16,7 +16,7 @@ const parse = stdout => {
     const gateway = results[1];
     const iface = results[2];
     if (gateway && net.isIP(gateway)) {
-      result = {gateway: gateway, interface: (iface ? iface : null)};
+      result = {gateway, interface: (iface ? iface : null)};
       return true;
     }
   });

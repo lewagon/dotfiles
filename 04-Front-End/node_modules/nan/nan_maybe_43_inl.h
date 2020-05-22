@@ -12,19 +12,6 @@
 template<typename T>
 using MaybeLocal = v8::MaybeLocal<T>;
 
-template<typename T>
-using Maybe = v8::Maybe<T>;
-
-template<typename T>
-inline Maybe<T> Nothing() {
-  return v8::Nothing<T>();
-}
-
-template<typename T>
-inline Maybe<T> Just(const T& t) {
-  return v8::Just<T>(t);
-}
-
 inline
 MaybeLocal<v8::String> ToDetailString(v8::Local<v8::Value> val) {
   v8::Isolate *isolate = v8::Isolate::GetCurrent();

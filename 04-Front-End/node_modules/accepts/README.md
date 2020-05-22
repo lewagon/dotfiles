@@ -1,7 +1,7 @@
 # accepts
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Downloads][npm-downloads-image]][npm-url]
 [![Node.js Version][node-version-image]][node-version-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
@@ -131,13 +131,12 @@ curl -I -H'Accept: text/html' http://localhost:3000/
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/accepts.svg
+[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/accepts/master
+[coveralls-url]: https://coveralls.io/r/jshttp/accepts?branch=master
+[node-version-image]: https://badgen.net/npm/node/accepts
+[node-version-url]: https://nodejs.org/en/download
+[npm-downloads-image]: https://badgen.net/npm/dm/accepts
 [npm-url]: https://npmjs.org/package/accepts
-[node-version-image]: https://img.shields.io/node/v/accepts.svg
-[node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://img.shields.io/travis/jshttp/accepts/master.svg
+[npm-version-image]: https://badgen.net/npm/v/accepts
+[travis-image]: https://badgen.net/travis/jshttp/accepts/master
 [travis-url]: https://travis-ci.org/jshttp/accepts
-[coveralls-image]: https://img.shields.io/coveralls/jshttp/accepts/master.svg
-[coveralls-url]: https://coveralls.io/r/jshttp/accepts
-[downloads-image]: https://img.shields.io/npm/dm/accepts.svg
-[downloads-url]: https://npmjs.org/package/accepts

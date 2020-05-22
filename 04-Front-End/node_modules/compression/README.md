@@ -151,7 +151,7 @@ var compression = require('compression')
 var express = require('express')
 
 var app = express()
-app.use(compression({filter: shouldCompress}))
+app.use(compression({ filter: shouldCompress }))
 
 function shouldCompress (req, res) {
   if (req.headers['x-no-compression']) {

@@ -13,7 +13,7 @@ function rebuild (gyp, argv, callback) {
     { name: 'clean', args: [] },
     { name: 'build', args: ['rebuild'] }
     ];
-  commands = napi.expand_commands(package_json, commands);
+  commands = napi.expand_commands(package_json, gyp.opts, commands);
   for (var i = commands.length; i !== 0; i--) {
     gyp.todo.unshift(commands[i-1]);
   }

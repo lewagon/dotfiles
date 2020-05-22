@@ -8,7 +8,7 @@ Think of it like an async version of [`Array#find`](https://developer.mozilla.or
 ## Install
 
 ```
-$ npm install --save p-locate
+$ npm install p-locate
 ```
 
 
@@ -22,14 +22,16 @@ const pLocate = require('p-locate');
 
 const files = [
 	'unicorn.png',
-	'rainbow.png', // only this one actually exists on disk
+	'rainbow.png', // Only this one actually exists on disk
 	'pony.png'
 ];
 
-pLocate(files, file => pathExists(file)).then(foundPath => {
+(async () => {
+	const foundPath = await pLocate(files, file => pathExists(file));
+
 	console.log(foundPath);
 	//=> 'rainbow'
-});
+})();
 ```
 
 *The above is just an example. Use [`locate-path`](https://github.com/sindresorhus/locate-path) if you need this.*

@@ -19,32 +19,29 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+var common = require('./common');
 var assert = require('assert');
 var events = require('../');
-
-var gotEvent = false;
-
 var e = new events.EventEmitter();
 
-e.on('maxListeners', function() {
-  gotEvent = true;
-});
+var hasDefineProperty = !!Object.defineProperty;
+try { Object.defineProperty({}, 'x', { value: 0 }); } catch (err) { hasDefineProperty = false }
+
+e.on('maxListeners', common.mustCall());
 
 // Should not corrupt the 'maxListeners' queue.
 e.setMaxListeners(42);
 
-assert.throws(function() {
-  e.setMaxListeners(NaN);
-});
+var throwsObjs = [NaN, -1, 'and even this'];
+var maxError = /^RangeError: The value of "n" is out of range\. It must be a non-negative number\./;
+var defError = /^RangeError: The value of "defaultMaxListeners" is out of range\. It must be a non-negative number\./;
 
-assert.throws(function() {
-  e.setMaxListeners(-1);
-});
-
-assert.throws(function() {
-  e.setMaxListeners("and even this");
-});
+for (var i = 0; i < throwsObjs.length; i++) {
+  var obj = throwsObjs[i];
+  assert.throws(function() { e.setMaxListeners(obj); }, maxError);
+  if (hasDefineProperty) {
+    assert.throws(function() { events.defaultMaxListeners = obj; }, defError);
+  }
+}
 
 e.emit('maxListeners');
-
-assert(gotEvent);

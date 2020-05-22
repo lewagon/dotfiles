@@ -270,12 +270,13 @@ inline void Persistent<T, M>::SetWeak(
       , WeakCallbackInfo<P>::template invokeparameter<true>
       , type);
   } else {
-    v8::Local<T>* self = reinterpret_cast<v8::Local<T>*>(this);
-    assert((*self)->IsObject());
-    int count = (*self)->InternalFieldCount();
+    v8::Local<v8::Value>* self_v(reinterpret_cast<v8::Local<v8::Value>*>(this));
+    assert((*self_v)->IsObject());
+    v8::Local<v8::Object> self((*self_v).As<v8::Object>());
+    int count = self->InternalFieldCount();
     void *internal_fields[kInternalFieldsInWeakCallback] = {0, 0};
     for (int i = 0; i < count && i < kInternalFieldsInWeakCallback; i++) {
-      internal_fields[i] = (*self)->GetAlignedPointerFromInternalField(i);
+      internal_fields[i] = self->GetAlignedPointerFromInternalField(i);
     }
     wcbd = new WeakCallbackInfo<P>(
         reinterpret_cast<Persistent<v8::Value>*>(this)
@@ -283,7 +284,7 @@ inline void Persistent<T, M>::SetWeak(
       , 0
       , internal_fields[0]
       , internal_fields[1]);
-    (*self)->SetAlignedPointerInInternalField(0, wcbd);
+    self->SetAlignedPointerInInternalField(0, wcbd);
     v8::PersistentBase<T>::SetWeak(
         static_cast<WeakCallbackInfo<P>*>(0)
       , WeakCallbackInfo<P>::template invoketwofield<true>
@@ -307,12 +308,13 @@ inline void Persistent<T, M>::SetWeak(
         wcbd
       , WeakCallbackInfo<P>::invokeparameter);
   } else {
-    v8::Local<T>* self = reinterpret_cast<v8::Local<T>*>(this);
-    assert((*self)->IsObject());
-    int count = (*self)->InternalFieldCount();
+    v8::Local<v8::Value>* self_v(reinterpret_cast<v8::Local<v8::Value>*>(this));
+    assert((*self_v)->IsObject());
+    v8::Local<v8::Object> self((*self_v).As<v8::Object>());
+    int count = self->InternalFieldCount();
     void *internal_fields[kInternalFieldsInWeakCallback] = {0, 0};
     for (int i = 0; i < count && i < kInternalFieldsInWeakCallback; i++) {
-      internal_fields[i] = (*self)->GetAlignedPointerFromInternalField(i);
+      internal_fields[i] = self->GetAlignedPointerFromInternalField(i);
     }
     wcbd = new WeakCallbackInfo<P>(
         reinterpret_cast<Persistent<v8::Value>*>(this)
@@ -320,7 +322,7 @@ inline void Persistent<T, M>::SetWeak(
       , 0
       , internal_fields[0]
       , internal_fields[1]);
-    (*self)->SetAlignedPointerInInternalField(0, wcbd);
+    self->SetAlignedPointerInInternalField(0, wcbd);
     v8::PersistentBase<T>::SetPhantom(
         static_cast<WeakCallbackInfo<P>*>(0)
       , WeakCallbackInfo<P>::invoketwofield
@@ -345,12 +347,13 @@ inline void Persistent<T, M>::SetWeak(
         wcbd
       , WeakCallbackInfo<P>::invokeparameter);
   } else {
-    v8::Local<T>* self = reinterpret_cast<v8::Local<T>*>(this);
-    assert((*self)->IsObject());
-    int count = (*self)->InternalFieldCount();
+    v8::Local<v8::Value>* self_v(reinterpret_cast<v8::Local<v8::Value>*>(this));
+    assert((*self_v)->IsObject());
+    v8::Local<v8::Object> self((*self_v).As<v8::Object>());
+    int count = self->InternalFieldCount();
     void *internal_fields[kInternalFieldsInWeakCallback] = {0, 0};
     for (int i = 0; i < count && i < kInternalFieldsInWeakCallback; i++) {
-      internal_fields[i] = (*self)->GetAlignedPointerFromInternalField(i);
+      internal_fields[i] = self->GetAlignedPointerFromInternalField(i);
     }
     wcbd = new WeakCallbackInfo<P>(
         reinterpret_cast<Persistent<v8::Value>*>(this)
@@ -358,7 +361,7 @@ inline void Persistent<T, M>::SetWeak(
       , 0
       , internal_fields[0]
       , internal_fields[1]);
-    (*self)->SetAlignedPointerInInternalField(0, wcbd);
+    self->SetAlignedPointerInInternalField(0, wcbd);
     v8::PersistentBase<T>::SetPhantom(
         WeakCallbackInfo<P>::invoketwofield
       , 0
@@ -380,12 +383,13 @@ inline void Persistent<T, M>::SetWeak(
       , parameter);
     v8::PersistentBase<T>::SetWeak(wcbd, WeakCallbackInfo<P>::invoke);
   } else {
-    v8::Local<T>* self = reinterpret_cast<v8::Local<T>*>(this);
-    assert((*self)->IsObject());
-    int count = (*self)->InternalFieldCount();
+    v8::Local<v8::Value>* self_v(reinterpret_cast<v8::Local<v8::Value>*>(this));
+    assert((*self_v)->IsObject());
+    v8::Local<v8::Object> self((*self_v).As<v8::Object>());
+    int count = self->InternalFieldCount();
     void *internal_fields[kInternalFieldsInWeakCallback] = {0, 0};
     for (int i = 0; i < count && i < kInternalFieldsInWeakCallback; i++) {
-      internal_fields[i] = (*self)->GetAlignedPointerFromInternalField(i);
+      internal_fields[i] = self->GetAlignedPointerFromInternalField(i);
     }
     wcbd = new WeakCallbackInfo<P>(
         reinterpret_cast<Persistent<v8::Value>*>(this)
@@ -411,12 +415,13 @@ inline void PersistentBase<T>::SetWeak(
       , parameter);
     persistent.MakeWeak(wcbd, WeakCallbackInfo<P>::invoke);
   } else {
-    v8::Local<T>* self = reinterpret_cast<v8::Local<T>*>(this);
-    assert((*self)->IsObject());
-    int count = (*self)->InternalFieldCount();
+    v8::Local<v8::Value>* self_v(reinterpret_cast<v8::Local<v8::Value>*>(this));
+    assert((*self_v)->IsObject());
+    v8::Local<v8::Object> self((*self_v).As<v8::Object>());
+    int count = self->InternalFieldCount();
     void *internal_fields[kInternalFieldsInWeakCallback] = {0, 0};
     for (int i = 0; i < count && i < kInternalFieldsInWeakCallback; i++) {
-      internal_fields[i] = (*self)->GetPointerFromInternalField(i);
+      internal_fields[i] = self->GetPointerFromInternalField(i);
     }
     wcbd = new WeakCallbackInfo<P>(
         reinterpret_cast<Persistent<v8::Value>*>(this)

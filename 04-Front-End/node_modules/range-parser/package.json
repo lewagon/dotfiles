@@ -2,7 +2,7 @@
   "name": "range-parser",
   "author": "TJ Holowaychuk <tj@vision-media.ca> (http://tjholowaychuk.com)",
   "description": "Range header field string parser",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "contributors": [
     "Douglas Christopher Wilson <doug@somethingdoug.com>",
     "James Wyatt Cready <wyatt.cready@lanetix.com>",
@@ -16,12 +16,16 @@
   ],
   "repository": "jshttp/range-parser",
   "devDependencies": {
-    "eslint": "2.11.1",
-    "eslint-config-standard": "5.3.1",
-    "eslint-plugin-promise": "1.1.0",
-    "eslint-plugin-standard": "1.3.2",
-    "istanbul": "0.4.3",
-    "mocha": "1.21.5"
+    "deep-equal": "1.0.1",
+    "eslint": "5.16.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-markdown": "1.0.0",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-standard": "4.0.0",
+    "mocha": "6.1.4",
+    "nyc": "14.1.1"
   },
   "files": [
     "HISTORY.md",
@@ -32,9 +36,9 @@
     "node": ">= 0.6"
   },
   "scripts": {
-    "lint": "eslint **/*.js",
+    "lint": "eslint --plugin markdown --ext js,md .",
     "test": "mocha --reporter spec",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
+    "test-cov": "nyc --reporter=html --reporter=text npm test",
+    "test-travis": "nyc --reporter=text npm test"
   }
 }

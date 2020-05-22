@@ -94,7 +94,7 @@ template<typename T> class PersistentBase {
 };
 ```
 
-See the V8 documentation for [`PersistentBase`](https://v8docs.nodesource.com/io.js-3.3/d4/dca/classv8_1_1_persistent_base.html) for further information.
+See the V8 documentation for [`PersistentBase`](https://v8docs.nodesource.com/node-8.11/d4/dca/classv8_1_1_persistent_base.html) for further information.
 
 **Tip:** To get a `v8::Local` reference to the original object back from a `PersistentBase` or `Persistent` object:
 
@@ -126,7 +126,7 @@ template<typename T> class NonCopyablePersistentTraits {
 };
 ```
 
-See the V8 documentation for [`NonCopyablePersistentTraits`](https://v8docs.nodesource.com/io.js-3.3/de/d73/classv8_1_1_non_copyable_persistent_traits.html) for further information.
+See the V8 documentation for [`NonCopyablePersistentTraits`](https://v8docs.nodesource.com/node-8.11/de/d73/classv8_1_1_non_copyable_persistent_traits.html) for further information.
 
 <a name="api_nan_copyable_persistent_traits"></a>
 ### Nan::CopyablePersistentTraits & v8::CopyablePersistentTraits
@@ -151,7 +151,7 @@ class CopyablePersistentTraits {
 };
 ```
 
-See the V8 documentation for [`CopyablePersistentTraits`](https://v8docs.nodesource.com/io.js-3.3/da/d5c/structv8_1_1_copyable_persistent_traits.html) for further information.
+See the V8 documentation for [`CopyablePersistentTraits`](https://v8docs.nodesource.com/node-8.11/da/d5c/structv8_1_1_copyable_persistent_traits.html) for further information.
 
 <a name="api_nan_persistent"></a>
 ### Nan::Persistent
@@ -204,7 +204,7 @@ template<typename T, typename M> class Persistent : public PersistentBase<T> {
 };
 ```
 
-See the V8 documentation for [`Persistent`](https://v8docs.nodesource.com/io.js-3.3/d2/d78/classv8_1_1_persistent.html) for further information.
+See the V8 documentation for [`Persistent`](https://v8docs.nodesource.com/node-8.11/d2/d78/classv8_1_1_persistent.html) for further information.
 
 <a name="api_nan_global"></a>
 ### Nan::Global
@@ -238,7 +238,7 @@ template<typename T> class Global : public PersistentBase<T> {
 };
 ```
 
-See the V8 documentation for [`Global`](https://v8docs.nodesource.com/io.js-3.3/d5/d40/classv8_1_1_global.html) for further information.
+See the V8 documentation for [`Global`](https://v8docs.nodesource.com/node-8.11/d5/d40/classv8_1_1_global.html) for further information.
 
 <a name="api_nan_weak_callback_info"></a>
 ### Nan::WeakCallbackInfo
@@ -279,7 +279,7 @@ int *data = new int(0);
 obj.SetWeak(data, callback, WeakCallbackType::kParameter);
 ```
 
-See the V8 documentation for [`WeakCallbackInfo`](https://v8docs.nodesource.com/io.js-3.3/d8/d06/classv8_1_1_weak_callback_info.html) for further information.
+See the V8 documentation for [`WeakCallbackInfo`](https://v8docs.nodesource.com/node-8.11/d8/d06/classv8_1_1_weak_callback_info.html) for further information.
 
 <a name="api_nan_weak_callback_type"></a>
 ### Nan::WeakCallbackType
