@@ -17,7 +17,7 @@ Write your **user stories** down. You should have no more than 15. Group them by
 Open [Kitt's DB schema builder](https://kitt.lewagon.com/db) and figure out the **database schema** needed for your user stories
 
 #### Mockup & Routes
-Open your figma from the Product Design Sprint and make sure it still matches the demo you have in mind for Demoday!
+Open your figma from the Product Design Sprint and make sure it still matches the demo you have in mind for Demoday! If it doesn't, take some time to think about it as a team, and rework your wireframe.
 
 From there, figure out the **routes** and add them to your spreadsheet, along with the corresponding **controller** and **action**.
 
