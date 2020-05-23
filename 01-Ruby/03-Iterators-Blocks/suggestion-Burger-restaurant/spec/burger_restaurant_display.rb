@@ -1,46 +1,5 @@
-require 'rspec/expectations'
 require 'matrix'
 require 'string'
-
-file = File.join(__dir__, "../lib/burger_factory.rb")
-content = File.read(file)
-
-call_regex = /\s?=\s?cook_burger\W+steak\W+ketchup\W+onions/
-got_regex = /\s?=\s?cook_burger\W*(?<parameters>('|").+('|"))\W*(do|{|\n)/
-
-
-RSpec::Matchers.define :pass_the_right_arguments do |expected|
-  match do |actual|
-    content.match?(Regexp.new(actual + call_regex.source))
-  end
-  
-  failure_message do |actual|
-    got = content.match(Regexp.new(actual + got_regex.source))[:parameters]
-    <<~MESSAGE
-      expected:   "steak", "ketchup", "onions"
-      got:        #{got}
-
-      -
-    MESSAGE
-  end
-end
-
-
-RSpec::Matchers.define :be_ordered_burger do |expected|
-  match do |actual|
-    actual == expected
-  end
-  
-  failure_message do |actual|
-    <<~MESSAGE
-      expected:   #{expected}
-      got:        #{actual}
-
-      -
-    MESSAGE
-  end
-end
-
 
 COLORS = [52, 124, 208]
 CHARACTERS = 20
@@ -61,7 +20,6 @@ INGREDIENTS = {
 def diff_colors (actual, expected)
   a = actual - ["bread", "bread"]
   e = expected - ["bread", "bread"]
-  # colors.map.with_index { |color, index| e[index] == a[index] ? color : NEUTRAL }
   a.map do |ingredient|
     if(e.find_index(ingredient))
       COLORS[e.find_index(ingredient)]
@@ -106,6 +64,7 @@ end
 
 
 def display_burgers(actual, expected)
+  actual = [] if actual.nil?
   diff = diff_colors(actual, expected)
   actual_illustration = illustrate_burger(actual, "~ Actual ~", diff)
   expected_illustration = illustrate_burger(expected, "~ Expected ~", COLORS)

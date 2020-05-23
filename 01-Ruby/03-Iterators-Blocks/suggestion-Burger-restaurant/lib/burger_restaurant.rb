@@ -1,40 +1,38 @@
-########################################
-# TODO: write the `cook_burger` method #
-# - it takes 3 arguments               #
-# - it returns an array of strings     #
-########################################
-
-def cook_burger(steak, sauce, topping)
-  steak = (block_given? ? yield(steak) : steak)
-  ["bread", steak, sauce, "bread"]
-end
+# def burger(steak, sauce, topping)
+#   steak = (block_given? ? yield(steak) : steak)
+#   ["bread", steak, sauce, topping, "bread"]
+# end
 
 
+##################################################################
+# TODO: append blocks to the method calls                        #
+# - they take a string as a parameter                            #
+# - they return a string modified according to the instructions  #
+##################################################################
 
-
-##################################
-# TODO: fill the variables below #
-##################################
-
-# TODO: call `cook_burger` with ingredients "steak", "ketchup" and "tomato"
-# classical_burger = 
-classical_burger = cook_burger("steak", "ketchup", "onions")
-
-
-# bigger_classical_burger = cook_burger("STEAK", "ketchup", "onions") do |ingredient|
+# TODO: append a block to transform a string to uppercase
+grilled_classical_burger = burger("steak", "ketchup", "onions")
+# grilled_classical_burger = burger("STEAK", "ketchup", "onions") do |ingredient|
 #   ingredient.upcase
 # end
 
-
-# classical_burger_with_mayo = cook_burger("steak", "ketchup", "onions") do |ingredient|
+# TODO: append a block to replace any vowel by the sign "~"
+juicy_classical_burger = burger("steak", "ketchup", "onions")
+# juicy_classical_burger = burger("steak", "ketchup", "onions") do |ingredient|
 #   ingredient.tr("aeiou", "~")
 # end
 
-
-# vegan_burger = cook_burger("steak", "ketchup", "onions") do |ingredient|
+# TODO: append a block to replace the string "steak" by "tofu"
+vegan_burger = burger("steak", "ketchup", "onions")
+# vegan_burger = burger("steak", "ketchup", "onions") do |ingredient|
 #   ingredient == "steak" ? "tofu" : ingredient
 # end
 
+# TODO: append a block to add the sign "*" before and after the string
+salty_classical_burger = burger("steak", "ketchup", "onions")
+# salty_classical_burger = burger("steak", "ketchup", "onions") do |ingredient|
+#   "*#{ingredient}*"
+# end
 
 
 
