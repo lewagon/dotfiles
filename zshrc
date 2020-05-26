@@ -21,6 +21,10 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 export PATH="${HOME}/.pyenv/bin:${PATH}" # Needed for Linux/WSL
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
 
+# Load phpenv (To manage your PHP versions)
+export PATH="${HOME}/.phpenv/bin:${PATH}" # Needed for Linux/WSL
+type -a phpenv > /dev/null && eval "$(phpenv init -)"
+
 # Load nvm if installed (To manage your Node versions)
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
@@ -43,3 +47,6 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/home/zavier/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
