@@ -33,7 +33,7 @@ def generate_controller_command
 end
 
 def naming_conventions
-  # TODO: Return a `string` with the file path (from the root of you rails
+  # TODO: Return a `string` with the file path (from the root of your rails
   # application) to the view corresponding to the controller action generated
   # in the question above (the `about` action, in the `pages` controller).
 end
