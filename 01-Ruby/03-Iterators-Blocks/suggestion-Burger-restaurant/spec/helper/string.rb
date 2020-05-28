@@ -13,4 +13,12 @@ class String
   def white_brown
     self.style(255, 94)
   end
+
+  def green
+    self.style(255, 34)
+  end
+
+  def red
+    self.style(255, 124)
+  end
 end

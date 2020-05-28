@@ -2,57 +2,68 @@
 
 This challenge is all about syntax. The first encounter with blocks and `yield` might be puzzling at first, let's practice it.
 
-On this journey, you're about to open a **burger restaurant**. On your very first day, you put a single burger on the menu. Customers can choose the cooking of the steak.
-
-![Side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-menu.svg?sanitize=true)
+On this journey, you're about to open a **burger restaurant**. TODO
 
 
 
 ## Specs
 
-The preparation of the burgers is handled by a method named `burger`. You don't need to write it for the moment, the specs includes it for you, you can call it as stated below.
+Let's start by coding a simple `burger` method which takes 3 parameters (ingredient, sauce, topping) and returns the burger as an array of strings. For instance:
 
 ```ruby
-	burger("steak", "ketchup", "onions")
-	# => ["bread", "steak", "ketchup", "onions", "bread"]
+burger("steak", "ketchup", "onions")
+# => ["bread", "steak", "ketchup", "onions", "bread"]
 ```
 
-It takes strings of 3 ingredients and returns an array of the chosen recipe layered between two slices of bread.
-When a client wants some special cooking for the steak, a block is appended to the order with custom instructions.
+Clients can choose from the menu which elements they want in their burgers:
 
-![Method](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-method.svg?sanitize=true)
+![Burger Restaurant Menu](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-menu.svg?sanitize=true)
+
+This means the burger method can only be called with arguments that are included in the lists above. However, our clients, when they order, can specify custom needs about the **main ingredient**, like the cooking they want for their steak, if they want a bigger portion, or more salt.
+
+Our method is not able to receive this kind of special demands right now, so we need to rework it a bit.
+
+
+
+### Something Special?
+
+But before jumping in the code of the method, let's figure out a way to write down the special instructions to the kitchen (with this constraint of not passing the additional info through arguments). It's like writing a side note on the order, let's do it with a block in Ruby!
+
+![Method call with side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-method.svg?sanitize=true)
+
+
+
+### Back to the kitchen
+
+![Side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
+
+Great! We found a way to programmatically send the additional info to our cook in the kitchen. Now, let's make sure we change the code of the `burger` method to make it actually work!
+
+Upgrade `burger` to welcome a block:  
+- Use `yield` to call the block on the main `ingredient`.
+
+The method must work **with or without a block**. Use the helper [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) to detect if a block is ready to use. Write a condition to apply yield only when a block is present.
 
 
 ### Prepare burgers
 
-The first clients are pouring in. Some burgers are already on the grill, the chief awaits for the cooking instructions of the steaks. You're in charge of taking orders and write the side note.  
-Open `burger_restaurant.rb`, write a block for each burger to match the customer needs:
-- they all take a string as a parameter
-- they return the string modified
-
-![Yield](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
+The clients are pouring in, they all want to taste your delicious burgers.  
+Open `interface.rb`, a list of orders are waiting to be filled. Write down the instructions to prepare all the burgers, you can display the burgers with `puts` or `p`.
 
 
-### In the kitchen
+#### A little help with your first block
 
-The rush hour is over, you head to the kitchen to have a talk with the chief:
-- You: "Everything is automated, how do you manage to cook on-demand steak?"
-- Chief: "There's a `yield` in the method"
-- You: "A `yield`?"
-- Chief: "The `yield` executes the **block**, it's like adding instructions on the fly to the method"
+One of your customers asked for a bigger portion of fish. Transform your classical burger into a bigger burger for him, write a block to transform the string to uppercase:
 
-![Side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-side-note.svg?sanitize=true)
+ 1. Call the method `burger` with "fish", "mayo" and "salad", **all lowercase letters**, and store the result in the variable `bigger_burger`.
 
-#### Advanced: code the `burger` method
+ 2. Append a block (side note in our story) with the custom instructions:
+ 	- it takes a string as an argument
+ 	- it transforms the string to uppercase
 
-You've run the provided `burger` method, do you feel like coding it?
-
-In `burger_restaurant.rb`, declare a method named `burger`:
-- it takes 3 string parameters: `steak`, `sauce`, and `topping`.
-- it returns an array with the 3 ingredients listed above, between 2 strings of "bread".
-- place it a the top of the file, before the method calls
+![Write block in Ruby](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-syntax.svg?sanitize=true)
 
 
-Upgrade `burger` to welcome a block: 
-- Use `yield` to call the block on the `steak` ingredient.
-- The method must work **with or without a block**. Use the helper [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) to detect if a block is ready to use. Write a condition to apply yield only when a block is present.
+You just wrote your first block, practice on your own with the other burgers!
+
+

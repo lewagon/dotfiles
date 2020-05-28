@@ -1,23 +1,23 @@
 require 'rspec/expectations'
-require 'burger_restaurant_display'
+require_relative 'helper/burger_restaurant_display'
 
-file = File.join(__dir__, "../lib/burger_restaurant.rb")
+file = File.join(__dir__, "../lib/interface.rb")
 content = File.read(file)
 
-call_regex = /\s?=\s?burger\W+steak\W+ketchup\W+onions/
-got_regex = /\s?=\s?burger\W*(?<parameters>('|").+('|"))\W*(do|{|\n)/
+got_regex = /\s*=\s*burger\W*(?<parameters>('|").+('|"))\W*(do|{|\n)/
 
 
-
-RSpec::Matchers.define :pass_the_right_arguments do |expected|
+RSpec::Matchers.define :pass_the_right_arguments do |*expected|
   match do |actual|
-    content.match?(Regexp.new(actual + call_regex.source))
+    r  = Regexp.new(actual + /\s*=\s*burger\W*/.source + /#{expected.join('\\W*')}/.source)
+    content.match?(r)
   end
   
   failure_message do |actual|
-    got = content.match(Regexp.new(actual + got_regex.source))[:parameters]
+    r = Regexp.new(actual + got_regex.source)
+    got = content.match(r) ? content.match(r)[:parameters] : ""
     <<~MESSAGE
-      expected:   "steak", "ketchup", "onions"
+      expected:   "#{expected.join('", "')}"
       got:        #{got}
 
       -
@@ -30,7 +30,7 @@ RSpec::Matchers.define :be_ordered_burger do |expected|
   match do |actual|
     actual == expected
   end
-  
+
   failure_message do |actual|
     <<~MESSAGE
       expected:   #{expected}
