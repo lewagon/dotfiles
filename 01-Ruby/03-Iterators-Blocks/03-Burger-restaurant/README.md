@@ -38,6 +38,7 @@ But before jumping in the code of the method, let's figure out a way to write do
 ![Side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
 
 Great! We found a way to programmatically send the additional info to our cook in the kitchen. Now, let's make sure we change the code of the `burger` method to make it actually work!
+`yield` is the helper you need to execute the block, it will take place in your method to apply on-demand instructions to the main ingredient.
 
 Upgrade `burger` to welcome a block:  
 - Use `yield` to call the block on the main `ingredient`.
@@ -48,7 +49,7 @@ The method must work **with or without a block**. Use the helper [`block_given?`
 ### Prepare burgers
 
 The clients are pouring in, they all want to taste your delicious burgers.  
-Open `interface.rb`, a list of orders are waiting to be filled. Write down the instructions to prepare all the burgers, you can display the burgers with `puts` or `p`.
+Open `interface.rb`, a list of orders are waiting to be filled. Write down the instructions to prepare all the burgers, you can display the burgers with `puts` or `p` afterwards.
 
 
 #### A little help with your first block
@@ -65,5 +66,4 @@ One of your customers asked for a bigger portion of fish. Transform your classic
 
 
 You just wrote your first block, practice on your own with the other burgers!
-
 
