@@ -22,4 +22,4 @@ Open your figma from the Product Design Sprint and make sure it still matches th
 From there, figure out the **routes** and add them to your spreadsheet, along with the corresponding **controller** and **action**.
 
 #### Rails New
-When starting your rails app, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates/tree/rails-six). Make sure you use the [Devise template](https://github.com/lewagon/rails-templates/tree/rails-six#devise) if you need a `User` model!
+When starting your rails app, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates/tree/master). Make sure you use the [Devise template](https://github.com/lewagon/rails-templates/tree/master#devise) if you need a `User` model!
