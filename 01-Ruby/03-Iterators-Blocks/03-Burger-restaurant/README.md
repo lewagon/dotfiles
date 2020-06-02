@@ -71,3 +71,8 @@ One of your customers asked for a bigger portion of fish. Transform your classic
 
 You just wrote your first block, practice on your own with the other burgers!
 
+
+## Key learning points
+
+- What's a block?
+- What's the syntax if the block has only 1 ruby instruction in it? several?
