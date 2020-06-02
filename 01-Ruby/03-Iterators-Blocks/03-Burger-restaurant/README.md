@@ -1,9 +1,13 @@
 ## Background & Objectives
 
-This challenge is all about syntax. The first encounter with blocks and `yield` might be puzzling at first, let's practice it.
+This challenge is all about syntax. The first encounter with blocks and `yield` might be puzzling at first, let's practice it. The objectives here are:
 
-On this journey, you're about to open a **burger restaurant**. TODO
+- Implement some basic method using `yield`, to understand the inner mechanics.
+- Learn the syntax for calling a method with a block.
+- Understand what happens when you pass a parameter to the block.
 
+
+On this journey, you're about to open a **burger restaurant**, from the kitchen to the counter you'll implement methods to prepare burgers for your first customers.
 
 
 ## Specs
@@ -15,11 +19,11 @@ burger("steak", "ketchup", "onions")
 # => ["bread", "steak", "ketchup", "onions", "bread"]
 ```
 
-Clients can choose from the menu which elements they want in their burgers:
+Customers can choose from the menu which elements they want in their burgers:
 
 ![Burger Restaurant Menu](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-menu.svg?sanitize=true)
 
-This means the burger method can only be called with arguments that are included in the lists above. However, our clients, when they order, can specify custom needs about the **main ingredient**, like the cooking they want for their steak, if they want a bigger portion, or more salt.
+This means the burger method can only be called with arguments that are included in the lists above. However, our customers, when they order, can specify custom needs about the **main ingredient**, like the cooking they want for their steak, if they want a bigger portion, or more salt.
 
 Our method is not able to receive this kind of special demands right now, so we need to rework it a bit.
 
@@ -48,7 +52,7 @@ The method must work **with or without a block**. Use the helper [`block_given?`
 
 ### Prepare burgers
 
-The clients are pouring in, they all want to taste your delicious burgers.  
+The customers are pouring in, they all want to taste your delicious burgers.  
 Open `interface.rb`, a list of orders are waiting to be filled. Write down the instructions to prepare all the burgers, you can display the burgers with `puts` or `p` afterwards.
 
 
