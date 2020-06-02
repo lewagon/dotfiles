@@ -10,17 +10,6 @@ Many methods can just be called **with a block** given after the list of argumen
 
 ## Specs
 
-### Timer method
-
-Implement a block-timer in `#timer_for` that allows you to track the duration (in seconds) of the execution of any given block. It should work this way:
-
-```ruby
-timer_for do
-  (1..10000000).to_a.shuffle.sort
-end
-#=> 3.313461
-```
-
 ### A custom map
 
 To better understand `yield`, let's try to reimplement the [`Enumerable#map`](https://ruby-doc.org/core-2.5.3/Enumerable.html#method-i-map) method without actually using it. In this exercise, you need to implement a `#my_map` method which will be called with a block, like the regular `Enumerable#map` method. You can use `Enumerable#each` in your code to iterate through elements.
