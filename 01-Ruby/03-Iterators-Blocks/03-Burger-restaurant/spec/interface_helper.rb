@@ -4,7 +4,7 @@ require_relative 'helper/burger_restaurant_display'
 file = File.join(__dir__, "../lib/interface.rb")
 content = File.read(file)
 
-got_regex = /\s*=\s*burger\W*(?<parameters>('|").+('|"))\W*(do|{|\n)/
+METHOD_CALL_PATTERN = /\s*=\s*burger\W*(?<parameters>('|").+('|"))\W*(do|{|\n)/
 
 
 RSpec::Matchers.define :pass_the_right_arguments do |*expected|
@@ -12,9 +12,9 @@ RSpec::Matchers.define :pass_the_right_arguments do |*expected|
     r  = Regexp.new(actual + /\s*=\s*burger\W*/.source + /#{expected.join('\\W*')}/.source)
     content.match?(r)
   end
-  
+
   failure_message do |actual|
-    r = Regexp.new(actual + got_regex.source)
+    r = Regexp.new(actual + METHOD_CALL_PATTERN.source)
     got = content.match(r) ? content.match(r)[:parameters] : ""
     <<~MESSAGE
       expected:   "#{expected.join('", "')}"

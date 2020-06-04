@@ -10,15 +10,15 @@ MARGINS = Array.new(LINES) { |m| MARGIN }
 SPACER =  (" " * ((CHARACTERS - 10) / 2)).brown
 NEUTRAL = 240
 GOOD = [
-        MARGIN,
-        "    " + "  ".green + "    ",
-        "  " + "  ".green + "  " + "  ".green + "  ",
-        "    " + "  ".green + "    ",
-        MARGIN,
-        MARGIN,
-        MARGIN,
-        MARGIN
-      ]
+  MARGIN,
+  "    " + "  ".green + "    ",
+  "  " + "  ".green + "  " + "  ".green + "  ",
+  "    " + "  ".green + "    ",
+  MARGIN,
+  MARGIN,
+  MARGIN,
+  MARGIN
+]
 
 BAD = [
   MARGIN,
@@ -96,7 +96,5 @@ def display_burgers(actual, expected, feedback)
   combined = combine(MARGINS, actual_illustration, tick , expected_illustration)
   combined.to_a.each { |row| puts row.join }
 
-  puts "    Actual:    #{actual.inspect}"
-  puts "    Expected:  #{expected.inspect}"
   puts "\n\n"
 end

@@ -1,4 +1,3 @@
-##################################
-# TODO: code the `burger` method #
-##################################
-
+def burger(ingredient, sauce, topping)
+  # TODO: code the `burger` method
+end

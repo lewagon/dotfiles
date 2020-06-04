@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-This challenge is all about syntax. The first encounter with blocks and `yield` might be puzzling at first, let's practice it. The objectives here are:
+The first encounter with blocks and `yield` might be puzzling at first, let's practice it. The objectives here are:
 
 - Implement some basic method using `yield`, to understand the inner mechanics.
 - Learn the syntax for calling a method with a block.
@@ -23,36 +23,48 @@ Customers can choose from the menu which elements they want in their burgers:
 
 ![Burger Restaurant Menu](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-menu.svg?sanitize=true)
 
-This means the burger method can only be called with arguments that are included in the lists above. However, our customers, when they order, can specify custom needs about the **main ingredient**, like the cooking they want for their steak, if they want a bigger portion, or more salt.
+### Something Special?
+
+This means the burger method can only be called with arguments that are included in the lists above. However, our customers, when they order, often specify custom needs about the **main ingredient**, like the cooking they want for their steak, if they want a bigger portion, or a replacement.
 
 Our method is not able to receive this kind of special demands right now, so we need to rework it a bit.
 
-
-
-### Something Special?
-
-But before jumping in the code of the method, let's figure out a way to write down the special instructions to the kitchen (with this constraint of not passing the additional info through arguments). It's like writing a side note on the order, let's do it with a block in Ruby!
+But before jumping in the code of the method, let's figure out a way to write down the special instructions to the kitchen (with this constraint of not passing the additional info through arguments). It's like writing a side note on the order:
 
 ![Method call with side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-method.svg?sanitize=true)
 
+Let's do it with a block in Ruby!
 
+```ruby
+burger("steak", "ketchup", "onions") do |ingredient|
+  "grilled #{ingredient}"
+end
+```
+
+Great! We found a way to transform our ingredient without altering the argument. Now we expect the above call to return:
+
+```ruby
+# => ["bread", "grilled steak", "ketchup", "onions", "bread"]
+```
+
+Let's modify our method to make it happen!
 
 ### Back to the kitchen
 
+`yield` is the keyword you need to execute the block, it will take place in your method to apply on-demand instructions to the main ingredient.
+
 ![Side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
 
-Great! We found a way to programmatically send the additional info to our cook in the kitchen. Now, let's make sure we change the code of the `burger` method to make it actually work!
-`yield` is the helper you need to execute the block, it will take place in your method to apply on-demand instructions to the main ingredient.
+Upgrade `burger` to welcome a block:
+- Place `yield` where you want to invoke the block
+- The block will transform the main `ingredient` only
 
-Upgrade `burger` to welcome a block:  
-- Use `yield` to call the block on the main `ingredient`.
-
-The method must work **with or without a block**. Use the helper [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) to detect if a block is ready to use. Write a condition to apply yield only when a block is present.
+The method must work **with or without a block**. Use the [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) method to detect if a block is ready to use.
 
 
 ### Prepare burgers
 
-The customers are pouring in, they all want to taste your delicious burgers.  
+The customers are pouring in, they all want to taste your delicious burgers.
 Open `interface.rb`, a list of orders are waiting to be filled. Write down the instructions to prepare all the burgers, you can display the burgers with `puts` or `p` afterwards.
 
 
@@ -70,9 +82,3 @@ One of your customers asked for a bigger portion of fish. Transform your classic
 
 
 You just wrote your first block, practice on your own with the other burgers!
-
-
-## Key learning points
-
-- What's a block?
-- What's the syntax if the block has only 1 ruby instruction in it? several?
