@@ -1,4 +1,4 @@
-require "03_tag"
+require "tag"
 
 describe "#tag" do
   it "should return the correct html for any example without an attribute" do
