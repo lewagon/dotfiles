@@ -2,10 +2,10 @@ require "fileutils"
 require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/repositories/order_repository"
   require_relative "../app/repositories/meal_repository"
   require_relative "../app/repositories/customer_repository"
   require_relative "../app/repositories/employee_repository"
+  require_relative "../app/repositories/order_repository"
 rescue LoadError => e
   describe "OrderRepository" do
     it "You need a `order_repository.rb` file for your `OrderRepository`" do

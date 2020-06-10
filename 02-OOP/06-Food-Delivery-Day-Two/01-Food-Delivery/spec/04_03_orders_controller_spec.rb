@@ -1,10 +1,10 @@
 require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/controllers/orders_controller"
+  require_relative "../app/repositories/meal_repository"
   require_relative "../app/repositories/customer_repository"
   require_relative "../app/repositories/employee_repository"
-  require_relative "../app/repositories/meal_repository"
+  require_relative "../app/controllers/orders_controller"
 rescue LoadError => e
   describe "OrdersController" do
     it "You need a `orders_controller.rb` file for your `OrdersController`" do
@@ -27,17 +27,6 @@ describe "OrdersController", :_order do
   let(:meals_csv_path) { "spec/support/meals.csv" }
   let(:meal_repository) { MealRepository.new(meals_csv_path) }
 
-  let(:employees) do
-    [
-      [ "id", "username", "password", "role" ],
-      [ 1, "paul", "secret", "manager" ],
-      [ 2, "john", "secret", "delivery_guy" ],
-      [ 3, "ringo", "secret", "delivery_guy"]
-    ]
-  end
-  let(:employees_csv_path) { "spec/support/employees.csv" }
-  let(:employee_repository) { EmployeeRepository.new(employees_csv_path) }
-
   let(:customers) do
     [
       [ "id", "name", "address" ],
@@ -48,6 +37,17 @@ describe "OrdersController", :_order do
   end
   let(:customers_csv_path) { "spec/support/customers.csv" }
   let(:customer_repository) { CustomerRepository.new(customers_csv_path) }
+
+  let(:employees) do
+    [
+      [ "id", "username", "password", "role" ],
+      [ 1, "paul", "secret", "manager" ],
+      [ 2, "john", "secret", "delivery_guy" ],
+      [ 3, "ringo", "secret", "delivery_guy"]
+    ]
+  end
+  let(:employees_csv_path) { "spec/support/employees.csv" }
+  let(:employee_repository) { EmployeeRepository.new(employees_csv_path) }
 
   let(:orders) do
     [
