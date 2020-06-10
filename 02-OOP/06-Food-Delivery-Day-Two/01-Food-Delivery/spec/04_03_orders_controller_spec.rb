@@ -2,7 +2,9 @@ require_relative "support/csv_helper"
 
 begin
   require_relative "../app/controllers/orders_controller"
+  require_relative "../app/repositories/customer_repository"
   require_relative "../app/repositories/employee_repository"
+  require_relative "../app/repositories/meal_repository"
 rescue LoadError => e
   describe "OrdersController" do
     it "You need a `orders_controller.rb` file for your `OrdersController`" do
@@ -49,11 +51,11 @@ describe "OrdersController", :_order do
 
   let(:orders) do
     [
-      [ "id", "meal_id", "employee_id", "customer_id", "delivered" ],
-      [ 1, 1, 2, 1, true ],
+      [ "id", "meal_id", "customer_id", "employee_id", "delivered" ],
+      [ 1, 1, 1, 2, true ],
       [ 2, 1, 2, 2, false ],
-      [ 3, 2, 2, 3, false ],
-      [ 4, 5, 3, 1, false ]
+      [ 3, 2, 3, 2, false ],
+      [ 4, 5, 2, 3, false ]
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }
@@ -80,7 +82,7 @@ describe "OrdersController", :_order do
 
       expect(order_repository.undelivered_orders.length).to eq(4)
       expect(order_repository.undelivered_orders[3].meal.name).to eq("Capricciosa")
-      expect(order_repository.undelivered_orders[3].employee.username).to eq("ringo")
+      expect(order_repository.undelivered_orders[3].employee.username).to eq("john")
       expect(order_repository.undelivered_orders[3].customer.name).to eq("John Bonham")
     end
   end
@@ -116,7 +118,7 @@ describe "OrdersController", :_order do
     it "should ask the delivery guy for an order index, mark it as delivered, and save the relevant data to the CSV file" do
       controller = OrdersController.new(meal_repository, customer_repository, employee_repository, order_repository)
       # Ringo wants to mark as delivered number 4.
-      allow_any_instance_of(Object).to receive(:gets).and_return("1")
+      allow_any_instance_of(Object).to receive(:gets).and_return("4")
       ringo = employee_repository.find(3)  # ringo is a delivery guy
       controller.mark_as_delivered(ringo)
       # Reload from CSV

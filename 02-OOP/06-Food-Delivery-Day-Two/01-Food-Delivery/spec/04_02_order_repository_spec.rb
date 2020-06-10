@@ -4,8 +4,8 @@ require_relative "support/csv_helper"
 begin
   require_relative "../app/repositories/order_repository"
   require_relative "../app/repositories/meal_repository"
-  require_relative "../app/repositories/employee_repository"
   require_relative "../app/repositories/customer_repository"
+  require_relative "../app/repositories/employee_repository"
 rescue LoadError => e
   describe "OrderRepository" do
     it "You need a `order_repository.rb` file for your `OrderRepository`" do
@@ -28,16 +28,6 @@ describe "OrderRepository", :_order do
   let(:meals_csv_path) { "spec/support/meals.csv" }
   let(:meal_repository) { MealRepository.new(meals_csv_path) }
 
-  let(:employees) do
-    [
-      [ "id", "username", "password", "role" ],
-      [ 1, "paul", "secret", "manager" ],
-      [ 2, "john", "secret", "delivery_guy" ]
-    ]
-  end
-  let(:employees_csv_path) { "spec/support/employees.csv" }
-  let(:employee_repository) { EmployeeRepository.new(employees_csv_path) }
-
   let(:customers) do
     [
       [ "id", "name", "address" ],
@@ -49,12 +39,22 @@ describe "OrderRepository", :_order do
   let(:customers_csv_path) { "spec/support/customers.csv" }
   let(:customer_repository) { CustomerRepository.new(customers_csv_path) }
 
+  let(:employees) do
+    [
+      [ "id", "username", "password", "role" ],
+      [ 1, "paul", "secret", "manager" ],
+      [ 2, "john", "secret", "delivery_guy" ]
+    ]
+  end
+  let(:employees_csv_path) { "spec/support/employees.csv" }
+  let(:employee_repository) { EmployeeRepository.new(employees_csv_path) }
+
   let(:orders) do
     [
-      [ "id", "meal_id", "employee_id", "customer_id", "delivered"],
-      [ 1, 1, 2, 1, true ],
+      [ "id", "meal_id", "customer_id", "employee_id", "delivered"],
+      [ 1, 1, 1, 2, true ],
       [ 2, 1, 2, 2, false ],
-      [ 3, 2, 2, 3, false ],
+      [ 3, 2, 3, 2, false ],
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }
@@ -62,8 +62,8 @@ describe "OrderRepository", :_order do
 
   before(:each) do
     CsvHelper.write_csv(meals_csv_path, meals)
-    CsvHelper.write_csv(employees_csv_path, employees)
     CsvHelper.write_csv(customers_csv_path, customers)
+    CsvHelper.write_csv(employees_csv_path, employees)
     CsvHelper.write_csv(orders_csv_path, orders)
   end
 
@@ -73,19 +73,19 @@ describe "OrderRepository", :_order do
   end
 
   describe "#initialize" do
-    it "should take 4 arguments: the CSV file path to store orders, and 3 repository instances (meal, employee and customer)" do
+    it "should take 4 arguments: the CSV file path to store orders, and 3 repository instances (meal, customer and employee)" do
       expect(OrderRepository.instance_method(:initialize).arity).to eq(4)
     end
 
     it "should not crash if the CSV path does not exist yet. Hint: use File.exist?" do
-      expect { OrderRepository.new("unexisting_file.csv", meal_repository, employee_repository, customer_repository) }.not_to raise_error
+      expect { OrderRepository.new("unexisting_file.csv", meal_repository, customer_repository, employee_repository) }.not_to raise_error
     end
 
     it "store the 3 auxiliary repositories in instance variables" do
       repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       expect(repo.instance_variable_get(:@meal_repository)).to be_a(MealRepository)
-      expect(repo.instance_variable_get(:@employee_repository)).to be_a(EmployeeRepository)
       expect(repo.instance_variable_get(:@customer_repository)).to be_a(CustomerRepository)
+      expect(repo.instance_variable_get(:@employee_repository)).to be_a(EmployeeRepository)
     end
 
     it "store orders in memory in an instance variable `@orders` or `@elements`" do
