@@ -2,10 +2,10 @@ require "fileutils"
 require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/repositories/order_repository"
   require_relative "../app/repositories/meal_repository"
   require_relative "../app/repositories/customer_repository"
   require_relative "../app/repositories/employee_repository"
+  require_relative "../app/repositories/order_repository"
 rescue LoadError => e
   describe "OrderRepository" do
     it "You need a `order_repository.rb` file for your `OrderRepository`" do
@@ -51,10 +51,10 @@ describe "OrderRepository", :_order do
 
   let(:orders) do
     [
-      [ "id", "meal_id", "customer_id", "employee_id", "delivered"],
-      [ 1, 1, 1, 2, true ],
-      [ 2, 1, 2, 2, false ],
-      [ 3, 2, 3, 2, false ],
+      [ "id", "delivered", "meal_id", "customer_id", "employee_id"],
+      [ 1, true, 1, 1, 2 ],
+      [ 2, false, 1, 2, 2 ],
+      [ 3, false, 2, 3, 2 ],
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }
