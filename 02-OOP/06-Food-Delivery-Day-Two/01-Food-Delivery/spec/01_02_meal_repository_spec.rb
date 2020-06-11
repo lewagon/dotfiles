@@ -69,6 +69,64 @@ describe "MealRepository", :meal do
     end
   end
 
+  describe "#create" do
+    it "should create a meal to the in-memory list" do
+      repo = MealRepository.new(csv_path)
+      new_meal = Meal.new(price: 12, name: "Hawaii")
+      repo.create(new_meal)
+      expect(repo.all.length).to eq(6)
+    end
+
+    it "should set the new meal id" do
+      repo = MealRepository.new(csv_path)
+      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
+      repo.create(hawaii_meal)
+      expect(hawaii_meal.id).to eq(6)
+      rucola_meal = Meal.new(price: 12, name: "Rucola")
+      repo.create(rucola_meal)
+      expect(rucola_meal.id).to eq(7)
+    end
+
+    it "should start auto-incrementing at 1 if it is the first meal created" do
+      csv_path = "unexisting_empty_meals.csv"
+      FileUtils.remove_file(csv_path, force: true)
+
+      repo = MealRepository.new(csv_path)
+      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
+      repo.create(hawaii_meal)
+      expect(hawaii_meal.id).to eq(1)
+
+      FileUtils.remove_file(csv_path, force: true)
+    end
+
+    it "every new created meal should be saved in a row in the CSV (first row = headers)" do
+      csv_path = "spec/support/empty_meals.csv"
+      FileUtils.remove_file(csv_path, force: true)
+
+      repo = MealRepository.new(csv_path)
+      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
+      repo.create(hawaii_meal)
+
+      repo = MealRepository.new(csv_path)
+      expect(repo.all.length).to eq(1)
+      expect(repo.all[0].id).to eq(1)
+      expect(repo.all[0].name).to eq("Hawaii")
+      expect(repo.all[0].price).to eq(11)
+
+      rucola_meal = Meal.new(price: 12, name: "Rucola")
+      repo.create(rucola_meal)
+      expect(rucola_meal.id).to eq(2)
+
+      repo = MealRepository.new(csv_path)
+      expect(repo.all.length).to eq(2)
+      expect(repo.all[1].id).to eq(2)
+      expect(repo.all[1].name).to eq("Rucola")
+      expect(repo.all[1].price).to eq(12)
+
+      FileUtils.remove_file(csv_path, force: true)
+    end
+  end
+
   describe "#all" do
     it "should return all the meals stored by the repo" do
       repo = MealRepository.new(csv_path)
@@ -79,64 +137,6 @@ describe "MealRepository", :meal do
     it "MealRepository should not expose the @meals through a reader/method" do
       repo = MealRepository.new(csv_path)
       expect(repo).not_to respond_to(:meals)
-    end
-  end
-
-  describe "#add" do
-    it "should add a meal to the in-memory list" do
-      repo = MealRepository.new(csv_path)
-      new_meal = Meal.new(price: 12, name: "Hawaii")
-      repo.add(new_meal)
-      expect(repo.all.length).to eq(6)
-    end
-
-    it "should set the new meal id" do
-      repo = MealRepository.new(csv_path)
-      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
-      repo.add(hawaii_meal)
-      expect(hawaii_meal.id).to eq(6)
-      rucola_meal = Meal.new(price: 12, name: "Rucola")
-      repo.add(rucola_meal)
-      expect(rucola_meal.id).to eq(7)
-    end
-
-    it "should start auto-incrementing at 1 if it is the first meal added" do
-      csv_path = "unexisting_empty_meals.csv"
-      FileUtils.remove_file(csv_path, force: true)
-
-      repo = MealRepository.new(csv_path)
-      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
-      repo.add(hawaii_meal)
-      expect(hawaii_meal.id).to eq(1)
-
-      FileUtils.remove_file(csv_path, force: true)
-    end
-
-    it "every new added meal should be saved in a row in the CSV (first row = headers)" do
-      csv_path = "spec/support/empty_meals.csv"
-      FileUtils.remove_file(csv_path, force: true)
-
-      repo = MealRepository.new(csv_path)
-      hawaii_meal = Meal.new(price: 11, name: "Hawaii")
-      repo.add(hawaii_meal)
-
-      repo = MealRepository.new(csv_path)
-      expect(repo.all.length).to eq(1)
-      expect(repo.all[0].id).to eq(1)
-      expect(repo.all[0].name).to eq("Hawaii")
-      expect(repo.all[0].price).to eq(11)
-
-      rucola_meal = Meal.new(price: 12, name: "Rucola")
-      repo.add(rucola_meal)
-      expect(rucola_meal.id).to eq(2)
-
-      repo = MealRepository.new(csv_path)
-      expect(repo.all.length).to eq(2)
-      expect(repo.all[1].id).to eq(2)
-      expect(repo.all[1].name).to eq("Rucola")
-      expect(repo.all[1].price).to eq(12)
-
-      FileUtils.remove_file(csv_path, force: true)
     end
   end
 
