@@ -66,44 +66,31 @@ describe "CustomerRepository", :customer do
     end
   end
 
-  describe "#all" do
-    it "should return all the customers stored by the repo" do
-      repo = CustomerRepository.new(csv_path)
-      expect(repo.all).to be_a(Array)
-      expect(repo.all[0].name).to eq("Paul McCartney")
-    end
-
-    it "CustomerRepository should not expose the @customers through a reader/method" do
-      repo = CustomerRepository.new(csv_path)
-      expect(repo).not_to respond_to(:customers)
-    end
-  end
-
-  describe "#add" do
-    it "should add a customer to the in-memory list" do
+  describe "#create" do
+    it "should create a customer to the in-memory list" do
       repo = CustomerRepository.new(csv_path)
       new_customer = Customer.new(address: "Gary", name: "Michael Jackson")
-      repo.add(new_customer)
+      repo.create(new_customer)
       expect(repo.all.length).to eq(4)
     end
 
     it "should set the new customer id" do
       repo = CustomerRepository.new(csv_path)
       hawaii_customer = Customer.new(address: "Gary", name: "Michael Jackson")
-      repo.add(hawaii_customer)
+      repo.create(hawaii_customer)
       expect(hawaii_customer.id).to eq(4)
       rucola_customer = Customer.new(address: "Stone Town", name: "Freddie Mercury")
-      repo.add(rucola_customer)
+      repo.create(rucola_customer)
       expect(rucola_customer.id).to eq(5)
     end
 
-    it "should start auto-incremting at 1 if it is the first customer added" do
+    it "should start auto-incremting at 1 if it is the first customer created" do
       csv_path = "unexisting_empty_customers.csv"
       FileUtils.remove_file(csv_path, force: true)
 
       repo = CustomerRepository.new(csv_path)
       hawaii_customer = Customer.new(address: "Gary", name: "Michael Jackson")
-      repo.add(hawaii_customer)
+      repo.create(hawaii_customer)
       expect(hawaii_customer.id).to eq(1)
 
       FileUtils.remove_file(csv_path, force: true)
@@ -115,7 +102,7 @@ describe "CustomerRepository", :customer do
 
       repo = CustomerRepository.new(csv_path)
       hawaii_customer = Customer.new(address: "Gary", name: "Michael Jackson")
-      repo.add(hawaii_customer)
+      repo.create(hawaii_customer)
 
       repo = CustomerRepository.new(csv_path)
       expect(repo.all.length).to eq(1)
@@ -124,7 +111,7 @@ describe "CustomerRepository", :customer do
       expect(repo.all[0].address).to eq("Gary")
 
       rucola_customer = Customer.new(address: "Stone Town", name: "Freddie Mercury")
-      repo.add(rucola_customer)
+      repo.create(rucola_customer)
       expect(rucola_customer.id).to eq(2)
 
       repo = CustomerRepository.new(csv_path)
@@ -134,6 +121,19 @@ describe "CustomerRepository", :customer do
       expect(repo.all[1].address).to eq("Stone Town")
 
       FileUtils.remove_file(csv_path, force: true)
+    end
+  end
+
+  describe "#all" do
+    it "should return all the customers stored by the repo" do
+      repo = CustomerRepository.new(csv_path)
+      expect(repo.all).to be_a(Array)
+      expect(repo.all[0].name).to eq("Paul McCartney")
+    end
+
+    it "CustomerRepository should not expose the @customers through a reader/method" do
+      repo = CustomerRepository.new(csv_path)
+      expect(repo).not_to respond_to(:customers)
     end
   end
 
