@@ -115,24 +115,7 @@ describe "OrderRepository", :_order do
     end
   end
 
-  describe "#undelivered_orders" do
-    it "should return all the undelivered orders" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
-      expect(repo.undelivered_orders).to be_a(Array)
-      expect(repo.undelivered_orders.length).to eq(2)
-      expect(repo.undelivered_orders[0]).to be_a(Order)
-      expect(repo.undelivered_orders[1]).to be_a(Order)
-      expect(repo.undelivered_orders[0].delivered?).to be false
-      expect(repo.undelivered_orders[1].delivered?).to be false
-    end
-
-    it "OrderRepository should not expose the @orders through a reader/method" do
-      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
-      expect(repo).not_to respond_to(:orders)
-    end
-  end
-
-  describe "#add" do
+  describe "#create" do
     it "should add an order to the in-memory list" do
       repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       new_order = Order.new({
@@ -140,7 +123,7 @@ describe "OrderRepository", :_order do
         customer: customer_repository.find(1),
         employee: employee_repository.find(1)
       })
-      repo.add(new_order)
+      repo.create(new_order)
       expect(elements(repo).length).to eq(4)
     end
 
@@ -151,7 +134,7 @@ describe "OrderRepository", :_order do
         customer: customer_repository.find(1),
         employee: employee_repository.find(1)
       })
-      repo.add(new_order)
+      repo.create(new_order)
       expect(new_order.id).to eq(4)
     end
 
@@ -165,7 +148,7 @@ describe "OrderRepository", :_order do
         customer: customer_repository.find(1),
         employee: employee_repository.find(1)
       })
-      repo.add(new_order)
+      repo.create(new_order)
       expect(new_order.id).to eq(1)
 
       FileUtils.remove_file(orders_csv_path, force: true)
@@ -181,7 +164,7 @@ describe "OrderRepository", :_order do
         customer: customer_repository.find(1),
         employee: employee_repository.find(1)
       })
-      repo.add(new_order)
+      repo.create(new_order)
 
       # Reload from the CSV
       repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
@@ -195,6 +178,23 @@ describe "OrderRepository", :_order do
       expect(repo.undelivered_orders[0].customer.id).to eq(1)
 
       FileUtils.remove_file(orders_csv_path, force: true)
+    end
+  end
+
+  describe "#undelivered_orders" do
+    it "should return all the undelivered orders" do
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
+      expect(repo.undelivered_orders).to be_a(Array)
+      expect(repo.undelivered_orders.length).to eq(2)
+      expect(repo.undelivered_orders[0]).to be_a(Order)
+      expect(repo.undelivered_orders[1]).to be_a(Order)
+      expect(repo.undelivered_orders[0].delivered?).to be false
+      expect(repo.undelivered_orders[1].delivered?).to be false
+    end
+
+    it "OrderRepository should not expose the @orders through a reader/method" do
+      repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
+      expect(repo).not_to respond_to(:orders)
     end
   end
 end
