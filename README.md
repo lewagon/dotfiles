@@ -11,14 +11,15 @@ This repository is used by [Le Wagon](https://www.lewagon.com) students during o
 Copiar en code/user/dotfiles
 
 
-[Instalaciones bàsicas](https://kitt.lewagon.com/camps/384/lectures/search?keyword=install&button=):
+[Instalaciones bàsicas aparte de Ruby y lo que figura en el LeWagon setup](https://kitt.lewagon.com/camps/384/lectures/search?keyword=install&button=):
 
 *componente (lecture)
 
 - ACTIVE RECORD (active record basics)
-- RAILS (rails basics)
-- HUB (Rails basics)
-- HEROKU (Rails hosting)
+- Rest Client gem (active record basics)
 - NODE (javascript basics)
-- YARN (javascript plugins)
-- POSTGRESQL (hosting and image upload)
+- Yarn gem (javascript basics)
+- RAILS (rails basics)
+- HUB gem (Rails basics)
+- HEROKU (Rails hosting)
+- POSTGRESQL se instala en el LeWagon setup (hosting and image upload)
