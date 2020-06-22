@@ -11,7 +11,7 @@ This repository is used by [Le Wagon](https://www.lewagon.com) students during o
 Copiar en code/user/dotfiles
 
 
-[Instalaciones bàsicas aparte de Ruby y lo que figura en el LeWagon setup](https://kitt.lewagon.com/camps/384/lectures/search?keyword=install&button=):
+[Instalaciones bàsicas a parte de Ruby y lo que figura en el LeWagon setup](https://kitt.lewagon.com/camps/384/lectures/search?keyword=install&button=):
 
 *componente (lecture)
 
