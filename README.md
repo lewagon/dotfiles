@@ -14,10 +14,10 @@ instalaciones bàsicas:
 
 *componente (lecture)
 
-ACTIVE RECORD (active record basics)
-RAILS (rails basics)
-HUB (Rails basics)
-HEROKU (Rails hosting)
-NODE (javascript basics)
-YARN (javascript plugins)
-POSTGRESQL (hosting and image upload)
+- ACTIVE RECORD (active record basics)
+- RAILS (rails basics)
+- HUB (Rails basics)
+- HEROKU (Rails hosting)
+- NODE (javascript basics)
+- YARN (javascript plugins)
+- POSTGRESQL (hosting and image upload)
