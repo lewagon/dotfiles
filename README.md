@@ -10,7 +10,8 @@ This repository is used by [Le Wagon](https://www.lewagon.com) students during o
 
 Copiar en code/user/dotfiles
 
-instalaciones bàsicas:
+
+[Instalaciones bàsicas](https://kitt.lewagon.com/camps/384/lectures/search?keyword=install&button=):
 
 *componente (lecture)
 
