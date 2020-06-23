@@ -1,5 +1,3 @@
 'use strict';
 
-module.exports = class DevMiddlewareError extends Error {
-
-};
+module.exports = class DevMiddlewareError extends Error {};

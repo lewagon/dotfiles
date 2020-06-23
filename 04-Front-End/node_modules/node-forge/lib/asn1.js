@@ -619,7 +619,7 @@ function _fromDer(bytes, remaining, depth, options) {
   }
 
   // add BIT STRING contents if available
-  var asn1Options = bitStringContents === undefined ?  null : {
+  var asn1Options = bitStringContents === undefined ? null : {
     bitStringContents: bitStringContents
   };
 

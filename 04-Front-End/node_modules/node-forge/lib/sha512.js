@@ -81,7 +81,7 @@ sha512.create = function(algorithm) {
 
   // determine digest length by algorithm name (default)
   var digestLength = 64;
-  switch (algorithm) {
+  switch(algorithm) {
     case 'SHA-384':
       digestLength = 48;
       break;

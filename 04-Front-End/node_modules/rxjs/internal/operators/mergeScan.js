@@ -13,8 +13,6 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var tryCatch_1 = require("../util/tryCatch");
-var errorObject_1 = require("../util/errorObject");
 var subscribeToResult_1 = require("../util/subscribeToResult");
 var OuterSubscriber_1 = require("../OuterSubscriber");
 var InnerSubscriber_1 = require("../InnerSubscriber");
@@ -52,25 +50,30 @@ var MergeScanSubscriber = (function (_super) {
     MergeScanSubscriber.prototype._next = function (value) {
         if (this.active < this.concurrent) {
             var index = this.index++;
-            var ish = tryCatch_1.tryCatch(this.accumulator)(this.acc, value);
             var destination = this.destination;
-            if (ish === errorObject_1.errorObject) {
-                destination.error(errorObject_1.errorObject.e);
+            var ish = void 0;
+            try {
+                var accumulator = this.accumulator;
+                ish = accumulator(this.acc, value, index);
             }
-            else {
-                this.active++;
-                this._innerSub(ish, value, index);
+            catch (e) {
+                return destination.error(e);
             }
+            this.active++;
+            this._innerSub(ish, value, index);
         }
         else {
             this.buffer.push(value);
         }
     };
     MergeScanSubscriber.prototype._innerSub = function (ish, value, index) {
-        var innerSubscriber = new InnerSubscriber_1.InnerSubscriber(this, undefined, undefined);
+        var innerSubscriber = new InnerSubscriber_1.InnerSubscriber(this, value, index);
         var destination = this.destination;
         destination.add(innerSubscriber);
-        subscribeToResult_1.subscribeToResult(this, ish, value, index, innerSubscriber);
+        var innerSubscription = subscribeToResult_1.subscribeToResult(this, ish, undefined, undefined, innerSubscriber);
+        if (innerSubscription !== innerSubscriber) {
+            destination.add(innerSubscription);
+        }
     };
     MergeScanSubscriber.prototype._complete = function () {
         this.hasCompleted = true;

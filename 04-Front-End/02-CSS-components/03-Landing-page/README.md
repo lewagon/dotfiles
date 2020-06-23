@@ -38,7 +38,7 @@ Build a landing page with the following elements:
 - [Good google fonts pairs](https://fontpair.co/)
 - [Startup illustrations](https://undraw.co/illustrations)
 - [Icons](https://www.flaticon.com/)
-- [Coolors](https://colorhunt.co/)
+- [Coolors](https://coolors.co/)
 
 ## Finished?
 

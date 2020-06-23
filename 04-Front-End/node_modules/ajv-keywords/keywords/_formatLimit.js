@@ -9,6 +9,21 @@ var COMPARE_FORMATS = {
   'date-time': compareDateTime
 };
 
+var $dataMetaSchema = {
+  type: 'object',
+  required: [ '$data' ],
+  properties: {
+    $data: {
+      type: 'string',
+      anyOf: [
+        { format: 'relative-json-pointer' },
+        { format: 'json-pointer' }
+      ]
+    }
+  },
+  additionalProperties: false
+};
+
 module.exports = function (minMax) {
   var keyword = 'format' + minMax;
   return function defFunc(ajv) {
@@ -17,29 +32,25 @@ module.exports = function (minMax) {
       inline: require('./dotjs/_formatLimit'),
       statements: true,
       errors: 'full',
+      dependencies: ['format'],
       metaSchema: {
         anyOf: [
-          { type: 'string' },
-          {
-            type: 'object',
-            required: [ '$data' ],
-            properties: {
-              $data: {
-                type: 'string',
-                anyOf: [
-                  { format: 'relative-json-pointer' },
-                  { format: 'json-pointer' }
-                ]
-              }
-            },
-            additionalProperties: false
-          }
+          {type: 'string'},
+          $dataMetaSchema
         ]
       }
     };
 
     ajv.addKeyword(keyword, defFunc.definition);
-    ajv.addKeyword('formatExclusive' + minMax);
+    ajv.addKeyword('formatExclusive' + minMax, {
+      dependencies: ['format' + minMax],
+      metaSchema: {
+        anyOf: [
+          {type: 'boolean'},
+          $dataMetaSchema
+        ]
+      }
+    });
     extendFormats(ajv);
     return ajv;
   };

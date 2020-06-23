@@ -1,3 +1,5 @@
+'use strict';
+
 var util   = require('util'),
     net    = require('net'),
     tls    = require('tls'),

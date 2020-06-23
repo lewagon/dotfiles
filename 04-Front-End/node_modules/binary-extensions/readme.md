@@ -2,7 +2,7 @@
 
 > List of binary file extensions
 
-The list is just a [JSON file](binary-extensions.json) and can be used wherever.
+The list is just a [JSON file](binary-extensions.json) and can be used anywhere.
 
 
 ## Install
@@ -30,4 +30,4 @@ console.log(binaryExtensions);
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com), Paul Miller (https://paulmillr.com)

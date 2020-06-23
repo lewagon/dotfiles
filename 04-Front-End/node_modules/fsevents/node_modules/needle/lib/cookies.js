@@ -1,22 +1,24 @@
-//
+
 //  Simple cookie handling implementation based on the standard RFC 6265.
+//
 //  This module just has two functionalities:
 //    - Parse a set-cookie-header as a key value object
 //    - Write a cookie-string from a key value object
-//  All cookie attributes are ignored.
 //
+//  All cookie attributes are ignored.
 
 var unescape = require('querystring').unescape;
 
-// RegExps
-const COOKIE_PAIR        = /^([^=\s]+)\s*=\s*("?)\s*(.*)\s*\2\s*$/;
-const EXCLUDED_CHARS     = /[\x00-\x1F\x7F\x3B\x3B\s\"\,\\"%]/g;
-const TRAILING_SEMICOLON = /\x3B+$/;
-const SEP_SEMICOLON      = /\s*\x3B\s*/;
+var COOKIE_PAIR        = /^([^=\s]+)\s*=\s*("?)\s*(.*)\s*\2\s*$/;
+var EXCLUDED_CHARS     = /[\x00-\x1F\x7F\x3B\x3B\s\"\,\\"%]/g;
+var TRAILING_SEMICOLON = /\x3B+$/;
+var SEP_SEMICOLON      = /\s*\x3B\s*/;
 
-// Constants
-const KEY_INDEX   = 1; // index of key from COOKIE_PAIR match
-const VALUE_INDEX = 3; // index of value from COOKIE_PAIR match
+// i know these should be 'const', but I'd like to keep
+// supporting earlier node.js versions as long as I can. :)
+
+var KEY_INDEX   = 1; // index of key from COOKIE_PAIR match
+var VALUE_INDEX = 3; // index of value from COOKIE_PAIR match
 
 // Returns a copy str trimmed and without trainling semicolon.
 function cleanCookieString(str) {

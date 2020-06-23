@@ -24,7 +24,7 @@ describe('when posting a very long string', function() {
     }
 
     try {
-      needle.post('http://google.com', { data: get_string(Math.pow(2, 20)) }, finished)
+      needle.post('https://google.com', { data: get_string(Math.pow(2, 20)) }, finished)
     } catch(e) {
       error = e;
     }

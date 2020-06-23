@@ -121,7 +121,13 @@ Scheduler.prototype.tickSync = function tickSync () {
     debug('tick sync pending=%d', this.count, item.chunks)
     for (var j = 0; j < item.chunks.length; j++) {
       this.count--
-      res = this.push(item.chunks[j])
+      // TODO: handle stream backoff properly
+      try {
+        res = this.push(item.chunks[j])
+      } catch (err) {
+        this.emit('error', err)
+        return false
+      }
     }
     debug('after tick sync pending=%d', this.count)
 
@@ -161,7 +167,13 @@ Scheduler.prototype.tickAsync = function tickAsync () {
     debug('tick async pending=%d', this.count, item.chunks)
     for (var i = 0; i < item.chunks.length; i++) {
       this.count--
-      res = this.push(item.chunks[i])
+      // TODO: handle stream backoff properly
+      try {
+        res = this.push(item.chunks[i])
+      } catch (err) {
+        this.emit('error', err)
+        return false
+      }
     }
     debug('after tick pending=%d', this.count)
 
@@ -182,7 +194,7 @@ Scheduler.prototype.dump = function dump () {
   while (!this.tickAsync()) {
     // Intentional no-op
   }
-  assert.equal(this.count, 0)
+  assert.strictEqual(this.count, 0)
 }
 
 function SchedulerItem (stream, priority) {

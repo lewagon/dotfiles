@@ -1,7 +1,7 @@
 # type-is
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Downloads][npm-downloads-image]][npm-url]
 [![Node.js Version][node-version-image]][node-version-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
@@ -30,21 +30,39 @@ http.createServer(function (req, res) {
 })
 ```
 
-### type = typeis(request, types)
+### typeis(request, types)
 
-`request` is the node HTTP request. `types` is an array of types.
+Checks if the `request` is one of the `types`. If the request has no body,
+even if there is a `Content-Type` header, then `null` is returned. If the
+`Content-Type` header is invalid or does not matches any of the `types`, then
+`false` is returned. Otherwise, a string of the type that matched is returned.
+
+The `request` argument is expected to be a Node.js HTTP request. The `types`
+argument is an array of type strings.
+
+Each type in the `types` array can be one of the following:
+
+- A file extension name such as `json`. This name will be returned if matched.
+- A mime type such as `application/json`.
+- A mime type with a wildcard such as `*/*` or `*/json` or `application/*`.
+  The full mime type will be returned if matched.
+- A suffix such as `+json`. This can be combined with a wildcard such as
+  `*/vnd+json` or `application/*+json`. The full mime type will be returned
+  if matched.
+
+Some examples to illustrate the inputs and returned value:
 
 <!-- eslint-disable no-undef -->
 
 ```js
 // req.headers.content-type = 'application/json'
 
-typeis(req, ['json'])             // 'json'
-typeis(req, ['html', 'json'])     // 'json'
-typeis(req, ['application/*'])    // 'application/json'
-typeis(req, ['application/json']) // 'application/json'
+typeis(req, ['json']) // => 'json'
+typeis(req, ['html', 'json']) // => 'json'
+typeis(req, ['application/*']) // => 'application/json'
+typeis(req, ['application/json']) // => 'application/json'
 
-typeis(req, ['html']) // false
+typeis(req, ['html']) // => false
 ```
 
 ### typeis.hasBody(request)
@@ -68,33 +86,40 @@ if (typeis.hasBody(req)) {
 }
 ```
 
-### type = typeis.is(mediaType, types)
+### typeis.is(mediaType, types)
 
-`mediaType` is the [media type](https://tools.ietf.org/html/rfc6838) string. `types` is an array of types.
+Checks if the `mediaType` is one of the `types`. If the `mediaType` is invalid
+or does not matches any of the `types`, then `false` is returned. Otherwise, a
+string of the type that matched is returned.
+
+The `mediaType` argument is expected to be a
+[media type](https://tools.ietf.org/html/rfc6838) string. The `types` argument
+is an array of type strings.
+
+Each type in the `types` array can be one of the following:
+
+- A file extension name such as `json`. This name will be returned if matched.
+- A mime type such as `application/json`.
+- A mime type with a wildcard such as `*/*` or `*/json` or `application/*`.
+  The full mime type will be returned if matched.
+- A suffix such as `+json`. This can be combined with a wildcard such as
+  `*/vnd+json` or `application/*+json`. The full mime type will be returned
+  if matched.
+
+Some examples to illustrate the inputs and returned value:
 
 <!-- eslint-disable no-undef -->
 
 ```js
 var mediaType = 'application/json'
 
-typeis.is(mediaType, ['json'])             // 'json'
-typeis.is(mediaType, ['html', 'json'])     // 'json'
-typeis.is(mediaType, ['application/*'])    // 'application/json'
-typeis.is(mediaType, ['application/json']) // 'application/json'
+typeis.is(mediaType, ['json']) // => 'json'
+typeis.is(mediaType, ['html', 'json']) // => 'json'
+typeis.is(mediaType, ['application/*']) // => 'application/json'
+typeis.is(mediaType, ['application/json']) // => 'application/json'
 
-typeis.is(mediaType, ['html']) // false
+typeis.is(mediaType, ['html']) // => false
 ```
-
-### Each type can be:
-
-- An extension name such as `json`. This name will be returned if matched.
-- A mime type such as `application/json`.
-- A mime type with a wildcard such as `*/*` or `*/json` or `application/*`. The full mime type will be returned if matched.
-- A suffix such as `+json`. This can be combined with a wildcard such as `*/vnd+json` or `application/*+json`. The full mime type will be returned if matched.
-
-`false` will be returned if no type matches or the content type is invalid.
-
-`null` will be returned if the request does not have a body.
 
 ## Examples
 
@@ -134,13 +159,12 @@ app.use(function bodyParser (req, res, next) {
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/type-is.svg
-[npm-url]: https://npmjs.org/package/type-is
-[node-version-image]: https://img.shields.io/node/v/type-is.svg
-[node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://img.shields.io/travis/jshttp/type-is/master.svg
-[travis-url]: https://travis-ci.org/jshttp/type-is
-[coveralls-image]: https://img.shields.io/coveralls/jshttp/type-is/master.svg
+[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/type-is/master
 [coveralls-url]: https://coveralls.io/r/jshttp/type-is?branch=master
-[downloads-image]: https://img.shields.io/npm/dm/type-is.svg
-[downloads-url]: https://npmjs.org/package/type-is
+[node-version-image]: https://badgen.net/npm/node/type-is
+[node-version-url]: https://nodejs.org/en/download
+[npm-downloads-image]: https://badgen.net/npm/dm/type-is
+[npm-url]: https://npmjs.org/package/type-is
+[npm-version-image]: https://badgen.net/npm/v/type-is
+[travis-image]: https://badgen.net/travis/jshttp/type-is/master
+[travis-url]: https://travis-ci.org/jshttp/type-is

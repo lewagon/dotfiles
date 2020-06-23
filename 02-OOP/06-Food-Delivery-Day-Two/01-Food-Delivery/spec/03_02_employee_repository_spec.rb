@@ -20,7 +20,8 @@ describe "EmployeeRepository", :employee do
     [
       [ "id", "username", "password", "role" ],
       [ 1, "paul", "secret", "manager" ],
-      [ 2, "john", "secret", "delivery_guy" ]
+      [ 2, "john", "secret", "delivery_guy" ],
+      [ 3, "ringo", "secret", "delivery_guy"]
     ]
   end
   let(:csv_path) { "spec/support/employees.csv" }
@@ -51,7 +52,7 @@ describe "EmployeeRepository", :employee do
     it "should load existing employees from the CSV" do
       repo = EmployeeRepository.new(csv_path)
       loaded_employees = elements(repo) || []
-      expect(loaded_employees.length).to eq(2)
+      expect(loaded_employees.length).to eq(3)
     end
 
     it "fills the `@employees` with instance of `Employee`, setting the correct types on each property" do
@@ -68,11 +69,16 @@ describe "EmployeeRepository", :employee do
     end
   end
 
+  it "EmployeeRepository should not implement a create method (we'll create employees manually in the CSV)" do
+    repo = EmployeeRepository.new(csv_path)
+    expect(repo).not_to respond_to(:create)
+  end
+
   describe "#all_delivery_guys" do
     it "should return all the delivery guys stored by the repo" do
       repo = EmployeeRepository.new(csv_path)
       expect(repo.all_delivery_guys).to be_a(Array)
-      expect(repo.all_delivery_guys.size).to eq(1)
+      expect(repo.all_delivery_guys.size).to eq(2)
       expect(repo.all_delivery_guys[0].username).to eq("john")
     end
 
@@ -80,11 +86,6 @@ describe "EmployeeRepository", :employee do
       repo = EmployeeRepository.new(csv_path)
       expect(repo).not_to respond_to(:employees)
     end
-  end
-
-  it "EmployeeRepository should not implement an add method (we'll add employees manually to the CSV)" do
-    repo = EmployeeRepository.new(csv_path)
-    expect(repo).not_to respond_to(:add)
   end
 
   describe "#find" do

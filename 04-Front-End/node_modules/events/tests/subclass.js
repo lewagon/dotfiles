@@ -19,6 +19,8 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+var common = require('./common');
+var test = require('tape');
 var assert = require('assert');
 var EventEmitter = require('../').EventEmitter;
 var util = require('util');
@@ -32,10 +34,7 @@ function MyEE(cb) {
   EventEmitter.call(this);
 }
 
-var called = false;
-var myee = new MyEE(function() {
-  called = true;
-});
+var myee = new MyEE(common.mustCall());
 
 
 util.inherits(ErrorEE, EventEmitter);
@@ -47,5 +46,21 @@ assert.throws(function() {
   new ErrorEE();
 }, /blerg/);
 
-assert(called);
-assert.deepEqual(myee._events, {});
+test.onFinish(function() {
+  assert.ok(!(myee._events instanceof Object));
+  assert.strictEqual(Object.keys(myee._events).length, 0);
+});
+
+
+function MyEE2() {
+  EventEmitter.call(this);
+}
+
+MyEE2.prototype = new EventEmitter();
+
+var ee1 = new MyEE2();
+var ee2 = new MyEE2();
+
+ee1.on('x', function() {});
+
+assert.strictEqual(ee2.listenerCount('x'), 0);

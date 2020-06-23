@@ -1,8 +1,11 @@
 require_relative "support/csv_helper"
 
 begin
-  require_relative "../app/controllers/orders_controller"
+  require_relative "../app/repositories/meal_repository"
+  require_relative "../app/repositories/customer_repository"
   require_relative "../app/repositories/employee_repository"
+  require_relative "../app/repositories/order_repository"
+  require_relative "../app/controllers/orders_controller"
 rescue LoadError => e
   describe "OrdersController" do
     it "You need a `orders_controller.rb` file for your `OrdersController`" do
@@ -25,17 +28,6 @@ describe "OrdersController", :_order do
   let(:meals_csv_path) { "spec/support/meals.csv" }
   let(:meal_repository) { MealRepository.new(meals_csv_path) }
 
-  let(:employees) do
-    [
-      [ "id", "username", "password", "role" ],
-      [ 1, "paul", "secret", "manager" ],
-      [ 2, "john", "secret", "delivery_guy" ],
-      [ 3, "ringo", "secret", "delivery_guy"]
-    ]
-  end
-  let(:employees_csv_path) { "spec/support/employees.csv" }
-  let(:employee_repository) { EmployeeRepository.new(employees_csv_path) }
-
   let(:customers) do
     [
       [ "id", "name", "address" ],
@@ -47,13 +39,24 @@ describe "OrdersController", :_order do
   let(:customers_csv_path) { "spec/support/customers.csv" }
   let(:customer_repository) { CustomerRepository.new(customers_csv_path) }
 
+  let(:employees) do
+    [
+      [ "id", "username", "password", "role" ],
+      [ 1, "paul", "secret", "manager" ],
+      [ 2, "john", "secret", "delivery_guy" ],
+      [ 3, "ringo", "secret", "delivery_guy"]
+    ]
+  end
+  let(:employees_csv_path) { "spec/support/employees.csv" }
+  let(:employee_repository) { EmployeeRepository.new(employees_csv_path) }
+
   let(:orders) do
     [
-      [ "id", "meal_id", "employee_id", "customer_id", "delivered" ],
-      [ 1, 1, 2, 1, true ],
-      [ 2, 1, 2, 2, false ],
-      [ 3, 2, 2, 3, false ],
-      [ 4, 5, 3, 1, false ]
+      [ "id", "delivered", "meal_id", "customer_id", "employee_id" ],
+      [ 1, true, 1, 1, 2 ],
+      [ 2, false, 1, 2, 2 ],
+      [ 3, false, 2, 3, 2 ],
+      [ 4, false, 5, 2, 3 ]
     ]
   end
   let(:orders_csv_path) { "spec/support/orders.csv" }

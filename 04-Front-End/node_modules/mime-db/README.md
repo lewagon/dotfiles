@@ -24,12 +24,12 @@ npm install mime-db
 ### Database Download
 
 If you're crazy enough to use this in the browser, you can just grab the
-JSON file using [RawGit](https://rawgit.com/). It is recommended to replace
-`master` with [a release tag](https://github.com/jshttp/mime-db/tags) as the
-JSON format may change in the future.
+JSON file using [jsDelivr](https://www.jsdelivr.com/). It is recommended to
+replace `master` with [a release tag](https://github.com/jshttp/mime-db/tags)
+as the JSON format may change in the future.
 
 ```
-https://cdn.rawgit.com/jshttp/mime-db/master/db.json
+https://cdn.jsdelivr.net/gh/jshttp/mime-db@master/db.json
 ```
 
 ## Usage
@@ -76,12 +76,18 @@ and the values being an object with the following keys:
 
 To update the build, run `npm run build`.
 
-## Adding Custom Media Types
+### Adding Custom Media Types
 
 The best way to get new media types included in this library is to register
 them with the IANA. The community registration procedure is outlined in
 [RFC 6838 section 5](http://tools.ietf.org/html/rfc6838#section-5). Types
 registered with the IANA are automatically pulled into this library.
+
+If that is not possible / feasible, they can be added directly here as a
+"custom" type. To do this, it is required to have a primary source that
+definitively lists the media type. If an extension is going to be listed as
+associateed with this media type, the source must definitively link the
+media type and extension as well.
 
 [coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/mime-db/master
 [coveralls-url]: https://coveralls.io/r/jshttp/mime-db?branch=master

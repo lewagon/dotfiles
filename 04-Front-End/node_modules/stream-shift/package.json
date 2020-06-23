@@ -1,6 +1,6 @@
 {
   "name": "stream-shift",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Returns the next buffer/object in a stream's readable queue",
   "main": "index.js",
   "dependencies": {},

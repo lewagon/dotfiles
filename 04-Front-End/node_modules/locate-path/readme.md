@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save locate-path
+$ npm install locate-path
 ```
 
 
@@ -19,14 +19,14 @@ const locatePath = require('locate-path');
 
 const files = [
 	'unicorn.png',
-	'rainbow.png', // only this one actually exists on disk
+	'rainbow.png', // Only this one actually exists on disk
 	'pony.png'
 ];
 
-locatePath(files).then(foundPath => {
-	console.log(foundPath);
+(async () => {
+	console(await locatePath(files));
 	//=> 'rainbow'
-});
+})();
 ```
 
 

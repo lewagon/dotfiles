@@ -1,5 +1,6 @@
 var path = require('path');
 var test = require('tape');
+var Buffer = require('safe-buffer').Buffer;
 
 var Writable = require('../').Writable;
 var inherits = require('inherits');
@@ -18,7 +19,7 @@ TestWritable.prototype._write = function(chunk, encoding, cb) {
     cb();
 };
 
-var buf = Buffer([ 88 ]);
+var buf = Buffer.from([ 88 ]);
 
 test('.writable writing ArrayBuffer', function(t) {
     var writable = new TestWritable();

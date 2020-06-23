@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/webpack-contrib/schema-utils/compare/v0.4.7...v1.0.0) (2018-08-07)
+
+
+### Features
+
+* **src:** add support for custom error messages ([#33](https://github.com/webpack-contrib/schema-utils/issues/33)) ([1cbe4ef](https://github.com/webpack-contrib/schema-utils/commit/1cbe4ef))
+
+
+
 <a name="0.4.7"></a>
 ## [0.4.7](https://github.com/webpack-contrib/schema-utils/compare/v0.4.6...v0.4.7) (2018-08-07)
 

@@ -1,3 +1,14 @@
+1.1.5 / 2019-12-18
+=================
+  * [meta] remove unused Makefile and associated utilities
+  * [meta] add `funding` field; add FUNDING.yml
+  * [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `semver`, `tape`, `covert`, `rimraf`
+  * [Tests] use shared travis configs
+  * [Tests] use `eccheck` over `editorconfig-tools`
+  * [Tests] use `npx aud` instead of `nsp` or `npm audit` with hoops
+  * [Tests] remove `jscs`
+  * [actions] add automatic rebasing / merge commit blocking
+
 1.1.4 / 2018-07-02
 =================
   * [Fix] improve `class` and arrow function detection (#30, #31)

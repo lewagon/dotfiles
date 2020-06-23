@@ -33,8 +33,8 @@ just store the dishes that make up the meal. How do you think you could represen
 Let's now create a complete `#calories_counter` that will enable us to calculate calories by running:
 
 ```ruby
-order = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
-puts calories_counter(order)
+orders = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
+puts calories_counter(orders)
 ```
 
 ## Key learning points

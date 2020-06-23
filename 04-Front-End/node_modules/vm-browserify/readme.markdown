@@ -2,7 +2,7 @@
 
 emulate node's vm module for the browser
 
-[![testling badge](https://ci.testling.com/substack/vm-browserify.png)](https://ci.testling.com/substack/vm-browserify)
+[![Build Status](https://travis-ci.org/browserify/vm-browserify.svg?branch=master)](https://travis-ci.org/browserify/vm-browserify)
 
 # example
 
@@ -11,9 +11,9 @@ Just write some client-side javascript:
 ``` js
 var vm = require('vm');
 
-$(function () {
+window.addEventListener('load', function () {
     var res = vm.runInNewContext('a + 5', { a : 100 });
-    $('#res').text(res);
+    document.querySelector('#res').textContent = res;
 });
 ```
 
@@ -28,7 +28,6 @@ then whip up some html:
 ``` html
 <html>
   <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="/bundle.js"></script>
   </head>
   <body>

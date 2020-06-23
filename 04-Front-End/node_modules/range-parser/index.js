@@ -25,6 +25,10 @@ module.exports = rangeParser
  */
 
 function rangeParser (size, str, options) {
+  if (typeof str !== 'string') {
+    throw new TypeError('argument str must be a string')
+  }
+
   var index = str.indexOf('=')
 
   if (index === -1) {

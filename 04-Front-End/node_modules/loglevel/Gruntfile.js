@@ -91,11 +91,13 @@ module.exports = function (grunt) {
             }
         },
         "jasmine_node": {
-            options: {
-                match: "node-integration.",
-                matchall: true,
-                projectRoot: "./test",
-                useHelpers: false
+            test: {
+                options: {
+                    match: "node-integration.",
+                    matchall: true,
+                    projectRoot: "./test",
+                    useHelpers: false
+                }
             }
         },
         coveralls: {

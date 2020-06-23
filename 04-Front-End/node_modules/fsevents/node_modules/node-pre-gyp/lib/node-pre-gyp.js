@@ -135,7 +135,7 @@ proto.parseArgv = function parseOpts (argv) {
   if (dir == null) dir = process.cwd();
   var package_json = JSON.parse(fs.readFileSync(path.join(dir,'package.json')));
 
-  this.todo = napi.expand_commands (package_json, commands);
+  this.todo = napi.expand_commands (package_json, this.opts, commands);
 
   // support for inheriting config env variables from npm
   var npm_config_prefix = 'npm_config_';

@@ -17,7 +17,7 @@ const parse = (stdout, family) => {
     const gateway = (results[1] || "").substring(5);
     const iface = (results[2] || "").substring(5);
     if (gateway && net.isIP(gateway)) { // default via 1.2.3.4 dev en0
-      result = {gateway: gateway, interface: (iface ? iface : null)};
+      result = {gateway, interface: (iface ? iface : null)};
       return true;
     } else if (iface && !gateway) { // default via dev en0
       const interfaces = os.networkInterfaces();

@@ -1,7 +1,7 @@
 {
   "name": "union-value",
   "description": "Set an array of unique values as the property of an object. Supports setting deeply nested properties using using object-paths/dot notation.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/jonschlinkert/union-value",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/union-value",
@@ -23,7 +23,7 @@
     "arr-union": "^3.1.0",
     "get-value": "^2.0.6",
     "is-extendable": "^0.1.1",
-    "set-value": "^0.4.3"
+    "set-value": "^2.0.1"
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.11",

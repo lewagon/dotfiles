@@ -21,7 +21,7 @@ function do_build(gyp,argv,callback) {
             napi.swap_build_dir_in(result.opts.napi_build_version);
         }
         compile.run_gyp(final_args,result.opts,function(err) {
-            if (!err && result.opts.napi_build_version) {
+            if (result.opts.napi_build_version) {
                 napi.swap_build_dir_out(result.opts.napi_build_version);
             }
             return callback(err);

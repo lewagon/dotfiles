@@ -2,8 +2,6 @@
 
 You will spend the next 5 days in your Projects group of 3 or 4, working on an AirBnB clone (you don't have to rent **flats**, be creative!)
 
-If possible, try and create a clone that contains a few things you might also need for your Project. So maybe pick a colour scheme / fonts / layout style that you can copy across - it will save you time next week and will make your product even more awesome!
-
 ### Demos
 
 You will demo your work (in production, no demo on `localhost`!) on Wednesday and Friday nights. Deadlines matter!
@@ -12,14 +10,40 @@ You will demo your work (in production, no demo on `localhost`!) on Wednesday an
 
 Work on the following steps and validate them with a coach on Monday morning before creating your Rails app and starting to code in the afternoon. You will save a lot of time by doing this, trust us.
 
-#### 1 - Mockup and routes
+#### 1 - User stories
 
-- Download and **print** [this template for your mockup and routes](https://github.com/lewagon/fullstack-images/raw/master/rails/rails-user-stories.pdf).
-- Brainstorm on your core routes and associated views (home page, results page, show page, posting a new offer, booking something, checking your bookings, accepting or declining a booking, etc.)
+Duplicate this [spreadsheet](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) (1 per team) and invite your teammates to collaborate.
+
+![duplicate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/duplicate.png)
+![rename](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/rename.png)
+
+Start by thinking of the **user journeys** you will showcase during the demo. There are lots of possible use cases for a product like Airbnb, but try to narrow them down to the minimum viable journeys to make it work.
+
+<details><summary markdown='span'>View solution
+</summary>
+
+- 1 user journey for the user creating an offer
+- 1 user journey for the user booking an offer
+- 1 user journey for the owner accepting or declining a booking request
+
+</details>
+
+Each user journey contains several **user stories**: write them down in the spreadsheet by using the right terminology. When you are done, create a ticket to validate them with a teacher.
+
+You can draw quick sketches with a pen and paper of the different screens and the rough elements they contain. This will help you visualize your user journeys. Be careful, no need to be too specific at this point! This is a sprint, you need to allocate your time and resources wisely.
 
 #### 2 - Database Scheme
 
-Draw your database schema using [our db tool](http://db.lewagon.com/) and validate it with a coach. The database schema is the foundation of your app. If your schema is incorrect or overcomplicated, you will really struggle when you start to code.
+Draw your database schema using [our db tool](https://kitt.lewagon.com/db/new) and **create a ticket to validate it with a teacher**. Draw only the minimum viable for your app to work. Use the right conventions (plural names for columns... etc - cf. the DB lectures).
+
+#### 3 - Routes
+
+Go back to your User stories spreadsheet and add the following information:
+- Route: Verb + Path
+- Action
+- Controller
+
+Create a ticket to validate them with a teacher. All good? Time for the `rails new`!
 
 ### Setup (Monday afternoon)
 
@@ -33,7 +57,7 @@ Use Le Wagon's minimal template, which already has a good frontend setup:
 cd ~/code/<user.github_nickname>
 rails new \
   --database postgresql \
-  -m https://raw.githubusercontent.com/lewagon/rails-templates/rails-six/minimal.rb \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
 

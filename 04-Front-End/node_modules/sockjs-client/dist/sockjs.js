@@ -1,4 +1,4 @@
-/* sockjs-client v1.3.0 | http://sockjs.org | MIT license */
+/* sockjs-client v1.4.0 | http://sockjs.org | MIT license */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.SockJS = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -658,6 +658,7 @@ function SockJS(url, protocols, options) {
   }
   this._transportsWhitelist = options.transports;
   this._transportOptions = options.transportOptions || {};
+  this._timeout = options.timeout || 0;
 
   var sessionId = options.sessionId || 8;
   if (typeof sessionId === 'function') {
@@ -818,7 +819,7 @@ SockJS.prototype._connect = function() {
     }
 
     // calculate timeout based on RTO and round trips. Default to 5s
-    var timeoutMs = (this._rto * Transport.roundTrips) || 5000;
+    var timeoutMs = Math.max(this._timeout, (this._rto * Transport.roundTrips) || 5000);
     this._transportTimeoutId = setTimeout(this._transportTimeout.bind(this), timeoutMs);
     debug('using timeout', timeoutMs);
 
@@ -917,7 +918,7 @@ SockJS.prototype._transportClose = function(code, reason) {
 };
 
 SockJS.prototype._open = function() {
-  debug('_open', this._transport.transportName, this.readyState);
+  debug('_open', this._transport && this._transport.transportName, this.readyState);
   if (this.readyState === SockJS.CONNECTING) {
     if (this._transportTimeoutId) {
       clearTimeout(this._transportTimeoutId);
@@ -3729,7 +3730,7 @@ module.exports = {
 }).call(this,{ env: {} })
 
 },{"debug":55,"url-parse":61}],53:[function(require,module,exports){
-module.exports = '1.3.0';
+module.exports = '1.4.0';
 
 },{}],54:[function(require,module,exports){
 /**

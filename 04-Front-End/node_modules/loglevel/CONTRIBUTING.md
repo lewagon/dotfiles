@@ -58,3 +58,8 @@ How to make your change and submit it
 6. Check your code all passes (run `grunt`) - if you have any issues try running `grunt jasmine:requirejs:src:build` (or a different test build instead of 'requirejs': see the jasmine config in Gruntfile.js) and debugging the generated _SpecRunner.html in a browser
 7. Commit your changes
 8. Open a pull request back to master in loglevel
+
+Reporting security issues
+-------------------------
+
+Tidelift acts as the security contact for loglevel. Issues can be reported to security@tidelift.com, see https://tidelift.com/security for more details.

@@ -1,9 +1,22 @@
 # Handle Thing
 
-[![Build Status](https://secure.travis-ci.org/indutny/handle-thing.png)](http://travis-ci.org/indutny/handle-thing)
+[![Build Status](https://travis-ci.org/spdy-http2/handle-thing.svg?branch=master)](http://travis-ci.org/spdy-http2/handle-thing)
 [![NPM version](https://badge.fury.io/js/handle-thing.svg)](http://badge.fury.io/js/handle-thing)
+[![dependencies Status](https://david-dm.org/spdy-http2/handle-thing/status.svg?style=flat-square)](https://david-dm.org/spdy-http2/handle-thing)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
+[![Waffle](https://img.shields.io/badge/track-waffle-blue.svg?style=flat-square)](https://waffle.io/spdy-http2/node-spdy)
 
-The right thing when you need it
+> Wrap Streams2 instance into a HandleWrap. The right thing when you need it
+
+## Usage
+
+### Examples
+
+`soon™`
+
+### API
+
+`soon™`
 
 ## LICENSE
 

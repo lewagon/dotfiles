@@ -19,6 +19,7 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+require('./common');
 var assert = require('assert');
 var events = require('../');
 
@@ -44,25 +45,35 @@ function callback3() {
 }
 
 e.on('foo', callback1);
-assert.equal(1, e.listeners('foo').length);
+assert.strictEqual(e.listeners('foo').length, 1);
 
 e.emit('foo');
-assert.equal(2, e.listeners('foo').length);
-assert.deepEqual(['callback1'], callbacks_called);
+assert.strictEqual(e.listeners('foo').length, 2);
+assert.ok(Array.isArray(callbacks_called));
+assert.strictEqual(callbacks_called.length, 1);
+assert.strictEqual(callbacks_called[0], 'callback1');
 
 e.emit('foo');
-assert.equal(0, e.listeners('foo').length);
-assert.deepEqual(['callback1', 'callback2', 'callback3'], callbacks_called);
+assert.strictEqual(e.listeners('foo').length, 0);
+assert.ok(Array.isArray(callbacks_called));
+assert.strictEqual(callbacks_called.length, 3);
+assert.strictEqual(callbacks_called[0], 'callback1');
+assert.strictEqual(callbacks_called[1], 'callback2');
+assert.strictEqual(callbacks_called[2], 'callback3');
 
 e.emit('foo');
-assert.equal(0, e.listeners('foo').length);
-assert.deepEqual(['callback1', 'callback2', 'callback3'], callbacks_called);
+assert.strictEqual(e.listeners('foo').length, 0);
+assert.ok(Array.isArray(callbacks_called));
+assert.strictEqual(callbacks_called.length, 3);
+assert.strictEqual(callbacks_called[0], 'callback1');
+assert.strictEqual(callbacks_called[1], 'callback2');
+assert.strictEqual(callbacks_called[2], 'callback3');
 
 e.on('foo', callback1);
 e.on('foo', callback2);
-assert.equal(2, e.listeners('foo').length);
+assert.strictEqual(e.listeners('foo').length, 2);
 e.removeAllListeners('foo');
-assert.equal(0, e.listeners('foo').length);
+assert.strictEqual(e.listeners('foo').length, 0);
 
 // Verify that removing callbacks while in emit allows emits to propagate to
 // all listeners
@@ -70,7 +81,10 @@ callbacks_called = [];
 
 e.on('foo', callback2);
 e.on('foo', callback3);
-assert.equal(2, e.listeners('foo').length);
+assert.strictEqual(2, e.listeners('foo').length);
 e.emit('foo');
-assert.deepEqual(['callback2', 'callback3'], callbacks_called);
-assert.equal(0, e.listeners('foo').length);
+assert.ok(Array.isArray(callbacks_called));
+assert.strictEqual(callbacks_called.length, 2);
+assert.strictEqual(callbacks_called[0], 'callback2');
+assert.strictEqual(callbacks_called[1], 'callback3');
+assert.strictEqual(0, e.listeners('foo').length);

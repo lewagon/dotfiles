@@ -1,7 +1,7 @@
 /**
  * JavaScript implementation of Ed25519.
  *
- * Copyright (c) 2017-2018 Digital Bazaar, Inc.
+ * Copyright (c) 2017-2019 Digital Bazaar, Inc.
  *
  * This implementation is based on the most excellent TweetNaCl which is
  * in the public domain. Many thanks to its contributors:
@@ -13,6 +13,9 @@ require('./jsbn');
 require('./random');
 require('./sha512');
 require('./util');
+var asn1Validator = require('./asn1-validator');
+var publicKeyValidator = asn1Validator.publicKeyValidator;
+var privateKeyValidator = asn1Validator.privateKeyValidator;
 
 if(typeof BigInteger === 'undefined') {
   var BigInteger = forge.jsbn.BigInteger;
@@ -64,6 +67,75 @@ ed25519.generateKeyPair = function(options) {
   return {publicKey: pk, privateKey: sk};
 };
 
+/**
+ * Converts a private key from a RFC8410 ASN.1 encoding.
+ *
+ * @param obj - The asn1 representation of a private key.
+ *
+ * @returns {Object} keyInfo - The key information.
+ * @returns {Buffer|Uint8Array} keyInfo.privateKeyBytes - 32 private key bytes.
+ */
+ed25519.privateKeyFromAsn1 = function(obj) {
+  var capture = {};
+  var errors = [];
+  var valid = forge.asn1.validate(obj, privateKeyValidator, capture, errors);
+  if(!valid) {
+    var error = new Error('Invalid Key.');
+    error.errors = errors;
+    throw error;
+  }
+  var oid = forge.asn1.derToOid(capture.privateKeyOid);
+  var ed25519Oid = forge.oids.EdDSA25519;
+  if(oid !== ed25519Oid) {
+    throw new Error('Invalid OID "' + oid + '"; OID must be "' +
+      ed25519Oid + '".');
+  }
+  var privateKey = capture.privateKey;
+  // manually extract the private key bytes from nested octet string, see FIXME:
+  // https://github.com/digitalbazaar/forge/blob/master/lib/asn1.js#L542
+  var privateKeyBytes = messageToNativeBuffer({
+    message: forge.asn1.fromDer(privateKey).value,
+    encoding: 'binary'
+  });
+  // TODO: RFC8410 specifies a format for encoding the public key bytes along
+  // with the private key bytes. `publicKeyBytes` can be returned in the
+  // future. https://tools.ietf.org/html/rfc8410#section-10.3
+  return {privateKeyBytes: privateKeyBytes};
+};
+
+/**
+ * Converts a public key from a RFC8410 ASN.1 encoding.
+ *
+ * @param obj - The asn1 representation of a public key.
+ *
+ * @return {Buffer|Uint8Array} - 32 public key bytes.
+ */
+ed25519.publicKeyFromAsn1 = function(obj) {
+  // get SubjectPublicKeyInfo
+  var capture = {};
+  var errors = [];
+  var valid = forge.asn1.validate(obj, publicKeyValidator, capture, errors);
+  if(!valid) {
+    var error = new Error('Invalid Key.');
+    error.errors = errors;
+    throw error;
+  }
+  var oid = forge.asn1.derToOid(capture.publicKeyOid);
+  var ed25519Oid = forge.oids.EdDSA25519;
+  if(oid !== ed25519Oid) {
+    throw new Error('Invalid OID "' + oid + '"; OID must be "' +
+      ed25519Oid + '".');
+  }
+  var publicKeyBytes = capture.ed25519PublicKey;
+  if(publicKeyBytes.length !== ed25519.constants.PUBLIC_KEY_BYTE_LENGTH) {
+    throw new Error('Key length is invalid.');
+  }
+  return messageToNativeBuffer({
+    message: publicKeyBytes,
+    encoding: 'binary'
+  });
+};
+
 ed25519.publicKeyFromPrivateKey = function(options) {
   options = options || {};
   var privateKey = messageToNativeBuffer({
@@ -89,9 +161,13 @@ ed25519.sign = function(options) {
     message: options.privateKey,
     encoding: 'binary'
   });
-  if(privateKey.length !== ed25519.constants.PRIVATE_KEY_BYTE_LENGTH) {
+  if(privateKey.length === ed25519.constants.SEED_BYTE_LENGTH) {
+    var keyPair = ed25519.generateKeyPair({seed: privateKey});
+    privateKey = keyPair.privateKey;
+  } else if(privateKey.length !== ed25519.constants.PRIVATE_KEY_BYTE_LENGTH) {
     throw new TypeError(
       '"options.privateKey" must have a byte length of ' +
+      ed25519.constants.SEED_BYTE_LENGTH + ' or ' +
       ed25519.constants.PRIVATE_KEY_BYTE_LENGTH);
   }
 
@@ -147,7 +223,7 @@ ed25519.verify = function(options) {
 
 function messageToNativeBuffer(options) {
   var message = options.message;
-  if(message instanceof Uint8Array) {
+  if(message instanceof Uint8Array || message instanceof NativeBuffer) {
     return message;
   }
 
@@ -168,7 +244,7 @@ function messageToNativeBuffer(options) {
 
   if(typeof message === 'string') {
     if(typeof Buffer !== 'undefined') {
-      return new Buffer(message, encoding);
+      return Buffer.from(message, encoding);
     }
     message = new ByteBuffer(message, encoding);
   } else if(!(message instanceof ByteBuffer)) {
@@ -217,7 +293,7 @@ function sha512(msg, msgLen) {
   md.update(buffer.getBytes(msgLen), 'binary');
   var hash = md.digest().getBytes();
   if(typeof Buffer !== 'undefined') {
-    return new Buffer(hash, 'binary');
+    return Buffer.from(hash, 'binary');
   }
   var out = new NativeBuffer(ed25519.constants.HASH_BYTE_LENGTH);
   for(var i = 0; i < 64; ++i) {

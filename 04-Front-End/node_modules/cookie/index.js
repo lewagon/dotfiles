@@ -170,6 +170,9 @@ function serialize(name, val, options) {
       case 'strict':
         str += '; SameSite=Strict';
         break;
+      case 'none':
+        str += '; SameSite=None';
+        break;
       default:
         throw new TypeError('option sameSite is invalid');
     }

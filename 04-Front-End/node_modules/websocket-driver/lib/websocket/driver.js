@@ -1,7 +1,7 @@
 'use strict';
 
 // Protocol references:
-// 
+//
 // * http://tools.ietf.org/html/draft-hixie-thewebsocketprotocol-75
 // * http://tools.ietf.org/html/draft-hixie-thewebsocketprotocol-76
 // * http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-17
@@ -32,14 +32,7 @@ var Driver = {
   },
 
   isWebSocket: function(request) {
-    if (request.method !== 'GET') return false;
-
-    var connection = request.headers.connection || '',
-        upgrade    = request.headers.upgrade || '';
-
-    return request.method === 'GET' &&
-           connection.toLowerCase().split(/ *, */).indexOf('upgrade') >= 0 &&
-           upgrade.toLowerCase() === 'websocket';
+    return Base.isWebSocket(request);
   },
 
   validateOptions: function(options, validKeys) {

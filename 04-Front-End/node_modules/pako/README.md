@@ -179,4 +179,5 @@ Original implementation (in C):
 License
 -------
 
-MIT
+- MIT - all files, except `/lib/zlib` folder
+- ZLIB - `/lib/zlib` content

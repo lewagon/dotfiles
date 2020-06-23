@@ -8,7 +8,10 @@ class EndError extends Error {
 	}
 }
 
-// the input can also be a promise, so we `Promise.all()` them both
+// The input can also be a promise, so we `Promise.resolve()` it
+const testElement = (el, tester) => Promise.resolve(el).then(tester);
+
+// The input can also be a promise, so we `Promise.all()` them both
 const finder = el => Promise.all(el).then(val => val[1] === true && Promise.reject(new EndError(val[0])));
 
 module.exports = (iterable, tester, opts) => {
@@ -19,13 +22,13 @@ module.exports = (iterable, tester, opts) => {
 
 	const limit = pLimit(opts.concurrency);
 
-	// start all the promises concurrently with optional limit
-	const items = Array.from(iterable).map(el => [el, limit(() => Promise.resolve(el).then(tester))]);
+	// Start all the promises concurrently with optional limit
+	const items = [...iterable].map(el => [el, limit(testElement, el, tester)]);
 
-	// check the promises either serially or concurrently
+	// Check the promises either serially or concurrently
 	const checkLimit = pLimit(opts.preserveOrder ? 1 : Infinity);
 
-	return Promise.all(items.map(el => checkLimit(() => finder(el))))
+	return Promise.all(items.map(el => checkLimit(finder, el)))
 		.then(() => {})
 		.catch(err => err instanceof EndError ? err.value : Promise.reject(err));
 };

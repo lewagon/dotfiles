@@ -209,8 +209,6 @@ forge you need.
 Testing
 -------
 
-See the [testing README](./tests/README.md) for full details.
-
 ### Prepare to run tests
 
     npm install
@@ -221,10 +219,10 @@ Forge natively runs in a [Node.js][] environment:
 
     npm test
 
-### Running automated tests with PhantomJS
+### Running automated tests with Headless Chrome
 
-Automated testing is done via [Karma][]. By default it will run the tests in a
-headless manner with PhantomJS.
+Automated testing is done via [Karma][]. By default it will run the tests with
+Headless Chrome.
 
     npm run test-karma
 
@@ -241,7 +239,7 @@ By default [webpack][] is used. [Browserify][] can also be used.
 
 You can also specify one or more browsers to use.
 
-    npm run test-karma -- --browsers Chrome,Firefox,Safari,PhantomJS
+    npm run test-karma -- --browsers Chrome,Firefox,Safari,ChromeHeadless
 
 The reporter option and `BUNDLER` environment variable can also be used.
 
@@ -906,7 +904,7 @@ var signature = ED25519.sign({
 // sign a message passed as a buffer
 var signature = ED25519.sign({
   // also accepts a forge ByteBuffer or Uint8Array
-  message: new Buffer('test', 'utf8'),
+  message: Buffer.from('test', 'utf8'),
   privateKey: privateKey
 });
 
@@ -932,7 +930,7 @@ var verified = ED25519.verify({
 // sign a message passed as a buffer
 var verified = ED25519.verify({
   // also accepts a forge ByteBuffer or Uint8Array
-  message: new Buffer('test', 'utf8'),
+  message: Buffer.from('test', 'utf8'),
   // node.js Buffer, Uint8Array, forge ByteBuffer, or binary string
   signature: signature,
   // node.js Buffer, Uint8Array, forge ByteBuffer, or binary string
@@ -961,14 +959,14 @@ __Examples__
 var rsa = forge.pki.rsa;
 
 // generate an RSA key pair synchronously
-// *NOT RECOMMENDED* -- can be significantly slower than async and will not
-// use native APIs if available.
+// *NOT RECOMMENDED*: Can be significantly slower than async and may block
+// JavaScript execution. Will use native Node.js 10.12.0+ API if possible.
 var keypair = rsa.generateKeyPair({bits: 2048, e: 0x10001});
 
 // generate an RSA key pair asynchronously (uses web workers if available)
 // use workers: -1 to run a fast core estimator to optimize # of workers
-// *RECOMMENDED* - can be significantly faster than sync -- and will use
-// native APIs if available.
+// *RECOMMENDED*: Can be significantly faster than sync. Will use native
+// Node.js 10.12.0+ or WebCrypto API if possible.
 rsa.generateKeyPair({bits: 2048, workers: 2}, function(err, keypair) {
   // keypair.privateKey, keypair.publicKey
 });
@@ -1378,6 +1376,10 @@ p7.addSigner({
 p7.sign();
 var pem = forge.pkcs7.messageToPem(p7);
 
+// PKCS#7 Sign in detached mode.
+// Includes the signature and certificate without the signed data.
+p7.sign({detached: true});
+
 ```
 
 <a name="pkcs8" />
@@ -1407,15 +1409,17 @@ var privateKeyInfo = pki.wrapRsaPrivateKey(rsaPrivateKey);
 // convert a PKCS#8 ASN.1 PrivateKeyInfo to PEM
 var pem = pki.privateKeyInfoToPem(privateKeyInfo);
 
-// encrypts a PrivateKeyInfo and outputs an EncryptedPrivateKeyInfo
+// encrypts a PrivateKeyInfo using a custom password and
+// outputs an EncryptedPrivateKeyInfo
 var encryptedPrivateKeyInfo = pki.encryptPrivateKeyInfo(
-  privateKeyInfo, 'password', {
+  privateKeyInfo, 'myCustomPasswordHere', {
     algorithm: 'aes256', // 'aes128', 'aes192', 'aes256', '3des'
   });
 
-// decrypts an ASN.1 EncryptedPrivateKeyInfo
+// decrypts an ASN.1 EncryptedPrivateKeyInfo that was encrypted
+// with a custom password
 var privateKeyInfo = pki.decryptPrivateKeyInfo(
-  encryptedPrivateKeyInfo, 'password');
+  encryptedPrivateKeyInfo, 'myCustomPasswordHere');
 
 // converts an EncryptedPrivateKeyInfo to PEM
 var pem = pki.encryptedPrivateKeyToPem(encryptedPrivateKeyInfo);
@@ -1959,11 +1963,11 @@ bytes.getBytes(/* count */);
 // convert a forge buffer into a Node.js Buffer
 // make sure you specify the encoding as 'binary'
 var forgeBuffer = forge.util.createBuffer();
-var nodeBuffer = new Buffer(forgeBuffer.getBytes(), 'binary');
+var nodeBuffer = Buffer.from(forgeBuffer.getBytes(), 'binary');
 
 // convert a Node.js Buffer into a forge buffer
 // make sure you specify the encoding as 'binary'
-var nodeBuffer = new Buffer();
+var nodeBuffer = Buffer.from('CAFE', 'hex');
 var forgeBuffer = forge.util.createBuffer(nodeBuffer.toString('binary'));
 
 // parse a URL
@@ -2035,8 +2039,8 @@ When using this code please keep the following in mind:
 Library Background
 ------------------
 
-* http://digitalbazaar.com/2010/07/20/javascript-tls-1/
-* http://digitalbazaar.com/2010/07/20/javascript-tls-2/
+* https://digitalbazaar.com/2010/07/20/javascript-tls-1/
+* https://digitalbazaar.com/2010/07/20/javascript-tls-2/
 
 Contact
 -------
@@ -2056,40 +2060,40 @@ Financial support is welcome and helps contribute to futher development:
 
 [#forgejs]: https://webchat.freenode.net/?channels=#forgejs
 [0.6.x]: https://github.com/digitalbazaar/forge/tree/0.6.x
-[3DES]: http://en.wikipedia.org/wiki/Triple_DES
-[AES]: http://en.wikipedia.org/wiki/Advanced_Encryption_Standard
-[ASN.1]: http://en.wikipedia.org/wiki/ASN.1
+[3DES]: https://en.wikipedia.org/wiki/Triple_DES
+[AES]: https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+[ASN.1]: https://en.wikipedia.org/wiki/ASN.1
 [Bower]: https://bower.io/
 [Browserify]: http://browserify.org/
-[CBC]: http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
-[CFB]: http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
-[CTR]: http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+[CBC]: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+[CFB]: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+[CTR]: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
 [CommonJS]: https://en.wikipedia.org/wiki/CommonJS
-[DES]: http://en.wikipedia.org/wiki/Data_Encryption_Standard
-[ECB]: http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
-[Fortuna]: http://en.wikipedia.org/wiki/Fortuna_(PRNG)
-[GCM]: http://en.wikipedia.org/wiki/GCM_mode
-[HMAC]: http://en.wikipedia.org/wiki/HMAC
-[JavaScript]: http://en.wikipedia.org/wiki/JavaScript
+[DES]: https://en.wikipedia.org/wiki/Data_Encryption_Standard
+[ECB]: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+[Fortuna]: https://en.wikipedia.org/wiki/Fortuna_(PRNG)
+[GCM]: https://en.wikipedia.org/wiki/GCM_mode
+[HMAC]: https://en.wikipedia.org/wiki/HMAC
+[JavaScript]: https://en.wikipedia.org/wiki/JavaScript
 [Karma]: https://karma-runner.github.io/
-[MD5]: http://en.wikipedia.org/wiki/MD5
-[Node.js]: http://nodejs.org/
-[OFB]: http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
-[PKCS#10]: http://en.wikipedia.org/wiki/Certificate_signing_request
-[PKCS#12]: http://en.wikipedia.org/wiki/PKCS_%E2%99%AF12
-[PKCS#5]: http://en.wikipedia.org/wiki/PKCS
-[PKCS#7]: http://en.wikipedia.org/wiki/Cryptographic_Message_Syntax
+[MD5]: https://en.wikipedia.org/wiki/MD5
+[Node.js]: https://nodejs.org/
+[OFB]: https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
+[PKCS#10]: https://en.wikipedia.org/wiki/Certificate_signing_request
+[PKCS#12]: https://en.wikipedia.org/wiki/PKCS_%E2%99%AF12
+[PKCS#5]: https://en.wikipedia.org/wiki/PKCS
+[PKCS#7]: https://en.wikipedia.org/wiki/Cryptographic_Message_Syntax
 [PayPal]: https://www.paypal.com/
-[RC2]: http://en.wikipedia.org/wiki/RC2
-[SHA-1]: http://en.wikipedia.org/wiki/SHA-1
-[SHA-256]: http://en.wikipedia.org/wiki/SHA-256
-[SHA-384]: http://en.wikipedia.org/wiki/SHA-384
-[SHA-512]: http://en.wikipedia.org/wiki/SHA-512
+[RC2]: https://en.wikipedia.org/wiki/RC2
+[SHA-1]: https://en.wikipedia.org/wiki/SHA-1
+[SHA-256]: https://en.wikipedia.org/wiki/SHA-256
+[SHA-384]: https://en.wikipedia.org/wiki/SHA-384
+[SHA-512]: https://en.wikipedia.org/wiki/SHA-512
 [Subresource Integrity]: https://www.w3.org/TR/SRI/
-[TLS]: http://en.wikipedia.org/wiki/Transport_Layer_Security
+[TLS]: https://en.wikipedia.org/wiki/Transport_Layer_Security
 [UMD]: https://github.com/umdjs/umd
-[X.509]: http://en.wikipedia.org/wiki/X.509
+[X.509]: https://en.wikipedia.org/wiki/X.509
 [freenode]: https://freenode.net/
 [unpkg]: https://unpkg.com/
 [webpack]: https://webpack.github.io/
-[TweetNaCl]: https://github.com/dchest/tweetnacl-js
+[TweetNaCl.js]: https://github.com/dchest/tweetnacl-js

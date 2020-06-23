@@ -1,5 +1,7 @@
 'use strict';
 
+var Buffer = require('safe-buffer').Buffer;
+
 var StreamReader = function() {
   this._queue     = [];
   this._queueSize = 0;
@@ -8,14 +10,14 @@ var StreamReader = function() {
 
 StreamReader.prototype.put = function(buffer) {
   if (!buffer || buffer.length === 0) return;
-  if (!buffer.copy) buffer = new Buffer(buffer);
+  if (!Buffer.isBuffer(buffer)) buffer = Buffer.from(buffer);
   this._queue.push(buffer);
   this._queueSize += buffer.length;
 };
 
 StreamReader.prototype.read = function(length) {
   if (length > this._queueSize) return null;
-  if (length === 0) return new Buffer(0);
+  if (length === 0) return Buffer.alloc(0);
 
   this._queueSize -= length;
 
@@ -44,7 +46,7 @@ StreamReader.prototype.read = function(length) {
     buffers.push(queue[0].slice(0, remain));
     queue[0] = queue[0].slice(remain);
   }
-  return this._concat(buffers, length);
+  return Buffer.concat(buffers, length);
 };
 
 StreamReader.prototype.eachByte = function(callback, context) {
@@ -62,19 +64,6 @@ StreamReader.prototype.eachByte = function(callback, context) {
     this._offset = 0;
     this._queue.shift();
   }
-};
-
-StreamReader.prototype._concat = function(buffers, length) {
-  if (Buffer.concat) return Buffer.concat(buffers, length);
-
-  var buffer = new Buffer(length),
-      offset = 0;
-
-  for (var i = 0, n = buffers.length; i < n; i++) {
-    buffers[i].copy(buffer, offset);
-    offset += buffers[i].length;
-  }
-  return buffer;
 };
 
 module.exports = StreamReader;

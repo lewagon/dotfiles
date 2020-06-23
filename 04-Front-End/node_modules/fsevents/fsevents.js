@@ -9,9 +9,7 @@
 if (process.platform !== 'darwin')
   throw new Error('Module \'fsevents\' is not compatible with platform \'' + process.platform + '\'');
 
-var path = require('path');
-var binary = require('node-pre-gyp');
-var Native = require(binary.find(path.join(__dirname, 'package.json')));
+var Native = require("bindings")("fse");
 
 var EventEmitter = require('events').EventEmitter;
 var fs = require('fs');

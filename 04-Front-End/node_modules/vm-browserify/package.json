@@ -1,6 +1,6 @@
 {
   "name": "vm-browserify",
-  "version": "0.0.4",
+  "version": "1.1.2",
   "description": "vm module for the browser",
   "main": "index.js",
   "repository": {
@@ -12,11 +12,11 @@
     "browser",
     "eval"
   ],
-  "dependencies": {
-    "indexof": "0.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "tape": "~2.3.2"
+    "browserify": "^16.1.1",
+    "tape": "^4.11.0",
+    "tape-run": "^6.0.1"
   },
   "author": {
     "name": "James Halliday",
@@ -24,23 +24,7 @@
     "url": "http://substack.net"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "browserify test/vm.js | tape-run"
   },
-  "license": "MIT",
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/6..latest",
-      "firefox/16..latest",
-      "firefox/nightly",
-      "chrome/22..latest",
-      "chrome/canary",
-      "opera/12..latest",
-      "opera/next",
-      "safari/5.1..latest",
-      "ipad/6.0..latest",
-      "iphone/6.0..latest",
-      "android-browser/4.2..latest"
-    ]
-  }
+  "license": "MIT"
 }

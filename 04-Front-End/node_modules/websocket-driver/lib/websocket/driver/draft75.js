@@ -1,7 +1,8 @@
 'use strict';
 
-var Base = require('./base'),
-    util = require('util');
+var Buffer = require('safe-buffer').Buffer,
+    Base   = require('./base'),
+    util   = require('util');
 
 var Draft75 = function(request, url, options) {
   Base.apply(this, arguments);
@@ -61,7 +62,7 @@ var instance = {
         case 2:
           if (octet === 0xFF) {
             this._stage = 0;
-            message = new Buffer(this._buffer).toString('utf8', 0, this._buffer.length);
+            message = Buffer.from(this._buffer).toString('utf8', 0, this._buffer.length);
             this.emit('message', new Base.MessageEvent(message));
           }
           else {
@@ -85,12 +86,12 @@ var instance = {
 
     if (typeof buffer !== 'string') buffer = buffer.toString();
 
-    var payload = new Buffer(buffer, 'utf8'),
-        frame   = new Buffer(payload.length + 2);
+    var length = Buffer.byteLength(buffer),
+        frame  = Buffer.allocUnsafe(length + 2);
 
     frame[0] = 0x00;
-    frame[payload.length + 1] = 0xFF;
-    payload.copy(frame, 1);
+    frame.write(buffer, 1);
+    frame[frame.length - 1] = 0xFF;
 
     this._write(frame);
     return true;
@@ -100,7 +101,7 @@ var instance = {
     var start   = 'HTTP/1.1 101 Web Socket Protocol Handshake',
         headers = [start, this._headers.toString(), ''];
 
-    return new Buffer(headers.join('\r\n'), 'utf8');
+    return Buffer.from(headers.join('\r\n'), 'utf8');
   },
 
   _parseLeadingByte: function(octet) {

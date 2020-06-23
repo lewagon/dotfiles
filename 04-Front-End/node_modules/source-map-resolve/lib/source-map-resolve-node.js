@@ -1,7 +1,5 @@
-// Copyright 2014, 2015, 2016, 2017 Simon Lydell
-// X11 (“MIT”) Licensed. (See LICENSE.)
-
 var sourceMappingURL   = require("source-map-url")
+
 var resolveUrl         = require("./resolve-url")
 var decodeUriComponent = require("./decode-uri-component")
 var urix               = require("urix")
@@ -71,7 +69,44 @@ function resolveSourceMapSync(code, codeUrl, read) {
 }
 
 var dataUriRegex = /^data:([^,;]*)(;[^,;]*)*(?:,(.*))?$/
+
+/**
+ * The media type for JSON text is application/json.
+ *
+ * {@link https://tools.ietf.org/html/rfc8259#section-11 | IANA Considerations }
+ *
+ * `text/json` is non-standard media type
+ */
 var jsonMimeTypeRegex = /^(?:application|text)\/json$/
+
+/**
+ * JSON text exchanged between systems that are not part of a closed ecosystem
+ * MUST be encoded using UTF-8.
+ *
+ * {@link https://tools.ietf.org/html/rfc8259#section-8.1 | Character Encoding}
+ */
+var jsonCharacterEncoding = "utf-8"
+
+function base64ToBuf(b64) {
+  var binStr = atob(b64)
+  var len = binStr.length
+  var arr = new Uint8Array(len)
+  for (var i = 0; i < len; i++) {
+    arr[i] = binStr.charCodeAt(i)
+  }
+  return arr
+}
+
+function decodeBase64String(b64) {
+  if (typeof TextDecoder === "undefined" || typeof Uint8Array === "undefined") {
+    return atob(b64)
+  }
+  var buf = base64ToBuf(b64);
+  // Note: `decoder.decode` method will throw a `DOMException` with the
+  // `"EncodingError"` value when an coding error is found.
+  var decoder = new TextDecoder(jsonCharacterEncoding, {fatal: true})
+  return decoder.decode(buf);
+}
 
 function resolveSourceMapHelper(code, codeUrl) {
   codeUrl = urix(codeUrl)
@@ -83,7 +118,7 @@ function resolveSourceMapHelper(code, codeUrl) {
 
   var dataUri = url.match(dataUriRegex)
   if (dataUri) {
-    var mimeType = dataUri[1]
+    var mimeType = dataUri[1] || "text/plain"
     var lastParameter = dataUri[2] || ""
     var encoded = dataUri[3] || ""
     var data = {
@@ -93,14 +128,19 @@ function resolveSourceMapHelper(code, codeUrl) {
       map: encoded
     }
     if (!jsonMimeTypeRegex.test(mimeType)) {
-      var error = new Error("Unuseful data uri mime type: " + (mimeType || "text/plain"))
+      var error = new Error("Unuseful data uri mime type: " + mimeType)
       error.sourceMapData = data
       throw error
     }
-    data.map = parseMapToJSON(
-      lastParameter === ";base64" ? atob(encoded) : decodeURIComponent(encoded),
-      data
-    )
+    try {
+      data.map = parseMapToJSON(
+        lastParameter === ";base64" ? decodeBase64String(encoded) : decodeURIComponent(encoded),
+        data
+      )
+    } catch (error) {
+      error.sourceMapData = data
+      throw error
+    }
     return data
   }
 

@@ -22,7 +22,7 @@ var LEVELS = {
 
 module.exports = {
   // singleton
-  getInstance: function () {
+  getInstance: function() {
     if (!loggerInstance) {
       loggerInstance = new Logger()
     }
@@ -32,7 +32,7 @@ module.exports = {
   getArrow: getArrow
 }
 
-function Logger () {
+function Logger() {
   var logLevel
   var provider
 
@@ -42,12 +42,12 @@ function Logger () {
     info: info,
     warn: warn,
     error: error,
-    setLevel: function (v) {
+    setLevel: function(v) {
       if (isValidLevel(v)) {
         logLevel = v
       }
     },
-    setProvider: function (fn) {
+    setProvider: function(fn) {
       if (fn && isValidProvider(fn)) {
         provider = fn(defaultProvider)
       }
@@ -58,37 +58,37 @@ function Logger () {
 
   return api
 
-  function init () {
+  function init() {
     api.setLevel('info')
-    api.setProvider(function () {
+    api.setProvider(function() {
       return defaultProvider
     })
   }
 
   // log will log messages, regardless of logLevels
-  function log () {
+  function log() {
     provider.log(_interpolate.apply(null, arguments))
   }
 
-  function debug () {
+  function debug() {
     if (_showLevel('debug')) {
       provider.debug(_interpolate.apply(null, arguments))
     }
   }
 
-  function info () {
+  function info() {
     if (_showLevel('info')) {
       provider.info(_interpolate.apply(null, arguments))
     }
   }
 
-  function warn () {
+  function warn() {
     if (_showLevel('warn')) {
       provider.warn(_interpolate.apply(null, arguments))
     }
   }
 
-  function error () {
+  function error() {
     if (_showLevel('error')) {
       provider.error(_interpolate.apply(null, arguments))
     }
@@ -99,11 +99,11 @@ function Logger () {
    * @param  {String}  showLevel [debug, info, warn, error, silent]
    * @return {Boolean}
    */
-  function _showLevel (showLevel) {
+  function _showLevel(showLevel) {
     var result = false
     var currentLogLevel = LEVELS[logLevel]
 
-    if (currentLogLevel && (currentLogLevel <= LEVELS[showLevel])) {
+    if (currentLogLevel && currentLogLevel <= LEVELS[showLevel]) {
       result = true
     }
 
@@ -112,14 +112,14 @@ function Logger () {
 
   // make sure logged messages and its data are return interpolated
   // make it possible for additional log data, such date/time or custom prefix.
-  function _interpolate () {
+  function _interpolate() {
     var fn = _.spread(util.format)
     var result = fn(_.slice(arguments))
 
     return result
   }
 
-  function isValidProvider (fnProvider) {
+  function isValidProvider(fnProvider) {
     var result = true
 
     if (fnProvider && !_.isFunction(fnProvider)) {
@@ -129,7 +129,7 @@ function Logger () {
     return result
   }
 
-  function isValidLevel (levelName) {
+  function isValidLevel(levelName) {
     var validLevels = _.keys(LEVELS)
     var isValid = _.includes(validLevels, levelName)
 
@@ -153,10 +153,10 @@ function Logger () {
  * @param  {String} newTarget
  * @return {String}
  */
-function getArrow (originalPath, newPath, originalTarget, newTarget) {
+function getArrow(originalPath, newPath, originalTarget, newTarget) {
   var arrow = ['>']
-  var isNewTarget = (originalTarget !== newTarget) // router
-  var isNewPath = (originalPath !== newPath) // pathRewrite
+  var isNewTarget = originalTarget !== newTarget // router
+  var isNewPath = originalPath !== newPath // pathRewrite
 
   if (isNewPath && !isNewTarget) {
     arrow.unshift('~')

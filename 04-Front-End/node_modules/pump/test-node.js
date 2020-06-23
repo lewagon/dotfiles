@@ -40,8 +40,8 @@ var res = pump(rs, toHex(), toHex(), toHex(), ws, function () {
   check()
 })
 
-if (res) {
-  process.exit(1)
+if (res !== ws) {
+  throw new Error('should return last stream')
 }
 
 setTimeout(function () {

@@ -1,6 +1,6 @@
 {
   "name": "path-browserify",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "the path module from node core for browsers",
   "main": "index.js",
   "dependencies": {},
@@ -8,7 +8,7 @@
     "tape": "~1.0.4"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "node test/test-path.js"
   },
   "repository": {
     "type": "git",

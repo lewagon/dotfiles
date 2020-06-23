@@ -1,0 +1,36 @@
+{
+    "name": "@types/glob",
+    "version": "7.1.1",
+    "description": "TypeScript definitions for Glob",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "vvakame",
+            "url": "https://github.com/vvakame",
+            "githubUsername": "vvakame"
+        },
+        {
+            "name": "voy",
+            "url": "https://github.com/voy",
+            "githubUsername": "voy"
+        },
+        {
+            "name": "Klaus Meinhardt",
+            "url": "https://github.com/ajafff",
+            "githubUsername": "ajafff"
+        }
+    ],
+    "main": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/events": "*",
+        "@types/minimatch": "*",
+        "@types/node": "*"
+    },
+    "typesPublisherContentHash": "43019f2af91c7a4ca3453c4b806a01c521ca3008ffe1bfefd37c5f9d6135660e",
+    "typeScriptVersion": "2.0"
+}

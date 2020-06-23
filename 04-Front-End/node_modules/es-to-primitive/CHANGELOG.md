@@ -1,3 +1,14 @@
+1.2.1 / 2019-11-08
+=================
+  * [readme] remove testling URLs
+  * [meta] add `funding` field
+  * [meta] create FUNDING.yml
+  * [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `covert`, `replace`, `semver`, `tape`, `function.prototype.name`
+  * [Tests] use shared travis-ci configs
+  * [Tests] Add es5 tests for `symbol` types (#45)
+  * [Tests] use `npx aud` instead of `nsp` or `npm audit` with hoops
+  * [Tests] remove `jscs`
+
 1.2.0 / 2018-09-27
 =================
   * [New] create ES2015 entry point/property, to replace ES6

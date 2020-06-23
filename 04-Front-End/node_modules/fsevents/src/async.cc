@@ -11,7 +11,7 @@ void async_propagate(uv_async_t *async) {
   fse_event *event;
   char pathbuf[1024];
   const char *pathptr = NULL;
-  fse->lock();
+  uv_mutex_lock(&fse->mutex);
   cnt = fse->events.size();
   for (idx=0; idx<cnt; idx++) {
     event = fse->events.at(idx);
@@ -22,7 +22,7 @@ void async_propagate(uv_async_t *async) {
     delete event;
   }
   if (cnt>0) fse->events.clear();
-  fse->unlock();
+  uv_mutex_unlock(&fse->mutex);
 }
 
 void FSEvents::asyncStart() {
