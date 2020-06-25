@@ -1,4 +1,4 @@
-require "my_map"
+require "02_my_map"
 
 describe "#my_map" do
   it "should upcase all elements of an array when passed `element.upcase` in the block" do

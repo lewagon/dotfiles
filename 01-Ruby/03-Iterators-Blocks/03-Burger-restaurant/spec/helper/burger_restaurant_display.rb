@@ -33,7 +33,7 @@ BAD = [
 
 INGREDIENTS = {
   top_bread: [" ⎽-°-°°-°-⎽ ".center(CHARACTERS, " ").brown, "(__________)".center(CHARACTERS, " ").brown],
-  bread: ["    ( ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅)    ".center(CHARACTERS, " ").brown, "      ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅ ̅̅     ".center(CHARACTERS, " ").brown]
+  bread: ["(__________)".center(CHARACTERS, " ").brown]
 }
 
 
