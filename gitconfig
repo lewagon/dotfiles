@@ -41,7 +41,10 @@
 
 [help]
   autocorrect = 1
-
+[diff]
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [push]
 	default = simple
 
