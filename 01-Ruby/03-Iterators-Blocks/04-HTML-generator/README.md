@@ -1,9 +1,6 @@
 ## Background & Objectives
 
-Ruby on rails is a tool to build application for the web, you'l learn it in a few weeks. In the meantime, let's discover something useful that you'll use a lot when programming with Ruby on Rails.
-In this framework, some methods are dedicated to format text, dates, numbers, etc to display them. Those methods are called **helpers**. 
-
-Code your first helper, it will help build HTML tags.
+Let's keep practicing blocks in this challenge. We will code another method that should be called with a block, and this time we will see how blocks enable nesting method calls, and how this can be useful in a real-life example. We will also discover how we can define methods with a second optional parameter, which is very frequent!
 
 ## Specs
 
