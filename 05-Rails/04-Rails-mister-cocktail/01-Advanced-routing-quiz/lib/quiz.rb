@@ -1,6 +1,6 @@
 # TODO: Below are three questions for you to answer. Read each of the questions
 # and make sure each of the methods `return` the correct answer.
-# ⚠️ Try and answer them before running `rake`.
+# WARNING: Try and answer them before running `rake`.
 
 def restaurants_resources_routes
   # TODO: Return an `Array` with the 7 `routes` that `resources :restaurants` would generate for you.
