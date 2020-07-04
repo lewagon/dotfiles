@@ -10,15 +10,22 @@
 		"All Autocomplete",
 		"Babel",
 		"BracketHighlighter",
-		"Color Highlighter",
+		"Color Highlight",
 		"Emmet",
 		"ERB Snippets",
+		"FileIcons",
 		"Git",
 		"Latest Migration",
 		"MagicPython",
+		"Material Theme",
 		"Package Control",
 		"SCSS",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
 		"SublimeLinter",
-		"SublimeLinter-rubocop"
+		"SublimeLinter-eslint",
+		"SublimeLinter-rubocop",
+		"TerminalView",
+		"Theme - Alpenglow"
 	]
 }

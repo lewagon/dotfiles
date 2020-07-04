@@ -1,4 +1,5 @@
 {
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"detect_indentation": false,
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -21,18 +22,25 @@
 		".pytest_cache",
 		"__pycache__"
 	],
+	"font_size": 11,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"material_theme_big_fileicons": true,
+	"material_theme_bright_scrollbars": true,
+	"material_theme_contrast_mode": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_separator": true,
 	"remember_open_files": false,
 	"rulers":
 	[
 		80
 	],
 	"tab_size": 2,
+	"theme": "Material-Theme-Palenight.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
