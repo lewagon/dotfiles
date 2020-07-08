@@ -26,7 +26,8 @@
   "hot_exit": false,
   "ignored_packages":
   [
-    "Vintage"
+    "Vintage",
+    "Python"
   ],
   "remember_open_files": false,
   "rulers":
