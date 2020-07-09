@@ -29,6 +29,11 @@ describe "burger_restaurant.rb", unless: @watermark do
     it "should be able to take a block with arguments" do
       expect{|block| burger("fish", "barbecue", "salad", &block)}.to yield_with_args(String)
     end
+      
+    it "should upcase the ingredient when given the correct block" do
+      big_fish_burger = burger("fish", "barbecue", "salad") { |ingredient| ingredient.upcase }
+      expect(big_fish_burger[1]).to eq("FISH")
+    end
   end
 end
 
