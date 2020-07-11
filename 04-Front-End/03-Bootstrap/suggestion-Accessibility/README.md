@@ -135,7 +135,7 @@ When coding, the best practise is to use native [HTML5 elements](https://develop
 
 ARIA attributes can also translate interactions made through Javascript. Imagine a  page with tabs. Tabs can be clicked, can be switched, they basically have [states](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets). A good implementation of ARIA attributes can mimic those interactive behaviours to assistive technology.
 
-Bootstrap which is a solid accessible framework, apply all the necessary ARIA attributes to their components. Please keep them, they are precious to assistive technology.
+Bootstrap which is a solid accessible framework, applies all the necessary ARIA attributes to its components. Please keep them, they are precious to assistive technology.
 
 #### Form
 - Take time to carefully inspect some `input` elements in the form
