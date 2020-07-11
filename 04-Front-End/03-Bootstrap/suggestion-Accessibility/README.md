@@ -95,8 +95,7 @@ Open `index.html` to fix content
 - Spot the `textarea`, it has a error class. The light outline is not a clear information and cannot be seen by everyone. Add a paragraph below the `textarea` with a message about the error: `<p class="error-message">Comment must not be blank</p>`
 - Force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the available width for your page. Put the following tag in the `<head>`:
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-- Avoid content reordering (???? => // TODO: inventer un challenge/ Mettre la nav apres main ?)
-
+- Avoid content reordering. Remember accessibility technology reads content from the code, not from the rendered page. In your page, the navigation widget is at the bottom of the code, but at the top of the page. Place it at the beginning so it can be read first by the users. 
 
 
 
@@ -114,7 +113,7 @@ The source code is the starting point to generate two user interfaces:
 
 ![Accessibility Tree](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility-tree.svg?sanitize=true)
 
-Assistive technology kind of "understands" code, that the content is more than just text. It makes the difference between a heading and a link. For example, screens readers automatically create a page summary with all the headers. The users are be able to jump to a specific part of the content or to navigate through links only.
+Assistive technology kind of "understands" code, it knows that the content is more than just words. It reads the text and constantly adds some context. For example, a link labeled "Accessibility Principles" in VoiceOver for mac will be spoken out like this: "visited, link, Accessibility Principles / You are currently on a link, to click this link press Control-Option-Space".
 
 ![VoiceOver](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/voiceover.png)
 
@@ -132,21 +131,32 @@ Assistive technology kind of "understands" code, that the content is more than j
 Spot the `role` attribute, it is one of the most important. 
 You'll find they are great differences between **non-semantic** elements, like `div` or `span` which are just generic containers, and **semantics** elements like `h1`, `nav` which have specific `role`.
 
-Take time to inspect some `input` elements in the form, they have a lot more attributes below `role`, matching their complex behaviours.
-
 When coding, the best practise is to use native [HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics) because they have built-in behaviours. But it's not always possible. Custom components, like a loading bar for example, have no others options than a hierarchy of generic `div` containers. The good news is you still have the opportunity to be caught up by the accessibility tree. Special attributes, named [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) after the standard **Accessible Rich Internet Application**, can be added to any element.
 
 ARIA attributes can also translate interactions made through Javascript. Imagine a  page with tabs. Tabs can be clicked, can be switched, they basically have [states](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets). A good implementation of ARIA attributes can mimic those interactive behaviours to assistive technology.
 
 Bootstrap which is a solid accessible framework, apply all the necessary ARIA attributes to their components. Please keep them, they are precious to assistive technology.
 
+#### Form
+- Take time to carefully inspect some `input` elements in the form
+- Try to click on "Styling" next to a checkbox
+- Try to click on "Yes" next to a radio button
+
+Inputs, textareas have a lot more attributes below `role`. They need special properties to match their complex behaviours and states. See the `name` property? It is filled with the text of another tag: the label. Labels go hand in hand with inputs. The first indicates what is expected and the second saves the user's choice.
+Label can also be clicked, checkboxes and radio buttons can be ticked with a click on the label. In your page, the radio button this functionality seems broken, isn't the label missing?
+
 
 #### Meaning
 
-// TODO:
-- title tab
-- semantic links
-- Buttons without text
+Some informations in the page are only visual, try to spot them all:
+
+- Images
+- Read the title of the tab in the browser
+- There a link labeled "clear here"
+- In the footer the arrow button, with no text
+
+Images, links, tabs, buttons are all part of the content. When the design delivers rely on visual information or context, we must back it up with semantic code to give all users a similar experience.
+Assistive technology tools go beyond than just read, they add essential navigation functionalities. All users tend to overview the content before they decide to read deeper. That's why screens readers offers direct access to mains elements like links and headers. Users can jump to a specific part of the content or browse through lists of links only. This is why it's so important to include in the code all the information they need to be efficient. Imagine a list of links all labeled "read more" or "click here"...
 
 
 
@@ -159,32 +169,36 @@ Some elements have implicit accessibility attributes, they structure the content
 
 Open `index.html`, fix it by adding **semantic** logic.
 
-#### Structure of the page:
+#### Semantic elements:
 - Replace generic div containers with [HTML5 semantic elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics) (`<header>`, `<main>` and `<footer>`).
-
-#### Content:
 - Titles are marked by classes (`.title` and `.subtitle`). Replace them with dedicated heading tags from `h2` and `h3`.
 - Use `p` for paragraphs instead of div with `.content` class.
-- Add alternative text to the images. Use the [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img) attribute to describe precisely the image for those who won't see it.
-- The button in the footer jump to the top of the page but has no it has no text to explain it to screen readers. Add a an `aria-label` attribute, it will be translated to spoken language: <button aria-label="Back to top"></button>
 
 
-#### Form:
+#### Form
 - One of the input type does not match the question it is supposed to address.
-Find the input when the user [input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) // TODO:
-- Add missing [`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) to input. // TODO:
+Find the input when the user enters a zoom scale. The input if of type `text`, could you find a better [input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)?
+- Add missing [`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) to inputs "yes" and "no":
+```html
+<input type="radio" name="explanations" id="yes">
+<label for="yes">Yes</label>
+<input type="radio" name="explanations" id="no">
+<label for="no">No</label>
+```
 
-// TODO explain labels
-
+A label refers to an input's `id` for the attribute `for`
 ```html
 <label for="yes">
 <input type="radio" id="yes">
 ```
 
-#### Add meaning:
-- Add a `lang` attribute to the html tag, it is useful to screen readers: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
+
+#### Meaning:
+- Add alternative text to the images. Use the [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img) attribute to describe precisely the image for those who won't see it.
+- The button in the footer jump to the top of the page but has no it has no text to explain it to screen readers. Add a an `aria-label` attribute, it will be translated to spoken language: <button aria-label="Back to top"></button>
 - At the end of the introduction, the link "click here" doesn't give any information to the user about the URL. Replace the link text with a clear description: "Accessibility Principles".
 - In the footer, there is a button with no text to move to the top. Add an ARIA attribute to make it available to the accessibility tree : `aria-label="Back to top"`.
+- Add a `lang` attribute to the html tag, it is useful to screen readers: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
 - Add a `<title>` tag to the page in `<head>`: `<title>Accessibility Guidelines</title>`.
 
 
@@ -253,3 +267,4 @@ Install [Accessibility Insights](https://accessibilityinsights.io) to run an aud
 - ["A11ycasts with Rob Dodson" on Youtube](https://www.youtube.com/watch?v=HtTyRajRuyY&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 - [How visually impaired people navigate the web](https://uxdesign.cc/how-visually-impaired-people-navigate-the-web-7f9eab9d9c37)
 -["An overview of accessible web applications and widgets" on MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
+
