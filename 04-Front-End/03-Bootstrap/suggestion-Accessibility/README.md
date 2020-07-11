@@ -195,7 +195,6 @@ A label refers to an input's `id` for the attribute `for`
 
 #### Meaning:
 - Add alternative text to the images. Use the [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img) attribute to describe precisely the image for those who won't see it.
-- The button in the footer jump to the top of the page but has no it has no text to explain it to screen readers. Add a an `aria-label` attribute, it will be translated to spoken language: <button aria-label="Back to top"></button>
 - At the end of the introduction, the link "click here" doesn't give any information to the user about the URL. Replace the link text with a clear description: "Accessibility Principles".
 - In the footer, there is a button with no text to move to the top. Add an ARIA attribute to make it available to the accessibility tree : `aria-label="Back to top"`.
 - Add a `lang` attribute to the html tag, it is useful to screen readers: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
