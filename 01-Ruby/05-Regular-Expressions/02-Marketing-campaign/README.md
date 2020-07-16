@@ -25,7 +25,9 @@ Your landing page is ready. You want to make sure the visitors leave a valid ema
 Code the `valid?` function:
 - it should return `true` if the email is valid, and `false` otherwise.
 - identify the different parts of the email and code a regex to match the pattern of a classic email.
-- code the regex yourself. You'll probably find a lot of advanced regex to match every email configuration on the web, but take the time to code yours.
+- code the regex yourself. You'll probably find a lot of advanced email validation regexes on the web, but take the time to code yours.
+
+**Warning:** REGEX is not expressive enough to validate 100% of the compliant email addresses as this [Stackoverflow discussion](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) and [emailregex.com](https://emailregex.com/) show. In professional environments, prefer the use of external services like the one provided by [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) or [Mailgun](https://www.mailgun.com/email-validation/) as it uses a huge database and machine learning to determine if an address is correct.
 
 
 #### Pattern of an email address
