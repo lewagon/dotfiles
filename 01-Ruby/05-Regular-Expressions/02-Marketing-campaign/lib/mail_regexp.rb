@@ -1,5 +1,5 @@
 def valid?(email)
-  # TODO: return true is the email is valid, false otherwise
+  # TODO: return true if the email is valid, false otherwise
 end
 
 def clean_database(emails)
