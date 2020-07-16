@@ -20,7 +20,7 @@ describe "interface.rb" do
       display_burgers(locals[:bigger_burger], @burger, locals[:bigger_burger] == @burger)
     end
 
-    it 'should work with lowercase "fish", "mayo" and "salad" as ingredients' do
+    it 'should work with lowercase "fish", "mayo" and "salad" as choices' do
       bigger_burger = locals[:bigger_burger]
       expect(bigger_burger).to be_truthy
       expect("bigger_burger").to pass_the_right_arguments("fish", "mayo", "salad")
@@ -41,7 +41,7 @@ describe "interface.rb" do
       display_burgers(locals[:juicy_burger], @burger, locals[:juicy_burger] == @burger)
     end
 
-    it 'should work with lowercase "steak", "barbecue" and "cheddar" as ingredients' do
+    it 'should work with lowercase "steak", "barbecue" and "cheddar" as choices' do
       expect("juicy_burger").to pass_the_right_arguments("steak", "barbecue", "cheddar")
     end
 
@@ -60,7 +60,7 @@ describe "interface.rb" do
       display_burgers(locals[:spicy_burger], @burger, locals[:spicy_burger] == @burger)
     end
 
-    it 'should work with lowercase "chicken", "ketchup" and "cheddar" as ingredients' do
+    it 'should work with lowercase "chicken", "ketchup" and "cheddar" as choices' do
       expect("spicy_burger").to pass_the_right_arguments("chicken", "ketchup", "cheddar")
     end
 
