@@ -91,26 +91,25 @@ def display_email(message)
   email = "#{message[:username]}@#{message[:domain]}.#{message[:tld]}"
   puts <<-HEREDOC
 
-    ┌──────────────────────────────────────────┐
-    │  ===================================== x │
-    │                                          │
-    │                                          │
-    │  To: #{email.ljust(36)}│
-    │  Subject: #{message[:subject].ljust(31)}│
-    │                                          │
-    │  ──────────────────────────────────────  │
-    │                                          │
-    │                                          │
-    │  Dear #{message[:username].capitalize.ljust(35)}│
-    │                                          │
-    │  #{message[:body].ljust(40)}│
-    │                                          │
-    │  #{message[:closing].ljust(40)}│
-    │  #{message[:signature].ljust(40)}│
-    │                                          │
-    │                                          │
-    │                                          │
-    └──────────────────────────────────────────┘
+    ┌────────────────────────────────────────────┐
+    │  ======================================= x │
+    │                                            │
+    │                                            │
+    │  To: #{email.ljust(38)}│
+    │  Subject: #{message[:subject].ljust(33)}│
+    │                                            │
+    │  ────────────────────────────────────────  │
+    │                                            │
+    │                                            │
+    │  Dear #{message[:username].capitalize.ljust(37)}│
+    │                                            │
+    │  #{message[:body].ljust(42)}│
+    │                                            │
+    │  #{message[:closing].ljust(42)}│
+    │  #{message[:signature].ljust(42)}│
+    │                                            │
+    │                                            │
+    └────────────────────────────────────────────┘
 
 
   HEREDOC
