@@ -12,20 +12,21 @@ On this journey, you're about to open a **burger restaurant**, from the kitchen 
 
 ## Specs
 
-Let's start by coding a simple `burger` method which takes 3 parameters (ingredient, sauce, topping) and returns the burger as an array of strings. For instance:
+### Step 1: Basic burger
+Let's start by coding a simple `burger` method which takes 3 parameters (patty, sauce, topping) and returns the burger as an array of strings. For instance:
 
 ```ruby
 burger("steak", "ketchup", "onions")
 # => ["bread", "steak", "ketchup", "onions", "bread"]
 ```
 
-Customers can choose from the menu which elements they want in their burgers:
+Customers can compose their burgers by picking one of each:
 
 ![Burger Restaurant Menu](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-menu.svg?sanitize=true)
 
-### Something Special?
+### Step 2: On-demand burger
 
-This means the burger method can only be called with arguments that are included in the lists above. However, our customers, when they order, often specify custom needs about the **main ingredient**, like the cooking they want for their steak, if they want a bigger portion, or a replacement.
+The `burger` method can only be called with arguments that are included in the lists above. However, our customers, when they order, often specify custom needs about the **patty**, like the cooking they want for their steak, if they want a bigger portion, or a replacement.
 
 Our method is not able to receive this kind of special demands right now, so we need to rework it a bit.
 
@@ -36,12 +37,12 @@ But before jumping in the code of the method, let's figure out a way to write do
 Let's do it with a block in Ruby!
 
 ```ruby
-burger("steak", "ketchup", "onions") do |ingredient|
-  "grilled #{ingredient}"
+burger("steak", "ketchup", "onions") do |patty|
+  "grilled #{patty}"
 end
 ```
 
-Great! We found a way to transform our ingredient without altering the argument. Now we expect the above call to return:
+Great! We found a way to transform our patty without altering the argument. Now we expect the above call to return:
 
 ```ruby
 # => ["bread", "grilled steak", "ketchup", "onions", "bread"]
@@ -49,20 +50,20 @@ Great! We found a way to transform our ingredient without altering the argument.
 
 Let's modify our method to make it happen!
 
-### Back to the kitchen
+#### Back to the kitchen
 
-`yield` is the keyword you need to execute the block, it will take place in your method to apply on-demand instructions to the main ingredient.
+`yield` is the keyword you need to execute the block, it will take place in your method to apply on-demand instructions to the patty.
 
 ![Side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
 
 Upgrade `burger` to welcome a block:
 - Place `yield` where you want to invoke the block
-- The block will transform the main `ingredient` only
+- The block will transform the `patty` only
 
 The method must work **with or without a block**. Use the [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) method to detect if a block is ready to use.
 
 
-### Prepare burgers
+### Step 3: Prepare burgers
 
 The customers are pouring in, they all want to taste your delicious burgers.
 Open `interface.rb`, a list of orders are waiting to be filled. Write down the instructions to prepare all the burgers, you can display the burgers with `puts` or `p` afterwards.
