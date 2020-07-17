@@ -40,9 +40,5 @@ secret_message = "Reveal the logos' colors:\
 
 p last_five_letters(secret_message)
 ```
-#### String formatting
-The `secret_message` variable actually contains a single line of text. At the end of each line, the return character, which normally creates a new line, is **escaped** by the **backslash** and therefore will be ignored.
-Here we use backslash to have a pretty code, nicely formatted without changing the value of the variable.
 
-But backslash can do more. Depending on the context, it can indicates to the code that the following character means something and should be interpreted. Learn more on [backslash](https://stackoverflow.com/questions/4254887/what-does-back-slash-really-mean) in this Stackoverflow thread.
-
+**NOTE:** Make sure you copy paste the backslashes \: they escape the line breaks to keep `secret_message` a single-line string. Making your regular expressions match multiline strings can be harder than expected, as explained in this [StackOverflow answer](https://stackoverflow.com/questions/4257071/ruby-regex-matches-start-of-line-even-without-m-modifier/4257912#4257912)!
