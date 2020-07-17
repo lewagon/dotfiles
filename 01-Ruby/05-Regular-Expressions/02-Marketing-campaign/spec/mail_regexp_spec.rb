@@ -50,7 +50,7 @@ describe "#compose_mail_translated" do
                                 tld: "fr",
                                 subject: "Notre site est en ligne",
                                 body: "Venez nous rendre visite !",
-                                cheers: "A bientot",
+                                closing: "A bientot",
                                 signature: "L'équipe"
                               })
     display_email(email)
@@ -64,7 +64,7 @@ describe "#compose_mail_translated" do
                                 tld: "de",
                                 subject: "Unsere Website ist jetzt online",
                                 body: "Komm und besuche uns!",
-                                cheers: "Prost",
+                                closing: "Bis bald",
                                 signature: "Das Team"
                               })
     display_email(email)
@@ -78,7 +78,7 @@ describe "#compose_mail_translated" do
                                 tld: "com",
                                 subject: "Our website is online",
                                 body: "Come and visit us!",
-                                cheers: "Cheers",
+                                closing: "See you soon",
                                 signature: "The Team"
                               })
     display_email(email)
@@ -105,7 +105,7 @@ def display_email(message)
     │                                          │
     │  #{message[:body].ljust(40)}│
     │                                          │
-    │  #{message[:cheers].ljust(40)}│
+    │  #{message[:closing].ljust(40)}│
     │  #{message[:signature].ljust(40)}│
     │                                          │
     │                                          │

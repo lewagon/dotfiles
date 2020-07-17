@@ -16,5 +16,5 @@ end
 
 def compose_mail_translated(email)
   # TODO: return a Hash with username, domain and tld extracted from email
-  # TODO: translate subject, body, cheers and signature, according to TLD
+  # TODO: translate subject, body, closing and signature, according to TLD
 end

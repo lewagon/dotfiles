@@ -110,19 +110,19 @@ LOCALES = {
   en: {
     subject: "Our website is online",
     body: "Come and visit us!",
-    cheers: "Cheers",
+    closing: "See you soon",
     signature: "The Team"
   },
   fr: {
     subject: "Notre site est en ligne",
     body: "Venez nous rendre visite !",
-    cheers: "A bientot",
+    closing: "A bientot",
     signature: "L'équipe"
   },
   de: {
     subject: "Unsere Website ist jetzt online",
     body: "Komm und besuche uns!",
-    cheers: "Prost",
+    closing: "Bis bald",
     signature: "Das Team"
   }
 }
@@ -141,7 +141,7 @@ Code the `compose_email_translated` function:
     tld: com,
     subject: "Our website is online",
     body: "Come and visit us!",
-    cheers: "Cheers",
+    closing: "See you soon",
     signature: "The Team"
 }
 ```
