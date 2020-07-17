@@ -16,7 +16,7 @@ describe "Double Rainbow" do
   end
 
   describe "#word_contains_two_p" do
-    it "should return the first word containing two `p`" do
+    it "should return the first word containing two 'p'" do
       test_string = "perfect apocalypse"
       expect(word_contains_two_p(@secret_message)).to eq "purple"
       expect(word_contains_two_p(test_string)).to eq "apocalypse"
@@ -36,7 +36,7 @@ describe "Double Rainbow" do
   end
 
   describe "#four_letters_word" do
-    it "should return a 4 letters word, located between a space and a comma" do
+    it "should return the four-letters word starting with 'b'" do
       test_string = " aaaa bbbb, ,cccc"
       expect(four_letters_word(@secret_message)).to eq "blue"
       expect(four_letters_word(test_string)).to eq "bbbb"
@@ -46,7 +46,7 @@ describe "Double Rainbow" do
   end
 
   describe "#last_five_letters" do
-    it "should return the last 5 characters" do
+    it "should return the last five characters" do
       test_string = "This is the best color"
       expect(last_five_letters(@secret_message)).to eq "green"
       expect(last_five_letters(test_string)).to eq "color"
@@ -56,7 +56,7 @@ describe "Double Rainbow" do
   end
 
   describe "#word_contains_ll" do
-    it "should return the word containing two consecutive `l`" do
+    it "should return the word containing two consecutive 'l'" do
       test_string = "hello from thes specs"
       expect(word_contains_ll(@secret_message)).to eq "yellow"
       expect(word_contains_ll(test_string)).to eq "hello"
@@ -66,7 +66,7 @@ describe "Double Rainbow" do
   end
 
   describe "#six_letters_word" do
-    it "should return a 6 letters word, composed of letters from `a` to `r`" do
+    it "should return a six-letters word, composed of letters from 'a' to 'r'" do
       test_string = "egnaro is spelled backward"
       expect(six_letters_word(@secret_message)).to eq "orange"
       expect(six_letters_word(test_string)).to eq "egnaro"
@@ -76,7 +76,7 @@ describe "Double Rainbow" do
   end
 
   describe "#all_capital_letters" do
-    it "should return all the capital letters" do
+    it "should return all the capital letters as a string" do
       test_string = "ManY COLORS"
       expect(all_capital_letters(@secret_message)).to eq "RED"
       expect(all_capital_letters(test_string)).to eq "MYCOLORS"
