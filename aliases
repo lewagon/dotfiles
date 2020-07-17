@@ -27,8 +27,15 @@ alias gmsg='git commit --message'
 
 # CD
 
-alias home='cd ~'
 alias mrp='cd ~/gitlab.peersandpeers/mrpeinture/mrpeinture  '
 alias anx='cd ~/gitlab.peersandpeers/lesateliersnx/lesateliersnx'
-alias alexandrebk='cd ~/code/alexandrebk'
+alias abk='cd ~/code/alexandrebk'
 alias dotfiles='cd ~/code/alexandrebk/dotfiles'
+alias shopify='cd ~/code/alexandrebk/shopify_picanova_api'
+
+# Commit message
+
+alias cmsg='ruby ~/commit_message.rb'
+alias cms='ruby ~/commit_message.rb'
+alias rmsg='ruby ~/review_message.rb'
+alias rms='ruby ~/review_message.rb'

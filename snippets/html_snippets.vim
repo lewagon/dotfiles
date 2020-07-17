@@ -12,9 +12,9 @@ Snippet lto         <%= link_to <{}> do %><CR><{}><CR><% end %>
 Snippet it          <%= image_tag <{}>, alt: "<{}>" %>
 Snippet render      <%= render "<{path}>"<{}> %><{}>
 Snippet rendervar   <%= render "<{path}>", <{var}>: @<{var}> %><CR><{}>
-Snippet int         <%= t("<{}>") %><{}>
-Snippet simple_form <%= simple_form_for [<{}>] <{}>do |f| %><CR><{}><CR><%= f.button :submit %><CR><% end %>
-Snippet f.input     <%= f.input :<{}> %><{}>
-Snippet input       <%= f.input :<{}> %><{}>
+Snippet int         <%= t("<{}>") %>
+Snippet simple_form <%= simple_form_for <{}> do |f| %><CR><%= f.button :submit %><CR><% end %>
+Snippet f.input     <%= f.input :<{}> %>
+Snippet input       <%= f.input :<{}> %>
 
-Snippet d-flex      d-flex justify-content-<{}> align-items-<{}>
+Snippet d-flex      d-flex justify-content-<{between}> align-items-<{center}>

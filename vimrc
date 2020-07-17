@@ -56,7 +56,7 @@ nmap ç /
 nmap à .
 nmap ù %
 
-let mapleader = ","
+let mapleader = " "
 let localmapleader = ","
 "let mapleader = "\<Space>"
 "let localmapleader = "\<Space>"
@@ -80,16 +80,20 @@ map <Leader>pm [m
 " Open new file
 map <Leader>snippet :tabe ~/code/alexandrebk/dotfiles/snippets<CR>
 map <Leader>vimrc :tabe $MYVIMRC<CR>
+map <Leader>rc :tabe $MYVIMRC<CR>
 map <Leader>routes :tabe config/routes.rb<CR>
 map <Leader>so :source $MYVIMRC<CR>
 map <Leader>sc :tabe db/schema.rb<CR>
 map <Leader>tree :tabe .<CR>jjjj
 map <Leader>new :tabe .<CR>jjjj
 map <Leader>spec :tabe spec<CR>jjjj
-map <Leader>model :tabe app/models<CR>jjjj
+map <Leader>app :tabe app<CR>jjjj
+map <Leader>models :tabe app/models<CR>jjjj
 map <Leader>con :tabe app/controllers<CR>jjjj
-map <Leader>view :tabe app/views<CR>jjjj
-map <Leader>mailer :tabe app/mailers<CR>jjjj
+map <Leader>views :tabe app/views<CR>jjjj
+map <Leader>mail :tabe app/mailers<CR>jjjj
+map <Leader>job :tabe app/jobs<CR>jjjj
+map <Leader>assets :tabe app/assets<CR>jjjj
 map <Leader>db :tabe db<CR>jjjj
 map <Leader>javascript :tabe app/javascript<CR>jjjj
 map <Leader>railsc :!rails console<CR>
@@ -106,12 +110,8 @@ map <Leader>: :Tabularize /^[^:]*:\zs/l0l1<CR>
 " Insert Mode Mapping
 imap jk <ESC>:w<CR>
 imap kj <ESC>:w<CR>
-imap § #{}
-imap "<Tab> ""<Left>
-imap '<Tab> ''<Left>
-autocmd FileType ruby          imap debug<Tab> puts "-"*30<CR>
-autocmd FileType eruby         imap er<Tab> <%  %><Left><Left><Left>
-autocmd FileType eruby         imap pe<Tab> <%=  %><Left><Left><Left>
+imap § #{}<Left>
+autocmd FileType ruby          imap debug<Tab> puts "-"*30
 
 
 """""""""""""""""""""""""
@@ -120,12 +120,17 @@ autocmd FileType eruby         imap pe<Tab> <%=  %><Left><Left><Left>
 
 " SET and Display options
 syntax on
+set noerrorbells
+set smartindent
+set smartcase
 set number
 set backspace=indent,eol,start
 set tags=tags
 set wrap                         " not wrapping lines
 set cursorline                   " set line under cursor
-set cursorcolumn                   " set line under cursor
+set cursorcolumn                 " set line under cursor
+set incsearch                    " incremental search
+" set hlsearch                     " highlight search
 " set nocursorline
 " set encoding=utf-8
 " set fileencoding=utf-8
