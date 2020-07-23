@@ -1,9 +1,8 @@
-task :eslint do
-  system "../../node_modules/.bin/eslint lib/*.js"
-end
+require 'rake'
+require 'rake/testtask'
 
-task :mocha do
-  system "../../node_modules/.bin/mocha spec/*.js"
-end
+require 'minitest/autorun'
+require 'minitest/pride'
 
-task default: [:eslint, :mocha]
+task :default do
+end
