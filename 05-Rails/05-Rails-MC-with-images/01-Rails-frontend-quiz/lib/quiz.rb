@@ -2,8 +2,8 @@
 # and make sure each of the methods `return` the correct answer.
 
 
-def rails_app_with_wepback
-  # TODO: Return a `String` with the write command to create a new rails app called `mister-cocktail` with webpack.
+def rails_app
+  # TODO: Return a `String` with the write command to create a new rails app called `mister-cocktail`.
 end
 
 def modern_javascript

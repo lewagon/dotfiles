@@ -1,9 +1,9 @@
 require "quiz"
 
 describe "quiz" do
-  describe "#rails_app_with_wepback" do
+  describe "#rails_app" do
     it "should return the correct answer" do
-      expect(rails_app_with_wepback).to eq("rails new mister-cocktail --webpack")
+      expect(rails_app).to eq("rails new mister-cocktail")
     end
   end
 
