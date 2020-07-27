@@ -48,7 +48,7 @@ The controller will gather data from the cookbook to hand them over to the view.
 
 ### View
 
-The view is responsible for all the `puts` and `gets` of your code. Make sure you never have those words anywhere else! (except maybe for debugging)
+The view is responsible for all the `puts` and `gets` of your MVC. Make sure you never have those words anywhere else! (except maybe for debugging)
 
 ### Tying it all together
 
