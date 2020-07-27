@@ -164,6 +164,8 @@ class OrdersController
 end
 ```
 
+**Important**: since **ids** do not necessarily start from 1 and are not necessarily continuous, let's instead ask the user for **indexes** to improve the user experience.
+
 All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 3 - Optionals
