@@ -175,7 +175,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 In our app, a manager can't update or destroy an existing order.
 
 Implement these additional user actions:
-- As a manager, I can update an existing order
+- As a manager, I can edit an existing order
 - As a manager, I can delete an existing order
 
 Done? Time to `git add`, `commit` and `push`.
