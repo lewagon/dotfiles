@@ -170,13 +170,13 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 3 - Optionals
 
-### 3.1 - Implement update and destroy actions for meal and customer
+### 3.1 - Implement `edit` and `destroy` actions for orders
 
-In our app, a manager can't update or destroy an existing order.
+In our app, a manager can't edit or destroy an existing order.
 
 Implement these additional user actions:
-- As a manager, I can update an existing order
-- As a manager, I can delete an existing order
+- As a manager, I can edit an existing order
+- As a manager, I can destroy an existing order
 
 Done? Time to `git add`, `commit` and `push`.
 
