@@ -1,22 +1,18 @@
 ## Background and Objectives
 
-Accessibility is the art of building website for everyone! Auditory, cognitive, physical, speech, and visual disabilities means the users could be using specific hardware or software tools to browse content. We refer to them as **assistive technology**. It can be screen readers, magnification software to zoom the content, speech input software, alternative input devices such as eye trackers, head pointers, and so many more, yet to invent...
+As developers, we tend to focus on how the web page appears _to us_ when we code. We forget that we all see differently! Accessibility (often referred to as [a11y](https://www.a11yproject.com/about/#what-does-the-term-a11y-mean)) is the art of building websites for everyone, including people with disabilities or impairments. A lot of people visit websites using **assistive technologies** like screen readers, magnification software to zoom the content, speech input software, alternative input devices such as eye trackers, head pointers, and so many more...
 
-Whether it's with audio, braille, or whatever technique, the purpose of assistive technology is to give the user a complete experience of the content. Coding choices will have a huge impact on compatibility with those tools. Accessibility is not an obscure science or a separate language, it's just a series of wise choices regarding HTML, CSS and Javascript. With a clean code, you can build something wonderful for everyone.
+As you can imagine, assistive technologies try to describe what the user cannot see. Using the right HTML/CSS will have a huge impact on how these technologies can explore and describe the page's content. Writing accessible code is not an obscure science or a separate language, it's just a series of wise choices and principles. With the right code, you can build something wonderful for everyone.
 
-
+This challenge is more of a tutorial to let you discover the a11y principles.
 
 ## Specs
 
-Let's fix a page that has been coded without any care for accessibility. The challenge combines three major accessibility topics: **Styling**, **Semantics** and **Focus**.
+Let's fix a page that has been coded without any care for accessibility. The challenge covers the three pilars of accessibility: **Styling**, **Semantics** and **Focus**.
 
 ![Main topics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/main-topics.png)
 
-It's strongly advised to use Chrome. You'll make an intensive use of **Developer Tools** panels, many useful tools for accessibility are already built-in Chrome. If you can't find a panel, there's a chance it is still hidden in the menus. Find it here:
-
-![Panels](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/panels.png)
-
-
+**Setup**
 Start by running a server:
 
 ```ruby
@@ -24,51 +20,55 @@ cd accessibility-guidelines
 serve
 ```
 
+We strongly recommend using Chrome. You will make an intensive use of the **Developer Tools** panels where Chrome has many useful tools for accessibility built-in. Open the developer tools and place them on the right:
+
+![Chrome setup](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/chrome-setup.png)
 
 
 ## Styling
 
 ![Styling topic](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/styling-topic.png)
 
-Graphic design is meant to express a lot of messages through colors, forms, layout, etc. but let's keep in mind that the main goal is to pass information.  Subtile design choices can sometimes make the content difficult to read. Visual impairment is very common, a large part of the population need glasses to read screens at one point of their lifetime. Some people with color-blindness see colors in different spectrums. The goal of styling an app in to find the perfect balance between graphics and readability.
+Graphic design is meant to express a lot of messages through colors, forms, layout, etc. but let's keep in mind that the main goal is to deliver **information**. Subtle design choices can sometimes make the content difficult to read. Visual impairment is very common, a large part of the population wears glasses. Colorblinds see colors in different spectrums. The goal of styling an app in to find the right balance between graphics and readability.
 
 
 
-### Explore
+#### Vision Deficiencies
+First, let's emulate different kind of visual deficiencies and observe the way our page renders:
+
+1. Open the **Rendering** panel in the Developer Tools in the **More tools** menu
+2. At the very bottom of the panel, find the last menu "Emulate Vision Deficiencies" and select all the values to see the rendering differences
+3. Try to spot the styling detail in the form that cannot be seen when emulating colorblindness deficiencies
+
+<details><summary markdown='span'>View solution
+</summary>
+The comment section is outlined with a pink border. Hard to spot when selecting Protanopia or Deuteranopia, right?
+</details>
 
 
-#### Vision Deficiencies:
-
-1. Open the **Rendering** panel in Chrome Developer Tools
-2. At the very bottom of the panel, find the last menu "Emulate Vision Deficiencies"
-3. Try to spot the information that cannot be read when emulating various deficiencies.
-
-Note that we simulated an error in the form, the comment section is outlined with a pink border. Can you see it when selecting Protranopia or Deuteranopia?
-
-
-#### Contrast:
-
-1. Open the **Styles** panel in Chrome Developer Tools
-2. Inspect any title (`h1`, `h2` or `h3`)
-3. Click on the color to open the color picker
+#### Contrast
+Now, let's have a look at how Chrome assesses the contrast in our page.
+1. Open the **Styles** panel in the **Elements** tab
+2. Inspect the main heading `<h1>` (or any other secondary `<h2>` or tertiary `<h3>` heading)
+3. Click on the color to open the color picker, and look at the contrast score
 
 ![Contrast](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/contrast.png)
 
-Notice that the contrast ratio is marked as insufficient. Contrast is the difference between two colors. Colors that are too similar tend to blend together and lower readability. In our page the titles are too dim.
+The contrast ratio is marked as insufficient. Contrast is the difference between two colors. Colors that are too similar tend to blend together and lower readability. In our page the titles are too dim, we will fix that in a minute.
 
 
-#### Font-size:
+#### Font-size
 
-1. Open Chrome settings
-2. Open **Appearance** page (or type this URI chrome://settings/appearance)
-3. Change the default font-size to a bigger one
+1. Open Chrome settings (`cmd ,` or `ctrl ,`)
+2. Select the **Appearance** menu
+3. Change the default font-size from `Medium` to `Very Large` and go back to [localhost:8000](http://localhost:8000)
 
 ![Contrast](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/font-size.png)
 
-You probably expected to see the text in a bigger font. Unfortunately it doesn't change anything to your page, that's because all the font sizes as set in fixed pixels. Some [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) are relative (`em`, `rem`) to the default browser font-size. More often is it set to 16px. When the user change the settings, all fonts with relative units change proportionally.
+You probably expected to see the text in a bigger font. Unfortunately it has not changed anything, because all the font sizes are set in pixels. Some [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) are relative (`em`, `rem`) to the default browser's font-size. When the user changes the settings, all fonts with relative units change proportionally.
 
 
-#### Viewport:
+#### Viewport
 
 1. Open Chrome Developer Tools
 2. Click on the **Toggle device toolbar** button
@@ -76,11 +76,10 @@ You probably expected to see the text in a bigger font. Unfortunately it doesn't
 
 ![Viewport](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/viewport.png)
 
-You page appears smaller than expected, it is shrunk. To get how the size of the page is calculated, we must understand how mobile display web pages. They often render at a bigger width and they zoom out the whole thing. It is done intentionally because most websites are optimised for wider screen and content is spread horizontally. There is a way to change the format of the page, also called [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) by adding a special meta tag in `<head>`.
+You page appears smaller than expected, it is shrunk. To get how the size of the page is calculated, we must understand how mobiles display web pages. They often render at a bigger width and they zoom out the whole page. It is done intentionally because most websites are optimised for wider screens and content is spread horizontally. There is a way to change the format of the page, also called [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) by adding a special meta tag in the `<head>`.
 
 
-
-### Take action
+### Your turn
 
 Open `style.css` to fix readability for everyone.
 
@@ -94,7 +93,7 @@ Open `index.html` to fix content
 - Spot the `textarea`, it has an `error` class. The light outline is not a clear information and cannot be seen by everyone. Add a paragraph below the `textarea` with a message about the error: `<p class="error-message">Comment must not be blank</p>`
 - Force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the available width for your page. Put the following tag in the `<head>`:
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-- Avoid content reordering. Remember accessibility technology reads content from the code, not from the rendered page. In your page, the navigation widget is at the bottom of the code, but at the top of the page. Place it at the beginning so it can be read first by the users. 
+- Avoid content reordering. Remember accessibility technology reads content from the code, not from the rendered page. In your page, the navigation widget is at the bottom of the code, but at the top of the page. Place it at the beginning so it can be read first by the users.
 
 
 
@@ -107,8 +106,8 @@ Let's play a game. Those two websites look absolutely similar, but what makes th
 ![Semantics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics.svg?sanitize=true)
 
 The first website rely on CSS styling to structure the content. The second one makes a very wise use of native HTML tags and reclaims the natural roles of the elements. Is the final result the same? Well, not really, the first is only visual, the second can be interpreted by any assistive technology too.
- 
-The source code is the starting point to generate two user interfaces: 
+
+The source code is the starting point to generate two user interfaces:
 - a **graphical interface** that you can **see** in a browser
 - an **accessibility tree** that you can perceive with **other senses** through **assistive technology**.
 
@@ -128,7 +127,7 @@ Assistive technology kind of "understands" code, it knows that the content is mo
 
 ![Accessibility panel](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility.png)
 
-Spot the `role` attribute, it is one of the most important. 
+Spot the `role` attribute, it is one of the most important.
 You'll find they are great differences between **non-semantic** elements, like `div` or `span` which are just generic containers, and **semantics** elements like `h1`, `nav` which have specific `role`.
 
 When coding, the best practise is to use native [HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics) because they have built-in behaviours. But it's not always possible. Custom components, like a loading bar for example, have no others options than a hierarchy of generic `div` containers. The good news is you still have the opportunity to be caught up by the accessibility tree. Special attributes, named [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) after the standard **Accessible Rich Internet Application**, can be added to any element.
@@ -164,7 +163,7 @@ Assistive technology tools go beyond than just read, they add essential navigati
 In conclusion, some elements have implicit accessibility attributes, they structure the content or add interactions details. We can add more properties to custom components the preserve the user experience.
 
 
-### Take action
+### Your turn
 
 Open `index.html`, fix it by adding **semantic** logic.
 
@@ -228,12 +227,11 @@ If you pay attention, the focus gets trapped in the page somewhere at the beginn
 When the navigation is hidden to your eyes, it is still available in the HTML document. The focus will trigger it anyway. To avoid this behaviour and it from the accessibility tree, use CSS properties such as `visibility: hidden` or `display: none`. The element will be hidden from both the browser and the accessibility tree.
 
 
-### Take action
+### Your turn
 Open `nav.css` to fix the focus problem.
 
 - When closed, the navigation list must be hidden from the accessibility tree. Add `visibility: hidden;` to it's default state
 - On the nav open state, add `visibility: visible;`
-
 
 
 
