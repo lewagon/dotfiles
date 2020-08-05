@@ -6,5 +6,5 @@ def generate_grid(grid_size)
 end
 
 def run_game(attempt, grid, start_time, end_time)
-  # TODO: runs the game and return detailed hash of result (with `:score`, `:message` and `:time`)
+  # TODO: runs the game and return detailed hash of result (with `:score`, `:message` and `:time` keys)
 end
