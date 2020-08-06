@@ -2,7 +2,7 @@
 
 As developers, we tend to focus on how the web page appears _to us_ when we code. We forget that we all see differently! Accessibility (often referred to as [a11y](https://www.a11yproject.com/about/#what-does-the-term-a11y-mean)) is the art of building websites for everyone, including people with disabilities or impairments. A lot of people visit websites using **assistive technologies** like screen readers, magnification software to zoom the content, speech input software, alternative input devices such as eye trackers, head pointers, and so many more...
 
-As you can imagine, assistive technologies try to describe what the user cannot see. Using the right HTML/CSS will have a huge impact on how these technologies can explore and describe the page's content. Writing accessible code is not an obscure science or a separate language, it's just a series of wise choices and principles. With the right code, you can build something wonderful for everyone.
+As you can imagine, assistive technologies try to bridge the user's disabilities. Using the right HTML/CSS will have a huge impact on how these technologies can explore and describe the page's content. Writing accessible code is not an obscure science or a separate language, it's just a series of wise choices and principles. With the right code, you can build something wonderful for everyone.
 
 This challenge is more of a tutorial to let you discover the a11y principles.
 
