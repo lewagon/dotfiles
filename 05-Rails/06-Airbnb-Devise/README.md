@@ -1,14 +1,14 @@
 ## AirBnB Week
 
-You will spend the next 5 days in your Projects group of 3 or 4, working on an AirBnB clone (you don't have to rent **flats**, be creative!)
+You will spend the next sessions with your Project Group working on an Airbnb clone (you don't have to rent **flats**, be creative!)
 
 ### Demos
 
-You will demo your work (in production, no demo on `localhost`!) on Wednesday and Friday nights. Deadlines matter!
+You will demo your work (in production, no demos on `localhost`!) during the **Geocoding** and **AJAX in Rails** sessions. Deadlines matter!
 
-### Kick-start (Monday morning)
+### Part I
 
-Work on the following steps and validate them with a coach on Monday morning before creating your Rails app and starting to code in the afternoon. You will save a lot of time by doing this, trust us.
+Work on the following steps and validate them with a teacher at the start of the session before creating your Rails app and moving on to Part II. You will save a lot of time by doing this, trust us.
 
 #### 1 - User stories
 
@@ -45,7 +45,7 @@ Go back to your User stories spreadsheet and add the following information:
 
 Create a ticket to validate them with a teacher. All good? Time for the `rails new`!
 
-### Setup (Monday afternoon)
+### Part II
 
 Before splitting the tasks among the team, set your project up together. The **lead developer** (and only him/her) should:
 
