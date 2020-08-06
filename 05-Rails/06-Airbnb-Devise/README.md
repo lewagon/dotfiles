@@ -1,10 +1,10 @@
 ## AirBnB Week
 
-You will spend the next sessions with your Project Group working on a AirBnB clone (you don't have to rent **flats**, be creative!)
+You will spend the next sessions with your Project Group working on an Airbnb clone (you don't have to rent **flats**, be creative!)
 
 ### Demos
 
-You will demo your work (in production, no demos on `localhost`!) durning the **Geocoding** and **AJAX in Rails** sessions. Deadlines matter!
+You will demo your work (in production, no demos on `localhost`!) during the **Geocoding** and **AJAX in Rails** sessions. Deadlines matter!
 
 ### Part I
 
