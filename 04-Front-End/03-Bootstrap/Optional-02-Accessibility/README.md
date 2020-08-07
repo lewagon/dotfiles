@@ -1,18 +1,19 @@
 ## Background and Objectives
 
-As developers, we tend to focus on how the web page appears _to us_ when we code. We forget that we all see differently! Accessibility (often referred to as [a11y](https://www.a11yproject.com/about/#what-does-the-term-a11y-mean)) is the art of building websites for everyone, including people with disabilities or impairments. A lot of people visit websites using **assistive technologies** like screen readers, magnification software to zoom the content, speech input software, alternative input devices such as eye trackers, head pointers, and so many more...
+As developers, we tend to focus on how the web page appears _to us_ when we code. We forget that we all see differently! Accessibility is the art of building websites for everyone, including people with disabilities or impairments. A lot of people visit websites using **assistive technologies** like screen readers, magnification software to zoom the content, speech input software, alternative input devices such as eye trackers, head pointers, and so many more...
 
-As you can imagine, assistive technologies try to bridge the user's disabilities. Using the right HTML/CSS will have a huge impact on how these technologies can explore and describe the page's content. Writing accessible code is not an obscure science or a separate language, it's just a series of wise choices and principles. With the right code, you can build something wonderful for everyone.
+Coding choices will have a huge impact on how these technologies can bridge the user's disabilities. But writing accessible app is not an obscure science or a separate language, it's just a series of wise principles. With the right code, you can build something wonderful for everyone.
 
-This challenge is more of a tutorial to let you discover the a11y principles.
+
 
 ## Specs
 
-Let's fix a page that has been coded without any care for accessibility. The challenge covers the three pilars of accessibility: **Styling**, **Semantics** and **Focus**.
+This challenge is more of a tutorial. You'll fix a page that has been coded without any care for inclusivity and discover the pilars of accessibility: **Styling**, **Semantics** and **Focus**.
 
 ![Main topics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/main-topics.png)
 
 **Setup**
+
 Start by running a server:
 
 ```ruby
@@ -25,75 +26,57 @@ We strongly recommend using Chrome. You will make an intensive use of the **Deve
 ![Chrome setup](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/chrome-setup.png)
 
 
+
 ## Styling
 
 ![Styling topic](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/styling-topic.png)
 
-Graphic design is meant to express a lot of messages through colors, forms, layout, etc. but let's keep in mind that the main goal is to deliver **information**. Subtle design choices can sometimes make the content difficult to read. Visual impairment is very common, a large part of the population wears glasses. Colorblinds see colors in different spectrums. The goal of styling an app in to find the right balance between graphics and readability.
+Subtle design choices can make the content difficult to read. Visual impairment is very common, a large part of the population wears glasses and color-blind people see colors in different spectrums. The goal of styling an app in to find the right balance between nice graphics and readability.
 
 
+#### Add text indications to counteract vision deficiencies
 
-#### Vision Deficiencies
-First, let's emulate different kind of visual deficiencies and observe the way our page renders:
+![Vision](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/vision.png)
 
-1. Open the **Rendering** panel in the Developer Tools in the **More tools** menu
-2. At the very bottom of the panel, find the last menu "Emulate Vision Deficiencies" and select all the values to see the rendering differences
-3. Try to spot the styling detail in the form that cannot be seen when emulating colorblindness deficiencies
-
-<details><summary markdown='span'>View solution
-</summary>
-The comment section is outlined with a pink border. Hard to spot when selecting Protanopia or Deuteranopia, right?
-</details>
+1. Open the **Rendering** panel (via the **More tools** menu)
+2. Find the last menu **Emulate Vision Deficiencies** and test all the rendering differences.
+The comment `textarea` in the page is outlined with a pink border to emulate an error state. Hard to discern when selecting Protanopia or Deuteranopia, right?
+3. Open `index.html` and add a written error message below the `textarea`:
+`<p class="error-message">Comment must not be blank</p>`
 
 
-#### Contrast
-Now, let's have a look at how Chrome assesses the contrast in our page.
-1. Open the **Styles** panel in the **Elements** tab
-2. Inspect the main heading `<h1>` (or any other secondary `<h2>` or tertiary `<h3>` heading)
-3. Click on the color to open the color picker, and look at the contrast score
+#### Increase contrast
 
 ![Contrast](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/contrast.png)
 
-The contrast ratio is marked as insufficient. Contrast is the difference between two colors. Colors that are too similar tend to blend together and lower readability. In our page the titles are too dim, we will fix that in a minute.
+1. Open the **Styles** panel in the **Elements** tab
+2. Inspect the main heading `<h1>` and notice that the contrast score is marked as insufficient. Colors that are too similar tend to blend together and lower readability.
+3. Choose colors with appropriate contrast for all the titles. Test directly from the **color picker** to see the difference in real time.
+![Pick a color](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/color.png)
+4. Update your color choices in `style.css`
 
 
-#### Font-size
+#### Make the font-size more comfortable
+
+![Contrast](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/font-size.png)
 
 1. Open Chrome settings (`cmd ,` or `ctrl ,`)
 2. Select the **Appearance** menu
 3. Change the default font-size from `Medium` to `Very Large` and go back to [localhost:8000](http://localhost:8000)
-
-![Contrast](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/font-size.png)
-
-You probably expected to see the text in a bigger font. Unfortunately it has not changed anything, because all the font sizes are set in pixels. Some [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) are relative (`em`, `rem`) to the default browser's font-size. When the user changes the settings, all fonts with relative units change proportionally.
+You probably expected to see the text bigger. Unfortunately it has not changed anything because all the font are set in pixels. Only relative [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) change proportionally to the browser's defaults.
+4. Increase the font-size of `p` to be more comfortable, use Blurred vision emulator for reference. Use relative units (`em`).
 
 
-#### Viewport
+#### Allow the app to be responsive
+
+![Viewport](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/viewport.png)
 
 1. Open Chrome Developer Tools
 2. Click on the **Toggle device toolbar** button
 3. Choose a mobile preset
-
-![Viewport](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/viewport.png)
-
-You page appears smaller than expected, it is shrunk. To get how the size of the page is calculated, we must understand how mobiles display web pages. They often render at a bigger width and they zoom out the whole page. It is done intentionally because most websites are optimised for wider screens and content is spread horizontally. There is a way to change the format of the page, also called [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) by adding a special meta tag in the `<head>`.
-
-
-### Your turn
-
-Open `style.css` to fix readability for everyone.
-
-- Fix color contrast to all the titles (`h1`, `h2`, `h3`).
-- Increase the font-size of `p` to ease readability (use the Blurred vision emulator for reference).
-- Allow custom font-size by using relative units (`em`) instead of pixels.
-
-
-Open `index.html` to fix content
-
-- Spot the `textarea`, it has an `error` class. The light outline is not a clear information and cannot be seen by everyone. Add a paragraph below the `textarea` with a message about the error: `<p class="error-message">Comment must not be blank</p>`
-- Force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the available width for your page. Put the following tag in the `<head>`:
+Your page appears smaller than expected and shrunk. This is a consequence of how mobiles display web content: they render at a bigger width and zoom out the whole page. It is intentional because most websites are optimised for horizontal screens.
+4. In `index.html`, force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the width of your page. Put the following tag in `<head>`:
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-- Avoid content reordering. Remember accessibility technology reads content from the code, not from the rendered page. In your page, the navigation widget is at the bottom of the code, but at the top of the page. Place it at the beginning so it can be read first by the users.
 
 
 
@@ -101,106 +84,67 @@ Open `index.html` to fix content
 
 ![Semantics topic](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics-topic.png)
 
-Let's play a game. Those two websites look absolutely similar, but what makes them different?
-
 ![Semantics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics.svg?sanitize=true)
 
-The first website rely on CSS styling to structure the content. The second one makes a very wise use of native HTML tags and reclaims the natural roles of the elements. Is the final result the same? Well, not really, the first is only visual, the second can be interpreted by any assistive technology too.
+Those two websites look similar, but what makes them different? The first rely on CSS to structure the content. The second one reclaims the natural roles of the HTML elements. Is the final result the same? Well, not really, assistive technology interprets correctly only the second one.
 
-The source code is the starting point to generate two user interfaces:
-- a **graphical interface** that you can **see** in a browser
-- an **accessibility tree** that you can perceive with **other senses** through **assistive technology**.
+Behind the scene, assistive technology relies on code to render the page, much like browsers do. But it needs an overlay of **semantic** information to be able to name and describe the elements to the user. For example, to perform intelligible audio descriptions of `a` tags:
 
-![Accessibility Tree](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility-tree.svg?sanitize=true)
+![Audio](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/audio.png)
 
-Assistive technology kind of "understands" code, it knows that the content is more than just words. It reads the text and constantly adds some context. For example, a link labeled "Accessibility Principles" in VoiceOver for mac will be spoken out like this: "visited, link, Accessibility Principles / You are currently on a link, to click this link press Control-Option-Space".
-
-
-
-### Explore
-
-#### Semantic elements
-
-1. Open the **Accessibility** panel.
-2. With the inspect tool, wander around the page to inspect some of the elements.
-3. Have a look each time at the accessibility properties in the panel.
-
-![Accessibility panel](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility.png)
-
-Spot the `role` attribute, it is one of the most important.
-You'll find they are great differences between **non-semantic** elements, like `div` or `span` which are just generic containers, and **semantics** elements like `h1`, `nav` which have specific `role`.
-
-When coding, the best practise is to use native [HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics) because they have built-in behaviours. But it's not always possible. Custom components, like a loading bar for example, have no others options than a hierarchy of generic `div` containers. The good news is you still have the opportunity to be caught up by the accessibility tree. Special attributes, named [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) after the standard **Accessible Rich Internet Application**, can be added to any element.
-
-ARIA attributes can also translate interactions made through Javascript. Imagine a  page with tabs. Tabs can be clicked, can be switched, they basically have [states](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets). A good implementation of ARIA attributes can mimic those interactive behaviours to assistive technology.
-
-Bootstrap which is a solid accessible framework, applies all the necessary ARIA attributes to its components. Please keep them, they are precious to assistive technology.
-
-
-#### Form
-- Take time to carefully inspect some `input` elements in the form
-- Try to click on "Styling" next to a checkbox
-- Try to click on "Yes" next to a radio button, is there a difference?
-
-Inputs, textareas have a lot more attributes below `role`. They need special properties to match their complex behaviours and states. See the `name` property? It is filled with the text of another tag: the label. Labels go hand in hand with inputs. The first indicates what is expected and the second saves the user's choice.
-Label can also be clicked, checkboxes and radio buttons can be ticked with a click on the label. In your page, the radio button functionality seems broken, isn't the label missing?
-
-
-#### Meaning
-
-Some informations in the page are only visual, try to spot them all:
-
-- Images
-- Read the title of the tab in the browser
-- There a link labeled "clear here"
-- In the footer the arrow button, with no text
-
-Images, links, tabs, buttons are all part of the content. When the design delivers rely on visual information or context, we must back it up with semantic code to give all users a similar experience.
-Assistive technology tools go beyond than just read, they add essential navigation functionalities. All users tend to overview the content before they decide to read deeper. That's why screens readers build list of major elements like **links** or **headings**, with a direct access to specific parts:
+Tools can do a lot beyond reading, they extend navigation functionalities. VoiceOver build summaries of major elements with a direct access, here a list of headings:
 
 ![VoiceOver](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/voiceover.png)
 
-In conclusion, some elements have implicit accessibility attributes, they structure the content or add interactions details. We can add more properties to custom components the preserve the user experience.
+The semantic information is infered from:
+- Native [HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics), like headings, navigation, etc. They have implicit roles understood by a wide range of assistive tools.
+- [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), a complete set of attributes that patch missing information. They can even mimic interactions made through Javascript. You'll find lots of examples in Bootstrap, a solid accessible framework with all the necessary ARIA attributes added to its components.
+
+![User Interface](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/user-interface.svg?sanitize=true)
 
 
-### Your turn
+#### Add semantic logic to structure the page
 
-Open `index.html`, fix it by adding **semantic** logic.
+It's considered a best practice to use native HTML elements when possible.
 
-#### Semantic elements:
-- Replace generic div containers with [HTML5 semantic elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics) (`<header>`, `<main>` and `<footer>`).
-- Titles are marked by classes (`.title` and `.subtitle`). Replace them with dedicated heading tags from `h2` and `h3`.
-- Use `p` for paragraphs instead of div with `.content` class.
+![Accessibility panel](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility.png)
 
-
-#### Form
-- One of the input type does not match the question it is supposed to address.
-Find the input when the user enters a zoom scale. The input if of type `text`, could you find a better [input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)?
-- Add missing [`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) to inputs "yes" and "no":
-
-```html
-<input type="radio" name="explanations" id="yes">
-<label for="yes">Yes</label>
-<input type="radio" name="explanations" id="no">
-<label for="no">No</label>
-```
-
-A label refers to an input's `id` with the attribute `for`
-
-```html
-<label for="yes">
-<input type="radio" id="yes">
-```
+1. Open the **Accessibility** panel.
+2. With the **Inspect tool**, inspect the `h1` tag and one `div`.
+3. Have a look each time at the accessibility properties in the panel. The `role` attribute, it is one of the most important.
+Wander through the page if you like to explore more. You'll find great differences between **non-semantic** elements, like `div` or `span` which are just generic containers, and **semantics** elements like `h1`, `nav` with specific `role`.
+4. Replace generic `div` with their HTML5 counterparts: 
+	- `<header>`, `<main>` and `<footer>` for the structure
+	- `h2` and `h3` for the headings
+	- `p` for paragraphs.
 
 
-#### Meaning:
-- Add alternative text to the images. Use the [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img) attribute to describe precisely the image for those who won't see it.
-- The link "click here" doesn't give any information about the URL. Remember screen readers build lists of links to enable direct access. Lists can't be a succession of "clear here", "read more" or any generic instructions. Replace the text with a clear description: "Accessibility Principles".
-- In the footer, there is a button with no text to move to the top. Add an ARIA attribute to make it available to the accessibility tree : `aria-label="Back to top"`.
-- Add a `lang` attribute to the html tag: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
-- Add a `<title>` tag to the page in `<head>`: `<title>Accessibility Guidelines</title>`.
+#### Add precise interactions to the form
+
+Input elements have a lot of specific properties to relay their complex behaviours. See their `name` property? It is filled with the text of another tag: the [`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label). Labels always go hand in hand with inputs.
+
+1. When you click on the word "Styling", it selects the related checkbox. When you try to click "Yes", it seems broken compared to the previous test. It's because the "Yes" is not tagged as `label` in the HTML.
+2. Open `index.html` and fix missing labels to radio buttons "Yes" and "No":
+
+	```html
+	<input type="radio" name="explanations" id="yes">
+	<label for="yes">Yes</label>
+	<input type="radio" name="explanations" id="no">
+	<label for="no">No</label>
+	```
+3. The "zoom scale" input is supposed to be filled with a number, but is declared of type `text`. Find a more appropriate [input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) to allow a correct description.
 
 
+
+#### Add missing information
+
+When information is only visual or cannot live without context, we must back it up with semantic code to deliver all users a similar experience. [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) come to the rescue when no native HTML element is relevant to the situation.
+
+1. Add alternative description to the images with the [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img) attribute.
+3. The link "click here" is too vague, replace the text with a clear intention: "Accessibility Principles".
+4. The arrow in the footer is a link to the top. Compensate the lack of text with ARIA: `aria-label="Back to top"`.
+5. Specify the language in the `html` tag: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
+6. Insert the title of the page in `<head>`: `<title>Accessibility Guidelines</title>`, it will be read when switching from tab to tab.
 
 
 ## Focus
@@ -208,30 +152,19 @@ A label refers to an input's `id` with the attribute `for`
 ![Focus topic](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/focus-topic.png)
 
 Have you ever noticed the blue outline when you type in a form? Some developers get rid of it with a little CSS because it doesn't suit their design. Don't do it! This blue outline is a **focus ring**, it's highly important for keyboard users.
-
-Focus highlights the element that receives the user input. Only interactive elements are triggered by focus (links and form elements), content items (text and images) are not focusable. Focus will follow the same order than the HTML document. While it possible to reorder the focus sequence with [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex), it's not recommended and considered an anti-pattern.
-
-
-### Explore:
-
-Practice the keyboard-only navigation:
-
-- Use tab to move forward in the page / Use SHIFT + tab to move backward
-- Use arrow keys to select values in a form
-- Use space bar to tick checkboxes
-- Press Enter to submit
+Only interactive elements can receive focus, content items (text and images) are not focusable. Focus jumps from element to element in the same order than the HTML. Though it is possible to manage the orders with the [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute, it's considered an anti-pattern.
 
 ![Link](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/link.png)
 
-If you pay attention, the focus gets trapped in the page somewhere at the beginning. Did you notice that you pressed tab three times without any feedback? Can you guess what happened?
-When the navigation is hidden to your eyes, it is still available in the HTML document. The focus will trigger it anyway. To avoid this behaviour and it from the accessibility tree, use CSS properties such as `visibility: hidden` or `display: none`. The element will be hidden from both the browser and the accessibility tree.
-
-
-### Your turn
-Open `nav.css` to fix the focus problem.
-
-- When closed, the navigation list must be hidden from the accessibility tree. Add `visibility: hidden;` to it's default state
-- On the nav open state, add `visibility: visible;`
+1. Practice the keyboard-only navigation:
+	- TAB to move forward in the page / SHIFT + TAB to move backward
+	- Arrow keys to select values in a form
+	- SPACE bar to tick checkboxes
+	- ENTER to submit
+	
+	Did you notice that you pressed TAB three times without any feedback? You actually focused the three links of the hidden navigation widget. Hint: when an element is hidden to your eyes, it doesn't mean it is hidden from the code.
+2. Show/hide the navigation from the HTML document: add `visibility: hidden;` to its default state and `visibility: visible;` to its open state in `nav.css`.
+3. Now the CSS is fixed, open the navigation and try to focus it again. See the links are the last items to receive focus, out of the page's logic? Open `index.html` and move the navigation HTML code before `main` container.
 
 
 
@@ -260,7 +193,7 @@ Install [Accessibility Insights](https://accessibilityinsights.io) to run an aud
 - ["Accessibility" on developers.google](https://developers.google.com/web/fundamentals/accessibility/)
 - ["Accessible to all" on web.dev](https://web.dev/accessible/)
 - ["The POUR Methodology" on Adobe's blog](https://theblog.adobe.com/design-with-accessibility-in-mind-the-pour-methodology/)
+- The [a11y project](https://www.a11yproject.com/about/#what-does-the-term-a11y-mean)
 - ["A11ycasts with Rob Dodson" on Youtube](https://www.youtube.com/watch?v=HtTyRajRuyY&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 - [How visually impaired people navigate the web](https://uxdesign.cc/how-visually-impaired-people-navigate-the-web-7f9eab9d9c37)
 -["An overview of accessible web applications and widgets" on MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
-
