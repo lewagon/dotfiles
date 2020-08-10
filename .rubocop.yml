@@ -32,7 +32,7 @@ Style/SignalException:
   Enabled: false
 Metrics/CyclomaticComplexity:
   Enabled: false
-Style/MethodMissingSuper:
+Lint/MissingSuper:
   Enabled: false
 Style/MissingRespondToMissing:
   Enabled: false
