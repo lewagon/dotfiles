@@ -2,6 +2,7 @@ require_relative 'cookbook_helper'
 
 begin
   require 'recipe_factory'
+  require 'view'
 rescue
 end
 
