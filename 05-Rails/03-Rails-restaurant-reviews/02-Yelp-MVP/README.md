@@ -75,18 +75,19 @@ If you have trouble running `rake`, you may need to run `bin/rake`. It means tha
 
 #### Schema
 
-- A restaurant has a name, an address, a phone number, a category (chinese, italian...) and many reviews
-- A review has content (the text), a rating (between 0 and 5) and references a restaurant
+- A restaurant has a `name` (string), `address` (string), `phone_number` (string), `category` (string), and can have many reviews.
+- A review has a `rating` (integer), `content` (text), and belongs to a restaurant.
 
 **Question**: Can you draw this simple schema at [db.lewagon.com](http://db.lewagon.com)? Discuss with your buddy.
 
 #### Validation
 
-- A restaurant must have at least a name, an address and a category.
-- The restaurant category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`.
-- A review must have a parent restaurant.
-- A review must have content and a rating. The rating should be a number between 0 and 5.
-- When a restaurant is destroyed, all of its reviews should be destroyed as well.
+- A restaurant must have a name, an address and a category.
+- A restaurant's category must belong to this fixed list: `["chinese", "italian", "japanese", "french", "belgian"]`.
+- When a restaurant is destroyed, all of its reviews must be destroyed as well.
+- A review must belong to a restaurant.
+- A review must have content and a rating.
+- A review's rating must be a number between 0 and 5.
 
 Validate all model tests before moving to the routing layer. You can use this command:
 
