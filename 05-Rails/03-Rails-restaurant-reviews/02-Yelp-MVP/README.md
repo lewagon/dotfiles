@@ -96,7 +96,7 @@ rspec spec/models
 ```
 to selectively run tests in the `spec/models` folder.
 
-You can also manually test your code with the `rails console`. Do not forget to `reload!` between each code change!
+You can also manually test your code with the `rails console`. Don't forget to `reload!` between each code change!
 
 ```bash
 rails c
@@ -126,20 +126,20 @@ Asking yourself what routes you need is a very important step in your web-app bu
 ```
 GET "restaurants"
 ```
-- She/He can add a new restaurant, and be redirected to the `show view` of that new restaurant.
+- A visitor can add a new restaurant, and be redirected to the `show view` of that new restaurant.
 
 ```
 GET "restaurants/new"
 POST "restaurants"
 ```
 
-- She/He can see the details of a restaurant, with all the reviews related to the restaurant.
+- A visitor can see the details of a restaurant, with all the reviews related to the restaurant.
 
 ```
 GET "restaurants/38"
 ```
 
-- She/He can add a new review to a restaurant
+- A visitor can add a new review to a restaurant
 
 ```
 GET "restaurants/38/reviews/new"
