@@ -40,4 +40,7 @@ export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bi
 # For tmuxinator
 export EDITOR=vim
 
+# Disable Spring for caching
+export DISABLE_SPRING=true
+
 ctags=/usr/local/bin/ctags
