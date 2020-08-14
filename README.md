@@ -76,7 +76,9 @@ To install Emmet vim you can follow [this instructions](https://vimawesome.com/p
 brew install rename
 brew install tree
 brew install ack
+brew cask install chromium
 ```
+
 ## Un lien utile pour le setup de son mac
 
 [Ici](https://sourabhbajaj.com/mac-setup/)
