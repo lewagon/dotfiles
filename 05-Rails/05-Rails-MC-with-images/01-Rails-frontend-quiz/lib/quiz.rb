@@ -3,7 +3,7 @@
 
 
 def rails_app
-  # TODO: Return a `String` with the write command to create a new rails app called `mister-cocktail`.
+  # TODO: Return a `String` with the right command to create a new rails app called `mister-cocktail`.
 end
 
 def modern_javascript
