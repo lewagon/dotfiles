@@ -80,9 +80,9 @@ alias rdb='rdd rdc rdm'
 #Push your code to Heroku
 alias gph='git push heroku master'
 
-alias hpass = 'git push chateaupass master'
-alias hdm = 'heroku run rails db:migrate --app chateaupass'
-alias hrc = 'heroku run rails c --app chateaupass'
+alias hpass='git push chateaupass master'
+alias hdm='heroku run rails db:migrate --app chateaupass'
+alias hrc='heroku run rails c --app chateaupass'
 
 
 # GIT 
