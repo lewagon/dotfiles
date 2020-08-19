@@ -2,8 +2,7 @@
 
 As developers, we tend to focus on how the web page appears _to us_ when we code. We forget that we all see differently! Accessibility is the art of building websites for everyone, including people with disabilities or impairments. A lot of people visit websites using **assistive technologies** like screen readers, magnification software to zoom the content, speech input software, alternative input devices such as eye trackers, head pointers, and so many more...
 
-Coding choices will have a huge impact on how these technologies can bridge the user's disabilities. But writing accessible app is not an obscure science or a separate language, it's just a series of wise principles. With the right code, you can build something wonderful for everyone.
-
+Coding choices have a huge impact on how these technologies can bridge the user's disabilities. But writing accessible app is not an obscure science or a separate language, it's just a series of wise principles. With the right code, you can build something wonderful for everyone.
 
 
 ## Specs
@@ -31,18 +30,21 @@ We strongly recommend using Chrome. You will make an intensive use of the **Deve
 
 ![Styling topic](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/styling-topic.png)
 
-Subtle design choices can make the content difficult to read. Visual impairment is very common, a large part of the population wears glasses and color-blind people see colors in different spectrums. The goal of styling an app in to find the right balance between nice graphics and readability.
+Subtle design choices can make the content difficult to read. Visual impairment is very common, a large part of the population wears glasses and color-blind people see colors in different spectrums. The goal of styling an app is to find the right balance between nice graphics and readability.
 
 
-#### Add text indications to counteract vision deficiencies
+#### Add text to UI warnings
 
 ![Vision](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/vision.png)
 
 1. Open the **Rendering** panel (via the **More tools** menu)
 2. Find the last menu **Emulate Vision Deficiencies** and test all the rendering differences.
-The comment `textarea` in the page is outlined with a pink border to emulate an error state. Hard to discern when selecting Protanopia or Deuteranopia, right?
-3. Open `index.html` and add a written error message below the `textarea`:
-`<p class="error-message">Comment must not be blank</p>`
+The comment `textarea` in the page is outlined with a pink border to point out an error. Hard to discern when selecting Protanopia or Deuteranopia, right?
+3. Open `index.html` and add an error message below the `textarea`:
+
+```html
+<p class="error-message">Comment can't be blank</p>
+```
 
 
 #### Increase contrast
@@ -51,7 +53,7 @@ The comment `textarea` in the page is outlined with a pink border to emulate an 
 
 1. Open the **Styles** panel in the **Elements** tab
 2. Inspect the main heading `<h1>` and notice that the contrast score is marked as insufficient. Colors that are too similar tend to blend together and lower readability.
-3. Choose colors with appropriate contrast for all the titles. Test directly from the **color picker** to see the difference in real time.
+3. Choose colors with the appropriate contrast for all the titles. Test directly from the **color picker** to see the difference in real time.
 ![Pick a color](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/color.png)
 4. Update your color choices in `style.css`
 
@@ -64,21 +66,20 @@ The comment `textarea` in the page is outlined with a pink border to emulate an 
 2. Select the **Appearance** menu
 3. Change the default font-size from `Medium` to `Very Large` and go back to [localhost:8000](http://localhost:8000)
 You probably expected to see the text bigger. Unfortunately it has not changed anything because all the font are set in pixels. Only relative [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) change proportionally to the browser's defaults.
-4. Increase the font-size of `p` to be more comfortable, use Blurred vision emulator for reference. Use relative units (`em`).
+4. Replace font sizes with relative units (`em`). Increase the font-size of `<p>` to be more comfortable. Use the Blurred vision emulator to test your changes.
 
 
 #### Allow the app to be responsive
 
 ![Viewport](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/viewport.png)
 
-1. Open Chrome Developer Tools
-2. Click on the **Toggle device toolbar** button
-3. Choose a mobile preset
-Your page appears smaller than expected and shrunk. This is a consequence of how mobiles display web content: they render at a bigger width and zoom out the whole page. It is intentional because most websites are optimised for horizontal screens.
-4. In `index.html`, force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the width of your page. Put the following tag in `<head>`:
-`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+1. In the developers tools, click on the **Toggle device toolbar** button
+1. Choose a mobile preset. Your page appears smaller than expected and shrunk. This is a consequence of how mobiles display web content: they render at a bigger width and zoom out the whole page. It is intentional because most websites are optimised for horizontal screens.
+1. In `index.html`, force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the width of your page. Put the following tag in the `<head>`:
 
-
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
 ## Semantics
 
@@ -86,37 +87,37 @@ Your page appears smaller than expected and shrunk. This is a consequence of how
 
 ![Semantics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics.svg?sanitize=true)
 
-Those two websites look similar, but what makes them different? The first rely on CSS to structure the content. The second one reclaims the natural roles of the HTML elements. Is the final result the same? Well, not really, assistive technology interprets correctly only the second one.
+Those two websites look similar, but what makes them different? The first one relies on CSS to structure the content. The second one relies on the natural roles of the HTML elements. Is the final result the same? **No, because assistive technologies are not able to describe the first one properly**.
 
-Behind the scene, assistive technology relies on code to render the page, much like browsers do. But it needs an overlay of **semantic** information to be able to name and describe the elements to the user. For example, to perform intelligible audio descriptions of `a` tags:
+Behind the scenes, assistive technologies rely on code to render the page, much like browsers do. But it needs an overlay of **semantic** information to be able to name and describe the elements to the user. For example, to perform intelligible audio descriptions of `<a>` tags:
 
 ![Audio](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/audio.png)
 
-Tools can do a lot beyond reading, they extend navigation functionalities. VoiceOver build summaries of major elements with a direct access, here a list of headings:
+Tools can do a lot beyond reading, they extend navigation functionalities. VoiceOver builds summaries of major elements with a direct access, here a list of headings:
 
 ![VoiceOver](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/voiceover.png)
 
 The semantic information is infered from:
 - Native [HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/semantics), like headings, navigation, etc. They have implicit roles understood by a wide range of assistive tools.
-- [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), a complete set of attributes that patch missing information. They can even mimic interactions made through Javascript. You'll find lots of examples in Bootstrap, a solid accessible framework with all the necessary ARIA attributes added to its components.
+- [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), a complete set of attributes that patch missing information. By the way, you can find lots of aria attributes examples in Bootstrap components. Bootstrap is pretty [compliant with accessibility standards](https://getbootstrap.com/docs/4.5/getting-started/accessibility/), make sure you keep those attributes, they are useful!
 
 ![User Interface](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/user-interface.svg?sanitize=true)
 
 
-#### Add semantic logic to structure the page
+#### Use the right HTML tags
 
-It's considered a best practice to use native HTML elements when possible.
+It's important to leverage HTML tags native roles and behaviour as much as possible. For instance, always use an `<a>` or a `<button>` for a clickable element. Adding a `cursor: pointer;` css rule in your code is a [smell](https://en.wikipedia.org/wiki/Code_smell)!
 
 ![Accessibility panel](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility.png)
 
 1. Open the **Accessibility** panel.
-2. With the **Inspect tool**, inspect the `h1` tag and one `div`.
+2. With the **Inspect tool**, inspect the `<h1>` tag and one `<div>`.
 3. Have a look each time at the accessibility properties in the panel. The `role` attribute, it is one of the most important.
-Wander through the page if you like to explore more. You'll find great differences between **non-semantic** elements, like `div` or `span` which are just generic containers, and **semantics** elements like `h1`, `nav` with specific `role`.
-4. Replace generic `div` with their HTML5 counterparts: 
-	- `<header>`, `<main>` and `<footer>` for the structure
-	- `h2` and `h3` for the headings
-	- `p` for paragraphs.
+Wander through the page if you like to explore more. You'll find great differences between **non-semantic** elements, like `<div>` or `<span>` which are just generic containers, and **semantics** elements like `<h1>`, `<nav>` with specific `role`.
+4. Replace generic `<div>` with their HTML5 counterparts: 
+  - `<header>`, `<main>` and `<footer>` for the structure
+  - `<h2>` and `<h3>` for the headings
+  - `<p>` for paragraphs.
 
 
 #### Add precise interactions to the form
