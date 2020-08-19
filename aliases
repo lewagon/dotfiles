@@ -83,7 +83,7 @@ alias gph='git push heroku master'
 alias hpass='git push chateaupass master'
 alias hdm='heroku run rails db:migrate --app chateaupass'
 alias hrc='heroku run rails c --app chateaupass'
-alias hlogs='heroku heroku logs --tail --app chateaupass'
+alias hlogs='heroku logs --tail --app chateaupass'
 
 
 # GIT 
