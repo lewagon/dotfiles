@@ -40,7 +40,7 @@ Subtle design choices can make the content difficult to read. Visual impairment 
 1. Open the **Rendering** panel (via the **More tools** menu)
 2. Find the last menu **Emulate Vision Deficiencies** and test all the rendering differences.
 The comment `textarea` in the page is outlined with a pink border to point out an error. Hard to discern when selecting Protanopia or Deuteranopia, right?
-3. Open `index.html` and add an error message below the `textarea`:
+3. Open `index.html` and add an error message under the `textarea`:
 
 ```html
 <p class="error-message">Comment can't be blank</p>
@@ -64,8 +64,7 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 
 1. Open Chrome settings (`cmd ,` or `ctrl ,`)
 2. Select the **Appearance** menu
-3. Change the default font-size from `Medium` to `Very Large` and go back to [localhost:8000](http://localhost:8000)
-You probably expected to see the text bigger. Unfortunately it has not changed anything because all the font are set in pixels. Only relative [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) change proportionally to the browser's defaults.
+3. Change the default font-size from `Medium` to `Very Large` and go back to [localhost:8000](http://localhost:8000). You probably expected to see the text bigger. Unfortunately it has not changed anything because all the font sizes are set in pixels. Only relative [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) change proportionally to the browser's defaults.
 4. Replace font sizes with relative units (`em`). Increase the font-size of `<p>` to be more comfortable. Use the Blurred vision emulator to test your changes.
 
 
@@ -87,13 +86,13 @@ You probably expected to see the text bigger. Unfortunately it has not changed a
 
 ![Semantics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics.svg?sanitize=true)
 
-Those two websites look similar, but what makes them different? The first one relies on CSS to structure the content. The second one relies on the natural roles of the HTML elements. Is the final result the same? **No, because assistive technologies are not able to describe the first one properly**.
+Those two websites look similar, but are in fact very different. The first one relies on CSS to organize the page's display. The second one relies on the natural roles of the HTML elements. Is the final result the same? **No, because assistive technologies are not able to describe the first one accurately**.
 
 Behind the scenes, assistive technologies rely on code to render the page, much like browsers do. But it needs an overlay of **semantic** information to be able to name and describe the elements to the user. For example, to perform intelligible audio descriptions of `<a>` tags:
 
 ![Audio](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/audio.png)
 
-Tools can do a lot beyond reading, they extend navigation functionalities. VoiceOver builds summaries of major elements with a direct access, here a list of headings:
+Tools can do a lot beyond reading, they extend navigation functionalities. VoiceOver builds summaries of major elements with a direct access, here, a list of headings:
 
 ![VoiceOver](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/voiceover.png)
 
@@ -114,25 +113,25 @@ It's important to leverage HTML tags native roles and behaviour as much as possi
 2. With the **Inspect tool**, inspect the `<h1>` tag and one `<div>`.
 3. Have a look each time at the accessibility properties in the panel. The `role` attribute, it is one of the most important.
 Wander through the page if you like to explore more. You'll find great differences between **non-semantic** elements, like `<div>` or `<span>` which are just generic containers, and **semantics** elements like `<h1>`, `<nav>` with specific `role`.
-4. Replace generic `<div>` with their HTML5 counterparts: 
+4. Replace generic `<div>` with the right HTML5 tag: 
   - `<header>`, `<main>` and `<footer>` for the structure
   - `<h2>` and `<h3>` for the headings
   - `<p>` for paragraphs.
 
-
-#### Add precise interactions to the form
+#### Connect interacting elements
 
 Input elements have a lot of specific properties to relay their complex behaviours. See their `name` property? It is filled with the text of another tag: the [`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label). Labels always go hand in hand with inputs.
 
 1. When you click on the word "Styling", it selects the related checkbox. When you try to click "Yes", it seems broken compared to the previous test. It's because the "Yes" is not tagged as `label` in the HTML.
-2. Open `index.html` and fix missing labels to radio buttons "Yes" and "No":
+2. Open `index.html` and add missing labels to radio buttons "Yes" and "No", with the `for` attribute pointing to the input's `id`:
 
-	```html
-	<input type="radio" name="explanations" id="yes">
-	<label for="yes">Yes</label>
-	<input type="radio" name="explanations" id="no">
-	<label for="no">No</label>
-	```
+```html
+<input type="radio" name="explanations" id="yes">
+<label for="yes">Yes</label>
+<input type="radio" name="explanations" id="no">
+<label for="no">No</label>
+```
+
 3. The "zoom scale" input is supposed to be filled with a number, but is declared of type `text`. Find a more appropriate [input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) to allow a correct description.
 
 
@@ -142,40 +141,42 @@ Input elements have a lot of specific properties to relay their complex behaviou
 When information is only visual or cannot live without context, we must back it up with semantic code to deliver all users a similar experience. [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) come to the rescue when no native HTML element is relevant to the situation.
 
 1. Add alternative description to the images with the [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img) attribute.
-3. The link "click here" is too vague, replace the text with a clear intention: "Accessibility Principles".
-4. The arrow in the footer is a link to the top. Compensate the lack of text with ARIA: `aria-label="Back to top"`.
-5. Specify the language in the `html` tag: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
-6. Insert the title of the page in `<head>`: `<title>Accessibility Guidelines</title>`, it will be read when switching from tab to tab.
+1. The link "click here" is too vague, replace the text with a clear intention: "Accessibility Principles".
+1. The arrow in the footer is a link to the top. Compensate the lack of text with ARIA: `aria-label="Back to top"`.
+1. Specify the language in the `html` tag: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
+1. Insert the title of the page in `<head>`: `<title>Accessibility Guidelines</title>`, it will be read when switching from tab to tab.
 
 
 ## Focus
 
 ![Focus topic](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/focus-topic.png)
 
-Have you ever noticed the blue outline when you type in a form? Some developers get rid of it with a little CSS because it doesn't suit their design. Don't do it! This blue outline is a **focus ring**, it's highly important for keyboard users.
-Only interactive elements can receive focus, content items (text and images) are not focusable. Focus jumps from element to element in the same order than the HTML. Though it is possible to manage the orders with the [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute, it's considered an anti-pattern.
+Have you ever noticed the blue outline when you type in a form? Some developers remove it with CSS because it does not suit their design. Don't do it! This blue outline is a **focus ring**, it's highly important for keyboard users.
+
+Only interactive elements can receive focus, content items (text and images) are not focusable. Focus jumps from element to element in the same order than the HTML. Even though it is possible to manage the orders with the [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute, it's considered an anti-pattern.
 
 ![Link](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/link.png)
 
 1. Practice the keyboard-only navigation:
-	- TAB to move forward in the page / SHIFT + TAB to move backward
-	- Arrow keys to select values in a form
-	- SPACE bar to tick checkboxes
-	- ENTER to submit
+- `⇥` TAB to move forward in the page / `⇧` SHIFT + `⇥` TAB to move backward
+- `↑ ↓ ← →` Arrow keys to select values in a form
+- SPACE bar to tick checkboxes
+- `↵` ENTER to submit
 	
-	Did you notice that you pressed TAB three times without any feedback? You actually focused the three links of the hidden navigation widget. Hint: when an element is hidden to your eyes, it doesn't mean it is hidden from the code.
+Did you notice that you pressed TAB three times without any feedback? You actually focused the three links of the hidden navigation widget. Hint: when an element is hidden to your eyes, it doesn't mean it is hidden from the code.
+
 2. Show/hide the navigation from the HTML document: add `visibility: hidden;` to its default state and `visibility: visible;` to its open state in `nav.css`.
 3. Now the CSS is fixed, open the navigation and try to focus it again. See the links are the last items to receive focus, out of the page's logic? Open `index.html` and move the navigation HTML code before `main` container.
 
+TODO(Capuche): Let's add the solution here in a toggle
 
 
-## Optional: Test by yourself
+## (Optional) Test the result
 
 
 ### LightHouse (Google)
-Lighthouse is an audit tool which includes accessibility. You can test it on the page you fixed in this challenge.
-[Lighthouse explained](https://developers.google.com/web/tools/lighthouse/)
-(If you experience difficulties the first time you launch an audit, try to reboot Chrome)
+Lighthouse is an audit tool which tests accessibility among other things. You can test it on the page you fixed in this challenge.
+[Lighthouse explained](https://developers.google.com/web/tools/lighthouse/). If you experience difficulties the first time you launch an audit, try to reboot Chrome
 
 
 ### Accessibility Insights (Microsoft)
@@ -185,8 +186,6 @@ Install [Accessibility Insights](https://accessibilityinsights.io) to run an aud
 ### Screen readers
 - [VoiceOver on Mac](https://www.youtube.com/watch?v=5R-6WvAihms&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=7)
 - [NVDA for Windows](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=9)
-
-
 
 
 ## Read more
