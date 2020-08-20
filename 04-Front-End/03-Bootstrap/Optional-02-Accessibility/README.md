@@ -154,28 +154,28 @@ When information is only visual or cannot live without context, we must back it 
 1. The link "click here" is too vague, replace the text with a clear intention: "Accessibility Principles".
 1. Add ARIA to buttons without text.
 <details>
-    <summary markdown='span'>View nav button solution</summary>
+  <summary markdown='span'>View nav button solution</summary>
     
 	```html
 	<button class="toggle-nav" aria-label="Toggle menu"></button> 
 	```
 </details>
 <details>
-    <summary markdown='span'>View footer button solution</summary>
+  <summary markdown='span'>View footer link solution</summary>
 
 	```html
-	<button class="to-top" aria-label="Back to top"></button>
+	<a href="#top" class="to-top" aria-label="Back to top"></a>
 	```
 </details>
 
 1. Specify the language in the `html` tag: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
 1. Insert the `<title>` of the page in `<head>`, it will be read when switching from tab to tab.
 <details>
-    <summary markdown='span'>View solution</summary>
+  <summary markdown='span'>View solution</summary>
 
-    ```html
-    <title>Accessibility Guidelines</title>
-    ```
+  ```html
+  <title>Accessibility Guidelines</title>
+  ```
 </details>
 
 
