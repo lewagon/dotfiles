@@ -1,8 +1,8 @@
-h2:last-of-type{
+h2:last-of-type {
   border-top: 1px solid #e5e5e5;
 }
 
-form{
+form {
   padding: 30px;
   margin-top: 25px;
   border: 2px solid #e5e5e5;
@@ -17,7 +17,7 @@ label, form p {
   font-size: 18px;
 }
 
-input[type=radio] + label, input[type=checkbox] + label{
+input[type=radio] + label, input[type=checkbox] + label {
   display: inline-block;
   margin-right: 20px;
 }
@@ -36,29 +36,29 @@ input[type="text"], input[type="date"], input[type="number"], input[type="submit
   padding: 5px 15px;
 }
 
-textarea{
+textarea {
   height: 120px;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   background-color: #151515;
   color: white;
   margin-top: 20px;
   cursor: pointer;
 }
 
-.error{
+.error {
   border: 1px solid #ff8a8a;
 }
 
-.error-message{
+.error-message {
   font-style: italic;
   font-size: 1em;
   color: #ED2627;
   margin-top: -40px;
 }
 
-.error-message::before{
+.error-message::before {
   content: '*';
   display: inline-block;
   margin-right: 0.2em;

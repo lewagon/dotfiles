@@ -7,18 +7,18 @@
 /* Importing layouts */
 @import url("pages/guidelines.css");
 
-*{
+* {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-h1, .main-title{
+h1, .main-title {
   font-size: 38px;
   color: #989898;
   font-weight: lighter;
   margin: 1.75em auto 0.9em auto
 }
 
-h2, .title{
+h2, .title {
   font-size: 28px;
   color: #b6b7b7;
   font-weight: lighter;
@@ -26,20 +26,20 @@ h2, .title{
   margin: 2.1em 0 0.4em 0;
 }
 
-h3, .subtitle{
+h3, .subtitle {
   font-size: 20px;
   color: #b6b7b7;
   font-weight: normal;
   margin: 2em 0 0.3em 0;
 }
 
-p, .content{
+p, .content {
   color: black;
   font-size: 12px;
   line-height: 2em;
 }
 
-a, a:hover, a:visited, a:active{
+a, a:hover, a:visited, a:active {
   text-decoration: none;
   color: #574FB0;
 }

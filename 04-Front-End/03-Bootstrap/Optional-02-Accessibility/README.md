@@ -40,11 +40,13 @@ Subtle design choices can make the content difficult to read. Visual impairment 
 1. Open the **Rendering** panel (via the **More tools** menu)
 2. Find the last menu **Emulate Vision Deficiencies** and test all the rendering differences.
 The comment `textarea` in the page is outlined with a pink border to point out an error. Hard to discern when selecting Protanopia or Deuteranopia, right?
-3. Open `index.html` and add an error message under the `textarea`:
-
-```html
-<p class="error-message">Comment can't be blank</p>
-```
+3. Open `index.html` and add an error message under the `textarea`.
+<details>
+	<summary markdown='span'>View solution</summary>
+	```html
+	<p class="error-message">Comment can't be blank</p>
+	```
+</details>
 
 
 #### Increase contrast
@@ -65,7 +67,7 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 1. Open Chrome settings (`cmd ,` or `ctrl ,`)
 2. Select the **Appearance** menu
 3. Change the default font-size from `Medium` to `Very Large` and go back to [localhost:8000](http://localhost:8000). You probably expected to see the text bigger. Unfortunately it has not changed anything because all the font sizes are set in pixels. Only relative [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) change proportionally to the browser's defaults.
-4. Replace font sizes with relative units (`em`). Increase the font-size of `<p>` to be more comfortable. Use the Blurred vision emulator to test your changes.
+4. Replace font sizes with relative units (`rem`). Increase the font-size of `<p>` to be more comfortable. Use the Blurred vision emulator to test your changes.
 
 
 #### Allow the app to be responsive
@@ -74,11 +76,16 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 
 1. In the developers tools, click on the **Toggle device toolbar** button
 1. Choose a mobile preset. Your page appears smaller than expected and shrunk. This is a consequence of how mobiles display web content: they render at a bigger width and zoom out the whole page. It is intentional because most websites are optimised for horizontal screens.
-1. In `index.html`, force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the width of your page. Put the following tag in the `<head>`:
+1. In `index.html`, force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the width of your page. Add the necessary meta tag in `<head>`.
+<details>
+    <summary markdown='span'>View solution</summary>
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
+    ```html
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	```
+</details>
+
+
 
 ## Semantics
 
@@ -123,14 +130,17 @@ Wander through the page if you like to explore more. You'll find great differenc
 Input elements have a lot of specific properties to relay their complex behaviours. See their `name` property? It is filled with the text of another tag: the [`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label). Labels always go hand in hand with inputs.
 
 1. When you click on the word "Styling", it selects the related checkbox. When you try to click "Yes", it seems broken compared to the previous test. It's because the "Yes" is not tagged as `label` in the HTML.
-2. Open `index.html` and add missing labels to radio buttons "Yes" and "No", with the `for` attribute pointing to the input's `id`:
+2. Open `index.html` and add missing labels to radio buttons "Yes" and "No", with the `for` attribute pointing to the input's `id`.
+<details>
+	<summary markdown='span'>View solution</summary>
 
-```html
-<input type="radio" name="explanations" id="yes">
-<label for="yes">Yes</label>
-<input type="radio" name="explanations" id="no">
-<label for="no">No</label>
-```
+	```html
+	<input type="radio" name="explanations" id="yes">
+	<label for="yes">Yes</label>
+	<input type="radio" name="explanations" id="no">
+	<label for="no">No</label>
+	```
+</details>
 
 3. The "zoom scale" input is supposed to be filled with a number, but is declared of type `text`. Find a more appropriate [input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) to allow a correct description.
 
@@ -142,9 +152,32 @@ When information is only visual or cannot live without context, we must back it 
 
 1. Add alternative description to the images with the [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img) attribute.
 1. The link "click here" is too vague, replace the text with a clear intention: "Accessibility Principles".
-1. The arrow in the footer is a link to the top. Compensate the lack of text with ARIA: `aria-label="Back to top"`.
+1. Add ARIA to buttons without text.
+<details>
+    <summary markdown='span'>View nav button solution</summary>
+    
+	```html
+	<button class="toggle-nav" aria-label="Toggle menu"></button> 
+	```
+</details>
+<details>
+    <summary markdown='span'>View footer button solution</summary>
+
+	```html
+	<button class="to-top" aria-label="Back to top"></button>
+	```
+</details>
+
 1. Specify the language in the `html` tag: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
-1. Insert the title of the page in `<head>`: `<title>Accessibility Guidelines</title>`, it will be read when switching from tab to tab.
+1. Insert the `<title>` of the page in `<head>`, it will be read when switching from tab to tab.
+<details>
+    <summary markdown='span'>View solution</summary>
+
+    ```html
+    <title>Accessibility Guidelines</title>
+    ```
+</details>
+
 
 
 ## Focus
@@ -165,10 +198,22 @@ Only interactive elements can receive focus, content items (text and images) are
 	
 Did you notice that you pressed TAB three times without any feedback? You actually focused the three links of the hidden navigation widget. Hint: when an element is hidden to your eyes, it doesn't mean it is hidden from the code.
 
-2. Show/hide the navigation from the HTML document: add `visibility: hidden;` to its default state and `visibility: visible;` to its open state in `nav.css`.
-3. Now the CSS is fixed, open the navigation and try to focus it again. See the links are the last items to receive focus, out of the page's logic? Open `index.html` and move the navigation HTML code before `main` container.
+2. Toggle the navigation [`visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) in `focus.css`.
+<details>
+	<summary markdown='span'>View solution</summary>
 
-TODO(Capuche): Let's add the solution here in a toggle
+	```css
+	nav ul {
+  		visibility: hidden;
+	}
+
+	nav.open ul {
+	  visibility: visible;
+	}
+	```
+</details>
+
+3. Now the CSS is fixed, open the navigation and try to focus it again. We need to fix one last thing: the navigation links should be the first items to receive focus. Open `index.html` and move the `<nav>` code before the `<main>` container.
 
 
 ## (Optional) Test the result

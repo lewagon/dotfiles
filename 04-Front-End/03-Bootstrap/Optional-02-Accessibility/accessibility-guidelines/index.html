@@ -14,7 +14,7 @@
       <div class="content">The W3C created guidelines to help developpers build accessible apps. It's a set of four topics, labeled as the POUR principles. They describe the main philosophy behind accessibility and are completed with best practices and typical cases.</div>
       <div class="content">This page sumarizes the essence of each principle, completed with one example each time. You can read the detailed version on the W3C website: <a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/">click here</a>.</div>
       <img src="images/pour.svg">
-      <div class="title">The POUR principles</div>
+      <div class="title" id="pour">The POUR principles</div>
       <div class="subtitle">P for Perceivable</div>
       <img src="images/perceivable.svg">
       <div class="content">Create content that can be perceived by different senses. For example, use "alt" attributes in image tags to describe the scene. Images are part of the content, make it available for other senses than sight.</div>
@@ -27,7 +27,7 @@
       <div class="subtitle">R for Robust</div>
       <img src="images/robust.svg">
       <div class="content">Maximize compatibility with a wide range of assistive technologie tools. For example, use title tags from h1 to h6 to structure the page content, screen readers ofter option to sumarize the squeletton of the page.</div>
-      <div class="title">Leave a comment</div>
+      <div class="title" id="feedback">Leave a comment</div>
       <form action="#">
         <p>Do you plan to code with accessibility in mind?</p>
         <input type="radio" name="explanations" id="yes"> Yes
@@ -53,7 +53,7 @@
       </form>
     </div>
     <div class="footer">
-      <button aria-label="Back to top"></button>
+      <button class="to-top"></button>
     </div>
     <nav>
       <ul>
@@ -61,6 +61,7 @@
         <li><a href="#pour">The POUR principles</a></li>
         <li><a href="#feedback">Leave a comment</a></li>
       </ul>
+      <button class="toggle-nav"></button>
     </nav>
   </body>
 </html>
