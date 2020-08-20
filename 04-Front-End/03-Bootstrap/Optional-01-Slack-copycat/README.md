@@ -1,3 +1,5 @@
+Congratulations on reaching the optional challenges! Today you can choose between two path, if you like to keep on building challenging interfaces, the Slack Copycat is the perfect place. If you'd prefer to learn more about inclusivity in web interfaces, you can jump to the Accessibility challenge.
+
 ## Background & Objectives
 
 Build a [copycat of Slack](https://lewagon.github.io/bootstrap-challenges/12-Slack/) using the techniques you have learned in this morning's lecture, and previous lectures.
