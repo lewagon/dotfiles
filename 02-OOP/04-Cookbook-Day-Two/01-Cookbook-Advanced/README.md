@@ -72,7 +72,7 @@ You can download an HTML document on your computer with the `curl` command. Get 
 
 ```bash
 curl --silent 'https://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
-curl --silent 'https://www.bbcgoodfood.com/search/recipes?query=strawberry' > strawberry.html
+curl --silent 'https://www.bbcgoodfood.com/search/recipes?q=strawberry' > strawberry.html
 ```
 
 👆 **This step is really important**!
