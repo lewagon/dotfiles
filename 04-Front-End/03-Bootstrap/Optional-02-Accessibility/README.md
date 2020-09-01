@@ -2,7 +2,7 @@
 
 As developers, we tend to focus on how the web page appears _to us_ when we code. We forget that we all see differently! Accessibility is the art of building websites for everyone, including people with disabilities or impairments. A lot of people visit websites using **assistive technologies** like screen readers, magnification software to zoom the content, speech input software, alternative input devices such as eye trackers, head pointers, and so many more...
 
-Coding choices have a huge impact on how these technologies can bridge the user's disabilities. But writing accessible app is not an obscure science or a separate language, it's just a series of wise principles. With the right code, you can build something wonderful for everyone.
+Coding choices have a huge impact on how these technologies can bridge the user's disabilities. But writing accessible apps is not an obscure science or a separate language, it's just a series of wise principles. With the right code, you can build something wonderful for everyone.
 
 
 ## Specs
@@ -42,10 +42,11 @@ Subtle design choices can make the content difficult to read. Visual impairment 
 The comment `textarea` in the page is outlined with a pink border to point out an error. Hard to discern when selecting Protanopia or Deuteranopia, right?
 3. Open `index.html` and add an error message under the `textarea`.
 <details>
-	<summary markdown='span'>View solution</summary>
-	```html
-	<p class="error-message">Comment can't be blank</p>
-	```
+<summary markdown='span'>View solution</summary>
+
+```html
+<p class="error-message">Comment can't be blank</p>
+```
 </details>
 
 
@@ -78,13 +79,12 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 1. Choose a mobile preset. Your page appears smaller than expected and shrunk. This is a consequence of how mobiles display web content: they render at a bigger width and zoom out the whole page. It is intentional because most websites are optimised for horizontal screens.
 1. In `index.html`, force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the width of your page. Add the necessary meta tag in `<head>`.
 <details>
-    <summary markdown='span'>View solution</summary>
+<summary markdown='span'>View solution</summary>
 
-    ```html
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	```
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 </details>
-
 
 
 ## Semantics
@@ -120,7 +120,7 @@ It's important to leverage HTML tags native roles and behaviour as much as possi
 2. With the **Inspect tool**, inspect the `<h1>` tag and one `<div>`.
 3. Have a look each time at the accessibility properties in the panel. The `role` attribute, it is one of the most important.
 Wander through the page if you like to explore more. You'll find great differences between **non-semantic** elements, like `<div>` or `<span>` which are just generic containers, and **semantics** elements like `<h1>`, `<nav>` with specific `role`.
-4. Replace generic `<div>` with the right HTML5 tag: 
+4. Replace generic `<div>`s with the right HTML5 tags: 
   - `<header>`, `<main>` and `<footer>` for the structure
   - `<h2>` and `<h3>` for the headings
   - `<p>` for paragraphs.
@@ -130,20 +130,19 @@ Wander through the page if you like to explore more. You'll find great differenc
 Input elements have a lot of specific properties to relay their complex behaviours. See their `name` property? It is filled with the text of another tag: the [`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label). Labels always go hand in hand with inputs.
 
 1. When you click on the word "Styling", it selects the related checkbox. When you try to click "Yes", it seems broken compared to the previous test. It's because the "Yes" is not tagged as `label` in the HTML.
-2. Open `index.html` and add missing labels to radio buttons "Yes" and "No", with the `for` attribute pointing to the input's `id`.
+1. Open `index.html` and add missing labels to radio buttons "Yes" and "No", with the `for` attribute pointing to the input's `id`.
+1. The "zoom scale" input is supposed to be filled with a number, but is declared of type `text`. Find a more appropriate [input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) to allow a correct description.
+
 <details>
-	<summary markdown='span'>View solution</summary>
+<summary markdown='span'>View solution</summary>
 
-	```html
-	<input type="radio" name="explanations" id="yes">
-	<label for="yes">Yes</label>
-	<input type="radio" name="explanations" id="no">
-	<label for="no">No</label>
-	```
+```html
+<input type="radio" name="explanations" id="yes">
+<label for="yes">Yes</label>
+<input type="radio" name="explanations" id="no">
+<label for="no">No</label>
+```
 </details>
-
-3. The "zoom scale" input is supposed to be filled with a number, but is declared of type `text`. Find a more appropriate [input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) to allow a correct description.
-
 
 
 #### Add missing information
@@ -152,32 +151,33 @@ When information is only visual or cannot live without context, we must back it 
 
 1. Add alternative description to the images with the [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img) attribute.
 1. The link "click here" is too vague, replace the text with a clear intention: "Accessibility Principles".
-1. Add ARIA to buttons without text.
-<details>
-  <summary markdown='span'>View nav button solution</summary>
-    
-	```html
-	<button class="toggle-nav" aria-label="Toggle menu"></button> 
-	```
-</details>
-<details>
-  <summary markdown='span'>View footer link solution</summary>
-
-	```html
-	<a href="#top" class="to-top" aria-label="Back to top"></a>
-	```
-</details>
-
+1. Add ARIA attributes to buttons without text.
 1. Specify the language in the `html` tag: `<html lang="en">`. If this attribute is missing, screen readers will fallback to their default languages.
 1. Insert the `<title>` of the page in `<head>`, it will be read when switching from tab to tab.
-<details>
-  <summary markdown='span'>View solution</summary>
 
-  ```html
-  <title>Accessibility Guidelines</title>
-  ```
+<details>
+<summary markdown='span'>View nav button solution</summary>
+    
+```html
+<button class="toggle-nav" aria-label="Toggle menu"></button> 
+```
 </details>
 
+<details>
+<summary markdown='span'>View footer link solution</summary>
+
+```html
+<a href="#top" class="to-top" aria-label="Back to top"></a>
+```
+</details>
+
+<details>
+<summary markdown='span'>View title solution</summary>
+
+```html
+<title>Accessibility Guidelines</title>
+```
+</details>
 
 
 ## Focus
@@ -200,17 +200,17 @@ Did you notice that you pressed TAB three times without any feedback? You actual
 
 2. Toggle the navigation [`visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) in `focus.css`.
 <details>
-	<summary markdown='span'>View solution</summary>
+<summary markdown='span'>View solution</summary>
 
-	```css
-	nav ul {
-  		visibility: hidden;
-	}
+```css
+nav ul {
+  visibility: hidden;
+}
 
-	nav.open ul {
-	  visibility: visible;
-	}
-	```
+nav.open ul {
+  visibility: visible;
+}
+```
 </details>
 
 3. Now the CSS is fixed, open the navigation and try to focus it again. We need to fix one last thing: the navigation links should be the first items to receive focus. Open `index.html` and move the `<nav>` code before the `<main>` container.
@@ -221,7 +221,7 @@ Did you notice that you pressed TAB three times without any feedback? You actual
 
 ### LightHouse (Google)
 Lighthouse is an audit tool which tests accessibility among other things. You can test it on the page you fixed in this challenge.
-[Lighthouse explained](https://developers.google.com/web/tools/lighthouse/). If you experience difficulties the first time you launch an audit, try to reboot Chrome
+[Lighthouse explained](https://developers.google.com/web/tools/lighthouse/). If you experience difficulties the first time you launch an audit, try to reboot Chrome.
 
 
 ### Accessibility Insights (Microsoft)
