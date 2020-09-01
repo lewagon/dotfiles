@@ -75,8 +75,10 @@ If you have trouble running `rake`, you may need to run `bin/rake`. It means tha
 
 #### Schema
 
-- A restaurant has a `name` (string), `address` (string), `phone_number` (string), `category` (string), and can have many reviews.
-- A review has a `rating` (integer), `content` (text), and belongs to a restaurant.
+- A restaurant has a `name`, `address`, `phone_number`, `category`, and can have many reviews.
+- A review has a `rating`, `content`, and belongs to a restaurant.
+
+Make sure you think twice before choosing the data type, it might not always be your first guess! 
 
 **Question**: Can you draw this simple schema at [db.lewagon.com](http://db.lewagon.com)? Discuss with your buddy.
 
