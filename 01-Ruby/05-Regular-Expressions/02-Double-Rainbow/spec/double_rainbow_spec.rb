@@ -35,11 +35,11 @@ describe "Double Rainbow" do
     end
   end
 
-  describe "#four_letters_word" do
+  describe "#four_letter_word" do
     it "should return the four-letters word starting with 'b'" do
       test_string = " aaaa bbbb, ,cccc"
-      expect(four_letters_word(@secret_message)).to eq "blue"
-      expect(four_letters_word(test_string)).to eq "bbbb"
+      expect(four_letter_word(@secret_message)).to eq "blue"
+      expect(four_letter_word(test_string)).to eq "bbbb"
       css3_test = true
       puts "    #{colorized("", 27, 2)} CSS3 color unlocked"
     end
@@ -65,11 +65,11 @@ describe "Double Rainbow" do
     end
   end
 
-  describe "#six_letters_word" do
+  describe "#six_letter_word" do
     it "should return a six-letters word, composed of letters from 'a' to 'r'" do
       test_string = "egnaro is spelled backward"
-      expect(six_letters_word(@secret_message)).to eq "orange"
-      expect(six_letters_word(test_string)).to eq "egnaro"
+      expect(six_letter_word(@secret_message)).to eq "orange"
+      expect(six_letter_word(test_string)).to eq "egnaro"
       html5_test = true
       puts "    #{colorized("", 202, 2)} HTML5 color unlocked"
     end

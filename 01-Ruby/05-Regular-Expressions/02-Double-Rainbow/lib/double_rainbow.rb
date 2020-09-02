@@ -8,7 +8,7 @@ def word_before_exclamation_mark(sentence)
   # TODO: return the word located before an exclamation mark
 end
 
-def four_letters_word(sentence)
+def four_letter_word(sentence)
   # TODO: return the four-letters word starting with 'b'
 end
 
@@ -20,7 +20,7 @@ def word_contains_ll(sentence)
   # TODO: return the word containing two consecutive 'l'
 end
 
-def six_letters_word(sentence)
+def six_letter_word(sentence)
   # TODO: return the six-letters word, composed of letters from 'a' to 'r'
 end
 
