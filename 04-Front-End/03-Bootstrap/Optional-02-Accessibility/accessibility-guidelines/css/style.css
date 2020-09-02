@@ -2,7 +2,6 @@
 @import url("components/nav.css");
 @import url("components/form.css");
 @import url("components/footer.css");
-@import url("components/focus.css");
 
 /* Importing layouts */
 @import url("pages/guidelines.css");

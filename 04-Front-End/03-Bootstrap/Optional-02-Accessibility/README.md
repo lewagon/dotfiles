@@ -67,8 +67,8 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 
 1. Open Chrome settings (`cmd ,` or `ctrl ,`)
 2. Select the **Appearance** menu
-3. Change the default font-size from `Medium` to `Very Large` and go back to [localhost:8000](http://localhost:8000). You probably expected to see the text bigger. Unfortunately it has not changed anything because all the font sizes are set in pixels. Only relative [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) change proportionally to the browser's defaults.
-4. Replace font sizes with relative units (`rem`). Increase the font-size of `<p>` to be more comfortable. Use the Blurred vision emulator to test your changes.
+3. Change the default font-size from `Medium` to `Very Large` and go back to [localhost:8000](http://localhost:8000). You probably expected to see the text bigger. Unfortunately it has not changed much because some of the font sizes are set in pixels. Only relative [units](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) change proportionally to the browser's defaults.
+4. Replace font sizes with relative units (`rem`) in `styles.css`. Increase the font-size of `<p>` to be more comfortable. Use the Blurred vision emulator to test your changes.
 
 
 #### Allow the app to be responsive
