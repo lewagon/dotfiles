@@ -16,7 +16,7 @@ Here are the requirements of our system:
 - A user can create many `surveys`, but a survey is created by only one user
 - A survey has several `questions`.
 - A question has several possible `answers`.
-- When a user answers a survey, they can only choose one answer. These are stored as `user_answers`.
+- When a user answers a question, they can only choose one answer. These are stored as `user_answers`.
 
 #### Design the schema
 
@@ -29,4 +29,4 @@ in `lib/survey.xml`. You can then `rake` to check your solution.
 
 - Do you know what a schema is?
 - What's the relation between tables?
-- Could you draw the database scheme behind facebook? airbnb? Take a bit of paper and have a go!
+- Could you draw the database scheme behind Facebook? Airbnb? Take a bit of paper and have a go!
