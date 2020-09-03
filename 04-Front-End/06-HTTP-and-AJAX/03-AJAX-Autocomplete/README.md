@@ -35,6 +35,6 @@ https://wagon-dictionary.herokuapp.com/autocomplete/under
 etc.
 ```
 
-When you receive the JSON from the API, you job is to update the `ul#results` list with suggestions!
+When you receive the JSON from the API, your job is to update the `ul#results` list with suggestions!
 
 Once you have the basic behavior, don't hesitate to try and make the `ul#results` look 🎨 really good 🎨 😋

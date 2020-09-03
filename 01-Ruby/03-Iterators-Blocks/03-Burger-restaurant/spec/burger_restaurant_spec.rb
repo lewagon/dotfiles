@@ -14,9 +14,9 @@ ________________/_)_(_/__/ (__(_/__(/__/ (_
 
 HEREDOC
 
-describe "burger_restaurant.rb", unless: @watermark do
+describe "burger_restaurant.rb" do
   describe "#burger" do
-    it "should return an array of strings with [\"bread\", `ingredient`, `sauce`, `topping`, \"bread\"]" do
+    it "should return an array of strings with [\"bread\", `patty`, `sauce`, `topping`, \"bread\"]" do
       expect(burger("a", "b", "c")).to be_a(Array)
       expect(burger("steak", "ketchup", "onions")).to eq(["bread", "steak", "ketchup", "onions", "bread"])
       expect(burger("fish", "mayo", "salad")).to eq(["bread", "fish", "mayo", "salad", "bread"])
@@ -28,6 +28,11 @@ describe "burger_restaurant.rb", unless: @watermark do
 
     it "should be able to take a block with arguments" do
       expect{|block| burger("fish", "barbecue", "salad", &block)}.to yield_with_args(String)
+    end
+      
+    it "should upcase the patty when given the correct block" do
+      big_fish_burger = burger("fish", "barbecue", "salad") { |patty| patty.upcase }
+      expect(big_fish_burger).to eq(["bread", "FISH", "barbecue", "salad", "bread"])
     end
   end
 end

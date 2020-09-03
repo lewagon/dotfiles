@@ -14,7 +14,7 @@ end
 
 def nested_routes_for_one_to_many?
   # TODO: Return a `true` or `false` to answer this question:
-  # If you have a one to many relationship between you models like `Restaurant` and `Review` (belongs_to :restaurant),
+  # If you have a one to many relationship between your models like `Restaurant` and `Review` (belongs_to :restaurant),
   # do you always have to nest all your routes for `Review` in `Restaurant`?
 end
 
