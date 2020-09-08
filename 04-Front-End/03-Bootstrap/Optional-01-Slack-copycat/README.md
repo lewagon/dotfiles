@@ -1,3 +1,7 @@
+Congratulations on reaching the optional challenges! Today you can choose between two paths: 
+- if you want to keep building complex interfaces, stay on this **Slack Copycat** challenge;
+- if you'd rather learn about Web **Accessibility**, you can jump to the next challenge.
+
 ## Background & Objectives
 
 Build a [copycat of Slack](https://lewagon.github.io/bootstrap-challenges/12-Slack/) using the techniques you have learned in this morning's lecture, and previous lectures.
