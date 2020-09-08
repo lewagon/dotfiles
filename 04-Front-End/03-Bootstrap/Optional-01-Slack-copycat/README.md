@@ -1,4 +1,4 @@
-Congratulations on reaching the optional challenges! Today you can choose between two paths: 
+Congratulations for reaching the optional challenges! Today you can choose between two paths: 
 - if you want to keep building complex interfaces, stay on this **Slack Copycat** challenge;
 - if you'd rather learn about Web **Accessibility**, you can jump to the next challenge.
 
