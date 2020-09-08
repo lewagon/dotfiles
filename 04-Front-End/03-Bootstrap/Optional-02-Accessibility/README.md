@@ -33,7 +33,7 @@ We strongly recommend using Chrome. You will make an intensive use of the **Deve
 Subtle design choices can make the content difficult to read. Visual impairment is very common, a large part of the population wears glasses and color-blind people see colors in different spectrums. The goal of styling an app is to find the right balance between nice graphics and readability.
 
 
-#### Add text to UI warnings
+### Add text to UI warnings
 
 ![Vision](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/vision.png)
 
@@ -50,7 +50,7 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 </details>
 
 
-#### Increase contrast
+### Increase contrast
 
 ![Contrast](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/contrast.png)
 
@@ -61,7 +61,7 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 4. Update your color choices in `style.css`
 
 
-#### Make the font-size more comfortable
+### Make the font-size more comfortable
 
 ![Contrast](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/font-size.png)
 
@@ -71,7 +71,7 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 4. Replace font sizes with relative units (`rem`) in `styles.css`. Increase the font-size of `<p>` to be more comfortable. Use the Blurred vision emulator to test your changes.
 
 
-#### Allow the app to be responsive
+### Allow the app to be responsive
 
 ![Viewport](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/viewport.png)
 
@@ -110,7 +110,7 @@ The semantic information is infered from:
 ![User Interface](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/user-interface.svg?sanitize=true)
 
 
-#### Use the right HTML tags
+### Use the right HTML tags
 
 It's important to leverage HTML tags native roles and behaviour as much as possible. For instance, always use an `<a>` or a `<button>` for a clickable element. Adding a `cursor: pointer;` css rule in your code is a [smell](https://en.wikipedia.org/wiki/Code_smell)!
 
@@ -125,7 +125,7 @@ Wander through the page if you like to explore more. You'll find great differenc
   - `<h2>` and `<h3>` for the headings
   - `<p>` for paragraphs.
 
-#### Connect interacting elements
+### Connect interacting elements
 
 Input elements have a lot of specific properties to relay their complex behaviours. See their `name` property? It is filled with the text of another tag: the [`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label). Labels always go hand in hand with inputs.
 
@@ -145,7 +145,7 @@ Input elements have a lot of specific properties to relay their complex behaviou
 </details>
 
 
-#### Add missing information
+### Add missing information
 
 When information is only visual or cannot live without context, we must back it up with semantic code to deliver all users a similar experience. [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) come to the rescue when no native HTML element is relevant to the situation.
 
