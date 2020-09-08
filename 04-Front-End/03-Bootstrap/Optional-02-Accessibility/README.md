@@ -203,12 +203,8 @@ Did you notice that you pressed TAB three times without any feedback? You actual
 <summary markdown='span'>View solution</summary>
 
 ```css
-nav ul {
+nav.close ul {
   visibility: hidden;
-}
-
-nav.open ul {
-  visibility: visible;
 }
 ```
 </details>
