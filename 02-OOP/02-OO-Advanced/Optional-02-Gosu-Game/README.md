@@ -6,7 +6,7 @@ Time to make a game! For this, we will use a gem called `gosu`.
 
 Open your terminal and run:
 
-### Mac OS X
+### macOS
 
 ```bash
 brew update

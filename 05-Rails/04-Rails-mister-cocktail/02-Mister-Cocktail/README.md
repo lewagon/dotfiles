@@ -7,7 +7,7 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 Let's install `yarn` if you haven't already!
 
 ```bash
-# OSX
+# macOS
 brew install yarn
 
 # Ubuntu

@@ -126,7 +126,7 @@ First, delete the `test/controllers/games_controller_test.rb` file if it got gen
 First, you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu. Then you need to install `chromedriver` (if you did this step in the previous exercise, just skip it):
 
 ```bash
- # OSX
+ # macOS
 brew cask install chromedriver
 
 # Ubuntu
