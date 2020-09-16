@@ -16,7 +16,7 @@ sqlite3 --version
 
 If you don't have it, you can install it by running:
 
-- Mac: `brew install sqlite`
+- macOS: `brew install sqlite`
 - Ubuntu: `sudo apt-get install sqlite3 libsqlite3-dev`
 
 You can open the database we provided you to make some queries on it:
