@@ -12,5 +12,5 @@ aquí está la fórmula:
 
 ¡Abra el archivo `lib/demo.rb` e impleméntelo!
 
-Hay ** 4 pruebas ** verificadas por el comando `rake`. ¡Asegúrate de que estén todos verdes!
+Hay **4 tests** verificadas por el línea comando `rake`. ¡Asegúrate de que estén todos verdes!
 
