@@ -32,6 +32,7 @@ alias anx='cd ~/gitlab.peersandpeers/lesateliersnx/lesateliersnx'
 alias abk='cd ~/code/alexandrebk'
 alias dotfiles='cd ~/code/alexandrebk/dotfiles'
 alias shopify='cd ~/code/alexandrebk/shopify_picanova_api'
+alias oeno='cd ~/code/JeremyMIQUEL/oenoplace'
 
 # Commit message
 

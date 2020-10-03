@@ -76,7 +76,7 @@ To install Emmet vim you can follow [this instructions](https://vimawesome.com/p
 brew install rename
 brew install tree
 brew install ack
-brew cask install chromium
+brew cask install whatsapp
 ```
 
 ## Un lien utile pour le setup de son mac
@@ -94,3 +94,12 @@ ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/snippets/javascript_snip
 ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/snippets/html_snippets.vim /Users/alexandrebouvier/.vim/after/ftplugin/html_snippets.vim
 ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/snippets/text_snippets.vim /Users/alexandrebouvier/.vim/after/ftplugin/text_snippets.vim
 ```
+
+## Photos on AWS S3
+
+```sh
+brew install rclone
+```
+
+1. Create a remote name `s3`
+2. `rclone copy s3:my-new-space my/path/`
