@@ -15,7 +15,7 @@ end
 
 describe "#sum_with_while" do
 
-  it "should return the correct sum (1 -> 500)" do
+  it "should return the correct sum (1 -> 100)" do
     sum = sum_with_while(1, 100)
     expect(sum).to eq 5050
   end
