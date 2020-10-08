@@ -50,6 +50,8 @@ Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
   Enabled: false
+Style/ExplicitBlockArgument:
+  Enabled: false
 
 AllCops:
   NewCops: enable
