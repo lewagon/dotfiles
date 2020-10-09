@@ -16,13 +16,13 @@ In this challenge, let's assume you are launching an application in a few weeks.
 
 ![Collect valid emails](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step1.svg?sanitize=true)
 
-Your landing page is ready. You want to make sure the visitors submit a valid email with no errors.
+Your landing page is ready. You want to make sure the visitors submit a valid email.
 
 Code the `valid?` method that returns the right boolean depending on the email's validity:
-- identify the different parts of the email and code a regex to match the pattern of a classic email
-- code a simple regex yourself, no need to try and make it perfect (it is impossible to write a perfect regex for emails)!
+- identify the different parts of the email and code a regular expression to match the pattern of a classic email
+- code a simple regexp yourself, no need to try and make it perfect (it is impossible to write a perfect regex for emails)!
 
-**Warning:** REGEX is not expressive enough to validate 100% of the compliant email addresses as this [Stackoverflow discussion](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) and [emailregex.com](https://emailregex.com/) show. In professional environments, prefer the use of external services like the one provided by [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) or [Mailgun](https://www.mailgun.com/email-validation/) as it uses a huge database and machine learning to determine if an address is correct.
+**Warning:** Regular expressions are not expressive enough to validate 100% of the compliant email addresses as [this Stackoverflow discussion](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) and [this website](https://emailregex.com/) illustrate. In professional environments, prefer the use of external services like the one provided by [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) or [Mailgun](https://www.mailgun.com/email-validation/) as it uses a huge database and machine learning to determine if an address is correct.
 
 
 #### Pattern of an email address
@@ -34,7 +34,7 @@ Every email address is the association of a **username** with a **domain name**.
 
 ##### About domain names
 
-The Top Level Domain, also known as TLD are the last group of characters of the domain name, right after the **dot**, and can be chosen from a standard list. A very common one is `.com` for commercial website, but you may have heard about the other historical TLD, like `.net` and `.org`.
+The Top Level Domain, also known as TLD is the last group of characters of the domain name, right after the **dot**, and can be chosen from a standard list. A very common one is `.com` for commercial website, but you may have heard about the historical TLDs, like `.net` and `.org`.
 
 Main categories are:
 
@@ -59,7 +59,7 @@ Code the `clean_database` method:
 
 ![Build statistics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step3.svg?sanitize=true)
 
-Your landing page includes a very simple form to collect only contact emails. You don't know very much about your customers but you can infer some informations from the email addresses. You decide to make statistics about TLDs (Top Level Domains).
+Your landing page includes a very simple form to collect only contact emails. You don't know much about your customers but you can infer some informations from the email addresses. You decide to make statistics about TLDs (Top Level Domains).
 
 Code the `group_by_tld` method that returns a Hash with the emails addresses grouped by TLD.
 
@@ -78,11 +78,11 @@ Example:
 
 ![Emailing campaign](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step4.svg?sanitize=true)
 
-You are now working on the email's body. You're thinking of adding a bit of personalisation. Starting an email by "Dear customer" doesn't sound good, you'd rather extract the username from the email and start by something like `Dear Seb`.
+You are now working on the email's body and want it to be customised. Starting an email by "Dear customer" doesn't sound good, you'd rather extract the username from the email and start it with "Dear Seb".
 
 Code a `compose_email` method that:
 - extracts the username, domain and TLD from the email
-- returns a Hash formatted as below
+- returns a `Hash` formatted as below:
 
 ```ruby
 {
@@ -123,7 +123,7 @@ Code the `compose_email_translated` method:
 - extract the username, domain and TLD from the email
 - infer the language of the user from the TLD
 - replace the text parts with the corresponding translations 
-- return a Hash formatted as below
+- return a `Hash` formatted as below
 
 ```ruby
 {
