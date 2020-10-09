@@ -6,7 +6,7 @@ On most websites, they are the keys to create an account. If the email is misspe
 
 
 ## Story
-In this challenge, let's assume you are launching an application in a few weeks. You will notify everyone with a great emailing campaign as soon as your website is online! In the meantime, you prepared a landing page to collect visitors' emails. 
+In this challenge, let's assume you are launching an application in a few weeks. You will notify everyone with a great emailing campaign as soon as your website is online! In the meantime, you prepared a landing page to collect visitors' emails.
 
 ![Scenario](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-scenario.svg?sanitize=true)
 
@@ -42,7 +42,7 @@ Main categories are:
 - ccTLD: country code top level domain (such as `.fr`, `.de`, `.jp`)
 
 But there are [many more](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
- 
+
 
 ### Clean the database
 
@@ -67,7 +67,7 @@ Example:
 
 ```ruby
 {
-  com:	["julien@mdn.com"], 
+  com:	["julien@mdn.com"],
   de:	["dimitri@berlin.de"],
   fr:	["kevin@yahoo.fr", "edward@gmail.fr"]
 }
@@ -119,10 +119,10 @@ LOCALES = {
 }
 ```
 
-Code the `compose_email_translated` method:
+Code the `compose_translated_email` method:
 - extract the username, domain and TLD from the email
 - infer the language of the user from the TLD
-- replace the text parts with the corresponding translations 
+- replace the text parts with the corresponding translations
 - return a `Hash` formatted as below
 
 ```ruby
@@ -132,7 +132,7 @@ Code the `compose_email_translated` method:
   tld: com,
   subject: "Our website is online",
   body: "Come and visit us!",
-  closing: "See you soon",  
+  closing: "See you soon",
   signature: "The Team"
 }
 ```

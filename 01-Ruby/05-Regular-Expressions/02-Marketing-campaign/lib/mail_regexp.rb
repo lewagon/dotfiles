@@ -14,7 +14,7 @@ def compose_mail(email)
   # TODO: return a Hash with username, domain and tld extracted from email
 end
 
-def compose_mail_translated(email)
+def compose_translated_email(email)
   # TODO: return a Hash with username, domain and tld extracted from email
   # TODO: translate subject, body, closing and signature, according to TLD
 end
