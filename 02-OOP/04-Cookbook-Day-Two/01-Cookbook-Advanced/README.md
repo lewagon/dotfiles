@@ -153,11 +153,7 @@ Once you're done with the "Search", try to add a feature to mark a recipe as don
 5. [ ] Christmas crumble (5 / 5)
 ```
 
-## 4 - Add another property to `Recipe`
-
-If you are using [Marmiton](http://www.marmiton.org), let's import the `@difficulty` of each recipe. If you are using [allrecipes](https://www.allrecipes.com), let's import the `@prep_time` instead.
-
-Where is this information on the website?
+## 4 - Add a `@prep_time` property to `Recipe`
 
 Again, this new property should be:
 
