@@ -191,23 +191,23 @@ Only interactive elements can receive focus, content items (text and images) are
 ![Link](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/link.png)
 
 1. Practice the keyboard-only navigation:
-- `⇥` TAB to move forward in the page / `⇧` SHIFT + `⇥` TAB to move backward
-- `↑ ↓ ← →` Arrow keys to select values in a form
-- SPACE bar to tick checkboxes
-- `↵` ENTER to submit
-	
-Did you notice that you pressed TAB three times without any feedback? You actually focused the three links of the hidden navigation widget. Hint: when an element is hidden to your eyes, it doesn't mean it is hidden from the code.
+    - `⇥` TAB to move forward in the page / `⇧` SHIFT + `⇥` TAB to move backward
+    - `↑ ↓ ← →` Arrow keys to select values in a form
+    - SPACE bar to tick checkboxes
+    - `↵` ENTER to submit
+
+    Did you notice that you pressed TAB three times without any feedback? You actually focused the three links of the hidden navigation widget. Hint: when an element is hidden to your eyes, it doesn't mean it is hidden from the code.
 
 2. Toggle the navigation [`visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) in `focus.css`.
-<details>
-<summary markdown='span'>View solution</summary>
+    <details>
+    <summary markdown='span'>View solution</summary>
 
-```css
-nav.close ul {
-  visibility: hidden;
-}
-```
-</details>
+    ```css
+    nav.close ul {
+      visibility: hidden;
+    }
+    ```
+    </details>
 
 3. Now the CSS is fixed, open the navigation and try to focus it again. We need to fix one last thing: the navigation links should be the first items to receive focus. Open `index.html` and move the `<nav>` code before the `<main>` container.
 
