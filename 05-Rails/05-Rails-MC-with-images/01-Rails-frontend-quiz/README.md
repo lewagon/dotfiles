@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Before we move on to looking the second part of Mister Cocktail challenge let's review some of the principles we saw yeserday when we looked at rails modern frontend techniques.
+Before we move on to looking the second part of Mister Cocktail challenge let's review some of the principles we saw yesterday when we looked at rails modern frontend techniques.
 
 ## Specs
 
