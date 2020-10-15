@@ -157,36 +157,36 @@ We have not covered the Front-End aspect of a Rails project, but you can start o
 
 1. Variables
 
-```scss
-// Defining a variable
-$gray: #F4F4F4;
+    ```scss
+    // Defining a variable
+    $gray: #F4F4F4;
 
-body {
-  background: $gray; // Using this variable
-}
-```
+    body {
+      background: $gray; // Using this variable
+    }
+    ```
 
 2. Nesting
 
-```scss
-.banner {
-  background: red;
-  h1 {
-    font-size: 50px;
-  }
-}
-```
+    ```scss
+    .banner {
+      background: red;
+      h1 {
+        font-size: 50px;
+      }
+    }
+    ```
 
 3. Chaining
 
-```scss
-a {
-  color: grey;
-  &:hover {
-    color: black;
-  }
-}
-```
+    ```scss
+    a {
+      color: grey;
+      &:hover {
+        color: black;
+      }
+    }
+    ```
 
 In a few days, we'll also see how to organize our stylesheets in multiple files, and load them using the `import` keyword!
 
