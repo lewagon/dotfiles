@@ -81,7 +81,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 2 - Customers
 
-### 1.1 - Customer model
+### 2.1 - Customer model
 
 Our restaurant sells to customers, so we need a way to represent what a customer is.
 

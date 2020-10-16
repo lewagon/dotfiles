@@ -157,36 +157,36 @@ We have not covered the Front-End aspect of a Rails project, but you can start o
 
 1. Variables
 
-```scss
-// Defining a variable
-$gray: #F4F4F4;
+    ```scss
+    // Defining a variable
+    $gray: #F4F4F4;
 
-body {
-  background: $gray; // Using this variable
-}
-```
+    body {
+      background: $gray; // Using this variable
+    }
+    ```
 
 2. Nesting
 
-```scss
-.banner {
-  background: red;
-  h1 {
-    font-size: 50px;
-  }
-}
-```
+    ```scss
+    .banner {
+      background: red;
+      h1 {
+        font-size: 50px;
+      }
+    }
+    ```
 
 3. Chaining
 
-```scss
-a {
-  color: grey;
-  &:hover {
-    color: black;
-  }
-}
-```
+    ```scss
+    a {
+      color: grey;
+      &:hover {
+        color: black;
+      }
+    }
+    ```
 
 In a few days, we'll also see how to organize our stylesheets in multiple files, and load them using the `import` keyword!
 
@@ -198,7 +198,17 @@ For now, just open (or create) the `app/assets/stylesheets/questions.scss` file.
 
 First, delete the `test/controllers/questions_controller_test.rb` file if it got generated. We will be doing [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). The goal of this kind of testing is to automate all the manual testing of "code editing / go to the browser / reload the page / check if this is working". Everything you did manually in the browser can be done _via_ code!
 
-We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. To do that, open the following file and replace **all** its content with:
+We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. Before running your system tests you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu. Then you need to install `chromedriver`:
+
+```bash
+ # macOS
+brew cask install chromedriver
+
+# Ubuntu
+gem install chromedriver-helper
+```
+
+After the installation you can open the following file and replace **all** its content with:
 
 ```ruby
 # test/application_system_test_case.rb

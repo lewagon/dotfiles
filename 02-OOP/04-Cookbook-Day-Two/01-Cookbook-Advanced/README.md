@@ -1,7 +1,7 @@
 ⚠️ There's **no `rake`** for this exercise. Sorry 😉
 
 So now we want to enhance our cookbook by finding recipes online. We will use
-[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 allrecipes](https://www.allrecipes.com), because their markup structure is pretty clean (making them good candidates for parsing). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
+[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 allrecipes](https://www.allrecipes.com), because their markup structure is pretty clean (making them good candidates for scraping). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
@@ -25,7 +25,7 @@ ruby lib/app.rb
 
 ## 1 - Import recipes from the web
 
-You can scrape from any recipe website that you know, but good ones are [allrecipes](https://www.allrecipes.com) and [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
+You can scrape from any recipe website that you know, but good ones are [allrecipes](https://www.allrecipes.com) or [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
 
 ```bash
 -- My CookBook --
@@ -77,7 +77,7 @@ curl --silent 'https://www.allrecipes.com/search/?wt=strawberry' > strawberry.ht
 
 👆 **This step is really important**!
 
-The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to Marmiton/Allrecipes every time (that would probably also get us blacklisted).
+The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to Marmiton / allrecipes every time (that would probably also get us blacklisted).
 
 ### Parsing with Nokogiri
 
@@ -130,12 +130,13 @@ Think about the **class** that should be used to hold information parsed from th
 
 Try it live running your Cookbook!
 
-## 2 - Add a `@prep_time` property to `Recipe`
+## 2 - Add a `@rating` property to `Recipe`
 
 This new property should be:
 
+- Asked to the user when creating a new recipe
+- Parsed from the web when importing a new recipe
 - Stored in the CSV
-- Parsed from the web when importing a recipe
 - Printed when listing the recipes
 
 ## 3 - (User Action) Mark a recipe as done
@@ -145,18 +146,21 @@ Once you're done with the "Search", try to add a feature to mark a recipe as don
 ```bash
 -- Here are all your recipes --
 
-1. [X] Crumpets (15 min)
-2. [ ] Beans & Bacon breakfast (45 min)
-3. [X] Plum pudding (90 min)
-4. [X] Apple pie (60 min)
-5. [ ] Christmas crumble (30 min)
+1. [X] Crumpets (3 / 5)
+2. [ ] Beans & Bacon breakfast (4 / 5)
+3. [X] Plum pudding (3 / 5)
+4. [X] Apple pie (4 / 5)
+5. [ ] Christmas crumble (5 / 5)
 ```
 
-## 4 - Add a `@difficulty` property to `Recipe`
+## 4 - Add a `@prep_time` property to `Recipe`
 
-Again, this new property should be stored in the csv file and displayed when listing recipes.
+Again, this new property should be:
 
-Try modifying the web-import feature so that you can import recipes with a given difficulty (you might want to make this argument optional keeping the old import feature possible).
+- Asked to the user when creating a new recipe
+- Parsed from the web when importing a new recipe
+- Stored in the CSV
+- Printed when listing the recipes
 
 ## 5 - (Optional) Service
 
