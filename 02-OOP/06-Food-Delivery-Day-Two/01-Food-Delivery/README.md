@@ -14,7 +14,7 @@ Then, before you start, check that it still works:
 rake
 ```
 
-Now continue with your own code and keep adding features to the router / making the `rake` greener. Of course, you can have a look at [this morning's code](https://github.com/lewagon/food-delivery/tree/lecture-day-two) to get some inspiration.
+Now continue with your own code and keep adding features to the router / making the `rake` greener.
 
 Let's add more features to our Food Delivery program!
 
