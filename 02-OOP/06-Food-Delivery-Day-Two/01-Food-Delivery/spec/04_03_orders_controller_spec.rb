@@ -125,6 +125,8 @@ describe "OrdersController", :_order do
       # Reload from CSV
       new_order_repository = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       expect(new_order_repository.undelivered_orders.map(&:id)).not_to include(4)
+      # Rewrite the original CSV
+      CsvHelper.write_csv(orders_csv_path, orders)
     end
   end
 end

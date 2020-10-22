@@ -46,7 +46,9 @@ echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'
 source ~/.zshrc
 ```
 
-Install [Xming](https://sourceforge.net/projects/xming/).
+Install [Xming](https://sourceforge.net/projects/xming/) (Untick `Start Xming` at the end of the installer).
+
+
 Start XLaunch, leaving default settings but **add the following optional parameters** `-ac`.
 
 ![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
