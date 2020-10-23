@@ -38,5 +38,5 @@ alias oeno='cd ~/code/JeremyMIQUEL/oenoplace'
 
 alias cmsg='ruby ~/commit_message.rb'
 alias cms='ruby ~/commit_message.rb'
-alias rmsg='ruby ~/review_message.rb'
-alias rms='ruby ~/review_message.rb'
+alias password='ruby ~/code/alexandrebk/dotfiles/password.rb'
+
