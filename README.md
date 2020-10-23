@@ -43,7 +43,9 @@ Host *
   UseKeychain yes
 ```
 
-## VIM
+---
+
+### VIM
 
 Plugin list
 
@@ -70,7 +72,9 @@ vim +PluginInstall +qall
 
 To install Emmet vim you can follow [this instructions](https://vimawesome.com/plugin/emmet-vim)
 
-## Brew
+---
+
+### Brew
 
 ```
 brew install rename
@@ -79,11 +83,17 @@ brew install ack
 brew cask install whatsapp
 ```
 
-## Un lien utile pour le setup de son mac
+---
+
+### Un lien utile pour le setup de son mac
 
 [Ici](https://sourabhbajaj.com/mac-setup/)
 
-## Snippets on vim
+---
+
+### Snippets
+
+#### Vim
 
 To install snippets on vim you can create symbolic link to your dotfiles
 
@@ -95,7 +105,15 @@ ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/snippets/html_snippets.v
 ln -s /Users/alexandrebouvier/code/alexandrebk/dotfiles/snippets/text_snippets.vim /Users/alexandrebouvier/.vim/after/ftplugin/text_snippets.vim
 ```
 
-## Photos on AWS S3
+#### Sublime Test
+
+```
+subl /Users/alexandrebouvier/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+```
+
+---
+
+### Photos saved on AWS S3
 
 ```sh
 brew install rclone
