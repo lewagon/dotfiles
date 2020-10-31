@@ -1,3 +1,13 @@
+
+- [Shortcut miscellanous](https://github.com/alexandrebk/dotfiles/blob/master/cheat_sheet_miscellanous.md)
+- [Cheat Sheet Vim](https://github.com/alexandrebk/dotfiles/blob/master/cheat_sheet_vim.md)
+- [Snippets Documentation](https://github.com/alexandrebk/dotfiles/blob/master/doc_snippets.md)
+- [Snippets Ruby](https://github.com/alexandrebk/dotfiles/blob/master/snippets/ruby_snippets.vim)
+
+---
+
+### Setup
+
 Source: [Le wagon Setup](https://github.com/lewagon/setup)
 
 Run this shell:
@@ -82,12 +92,6 @@ brew install tree
 brew install ack
 brew cask install whatsapp
 ```
-
----
-
-### Un lien utile pour le setup de son mac
-
-[Ici](https://sourabhbajaj.com/mac-setup/)
 
 ---
 
