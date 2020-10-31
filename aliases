@@ -30,7 +30,6 @@ alias gmsg='git commit --message'
 alias mrp='cd ~/gitlab.peersandpeers/mrpeinture/mrpeinture  '
 alias anx='cd ~/gitlab.peersandpeers/lesateliersnx/lesateliersnx'
 alias abk='cd ~/code/alexandrebk'
-alias dotfiles='cd ~/code/alexandrebk/dotfiles'
 alias shopify='cd ~/code/alexandrebk/shopify_picanova_api'
 alias oeno='cd ~/code/JeremyMIQUEL/oenoplace'
 
@@ -40,3 +39,11 @@ alias cmsg='ruby ~/commit_message.rb'
 alias cms='ruby ~/commit_message.rb'
 alias password='ruby ~/code/alexandrebk/dotfiles/password.rb'
 
+# Browser
+
+alias dotfiles='open https://github.com/alexandrebk/dotfiles'
+alias google='open https://www.google.com/'
+alias lequipe='open https://www.lequipe.fr/'
+alias lemonde='open https://www.lequipe.fr/'
+alias lefigaro='open https://www.lequipe.fr/'
+alias youtube='open https://www.youtube.com/'
