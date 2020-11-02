@@ -9,7 +9,8 @@
     "no-param-reassign": "off",
     "class-methods-use-this": "off",
     "import/prefer-default-export": "off",
-    "prefer-destructuring": "off"
+    "prefer-destructuring": "off",
+    "arrow-body-style": "off"
   },
   "env": {
     "node": true,
