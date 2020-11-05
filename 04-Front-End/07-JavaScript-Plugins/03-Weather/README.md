@@ -102,7 +102,7 @@ Much better right?
 
 Last but not least, let's add a link to get the weather in the **current location**. We can do this with browsers' native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition).
 
-Add a link in your `index.html` file and bind it to the following callback:
+Add an `<a>` tag in your `index.html` file and bind it to the following callback:
 
 ```js
 navigator.geolocation.getCurrentPosition((data) => {
