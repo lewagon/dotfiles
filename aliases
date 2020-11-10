@@ -38,13 +38,16 @@ alias oeno='cd ~/code/JeremyMIQUEL/oenoplace'
 alias cmsg='ruby ~/commit_message.rb'
 alias cms='ruby ~/commit_message.rb'
 alias password='ruby ~/code/alexandrebk/dotfiles/password.rb'
+alias siren='ruby ~/code/alexandrebk/dotfiles/siren.rb'
+alias siret='ruby ~/code/alexandrebk/dotfiles/siret.rb'
 
 # Browser
 
 alias dotfiles='open https://github.com/alexandrebk/dotfiles'
 alias google='open https://www.google.com/'
 alias lequipe='open https://www.lequipe.fr/'
-alias lemonde='open https://www.lequipe.fr/'
-alias lefigaro='open https://www.lequipe.fr/'
+alias lemonde='open https://www.lemonde.fr/'
+alias lefigaro='open https://www.lefigaro.fr/'
 alias youtube='open https://www.youtube.com/'
 alias gitlab='open https://gitlab.peersandpeers.com/lesateliersnx/lesateliersnx/-/merge_requests'
+
