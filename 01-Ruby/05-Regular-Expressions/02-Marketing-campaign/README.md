@@ -59,7 +59,7 @@ Code the `clean_database` method:
 
 ![Build statistics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step3.svg?sanitize=true)
 
-Your landing page includes a very simple form to collect only contact emails. You don't know much about your customers but you can infer some informations from the email addresses. You decide to make statistics about TLDs (Top Level Domains).
+Your landing page includes a very simple form to collect only contact emails. You don't know much about your customers but you can infer some informations from the email addresses. You decide to make statistics about TLDs (Top Level Domains). **From now, all the datasets you're working with are already cleaned up for you.**
 
 Code the `group_by_tld` method that returns a Hash with the emails addresses grouped by TLD.
 
@@ -135,4 +135,18 @@ Code the `compose_translated_email` method:
   closing: "See you soon",
   signature: "The Team"
 }
+```
+
+**Refactoring Hint:** If your method has too many lines, you can split it into two methods. For example, create a method dedicated to pick the right translation in LOCALES. Then use it in `compose_translated_email` wherever you need a sentence to be translated.
+
+```ruby
+def translate(keyword, language)
+  # TODO: return the translation
+end
+
+translate(:subject, :en)
+# "Our website is online"
+
+translate(:subject, :fr)
+# "Notre site est en ligne"
 ```
