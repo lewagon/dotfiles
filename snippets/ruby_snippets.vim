@@ -40,6 +40,7 @@ Snippet fillin        fill_in "<{field}>", with: "<{text}>"
 Snippet fill          fill_in "<{field}>", with: "<{text}>"
 Snippet expect        expect(<{}>).to <{}>
 Snippet timecop       Timecop.freeze(DateTime.new(2020,1,1)) do<CR><{}><CR>end
+Snippet testexple     visit root_path<CR>click_on "text"<CR>fill_in "id" with: "text"<CR>select "test", from:<CR>click_on "text"<CR>expect().to eq
 
 
 Snippet def           def <{}><CR>end
