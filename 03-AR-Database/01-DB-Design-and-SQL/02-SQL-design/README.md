@@ -8,7 +8,7 @@ The goal of this first challenge is to become familiar with database design,
 #### Survey database design
 
 There are many ways to build a survey database, but let's start by building a basic
-system with users, questions, responses and votes.
+system with users, questions, responses and surveys.
 
 Here are the requirements of our system:
 
