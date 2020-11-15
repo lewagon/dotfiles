@@ -10,7 +10,7 @@ Cuando se diseña un componente siempre se sigue la misma secuencia de pasos:
 
 Decide qué componente quieres diseñar (formulario de login (login form), pestañas (tabs), barras de navegación (navbar), etc.). Aquí hay un [grupo de componentes Dribbble](https://dribbble.com/arthur-littm/buckets/1030911-Open-Component-Challenge) que hemos creado para este desafío. Échale un vistazo y selecciona el que más te guste.
 
-### PAso 2: Dibuja la estructura HTML ✏️
+### Paso 2: Dibuja la estructura HTML ✏️
 
 Ahora que sabes lo que vas a diseñar, tienes que dibujar la estructura del HTML. El error clásico que cometen los principiantes es saltarse este paso y empezar a codear directamente ⚠️. Intentar hacer el CSS con una estructura HTML pobre es una pesadilla 😱.
 
