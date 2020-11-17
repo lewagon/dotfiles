@@ -49,3 +49,7 @@
 [user]
 	email = jmiguelpimenta@gmail.com
 	name = Miguel Pimenta
+[hub]
+	protocol = https
+[credential]
+	helper = store
