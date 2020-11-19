@@ -1,3 +1,4 @@
+require_relative "app/models/post"
 require "sqlite3"
 
 db_file_path = File.join(File.dirname(__FILE__), "spec/support/posts_spec.db")
