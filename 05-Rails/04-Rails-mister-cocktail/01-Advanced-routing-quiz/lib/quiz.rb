@@ -3,13 +3,18 @@
 # WARNING: Try and answer them before running `rake`.
 
 def restaurants_resources_routes
-  # TODO: Return an `Array` with the 7 `routes` that `resources :restaurants` would generate for you.
-  routes = []
+  # TODO: Implement the 7 CRUD conventional `routes` that a `resources :restaurants`
+  # would generate for you.
 
-  routes << "get '/restaurants', to: 'restaurants#index'"
-  # Add more routes here
+  # You can use the same DSL (Domain Specific Language) that you use
+  # in your rails app `config/routes.rb` file
 
-  return routes
+  return RoutesSet.draw do
+    # get '/some_route', to: 'some_controller#some_action'
+
+    # Add more routes here
+    # ...
+  end
 end
 
 def nested_routes_for_one_to_many?
