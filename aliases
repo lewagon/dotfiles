@@ -1,3 +1,30 @@
+git_synchronyze () {
+  echo '=== git checkout master ==='
+  git checkout master
+  echo '=== git pull origin master ==='
+  git pull origin master
+  echo '=== git sweep ==='
+  git sweep
+}
+
+google () {
+  query=""
+  for i in "$*"
+  do
+     query+=$i
+  done
+  open "https://www.google.com/search?q=${query}&oq=${query}"
+}
+
+youtube () {
+  query=""
+  for i in "$*"
+  do
+     query+=$i
+  done
+  open "https://www.youtube.com/results?search_query=${query}"
+}
+
 # Get External IP / local IPs
 
 alias ip="curl ipinfo.io/ip"
@@ -6,12 +33,8 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # Quickly serve the current directory as HTTP
 
-alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
-alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
-
-# RAILS
-
-alias railss="rails server"
+alias serve='ruby -run -e httpd . -p 8000'
+# alias serve='python -m SimpleHTTPServer'
 
 # GIT
 
@@ -20,34 +43,33 @@ alias gwip="gaa && git commit -m 'Minor changes' && gpush"
 alias grefacto="gaa && git commit -m 'Refacto'"
 alias gpush='NAME=$(git symbolic-ref HEAD | sed -e "s,.*/\(.*\),\1,") && git push origin "$NAME"'
 alias gitm="git checkout master"
-alias gitcreate="git checkout -b"
-alias gitb='git checkout -b'
 alias gpull='git pull origin master'
 alias gmsg='git commit --message'
+alias cmsg='ruby ~/commit_message.rb'
+alias cms='ruby ~/commit_message.rb'
+alias gsync="git_synchronyze"
 
-# CD
+# Change Directory
 
 alias mrp='cd ~/gitlab.peersandpeers/mrpeinture/mrpeinture  '
 alias anx='cd ~/gitlab.peersandpeers/lesateliersnx/lesateliersnx'
 alias abk='cd ~/code/alexandrebk'
 alias shopify='cd ~/code/alexandrebk/shopify_picanova_api'
-alias oeno='cd ~/code/JeremyMIQUEL/oenoplace'
-
-# Commit message
-
-alias cmsg='ruby ~/commit_message.rb'
-alias cms='ruby ~/commit_message.rb'
-alias password='ruby ~/code/alexandrebk/dotfiles/password.rb'
-alias siren='ruby ~/code/alexandrebk/dotfiles/siren.rb'
-alias siret='ruby ~/code/alexandrebk/dotfiles/siret.rb'
+alias oenoplace='cd ~/code/JeremyMIQUEL/oenoplace'
 
 # Browser
 
 alias dotfiles='open https://github.com/alexandrebk/dotfiles'
-alias google='open https://www.google.com/'
 alias lequipe='open https://www.lequipe.fr/'
 alias lemonde='open https://www.lemonde.fr/'
 alias lefigaro='open https://www.lefigaro.fr/'
-alias youtube='open https://www.youtube.com/'
 alias gitlab='open https://gitlab.peersandpeers.com/lesateliersnx/lesateliersnx/-/merge_requests'
+alias podcast='open https://www.bbc.co.uk/sounds/series/p02nrsln'
 
+# Miscellaneous
+
+alias email="echo 'alexandre.b2506@gmail.com' | pbcopy"
+alias siren="echo '792677809' | pbcopy"
+alias siret="echo '79267780900016' | pbcopy"
+alias password='ruby ~/code/alexandrebk/dotfiles/password.rb'
+alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
