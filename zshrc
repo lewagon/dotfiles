@@ -44,3 +44,15 @@ export EDITOR=vim
 export DISABLE_SPRING=true
 
 ctags=/usr/local/bin/ctags
+
+ngrok_export_variable(){
+  url=`curl -s  http://localhost:4040/api/tunnels | ruby -e "require 'json' ; puts JSON.parse(ARGF.read)['tunnels'][1]['public_url'] rescue nil"`
+  if [ $url ]
+  then
+    export NGROK_URL=$url
+    echo "NGROK_URL=$NGROK_URL"
+  else
+    unset NGROK_URL
+    echo "Pas de ngrok qui tourne"
+  fi
+}
