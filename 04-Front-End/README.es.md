@@ -25,7 +25,7 @@ Primero veremos el framework CSS de Bootstrap y todo lo que nos da. Luego explor
 
 - Para componentes avanzados, habremos construido nuestra propia librería CSS
 - Para los estándar, ¡mejor no reinventamos la rueda! Usaremos clases Bootstrap integradas.
-- Usaremos el grid bootstrap para diseños receptivos
+- Usaremos el grid Bootstrap para diseños receptivos
 - Usaremos flexbox para el alineamiento horizontal y vertical de los componentes
 - Usaremos el grid CSS para crear tarjetas de mosaico.
 
