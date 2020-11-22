@@ -6,7 +6,7 @@ Siempre son los mismos 3 pasos:
 
 - Selecciona (**Select**) el elemento que quieres hacer interactivo.
 - Escucha (**Listen**) el evento en el elemento.
-- Escribe la llamada de vuelta (**callback**). Este es el código que corre cuando ocurre el evento.
+- Escribe la retrollamada (también conocida como llamada de vuelta o **callback** en inglés). Este es el código que corre cuando ocurre el evento.
 
 ## Especificaciones
 
