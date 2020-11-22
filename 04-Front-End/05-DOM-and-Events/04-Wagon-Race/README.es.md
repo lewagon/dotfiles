@@ -68,7 +68,7 @@ Escribe todo el código en `lib/wagon_race.js`. Necesitamos una manera para que 
 - Remueve la clase `active` del `td` del jugador actual y agrega una clase en el próximo `td`.
 - Hazle seguimiento al "index" de cada jugador en la tabla e incrementalo.
 
-#### Limitación del teclado
+#### Enlace al teclado
 
 ¡Hacer clic en un botón no es lo suficientemente rápido y ni siquiera puedes jugar con alguien más! Échale un vistazo el evento `keyup`:
 
