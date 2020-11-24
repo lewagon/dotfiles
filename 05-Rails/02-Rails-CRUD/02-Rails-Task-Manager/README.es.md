@@ -10,7 +10,7 @@ Vamos a crear un To-Do Manager con las funcionalidades CRUD:
 
 En este desafío te encontrarás con tu viejo amigo [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) el cual es el ORM de Rails.
 
-Aquí no hay `rake` here. No crees tu app Rails en `fullstack-challenges` ⛔️
+Aquí no hay `rake`. También recuerda no crear tu app Rails en `fullstack-challenges` ⛔️
 
 ```bash
 cd ~/code/<user.github_nickname>
