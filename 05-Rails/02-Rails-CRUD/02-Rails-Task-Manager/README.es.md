@@ -2,11 +2,11 @@
 
 Vamos a crear un To-Do Manager con las funcionalidades CRUD:
 
-1. Como usuario, puedo hacer una lista de tareas
-1. Como usuario, puedo ver los detalles de una tarea
-1. Como usuario, puedo agregar una nueva tarea
-1. Como usuario, puedo editar una tarea (marcarla como completada / actualizar su título y detalles)
-1. Como usuario, puedo eliminar una tarea
+1. Como usuario/a, puedo hacer una lista de tareas
+1. Como usuario/a, puedo ver los detalles de una tarea
+1. Como usuario/a, puedo agregar una nueva tarea
+1. Como usuario/a, puedo editar una tarea (marcarla como completada / actualizar su título y detalles)
+1. Como usuario/a, puedo eliminar una tarea
 
 En este desafío te encontrarás con tu viejo amigo [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) el cual es el ORM de Rails.
 
@@ -38,7 +38,7 @@ Genera un `TasksController` vacío (sin acciones) usando el generador correcto.
 
 Para este ejercicio, **no uses `resources`** en tu `config/routes.rb`. El objetivo de este ejercicio es crear nuevamente el CRUD regular desde cero.
 
-### 3 - Como usuario, puedo hacer una lista de tareas
+### 3 - Como usuario/a, puedo hacer una lista de tareas
 
 Primero, agrega una nueva ruta a la lista de tareas siguiendo la convención vista en clase. Luego, agrega una acción de controlador y su vista. Esta acción debe recuperar **todas** las tareas y una vista debe hacer un bucle sobre ella para mostrarlas como se ve en la captura de pantalla siguiente.
 
@@ -51,7 +51,7 @@ Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: 
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png).
 
-### 4 - Como usuario, puedo ver los detalles de una tarea
+### 4 - Como usuario/a, puedo ver los detalles de una tarea
 
 Ahora tenemos una lista de tareas y quisiéramos hacer clic en su título y navegar hacia una nueva página que muestre los detalles de dicha tarea. Siguiendo las convenciones vistas en clase, agrega una nueva ruta, una nueva acción de controlador y una nueva vista. Esta acción debe **buscar** una tarea específica gracias a su `id` directamente desde `params`.
 
@@ -59,20 +59,20 @@ Actualiza la vista `index.html.erb` con el helper `link_to` para crear los enlac
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index_show.gif).
 
-### 5 - Como usuario, puedo agregar una nueva tarea
+### 5 - Como usuario/a, puedo agregar una nueva tarea
 
 Siguiendo las convenciones vistas en clase, agrega dos rutas para manejar la creación de una tarea. Una ruta existe para mostrar el formulario del Task y la otra tiene como función manejar la petición `POST` generada cuando se envía dicho formulario. Intenta usar el helper `form_for` directamente en tu vista.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/new.gif).
 
-### 6 - Como usuario, puedo editar una tarea
+### 6 - Como usuario/a, puedo editar una tarea
 
 Queremos poder editar una tarea, cambiar su título y sus detalles y especialmente **marcarla como completada**. Siguiendo las convenciones vistas en clase, agrega las dos rutas que necesitas para esta funcionalidad.
 Implementa las acciones de controlador y las vistas.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/edit.gif).
 
-### 7 - Como usuario, puedo eliminar una tarea
+### 7 - Como usuario/a, puedo eliminar una tarea
 
 La última funcionalidad. Queremos poder borrar (destroy) tareas directamente desde la lista. Una confirmación JavaScript sería útil.
 
