@@ -31,7 +31,7 @@ end
 - Un árbol producirá 100 frutas al año cuando tenga más de 5 años.
 - Un árbol producirá 200 frutas al año cuando llegue a los 10 años.
 - Un árbol no producirá más frutas cuando alcance los 15 años.
-- Se debe poder tomar **una sola fruta** del árbol llamando al método `pick_a_fruit!` sobre el árbol (pero solo si todavia quedan frutas).
+- Se debe poder tomar **una sola fruta** del árbol llamando al método `pick_a_fruit!` sobre el árbol (pero solo si todavía quedan frutas).
 - Al final de cada año, aquellas frutas que no hayan sido recogidas **caerán**.
 - Se debe poder saber el número de frutas que quedan colgando en el árbol.
 
