@@ -45,3 +45,6 @@
 
 [branch "master"]
   mergeoptions = --no-edit
+
+[pull]
+  rebase = false
