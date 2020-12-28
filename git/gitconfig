@@ -1,0 +1,66 @@
+[user]
+	name = Miguel Pimenta
+	email = jmiguelpimenta@gmail.com
+
+[github]
+	user = jmschp
+
+[core]
+	editor = code --wait
+	autocrlf = input
+	excludesfile = ~/.config/git/ignore
+    # pager = less -FRSX
+	# filemode = false
+	# trustctime = false
+	# untrackedCache = true
+	# pager = diff-so-fancy | less --tabs=4 -RFX
+	# ignorecase = false
+
+[credential]
+	helper = osxkeychain
+
+[help]
+	autocorrect = 1
+
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[alias]
+    br = branch
+    ci = commit
+    co = checkout
+    d = !git --no-pager diff
+    dt  = difftool
+    fo = fetch origin
+    st = status
+    sts = status -sb
+    stat = !git --no-pager diff --stat
+
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    ld = "!sh -c \"git log --since '${1:-1} days ago' --oneline --author $(git config user.email)\" -"
+    lg = log -p
+	ll = log --pretty=oneline --graph --abbrev-commit
+	lm = log --pretty=format:'* %s (%h)'
+
+    # Clean merged branches
+    sweep = !git branch --merged main | grep -v 'main$' | xargs git branch -d && git remote prune origin
+        
+    # Serve local repo. http://coderwall.com/p/eybtga
+    # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
+    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+
+    # Removes a file from the index
+    unstage = reset --hard HEAD
+
+[push]
+	default = simple
+	# followTags = true
