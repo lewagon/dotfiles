@@ -1,4 +1,7 @@
-COMPUTER_NAME="jmschp-mac"
+echo "Type in your computer name (do not use spaces) "
+read computer_name
+
+COMPUTER_NAME=$computer_name
 
 osascript -e 'tell application "System Preferences" to quit'
 

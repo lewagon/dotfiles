@@ -4,13 +4,18 @@ read full_name
 echo "Type in your email address (the one used for your GitHub account): "
 read email
 
+echo "Type in your editor (< code --wait > for VS Code): "
+read editor
+
 git config --global user.email $email
 git config --global user.name $full_name
+git config --global core.editor $editor
+git config --global --edit
 
-git add .
-git commit --message "My identity for @lewagon in the gitconfig"
-git push origin master
+# git add .
+# git commit --message "My identity for @lewagon in the gitconfig"
+# git push origin master
 
-git remote add upstream git@github.com:lewagon/dotfiles.git
+# git remote add upstream git@github.com:lewagon/dotfiles.git
 
 echo "👌 Awesome, all set."
