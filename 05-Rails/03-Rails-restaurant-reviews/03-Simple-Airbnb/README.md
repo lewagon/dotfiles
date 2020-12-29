@@ -16,7 +16,7 @@ rails new rails-simple-airbnb --skip-active-storage --skip-action-mailbox
 cd rails-simple-airbnb
 git add .
 git commit -m "rails new"
-hub create
+gh repo create
 git push origin master
 ```
 

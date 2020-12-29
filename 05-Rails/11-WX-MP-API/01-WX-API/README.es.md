@@ -20,7 +20,7 @@ rails new \
 cd stories-api
 git add .
 git commit -m "rails new"
-hub create
+gh repo create
 git push origin master
 ```
 

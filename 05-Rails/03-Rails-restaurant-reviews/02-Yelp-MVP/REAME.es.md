@@ -13,7 +13,7 @@ rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"
-hub create
+gh repo create
 git push origin master
 echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile

@@ -10,25 +10,19 @@ cd ~/code/<user.github_nickname>/profile
 
 ## Creación el repositorio Github
 
-Instala la gema `hub` para crear un repositorio Github desde la Terminal sin abrir tu navegador (lo que es de mucha utilidad cuando eres perezoso/a 😉).
-
-```bash
-gem install hub
-```
-
-Ahora puedes inicializar (**init**) un repositorio, hacer los commits de tus cambios y crear el respectivo repositorio Github:
+Puedes inicializar (**init**) un repositorio, hacer los commits de tus cambios y crear el respectivo repositorio Github:
 
 ```bash
 git init
 git add .
 git commit -m "my profile page"
-hub create # this creates the associated repo on Github!
+gh repo create # this creates the associated repo on Github!
 ```
 
 Para abrir el repositorio Github desde tu navegador, puedes correr el código siguiente:
 
 ```bash
-hub browse
+gh repo view --web
 ```
 
 ## Github Pages
