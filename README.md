@@ -16,7 +16,7 @@ At the moment I am usign:
 #### Sytem update
 On a new installation of macOS open the terminal and run:
 ```bash
-sudo softwareupdate -i -a
+source softwareupdate -i -a
 ```
 To update macOS. After running sudo `softwareupdate -i -a` it might be necesary to restart the system. Then run:
 ```bash
@@ -25,13 +25,13 @@ xcode-select --install
 #### Apply system preferences
 Run the `defaults.sh ` and `defaults-chrome` that is in the folder `macos`
 ```bash
-bash macos/defaults.sh
-bash macos/defaults-chrome.sh
+source macos/defaults.sh
+source macos/defaults-chrome.sh
 ```
 ### Homebrew toolset
-Run `brew.sh ` in the `brew` folder this will install [Homebrew](https://brew.sh/), followed by the instalation of all the  packages listed in the Brewfile.
+Run `brew.sh ` in the `brew` folder this will install [Homebrew](https://brew.sh/), followed by the instalation of all the packages listed in the Brewfile.
 ```bash
-bash brew/brew.sh
+source brew/brew.sh
 ```
 #### zsh setup
 Homebrew as already installed
@@ -41,7 +41,7 @@ Homebrew as already installed
 
 Run the `zsh_setup.sh` file in the `zsh` folder to setup Zsh
 ```bash
-bash zsh/zsh_setup.sh
+source zsh/zsh_setup.sh
 ```
 This will make:
 1. zsh your defual shell
