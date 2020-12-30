@@ -91,6 +91,7 @@ brew install rename
 brew install tree
 brew install ack
 brew cask install whatsapp
+brew install cloc
 ```
 
 ---
