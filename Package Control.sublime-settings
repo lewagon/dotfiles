@@ -15,6 +15,7 @@
     "SublimeLinter",
     "SublimeLinter-rubocop",
     "BracketHighlighter",
-    "Color Highlight"
+    "Color Highlight",
+    "Anaconda"
   ]
 }
