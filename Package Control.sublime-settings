@@ -17,6 +17,7 @@
     "BracketHighlighter",
     "Color Highlight",
     "SublimeLinter-flake8",
-    "AutoPEP8"
+    "AutoPEP8",
+    "Anaconda"
   ]
 }
