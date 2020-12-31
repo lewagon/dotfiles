@@ -16,6 +16,8 @@
     "SublimeLinter-rubocop",
     "BracketHighlighter",
     "Color Highlight",
+    "SublimeLinter-flake8",
+    "AutoPEP8",
     "Anaconda"
   ]
 }
