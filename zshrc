@@ -52,9 +52,6 @@ load-nvmrc
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
-# Hide virtualenv for the Data Bootcamp
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
