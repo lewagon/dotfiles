@@ -1,6 +1,12 @@
 {
     "files.autoSave": "afterDelay",
-    
+
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.fontSize": 14
+    "terminal.integrated.fontSize": 14,
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "code-runner.executorMap": {
+        "python": "python3"
+    }
 }
