@@ -9,7 +9,7 @@
 [core]
 	editor = code --wait
 	autocrlf = input
-	excludesfile = ~/.config/git/ignore
+	excludesfile = ~/.gitignore
     # pager = less -FRSX
 	# filemode = false
 	# trustctime = false
