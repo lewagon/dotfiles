@@ -26,13 +26,14 @@ rails new rails-stupid-coaching --skip-active-storage --skip-action-mailbox
 cd rails-stupid-coaching
 git add .
 git commit -m "rails new"
-hub create
+gh repo create
+```
+
+```bash
 git push origin master
 ```
 
 We add the flag `--skip-active-storage` to avoid the installation of [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilitates uploading files to a cloud storage service, but we don't need it for the moment, and it will add to your app unnecessary routes.
-
-`hub` is a gem that we installed on the first day that created a repo on github for us so that we can `git push`. 😊
 
 **Objective**: We will implement a simple Rails application with 2 pages:
 
@@ -279,7 +280,7 @@ end
 
 Intrigued about this syntax? This is the **capybara** gem! Very helpful in this testing context where we need to automate clicking on links, buttons, or filling forms. Have a look at [its DSL](https://github.com/teamcapybara/capybara#the-dsl).
 
-Now your turn ✌️. Try to implement other scenarios in your system tests. 
+Now your turn ✌️. Try to implement other scenarios in your system tests.
 
 **Screenshots**
 
@@ -287,8 +288,8 @@ The equivalent of `binding.pry` in the test world is to take screenshots. Let's 
 
 ```ruby
 # Gemfile
-group :test do	
-  # [...]	
+group :test do
+  # [...]
   gem 'launchy'
 end
 ```

@@ -54,7 +54,7 @@ Luego empieza a hacerle seguimiento a tu proyecto con `git` y pushealo a la rama
 git init
 git add .
 git commit -m "my landing page"
-hub create
+gh repo create
 git push origin master # push to master first
 # then puts to a `gh-pages` branch
 git co -b gh-pages
