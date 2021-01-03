@@ -40,7 +40,7 @@ describe "Order", :_order do
     end
 
     it "should return false if the order has not yet been delivered" do
-      order = Order.new(delivered: false)
+      order = Order.new({})
       expect(order.delivered?).to be false
     end
   end

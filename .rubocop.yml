@@ -32,7 +32,7 @@ Style/SignalException:
   Enabled: false
 Metrics/CyclomaticComplexity:
   Enabled: false
-Style/MethodMissingSuper:
+Lint/MissingSuper:
   Enabled: false
 Style/MissingRespondToMissing:
   Enabled: false
@@ -49,6 +49,10 @@ Style/HashTransformValues:
 Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
+  Enabled: false
+Style/ExplicitBlockArgument:
+  Enabled: false
+Style/OptionalBooleanParameter:
   Enabled: false
 
 AllCops:

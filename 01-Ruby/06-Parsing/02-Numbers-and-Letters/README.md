@@ -15,7 +15,7 @@ The goal of this challenge is to write a simplified version of this game from th
 
 Here is how this should work, when running `ruby lib/interface.rb`:
 
-```
+```bash
 ********* Welcome to the longest word-game! *********
 Here is your grid:
 Q F M R K L I T P

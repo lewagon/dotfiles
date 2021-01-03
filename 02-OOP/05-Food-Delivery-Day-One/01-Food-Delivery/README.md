@@ -81,7 +81,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 2 - Customers
 
-### 1.1 - Customer model
+### 2.1 - Customer model
 
 Our restaurant sells to customers, so we need a way to represent what a customer is.
 
@@ -128,15 +128,15 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 3 - Optionals
 
-### 3.1 - Implement `update` and `destroy` actions for meal and customer
+### 3.1 - Implement `edit` and `destroy` actions for meals and customers
 
-In our app, a user can't update or destroy an existing meal or customer.
+In our app, a user can't edit or destroy an existing meal or customer.
 
 Implement these additional user actions:
-- As a user, I can update an existing meal
-- As a user, I can delete an existing meal
-- As a user, I can update an existing customer
-- As a user, I can delete an existing customer
+- As a user, I can edit an existing meal
+- As a user, I can destroy an existing meal
+- As a user, I can edit an existing customer
+- As a user, I can destroy an existing customer
 
 Done? Time to `git add`, `commit` and `push`.
 

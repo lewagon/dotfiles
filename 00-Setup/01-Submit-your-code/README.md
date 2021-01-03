@@ -13,7 +13,7 @@ Working in pairs is a common practice in software engineering. The idea is that 
 
 ## Exercise 1: Let's `rake`.
 
-When correct, this exercise will give you 1 green result line out of 3. The other 2 lines will be green when you're done with exercise 2.
+When correct, this exercise will give you 1 green result line out of 2. The other line will be green when you're done with exercise 2.
 
 Move to the exercise folder with the command at the top of this page.
 

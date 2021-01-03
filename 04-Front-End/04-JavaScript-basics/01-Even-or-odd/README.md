@@ -20,19 +20,19 @@ Before starting, take the time to install **Eslint Sublime Linter** in Sublime T
 
 1. Open Sublime Text
 
-```bash
-stt
-```
+    ```bash
+    stt
+    ```
 
 2. In **Sublime Text**, open **Package Control**'s menu:
 
-```bash
-# macOS
-cmd shift p
+    ```bash
+    # macOS
+    cmd shift p
 
-# Ubuntu
-ctrl shift p
-```
+    # Ubuntu
+    ctrl shift p
+    ```
 
 3. Type `install package` and select `Package Control: Install Package`
 4. Type `SublimeLinter-eslint` and select it

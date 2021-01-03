@@ -57,6 +57,16 @@ describe "#run_game" do
     end
   end
 
+
+  it "should return a detailed hash of result (with `:score`, `:message` and `:time`)" do
+    expect(perfect).to be_a(Hash)
+    expect(perfect).to include({
+      score: be_a(Numeric),
+      message: be_a(String),
+      time: be_a(Numeric)
+    })
+  end
+
   it "should compute higher score for longer word" do
     expect(perfect[:score] > quick[:score]).to eq true
   end

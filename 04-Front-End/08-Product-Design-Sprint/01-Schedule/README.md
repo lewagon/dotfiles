@@ -7,7 +7,7 @@ Before you start:
 
 ## Schedule
 
-### Morning
+### Part I
 
 After the morning lecture, you will work with your team to define your product:
 
@@ -17,10 +17,10 @@ After the morning lecture, you will work with your team to define your product:
 
 For your product pitch, persona and user journey, make a copy of our <a href="https://docs.google.com/spreadsheets/d/1OGCJLizpcROt0WwbGV_bCOxBktHO9XPdNHkXcZIyX1o/edit?usp=sharing" target="_blank">UX Research spreadsheet</a> and complete the different templates.
 
-### Afternoon
+### Part II
 
 - **Visual identity** (30 min) 👉 Learn to integrate a visual identity to your wireframe (see video tutorial below 👇)
-- **Prototype** 👉 finish your prototype and start adding the visual identity **only if you have time**. It's more strategic to have a kickass prototype in black and white rather than a poor mockup with lots of pictures and colors but that no one understands 😬. 
+- **Prototype** 👉 finish your prototype and start adding the visual identity **only if you have time**. It's more strategic to have a kickass prototype in black and white rather than a poor mockup with lots of pictures and colors but that no one understands 😬.
 
 ### Demo
 When you are done, copy / paste your prototype URL on your product's page in Kitt. To get the prototype URL, first play your prototype and then click on the `Share  Prototype` button like below:

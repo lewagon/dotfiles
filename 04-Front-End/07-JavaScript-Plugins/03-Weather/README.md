@@ -61,24 +61,24 @@ During this morning lecture you saw how to add [select2](https://select2.org/):
 
 1. Download `jquery` and `select2` with yarn
 
-```bash
-yarn add jquery select2
-```
+    ```bash
+    yarn add jquery select2
+    ```
 
 2. Add a select in your `index.html` file (remove the input):
 
-```html
-<select id="city-input" class="select2"></select>
-```
+    ```html
+    <select id="city-input" class="select2"></select>
+    ```
 
 3. Activate `select2` with:
 
-```js
-import $ from 'jquery';
-import 'select2';
+    ```js
+    import $ from 'jquery';
+    import 'select2';
 
-$('#city-input').select2();
-```
+    $('#city-input').select2();
+    ```
 
 Now we want to inject a list of cities without touching the HTML file. Thankfully, select2 [has an option for that](https://select2.org/data-sources/arrays)!
 
@@ -102,7 +102,7 @@ Much better right?
 
 Last but not least, let's add a link to get the weather in the **current location**. We can do this with browsers' native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition).
 
-Add a link in your `index.html` file and bind it to the following callback:
+Add an `<a>` tag in your `index.html` file and bind it to the following callback:
 
 ```js
 navigator.geolocation.getCurrentPosition((data) => {

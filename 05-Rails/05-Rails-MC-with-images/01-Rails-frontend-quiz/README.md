@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Before we move on to looking the second part of Mister Cocktail challenge let's review some of the principles we saw yeserday when we looked at rails modern frontend techniques.
+Before we move on to looking the second part of Mister Cocktail challenge let's review some of the principles we saw yesterday when we looked at rails modern frontend techniques.
 
 ## Specs
 
@@ -11,7 +11,7 @@ the correct information to pass the quiz!
 
 ### Question 1
 
-Return a `String` with the right command to create a new rails app called `mister-cocktail` with webpack.
+Return a `String` with the right command to create a new rails app called `mister-cocktail`.
 
 ### Question 2
 

@@ -7,3 +7,4 @@ Style/RegexpLiteral:
 AllCops:
   Exclude:
     - db/**/*.rb
+    - Rakefile

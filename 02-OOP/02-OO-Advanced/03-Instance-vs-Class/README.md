@@ -38,7 +38,7 @@ Are you able to answer the following questions? (Go into the doc if necessary)
 Date.today
 Twitter::REST::Client#follow (see https://github.com/sferik/twitter)
 String#upcase
-Nokogiri::HTML::Document.parse (see http://www.rubydoc.info/gems/nokogiri/Nokogiri/XML/Document)
+Nokogiri::HTML::Document.parse #(see http://www.rubydoc.info/gems/nokogiri/Nokogiri/XML/Document)
 Array#shuffle
 ```
 

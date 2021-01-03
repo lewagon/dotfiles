@@ -7,7 +7,7 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 Let's install `yarn` if you haven't already!
 
 ```bash
-# OSX
+# macOS
 brew install yarn
 
 # Ubuntu
@@ -162,7 +162,7 @@ to only run tests in the `spec/models` folder. Make sure they're all green befor
 - An ingredient has many doses
 - A dose belongs to an ingredient
 - A dose belongs to a cocktail
-- You can't delete an ingredient if it used by at least one cocktail.
+- You can't delete an ingredient if it is used by at least one cocktail.
 - When you delete a cocktail, you should delete associated doses (but not the ingredients as they can be linked to other cocktails).
 
 ### 2 - Seed the ingredients

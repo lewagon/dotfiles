@@ -1,5 +1,0 @@
-inherit_from:
-  - ../../../.rubocop.yml
-
-EachWithObject:
-  Enabled: false
