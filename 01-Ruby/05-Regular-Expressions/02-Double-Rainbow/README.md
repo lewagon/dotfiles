@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-During your journey at Le Wagon, you'll discover a lot of tools, services and languages.
+During your journey at Le Wagon, you will discover a lot of tools, services and languages.
 Here are the logos of the main ones, but they are all in black and white at the moment!
 This challenge is a regex game to reveal their colors.
 
@@ -38,7 +38,7 @@ secret_message = "Reveal the logos' colors:\
  Definitely a vivid color scheme with bright orange and shiny yellow,\
  many shades of blue, oscillating between purple and indigo! but not much green"
 
-p last_five_letters(secret_message)
+puts last_five_letters(secret_message)
 ```
 
-**NOTE:** Make sure you copy paste the backslashes \: they escape the line breaks to keep `secret_message` a single-line string. Making your regular expressions match multiline strings can be harder than expected, as explained in this [StackOverflow answer](https://stackoverflow.com/questions/4257071/ruby-regex-matches-start-of-line-even-without-m-modifier/4257912#4257912)!
+**NOTE:** Make sure you copy paste the backslashes `\`: they [escape](https://blog.appsignal.com/2016/12/21/ruby-magic-escaping-in-ruby.html) the line breaks to keep `secret_message` a single-line string. Making your regular expressions match multiline strings can be harder than expected, as explained in this [StackOverflow answer](https://stackoverflow.com/questions/4257071/ruby-regex-matches-start-of-line-even-without-m-modifier/4257912#4257912)!

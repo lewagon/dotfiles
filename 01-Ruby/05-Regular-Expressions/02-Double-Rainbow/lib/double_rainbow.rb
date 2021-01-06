@@ -1,15 +1,16 @@
 def word_contains_two_p(sentence)
-  # TODO: return the first word in `sentence` containing two 'p'
-  regexp = /WRITE YOUR REGEXP HERE/
+  # TODO: return the first word in `sentence` containing two 'p's
+  regexp = /YOUR_REGEXP/
   sentence.match(regexp)[0]
 end
 
 def word_before_exclamation_mark(sentence)
-  # TODO: return the word located before an exclamation mark
+  # TODO: return the first word located before an exclamation mark
+  # Hint: you may want to use `()` groups!
 end
 
 def four_letter_word(sentence)
-  # TODO: return the four-letters word starting with 'b'
+  # TODO: return the first four-letter word starting with 'b', followed with a comma `,`
 end
 
 def last_five_letters(sentence)
@@ -17,14 +18,14 @@ def last_five_letters(sentence)
 end
 
 def word_contains_ll(sentence)
-  # TODO: return the word containing two consecutive 'l'
+  # TODO: return the first word containing two consecutive 'l'
 end
 
 def six_letter_word(sentence)
-  # TODO: return the six-letters word, composed of letters from 'a' to 'r'
+  # TODO: return the first six-letter word, composed of letters from 'a' to 'r'
 end
 
 def all_capital_letters(sentence)
   # TODO: return all the capital letters as a string
-  # Code Hint: use `scan` to get all the occurences
+  # Hint: use `scan` to get all the occurences then `join` them
 end
