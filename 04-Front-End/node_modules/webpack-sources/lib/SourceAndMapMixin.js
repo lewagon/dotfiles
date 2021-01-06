@@ -21,7 +21,6 @@ module.exports = function mixinSourceAndMap(proto) {
 	proto.sourceAndMap = function(options) {
 		options = options || {};
 		if(options.columns === false) {
-			//console.log(this.listMap(options).debugInfo());
 			return this.listMap(options).toStringWithSourceMap({
 				file: "x"
 			});

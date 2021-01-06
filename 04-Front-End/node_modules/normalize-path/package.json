@@ -1,12 +1,12 @@
 {
   "name": "normalize-path",
-  "description": "Normalize file path slashes to be unix-like forward slashes. Also condenses repeat slashes to a single slash and removes and trailing slashes unless disabled.",
-  "version": "2.1.1",
+  "description": "Normalize slashes in a file path to be posix/unix-like forward slashes. Also condenses repeat slashes to a single slash and removes and trailing slashes, unless disabled.",
+  "version": "3.0.0",
   "homepage": "https://github.com/jonschlinkert/normalize-path",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "contributors": [
-    "Blaine Bublitz <blaine.bublitz@gmail.com> (https://twitter.com/BlaineBublitz)",
-    "Jon Schlinkert <jon.schlinkert@sellside.com> (http://twitter.com/jonschlinkert)"
+    "Blaine Bublitz (https://twitter.com/BlaineBublitz)",
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)"
   ],
   "repository": "jonschlinkert/normalize-path",
   "bugs": {
@@ -23,18 +23,17 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {
-    "remove-trailing-separator": "^1.0.1"
-  },
   "devDependencies": {
-    "benchmarked": "^0.1.1",
-    "gulp-format-md": "^0.1.11",
+    "gulp-format-md": "^1.0.0",
     "minimist": "^1.2.0",
-    "mocha": "*"
+    "mocha": "^3.5.3"
   },
   "keywords": [
+    "absolute",
     "backslash",
+    "delimiter",
     "file",
+    "file-path",
     "filepath",
     "fix",
     "forward",
@@ -42,6 +41,8 @@
     "fs",
     "normalize",
     "path",
+    "relative",
+    "separator",
     "slash",
     "slashes",
     "trailing",
@@ -49,20 +50,6 @@
     "urix"
   ],
   "verb": {
-    "related": {
-      "list": [
-        "contains-path",
-        "ends-with",
-        "is-absolute",
-        "is-relative",
-        "parse-filepath",
-        "path-ends-with",
-        "path-segments",
-        "rewrite-ext",
-        "unixify"
-      ],
-      "description": "Other useful libraries for working with paths in node.js:"
-    },
     "toc": false,
     "layout": "default",
     "tasks": [
@@ -71,6 +58,18 @@
     "plugins": [
       "gulp-format-md"
     ],
+    "related": {
+      "description": "Other useful path-related libraries:",
+      "list": [
+        "contains-path",
+        "is-absolute",
+        "is-relative",
+        "parse-filepath",
+        "path-ends-with",
+        "path-ends-with",
+        "unixify"
+      ]
+    },
     "lint": {
       "reflinks": true
     }

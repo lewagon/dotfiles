@@ -1,7 +1,6 @@
 language: node_js
 before_install:
-  - npm install -g npm@2
-  - npm install -g npm
+  - nvm install-latest-npm
 matrix:
   include:
   - node_js: '0.8'

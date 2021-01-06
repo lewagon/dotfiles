@@ -1,6 +1,6 @@
 {
 	"name": "opn",
-	"version": "5.4.0",
+	"version": "5.5.0",
 	"description": "A better node-open. Opens stuff like websites, files, executables. Cross-platform.",
 	"license": "MIT",
 	"repository": "sindresorhus/opn",

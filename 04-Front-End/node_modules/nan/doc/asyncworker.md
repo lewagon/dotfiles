@@ -68,7 +68,7 @@ class AsyncWorker {
 
 `Nan::AsyncProgressWorkerBase` is an _abstract_ class template that extends `Nan::AsyncWorker` and adds additional progress reporting callbacks that can be used during the asynchronous work execution to provide progress data back to JavaScript.
 
-Previously the definiton of `Nan::AsyncProgressWorker` only allowed sending `const char` data. Now extending `Nan::AsyncProgressWorker` will yield an instance of the implicit `Nan::AsyncProgressWorkerBase` template with type `<char>` for compatibility.
+Previously the definition of `Nan::AsyncProgressWorker` only allowed sending `const char` data. Now extending `Nan::AsyncProgressWorker` will yield an instance of the implicit `Nan::AsyncProgressWorkerBase` template with type `<char>` for compatibility.
 
 `Nan::AsyncProgressWorkerBase` &amp; `Nan::AsyncProgressWorker` is intended for best-effort delivery of nonessential progress messages, e.g. a progress bar.  The last event sent before the main thread is woken will be delivered.
 
@@ -143,4 +143,4 @@ Definition:
 void AsyncQueueWorker(AsyncWorker *);
 ```
 
-[AsyncResource]: "node_misc.html#api_nan_asyncresource"
+[AsyncResource]: node_misc.md#api_nan_asyncresource

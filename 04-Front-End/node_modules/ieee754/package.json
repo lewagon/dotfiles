@@ -1,7 +1,7 @@
 {
   "name": "ieee754",
   "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
@@ -11,7 +11,7 @@
     "Romain Beauxis <toots@rastageeks.org>"
   ],
   "devDependencies": {
-    "airtap": "0.0.7",
+    "airtap": "0.1.0",
     "standard": "*",
     "tape": "^4.0.0"
   },

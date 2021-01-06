@@ -9,8 +9,8 @@ module.exports = exports;
 
 exports.usage = 'Finds the require path for the node-pre-gyp installed module';
 
-exports.validate = function(package_json) {
-    versioning.validate_config(package_json);
+exports.validate = function(package_json,opts) {
+    versioning.validate_config(package_json,opts);
 };
 
 exports.find = function(package_json_path,opts) {
@@ -18,10 +18,10 @@ exports.find = function(package_json_path,opts) {
         throw new Error("package.json does not exist at " + package_json_path);
    }
    var package_json = require(package_json_path);
-   versioning.validate_config(package_json);
+   versioning.validate_config(package_json,opts);
    var napi_build_version;
-   if (napi.get_napi_build_versions (package_json)) {
-       napi_build_version = napi.get_best_napi_build_version(package_json);
+   if (napi.get_napi_build_versions (package_json, opts)) {
+       napi_build_version = napi.get_best_napi_build_version(package_json, opts);
    }
    opts = opts || {};
    if (!opts.module_root) opts.module_root = path.dirname(package_json_path);

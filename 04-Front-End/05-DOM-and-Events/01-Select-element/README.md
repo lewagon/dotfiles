@@ -11,7 +11,7 @@ Later this week we will also be using `yarn`, a JavaScript package manager.
 To install it run one of the following in the terminal:
 
 ```bash
-# OSX
+# macOS
 brew install yarn
 ```
 

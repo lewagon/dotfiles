@@ -1,3 +1,10 @@
+v3.0.0 - November 9, 2018
+
+* 0b5a8c7 Breaking: drop support for Node < 6 (#223) (Kai Cataldo)
+* a05e9f2 Upgrade: eslint-release@1.0.0 (#220) (Teddy Katz)
+* 36ed027 Chore: upgrade coveralls to ^3.0.1 (#213) (Teddy Katz)
+* 8667e34 Upgrade: eslint-release@^0.11.1 (#210) (Kevin Partington)
+
 v2.1.0 - January 6, 2018
 
 * 827f314 Update: support node ranges (fixes #89) (#190) (Teddy Katz)

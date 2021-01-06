@@ -16,7 +16,7 @@ module.exports = {
     // red flags (thus, warnings)
     'import/no-named-as-default': 'warn',
     'import/no-named-as-default-member': 'warn',
-    'import/no-duplicates': 'warn'
+    'import/no-duplicates': 'warn',
   },
 
   // need all these for parsing dependencies (even if _your_ code doesn't need

@@ -1,6 +1,6 @@
 {
   "name": "source-map-resolve",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "author": "Simon Lydell",
   "license": "MIT",
   "description": "Resolve the source map and/or sources for a generated file.",
@@ -20,6 +20,10 @@
   "repository": "lydell/source-map-resolve",
   "main": "lib/source-map-resolve-node.js",
   "browser": "source-map-resolve.js",
+  "files": [
+    "lib",
+    "source-map-resolve.js"
+  ],
   "scripts": {
     "lint": "jshint lib/ test/",
     "unit": "node test/source-map-resolve.js && node test/windows.js",
@@ -27,17 +31,17 @@
     "build": "node generate-source-map-resolve.js"
   },
   "dependencies": {
-    "atob": "^2.1.1",
+    "atob": "^2.1.2",
     "decode-uri-component": "^0.2.0",
     "resolve-url": "^0.2.1",
     "source-map-url": "^0.4.0",
     "urix": "^0.1.0"
   },
   "devDependencies": {
-    "Base64": "1.0.1",
-    "jshint": "2.9.5",
+    "Base64": "1.1.0",
+    "jshint": "2.10.3",
     "setimmediate": "1.0.5",
     "simple-asyncify": "1.0.0",
-    "tape": "4.9.0"
+    "tape": "4.12.1"
   }
 }

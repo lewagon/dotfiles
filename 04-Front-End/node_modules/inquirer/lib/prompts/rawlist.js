@@ -67,6 +67,10 @@ class RawListPrompt extends Base {
     events.keypress
       .pipe(takeUntil(validation.success))
       .forEach(this.onKeypress.bind(this));
+    events.normalizedUpKey.pipe(takeUntil(events.line)).forEach(this.onUpKey.bind(this));
+    events.normalizedDownKey
+      .pipe(takeUntil(events.line))
+      .forEach(this.onDownKey.bind(this));
 
     // Init the prompt
     this.render();
@@ -88,7 +92,8 @@ class RawListPrompt extends Base {
       message += chalk.cyan(this.answer);
     } else {
       var choicesStr = renderChoices(this.opt.choices, this.selected);
-      message += this.paginator.paginate(choicesStr, this.selected, this.opt.pageSize);
+      message +=
+        '\n' + this.paginator.paginate(choicesStr, this.selected, this.opt.pageSize);
       message += '\n  Answer: ';
     }
 
@@ -146,6 +151,35 @@ class RawListPrompt extends Base {
 
     this.render();
   }
+
+  /**
+   * When user press up key
+   */
+
+  onUpKey() {
+    this.onArrowKey('up');
+  }
+
+  /**
+   * When user press down key
+   */
+
+  onDownKey() {
+    this.onArrowKey('down');
+  }
+
+  /**
+   * When user press up or down key
+   * @param {String} type Arrow type: up or down
+   */
+
+  onArrowKey(type) {
+    var index = this.rl.line.length ? Number(this.rl.line) - 1 : 0;
+    if (type === 'up') index = index === 0 ? this.opt.choices.length - 1 : index - 1;
+    else index = index === this.opt.choices.length - 1 ? 0 : index + 1;
+    this.rl.line = String(index + 1);
+    this.onKeypress();
+  }
 }
 
 /**
@@ -172,6 +206,7 @@ function renderChoices(choices, pointer) {
     if (index === pointer) {
       display = chalk.cyan(display);
     }
+
     output += display;
   });
 

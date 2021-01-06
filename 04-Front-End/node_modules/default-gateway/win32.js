@@ -25,7 +25,7 @@ const parse = (gwTable, ifTable, family) => {
     const id = line.substr(0, i).trim();
     const name = line.substr(i + 1).trim();
     if (id === gwid) {
-      result = {gateway: gateway, interface: name ? name : null};
+      result = {gateway, interface: name ? name : null};
       return true;
     }
   });

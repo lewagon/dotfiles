@@ -25,7 +25,7 @@ module.exports = function(obj, prop, val) {
     return obj;
   }
 
-  var keys = split(prop, {sep: '.', brackets: true});
+  var keys = split(prop, {sep: '.', brackets: true}).filter(isValidKey);
   var len = keys.length;
   var idx = -1;
   var current = obj;
@@ -49,3 +49,7 @@ module.exports = function(obj, prop, val) {
 
   return obj;
 };
+
+function isValidKey(key) {
+  return key !== '__proto__' && key !== 'constructor' && key !== 'prototype';
+}

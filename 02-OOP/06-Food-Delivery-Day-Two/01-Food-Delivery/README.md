@@ -1,40 +1,70 @@
 Make sure you execute the commands above 👆
 
-Then let's copy the code from yesterday:
+**IMPORTANT** 👇
+
+Copy the code from yesterday:
 
 ```bash
 cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
 ```
 
-Then - before you start - check that it still works:
+Then, before you start, check that it still works:
 
 ```bash
 rake
 ```
 
-Now continue with your own code and keep adding features to the router / making the `rake` greener. Of course, you can have a look at [this morning's code](https://github.com/lewagon/food-delivery/tree/lecture-day-two) to get some inspiration.
+Now continue with your own code and keep adding features to the router / making the `rake` greener.
 
----
+Let's add more features to our Food Delivery program!
 
-[...]
+Here are all the **user actions** of our app:
+[ ] As an employee, I can log in
+[X] As a manager, I can add a new meal
+[X] As a manager, I can list all the meals
+[X] As a manager, I can add a new customer
+[X] As a manager, I can list all the customers
+[ ] As a manager, I can add a new order
+[ ] As a manager, I can list all the undelivered orders
+[ ] As a delivery guy, I can mark one of my orders as delivered
+[ ] As a delivery guy, I list all my undelivered orders
 
-## 5 - (`Employee`)
+Hence,there are two new components:
+- **Employees**
+- **Orders**
 
-The restaurant has two types of employees, **managers** and **delivery guys**. We want to implement a **read-only** logic for `EmployeeRepository` from a CSV file that we fill manually (no need for an `add` action).
+## 1 - `Employee`
 
-Open your `employees.csv` file and manually add some employees:
+### 1.1 - `Employee` model
 
-```bash
-id,username,password,role
-1,paul,secret,manager
-2,john,secret,delivery_guy
-```
+Our restaurant has two types of employees, **managers** and **delivery guys**. Both have an id, a username and a password, but they have different privileges depending of their roles.
 
-With that information, we can implement a **login** logic in our app to have two dashboards in the router depending on the user role: one dashboard for the manager, and another dashboard for the delivery guy (with fewer user actions available).
+Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake employee`.
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
+### 1.2 - `Employee` repository
+
+Now that we have a model representing our employees, we need a repository to store them.
+
+This repository is initialized with a CSV file path. It has a **read-only** logic since only the administrator of our app can create accounts (no need for and `add` method). The interface of this repository allows to:
+- Get all the delivery guys from the repository
+- Find a specific employee thanks to its id
+- Find a specific employee thanks to username
+
+Write some code to implement this and crash-test your repository in irb. You should create your own `employees.csv` CSV file inside the `data` folder. Then test your code by running `rake employee`.
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
+### 1.3 - `Session` controller
+
+Let's implement a **login** logic in our app.
+
+We want to have two menus in the router: one listing the tasks for managers and one listing the tasks for delivery guys. We also want to route the employee's choice to the corresponding action of the matching controller.
 
 To handle that, we'll introduce the notion of a **session**. At the router level, we'll store the logged-in user in a session.
 
-The sign sequence should go like this:
+The sign-in sequence should go like this:
 
 ```bash
 > username?
@@ -49,53 +79,84 @@ secret
 Welcome Paul!
 ```
 
-Now when you run the food delivery app, the first thing you can do is to **sign in**. The dashboard that you then see should be **dependent on your role**:
+After signing in, the dashboard that you see should be **dependent on your role**.
+
+Write some code to implement this behavior.
+
+There is no rake for this part. Launch your app by running this command in the terminal:
 
 ```bash
 ruby app.rb
 ```
-Optional: At the moment, a user's password is stored straight in the CSV and is visible to anyone. Is that a good idea? What could we do instead?
 
-To launch only employee tests, use `rspec -t employee`
+Everything is working? Good! Time to `git add`, `commit` and `push`.
 
-Finished? Great work :) Remember to `commit` and `push`.
+## 2 - `Order`
+
+### 2.1 - `Order` model
+
+Our restaurant takes orders, so we need a way to represent what an order is.
 
 
-## 6 - (`Order`) Time to link all the models!
+An order is what ties everything together. Each order has an id, a meal, a customer, an employee plus a `delivered` boolean to record whether or not the order has been delivered.
 
-An order is taken for a **customer**, containing a **meal** (to simplify things, let's say that an order can only contain **one meal**) and is then assigned to a given **delivery guy**. Finally, the `Order` model needs to record whether or not the meal has been delivered.
+Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake order`.
 
-Here's where our models link up. First, write the `Order` model class and its repository.
+All green? Good! Time to `git add`, `commit` and `push`.
 
-Then, make sure that the following **user stories** are implemented in your program:
+### 2.2 - `Order` repository
 
-- As an employee, I can log in
-- As a manager, I can add a meal
-- As a manager, I can view all the meals
-- As a manager, I can add a customer
-- As a manager, I can view all the customers
-- As a manager, I can view all the undelivered orders
-- As a manager, I can add an order for a customer and assign it to a delivery guy
-- As a delivery guy, I can view my undelivered orders
-- As a delivery guy, I can mark an order as delivered
+Now that we have a model representing our orders, we need a repository to store them.
 
-Again, to launch just the order tests, use `rspec -t _order`
+This repository is initialized with a CSV file path. It read/write the orders from the CSV file and store them in memory. The interface of this repository allows to:
+- Add a new order to the repository
+- Get all the undelivered orders from the repository
 
-**Important**: the `order_repository` and `orders_controller` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
+Since an order has a `meal`, a `customer` and an `employee` **instances**, we also need to initialize our order repository with a meal repository, a customer repository and an employee repository.
+
+Write some code to implement this and crash-test your repository in irb. You should create your own `orders.csv` CSV file inside the `data` folder. Then test your code by running `rake order`.
+
+**Important**: the `order_repository` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
 
 ```ruby
 class OrderRepository
-  def initialize(orders_csv_path, meal_repository, employee_repository, customer_repository)
+  def initialize(orders_csv_path, meal_repository, customer_repository, employee_repository)
     # [...]
   end
 
   # [...]
 end
 ```
+
+All green? Good! Time to `git add`, `commit` and `push`.
+
+### 2.3 - `Order` controller
+
+Let's move to the controller. Here are the **user actions** we want to implement:
+- As a manager, I can add a new order
+- As a manager, I can list all the undelivered orders
+- As a delivery guy, I can mark one of my orders as delivered
+- As a delivery guy, I list all my undelivered orders
+
+Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and views)!
+
+Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or views). Then write the code to implement each step. Create the view and code it step by step.
+
+To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
+
+```bash
+ruby app.rb
+```
+
+`rake order` should also help you go through all these steps. Follow your guide!
+
+Make sure your four order user actions work before moving on to the next feature.
+
+**Important**: the `orders_controller` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
 
 ```ruby
 class OrdersController
-  def initialize(meal_repository, employee_repository, customer_repository, order_repository)
+  def initialize(meal_repository, customer_repository, employee_repository, order_repository)
     # [...]
   end
 
@@ -103,10 +164,26 @@ class OrdersController
 end
 ```
 
-## 7 - (Optional) - `Destroy` actions
+**Important**: since **ids** do not necessarily start from 1 and are not necessarily continuous, let's instead ask the user for **indexes** to improve the user experience.
 
-We haven't done any **deleting** yet. How would you implement these additional user stories?
+All green? Good! Time to `git add`, `commit` and `push`.
 
-- As a manager, I can delete a meal
-- As a manager, I can delete a customer
+## 3 - Optionals
 
+### 3.1 - Implement `edit` and `destroy` actions for orders
+
+In our app, a manager can't edit or destroy an existing order.
+
+Implement these additional user actions:
+- As a manager, I can edit an existing order
+- As a manager, I can destroy an existing order
+
+Done? Time to `git add`, `commit` and `push`.
+
+### 3.2 - Hide the user's password
+
+At the moment, a user's password is stored straight in the CSV and is visible to anyone. Is that a good idea? What could we do instead?
+
+Done? Time to `git add`, `commit` and `push`.
+
+You're done with Food Delivery!

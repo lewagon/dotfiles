@@ -22,7 +22,7 @@ ruby lib/interface.rb
 Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `Hello, Boris Alexandre Papillard!`.
 
 * **constraint**: of course, your `interface.rb` program should use the `compute_name` method defined in the other file.
-* **enhancement**: you can improve your `custom_message` by adding other information like the number of characters in your full name (for instance, `Boris Alexandre Papillard has got 24 characters, including spaces`), or other very important details...
+* **enhancement**: you can improve your `custom_message` by adding other information like the number of characters in your full name (for instance, `Boris Alexandre Papillard has got 25 characters, including spaces`), or other very important details...
 
 ## Key learning points
 

@@ -1,6 +1,6 @@
 # TODO: Below are three questions for you to answer. Read each of the questions
 # and make sure each of the methods `return` the correct answer.
-# ⚠️ Try and answer them before running `rake`.
+# WARNING: Try and answer them before running `rake`.
 
 def restaurants_resources_routes
   # TODO: Return an `Array` with the 7 `routes` that `resources :restaurants` would generate for you.
@@ -14,7 +14,7 @@ end
 
 def nested_routes_for_one_to_many?
   # TODO: Return a `true` or `false` to answer this question:
-  # If you have a one to many relationship between you models like `Restaurant` and `Review` (belongs_to :restaurant),
+  # If you have a one to many relationship between your models like `Restaurant` and `Review` (belongs_to :restaurant),
   # do you always have to nest all your routes for `Review` in `Restaurant`?
 end
 

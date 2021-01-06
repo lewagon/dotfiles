@@ -652,7 +652,7 @@ modes.gcm.prototype.encrypt = function(input, output, finish) {
       this._partialOutput.putInt32(input.getInt32() ^ this._outBlock[i]);
     }
 
-    if(partialBytes === 0 || finish) {
+    if(partialBytes <= 0 || finish) {
       // handle overflow prior to hashing
       if(finish) {
         // get block overflow

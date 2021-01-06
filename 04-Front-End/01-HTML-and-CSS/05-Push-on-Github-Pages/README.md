@@ -10,25 +10,19 @@ cd ~/code/<user.github_nickname>/profile
 
 ## Create the Github repo
 
-Let's install the `hub` gem to create a Github repo from your terminal without opening your browser (very useful when you are lazy 😉)
-
-```bash
-gem install hub
-```
-
-Now you can **init**(ialize) a git repository, commit your changes, and create the associated Github repo:
+You can **init**(ialize) a git repository, commit your changes, and create the associated Github repo:
 
 ```bash
 git init
 git add .
 git commit -m "my profile page"
-hub create # this creates the associated repo on Github!
+gh repo create # this creates the associated repo on Github!
 ```
 
 To open the Github repo from your browser you can run:
 
 ```bash
-hub browse
+gh repo view --web
 ```
 
 ## Github Pages

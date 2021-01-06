@@ -62,9 +62,9 @@ cd ~/code/<user.github_nickname>/medium-article
 git init
 git add index.html style.css
 git commit -m "My medium copycat"
-hub create
+gh repo create
 git push
-hub browse
+gh repo view --web
 ```
 
 Then, let's create the magic `gh-pages` branch:
@@ -74,4 +74,4 @@ git checkout -b gh-pages
 git push origin gh-pages
 ```
 
-Go to `http://<user.github_nickname>.github.io/medium-article` to your medium copycat article online!
+Go to `http://<user.github_nickname>.github.io/medium-article/` to your medium copycat article online!

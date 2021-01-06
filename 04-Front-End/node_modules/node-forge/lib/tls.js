@@ -3528,40 +3528,48 @@ var _alertDescToCertError = function(desc) {
  */
 tls.verifyCertificateChain = function(c, chain) {
   try {
-    // verify chain
-    forge.pki.verifyCertificateChain(c.caStore, chain,
-      function verify(vfd, depth, chain) {
-        // convert pki.certificateError to tls alert description
-        var desc = _certErrorToAlertDesc(vfd);
+    // Make a copy of c.verifyOptions so that we can modify options.verify
+    // without modifying c.verifyOptions.
+    var options = {};
+    for (var key in c.verifyOptions) {
+      options[key] = c.verifyOptions[key];
+    }
 
-        // call application callback
-        var ret = c.verify(c, vfd, depth, chain);
-        if(ret !== true) {
-          if(typeof ret === 'object' && !forge.util.isArray(ret)) {
-            // throw custom error
-            var error = new Error('The application rejected the certificate.');
-            error.send = true;
-            error.alert = {
-              level: tls.Alert.Level.fatal,
-              description: tls.Alert.Description.bad_certificate
-            };
-            if(ret.message) {
-              error.message = ret.message;
-            }
-            if(ret.alert) {
-              error.alert.description = ret.alert;
-            }
-            throw error;
-          }
+    options.verify = function(vfd, depth, chain) {
+      // convert pki.certificateError to tls alert description
+      var desc = _certErrorToAlertDesc(vfd);
 
-          // convert tls alert description to pki.certificateError
-          if(ret !== vfd) {
-            ret = _alertDescToCertError(ret);
+      // call application callback
+      var ret = c.verify(c, vfd, depth, chain);
+      if(ret !== true) {
+        if(typeof ret === 'object' && !forge.util.isArray(ret)) {
+          // throw custom error
+          var error = new Error('The application rejected the certificate.');
+          error.send = true;
+          error.alert = {
+            level: tls.Alert.Level.fatal,
+            description: tls.Alert.Description.bad_certificate
+          };
+          if(ret.message) {
+            error.message = ret.message;
           }
+          if(ret.alert) {
+            error.alert.description = ret.alert;
+          }
+          throw error;
         }
 
-        return ret;
-      });
+        // convert tls alert description to pki.certificateError
+        if(ret !== vfd) {
+          ret = _alertDescToCertError(ret);
+        }
+      }
+
+      return ret;
+    };
+
+    // verify chain
+    forge.pki.verifyCertificateChain(c.caStore, chain, options);
   } catch(ex) {
     // build tls error if not already customized
     var err = ex;
@@ -3718,6 +3726,7 @@ tls.createConnection = function(options) {
     virtualHost: options.virtualHost || null,
     verifyClient: options.verifyClient || false,
     verify: options.verify || function(cn, vfd, dpth, cts) {return vfd;},
+    verifyOptions: options.verifyOptions || {},
     getCertificate: options.getCertificate || null,
     getPrivateKey: options.getPrivateKey || null,
     getSignature: options.getSignature || null,
@@ -4247,6 +4256,10 @@ forge.tls.createSessionCache = tls.createSessionCache;
  *   verifyClient: true to require a client certificate in server mode,
  *     'optional' to request one, false not to (default: false).
  *   verify: a handler used to custom verify certificates in the chain.
+ *   verifyOptions: an object with options for the certificate chain validation.
+ *     See documentation of pki.verifyCertificateChain for possible options.
+ *     verifyOptions.verify is ignored. If you wish to specify a verify handler
+ *     use the verify key.
  *   getCertificate: an optional callback used to get a certificate or
  *     a chain of certificates (as an array).
  *   getPrivateKey: an optional callback used to get a private key.

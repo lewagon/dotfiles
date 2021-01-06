@@ -23,6 +23,7 @@ class HookCodeFactory {
 						this.content({
 							onError: err => `throw ${err};\n`,
 							onResult: result => `return ${result};\n`,
+							resultReturns: true,
 							onDone: () => "",
 							rethrowIfPossible: true
 						})
@@ -43,24 +44,32 @@ class HookCodeFactory {
 				);
 				break;
 			case "promise":
-				let code = "";
-				code += '"use strict";\n';
-				code += "return new Promise((_resolve, _reject) => {\n";
-				code += "var _sync = true;\n";
-				code += this.header();
-				code += this.content({
+				let errorHelperUsed = false;
+				const content = this.content({
 					onError: err => {
-						let code = "";
-						code += "if(_sync)\n";
-						code += `_resolve(Promise.resolve().then(() => { throw ${err}; }));\n`;
-						code += "else\n";
-						code += `_reject(${err});\n`;
-						return code;
+						errorHelperUsed = true;
+						return `_error(${err});\n`;
 					},
 					onResult: result => `_resolve(${result});\n`,
 					onDone: () => "_resolve();\n"
 				});
-				code += "_sync = false;\n";
+				let code = "";
+				code += '"use strict";\n';
+				code += "return new Promise((_resolve, _reject) => {\n";
+				if (errorHelperUsed) {
+					code += "var _sync = true;\n";
+					code += "function _error(_err) {\n";
+					code += "if(_sync)\n";
+					code += "_resolve(Promise.resolve().then(() => { throw _err; }));\n";
+					code += "else\n";
+					code += "_reject(_err);\n";
+					code += "};\n";
+				}
+				code += this.header();
+				code += content;
+				if (errorHelperUsed) {
+					code += "_sync = false;\n";
+				}
 				code += "});\n";
 				fn = new Function(this.args(), code);
 				break;
@@ -207,35 +216,48 @@ class HookCodeFactory {
 		return code;
 	}
 
-	callTapsSeries({ onError, onResult, onDone, rethrowIfPossible }) {
+	callTapsSeries({
+		onError,
+		onResult,
+		resultReturns,
+		onDone,
+		doneReturns,
+		rethrowIfPossible
+	}) {
 		if (this.options.taps.length === 0) return onDone();
 		const firstAsync = this.options.taps.findIndex(t => t.type !== "sync");
-		const next = i => {
-			if (i >= this.options.taps.length) {
-				return onDone();
+		const somethingReturns = resultReturns || doneReturns || false;
+		let code = "";
+		let current = onDone;
+		for (let j = this.options.taps.length - 1; j >= 0; j--) {
+			const i = j;
+			const unroll = current !== onDone && this.options.taps[i].type !== "sync";
+			if (unroll) {
+				code += `function _next${i}() {\n`;
+				code += current();
+				code += `}\n`;
+				current = () => `${somethingReturns ? "return " : ""}_next${i}();\n`;
 			}
-			const done = () => next(i + 1);
+			const done = current;
 			const doneBreak = skipDone => {
 				if (skipDone) return "";
 				return onDone();
 			};
-			return this.callTap(i, {
+			const content = this.callTap(i, {
 				onError: error => onError(i, error, done, doneBreak),
 				onResult:
 					onResult &&
 					(result => {
 						return onResult(i, result, done, doneBreak);
 					}),
-				onDone:
-					!onResult &&
-					(() => {
-						return done();
-					}),
+				onDone: !onResult && done,
 				rethrowIfPossible:
 					rethrowIfPossible && (firstAsync < 0 || i < firstAsync)
 			});
-		};
-		return next(0);
+			current = () => content;
+		}
+		code += current();
+		return code;
 	}
 
 	callTapsLooping({ onError, onDone, rethrowIfPossible }) {

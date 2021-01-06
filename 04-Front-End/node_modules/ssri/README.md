@@ -189,7 +189,7 @@ desktopIntegrity.concat(mobileIntegrity)
 Returns the string representation of an `Integrity` object. All hash entries
 will be concatenated in the string by `opts.sep`, which defaults to `' '`.
 
-If you want to serialize an object that didn't from from an `ssri` function,
+If you want to serialize an object that didn't come from an `ssri` function,
 use [`ssri.stringify()`](#stringify).
 
 If `opts.strict` is true, the integrity string will be created using strict

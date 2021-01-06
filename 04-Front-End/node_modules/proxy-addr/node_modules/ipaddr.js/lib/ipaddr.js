@@ -229,6 +229,24 @@
       return this.toNormalizedString().replace(/((^|:)(0(:|$))+)/, '::');
     };
 
+    IPv6.prototype.toRFC5952String = function() {
+      var bestMatchIndex, bestMatchLength, match, regex, string;
+      regex = /((^|:)(0(:|$)){2,})/g;
+      string = this.toNormalizedString();
+      bestMatchIndex = 0;
+      bestMatchLength = -1;
+      while ((match = regex.exec(string))) {
+        if (match[0].length > bestMatchLength) {
+          bestMatchIndex = match.index;
+          bestMatchLength = match[0].length;
+        }
+      }
+      if (bestMatchLength < 0) {
+        return string;
+      }
+      return string.substring(0, bestMatchIndex) + '::' + string.substring(bestMatchIndex + bestMatchLength);
+    };
+
     IPv6.prototype.toByteArray = function() {
       var bytes, k, len, part, ref;
       bytes = [];
@@ -250,6 +268,25 @@
         for (k = 0, len = ref.length; k < len; k++) {
           part = ref[k];
           results.push(part.toString(16));
+        }
+        return results;
+      }).call(this)).join(":");
+      suffix = '';
+      if (this.zoneId) {
+        suffix = '%' + this.zoneId;
+      }
+      return addr + suffix;
+    };
+
+    IPv6.prototype.toFixedLengthString = function() {
+      var addr, part, suffix;
+      addr = ((function() {
+        var k, len, ref, results;
+        ref = this.parts;
+        results = [];
+        for (k = 0, len = ref.length; k < len; k++) {
+          part = ref[k];
+          results.push(part.toString(16).padStart(4, '0'));
         }
         return results;
       }).call(this)).join(":");

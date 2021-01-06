@@ -1,4 +1,3 @@
-
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -20,32 +19,131 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+require('./common');
 var assert = require('assert');
 var events = require('../');
+var util = require('util');
 
-function listener() {}
-function listener2() {}
+var listener = function listener() {};
+var listener2 = function listener2() {};
+function TestStream() {}
+util.inherits(TestStream, events.EventEmitter);
 
-var e1 = new events.EventEmitter();
-e1.on('foo', listener);
-var fooListeners = e1.listeners('foo');
-assert.deepEqual(e1.listeners('foo'), [listener]);
-e1.removeAllListeners('foo');
-assert.deepEqual(e1.listeners('foo'), []);
-assert.deepEqual(fooListeners, [listener]);
+{
+  var ee = new events.EventEmitter();
+  ee.on('foo', listener);
+  var fooListeners = ee.listeners('foo');
 
-var e2 = new events.EventEmitter();
-e2.on('foo', listener);
-var e2ListenersCopy = e2.listeners('foo');
-assert.deepEqual(e2ListenersCopy, [listener]);
-assert.deepEqual(e2.listeners('foo'), [listener]);
-e2ListenersCopy.push(listener2);
-assert.deepEqual(e2.listeners('foo'), [listener]);
-assert.deepEqual(e2ListenersCopy, [listener, listener2]);
+  var listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 1);
+  assert.strictEqual(listeners[0], listener);
 
-var e3 = new events.EventEmitter();
-e3.on('foo', listener);
-var e3ListenersCopy = e3.listeners('foo');
-e3.on('foo', listener2);
-assert.deepEqual(e3.listeners('foo'), [listener, listener2]);
-assert.deepEqual(e3ListenersCopy, [listener]);
+  ee.removeAllListeners('foo');
+  listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 0);
+
+  assert.ok(Array.isArray(fooListeners));
+  assert.strictEqual(fooListeners.length, 1);
+  assert.strictEqual(fooListeners[0], listener);
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee.on('foo', listener);
+
+  var eeListenersCopy = ee.listeners('foo');
+  assert.ok(Array.isArray(eeListenersCopy));
+  assert.strictEqual(eeListenersCopy.length, 1);
+  assert.strictEqual(eeListenersCopy[0], listener);
+
+  var listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 1);
+  assert.strictEqual(listeners[0], listener);
+
+  eeListenersCopy.push(listener2);
+  listeners = ee.listeners('foo');
+  
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 1);
+  assert.strictEqual(listeners[0], listener);
+
+  assert.strictEqual(eeListenersCopy.length, 2);
+  assert.strictEqual(eeListenersCopy[0], listener);
+  assert.strictEqual(eeListenersCopy[1], listener2);
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee.on('foo', listener);
+  var eeListenersCopy = ee.listeners('foo');
+  ee.on('foo', listener2);
+
+  var listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 2);
+  assert.strictEqual(listeners[0], listener);
+  assert.strictEqual(listeners[1], listener2);
+
+  assert.ok(Array.isArray(eeListenersCopy));
+  assert.strictEqual(eeListenersCopy.length, 1);
+  assert.strictEqual(eeListenersCopy[0], listener);
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee.once('foo', listener);
+  var listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 1);
+  assert.strictEqual(listeners[0], listener);
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee.on('foo', listener);
+  ee.once('foo', listener2);
+
+  var listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 2);
+  assert.strictEqual(listeners[0], listener);
+  assert.strictEqual(listeners[1], listener2);
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee._events = undefined;
+  var listeners = ee.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 0);
+}
+
+{
+  var s = new TestStream();
+  var listeners = s.listeners('foo');
+  assert.ok(Array.isArray(listeners));
+  assert.strictEqual(listeners.length, 0);
+}
+
+
+{
+  var ee = new events.EventEmitter();
+  ee.on('foo', listener);
+  var wrappedListener = ee.rawListeners('foo');
+  assert.strictEqual(wrappedListener.length, 1);
+  assert.strictEqual(wrappedListener[0], listener);
+  assert.notStrictEqual(wrappedListener, ee.rawListeners('foo'));
+  ee.once('foo', listener);
+  var wrappedListeners = ee.rawListeners('foo');
+  assert.strictEqual(wrappedListeners.length, 2);
+  assert.strictEqual(wrappedListeners[0], listener);
+  assert.notStrictEqual(wrappedListeners[1], listener);
+  assert.strictEqual(wrappedListeners[1].listener, listener);
+  assert.notStrictEqual(wrappedListeners, ee.rawListeners('foo'));
+  ee.emit('foo');
+  assert.strictEqual(wrappedListeners.length, 2);
+  assert.strictEqual(wrappedListeners[1].listener, listener);
+}

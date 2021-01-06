@@ -152,15 +152,29 @@ class NativeCompileCache {
 
   install() {
     const self = this;
+    const hasRequireResolvePaths = typeof require.resolve.paths === 'function';
     this._previousModuleCompile = Module.prototype._compile;
     Module.prototype._compile = function(content, filename) {
       const mod = this;
+
       function require(id) {
         return mod.require(id);
       }
-      require.resolve = function(request, options) {
+
+      // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
+      function resolve(request, options) {
         return Module._resolveFilename(request, mod, false, options);
-      };
+      }
+      require.resolve = resolve;
+
+      // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L37
+      // resolve.resolve.paths was added in v8.9.0
+      if (hasRequireResolvePaths) {
+        resolve.paths = function paths(request) {
+          return Module._resolveLookupPaths(request, mod, true);
+        };
+      }
+
       require.main = process.mainModule;
 
       // Enable support to add extra extension types

@@ -1,0 +1,23 @@
+footer, .footer {
+  position: relative;
+  background: #151515;
+  height: 80px;
+  width: 600px;
+  margin-top: 30px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 0px 15px 0px rgba(14,0,0,0.05);
+}
+
+.to-top {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 60px;
+  height: 20px;
+  border: none;
+  background: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2020%2014%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20style%3D%22fill%3A%23FFFFFF%3B%22%20d%3D%22M17.4%2C12.1c-0.4%2C0-0.7-0.1-1-0.4l-6.3-6.3l-6.3%2C6.3c-0.6%2C0.6-1.5%2C0.5-2%2C0c-0.6-0.6-0.5-1.5%2C0-2l7.3-7.2c0.6-0.5%2C1.4-0.5%2C2%2C0l7.3%2C7.2c0.6%2C0.6%2C0.6%2C1.4%2C0%2C2C18.2%2C11.9%2C17.8%2C12.1%2C17.4%2C12.1z%22%2F%3E%3C%2Fsvg%3E');
+  background-size: 20px 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

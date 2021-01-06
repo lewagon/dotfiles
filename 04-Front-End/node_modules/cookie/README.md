@@ -1,7 +1,7 @@
 # cookie
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Downloads][npm-downloads-image]][npm-url]
 [![Node.js Version][node-version-image]][node-version-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
@@ -64,7 +64,7 @@ var setCookie = cookie.serialize('foo', 'bar');
 
 ##### domain
 
-Specifies the value for the [`Domain` `Set-Cookie` attribute][rfc-6266-5.2.3]. By default, no
+Specifies the value for the [`Domain` `Set-Cookie` attribute][rfc-6265-5.2.3]. By default, no
 domain is set, and most clients will consider the cookie to apply to only the current domain.
 
 ##### encode
@@ -73,22 +73,22 @@ Specifies a function that will be used to encode a cookie's value. Since value o
 has a limited character set (and must be a simple string), this function can be used to encode
 a value into a string suited for a cookie's value.
 
-The default function is the global `ecodeURIComponent`, which will encode a JavaScript string
+The default function is the global `encodeURIComponent`, which will encode a JavaScript string
 into UTF-8 byte sequences and then URL-encode any that fall outside of the cookie range.
 
 ##### expires
 
-Specifies the `Date` object to be the value for the [`Expires` `Set-Cookie` attribute][rfc-6266-5.2.1].
+Specifies the `Date` object to be the value for the [`Expires` `Set-Cookie` attribute][rfc-6265-5.2.1].
 By default, no expiration is set, and most clients will consider this a "non-persistent cookie" and
 will delete it on a condition like exiting a web browser application.
 
-**note** the [cookie storage model specification][rfc-6266-5.3] states that if both `expires` and
-`magAge` are set, then `maxAge` takes precedence, but it is possiblke not all clients by obey this,
+**note** the [cookie storage model specification][rfc-6265-5.3] states that if both `expires` and
+`maxAge` are set, then `maxAge` takes precedence, but it is possible not all clients by obey this,
 so if both are set, they should point to the same date and time.
 
 ##### httpOnly
 
-Specifies the `boolean` value for the [`HttpOnly` `Set-Cookie` attribute][rfc-6266-5.2.6]. When truthy,
+Specifies the `boolean` value for the [`HttpOnly` `Set-Cookie` attribute][rfc-6265-5.2.6]. When truthy,
 the `HttpOnly` attribute is set, otherwise it is not. By default, the `HttpOnly` attribute is not set.
 
 **note** be careful when setting this to `true`, as compliant clients will not allow client-side
@@ -96,38 +96,37 @@ JavaScript to see the cookie in `document.cookie`.
 
 ##### maxAge
 
-Specifies the `number` (in seconds) to be the value for the [`Max-Age` `Set-Cookie` attribute][rfc-6266-5.2.2].
+Specifies the `number` (in seconds) to be the value for the [`Max-Age` `Set-Cookie` attribute][rfc-6265-5.2.2].
 The given number will be converted to an integer by rounding down. By default, no maximum age is set.
 
-**note** the [cookie storage model specification][rfc-6266-5.3] states that if both `expires` and
-`magAge` are set, then `maxAge` takes precedence, but it is possiblke not all clients by obey this,
+**note** the [cookie storage model specification][rfc-6265-5.3] states that if both `expires` and
+`maxAge` are set, then `maxAge` takes precedence, but it is possible not all clients by obey this,
 so if both are set, they should point to the same date and time.
 
 ##### path
 
-Specifies the value for the [`Path` `Set-Cookie` attribute][rfc-6266-5.2.4]. By default, the path
-is considered the ["default path"][rfc-6266-5.1.4]. By default, no maximum age is set, and most
-clients will consider this a "non-persistent cookie" and will delete it on a condition like exiting
-a web browser application.
+Specifies the value for the [`Path` `Set-Cookie` attribute][rfc-6265-5.2.4]. By default, the path
+is considered the ["default path"][rfc-6265-5.1.4].
 
 ##### sameSite
 
-Specifies the `boolean` or `string` to be the value for the [`SameSite` `Set-Cookie` attribute][draft-west-first-party-cookies-07].
+Specifies the `boolean` or `string` to be the value for the [`SameSite` `Set-Cookie` attribute][rfc-6265bis-03-4.1.2.7].
 
   - `true` will set the `SameSite` attribute to `Strict` for strict same site enforcement.
   - `false` will not set the `SameSite` attribute.
   - `'lax'` will set the `SameSite` attribute to `Lax` for lax same site enforcement.
+  - `'none'` will set the `SameSite` attribute to `None` for an explicit cross-site cookie.
   - `'strict'` will set the `SameSite` attribute to `Strict` for strict same site enforcement.
 
-More information about the different enforcement levels can be found in the specification
-https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1.1
+More information about the different enforcement levels can be found in
+[the specification][rfc-6265bis-03-4.1.2.7].
 
 **note** This is an attribute that has not yet been fully standardized, and may change in the future.
 This also means many clients may ignore this attribute until they understand it.
 
 ##### secure
 
-Specifies the `boolean` value for the [`Secure` `Set-Cookie` attribute][rfc-6266-5.2.5]. When truthy,
+Specifies the `boolean` value for the [`Secure` `Set-Cookie` attribute][rfc-6265-5.2.5]. When truthy,
 the `Secure` attribute is set, otherwise it is not. By default, the `Secure` attribute is not set.
 
 **note** be careful when setting this to `true`, as compliant clients will not send the cookie back to
@@ -178,7 +177,7 @@ function onRequest(req, res) {
 
   res.write('<form method="GET">');
   res.write('<input placeholder="enter your name" name="name"> <input type="submit" value="Set Name">');
-  res.end('</form');
+  res.end('</form>');
 }
 
 http.createServer(onRequest).listen(3000);
@@ -190,31 +189,65 @@ http.createServer(onRequest).listen(3000);
 $ npm test
 ```
 
+## Benchmark
+
+```
+$ npm run bench
+
+> cookie@0.3.1 bench cookie
+> node benchmark/index.js
+
+  http_parser@2.8.0
+  node@6.14.2
+  v8@5.1.281.111
+  uv@1.16.1
+  zlib@1.2.11
+  ares@1.10.1-DEV
+  icu@58.2
+  modules@48
+  napi@3
+  openssl@1.0.2o
+
+> node benchmark/parse.js
+
+  cookie.parse
+
+  6 tests completed.
+
+  simple      x 1,200,691 ops/sec ±1.12% (189 runs sampled)
+  decode      x 1,012,994 ops/sec ±0.97% (186 runs sampled)
+  unquote     x 1,074,174 ops/sec ±2.43% (186 runs sampled)
+  duplicates  x   438,424 ops/sec ±2.17% (184 runs sampled)
+  10 cookies  x   147,154 ops/sec ±1.01% (186 runs sampled)
+  100 cookies x    14,274 ops/sec ±1.07% (187 runs sampled)
+```
+
 ## References
 
-- [RFC 6266: HTTP State Management Mechanism][rfc-6266]
-- [Same-site Cookies][draft-west-first-party-cookies-07]
+- [RFC 6265: HTTP State Management Mechanism][rfc-6265]
+- [Same-site Cookies][rfc-6265bis-03-4.1.2.7]
 
-[draft-west-first-party-cookies-07]: https://tools.ietf.org/html/draft-west-first-party-cookies-07
-[rfc-6266]: https://tools.ietf.org/html/rfc6266
-[rfc-6266-5.1.4]: https://tools.ietf.org/html/rfc6266#section-5.1.4
-[rfc-6266-5.2.1]: https://tools.ietf.org/html/rfc6266#section-5.2.1
-[rfc-6266-5.2.2]: https://tools.ietf.org/html/rfc6266#section-5.2.2
-[rfc-6266-5.2.3]: https://tools.ietf.org/html/rfc6266#section-5.2.3
-[rfc-6266-5.2.4]: https://tools.ietf.org/html/rfc6266#section-5.2.4
-[rfc-6266-5.3]: https://tools.ietf.org/html/rfc6266#section-5.3
+[rfc-6265bis-03-4.1.2.7]: https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-03#section-4.1.2.7
+[rfc-6265]: https://tools.ietf.org/html/rfc6265
+[rfc-6265-5.1.4]: https://tools.ietf.org/html/rfc6265#section-5.1.4
+[rfc-6265-5.2.1]: https://tools.ietf.org/html/rfc6265#section-5.2.1
+[rfc-6265-5.2.2]: https://tools.ietf.org/html/rfc6265#section-5.2.2
+[rfc-6265-5.2.3]: https://tools.ietf.org/html/rfc6265#section-5.2.3
+[rfc-6265-5.2.4]: https://tools.ietf.org/html/rfc6265#section-5.2.4
+[rfc-6265-5.2.5]: https://tools.ietf.org/html/rfc6265#section-5.2.5
+[rfc-6265-5.2.6]: https://tools.ietf.org/html/rfc6265#section-5.2.6
+[rfc-6265-5.3]: https://tools.ietf.org/html/rfc6265#section-5.3
 
 ## License
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/cookie.svg
-[npm-url]: https://npmjs.org/package/cookie
-[node-version-image]: https://img.shields.io/node/v/cookie.svg
-[node-version-url]: https://nodejs.org/en/download
-[travis-image]: https://img.shields.io/travis/jshttp/cookie/master.svg
-[travis-url]: https://travis-ci.org/jshttp/cookie
-[coveralls-image]: https://img.shields.io/coveralls/jshttp/cookie/master.svg
+[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/cookie/master
 [coveralls-url]: https://coveralls.io/r/jshttp/cookie?branch=master
-[downloads-image]: https://img.shields.io/npm/dm/cookie.svg
-[downloads-url]: https://npmjs.org/package/cookie
+[node-version-image]: https://badgen.net/npm/node/cookie
+[node-version-url]: https://nodejs.org/en/download
+[npm-downloads-image]: https://badgen.net/npm/dm/cookie
+[npm-url]: https://npmjs.org/package/cookie
+[npm-version-image]: https://badgen.net/npm/v/cookie
+[travis-image]: https://badgen.net/travis/jshttp/cookie/master
+[travis-url]: https://travis-ci.org/jshttp/cookie

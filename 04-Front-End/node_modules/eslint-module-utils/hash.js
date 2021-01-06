@@ -2,7 +2,7 @@
  * utilities for hashing config objects.
  * basically iteratively updates hash with a JSON-like format
  */
-"use strict"
+'use strict'
 exports.__esModule = true
 
 const createHash = require('crypto').createHash
@@ -42,12 +42,12 @@ exports.hashArray = hashArray
 function hashObject(object, hash) {
   if (!hash) hash = createHash('sha256')
 
-  hash.update("{")
+  hash.update('{')
   Object.keys(object).sort().forEach(key => {
     hash.update(stringify(key))
     hash.update(':')
     hashify(object[key], hash)
-    hash.update(",")
+    hash.update(',')
   })
   hash.update('}')
 

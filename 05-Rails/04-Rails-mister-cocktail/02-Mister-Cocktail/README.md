@@ -1,15 +1,13 @@
 ## Background & Objectives
 
-Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to
-many relationship (`n:n`). So what's the deal? Well, it's time to build a cocktail
-manager. We want to store our favourite cocktails, and their recipes.
+Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to many relationship (`n:n`). So what's the deal? Well, it's time to build a cocktail manager. We want to store our favourite cocktails recipes.
 
 ## Rails app generation
 
 Let's install `yarn` if you haven't already!
 
 ```bash
-# OSX
+# macOS
 brew install yarn
 
 # Ubuntu
@@ -18,11 +16,11 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--webpack` option! Let's also add a `--database=postgresql` (we will talk about this tomorrow). 😉
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-mister-cocktail -T --webpack --database=postgresql
+rails new rails-mister-cocktail --database=postgresql --skip-action-mailbox -T
 cd rails-mister-cocktail
 ```
 
@@ -37,14 +35,14 @@ Let's set up git, create a repo on GitHub and push our skeleton.
 ```bash
 git add .
 git commit -m "rails new"
-hub create
+gh repo create
 git push origin master
 ```
 
 Let's import the teacher's spec to be able to `rake` our progress.
 
 ```bash
-echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 rails db:migrate
@@ -61,7 +59,7 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Before starting to code, don't forget to setup your Rails app for Frontend, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
+Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
 
 ```bash
 yarn add bootstrap jquery popper.js
@@ -72,7 +70,7 @@ And add the gems we're going to need:
 ```ruby
 # Gemfile
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 ```
 
@@ -124,17 +122,6 @@ module.exports = environment
 // app/javascript/packs/application.js
 import 'bootstrap';
 ```
-Make sure you are importing the JavaScript in the `application.html.erb`, note that the JS scripts should be a the bottom of the file (for performance and only when the DOM is loaded), also you can create several packs and import them where you need them!
-
-```html
-<!-- app/views/layouts/application.html.erb -->
-
-  <!-- [...] -->
-
-  <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
-</body>
-```
 
 Don't forget to `commit` and `push` your work often.
 
@@ -144,6 +131,8 @@ Don't forget to `commit` and `push` your work often.
 
 Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
 we need are `cocktails`, `ingredients` and `doses`. Think about the relations between the tables and who is storing the *references*. 😉
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/db.png)
 
 **Important**
 Don't use `rake` but:
@@ -173,7 +162,7 @@ to only run tests in the `spec/models` folder. Make sure they're all green befor
 - An ingredient has many doses
 - A dose belongs to an ingredient
 - A dose belongs to a cocktail
-- You can't delete an ingredient if it used by at least one cocktail.
+- You can't delete an ingredient if it is used by at least one cocktail.
 - When you delete a cocktail, you should delete associated doses (but not the ingredients as they can be linked to other cocktails).
 
 ### 2 - Seed the ingredients
@@ -229,7 +218,7 @@ POST "cocktails"
 ### 4 - Routing, Controller, Views for Doses
 
 - A user can add a new dose (ingredient/description pair) to an existing cocktail
-- Checkout `simple_form` [docs](https://github.com/plataformatec/simple_form#associations) about `f.association` to easily create a select dropdown for our list of ingredients.
+- Checkout `simple_form` [docs](https://github.com/heartcombo/simple_form#associations) about `f.association` to easily create a select dropdown for our list of ingredients.
 
 ```
 GET "cocktails/42/doses/new"

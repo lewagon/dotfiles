@@ -126,7 +126,7 @@ Parser.prototype.onFrameBody = function onFrameBody (header, buffer, callback) {
 
     if (header.id === 0) {
       return callback(this.error(constants.error.PROTOCOL_ERROR,
-                                 'Invalid stream id for DATA'))
+        'Invalid stream id for DATA'))
     }
 
     return callback(null, {
@@ -175,9 +175,9 @@ Parser.prototype._filterHeader = function _filterHeader (headers, name) {
 }
 
 Parser.prototype.onSynHeadFrame = function onSynHeadFrame (type,
-                                                          flags,
-                                                          body,
-                                                          callback) {
+  flags,
+  body,
+  callback) {
   var self = this
   var stream = type === 0x01
   var offset = stream ? 10 : this.version === 2 ? 6 : 4
@@ -202,7 +202,7 @@ Parser.prototype.onSynHeadFrame = function onSynHeadFrame (type,
 
     if (id === 0) {
       return callback(self.error(constants.error.PROTOCOL_ERROR,
-                                 'Invalid stream id for HEADERS'))
+        'Invalid stream id for HEADERS'))
     }
 
     var associated = stream ? head.readUInt32BE() & 0x7fffffff : 0
@@ -378,7 +378,7 @@ Parser.prototype.onRSTFrame = function onRSTFrame (body, callback) {
 
   if (frame.id === 0) {
     return callback(this.error(constants.error.PROTOCOL_ERROR,
-                               'Invalid stream id for RST'))
+      'Invalid stream id for RST'))
   }
 
   if (body.size !== 0) {
@@ -457,7 +457,7 @@ Parser.prototype.onGoawayFrame = function onGoawayFrame (body, callback) {
 }
 
 Parser.prototype.onWindowUpdateFrame = function onWindowUpdateFrame (body,
-                                                                    callback) {
+  callback) {
   if (!body.has(8)) {
     return callback(new Error('WINDOW_UPDATE OOB'))
   }
@@ -470,7 +470,7 @@ Parser.prototype.onWindowUpdateFrame = function onWindowUpdateFrame (body,
 }
 
 Parser.prototype.onXForwardedFrame = function onXForwardedFrame (body,
-                                                                callback) {
+  callback) {
   if (!body.has(4)) {
     return callback(new Error('X_FORWARDED OOB'))
   }

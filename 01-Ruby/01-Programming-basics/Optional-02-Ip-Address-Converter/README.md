@@ -14,11 +14,10 @@ is mapped to a specific address.
 
 Now you may want to discover your own IP address? Your computer has a local
 address given by the WiFi router, and you can get it typing `ips` in your
-terminal. If you want to determine what the Public IP Address of this Wifi router is, the one shared between you and other students, you can type `ip`.
+terminal. If you want to determine what the Public IP Address of this Wifi router is, the one shared between you and other students, you can type `myip`.
 
 ```bash
-ips
-ip
+myip
 ```
 
 These commands are not standard, you have them thanks to the setup we did on the first day. You can review those aliases by opening the `~/.aliases` file with Sublime Text for instance.

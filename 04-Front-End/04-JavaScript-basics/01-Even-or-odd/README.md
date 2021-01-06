@@ -12,32 +12,44 @@ node -v
 
 If not, Node might not be installed on your system. Please have a look at the Setup section in the lecture slides.
 
-## Install Eslint Sublime Linter
+## Install Eslint
+
+#### If you are using Sublime Text:
 
 Before starting, take the time to install **Eslint Sublime Linter** in Sublime Text: 
 
 1. Open Sublime Text
 
-```bash
-stt
-```
+    ```bash
+    stt
+    ```
 
 2. In **Sublime Text**, open **Package Control**'s menu:
 
-```bash
-# macOS
-cmd shift p
+    ```bash
+    # macOS
+    cmd shift p
 
-# Ubuntu
-ctrl shift p
-```
+    # Ubuntu
+    ctrl shift p
+    ```
 
 3. Type `install package` and select `Package Control: Install Package`
 4. Type `SublimeLinter-eslint` and select it
 5. Restart Sublime Text
 
+#### If you are using Visual Studio Code:
 
-It will highlight instantly your syntax errors / style offenses in Sublime Text. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
+Click on the [extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) page and click on **Install**.
+You will get an alert asking you to open Visual Studio Code. The editor will open to the extension page.
+
+![eslint_vscode](eslint_vscode.jpg)
+
+Click on **Install on WSL:Ubuntu**. Click on **Reload required**.
+
+
+
+It will highlight instantly your syntax errors / style offenses in Sublime Text / Visual Studio Code. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
 
 ## Specs
 

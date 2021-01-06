@@ -3,6 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var empty_1 = require("./observable/empty");
 var of_1 = require("./observable/of");
 var throwError_1 = require("./observable/throwError");
+var NotificationKind;
+(function (NotificationKind) {
+    NotificationKind["NEXT"] = "N";
+    NotificationKind["ERROR"] = "E";
+    NotificationKind["COMPLETE"] = "C";
+})(NotificationKind = exports.NotificationKind || (exports.NotificationKind = {}));
 var Notification = (function () {
     function Notification(kind, value, error) {
         this.kind = kind;

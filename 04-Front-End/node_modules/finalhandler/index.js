@@ -282,7 +282,7 @@ function send (req, res, status, headers, message) {
     setHeaders(res, headers)
 
     // security headers
-    res.setHeader('Content-Security-Policy', "default-src 'self'")
+    res.setHeader('Content-Security-Policy', "default-src 'none'")
     res.setHeader('X-Content-Type-Options', 'nosniff')
 
     // standard headers

@@ -55,7 +55,3 @@ With [npm](http://npmjs.org) do:
 ```
 npm test
 ```
-
-# license
-
-MIT. Derived largely from node's assert module.

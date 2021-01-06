@@ -73,7 +73,7 @@ describe OrangeTree do
     expect(orange_tree.height).to eq 10
   end
 
-  it "should not be able to live more than 100 years old" do
+  it "should not be able to live 100 years or more" do
     100.times do
       orange_tree.one_year_passes!
     end
@@ -149,13 +149,15 @@ describe OrangeTree do
 
     loop_counter = 0
 
-    until orange_tree.dead?
+    is_dead = orange_tree.dead?
+    until is_dead
       orange_tree.one_year_passes!
       loop_counter += 1
+      is_dead = orange_tree.dead?
       orange_tree.instance_variable_set(:@age, 50) if orange_tree.age == 99
       break if loop_counter == 10000
     end
 
-    expect(orange_tree.dead?).to eq true
+    expect(is_dead).to eq true
   end
 end

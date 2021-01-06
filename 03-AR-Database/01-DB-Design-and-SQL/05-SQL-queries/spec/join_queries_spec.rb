@@ -57,11 +57,11 @@ describe 'Join Query method' do
 
     it 'returns the TOP 5 artists for Rock' do
       top_5_rock = top_five_artists(db, 'Rock')
-      expect(top_5_rock[0]).to eq [ 'Led Zeppelin', 114 ]
-      expect(top_5_rock[1]).to eq [ 'U2', 112 ]
-      expect(top_5_rock[2]).to eq [ 'Deep Purple', 92 ]
-      expect(top_5_rock[3]).to eq [ 'Iron Maiden', 81 ]
-      expect(top_5_rock[4]).to eq [ 'Pearl Jam', 54 ]
+      expect(top_5_rock[0]).to eq [ 22, 'Led Zeppelin', 114 ]
+      expect(top_5_rock[1]).to eq [ 150, 'U2', 112 ]
+      expect(top_5_rock[2]).to eq [ 58, 'Deep Purple', 92 ]
+      expect(top_5_rock[3]).to eq [ 90, 'Iron Maiden', 81 ]
+      expect(top_5_rock[4]).to eq [ 118, 'Pearl Jam', 54 ]
     end
 
     it 'only returns 5 artists, no more or less' do
@@ -70,9 +70,9 @@ describe 'Join Query method' do
 
     it 'returns the TOP 5 artists for Pop' do
       top_5_pop = top_five_artists(db, 'Pop')
-      expect(top_5_pop[0]).to eq [ 'U2', 23 ]
-      expect(top_5_pop[1]).to eq [ 'Various Artists', 14 ]
-      expect(top_5_pop[2]).to eq [ 'Amy Winehouse', 11 ]
+      expect(top_5_pop[0]).to eq [ 150, 'U2', 23 ]
+      expect(top_5_pop[1]).to eq [ 21, 'Various Artists', 14 ]
+      expect(top_5_pop[2]).to eq [ 252, 'Amy Winehouse', 11 ]
       # Only 3 artists have POP songs in the DB.
     end
   end

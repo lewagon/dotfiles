@@ -3,8 +3,6 @@
 var transport = require('../../../spdy-transport')
 var base = transport.protocol.base
 
-var Buffer = require('safe-buffer').Buffer
-
 exports.PREFACE_SIZE = 24
 exports.PREFACE = 'PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n'
 exports.PREFACE_BUFFER = Buffer.from(exports.PREFACE)
@@ -15,7 +13,7 @@ exports.FRAME_HEADER_SIZE = 9
 exports.INITIAL_MAX_FRAME_SIZE = 16384
 exports.ABSOLUTE_MAX_FRAME_SIZE = 16777215
 exports.HEADER_TABLE_SIZE = 4096
-exports.DEFAULT_MAX_HEADER_LIST_SIZE = 80 * 1024  // as in http_parser
+exports.DEFAULT_MAX_HEADER_LIST_SIZE = 80 * 1024 // as in http_parser
 exports.MAX_INITIAL_WINDOW_SIZE = 2147483647
 
 exports.DEFAULT_WEIGHT = 16
@@ -39,7 +37,7 @@ exports.frameType = {
 }
 
 exports.flags = {
-  ACK: 0x01,  // SETTINGS-only
+  ACK: 0x01, // SETTINGS-only
   END_STREAM: 0x01,
   END_HEADERS: 0x04,
   PADDED: 0x08,

@@ -4,9 +4,7 @@ Style/ConditionalAssignment:
   Enabled: false
 Style/StringLiterals:
   Enabled: false
-Layout/TrailingBlankLines:
-  Enabled: false
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 Lint/UnusedMethodArgument:
   Enabled: false
@@ -34,7 +32,7 @@ Style/SignalException:
   Enabled: false
 Metrics/CyclomaticComplexity:
   Enabled: false
-Style/MethodMissingSuper:
+Lint/MissingSuper:
   Enabled: false
 Style/MissingRespondToMissing:
   Enabled: false
@@ -42,9 +40,24 @@ Security/Open:
   Enabled: false
 Bundler/OrderedGems:
   Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
+Lint/RaiseException:
+  Enabled: false
+Lint/StructNewOverride:
+  Enabled: false
+Style/ExplicitBlockArgument:
+  Enabled: false
+Style/OptionalBooleanParameter:
+  Enabled: false
 
 AllCops:
-  TargetRubyVersion: 2.5
+  NewCops: enable
+  TargetRubyVersion: 2.6
   Exclude:
     - '**/Rakefile'
     - '**/spec/**/*'

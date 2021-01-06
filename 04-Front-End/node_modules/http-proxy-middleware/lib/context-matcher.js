@@ -8,7 +8,7 @@ module.exports = {
   match: matchContext
 }
 
-function matchContext (context, uri, req) {
+function matchContext(context, uri, req) {
   // single path
   if (isStringPath(context)) {
     return matchSingleStringPath(context, uri)
@@ -45,18 +45,18 @@ function matchContext (context, uri, req) {
  * @param  {String} uri     'http://example.org/api/b/c/d.html'
  * @return {Boolean}
  */
-function matchSingleStringPath (context, uri) {
+function matchSingleStringPath(context, uri) {
   var pathname = getUrlPathName(uri)
   return pathname.indexOf(context) === 0
 }
 
-function matchSingleGlobPath (pattern, uri) {
+function matchSingleGlobPath(pattern, uri) {
   var pathname = getUrlPathName(uri)
   var matches = micromatch(pathname, pattern)
-  return matches && (matches.length > 0)
+  return matches && matches.length > 0
 }
 
-function matchMultiGlobPath (patternList, uri) {
+function matchMultiGlobPath(patternList, uri) {
   return matchSingleGlobPath(patternList, uri)
 }
 
@@ -65,7 +65,7 @@ function matchMultiGlobPath (patternList, uri) {
  * @param  {String} uri     'http://example.org/api/b/c/d.html'
  * @return {Boolean}
  */
-function matchMultiPath (contextList, uri) {
+function matchMultiPath(contextList, uri) {
   for (var i = 0; i < contextList.length; i++) {
     var context = contextList[i]
     if (matchSingleStringPath(context, uri)) {
@@ -81,14 +81,14 @@ function matchMultiPath (contextList, uri) {
  * @param  {String} uri from req.url
  * @return {String}     RFC 3986 path
  */
-function getUrlPathName (uri) {
+function getUrlPathName(uri) {
   return uri && url.parse(uri).pathname
 }
 
-function isStringPath (context) {
+function isStringPath(context) {
   return _.isString(context) && !isGlob(context)
 }
 
-function isGlobPath (context) {
+function isGlobPath(context) {
   return isGlob(context)
 }

@@ -1,8 +1,8 @@
 begin
-  require_relative "../app/models/order"
   require_relative "../app/models/meal"
-  require_relative "../app/models/employee"
   require_relative "../app/models/customer"
+  require_relative "../app/models/employee"
+  require_relative "../app/models/order"
 rescue LoadError => e
   describe "Order" do
     it "You need a `order.rb` file for your `Order` model" do
@@ -40,7 +40,7 @@ describe "Order", :_order do
     end
 
     it "should return false if the order has not yet been delivered" do
-      order = Order.new(delivered: false)
+      order = Order.new({})
       expect(order.delivered?).to be false
     end
   end

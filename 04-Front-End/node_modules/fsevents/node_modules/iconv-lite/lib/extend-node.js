@@ -10,7 +10,7 @@ module.exports = function (iconv) {
     // Node authors rewrote Buffer internals to make it compatible with
     // Uint8Array and we cannot patch key functions since then.
     // Note: this does use older Buffer API on a purpose
-    iconv.supportsNodeEncodingsExtension = !(new Buffer(0) instanceof Uint8Array);
+    iconv.supportsNodeEncodingsExtension = !(Buffer.from || new Buffer(0) instanceof Uint8Array);
 
     iconv.extendNodeEncodings = function extendNodeEncodings() {
         if (original) return;

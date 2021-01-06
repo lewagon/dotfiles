@@ -15,7 +15,7 @@ NAN provides a `Nan::New()` helper for the creation of new JavaScript objects in
 
 `Nan::New()` should be used to instantiate new JavaScript objects.
 
-Refer to the specific V8 type in the [V8 documentation](https://v8docs.nodesource.com/io.js-3.3/d1/d83/classv8_1_1_data.html) for information on the types of arguments required for instantiation.
+Refer to the specific V8 type in the [V8 documentation](https://v8docs.nodesource.com/node-8.11/d1/d83/classv8_1_1_data.html) for information on the types of arguments required for instantiation.
 
 Signatures:
 
@@ -75,7 +75,7 @@ v8::Local<v8::String> Nan::New<T>(Nan::ExternalOneByteStringResource * value);
 v8::Local<v8::RegExp> Nan::New<T>(v8::Local<v8::String> pattern, v8::RegExp::Flags flags);
 ```
 
-Note that `Nan::ExternalOneByteStringResource` maps to [`v8::String::ExternalOneByteStringResource`](https://v8docs.nodesource.com/io.js-3.3/d9/db3/classv8_1_1_string_1_1_external_one_byte_string_resource.html), and `v8::String::ExternalAsciiStringResource` in older versions of V8.
+Note that `Nan::ExternalOneByteStringResource` maps to [`v8::String::ExternalOneByteStringResource`](https://v8docs.nodesource.com/node-8.11/d9/db3/classv8_1_1_string_1_1_external_one_byte_string_resource.html), and `v8::String::ExternalAsciiStringResource` in older versions of V8.
 
 
 <a name="api_nan_undefined"></a>
@@ -125,7 +125,7 @@ v8::Local<v8::Boolean> Nan::False()
 <a name="api_nan_empty_string"></a>
 ### Nan::EmptyString()
 
-Call [`v8::String::Empty`](https://v8docs.nodesource.com/io.js-3.3/d2/db3/classv8_1_1_string.html#a7c1bc8886115d7ee46f1d571dd6ebc6d) to reference the empty string in a way that is compatible across all supported versions of V8.
+Call [`v8::String::Empty`](https://v8docs.nodesource.com/node-8.11/d2/db3/classv8_1_1_string.html#a7c1bc8886115d7ee46f1d571dd6ebc6d) to reference the empty string in a way that is compatible across all supported versions of V8.
 
 Signature:
 
@@ -137,7 +137,7 @@ v8::Local<v8::String> Nan::EmptyString()
 <a name="api_nan_new_one_byte_string"></a>
 ### Nan::NewOneByteString()
 
-An implementation of [`v8::String::NewFromOneByte()`](https://v8docs.nodesource.com/io.js-3.3/d2/db3/classv8_1_1_string.html#a5264d50b96d2c896ce525a734dc10f09) provided for consistent availability and API across supported versions of V8. Allocates a new string from Latin-1 data.
+An implementation of [`v8::String::NewFromOneByte()`](https://v8docs.nodesource.com/node-8.11/d2/db3/classv8_1_1_string.html#a5264d50b96d2c896ce525a734dc10f09) provided for consistent availability and API across supported versions of V8. Allocates a new string from Latin-1 data.
 
 Signature:
 

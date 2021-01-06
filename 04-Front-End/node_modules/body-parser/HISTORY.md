@@ -1,3 +1,24 @@
+1.19.0 / 2019-04-25
+===================
+
+  * deps: bytes@3.1.0
+    - Add petabyte (`pb`) support
+  * deps: http-errors@1.7.2
+    - Set constructor name when possible
+    - deps: setprototypeof@1.1.1
+    - deps: statuses@'>= 1.5.0 < 2'
+  * deps: iconv-lite@0.4.24
+    - Added encoding MIK
+  * deps: qs@6.7.0
+    - Fix parsing array brackets after index
+  * deps: raw-body@2.4.0
+    - deps: bytes@3.1.0
+    - deps: http-errors@1.7.2
+    - deps: iconv-lite@0.4.24
+  * deps: type-is@~1.6.17
+    - deps: mime-types@~2.1.24
+    - perf: prevent internal `throw` on invalid type
+
 1.18.3 / 2018-05-14
 ===================
 

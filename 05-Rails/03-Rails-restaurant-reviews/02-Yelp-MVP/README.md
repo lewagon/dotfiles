@@ -9,13 +9,13 @@ You are going to use external specs written by the teachers to test your rails a
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new --webpack -T rails-yelp-mvp
+rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"
-hub create
+gh repo create
 git push origin master
-echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 git submodule add git@github.com:lewagon/fullstack-challenges-03-Rails-restaurant-reviews-specs.git spec
@@ -75,18 +75,21 @@ If you have trouble running `rake`, you may need to run `bin/rake`. It means tha
 
 #### Schema
 
-- A restaurant has a name, an address, a phone number, a category (chinese, italian...) and many reviews
-- A review has content (the text), a rating (between 0 and 5) and references a restaurant
+- A restaurant has a `name`, `address`, `phone_number`, `category`, and can have many reviews.
+- A review has a `rating`, `content`, and belongs to a restaurant.
+
+Make sure you think twice before choosing the data type, it might not always be your first guess!
 
 **Question**: Can you draw this simple schema at [db.lewagon.com](http://db.lewagon.com)? Discuss with your buddy.
 
 #### Validation
 
-- A restaurant must have at least a name, an address and a category.
-- The restaurant category should belong to a fixed list `["chinese", "italian", "japanese", "french", "belgian"]`.
-- A review must have a parent restaurant.
-- A review must have content and a rating. The rating should be a number between 0 and 5.
-- When a restaurant is destroyed, all of its reviews should be destroyed as well.
+- A restaurant must have a name, an address and a category.
+- A restaurant's category must belong to this fixed list: `["chinese", "italian", "japanese", "french", "belgian"]`.
+- When a restaurant is destroyed, all of its reviews must be destroyed as well.
+- A review must belong to a restaurant.
+- A review must have content and a rating.
+- A review's rating must be a number between 0 and 5.
 
 Validate all model tests before moving to the routing layer. You can use this command:
 
@@ -95,7 +98,7 @@ rspec spec/models
 ```
 to selectively run tests in the `spec/models` folder.
 
-You can also manually test your code with the `rails console`. Do not forget to `reload!` between each code change!
+You can also manually test your code with the `rails console`. Don't forget to `reload!` between each code change!
 
 ```bash
 rails c
@@ -125,20 +128,20 @@ Asking yourself what routes you need is a very important step in your web-app bu
 ```
 GET "restaurants"
 ```
-- She/He can add a new restaurant, and be redirected to the `show view` of that new restaurant.
+- A visitor can add a new restaurant, and be redirected to the `show` view of that new restaurant.
 
 ```
 GET "restaurants/new"
 POST "restaurants"
 ```
 
-- She/He can see the details of a restaurant, with all the reviews related to the restaurant.
+- A visitor can see the details of a restaurant, with all the reviews related to the restaurant.
 
 ```
 GET "restaurants/38"
 ```
 
-- She/He can add a new review to a restaurant
+- A visitor can add a new review to a restaurant
 
 ```
 GET "restaurants/38/reviews/new"
@@ -148,7 +151,7 @@ POST "restaurants/38/reviews"
 - And that's it!
 
 
-In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) - no need to generate a new controller through `namespace :admin` routes, as a developer you have the power to manipulate the DB from the `rails console` if you want to update / delete any record.
+In our MVP, a visitor cannot update / delete any restaurant or review. This is the role of the admin (i.e. **you**) - as a developer you have the power to manipulate the DB from the `rails console` if you want to update / delete any record.
 
 We know it's a pretty basic MVP, but we just need you to understand that **each route is the embodiment of a user-story**. Don't just blindly write 7 CRUD routes for every model in your app. It's the best way to get confused by your own product and forget what your MVP really is.
 

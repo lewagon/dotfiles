@@ -266,7 +266,7 @@ function simpleparser (options) {
     }
 
     debug('parse urlencoding')
-    return parse(body, undefined, undefined, {maxKeys: parameterLimit})
+    return parse(body, undefined, undefined, { maxKeys: parameterLimit })
   }
 }
 

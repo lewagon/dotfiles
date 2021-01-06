@@ -1,5 +1,11 @@
 # `v8-module-cache` Changelog
 
+## 2019-05-10, Version 2.0.3
+
+* Add `LICENSE` file [#19](https://github.com/zertosh/v8-compile-cache/pull/19).
+* Add "repository" to `package.json` (see [eea336e](https://github.com/zertosh/v8-compile-cache/commit/eea336eaa8360f9ded9342b8aa928e56ac6a7529)).
+* Support `require.resolve.paths` (added in Node v8.9.0) [#20](https://github.com/zertosh/v8-compile-cache/pull/20)/[#22](https://github.com/zertosh/v8-compile-cache/pull/22).
+
 ## 2018-08-06, Version 2.0.2
 
 * Re-publish.

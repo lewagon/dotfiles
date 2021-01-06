@@ -4,12 +4,12 @@ module.exports = function defFunc(ajv) {
   defFunc.definition = {
     type: 'object',
     macro: function (schema) {
-      if (schema.length == 0) return {};
-      if (schema.length == 1) return { not: { required: schema } };
+      if (schema.length == 0) return true;
+      if (schema.length == 1) return {not: {required: schema}};
       var schemas = schema.map(function (prop) {
-        return { required: [prop] };
+        return {required: [prop]};
       });
-      return { not: { anyOf: schemas } };
+      return {not: {anyOf: schemas}};
     },
     metaSchema: {
       type: 'array',
@@ -22,4 +22,3 @@ module.exports = function defFunc(ajv) {
   ajv.addKeyword('prohibited', defFunc.definition);
   return ajv;
 };
-

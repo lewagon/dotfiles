@@ -5,13 +5,13 @@ The _JSON_ object provides the c++ versions of the methods offered by the `JSON`
  - <a href="#api_nan_json_parse"><b><code>Nan::JSON.Parse</code></b></a>
  - <a href="#api_nan_json_stringify"><b><code>Nan::JSON.Stringify</code></b></a>
 
-Refer to the V8 JSON object in the [V8 documentation](https://v8docs.nodesource.com/node-7.4/da/d6f/classv8_1_1_j_s_o_n.html) for more information about these methods and their arguments.
+Refer to the V8 JSON object in the [V8 documentation](https://v8docs.nodesource.com/node-8.11/da/d6f/classv8_1_1_j_s_o_n.html) for more information about these methods and their arguments.
 
 <a name="api_nan_json_parse"></a>
 
 ### Nan::JSON.Parse
 
-A simple wrapper around [`v8::JSON::Parse`](https://v8docs.nodesource.com/node-7.4/da/d6f/classv8_1_1_j_s_o_n.html#a936310d2540fb630ed37d3ee3ffe4504).
+A simple wrapper around [`v8::JSON::Parse`](https://v8docs.nodesource.com/node-8.11/da/d6f/classv8_1_1_j_s_o_n.html#a936310d2540fb630ed37d3ee3ffe4504).
 
 Definition:
 
@@ -37,7 +37,7 @@ if (!result.IsEmpty()) {
 
 ### Nan::JSON.Stringify
 
-A simple wrapper around [`v8::JSON::Stringify`](https://v8docs.nodesource.com/node-7.4/da/d6f/classv8_1_1_j_s_o_n.html#a44b255c3531489ce43f6110209138860).
+A simple wrapper around [`v8::JSON::Stringify`](https://v8docs.nodesource.com/node-8.11/da/d6f/classv8_1_1_j_s_o_n.html#a44b255c3531489ce43f6110209138860).
 
 Definition:
 

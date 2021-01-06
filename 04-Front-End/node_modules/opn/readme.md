@@ -2,6 +2,8 @@
 
 > A better [node-open](https://github.com/pwnall/node-open). Opens stuff like websites, files, executables. Cross-platform.
 
+If need this for Electron, use [`shell.openItem()`](https://electronjs.org/docs/api/shell#shellopenitemfullpath) instead.
+
 
 #### Why?
 

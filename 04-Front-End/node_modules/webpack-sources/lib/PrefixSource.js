@@ -45,10 +45,29 @@ class PrefixSource extends Source {
 
 	node(options) {
 		var node = this._source.node(options);
-		var append = [this._prefix];
-		return new SourceNode(null, null, null, [
-			cloneAndPrefix(node, this._prefix, append)
-		]);
+		var prefix = this._prefix;
+		var output = [];
+		var result = new SourceNode();
+		node.walkSourceContents(function(source, content) {
+			result.setSourceContent(source, content);
+		});
+		var needPrefix = true;
+		node.walk(function(chunk, mapping) {
+			var parts = chunk.split(/(\n)/);
+			for(var i = 0; i < parts.length; i += 2) {
+				var nl = i + 1 < parts.length;
+				var part = parts[i] + (nl ? "\n" : "");
+				if(part) {
+					if(needPrefix) {
+						output.push(prefix);
+					}
+					output.push(new SourceNode(mapping.line, mapping.column, mapping.source, part, mapping.name));
+					needPrefix = nl;
+				}
+			}
+		});
+		result.add(output);
+		return result;
 	}
 
 	listMap(options) {

@@ -1,8 +1,8 @@
 inherit_from:
   - ../.rubocop.yml
 
-UselessAssignment:
+Lint/UselessAssignment:
   Enabled: false
 
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   Enabled: false

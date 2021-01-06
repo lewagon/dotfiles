@@ -183,6 +183,8 @@ tag("a", "Le Wagon", { href: "http://lewagon.org", class: "btn" })
 # => <a href='http://lewagon.org' class='btn'>Le Wagon</a>
 ```
 
+Note: You should not reveal the solution and live code it with students. Start by showing them that we need to do "<h1  ATTRIBUTES >" + content "</h1>", then telling them that we will focus on ATTRIBUTES. Usually they will start with #each, and guide them to use #map in the end.
+
 ## Extracting data from CSV/JSON files
 
 1. Explain it's easy to extract data as array or hash from standard files like CSV/JSON.

@@ -1,6 +1,6 @@
 import { canReportError } from './util/canReportError';
 import { toSubscriber } from './util/toSubscriber';
-import { observable as Symbol_observable } from '../internal/symbol/observable';
+import { observable as Symbol_observable } from './symbol/observable';
 import { pipeFromArray } from './util/pipe';
 import { config } from './config';
 export class Observable {
@@ -20,7 +20,7 @@ export class Observable {
         const { operator } = this;
         const sink = toSubscriber(observerOrNext, error, complete);
         if (operator) {
-            operator.call(sink, this.source);
+            sink.add(operator.call(sink, this.source));
         }
         else {
             sink.add(this.source || (config.useDeprecatedSynchronousErrorHandling && !sink.syncErrorThrowable) ?

@@ -17,7 +17,7 @@ describe "Post" do
     if defined?(User)
       user = User.new(username: "george", email: "george@abitbol.me")
       user.save
-      post = Post.new(name: "Le Wagon", url: "http://www.lewagon.com", user: user)
+      post = Post.new(title: "Le Wagon", url: "http://www.lewagon.com", user: user)
       post.save
 
       expect(Post.last.user).to eq(User.last)

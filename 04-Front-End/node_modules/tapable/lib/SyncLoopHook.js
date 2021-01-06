@@ -8,7 +8,7 @@ const Hook = require("./Hook");
 const HookCodeFactory = require("./HookCodeFactory");
 
 class SyncLoopHookCodeFactory extends HookCodeFactory {
-	content({ onError, onResult, onDone, rethrowIfPossible }) {
+	content({ onError, onDone, rethrowIfPossible }) {
 		return this.callTapsLooping({
 			onError: (i, err) => onError(err),
 			onDone,

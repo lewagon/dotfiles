@@ -119,7 +119,7 @@ pkcs1.encode_rsa_oaep = function(key, message, options) {
 
   var PS = '';
   var PS_length = maxLength - message.length;
-  for (var i = 0; i < PS_length; i++) {
+  for(var i = 0; i < PS_length; i++) {
     PS += '\x00';
   }
 

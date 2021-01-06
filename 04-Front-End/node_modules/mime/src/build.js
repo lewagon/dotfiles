@@ -47,7 +47,7 @@ for (var type in db) {
 }
 
 function writeTypesFile(types, path) {
-  fs.writeFileSync(path, JSON.stringify(types));
+  fs.writeFileSync(path, 'module.exports = ' + JSON.stringify(types) + ';');
 }
 
 // Segregate into standard and non-standard types based on facet per
@@ -67,5 +67,5 @@ Object.keys(db).sort().forEach(function(k) {
   }
 });
 
-writeTypesFile(standard, path.join(__dirname, '../types', 'standard.json'));
-writeTypesFile(other, path.join(__dirname, '../types', 'other.json'));
+writeTypesFile(standard, path.join(__dirname, '../types', 'standard.js'));
+writeTypesFile(other, path.join(__dirname, '../types', 'other.js'));

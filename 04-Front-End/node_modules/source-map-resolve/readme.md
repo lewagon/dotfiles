@@ -228,4 +228,4 @@ source-map-resolve.js! To generate it, run `npm run build`.
 License
 =======
 
-[The X11 (“MIT”) License](LICENSE).
+[MIT](LICENSE).

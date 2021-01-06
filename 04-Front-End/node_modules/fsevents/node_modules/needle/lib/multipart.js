@@ -73,7 +73,7 @@ function generate_part(name, part, boundary, callback) {
     }
 
     return_part += '\r\n\r\n';
-    return_part += new Buffer(String(part.value), 'utf8').toString('binary');
+    return_part += Buffer.from(String(part.value), 'utf8').toString('binary');
     append();
 
   }

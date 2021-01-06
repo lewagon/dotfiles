@@ -51,8 +51,8 @@ module.exports = forge.pbkdf2 = pkcs5.pbkdf2 = function(
       // default prf to SHA-1
       md = 'sha1';
     }
-    p = new Buffer(p, 'binary');
-    s = new Buffer(s, 'binary');
+    p = Buffer.from(p, 'binary');
+    s = Buffer.from(s, 'binary');
     if(!callback) {
       if(crypto.pbkdf2Sync.length === 4) {
         return crypto.pbkdf2Sync(p, s, c, dkLen).toString('binary');

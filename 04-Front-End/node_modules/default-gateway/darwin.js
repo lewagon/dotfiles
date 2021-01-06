@@ -18,7 +18,7 @@ const parse = (stdout, family) => {
     const gateway = results[1];
     const iface = results[family === "v4" ? 5 : 3];
     if (dests.indexOf(target) !== -1 && gateway && net.isIP(gateway)) {
-      result = {gateway: gateway, interface: (iface ? iface : null)};
+      result = {gateway, interface: (iface ? iface : null)};
       return true;
     }
   });

@@ -1,3 +1,8 @@
+0.6.2 / 2019-04-29
+==================
+
+  * Fix sorting charset, encoding, and language with extra parameters
+
 0.6.1 / 2016-05-02
 ==================
 

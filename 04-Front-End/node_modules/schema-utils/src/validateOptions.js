@@ -9,17 +9,18 @@ const fs = require('fs');
 const path = require('path');
 
 const Ajv = require('ajv');
-const ajvKeywords = require('ajv-keywords');
+const errors = require('ajv-errors');
+const keywords = require('ajv-keywords');
 
 const ValidationError = require('./ValidationError');
 
 const ajv = new Ajv({
   allErrors: true,
-  useDefaults: true,
-  errorDataPath: 'property',
+  jsonPointers: true,
 });
 
-ajvKeywords(ajv, ['instanceof', 'typeof']);
+errors(ajv);
+keywords(ajv, ['instanceof', 'typeof']);
 
 const validateOptions = (schema, options, name) => {
   if (typeof schema === 'string') {

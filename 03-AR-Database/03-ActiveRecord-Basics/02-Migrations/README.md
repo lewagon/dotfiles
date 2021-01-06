@@ -36,7 +36,9 @@ Can you guess what it's needed for?
 
 Go back to the lecture and read the [ActiveRecord Migration documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). It shows how easy it is to perform migrations on Rails. But we haven't got to Rails yet ;) so we'll have to create our migration files manually.
 
-Use the task `rake db:timestamp` to get a correct timestamp for your migration file name. Write a new migration in a new file `db/migrate/` to add a new column to the `posts` table. Call the column `votes` and make it an `integer`.
+Use the task `rake db:timestamp` to get a correct timestamp for your migration file name. Write a new migration in a new file `db/migrate/` to add a new column to the `posts` table.
+
+Call the column `votes` of type `integer` with a default value `0`: a user post doesn't have any vote when created.
 
 Remember what we said about migration filenames! The format is **really** important.
 

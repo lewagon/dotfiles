@@ -25,6 +25,7 @@ module.exports = function (argString) {
     // don't split the string if we're in matching
     // opening or closing single and double quotes.
     if (c === opening) {
+      if (!args[i]) args[i] = ''
       opening = null
       continue
     } else if ((c === "'" || c === '"') && !opening) {

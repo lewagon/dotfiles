@@ -17,6 +17,13 @@ Take the time to think about the data structures that will best describe a store
 - don't forget to initialize the `cart` variable in `interface.rb`!
 - check that all tests pass
 
+Here's the list of the products and their prices, that should be available in the store:
+- yogurts: 2€
+- meat: 7€
+- vegetables: 5€
+- potatoes: 2€
+- rice: 1€
+
 As an extra:
 
 - Improve the `cart_to_s` method so that instead of returning something like

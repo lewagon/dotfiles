@@ -1,5 +1,5 @@
 'use strict';
-// Older verions of Node might not have `util.getSystemErrorName()`.
+// Older verions of Node.js might not have `util.getSystemErrorName()`.
 // In that case, fall back to a deprecated internal.
 const util = require('util');
 

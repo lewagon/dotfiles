@@ -1,8 +1,7 @@
 'use strict';
 
-var NodeHTTPParser = require('http-parser-js').HTTPParser;
-
-var VERSION = process.version.match(/[0-9]+/g).map(function(n) { return parseInt(n, 10) });
+var NodeHTTPParser = require('http-parser-js').HTTPParser,
+    Buffer         = require('safe-buffer').Buffer;
 
 var TYPES = {
   request:  NodeHTTPParser.REQUEST  || 'request',
@@ -97,6 +96,10 @@ HttpParser.METHODS = {
   32: 'UNLINK'
 };
 
+var VERSION = (process.version || '')
+              .match(/[0-9]+/g)
+              .map(function(n) { return parseInt(n, 10) });
+
 if (VERSION[0] === 0 && VERSION[1] === 12) {
   HttpParser.METHODS[16] = 'REPORT';
   HttpParser.METHODS[17] = 'MKACTIVITY';
@@ -123,12 +126,10 @@ HttpParser.prototype.parse = function(chunk) {
     return;
   }
 
-  if (VERSION[0] === 0 && VERSION[1] < 6) consumed += 1;
-
   if (this._complete)
     this.body = (consumed < chunk.length)
               ? chunk.slice(consumed)
-              : new Buffer(0);
+              : Buffer.alloc(0);
 };
 
 module.exports = HttpParser;

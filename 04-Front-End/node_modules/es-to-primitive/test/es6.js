@@ -7,7 +7,7 @@ var forEach = require('foreach');
 var functionName = require('function.prototype.name');
 var debug = require('object-inspect');
 
-var hasSymbols = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol';
+var hasSymbols = require('has-symbols')();
 var hasSymbolToPrimitive = hasSymbols && typeof Symbol.toPrimitive === 'symbol';
 
 test('function properties', function (t) {

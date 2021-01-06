@@ -34,5 +34,4 @@ Complete `JellyBean` which inherits from `Dessert`
 - Why do we make classes inherit from others? What's the point?
 - What's the keyword to extend the behavior of an inherited method?
 - Let's assume we have `class Bike < Vehicle` and we defined `Vehicle#drive`. If we implement `Bike#drive` which method will apply to `Bike` objects, `Vehicle#drive` or `Bike#drive`?
-- Can you find any examples of object inheritance in Rails?
 - Digression: About `nil?` and inheritance. In the ruby doc, look for the ruby implementation of the `nil?` method in the `NilClass`, and in the `Object` class which is the superclass of all ruby objects. Now try to figure out what happens exactly when you call `an_example_object.nil?`. If you find out the answer with so few clues, we'll buy you a beer 😊

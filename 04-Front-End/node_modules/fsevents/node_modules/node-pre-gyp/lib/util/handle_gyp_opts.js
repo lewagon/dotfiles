@@ -47,7 +47,8 @@ var share_with_node_gyp = [
   'module_path',
   'napi_version',
   'node_abi_napi',
-  'napi_build_version'
+  'napi_build_version',
+  'node_napi_label'
 ];
 
 function handle_gyp_opts(gyp, argv, callback) {
@@ -61,8 +62,10 @@ function handle_gyp_opts(gyp, argv, callback) {
         var val = opts[key];
         if (val) {
             node_pre_gyp_options.push('--' + key + '=' + val);
+        } else if (key === 'napi_build_version') {
+            node_pre_gyp_options.push('--' + key + '=0');
         } else {
-            if (key !== 'napi_version' && key !== 'node_abi_napi' && key !== 'napi_build_version')
+            if (key !== 'napi_version' && key !== 'node_abi_napi')
                 return callback(new Error("Option " + key + " required but not found by node-pre-gyp"));
         }
     });

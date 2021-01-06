@@ -7,6 +7,8 @@
 
 var isExtglob = require('is-extglob');
 var chars = { '{': '}', '(': ')', '[': ']'};
+var strictRegex = /\\(.)|(^!|\*|[\].+)]\?|\[[^\\\]]+\]|\{[^\\}]+\}|\(\?[:!=][^\\)]+\)|\([^|]+\|[^\\)]+\))/;
+var relaxedRegex = /\\(.)|(^!|[*?{}()[\]]|\(\?)/;
 
 module.exports = function isGlob(str, options) {
   if (typeof str !== 'string' || str === '') {
@@ -17,12 +19,12 @@ module.exports = function isGlob(str, options) {
     return true;
   }
 
-  var regex = /\\(.)|(^!|\*|[\].+)]\?|\[[^\\\]]+\]|\{[^\\}]+\}|\(\?[:!=][^\\)]+\)|\([^|]+\|[^\\)]+\))/;
+  var regex = strictRegex;
   var match;
 
   // optionally relax regex
   if (options && options.strict === false) {
-    regex = /\\(.)|(^!|[*?{}()[\]]|\(\?)/;
+    regex = relaxedRegex;
   }
 
   while ((match = regex.exec(str))) {

@@ -1,4 +1,4 @@
-RSpec::Support.require_rspec_core 'formatters/base_text_formatter'
+RSpec::Support.require_rspec_core "formatters/base_text_formatter"
 
 class BonusFormatter < RSpec::Core::Formatters::DocumentationFormatter
   RSpec::Core::Formatters.register self, :dump_summary
@@ -11,11 +11,11 @@ end
 
 BONUS = "
 
-       (_\\
-      / \\
- `== / /\\=,_
-  ;--==\\\\  \\\\o
-  /____//__/__\\
-@=`(0)     (0)
+        (_\\
+       / \\
+  `== / /\\=,_
+   ;--==\\\\  \\\\o
+   /____//__/__\\
+ @=`(0)     (0)
 
 "

@@ -1,3 +1,11 @@
+### Version 0.5.3 (2019-12-28) ###
+
+- Fixed: base64 encoded source maps now correctly decodes as utf-8. Previously,
+  non-ASCII characters could end up garbled. Thanks to ZHAO Jinxiang
+  (@xiaoxiangmoe)! (Note: This fix does not work in old evironments not
+  supporting both `TextDecoder` and `Uint8Array`.)
+- Improved: Reduced size of the npm package.
+
 ### Version 0.5.2 (2018-05-10) ###
 
 - Improved: Updated the version range of `atob` to disallow depending on `2.0.3`

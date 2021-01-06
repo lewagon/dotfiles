@@ -113,12 +113,12 @@ sha1.create = function() {
     return md;
   };
 
-   /**
-    * Produces the digest.
-    *
-    * @return a byte buffer containing the digest value.
-    */
-   md.digest = function() {
+  /**
+   * Produces the digest.
+   *
+   * @return a byte buffer containing the digest value.
+   */
+  md.digest = function() {
     /* Note: Here we copy the remaining bytes in the input buffer and
     add the appropriate SHA-1 padding. Then we do the final update
     on a copy of the state so that if the user wants to get

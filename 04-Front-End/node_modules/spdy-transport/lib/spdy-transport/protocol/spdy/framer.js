@@ -27,8 +27,8 @@ Framer.prototype.setMaxFrameSize = function setMaxFrameSize (size) {
 }
 
 Framer.prototype.headersToDict = function headersToDict (headers,
-                                                        preprocess,
-                                                        callback) {
+  preprocess,
+  callback) {
   function stringify (value) {
     if (value !== undefined) {
       if (Array.isArray(value)) {
@@ -469,7 +469,7 @@ Framer.prototype.ackSettingsFrame = function ackSettingsFrame (callback) {
 }
 
 Framer.prototype.windowUpdateFrame = function windowUpdateFrame (frame,
-                                                                callback) {
+  callback) {
   this._frame({
     type: 'WINDOW_UPDATE',
     id: frame.id,

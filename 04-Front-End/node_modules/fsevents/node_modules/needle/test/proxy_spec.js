@@ -51,7 +51,7 @@ describe('proxy option', function() {
 
   function get_auth(header) {
     var token  = header.split(/\s+/).pop();
-    return token && new Buffer(token, 'base64').toString().split(':');
+    return token && Buffer.from(token, 'base64').toString().split(':');
   }
 
   function no_proxy_auth(done) {

@@ -1,6 +1,6 @@
 ## Specs
 
-Write a program that prints the lyrics of the song [99 Bottles of Beer](http://www.99-bottles-of-beer.net/lyrics.html).
+Write a program that prints the lyrics of the song [99 Bottles of Beer](https://lyricsplayground.com/alpha/songs/numbers/99bottlesofbeeronthewall.html).
 
 It will take as an argument the starting number of bottles, given through the command line when executing the program. This program should work this way.
 
@@ -34,7 +34,7 @@ One way is via the ARGV constant which comes pre-defined in every Ruby program. 
 
 ```ruby
 puts "*** Command line arguments ***"
-puts ARGV.inspect
+p ARGV
 ```
 
 Now run it in the terminal this ways

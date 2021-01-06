@@ -37,9 +37,9 @@ function createProxyServer(options) {
    *    changeOrigin: <true/false, Default: false - changes the origin of the host header to the target URL>
    *    preserveHeaderKeyCase: <true/false, Default: false - specify whether you want to keep letter case of response header key >
    *    auth   : Basic authentication i.e. 'user:password' to compute an Authorization header.
-   *    hostRewrite: rewrites the location hostname on (301/302/307/308) redirects, Default: null.
-   *    autoRewrite: rewrites the location host/port on (301/302/307/308) redirects based on requested host/port. Default: false.
-   *    protocolRewrite: rewrites the location protocol on (301/302/307/308) redirects to 'http' or 'https'. Default: null.
+   *    hostRewrite: rewrites the location hostname on (201/301/302/307/308) redirects, Default: null.
+   *    autoRewrite: rewrites the location host/port on (201/301/302/307/308) redirects based on requested host/port. Default: false.
+   *    protocolRewrite: rewrites the location protocol on (201/301/302/307/308) redirects to 'http' or 'https'. Default: null.
    *  }
    *
    *  NOTE: `options.ws` and `options.ssl` are optional.

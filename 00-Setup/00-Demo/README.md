@@ -8,7 +8,7 @@ The goal is to implement a `circle_area` method which takes **one** parameter,
 `radius`, and returns the area of the circle of this given radius. As a reminder,
 here is the formula:
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/area-circle.png)
+![Area Circle](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/area-circle.svg?sanitize=true)
 
 Open the `lib/demo.rb` file and implement it!
 

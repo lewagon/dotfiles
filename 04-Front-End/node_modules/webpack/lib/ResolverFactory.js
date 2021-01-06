@@ -6,6 +6,11 @@
 
 const { Tapable, HookMap, SyncHook, SyncWaterfallHook } = require("tapable");
 const Factory = require("enhanced-resolve").ResolverFactory;
+const { cachedCleverMerge } = require("./util/cleverMerge");
+
+/** @typedef {import("enhanced-resolve").Resolver} Resolver */
+
+const EMTPY_RESOLVE_OPTIONS = {};
 
 module.exports = class ResolverFactory extends Tapable {
 	constructor() {
@@ -20,30 +25,24 @@ module.exports = class ResolverFactory extends Tapable {
 			let match;
 			match = /^resolve-options (.+)$/.exec(options.name);
 			if (match) {
-				this.hooks.resolveOptions.tap(
-					match[1],
-					options.fn.name || "unnamed compat plugin",
-					options.fn
-				);
+				this.hooks.resolveOptions
+					.for(match[1])
+					.tap(options.fn.name || "unnamed compat plugin", options.fn);
 				return true;
 			}
 			match = /^resolver (.+)$/.exec(options.name);
 			if (match) {
-				this.hooks.resolver.tap(
-					match[1],
-					options.fn.name || "unnamed compat plugin",
-					options.fn
-				);
+				this.hooks.resolver
+					.for(match[1])
+					.tap(options.fn.name || "unnamed compat plugin", options.fn);
 				return true;
 			}
 		});
-		this.cache1 = new WeakMap();
 		this.cache2 = new Map();
 	}
 
 	get(type, resolveOptions) {
-		const cachedResolver = this.cache1.get(resolveOptions);
-		if (cachedResolver) return cachedResolver();
+		resolveOptions = resolveOptions || EMTPY_RESOLVE_OPTIONS;
 		const ident = `${type}|${JSON.stringify(resolveOptions)}`;
 		const resolver = this.cache2.get(ident);
 		if (resolver) return resolver;
@@ -53,11 +52,22 @@ module.exports = class ResolverFactory extends Tapable {
 	}
 
 	_create(type, resolveOptions) {
+		const originalResolveOptions = Object.assign({}, resolveOptions);
 		resolveOptions = this.hooks.resolveOptions.for(type).call(resolveOptions);
 		const resolver = Factory.createResolver(resolveOptions);
 		if (!resolver) {
 			throw new Error("No resolver created");
 		}
+		/** @type {Map<Object, Resolver>} */
+		const childCache = new Map();
+		resolver.withOptions = options => {
+			const cacheEntry = childCache.get(options);
+			if (cacheEntry !== undefined) return cacheEntry;
+			const mergedOptions = cachedCleverMerge(originalResolveOptions, options);
+			const resolver = this.get(type, mergedOptions);
+			childCache.set(options, resolver);
+			return resolver;
+		};
 		this.hooks.resolver.for(type).call(resolver, resolveOptions);
 		return resolver;
 	}

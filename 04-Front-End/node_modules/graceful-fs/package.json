@@ -1,7 +1,7 @@
 {
   "name": "graceful-fs",
   "description": "A drop-in replacement for fs, making various improvements.",
-  "version": "4.1.15",
+  "version": "4.2.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/isaacs/node-graceful-fs"
@@ -13,7 +13,7 @@
   "scripts": {
     "preversion": "npm test",
     "postversion": "npm publish",
-    "postpublish": "git push origin --all; git push origin --tags",
+    "postpublish": "git push origin --follow-tags",
     "test": "node test.js | tap -"
   },
   "keywords": [
@@ -37,7 +37,7 @@
     "import-fresh": "^2.0.0",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8",
-    "tap": "^12.0.1"
+    "tap": "^12.7.0"
   },
   "files": [
     "fs.js",
@@ -45,5 +45,6 @@
     "legacy-streams.js",
     "polyfills.js",
     "clone.js"
-  ]
+  ],
+  "dependencies": {}
 }
