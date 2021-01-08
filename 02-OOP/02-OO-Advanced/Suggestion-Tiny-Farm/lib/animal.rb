@@ -3,11 +3,6 @@ class Animal
 
   def initialize(name)
     @name = name
-    @age = 0
-  end
-
-  def one_day_passes!
-    @age += 1
   end
 end
 
@@ -20,8 +15,7 @@ class Cow < Animal
     @milk = 0
   end
 
-  def one_day_passes!
-    super
+  def feed!
     @milk += 1
   end
 
@@ -40,8 +34,7 @@ class Chicken < Animal
     @eggs = 0
   end
 
-  def one_day_passes!
-    super
+  def feed!
     @eggs += 1 if @gender == "female"
   end
 

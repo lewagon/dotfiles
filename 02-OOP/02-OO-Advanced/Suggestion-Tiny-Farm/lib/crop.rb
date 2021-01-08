@@ -3,34 +3,27 @@ class Crop
 
   def initialize
     @grains = 0
-    @age = 0
   end
 
-  def ripe?
-    @grains.positive?
-  end
-
-  def one_day_passes!
-    @age += 1
+  def harvest!
+    @grains = 0
   end
 end
-
-
-class Corn < Crop
-  def one_day_passes!
-    super
-    @grains += 10 if @age > 2
-  end
-end
-
 
 class Rice < Crop
-  def one_day_passes!
-    super
-    @grains += 5 if @age > 1
+  def water!
+    @grains += 5
+  end
+end
+
+class Corn < Crop
+  def water!
+    @grains += 10
   end
 
-  def irrigate!
+  def weed!
     @grains += 40
   end
 end
+
+
