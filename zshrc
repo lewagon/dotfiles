@@ -23,7 +23,14 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1 # https://github.com/pyenv/pyenv-virtua
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv_prompt_info)]'
 
 # Load nvm (to manage your node versions)
-export NVM_DIR="$HOME/.nvm"
+if [ "$(uname 2> /dev/null)" != "Linux" ]
+then
+  # nvm bin path for macOS
+  export NVM_DIR="$HOME//usr/local/opt/nvm"
+else
+  # nvm bin path for Linux
+  export NVM_DIR="$HOME/.nvm"
+fi
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
