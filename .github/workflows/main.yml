@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup
+        run: |
+          sudo apt-get update -y && sudo apt-get upgrade -y
+          sudo apt-get install jq shellcheck
+
+      - name: Check sublime settings
+        run: for x in ./*.sublime-settings; do jq '.' "$x"; done
+
+      - name: Shellcheck
+        run: shellcheck git_setup.sh
