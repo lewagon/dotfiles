@@ -1,12 +1,89 @@
 {
-    "files.autoSave": "afterDelay",
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  // Terminal fonts to support Powerlevel10k theme
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 14,
+  // Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Code Runner
+  "code-runner.executorMap": {
+    "python": "python3"
+  },
+  // ES Lint
+  "eslint.alwaysShowStatus": false,
 
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.fontSize": 14,
+  // Spell Check
+  "cSpell.language": "en,pt,pt-BR",
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "graphql",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "pug",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml",
+    "ruby"
+  ],
+  "cSpell.userWords": ["unprocessable"],
 
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-    "code-runner.executorMap": {
-        "python": "python3"
+  // Ruby
+  "ruby.useBundler": true, //run non-lint commands with bundle exec
+  "ruby.useLanguageServer": true, // use the internal language server (see below)
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true // enable rubocop via bundler
+    },
+    "reek": {
+      "useBundler": true // enable reek via bundler
     }
+  },
+  "ruby.format": "rubocop", // use rubocop for formatting
+
+  // If not specified searches for 'rubocop' executable available on PATH (default and recommended)
+  "ruby.rubocop.executePath": "",
+
+  // You can use specific path
+  // "ruby.rubocop.executePath": "/Users/you/.rbenv/shims/"
+  // "ruby.rubocop.executePath": "/Users/you/.rvm/gems/ruby-2.3.2/bin/"
+  // "ruby.rubocop.executePath": "D:/bin/Ruby22-x64/bin/"
+
+  // If not specified, it assumes a null value by default.
+  // "ruby.rubocop.configFilePath": "/path/to/config/.rubocop.yml",
+
+  // default true
+  "ruby.rubocop.onSave": true,
+  // Setting for .html.erb files
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true
 }
