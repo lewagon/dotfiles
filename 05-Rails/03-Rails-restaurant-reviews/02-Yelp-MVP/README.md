@@ -13,7 +13,7 @@ rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"
-hub create
+gh repo create
 git push origin master
 echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
@@ -78,7 +78,7 @@ If you have trouble running `rake`, you may need to run `bin/rake`. It means tha
 - A restaurant has a `name`, `address`, `phone_number`, `category`, and can have many reviews.
 - A review has a `rating`, `content`, and belongs to a restaurant.
 
-Make sure you think twice before choosing the data type, it might not always be your first guess! 
+Make sure you think twice before choosing the data type, it might not always be your first guess!
 
 **Question**: Can you draw this simple schema at [db.lewagon.com](http://db.lewagon.com)? Discuss with your buddy.
 

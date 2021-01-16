@@ -140,13 +140,13 @@ At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org
 ## 1 PM - 2 PM: Lunch time
 - Tell students to be back at 2 PM sharp for the first (short) lectures
 
-## 2 PM - 3 PM
+## 2 PM - 3:15 PM
 
 ### Terminal & Git (teacher)
 
 1. **2pm-2pm15**: Second 15 min lecture on command line basics (navigate in filesystem, create directories & files, launch Sublime Text from terminal, etc.)
 
-2. **2pm-2pm45**: Third 45 min lecture on git commands (`add`/`commit`/`push`).
+2. **2pm15-2pm45**: Third 30 min lecture on git commands (`add`/`commit`/`push`).
 
 3. **2pm45-3:15pm**: At the end of the git lecture, your teacher will show you the Kitt platform
 

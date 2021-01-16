@@ -26,13 +26,14 @@ rails new rails-stupid-coaching --skip-active-storage --skip-action-mailbox
 cd rails-stupid-coaching
 git add .
 git commit -m "rails new"
-hub create
+gh repo create
+```
+
+```bash
 git push origin master
 ```
 
 Agregamos el flag `--skip-active-storage` para evitar la instalación de [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilita la carga de archivos a un servicio de almacenamiento en la nube pero por ahora no lo necesitamos y agregaría rutas innecesarias a tu app.
-
-`hub` es una gema que instalamos el primer día que creamos un repositorio en github para poder hacer `git push`. 😊
 
 **Objetivo**: Implementaremos una aplicación Rails simple con 2 páginas:
 
