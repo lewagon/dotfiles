@@ -7,7 +7,7 @@ IRB es un bucle de Lectura-Evaluación-Impresión [REPL](http://en.wikipedia.org
 1. La **R**(primera letra del término en inglés (read) lee la expresión escrita por el usuario la cual puede ser cualquier expresión Ruby válida como `"Hello"`, `2+2`, `"hello".upcase` …
 2. La **E**(primera letra del término en inglés (evaluate) evalúa el resultado de la expresión.
 3. La **P**(primera letra del término en inglés (print) imprime el resultado.
-4. La **L**(primera letra del término en inglés (loop) regresa al punto 1 y espera por una nueva entrada de datos que será ingresada por el usuario.
+4. La **L**(primera letra del término en inglés (loop) regresa al punto 1 y espera por una nueva entrada de datos que será ingresada por el/la usuario/a.
 
 * **Experimentar con las siguientes líneas** en IRB:
 
@@ -26,7 +26,7 @@ En Ruby, todo (texto, entero (integer), número flotante (float), un array, etc.
 
 Encuentra los métodos Ruby adecuados para la [Clase String ](http://ruby-doc.org/core-2.5.3/String.html), la [Clase Integer](http://ruby-doc.org/core-2.5.3/Integer.html), y la [Clase Array](http://ruby-doc.org/core-2.5.3/Array.html) para ejecutar y hacer que pasen las pruebas.
 
-¡ Codear requiere de astucia para saber cómo y dónde buscar la información que necesitas! A menudo el paso más difícil es saber cómo estructurar una pregunta en Google. Usa lo siguiente para encontrar los métodos necesarios para este desafío:
+¡Escribir código requiere de astucia para saber cómo y dónde buscar la información que necesitas! A menudo el paso más difícil es saber cómo estructurar una pregunta en Google. Usa lo siguiente para encontrar los métodos necesarios para este desafío:
 
 * Google y [Stack Overflow](http://stackoverflow.com/)
 * [La documentación Ruby](http://ruby-doc.org) si ya tienes alguna idea del método que buscas.
@@ -35,7 +35,7 @@ Cuando creas que hayas encontrado el método que buscas y creas que sepas cómo 
 
 ## Puntos clave de aprendizaje
 
-Estarás listo para continuar sólo si respondes estas preguntas correctamente:
+Estarás listo/a para continuar sólo si respondes estas preguntas correctamente:
 
 - ¿Cuántos objetos integrados Ruby conoces? ¿Cuáles?
 - ¿Cuál es la sintaxis para llamar a un método sobre uno de los objetos de estas clases?
