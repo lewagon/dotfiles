@@ -1,3 +1,7 @@
+## Background and Objectives
+
+In this challenge we will build a program that simulates a horse race. Like in a real race, the user will see a list of competing horses, choose on which horse they wish to bet on and finally find out if their preferred sprinter won or not. The user will be able to place bets until they run out of money.
+
 ## Guidelines
 
 This challenge should take you **45 minutes 🕒**.
