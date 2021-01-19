@@ -6,8 +6,8 @@ describe "#scrape_craiglist_antiques" do
     verify_antiques(antiques)
   end
 
-  it "should return an array of Paris antiques" do
-    antiques = scrape_craiglist_antiques("paris")
+  it "should return an array of London antiques" do
+    antiques = scrape_craiglist_antiques("london")
     verify_antiques(antiques)
   end
 
