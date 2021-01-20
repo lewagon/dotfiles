@@ -18,7 +18,7 @@ require 'nokogiri'
 html_content = open('https://www.etsy.com/search?q=wallet').read
 doc = Nokogiri::HTML(html_content)
 
-doc.search('.responsive-listing-grid .v2-listing-card__info .text-body').each_with_index do |element, index|
+doc.search('.wt-grid .v2-listing-card__info .text-body').each_with_index do |element, index|
   puts "#{index + 1}. #{element.text.strip}"
 end
 ```
@@ -42,4 +42,4 @@ because the [HTML source](https://support.mozilla.org/en-US/questions/873324) wa
 
 We would like to scrape **antiques** listed on [craigslist](https://craigslist.org/) for a given city. Open the `lib/scraper.rb` and implement the `scrape_craiglist_antiques` method. It should **return** an `Array` of antiques found on the website.
 
-This method should scrape successfully for London, Paris and New York. Therefore `scrape_craiglist_antiques("london")`, `scrape_craiglist_antiques("paris")` and `scrape_craiglist_antiques("newyork")` should all return results. Are the craiglist urls for all the cities the same?
+This method should scrape successfully for London and New York. Therefore `scrape_craiglist_antiques("london")` and `scrape_craiglist_antiques("newyork")` should all return results. Are the craiglist urls for all the cities the same?

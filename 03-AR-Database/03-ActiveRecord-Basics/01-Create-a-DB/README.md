@@ -17,7 +17,7 @@ rake db:timestamp   # Gives you a timestamp for your migration file name
 Don't forget to run this in your terminal:
 
 ```bash
-gem install activerecord
+gem install activerecord -v 6.0
 ```
 
 ## Specs

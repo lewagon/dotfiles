@@ -1,3 +1,7 @@
+## Background and Objectives
+
+This is the largest exercise of the day. We will build a simple store interface program, where the user can see which items are available and their respective prices. The user can then select which items they wish to put in their shopping cart and, when they are done, checkout and see their final bill.
+
 ## Guidelines
 
 - If you have time before lunch, start thinking about the pseudo-code for this challenge with the teacher.
