@@ -1,3 +1,4 @@
+# 04-Hash-Symbols/02-Modeling-with-Hash
 DISHES_CALORIES = {
   "Hamburger" => 250,
   "Cheese Burger" => 300,
@@ -8,11 +9,23 @@ DISHES_CALORIES = {
   "Coca Cola" => 150,
   "Sprite" => 150
 }
-
+MEALS = {
+  "Happy Meal" => ["Cheese Burger", "French Fries", "Coca Cola"],
+  "Best Of Big Mac" => ["Big Mac", "French Fries", "Coca Cola"],
+  "Best Of Royal Cheese" => ["McChicken", "Salad", "Sprite"]
+}
 def poor_calories_counter(burger, side, beverage)
   DISHES_CALORIES[burger] + DISHES_CALORIES[side] + DISHES_CALORIES[beverage]
 end
 
 def calories_counter(orders)
-  # TODO: return number of calories for a less constrained order
+  total = 0
+  orders.each do |order|
+    if DISHES_CALORIES.key?(order)
+      total += DISHES_CALORIES[order]
+    else
+      total += poor_calories_counter(MEALS[order][0], MEALS[order][1], MEALS[order][-1])
+    end
+  end
+  return total
 end
