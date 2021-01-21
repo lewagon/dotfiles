@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-We will build a simple calculator capable of handling the 4 basic operations (+, - , *, /). The program will ask the user for two numbers and one of the four operators in order to be able to perform a simple calculation and display the result to the user.
+We will build a simple calculator capable of handling the 4 basic operations (`+`, `-` , `*`, `/`). The program will ask the user for two numbers and one of the four operators in order to be able to perform a simple calculation and display the result to the user.
 
 ## Guidelines
 
