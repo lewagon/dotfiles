@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-¡Felicidades por haber llegado al primer ejercicio opcional! Es un poco más complicado y te deberá mantender ocupado por más tiempo. Puedes encontrarlo como [Kata de código](http://en.wikipedia.org/wiki/Kata_%28programming%29), un tipo de ejercicio para que los programadores desarrollen sus habilidades a base de práctica y repetición.
+¡Felicidades por haber llegado al primer ejercicio opcional! Es un poco más complicado y te deberá mantener ocupado/a por más tiempo. Puedes encontrarlo como [Kata de código](http://en.wikipedia.org/wiki/Kata_%28programming%29), un tipo de ejercicio para que los programadores desarrollen sus habilidades a base de práctica y repetición.
 
 ## Especificaciones
 
