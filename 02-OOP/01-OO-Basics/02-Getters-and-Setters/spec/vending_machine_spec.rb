@@ -29,6 +29,8 @@ describe "VendingMachine" do
         expect(vending_machine.user_balance_cents).to eq(0)
         vending_machine.insert_coin(100)
         expect(vending_machine.user_balance_cents).to eq(100)
+        vending_machine.insert_coin(11)
+        expect(vending_machine.user_balance_cents).to eq(111)
       end
     end
 
