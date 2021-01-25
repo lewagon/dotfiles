@@ -1,12 +1,12 @@
 ## Contexto y Objetivos
 
-¿Alguna vez has notado que tus tarjetas de crédito normalmente empiezan en 4 o 5? Es porque hay un patrón. En este ejercicio implementaremos el [Algoritmo Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm) para comprobar que el número de una tarjeta es válido.
+¿Alguna vez has notado que tus tarjetas de crédito normalmente empiezan en 4 o 5? Es porque hay un patrón. En este ejercicio implementaremos el [Algoritmo Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm) para comprobar que el número de una tarjeta sea válido.
 
 ## Especificaciones
 
-Implementarás tres métodos en este ejercicio. Primero comenzamos codeando dos métodos, `visa?` y `mastercard?` los cuales devolverán booleanos de acuerdo con el argumento `card` que reciben.
+Implementarás tres métodos en este ejercicio. Primero comenzamos a escribir el código de dos métodos, `visa?` y `mastercard?` los cuales devolverán booleanos dependiendo del argumento `card` que reciben.
 
-Lo primero que debes saber es que si tu tarjeta de crédito empieza con `5`, quiere decir que es Mastercard. Si empieza en `4` querrá decir que es Visa ¡Compruébalo con tus propias tarjetas!
+Lo primero que debes saber es que si tu tarjeta de crédito empieza por `5`, quiere decir que es Mastercard. Si el primer número es `4` querrá decir que es Visa ¡Compruébalo con tus propias tarjetas!
 
 ```ruby
 visa?("4242 4242 4242 4242")
@@ -16,7 +16,7 @@ mastercard?("4242 4242 4242 4242")
 # => false
 ```
 
-¿Ya pudiste implementar estos dos simples métodos? ¿Si? ¡Seguimos!
+¿Ya pudiste implementar estos dos simples métodos? ¿Sí? ¡Seguimos!
 
 El algoritmo (Wikipedia):
 1. A partir del dígito de chequeo incluido, el cual está a la derecha de todo el número, ir de derecha a izquierda duplicando cada segundo dígito. Si al duplicar el número este es mayor a 9 (e.g., 8 × 2 = 16), suma los dígitos del producto (e.g., 16: 1 + 6 = 7, 18: 1 + 8 = 9). Otra alternativa es restarle 9 al producto (e.g., 16: 16 - 9 = 7, 18: 18 - 9 = 9).
