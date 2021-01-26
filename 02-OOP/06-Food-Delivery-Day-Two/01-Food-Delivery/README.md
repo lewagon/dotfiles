@@ -8,7 +8,7 @@ Copy the code from yesterday:
 cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
 ```
 
-Then, before you start, check that it still works:
+Then, before you start, check that it still works by launching your app `ruby app.rb` then by running:
 
 ```bash
 rake
@@ -29,7 +29,7 @@ Here are all the **user actions** of our app:
 [ ] As a delivery guy, I can mark one of my orders as delivered
 [ ] As a delivery guy, I list all my undelivered orders
 
-Hence,there are two new components:
+Hence, there are two new components:
 - **Employees**
 - **Orders**
 
@@ -52,7 +52,7 @@ This repository is initialized with a CSV file path. It has a **read-only** logi
 - Find a specific employee thanks to its id
 - Find a specific employee thanks to username
 
-Write some code to implement this and crash-test your repository in irb. You should create your own `employees.csv` CSV file inside the `data` folder. Then test your code by running `rake employee`.
+Write some code to implement this and crash-test your repository in `irb`. You should create your own `employees.csv` CSV file inside the `data` folder. Then test your code by running `rake employee`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
@@ -108,13 +108,13 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 Now that we have a model representing our orders, we need a repository to store them.
 
-This repository is initialized with a CSV file path. It read/write the orders from the CSV file and store them in memory. The interface of this repository allows to:
+This repository is initialized with a CSV file path. It reads/writes the orders from the CSV file and store them in memory. The interface of this repository allows to:
 - Add a new order to the repository
 - Get all the undelivered orders from the repository
 
 Since an order has a `meal`, a `customer` and an `employee` **instances**, we also need to initialize our order repository with a meal repository, a customer repository and an employee repository.
 
-Write some code to implement this and crash-test your repository in irb. You should create your own `orders.csv` CSV file inside the `data` folder. Then test your code by running `rake order`.
+Write some code to implement this and crash-test your repository in `irb`. You should create your own `orders.csv` CSV file inside the `data` folder. Then test your code by running `rake order`.
 
 **Important**: the `order_repository` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
 
