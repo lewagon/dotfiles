@@ -17,8 +17,8 @@ end
 
 def db_path
   if ActiveRecord.version.to_s >= "6.1"
-    ActiveRecord::Base.configurations.configs_for(env_name: 'development', name: 'primary').database
+    ActiveRecord::Base.configurations.configs_for(env_name: 'test', name: 'primary').database
   else
-    ActiveRecord::Base.configurations['development']['database']
+    ActiveRecord::Base.configurations['test']['database']
   end
 end
