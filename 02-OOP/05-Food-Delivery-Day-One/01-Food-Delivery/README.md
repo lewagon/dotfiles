@@ -12,7 +12,7 @@ The software is designed for **one restaurant only**, so no need to cater (no pu
 
 The software is designed for **the restaurant's staff only**, so no need to design a login interface for customers.
 
-Hence,the first components of our software are:
+Hence, the first components of our software are:
 - **Meals**
 - **Customers**
 
