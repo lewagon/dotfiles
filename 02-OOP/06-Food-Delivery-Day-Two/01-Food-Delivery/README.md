@@ -8,8 +8,12 @@ Copy the code from yesterday:
 cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
 ```
 
-Then, before you start, check that it still works by launching your app `ruby app.rb` then by running:
+Then, before you start, check that it still works by launching your app:
+```bash
+ruby app.rb
+```
 
+Then, finally, you can run:
 ```bash
 rake
 ```
