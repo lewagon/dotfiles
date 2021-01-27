@@ -9,11 +9,13 @@ cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb
 ```
 
 Then, before you start, check that it still works by launching your app:
+
 ```bash
 ruby app.rb
 ```
 
 Then, finally, you can run:
+
 ```bash
 rake
 ```
