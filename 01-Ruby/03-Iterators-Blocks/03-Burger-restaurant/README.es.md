@@ -11,7 +11,7 @@ En este ejercicio estás a punto de abrir un **restaurante de hamburguesas**. Va
 ## Especificaciones
 
 ### Paso 1: Hamburguesa básica
-Comencemos codeando un método `burger` simple que tome 3 parámetros: hamburguesa/medallón, salsa, relleno (patty, sauce, topping) y que devuelva la hamburguesa como un array de strings. Por ejemplo:
+Escribe un método `burger` simple que tome 3 parámetros: hamburguesa/medallón, salsa, relleno (patty, sauce, topping) y que devuelva la hamburguesa como un array de strings. Por ejemplo:
 
 ```ruby
 burger("steak", "ketchup", "onions")
@@ -61,11 +61,11 @@ El método debe funcionar **con o sin bloque**. Utiliza el método [`block_given
 
 ### Paso 3: Preparación de las hamburguesas
 
-Hay muchos clientes entrando. Todos quieren probar tus hamburguesas. Abre el archivo `interface.rb`. Hay una lista de órdenes que tomar. Escribe todas las instrucciones para preparar las hamburguesas. Luego puedes mostrar las hamburguesas con `puts` or `p`.
+Hay muchos clientes entrando. Todos quieren probar tus hamburguesas. Abre el archivo `interface.rb`. Hay una lista de órdenes que tomar. Escribe todas las instrucciones para preparar las hamburguesas. Luego puedes mostrar las hamburguesas con `puts` o `p`.
 
 #### Un poco de ayuda con tu primer bloque
 
-Uno/a cliente/a quiere una porción más grande de pescado. Transforma la hamburguesa clásica a una más grande para él/ella y escribe un bloque para transformar el string a mayúscula:
+Uno/a cliente/a quiere una porción más grande de pescado. Convierte la hamburguesa clásica en una más grande para él/ella y escribe un bloque para transformar el string a mayúscula:
 
 1. Llama al método `burger` con "fish", "mayo" y "salad", **todos en minúscula**, y guarda el resultado en la variable `bigger_burger`.
 
