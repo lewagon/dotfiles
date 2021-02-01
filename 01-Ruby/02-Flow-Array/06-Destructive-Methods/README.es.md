@@ -1,11 +1,11 @@
 ## Contexto y Objetivos
 
-Los métodos destructivos modifican sus **receptores** (objetos sobre los cuales se les llama) lo que los torna peligrosos en cierta manera. Por lo tanto es **convención** común agregar un signo de exclamación al nombrarlos `!`.
+Los métodos destructivos modifican sus **receptores** (objetos sobre los cuales se les llama) lo que los torna peligrosos en cierta manera. Por lo tanto es **convención** agregar un signo de exclamación al nombrarlos `!`.
 
 ## Especificaciones
 
-- Implementa `#horse_racing_format!` El cual modifica el array que toma como argumento para hacerlo más amigable para el presentador de la carrera.
-- **Limitación**: El método debe invertir el array, preparar la posición del caballo. También debe agregar un signo de exclamación al final del nombre del caballo el cual es un string.
+- Implementa `#horse_racing_format!` el cual modifica el arreglo (array) que toma como argumento para hacerlo más amigable para el presentador de la carrera.
+- **Limitación**: El método debe invertir el array, preparar la posición del caballo. También debe agregar un signo de exclamación al final del nombre del caballo el cual es una cadena de caracteres (string).
 
 e.g.  `["Abricot du Laudot", "Black Caviar", "Brigadier Gerard"]` deben transformarse en `["3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]` luego de ser formateados por el método. ¡Este es el único formato que el presentador entenderá!
 
