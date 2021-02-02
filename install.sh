@@ -33,6 +33,7 @@ ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
 mkdir -p "$ZSH_PLUGINS_DIR" && cd "$ZSH_PLUGINS_DIR"
 if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
   echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions
   git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 fi
 cd "$CURRENT_DIR"
@@ -58,6 +59,8 @@ backup "$SUBL_PATH/Packages/User/Preferences.sublime-settings"
 curl -k https://sublime.wbond.net/Package%20Control.sublime-package > $SUBL_PATH/Installed\ Packages/Package\ Control.sublime-package
 ln -s $PWD/Preferences.sublime-settings $SUBL_PATH/Packages/User/Preferences.sublime-settings
 ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
+ln -s $PWD/SublimeLinter.sublime-settings $SUBL_PATH/Packages/User/SublimeLinter.sublime-settings
+ln -s $PWD/Anaconda.sublime-settings $SUBL_PATH/Packages/User/Anaconda.sublime-settings
 
 zsh ~/.zshrc
 

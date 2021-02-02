@@ -1,7 +1,6 @@
-# Get External IP / local IPs
-alias ip="curl ipinfo.io/ip"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+# Get External IP / Internet Speed
+alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
 # Quickly serve the current directory as HTTP
-alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
+alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)

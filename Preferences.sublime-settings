@@ -1,5 +1,4 @@
 {
-  "always_show_minimap_viewport": false,
   "detect_indentation": false,
   "draw_white_space": true,
   "ensure_newline_at_eof_on_save": true,
@@ -18,13 +17,17 @@
     "node_modules",
     "dist",
     "public/packs",
-    "coverage"
+    "coverage",
+    ".ipynb_checkpoints",
+    ".pytest_cache",
+    "__pycache__"
   ],
   "highlight_modified_tabs": true,
   "hot_exit": false,
   "ignored_packages":
   [
-    "Vintage"
+    "Vintage",
+    "Python"
   ],
   "remember_open_files": false,
   "rulers":
@@ -36,5 +39,5 @@
   "trim_automatic_white_space": true,
   "trim_trailing_white_space_on_save": true,
   "use_tab_stops": true,
-  "wordWrap": false
+  "word_wrap": false
 }
