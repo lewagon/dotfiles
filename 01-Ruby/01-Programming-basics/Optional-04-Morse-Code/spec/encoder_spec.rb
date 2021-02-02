@@ -15,7 +15,7 @@ describe "encoder" do
   end
 
   it "should put a pipe (|) character between each word to separate them" do
-    expect(encode("hi guys")).to eq(".... ..|--. ..- -.-- ...")
+    expect(encode("hi all")).to eq(".... ..|.- .-.. .-..")
   end
 
   it "should remove punctation like commas (,) or single quotes (')" do
