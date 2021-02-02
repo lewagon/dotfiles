@@ -48,7 +48,7 @@
   mergeoptions = --no-edit
 
 [user]
-	email = sam-jenkins@cookpad.com
+	email = sam.jenko@hotmail.com
 	name = Sam Jenkins
 
 [pull]
