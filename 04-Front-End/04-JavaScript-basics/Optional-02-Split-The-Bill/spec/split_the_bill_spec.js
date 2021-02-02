@@ -8,7 +8,7 @@ describe('Split the bill', () => {
     assert.equal(Object.keys(money).length, 0);
   });
 
-  it('should return an object with zero if the group is composed of one guy', () => {
+  it('should return an object with zero if the group is composed of one person', () => {
     const money = splitTheBill({ John: 100 });
     assert(money !== undefined, "splitTheBill() should return something");
     assert.equal(Object.keys(money).length, 1);

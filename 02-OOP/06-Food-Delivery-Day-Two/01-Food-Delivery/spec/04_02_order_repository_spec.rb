@@ -43,7 +43,7 @@ describe "OrderRepository", :_order do
     [
       [ "id", "username", "password", "role" ],
       [ 1, "paul", "secret", "manager" ],
-      [ 2, "john", "secret", "delivery_guy" ]
+      [ 2, "john", "secret", "rider" ]
     ]
   end
   let(:employees_csv_path) { "spec/support/employees.csv" }

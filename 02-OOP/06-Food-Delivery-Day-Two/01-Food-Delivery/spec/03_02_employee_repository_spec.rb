@@ -20,8 +20,8 @@ describe "EmployeeRepository", :employee do
     [
       [ "id", "username", "password", "role" ],
       [ 1, "paul", "secret", "manager" ],
-      [ 2, "john", "secret", "delivery_guy" ],
-      [ 3, "ringo", "secret", "delivery_guy"]
+      [ 2, "john", "secret", "rider" ],
+      [ 3, "ringo", "secret", "rider"]
     ]
   end
   let(:csv_path) { "spec/support/employees.csv" }
@@ -74,12 +74,12 @@ describe "EmployeeRepository", :employee do
     expect(repo).not_to respond_to(:create)
   end
 
-  describe "#all_delivery_guys" do
-    it "should return all the delivery guys stored by the repo" do
+  describe "#all_riders" do
+    it "should return all the riders stored by the repo" do
       repo = EmployeeRepository.new(csv_path)
-      expect(repo.all_delivery_guys).to be_a(Array)
-      expect(repo.all_delivery_guys.size).to eq(2)
-      expect(repo.all_delivery_guys[0].username).to eq("john")
+      expect(repo.all_riders).to be_a(Array)
+      expect(repo.all_riders.size).to eq(2)
+      expect(repo.all_riders[0].username).to eq("john")
     end
 
     it "EmployeeRepository should not expose the @employees through a reader/method" do
