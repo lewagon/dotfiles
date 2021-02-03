@@ -1,23 +1,27 @@
 {
-  "installed_packages":
-  [
-    "A File Icon",
-    "AdvancedNewFile",
-    "All Autocomplete",
-    "Anaconda",
-    "AutoPEP8",
-    "Babel",
-    "BracketHighlighter",
-    "Color Highlight",
-    "Emmet",
-    "ERB Snippets",
-    "Git",
-    "Latest Migration",
-    "MagicPython",
-    "Package Control",
-    "SCSS",
-    "SublimeLinter",
-    "SublimeLinter-flake8",
-    "SublimeLinter-rubocop"
-  ]
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"Anaconda",
+		"AutoPEP8",
+		"Babel",
+		"BracketHighlighter",
+		"Color Highlight",
+		"Emmet",
+		"ERB Snippets",
+		"Git",
+		"Latest Migration",
+		"MagicPython",
+		"Package Control",
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"SublimeLinter-rubocop"
+	]
 }
