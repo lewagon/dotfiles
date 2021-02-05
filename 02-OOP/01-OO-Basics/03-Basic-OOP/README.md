@@ -10,6 +10,8 @@ Using built-in classes is good, but creating your *own* classes is even better!
 
 Implement an `OrangeTree` class that models the life of an orange tree (its birth, life cycle and death).
 
+To know the living status of the `OrangeTree`, you will need to code a `#dead?` **instance** method which returns a boolean.
+
 To simulate time passing, you will need to implement the following **instance** method:
 
 ```ruby
@@ -21,13 +23,20 @@ def one_year_passes!
 end
 ```
 
-- You should be able to measure the height of the tree.
+These are the guidelines you have to implement:
+
+### Survival & Age
 - You should be able to find out if the tree is dead.
-- Each year, the tree should age by 1 year (it becomes older and taller, and eventually dies).
-- A tree grows 1 meter per year until it is 10 years old. Then it stops growing.
 - The orange tree **cannot** die until it reaches 50 years old.
 - After 50 years, the probability of dying increases each year.
 - No tree can live more than 100 years.
+- Each year, the tree should age by 1 year (it becomes older and taller, and eventually dies).
+
+### Height
+- You should be able to measure the height of the tree.
+- A tree grows 1 meter per year until it is 10 years old. Then it stops growing.
+
+### Fruits
 - A tree will produce 100 fruits a year once it is more than 5 years old.
 - A tree will produce 200 fruits a year when it reaches 10 years old.
 - A tree will not produce fruits once it reaches 15 years old.
@@ -36,6 +45,11 @@ end
 - You should be able to find out how many fruits are left hanging on the tree.
 
 To test it, launch the interface (`ruby lib/interface.rb`) and see what happens ;).
+
+Once you're done implementing your **instance** method `#one_year_passes!` (and then only), you can refactor your code into smaller methods:
+- `#grow_up!`
+- `#grow_fruits!`
+- `#may_die!`
 
 ## Key learning points
 
