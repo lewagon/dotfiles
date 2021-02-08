@@ -61,6 +61,7 @@ ln -s $PWD/Preferences.sublime-settings $SUBL_PATH/Packages/User/Preferences.sub
 ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
 ln -s $PWD/SublimeLinter.sublime-settings $SUBL_PATH/Packages/User/SublimeLinter.sublime-settings
 ln -s $PWD/Anaconda.sublime-settings $SUBL_PATH/Packages/User/Anaconda.sublime-settings
+ln -s $PWD/Default\ \(OSX\).sublime-keymap $SUBL_PATH/Packages/User/Default\ \(OSX\).sublime-keymap
 
 zsh ~/.zshrc
 

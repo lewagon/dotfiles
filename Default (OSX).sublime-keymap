@@ -1,0 +1,3 @@
+[
+  { "keys": ["super+shift+w"], "command": "close_all" }
+]
