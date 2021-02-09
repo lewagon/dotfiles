@@ -4,11 +4,11 @@ Time to implement a "Longest-word game" with a cool web-interface! For some of y
 
 Before jumping into the exercise, [read the rules](https://github.com/lewagon/fullstack-challenges/tree/master/01-Ruby/06-Parsing/02-Numbers-and-Letters).
 
-⛔️ If you worked on that exercise, please do not copy/paste solutions from previous exercises, try to rewrite them from scratch.
+⛔️ If you worked on that exercise, please do not copy/paste the solution, try to rewrite them from scratch.
 
 ## Setup
 
-There is no `rake` here, and do not create your Rails app in `fullstack-challenges`.
+There is no `rake` here, and do not create your Rails app in `fullstack-challenges`. You should be creating your app in the following directory (Kitt will sadly no longer display your score):
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -41,7 +41,7 @@ Prefix Verb URI Pattern      Controller#Action
 
 ### 2 - Generating a new game
 
-Have a look at your old Ruby code. How did you generate an `Array` of random letters? In the `new` action of the `GamesController`, create a new `@letters` instance variable storing these random letters from the alphabet. Then display it in the view. You should get something like this:
+Have a look at your old Ruby code. How did you generate an `Array` of ten random letters? In the `new` action of the `GamesController`, create a new `@letters` instance variable storing these random letters from the alphabet. Then display it in the view. You should get something like this:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game.png)
 
@@ -77,7 +77,7 @@ Go to the `/new` page, fill a word and submit the form. You should get a **Runti
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/raise.png)
 
-The cleaner way is to add the `pry-byebug` gem (you can get rid of the default `byebug` one from `rails new`) and add `binding.pry` in your Controller code. This way you can pause the Rails request in the terminal, inspect, and type `continue` to let it go and finish rendering the view.
+The cleaner way is to add the `pry-byebug` gem (you can get rid of the default `byebug` one from `rails new`) and add `binding.pry` in your Controller code. This way you can pause the Rails request in the terminal, inspect, and type `next` to execute the next line or `continue` to finish rendering the view.
 
 ```ruby
 # Gemfile
@@ -89,7 +89,7 @@ group :development, :test do
 end
 ```
 
-You need `bundle install` and restart `rails s` for this change to take effect.
+You need to `bundle install` and restart `rails s` for this change to take effect.
 
 ### 5 - Computing the score
 
@@ -115,7 +115,7 @@ At the bottom of the results, add a `link_to` to go back to the New game page.
 
 The user will play many games, it makes sense to store each score and add it to a grand total. We can have a rule where the score for each game is the number of letters in every valid words (but you can be more creative, take the square of the number of letters? Something else?).
 
-Today is not about the database, so we don't have ActiveRecord to help us store information and retrieve it between two HTTP requests. In Rails, another mechanisme exist to persist information **accross** HTTP requests: the [session](http://guides.rubyonrails.org/action_controller_overview.html#session).
+Today is not about the database, so we don't have ActiveRecord to help us store information and retrieve it between two HTTP requests. In Rails, another mechanism exists to persist information **accross** HTTP requests: the [session](http://guides.rubyonrails.org/action_controller_overview.html#session).
 
 Try to use a Rails session to store, compute and display a grand score.
 
@@ -161,10 +161,10 @@ rails test:system # Should say 0 tests, and not fail
 
 Great! We have a brand new file in ` test/system/games_test.rb`! What do we want to test?
 
-1. Going to the `/new` game page displays a random grid
+1. Going to the `/new` game page displays a random grid.
 1. You can fill the form with a random word, click the play button, and get a message that the word is not in the grid.
-1. You can fill the form with a one-letter consonant word, click play, and get a message it's not a valid English word
-1. You can fill the form with a **valid** English word (that's hard because there is randomness!), click play and get a "Congratulations" message
+1. You can fill the form with a one-letter consonant word, click play, and get a message that the word is not a valid English word.
+1. You can fill the form with a **valid** English word (that's hard because there is randomness!), click play and get a "Congratulations" message.
 
 Let's do the first one together:
 
