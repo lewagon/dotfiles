@@ -43,8 +43,8 @@ describe "OrdersController", :_order do
     [
       [ "id", "username", "password", "role" ],
       [ 1, "paul", "secret", "manager" ],
-      [ 2, "john", "secret", "delivery_guy" ],
-      [ 3, "ringo", "secret", "delivery_guy"]
+      [ 2, "john", "secret", "rider" ],
+      [ 3, "ringo", "secret", "rider"]
     ]
   end
   let(:employees_csv_path) { "spec/support/employees.csv" }
@@ -105,7 +105,7 @@ describe "OrdersController", :_order do
 
     it "should list Ringo's undelivered orders" do
       controller = OrdersController.new(meal_repository, customer_repository, employee_repository, order_repository)
-      ringo = employee_repository.find(3)  # ringo is a delivery guy
+      ringo = employee_repository.find(3)  # ringo is a rider
       expect(STDOUT).to receive(:puts).with(/(Paul McCartney||Calzone).*(Calzone||Paul McCartney)/)
       controller.list_my_orders(ringo)
     end
@@ -116,11 +116,11 @@ describe "OrdersController", :_order do
       expect(OrdersController.instance_method(:mark_as_delivered).arity).to eq(1)
     end
 
-    it "should ask the delivery guy for an order index (of their undelivered orders), mark it as delivered, and save the relevant data to the CSV file" do
+    it "should ask the rider for an order index (of their undelivered orders), mark it as delivered, and save the relevant data to the CSV file" do
       controller = OrdersController.new(meal_repository, customer_repository, employee_repository, order_repository)
       # Ringo wants to mark as delivered number 4.
       allow_any_instance_of(Object).to receive(:gets).and_return("1")
-      ringo = employee_repository.find(3)  # ringo is a delivery guy
+      ringo = employee_repository.find(3)  # ringo is a rider
       controller.mark_as_delivered(ringo)
       # Reload from CSV
       new_order_repository = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)

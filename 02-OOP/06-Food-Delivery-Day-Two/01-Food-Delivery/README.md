@@ -32,8 +32,8 @@ Here are all the **user actions** of our app:
 [X] As a manager, I can list all the customers
 [ ] As a manager, I can add a new order
 [ ] As a manager, I can list all the undelivered orders
-[ ] As a delivery guy, I can mark one of my orders as delivered
-[ ] As a delivery guy, I list all my undelivered orders
+[ ] As a rider, I can mark one of my orders as delivered
+[ ] As a rider, I list all my undelivered orders
 
 Hence, there are two new components:
 - **Employees**
@@ -43,7 +43,7 @@ Hence, there are two new components:
 
 ### 1.1 - `Employee` model
 
-Our restaurant has two types of employees, **managers** and **delivery guys**. Both have an id, a username and a password, but they have different privileges depending of their roles.
+Our restaurant has two types of employees, **managers** and **riders**. Both have an id, a username and a password, but they have different privileges depending of their roles.
 
 Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake employee`.
 
@@ -54,7 +54,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Now that we have a model representing our employees, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It has a **read-only** logic since only the administrator of our app can create accounts (no need for and `add` method). The interface of this repository allows to:
-- Get all the delivery guys from the repository
+- Get all the riders from the repository
 - Find a specific employee thanks to its id
 - Find a specific employee thanks to username
 
@@ -66,7 +66,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 Let's implement a **login** logic in our app.
 
-We want to have two menus in the router: one listing the tasks for managers and one listing the tasks for delivery guys. We also want to route the employee's choice to the corresponding action of the matching controller.
+We want to have two menus in the router: one listing the tasks for managers and one listing the tasks for riders. We also want to route the employee's choice to the corresponding action of the matching controller.
 
 To handle that, we'll introduce the notion of a **session**. At the router level, we'll store the logged-in user in a session.
 
@@ -141,8 +141,8 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Let's move to the controller. Here are the **user actions** we want to implement:
 - As a manager, I can add a new order
 - As a manager, I can list all the undelivered orders
-- As a delivery guy, I can mark one of my orders as delivered
-- As a delivery guy, I list all my undelivered orders
+- As a rider, I can mark one of my orders as delivered
+- As a rider, I list all my undelivered orders
 
 Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and views)!
 

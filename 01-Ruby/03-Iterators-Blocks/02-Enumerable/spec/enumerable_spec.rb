@@ -43,7 +43,7 @@ end
 describe "#concatenate" do
 
   it "should concatenate all the given strings" do
-    expect(concatenate(["hello", " ", "guys", ",", " ", "how", " ", "are", " ", "you", "?"])).to eq "hello guys, how are you?"
+    expect(concatenate(["hello", " ", "all", ",", " ", "how", " ", "are", " ", "you", "?"])).to eq "hello all, how are you?"
   end
 
 end
