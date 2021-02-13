@@ -51,3 +51,4 @@ export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/home/zavier/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
