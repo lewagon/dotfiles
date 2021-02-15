@@ -1,29 +1,4 @@
-class Animal
-  attr_reader :name
-
-  def initialize(name)
-    @name = name
-  end
-end
-
-
-class Cow < Animal
-  attr_reader :milk
-
-  def initialize(name)
-    super(name)
-    @milk = 0
-  end
-
-  def feed!
-    @milk += 1
-  end
-
-  def talk
-    "moo"
-  end
-end
-
+require_relative "animal"
 
 class Chicken < Animal
   attr_reader :eggs
@@ -34,8 +9,9 @@ class Chicken < Animal
     @eggs = 0
   end
 
-  def feed!
+  def feed
     @eggs += 1 if @gender == "female"
+    super
   end
 
   def talk
@@ -43,5 +19,9 @@ class Chicken < Animal
     when "male" then "cock-a-doodle-doo"
     when "female" then "cha-caw"
     end
+  end
+
+  def collar
+    "#{super}, #{@gender}"
   end
 end
