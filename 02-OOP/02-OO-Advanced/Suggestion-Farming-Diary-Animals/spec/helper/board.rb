@@ -55,7 +55,7 @@ class Board
     display_sky
     display_sky("🏡  ".center(@board_width - 1))
     display_sky("~  Farming Diary  ~".center(@board_width))
-    display_sky("Part One: The Crops".center(@board_width))
+    display_sky("Part Two: The Animals".center(@board_width))
     display_sky
     display_sky
     display_sky("🌳" * (@board_width / 2))

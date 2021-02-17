@@ -2,6 +2,8 @@ require_relative "helper/file_helper.rb"
 
 begin
   require "crop"
+  require "corn"
+  require "rice"
 rescue LoadError
 end
 
@@ -31,28 +33,30 @@ describe "Crop", if: crop_helper.file_and_class_valid? do
       initialize_parameters_count = Crop.allocate.method(:initialize).arity
       expect(initialize_parameters_count).to eq 0
     end
+
     it "should define an instance variable @grains" do
       expect(crop.instance_variable_get(:@grains)).to be_a Integer
     end
   end
-  
+
   describe '#ripe?' do
     it 'should implement a method to test if the crop is ripe' do
       Crop.public_method_defined? :ripe?
     end
-    
-    it 'should return true when the grains is over or equal to 30' do
+
+    it 'should return true when the grains is over or equal to 20' do
       expect(crop.ripe?).to be false
-      crop.instance_variable_set(:@grains, 30) 
+      crop.instance_variable_set(:@grains, 20) 
       expect(crop.ripe?).to be true
     end
   end
   
-  it "has appropriate getters and setters" do
-    expect(crop).to respond_to :grains
-    expect(crop).not_to respond_to(:grains=)
+  describe 'instance variables' do
+    it "have appropriate getters and setters" do
+      expect(crop).to respond_to :grains
+      expect(crop).not_to respond_to(:grains=)
+    end
   end
-
 end
 
 
@@ -63,8 +67,7 @@ describe "Inheritance", if: crop_helper.file_and_class_valid? do
       expect(Corn.superclass).to eq(Crop)
     end
 
-    it 'should not duplicate the Crop common methods' do
-      expect(Corn.instance_methods(false)).not_to include(:initialize)
+    it 'should not duplicate the `Crop` common methods' do
       expect(Corn.instance_methods(false)).not_to include(:ripe?)
     end
 
@@ -79,8 +82,7 @@ describe "Inheritance", if: crop_helper.file_and_class_valid? do
       expect(Rice.superclass).to eq(Crop)
     end
 
-    it 'should not duplicate the Crop common methods' do
-      expect(Rice.instance_methods(false)).not_to include(:initialize)
+    it 'should not duplicate the `Crop` common methods' do
       expect(Rice.instance_methods(false)).not_to include(:ripe?)
     end
 

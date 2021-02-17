@@ -6,6 +6,6 @@ class Crop
   end
 
   def ripe?
-    @grains >= 30
+    @grains >= 20
   end
 end

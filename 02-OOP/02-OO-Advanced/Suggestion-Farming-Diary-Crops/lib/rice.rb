@@ -6,6 +6,6 @@ class Rice < Crop
   end
 
   def transplant!
-    @grains += 40
+    @grains += 10
   end
 end

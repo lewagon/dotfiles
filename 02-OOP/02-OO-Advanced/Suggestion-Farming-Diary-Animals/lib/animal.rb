@@ -10,6 +10,6 @@ class Animal
   end
 
   def collar
-    "My name is #{name}"
+    "Name: #{name}"
   end
 end

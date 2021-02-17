@@ -33,6 +33,7 @@ describe "Rice", if: rice_helper.file_and_class_valid? do
       initialize_parameters_count = Rice.allocate.method(:initialize).arity
       expect(initialize_parameters_count).to eq 0
     end
+
     it "should define an instance variable @grains" do
       expect(rice.instance_variable_get(:@grains)).to be_a Integer
     end
@@ -42,22 +43,23 @@ describe "Rice", if: rice_helper.file_and_class_valid? do
     it 'should implement a method to water the rice crops' do
       Rice.public_method_defined? :water!
     end
+
     it 'should add 5 grains to the rice crops' do
       rice.water!
-      expect(rice.grains).to eq 5
+      expect(rice.instance_variable_get(:@grains)).to eq 5
       rice.water!
-      expect(rice.grains).to eq 10
+      expect(rice.instance_variable_get(:@grains)).to eq 10
     end
   end
-  
+
   describe '#ripe?' do
     it 'should implement a method to test if the rice is ripe' do
       Rice.public_method_defined? :ripe?
     end
-    
-    it 'should return true when the grains is over or equal to 30' do
+
+    it 'should return true when the grains is over or equal to 20' do
       expect(rice.ripe?).to be false
-      rice.instance_variable_set(:@grains, 30)
+      rice.instance_variable_set(:@grains, 20)
       expect(rice.ripe?).to be true
     end
   end
@@ -69,17 +71,16 @@ describe "Rice", if: rice_helper.file_and_class_valid? do
 
     it 'should add 40 grains to the rice crops' do
       rice.transplant!
-      expect(rice.grains).to eq 40
+      expect(rice.instance_variable_get(:@grains)).to eq 10
       rice.transplant!
-      expect(rice.grains).to eq 80
+      expect(rice.instance_variable_get(:@grains)).to eq 20
     end
   end
-  
-  describe 'getters and setters' do
-    it "has appropriate getters and setters" do
+
+  describe 'instance variables' do
+    it "have appropriate getters and setters" do
       expect(rice).to respond_to :grains
       expect(rice).not_to respond_to(:grains=)
     end
   end
-
 end

@@ -13,7 +13,7 @@ Board.new.display_title
 puts "\n\n📝 Day One: planting corn"
 
 # TODO: Create one `Corn` instance
-corn = Rice.new
+corn = Corn.new
 
 puts "Today, I planted 1 corn crop in the field"
 
@@ -34,7 +34,6 @@ puts "\n\n📝 Day Two: planting rice"
 # TODO: Plant rice
 rice = Rice.new
 
-# TODO: Replace the missing value with a dynamic variable
 puts "Today, I planted 1 corn crop in the field"
 
 # TODO: Transplant and water the rice crop
@@ -52,7 +51,7 @@ puts "The rice crop is #{'not ' unless rice.ripe?}ripe"
 puts "\n\n📝 Day Three: taking care of the crops"
 
 # TODO: create an array `field`. Put the corn and the rice crops in it
-field = [rice, corn]
+field = [corn, rice]
 
 # TODO: Water all the crops at once (Corn and Rice). Remember they both have the `water!` method
 field.each { |crop| crop.water! }
@@ -60,3 +59,7 @@ field.each { |crop| crop.water! }
 # TODO: Count the total grains of the field
 grains = field.reduce(0) { |sum, crop| sum + crop.grains }
 puts "I watered all the crops (rice and corn) and they produced #{grains} grains"
+
+# TODO: Check if all the crops are ripe
+ripe = field.all? { |crop| crop.ripe? }
+puts "The crops are #{'not ' unless ripe}ripe"
