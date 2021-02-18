@@ -172,7 +172,7 @@ Si te fijas en el código anterior donde _no usamos_ Stimulus, verás que usamos
 Abre nuevamente tu HTML y agrega otro atributo de datos (`data-` attribute):
 
 ```html
-<button data-target="zelda.trigger" [...]>
+<button data-zelda-target="trigger" [...]>
 ```
 
 Ahora nuestro botón tiene un target llamado `trigger` el cual podremos referenciar directamente en el controlador de Stimulus:
@@ -218,7 +218,7 @@ Bueno, empecemos con algo de HTML:
 
 ```html
 <div data-controller="zelda">
-  <button data-action="click->zelda#play" data-target="zelda.trigger" class="btn btn-success btn-lg">
+  <button data-action="click->zelda#play" data-zelda-target="trigger" class="btn btn-success btn-lg">
     Treasure!
   </button>
 </div>
@@ -261,7 +261,7 @@ Quisiéramos que `"secret.mp3"` fuese una variable. Una forma de hacer esto es u
 
 ```html
 <div data-controller="zelda" data-zelda-sound="treasure.mp3">
-  <button data-action="click->zelda#play" data-target="zelda.trigger" class="btn btn-success btn-lg">
+  <button data-action="click->zelda#play" data-zelda-target="trigger" class="btn btn-success btn-lg">
     Treasure!
   </button>
 </div>
@@ -279,7 +279,7 @@ const sound = new Audio(this.data.get('sound'));
 
 Échale un último vistazo a tu archivo `lib/controllers/zelda_controller.js`.
 
-- ¿Ves un `querySelector`? No, porque fue reemplazado por `this.element` en el mecanismo del **target** el cual enlaza automáticamente variables `this.$$$Target` con elementos `data-target` definidos
+- ¿Ves un `querySelector`? No, porque fue reemplazado por `this.element` en el mecanismo del **target** el cual enlaza automáticamente variables `this.$$$Target` con elementos `data-controller-name-target` definidos
 - ¿Ves un `addEventListener`? No, porque fue reemplazado por el `data-action` con la sintaxis `EVENT_TYPE->CONTROLLER_NAME#CALLBACK`.¡Solo tienes que implementar la retrollamada (CALLBACK) en tu controlador y listo!
 
 Una vez que se implementa un controlador Stimulus es muy fácil utilizarlo nuevamente en todos lados en una página web con las etiquetas HTML adecuadas.

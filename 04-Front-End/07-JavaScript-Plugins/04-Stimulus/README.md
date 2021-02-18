@@ -171,7 +171,7 @@ If you look at the code above where we _did not use_ Stimulus, we were using the
 Re-open your HTML and add another `data-` attribute:
 
 ```html
-<button data-target="zelda.trigger" [...]>
+<button data-zelda-target="trigger" [...]>
 ```
 
 Our button now has a target named `trigger` that we will be able to reference directly in the Stimulus controller:
@@ -217,7 +217,7 @@ OK, let's start with some HTML:
 
 ```html
 <div data-controller="zelda">
-  <button data-action="click->zelda#play" data-target="zelda.trigger" class="btn btn-success btn-lg">
+  <button data-action="click->zelda#play" data-zelda-target="trigger" class="btn btn-success btn-lg">
     Treasure!
   </button>
 </div>
@@ -260,7 +260,7 @@ We'd like `"secret.mp3"` to actually be a variable. A way to do that is to use a
 
 ```html
 <div data-controller="zelda" data-zelda-sound="treasure.mp3">
-  <button data-action="click->zelda#play" data-target="zelda.trigger" class="btn btn-success btn-lg">
+  <button data-action="click->zelda#play" data-zelda-target="trigger" class="btn btn-success btn-lg">
     Treasure!
   </button>
 </div>
@@ -278,7 +278,7 @@ Is it working? Great, you can now update the first button HTML to make it work w
 
 Have a last look at your `lib/controllers/zelda_controller.js` file.
 
-- Do you see a `querySelector`? No, this is replaced by `this.element` and the **target** mechanism which automatically binds `this.$$$Target` variables to `data-target` defined elements
+- Do you see a `querySelector`? No, this is replaced by `this.element` and the **target** mechanism which automatically binds `this.$$$Target` variables to `data-controller-name-target` defined elements
 - Do you see an `addEventListener`? No, this is replaced by the `data-action` with the syntax `EVENT_TYPE->CONTROLLER_NAME#CALLBACK`. You just have to implement the CALLBACK in your controller and that's it!
 
 Once a Stimulus controller is implemented, it's very easy to re-use it everywhere on a website with the right HTML tags.
