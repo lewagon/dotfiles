@@ -47,7 +47,7 @@ echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 rails db:migrate
 rails db:test:prepare
-git submodule add https://github.com/lewagon/fullstack-challenges-04-Rails-watch-list-specs.git spec
+git submodule add https://github.com/lewagon/rails-watch-list-specs.git spec
 git add .
 git commit -m "Prepare rails app with external specs"
 ```
@@ -132,8 +132,8 @@ Don't forget to `commit` and `push` your work often.
 Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
 we need are `movies`, `lists` and `saved_movies`. Think about the relations between the tables and who is storing the *references*. 😉
 
-<!-- Screenshot to save -->
-<!-- ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/db.png) -->
+<!-- screenshot -->
+[](https://user-images.githubusercontent.com/57643651/108531364-854a4a80-72ce-11eb-9855-4ee20fcfc9b2.png)
 
 **Important**
 Don't use `rake` but:
@@ -260,15 +260,24 @@ Now time to make a nice front-end! Time to play around with CSS! 😊 Go check o
 
 Don't forget you can have local images in the `app/assets/images` folder. Or even better, you can ask the user for an `image_url` when the user adds a new list.
 
+<!-- screenshot -->
+<!-- screenshot -->
+
 ### 6 - New saved movie form on the list show page (Optional)
 
-Try to put the "New saved movie form" on the list page, not on a separate page. What changes in the routes? And in the controllers?
+Try to put the "New saved movie form" on the list page itself, not on a separate page, so you won't have to leave the list page to add a new movie! What changes in the routes? And in the controllers?
 
 ### 7 - Select2 on the movies dropdown (Optional)
 
 Let's try adding an npm package to our rails app! Let's follow the slides to see how to add `select2` to our movies dropdown.
 
-### 8 - Going further
+### 8 - List reviews (Optional)
+
+Everyone should be able to comment and tell us what they thought of our movie collection. Let's add some reviews to our lists!
+
+<!-- screenshot -->
+
+### 9 - Going further
 
 - Adding a possibility to search movies and adding `typed.js` to the search input field.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our saved movies as we scroll down a list show page.
