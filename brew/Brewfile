@@ -54,6 +54,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 # cask "dash2"
+cask "drawio"
 # cask "dropbox"
 # cask "firefox"
 # cask "font-fira-code"
