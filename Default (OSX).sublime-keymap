@@ -1,3 +1,4 @@
 [
-  { "keys": ["super+shift+w"], "command": "close_all" }
+  { "keys": ["super+shift+w"], "command": "close_all" },
+  { "keys": ["super+shift+s"], "command": "save_all" }
 ]
