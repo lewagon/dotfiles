@@ -164,7 +164,7 @@ to only run tests in the `spec/models` folder. Make sure they're all green befor
 - A movie has many saved movies
 - A saved movie belongs to an movie
 - A saved movie belongs to a list
-- You can’t delete an movie if it is used by at least one saved movie.
+- You can’t delete a movie if it is referenced in at least one saved movie.
 - When you delete a list, you should delete associated saved movies (but not the movies as they can be linked to other lists).
 
 ### 2 - Seed the movies
@@ -185,7 +185,7 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 Have fun and seed fake movies using the [faker gem](https://github.com/faker-ruby/faker).
 
-If you want to see real movies you can use [this API](https://developers.themoviedb.org/3/movies/get-top-rated-movies) (with `open-uri` and `json` ruby libs).
+Even better, seed real movies by using [this API](https://developers.themoviedb.org/3/movies/get-top-rated-movies) (with `open-uri` and `json` ruby libs).
 
 **API Setup**
 
@@ -208,7 +208,7 @@ Don't use `rake` to code the applicative part. It's time to launch a `rails s` i
 
 - start with the **route**,
 - then start coding the **controller**,
-- start coding the **view** and refresh your browser.
+- finally start coding the **view** and refresh your browser.
 
 When your feature is done (and looks good), move on to the next one and repeat the process!
 
@@ -269,7 +269,7 @@ Try to put the "New saved movie form" on the list page itself, not on a separate
 
 ### 7 - Select2 on the movies dropdown (Optional)
 
-Let's try adding an npm package to our rails app! Let's follow the slides to see how to add `select2` to our movies dropdown.
+Let's try adding an npm package to our rails app! Let's follow the slides to see how we can add `select2` to our movies dropdown.
 
 ### 8 - List reviews (Optional)
 
@@ -279,5 +279,6 @@ Everyone should be able to comment and tell us what they thought of our movie co
 
 ### 9 - Going further
 
-- Adding a possibility to search movies and adding `typed.js` to the search input field.
+- Adding a possibility to search movies.
+- Adding `typed.js` to have some funky title on our home page.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our saved movies as we scroll down a list show page.
