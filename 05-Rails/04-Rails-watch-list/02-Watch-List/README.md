@@ -147,14 +147,14 @@ to only run tests in the `spec/models` folder. Make sure they're all green befor
 #### Attributes
 
 - A **movie** has a **title** (e.g. `"Wonder Woman 1984"`), an **overview** (`"Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s!"`), a **poster url** and a **rating** (6.9).
-- A **list** has an **name** (e.g. `"Drama"`, `"Comedy"`, `"Classic"`, `"To rewatch"`, ... )
-- A **saved movie** adds a movie to a list (e.g. Wonder Woman has been added to the "Girl Power" watch list) so each **saved movie** references a movie and a list, with a **comment**.
+- A **list** has a **name** (e.g. `"Drama"`, `"Comedy"`, `"Classic"`, `"To rewatch"`, ... )
+- A **saved movie** adds a movie to a list (e.g. Wonder Woman has been added to the "Girl Power" watch list). So each **saved movie** references a movie and a list, with a **comment**.
 
 #### Validation
 
 - A movie must have a unique title.
 - A list must have a unique name.
-- A saved movie must be linked to a movie and a list, and [movie, list] pairings should be unique.
+- A saved movie must be linked to a movie and a list, and the [movie, list] pairings should be unique.
 - The comment of a saved movie cannot be shorter than 6 characters.
 
 #### Associations
