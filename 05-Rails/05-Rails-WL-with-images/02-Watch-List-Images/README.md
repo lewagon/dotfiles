@@ -64,6 +64,6 @@ Even though it's a simple app, try your best to make something beautiful using B
 
 For an overview about all the image helpers rails provides (`image_tag`, `image_path`, `asset-url`, ...) check out the [cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/rails_image_helpers) 👈
 
-### Cocktail Reviews (Optional)
+### Saved Movie Reviews (Optional)
 
-If you're done with the images, try to add an anonymous review system to the cocktails.
+If you're done with the images, try to add an anonymous review system to the movies.

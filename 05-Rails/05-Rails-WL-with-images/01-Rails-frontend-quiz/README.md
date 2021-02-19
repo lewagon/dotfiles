@@ -11,7 +11,7 @@ the correct information to pass the quiz!
 
 ### Question 1
 
-Return a `String` with the right command to create a new rails app called `mister-cocktail`.
+Return a `String` with the right command to create a new rails app called `watch-list`.
 
 ### Question 2
 

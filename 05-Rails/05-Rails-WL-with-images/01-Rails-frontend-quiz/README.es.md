@@ -9,7 +9,7 @@ Ve al archivo `lib/quiz.rb`. Ahí verás un quiz con algunos métodos para poner
 
 ### Pregunta 1
 
-Devuelve una cadena de caracteres (`String`) con el comando adecuado para crear una nueva app Rails llamada `mister-cocktail`.
+Devuelve una cadena de caracteres (`String`) con el comando adecuado para crear una nueva app Rails llamada `watch-list`.
 
 ### Pregunta 2
 

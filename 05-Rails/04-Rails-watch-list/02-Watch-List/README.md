@@ -268,9 +268,7 @@ Try to put the "New saved movie form" on the list page, not on a separate page. 
 
 Let's try adding an npm package to our rails app! Let's follow the slides to see how to add `select2` to our movies dropdown.
 
-### 8 - Let's add reviews for these awesome movies! (Optional)
-
-### 9 - Going further
+### 8 - Going further
 
 - Adding a possibility to search movies and adding `typed.js` to the search input field.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our saved movies as we scroll down a list show page.
