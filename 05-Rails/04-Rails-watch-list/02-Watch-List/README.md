@@ -154,7 +154,7 @@ to only run tests in the `spec/models` folder. Make sure they're all green befor
 
 - A movie must have a unique title.
 - A list must have a unique name.
-- A saved movie must be linked to a movie and a list, and [movie, list] pairings should be unique.
+- A saved movie must be linked to a movie and a list, and the [movie, list] pairings should be unique.
 - The comment of a saved movie cannot be shorter than 6 characters.
 
 #### Associations
