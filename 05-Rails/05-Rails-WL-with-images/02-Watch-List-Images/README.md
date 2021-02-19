@@ -2,7 +2,7 @@
 
 Today, we have **three goals**:
 
-1. Deploy Mister Cocktail on Heroku
+1. Deploy our Watch List on Heroku
 2. Add the Image Upload features
 3. There's a Rails Quiz at 2pm!
 
@@ -11,7 +11,7 @@ Today, we have **three goals**:
 We'll continue working on yesterday's code, so go back to your folder:
 
 ```bash
-cd ~/code/<user.github_nickname>/rails-mister-cocktail
+cd ~/code/<user.github_nickname>/rails-watch-list
 ```
 
 If you generated the rails app **without** the `--database` flag, we need to manually migrate this Rails app to Postgresql for heroku. You can check if the app is configured with postgresql if you have the `pg` gem in the gemfile.
@@ -33,11 +33,11 @@ default: &default
 
 development:
   <<: *default
-  database: rails-mister-cocktail_development
+  database: rails-watch-list_development
 
 test:
   <<: *default
-  database: rails-mister-cocktail_test
+  database: rails-watch-list_test
 ```
 
 Open your terminal and run:
@@ -54,10 +54,9 @@ Go back to the lecture and follow the step to deploy your app in production on H
 
 ### Image Upload
 
-The goal is to **add a picture** to the `Cocktail` model. The user should be able to
-upload an image that will then be displayed on the `index` view
-of `Cocktail` as a thumbnail. On the `show` view of `Cocktail`, the same
-image should be displayed, but bigger!
+We are getting our `movies` posters from our seeds and thanks to the Omdb API but one movie poster doesn't represent what an entire list is about, so the goal is to **add a picture** to the `List` model, so that each list will be better illustrated.
+
+The user should be able to upload an image that will then be displayed on the `index` view of `List` as a thumbnail/cover. On the `show` view of a `List`, the same image should be displayed, but bigger, followed by the movies that have been saved to it!
 
 Even though it's a simple app, try your best to make something beautiful using Bootstrap, a few nice font, and all your creativity 🎨😊🎨
 
