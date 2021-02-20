@@ -4,7 +4,7 @@ Entender los conceptos básicos de la programación orientada a objetos (OPP en 
 
 ## Especificaciones
 
-Antes de crear tu clase, crea un archivo en el directorio `lib` para testear la clase mientras la creas (crear nuevas instancias, llamar métodos de instancia, mostrar resultados en la Terminal). Pongamosle `interface.rb` a este archivo.
+Antes de crear tu clase, crea un archivo en el directorio `lib` para testear la clase mientras la creas (crear nuevas instancias, llamar métodos de instancia, mostrar resultados en la Terminal). Pongámosle `interface.rb` a este archivo.
 
 Luego escoge algo del mundo real que quisieras modelar. Restaurantes, vehículos, usuarios, juegos, recetas… *¡Es tu decisión!*
 
@@ -22,12 +22,12 @@ Ahora es seguro borrar el archivo `.gitkeep`. Este archivo está ahí para que g
 
 ### ¿Cuáles son las propiedades internas de tus objetos?
 
-¿Cuáles son las características de un restaurante, de un usuario o de un juego?
+¿Cuáles son las características de un restaurante, de un/a usuario/a o de un juego?
 Escoge algunas características de tu clase que quisieras modelar. Serán tus **variables de instancia**, a quienes algunas veces se les llama **propiedades**.
 
 ### Define el constructor
 
-`initialize` es el método de instancia que se invoca cuando se llama `new` sobre una clase. Por ejemplo:
+`initialize` es el método de instancia que se invoca cuando se llama a `new` sobre una clase. Por ejemplo:
 
 ```ruby
 # lib/car.rb
