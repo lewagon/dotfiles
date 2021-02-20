@@ -39,6 +39,6 @@ Para testearlo, abre la interfaz (`ruby lib/interface.rb`) y averigua lo que pas
 
 ## Puntos clave de aprendizaje
 
-- ¿Cuales son las variables de instancia de la clase `OrangeTree`?
+- ¿Cuáles son las variables de instancia de la clase `OrangeTree`?
 - ¿A qué nos referimos con el estado?
 - ¿Qué métodos, al ser llamados, modifican al objeto sobre los cuales se les llama? ¿Cómo deben ser llamados estos métodos?
