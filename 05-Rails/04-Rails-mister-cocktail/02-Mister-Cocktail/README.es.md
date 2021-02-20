@@ -42,7 +42,7 @@ git push origin master
 Importa las especificaciones del/la profesor/a para poder hacer `rake` de lo que creamos.
 
 ```bash
-echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 rails db:migrate

@@ -42,7 +42,7 @@ git push origin master
 Let's import the teacher's spec to be able to `rake` our progress.
 
 ```bash
-echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 rails db:migrate
