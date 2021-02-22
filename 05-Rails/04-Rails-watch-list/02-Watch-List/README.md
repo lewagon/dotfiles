@@ -278,6 +278,7 @@ Everyone should be able to comment and tell us what they thought of our movie co
 
 ### 9 - Going further
 
-- Adding a possibility to search movies.
+- Adding a possibility to search for movies.
 - Adding `typed.js` to have some funky title on our home page.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
+- Using [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) to display stars instead of a normal input in the reviews form.
