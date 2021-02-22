@@ -130,7 +130,7 @@ Don't forget to `commit` and `push` your work often.
 ### 1 - Models
 
 Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
-we need are `movies`, `lists` and `saved_movies`. Think about the relations between the tables and who is storing the *references*. 😉
+we need are `movies`, `lists` and `bookmarks`. Think about the relations between the tables and who is storing the *references*. 😉
 
 <!-- screenshot -->
 [](https://user-images.githubusercontent.com/57643651/108531364-854a4a80-72ce-11eb-9855-4ee20fcfc9b2.png)
@@ -148,24 +148,24 @@ to only run tests in the `spec/models` folder. Make sure they're all green befor
 
 - A **movie** has a **title** (e.g. `"Wonder Woman 1984"`), an **overview** (`"Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s!"`), a **poster url** and a **rating** (6.9).
 - A **list** has a **name** (e.g. `"Drama"`, `"Comedy"`, `"Classic"`, `"To rewatch"`, ... )
-- A **saved movie** adds a movie to a list (e.g. Wonder Woman has been added to the "Girl Power" watch list). So each **saved movie** references a movie and a list, with a **comment**.
+- A **bookmark** adds a movie to a list (e.g. Wonder Woman has been added to the "Girl Power" watch list). So each **bookmark** references a movie and a list, with a **comment**.
 
 #### Validation
 
 - A movie must have a unique title.
 - A list must have a unique name.
-- A saved movie must be linked to a movie and a list, and the [movie, list] pairings should be unique.
-- The comment of a saved movie cannot be shorter than 6 characters.
+- A bookmark must be linked to a movie and a list, and the [movie, list] pairings should be unique.
+- The comment of a bookmark cannot be shorter than 6 characters.
 
 #### Associations
 
-- A list has many saved movies
-- A list has many movies through saved movies
-- A movie has many saved movies
-- A saved movie belongs to an movie
-- A saved movie belongs to a list
-- You can’t delete a movie if it is referenced in at least one saved movie.
-- When you delete a list, you should delete all associated saved movies (but not the movies as they can be referenced in other lists).
+- A list has many bookmarks
+- A list has many movies through bookmarks
+- A movie has many bookmarks
+- A bookmark belongs to a movie
+- A bookmark belongs to a list
+- You can’t delete a movie if it is referenced in at least one bookmark.
+- When you delete a list, you should delete all associated bookmarks (but not the movies as they can be referenced in other lists).
 
 ### 2 - Seed the movies
 
@@ -236,20 +236,20 @@ GET "lists/new"
 POST "lists"
 ```
 
-### 4 - Routing, Controller, Views for Saved Movies
+### 4 - Routing, Controller, Views for bookmarks
 
-- A user can add a new saved movie (movie/list pair) to an existing list
+- A user can add a new bookmark (movie/list pair) to an existing list
 - Checkout `simple_form` [docs](https://github.com/heartcombo/simple_form#associations) about `f.association` to easily create a select dropdown for our list of movies.
 
 ```
-GET "lists/42/saved_movies/new"
-POST "lists/42/saved_movies"
+GET "lists/42/bookmarks/new"
+POST "lists/42/bookmarks"
 ```
 
-- A user can delete a saved movie from a list. How can we make a delete link again?
+- A user can delete a bookmark from a list. How can we make a delete link again?
 
 ```
-DELETE "saved_movies/25"
+DELETE "bookmarks/25"
 ```
 
 Do we need a `MovieController`?
@@ -263,9 +263,9 @@ Don't forget you can have local images in the `app/assets/images` folder. Or eve
 <!-- screenshot -->
 <!-- screenshot -->
 
-### 6 - New saved movie form on the list show page (Optional)
+### 6 - New bookmark form on the list show page (Optional)
 
-Try to put the "New saved movie form" on the list page itself, not on a separate page, so you won't have to leave the list page to add a new movie! What changes in the routes? And in the controllers?
+Try to put the "New bookmark form" on the list page itself, not on a separate page, so you won't have to leave the list page to add a new movie! What changes in the routes? And in the controllers?
 
 ### 7 - Select2 on the movies dropdown (Optional)
 
@@ -281,4 +281,4 @@ Everyone should be able to comment and tell us what they thought of our movie co
 
 - Adding a possibility to search movies.
 - Adding `typed.js` to have some funky title on our home page.
-- Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our saved movies as we scroll down a list show page.
+- Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
