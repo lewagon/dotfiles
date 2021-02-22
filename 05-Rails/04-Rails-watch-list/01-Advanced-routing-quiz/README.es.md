@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Antes de empezar a ver el desafío Mister Cocktail, repasemos algunos de los principios que vimos ayer cuando vimos rutas avanzadas.
+Antes de empezar a ver el desafío Watch list, repasemos algunos de los principios que vimos ayer cuando vimos rutas avanzadas.
 
 ## Especificaciones
 
