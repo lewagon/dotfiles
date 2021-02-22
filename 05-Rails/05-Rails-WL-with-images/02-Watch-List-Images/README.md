@@ -66,4 +66,4 @@ For an overview about all the image helpers rails provides (`image_tag`, `image_
 
 ### List Reviews (Optional)
 
-If you're done with the images, try to add an anonymous review system to the lists of movies so that everyone can comment on the movie selection!
+If you're done with the images, try to add an anonymous review system to the movie lists so that everyone can comment on the movie selection of our lists!
