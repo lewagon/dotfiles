@@ -132,8 +132,7 @@ Don't forget to `commit` and `push` your work often.
 Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
 we need are `movies`, `lists` and `bookmarks`. Think about the relations between the tables and who is storing the *references*. 😉
 
-<!-- screenshot -->
-[](https://user-images.githubusercontent.com/57643651/108531364-854a4a80-72ce-11eb-9855-4ee20fcfc9b2.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
 **Important**
 Don't use `rake` but:
@@ -260,8 +259,8 @@ Now time to make a nice front-end! Time to play around with CSS! 😊 Go check o
 
 Don't forget you can have local images in the `app/assets/images` folder. Or even better, you can ask the user for an `image_url` when the user adds a new list.
 
-<!-- screenshot -->
-<!-- screenshot -->
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/homepage.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/showpage.png)
 
 ### 6 - New bookmark form on the list show page (Optional)
 
@@ -275,7 +274,7 @@ Let's try adding an npm package to our rails app! Let's follow the slides to see
 
 Everyone should be able to comment and tell us what they thought of our movie collection. Let's add some reviews to our lists!
 
-<!-- screenshot -->
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/reviews.png)
 
 ### 9 - Going further
 
