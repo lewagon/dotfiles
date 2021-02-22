@@ -54,7 +54,7 @@ Go back to the lecture and follow the step to deploy your app in production on H
 
 ### Image Upload
 
-We are getting our `movies` posters from our seeds and thanks to the Omdb API but one movie poster doesn't represent what an entire list is about, so the goal is to **add a picture** to the `List` model, so that each list will be better illustrated.
+We are getting our `movies` posters from our seeds and thanks to the [TMDB API](https://developers.themoviedb.org/3) but one movie poster doesn't represent what an entire list is about, so the goal is to **add a picture** to the `List` model, so that each list will be better illustrated.
 
 The user should be able to upload an image that will then be displayed on the `index` view of `List` as a thumbnail/cover. On the `show` view of a `List`, the same image should be displayed, but bigger, followed by the movies that have been saved to it!
 
