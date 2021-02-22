@@ -165,7 +165,7 @@ to only run tests in the `spec/models` folder. Make sure they're all green befor
 - A saved movie belongs to an movie
 - A saved movie belongs to a list
 - You can’t delete a movie if it is referenced in at least one saved movie.
-- When you delete a list, you should delete associated saved movies (but not the movies as they can be linked to other lists).
+- When you delete a list, you should delete all associated saved movies (but not the movies as they can be referenced in other lists).
 
 ### 2 - Seed the movies
 
