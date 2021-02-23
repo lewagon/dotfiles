@@ -22,7 +22,7 @@ Learn the best setup for implementing Bootstrap SASS + frontend libraries, and s
 
 Learn about the asset pipeline and webpacker.
 
-For the exercises, you'll start a two-day build of a watch list app, with 3 models `Movie`, `Saved Movies`, and `List`.
+For the exercises, you'll start a two-day build of a watch list app, with 3 models `Movie`, `Bookmark`, and `List`.
 You will have to follow the frontend setup carefully to work on a nice-looking app.
 
 ### `05 Hosting & Image Upload`
