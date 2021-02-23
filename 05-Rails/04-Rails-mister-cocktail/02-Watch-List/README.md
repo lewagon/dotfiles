@@ -192,7 +192,7 @@ The endpoints of the API requires you to sign up and generate an API key. Since 
 
 Here's how it works:
 
-1. the API would say: use [`https://api.themoviedb.org/3/movie/top_rated?api_key=](https://api.themoviedb.org/3/movie/top_rated?api_key=)<your_api_key>`
+1. the API would say: use `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>`
 2. What you should do is replace this part of the url `https://api.themoviedb.org/3` by `http://tmdb.lewagon.com`
 3. You can [try it here](http://tmdb.lewagon.com/movie/top_rated)
 
@@ -251,7 +251,7 @@ POST "lists/42/bookmarks"
 DELETE "bookmarks/25"
 ```
 
-Do we need a `MovieController`?
+Do we need a `MoviesController`?
 
 ### 5 - Design as we go
 
@@ -260,6 +260,7 @@ Now time to make a nice front-end! Time to play around with CSS! 😊 Go check o
 Don't forget you can have local images in the `app/assets/images` folder. Or even better, you can ask the user for an `image_url` when the user adds a new list.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/homepage.png)
+
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/showpage.png)
 
 ### 6 - New bookmark form on the list show page (Optional)
