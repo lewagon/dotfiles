@@ -59,7 +59,7 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
+Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies
 
 ```bash
 yarn add bootstrap jquery popper.js
