@@ -49,7 +49,7 @@ Task.create title: 'Laundry', details: 'Do not mix colors!'
 Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: true
 ```
 
-⚠️ Again, in the view, do not focus on coding the checkboxes visual for now. You will have the opportunity to code it in the optional questions.
+⚠️ In the view, do not focus on coding the checkboxes visual for now. You will have the opportunity to code it in the optional questions.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png)
 
