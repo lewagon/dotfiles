@@ -10,7 +10,7 @@ Vamos a crear un To-Do Manager con las funcionalidades CRUD:
 
 En este desafío te encontrarás con tu viejo amigo [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) el cual es el ORM de Rails.
 
-Aquí no hay `rake`. También recuerda no crear tu app Rails en `fullstack-challenges` ⛔️ En sitio, sigue estas instrucciones:
+Aquí no hay `rake`. También recuerda no crear tu app Rails en `fullstack-challenges` ⛔️ En su lugar, sigue estas instrucciones:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -49,7 +49,7 @@ Task.create title: 'Laundry', details: 'Do not mix colors!'
 Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: true
 ```
 
-⚠️ En la vista, no se cencentre en crear el código de las casillas de verificación (checkboxes) por ahora. Podremos hacerlo en las preguntas opcionales.
+⚠️ En la vista, no se concentre en crear el código de las casillas de verificación (checkboxes) por ahora. Podremos hacerlo en las preguntas opcionales.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png).
 
@@ -59,7 +59,7 @@ Ahora tenemos una lista de tareas y quisiéramos hacer clic en su título y nave
 
 Actualiza la vista `index.html.erb` con el helper `link_to` para crear los enlaces.
 
-⚠️ En la vista, no se cencentre en crear el código de las casillas de verificación (checkboxes) por ahora. Podremos hacerlo en las preguntas opcionales.
+⚠️ En la vista, no se concentre en crear el código de las casillas de verificación (checkboxes) por ahora. Podremos hacerlo en las preguntas opcionales.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index_show.gif).
 
@@ -92,8 +92,8 @@ Analiza tu código con ojo crítico e introduce los siguientes cambios:
 
 ### 9 - Casillas de verificación (checkboxes) (Opcional)
 
-Las casillas de verificación (checkboxes) solamente están Font Awesome iconos.
+Las casillas de verificación (checkboxes) solamente son iconos de Font Awesome.
 
 Para crear el visual de las "checkboxes" para cada tarea en la vista, importa Bootstrap & Font Awesome CDNs en el `<head>` del `application.html.erb`.
 
-Entonces, el la vista, usa condicionales. Si la tarea está completada, muestra la casilla marcada, de lo contrario, muestra la casilla vacia (como una pista 😉, busca para `check-square` y `square` iconos en fontawesome).
+Entonces, en la vista, usa condicionales. Si la tarea está completada, muestra la casilla marcada, de lo contrario, muestra la casilla vacia (como pista 😉, busca los iconos `check-square` y `square` en fontawesome).

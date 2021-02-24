@@ -95,4 +95,4 @@ The checkboxes are not real ones! They are simply Font Awesome icons.
 
 To create the checkboxes visuals in your view for each task, import Bootstrap & Font Awesome CDNs in the `<head>` of your `application.html.erb`.
 
-Then, in your view, use conditionals. If your task is completed, display the checked square, else, display an empty square (as a hint 😉, look for `check-square` and `square` icons on fontawesome 😉).
+Then, in your view, use conditionals. If your task is completed, display the checked square, else, display an empty square (as a hint 😉, search for `check-square` and `square` icons on fontawesome 😉).
