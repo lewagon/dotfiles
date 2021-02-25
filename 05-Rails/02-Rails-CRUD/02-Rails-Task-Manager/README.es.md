@@ -10,7 +10,7 @@ Vamos a crear un To-Do Manager con las funcionalidades CRUD:
 
 En este desafío te encontrarás con tu viejo amigo [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) el cual es el ORM de Rails.
 
-Aquí no hay `rake`. También recuerda no crear tu app Rails en `fullstack-challenges` ⛔️
+Aquí no hay `rake`. También recuerda no crear tu app Rails en `fullstack-challenges` ⛔️ En su lugar, sigue estas instrucciones:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -49,6 +49,8 @@ Task.create title: 'Laundry', details: 'Do not mix colors!'
 Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: true
 ```
 
+⚠️ En la vista, no se concentre en crear el código de las casillas de verificación (checkboxes) por ahora. Podremos hacerlo en las preguntas opcionales.
+
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png).
 
 ### 4 - Como usuario/a, puedo ver los detalles de una tarea
@@ -56,6 +58,8 @@ Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: 
 Ahora tenemos una lista de tareas y quisiéramos hacer clic en su título y navegar hacia una nueva página que muestre los detalles de dicha tarea. Siguiendo las convenciones vistas en clase, agrega una nueva ruta, una nueva acción de controlador y una nueva vista. Esta acción debe **buscar** una tarea específica gracias a su `id` directamente desde `params`.
 
 Actualiza la vista `index.html.erb` con el helper `link_to` para crear los enlaces.
+
+⚠️ En la vista, no se concentre en crear el código de las casillas de verificación (checkboxes) por ahora. Podremos hacerlo en las preguntas opcionales.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index_show.gif).
 
@@ -85,3 +89,11 @@ Analiza tu código con ojo crítico e introduce los siguientes cambios:
 1. Usa `resources` en tu `config/routes.rb`
 1. Usa un `before_action` en el `TasksController`
 1. ¿Deberíamos repetirnos (DRY) un poco con las vistas `new` y `edit`?¿Cómo deberíamos manejar el hecho de que el formulario `new` **no** debe mostrar "Completed"? ([hint](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F)).
+
+### 9 - Casillas de verificación (checkboxes) (Opcional)
+
+Las casillas de verificación (checkboxes) solamente son iconos de Font Awesome.
+
+Para crear el visual de las "checkboxes" para cada tarea en la vista, importa Bootstrap & Font Awesome CDNs en el `<head>` del `application.html.erb`.
+
+Entonces, en la vista, usa condicionales. Si la tarea está completada, muestra la casilla marcada, de lo contrario, muestra la casilla vacia (como pista 😉, busca los iconos `check-square` y `square` en fontawesome).
