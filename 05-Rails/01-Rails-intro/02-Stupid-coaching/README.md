@@ -211,7 +211,7 @@ brew cask install chromedriver
 gem install chromedriver-helper
 ```
 
-After the installation, you can open the following file and replace **all** its content with:
+After the installation you can open the following file and replace **all** its content with:
 
 ```ruby
 # test/test_helper.rb
