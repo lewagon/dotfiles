@@ -4,6 +4,15 @@
 
 ## Generación de la app Rails
 
+Ya debes tener [yarn](https://yarnpkg.com) instalado. Compruébalo con:
+
+```bash
+yarn -v
+ # Debería ver yarn versión aquí
+```
+
+Si no es así, vuelva a la sección dedicada del [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
+
 **Nota**: ¡Ya deberías ser capaz de seguir estos pasos sin esta guía! No olvides `--database=postgresql` (hablaremos de eso mañana). 😉
 
 ```bash

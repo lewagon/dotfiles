@@ -4,6 +4,15 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 
 ## Rails app generation
 
+You should already have [yarn](https://yarnpkg.com) installed. Check it with:
+
+```bash
+yarn -v
+# You should see your yarn version here
+```
+
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
+
 **Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
 
 ```bash
