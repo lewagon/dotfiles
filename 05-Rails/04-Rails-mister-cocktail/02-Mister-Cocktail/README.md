@@ -4,17 +4,14 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 
 ## Rails app generation
 
-Let's install `yarn` if you haven't already!
+You should already have [yarn](https://yarnpkg.com) installed. Check it with:
 
 ```bash
-# macOS
-brew install yarn
-
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+yarn -v
+# You should see your yarn version here
 ```
+
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
 
 **Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
 
