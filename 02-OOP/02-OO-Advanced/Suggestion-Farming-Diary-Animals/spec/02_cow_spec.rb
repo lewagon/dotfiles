@@ -23,42 +23,42 @@ describe "Cow", if: cow_helper.file_and_class_valid? do
     end
 
     it "should define an instance variable @milk" do
-      expect(cow.instance_variable_get(:@milk)).to be_a Integer
+      expect(cow.instance_variable_get(:@milk)).to eq 0
+    end
+
+    it "should set the animal's name" do
+      expect(cow.instance_variable_get(:@name)).to eq "Rebecca"
     end
   end
   
-  describe '#feed' do
-    it 'should override the `feed` method' do
-      expect(Cow.instance_methods(false)).to include(:feed)
+  describe '#feed!' do
+    it 'should override the `feed!` method' do
+      expect(Cow.instance_methods(false)).to include(:feed!)
     end
 
     it 'should add 1 liter of milk' do
-      cow.feed
+      cow.feed!
       expect(cow.instance_variable_get(:@milk)).to eq 1
-      cow.feed
+      cow.feed!
       expect(cow.instance_variable_get(:@milk)).to eq 2
-    end
-
-    it 'should return a string' do
-      expect(cow.feed).to eq 'Rebecca is eating'
     end
   end
   
   
   describe '#talk' do
     it 'should return a string' do
-      expect(cow.talk).to eq 'moo'
+      expect { cow.talk }.to output(/moo/).to_stdout
     end
   end
   
-  describe '#collar' do
+  describe '#hug' do
     it 'should be inherited from `Animal`, not duplicated' do
       expect(Cow.instance_methods(false)).not_to include(:collar)
     end
   end
 
-  describe 'instance variables' do
-    it "have appropriate getters and setters" do
+  describe '#milk' do
+    it "have appropriate getters and/or setters" do
       expect(cow).to respond_to :milk
       expect(cow).not_to respond_to(:milk=)
     end

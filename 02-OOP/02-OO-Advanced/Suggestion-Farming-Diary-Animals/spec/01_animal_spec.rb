@@ -83,32 +83,27 @@ describe "Animal", if: animal_helper.file_and_class_valid? do
     it "should define an instance variable @name" do
       expect(animal.instance_variable_get(:@name)).to be_a String
     end
-  end
 
-  describe '#feed' do
-    it 'should implement a method to feed the animal' do
-      Animal.public_method_defined? :feed
-    end
-
-    it 'should return a string' do
-      expect(animal.feed).to eq "Edward is eating"
+    it "should set the animal's name" do
+      expect(animal.instance_variable_get(:@name)).to eq "Edward"
     end
   end
 
-  describe '#collar' do
-    it "should implement a method to read the animal's collar" do
-      Animal.public_method_defined? :collar
+  describe '#hug' do
+    it "should implement a method to hug the animal" do
+      Animal.public_method_defined? :hug
     end
 
-    it 'should return a string' do
-      expect(animal.collar).to eq "Name: Edward"
+    it 'should puts a message that the animal is happy' do
+      expect { animal.hug }.to output(/Edward is happy/).to_stdout
     end
   end
 
-  describe 'instance variables' do
-    it "have appropriate getters and setters" do
+  describe '#name' do
+    it "have appropriate getters and/or setters" do
       expect(animal).to respond_to :name
       expect(animal).not_to respond_to(:name=)
+      expect(animal.name).to eq ("Edward")
     end
   end
 end
