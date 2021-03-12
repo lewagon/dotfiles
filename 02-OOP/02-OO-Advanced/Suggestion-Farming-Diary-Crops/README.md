@@ -22,16 +22,23 @@ To start your farm, create a first class named `Rice` in `rice.rb`. Write those 
   - `ripe?` returns true if there are at least 30 grains.
 
 Start your diary in `farming_diary.rb`:
-The file contains some guidelines for this first steps to help you figure out what you can do. But this file is all yours, you can add, change, delete and create everything you like. There is no rake on it and it's very important that you feel confortable with your own code.
+The file contains some guidelines to help you figure out what you can do. But this it's your playground! You can add, change, delete and create everything you like. There is no rake on it and it's very important that you feel confortable with your own code.
+
+Run your diary:
+
+```bash
+ruby lib/farming_diary.rb
+```
 
 Here is an example of a farmer's diary:
 
 ```bash
-📝 Day One: corn
+📝 Day One: planting corn
 Today, I planted 1 corn crop in the field
 After a good watering, the corn produced 5 grains
 The corn crop is not ripe
 ```
+
 
 ### Duplicate `Corn` to create `Rice`
 Create a `Rice` class in `rice.rb` and duplicate all the methods from the `Corn` class.

@@ -1,9 +1,10 @@
 ## Background and Objectives
 
-This challenge is an extension of the previous one. The farm welcomes its first animals!
-TODO: different approach
+This challenge is an extension of the previous one: the farm welcomes its first animals!
+And this time, you're going to explore different techniques of developments.
 
 ![Animals](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/tiny-farm/animals.svg?sanitize=true)
+
 
 ## Specs
 The farm has two kinds of **animals** (cow and chicken).
@@ -18,33 +19,33 @@ You are now familiar with inheritance, let's try to create the classes starting 
 
   - Create the three classes `Animal`, `Cow` and `Chicken` all at once. **Focus on the structure** and the correct inheritance.
 
-
 Add methods:
   - `initialize` takes the name of the animal as a parameter and set a @name variable.
-  - `feed` returns "Rebecca is eating" for an animal named Rebecca
-  - `collar` returns "Name: Rebecca"
+  - `hug` puts "Rebecca is happy" (for an animal named Rebecca)
 
 
 ### Cow
-Cows inherit from animal but they have particularities.
-This time, we're going to explore a different technique to implement them: **call** the methods first and **code** them afterwards.
+Cows inherit from animal but they have particularities, here are what you need to know:
 
-Create a new instance of `Cow` in `farming_diary.rb` and call all the methods on it. Now go back to the `Cow` class to implement the following clues:
+  - You can **feed!** the cows.
+  - Cows produce **milk**. Milk is increased by one when you feed them.
+  - Cows can **talk**, a new method `talk` puts "moo".
 
-  - Cows produce **milk**. Milk is increased by one anytime the cow is beeing fed.
-  - Cows can **talk**, a new method `talk` returns "moo"
+This time, like in Test Driven Development, **call** the methods first and **code** them afterwards:
+In your diary, create a new instance of `Cow` and call all the methods on it. For example, call `feed!` and test if the amount of milk produced is what you expected. Then adjust the methods through trials and errors.
 
-In your diary, feed the cow and test if the amount of milk produced is what you expected. Adjust the methods through trials and errors. Does this process remind you of Test Driven Development (TDD)?
+Keep in mind to always use the keyword `super` when you need to call the parent method.
 
 
 ### Chicken
 
-Here are the clues for the chicken:
+Here are the clues for the chickens:
 
-  - Chickens have a gender in addition to a name.
-  - Chickens produce eggs but only female can produce one when beeing fed.
-  - Chickens can talk: "cock-a-doodle-doo" if the chicken is a male, "cha-caw" if it is a female.
-  - A chicken's collar reads "Name: Rebecca, female". A little different from the basic animals.
+  - Chickens have a **gender** in addition to a name: they can be `male` or `female`.
+  - You can **feed!** the chickens.
+  - Chickens produce **eggs** but only female can produce one when beeing fed.
+  - Chickens can **talk** too: "cock-a-doodle-doo" if the chicken is a male, "cha-caw" if it is a female.
+  - When receiving a **hug**, a chicken act as other animals but it puts an aditionnal line: "Laura is running away". Chickens don't have time for hugs!
 
 When all the methods returns what you expect, you're done with the class. Have fun with your diary in `farming_diary.rb`!
 

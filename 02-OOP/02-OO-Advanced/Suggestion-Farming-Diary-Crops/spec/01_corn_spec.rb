@@ -33,7 +33,7 @@ describe "Corn", if: corn_helper.file_and_class_valid? do
     end
 
     it "should define an instance variable @grains" do
-      expect(corn.instance_variable_get(:@grains)).to be_a Integer
+      expect(corn.instance_variable_get(:@grains)).to eq 0
     end
   end
   
@@ -62,8 +62,8 @@ describe "Corn", if: corn_helper.file_and_class_valid? do
     end
   end
   
-  describe 'instance variables' do
-    it "have appropriate getters and setters" do
+  describe '#grains' do
+    it "has appropriate getters and/or setters" do
       expect(corn).to respond_to :grains
       expect(corn).not_to respond_to(:grains=)
     end

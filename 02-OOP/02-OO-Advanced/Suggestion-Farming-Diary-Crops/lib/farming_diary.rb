@@ -50,16 +50,16 @@ puts "The rice crop is #{'not ' unless rice.ripe?}ripe"
 
 puts "\n\n📝 Day Three: taking care of the crops"
 
-# TODO: create an array `field`. Put the corn and the rice crops in it
-field = [corn, rice]
+# TODO: create an array `crops`. Put the corn and the rice crops in it
+crops = [corn, rice]
 
 # TODO: Water all the crops at once (Corn and Rice). Remember they both have the `water!` method
-field.each { |crop| crop.water! }
+crops.each { |crop| crop.water! }
 
-# TODO: Count the total grains of the field
-grains = field.reduce(0) { |sum, crop| sum + crop.grains }
+# TODO: Count the total grains
+grains = crops.reduce(0) { |sum, crop| sum + crop.grains }
 puts "I watered all the crops (rice and corn) and they produced #{grains} grains"
 
 # TODO: Check if all the crops are ripe
-ripe = field.all? { |crop| crop.ripe? }
+ripe = crops.all? { |crop| crop.ripe? }
 puts "The crops are #{'not ' unless ripe}ripe"

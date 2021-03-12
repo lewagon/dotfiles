@@ -5,11 +5,7 @@ class Animal
     @name = name
   end
 
-  def feed
-    "#{@name} is eating"
-  end
-
-  def collar
-    "Name: #{name}"
+  def hug
+    puts "#{@name} is happy"
   end
 end

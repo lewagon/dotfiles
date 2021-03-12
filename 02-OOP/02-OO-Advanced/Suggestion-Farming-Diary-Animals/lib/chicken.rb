@@ -9,19 +9,19 @@ class Chicken < Animal
     @eggs = 0
   end
 
-  def feed
+  def feed!
     @eggs += 1 if @gender == "female"
-    super
   end
 
   def talk
     case @gender
-    when "male" then "cock-a-doodle-doo"
-    when "female" then "cha-caw"
+    when "male" then puts "cock-a-doodle-doo"
+    when "female" then puts "cha-caw"
     end
   end
 
-  def collar
-    "#{super}, #{@gender}"
+  def hug
+    super
+    puts "#{name} is running away"
   end
 end

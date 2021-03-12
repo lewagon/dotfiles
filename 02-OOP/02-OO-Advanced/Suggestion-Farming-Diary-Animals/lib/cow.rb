@@ -8,12 +8,11 @@ class Cow < Animal
     @milk = 0
   end
 
-  def feed
+  def feed!
     @milk += 1
-    super
   end
 
   def talk
-    "moo"
+    puts "moo"
   end
 end
