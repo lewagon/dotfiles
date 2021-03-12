@@ -16,7 +16,7 @@ Don't rake now! Wait until the very end of the challende, try to code everything
 
 
 ### Create the first class `Corn`
-To start your farm, create a first class named `Rice` in `rice.rb`. Write those three methods:
+To start your farm, create a first class named `Corn` in `corn.rb`. Write those three methods:
   - `initialize`: sets the instance variable `@grains` to zero.
   - `water!`: adds 10 grains anytime it is called.
   - `ripe?` returns true if there are at least 30 grains.
