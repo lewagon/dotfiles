@@ -12,7 +12,7 @@ The farm has two kinds of **crops** (rice and corn).
 
 Discuss with your buddy: how many classes do you think you need, and how would you structure them? 
 
-Don't rake now! Wait until the very end of the challende, try to code everything by yourself first!
+Don't rake now! Wait until the very end of the challenge, try to code everything by yourself first!
 
 
 ### Create the first class `Corn`
