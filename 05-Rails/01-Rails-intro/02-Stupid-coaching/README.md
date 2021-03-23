@@ -59,11 +59,11 @@ Every web developer starts working by launching a server and opening a browser t
 
 Every time you write some code in a file, save it and refresh your browser. You will get many error messages, but it is important to get familiar with them. This way, you will understand Rails' execution flow and learn how to fix them!
 
-### 1. Generate controller
+### Generate controller
 
 First things first, let's generate a `QuestionsController` we'll use for our two pages. Remember the `rails` command to do that?
 
-### 2. Display the form: `/ask`
+### Display the form: `/ask`
 
 We want to display a page with a `<form>` to our users at [localhost:3000/ask](http://localhost:3000/ask). In Rails, this counts as a user story, so we need more than an HTML file to make it happen. For every user action in Rails, we need to code **(i) a route, (ii) an action, and (iii) a view**. Remember the MVC pattern?
 
@@ -116,7 +116,7 @@ Here we want the form to trigger our **second user story**: `answer`, which shou
 
 You should get a **routing error**, let's code the answer now!
 
-### 3. Display the Coach's Answer: `/answer`
+### Display the Coach's Answer: `/answer`
 
 Time to implement the logic in the `answer` action (second step of the user journey). For this second user story, follow the same methodology as in `1. Display the form`:
 - code the **route**
@@ -199,7 +199,9 @@ For now, just open (or create) the `app/assets/stylesheets/questions.scss` file.
 
 First, delete the `test/controllers/questions_controller_test.rb` file if it got generated. We will be doing [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). The goal of this kind of testing is to automate all the manual testing of "code editing / go to the browser / reload the page / check if this is working". Everything you did manually in the browser can be done _via_ code!
 
-We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. Before running your system tests you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu. Then you need to install `chromedriver`:
+We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. Before running your system tests you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu.
+
+Then you need to install `chromedriver`:
 
 ```bash
  # macOS
@@ -212,17 +214,29 @@ gem install chromedriver-helper
 After the installation you can open the following file and replace **all** its content with:
 
 ```ruby
-# test/application_system_test_case.rb
-require "test_helper"
+# test/test_helper.rb
+ENV['RAILS_ENV'] ||= 'test'
+require_relative '../config/environment'
+require 'rails/test_help'
 
+class ActiveSupport::TestCase
+  fixtures :all
+end
+
+Capybara.register_driver :headless_chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu window-size=1400,900])
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+Capybara.save_path = Rails.root.join('tmp/capybara')
+Capybara.javascript_driver = :headless_chrome
+```
+
+Then in the following file **update** this line:
+
+```ruby
+# test/application_system_test_case.rb
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  Capybara.register_driver(:headless_chrome) do |app|
-    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome \
-      chromeOptions: { args: %w[headless disable-gpu window-size=1280x760] }
-    Capybara::Selenium::Driver.new app,
-      browser: :chrome, desired_capabilities: capabilities
-  end
-  driven_by :selenium, using: :headless_chrome
+  driven_by :headless_chrome # Update this line
 end
 ```
 
@@ -302,4 +316,3 @@ take_screenshot
 ```
 
 It will take screenshots in the _Headless Chrome_. They will go in the `tmp/screenshots` folder.
-

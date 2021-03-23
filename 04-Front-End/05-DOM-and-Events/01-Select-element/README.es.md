@@ -2,28 +2,17 @@
 
 ¡En este primer desafío vamos a seleccionar un elemento del DOM!
 
-### Instala yarn
+### Configuración
 
-Ya debes tener Node instalado. Compruébalo con `node -v`.
-
-Más tarde durante la semana también usarás `yarn`, un gestor de dependencias de JavaScript.
-
-Para instalarlo corre el código siguiente en tu Terminal:
+Ya debes tener `node` y `yarn` instalados. Compruébalo con:
 
 ```bash
-# macOS
-brew install yarn
+node -v
+# Debería ver node versión aquí
+yarn -v
+# Debería ver yarn versión aquí
 ```
-
-<br>
-
-```bash
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
-```
-
+Si no es así, vuelva a la sección dedicada del [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#node-with-nvm), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#node-with-nvm) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#node-with-nvm) setup.
 
 ## Especificaciones
 

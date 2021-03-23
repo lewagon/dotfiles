@@ -59,11 +59,11 @@ Todos los programadores empiezan a trabajar iniciando un servidor y abriendo el 
 
 Cada vez que escribas algo de código en un archivo, guárdalo y refresca el navegador. Obtendrás muchos mensajes de error, así que es importante que te familiarices con ellos.¡De esta manera entenderás el flujo de ejecución de Rails y aprenderás cómo resolver los errores!
 
-### 1. Genera el controlador
+### Genera el controlador
 
 Primero lo primero, generaremos un `QuestionsController` que usaremos para nuestras dos páginas.¿Recuerdas el comando `rails` para hacerlo?
 
-### 2. Muestra el formulario: `/ask`
+### Muestra el formulario: `/ask`
 
 Queremos mostrar la página con un `<form>` para nuestros/as usuarios/as en [localhost:3000/ask](http://localhost:3000/ask). En Rails esto se considera una user story, así que necesitamos más que un archivo HTML para hacer que esto suceda. Para cada acción de usuario/a en Rails, necesitamos escribir código para **(i) una ruta, (ii) una acción y (iii) una vista**.¿Recuerdas el patrón MVC?
 
@@ -116,7 +116,7 @@ Aquí queremos que el formulario desencadene nuestra **segunda user story**: `an
 
 Deberías obtener un **routing error**.¡Ahora vamos a escribir el código de la respuesta!
 
-### 3. Muestra la respuesta del Coach: `/answer`
+### Muestra la respuesta del Coach: `/answer`
 
 Es hora de implementar la lógica en la acción `answer` (el segundo paso en el user journey). Para esta segunda user story, sigue la misma metodología que en `1. Display the form`:
 - escribe el código de la **ruta**
@@ -199,7 +199,9 @@ Por ahora solamente abre (o crea) el archivo `app/assets/stylesheets/questions.s
 
 Primero, borra el archivo `test/controllers/questions_controller_test.rb` si fue generado. Estaremos trabajando con [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). El objetivo de este tipo de testing es automatizar todo el testeo manual de "editar código / ir al navegador / recargar la página / comprobar que esté funcionando". Todo lo que hiciste manualmente en el navegador puede hacerse _por_ medio_ de código!
 
-Usaremos _Headless Chrome_ para el System Testing. Es un navegador sin interfaz de usuario que está bien adaptado a este tipo de tests. Antes de correr tus system tests debes asegurarte de que tienes una versión **reciente** de Chrome en tu sistema (no Chromium). Está disponible tanto para OSX como para Ubuntu. Luego tienes que instalar `chromedriver`:
+Usaremos _Headless Chrome_ para el System Testing. Es un navegador sin interfaz de usuario que está bien adaptado a este tipo de tests. Antes de correr tus system tests debes asegurarte de que tienes una versión **reciente** de Chrome en tu sistema (no Chromium). Está disponible tanto para OSX como para Ubuntu.
+
+Luego tienes que instalar `chromedriver`:
 
 ```bash
  # macOS
@@ -212,17 +214,29 @@ gem install chromedriver-helper
 Después de la instalación puedes abrir el siguiente archivo y reemplazar **todo** su contenido con:
 
 ```ruby
-# test/application_system_test_case.rb
-require "test_helper"
+# test/test_helper.rb
+ENV['RAILS_ENV'] ||= 'test'
+require_relative '../config/environment'
+require 'rails/test_help'
 
+class ActiveSupport::TestCase
+  fixtures :all
+end
+
+Capybara.register_driver :headless_chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu window-size=1400,900])
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+Capybara.save_path = Rails.root.join('tmp/capybara')
+Capybara.javascript_driver = :headless_chrome
+```
+
+Después en el siguiente archivo, **actualiza** esta línea:
+
+```ruby
+# test/application_system_test_case.rb
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  Capybara.register_driver(:headless_chrome) do |app|
-    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome \
-      chromeOptions: { args: %w[headless disable-gpu window-size=1280x760] }
-    Capybara::Selenium::Driver.new app,
-      browser: :chrome, desired_capabilities: capabilities
-  end
-  driven_by :selenium, using: :headless_chrome
+  driven_by :headless_chrome # Update this line
 end
 ```
 
