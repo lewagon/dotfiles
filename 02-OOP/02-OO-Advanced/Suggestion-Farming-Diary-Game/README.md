@@ -11,6 +11,7 @@ The player can choose between a set of actions: plant corn, plant rice, water th
 When the player picks one action, we deliver and move on to the next choice. It's a loop.
 Let's build it step by step.
 
+![Loop](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/loop.svg?sanitize=true)
 
 ### Code a basic user interface
 

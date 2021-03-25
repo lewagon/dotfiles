@@ -1,9 +1,9 @@
 ## Background and Objectives
 
 This challenge is an extension of the previous one: the farm welcomes its first animals!
-And this time, you're going to explore different techniques of developments.
+And this time, you're going to explore different techniques of development.
 
-![Animals](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/tiny-farm/animals.svg?sanitize=true)
+![Animals](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/animals.svg?sanitize=true)
 
 
 ## Specs

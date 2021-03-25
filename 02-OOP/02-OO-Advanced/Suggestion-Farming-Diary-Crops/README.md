@@ -4,7 +4,7 @@ Here is a little farming scenario, you'll build step by step to discover the ben
 
 It's a challenge where you have a lot of autonomy because it's how you'll learn the best! Follow the guidelines to develop the classes, then build a small scenario of your liking by planting some crops in your farm... Build, break things and enjoy!
 
-![Crops](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/tiny-farm/crops.svg?sanitize=true)
+![Crops](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/crops.svg?sanitize=true)
 
 ## Specs
 
@@ -44,7 +44,7 @@ The corn crop is not ripe
 Create a `Rice` class in `rice.rb` and duplicate all the methods from the `Corn` class.
   - Adjust the grains production in `water!`: it adds 5 grains 
   - `ripe?` is the same.
-  - Rice has a specific method called `transplant!` which produces 40 grains.
+  - Rice has a specific method called `transplant!` which produces 10 grains.
 
 Continue your diary by planting some rice in the field.
 
