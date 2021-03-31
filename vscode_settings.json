@@ -1,0 +1,22 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "erb": "html"
+    },
+    "editor.detectIndentation": false,
+    "files.insertFinalNewline": true,
+    "files.hotExit": "off",
+    "editor.tabSize": 2,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.useTabStops": true,
+    "editor.wordWrap": "on",
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+    "editor.renderControlCharacters": true,
+    "workbench.colorTheme": "Monokai"
+}
