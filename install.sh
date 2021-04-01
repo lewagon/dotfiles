@@ -42,22 +42,20 @@ if [[ ! `uname` =~ "darwin" ]]; then
   git config --global core.editor "code -n -w $@ >/dev/null 2>&1"
   echo 'export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"' >> zshrc
 else
-  git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
-  bundler_editor="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+  git config --global core.editor "'/usr/local/bin/code' -n -w"
+  bundler_editor="'/usr/local/bin/code'"
   echo "export BUNDLER_EDITOR=\"${bundler_editor} -a\"" >> zshrc
 fi
 
 # Sublime Text
 if [[ ! `uname` =~ "darwin" ]]; then
-  SUBL_PATH=~/.config/sublime-text-3
+  CODE_PATH=~/.config/Code/User
 else
-  SUBL_PATH=~/Library/Application\ Support/Sublime\ Text\ 3
+  CODE_PATH=~/Library/Application\ Support/Sublime\ Text\ 3
 fi
-mkdir -p $SUBL_PATH/Packages/User $SUBL_PATH/Installed\ Packages
-backup "$SUBL_PATH/Packages/User/Preferences.sublime-settings"
-curl -k https://sublime.wbond.net/Package%20Control.sublime-package > $SUBL_PATH/Installed\ Packages/Package\ Control.sublime-package
-ln -s $PWD/Preferences.sublime-settings $SUBL_PATH/Packages/User/Preferences.sublime-settings
-ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
+mkdir -p $CODE_PATH/Packages/User $CODE_PATH/Installed\ Packages
+backup "$CODE_PATH/settings.json"
+ln -s $PWD/vscode_settings.json $CODE_PATH/settings.json
 ln -s $PWD/SublimeLinter.sublime-settings $SUBL_PATH/Packages/User/SublimeLinter.sublime-settings
 
 zsh ~/.zshrc
