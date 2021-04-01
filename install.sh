@@ -56,7 +56,6 @@ fi
 mkdir -p $CODE_PATH/Packages/User $CODE_PATH/Installed\ Packages
 backup "$CODE_PATH/settings.json"
 ln -s $PWD/vscode_settings.json $CODE_PATH/settings.json
-ln -s $PWD/SublimeLinter.sublime-settings $SUBL_PATH/Packages/User/SublimeLinter.sublime-settings
 
 zsh ~/.zshrc
 
