@@ -18,5 +18,5 @@
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
     "editor.renderControlCharacters": true,
-    "workbench.colorTheme": "Monokai"
+    "workbench.colorTheme": "Solarized Light"
 }

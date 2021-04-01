@@ -12,7 +12,7 @@ backup() {
 for name in *; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
-    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ ! "$name" =~ '\.sublime-settings$' ]]; then
+    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ ! "$name" != 'vscode_settings.json' ]]; then
       backup $target
 
       if [ ! -e "$target" ]; then
@@ -47,14 +47,13 @@ else
   echo "export BUNDLER_EDITOR=\"${bundler_editor} -a\"" >> zshrc
 fi
 
-# Sublime Text
+# VS Code
 if [[ ! `uname` =~ "darwin" ]]; then
   CODE_PATH=~/.config/Code/User
 else
-  CODE_PATH=~/Library/Application\ Support/Sublime\ Text\ 3
+  CODE_PATH=~/Library/Application\ Support/Code/User/settings.json
 fi
 mkdir -p $CODE_PATH/Packages/User $CODE_PATH/Installed\ Packages
-backup "$CODE_PATH/settings.json"
 ln -s $PWD/vscode_settings.json $CODE_PATH/settings.json
 
 zsh ~/.zshrc
