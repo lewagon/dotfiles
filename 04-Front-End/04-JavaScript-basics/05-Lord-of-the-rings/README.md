@@ -16,7 +16,7 @@ So for example:
 
 ```js
 const battlefield = "Elves:3,Orcs:2"
-buildSoldierObject(battlefield)  //=> { "Elves" => 3, "Orcs" => 2 }
+buildSoldierObject(battlefield)  //=> { "Elves": 3, "Orcs": 2 }
 ```
 
 Here is a reminder on how to use objects in Javascript:
