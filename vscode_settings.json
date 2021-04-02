@@ -3,20 +3,39 @@
     "emmet.includeLanguages": {
         "erb": "html"
     },
+    "editor.renderWhitespace": "all",
     "editor.detectIndentation": false,
     "files.insertFinalNewline": true,
+    "files.exclude": {
+      "tmp": true,
+      "log": true,
+      ".git": true,
+      ".svn": true,
+      "_site": true,
+      ".bundle": true,
+      ".sass-cache": true,
+      ".asset-cache": true,
+      "build": true,
+      "node_modules": true,
+      "dist": true,
+      "public/packs": true,
+      "coverage": true,
+      ".ipynb_checkpoints": true,
+      ".pytest_cache": true,
+      "__pycache__": true
+    },
     "files.hotExit": "off",
+    "window.restoreWindows": "none",
+    "editor.rulers": [80],
     "editor.tabSize": 2,
     "editor.trimAutoWhitespace": true,
     "files.trimTrailingWhitespace": true,
     "editor.useTabStops": true,
     "editor.wordWrap": "on",
-    "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "workbench.startupEditor": "newUntitledFile",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
     "editor.renderControlCharacters": true,
-    "workbench.colorTheme": "Solarized Light"
+    "workbench.colorTheme": "Monokai"
 }
