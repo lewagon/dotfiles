@@ -5,26 +5,23 @@ require_relative "../spec/helper/board"
 Board.new.display_title
 
 
-puts "\n\n📝 Day Four: cows"
 
-
+puts "\n\n📝 Day Four: Cow"
 # TODO: Create a new `Cow` and feed it. Check how much milk you have.
 
 
-puts "... produced ... liter(s) of milk"
+puts "#{'TODO'} produced #{'TODO'} liter(s) of milk"
 
-# TODO: check the other methods of your cow
-
-
+# TODO: Check the other methods of your cow
 
 
-puts "\n\n📝 Day Five: chickens"
 
+puts "\n\n📝 Day Five: Chicken"
 # TODO: create chickens and test their methods
 
 
 
 
-puts "\n\n📝 Day Six: taking care of the animals"
-# TODO: Create your own story: add animals and have fun. This part is up to you!
+puts "\n\n📝 Day Six: Animal"
+# TODO: Create your own story: take care of your animals. This part is up to you!
 

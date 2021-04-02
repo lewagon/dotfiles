@@ -26,8 +26,12 @@ describe "Cow", if: cow_helper.file_and_class_valid? do
       expect(cow.instance_variable_get(:@milk)).to eq 0
     end
 
-    it "should set the animal's name" do
+    it "should set the cow's name" do
       expect(cow.instance_variable_get(:@name)).to eq "Rebecca"
+    end
+
+    it "should set the cow's weight to 400000g" do
+      expect(cow.instance_variable_get(:@weight)).to eq 400_000
     end
   end
   
@@ -42,18 +46,17 @@ describe "Cow", if: cow_helper.file_and_class_valid? do
       cow.feed!
       expect(cow.instance_variable_get(:@milk)).to eq 2
     end
-  end
-  
-  
-  describe '#talk' do
-    it 'should return a string' do
-      expect { cow.talk }.to output(/moo/).to_stdout
+
+    it 'should add 1 gram of weight' do
+      cow.feed!
+      expect(cow.instance_variable_get(:@weight)).to eq 400_001
     end
   end
-  
-  describe '#hug' do
-    it 'should be inherited from `Animal`, not duplicated' do
-      expect(Cow.instance_methods(false)).not_to include(:collar)
+
+
+  describe '#talk' do
+    it 'should return "moo"' do
+      expect(cow.talk).to eq("moo")
     end
   end
 

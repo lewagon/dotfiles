@@ -13,6 +13,10 @@ Let's build it step by step.
 
 ![Loop](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/loop.svg?sanitize=true)
 
+
+There is no `rake` on this challenge.
+
+
 ### Code a basic user interface
 
 Open `interface.rb` and code a very basic user interface. For the moment, it runs only once:
@@ -52,6 +56,7 @@ I don't know what you mean...
 ```
 
 **Hint to code the condition:** You can choose a basic `if` but try to explore the [`case`](https://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case) statement operator. Why? Because you'll add more words to choose from, and a `case` statement is perfect for a long list of closed options.
+
 
 
 ### Build the loop
@@ -119,9 +124,9 @@ The UI is ready, now let's replace all the `puts` with real actions!
 # TODO: copy the classes
 ```
 
- - Move the line `Board.new.display` as the firt line of the loop. It displays the little illustration of the farm.
+ - Move the line `Board.new.display` **inside** the loop, on the first line. It displays an interactive illustration of the farm. If your code works, you'll see suprises appear :)
  - Go back to the case statement: in the `corn` clause, create a new instance of the class `Corn`.
- - Run `lib/interface.rb`, do you see the corn appear in the field?
+ - Run `lib/interface.rb`, do you see the corn appear in the illustration?
 
 When ready, make the same with the `rice` clause.
 
@@ -153,7 +158,7 @@ The UI has three new entries (cow, chicken and feed):
 Pick an action: [corn | rice | water | cow | chicken | feed | quit] 
 ```
 
-Hints and clues:
+**Hints and clues:**
   - `cow` and `chicken` actions create new intances of the corresponding classes.
   - As you know animals have names, you may ask the player to fill the name.
   

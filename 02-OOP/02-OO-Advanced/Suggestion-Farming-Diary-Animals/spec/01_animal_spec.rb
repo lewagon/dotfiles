@@ -89,21 +89,26 @@ describe "Animal", if: animal_helper.file_and_class_valid? do
     end
   end
 
-  describe '#hug' do
-    it "should implement a method to hug the animal" do
-      Animal.public_method_defined? :hug
-    end
-
-    it 'should puts a message that the animal is happy' do
-      expect { animal.hug }.to output(/Edward is happy/).to_stdout
-    end
-  end
-
   describe '#name' do
     it "have appropriate getters and/or setters" do
       expect(animal).to respond_to :name
       expect(animal).not_to respond_to(:name=)
       expect(animal.name).to eq ("Edward")
+    end
+  end
+
+  describe '#weight' do
+    it "have appropriate getters and/or setters" do
+      expect(animal).to respond_to :weight
+      expect(animal).not_to respond_to(:weight=)
+    end
+  end
+
+  describe '#feed!' do
+    it "should increase the animal's weight by 1" do
+      animal.instance_variable_set(:@weight, 100)
+      animal.feed!
+      expect(animal.instance_variable_get(:@weight)).to eq 101
     end
   end
 end
