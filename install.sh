@@ -33,6 +33,7 @@ ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
 mkdir -p "$ZSH_PLUGINS_DIR" && cd "$ZSH_PLUGINS_DIR"
 if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
   echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions
   git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 fi
 cd "$CURRENT_DIR"
@@ -51,9 +52,9 @@ fi
 if [[ ! `uname` =~ "darwin" ]]; then
   CODE_PATH=~/.config/Code/User
 else
-  CODE_PATH=~/Library/Application\ Support/Code/User/settings.json
+  CODE_PATH=~/Library/Application\ Support/Code/User
 fi
-mkdir -p $CODE_PATH/Packages/User $CODE_PATH/Installed\ Packages
+backup "$CODE_PATH/settings.json"
 ln -s $PWD/vscode_settings.json $CODE_PATH/settings.json
 
 zsh ~/.zshrc

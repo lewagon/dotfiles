@@ -1,4 +1,4 @@
-This repository is used by [Le Wagon](https://www.lewagon.com) students during our 9-week [coding bootcamp](https://www.lewagon.com).
+This repository is used by [Le Wagon](https://www.lewagon.com) Web Development course students.
 
 ## Toolset
 
