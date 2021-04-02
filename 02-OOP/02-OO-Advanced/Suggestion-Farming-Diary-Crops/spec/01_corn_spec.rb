@@ -24,8 +24,8 @@ end
 describe "Corn", if: corn_helper.file_and_class_valid? do
 
   let(:corn) { Corn.new }
-  
-  
+
+
   describe '#initialize' do
     it 'should not take any parameters' do
       initialize_parameters_count = Corn.allocate.method(:initialize).arity
@@ -36,7 +36,7 @@ describe "Corn", if: corn_helper.file_and_class_valid? do
       expect(corn.instance_variable_get(:@grains)).to eq 0
     end
   end
-  
+
   describe '#water!' do
     it 'should implement a method to water the corn' do
       Corn.public_method_defined? :water!
@@ -49,19 +49,19 @@ describe "Corn", if: corn_helper.file_and_class_valid? do
       expect(corn.instance_variable_get(:@grains)).to eq 20
     end
   end
-  
+
   describe '#ripe?' do
     it 'should implement a method to test if the corn is ripe' do
       Corn.public_method_defined? :ripe?
     end
-    
+
     it 'should return true when the grains is over or equal to 20' do
       expect(corn.ripe?).to be false
       corn.instance_variable_set(:@grains, 20)
       expect(corn.ripe?).to be true
     end
   end
-  
+
   describe '#grains' do
     it "has appropriate getters and/or setters" do
       expect(corn).to respond_to :grains

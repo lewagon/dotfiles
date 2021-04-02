@@ -26,8 +26,8 @@ end
 describe "Rice", if: rice_helper.file_and_class_valid? do
 
   let(:rice) { Rice.new }
-  
-  
+
+
   describe '#initialize' do
     it 'should not take any parameters' do
       initialize_parameters_count = Rice.allocate.method(:initialize).arity
@@ -38,7 +38,7 @@ describe "Rice", if: rice_helper.file_and_class_valid? do
       expect(rice.instance_variable_get(:@grains)).to eq 0
     end
   end
-  
+
   describe '#water!' do
     it 'should implement a method to water the rice crops' do
       Rice.public_method_defined? :water!

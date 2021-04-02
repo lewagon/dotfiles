@@ -26,8 +26,8 @@ end
 describe "Crop", if: crop_helper.file_and_class_valid? do
 
   let(:crop) { Crop.new }
-  
-  
+
+
   describe '#initialize' do
     it 'should not take any parameters' do
       initialize_parameters_count = Crop.allocate.method(:initialize).arity
@@ -92,4 +92,3 @@ describe "Inheritance", if: crop_helper.file_and_class_valid? do
     end
   end
 end
-
