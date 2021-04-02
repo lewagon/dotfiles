@@ -30,8 +30,10 @@ describe "View", if: cookbook_helper.file_and_class_valid? do
     it 'should implement a method to display recipes' do
       recipes = []
       recipes << RecipeFactory.build('Winter Soup', 'Warm vegetable soup')
-      expect(STDOUT).to receive(:puts).with(/.*(Winter Soup).*/)
+      allow(STDOUT).to receive(:puts)
       view.display(recipes)
+
+      expect(STDOUT).to have_received(:puts).with(/.*(Winter Soup).*/)
     end
   end
 end
