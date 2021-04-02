@@ -55,7 +55,7 @@ else
   CODE_PATH=~/Library/Application\ Support/Code/User
 fi
 backup "$CODE_PATH/settings.json"
-ln -s $PWD/vscode_settings.json $CODE_PATH/settings.json
+ln -sf $PWD/vscode_settings.json $CODE_PATH/settings.json
 
 zsh ~/.zshrc
 
