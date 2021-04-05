@@ -39,6 +39,7 @@
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "git.enabled": false,
   "window.restoreWindows": "none",
   "workbench.colorTheme": "Monokai",
   "workbench.settings.editor": "json",
