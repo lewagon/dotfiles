@@ -39,7 +39,7 @@ alias serve='ruby -run -e httpd . -p 8000'
 # GIT
 
 alias gfix="git commit -a --amend --no-edit"
-alias gwip="gaa && git commit -m 'Minor changes' && gpush"
+alias gwip="gaa && git commit -m 'Minor changes' && git push"
 alias grefacto="gaa && git commit -m 'Refacto'"
 alias gpush='NAME=$(git symbolic-ref HEAD | sed -e "s,.*/\(.*\),\1,") && git push origin "$NAME"'
 alias gitm="git checkout master"
@@ -53,13 +53,19 @@ alias gsync="git_synchronyze"
 
 alias mrp='cd ~/gitlab.peersandpeers/mrpeinture/mrpeinture  '
 alias anx='cd ~/gitlab.peersandpeers/lesateliersnx/lesateliersnx'
+alias matech='cd ~/gitlab.peersandpeers/lesateliersnx/matech'
 alias abk='cd ~/code/alexandrebk'
-alias shopify='cd ~/code/alexandrebk/shopify_picanova_api'
+alias poplace='cd ~/code/alexandrebk/shopify_picanova_api'
+alias nysa='cd ~/code/alexandrebk/connector_nysa'
+alias moncdi='cd ~/code/moncdi/webapp'
+alias timeplanet='cd ~/code/TimeForPlanet/time-planet'
+alias time='cd ~/code/TimeForPlanet/time-planet'
+alias dotfiles='cd ~/code/alexandrebk/dotfiles'
+alias formation='cd ~/code/alexandrebk/db_schema_multiuser_app'
 alias oenoplace='cd ~/code/JeremyMIQUEL/oenoplace'
 
 # Browser
 
-alias dotfiles='open https://github.com/alexandrebk/dotfiles'
 alias lequipe='open https://www.lequipe.fr/'
 alias lemonde='open https://www.lemonde.fr/'
 alias lefigaro='open https://www.lefigaro.fr/'
@@ -68,8 +74,6 @@ alias podcast='open https://www.bbc.co.uk/sounds/series/p02nrsln'
 
 # Miscellaneous
 
-alias email="echo 'alexandre.b2506@gmail.com' | pbcopy"
-alias siren="echo '792677809' | pbcopy"
-alias siret="echo '79267780900016' | pbcopy"
 alias password='ruby ~/code/alexandrebk/dotfiles/password.rb'
 alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
+alias space="du -sh * | sort -h"
