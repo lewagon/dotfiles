@@ -12,7 +12,7 @@ backup() {
 for name in *; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
-    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ "$name" != 'vscode_settings.json' ]]; then
+    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ "$name" != 'vscode_settings.json' ]] && [[ "$name" != 'config' ]]; then
       backup $target
 
       if [ ! -e "$target" ]; then
@@ -22,10 +22,6 @@ for name in *; do
     fi
   fi
 done
-
-REGULAR="\\033[0;39m"
-YELLOW="\\033[1;33m"
-GREEN="\\033[1;32m"
 
 # zsh plugins
 CURRENT_DIR=`pwd`
@@ -60,3 +56,9 @@ ln -sf $PWD/vscode_settings.json $CODE_PATH/settings.json
 zsh ~/.zshrc
 
 echo "👌  Carry on with git setup!"
+
+# SSH passphrase config
+if [[ `uname` =~ "darwin" ]]; then
+  backup ~/.ssh/config
+  ln -sf $PWD/config ~/.ssh/config
+fi
