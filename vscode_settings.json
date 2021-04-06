@@ -1,5 +1,5 @@
 {
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": false,
   "editor.detectIndentation": false,
   "editor.formatOnPaste": true,
   "editor.minimap.enabled": false,
@@ -45,5 +45,6 @@
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.settings.useSplitJSON": true,
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.activityBar.visible": false
 }

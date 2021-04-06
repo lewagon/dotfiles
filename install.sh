@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 backup() {
   target=$1
   if [ -e "$target" ]; then           # Does the config file already exist?
@@ -8,7 +10,6 @@ backup() {
   fi
 }
 
-#!/bin/zsh
 for name in *; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
@@ -34,15 +35,7 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
 fi
 cd "$CURRENT_DIR"
 
-setopt nocasematch
-if [[ ! `uname` =~ "darwin" ]]; then
-  git config --global core.editor "code -n -w $@ >/dev/null 2>&1"
-  echo 'export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"' >> zshrc
-else
-  git config --global core.editor "'/usr/local/bin/code' -n -w"
-  bundler_editor="'/usr/local/bin/code'"
-  echo "export BUNDLER_EDITOR=\"${bundler_editor} -a\"" >> zshrc
-fi
+git config --global core.editor "code"
 
 # VS Code
 if [[ ! `uname` =~ "darwin" ]]; then
@@ -55,7 +48,7 @@ ln -sf $PWD/vscode_settings.json $CODE_PATH/settings.json
 
 zsh ~/.zshrc
 
-echo "👌  Carry on with git setup!"
+echo "👌 Carry on with git setup!"
 
 # SSH passphrase config
 if [[ `uname` =~ "darwin" ]]; then
