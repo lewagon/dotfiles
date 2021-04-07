@@ -59,4 +59,4 @@ Don't forget to design the `.btn:hover` state for each of your buttons.
 
 ## Spacing around a link
 
-You might have noticed that `margin` does not apply on your links by default. This is because the `<a>` tag is an inline element. If you want apply spacing to links you will need to change their `display` property to `inline-block` or `block`.
+You might have noticed that `margin-top` or `margin-bottom` does not apply on your links by default. This is because the `<a>` tag is an inline element. If you want to apply vertical spacing to links you will need to change their `display` property to `inline-block` or `block`.

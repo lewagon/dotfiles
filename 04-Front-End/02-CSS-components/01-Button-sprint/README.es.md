@@ -58,4 +58,4 @@ Recuerda diseñar el estado `.btn:hover` para cada uno de tus botones.
 
 ## Espacio alrededor de un enlace
 
-Tal vez hayas notado que `margin` no se aplica a tus enlaces por defecto.  Esto es porque la etiqueta `<a>` es un elemento alineado. Si quieres agregar espacios a tus enlaces debes cambiar la propiedad `display` a `inline-block` o `block`.
+Tal vez hayas notado que `margin-top` o `margin-bottom` no se aplica a tus enlaces por defecto.  Esto es porque la etiqueta `<a>` es un elemento alineado. Si quieres agregar espacio vertical a tus enlaces debes cambiar la propiedad `display` a `inline-block` o `block`.
