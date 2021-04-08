@@ -30,8 +30,8 @@ describe "Cow", if: cow_helper.file_and_class_valid? do
       expect(cow.instance_variable_get(:@name)).to eq "Rebecca"
     end
 
-    it "should set the cow's weight to 400000g" do
-      expect(cow.instance_variable_get(:@weight)).to eq 400_000
+    it "should set the cow's energy to 0" do
+      expect(cow.instance_variable_get(:@energy)).to eq 0
     end
   end
 
@@ -40,16 +40,16 @@ describe "Cow", if: cow_helper.file_and_class_valid? do
       expect(Cow.instance_methods(false)).to include(:feed!)
     end
 
-    it 'should add 1 liter of milk' do
-      cow.feed!
-      expect(cow.instance_variable_get(:@milk)).to eq 1
+    it 'should add 2 liters of milk' do
       cow.feed!
       expect(cow.instance_variable_get(:@milk)).to eq 2
+      cow.feed!
+      expect(cow.instance_variable_get(:@milk)).to eq 4
     end
 
-    it 'should add 1 gram of weight' do
+    it 'should add 1 energy' do
       cow.feed!
-      expect(cow.instance_variable_get(:@weight)).to eq 400_001
+      expect(cow.instance_variable_get(:@energy)).to eq 1
     end
   end
 

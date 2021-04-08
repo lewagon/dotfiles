@@ -87,6 +87,10 @@ describe "Animal", if: animal_helper.file_and_class_valid? do
     it "should set the animal's name" do
       expect(animal.instance_variable_get(:@name)).to eq "Edward"
     end
+
+    it "should set the animal's energy to 0" do
+      expect(animal.instance_variable_get(:@energy)).to eq 0
+    end
   end
 
   describe '#name' do
@@ -97,18 +101,17 @@ describe "Animal", if: animal_helper.file_and_class_valid? do
     end
   end
 
-  describe '#weight' do
+  describe '#energy' do
     it "have appropriate getters and/or setters" do
-      expect(animal).to respond_to :weight
-      expect(animal).not_to respond_to(:weight=)
+      expect(animal).to respond_to :energy
+      expect(animal).not_to respond_to(:energy=)
     end
   end
 
   describe '#feed!' do
-    it "should increase the animal's weight by 1" do
-      animal.instance_variable_set(:@weight, 100)
+    it "should increase the animal's energy by 1" do
       animal.feed!
-      expect(animal.instance_variable_get(:@weight)).to eq 101
+      expect(animal.instance_variable_get(:@energy)).to eq 1
     end
   end
 end
