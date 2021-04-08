@@ -4,73 +4,74 @@ This challenge is an extension of the previous one: the farm welcomes its first 
 
 
 ## Specs
-The farm has two kinds of **animals** (cows and chickens).
+The farm has two kinds of animals: cows and chickens.
 
 ![Animals](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/animals.svg?sanitize=true)
 
 Discuss with your buddy: how many classes do you think you need, and how would you structure them?
 
-Don't `rake` now! Wait until the very end of the challenge, try to code everything by yourself first!
+Don't `rake`! Wait until the very end of the challenge, follow the guidelines and let the farming diary guide you into coding the classes!
 
 
-### Structure
-You are now familiar with the benefits of inheritance, let's figure out the classes we need!
-- Create the three `Animal`, `Cow` and `Chicken` classes all at once and leave them empty
-- Set the proper inheritance in the two appropriate classes
+### Parent and children
+We are now familiar with the benefits of inheritance, let's go ahead and:
+- Create the three empty classes
+- Set the proper inheritance relationship between the two children class and the parent class
 
 Unlike in the previous challenge, let's start by coding the common behaviour in the parent class!
 
-- An animal is initialized with a **name**
-- You can **feed** an animal: it will increase its **weight** by 1
+- An animal is initialized with a **name** and zero **energy**
+- You can **feed** an animal: it will increase its **energy** by 1
 
 
 ### Cow
-
 To figure out the `Cow` class, let's start by coding the **program** we want to run.
-- Open `farming_diary.rb` and create a new instance of `Cow`.
-- Call the methods `feed!` and `talk` on your cow (even if the class is not ready yet).
-- Run the file with `ruby lib/farming_diary.rb`. Solve one error message at a time by adding the right code to your `Cow` class, and keep going until everything works as expected.
+- Open the `lib/farming_diary.rb` interface and instantiate a new `Cow`
+- Call the methods `feed!` and `talk` on your cow (even if the methods are not coded yet)
+- Run the file with `ruby lib/farming_diary.rb` and solve one error message at a time by coding the `Cow` class
 
 Here is what you need to know about cows:
 
-- A cow has a starting **weight** of `400_000` (grams).
-- Each time you feed the cows, they produce one gallon of **milk**.
-- Cows can `talk`, they say "moo".
+- Each time you feed the cows, they produce 2 liters of **milk**
+- When cows `talk`, they say "moo"
 
-**Reminder:** always use the keyword `super` when you need to call the parent method.
+Here is an example of the Cow day in the Farming Diary:
 
-Here is an example of the Cow day in Farming Diary:
 ```bash
 📝 Day Four: Cow
-Rebecca produced 1 liter(s) of milk
-Rebecca says moo
+Marguerite produced 2 liters of milk
+Marguerite says moo
+[...]
 ```
 
 ### Chicken
+Let's move on to the Day Five of our farming diary.
+- Instantiate two chickens, a male and a female
+- Fill in the TODOs with the appropriate code
 
-You're completly free to run your tests and choose your methodology. Don't be afraid to make mistakes, explorations is the best way to learn and have fun. Discuss with your buddy!
+Here is what you need to know about chickens:
 
-Here are a series of clues for the chickens:
+- Chickens have a **gender**
+- When you **feed** chickens, females produce two **eggs** (and males none 🤷‍♂️)
+- Chickens can talk: males say "cock-a-doodle-doo" and females say "cha-caw"
 
-  - Chickens **weight** 800 (grams)
-  - Chickens have a **gender**, they can be `male` or `female`.
-  - You can `feed!` the chickens. If they are female they produce **eggs** (one every time).
-  - Chickens can `talk` too: "cock-a-doodle-doo" if the chicken is a male, "cha-caw" if it is a female.
+Here is an example of the Chicken day in the Farming Diary:
 
-When all the methods returns what you expect, you're done with the chicken. Have fun!
-
-
+```bash
+📝 Day Five: Chicken
+Bob produced 0 eggs and says cock-a-doodle-doo
+Alice produced 2 eggs and says chack-caw
+[...]
+```
 
 ## Take away
 
-Congratulations! You can run the `rake`now and check if everything is OK.
+Congratulations! You can run the `rake` now to check that your code is properly organized.
 
-You've created inheritance with two different approaches:
-- In the first challenge, you refactored two classes and moved shared methods to a parent class.
-- In the second one, you designed the inheritance before coding the classes.
+In children class, there are 4 kinds of methods:
+- methods that **inherit** from the parent class: the method is only defined in the parent class
+- methods that **extend** the parent's method definition: the method is slightly different in the children classes
+- methods that **override** the parent's method: definition is completely different than in the parent class
+- methods that are specific to the child class: they are not defined in the parent class _at all_
 
-Both methods are valid, but taking time to design the structure before coding is always the best of all the ideas.
-
-To implement methods and variables, you did:
-- Code class first and check afterwards if they work
-- Call all the methods and go back to the class to develop them.
+Extending a method requires the `super` keyword: it acts as if you copied the body from the parent method and pasted it where `super` is invoked.
