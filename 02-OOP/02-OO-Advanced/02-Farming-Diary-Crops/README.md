@@ -57,7 +57,7 @@ In your diary, fill the **Day Three** section. No need to instantiate crops ther
 
 
 ## Checks and takeaways
-Now it's time to `rake`! Take the time to make all the tests green, to validate your architecture and classes public interfaces. If you wonder why we restrict some setters in the specs, it is because the farming diary did not require to add them! Remember **encapsulation**?
+Now let's run `rake`! Take the time to make all the tests green, to validate your architecture and classes public interfaces. If you wonder why we restrict some setters in the specs, it is because the farming diary did not require to add them! Remember **encapsulation**?
 
 
 > Encapsulation is hiding by default the internal state or behaviour of an object, and exposing it with the right level of abstraction **according to your programs needs**

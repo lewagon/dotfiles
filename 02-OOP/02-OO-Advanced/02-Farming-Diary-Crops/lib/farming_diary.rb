@@ -18,9 +18,9 @@ puts "\n\n"
 puts "📝 Day Two: Rice"
 # 2.1 Instantiate a rice crop
 
-# 2.2 Transplant the rice crop
+# 2.2 Water the rice crop
 
-# 2.3 Water the rice crop
+# 2.3 Transplant the rice crop
 
 # 2.4 Replace 'TODO' with the relevant code
 puts "After a transplant and a good watering, the rice crop produced #{'TODO'} grains"
