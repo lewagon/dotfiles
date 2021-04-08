@@ -32,7 +32,7 @@ To figure out the `Cow` class, let's start by coding the **program** we want to 
 
 Here is what you need to know about cows:
 
-- Each time you feed the cows, they produce 2 liters of **milk**
+- Each time you feed the cows, beyond gaining energy, they produce 2 liters of **milk**
 - When cows `talk`, they say "moo"
 
 Here is an example of the Cow day in the Farming Diary:
@@ -52,7 +52,7 @@ Let's move on to the Day Five of our farming diary.
 Here is what you need to know about chickens:
 
 - Chickens have a **gender**
-- When you **feed** chickens, females produce two **eggs** (and males none 🤷‍♂️)
+- When you **feed** chickens, beyond gaining energy, females produce two **eggs** (and males none 🤷‍♂️)
 - Chickens can talk: males say "cock-a-doodle-doo" and females say "cha-caw"
 
 Here is an example of the Chicken day in the Farming Diary:
