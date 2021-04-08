@@ -37,8 +37,9 @@ describe "Chicken", if: chicken_helper.file_and_class_valid? do
       expect(female_chicken.instance_variable_get(:@gender)).to eq "female"
     end
 
-    it "should set the chicken's weight to 800g" do
-      expect(male_chicken.instance_variable_get(:@weight)).to eq 800
+    it "should set the chicken's energy to 0" do
+      expect(male_chicken.instance_variable_get(:@energy)).to eq 0
+      expect(female_chicken.instance_variable_get(:@energy)).to eq 0
     end
   end
 
@@ -47,11 +48,11 @@ describe "Chicken", if: chicken_helper.file_and_class_valid? do
       expect(Chicken.instance_methods(false)).to include(:feed!)
     end
 
-    it 'should add 1 egg if the chicken is a female' do
-      female_chicken.feed!
-      expect(female_chicken.instance_variable_get(:@eggs)).to eq 1
+    it 'should add 2 eggs if the chicken is a female' do
       female_chicken.feed!
       expect(female_chicken.instance_variable_get(:@eggs)).to eq 2
+      female_chicken.feed!
+      expect(female_chicken.instance_variable_get(:@eggs)).to eq 4
     end
 
     it 'should not add eggs if the chicken is a male' do
@@ -59,11 +60,11 @@ describe "Chicken", if: chicken_helper.file_and_class_valid? do
       expect(male_chicken.instance_variable_get(:@eggs)).to eq 0
     end
 
-    it 'should add 1 gram of weight' do
+    it 'should add 1 energy' do
       female_chicken.feed!
-      expect(female_chicken.instance_variable_get(:@weight)).to eq 801
+      expect(female_chicken.instance_variable_get(:@energy)).to eq 1
       male_chicken.feed!
-      expect(male_chicken.instance_variable_get(:@weight)).to eq 801
+      expect(male_chicken.instance_variable_get(:@energy)).to eq 1
     end
   end
 
