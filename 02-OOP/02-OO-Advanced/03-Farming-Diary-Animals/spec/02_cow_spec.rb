@@ -34,7 +34,7 @@ describe "Cow", if: cow_helper.file_and_class_valid? do
       expect(cow.instance_variable_get(:@weight)).to eq 400_000
     end
   end
-  
+
   describe '#feed!' do
     it 'should override the `feed!` method' do
       expect(Cow.instance_methods(false)).to include(:feed!)
@@ -52,7 +52,6 @@ describe "Cow", if: cow_helper.file_and_class_valid? do
       expect(cow.instance_variable_get(:@weight)).to eq 400_001
     end
   end
-
 
   describe '#talk' do
     it 'should return "moo"' do

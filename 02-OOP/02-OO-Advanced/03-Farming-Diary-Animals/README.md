@@ -4,37 +4,38 @@ This challenge is an extension of the previous one: the farm welcomes its first 
 
 
 ## Specs
-The farm has two kinds of **animals** (cow and chicken).
+The farm has two kinds of **animals** (cows and chickens).
 
 ![Animals](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/animals.svg?sanitize=true)
 
-Discuss with your buddy: how many classes do you think you need, and how would you structure them? 
+Discuss with your buddy: how many classes do you think you need, and how would you structure them?
 
 Don't `rake` now! Wait until the very end of the challenge, try to code everything by yourself first!
 
 
 ### Structure
-You are now familiar with inheritance, let's try to create the classes starting from the parent class:
+You are now familiar with the benefits of inheritance, let's figure out the classes we need!
+- Create the three `Animal`, `Cow` and `Chicken` classes all at once and leave them empty
+- Set the proper inheritance in the two appropriate classes
 
-  - Create the three classes `Animal`, `Cow` and `Chicken` all at once. **Focus on the structure** and the correct inheritance.
+Unlike in the previous challenge, let's start by coding the common behaviour in the parent class!
 
-Code the common behaviors (in the appropriate class):
-  - **Initialize** the animal with a **name**.
-  - The method **`feed!`** increases the animal's **weight** by one.
+- An animal is initialized with a **name**
+- You can **feed** an animal: it will increase its **weight** by 1
 
 
 ### Cow
 
-In the previous challenge about crops, you developed the classes before testing them. This time let's do the opposite: **call** the methods before **coding** them. Do you remember **Test Driven Development**? It's the same methodology. 
- - Open `farming_diary.rb` and create a new instance of `Cow`.
- - Call the methods `feed!` and `talk` on your cow (even if the class is not ready yet).
- - Run the file with `ruby lib/farming_diary.rb`. Solve one bug at a time, and keep going until everything works fine.
+To figure out the `Cow` class, let's start by coding the **program** we want to run.
+- Open `farming_diary.rb` and create a new instance of `Cow`.
+- Call the methods `feed!` and `talk` on your cow (even if the class is not ready yet).
+- Run the file with `ruby lib/farming_diary.rb`. Solve one error message at a time by adding the right code to your `Cow` class, and keep going until everything works as expected.
 
 Here is what you need to know about cows:
 
-  - A cow has a starting **weight** of 400_000 (grams).
-  - Each time you feed the cows, they produce one **milk**.
-  - Cows can `talk`, they say "moo".
+- A cow has a starting **weight** of `400_000` (grams).
+- Each time you feed the cows, they produce one gallon of **milk**.
+- Cows can `talk`, they say "moo".
 
 **Reminder:** always use the keyword `super` when you need to call the parent method.
 
