@@ -20,6 +20,7 @@ brew 'gnupg'
 # brew "grep"
 # brew "grip"
 brew 'heroku'
+brew 'htop'
 # brew "httpie"
 brew 'imagemagick'
 brew 'jq'
