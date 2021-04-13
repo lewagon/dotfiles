@@ -10,7 +10,7 @@ Let's start by importing your animals and crops classes in this challenge:
 
 ```bash
 cp ../02-Farming-Diary-Crops/lib/{crop.rb,corn.rb,rice.rb} lib
-cp .03-Farming-Diary-Animals/lib/{animal.rb,cow.rb,chicken.rb} lib
+cp ../03-Farming-Diary-Animals/lib/{animal.rb,cow.rb,chicken.rb} lib
 ```
 
 In `lib/interface.rb`, we already added the right `require_relative` at the top of the file to load your classes 👌
