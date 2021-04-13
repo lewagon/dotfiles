@@ -1,4 +1,3 @@
-require "beer_song"
 require 'open3'
 
 describe "#beer_song" do
