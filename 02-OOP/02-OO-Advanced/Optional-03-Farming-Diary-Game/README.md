@@ -122,32 +122,32 @@ Pick an action: [corn | rice | water | cow | chicken | feed | quit]
 - `cow` and `chicken` actions create new intances of the corresponding classes and stores them in an `animal` array
 - Ask the player for the name of the animals they add to their farm
 
-  <details>
-  <summary markdown='span'>View solution</summary>
+<details>
+<summary markdown='span'>View solution</summary>
 
-  ```bash
-  when "cow"
-    puts "Name the cow"
-    print "> "
-    name = gets.chomp
-    Cow.new(name)
-  ```
-  </details>
+```bash
+when "cow"
+  puts "Name the cow"
+  print "> "
+  name = gets.chomp
+  Cow.new(name)
+```
+</details>
 
-- Chickens have a gender, picked randomly by the game:
+Chickens have a gender, picked randomly by the game:
 
-  <details>
-  <summary markdown='span'>View solution</summary>
+<details>
+<summary markdown='span'>View solution</summary>
 
-  ```bash
-  when "chicken"
-    gender = ["female", "male"].sample
-    puts "The chicken is a #{gender}"
-    puts "Name the chicken"
-    print "> "
-    name = gets.chomp
-    Chicken.new(name, gender)
-  ```
-  </details>
+```bash
+when "chicken"
+  gender = ["female", "male"].sample
+  puts "The chicken is a #{gender}"
+  puts "Name the chicken"
+  print "> "
+  name = gets.chomp
+  Chicken.new(name, gender)
+```
+</details>
 
 Good luck!
