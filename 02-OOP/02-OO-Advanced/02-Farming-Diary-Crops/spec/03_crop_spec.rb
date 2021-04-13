@@ -46,7 +46,7 @@ describe "Crop", if: crop_helper.file_and_class_valid? do
 
     it 'should return true when the grains is over or equal to 20' do
       expect(crop.ripe?).to be false
-      crop.instance_variable_set(:@grains, 20) 
+      crop.instance_variable_set(:@grains, 20)
       expect(crop.ripe?).to be true
     end
   end
@@ -63,30 +63,32 @@ end
 describe "Inheritance", if: crop_helper.file_and_class_valid? do
 
   describe "Corn" do
-    it 'should add Crop as superclass' do
+    it 'should inherit from `Crop`' do
       expect(Corn.superclass).to eq(Crop)
     end
 
     it 'should not duplicate the `Crop` common methods' do
       expect(Corn.instance_methods(false)).not_to include(:ripe?)
+      expect(Corn.instance_methods(false)).not_to include(:initialize?)
     end
 
-    it 'should get specific methods in the class' do
+    it 'should define specific methods' do
       expect(Corn.instance_methods(false)).to include(:water!)
     end
   end
-  
+
 
   describe "Rice" do
-    it 'should add Crop as superclass' do
+    it 'should inherit from `Crop`' do
       expect(Rice.superclass).to eq(Crop)
     end
 
     it 'should not duplicate the `Crop` common methods' do
       expect(Rice.instance_methods(false)).not_to include(:ripe?)
+      expect(Corn.instance_methods(false)).not_to include(:initialize?)
     end
 
-    it 'should get specific methods in the class' do
+    it 'should define specific methods' do
       expect(Rice.instance_methods(false)).to include(:water!)
       expect(Rice.instance_methods(false)).to include(:transplant!)
     end
