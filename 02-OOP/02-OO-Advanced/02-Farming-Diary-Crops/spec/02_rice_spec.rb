@@ -69,7 +69,7 @@ describe "Rice", if: rice_helper.file_and_class_valid? do
       Rice.public_method_defined? :transplant!
     end
 
-    it 'should add 40 grains to the rice crops' do
+    it 'should add 10 grains to the rice crops' do
       rice.transplant!
       expect(rice.instance_variable_get(:@grains)).to eq 10
       rice.transplant!

@@ -67,7 +67,7 @@ describe "Inheritance", if: crop_helper.file_and_class_valid? do
       expect(Corn.superclass).to eq(Crop)
     end
 
-    it 'should not duplicate the `Crop` common methods' do
+    it 'should not duplicate the `Crop` shared methods' do
       expect(Corn.instance_methods(false)).not_to include(:ripe?)
       expect(Corn.instance_methods(false)).not_to include(:initialize)
     end
@@ -83,7 +83,7 @@ describe "Inheritance", if: crop_helper.file_and_class_valid? do
       expect(Rice.superclass).to eq(Crop)
     end
 
-    it 'should not duplicate the `Crop` common methods' do
+    it 'should not duplicate the `Crop` shared methods' do
       expect(Rice.instance_methods(false)).not_to include(:ripe?)
       expect(Rice.instance_methods(false)).not_to include(:initialize)
     end

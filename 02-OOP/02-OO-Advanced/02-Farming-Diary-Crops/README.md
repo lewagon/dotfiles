@@ -18,7 +18,7 @@ Discuss with your buddy: how many classes do you think you need, and how would y
 To start, code a `Corn` class in `corn.rb` with the following methods:
 - `initialize` sets the instance variable `@grains` to zero.
 - `water!`: adds 10 grains anytime it is called.
-- `ripe?` returns true if there are at least 30 grains.
+- `ripe?` returns true if there are at least 20 grains.
 
 Open `farming_diary.rb`, and complete the **Day One** section. Run your diary with:
 
