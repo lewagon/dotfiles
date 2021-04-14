@@ -20,21 +20,19 @@ To start, code a `Corn` class in `corn.rb` with the following methods:
 - `water!`: adds 10 grains anytime it is called.
 - `ripe?` returns true if there are at least 20 grains.
 
-Open `farming_diary.rb`, and complete the **Day One** section. Run your diary with:
+Open `farming_diary.rb` and complete the **Day One** section.
+Adapt the code to make it print the following output:
+
+```bash
+📝 Day One: Corn
+puts "After a good watering, the corn crop produced 10 grains"
+puts "The corn crop is not ripe"
+```
+
+Run your diary with:
 
 ```bash
 ruby lib/farming_diary.rb
-```
-
-Adapt the `Corn` class to make it print the following output:
-
-```bash
-📝 Day One: planting corn
-Today, I planted 1 corn crop in the field
-After a good watering, the corn produced 5 grains
-The corn crop is not ripe yet!
-
-[...]
 ```
 
 ### The `Rice` class
@@ -45,6 +43,8 @@ Create a `Rice` class in `rice.rb` and copy / paste all the methods from the `Co
 
 Continue your farming diary by planting some rice on **Day Two**.
 
+**Hint:** Don't forget the `require_relative` to the `Rice` class.
+
 
 ### Refactoring
 If you felt uncomfortable when copy / pasting code, you were right! Duplicating code is more maintenance and a source of errors. That's where inheritance comes to the rescue to keep the code DRY (Don't Repeat Yourself).
@@ -54,6 +54,10 @@ The crops share many similarities, refactor them:
 - Make `Corn` and `Rice` classes inherit from `Crop`.
 
 In your diary, fill the **Day Three** section. No need to instantiate crops there, but note that you can call the same method on two objects of different types! This concept is called [polymorphism](https://thoughtbot.com/blog/back-to-basics-polymorphism-and-ruby) 🤓
+
+**Hints:**
+- To count all the grains of all the crops, you can use the method [sum](https://ruby-doc.org/core-2.4.0/Enumerable.html#method-i-sum)
+- To check if all the crops are ripe, have a look at [all?](https://ruby-doc.org/core-2.4.0/Enumerable.html#method-i-all-3F)
 
 
 ## Checks and takeaways
