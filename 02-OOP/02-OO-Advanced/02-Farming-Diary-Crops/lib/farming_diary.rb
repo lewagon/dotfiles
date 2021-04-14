@@ -12,7 +12,7 @@ corn = Corn.new
 
 # 1.3 Replace 'TODO' with the relevant code (this step is done for you as an example)
 puts "After a good watering, the corn crop produced #{corn.grains} grains"
-# 1.4 Replace 'TODO' with the state of the crop ("ripe" or "not ripe")
+# 1.4 Replace 'TODO' with the state of the crop ('ripe' or 'not ripe')
 puts "The corn crop is #{'TODO'}"
 
 
@@ -26,7 +26,7 @@ puts "\n\n📝 Day Two: Rice"
 
 # 2.4 Replace 'TODO' with the relevant code
 puts "After a transplant and a good watering, the rice crop produced #{'TODO'} grains"
-# 2.5 Replace 'TODO' with the state of the crop ("ripe" or "not ripe")
+# 2.5 Replace 'TODO' with the state of the crop ('ripe' or 'not ripe')
 puts "The rice crop is #{'TODO'}"
 
 
@@ -38,5 +38,5 @@ puts "\n\n📝 Day Three: Crop"
 
 # 3.3 Replace 'TODO' with the relevant code
 puts "I watered all the crops (rice and corn) and they have now #{'TODO'} grains"
-# 3.4 Replace 'TODO' with the state of the crop ("ripe" or "not ripe")
+# 3.4 Replace 'TODO' with the state of the crop ('ripe' or 'not ripe')
 puts "The crops are #{'TODO'}"
