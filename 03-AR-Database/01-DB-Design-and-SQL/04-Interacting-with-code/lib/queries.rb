@@ -1,6 +1,4 @@
 require 'sqlite3'
-#  You can use this constant to try your queries
-DB = SQLite3::Database.new("lib/db/jukebox.sqlite")
 
 def artist_count(db)
   # TODO: use `db` to execute an SQL query against the database.

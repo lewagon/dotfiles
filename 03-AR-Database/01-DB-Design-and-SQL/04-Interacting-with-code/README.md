@@ -25,14 +25,7 @@ def the_method(db)
 end
 ```
 
-👉 To try your code in the `lib/queries.rb` file you will need to use the `DB` constant we provide you.
-
-```ruby
-rows = DB.execute("SELECT id, name FROM tracks LIMIT 3")
-# => [[1, "For Those About To Rock (We Salute You)"], [2, "Balls to the Wall"], [3, "Fast As a Shark"]]
-```
-
-You can also use `irb` but you will need to build `db` yourself.
+👉 To try your code with `irb` (or in the `lib/queries.rb` file), you will need to build `db` yourself.
 
 ```ruby
 # ➜ 03-Interacting-with-code git:(master) ✗  irb
@@ -40,6 +33,15 @@ require "sqlite3"
 db = SQLite3::Database.new("lib/db/jukebox.sqlite")
 rows = db.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
+```
+
+You can then import your query methods with:
+
+```ruby
+# ➜ 03-Interacting-with-code git:(master) ✗ irb
+require_relative "lib/queries.rb"
+artist_count(db)
+# => [...]
 ```
 
 Open the file `lib/queries.rb` to answer the following questions. Don't forget you can look inside the database by running `sqlite3 lib/db/jukebox.sqlite` in the Terminal or use one of the tools mentionned in the previous exercise (SQLite Pro, SQLStudio or SQLite Browser).
