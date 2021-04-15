@@ -117,7 +117,7 @@ Time to use your parsing code on a live URL with different queries (not just `[f
 require 'nokogiri'
 require 'open-uri'
 url = "http://the_url_here"
-doc = Nokogiri::HTML(open(url), nil, 'utf-8')
+doc = Nokogiri::HTML(URI.open(url), nil, 'utf-8')
 
 # Rest of the code
 ```
