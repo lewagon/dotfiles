@@ -1,7 +1,6 @@
 ⚠️ There's **no `rake`** for this exercise. Sorry 😉
 
-So now we want to enhance our cookbook by finding recipes online. We will use
-[🇫🇷 Marmiton](http://www.marmiton.org) or [🇬🇧 allrecipes](https://www.allrecipes.com), because their markup structure is pretty clean (making them good candidates for scraping). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
+So now we want to enhance our cookbook by finding recipes online. We will use [🇬🇧 allrecipes](https://www.allrecipes.com), because their markup structure is pretty clean (making them good candidates for scraping). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
@@ -25,7 +24,7 @@ ruby lib/app.rb
 
 ## 1 - Import recipes from the web
 
-You can scrape from any recipe website that you know, but good ones are [allrecipes](https://www.allrecipes.com) or [Marmiton](http://www.marmiton.org/) for the french speakers. Here's how this feature should work:
+You can scrape from any recipe website that you know, but a good one is [allrecipes](https://www.allrecipes.com). Here's how this feature should work:
 
 ```bash
 -- My CookBook --
@@ -71,13 +70,12 @@ First, let's have a look at how we'll retrieve information from the Web.
 You can download an HTML document on your computer with the `curl` command. Get the following HTML page saved as a `.html` file in your working directory by running one of these two commands in the terminal:
 
 ```bash
-curl --silent 'https://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
 curl --silent 'https://www.allrecipes.com/search/?wt=strawberry' > strawberry.html
 ```
 
 👆 **This step is really important**!
 
-The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to Marmiton / allrecipes every time (that would probably also get us blacklisted).
+The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to allrecipes every time (that would probably also get us blacklisted).
 
 ### Parsing with Nokogiri
 
@@ -167,7 +165,7 @@ Again, this new property should be:
 Try to extract the **parsing** logic out of the controller and put it into a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
 ```ruby
-class ScrapeAllrecipesService # or ScrapeMarmitonService
+class ScrapeAllrecipesService
   def initialize(keyword)
     @keyword = keyword
   end
