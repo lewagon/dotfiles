@@ -25,7 +25,14 @@ def the_method(db)
 end
 ```
 
-👉 To try your code with `irb` (or in the `lib/queries.rb` file), you will need to build `db` yourself.
+👉 To try your code in the `lib/queries.rb` file you will need to use the `DB` constant we provide you.
+
+```ruby
+rows = DB.execute("SELECT id, name FROM tracks LIMIT 3")
+# => [[1, "For Those About To Rock (We Salute You)"], [2, "Balls to the Wall"], [3, "Fast As a Shark"]]
+```
+
+You can also use `irb` but you will need to build `db` yourself.
 
 ```ruby
 # ➜ 03-Interacting-with-code git:(master) ✗  irb
