@@ -1,7 +1,6 @@
 ⚠️ **No hay `rake`** para este ejercicio. Lo siento 😉
 
-Ahora queremos mejorar nuestro recetario (cookbook) con recetas de internet. Usaremos
-[🇫🇷 Marmiton](http://www.marmiton.org) o [🇬🇧 allrecipes](https://www.allrecipes.com), porque el lenguaje de marcado (markup) que tienen es bastante claro (lo que las hace buenas candidatas para scraping). Si quieres escoger otra página web de recetas, ¡no hay problema!. Solo debe tener la funcionalidad de **búsqueda** donde se pasen palabras clave en la cadena de consulta [query string](https://en.wikipedia.org/wiki/Query_string).
+Ahora queremos mejorar nuestro recetario (cookbook) con recetas de internet. Usaremos [🇬🇧 allrecipes](https://www.allrecipes.com), porque el lenguaje de marcado (markup) que tienen es bastante claro (lo que las hace buenas candidatas para scraping). Si quieres escoger otra página web de recetas, ¡no hay problema!. Solo debe tener la funcionalidad de **búsqueda** donde se pasen palabras clave en la cadena de consulta [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Configuración
 
@@ -25,7 +24,7 @@ ruby lib/app.rb
 
 ## 1 - Importar recetas de la web
 
-Puedes hacer el scraping de cualquier página web que conozcas pero las buenas son [allrecipes](https://www.allrecipes.com) o [Marmiton](http://www.marmiton.org/) para los que hablan francés. Así es como debería funcionar esta funcionalidad:
+Puedes hacer el scraping de cualquier página web que conozcas pero una buena es [allrecipes](https://www.allrecipes.com). Así es como debería funcionar esta funcionalidad:
 
 ```bash
 -- My CookBook --
@@ -71,13 +70,12 @@ Primero veamos cómo recuperaremos información de la web.
 Es posible descargar un documento HTML en tu computadora con el comando `curl`. Obtén la siguiente página HTML que está guardada como un archivo `.html` en tu directorio de trabajo corriendo uno de estos dos comandos en la Terminal:
 
 ```bash
-curl --silent 'https://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
 curl --silent 'https://www.allrecipes.com/search/?wt=strawberry' > strawberry.html
 ```
 
 👆 ¡**Este paso es muy importante**!
 
-La razón por la cual mantenemos la página en nuestro disco duro es porque tenemos que correr scripts Ruby en ella cientos de veces para testear nuestro código. Es más rápido abrir el archivo que está en el disco duro que hacer que nuestra red llame a Marmiton / allrecipes cada vez (esto probablemente hará que te metan en la lista negra y te veten de la página).
+La razón por la cual mantenemos la página en nuestro disco duro es porque tenemos que correr scripts Ruby en ella cientos de veces para testear nuestro código. Es más rápido abrir el archivo que está en el disco duro que hacer que nuestra red llame a allrecipes cada vez (esto probablemente hará que te metan en la lista negra y te veten de la página).
 
 ### Parseo con Nokogiri
 
@@ -167,7 +165,7 @@ Esta nueva propiedad también debe ser:
 Intenta extraer la lógica de **parseo** del controlador y de ponerla en un [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
 ```ruby
-class ScrapeAllrecipesService # or ScrapeMarmitonService
+class ScrapeAllrecipesService
   def initialize(keyword)
     @keyword = keyword
   end
