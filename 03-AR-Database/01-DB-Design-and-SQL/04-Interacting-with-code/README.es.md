@@ -37,8 +37,7 @@ rows = db.execute("SELECT * FROM artists LIMIT 3")
 También puedes importar tu méthodas:
 
 ```ruby
-# ➜ 03-Interacting-with-code git:(master) ✗ irb
-require_relative "lib/queries.rb"
+require_relative "lib/queries"
 artist_count(db)
 # => [...]
 ```
