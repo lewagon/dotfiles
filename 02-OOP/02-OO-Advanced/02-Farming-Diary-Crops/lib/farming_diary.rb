@@ -1,8 +1,8 @@
 # DO NOT remove the two lines below, needed for display purposes
 require_relative "../spec/helper/board"
 
-require_relative "rice"
 require_relative "corn"
+require_relative "rice"
 
 
 puts "\n\n📝 Day One: Corn"
