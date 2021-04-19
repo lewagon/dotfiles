@@ -27,6 +27,19 @@ def all_helpers_valid(helpers)
   return helpers.all? { |helper| helper.file_and_class_valid? }
 end
 
+puts "
+
+***************** Notice to all Farmers *****************
+*                                                       *
+*   Are you sure you're ready to rake?                  *
+*   Try to code everything with the indications first.  *
+*   Come back to check your code when it's complete.    *
+*                     GOOD LUCK!!!                      *
+*                                                       *
+*********************************************************
+
+"
+
 describe "Inheritance", unless: all_helpers_valid([animal_helper, cow_helper, chicken_helper]) do
   
   describe 'Animal' do
@@ -71,21 +84,13 @@ end
 
 describe "Animal", if: animal_helper.file_and_class_valid? do
 
-  let(:animal) { Animal.new('Edward') }
+  let(:animal) { Animal.new }
 
 
   describe '#initialize' do
-    it 'should take one parameter' do
+    it 'should not take parameters' do
       initialize_parameters_count = Animal.allocate.method(:initialize).arity
-      expect(initialize_parameters_count).to eq 1
-    end
-
-    it "should define an instance variable @name" do
-      expect(animal.instance_variable_get(:@name)).to be_a String
-    end
-
-    it "should set the animal's name" do
-      expect(animal.instance_variable_get(:@name)).to eq "Edward"
+      expect(initialize_parameters_count).to eq 0
     end
 
     it "should set the animal's energy to 0" do
@@ -93,17 +98,9 @@ describe "Animal", if: animal_helper.file_and_class_valid? do
     end
   end
 
-  describe '#name' do
-    it "have appropriate getters and/or setters" do
-      expect(animal).to respond_to :name
-      expect(animal).not_to respond_to(:name=)
-      expect(animal.name).to eq ("Edward")
-    end
-  end
-
   describe '#energy' do
     it "have appropriate getters and/or setters" do
-      expect(animal).to respond_to :energy
+      expect(animal).not_to respond_to :energy
       expect(animal).not_to respond_to(:energy=)
     end
   end
