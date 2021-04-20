@@ -115,7 +115,7 @@ Pick an action: [corn | rice | water | cow | chicken | feed | quit]
 ```
 
 **Hints and clues:**
-- `cow` and `chicken` actions create new intances of the corresponding classes and stores them in an `animals` array
+- `cow` and `chicken` actions create new instances of the corresponding classes and stores them in an `animals` array
 - Chickens have a gender, picked randomly by the game
   <details>
   <summary markdown='span'>View solution</summary>
