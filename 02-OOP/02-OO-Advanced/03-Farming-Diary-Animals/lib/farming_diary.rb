@@ -19,7 +19,7 @@ puts "📝 Day Four: Feed The Animals"
 # 1. Store all your animals in an `animals` array 
 
 
-# 2. Call the method `feed!` on each animal (use `each` on the array).
+# 2. Call the `feed!` method on each animal (use `each` on the array)
 
 
 # 3. Replace the TODOs
