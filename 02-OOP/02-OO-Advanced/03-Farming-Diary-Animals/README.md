@@ -37,7 +37,7 @@ The male chicken says cock-a-doodle-doo
 ```
 
 ### Feed The Animals
-Let's move on to the Day Four and feed all the animals at once. Remember all your animals have a shared method `feed!`?
+Let's move on to the Day Four and feed all the animals at once. Remember all your animals have a shared `feed!` method?
 
 Here is what you need to know about `feed!`:
 - `Cow`: beyond gaining energy, cows produce 2 liters of **@milk**
