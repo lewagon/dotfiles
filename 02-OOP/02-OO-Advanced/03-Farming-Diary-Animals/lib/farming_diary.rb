@@ -16,7 +16,7 @@ puts "The male chicken says #{male_chicken.talk}"
 
 puts "\n\n"
 puts "📝 Day Four: Feed The Animals"
-# 1. Create an `animals` array and fill it with all your animals
+# 1. Store all your animals in an `animals` array 
 
 
 # 2. Call the method `feed!` on each animal (use `each` on the array).
