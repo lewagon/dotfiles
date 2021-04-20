@@ -17,7 +17,7 @@ describe "Cow", if: cow_helper.file_and_class_valid? do
 
 
   describe '#initialize' do
-    it 'should not take parameters' do
+    it 'should not take any parameters' do
       initialize_parameters_count = Cow.allocate.method(:initialize).arity
       expect(initialize_parameters_count).to eq 0
     end
