@@ -18,15 +18,15 @@ Discuss with your buddy: how many classes do you think you need, and how would y
 To start, code a `Corn` class in `corn.rb` with the following methods:
 - `initialize` sets the instance variable `@grains` to zero.
 - `water!`: adds 10 grains anytime it is called.
-- `ripe?` returns true if there are at least 20 grains.
+- `ripe?` returns true if there are at least 15 grains.
 
 Open `farming_diary.rb` and complete the **Day One** section.
 Adapt the code to make it print the following output:
 
 ```bash
 📝 Day One: Corn
-puts "After a good watering, the corn crop produced 10 grains"
-puts "The corn crop is not ripe"
+The corn crop produced 10 grains
+The corn crop is not ripe
 ```
 
 Run your diary with:
@@ -43,21 +43,14 @@ Create a `Rice` class in `rice.rb` and copy / paste all the methods from the `Co
 
 Continue your farming diary by planting some rice on **Day Two**.
 
-**Hint:** Don't forget the `require_relative` to the `Rice` class.
-
 
 ### Refactoring
 If you felt uncomfortable when copy / pasting code, you were right! Duplicating code is more maintenance and a source of errors. That's where inheritance comes to the rescue to keep the code DRY (Don't Repeat Yourself).
 
 The crops share many similarities, refactor them:
 - Introduce a parent class named `Crop` and move the shared methods into it.
-- Make `Corn` and `Rice` classes inherit from `Crop`.
-
-In your diary, fill the **Day Three** section. No need to instantiate crops there, but note that you can call the same method on two objects of different types! This concept is called [polymorphism](https://thoughtbot.com/blog/back-to-basics-polymorphism-and-ruby) 🤓
-
-**Hints:**
-- To count all the grains of all the crops, you can use the method [sum](https://ruby-doc.org/core-2.4.0/Enumerable.html#method-i-sum)
-- To check if all the crops are ripe, have a look at [all?](https://ruby-doc.org/core-2.4.0/Enumerable.html#method-i-all-3F)
+- Make `Corn` and `Rice` classes **inherit** from `Crop`.
+- Don't forget to `require_relative`.
 
 
 ## Checks and takeaways

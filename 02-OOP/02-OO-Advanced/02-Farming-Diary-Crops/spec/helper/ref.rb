@@ -28,14 +28,14 @@ class Ref
   end
 
   def product_count
-    count = "?"
     if @count > 0 && @items.any? { |item| item.respond_to?(@product) }
-      count = @items.reduce(0) { |sum, item| sum + get_product(item) }
+      @items.reduce(0) { |sum, item| sum + get_product(item) }
+    else
+      0
     end
-    count
   end
 
   def nice_product
-    @product.to_s.capitalize
+    @product.to_s
   end
 end

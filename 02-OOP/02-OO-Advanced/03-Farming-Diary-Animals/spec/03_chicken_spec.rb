@@ -13,23 +13,18 @@ chicken_helper = FileHelper.new(
 
 describe "Chicken", if: chicken_helper.file_and_class_valid? do
 
-  let(:female_chicken) { Chicken.new('Laura', 'female') }
-  let(:male_chicken) { Chicken.new('Germain', 'male') }
+  let(:female_chicken) { Chicken.new('female') }
+  let(:male_chicken) { Chicken.new('male') }
 
 
   describe '#initialize' do
-    it 'should take two parameter' do
+    it 'should take one parameter' do
       initialize_parameters_count = Chicken.allocate.method(:initialize).arity
-      expect(initialize_parameters_count).to eq 2
+      expect(initialize_parameters_count).to eq 1
     end
 
     it "should define an instance variable @eggs" do
       expect(female_chicken.instance_variable_get(:@eggs)).to eq 0
-    end
-
-    it "should set the chicken's name" do
-      expect(male_chicken.instance_variable_get(:@name)).to eq "Germain"
-      expect(female_chicken.instance_variable_get(:@name)).to eq "Laura"
     end
 
     it "should set the chicken's gender" do
@@ -44,7 +39,7 @@ describe "Chicken", if: chicken_helper.file_and_class_valid? do
   end
 
   describe '#feed!' do
-    it 'should override the `feed!` method' do
+    it 'should extend the `feed!` method' do
       expect(Chicken.instance_methods(false)).to include(:feed!)
     end
 
@@ -74,8 +69,8 @@ describe "Chicken", if: chicken_helper.file_and_class_valid? do
       expect(male_chicken.talk).to eq("cock-a-doodle-doo")
     end
 
-    it 'should return a "cha-caw" for a female' do
-      expect(female_chicken.talk).to eq("cha-caw")
+    it 'should return a "cluck cluck" for a female' do
+      expect(female_chicken.talk).to eq("cluck cluck")
     end
   end
 

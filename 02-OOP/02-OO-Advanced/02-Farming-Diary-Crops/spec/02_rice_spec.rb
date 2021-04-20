@@ -57,9 +57,9 @@ describe "Rice", if: rice_helper.file_and_class_valid? do
       Rice.public_method_defined? :ripe?
     end
 
-    it 'should return true when the grains is over or equal to 20' do
+    it 'should return true when the grains is over or equal to 15' do
       expect(rice.ripe?).to be false
-      rice.instance_variable_set(:@grains, 20)
+      rice.instance_variable_set(:@grains, 15)
       expect(rice.ripe?).to be true
     end
   end
