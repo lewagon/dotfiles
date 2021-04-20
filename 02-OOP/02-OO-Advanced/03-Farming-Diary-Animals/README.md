@@ -39,7 +39,7 @@ The male chicken says cock-a-doodle-doo
 ### Feed The Animals
 Let's move on to the Day Four and feed all the animals at once. Remember all your animals have a shared method `feed!`?
 
-Here is what you need to know `feed!`:
+Here is what you need to know about `feed!`:
 - `Cow`: beyond gaining energy, cows produce 2 liters of **@milk**
 - `Chicken`: beyond gaining energy, females produce 2 **@eggs** (and males none 🤷‍♂️)
 
