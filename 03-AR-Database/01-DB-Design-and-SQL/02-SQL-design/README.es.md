@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-El objetivo de este primer desafío es familiarizarse con el diseño de base de datos,*una* habilidad clave para hacer que tu backend se pueda mantener, sea flexible y eficiente.
+El objetivo de este segundo desafío es familiarizarse con el diseño de base de datos,*una* habilidad clave para hacer que tu backend se pueda mantener, sea flexible y eficiente.
 
 ## Especificaciones
 
