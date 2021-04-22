@@ -76,9 +76,9 @@ Page({
 
 你很棒！你有一个按钮向逻辑层(javascript文件)发出`bindtap`事件，并有一个函数将本地数据重新设置为另一个字符串后，立即呈现在视图中。
 
-⚠️不要破坏Page对象! **每个键值对（key-value pair）都用逗号链起来**。注意Page对象包含框架提供的不同键（keys），如`onReady`、`onShow`等等。我们称它们为[生活方式函数](https://developers.weixin.qq.com/miniprogram/en/dev/framework/app-service/page.html)。
+⚠️不要破坏Page对象! **每个键值对（key-value pair）都用逗号链起来**。注意Page对象包含框架提供的不同键（keys），如`onReady`、`onShow`等等。我们称它们为[生命周期函数](https://developers.weixin.qq.com/miniprogram/en/dev/framework/app-service/page.html)。
 
-### 奖励操作
+### 选做内容：
 
 将着陆页中的`<navigator>`转化为`<button>`元素，在**bindtap**上调用这个函数。
 

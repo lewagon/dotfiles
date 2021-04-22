@@ -4,7 +4,7 @@
 
 这是[Fmylife.com](https://fmylife.com)，用户分享他们的一些个人趣事，每条发布都以"FML"结尾。我们要做一个复制品，但主题是关于你作为程序员的新生活😆。
 
-每次主讲老师演示完后，请你写出自己的挑战方案!
+每次主讲老师演示完后，你将会尝试编写自己的代码!
 
 **上午的挑战**
 
@@ -15,8 +15,8 @@
 **下午的挑战**
 
 4. 创建一个发布页面并使用全局数据
-5. 可选 - 使用缓存
-6. 可选 - 登录用户
+5. 选做 - 使用缓存
+6. 选做 - 登录用户
 
 ---
 
@@ -60,4 +60,3 @@
 <view class="banner" style="height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.lewagon.com/api/v1/cities/shenzhen/cover?width=1200);">
 </view>
 ```
-

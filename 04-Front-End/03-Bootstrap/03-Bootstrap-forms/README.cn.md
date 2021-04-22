@@ -2,11 +2,11 @@
 
 搭建一个[响应式报名表](https://lewagon.github.io/bootstrap-challenges/10-Login-form/)。
 
-**⚠️在开始之前，请仔细阅读所有说明⚠️**。表单是网站中最重要的组件之一，所以你需要知道如何设计它们!
+**⚠️在开始之前，请仔细阅读以下所有说明⚠️**。表单是网站中最重要的组件之一，所以你需要知道如何设计它们!
 
 ## 网格偏移技术
 
-让表单响应的最佳技巧是将其注入Bootstrap网格中的一个具有`justify-content-center`对齐类的**行**中。**记住**每个`.row`都是一个flexbox，我们可以使用flexbox的对齐技巧来使得我们的表单响应。
+制作响应式表单的最佳技巧是将其注入Bootstrap网格中的一个具有`justify-content-center`对齐类的**行**中。**记住**每个`.row`都是一个flexbox，我们可以使用flexbox的对齐技巧来使得我们的表单变得响应式。
 
 ```html
 <div class="container">
@@ -20,7 +20,7 @@
 </div>
 ```
 
-- 该表单在手机上将是全尺寸的。
+该表单在手机上将是全屏的。
 - 在平板电脑和更大的设备上，它将被居中（归功于`justify-content-center`对齐类），并将占据33%的屏幕。
 - 你也可以让它变得更有响应性（移动设备上的全屏，平板电脑上的半屏居中，笔记本电脑上的33%屏幕居中等等）。
 
@@ -78,7 +78,7 @@
 </form>
 ```
 
-Bootstrap表单示例 **无标签**：
+**无标签**的Bootstrap表单示例：
 
 ```html
 <form action="#">
@@ -112,7 +112,7 @@ Bootstrap表单示例 **无标签**：
 
 ```html
 <form>
-  <div class="form-row"><div class="form-row">
+  <div class="form-row">
     <div class="col-6 form-group">
       <label>名</label>
       <input type="text" class="form-control" placeholder="First name">

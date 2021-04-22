@@ -6,7 +6,7 @@
 
 ## 详细说明
 
-以下是你在这次挑战中必须重现的[笑脸格子](http://lewagon.github.io/bootstrap-challenges/01-New-Bootstrap-grid/)。这三个格子一开始是这样的:
+以下是你在这次挑战中需要重现的[笑脸格子](http://lewagon.github.io/bootstrap-challenges/01-New-Bootstrap-grid/)。这三个格子一开始是这样的:
 
 ```html
 <div class="container">
@@ -33,7 +33,7 @@
 </div>
 ```
 
-不要在内容周围建立一个网格，而是像这样插入：。
+不要在内容周围建立一个网格，而是像这样插入：
 
 
 ```html

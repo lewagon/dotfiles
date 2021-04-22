@@ -5,7 +5,7 @@
 1. 创建你的`avatar`CSS组件。
 2. 在`tabs.css`和`notification.css`中实现你的标签和通知设计。
 
-但是首先，**阅读所有的说明**!
+但是首先，**阅读所有以下的说明**!
 
 ## 标签页设计（Tab design）
 
@@ -27,7 +27,7 @@
 
 ## 通知设计（Notification design）
 
-关于`.notification`的设计，**回到幻灯片！** 这是flexbox的一个经典用例，通知的主体是通过`flex-grow`来推其他的部件。
+关于`.notification`的设计，**回到幻灯片！** 这是使用flexbox的一个经典用例，通知的主体是通过`flex-grow`来推开其他的部件。
 
 完成后，就只需要微调你的`margin`、`padding`，挑选字体和颜色的设计。
 

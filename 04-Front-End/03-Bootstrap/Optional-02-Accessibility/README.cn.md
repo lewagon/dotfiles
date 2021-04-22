@@ -1,6 +1,6 @@
 ## 背景和目标
 
-作为开发人员，当我们编写代码时，我们倾向于关注网页在我们看来的样子，可能忽略了其他人的需求。可访问性是为每个人建立网站的艺术，就包括了一些有残疾和障碍人士。很多人访问网站时都会使用**辅助技术**，比如屏幕阅读器、放大软件来缩放内容、语音输入软件、替代性输入设备，如眼球追踪器、头部指示器等等。
+作为开发人员，当我们编写代码时，我们倾向于关注网页在_我们看来的样子_，可能忽略了其他人的需求。可访问性是为每个人建立网站的艺术，就包括了一些有残疾和障碍人士。很多人访问网站时都会使用**辅助技术**，比如屏幕阅读器、放大软件来缩放内容、语音输入软件、替代性输入设备，如眼球追踪器、头部指示器等等。
 
 编码的选择对这些技术如何衔接用户的障碍有着巨大的影响。但是，编写无障碍应用程序并不是一门晦涩的科学，也不是一门独立的语言，它只是一系列明智的原则。只要有正确的代码，你就能为每个人打造出美好的应用。
 
@@ -15,7 +15,7 @@
 
 先运行一个服务器：
 
-```ruby
+```bash
 cd accessibility-guidelines
 serve
 ```
@@ -48,6 +48,7 @@ serve
 ```html
 <p class="error-message">注释不能为空</p>
 ```
+</details>
 
 ### 增加对比度
 
@@ -89,11 +90,11 @@ serve
 
 ## 语义
 
-语义学专题](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics-topic.png)
+![语义学专题](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics-topic.png)
 
-[语义](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics.svg?sanitize=true)
+![语义](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics.svg?sanitize=true)
 
-这两个网站看起来很相似，但实际上却有很大的不同。第一个是依靠CSS来组织页面的显示。第二个则是依靠HTML元素的自然作用。最后的结果是一样的吗？**不一样，因为辅助技术是无法准确描述第一种的**。
+这两个网站看起来很相似，但实际上却有很大的不同。第一个是依靠CSS来组织页面的显示。第二个则是依靠HTML元素的自然作用。最后的结果是一样的吗？**不一样，因为辅助技术是无法准确描述第一种**。
 
 在幕后，辅助技术依靠代码来渲染页面，就像浏览器一样。但它需要一个**语义**信息的叠加，才能够命名，并且向用户描述这些元素。例如，要对`<a>`标签进行可理解的音频描述。
 
@@ -107,13 +108,13 @@ serve
 - 本地[HTML5元素](https://developer.mozilla.org/en-US/docs/Glossary/semantics)，如标题、导航等。它们具有隐含的作用，被广泛的辅助工具所理解。
 - [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)，一套完整的属性，可以修补缺失的信息。对了，你可以在Bootstrap组件中找到很多aria属性的例子。Bootstrap很[符合可访问性标准](https://getbootstrap.com/docs/4.5/getting-started/accessibility/)，一定要保留这些属性，它们很有用!
 
-![用户界面User Interface](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/user-interface.svg?sanitize=true)
+![用户交互 User Interface](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/user-interface.svg?sanitize=true)
 
 ### 使用正确的HTML标签
 
-尽可能地利用HTML标签的本地作用和行为。例如，总是使用`<a>`或`<button>`来表示可点击元素。在你的代码中添加一个`cursor: pointer;`的css规则是一个[闻smell](https://en.wikipedia.org/wiki/Code_smell)!
+尽可能地利用HTML标签的本地作用和行为。例如，总是使用`<a>`或`<button>`来表示可点击元素。在你的代码中添加一个`cursor: pointer;`的css规则是一个[代码异味 code smell](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%A0%81%E5%BC%82%E5%91%B3)!
 
-![无障碍面板Accessibility panel](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility.png)
+![无障碍面板 Accessibility panel](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility.png)
 
 1. 打开**可访问性**面板。
 2. 使用**检查工具**，检查`<h1>`标签和一个`<div>`。
@@ -126,7 +127,7 @@ serve
 
 ### 连接相互作用的元素
 
-输入元素有很多特定的属性来转述它们的复杂行为。看到它们的`name`属性了吗？它填充了另一个标签的文本，标签[`label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)。标签（lables）总是与输入（inputs）在一起的。
+输入元素有很多特定的属性来转述它们的复杂行为。看到它们的`name`属性了吗？它填充了另一个标签的文本，标签[`标签 label`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)。标签（lables）总是与输入（inputs）在一起的。
 
 1. 当你点击 "样式" 二字时，它会选择相关的复选框。
 2. 当你尝试点击 "是" 的时候，和之前的测试相比，似乎坏了。这是因为 "是" 在HTML中没有被标记为标签`label`。
@@ -148,11 +149,11 @@ serve
 
 当信息只是视觉上的，或者不能没有上下文的时候，我们必须用语义代码来支撑，为所有用户提供类似的体验。当没有原生的HTML元素与情况相关时，[ARIA属性](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)就会派上用场。
 
-1. 用[alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img)属性为图片添加替代性描述。
-1. "点击这里"("click here")的链接太过模糊，用明确的意图代替文字，既"无障碍原则"。
-1. 给没有文字的按钮添加ARIA属性。
-1. 在`html`标签中指定语言：`<html lang="en">`。如果这个属性缺失，屏幕阅读器将回退到它们的默认语言。
-1. 在`<head>`中插入页面的`<title>`，它将在切换标签页时被读取。
+1. 用[`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img)属性为图片添加替代性描述。
+2. "点击这里"("click here")的链接太过模糊，用明确的意图代替文字，既使用"无障碍原则"。
+3. 给没有文字的按钮添加ARIA属性。
+4. 在`html`标签中指定语言：`<html lang="en">`。如果这个属性缺失，屏幕阅读器将回退到它们的默认语言。
+5. 在`<head>`中插入页面的`<title>`，它将在切换标签页时被读取。
 
 <detail>
 <summary markdown='span'>查看导航按钮的解决方案</summary>
@@ -211,7 +212,7 @@ serve
 3. 现在CSS已经固定了，打开导航，再试着将其聚焦。我们需要修复最后一件事：第一个被聚焦的应该是导航链接。打开`index.html`，将`<nav>`代码移到`<main>`容器之前。
 
 
-## 可选 - 测试结果
+## （选做） 测试结果
 
 
 ### LightHouse (Google)

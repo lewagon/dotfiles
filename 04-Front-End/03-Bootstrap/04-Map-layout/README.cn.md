@@ -6,9 +6,9 @@
 
 ## 开始挑战吧
 
-1. 确保你理解`index.html`中的代码，以及我们给你的`components/navbar.css`和`components/card.css`中导航条和卡片的设计。如果你不完全理解，可以提个票（ticket），有老师会讲解给你!
+1. 确保你理解`index.html`中的代码，以及我们给你的`components/navbar.css`和`components/card.css`中导航条和卡片的设计。如果你不完全理解，可以提个问（raise a ticket），有老师会讲解给你!
 2. 回过头再来演练一下如何使用`flexbox`和`position: sticky`构建布局。
-3. **检查代码不要作弊! 🔎**本次挑战的目标是教你如何自己构建布局。慢慢思考，有困难就问老师，但不要作弊😉!
+**不要使用浏览器的‘检查(Inspect)/查看元素’来作弊! 🔎**本次挑战的目标是教你如何自己构建布局。慢慢思考，有困难就问老师，但不要作弊😉!
 
 要显示MapBox地图，你需要[获取MapBox API密钥](https://www.mapbox.com/account/access-tokens/)，并确保你将自己的密钥添加到`#map`图片元素的`src`属性的url中。
 
