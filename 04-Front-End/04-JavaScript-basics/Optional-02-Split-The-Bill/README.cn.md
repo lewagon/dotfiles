@@ -1,7 +1,6 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
-我们会依然在终端使用Node.js, 还有一个练习. 我们的目标是搞明白如何操控JavaScript对象[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
+我们会依然在终端使用Node.js，并且我们还有一个练习. 我们的目标是搞明白如何操控JavaScript对象[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
 ## 详细说明
 

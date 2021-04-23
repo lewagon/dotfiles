@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 一个简单的挑战开始新的一天！今天上午，你了解了如何在前端项目中处理多个文件。在 `lib` 文件夹中可以找到两个javascript文件。当前的代码不好用，你的任务是修复它。

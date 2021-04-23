@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 在这个挑战中，我们将使用[OpenWeatherMap API](https://openweathermap.org/)! 我们将再次练习AJAX，并了解如何向用户询问他们的当前位置！
@@ -14,7 +13,7 @@ rake webpack
 
 ### 获取你的API密钥 (你和你的伙伴需要1个）
 
-首先，去[OpenWeatherMap API](https://home.openweathermap.org/users/sign_up)并创建一个帐户来获取API密钥。你应该在这里找到它(https://home.openweathermap.org/api_keys). 你们都将在同一时间创建帐户，这可能会造成一些延迟的钥匙激活Open Weather。为避免此问题，**与你的伙伴共享API密钥**以限制要激活的密钥数量。
+首先，去[OpenWeatherMap API](https://home.openweathermap.org/users/sign_up)并创建一个帐户来获取API密钥。你应该在这里找到它(https://home.openweathermap.org/api_keys). 你们都将在同一时间创建帐户，这可能会在Open Weather激活钥匙过程中造成一些延迟。为避免此问题，**与你的伙伴共享API密钥**以限制要激活的密钥数量。
 
 你可以免费执行60次调用/分钟，这对于这个挑战来说应该足够了。
 
@@ -54,11 +53,11 @@ rake webpack
 
 ![吉隆坡的天气](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_in_kuala_lumpur.png)
 
-### 从NPM添加 Select2 包 
+### 从NPM添加 Select2 包
 
 在早上的课堂上你看过了如何添加[select2](https://select2.org/):
 
-1. 用 yarn下载 `jquery` and `select2` 
+1. 用 yarn下载 `jquery` and `select2`
 
     ```bash
     yarn add jquery select2
@@ -111,8 +110,8 @@ navigator.geolocation.getCurrentPosition((data) => {
 ```
 
 看到你从浏览器获取了什么吗？你的GPS坐标。我们的代码目前使用城市**名称**来获取天气。幸运的事，还有一个端点在url中采用**坐标**。你可以向下滚动一点[在文档中](https://openweathermap.org/current)找到以纬度和经度为参数的端点。
- 
-请继续定义另一个 `fetchWeatherByCoordinates` ，以使你传送的url适应 `fetch` 请求。
+
+请继续定义另一个 `fetchWeatherByCoordinates` 方法，以使你传送的url适应 `fetch` 请求。
 
 ### 是时候重新组织你的代码了！
 

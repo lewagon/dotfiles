@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 让我们通过使用API来注册我们玩的游戏并存储结果，把我们的Wagon赛车变得更有趣一点。

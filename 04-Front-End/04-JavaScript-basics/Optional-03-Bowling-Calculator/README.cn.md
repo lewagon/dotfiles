@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 我们来打保龄球吧! 🎳

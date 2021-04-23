@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 在这个练习中，我们将练习AJAX技巧。让我们从一个`GET`请求开始。这里我们将使用[MapBox地理编码API](https://www.mapbox.com/search/). 我们想创建一个工具，它让我们可以输入一个地址，点击一个按钮，并得到**全球定位系统(GPS)坐标**！锦上添花的是，我们也将展示地图。

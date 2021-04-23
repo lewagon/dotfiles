@@ -1,9 +1,8 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 在前端开发中, **数据属性** 让你可以轻松地在JS里访问HTML里插入的值。
 
-在这个挑战中，我们一起写一个能够解析HTML标签并提取数据属性然后生成对象[`Object`]的函数。
+在这个挑战中，我们一起写一个能够解析HTML标签并提取数据属性然后生成`对象[Object]`的函数。
 
 ## 详细说明
 
@@ -21,8 +20,8 @@ dataset(burger);
 // => { id: 42, price: 15, category: 'popular' }
 ```
 
-- 它应该只返回**wrapping**元素的数据集，不论它的子元素是什么。 
-- 它应该返回正确的值的种类（在例子中，`42` 和 `15`应该是数字`number`。 
+- 它应该只返回**wrapping**元素的数据集，不论它的子元素是什么。
+- 它应该返回正确的数据类型（在例子中，`42` 和 `15`应该是数字类型`number`。
 
 ### 帮助
 
@@ -47,4 +46,4 @@ dataset(element);
 
 这是一个相对方便的方法来吧你的HTML代码传到JavaScript代码上，来更好地回应DOM事件或远程呼叫服务器。
 
-你会在接下来的几天里更多地学习这些应用。同时你也可以更多地阅读关于[数据集属性dataset property]的内容(https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).
+你会在接下来的几天里更多地学习这些应用。同时你也可以更多地阅读关于[数据集属性 dataset property]的内容(https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).

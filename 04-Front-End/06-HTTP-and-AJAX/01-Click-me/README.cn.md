@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 这是一个可以很快完成的热身挑战! 我们来练习一下如何把一个文档对象模型(DOM)事件和JavaScript的一些动作绑定在一起！

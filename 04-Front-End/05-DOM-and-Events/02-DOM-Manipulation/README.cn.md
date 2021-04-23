@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 我们做这个练习的目标是用在CSS模块里学的选择器动态地操作网页。
@@ -23,6 +22,6 @@ rake webpack
 
 然后在你最爱的浏览器里打开[`localhost:8080`](http://localhost:8080)。打开控制台（Console）.
 
-修改一些`lib/dom.js`文件中的代码, 当你在Sublime Text里保存后, 在浏览器内网页会重新载入。 
+修改一些`lib/dom.js`文件中的代码, 当你在Sublime Text里保存后, 在浏览器内网页会重新载入。
 
 你的目标是通过所有测试！

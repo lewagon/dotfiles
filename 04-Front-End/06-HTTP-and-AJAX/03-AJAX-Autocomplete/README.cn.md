@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 这是我们的第一个AJAX练习。我们会创建一个具有自动完成功能的输入。那是什么呢？前往[Algolia Places](https://community.algolia.com/places/) 看一个示例：当你在输入框中输入**一个**字符，你就会在下面得到自动完成的建议。
@@ -25,7 +24,7 @@ rake webpack
 GET https://wagon-dictionary.herokuapp.com/autocomplete/:stem
 ```
 
-在这里，你会把`:stem`替换成用户输入的字符。一旦用户输入一个新字符 (或许试试 `keyup`?), 你会触发一个新的AJAX调用。如果你查看Chrome Inspector中的“网络”选项卡，你会看到如下内容： 
+在这里，你会把`:stem`替换成用户输入的字符。一旦用户输入一个新字符 (或许试试 `keyup`?), 你会触发一个新的AJAX调用。如果你查看Chrome Inspector中的“网络”选项栏，你会看到如下内容：
 
 ```bash
 https://wagon-dictionary.herokuapp.com/autocomplete/u

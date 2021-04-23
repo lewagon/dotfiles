@@ -1,7 +1,7 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
-在这个挑战中，我们希望你可以从未经处理的数据生成一个**未排序列表**的HTML。
+在这个挑战中，我们希望你可以使用未经处理的数据来生成一个**未排序列表**的HTML。
+
 ## 详细说明
 
 ### 列表项生成器

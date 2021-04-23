@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 在这个挑战里，你会需要编写**循环[loops]**, **条件[conditions]**代码，还会使用**数字[numbers]**。

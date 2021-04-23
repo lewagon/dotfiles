@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 想一想Gmail邮箱收件箱的界面。你需要刷新页面来显示新的邮件吗？答案当然是**不**! 像Gmail这样的网站定期地提取新的邮件，然后把它们添加到列表的最上方。所以它是在初始页面加载**之后**，在_DOM_上添加新的内容。

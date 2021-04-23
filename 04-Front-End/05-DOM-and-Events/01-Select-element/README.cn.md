@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 第一个挑战里，我们会从文档对象模型(DOM)里选择元素(element)。
@@ -9,9 +8,9 @@
 
 ```bash
 node -v
-# You should see your node version here
+# 你应该在这儿看到你node的版本号
 yarn -v
-# You should see your yarn version here
+# 你应该在这儿看到你yarn的版本号
 ```
 如果没有的话, 你可以回到关于[macOS](https://github.com/lewagon/setup/blob/master/macOS.md#node-with-nvm), 关于[Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#node-with-nvm) 或者 [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#node-with-nvm) 的设置内容.
 

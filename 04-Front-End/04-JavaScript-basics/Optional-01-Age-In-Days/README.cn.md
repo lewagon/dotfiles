@@ -1,7 +1,6 @@
-<!-- Please put your translation here and with the same style in README.md -->
 让我们回到Node.js 和 `rake`的内容.
 
-##  详细说明
+## 详细说明
 
 还记得Ruby时期的这个挑战吗?
 

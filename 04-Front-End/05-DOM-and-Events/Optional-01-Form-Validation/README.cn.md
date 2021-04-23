@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 Javascript在客户端验证窗体时非常有用。
@@ -12,7 +11,7 @@ Javascript在客户端验证窗体时非常有用。
 rake webpack
 ```
 
-我们希望在用户填写每个输入时验证窗体。[`blur`](https://developer.mozilla.org/en-US/docs/Web/Events/blur) 可能是你想要找的。。。
+我们希望在用户填写每个输入时验证表单。[`blur`](https://developer.mozilla.org/en-US/docs/Web/Events/blur) 可能是你想要找的。。。
 
 - 所有字段都是必填的
 - 确保选中了“服务条款”复选框

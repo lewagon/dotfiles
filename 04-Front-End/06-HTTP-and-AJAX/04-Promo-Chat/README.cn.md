@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 在这个挑战中，你将使用我们提供的API:**wagon-chat** API.
@@ -21,12 +20,13 @@
 * 一个带有窗体（form)的 **发送按钮** , 把你的消息推送给chat API。
 * 一个带有占位符的 **刷新按钮** , 你将在这里显示所有新消息。
 
-从阅读[API文档](https://github.com/lewagon/wagon-chat-api/blob/master/README.md)开始。 你能找到多少个端点？你能找出哪个端点与窗体相关吗？哪个和刷新按钮有关？
+从阅读[API文档](https://github.com/lewagon/wagon-chat-api/blob/master/README.md)开始。 你能找到多少个端点？你能找出哪个端点与表单相关吗？哪个和刷新按钮有关？
+
 在`lib/index.js`文件内写你的JS代码.
 
 ### 刷新按钮: 提取最近的消息
 
-在标记中，您可以找到 `#refresh` 按钮。点击时，我们希望显示你们组里所有人的所有最新评论！ 
+在标记中，您可以找到 `#refresh` 按钮。点击时，我们希望显示你们组里所有人的所有最新评论！
 
 你需要用`fetch` 向JS的API发出`GET`请求：阅读[文档](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) 查看此请求的结构以及API将返回什么。在接收到的数据中查找消息，并在DOM中显示每一条消息。
 
@@ -40,7 +40,7 @@
 
 是时候开始聊天并发布自己的信息了！
 
-`#comment-form` 窗体有两个输入 (`#your-message` 和 `#your-name`)。 首先编写一个简单的脚本来检索输入值。一开始，你可以用 `console.log()` 查看各种值来确保一切运行顺利。这是一个基本的DOM练习，还没有涉及AJAX！
+`#comment-form` 表单有两个输入值 (`#your-message` 和 `#your-name`)。 首先编写一个简单的脚本来检索输入值。一开始，你可以用 `console.log()` 查看各种值来确保一切运行顺利。这是一个基本的DOM练习，还没有涉及AJAX！
 
 **提示**: 你需要防止窗体提交的默认行为(使用 `preventDefault()` 方法).
 

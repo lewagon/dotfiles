@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 让我们来做一个JS游戏：Wagon赛车🏎. 它是一个简单的游戏，你可以用键盘来让小货车向前移动。每一个玩家会用一个键来移动他们的小货车(e.g. 第一个玩家用`Q` , 第二个玩家用`P`)。
@@ -65,7 +64,7 @@ rake webpack
 
 #### Javascript
 
-把所有代码写在 `lib/wagon_race.js` 文件里. 我们需要想办法让JavaScript更新得分板的状态。需要创建可以更新玩家分数的简单的JS函数。再次声明，做到这个有不同的方法。一个例子是： 
+把所有代码写在 `lib/wagon_race.js` 文件里. 我们需要想办法让JavaScript更新得分板的状态。需要创建可以更新玩家分数的简单的JS函数。再次声明，做到这个有不同的方法。一个例子是：
 
 - 在当前玩家的`td` 上删除`active` 类(class)，然后把这个类添加到下一个 `td`上。
 - 在表格中追踪每个玩家的"索引"(index)并增加。

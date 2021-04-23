@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 我们想在浏览器写一个经典的游戏[扫雷Minesweeper](https://www.google.com/search?tbm=isch&q=minesweeper+windows)。

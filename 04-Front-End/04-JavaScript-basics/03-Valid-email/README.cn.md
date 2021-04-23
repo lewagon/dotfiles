@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 正则表达式[RegExp]回归啦！(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) 好消息是, 它们和你在第二周学习的表达式是完全一样的🙌

@@ -1,13 +1,12 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 以下是你要在这个挑战创建的内容:
 
 ![动态窗体动图](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/booking-form.gif)
 
-在这个挑战中我们不会用AJAX，我们只想当用户点击`-` / `+` 按钮时 **更新窗体的UI**”。
- 
-提交窗体不会产生任何影响。
+在这个挑战中我们不会用AJAX，我们只想当用户点击`-` / `+` 按钮时 **更新表单的UI**”。
+
+提交表单不会产生任何影响。
 
 是时候试着用下[`dataset`s](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)!
 
@@ -37,7 +36,7 @@ rake webpack
 
 ```js
 button.addEventListener('click', (event) => {
-  event.preventDefault();  
+  event.preventDefault();
 });
 
 ```

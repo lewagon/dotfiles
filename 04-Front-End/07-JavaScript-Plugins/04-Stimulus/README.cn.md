@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景和目标
 
 在这个练习中，我们将使用[Stimulus](https://stimulusjs.org/) JavaScript框架. 这个框架是由[Basecamp](https://basecamp.com/)创建的, 也是Ruby-on-Rails框架背后的公司。
@@ -22,7 +21,7 @@ rake
 - 一个 `firstName` 实例变量
 - 一个 `lastName` 实例变量
 - 两个实例变量都由 `constructor` 初始化
-- 一个 `fullName()` 实例方法返回连接好的名字和姓氏 
+- 一个 `fullName()` 实例方法返回连接好的名字和姓氏
 
 这会是7行JS代码，想想你是如何在Ruby中进行面向对象编程的，这里的概念完全相同！
 
@@ -164,7 +163,7 @@ sound.play();
 
 - 当声音播放时，将按钮文本更改为`"Bingo !"`
 - 声音播放时禁用按钮
-- 当声音播放完毕，将按钮文本改回 `"Click me!"` 
+- 当声音播放完毕，将按钮文本改回 `"Click me!"`
 - 声音播放完毕后重新启用按钮
 
 如果你看上面的代码，我们_没有使用_ Stimulus, 我们使用的是 `event.currentTarget` 引用按钮。在这里，我们将使用Stimulus的另一个特性，**target**。
@@ -224,11 +223,11 @@ play() {
 </div>
 ```
 
-重新加载页面，现在你可以看到第二个按钮。点击上面写着 `Treasure` 的绿色按钮。会发生什么？ 
+重新加载页面，现在你可以看到第二个按钮。点击上面写着 `Treasure` 的绿色按钮。会发生什么？
 
 - 是同一个声音吗？我们想要一个新的（见文件夹里的 `treasure.mp3` ）
 - 声音播放完毕后，按钮文本是否回到 `Treasure` ？我们想要那个！
- 
+
 让我们从文本开始。现在，我们在JavaScript中有一个硬编码的 `innerText`集合，在播放`“ended”`回调中：
 
 ```js
