@@ -6,7 +6,7 @@
 
 ### 1. 获取珍贵的数据
 
-把你的**着陆页按钮**变成一个Login（登录）! 
+把你的**着陆页按钮**变成一个Login（登录）!
 
 - 添加一个`getUserInfo`的**open-type**和一个**bindgetuserinfo**事件处理。
 - 你需要浏览[文档](https://developers.weixin.qq.com/miniprogram/en/dev/component/button.html)...

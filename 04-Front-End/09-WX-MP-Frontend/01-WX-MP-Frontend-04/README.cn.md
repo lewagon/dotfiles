@@ -12,7 +12,7 @@
 
 好处是，整个App（`app.js`）共享一个*global*的数据存储，我们可以在任何地方访问。这里也就是你用来保存任何东西以重复使用的地方。例如：你的用户信息!
 
-虽然[文档](https://developers.weixin.qq.com/miniprogram/en/dev/framework/app-service/app.html)对此说得很少，但请注意，WXML不能直接访问*global*数据存储。你必须先通过*local*数据!
+虽然[文档](https://developers.weixin.qq.com/miniprogram/en/dev/framework/app-service/app.html)对此说得很少，但请注意，WXML不能直接访问*全局global*存储数据。你必须先将其存到*本地local*数据!
 
 ```js
 //app.js
@@ -42,9 +42,9 @@ Page({
 
 按照这个逻辑，你需要：
 
-- 用`App.js`在我们的`stories` 数组中添加一个**globalData**的存储
-- 在stories.js`的顶部，使用getApp()来获取你的App的实例
-- 在你的 "stories.js "**onShow函数**中，将**本地存储**重置为等于全局数据存储
+- 用`App.js`在我们的 `stories` 数组中添加一个**globalData**的存储
+- 在`stories.js`的顶部，使用getApp()来获取你的App的实例
+- 在你的 `stories.js` **onShow函数**中，将**本地存储**重置为等于全局存储的数据
 
 ```js
 Page({
@@ -81,10 +81,12 @@ Page({
 
 **现在让我们设计一个漂亮的表单** 🎨。
 
-- 在你的`post.wxml`视图页中，使用[form](https://developers.weixin.qq.com/miniprogram/en/dev/component/form.html)组件和它的**bindsubmit**属性。
-- 我们需要两个[input](https://developers.weixin.qq.com/miniprogram/en/dev/component/input.html)(名称和内容)，当然还需要一个按钮来提交表单！你知道如何在你的`post.wxml`视图页中**接收这个表单数据吗？
+- 在你的`post.wxml`视图页中，使用[表单form](https://developers.weixin.qq.com/miniprogram/en/dev/component/form.html)组件和它的**bindsubmit**属性。
+- 我们需要两个[input](https://developers.weixin.qq.com/miniprogram/en/dev/component/input.html)(名称和内容)，当然还需要一个按钮来提交表单！
 
-你知道如何在逻辑层`post.js`里面**接收这个表单数据吗，就是通过你的表单的`bindsubmit`来实现的!
+你知道如何在你的`post.wxml`视图页中**接收这个表单数据**吗？
+
+是通过你的表单的`bindsubmit`属性哦!
 
 创建一个名为**formSubmit**的函数。这个函数接收一个`event`参数，里面有你所有的表单数据😉。
 
@@ -105,6 +107,6 @@ Page({
 - 将它们保存在您的App的`globalData`中。
 - 通过[`wx.switchTab`](https://developers.weixin.qq.com/miniprogram/en/dev/api/ui-navigate.html#wxswitchtabobject)将用户切换回故事页面。
 
-*👉 *提示：记住我们是如何使用`getApp()`来获取我们页面里面的App实例！* 🤓
+*👉 *提示：记住我们是如何使用`getApp()`来获取我们页面里面的App实例的！* 🤓
 
 **测试，再测试!** 有任何进展都记得使用console.log! 🤓
