@@ -1,0 +1,16 @@
+<!-- Please put your translation here and with the same style in README.md -->
+## 背景与目标
+
+现在是时候熟悉[可枚举（Enumerable）](http://ruby-doc.org/core/Enumerable.html) 模组的方法了。`Enumerable`模组是由类似数组（Array）和哈希（Hash）这样的集合类的[混合(mixed-in)]。其中有些方法在执行时需要一个ruby命令语句块。这个练习的目标不是理解ruby语句块的语法（你很快就会看到它），而是学习如何使用这些方法，当你对集合执行运算时，会发现它们用起来非常方便。
+
+- **学习的主要经验**当你想对一个集合（例如一个数组）执行运算时，95%的情况下，需要一个迭代器（iterator）来提取你寻找的东西！那就去文档里找一找好用的可枚举方法（`Enumerable#method`）😊
+- 理解每个迭代器(iterator)是如何工作的，它返回什么，它如何将语句块应用于集合中的元素。
+
+## 详细说明
+
+- 在代码画布`lib/enumerable.rb`中完成每个方法（method）。对每个方法，我们告诉你要用哪个迭代器（iterator），因为我们人很nice😊
+
+## 主要学习要点
+
+- 什么是迭代器（iterator）？你知道哪些？
+- 你可以选择其中一个来解释一下它究竟是如何运行的吗？
