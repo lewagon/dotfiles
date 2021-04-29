@@ -38,11 +38,6 @@ cp .03-Farming-Diary-Animals/lib/{animal.rb,cow.rb,chicken.rb} lib
 Pick an action: [corn | rice | quit]
 > corn
 Let\'s plant corn crops!
-
-选择一个动作: [玉米 | 大米 | 退出]
-> 玉米
-让我们种玉米吧！
-
 ```
 
 或
@@ -51,10 +46,6 @@ Let\'s plant corn crops!
 Pick an action: [corn | rice | quit]
 > rice
 Rice crops today!
-
-选择一个动作：[玉米| 大米 |退出]
-> 大米
-今天是大米日！
 ```
 
 or
@@ -63,10 +54,6 @@ or
 Pick an action: [corn | rice | quit]
 > quit
 See you next time
-
-选择一个动作：[玉米 |大米 |退出]
-> 退出
-下次见
 ```
 
 当玩家随机键入一个单词时：
@@ -75,21 +62,15 @@ See you next time
 Pick an action: [corn | rice | quit]
 > lalala
 I don\'t know what you mean...
-
-选择一个动作：[玉米 |大米 |退出]
-> lalala
-我不明白你的意思...
-
 ```
 
-**注意：** 你可以选择一个基本的 `if` / `else` 语句，或者用 [`case` / `when`](https://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case) 语句，非常适合封闭选项的长列表。
+**注意：** 你可以选择一个基本的 `if` / `else` 语句，或者用 [`case` / `when`](https://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case) 语句，非常适合含有封闭选项的长列表。
 
 
 ### 让它循环
-如果一个动作后就退出了，那游戏就不好玩了。使其循环，直到玩家键入 `quit` 动作。运行`lib/interface.rb`，应给出以下输出：
+如果只做一个动作后就退出了，那游戏就不好玩了。使其循环，直到玩家键入 `quit` 动作。运行`lib/interface.rb`，应给出以下输出：
 
 ```bash
-
 Pick an action: [corn | rice | quit]
 > corn
 Let\'s plant corn crops!
@@ -101,18 +82,6 @@ Rice crops today!
 Pick an action: [corn | rice | quit]
 > quit
 See you next time
-
-选择一个动作: [玉米 | 大米 | 退出]
-> 玉米
-让我们种玉米吧！
-
-选择一个动作：[玉米| 大米 |退出]
-> 大米
-今天是大米日！
-
-选择一个动作：[玉米 |大米 |退出]
-> 退出
-下次见
 ```
 
 
@@ -127,7 +96,6 @@ See you next time
 
 ```bash
 Pick an action: [corn | rice | water | quit]
-选择一个动作： [玉米 |大米 |浇灌 |退出]
 ```
 
 在这个动作中，玩家浇灌所有已经种植的作物（玉米和大米）。记住他们都继承了来自 `Crop` 的 `water!` 方法。
@@ -140,7 +108,6 @@ UI有三个新条目（牛、鸡和饲料）：
 
 ```bash
 Pick an action: [corn | rice | water | cow | chicken | feed | quit]
-选择一个动作：[玉米 |大米 |水 |牛 |鸡 |饲料 |退出]
 ```
 
 **提示和线索:**

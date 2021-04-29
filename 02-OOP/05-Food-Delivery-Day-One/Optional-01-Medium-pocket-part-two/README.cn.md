@@ -3,7 +3,7 @@
 你成功地完成了第一部分的送餐程序挑战，太棒了！
 在这个挑战中，我们将用 `Author` 模型扩展 DEV Pocket 挑战（Cookbook 第一天的 optional challenge）。我们将对 `Post` 和`Author` 之间的以下关系进行建模：
 
-![数据库架构](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/pocket_reader.png)
+![数据模式](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/pocket_reader.png)
 
 我们希望将用户操作扩展到：
 
@@ -16,22 +16,13 @@
 6. List author\'s posts  # 新
 7. See author info      # 新
 8. Exit
-
-1. 列出帖子
-2. 保存帖子以备以后阅读
-3. 阅读帖子
-4. 将帖子标记为已读
-5. 列出作者们         # 新
-6. 列出作者的帖子      # 新
-7. 阅读者信息         # 新
-8. 离开
 ```
 
 正如你可能想象的那样，当一篇帖子被保存时，关于作者的信息将会被删除。让我们继续思考一下我们的架构。
 
 ## 详细说明
 
-首先导航到Cookbook day one 的 DEV Pocket可选挑战并下载解决方案。这将是你编写这个扩展版本的起点。
+首先导航到Cookbook day one 的 DEV Pocket挑战并下载解决方案。这将是你编写这个扩展版本的起点。
 
 ### 模型
 
@@ -67,7 +58,7 @@ class Author
 end
 ```
 
-在 `irb`中测试你的关系，修复错误并转到存储库。
+在 `irb`中测试你所编写的逻辑关系，修复错误，然后接下来搭建存储库。
 
 ### 存储库
 
@@ -147,11 +138,11 @@ class ReaderScraper
 end
 ```
 
-确保它仍然有效，然后继续下一个用户案例。
+确保它仍然有效，然后继续下一个步骤。
 
 **列出作者**
 
-哎，最难的部分已经过去了。这个很简单。我们要列出作者，所以让我们编写一个`AuthorsController`。
+喔吼...，最难的部分已经过去了。接下来这个很简单！我们只需要要列出作者，所以让我们编写一个`AuthorsController`。
 
 它需要访问author存储库和authors视图。视图必须在索引列表中显示作者姓名和关联的未读文章：
 
@@ -183,4 +174,4 @@ Elasticsearch wrangler. Speaker. Runner. Show Jumper. Always Ambitious. Never Sa
 54 posts published - 442 comments written
 ```
 
-开心建模!
+祝你建模愉快!

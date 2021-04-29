@@ -1,7 +1,7 @@
 ##  背景和目标
 
 让我们玩一玩继承。在ruby中，可以调用类的 `ancestors` 来
-弄一份类所有父类的名单。看看[这个问题](http://stackoverflow.com/questions/19045195/understanding-ruby-class-and-ancestors-methods)和Stack Overflow 建议的答案是以获得类层次结构的感觉。
+弄一份类所有父类的名单。看看[这个问题](http://stackoverflow.com/questions/19045195/understanding-ruby-class-and-ancestors-methods)和Stack Overflow 建议的答案来初步了解类别继承体系。
 
 ## 详细说明
 
@@ -12,5 +12,5 @@ Mother.phone_kids
 # => 应该能调用 Daughter.phone 和 Son.phone
 ```
 
-规范为你提供了两个 `Mother` 的子类，因此你只需实现
-类方法 `phone_kids` 。你可能需要使用[`inherited`](http://www.ruby-doc.org/core-2.5.3/Class.html#method-i-inherited） `Class` 的类方法。
+说明为你提供了两个 `Mother` 的子类，因此你只需实现
+类方法 `phone_kids` 。你可能需要使用`Class` 中[`inherited`](http://www.ruby-doc.org/core-2.5.3/Class.html#method-i-inherited)方法。

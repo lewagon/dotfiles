@@ -39,11 +39,6 @@
 📝 Day Four: Cow
 Marguerite produced 2 liters of milk
 Marguerite says moo
-
-📝 第四天：牛
-玛格丽特产了两公升牛奶
-玛格丽特说
-[...]
 ```
 
 ### 鸡
@@ -63,11 +58,6 @@ Marguerite says moo
 📝 Day Five: Chicken
 Bob produced 0 eggs and says cock-a-doodle-doo
 Alice produced 2 eggs and says chack-caw
-
-📝 第五天：鸡
-鲍勃生了 0 个蛋，cock-a-doodle-doo 叫
-爱丽丝生了 2 个蛋，chack-caw 叫
-[...]
 ```
 
 ## 要点

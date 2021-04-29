@@ -15,7 +15,7 @@ a_time_object.hour
 你能找到一种不同于其他方法的方法吗？一定要找到入侵者！
 
 ## 详细说明
-- 创建一个带有两个实例变量 `@city` 和 `@name` 的 `Restaurant` 类，设置两个参数 `initialize` 。
+- 创建一个带有两个实例变量 `@city` 和 `@name` 的 `Restaurant` 类，并在 `initialize` 中设置这两个参数。
 - 定义一个实例方法 `#rate(new_rate)` 以实现对餐厅对象的评级。每次调用新的评级时，此方法都应重新计算餐厅平均评级 `@average_rating` 。 `@average_rating` 应该可以被外部世界访问。
 - 定义一个 **类** 方法 `.filter_by_city（restaurants，city）` 返回已定义城市中的所有餐馆（此返回应该存一系列餐馆对象的数组）。例如：
 
@@ -42,6 +42,6 @@ Nokogiri::HTML::Document.parse #(请参阅 http://www.rubydoc.info/gems/nokogiri
 Array#shuffle
 ```
 
-- **可选:** 查看 `new` 和 `initialize` 方法, 哪一个是实例方法？ 哪一个是类方法？ 他们之间有什么关系？是哪一个在调用另一个方法？
+- **选做部分:** 查看 `new` 和 `initialize` 方法, 哪一个是实例方法？ 哪一个是类方法？ 他们之间有什么关系？是哪一个在调用另一个方法？
 
 

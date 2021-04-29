@@ -8,7 +8,7 @@ Sinatra称之为网络“微框架”。它基本上是一个微型Rails，也�
  `app.rb` f文件充当控制器。路由层由Sinatra处理。
 我们已经创建了一个控制器方法来处理基础的web应用。Sinatra将浏览器中的URL映射到 `app.rb` 中的对应方法。看一下[路由文件](http://www.sinatrarb.com/intro.html#Routes)的更多信息。
 
-阅读更多关于 Sinatra [辅导](https://github.com/lewagon/sinatra-101). Follow the [安装](https://github.com/lewagon/sinatra-101#setup), [sinatra app](https://github.com/lewagon/sinatra-101#sinatra-app) and [视图](https://github.com/lewagon/sinatra-101#views) 在启动 Cookbook web应用程序之前，请彻底执行以下步骤。
+阅读更多关于 Sinatra [教程](https://github.com/lewagon/sinatra-101). 参照 [安装](https://github.com/lewagon/sinatra-101#setup), [sinatra app](https://github.com/lewagon/sinatra-101#sinatra-app) and [视图](https://github.com/lewagon/sinatra-101#views) 在启动 Cookbook web应用程序之前，请彻底执行以下步骤。
 
 ## 详细说明
 
@@ -41,4 +41,5 @@ POST /recipes
 ### 更进一步
 
 当你成功地编写了这3个用户故事时，请继续并尝试实现更难的 `import` 和 `mark as done` 操作！
+
 Sinatra 快乐！

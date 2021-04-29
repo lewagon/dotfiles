@@ -16,6 +16,7 @@ gem install gosu
 
 ### Linux
 
+```bash
 sudo apt-get update
 sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
   libpango1.0-dev libgl1-mesa-dev libfreeimage-dev libopenal-dev\
@@ -38,11 +39,11 @@ echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'
 重新启动终端。
 
 安装[Xming](https://sourceforge.net/projects/xming/).
-启动XLaunch，保留默认设置，但 **添加以下可选参数** `-ac`。
+启动XLaunch，保留默认设置，但需要同时 **添加以下可选参数** `-ac`。
 
 ![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
 
-如果在运行游戏时出现错误 `could not initialize SDL` ，则需要在Windows Defender中添加一个异常，以允许Xming 通过UDP和TCP协议输入公共流量。你可以按照这个[文件](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule)。
+如果在运行游戏时出现错误 `could not initialize SDL` ，则需要在Windows Defender中添加一个异常，以允许Xming 通过UDP和TCP协议输入公共流量。你可以参照这个[文件](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule)。
 
 ## 蛇
 

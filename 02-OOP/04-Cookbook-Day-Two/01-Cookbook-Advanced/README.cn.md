@@ -162,7 +162,7 @@ doc = Nokogiri::HTML(open(url), nil, 'utf-8')
 - 存储到CSV中
 - 列出菜谱时打印
 
-## 5 -（可选）服务
+## 5 -（选做部分）服务
 
 尝试从控制器中提取 **解析** 逻辑并将其放入[**服务对象**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
