@@ -2,10 +2,10 @@
 - 学习在ruby文档中查找正确的方法（method）。
 - 熟练使用IRB来测试新的方法（method）并把它们变成你的。
 
-IRB是ruby的一个交互式解释环境[REPL]（http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop ）。它是这样运行的：
+IRB是ruby的一个交互式编程环境[REPL](https://zh.wikipedia.org/wiki/读取﹣求值﹣输出循环)。它是这样运行的：
 
 1. 它可以 **读取（Read）** 用户的表达式，可以是任何有效的ruby表达式，例如：`"Hello"`, `2+2`, `"hello".upcase` 等等。
-2. 它可以 **评估（Evaluates）** 该表达式的结果。
+2. 它可以 **评估（Evaluate）** 该表达式的结果。
 3. 它可以 **打印（Print）** 这个结果。
 4. 它可以从1开始 **循环（Loop）**，等待新的用户输入。
 
