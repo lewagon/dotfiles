@@ -124,5 +124,8 @@ subl /Users/alexandrebouvier/Library/Application\ Support/Sublime\ Text\ 3/Packa
 brew install rclone
 ```
 
-1. Create a remote name `s3`
-2. `rclone copy s3:my-new-space my/path/`
+First we need to create a remote name `s3`
+
+To download files to AWS --> `rclone copy s3:my-new-space my_path`
+
+To upload files to AWS --> `rclone copy my_path s3:my-new-space/my_path`

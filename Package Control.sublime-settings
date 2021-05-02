@@ -19,6 +19,7 @@
 		"Package Control",
 		"SCSS",
 		"SublimeLinter",
-		"SublimeLinter-rubocop"
+		"SublimeLinter-rubocop",
+		"Vue Syntax Highlight"
 	]
 }
