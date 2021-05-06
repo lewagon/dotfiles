@@ -30,7 +30,7 @@ Sinatra就是我们所说的网页"微框架"。它基本上是一个微型Rails
 
 ## 详细说明
 
-### 主页
+### 主页面
 
 你应该编写一个主页`/`，显示所有艺术家的名单。
 点唱机的所有艺术家名单。点击一个艺术家的名字，你应该转到艺术家页面。
@@ -40,13 +40,13 @@ Sinatra就是我们所说的网页"微框架"。它基本上是一个微型Rails
 你应该编写一个`/artists/:id`页面，显示该艺术家的所有专辑。
 点击一个专辑名称，你应该重定向到专辑页面。
 
-### 专辑页
+### 专辑页面
 
 你应该编写一个`/albums/:id`页面，显示该专辑的曲目。
 点击一个曲目的名字，就会重定向到曲目页面。
 
-### 曲目页
+### 曲目页面
 
 你应该编写一个`/tracks/:id`页面，显示所有的曲目信息，如果你有时间的话，你可以看看像youtube这样的视频嵌入API服务，也可以在该页面上投放一个视频。
 
-完成后，使用[`ngrok`](https://github.com/lewagon/sinatra-101/blob/master/README.md#share-with-the-world)在Slack上分享你的工作👌。w
+完成后，使用[`ngrok`](https://github.com/lewagon/sinatra-101/blob/master/README.md#share-with-the-world)在Slack上分享你的作品 👌
