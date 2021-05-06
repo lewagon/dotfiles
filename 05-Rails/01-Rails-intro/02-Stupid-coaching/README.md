@@ -205,7 +205,7 @@ Then you need to install `chromedriver`:
 
 ```bash
  # macOS
-brew cask install chromedriver
+brew install --cask chromedriver
 
 # Ubuntu
 gem install chromedriver-helper
