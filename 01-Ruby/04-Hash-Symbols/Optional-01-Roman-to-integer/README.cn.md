@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 编写一个`roman_to_integer(roman_string)`方法，它将罗马数字转换为整数，'IV'转换为4, 'XVI'转换为16,等等。
 
 ## 进一步建议

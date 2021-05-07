@@ -1,9 +1,8 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景与目标
 
 购物有时很烦人，对吗？鉴于你现在已经是一个熟练的Ruby开发者了，你可能会发现开发自己的购物车更有趣！
 
-我们已经为你启动了这项工作：你将看到一个`interface.rb`文件已准备好录入你的购物清单，以及`store.rb`和`cart.rb`两个文件，它们包含商店和购物车的逻辑。
+我们已经为你准备好了这项工作：你将看到一个`interface.rb`文件已准备好录入你的购物清单，以及`store.rb`和`cart.rb`两个文件，它们包含商店和购物车的逻辑。
 
 你需要完成这三个文件，以使整个任务正确运行。完成`store.rb` and `cart.rb`里的方法（methods），并初始化`interface.rb`中的`cart`变量。
 你可以通过运行`ruby lib/interface.rb`来试试你的代码。
@@ -14,7 +13,7 @@
 
 花点时间想想，能够最好地描述一个商店的库存以及购物车数据结构是什么。然后：
 
-- 完成所有的`store.rb`和`cart.rb`中的所有功能
+- 完成`store.rb`和`cart.rb`中的所有功能
 - 别忘了初始化`interface.rb`文件中的`cart`变量
 - 检查是否所有的测试都通过了
 
