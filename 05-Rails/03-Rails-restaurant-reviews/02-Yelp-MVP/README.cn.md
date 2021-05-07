@@ -1,6 +1,7 @@
 ## 背景和目标
 本练习的目标是开发一个2个模型的Rails应用，一个restaurant模型和匿名的reviews模型。
 你可以在这里看到一个类似的例子，使用articles和comments模型，[Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model)。
+
 ## 生成Rails应用
 你将使用一个外部的由老师编写的详细说明文件specs来测试你的Rails应用，这就是为什么要在命令里面指定`-T`，意思是不要生成Rails内置的测试文件。
 以下是你将要运行的设置命令：
@@ -23,8 +24,8 @@ git commit -m "Prepare rails app with external specs"
 
 开始开发你的app之前，记得遵守我们的Rails前端指南[Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md)，确保你使用了simple form, Bootstrap，而且有stylesheets文件夹(⚠️ 只做 **setup** 这个环节, 不要使用 **Bootstrap JS**，这是明天的内容！)。
 
-### 测试你的代码Testing your code
-每次在你添加了一个数据库迁移文件之后（比如说 运行了`rails g model ...`之后），不要忘了在被用于详细说明specs的**测试数据库**上运行数据库迁移：
+### 测试你的代码
+每次在你添加了一个数据库迁移文件之后（比如说 运行了`rails g model ...`之后），不要忘了在**测试数据库**上运行数据库迁移：
 
 ```bash
 rails db:migrate RAILS_ENV=test  # 如果你添加了一个数据库迁移
@@ -64,7 +65,7 @@ rake
 ```
 如果运行`rake`不顺利的话，你需要运行`bin/rake`。这意味着你的环境变量`$PATH`没有包含`./bin` 文件夹，你可以通过dotfiles的zshrc来修复这个问题(查看 [我们的默认配置](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))。
 
-## 详细说明Specs
+## 详细说明
 
 ### 模型Models
 
@@ -108,21 +109,21 @@ rails c
 > yummy.restaurant            # 应该返回 bristol restaurant
 ```
 
-### 初始化Seed
+### 初始化
 
 - 在`db/seeds.rb`文件，使用至少5条有效的restaurant数据记录来初始化数据库。
 - 运行 `rails db:seed` 命令来执行初始化代码。
 
 ### 路由Routing / 控制器Controllers
 
-在开发网站应用的过程中，问问你自己需要哪些路由是一个非常重要的步骤。**路由应该精确镜像了产品的用户故事**。 我们在这里定义我们的最小产品：
+在开发网站应用的过程中，问问你自己需要哪些路由是一个非常重要的步骤。**路由应该精确镜像了产品的用户故事**。 我们在这里定义我们的最小可行性产品：
 
 - 访客可以看到所有的restaurants列表。
 
 ```
 GET "restaurants"
 ```
-- 访客可以添加一个新的restaurant，而且会被重定向到新添加restaurant的`show` 页面。
+- 访客可以添加一个新的restaurant，而且会被重定向到新添加的restaurant的`show` 页面。
 
 ```
 GET "restaurants/new"
