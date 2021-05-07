@@ -1,7 +1,6 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景与目标
 
-为了更好地理解`yield`，让我们试着重新实现[`Enumerable#map`](https://ruby-doc.org/core-2.5.3/Enumerable.html#method-i-map)方法，实际上不去直接使用它。
+为了更好地理解`yield`，让我们试着重新实现[`Enumerable#map`](https://ruby-doc.org/core-2.5.3/Enumerable.html#method-i-map)方法，而不是直接使用它。
 
 
 ## 详细说明
@@ -30,5 +29,5 @@ end
 
 ## 关键学习要点
 
-- 重新考虑你使用过的所有的迭代器（iterators）`#each_with_index`, `#select`, `#find`... 是不是已经100%清楚，他们是被一个语句块（block）调用的方法（methods）？
+- 重新想想你使用过的所有的迭代器（iterators）`#each_with_index`, `#select`, `#find`... 是不是已经100%清楚它们是调用时需要传递语句块（block）的方法（methods）？
 
