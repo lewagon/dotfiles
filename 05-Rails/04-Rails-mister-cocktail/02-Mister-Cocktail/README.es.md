@@ -59,7 +59,7 @@ rspec spec/models                # Launch tests
 Antes de empezar a escribir código, no olvides configurar el Front en tu app Rails. Agrega las dependencias de Bootstrap y JavaScript como viste en la clase de esta mañana.
 
 ```bash
-yarn add bootstrap jquery popper.js
+yarn add bootstrap@4.6 jquery popper.js
 ```
 
 Y también las gemas que vamos a necesitar:
