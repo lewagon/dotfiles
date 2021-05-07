@@ -1,7 +1,6 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景与目标
 
-这里是用一种编程语言进行**循环**的第三种方式：[递归(recursion)](http://stackoverflow.com/questions/6418017/what-is-ruby-recursion-and-how-does-it-work)。
+这是用编程语言进行**循环**的第三种方式：[递归(recursion)](http://stackoverflow.com/questions/6418017/what-is-ruby-recursion-and-how-does-it-work)。
 
 ## 详细说明
 

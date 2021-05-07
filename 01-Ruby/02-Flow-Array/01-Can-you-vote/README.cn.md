@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景与目标
 
 练习使用`if/else`来修改你的代码的运行流程（flow）。
@@ -22,4 +21,4 @@ end
 
 ## 可选练习
 
-- 你可以想出一个方法把你的代码重构成仅有一行吗？
+- 你可以想出一个方法把你的代码重构成仅一行吗？

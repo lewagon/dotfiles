@@ -1,7 +1,6 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景与目标
 
-从这个练习中，只需要学到一个教训：**阅读错误**！错误信息将告诉你：
+从这个练习中，只需要学到一件事：如何**阅读报错信息**！错误信息将告诉你：
 
 - 你犯了哪种错误
 - 错误发生在你的程序的哪一行
@@ -14,4 +13,4 @@
 rake
 ```
 
-"bugged_concatenate.rb"中的代码有一些错误。尝试通过阅读终端中的信息来修复它们。
+`bugged_concatenate.rb`中的代码有一些错误。尝试通过阅读终端中的信息来修复它们。
