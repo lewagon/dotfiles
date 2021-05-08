@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景与目标
 
 电子邮件（Email）是任何SaaS（软件即服务）业务的命脉，知道如何在程序中处理它们超级重要。
@@ -17,17 +16,17 @@
 
 你的登陆页已经准备就绪。你想确保来访者提交一个有效的email。
 
-编写`valid?`防范，它依据email的有效性返回一个正确的布林值（boolean）：
+编写`valid?`方法，它依据email的有效性返回一个正确的布林值（boolean）：
 - 识别电子邮件的不同部分，并编写一个正则表达式来匹配一个典型的email
-- 你自己编写一个简单的regex，没必要试图使其完美（写出一个完美的email regex时不可能的）！
+- 你自己编写一个简单的regex，没必要试图使其完美（写出一个完美的email regex是不可能的）！
 
 **警告：**正则表达式是不足以表达出能验证100%合规的电子邮件地址，详见[这个Stackoverflow的讨论](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression)以及[这个网站](https://emailregex.com/) 的阐述。在专业的环境中，我们倾向于使用外部服务，例如[Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/)或[Mailgun](https://www.mailgun.com/email-validation/) 所提供的服务，它使用了一个巨大的数据库和机器学习来判断一个地址是否正确。
 
 #### Email地址的模式
 
-每一个电子邮件地址是由一个**用户名（username）**和一个**域名（domain name）**联合组成。它遵循一下的模式：
+每一个电子邮件地址是由一个**用户名（username）**和一个**域名（domain name）**组成。它遵循一下的模式：
 
-![Pattern of an email address](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email.svg?sanitize=true)
+![email的格式](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email.svg?sanitize=true)
 
 #### 关于域名
 
@@ -42,7 +41,7 @@
 
 ### 清理数据库
 
-![清理数据库（Clean the database）](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step2.svg?sanitize=true)
+![清理数据库](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step2.svg?sanitize=true)
 
 几天过去了，你的数据库已经填入了一些有用的联系人。你的营销团队从专业人士那里获得了更多的数据以扩大受众。在发布邮件广告活动之前，你需要清理数据库并过滤掉任何无效的eamil。
 
@@ -51,7 +50,7 @@
 - 它返回一个仅包含有效email的数组
 
 ### 生成统计数据
-![生成统计数据（Build statistics）](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step3.svg?sanitize=true)
+![生成统计数据](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step3.svg?sanitize=true)
 
 你的登陆页包含了一个非常简单的表格仅用户收集联系人电子邮箱。你并不是很了解你的客户，但你可以从email地址推断出一些信息。你决定统计一下TLD（顶级域名，Top Level Domains）。**从现在起，所有你正在使用的数据库都已经为你清理干净了。**
 
@@ -69,7 +68,7 @@
 
 ### 邮件广告活动
 
-![邮件广告活动（Emailing campaign）](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step4.svg?sanitize=true)
+![邮件广告活动](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step4.svg?sanitize=true)
 
 你现在开始处理你的邮件主体，并希望它是定制化的。以“亲爱的顾客（Dear customer）”开头，听起来并不好，你宁愿从邮件中提取出用户名并以“Dear Seb”开头。
 
@@ -85,7 +84,7 @@
 }
 ```
 
-### （可选）使用`本地化（locale）`翻译
+### （选做）使用`本地化（locale）`翻译
 
 你对TLD所做的统计数据显示，你的很多客户来自德国和法国。你订购了这两种语言的翻译。翻译为你提供了这个：
 
@@ -143,12 +142,3 @@ translate(:subject, :en)
 translate(:subject, :fr)
 # "Notre site est en ligne"
 ```
-
-
-
-
-
-
-
-
-

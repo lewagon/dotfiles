@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景与目标
 
 - 处理文本文件
