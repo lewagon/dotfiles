@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 指引
 
 冬天来了 ⛄⛄⛄。我们想要构建一个程序，用来处理我们的礼物清单，标记已经买好的东西，并最终找从外部网站到一些灵感，例如Esty。这个挑战应该会花去你一整天的时间。🎁
@@ -45,7 +44,7 @@ ruby interface.rb
 
 现在，让我们完成简单的行动（`list`, `add`, `delete`）。
 
-- 你如果为你的`gift_list`建模？
+- 如何为你的`gift_list`建模？
 - 你会使用哈希（hash）？还是数组（array）？
 
 ** 在你开始每一个行动之前，先和你的老师讨论一下**
@@ -80,9 +79,9 @@ ruby interface.rb
 
 同样，**和你的老师进行讨论**
 
-##步骤4 - 在Esty上找到好主意 🎁🎁🎁🎁
+##步骤4 - 在Esty上找到灵感 🎁🎁🎁🎁
 
-你没有圣诞节创意，想从[Etsy](https://www.etsy.com)上面获取灵感。
+你想不出要为圣诞节买什么，想从[Etsy](https://www.etsy.com)上面获取灵感。
 在你的菜单上增加一个`idea`行动（除了“列表”，“添加”，“删除”和“标记”行动之外）。以下是该行动的工作方式：
 
 
@@ -126,7 +125,7 @@ doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |elemen
   puts element.text.strip
 end
 ```
-一旦你的爬虫在你的本地文件`results.html`上正常工作，更新它以使其连接到Esty关于任何关键词的结果页， 并爬取在线页面：
+一旦你的爬虫在你的本地文件`results.html`上正常工作，你就可以让它连接到Esty关于任何关键词的结果页，并爬取在线页面：
 
 ```ruby
 require 'open-uri'
@@ -146,10 +145,10 @@ doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |elemen
   puts element.text.strip
 end
 ```
-- 采用这个脚本，随意爬取另一个网站
+- 你可以更改这个脚本，让它爬取另一个网站
 - 另外，你不仅可以抓取名称，还可以抓取其他信息（例如商品的价格）。
 
-## [可选]将礼物保存为CSV文件🎁🎁🎁🎁🎁
+## [选做题]将礼物保存为CSV文件🎁🎁🎁🎁🎁
 我们想要在每次启动程序时，提取礼物清单。
 创建一个文件`gifts.csv`，将你的数据永久地保存在本地。
 
@@ -175,7 +174,7 @@ csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
 filepath    = 'gifts.csv'
 
 CSV.open(filepath, 'wb', csv_options) do |csv|
-  # CSV有标头
+  # CSV有标题
   csv << ['name', 'price', 'bought']
   #TODO: 存储每个礼物
 end
@@ -183,7 +182,3 @@ end
 
 - 找到加载礼物的最佳时机。
 - 什么时候你需要保存礼物？
-
-
-
-

@@ -1,4 +1,3 @@
-<!-- Please put your translation here and with the same style in README.md -->
 ## 背景与目标
 
 ## 例子
@@ -24,7 +23,7 @@ doc.search('.wt-grid .v2-listing-card__info .text-body').each_with_index do |ele
 end
 ```
 
-如果你启动此代码，它将打印在[Etsy](https://www.etsy.com/search?q=wallet)上第一页结果中找到的所有的钱包。
+如果你启动此代码，它将打印在[Etsy](https://www.etsy.com/search?q=wallet)上搜索钱包的第一页的结果。
 
 它是如何工作的？
 
@@ -41,5 +40,3 @@ end
 我们想要爬取某个城市在[craigslist](https://craigslist.org/) 上列出的**古玩（antiques）**。打开 `lib/scraper.rb`并完成`scrape_craiglist_antiques`方法。它应该返回一个网站上找到的古玩`数组（Array）`。
 
 这个方法应该能够成功抓取伦敦和纽约。因此，`scrape_craiglist_antiques("london")`和`scrape_craiglist_antiques("newyork")`应该都能返回结果。所有城市的craiglist网址（url）都是一样的吗？
-
-
