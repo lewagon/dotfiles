@@ -26,7 +26,7 @@ fox = { color: "red", species: "mammal" }
 fox = { :color => "red", :species => "mammal" }
 ```
 
-Read [this StackOverflow answer](http://stackoverflow.com/a/8189435/197944/) if you really want to get into the subtle differences between Strings and Symbols. The concept of **mutability** is important here.
+如果你确实想了解字符串（string）和符号（symbol）之间的细微差别，请阅读[这个StackOverflow的回答](http://stackoverflow.com/a/8189435/197944/)。此处，**可变性（mutability）**的概念很重要。
 
 ## 详细说明
 

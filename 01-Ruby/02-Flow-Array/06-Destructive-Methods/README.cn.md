@@ -11,7 +11,7 @@
 例如，`["Abricot du Laudot", "Black Caviar", "Brigadier Gerard"]`在格式编排后应该变为`["3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]`。
 这是主持人能理解的唯一格式！
 
-**🤔 Tip:** Don't hesitate to open the file in the `spec` folder and **read the test code** to understand what's going on. This is the code which gets executed when you run `rake` in your terminal.
+**🤔 提示:** 你可以随时打开`spec`文件夹中的文件，并**阅读测试代码**以便理解发生了什么。这是当你在终端中运行`rake`时所执行的代码。
 
 ## 进一步建议 & 资源
 
