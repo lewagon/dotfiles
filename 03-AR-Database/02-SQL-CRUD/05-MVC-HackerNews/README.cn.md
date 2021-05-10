@@ -24,7 +24,7 @@ ruby app.rb
 
 我们为你提供了脚本`reset_db.rb`，你可以用它来运行。
 
-``bash
+```bash
 ruby reset_db.rb
 ```
 

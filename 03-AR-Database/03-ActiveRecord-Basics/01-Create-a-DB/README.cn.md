@@ -14,7 +14,7 @@ rake db:timestamp # 给你的迁移文件名提供一个时间戳
 
 ## 设置
 
-不要忘记在你的终端上运行这个:
+不要忘记在你的终端上运行下面这段代码:
 
 ```bash
 gem install activerecord -v 6.0

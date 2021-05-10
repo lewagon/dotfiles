@@ -1,7 +1,7 @@
 ## 背景与目标
 
 再次假设你的`Post`类可以访问一个全局的`DB`，定义为
-变量，定义如下：
+变量，其定义如下：
 
 ```ruby
 DB = SQLite3::Database.new("a_file.db")
@@ -30,4 +30,4 @@ post.title = "很棒的文章，更新了"
 post.save # TODO: 应该更新数据库中的记录
 ```
 
-你可能需要使用[last_insert\_row\_id](http://zetcode.com/db/sqliteruby/connect/)。
+你可能需要使用[last\_insert\_row\_id](http://zetcode.com/db/sqliteruby/connect/)。

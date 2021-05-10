@@ -1,6 +1,6 @@
 ## 背景和目标
 
-现在`Post`和`User`之间的关联已经到位，让我们给模型添加一些验证，确保我们不会在数据库中存储**不一致的**数据。在开始练习之前，请花15分钟时间，从上到下仔细阅读这个指南:
+现在`Post`和`User`之间的关联已经到位，让我们给模型添加一些验证，确保我们不会在数据库中存储**不一致的**数据。在开始练习之前，请花15分钟时间，从上到下仔细阅读下方这个指南:
 
 [guides.rubyonrails.org/active\_record\_validations](http://guides.rubyonrails.org/active_record_validations.html)
 
@@ -47,7 +47,7 @@ class User
 end
 ```
 
-阅读[Active Record Callbacks guide](http://guides.rubyonrails.org/active_record_callbacks.html)来回答最后一个面子问题。
+阅读[Active Record Callbacks guide](http://guides.rubyonrails.org/active_record_callbacks.html)来回答最后一个问题。
 
 实现一个回调，在验证前剥离电子邮件。
 
@@ -56,5 +56,5 @@ end
 现在我们没有Rails或像[letter_opener](https://github.com/ryanb/letter_opener)这样的实用工具，所以我们将用下面的方法回调用来模拟发送电子邮件。
 
 ```ruby
-FakeMailer.instance.mail('boris@lewagon.org', '欢迎来到HN！')
+FakeMailer.instance.mail('boris@lewagon.org', 'Welcome to HN!')
 ```

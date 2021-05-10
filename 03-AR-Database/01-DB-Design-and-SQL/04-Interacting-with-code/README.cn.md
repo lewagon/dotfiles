@@ -12,7 +12,7 @@ gem install sqlite3
 
 ## 详细说明
 
-👉 **重要的是**: 每个方法都需要一个`db`参数，这是一个`SQLite3::Database`的实例，你可以在上面调用`execute`方法。这个`db`是**由测试建立的，并传递给方法**。不需要自己创建一个来满足`rake`。你的方法将看起来像这样:
+👉 **重要的是**: 每个方法都需要一个`db`参数，这是一个`SQLite3::Database`的实例，你可以在上面调用`execute`方法。这个`db`是**由测试建立的，并传递给方法**。你不需要自己创建一个来满足`rake`。你的方法将看起来像这样:
 
 ```ruby
 def the_method(db)
@@ -22,7 +22,7 @@ def the_method(db)
 
   # 然后你就需要返回一些东西。
   return ?
-结束
+end
 ```
 
 👉 要在`irb`中（或在`lib/queries.rb`文件中）尝试你的代码，你需要自己构建`db`:
@@ -80,7 +80,7 @@ rows = db.execute(query)
 
 在之前的练习中，你已经认识了这些工具。使用它们吧!
 
-- [SQLite Pro (仅限macOS，付费但试用似乎没有限制)](https://www.sqlitepro.com/)
+- [SQLite Pro (仅限macOS，可以试用)](https://www.sqlitepro.com/)
 - [SQLStudio（免费）](http://sqlitestudio.pl/)
 - [SQLite浏览器（免费）](http://sqlitebrowser.org/)
 

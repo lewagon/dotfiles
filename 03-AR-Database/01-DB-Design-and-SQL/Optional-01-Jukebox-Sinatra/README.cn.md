@@ -1,7 +1,7 @@
 ## 背景与目标
 
 我们想建立一个小型的[Sinatra](http://www.sinatrarb.com/)网页应用程序来显示Jukebox数据库的所有信息。
-这个练习有一个rake，可以测试你的sinatra应用程序，为了让它工作，在终端运行`gem install rack-test`。
+这个练习有一个rake，可以测试你的sinatra应用程序，为了让它工作，需要在终端运行`gem install rack-test`。
 
 ## 设置
 
@@ -24,7 +24,7 @@ ruby lib/app.rb
 
 Sinatra就是我们所说的网页"微框架"。它基本上是一个微型Rails，也遵循**MVC**模式。
 `app.rb`文件充当控制器。路由器层则由Sinatra处理。
-我们已经创建了一个控制器方法来处理网页应用程序的根（root）。Sinatra将浏览器中的URL映射到`app.rb`中的正确方法。请看一下[routing doc](http://www.sinatrarb.com/intro.html#Routes)，了解更多信息。
+我们已经创建了一个控制器方法来处理网页应用程序的根文件（root）。Sinatra将浏览器中的URL映射到`app.rb`中的正确方法。请看一下[routing doc 路由](http://www.sinatrarb.com/intro.html#Routes)，了解更多信息。
 
 不要犹豫，在我们自制的[教程](https://github.com/lewagon/sinatra-101)中阅读更多关于Sinatra的内容（跳过**设置**部分，因为你在`lib`文件夹中已经有一个模板了）。
 

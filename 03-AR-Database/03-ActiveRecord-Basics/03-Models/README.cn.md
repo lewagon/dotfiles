@@ -44,5 +44,5 @@ ruby app.rb
 ## 关键学习点
 
 * 什么是ORM？它是如何简化你的生活的？
-* Active Record映射依靠的是什么命名规则？魔法从何而来？
+* Active Record对象关系映射依靠的是什么命名规则？他背后的原理是什么？
 * 你能看出使用ActiveRecord比自己写所有的SQL要好得多吗？

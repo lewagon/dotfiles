@@ -33,7 +33,7 @@ sqlite3 lib/db/jukebox.sqlite
 
 你也可以使用一个**SQLite查看器**应用程序来读取SQLite数据库，探索模式，甚至**运行SQL查询**。
 
-- [SQLite Pro (仅限macOS，付费但试用似乎没有限制)](https://www.sqlitepro.com/)
+- [SQLite Pro (仅限macOS，可以选择试用)](https://www.sqlitepro.com/)
 - [SQLStudio（免费）](http://sqlitestudio.pl/)
 - [SQLite浏览器（免费）](http://sqlitebrowser.org/)
 
@@ -62,10 +62,10 @@ cd ~/code/your-github-username/fullstack-challenges/03-AR-Database/01-DB-Design-
 sqlitebrowser lib/db/jukebox.sqlite
 ```
 
-如果你在打开你的DB时得到错误`could not initialize SDL`，你需要在你的Windows Defender中添加一个异常，以允许Xming公共输入流量通过UDP和TCP协议。你可以按照这个流程[文档](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule)。
+如果你在打开你的DB时得到错误`could not initialize SDL`，你需要在你的Windows Defender中添加一个异常，以允许Xming公共输入流量通过UDP和TCP协议。你可以按照这个[文档](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule)的流程。
 
 
-❓ 我应该使用命令行`sqlite3`，还是上面的一个可视化工具？是的，两者都很有用! 出于两个原因，学习一下命令行的操作是很好的。一方面，[CLI](https://en.wikipedia.org/wiki/Command-line_interface)允许你专注于SQL查询。另一方面，[GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)工具将证明对探索数据库模式结构(表？列？等等)有帮助。两个都试试吧!
+❓ 我应该使用命令行`sqlite3`，还是以上其中一个可视化工具？是的，两者都很有用! 出于两个原因，学习一下命令行的操作是很好的。一方面，[CLI](https://en.wikipedia.org/wiki/Command-line_interface)允许你专注于SQL查询。另一方面，[GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)工具将证明对探索数据库模式结构(表？列？等等)有帮助。两个都试试吧!
 
 ## 详细说明
 

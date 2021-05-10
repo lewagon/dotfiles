@@ -27,24 +27,24 @@ CREATE TABLE `posts` (
 
 添加`initialize`方法，将上述列存储在实例变量中。添加相关的读取器和访问器。
 
-### `find'
+### `find`
 
 在`Post`类上实现一个**类**方法`find(id)`，该方法需要
 一个整数作为参数（帖子ID），并返回一个`Post`的实例。
 
 (假设在程序中定义了一个全局变量`DB`，不需要
-你要实例化它)
+你去实例化它)
 
 我们希望你能保护`find`方法，防止**SQL注入**。你可能会问，什么是SQL注入？好吧，如果你能[hack this bank](https://www.hacksplaining.com/exercises/sql-injection#/start)，你会明白的！。
 这是一个关于练习的提示。你可能需要使用[占位符](http://ruby.bastardsbook.com/chapters/sql/#placeholders-sqlite-gem)，向`.execute`方法传递几个参数。
 
 ### `all`
 
-在`Post`类上实现一个**类**的方法`all`，该方法不需要任何参数，并返回一个包含每个`Post`实例的数组。
+在`Post`类上实现一个**类**的方法`all`，该方法不需要任何参数，但它将会返回一个包含每个`Post`实例的数组。
 
 ## 进一步的建议
 
-SQL注入是一种攻击类型，使用你的应用程序的人不会只是将一个普通的整数`id`传递给`find`方法，而是添加一个邪恶的字符串来破坏你的数据。如果你看一下详细说明中的SQL查询，你会明白什么意思。
+SQL注入是一种攻击类型，使用你的应用程序的人不会只是将一个普通的整数`id`传递给`find`方法，而是添加一个邪恶的字符串😈来破坏你的数据。如果你看一下详细说明中的SQL查询，你会明白什么意思。
 
 你可以阅读[这篇Medium文章](https://medium.com/@yelstin.fernandes/how-to-add-items-to-a-database-table-using-ruby-sqlite3-74dcd8f931f9)和[这篇StackOverflow答案](https://stackoverflow.com/questions/13462112/inserting-ruby-string-into-sqlite#answer-13462218)，以了解SQL注入的情况 👌
 
