@@ -11,7 +11,7 @@
 现在没有`rake`了，所以不要在`fullstack-challenges`里面创建你的Rails应用⛔
 
 ```bash
-cd ~/code/<你的github名字>
+cd ~/code/<user.github_nickname>
 rails new rails-simple-airbnb --skip-active-storage --skip-action-mailbox
 cd rails-simple-airbnb
 git add .
@@ -40,7 +40,7 @@ git push origin master
 
 ### 3 - 初始化Seed
 
-我们在控制台`rails console`里创建一些公寓，或者更好的方法是为我们的应用创建一个种子文件。尽管我们不能通过网站来添加公寓，这仍然会帮助我们设计视图。我们在`db/seeds.rb` 文件里创建大约4个公寓。你可以从这一个开始：
+我们在控制台`rails console`里创建一些公寓，或者更好的方法是为我们的应用创建一个种子文件（seed file)。尽管我们暂时不能通过网站来添加公寓，这仍然会帮助我们设计视图。我们在`db/seeds.rb` 文件里创建大约4个公寓。你可以从这一个开始：
 
 
 ```ruby
@@ -79,7 +79,7 @@ Flat.create!(
 
 ### 7 - 做为用户，我可以编辑一个公寓的详细信息
 
-我们也要添加编辑一个公寓的选项，以便在创建公寓后可以去除拼写错误。重构`new.html.erb`，把它做成一个局部视图怎么样？
+我们也要添加编辑一个公寓的选项，以便在创建公寓后可以去除拼写错误。重构`new.html.erb`，把它做成一个局部视图（view partial）怎么样？
 
 别忘了使用新的编辑公寓的链接来更新`index.html.erb` 和 `show.html.erb`视图！
 
