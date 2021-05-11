@@ -1,13 +1,15 @@
 ## 背景和目标
-本练习的目标是开发一个2个模型的Rails应用，一个restaurant模型和匿名的reviews模型。
+
+本练习的目标是开发一个2个模型的Rails应用，一个restaurant模型和匿名的review模型。
 你可以在这里看到一个类似的例子，使用articles和comments模型，[Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model)。
 
 ## 生成Rails应用
+
 你将使用一个外部的由老师编写的详细说明文件specs来测试你的Rails应用，这就是为什么要在命令里面指定`-T`，意思是不要生成Rails内置的测试文件。
 以下是你将要运行的设置命令：
 
 ```bash
-cd ~/code/<你的github用户名>
+cd ~/code/<user.github_nickname>
 rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
 cd rails-yelp-mvp
 git add .
@@ -22,13 +24,13 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-开始开发你的app之前，记得遵守我们的Rails前端指南[Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md)，确保你使用了simple form, Bootstrap，而且有stylesheets文件夹(⚠️ 只做 **setup** 这个环节, 不要使用 **Bootstrap JS**，这是明天的内容！)。
+开发你的app之前，记得遵守我们的[Rails前端指南](https://github.com/lewagon/rails-stylesheets/blob/master/README.md)，确保你使用了simple form, Bootstrap，而且有stylesheets文件夹(⚠️ 只做 **setup** 这个环节, 不要使用 **Bootstrap JS**，这是明天的内容！)。
 
 ### 测试你的代码
 每次在你添加了一个数据库迁移文件之后（比如说 运行了`rails g model ...`之后），不要忘了在**测试数据库**上运行数据库迁移：
 
 ```bash
-rails db:migrate RAILS_ENV=test  # 如果你添加了一个数据库迁移
+rails db:migrate RAILS_ENV=test  # 添加了一个数据库迁移之后运行
 ```
 测试你的代码是非常简单方便的
 
@@ -63,7 +65,7 @@ rake
 # rspec ./spec/models/review_spec.rb:51 # Review rating should be an integer
 # rspec ./spec/models/review_spec.rb:58 # Review rating should be a number between 0 and 5
 ```
-如果运行`rake`不顺利的话，你需要运行`bin/rake`。这意味着你的环境变量`$PATH`没有包含`./bin` 文件夹，你可以通过dotfiles的zshrc来修复这个问题(查看 [我们的默认配置](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))。
+如果运行`rake`不顺利的话，你需要运行`bin/rake`。这意味着你的环境变量`$PATH`没有包含`./bin` 文件夹，你可以通过dotfiles的zshrc来修复这个问题(查看[我们的默认配置](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))。
 
 ## 详细说明
 
@@ -81,7 +83,7 @@ rake
 #### 验证Validation
 
 - 一个 restaurant 必须要有name，address 和 category。
-- 一个 restaurant的 category 必须在这个固定的清单里: `["chinese", "italian", "japanese", "french", "belgian"]`.
+- 一个 restaurant的 category 必须在这个固定的清单里: `["chinese", "italian", "japanese", "french", "belgian"]`。
 - 一个restaurant被删除之后，它所有的reviews也必须被删除。
 - 一个 review 必须属于一个restaurant。
 - 一个 review 必须要有content 和 rating。
@@ -116,14 +118,14 @@ rails c
 
 ### 路由Routing / 控制器Controllers
 
-在开发网站应用的过程中，问问你自己需要哪些路由是一个非常重要的步骤。**路由应该精确镜像了产品的用户故事**。 我们在这里定义我们的最小可行性产品：
+在开发网站应用的过程中，问问你自己需要哪些路由是一个非常重要的步骤。**路由应该精确模拟了产品的用户故事**。 我们在这里定义我们的最小可行性产品（Minimum Viable Product）：
 
 - 访客可以看到所有的restaurants列表。
 
 ```
 GET "restaurants"
 ```
-- 访客可以添加一个新的restaurant，而且会被重定向到新添加的restaurant的`show` 页面。
+- 访客可以添加一个新的restaurant，而且会被重定向（redirect）到新添加的restaurant的`show` 页面。
 
 ```
 GET "restaurants/new"
@@ -154,7 +156,7 @@ POST "restaurants/38/reviews"
 
 现在是时候实现这个产品所需要的所有路由了！
 
-**提示:** 你需要使用[嵌套资源]来处理路由`GET "restaurants/38/reviews/new"`, [嵌套资源](http://guides.rubyonrails.org/routing.html#nested-resources).
+**提示:** 你需要使用[嵌套资源](http://guides.rubyonrails.org/routing.html#nested-resources)来处理路由`GET "restaurants/38/reviews/new"`。
 
 ### 视图Views
 
@@ -217,7 +219,7 @@ POST "restaurants/38/reviews"
 </form>
 ```
 
-这个URL是和你在`routes.rb`里定义的路由`POST "restaurants/:restaurant_id/reviews"`保持一致的。可以看一下这篇文章，有更多的信息[文章](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources)。
+这个URL是和你在`routes.rb`里定义的路由`POST "restaurants/:restaurant_id/reviews"`保持一致的。可以看一下这篇[文章](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources)，有更多的信息。
 
 **提示:** 安装[simple_form](https://github.com/plataformatec/simple_form) gem， 可以使用更轻量化语法的而且和bootstrap兼容的表单。
 
