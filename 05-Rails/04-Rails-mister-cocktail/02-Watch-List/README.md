@@ -69,7 +69,7 @@ And add the gems we're going to need:
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 ```
