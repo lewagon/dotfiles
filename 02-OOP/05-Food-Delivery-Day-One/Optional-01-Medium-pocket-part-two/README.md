@@ -14,7 +14,7 @@ We want to extend the user actions to:
 3. Read post
 4. Mark post as read
 5. List authors         # NEW
-6. List author's posts  # NEW
+6. List author\'s posts  # NEW
 7. See author info      # NEW
 8. Exit
 ```
@@ -141,7 +141,7 @@ Phew, the hardest part is behind us. This one is an easy one. We want to list au
 It will need to access the author repo and an authors view. The view must display authors names and associated unread posts in an indexed list:
 
 ```bash
-1. Magnus Skog 
+1. Magnus Skog
 2. Molly Struve (2 unread)
 ```
 
@@ -156,7 +156,7 @@ As always, start by breaking down the action in small steps in pseudo-code, then
 Our user must see the following in the terminal when choosing Molly Struve:
 
 ```bash
-1. Magnus Skog 
+1. Magnus Skog
 2. Molly Struve (2 unread)
 Index?
 > 2
