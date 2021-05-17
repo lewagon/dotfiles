@@ -26,7 +26,7 @@ git push origin master
 可以随时在控制台`rails console`测试你的模型：
 
 ```ruby
-new_article = Article.new(title: '生活的意义', content: "已经42岁了!")
+new_article = Article.new(title: 'The meaning of life', content: "It's 42!")
 new_article.valid?  # => should be `true`
 new_article.save    # => should not display rollback warnings
 Article.last        # => should be the one you just saved
