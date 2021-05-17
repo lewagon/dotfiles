@@ -58,7 +58,7 @@ Task.create title: '学习', details: '有很多卡片要学习', completed: tru
 
 使用`link_to`帮助方法创建链接并更新`index.html.erb`。
 
-⚠️ 再一次，现在先不要急着在视图里开发复选框的外观视觉效果。在选做练习你有机会来开发的。
+⚠️ 再一次，现在先不要急着在视图里开发复选框的外观视觉效果。在选做练习中你会有机会来开发的。
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index_show.gif)
 
@@ -85,8 +85,8 @@ Task.create title: '学习', details: '有很多卡片要学习', completed: tru
 仔细研究你的代码，并且引入以下重构：
 
 1. 在`config/routes.rb`使用`resources`
-1. 在`TasksController`使用`before_action`
-1. 我们可以在`new` 和 `edit`视图不要重复自己`DRY`吗？我们如何让新建任务的表单**不要**显示已完成？([提示](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F))
+2. 在`TasksController`使用`before_action`
+3. 我们可以在`new` 和 `edit`视图不要重复自己`DRY`吗？我们如何让新建任务的表单**不要**显示已完成？([提示](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F))
 
 ### 9 - 复选框外观视觉效果（选做）
 
