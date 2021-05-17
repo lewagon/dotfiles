@@ -265,6 +265,7 @@ end
 Run the test in the terminal with:
 
 ```bash
+rails db:migrate
 rails test:system
 ```
 
