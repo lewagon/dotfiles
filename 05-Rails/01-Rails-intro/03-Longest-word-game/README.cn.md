@@ -8,7 +8,7 @@
 
 ## 设置
 
-现在没有`rake`了，所以不要在`fullstack-challenges`里面创建你的Rails应用。你应该在下面的目录里创建你的应用（Kitt将不能再显示你的分数了，伤心）：
+现在没有`rake`了，所以不要在`fullstack-challenges`里面创建你的Rails应用。你应该在下面的目录里创建你的应用（Kitt将不能再显示你的分数了，伤心伤心💔）：
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -34,9 +34,9 @@ git push origin master
 打开`routes.rb`文件，调整上一个命令自动生成的路由。最后，运行`rails routes`命令，应该返回类似下面这样的路由：
 
 ```bash
-前缀Prefix   动词Verb URI 模式Pattern      控制器Controller#动作Action
-new         GET  /new(.:format)          games#new
-score       POST /score(.:format)        games#score
+Prefix   Verb URI Pattern       Controller#Action
+new      GET  /new(.:format)    games#new
+score    POST /score(.:format)  games#score
 ```
 
 ### 2 - 生成一个新游戏
@@ -94,7 +94,7 @@ end
 
 ### 5 - 计算得分
 
-是时候实现`GamesController#score`逻辑了。我们手边有所有的信息吗？我们还需要什么？我们需要通过`POST`传入更多信息吗？阅读[`hidden_field_tag`](http://api.rubyonrails.org/v5.1/classes/ActionView/Helpers/FormTagHelper.html#method-i-hidden_field_tag)。
+是时候实现`GamesController#score`逻辑了。我们手边有所有的信息吗？我们还需要什么？我们需要通过`POST`传入更多信息吗？请阅读[`hidden_field_tag`](http://api.rubyonrails.org/v5.1/classes/ActionView/Helpers/FormTagHelper.html#method-i-hidden_field_tag)。
 
 我们需要处理3种场景：
 
