@@ -225,7 +225,7 @@ GET "lists"
 - A user can see the details of a given list and its name
 
 ```
-GET "list/42"
+GET "lists/42"
 ```
 
 - A user can create a new list
