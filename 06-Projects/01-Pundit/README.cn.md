@@ -5,10 +5,10 @@
 对于**每一步**，都请老师验证。如果你们想在不需要的代码上浪费时间的话，那么可以上来就直接写代码。
 
 #### 用户故事
-复制这个 [表格](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) （每组1份） 并邀请你的队友一起合作。
+复制这个 [表格](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) (需要VPN 🛡) （每组1份） 并邀请你的队友一起合作。
 
-![复制](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/duplicate.png)
-![重命名](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/rename.png)
+![复制](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/duplicate.png)
+![重命名](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/rename.png)
 
 写下你们的 **用户故事**。你们应该有不超过15个故事。按照用户旅程把它们分组。
 

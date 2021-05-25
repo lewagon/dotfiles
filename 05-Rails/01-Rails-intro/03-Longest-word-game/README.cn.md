@@ -55,7 +55,7 @@ score    POST /score(.:format)  games#score
 ```erb
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 ```
-这行代码会添加一个带有`authenticity_token`的隐藏的输入框，这保证了`POST`请求是来自于你的网站，而不是其它网站。阅读这个[stack overflow帖子](https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token)，如果你想知道更多关于[CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)(跨站请求伪造cross-site request forgery)和为什么Rails会默认添加这一个安全层！
+这行代码会添加一个带有`authenticity_token`的隐藏的输入框，这保证了`POST`请求是来自于你的网站，而不是其它网站。阅读这个[stack overflow帖子](https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token)，如果你想知道更多关于[CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) (需要VPN 🛡 )(跨站请求伪造cross-site request forgery)和为什么Rails会默认添加这一个安全层！
 
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game_with_form.png)

@@ -21,7 +21,7 @@ cp .03-Farming-Diary-Animals/lib/{animal.rb,cow.rb,chicken.rb} lib
 当玩家选择一个动作时，我们使用我们的类将其翻译成代码，然后继续下一个选择。这是一个循环。
 让我们一步一步来建造它。
 
-![循环](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/loop.svg?sanitize=true)
+![循环](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/loop.svg)
 
 
 这个挑战没有 `rake` 。

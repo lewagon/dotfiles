@@ -7,7 +7,7 @@
 
 这个农场有两种作物（大米和玉米）。
 
-![作物](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/crops.svg?sanitize=true)
+![作物](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/crops.svg)
 
 与你的伙伴讨论：需要建多少个类，和如何构造它们？
 

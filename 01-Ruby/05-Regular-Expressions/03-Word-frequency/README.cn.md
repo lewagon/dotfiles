@@ -25,7 +25,7 @@ most_common_words('source-text.txt', 'stop_words.txt', 3)
 
 ### 摆脱噪音
 
-在你的方法中增加一个过滤器，摆脱掉[停用词（stop word）](http://en.wikipedia.org/wiki/Stop_words)例如"a"，"the"，"is"等等。我们已经给了你一个文本文件"stop_words.txt"包含英文停用词。你应该在你的程序中使用这个文件。
+在你的方法中增加一个过滤器，摆脱掉[停用词（stop word）](http://en.wikipedia.org/wiki/Stop_words) (需要VPN 🛡 )例如"a"，"the"，"is"等等。我们已经给了你一个文本文件"stop_words.txt"包含英文停用词。你应该在你的程序中使用这个文件。
 
 ### 玩点创意
 

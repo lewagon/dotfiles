@@ -41,7 +41,7 @@ echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'
 安装[Xming](https://sourceforge.net/projects/xming/).
 启动XLaunch，保留默认设置，但需要同时 **添加以下可选参数** `-ac`。
 
-![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
+![xlaunch](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/xlaunch.jpg)
 
 如果在运行游戏时出现错误 `could not initialize SDL` ，则需要在Windows Defender中添加一个异常，以允许Xming 通过UDP和TCP协议输入公共流量。你可以参照这个[文件](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule)。
 

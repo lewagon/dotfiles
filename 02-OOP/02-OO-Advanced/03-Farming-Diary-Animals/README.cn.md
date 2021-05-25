@@ -5,7 +5,7 @@
 ## 详细说明
 这个农场有两种动物：牛和鸡。
 
-![动物](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/animals.svg?sanitize=true)
+![动物](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/animals.svg)
 
 与你的伙伴讨论：需要建多少个类，和如何构造它们？
 

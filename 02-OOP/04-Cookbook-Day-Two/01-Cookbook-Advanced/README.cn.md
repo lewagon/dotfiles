@@ -1,7 +1,7 @@
 ⚠️ 这个练习 **没有 `rake`** 。 对不起 😉
 
 所以现在我们想通过在网上找到食谱来增强我们的cookbook。我们将使用
-[🇫🇷 Marmiton](http://www.marmiton.org) 或 [🇬🇧 allrecipes](https://www.allrecipes.com)，因为它们的标记结构非常干净（这使它们成为好的爬虫候选者）。如果你想选择其他食谱网站，请继续！它只需要有一个 **搜索** 功能，搜索关键字中传递在[query string](https://en.wikipedia.org/wiki/Query_string).
+[🇫🇷 Marmiton](http://www.marmiton.org) 或 [🇬🇧 allrecipes](https://www.allrecipes.com)，因为它们的标记结构非常干净（这使它们成为好的爬虫候选者）。如果你想选择其他食谱网站，请继续！它只需要有一个 **搜索** 功能，搜索关键字中传递在[query string](https://en.wikipedia.org/wiki/Query_string) (需要VPN 🛡 ).
 
 ## 设置
 

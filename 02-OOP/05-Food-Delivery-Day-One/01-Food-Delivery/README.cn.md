@@ -138,7 +138,7 @@ ruby app.rb
 
 ### 3.2 - Refactor repositories with inheritance
 
-`MealRepository` 和 `CustomerRepository` 有很多相似之处，不是吗？为了保持[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), ，我们需要定义一个父类,`BaseRepository`，它有所有 `MealRepository` 和`CustomerRepository` 共同分享的行为会从中继承。
+`MealRepository` 和 `CustomerRepository` 有很多相似之处，不是吗？为了保持[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (需要VPN 🛡 ), ，我们需要定义一个父类,`BaseRepository`，它有所有 `MealRepository` 和`CustomerRepository` 共同分享的行为会从中继承。
 
 写一些代码来实现这个。这是一个重构过程，所以这部分没有新的测试。如果你的 `rake` 以前都是绿色的，那以后应该都是绿色的！
 
