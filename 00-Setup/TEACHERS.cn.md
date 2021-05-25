@@ -122,14 +122,14 @@ _问问学生们，他们当中谁想成为开发者，谁想创办一家初创�
 
 ### 设置课程 - 10:30am (2 h 30)
 
-At the end of the lecture
+在讲座快要结束的时候
 
-- Tell all students to start [Le Wagon's setup](https://github.com/lewagon/setup)
-- Students on Mac should click on the apple, Linux on the penguin
-- Students on Linux should gather with a dedicated teacher
-- If you struggle on Linux setup: first read [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) and [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
+- 告诉所有学生们开始[Le Wagon的设置](https://github.com/lewagon/setup)
+- 使用Mac的学生们可以点击页面上的苹果标志，使用Linux的点击企鹅
+- 使用Linux的学生应该聚在一起，和一个负责的老师一起完成设置
+- 如果你在Linux上设置遇到问题了: 首先阅读这个 [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) 和 [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
 
-### Student validation (end of morning setup)
+### 学生验证 (上午设置的末尾)
 
 讲座结束时， 学生登录 [Kitt](https://kitt.lewagon.org/onboarding) 并完成个人资料的设置，然后:
 
