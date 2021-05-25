@@ -6,9 +6,9 @@
 
 2. **10:30am-1pm**: 认真跟随[Le Wagon的设置指南](https://github.com/lewagon/setup) 卡住的时候要寻求帮助。它会占用你整个上午的时间，而且对非Mac用户来说可能还会占用午休时间😉。
 
-3. **2pm-2:15pm**: 关于命令行基础知识的第二次15分钟讲座（浏览文件系统、创建目录和文件、从终端启动Sublime Text等)
+3. **2pm-2:15pm**: 关于命令行基础知识的第二次讲座，时长15分钟（浏览文件系统、创建目录和文件、从终端启动Sublime Text等)
 
-4. **2:15pm-3pm**: 关于git命令的第三次45分钟讲座 (`git add`/`git commit`/`git push`).
+4. **2:15pm-3pm**: 关于git命令的第三次讲座，时长45分钟 (`git add`/`git commit`/`git push`).
 
 5. **3pm-3:15pm**: Git讲座结束时，老师会向你展示Kitt平台(挑战, tickets, flashcards) 还有如何提交演示练习 `00-Setup/00-Demo` 的答案 （老师会做完然后和全班一起提交。）
 
