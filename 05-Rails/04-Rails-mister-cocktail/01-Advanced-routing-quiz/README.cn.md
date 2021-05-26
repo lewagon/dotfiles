@@ -9,7 +9,7 @@
 ⚠️ 在运行 `rake`命令之前，尝试回答这些问题。
 
 ### 问题 1
-返回一个数组`Array`，包含了7个元素，这些元素都是字符串`String`，这些字符串对应了`resources :restaurants`生成的7个增删查改CRUD路由。
+实现与 `resources：restaurants` 生成的7条CRUD路线相对应的7条常规路线。
 
 提示: 路由遵循这样的模式：`verb "url", to: "controller#action"`
 /!\ 实际上在Rails里，路由并不是字符串!

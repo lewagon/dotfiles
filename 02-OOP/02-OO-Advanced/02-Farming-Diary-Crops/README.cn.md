@@ -7,7 +7,7 @@
 
 这个农场有两种作物（大米和玉米）。
 
-![作物](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/crops.svg?sanitize=true)
+![作物](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/crops.svg)
 
 与你的伙伴讨论：需要建多少个类，和如何构造它们？
 
@@ -17,7 +17,7 @@
 首先，在 `corn.rb` 中，使用以下方法编写一个 `玉米` 类：
 - `initialize` 将实例变量 `@grains` 设置为 0。
 - `water!`: 随时添加 10 grains。
-- `ripe?` 如果有至少 30 grains返回true。
+- `ripe?` 如果有至少 15 grains返回true。
 
 打开​​ `farming_diary.rb`，并完成 **Day One** 部分。使用以下代码运行你的日记：
 
@@ -29,17 +29,16 @@ ruby lib/farming_diary.rb
 
 ```bash
 📝 Day One: planting corn
-Today, I planted 1 corn crop in the field
-After a good watering, the corn produced 5 grains
-The corn crop is not ripe yet!
+The corn crop produced 10 grains
+The corn crop is not ripe
+```
+
+这三句话的意思是：
 
 📝 第一天： 种植玉米
-今天，我在地里种了一棵玉米
-经过充分浇水，玉米产了 5 grains
+经过充分浇水，玉米产了 10 grains
 玉米还没熟呢！
 
-[...]
-```
 
 ### `大米` 类
 
@@ -55,8 +54,8 @@ The corn crop is not ripe yet!
 作物有许多相似之处，重构它们：
 - 引入名为 `Crop` 的父类并将共享方法移到其中。
 - 使 `Corn` 和 `Rice` 类继承自 `Crop`。
+- 别忘记使用 `require_relative`.
 
-在日记中，填写 **第三天** 部分。不需要在那里实例化 crops ，但是请注意，你可以在两个不同类型的对象上调用相同的方法！这个概念叫做[多态性](https://thoughtbot.com/blog/back-to-basics-polymorphism-and-ruby) 🤓
 
 ## 检查和要点
 现在让我们跑 `rake`! 花点时间让所有测试都变为绿色，以验证你的体系结构和类的公共接口。如果你想知道为什么我们在规格中限制一些 setters ，那是因为农业日记没有要求添加它们！你还记得 **封装**吗？

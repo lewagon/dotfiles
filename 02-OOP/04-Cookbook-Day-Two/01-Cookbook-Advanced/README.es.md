@@ -70,7 +70,7 @@ Primero veamos cómo recuperaremos información de la web.
 Es posible descargar un documento HTML en tu computadora con el comando `curl`. Obtén la siguiente página HTML que está guardada como un archivo `.html` en tu directorio de trabajo corriendo uno de estos dos comandos en la Terminal:
 
 ```bash
-curl --silent 'https://www.allrecipes.com/search/?wt=strawberry' > strawberry.html
+curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > strawberry.html
 ```
 
 👆 ¡**Este paso es muy importante**!
@@ -115,7 +115,7 @@ Es hora de usar tu código de parseo en una URL en línea con consultas diferent
 require 'nokogiri'
 require 'open-uri'
 url = "http://the_url_here"
-doc = Nokogiri::HTML(URI.open(url), nil, 'utf-8')
+doc = Nokogiri::HTML(URI.open(url).read, nil, 'utf-8')
 
 # Rest of the code
 ```

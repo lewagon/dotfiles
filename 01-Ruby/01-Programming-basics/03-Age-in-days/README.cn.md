@@ -1,7 +1,7 @@
 ## 背景与目标
 
 - 熟悉调用外部脚本和使用其中的方法。
-- **全面**理解[变量（variable）](http://en.wikipedia.org/wiki/Program_variable)的概念，变量的赋值，定义方法以及调用方法。
+- **全面**理解[变量（variable）](http://en.wikipedia.org/wiki/Program_variable) (需要VPN 🛡 )的概念，变量的赋值，定义方法以及调用方法。
 
 ## 详细说明
 

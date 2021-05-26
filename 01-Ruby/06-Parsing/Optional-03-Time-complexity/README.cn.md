@@ -8,7 +8,7 @@
 我们只知道我们要寻找的书的标题，我们想先在较小的样本的一组书中找到它的索引（index），然后在一个更大的样本组完成同样的任务。
 
 ### 在书架上找到一本书
-![书架（Shelf）](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/shelf.png)
+![书架（Shelf）](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/shelf.png)
 
 想象你自己在家，在书架上寻找一本书，而书架上有12本无序排列的书。你可能从左到右逐一浏览每本书，直到你找到正确的那本。让我们来对这个行为进行编码！
 
@@ -41,7 +41,7 @@ books = [
 必须有个更有效的方法。
 
 ### 在图书馆中找一本书
-![图书馆（Library）](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/library.png)
+![图书馆（Library）](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/library.png)
 
 现在，让我们想象自己正置身于一个巨大的图书馆中。如果使用我们之前的技术逐一浏览每本书，要找到正确的书可能要花上好几天。值得庆幸的是，在图书馆，书籍已经**按照字母表顺序排序**了。因此，我们可以从图书馆的中间，从书本打头的字母那里开始寻找，并依此重复直到我们找到正确的那本书。这将大大减少迭代的次数！
 
@@ -66,7 +66,7 @@ books = [
 而函数`find_book_enhanced`为O(log2 n)：每次搜索的可能性是前一次的2倍。在一个大型图书馆，命令的数量缓慢增加。这是怎么回事？我们建立了一个循环，每次迭代将可能性减少了2个。我们以100万本书开始，然后只有500K被留下，然后是250K，依此类推。每一次，我们只检查轴心书籍是不是我要找的那本。
 这个过程被称为**二进制搜索**，是减少计算时间非常优化的方法。
 
-![Equations](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/equations.png)
+![Equations](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/equations.png)
 
 
 ## 进一步建议 & 资源

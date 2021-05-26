@@ -2,7 +2,7 @@
 
 在你的Le Wagon旅程中，你将发现很多工具，服务以及语言。这里是其中最主要的那些的logo，但他们在此刻都是黑白的。这个挑战是一个游戏，使用正则表达式来揭秘他们的颜色！
 
-![Logos](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/double-rainbow_logos.png)
+![Logos](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/double-rainbow_logos.png)
 
 ## 详细说明
 

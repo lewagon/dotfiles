@@ -102,7 +102,7 @@ serve
 </ul>
 ```
 
-记得缩进你的HTML！你的代码应该看起来像一队[V型排列的鸭群](https://upload.wikimedia.org/wikipedia/commons/0/0b/Eurasian_Cranes_migrating_to_Meyghan_Salt_Lake.jpg)! 🦆🦆🦆
+记得缩进你的HTML！你的代码应该看起来像一队[V型排列的鸭群](https://upload.wikimedia.org/wikipedia/commons/0/0b/Eurasian_Cranes_migrating_to_Meyghan_Salt_Lake.jpg) (需要VPN 🛡 )! 🦆🦆🦆
 
 ## 完成了吗？
 

@@ -10,6 +10,19 @@ corn_helper = FileHelper.new(
   class_name: "Corn"
 )
 
+puts "
+
+***************** Notice to all Farmers *****************
+*                                                       *
+*   Are you sure you're ready to rake?                  *
+*   Try to code everything with the indications first.  *
+*   Come back to check your code when it's complete.    *
+*                     GOOD LUCK!!!                      *
+*                                                       *
+*********************************************************
+
+"
+
 describe "Corn", unless: corn_helper.file_and_class_valid? do
   it '`corn.rb` file should exist' do
     expect(corn_helper.file_exists?).to be(true)
@@ -55,9 +68,9 @@ describe "Corn", if: corn_helper.file_and_class_valid? do
       Corn.public_method_defined? :ripe?
     end
 
-    it 'should return true when the grains is over or equal to 20' do
+    it 'should return true when the grains is over or equal to 15' do
       expect(corn.ripe?).to be false
-      corn.instance_variable_set(:@grains, 20)
+      corn.instance_variable_set(:@grains, 15)
       expect(corn.ripe?).to be true
     end
   end

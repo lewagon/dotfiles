@@ -70,7 +70,7 @@ First, let's have a look at how we'll retrieve information from the Web.
 You can download an HTML document on your computer with the `curl` command. Get the following HTML page saved as a `.html` file in your working directory by running one of these two commands in the terminal:
 
 ```bash
-curl --silent 'https://www.allrecipes.com/search/?wt=strawberry' > strawberry.html
+curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > strawberry.html
 ```
 
 👆 **This step is really important**!
@@ -115,7 +115,7 @@ Time to use your parsing code on a live URL with different queries (not just `[f
 require 'nokogiri'
 require 'open-uri'
 url = "http://the_url_here"
-doc = Nokogiri::HTML(URI.open(url), nil, 'utf-8')
+doc = Nokogiri::HTML(URI.open(url).read, nil, 'utf-8')
 
 # Rest of the code
 ```

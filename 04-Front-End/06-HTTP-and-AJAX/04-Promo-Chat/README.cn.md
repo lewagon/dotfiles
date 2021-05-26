@@ -6,7 +6,7 @@
 在这个练习中, 你需要对API代码发出 `GET` 和 `POST` 请求. 你将使用AJAX调用来实现一个动态聊天室，在这里你可以即时查看最新消息并发布新消息。
 
 
-![突出显示的Gif动图](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/chat-room.gif)
+![突出显示的Gif动图](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/chat-room.gif)
 
 ## 资源
 [wagon-chat API文档](https://github.com/lewagon/wagon-chat-api/blob/master/README.md)

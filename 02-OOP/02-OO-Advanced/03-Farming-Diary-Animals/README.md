@@ -4,7 +4,6 @@ This challenge is an extension of the previous one: the farm welcomes its first 
 
 
 ## Specs
-The farm has two kinds of animals: cows and chickens.
 
 ![Animals](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/animals.svg?sanitize=true)
 
@@ -16,52 +15,43 @@ Don't `rake`! Wait until the very end of the challenge, follow the guidelines an
 ### Parent and children
 We are now familiar with the benefits of inheritance, let's go ahead and:
 - Create the three empty classes
-- Set the proper inheritance relationship between the two children class and the parent class
+- Set the proper inheritance relationship between the children and the parent classes
 
-Unlike in the previous challenge, let's start by coding the common behaviour in the parent class!
-
-- An animal is initialized with a **name** and zero **energy**
+Unlike in the previous challenge, let's start by coding the common behaviour in the parent class:
+- An animal is initialized with zero **energy**
 - You can **feed** an animal: it will increase its **energy** by 1
 
 
-### Cow
-To figure out the `Cow` class, let's start by coding the **program** we want to run.
-- Open the `lib/farming_diary.rb` interface and instantiate a new `Cow`
-- Call the methods `feed!` and `talk` on your cow (even if the methods are not coded yet)
-- Run the file with `ruby lib/farming_diary.rb` and solve one error message at a time by coding the `Cow` class
+### Animals Talk
+To figure out the classes, let's start by the **program** we want to run:
+- Open the `lib/farming_diary.rb`, read _Day Three_ and gather information to code the classes.
+- Run the file with `ruby lib/farming_diary.rb`. Solve one error at a time by coding the missing `talk` method in `Cow` and `Chicken`.
 
-Here is what you need to know about cows:
-
-- Each time you feed the cows, beyond gaining energy, they produce 2 liters of **milk**
-- When cows `talk`, they say "moo"
-
-Here is an example of the Cow day in the Farming Diary:
+Expected output:
 
 ```bash
-📝 Day Four: Cow
-Marguerite produced 2 liters of milk
-Marguerite says moo
-[...]
+📝 Day Three: Animals Talk
+The cow says moo
+The female chicken says cluck cluck
+The male chicken says cock-a-doodle-doo
 ```
 
-### Chicken
-Let's move on to the Day Five of our farming diary.
-- Instantiate two chickens, a male and a female
-- Fill in the TODOs with the appropriate code
+### Feed The Animals
+Let's move on to the Day Four and feed all the animals at once with an iteration. Remember your animals have a shared `feed!` method? You can call the same method on two objects of different types! This concept is called [polymorphism](https://thoughtbot.com/blog/back-to-basics-polymorphism-and-ruby) 🤓
 
-Here is what you need to know about chickens:
+Here is what you need to know about `feed!`:
+- `Cow`: beyond gaining energy, cows produce 2 liters of **@milk**
+- `Chicken`: beyond gaining energy, females produce 2 **@eggs** (and males none 🤷‍♂️)
 
-- Chickens have a **gender**
-- When you **feed** chickens, beyond gaining energy, females produce two **eggs** (and males none 🤷‍♂️)
-- Chickens can talk: males say "cock-a-doodle-doo" and females say "cha-caw"
+**Hint**: the children method **extend** the parent one. Don't forget to use `super` to call the parent's part!
 
-Here is an example of the Chicken day in the Farming Diary:
+Expected output:
 
 ```bash
-📝 Day Five: Chicken
-Bob produced 0 eggs and says cock-a-doodle-doo
-Alice produced 2 eggs and says chack-caw
-[...]
+📝 Day Four: Feed The Animals
+The cow produced 2 liters of milk
+The female chicken produced 2 eggs
+The male chicken produced 0 eggs
 ```
 
 ## Take away

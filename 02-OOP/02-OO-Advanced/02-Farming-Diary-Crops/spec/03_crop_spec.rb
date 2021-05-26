@@ -44,9 +44,9 @@ describe "Crop", if: crop_helper.file_and_class_valid? do
       Crop.public_method_defined? :ripe?
     end
 
-    it 'should return true when the grains is over or equal to 20' do
+    it 'should return true when the grains is over or equal to 15' do
       expect(crop.ripe?).to be false
-      crop.instance_variable_set(:@grains, 20)
+      crop.instance_variable_set(:@grains, 15)
       expect(crop.ripe?).to be true
     end
   end
@@ -61,7 +61,6 @@ end
 
 
 describe "Inheritance", if: crop_helper.file_and_class_valid? do
-
   describe "Corn" do
     it 'should inherit from `Crop`' do
       expect(Corn.superclass).to eq(Crop)
@@ -76,7 +75,6 @@ describe "Inheritance", if: crop_helper.file_and_class_valid? do
       expect(Corn.instance_methods(false)).to include(:water!)
     end
   end
-
 
   describe "Rice" do
     it 'should inherit from `Crop`' do

@@ -22,7 +22,7 @@ burger("steak", "ketchup", "onions")
 
 
 顾客可以通过定义每一个参数来组成他们自己的汉堡：
-![Burger Restaurant Menu](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-menu.svg?sanitize=true)
+![Burger Restaurant Menu](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/burger-restaurant-menu.svg)
 
 ### 第二步：随选汉堡
 
@@ -32,7 +32,7 @@ burger("steak", "ketchup", "onions")
 
 但是在开始编程这个方法之前，让我们找到一个方式来记录给厨房的特殊说明（限制条件：不通过参数传递额外信息）。这就像在订单上写一个备注一样：
 
-![Method call with side note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-method.svg?sanitize=true)
+![Method call with side note](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/burger-restaurant-method.svg)
 
 让我们用一个Ruby语句块来完成它吧！
 
@@ -54,7 +54,7 @@ end
 
 `yield`是你需要执行语句块（block）时使用的关键词，它会在执行方法时被执行，对肉饼（patty）进行用户要求的改变。
 
-![旁注](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
+![旁注](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/burger-restaurant-yield.svg)
 
 升级`burger`方法，让它可以接受语句块（block）吧：
 - 将`yield`放在你想要调用语句块的地方
@@ -78,7 +78,7 @@ end
   - 它以一个字符串作为参数
   - 它将字符串转化为大写
 
-![在Ruby中写语句块](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-syntax.svg?sanitize=true)
+![在Ruby中写语句块](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/burger-restaurant-syntax.svg)
 
 
 你刚刚写下了你的第一个语句块（block），自己练习一下写其他的汉堡吧！

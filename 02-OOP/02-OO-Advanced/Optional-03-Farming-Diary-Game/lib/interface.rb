@@ -6,5 +6,5 @@ require_relative "corn"
 require_relative "cow"
 require_relative "chicken"
 
-# Display the state of the farm
+# Display the state of the farm (move the line below in the loop when asked)
 Board.new.display

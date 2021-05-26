@@ -205,7 +205,7 @@ Then you need to install `chromedriver`:
 
 ```bash
  # macOS
-brew cask install chromedriver
+brew install --cask chromedriver
 
 # Ubuntu
 gem install chromedriver-helper
@@ -265,6 +265,7 @@ end
 Run the test in the terminal with:
 
 ```bash
+rails db:migrate
 rails test:system
 ```
 

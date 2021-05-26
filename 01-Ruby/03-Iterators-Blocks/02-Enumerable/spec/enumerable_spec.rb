@@ -2,7 +2,7 @@ require "enumerable"
 
 describe "#sum_odd_indexed" do
 
-  it "should compute the sum of odd-numbered elements'" do
+  it "should compute the sum of odd-indexed elements'" do
     expect(sum_odd_indexed([4, 7, 6, 8, 10])).to eq 15
   end
 

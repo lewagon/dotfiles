@@ -2,7 +2,7 @@
 
 我们做这个练习的目标是用在CSS模块里学的选择器动态地操作网页。
 
-我们指的是操作文档对象模型[Document Object Model](http://en.wikipedia.org/wiki/Document_Object_Model) (DOM), 它是**浏览器创建的HTML的内存表现**. 可以把它想象成家族谱：根节点（the root node）, 子辈（children）, 孙辈（grandchildren), 等等. 在那个树上，你可以:
+我们指的是操作文档对象模型[Document Object Model](http://en.wikipedia.org/wiki/Document_Object_Model) (需要VPN 🛡 ) (DOM), 它是**浏览器创建的HTML的内存表现**. 可以把它想象成家族谱：根节点（the root node）, 子辈（children）, 孙辈（grandchildren), 等等. 在那个树上，你可以:
 
 - 横向移动来读取具体的节点
 - 删除节点

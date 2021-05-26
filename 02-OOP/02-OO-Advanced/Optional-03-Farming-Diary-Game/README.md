@@ -1,5 +1,4 @@
 ## Background and Objectives
-
 Back to our Farm diary. After all the great work you did building the classes, let's reward our efforts by building a game on top of it! Let's build an interface where the player is a farmer who manages his/her crops and animals, and see the farm evolve thanks to an illustration we provide.
 
 You will learn how to build an interface using an infinite loop!
@@ -18,14 +17,12 @@ In `lib/interface.rb`, we already added the right `require_relative` at the top 
 ## Specs
 
 The player can choose between a set of actions: plant corn, plant rice, water the crops, add animals, etc.
-When the player picks one action, we translate it in code using our classes and move on to the next choice. It's a loop.
-Let's build it step by step.
+When the player picks one action, we translate it in code using our classes and move on to the next choice. It's a loop. Let's build it step by step.
 
 ![Loop](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/loop.svg?sanitize=true)
 
 
 There is no `rake` on this challenge.
-
 
 ### Start with a basic UI
 
@@ -94,7 +91,7 @@ See you next time
 
 Now that you have the infinite loop in place, let's introduce our farm classes in the game. When the player picks `corn` or `rice`, instantiate objects of the appropriate class and store them in a `crops` array.
 
-To give you an illustrated feedback of the state of the farm after each action, move the `Board.new.display` inside the loop. If your code works as expected, surprises will appear :)
+To give you an illustrated feedback of the state of the farm after each action, move the `Board.new.display` inside the loop. If your code works as expected, the farm will live :)
 
 
 ### Watering crops
@@ -107,7 +104,6 @@ Pick an action: [corn | rice | water | quit]
 
 In this action, the player waters all the crops (corn and rice) already planted. Remember they both inherit the `water!` method from `Crop`.
 
-
 ### Animals
 
 Congratulations on building the crops part. Do you want to give a try to build the animals part all by yourself?
@@ -119,20 +115,8 @@ Pick an action: [corn | rice | water | cow | chicken | feed | quit]
 ```
 
 **Hints and clues:**
-- `cow` and `chicken` actions create new intances of the corresponding classes and stores them in an `animal` array
-- Ask the player for the name of the animals they add to their farm
-  <details>
-    <summary markdown='span'>View solution</summary>
-
-    ```bash
-    when "cow"
-      puts "Name the cow"
-      print "> "
-      name = gets.chomp
-      Cow.new(name)
-    ```
-  </details>
-- Chickens have a gender, picked randomly by the game:
+- `cow` and `chicken` actions create new instances of the corresponding classes and stores them in an `animals` array
+- Chickens have a gender, picked randomly by the game
   <details>
   <summary markdown='span'>View solution</summary>
 
@@ -140,10 +124,7 @@ Pick an action: [corn | rice | water | cow | chicken | feed | quit]
   when "chicken"
     gender = ["female", "male"].sample
     puts "The chicken is a #{gender}"
-    puts "Name the chicken"
-    print "> "
-    name = gets.chomp
-    Chicken.new(name, gender)
+    Chicken.new(gender)
   ```
   </details>
 

@@ -10,7 +10,7 @@ cp -r ../02-Fonts-and-colors/profile .
 
 通过将您的个人资料信息分割到不同的`<div>`标签中，来玩转 盒子模型（Box Model）(`margin/border/padding/width/height`)。再使用高级CSS选择器（如id、class（类）、grouping、descendant（后代）等选择器）来设计和微调你的页面。
 
-如果你的页面不能显示你当前的代码，不要忘记**硬刷新**你的浏览器(`cmd + shift + r`)来清除浏览器的缓存!
+如果你的页面不能显示你当前的代码，不要忘记**硬刷新**你的浏览器(MacOS用 `cmd + shift + r`, Windows用 `ctrl` + `F5` )来清除浏览器的缓存!
 
 ## 详细说明
 
