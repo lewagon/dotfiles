@@ -129,7 +129,7 @@ _问问学生们，他们当中谁想成为开发者，谁想创办一家初创�
 - 使用Linux的学生应该聚在一起，和一个负责的老师一起完成设置
 - 如果你在Linux上设置遇到问题了: 首先阅读这个 [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) 和 [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
 
-### 学生验证 (上午设置的末尾)
+### 学生系统验证 (上午电脑设置完成后)
 
 讲座结束时， 学生登录 [Kitt](https://kitt.lewagon.org/onboarding) 并完成个人资料的设置，然后:
 
