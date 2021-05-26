@@ -3,7 +3,7 @@
 
 ## 9:30 AM - 10:15 AM
 
-主管介绍9周的学习计划和理念，然后详细说明9周、典型的一周、典型的一天的安排。
+由主管来介绍9周的学习计划和理念，然后详细说明9周、典型的一周、典型的一天的安排。
 
 ### 课程理念
 
@@ -124,7 +124,7 @@ _问问学生们，他们当中谁想成为开发者，谁想创办一家初创�
 
 在讲座快要结束的时候
 
-- 告诉所有学生们开始[Le Wagon的设置](https://github.com/lewagon/setup)
+- 告诉所有学生们开始[Le Wagon的电脑设置](https://github.com/lewagon/setup)
 - 使用Mac的学生们可以点击页面上的苹果标志，使用Linux的点击企鹅
 - 使用Linux的学生应该聚在一起，和一个负责的老师一起完成设置
 - 如果你在Linux上设置遇到问题了: 首先阅读这个 [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) 和 [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
