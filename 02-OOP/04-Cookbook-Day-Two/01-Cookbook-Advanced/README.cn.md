@@ -73,7 +73,7 @@ Importing "Strawberry slushie"...
 
 ```bash
 curl --silent 'https://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
-curl --silent 'https://www.allrecipes.com/search/?wt=strawberry' > strawberry.html
+curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > strawberry.html
 ```
 
 👆 **这一步非常重要**!
@@ -118,7 +118,7 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 require 'nokogiri'
 require 'open-uri'
 url = "http://the_url_here"
-doc = Nokogiri::HTML(open(url), nil, 'utf-8')
+doc = Nokogiri::HTML(open(url).read, nil, 'utf-8')
 
 # 代码的其余部分
 ```
