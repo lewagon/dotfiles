@@ -64,5 +64,5 @@ ruby lib/app.rb
 ## 额外阅读
 
 以下概念在软件体系结构中也很重要：
-- [单一责任原则](http://en.wikipedia.org/wiki/Single_responsibility_principle)
-- [關注點分離](http://en.wikipedia.org/wiki/Separation_of_concerns)
+- [单一责任原则](http://en.wikipedia.org/wiki/Single_responsibility_principle) (需要VPN 🛡)
+- [關注點分離](http://en.wikipedia.org/wiki/Separation_of_concerns) (需要VPN 🛡)

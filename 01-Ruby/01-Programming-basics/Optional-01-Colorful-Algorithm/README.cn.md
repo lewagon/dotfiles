@@ -1,6 +1,6 @@
 ## 背景与目标
 
-恭喜你来到第一个选做练习。这一个会有点棘手，应该会花多点时间。它可以被看作一个[Code Kata](http://en.wikipedia.org/wiki/Kata_%28programming%29), 程序员用来训练自己的练习。
+恭喜你来到第一个选做练习。这一个会有点棘手，应该会花多点时间。它可以被看作一个[Code Kata](http://en.wikipedia.org/wiki/Kata_%28programming%29) (需要VPN 🛡 ), 程序员用来训练自己的练习。
 
 ## 详细说明
 

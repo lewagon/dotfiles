@@ -34,7 +34,7 @@ rake webpack
 
 使用API返回的数据，你可以创建以下页面：
 
-![实时天气](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_api.png)
+![实时天气](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/weather_api.png)
 
 **别着急** 进入代码:
 
@@ -51,7 +51,7 @@ rake webpack
 
 你的页面应该更新和显示正确的数据，而无需重新加载！如果你的HTML重新加载，这意味着你忘记了**阻止**某事。。。
 
-![吉隆坡的天气](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_in_kuala_lumpur.png)
+![吉隆坡的天气](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/weather_in_kuala_lumpur.png)
 
 ### 从NPM添加 Select2 包
 

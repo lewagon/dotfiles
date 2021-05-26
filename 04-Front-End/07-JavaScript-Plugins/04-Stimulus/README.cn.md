@@ -29,7 +29,7 @@ rake
 
 💡 这个挑战更像是一个帮助你探索Stimulus框架的教程。不要跳过任何一步，跟着我们的讲解走，会好的👌
 
-还记得[我的第一个事件监听器](?path=04-Front-End/05-DOM-and-Events/03-My-First-Event-Listener) 练习吗? 你点击一个按钮然后这个[Zelda Ocarina of Time](https://www.youtube.com/watch?v=g2wzMZzdNJA) 声音开始播放！
+还记得[我的第一个事件监听器](?path=04-Front-End/05-DOM-and-Events/03-My-First-Event-Listener) 练习吗? 你点击一个按钮然后这个[Zelda Ocarina of Time](https://www.youtube.com/watch?v=g2wzMZzdNJA) (需要VPN 🛡 ) 声音开始播放！
 
 ```html
 <button id="clickme" class="btn btn-primary btn-lg">

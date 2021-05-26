@@ -62,14 +62,14 @@ rspec spec/models                # 运行测试
 开始写代码之前，不要忘了设置Rails应用的前端。就像早上的课程里那样，设置Bootstrap和它的JavaScript依赖。
 
 ```bash
-yarn add bootstrap jquery popper.js
+yarn add bootstrap@4.6 jquery popper.js
 ```
 
 添加我们要用到的gem：
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 ```
@@ -224,7 +224,7 @@ GET "lists"
 - 用户可以看到一个给定清单list的详细信息和名称
 
 ```
-GET "list/42"
+GET "lists/42"
 ```
 
 - 用户可以创建一个新的清单list

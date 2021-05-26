@@ -1,6 +1,6 @@
 ## 背景和目标
 
-我们想在浏览器写一个经典的游戏[扫雷Minesweeper](https://www.google.com/search?tbm=isch&q=minesweeper+windows)。
+我们想在浏览器写一个经典的游戏[扫雷Minesweeper](https://www.google.com/search?tbm=isch&q=minesweeper+windows) (需要VPN 🛡 )。
 
 我们为你提供了一个样板帮你开始，其中包括：
 

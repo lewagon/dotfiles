@@ -1,7 +1,7 @@
 ## 背景与目标
 
 你有没有注意到你的信用卡通常都以4或者5开头？那是因为它有一种模式。
-在这个练习中，我们将采用[Luhn算法](https://en.wikipedia.org/wiki/Luhn_algorithm) 来验证信用卡号码是否有效。
+在这个练习中，我们将采用[Luhn算法](https://en.wikipedia.org/wiki/Luhn_algorithm) (需要VPN 🛡 ) 来验证信用卡号码是否有效。
 
 ## 详细说明
 

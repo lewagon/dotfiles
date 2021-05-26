@@ -5,7 +5,7 @@
 ## 详细说明
 这个农场有两种动物：牛和鸡。
 
-![动物](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/animals.svg?sanitize=true)
+![动物](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/animals.svg)
 
 与你的伙伴讨论：需要建多少个类，和如何构造它们？
 
@@ -18,46 +18,41 @@
 
 与上一个挑战不同，让我们从编写父类中的常见行为开始！
 
-- 动物被初始化为 **name** 和 0 **energy**
+- 动物被初始化为 0 **energy**
 - 你可以 **feed** 一只动物：它的 **energy** 会增加 1
 
 
-### 牛
-要理解 `Cow` 类，让我们从编写要运行的 **程序** 开始。
--打开 `lib/farming_diary.rb` 接口并创建一个新的 `Cow` 实例
--调用方法 `feed!` 和 `talk` 在你的牛身上（即使方法还没有编码）
--运行文件 `ruby lib/farming_diary.rb` 并通过编码 `Cow` 类一次解决一条错误消息
+### 动物对话
+要理解我们的类，让我们从编写要运行的 **程序** 开始。
+-打开 `lib/farming_diary.rb` 接口并看一下`Day Three`为了收集信息怎么创建我们的类
+-运行文件 `ruby lib/farming_diary.rb` 并通过编码 `Cow` 和 `Chicken` 类一次解决一条错误消息
 
-以下是你需要了解的关于牛的信息：
-
-- 每次你给牛喂奶，除了获得 energy 外，它们还会产出 2 升 **milk**
-- 牛 `talk` 的时候会说 "moo"
-
-以下是农业日记牛日的一个例子：
+预期产量：
 
 ```bash
-📝 Day Four: Cow
-Marguerite produced 2 liters of milk
-Marguerite says moo
+📝 Day Three: Animals Talk
+The cow says moo
+The female chicken says cluck cluck
+The male chicken says cock-a-doodle-doo
 ```
 
-### 鸡
-让我们继续我们农事日记的第五天。
-- 创建两只鸡的实例，一只公鸡和一只母鸡
-- 用适当的代码填写 TODOs
+### 喂动物
 
-以下是你需要了解的关于鸡的知识：
+让我们继续进行第四天，用迭代(iteration)一次喂饱所有动物. 记住你的动物有一个共同的 `feed!` 方法? 你可以在两个不同类型的对象上调用相同的方法！这个概念叫做[多态性](https://thoughtbot.com/blog/back-to-basics-polymorphism-and-ruby) 🤓
 
-- 鸡有 **gender**
-- 当你 **feed** 鸡时，除了获得能量外，雌性会产生两个 **eggs** 雄性则没有）🤷‍♂️)
-- 鸡会说话：雄性说 "cock-a-doodle-doo" ，雌性说 "cha-caw"
+以下是你需要了解的关于`feed!`的知识：
 
-以下例子是农场日记中的记录鸡的一天：
+- `Cow`: 牛除了获得能量外，还生产2升`@milk`
+- `Chicken`: 除了获得能量以外，雌性还产生2个`@eggs`（雄性不产生eggs🤷‍♂️
+**提示**：子类方法**扩展**父类方法。别忘记使用`super`来叫父类方法！
+
+预期产量：
 
 ```bash
-📝 Day Five: Chicken
-Bob produced 0 eggs and says cock-a-doodle-doo
-Alice produced 2 eggs and says chack-caw
+📝 Day Four: Feed The Animals
+The cow produced 2 liters of milk
+The female chicken produced 2 eggs
+The male chicken produced 0 eggs
 ```
 
 ## 要点

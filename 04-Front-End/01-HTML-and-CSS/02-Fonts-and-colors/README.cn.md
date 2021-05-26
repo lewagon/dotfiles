@@ -36,7 +36,7 @@ touch style.css
 ## 进一步的建议和资源
 
 - 在[Coolors](http://coolors.co/)或[Color hunt](http://colorhunt.co/)上寻找灵感，选择一个不错的配色方案。
-- 在[Google fonts](https://www.google.com/fonts)上挑选字体。
+- 在[Google fonts](https://www.google.com/fonts) (需要VPN 🛡 )上挑选字体。
 - 在Google fonts中，**Open Sans**是`body`的标准选择。比如**Raleway**，**Varela**，**Poppins**，**Roboto**都是是几个不错的字体，可以用来做  `h1`，`h2`，`h3`。
 
 例如，如果你想使用Open-Sans和Poppins(它们各自的字重不同)，你可以在`style.css`的顶部添加以下内容：

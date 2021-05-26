@@ -3,7 +3,7 @@
 你成功地完成了第一部分的送餐程序挑战，太棒了！
 在这个挑战中，我们将用 `Author` 模型扩展 DEV Pocket 挑战（Cookbook 第一天的 optional challenge）。我们将对 `Post` 和`Author` 之间的以下关系进行建模：
 
-![数据模式](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/pocket_reader.png)
+![数据模式](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/pocket_reader.png)
 
 我们希望将用户操作扩展到：
 

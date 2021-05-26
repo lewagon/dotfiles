@@ -18,10 +18,9 @@ cp .03-Farming-Diary-Animals/lib/{animal.rb,cow.rb,chicken.rb} lib
 ## 详细说明
 
 玩家可以在一组动作中进行选择：种植玉米、种植水稻、浇灌作物、添加动物等。
-当玩家选择一个动作时，我们使用我们的类将其翻译成代码，然后继续下一个选择。这是一个循环。
-让我们一步一步来建造它。
+当玩家选择一个动作时，我们使用我们的类将其翻译成代码，然后继续下一个选择。这是一个循环。让我们一步一步来建造它。
 
-![循环](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/loop.svg?sanitize=true)
+![循环](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/loop.svg)
 
 
 这个挑战没有 `rake` 。
@@ -88,7 +87,7 @@ See you next time
 ### 种植农作物
 
 现在你已经有了无限循环，让我们在游戏中介绍农场类。当玩家选择 `corn` 或 `rice` 时，实例化相应类的对象并将它们存储在 `crops` 数组中。
-要在每次操作后向你提供农场状态的图解反馈，请移动 `Board.new.display` 到循环内。如果你的代码按预期工作，将出现惊喜：）
+要在每次操作后向你提供农场状态的图解反馈，请移动 `Board.new.display` 到循环内。如果你的代码按预期工作，将出现一个农场 ：）
 
 ### 给农作物浇水
 
@@ -111,22 +110,7 @@ Pick an action: [corn | rice | water | cow | chicken | feed | quit]
 ```
 
 **提示和线索:**
-- `cow` and `chicken` actions create new intances of the corresponding classes and stores them in an `animal` array
-- Ask the player for the name of the animals they add to their farm
-
 - `cow` 和 `chicken` 创建相应类的新入口，并将它们存储在 `animal` 数组中
-- 向玩家询问他们在农场中添加的动物的名字
-  <details>
-    <summary markdown='span'>View solution</summary>
-
-    ```bash
-    when "cow"
-      puts "Name the cow"
-      print "> "
-      name = gets.chomp
-      Cow.new(name)
-    ```
-  </details>
 - 鸡有性别，由游戏随机挑选：
 
   <details>
