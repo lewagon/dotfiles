@@ -120,10 +120,7 @@ Pick an action: [corn | rice | water | cow | chicken | feed | quit]
   when "chicken"
     gender = ["female", "male"].sample
     puts "The chicken is a #{gender}"
-    puts "Name the chicken"
-    print "> "
-    name = gets.chomp
-    Chicken.new(name, gender)
+    Chicken.new(gender)
   ```
   </details>
 

@@ -31,13 +31,14 @@ ruby lib/farming_diary.rb
 📝 Day One: planting corn
 The corn crop produced 10 grains
 The corn crop is not ripe
+```
+
+这三句话的意思是：
 
 📝 第一天： 种植玉米
 经过充分浇水，玉米产了 10 grains
 玉米还没熟呢！
 
-[...]
-```
 
 ### `大米` 类
 
@@ -53,7 +54,7 @@ The corn crop is not ripe
 作物有许多相似之处，重构它们：
 - 引入名为 `Crop` 的父类并将共享方法移到其中。
 - 使 `Corn` 和 `Rice` 类继承自 `Crop`。
-- 别忘记 `require_relative`.
+- 别忘记使用 `require_relative`.
 
 
 ## 检查和要点
