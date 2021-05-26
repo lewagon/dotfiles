@@ -2,7 +2,7 @@
 
 在这个挑战中，我们想要再现当选择一个问题的**多种**可能的答案时，出现的现代网页应用的UX。
 
-![突出显示的Gif动图](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/highlights.gif)
+![突出显示的Gif动图](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/highlights.gif)
 
 再一次，这是关于**选择** 元素, 把它们和一个事件**绑定**在一起，然后**回应** 它!
 

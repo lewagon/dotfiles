@@ -5,7 +5,7 @@
 
 ## 详细说明
 
-如果你看法国电视，可能会偶然发现[_Des chiffres et des lettres_](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres)。对于英语的学习者，你可能更熟悉[_Countdown_](https://www.youtube.com/watch?v=GvV8aVEJmiU)!
+如果你看法国电视，可能会偶然发现[_Des chiffres et des lettres_](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres) (需要VPN 🛡 )。对于英语的学习者，你可能更熟悉[_Countdown_](https://www.youtube.com/watch?v=GvV8aVEJmiU) (需要VPN 🛡 )!
 
 这个挑战的目标是，在终端中编写一个简化版的该游戏：
 
@@ -49,6 +49,6 @@ Message: Well Done!
 这个挑战没有给予指引，是有意为之。这里有一些要素将帮助你：
 
 - 在深入研究代码之前，写下伪代码并送清楚如何着手。
-- 你可以安装扩展程序[Json Formatter for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) 帮助你读取API（ 看看[JSONView for Mozilla](https://addons.mozilla.org/fr/firefox/addon/jsonview/)）提供的JSON。
+- 你可以安装扩展程序[Json Formatter for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) (需要VPN 🛡 ) 帮助你读取API（ 看看[JSONView for Mozilla](https://addons.mozilla.org/fr/firefox/addon/jsonview/)）提供的JSON。
 - 使用ruby标准库里的`open-uri` 软件包，向这个API发送HTTP请求并得到JSON结果。使用`json`软件包解析返回的JSON文件。
 - 为了测试网格是否包含所用字母，可以使用`Enumerable#all?`。

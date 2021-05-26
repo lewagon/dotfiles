@@ -214,7 +214,7 @@ ask          GET        /ask(.:format)       questions#ask
 
 ```bash
  # macOS
-brew cask install chromedriver
+brew install --cask chromedriver
 
 # Ubuntu
 gem install chromedriver-helper
@@ -273,6 +273,7 @@ end
 在终端运行测试：
 
 ```bash
+rails db:migrate
 rails test:system
 ```
 如果你仔细查看测试场景的话，你可以看到：

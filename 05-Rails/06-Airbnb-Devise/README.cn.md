@@ -12,10 +12,10 @@
 
 #### 1 - 用户故事
 
-复制这个[表格](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) (每组1份) 并邀请你的队友合作。
+复制这个[表格](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) (需要VPN 🛡) (每组1份) 并邀请你的队友合作。
 
-![复制](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/duplicate.png)
-![重命名](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/user-stories/rename.png)
+![复制](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/duplicate.png)
+![重命名](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/rename.png)
 
 先想想演示中你们将展示的 **用户旅程**。像Airbnb这样的产品有很多可能的使用案例，但要尽量把它们缩小到产品所需的最小化的可行用户旅程。
 

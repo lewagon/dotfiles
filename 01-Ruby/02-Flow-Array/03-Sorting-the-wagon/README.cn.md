@@ -5,7 +5,7 @@
 数组（Array）是有序的，因此可以通过每个元素的**索引**访问它。这个练习将帮助你理解如何创建一个数组，如何在其中存储数据，最后，如何用索引提取数据。
 记住，数组索引是由`0`开始的，而不是`1`。
 
-程序员经常被要求对事物进行排序，这就是为什么你应该阅读一些[排序算法（sorting algorithms）](http://en.wikipedia.org/wiki/Sorting_algorithm)。希望这个Ruby文档会让你知道一些[枚举（Enumerable）]的排序方法(http://ruby-doc.org/core-2.5.3/Enumerable.html) 。`数组（Array）`就是`枚举（Enumerable）`的一种形式，所以你可以在使用`数组（Array）时，`应用`枚举（Enumerable）`文档页面中引用的所有方法（methods），因为`数组（Array）`**含有**`枚举（Enumerable）`模块。
+程序员经常被要求对事物进行排序，这就是为什么你应该阅读一些[排序算法（sorting algorithms）](http://en.wikipedia.org/wiki/Sorting_algorithm) (需要VPN 🛡)。希望这个Ruby文档会让你知道一些[枚举（Enumerable）]的排序方法(http://ruby-doc.org/core-2.5.3/Enumerable.html) 。`数组（Array）`就是`枚举（Enumerable）`的一种形式，所以你可以在使用`数组（Array）时，`应用`枚举（Enumerable）`文档页面中引用的所有方法（methods），因为`数组（Array）`**含有**`枚举（Enumerable）`模块。
 
 ## 详细说明
 

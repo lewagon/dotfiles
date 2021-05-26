@@ -2,7 +2,7 @@
 
 以下是你要在这个挑战创建的内容:
 
-![动态窗体动图](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/booking-form.gif)
+![动态窗体动图](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/booking-form.gif)
 
 在这个挑战中我们不会用AJAX，我们只想当用户点击`-` / `+` 按钮时 **更新表单的UI**”。
 

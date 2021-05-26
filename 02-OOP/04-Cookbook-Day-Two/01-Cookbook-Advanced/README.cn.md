@@ -1,7 +1,7 @@
-⚠️ 这个练习 **没有 `rake`** 。 对不起 😉
+⚠️ 这个练习 **没有 `rake`** 。 抱歉啦😉
 
 所以现在我们想通过在网上找到食谱来增强我们的cookbook。我们将使用
-[🇫🇷 Marmiton](http://www.marmiton.org) 或 [🇬🇧 allrecipes](https://www.allrecipes.com)，因为它们的标记结构非常干净（这使它们成为好的爬虫候选者）。如果你想选择其他食谱网站，请继续！它只需要有一个 **搜索** 功能，搜索关键字中传递在[query string](https://en.wikipedia.org/wiki/Query_string).
+[🇫🇷 Marmiton](http://www.marmiton.org) 或 [🇬🇧 allrecipes](https://www.allrecipes.com)，因为它们的标记结构非常干净（这使它们成为好的爬虫候选者）。如果你想选择其他食谱网站，请继续！它只需要有一个 **搜索** 功能，搜索关键字中传递在[query string](https://en.wikipedia.org/wiki/Query_string) (需要VPN 🛡 ).
 
 ## 设置
 
@@ -72,8 +72,7 @@ Importing "Strawberry slushie"...
 你可以使用 `curl` 命令在计算机上下载 HTML 文档。通过在终端中运行以下两个命令之一，将以下HTML页保存为工作目录中的 `.html` 文件：
 
 ```bash
-curl --silent 'https://www.marmiton.org/recettes/recherche.aspx?aqt=fraise' > fraise.html
-curl --silent 'https://www.allrecipes.com/search/?wt=strawberry' > strawberry.html
+curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > strawberry.html
 ```
 
 👆 **这一步非常重要**!
@@ -118,7 +117,7 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 require 'nokogiri'
 require 'open-uri'
 url = "http://the_url_here"
-doc = Nokogiri::HTML(open(url), nil, 'utf-8')
+doc = Nokogiri::HTML(open(url).read, nil, 'utf-8')
 
 # 代码的其余部分
 ```

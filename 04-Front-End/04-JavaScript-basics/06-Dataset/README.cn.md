@@ -42,7 +42,7 @@ dataset(element);
 
 ### 更进一步
 
-从明天开始，我们会写在**浏览器**上运行的JavaScript代码, 在[DOM]环境下(https://en.wikipedia.org/wiki/Document_Object_Model). 在这个环境下, 你可以在任何DOM中的HTML元素上调用 `.dataset`, and 它会返回和这个挑战中一样类型的对象!
+从明天开始，我们会写在**浏览器**上运行的JavaScript代码, 在[DOM]环境下(https://en.wikipedia.org/wiki/Document_Object_Model) (需要VPN 🛡). 在这个环境下, 你可以在任何DOM中的HTML元素上调用 `.dataset`, and 它会返回和这个挑战中一样类型的对象!
 
 这是一个相对方便的方法来吧你的HTML代码传到JavaScript代码上，来更好地回应DOM事件或远程呼叫服务器。
 

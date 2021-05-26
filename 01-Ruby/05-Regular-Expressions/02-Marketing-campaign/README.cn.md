@@ -7,12 +7,12 @@
 ## 故事
 在这个挑战中，让我们假设你将在几周内发布一款应用程序。一旦你的网站上线，你将通过大量的邮件广告活动立刻通知每个人。同时，你准备了一个登陆页用来收集访问者的邮件地址。
 
-![Scenario](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-scenario.svg?sanitize=true)
+![Scenario](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/email-scenario.svg)
 
 ## 详细说明
 ### 收集有效email
 
-![Collect valid emails](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step1.svg?sanitize=true)
+![Collect valid emails](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/email-step1.svg)
 
 你的登陆页已经准备就绪。你想确保来访者提交一个有效的email。
 
@@ -26,7 +26,7 @@
 
 每一个电子邮件地址是由一个**用户名（username）**和一个**域名（domain name）**组成。它遵循一下的模式：
 
-![email的格式](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email.svg?sanitize=true)
+![email的格式](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/email.svg)
 
 #### 关于域名
 
@@ -37,11 +37,11 @@
 - gTLD：通用顶级域名（例如`.com`, `.net`, `.org`）
 - ccTLD：国家代码顶级域名（例如`.fr`, `.de`, `.jp`）
 
-但这里还有[更多](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
+但这里还有[更多](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains) (需要VPN 🛡 )
 
 ### 清理数据库
 
-![清理数据库](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step2.svg?sanitize=true)
+![清理数据库](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/email-step2.svg)
 
 几天过去了，你的数据库已经填入了一些有用的联系人。你的营销团队从专业人士那里获得了更多的数据以扩大受众。在发布邮件广告活动之前，你需要清理数据库并过滤掉任何无效的eamil。
 
@@ -50,7 +50,7 @@
 - 它返回一个仅包含有效email的数组
 
 ### 生成统计数据
-![生成统计数据](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step3.svg?sanitize=true)
+![生成统计数据](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/email-step3.svg)
 
 你的登陆页包含了一个非常简单的表格仅用户收集联系人电子邮箱。你并不是很了解你的客户，但你可以从email地址推断出一些信息。你决定统计一下TLD（顶级域名，Top Level Domains）。**从现在起，所有你正在使用的数据库都已经为你清理干净了。**
 
@@ -68,7 +68,7 @@
 
 ### 邮件广告活动
 
-![邮件广告活动](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step4.svg?sanitize=true)
+![邮件广告活动](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/email-step4.svg)
 
 你现在开始处理你的邮件主体，并希望它是定制化的。以“亲爱的顾客（Dear customer）”开头，听起来并不好，你宁愿从邮件中提取出用户名并以“Dear Seb”开头。
 

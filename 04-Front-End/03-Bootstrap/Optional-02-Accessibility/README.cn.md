@@ -9,7 +9,7 @@
 
 这个挑战更像是一个教程。你将修复一个没有任何包容性的页面，并发现无障碍性的关键所在：**样式[Styling]**、**语义[Semantics]**、**[焦点Focus]**
 
-![主要话题main topics](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/main-topics.png)
+![主要话题main topics](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/main-topics.png)
 
 **设置**
 
@@ -22,20 +22,20 @@ serve
 
 我们强烈建议使用 Chrome 浏览器。您将大量使用**开发者工具**面板，其中Chrome内置了许多有用的无障碍工具。打开开发者工具并将其放在右侧。
 
-![Chrome 设置](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/chrome-setup.png)
+![Chrome 设置](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/chrome-setup.png)
 
 
 
 ## 样式
 
-[样式专题](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/styling-topic.png)
+[样式专题](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/styling-topic.png)
 
 细微的设计选择会使内容难以阅读。视觉障碍是非常普遍的，很大一部分人都戴着眼镜，色盲者看到的颜色是不同的光谱。风格化应用程序的目标是在漂亮的图形和可读性之间找到正确的平衡。
 
 
 ### 为UI警告添加文本
 
-![Vision](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/vision.png)
+![Vision](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/vision.png)
 
 1. 打开**渲染Rendering**面板（通过**更多工具**菜单）。
 2. 找到最后一个菜单**模仿视觉缺陷 Emulate Vision Deficiencies**，测试所有的渲染差异。
@@ -52,18 +52,18 @@ serve
 
 ### 增加对比度
 
-![对比](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/contrast.png)
+![对比](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/contrast.png)
 
 1. 打开**元素**选项卡中的**样式**面板。
 2. 检查主标题`<h1>`，注意对比度分数被标记为不足。太过相似的颜色容易融合在一起，降低可读性。
 3. 为所有标题选择对比度合适的颜色。直接从**选色器**测试，实时查看差异。
-![选色](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/color.png)
+![选色](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/color.png)
 4. 更新`style.css`中的颜色选择。
 
 
 ### 让字体大小更舒适
 
-![对比](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/font-size.png)
+![对比](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/font-size.png)
 
 1. 打开Chrome设置（`cmd ,`或`ctrl ,`）。
 2. 选择**外观**菜单
@@ -73,7 +73,7 @@ serve
 
 ### 允许应用程序具有响应性
 
-![ Viewport视窗](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/viewport.png)
+![ Viewport视窗](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/viewport.png)
 
 1. 在开发者工具中，点击**切换设备工具栏[Toggle device toolbar]**按钮。
 2. 选择一个移动预设(mobile preset)。你的页面看起来比预期的要小，而且缩小了。这是手机显示网页内容方式的结果：它们以更大的宽度呈现，并将整个页面放大。这是有意为之，因为大多数网站都是针对水平屏幕进行优化的。
@@ -90,31 +90,31 @@ serve
 
 ## 语义
 
-![语义学专题](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics-topic.png)
+![语义学专题](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/semantics-topic.png)
 
-![语义](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/semantics.svg?sanitize=true)
+![语义](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/semantics.svg)
 
 这两个网站看起来很相似，但实际上却有很大的不同。第一个是依靠CSS来组织页面的显示。第二个则是依靠HTML元素的自然作用。最后的结果是一样的吗？**不一样，因为辅助技术是无法准确描述第一种**。
 
 在幕后，辅助技术依靠代码来渲染页面，就像浏览器一样。但它需要一个**语义**信息的叠加，才能够命名，并且向用户描述这些元素。例如，要对`<a>`标签进行可理解的音频描述。
 
-![音频](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/audio.png)
+![音频](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/audio.png)
 
 工具除了阅读之外，还可以做很多事情，它们扩展了导航功能。VoiceOver建立了主要元素的摘要，可以直接访问，这里是一个标题列表：
 
-![VoiceOver](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/voiceover.png)
+![VoiceOver](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/voiceover.png)
 
 语义信息是从以下方面推断的：
 - 本地[HTML5元素](https://developer.mozilla.org/en-US/docs/Glossary/semantics)，如标题、导航等。它们具有隐含的作用，被广泛的辅助工具所理解。
 - [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)，一套完整的属性，可以修补缺失的信息。对了，你可以在Bootstrap组件中找到很多aria属性的例子。Bootstrap很[符合可访问性标准](https://getbootstrap.com/docs/4.5/getting-started/accessibility/)，一定要保留这些属性，它们很有用!
 
-![用户交互 User Interface](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/user-interface.svg?sanitize=true)
+![用户交互 User Interface](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/user-interface.svg)
 
 ### 使用正确的HTML标签
 
 尽可能地利用HTML标签的本地作用和行为。例如，总是使用`<a>`或`<button>`来表示可点击元素。在你的代码中添加一个`cursor: pointer;`的css规则是一个[代码异味 code smell](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%A0%81%E5%BC%82%E5%91%B3)!
 
-![无障碍面板 Accessibility panel](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/accessibility.png)
+![无障碍面板 Accessibility panel](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/accessibility.png)
 
 1. 打开**可访问性**面板。
 2. 使用**检查工具**，检查`<h1>`标签和一个`<div>`。
@@ -182,13 +182,13 @@ serve
 
 ## 焦点（Focus）
 
-![焦点话题Focus topic](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/focus-topic.png)
+![焦点话题Focus topic](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/focus-topic.png)
 
 你有没有注意到在表单中输入时的蓝色轮廓？有些开发人员用CSS删除它，因为它不适应他们的设计。请不要这样做! 这个蓝色轮廓是一个**焦点环**，它对键盘用户非常重要。
 
 只有交互式元素才能接受焦点，内容项（文本和图片）是不能接受焦点的。焦点从元素跳转到元素的顺序与HTML相同。尽管可以用[`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)属性来管理顺序，但这被认为是一种反模式（anti-pattern）。
 
-![链接Link](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/link.png)
+![链接Link](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/link.png)
 
 1. 练习只用键盘导航。
     - `⇥` TAB在页面中向前移动，`⇧` SHIFT + `⇥` TAB向后移动
@@ -217,7 +217,7 @@ serve
 
 ### LightHouse (Google)
 Lighthouse是一个审计工具，用于测试可访问性和其他方面。你可以在上面测试你修复的页面。
-[Lighthouse 解释](https://developers.google.com/web/tools/lighthouse/)。如果你在第一次启动时遇到困难，请尝试重启Chrome。
+[Lighthouse 解释](https://developers.google.com/web/tools/lighthouse/) (需要VPN 🛡 )。如果你在第一次启动时遇到困难，请尝试重启Chrome。
 
 
 ### 微软的无障碍见解手册 Accessibility Insights (Microsoft)
@@ -225,8 +225,8 @@ Lighthouse是一个审计工具，用于测试可访问性和其他方面。你�
 
 
 ### 屏幕阅读器
-- [旁白 VoiceOver on Mac](https://www.youtube.com/watch?v=5R-6WvAihms&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=7)
-- [NVDA for Windows](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=9)
+- [旁白 VoiceOver on Mac](https://www.youtube.com/watch?v=5R-6WvAihms&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=7) (需要VPN 🛡 )
+- [NVDA for Windows](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=9) (需要VPN 🛡 )
 
 
 ## 阅读更多
