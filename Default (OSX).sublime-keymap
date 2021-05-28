@@ -1,4 +1,14 @@
 [
   { "keys": ["super+shift+w"], "command": "close_all" },
-  { "keys": ["super+shift+s"], "command": "save_all" }
+  { "keys": ["super+shift+s"], "command": "save_all" },
+  { "keys": ["ctrl+alt+c", "ctrl+alt+s"], "command": "convert_to_snake"},
+  { "keys": ["ctrl+alt+c", "ctrl+alt+shift+s"], "command": "convert_to_screaming_snake"},
+  { "keys": ["ctrl+alt+c", "ctrl+alt+c"], "command": "convert_to_camel"},
+  { "keys": ["ctrl+alt+c", "ctrl+alt+p"], "command": "convert_to_pascal"},
+  { "keys": ["ctrl+alt+c", "ctrl+alt+d"], "command": "convert_to_dot"},
+  { "keys": ["ctrl+alt+c", "ctrl+alt+h"], "command": "convert_to_dash"},
+  { "keys": ["ctrl+alt+c", "ctrl+alt+w"], "command": "convert_to_separate_words"},
+  { "keys": ["ctrl+alt+c", "ctrl+alt+/"], "command": "convert_to_slash"},
+  { "keys": ["ctrl+alt+c", "ctrl+alt+b"], "command": "convert_to_back_slash"},
+  { "keys": ["ctrl+shift+-"], "command": "toggle_snake_camel_pascal"}
 ]
