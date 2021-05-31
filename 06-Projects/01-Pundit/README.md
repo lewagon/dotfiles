@@ -13,7 +13,7 @@ For **each step of part 1**, you must put in a ticket to get it validated by a T
 
 
 <details>
-<summary>Step 1 - User stories</summary>
+<summary markdown='span'>Step 1 - User stories</summary>
 Duplicate this [spreadsheet](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) (1 per team) and invite your teammates to collaborate.
 
 Revisit your projects from Product Design Sprint. What worked? What didn’t work? First up, decide on **the core user journey**. Then divide the core user journey into user stories. You should end up with a dozen max, not counting Devise.
@@ -29,14 +29,14 @@ By thinking of your user stories this way, it will make it easier to label and p
 
 
 <details>
-<summary>Step 2 - Database Schema</summary>
+<summary markdown='span'>Step 2 - Database Schema</summary>
 Next up, open [Kitt's DB schema builder](https://kitt.lewagon.com/db) and figure out the **database schema** needed for your user stories. This is usually the trickiest bit of the day, and it can be easy to get carried away. Spend time talking it out amongst your group, focusing on your **core user journey**. What kind of relationships do you have in your app -- 1:N, N:N? If you have any N:N relationships, don't forget to include your join tables.
 
 If you notice your schema is getting rather large (i.e. more than 6 tables), think about scaling it down to the **must haves** that you determined above. It's always better to start small with an approachable schema than to start with an overly complicated schema. Complicated schemas == dependencies == hard to divide features and get your MVP up and running in time. Instead, divide it into stages based on priority. Once you accomplish one stage, move onto the next and update the schema if needed. Repeat until done (or you run out of time 😅).
 </details>
 
 <details>
-<summary>Step 3 - Routes & Mockups</summary>
+<summary markdown='span'>Step 3 - Routes & Mockups</summary>
 Open your [Figma](https://www.figma.com/) from the Product Design Sprint and see if the user flow still matches what your team has in mind. If it doesn't, take some time to think about it as a team, and rework your wireframe based on the flow you've decided on. You can use a tool like [Whimsical](https://whimsical.com) or [Excalidraw](https://excalidraw.com/) to keep it super basic and clear. At this point, your Figma is still a wireframe. Now is **not** the time to start adding your visual identity, you will have more time later to work on a high-fidelity version.
 
 Based on your user stories and the different screens of your wireframe, figure out the **routes** for each and add them to your spreadsheet, along with the corresponding **controller** and **action**.
@@ -50,7 +50,7 @@ As not everyone will be able to code the app setup, now is the perfect time to d
 
 
 <details>
-<summary>Task 1 - Rails New</summary>
+<summary markdown='span'>Task 1 - Rails New</summary>
 First, decide amongst your team who will be the Lead Developer for this project. This can be the same person from your Airbnb project, or a new team member can give it a go. That person will then continue with the following steps for setting up the app.
 
 When starting your rails project, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates/tree/master). Make sure you use the [Devise template](https://github.com/lewagon/rails-templates/tree/master#devise) if you need a `User` model!
@@ -64,7 +64,7 @@ Tip: always run `heroku run rails db:migrate` after pushing to Heroku to make su
 
 
 <details>
-<summary>Task 2 - Figma</summary>
+<summary markdown='span'>Task 2 - Figma</summary>
 As you likely found out during Airbnb Week, having a thorough and fully fleshed-out Figma can make a world of a difference for your team's working process. Knowing exactly what each feature should look like, with a consistent design pattern, is what takes your app to the next level!
 
 While you created your initial mockup on the Product Design Sprint, now is the time to take another look and update it based on the decisions you & your team made earlier about user stories, routes, etc.
@@ -74,7 +74,7 @@ Choose a team member to work on improving the Figma while the others continue wi
 </details>
 
 <details>
-<summary>Task 3 - Kanban Board</summary>
+<summary markdown='span'>Task 3 - Kanban Board</summary>
 A [Kanban board](https://en.wikipedia.org/wiki/Kanban_board) is an agile project management tool designed to help visualize work, track progress, and maximize efficiency (or flow). There are many different resources out there ([Trello](https://trello.com/), [Github Projects](https://github.com/features/project-management/), [Notion](https://www.notion.so/), just to name a few).
 
 We've prepared three drafts for you to start from if you choose Trello, Github Projects or Notion, but feel free to use another tool if you are more familiar with it:
@@ -88,14 +88,14 @@ We've prepared three drafts for you to start from if you choose Trello, Github P
 
 
 <details>
-<summary>Task 4 - Domain Name</summary>
+<summary markdown='span'>Task 4 - Domain Name</summary>
 Having a custom domain name will make your MVP seem much more legit than using the free `.herokuapp.com` url. We recommend using [Namecheap](https://www.namecheap.com/) to buy your domain name. Please follow [this guide](https://www.lewagon.com/blog/buying-a-domain-on-namecheap-and-pointing-it-to-heroku) to purchase and setup your custom domain. Then follow [this guide](https://www.lewagon.com/blog/setting-up-a-free-ssl-certificate-on-heroku) to setup your SSL certificate.
 
 Please note that Le Wagon is an official partner of GitHub since 2015. Hence, our partnership allows you to redeem an access to the [Github Student Developer Pack](https://education.github.com/pack). You can find all the info [here](https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3). There is a [special offer](https://education.github.com/pack?sort=popularity&tag=Domains) for Namecheap if the domain name registers with a `.me` TLD.
 </details>
 
 <details>
-<summary>Task 5 - Team Slack Channel</summary>
+<summary markdown='span'>Task 5 - Team Slack Channel</summary>
 It's good to have a centralized location where all communication, resource-sharing, and notes can be kept relating to your project. Use a channel named `#batch-<user.batch_slug>-your_project_name` with your team. Add a topic to the channel with the following links for your project:
 
 1. Trello or Github Project
@@ -110,7 +110,7 @@ Important: This channel **must not** be used as an alternative ticketing system.
 </details>
 
 <details>
-<summary><strong>Task 6 - Product Page</strong></summary>
+<summary markdown='span'>Task 6 - Product Page</summary>
 On Kitt, we also centralize all your different links for your project. Please go on your batch's [Products page](https://kitt.lewagon.com/camps/<user.batch_slug>/products), select your product and click on `view details`. Take the time to fill out the different sections of your product page. This will allow the teaching crew to have an overview of your project.
 </details>
 
