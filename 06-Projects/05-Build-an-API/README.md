@@ -14,7 +14,7 @@ You should now know the drill:
 - Demo time!
 
 ---
-#### Demos
+## Demos
 
 What makes a good demo?
 - 3-5 minutes per product

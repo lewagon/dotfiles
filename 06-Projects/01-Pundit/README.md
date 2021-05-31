@@ -124,7 +124,7 @@ On Kitt, we also centralize all your different links for your project. Please go
 </details>
 
 ---
-#### End of day
+## End of day
 Before signing off, ask your teammates if there is any work done that can be merged in `master` and deployed 🚀
 
 ```zsh
@@ -135,7 +135,7 @@ git push heroku master
 ```
 
 ---
-#### Resources
+## Resources
 
 - Remind yourself how to properly use git with [this cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/git_advanced).
 - Refresh your Active Record knowledge [here](https://kitt.lewagon.com/knowledge/cheatsheets/activerecord) before starting to create your models.

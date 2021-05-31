@@ -3,7 +3,7 @@
 If your frontend could use some work, now is the time to give it the love and attention it deserves.
 
 ---
-#### Frontend
+## Frontend
 
 - Look back on the frontend feedbacks from your intermediate demo, and implement them.
 - Call in some extra support if needed, and get a TA to give you additional feedback on ways to improve.
@@ -11,7 +11,7 @@ If your frontend could use some work, now is the time to give it the love and at
 - If it's a mobile app, make sure you're checking often that everything is looking good and is in it's correct place on the mobile browser.
 
 ---
-#### Resources
+## Resources
 - Behold the holy grail of [all things simple form](https://kitt.lewagon.com/knowledge/cheatsheets/simple_form), including how to target specific simple-form-generated CSS classes
 - Need any realtime content streams for your users, like for a chat? Use [ActionCable](https://kitt.lewagon.com/knowledge/cheatsheets/actioncable)
 - Position things perfectly with [flexbox](https://kitt.lewagon.com/knowledge/cheatsheets/flexbox)
