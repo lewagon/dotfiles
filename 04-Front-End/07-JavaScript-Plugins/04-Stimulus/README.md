@@ -108,11 +108,13 @@ export default class extends Controller {
 ```
 
 Notice the `connect()` method. Stimulus controllers come with lifecyle callbacks:
-- initialize()
-- connect()
-- disconnect()
+- `initialize()` (different from ES6 constructor)
+- `connect()`
+- `disconnect()`
 
 `connect()` is triggered when the controller is connected to a DOM element, with the `data-controller` data attributes.
+
+If you want to read more about Stimulus controller lifecycles, read [this](https://stimulus.hotwire.dev/reference/lifecycle-callbacks)
 
 Now, let's tweak our HTML to **connect** the controller:
 - On which DOM element are you going to connect the controller?
