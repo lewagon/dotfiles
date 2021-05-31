@@ -62,14 +62,14 @@ rspec spec/models                # Launch tests
 Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies
 
 ```bash
-yarn add bootstrap jquery popper.js
+yarn add bootstrap@4.6 jquery popper.js
 ```
 
 And add the gems we're going to need:
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 ```
@@ -225,7 +225,7 @@ GET "lists"
 - A user can see the details of a given list and its name
 
 ```
-GET "list/42"
+GET "lists/42"
 ```
 
 - A user can create a new list
