@@ -8,6 +8,15 @@ The DNS propagation can (sometimes) take up to 24 hours. So if your domain doesn
 
 Please note that Le Wagon is an official partner of GitHub since 2015. Hence, our partnership allows you to redeem an access to the [Github Student Developer Pack](https://education.github.com/pack). You can find all the info [here](https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3).
 
+Getting started with your projects today will cover the following topics:
+- <a href="#daily-standup">Daily Standups</a>
+- <a href="#feature-building">Feature Building</a>
+- <a href="#feature-dependencies">Feature Dependencies</a>
+- <a href="#best-branching-practices">Best Branching Practices</a>
+- <a href="#continuous-deployment">Continuous Deployment</a>
+- <a href="#browser-tabs">Browser Tabs</a>
+- <a href="#seeds">Seeds</a>
+
 ---
 #### Daily Standup
 

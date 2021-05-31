@@ -11,7 +11,10 @@ For **each step of part 1**, you must put in a ticket to get it validated by a T
 ---
 ## Part 1
 
-### Step 1 - User stories
+
+<details>
+<summary><strong>Step 1 - User stories</strong></summary>
+
 Duplicate this [spreadsheet](https://docs.google.com/spreadsheets/d/1_q-wwWiWUY5VL0gZVtqWIidWEtfwhX8FHEbwaW0LuFI/edit?usp=sharing) (1 per team) and invite your teammates to collaborate.
 
 Revisit your projects from Product Design Sprint. What worked? What didn’t work? First up, decide on **the core user journey**. Then divide the core user journey into user stories. You should end up with a dozen max, not counting Devise.
@@ -23,16 +26,24 @@ When coming up with your user stories with your team, we recommend to organize t
 - 📕 **Won’t have**: the least-critical, lowest-payback items, or not appropriate
 
 By thinking of your user stories this way, it will make it easier to label and prioritize them in your [Kanban board](https://en.wikipedia.org/wiki/Kanban_board).
+</details>
 
-### Step 2 - Database Schema
+
+<details>
+<summary><strong>Step 2 - Database Schema</strong></summary>
+
 Next up, open [Kitt's DB schema builder](https://kitt.lewagon.com/db) and figure out the **database schema** needed for your user stories. This is usually the trickiest bit of the day, and it can be easy to get carried away. Spend time talking it out amongst your group, focusing on your **core user journey**. What kind of relationships do you have in your app -- 1:N, N:N? If you have any N:N relationships, don't forget to include your join tables.
 
 If you notice your schema is getting rather large (i.e. more than 6 tables), think about scaling it down to the **must haves** that you determined above. It's always better to start small with an approachable schema than to start with an overly complicated schema. Complicated schemas == dependencies == hard to divide features and get your MVP up and running in time. Instead, divide it into stages based on priority. Once you accomplish one stage, move onto the next and update the schema if needed. Repeat until done (or you run out of time 😅).
+</details>
 
-### Step 3 - Routes & Mockups
+<details>
+<summary><strong>Step 3 - Routes & Mockups</strong></summary>
+
 Open your [Figma](https://www.figma.com/) from the Product Design Sprint and see if the user flow still matches what your team has in mind. If it doesn't, take some time to think about it as a team, and rework your wireframe based on the flow you've decided on. You can use a tool like [Whimsical](https://whimsical.com) or [Excalidraw](https://excalidraw.com/) to keep it super basic and clear. At this point, your Figma is still a wireframe. Now is **not** the time to start adding your visual identity, you will have more time later to work on a high-fidelity version.
 
 Based on your user stories and the different screens of your wireframe, figure out the **routes** for each and add them to your spreadsheet, along with the corresponding **controller** and **action**.
+</details>
 
 ---
 ## Part 2
@@ -40,7 +51,10 @@ Based on your user stories and the different screens of your wireframe, figure o
 
 As not everyone will be able to code the app setup, now is the perfect time to divide up the rest of the steps amongst your team so that everyone has something to work on.
 
-### Task 1 - Rails New
+
+<details>
+<summary><strong>Task 1 - Rails New</strong></summary>
+
 First, decide amongst your team who will be the Lead Developer for this project. This can be the same person from your Airbnb project, or a new team member can give it a go. That person will then continue with the following steps for setting up the app.
 
 When starting your rails project, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates/tree/master). Make sure you use the [Devise template](https://github.com/lewagon/rails-templates/tree/master#devise) if you need a `User` model!
@@ -50,16 +64,23 @@ After the app is created, create your Github Repository and add all teammates as
 Then create the Heroku app and do your initial deploy. Check out [the Heroku lecture slides](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/05-Rails%2F05-Rails-MC-with-images#/0/2/5) if you need a refresher on the steps.
 
 Tip: always run `heroku run rails db:migrate` after pushing to Heroku to make sure your production database is up to date with any changes.
+</details>
 
-### Task 2 - Figma
+
+<details>
+<summary><strong>Task 2 - Figma</strong></summary>
+
 As you likely found out during Airbnb Week, having a thorough and fully fleshed-out Figma can make a world of a difference for your team's working process. Knowing exactly what each feature should look like, with a consistent design pattern, is what takes your app to the next level!
 
 While you created your initial mockup on the Product Design Sprint, now is the time to take another look and update it based on the decisions you & your team made earlier about user stories, routes, etc.
 Figma is an incredible tool with loads of cool features that you can utilize here to make a high-fidelity prototype. Make sure to create your [components library](https://help.figma.com/hc/en-us/articles/360038662654-Guide-to-Components-in-Figma), add some plugins like [unsplash](https://www.figma.com/community/plugin/738454987945972471/Unsplash), [color palettes](https://www.figma.com/community/search?model_type=public_plugins&q=color%20palettes) and explore even more in the [community](https://www.figma.com/community/explore) section.
 
 Choose a team member to work on improving the Figma while the others continue with the next tasks.
+</details>
 
-### Task 3 - Kanban Board
+<details>
+<summary><strong>Task 3 - Kanban Board</strong></summary>
+
 A [Kanban board](https://en.wikipedia.org/wiki/Kanban_board) is an agile project management tool designed to help visualize work, track progress, and maximize efficiency (or flow). There are many different resources out there ([Trello](https://trello.com/), [Github Projects](https://github.com/features/project-management/), [Notion](https://www.notion.so/), just to name a few).
 
 We've prepared three drafts for you to start from if you choose Trello, Github Projects or Notion, but feel free to use another tool if you are more familiar with it:
@@ -69,13 +90,20 @@ We've prepared three drafts for you to start from if you choose Trello, Github P
 2. Github Projects Draft - To set up your kanban board on Github, you'll need to have the repository created already and to have all the collaborators added. Then, a team member can use [this board](https://github.com/users/tonipanacek/projects/1) as the basis for your project board. Follow the instructions [here](https://docs.github.com/en/github/managing-your-work-on-github/copying-a-project-board) to see how to copy and add the board to your own project's repository. Two things to note: Github doesn't copy over the cards from the original board, so you'll have to add them yourself. Feel free to copy/paste the cards to get you going, or just start from scratch. Second, Github uses markdown syntax for text formatting like headings, font style, and checkboxes. It's not required, but can be nice to add formatting to your cards. You can read more about it [here](https://guides.github.com/features/mastering-markdown/).
 
 3. Notion Draft - Make a copy of [this Notion page](https://www.notion.so/lewagon/Project-Weeks-a3961a7da7324637bea441832becb3ad) by selecting the `Duplicate` option in the navbar. Then add all team members to the board (by clicking `Share` and then inviting them by email) and start importing all your user stories and tasks, ordering by priority. The top right section of the page should house all your relevant app links. The ones there should be used as a guide for which ones you'll need to include but unfortunately you can't edit these, so you'll have to recreate them yourself with the correct links. Follow [this guide](https://www.notion.so/Web-bookmarks-00b4add1fc96477d8aa70e65e02ec4da) for getting the `Web bookmarks` added correctly. If you're new to Notion, feel free to check out [this page](https://www.notion.so/Help-Support-e040febf70a94950b8620e6f00005004) to learn more and become a Notion-expert in no-time 💯
+</details>
 
-### Task 4 - Domain Name
+
+<details>
+<summary><strong>Task 4 - Domain Name</strong></summary>
+
 Having a custom domain name will make your MVP seem much more legit than using the free `.herokuapp.com` url. We recommend using [Namecheap](https://www.namecheap.com/) to buy your domain name. Please follow [this guide](https://www.lewagon.com/blog/buying-a-domain-on-namecheap-and-pointing-it-to-heroku) to purchase and setup your custom domain. Then follow [this guide](https://www.lewagon.com/blog/setting-up-a-free-ssl-certificate-on-heroku) to setup your SSL certificate.
 
 Please note that Le Wagon is an official partner of GitHub since 2015. Hence, our partnership allows you to redeem an access to the [Github Student Developer Pack](https://education.github.com/pack). You can find all the info [here](https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3). There is a [special offer](https://education.github.com/pack?sort=popularity&tag=Domains) for Namecheap if the domain name registers with a `.me` TLD.
+</details>
 
-### Task 5 - Team Slack Channel
+<details>
+<summary><strong>Task 5 - Team Slack Channel</strong></summary>
+
 It's good to have a centralized location where all communication, resource-sharing, and notes can be kept relating to your project. Use a channel named `#batch-<user.batch_slug>-your_project_name` with your team. Add a topic to the channel with the following links for your project:
 
 1. Trello or Github Project
@@ -87,9 +115,13 @@ It's good to have a centralized location where all communication, resource-shari
 In order to get everything to fit in the description area, you will likely need to use a tool like [bitly](https://bitly.com/) to shorten the URLs.
 
 Important: This channel **must not** be used as an alternative ticketing system. Tickets still need to be created the normal way.
+</details>
 
-### Task 6 - Product Page
+<details>
+<summary><strong>Task 6 - Product Page</strong></summary>
+
 On Kitt, we also centralize all your different links for your project. Please go on your batch's [Products page](https://kitt.lewagon.com/camps/<user.batch_slug>/products), select your product and click on `view details`. Take the time to fill out the different sections of your product page. This will allow the teaching crew to have an overview of your project.
+</details>
 
 ---
 #### End of day
