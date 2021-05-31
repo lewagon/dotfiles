@@ -3,6 +3,18 @@
 Let's keep up the good work!
 
 ---
+## Today's Overview:
+
+Today you should approach the following topics:
+- <a href="#domain-name">Domain Name</a>
+- <a href="#debug-heroku">Debug Heroku</a>
+- <a href="#seeds">Seeds</a>
+- <a href="#homepage">Homepage</a>
+- <a href="#well-formated-html">Well-Formatted HTML</a>
+- <a href="#resources">Resources</a>
+
+
+---
 #### Domain name
 
 If your team hasn't set up a custom domain yet, do that first thing. You can check the previous days instructions to follow the correct guide. Otherwise, confirm that the domain is connected correctly and fill in the info on [your product page](https://kitt.lewagon.com/camps/<user.batch_slug>/products).

@@ -3,6 +3,16 @@
 The next session will be your **intermediate demo**!
 
 ---
+## Today's Overview:
+
+Today you should approach the following topics:
+- <a href="#core-user-journey">Core User Journey</a>
+- <a href="#seeds">Seeds</a>
+- <a href="#testing-your-mobile-apps-with-ngrok">Ngrok</a>
+- <a href="#resources">Resources</a>
+
+
+---
 #### Core User Journey
 
 At this point, your **core user journey** should essentially be complete. If it's not, this should be the main focus for today. Put aside any features that are not a part of the core user journey, and come back to them once the absolutely necessary features are complete.
