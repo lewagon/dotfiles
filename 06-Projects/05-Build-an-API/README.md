@@ -6,7 +6,7 @@ By now you should know the drill:
 - **After the break: Stop coding any new features**
 - Push your branches
 - Solve conflicts
-- Create / improve your seeds
+- Improve your seeds
 - Debug
 - Merge branches
 - Push to Heroku
