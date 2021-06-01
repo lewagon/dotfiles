@@ -24,8 +24,7 @@ brew install --cask ngrok
 
 Installation for Ubuntu/WSL:
 ```zsh
-sudo apt-get update
-sudo apt-get install ngrok-client
+sudo wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz -O - | sudo tar xz -C /usr/local/bin
 ```
 
 If you need to install it manually, you can download it [here](https://ngrok.com/download).
