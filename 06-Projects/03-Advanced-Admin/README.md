@@ -3,7 +3,7 @@
 Let's keep up the good work!
 
 ---
-## Today's Overview:
+## Overview:
 
 Today you should approach the following topics:
 - <a href="#domain-name">Domain Name</a>
