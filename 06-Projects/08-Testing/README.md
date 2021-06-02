@@ -5,7 +5,7 @@ Nearly there - keep pushing!
 It's time to do some technical setups to check that everything is working correctly.
 
 ---
-#### Product Checklist
+## Product Checklist
 Please note: To release the checklist panel in your [product's page](https://kitt.lewagon.com/camps/<user.batch_slug>/products), enter your domain name in your Tech Specs panel.
 
 At this point, your product should be shaping up! But we want to make sure it's all set up so that it looks really legit when you share it around to all your family, friends & future employers 😁
@@ -20,17 +20,17 @@ So, it's time to perform some sanity checks:
 - [og:image has the right dimensions](https://github.com/lewagon/product/blob/master/checklist/07_og_image_has_the_right_dimensions.md)
 
 ---
-#### Progressive Web App Setup
+## Progressive Web App Setup
 
 If your product is for mobile, it's time to set up something called a PWA. Basically, the goal is to mimic a native mobile app and make the UX more comfortable on mobile. This is done by adding a shortcut to your app from the user's homescreen and displaying the app in full screen. To set this up, please follow [this tutorial](https://kitt.lewagon.com/knowledge/tutorials/from_web_app_to_pwa) and put in a ticket if you have any trouble.
 
 ---
-#### Pitch Prep
+## Pitch Prep
 
 In preparation for the Dress Rehearsal in the next session, check out some pitches from [previous demo days](https://www.youtube.com/playlist?list=PLkbmdtbypn7R_BN6nFX-XZc7uDyMSxhye) to get inspiration and learn how to deliver a clear and fun user journey 👌
 
 ---
-#### Resources
+## Resources
 - Behold the holy grail of [all things simple form](https://kitt.lewagon.com/knowledge/cheatsheets/simple_form), including how to target specific simple-form-generated CSS classes
 - Need any realtime content streams for your users, like for a chat? Use [ActionCable](https://kitt.lewagon.com/knowledge/cheatsheets/actioncable)
 - Position things perfectly with [flexbox](https://kitt.lewagon.com/knowledge/cheatsheets/flexbox)
