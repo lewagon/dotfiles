@@ -3,11 +3,11 @@
 You now belong to a team with a clear concept for the MVP you're going to be building for the rest of the bootcamp. The goal of the kick off is the same as Airbnb - Day 1.
 
 The kick off will encompass the following parts:
-* Product Design 🤔
+* <a href="#product-design-">Product Design 🤔</a>
     * <a href="#user-stories">User Stories</a>
     * <a href="#db-schema">DB Schema</a>
     * <a href="#routes--mockup">Routes & Mockup</a>
-* Building 🛠
+* <a href="#building-">Building 🛠</a>
     * <a href="#rails-new">Rails New</a>
     * <a href="#figma">Figma</a>
     * <a href="#kanban-board">Kanban Board</a>
