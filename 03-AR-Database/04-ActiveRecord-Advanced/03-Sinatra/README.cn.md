@@ -111,7 +111,7 @@ end
 
 ### 分享
 
-欢迎在Slack上用[`ngrok`]（https://ngrok.com/ ）分享你的作品。安装`ngrok`（用`brew cask install ngrok`或[手动安装Ubuntu](https://ngrok.com/download)），并在另一个窗口运行它。
+欢迎在Slack上用[`ngrok`]（https://ngrok.com/ ）分享你的作品。安装`ngrok`（用`brew install --cask ngrok`或[手动安装Ubuntu](https://ngrok.com/download)），并在另一个窗口运行它。
 
 ```bash
 ngrok http 4567
