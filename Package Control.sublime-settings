@@ -1,16 +1,34 @@
 {
-  "installed_packages":
-  [
-    "AdvancedNewFile",
-    "All Autocomplete",
-    "ApplySyntax",
-    "BracketHighlighter",
-    "Emmet",
-    "Git",
-    "GitGutter",
-    "JSX",
-    "Package Control",
-    "SCSS",
-    "ERB Snippets"
-  ]
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Advanced CSV",
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"ApplySyntax",
+		"Babel",
+		"Better CoffeeScript",
+		"BracketHighlighter",
+		"Color Convert",
+		"Color Highlighter",
+		"ColorSchemeSelector",
+		"Dockerfile Syntax Highlighting",
+		"Emmet",
+		"Emoji",
+		"ERB Snippets",
+		"Git",
+		"GitGutter",
+		"GNU Octave Completions",
+		"JSON-Template",
+		"JSX",
+		"LaTeXTools",
+		"Matlab Completions",
+		"Package Control",
+		"SCSS",
+		"SubLilyPond",
+		"VHDL"
+	]
 }
