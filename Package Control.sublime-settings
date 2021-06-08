@@ -1,10 +1,9 @@
 {
-//<<<<<<< HEAD
 	"bootstrapped": true,
-	/*"in_process_packages":
+	"in_process_packages":
 	[
-	],*/
-	/*"installed_packages":
+	],
+	"installed_packages":
 	[
 		"Advanced CSV",
 		"AdvancedNewFile",
@@ -36,5 +35,5 @@
     "SublimeLinter",
     "SublimeLinter-rubocop"
 		"VHDL"
-	]*/
+	]
 }
