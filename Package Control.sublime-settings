@@ -8,6 +8,7 @@
 	[
 		"Advanced CSV",
 		"AdvancedNewFile",
+    "A File Icon",
 		"All Autocomplete",
 		"ApplySyntax",
 		"Babel",
@@ -25,29 +26,15 @@
 		"GNU Octave Completions",
 		"JSON-Template",
 		"JSX",
+    "Latest Migration",
 		"LaTeXTools",
+    "MagicPython",
 		"Matlab Completions",
 		"Package Control",
 		"SCSS",
 		"SubLilyPond",
-		"VHDL"
-	]*/
-//=======
-  /*"installed_packages":
-  [
-    "A File Icon",
-    "AdvancedNewFile",
-    "All Autocomplete",
-    "Babel",
-    "Emmet",
-    "ERB Snippets",
-    "Git",
-    "Latest Migration",
-    "MagicPython",
-    "Package Control",
-    "SCSS",
     "SublimeLinter",
     "SublimeLinter-rubocop"
-  ]*/
-//>>>>>>> 90029e1b483e3bd3af519e475af4b725ea242079
+		"VHDL"
+	]*/
 }

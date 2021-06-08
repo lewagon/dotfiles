@@ -7,16 +7,11 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="cobalt2"
 # ZSH_THEME="random"
 
-<<<<<<< HEAD
 # Add ruby version on prompt (float right)
 if [ -x "$(command -v rbenv)" ]; then RPS1='[$(ruby_prompt_info)]$EPS1'; fi
 
 # Useful plugins for Rails development with Sublime Text
-plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search docker)
-=======
-# Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
->>>>>>> 90029e1b483e3bd3af519e475af4b725ea242079
+plugins=(git gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search docker)
 
 # Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -48,7 +43,7 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-<<<<<<< HEAD
+
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 unsetopt LIST_BEEP
