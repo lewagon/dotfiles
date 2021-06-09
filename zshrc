@@ -66,3 +66,4 @@ export BROWSER='"/mnt/c/Program Files (x86)/Mozilla Firefox/firefox.exe"'
 export BROWSER='"/mnt/c/Program Files/Mozilla Firefox/firefox.exe"'
 sudo /etc/init.d/postgresql start
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
