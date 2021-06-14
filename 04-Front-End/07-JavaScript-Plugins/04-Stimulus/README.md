@@ -53,7 +53,7 @@ button.addEventListener('click', (event) => {
 });
 ```
 
-Go ahead, open your `index.html` and `lib/index.js` and copy/paste the code above. When done launch the server and check in your browser that the button is working as intended:
+Go ahead, open your `index.html` and `lib/index.js` where you will find the same code as above. Launch the server and check in your browser that the button is working as intended:
 
 ```bash
 yarn install
@@ -68,7 +68,7 @@ See how we enhanced the solution you came up with listening to the `ended` event
 
 ### Refactoring with Stimulus
 
-We will now refactor this code using the Stimulus framework. Before we jump to the code, please take some times to read the following pages of the Handbook to grasp the philosophy behind the birth of this framework:
+We will now **refactor** this code using the Stimulus framework. Before we jump to the code, please take some times to read the following pages of the Handbook to grasp the philosophy behind the birth of this framework:
 
 - [The Origin of Stimulus](https://stimulusjs.org/handbook/origin)
 - [Introduction](https://stimulusjs.org/handbook/introduction)
@@ -82,7 +82,7 @@ yarn add stimulus
 mkdir lib/controllers # This is where we will add our Stimulus code
 ```
 
-Then open the `lib/index.js` and add the following at the **beginning** of the file:
+Then open the `lib/index.js`, remove or comment the old code, and add the following at the **beginning** of the file:
 
 ```js
 import { Application } from "stimulus";
@@ -187,7 +187,7 @@ export default class extends Controller {
 }
 ```
 
-💡 If you use Sublime's linter, then ESLint will complain of a syntax error. This exercise is not configured to support the [`babel-eslint`](https://github.com/babel/babel-eslint) package which would allow this kind of syntax. Just continue the challenge ignoring this error.
+💡 If you use your text editor's linter, then ESLint will complain of a syntax error. This exercise is not configured to support the [`babel-eslint`](https://github.com/babel/babel-eslint) package which would allow this kind of syntax. Just continue the challenge ignoring this error.
 
 Go ahead and click on the button. Can you see the `this.triggerTarget` in the console? Is it referencing the `<button />` element in the DOM?
 
@@ -211,9 +211,7 @@ For now, this refactoring may seem dull, even more complicated. Let's do some ch
 
 Let's say we want to add a **second** button, which will play another sound. Also we would like that second button to actually have another text, to be more meaningful.
 
-In a nutshell, we would like to implement our own [Button Playground](https://www.myinstants.com/).
-
-OK, let's start with some HTML:
+Let's start with some HTML:
 
 ```html
 <div data-controller="zelda">
@@ -282,4 +280,3 @@ Have a last look at your `lib/controllers/zelda_controller.js` file.
 - Do you see an `addEventListener`? No, this is replaced by the `data-action` with the syntax `EVENT_TYPE->CONTROLLER_NAME#CALLBACK`. You just have to implement the CALLBACK in your controller and that's it!
 
 Once a Stimulus controller is implemented, it's very easy to re-use it everywhere on a website with the right HTML tags.
-
