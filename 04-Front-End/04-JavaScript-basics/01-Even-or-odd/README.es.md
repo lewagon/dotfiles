@@ -21,7 +21,7 @@ Antes de empezar, tómate el tiempo de instalar **Eslint Sublime Linter** en Sub
 1. Abre Sublime Text
 
     ```bash
-    stt
+    code .
     ```
 2. Abre el menú **Package Control** en **Sublime Text**
 

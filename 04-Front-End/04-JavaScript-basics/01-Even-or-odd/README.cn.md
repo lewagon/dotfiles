@@ -19,7 +19,7 @@ node -v
 1. 打开Sublime Text
 
     ```bash
-    stt
+    code .
     ```
 
 2. 在 **Sublime Text**里, 打开**Package Control**的菜单栏:

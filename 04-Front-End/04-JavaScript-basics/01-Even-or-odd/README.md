@@ -21,7 +21,7 @@ Before starting, take the time to install **Eslint Sublime Linter** in Sublime T
 1. Open Sublime Text
 
     ```bash
-    stt
+    code .
     ```
 
 2. In **Sublime Text**, open **Package Control**'s menu:
@@ -49,7 +49,7 @@ Click on **Install on WSL:Ubuntu**. Click on **Reload required**.
 
 
 
-It will highlight instantly your syntax errors / style offenses in Sublime Text / Visual Studio Code. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
+It will highlight instantly your syntax errors / style offenses in your code editor. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
 
 ## Specs
 
