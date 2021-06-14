@@ -187,7 +187,7 @@ export default class extends Controller {
 }
 ```
 
-💡 If you use Sublime's linter, then ESLint will complain of a syntax error. This exercise is not configured to support the [`babel-eslint`](https://github.com/babel/babel-eslint) package which would allow this kind of syntax. Just continue the challenge ignoring this error.
+💡 If you use your text editor's linter, then ESLint will complain of a syntax error. This exercise is not configured to support the [`babel-eslint`](https://github.com/babel/babel-eslint) package which would allow this kind of syntax. Just continue the challenge ignoring this error.
 
 Go ahead and click on the button. Can you see the `this.triggerTarget` in the console? Is it referencing the `<button />` element in the DOM?
 

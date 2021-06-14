@@ -6,7 +6,7 @@ Organicemos tu puesto de trabajo:
 
 2. **10:30am-1pm**: Sigue [la configuración de Le Wagon detalladamente](https://github.com/lewagon/setup) y pide ayuda cada vez que encuentres un obstáculo y no puedas avanzar. Te debería tomar toda la mañana. Si no tienes una Mac, tal vez te quite un poco del tiempo de tu almuerzo 😉.
 
-3. **2pm-2:15pm**: Segunda clase. Dura 15 minutos y es sobre conceptos básicos de línea de comando (navegación en el sistema de archivos, creación de directorios y archivos, apertura de Sublime Text desde la Terminal, etc.).
+3. **2pm-2:15pm**: Segunda clase. Dura 15 minutos y es sobre conceptos básicos de línea de comando (navegación en el sistema de archivos, creación de directorios y archivos, apertura de tu editor de texto desde la Terminal, etc.).
 
 4. **2:15pm-3pm**: Tercera clase. Dura 45 minutos y es sobre comandos git (`git add`/`git commit`/`git push`).
 
@@ -16,7 +16,7 @@ Organicemos tu puesto de trabajo:
 
 Ahora tienes todas las herramientas que necesitarás durante las nueve semanas del bootcamp. Recuerda que tus nuevos mejores amigos en tu computadora son:
 
-- **Sublime Text**, el editor de texto que usarás para escribir código Ruby (¡y para muchas cosas más!).
+- **VS Code**, el editor de texto que usarás para escribir código Ruby (¡y para muchas cosas más!).
 - La **Terminal**, también llamada consola, donde escribirás los comandos.
 - **git**, el software de control de versiones que utilizarás para llevar registro de los cambios en tu código, coordinar el trabajo y ¡subir tus soluciones a Kitt!
 

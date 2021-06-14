@@ -68,7 +68,7 @@ Once the first exercise is all green (style + tests), **please commit and push**
 
 ## About the testing setup
 
-Open the `Rakefile` in Sublime Text. You will find two tasks:
+Open the `Rakefile` in your text editor. You will find two tasks:
 
 - `eslint`, a [JavaScript linter](http://eslint.org/), the equivalent of Rubocop in the Ruby world.
 - `mocha`, a [JavaScript testing framework](https://mochajs.org), the equivalent of Rspec in the Ruby world.
