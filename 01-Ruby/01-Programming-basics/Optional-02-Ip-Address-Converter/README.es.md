@@ -17,7 +17,7 @@ Verás que `www.lewagon.com` está vinculado a un dominio en Heroku el cual est�
 myip
 ```
 
-Estos comandos no son estándares. Tú los tienes gracias a la configuración que hicimos el primer día. Puedes volver a ver los aliases abriendo el archivo `~/.aliases` con Sublime Text.
+Estos comandos no son estándares. Tú los tienes gracias a la configuración que hicimos el primer día. Puedes volver a ver los aliases abriendo el archivo `~/.aliases` con tu editor de texto.
 
 ## Especificaciones
 

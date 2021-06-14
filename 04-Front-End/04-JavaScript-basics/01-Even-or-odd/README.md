@@ -49,7 +49,7 @@ Click on **Install on WSL:Ubuntu**. Click on **Reload required**.
 
 
 
-It will highlight instantly your syntax errors / style offenses in your code editor. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
+It will highlight instantly your syntax errors / style offenses in your text editor. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
 
 ## Specs
 
