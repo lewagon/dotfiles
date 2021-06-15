@@ -10,43 +10,6 @@ node -v
 
 如果不是的话，你的系统里可能没有安装Node. 请回到第一天Setup的课堂文档里找一下Node安装。
 
-## 安装 Eslint
-
-#### 如果你使用的是Sublime Text:
-
-在开始前，花些时间在Sublime Text上安装 **Eslint Sublime Linter** ：
-
-1. 打开Sublime Text
-
-    ```bash
-    code .
-    ```
-
-2. 在 **Sublime Text**里, 打开**Package Control**的菜单栏:
-
-    ```bash
-    # macOS
-    cmd shift p
-
-    # Ubuntu
-    ctrl shift p
-    ```
-
-3. 输入`install package` 然后选择`Package Control: Install Package`
-4. 输入 `SublimeLinter-eslint` 然后选择它
-5. 重启Sublime Text
-
-#### 如果你使用的是Visual Studio Code:
-
-点击[extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)页面然后点击**Install**.
-会出现一个提示让你打开Visual Studio Code.打开后会跳转到扩展页面。
-
-![eslint_vscode](eslint_vscode.jpg)
-
-点击**Install on WSL:Ubuntu**. 点击**Reload required**.
-
-它会立即在Sublime Text/Visual Studio Code标记出你的语法错误/不理想的代码风格。在学习Ruby后掌握JavaScript的语法可能会有点难，它会帮助你**很多**。
-
 ## 详细说明
 
 让我们从一个简单的算法开始。打开文件`lib/even_or_odd.js` 。执行 `evenOrOdd`[偶数或奇数]函数。 它使用了一个参数 `number` (属于`Number`类型)并且返回一个`String`[字符串]:

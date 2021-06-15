@@ -12,45 +12,6 @@ node -v
 
 If not, Node might not be installed on your system. Please have a look at the Setup section in the lecture slides.
 
-## Install Eslint
-
-#### If you are using Sublime Text:
-
-Before starting, take the time to install **Eslint Sublime Linter** in Sublime Text: 
-
-1. Open Sublime Text
-
-    ```bash
-    code .
-    ```
-
-2. In **Sublime Text**, open **Package Control**'s menu:
-
-    ```bash
-    # macOS
-    cmd shift p
-
-    # Ubuntu
-    ctrl shift p
-    ```
-
-3. Type `install package` and select `Package Control: Install Package`
-4. Type `SublimeLinter-eslint` and select it
-5. Restart Sublime Text
-
-#### If you are using Visual Studio Code:
-
-Click on the [extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) page and click on **Install**.
-You will get an alert asking you to open Visual Studio Code. The editor will open to the extension page.
-
-![eslint_vscode](eslint_vscode.jpg)
-
-Click on **Install on WSL:Ubuntu**. Click on **Reload required**.
-
-
-
-It will highlight instantly your syntax errors / style offenses in your text editor. Picking up the JavaScript syntax after Ruby may be tricky, so this should help you **a lot**.
-
 ## Specs
 
 Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `Number`) and returns a `String`:
