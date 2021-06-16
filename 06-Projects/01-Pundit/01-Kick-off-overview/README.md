@@ -3,7 +3,7 @@ You now belong to a team with a clear concept for the MVP you are going to be bu
 
 The kick off will encompass the following parts:
 
-* Product Design :thinking:
+* Product Design :thinking_face:
   * User Stories
   * DB Schema
   * Routes & Mockup
@@ -24,4 +24,4 @@ At the end of Kick-off,
 - your Heroku app should be up to let you deploy continuously during the next sessions
 - all your projects urls should be submitted on your product page
 
-Happy Kick-off! :rocket:
+Happy Kick-off :rocket: !

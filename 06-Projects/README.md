@@ -8,6 +8,12 @@ Good luck - you're going to be amazing. Here are your milestones:
 - Dress rehearsal: rehearsal for final demo with the staff only, the day before Demoday. Be prepared!
 - Demoday: THE BIG DAY. Everyone is here! Press, VCs, your family! Smash it!
 
+## Projects Instructions
+
+You will find instructions guiding you through projects, that you must read every time you sign in on Kitt before rushing in the code! You will find project management best practices, coding advice and resources, and guidance to be on time and prepared for every milestone during the projects module.
+
+Before anything, let's make sure you kick-off your project the best possible way :rocket:
+
 ## Morning lectures
 
 During the first week, you will still have morning talks on advanced topics. Here is the program for morning lectures:

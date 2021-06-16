@@ -1,4 +1,4 @@
-### Product Page
+## Product Page
 On Kitt, we also centralize all your different links for your project. Please go on your batch's [Products page](https://kitt.lewagon.com/camps/<user.batch_slug>/products), select your product and click on `view details`. Take the time to fill out the different sections of your product page. This will allow the teaching crew to have an overview of your project.
 
 
