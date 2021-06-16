@@ -74,6 +74,6 @@ alias podcast='open https://www.bbc.co.uk/sounds/series/p02nrsln'
 
 # Miscellaneous
 
-alias password='ruby ~/code/alexandrebk/dotfiles/password.rb'
+alias password='~/code/alexandrebk/password/target/release/password'
 alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
 alias space="du -sh * | sort -h"

@@ -38,6 +38,8 @@ zsh git_setup.sh
 
 Please now quit all your opened terminal windows.
 
+### SHH passphrase
+
 In order not to re-type your SSH passphrase at every git push, you can add these lines to the `~/.ssh/config` file:
 
 ```
@@ -66,7 +68,7 @@ Plugin list
 * [Tabular](https://github.com/godlygeek/tabular)
 * [Emmet](https://www.vim.org/scripts/script.php?script_id=2981)
 
-First of all you need to install Vundle to manage your plugin.
+First of all you need to install [Vundle](https://mutebardtison.github.io/2018/08/17/Vim-Plugins-Installation-with-Vundle-in-macOS/) to manage your plugin.
 
 The you can add the plugin to your `vimrc`
 
