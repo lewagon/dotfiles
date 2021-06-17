@@ -22,7 +22,7 @@ To build your UI Kit, add a new page called UI Kit and then create a frame to ha
 
 As you will build a lo-fi UI Kit, you'll not use colors to create your components.
 
-But at some point it could be handy to have access to a **grayscale palette** to add some contrast in your component.
+But at some point it could be handy to have access to a **grayscale palette** to add some contrast in your components.
 
 Create 5 squares in your UI Kit to implement it. Each one of these squares should have the following background color:
 
