@@ -30,7 +30,7 @@ Create 5 squares in your UI Kit to implement it. Each one of these squares shoul
 - `#888888` (dark grey)
 - `#BBBBBB` (grey)
 - `#DDDDDD` (light grey)
-- `#ffffff` (white)
+- `#FFFFFF` (white)
 
 This will be the unique color allowed for your lo-fi components.
 
