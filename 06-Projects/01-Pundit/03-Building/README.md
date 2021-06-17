@@ -1,7 +1,7 @@
 As not everyone will be able to code the app setup, now is the perfect time to divide up the rest of the steps amongst your team so that everyone has something to work on.
 
 
-### Rails New
+## Rails New
 First, decide amongst your team who will be the Lead Developer for this project. This can be the same person from your Airbnb project, or a new team member can give it a go. That person will then continue with the following steps for setting up the app.
 
 When starting your rails project, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates/tree/master). Make sure you use the [Devise template](https://github.com/lewagon/rails-templates/tree/master#devise) if you need a `User` model!
@@ -12,9 +12,43 @@ Then create the Heroku app and do your initial deploy. Check out [the Heroku lec
 
 Tip: always run `heroku run rails db:migrate` after pushing to Heroku to make sure your production database is up to date with any changes.
 
+## Pair Programming
+It is hard to split the work and have everyone starting to code on an empty project. Start by generating your **core models** on the lead developer's machine, in [pair-programming](https://en.wikipedia.org/wiki/Pair_programming). Make sure you follow thoroughly the DB schema that was validated by the teaching staff.
+Always start by generating the models that do not reference other models. Remember the syntax?
 
 
-### Figma
+```bash
+# Generic syntax
+rails g model ModelName column:type
+
+# For instance
+rails g model Pet name:string user:references
+```
+
+Once you generated all your models, don't forget to run
+
+```bash
+rails db:migrate
+```
+
+Then open your models and go on with **associations** and **validations** :ok_hand:
+
+## Controllers
+
+Before splitting the work, you can also consider generating the main controllers (empty at this point).
+
+```bash
+# Generic syntax
+rails g controller model_name_plural
+
+# For instance
+rails g controller pets
+```
+
+At this point you should be ready to commit or merge this work to `master` and start dispatching the work in the team. Branching becomes **mandatory** at this stage!
+
+
+## Figma
 As you likely found out during Airbnb Week, having a thorough and fully fleshed-out Figma can make a world of a difference for your team's working process. Knowing exactly what each feature should look like, with a consistent design pattern, is what takes your app to the next level!
 
 While you created your initial mockup on the Product Design Sprint, now is the time to take another look and update it based on the decisions you & your team made earlier about user stories, routes, etc.
