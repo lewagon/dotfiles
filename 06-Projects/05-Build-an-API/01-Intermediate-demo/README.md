@@ -1,5 +1,3 @@
-## Projects - Intermediate Demo
-
 Your intermediate demo is approaching! This is an exciting time, as it's the only moment before Demo Day that you'll see what all the other teams have been working on. After this Demo, the pitch practices will happen 1:1 with your team and some selected teachers/TAs. So it's time to show off all the hard work you've put in until now!
 
 By now you should know the drill:
@@ -14,13 +12,12 @@ By now you should know the drill:
 - Prepare your pitch
 - Demo time!
 
----
 ## Demos
 
 What makes a good demo?
 - 3-5 minutes per product
 - 1-2 speakers, 1 assistant (if non-remote)
-- No demos on localhost, demos must take place on production environments
+- No demos on `localhost`, demos must take place on production environments
 - Embody a use case, starting from your pain - do not describe the features you coded.
 - Have realistic data on your website (this means working on your seeds 😉)
 - Practice, practice, practice!
