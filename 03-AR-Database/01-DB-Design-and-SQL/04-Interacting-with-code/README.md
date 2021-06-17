@@ -35,6 +35,14 @@ rows = db.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
 ```
 
+You can then import your query methods with:
+
+```ruby
+require_relative "lib/queries"
+artist_count(db)
+# => [...]
+```
+
 Open the file `lib/queries.rb` to answer the following questions. Don't forget you can look inside the database by running `sqlite3 lib/db/jukebox.sqlite` in the Terminal or use one of the tools mentionned in the previous exercise (SQLite Pro, SQLStudio or SQLite Browser).
 
 There are five methods to implement:

@@ -6,7 +6,9 @@ describe "#valid?" do
   end
 
   it "should return false with an invalid email" do
+    expect(valid?("borislewagoncom")).to be false
     expect(valid?("borislewagon.com")).to be false
+    expect(valid?("boris@lewagoncom")).to be false
   end
 end
 

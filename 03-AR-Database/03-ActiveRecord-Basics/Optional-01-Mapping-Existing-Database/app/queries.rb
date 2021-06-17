@@ -11,5 +11,5 @@ def long_tracks(min_length)
 end
 
 def top_five_artists(genre_name)
-  # TODO: return the 5 artists with the more tracks of genre `genre_name`
+  # TODO: return the 5 artists with the most tracks of genre `genre_name`
 end

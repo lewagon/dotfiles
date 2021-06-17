@@ -112,7 +112,7 @@ Este ejercicio es muy abierto. Estas son algunas de las cosas por donde puedes e
 
 ## Compartir
 
-Siéntete libre de compartir tu trabajo en Slack con [`ngrok`](https://ngrok.com/). Instala `ngrok` (con `brew cask install ngrok` o [manualmente en  Ubuntu](https://ngrok.com/download)) y correlo en otra ventana.
+Siéntete libre de compartir tu trabajo en Slack con [`ngrok`](https://ngrok.com/). Instala `ngrok` (con `brew install --cask ngrok` o [manualmente en  Ubuntu](https://ngrok.com/download)) y correlo en otra ventana.
 
 ```bash
 ngrok http 4567

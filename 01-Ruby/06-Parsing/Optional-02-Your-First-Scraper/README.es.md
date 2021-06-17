@@ -13,7 +13,7 @@ Luego puedes correr el siguiente código Ruby:
 require 'open-uri'
 require 'nokogiri'
 
-html_content = open('https://www.etsy.com/search?q=wallet').read
+html_content = URI.open('https://www.etsy.com/search?q=wallet').read
 doc = Nokogiri::HTML(html_content)
 
 doc.search('.wt-grid .v2-listing-card__info .text-body').each_with_index do |element, index|

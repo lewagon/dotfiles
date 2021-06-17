@@ -45,9 +45,9 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 We haven't launched our app yet. To do this, we need a router and we need to fill in the `app.rb` file.
 
-The router is responsible for displaying the tasks that the user can do and routing the user's choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instanciating a router and executing its `run` method to launch the app.
+The router is responsible for displaying the tasks that the user can do and routing the user's choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instantiating a router and executing its `run` method to launch the app.
 
-Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you can go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instanciate the router with a controller** as we don't have it yet. Just print `TODO` for the moment when the user selects a task.
+Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you can go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instantiate the router with a controller** as we don't have it yet. Just print `TODO` for the moment when the user selects a task.
 
 There is no rake for this part. Launch your app by running this command in the terminal:
 
@@ -114,7 +114,7 @@ Remember that the role of the controller is to delegate the work to the other co
 
 Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or view). Then write the code to implement each step. Create the view and code it step by step.
 
-To test your controller, link it to your app by instanciating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
+To test your controller, link it to your app by instantiating it in `app.rb` and passing it to the router. Then you can crash-test your code by launching your app:
 
 ```bash
 ruby app.rb

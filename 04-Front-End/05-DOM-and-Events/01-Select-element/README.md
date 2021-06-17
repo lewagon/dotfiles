@@ -2,28 +2,17 @@
 
 In this first challenge, we are going to select an element from the DOM!
 
-### Install yarn
+### Setup
 
-You should already have Node installed. Check with `node -v`.
-
-Later this week we will also be using `yarn`, a JavaScript package manager.
-
-To install it run one of the following in the terminal:
+You should already have `node` and `yarn` installed. Check it with:
 
 ```bash
-# macOS
-brew install yarn
+node -v
+# You should see your node version here
+yarn -v
+# You should see your yarn version here
 ```
-
-<br>
-
-```bash
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
-```
-
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#node-with-nvm), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#node-with-nvm) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#node-with-nvm) setup.
 
 ## Specs
 

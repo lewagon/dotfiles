@@ -22,8 +22,8 @@ Learn the best setup for implementing Bootstrap SASS + frontend libraries, and s
 
 Learn about the asset pipeline and webpacker.
 
-For the exercises, you'll start a two-day build of a cocktail app, with 3 models `Cocktail`, `Ingredient`, and `Dose`. You'll have to:
-- Follow the frontend setup carefully to work on a nice-looking app.
+For the exercises, you'll start a two-day build of a watch list app, with 3 models `Movie`, `Bookmark`, and `List`.
+You will have to follow the frontend setup carefully to work on a nice-looking app.
 
 ### `05 Hosting & Image Upload`
 

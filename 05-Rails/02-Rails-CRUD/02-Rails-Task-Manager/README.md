@@ -10,7 +10,7 @@ Let's build a To Do Manager with the basic CRUD features:
 
 In this challenge, you will meet your old friend [**Active Record**](http://guides.rubyonrails.org/active_record_basics.html) again, which is Rails' ORM.
 
-There is no `rake` here, and do not create your Rails app in `fullstack-challenges` ⛔️
+There is no `rake` here, and do not create your Rails app in `fullstack-challenges` ⛔️ Instead, please follow these instructions:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -49,6 +49,8 @@ Task.create title: 'Laundry', details: 'Do not mix colors!'
 Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: true
 ```
 
+⚠️ In the view, do not focus on coding the checkboxes visual for now. You will have the opportunity to code it in the optional questions.
+
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index.png)
 
 ### 4 - As a user, I can view the details of a task
@@ -56,6 +58,8 @@ Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: 
 We now have a list of tasks, and we would like to click on the task title and navigate to a new page, displaying the details of this task. Following the conventions from the lecture, add a new route, a new controller action and a new view. This action should **find** a specific task, thanks to its `id`, directly from `params`.
 
 Update the `index.html.erb` view with the `link_to` helper to build the links.
+
+⚠️ Again, in the view, do not focus on coding the checkboxes visual for now. You will have the opportunity to code it in the optional questions.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/index_show.gif)
 
@@ -84,3 +88,11 @@ Have a critical look at your code and introduce the following refactoring:
 1. Use `resources` in your `config/routes.rb`
 1. Use a `before_action` in the `TasksController`
 1. Should we DRY a bit the `new` and `edit` views? How can we handle the fact that the `new` form should **not** display "Completed"? ([hint](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F))
+
+### 9 - Checkboxes Visuals (Optional)
+
+The checkboxes are not real ones! They are simply Font Awesome icons.
+
+To create the checkboxes visuals in your view for each task, import Bootstrap & Font Awesome CDNs in the `<head>` of your `application.html.erb`.
+
+Then, in your view, use conditionals. If your task is completed, display the checked square, else, display an empty square (as a hint 😉, search for `check-square` and `square` icons on fontawesome 😉).

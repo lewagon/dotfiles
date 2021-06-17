@@ -14,7 +14,7 @@ Embrace all the cool ruby iterators (`each`, `select`, `map` and more). Understa
 
 ### `04 Hash & Symbols`
 
-Finally, let's introduce hashes - data stuctures designed to store key-value pairs like dictionaries. Define and manipulate your own hashes. Understand symbols - objects a bit similar to strings but more adpated for storing "keywords" of your code. You'll often see symbols as hash keys, so get used to it!
+Finally, let's introduce hashes - data structures designed to store key-value pairs like dictionaries. Define and manipulate your own hashes. Understand symbols - objects a bit similar to strings but more adapted for storing "keywords" of your code. You'll often see symbols as hash keys, so get used to it!
 
 #### Friday ruby quiz
 

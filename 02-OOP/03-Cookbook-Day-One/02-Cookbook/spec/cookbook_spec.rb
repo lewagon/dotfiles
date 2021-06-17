@@ -97,6 +97,7 @@ describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
     describe '#initialize' do
       it 'should have loaded existing recipes in spec/recipes.csv' do
         expect(@cookbook.all.length).to eq recipes.length
+        expect(@cookbook.all.first).to be_instance_of Recipe
       end
     end
 
