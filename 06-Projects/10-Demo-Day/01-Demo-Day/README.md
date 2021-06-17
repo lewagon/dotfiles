@@ -1,5 +1,3 @@
-## Projects - Demo Day
-
 ![Excited](https://telltaletv.com/wp-content/uploads/2016/08/picture-of-seinfeld-group-jumping-at-the-door-gif.gif)
 
 
