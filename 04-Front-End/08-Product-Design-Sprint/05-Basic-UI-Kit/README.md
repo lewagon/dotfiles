@@ -20,7 +20,7 @@ To build your UI Kit, add a new page called UI Kit and then create a frame to ha
 
 ### Create a grayscale palette
 
-As you will build a lo-fi UI Kit, you'll not use colors to create your component.
+As you will build a lo-fi UI Kit, you'll not use colors to create your components.
 
 But at some point it could be handy to have access to a **grayscale palette** to add some contrast in your component.
 
