@@ -45,7 +45,7 @@ load-nvmrc() {
   fi
 }
 add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+[ -s "$NVM_DIR/nvm.sh" ] && load-nvmrc
 
 # Rails and Ruby uses the local `bin` folder to store binstubs.
 # So instead of running `bin/rails` like the doc says, just run `rails`
