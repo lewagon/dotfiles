@@ -41,10 +41,13 @@ cd "$CURRENT_DIR"
 git config --global core.editor "code"
 
 # Symlink VS Code settings to the present `settings.json` file
-if [[ ! `uname` =~ "darwin" ]]; then
-  CODE_PATH=~/.config/Code/User
-else
+if [ `uname` =~ "darwin" ]; then
   CODE_PATH=~/Library/Application\ Support/Code/User
+else
+  CODE_PATH=~/.config/Code/User
+  if [ ! -e $CODE_PATH ]; then
+    CODE_PATH=~/mnt/c/Users/le\ wagon\ 12/AppData/Roaming/Code/User
+  fi
 fi
 backup "$CODE_PATH/settings.json"
 ln -sf $PWD/settings.json $CODE_PATH/settings.json
