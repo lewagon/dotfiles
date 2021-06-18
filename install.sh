@@ -49,10 +49,12 @@ fi
 backup "$CODE_PATH/settings.json"
 ln -sf $PWD/settings.json $CODE_PATH/settings.json
 
-# Symlink SSH config file to the present `config` file for macOS
+# Symlink SSH config file to the present `config` file for macOS and add SSH
+# passphrase to the keychain
 if [[ `uname` =~ "darwin" ]]; then
   backup ~/.ssh/config
   ln -sf $PWD/config ~/.ssh/config
+  ssh-add -K ~/.ssh/id_25519
 fi
 
 # Refresh the current terminal with the newly installed configuration

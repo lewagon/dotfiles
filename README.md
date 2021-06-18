@@ -1,4 +1,4 @@
-This repository is used by [Le Wagon](https://www.lewagon.com) Web Development course students.
+This repository is used by [Le Wagon Web Development course](https://www.lewagon.com/web-development-course/full-time) students.
 
 ## Toolset
 
