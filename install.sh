@@ -37,9 +37,6 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
 fi
 cd "$CURRENT_DIR"
 
-# Setup git text editor to use VS Code
-git config --global core.editor "code"
-
 # Symlink VS Code settings to the present `settings.json` file
 # If it's a macOS
 if [[ `uname` =~ "darwin" ]]; then
