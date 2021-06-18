@@ -46,7 +46,7 @@ if [ `uname` =~ "darwin" ]; then
 else
   CODE_PATH=~/.config/Code/User
   if [ ! -e $CODE_PATH ]; then
-    CODE_PATH=~/mnt/c/Users/le\ wagon\ 12/AppData/Roaming/Code/User
+    CODE_PATH=~/.vscode-server/data/Machine
   fi
 fi
 backup "$CODE_PATH/settings.json"
