@@ -41,10 +41,13 @@ cd "$CURRENT_DIR"
 git config --global core.editor "code"
 
 # Symlink VS Code settings to the present `settings.json` file
-if [ `uname` =~ "darwin" ]; then
+# If it's a macOS
+if [[ `uname` =~ "darwin" ]]; then
   CODE_PATH=~/Library/Application\ Support/Code/User
+# Else, it's a Linux
 else
   CODE_PATH=~/.config/Code/User
+  # If this folder doesn't exist, it's a WSL
   if [ ! -e $CODE_PATH ]; then
     CODE_PATH=~/.vscode-server/data/Machine
   fi
