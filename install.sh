@@ -19,7 +19,6 @@ for name in *; do
     target="$HOME/.$name"
     if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ "$name" != 'settings.json' ]] && [[ "$name" != 'config' ]]; then
       backup $target
-      echo $name
       if [ ! -e "$target" ]; then
         echo "-----> Symlinking your new $target"
         ln -s "$PWD/$name" "$target"
@@ -51,6 +50,7 @@ else
   fi
 fi
 backup "$CODE_PATH/settings.json"
+echo "-----> Symlinking your new settings.json"
 ln -s $PWD/settings.json $CODE_PATH/settings.json
 
 # Symlink SSH config file to the present `config` file for macOS and add SSH
