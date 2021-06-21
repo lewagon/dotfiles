@@ -57,7 +57,7 @@ ln -sf $PWD/settings.json $CODE_PATH/settings.json
 if [[ `uname` =~ "Darwin" ]]; then
   backup ~/.ssh/config
   ln -sf $PWD/config ~/.ssh/config
-  ssh-add -K ~/.ssh/id_25519
+  ssh-add -K ~/.ssh/id_ed25519
 fi
 
 # Refresh the current terminal with the newly installed configuration
