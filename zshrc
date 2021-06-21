@@ -32,7 +32,7 @@ export NVM_DIR="$HOME/.nvm"
 # Call `nvm use` automatically in a directory with a `.nvmrc` file
 autoload -U add-zsh-hook
 load-nvmrc() {
-  if nvm -v > /dev/null; then
+  if nvm -v &> /dev/null; then
     local node_version="$(nvm version)"
     local nvmrc_path="$(nvm_find_nvmrc)"
 
