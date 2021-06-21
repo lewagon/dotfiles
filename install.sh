@@ -12,6 +12,15 @@ backup() {
   fi
 }
 
+symlink() {
+  file=$1
+  link=$2
+  if [ ! -e "$link" ]; then
+    echo "-----> Symlinking your new $link"
+    ln -s $file $link
+  fi
+}
+
 # For all files `$name` in the present folder except `*.sh`, `README.md`, `settings.json`,
 # and `config`, backup the target file located at `~/.$name` and symlink `$name` to `~/.$name`
 for name in *; do
@@ -19,10 +28,7 @@ for name in *; do
     target="$HOME/.$name"
     if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ "$name" != 'settings.json' ]] && [[ "$name" != 'config' ]]; then
       backup $target
-      if [ ! -e "$target" ]; then
-        echo "-----> Symlinking your new $target"
-        ln -sf "$PWD/$name" "$target"
-      fi
+      symlink $PWD/$name $target
     fi
   fi
 done
@@ -49,15 +55,16 @@ else
     CODE_PATH=~/.vscode-server/data/Machine
   fi
 fi
-backup "$CODE_PATH/settings.json"
-echo "-----> Symlinking your new settings.json"
-ln -sf $PWD/settings.json $CODE_PATH/settings.json
+target="$CODE_PATH/settings.json"
+backup $target
+symlink $PWD/settings.json $target
 
 # Symlink SSH config file to the present `config` file for macOS and add SSH
 # passphrase to the keychain
 if [[ `uname` =~ "Darwin" ]]; then
-  backup ~/.ssh/config
-  ln -sf $PWD/config ~/.ssh/config
+  target=~/.ssh/config
+  backup $target
+  symlink $PWD/config $target
   ssh-add -K ~/.ssh/id_ed25519
 fi
 
