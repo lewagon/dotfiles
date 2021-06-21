@@ -47,7 +47,7 @@ load-nvmrc() {
     nvm use default --silent
   fi
 }
-add-zsh-hook chpwd load-nvmrc
+add-zsh-hook chpwd [ -s "$NVM_DIR/nvm.sh" ] && load-nvmrc
 [ -s "$NVM_DIR/nvm.sh" ] && load-nvmrc
 
 # Rails and Ruby uses the local `bin` folder to store binstubs.
