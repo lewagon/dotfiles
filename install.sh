@@ -39,7 +39,7 @@ cd "$CURRENT_DIR"
 
 # Symlink VS Code settings to the present `settings.json` file
 # If it's a macOS
-if [[ `uname` =~ "darwin" ]]; then
+if [[ `uname` =~ "Darwin" ]]; then
   CODE_PATH=~/Library/Application\ Support/Code/User
 # Else, it's a Linux
 else
@@ -54,7 +54,7 @@ ln -sf $PWD/settings.json $CODE_PATH/settings.json
 
 # Symlink SSH config file to the present `config` file for macOS and add SSH
 # passphrase to the keychain
-if [[ `uname` =~ "darwin" ]]; then
+if [[ `uname` =~ "Darwin" ]]; then
   backup ~/.ssh/config
   ln -sf $PWD/config ~/.ssh/config
   ssh-add -K ~/.ssh/id_25519
