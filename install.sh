@@ -21,7 +21,7 @@ for name in *; do
       backup $target
       if [ ! -e "$target" ]; then
         echo "-----> Symlinking your new $target"
-        ln -s "$PWD/$name" "$target"
+        ln -sf "$PWD/$name" "$target"
       fi
     fi
   fi
@@ -51,7 +51,7 @@ else
 fi
 backup "$CODE_PATH/settings.json"
 echo "-----> Symlinking your new settings.json"
-ln -s $PWD/settings.json $CODE_PATH/settings.json
+ln -sf $PWD/settings.json $CODE_PATH/settings.json
 
 # Symlink SSH config file to the present `config` file for macOS and add SSH
 # passphrase to the keychain
