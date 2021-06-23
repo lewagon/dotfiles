@@ -11,6 +11,7 @@
 
 [core]
   pager = less -FRSX
+  editor = code
 
 [alias]
   co = checkout
