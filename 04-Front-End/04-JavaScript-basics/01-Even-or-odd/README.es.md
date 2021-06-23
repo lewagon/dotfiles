@@ -12,43 +12,6 @@ node -v
 
 De otra manera Node no se instalará en tu sistema. Échale un vistazo a la sección de configuración en las diapositivas de la clase, por favor.
 
-## Instala Eslint
-
-#### Si usas Sublime Text:
-
-Antes de empezar, tómate el tiempo de instalar **Eslint Sublime Linter** en Sublime Text:
-
-1. Abre Sublime Text
-
-    ```bash
-    stt
-    ```
-2. Abre el menú **Package Control** en **Sublime Text**
-
-    ```bash
-    # macOS
-    cmd shift p
-
-    # Ubuntu
-    ctrl shift p
-    ```
-3. Escribe `install package` y selecciona `Package Control: Install Package`
-4. Escribe `SublimeLinter-eslint` y seleccionalo
-5. Reinicia Sublime Text
-
-#### Si usas Visual Studio Code:
-
-Haz clic en la página de [extensión](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) y haz click en **Install**.
-Recibirás una alerta pidiéndote que abras Visual Studio Code. El editor abrirá en la página de extensión.
-
-![eslint_vscode](eslint_vscode.jpg)
-
-Has clic en **Install on WSL:Ubuntu**. Haz clic en **Reload required**.
-
-
-
-Resaltará tus errores de sintaxis / ofensas de estilo en Sublime Text / Visual Studio Code instantáneamente. Puede ser un poco difícil aprender la sintaxis de JavaScript después de haber aprendido Ruby, así que esto te ayudará **mucho**.
-
 ## Especificaciones
 
 Comencemos con un algoritmo muy simple. Abre el archivo `lib/even_or_odd.js`. Implementa la función `evenOrOdd` que toma el parámetro `number` (de tipo `Number`) y devuelve una cadena de texto (`String`):
@@ -66,7 +29,7 @@ Un vez que el primer ejercicio esté todo verde (estilo + tests), **por favor ha
 
 ## Acerca de la configuración de los tests
 
-Abre `Rakefile` en Sublime Text. Ahí encontrarás dos actividades:
+Abre `Rakefile` en tu editor de texto. Ahí encontrarás dos actividades:
 
 - `eslint` es un [linter de JavaScript](http://eslint.org/), el equivalente a Rubocop en el mundo Ruby.
 - `mocha` es un [framework de testing de JavaScript](https://mochajs.org), el equivalente a Rspec en el mundo Ruby.

@@ -9,7 +9,7 @@
 ```bash
 cd profile
 mkdir images
-stt
+code .
 ```
 
 ## 本地服务器（Local Server）

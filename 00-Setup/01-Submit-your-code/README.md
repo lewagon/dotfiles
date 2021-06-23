@@ -19,7 +19,7 @@ Move to the exercise folder with the command at the top of this page.
 
 * Run `rake`. It should all be red (as you have not started coding).
 
-Open the `lib/wagon_start.rb` file in Sublime Text. That's where you'll need to edit the code.
+Open the `lib/wagon_start.rb` file in your text editor. That's where you'll need to edit the code.
 
 * Make the `wagon_start` method return `"That's how it starts"`
 * In the terminal, run `rake` and make sure you have a green result for `#wagon_start` and a good style (**no** offences). You can progress with poor style, but if you want to create good habits with your code structure then get everything green before moving on!
@@ -43,7 +43,7 @@ First step, we'll create all our files in a directory named `tmp`.
 ### README file
 
 * Inside `tmp` directory, create a file named `README`
-* Open this `tmp` directory in Sublime Text. Write some text in the `README` file.
+* Open this `tmp` directory in your text editor. Write some text in the `README` file.
 
 ### Level-1 directory
 
