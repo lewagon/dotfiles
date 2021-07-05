@@ -19,7 +19,7 @@
 
 * 运行 `rake`. 它应该都是红色的(因为你还没开始写码).
 
-在Sublime Text里打开 `lib/wagon_start.rb` 文件。那就是你编辑代码的地方。
+在代码编辑器里打开 `lib/wagon_start.rb` 文件。那就是你编辑代码的地方。
 
 * 让 `wagon_start` 方法返回 `"That's how it starts"`
 * 在终端上, 运行 `rake` 并确保你的 `#wagon_start` 有绿色的 green 结果和好的样式 （**没有** offences/错误)。 虽然就算你的代码样式不好也可以继续往下做练习，但如果你想有好写代码结构的习惯，那么在继续下面的练习之前把所有东西都变成绿色！
@@ -43,7 +43,7 @@
 ### README 文件
 
 * 在 `tmp` 目录里, 创建名为 `README` 的文件
-* 在Sublime Text打开这个 `tmp` 目录。 在 `README` 文件里写一些文字。
+* 在代码编辑器里打开这个 `tmp` 目录。 在 `README` 文件里写一些文字。
 
 ### 一级目录
 

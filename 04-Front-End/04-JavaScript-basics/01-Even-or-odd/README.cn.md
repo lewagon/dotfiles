@@ -27,7 +27,7 @@ node -v
 
 ## 关于测试的设置
 
-在Sublime Text中打开`Rakefile`。你会看到两个任务:
+在代码编辑器中打开`Rakefile`。你会看到两个任务:
 
 - `eslint`, 一个JavaScript代码检查器[JavaScript linter](http://eslint.org/), 在Ruby中和Rubocop一样。
 - `mocha`, 一个JavaScript检测框架[JavaScript testing framework](https://mochajs.org), 在Ruby中和Rspec一样。
