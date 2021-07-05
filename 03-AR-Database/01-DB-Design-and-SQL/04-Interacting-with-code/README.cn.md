@@ -69,7 +69,7 @@ SQL
 rows = db.execute(query)
 ```
 
-你会注意到Sublime Text理解Heredoc，语法高亮实际上是Ruby文件中的SQL!
+你会注意到代码编辑器理解Heredoc，语法高亮实际上是Ruby文件中的SQL!
 
 ## 资源
 
