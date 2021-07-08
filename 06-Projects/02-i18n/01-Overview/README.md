@@ -14,13 +14,15 @@ Please note that Le Wagon is an official partner of GitHub since 2015. Hence, ou
 ## Overview
 
 Getting started with your projects today will cover the following topics:
-- Daily Standups
-- Feature Building
-- Feature Dependencies
-- Best Branching Practices
-- Continuous Deployment
-- Browser Tabs
-- Seeds
-- Resources
+* Daily Standups
+* Building Features
+  * Tasks as Features
+  * Dependencies
+* Best Practices
+  * How to Branch
+  * Continuous Deployment
+  * Browser Tabs
+  * Seeds
+* Resources
 
 Happy reading 📚

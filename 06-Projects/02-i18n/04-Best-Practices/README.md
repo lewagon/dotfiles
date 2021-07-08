@@ -1,4 +1,4 @@
-## Best Branching Practices
+## How to Branch
 
 The workflow we use is called **Feature Branching**. This means that each branch is one feature, or **part of one feature**. Ideally, you should not be working on the same branch for more than a day. If the backend and basic frontend is done, push it and then create a new branch to finish beautifying the view. Your branch should have a clear, descriptive name, like `restaurants-show` or `dashboard-page-frontend` or `animated-menu-items`.
 
@@ -32,8 +32,3 @@ By now, we have likely learned that coding means having 100 browser tabs open at
 
 It's good to start off with some basic data that everyone can work with, especially for those working on the READ features. Prioritize the creation of some basic seeds to get going.
 
-## Resources
-
-- Some of your schemas may have more advanced relationships and foreign keys than we saw during Airbnb week. For example, a table that needs to store two instances (foreign keys) from another table (most often the `User` table). In this case you'll need to use something called `aliases`. Learn how to implement this with [a guide](https://kitt.lewagon.com/knowledge/cheatsheets/activerecord_advanced) on advanced Active Record.
-- Make sure to authorize your user actions with [Pundit](https://kitt.lewagon.com/knowledge/cheatsheets/pundit)
-- Start building out your frontend by grabbing components from the [Le Wagon UI Kit](https://uikit.lewagon.com/documentation) and customize them to your own design.
