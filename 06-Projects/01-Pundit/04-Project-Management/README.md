@@ -20,7 +20,7 @@ Please note that Le Wagon is an official partner of GitHub since 2015. Hence, ou
 ### Team Slack Channel
 It's good to have a centralized location where all communication, resource-sharing, and notes can be kept relating to your project. Use a channel named `#batch-<user.batch_slug>-your_project_name` with your team. Add bookmarks to the channel with the following links for your project:
 
-1. Trello or Github Project
+1. Kanban Board
 2. Heroku
 3. DB Schema
 4. Github Repo
