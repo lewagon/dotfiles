@@ -112,7 +112,7 @@ Notice the `connect()` method. Stimulus controllers come with lifecyle callbacks
 - `connect()`
 - `disconnect()`
 
-`connect()` is triggered when the controller is connected to a DOM element, with the `data-controller` data attributes.
+`connect()` is triggered when the controller is connected to a DOM element, with the `data-controller` attribute.
 
 If you want to read more about Stimulus controller lifecycles, read [this](https://stimulus.hotwire.dev/reference/lifecycle-callbacks)
 
