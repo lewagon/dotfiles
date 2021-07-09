@@ -171,7 +171,7 @@ Notice this method takes an `event` parameter. By default the Stimulus actions c
 
 In this method, you will have to:
 - Check the status of the "Check All" checkbox clicked.
-- If it's checked, then, let's checked all the other checkboxes
+- If it's checked, then, let's check all the other checkboxes
 - If it isn't checked, then, let's uncheck all the other checkboxes
 
 But how do you access all the other checkboxes in this method? Good question!
