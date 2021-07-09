@@ -169,7 +169,7 @@ export default class extends Controller {
 
 Notice this method takes an paramer `event`. By default the Stimulus actions call the method with an `event` object passed as argument (like the [good old `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
 
-In this method, you'll have to :
+In this method, you will have to:
 - Check the status of the "Check All" checkbox clicked.
 - If it's checked, then, let's checked all the other checkboxes
 - If it isn't checked, then, let's uncheck all the other checkboxes
