@@ -120,7 +120,7 @@ Now, let's tweak our HTML to **connect** the controller:
 - On which DOM element are you going to connect the controller?
 - What's the syntax to connect it?
 
-Important: we now the controller will have to interact with the checkbox "Check all", and also the 4 other category checkboxes. In Stimulus, a controller can interact only with elements within its scope - as in, only with children elements of the DOM element to which it's connected. So, the question here is: "Which element is wrapping both the 'Check All' checkbox and the category checkboxes?"
+Important: we know the controller will have to interact with the checkbox "Check all", and also the 4 other category checkboxes. In Stimulus, a controller can interact only with elements within its scope - as in, only with children elements of the DOM element to which it's connected. So, the question here is: "Which element is wrapping both the 'Check All' checkbox and the category checkboxes?"
 
 <details>
   <summary>Hint</summary>
