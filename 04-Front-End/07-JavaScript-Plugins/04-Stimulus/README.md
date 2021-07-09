@@ -41,7 +41,7 @@ Go ahead, open your `index.html` and look at the code inside.
 </form>
 ```
 
-It's a HTML form with category checkboxes:
+It's an HTML form with category checkboxes:
 - 1x checkbox "Check All"
 - 4x checkbox with Categories
 
@@ -233,4 +233,3 @@ Have a last look at your `lib/controllers/zelda_controller.js` file.
 - Do you see an `addEventListener`? No, this is replaced by the `data-action` with the syntax `EVENT_TYPE->CONTROLLER_NAME#CALLBACK`. You just have to implement the CALLBACK in your controller and that's it!
 
 Once a Stimulus controller is implemented, it's very easy to re-use it everywhere on a website with the right HTML tags.
-
