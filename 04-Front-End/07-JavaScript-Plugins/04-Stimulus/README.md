@@ -178,7 +178,7 @@ But how do you access all the other checkboxes in this method? Good question!
 
 ## Targets
 
-In addition to actions (which replace `addEventListener` in the context of a Stimulus controller), Stimulus introduces `targets` (which replace all you `querySelector` or `getElementById` in the context of a Stimulus controller).
+In addition to actions (which replace `addEventListener` in the context of a Stimulus controller), Stimulus introduces `targets` (which replace all your `querySelector` or `getElementById` in the context of a Stimulus controller).
 
 To add targets, let's have a look at the [Stimulus documentation](https://stimulus.hotwire.dev/reference/targets).
 
