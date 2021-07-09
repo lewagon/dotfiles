@@ -46,7 +46,7 @@ yarn add stimulus
 mkdir lib/controllers # This is where we will add our Stimulus code
 ```
 
-Then open the `lib/index.js` and add the following at the **beginning** of the file:
+Then open the `lib/index.js` and add the following at the beginning of the file:
 
 ```js
 import { Application } from "stimulus";
@@ -176,6 +176,7 @@ The syntax to do this is using, guess what... `data-attributes`! More precisely:
 Therefore, let's add `data-check-all-checkbox-target='checkbox'` to all the `<input type="checkbox" ...>` element (except the "Check All" one).
 
 Once this is done, the Stimulus controller can easily fetch the targets with some simple Stimulus syntax:
+
 ```js
 this.checkboxTarget // -> return the first checkbox target
 this.checkboxTargets // -> return a collection (think Array) of all the checkbox targets
@@ -194,7 +195,7 @@ You've got everything in hand to tackle the rest of this challenge.
 
 Remember to try the behaviour of your Stimulus controller in the Browser (test manually), and feel free to add `console.log` to understand what you're dealing with in the `checkAll` methods
 
-You're turn!
+Your turn!
 
 ## Conclusion
 

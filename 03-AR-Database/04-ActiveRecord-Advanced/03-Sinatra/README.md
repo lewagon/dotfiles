@@ -116,7 +116,7 @@ There are no tests for this exercise, so `rake` will just run Rubocop to make su
 
 ### Sharing
 
-Feel free to share you work on Slack with [`ngrok`](https://ngrok.com/). Install `ngrok` (with `brew cask install ngrok` or [manually for Ubuntu](https://ngrok.com/download)), and run it
+Feel free to share you work on Slack with [`ngrok`](https://ngrok.com/). Install `ngrok` (with `brew install --cask ngrok` or [manually for Ubuntu](https://ngrok.com/download)), and run it
 in another window.
 
 ```bash

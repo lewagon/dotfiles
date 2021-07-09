@@ -8,13 +8,35 @@
     <title>Weather</title>
     <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <!-- TODO: Put your HTML code in here -->
-
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+          <form class="form-inline my-5">
+            <input type="text" placeholder="Enter city" class='form-control flex-grow-1'>
+            <input type="submit" value="Get the weather" class="btn btn-primary ml-3">
+          </form>
+          <div class="card mt-4 mb-5">
+            <div class="card-body">
+              <h1>Weather in <span> <!-- TODO: CITY NAME --> </span></h1>
+              <h3 class="gray-text"><!-- TODO: DATE --></h3>
+              <div>
+                <p><!-- TODO: DESCRIPTION --></p>
+                <div class="d-flex">
+                  <img src="" alt="Weather Icon">
+                  <h2><!-- TODO: TEMPERATURE --></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
