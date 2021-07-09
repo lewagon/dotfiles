@@ -136,7 +136,7 @@ You should see the message `The 'check-all-checkboxes' controller is now loaded!
 
 ## Listen to an event
 
-We now we want to check all checkboxes when we check the "Check all" one.
+We now want to check all checkboxes when we check the "Check all" one.
 It means, we want to listen to event happening on the "Check all" checkbox, and then trigger some code logic for the other checkboxes.
 
 If we read the Stimulus documentation, we can see (here the syntax)[https://stimulus.hotwire.dev/reference/actions] to listen to an event. In Stimulus, it's called an **Action**.
