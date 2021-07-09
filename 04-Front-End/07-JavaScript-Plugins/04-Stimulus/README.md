@@ -12,35 +12,6 @@ This framework uses [ES6 Classes](https://developer.mozilla.org/en-US/docs/Web/J
 
 Go ahead, open your `index.html` and look at the code inside.
 
-```html
-<form class='mt-5'>
-  <h3>Categories</h3>
-  <div class='form-check'>
-    <input id='check-all' type="checkbox" class="form-check-input">
-    <label for='check-all'>Check all</label>
-  </div>
-  <hr>
-  <div>
-    <div class='form-check'>
-      <input id='checkbox-appartment' type="checkbox" class="form-check-input">
-      <label for='checkbox-appartment'>Appartment 🏢</label>
-    </div>
-    <div class='form-check'>
-      <input id='checkbox-house' type="checkbox" class="form-check-input">
-      <label for='checkbox-house'>House 🏡</label>
-    </div>
-    <div class='form-check'>
-      <input id='checkbox-igloo' type="checkbox" class="form-check-input">
-      <label for='checkbox-igloo'>Igloo 🧊</label>
-    </div>
-    <div class='form-check'>
-      <input id='checkbox-cabin' type="checkbox" class="form-check-input">
-      <label for='checkbox-cabin'>Cabin 🌳</label>
-    </div>
-  </div>
-</form>
-```
-
 It's an HTML form with category checkboxes:
 - 1x checkbox "Check All"
 - 4x checkbox with Categories
