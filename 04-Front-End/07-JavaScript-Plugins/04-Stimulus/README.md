@@ -227,7 +227,7 @@ You're turn!
 
 ## Conclusion
 
-Have a last look at your `lib/controllers/zelda_controller.js` file.
+Have a last look at your `lib/controllers/check_all_checkboxes_controller.js` file.
 
 - Do you see a `querySelector`? No, this is replaced by the **target** mechanism which automatically binds `this.$$$Target` variables to `data-controller-name-target` defined elements
 - Do you see an `addEventListener`? No, this is replaced by the `data-action` with the syntax `EVENT_TYPE->CONTROLLER_NAME#CALLBACK`. You just have to implement the CALLBACK in your controller and that's it!
