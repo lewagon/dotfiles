@@ -61,7 +61,7 @@ You can check these checkboxes individually, but the "Check all" checkbox is not
 
 ## Getting Started: Stimulus installation
 
-Before we jump to the code, please take some times to read the following pages of the Handbook to grasp the philosophy behind the birth of this framework:
+Before we jump to the code, please take some time to read the following pages of the Handbook to grasp the philosophy behind the birth of this framework:
 
 - [The Origin of Stimulus](https://stimulusjs.org/handbook/origin)
 - [Introduction](https://stimulusjs.org/handbook/introduction)
