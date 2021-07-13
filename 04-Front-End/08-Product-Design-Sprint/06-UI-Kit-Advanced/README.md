@@ -35,7 +35,6 @@ How about if you need to resize your card? Make sure you select the resizing opt
 
 ![Resize your card](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_auto_layout_six.gif)
 
-
 ### More about Auto Layout
 
 Auto Layout is a great way to design dynamic components. But there is more to it than that: you can also use it to quickly reorder your elements or to create full screens that work across mutliple devices! Have a look at the [Auto Layout Playground](https://www.figma.com/community/file/784448220678228461) to find out more.
