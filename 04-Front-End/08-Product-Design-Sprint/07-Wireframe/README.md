@@ -12,7 +12,6 @@ When your first screen is created, you can simply duplicate it by doing a copy/p
 
 ![Duplicate a frame to keep the margins](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_wireframe_duplicate_screen.gif)
 
-
 > **Be careful here** : it's very important that you **create a Figma's frame for each screen** of your app. If you're not sure of your setup, please call a teacher to validate it.
 
 When all the screens are created, each member of your team can take care of one screen (you can also work by groups of 2).
