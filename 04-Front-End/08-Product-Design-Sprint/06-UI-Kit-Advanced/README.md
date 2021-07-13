@@ -6,7 +6,7 @@ Now that you've created your first UI components, it's time to move on to a more
 
 ### Design a dynamic card component with Auto Layout
 
-Start by creating two rectangles, one which will be your card and the other which will be an image on top of it. Put them on top of each other, highlight them both and select the option `Auto Layout` on the right design panel. (If you cannot see the option on the right panel, right-click on your selection and choose `add auto layout` from the menu.)
+Start by creating two rectangles, one which will be your card and the other which will be an image on top of it. Put them on top of each other, highlight them both and select the option `Auto Layout` on the right design panel. If you cannot see the option on the right panel, right-click on your selection and choose `add auto layout` from the menu.
 
 ![Create a frame with Auto Layout](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_auto_layout_one.gif)
 
