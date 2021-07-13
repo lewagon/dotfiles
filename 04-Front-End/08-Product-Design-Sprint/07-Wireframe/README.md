@@ -1,6 +1,6 @@
 ## Wireframe (1h)
 
-It's time to take back your User Flow and to create your wireframe with the help of your UI Kit. The goal here is to create a lo fi mock-up for each screen of your product.
+It's time to take back your user flow and to create your wireframe with the help of your UI kit. The goal here is to create a lo-fi mock-up for each screen of your product.
 
 Start by creating a new page on Figma and add a new frame on it. You can draw a rectangle on your new frame and center it in order to put margins on both sides:
 
