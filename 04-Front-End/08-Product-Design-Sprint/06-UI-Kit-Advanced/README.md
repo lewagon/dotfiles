@@ -4,7 +4,6 @@ Now that you've created your first UI components, it's time to move on to a more
 
 **Auto Layout** lets you design dynamic components (called frames) that respond to the contents they hold - they grow to fill and shrink to fit. With Auto Layout you can also set padding on a frame and align the items inside horizontally and vertically, just like in a CSS flexbox! 💪
 
-
 ### Design a dynamic card component with Auto Layout
 
 Start by creating two rectangles, one which will be your card and the other which will be an image on top of it. Put them on top of each other, highlight them both and select the option `Auto Layout` on the right design panel. (If you cannot see the option on the right panel, right-click on your selection and choose `add auto layout` from the menu.)
