@@ -8,7 +8,7 @@ Start by creating a new page on Figma and add a new frame on it. You can draw a 
 
 > You can remove the rectangle when the margins are well placed
 
-When your first screen is created, you can simply duplicate it by doing a copy/paste. This way, each screen will keep the same margins. Create as many screens on your Figma as you have screens in your User Flow.
+When your first screen is created, you can simply duplicate it by doing a copy/paste. This way, each screen will keep the same margins. Create as many screens on your Figma as you have screens in your user flow.
 
 ![Duplicate a frame to keep the margins](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_wireframe_duplicate_screen.gif)
 
