@@ -11,7 +11,8 @@
 
 [core]
   pager = less -FRSX
-	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	editor = vim
+	visual = vim
 
 [alias]
   co = checkout
@@ -24,7 +25,7 @@
   stat = !git --no-pager diff --stat
 
   # Clean merged branches
-  sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
+  sweep = !git branch --merged main | grep -v 'main$' | xargs git branch -d && git remote prune origin
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log
   lg = log --graph --all --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)%an%Creset %C(yellow)%d%Creset'
@@ -33,7 +34,7 @@
   # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 
-  m = checkout master
+  m = checkout main
 
   # Removes a file from the index
   unstage = reset HEAD --
@@ -44,11 +45,13 @@
 [push]
 	default = simple
 
-[branch "master"]
+[branch "main"]
   mergeoptions = --no-edit
 
 [pull]
   rebase = false
 [user]
-	email = xavierosee@users.noreply.github.com
+	email = xrosee@live.cn
 	name = Xavier Rosee
+[init]
+	defaultBranch = main

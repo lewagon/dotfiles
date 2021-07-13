@@ -1,8 +1,8 @@
-This repository is used by [Le Wagon](https://www.lewagon.com) students during our 9-week [coding bootcamp](https://www.lewagon.com).
+This repository is a fork of a repo created by [Le Wagon](https://www.lewagon.com) for students of their 9-week [Data Science bootcamp](https://www.lewagon.com).
 
 ## Toolset
 
 - [oh-my-zsh](http://ohmyz.sh/)
-- [Sublime Text](https://www.sublimetext.com/)
 - [git](https://git-scm.com/)
 - Ruby via [`rbenv`](https://github.com/rbenv/rbenv)
+- Python via [`pyenv`](https://github.com/pyenv/pyenv)
