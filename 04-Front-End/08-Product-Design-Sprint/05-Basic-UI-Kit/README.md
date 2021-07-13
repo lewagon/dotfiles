@@ -42,7 +42,7 @@ When all the squares are done, select each square and save each one color as you
 
 Now it's time to create your first component. Let's begin with an easy one, **the main title**.
 
-Select the text tool, and create a title with a size of `48px` in `bold`. When it's done, don't forget to click on the **create component** button at the top of your workspace. It's really import to do that, if you forget about it you will not find this component in the assets tab during the wireframe creation.
+Select the text tool, and create a title with a size of `48px` in `bold`. When it's done, don't forget to click on the **create component** button at the top of your workspace. **It's really important to do that** If you forget about it you will not find this component in the assets tab during the wireframe creation.
 
 Here is an example of what you have to do:
 
