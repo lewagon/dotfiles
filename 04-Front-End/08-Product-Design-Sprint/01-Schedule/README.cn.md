@@ -52,4 +52,4 @@
 - **颜色**: 在[Color Hunt](https://colorhunt.co/)上找或者使用像[Colorzilla](http://www.colorzilla.com/)这样的颜色选择器。
 - **图片**: 你可以使用 [unsplash](https://unsplash.com/)
 - **图标**: 下载并使用 [Nucleo app](https://nucleoapp.com/)实用工具图标
-- **UI工具包**: 从[Wireframe Kit](https://www.figma.com/resources/assets/wireframe-kit/)获得灵感
+- **UI工具包**: 从[Wireframe Kit](https://www.figma.com/templates/wireframe-kits/)获得灵感

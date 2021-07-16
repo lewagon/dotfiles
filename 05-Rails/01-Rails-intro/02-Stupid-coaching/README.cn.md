@@ -256,7 +256,7 @@ end
 rails g system_test questions
 ```
 
-用Sublime Text打开生成的文件，写下你的第一个测试：
+用代码编辑器打开生成的文件，写下你的第一个测试：
 
 ```ruby
 # test/system/questions_test.rb

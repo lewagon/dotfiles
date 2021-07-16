@@ -10,7 +10,7 @@ Jump into your `profile` and create an `images` directory to store all your pict
 ```bash
 cd profile
 mkdir images
-stt
+code .
 ```
 
 ## Local server

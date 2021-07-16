@@ -53,4 +53,4 @@ Tutorial in 🇫🇷
 - **Colors**: find them on [Color Hunt](https://colorhunt.co/) or use a color picker like [Colorzilla](http://www.colorzilla.com/)
 - **Pictures**: you can use [unsplash](https://unsplash.com/)
 - **Icons**: download and use [Nucleo app](https://nucleoapp.com/) for utility icons
-- **UI Kit**: get inspiration from [Wireframe Kit](https://www.figma.com/resources/assets/wireframe-kit/)
+- **UI Kit**: get inspiration from [Wireframe Kit](https://www.figma.com/templates/wireframe-kits/)
