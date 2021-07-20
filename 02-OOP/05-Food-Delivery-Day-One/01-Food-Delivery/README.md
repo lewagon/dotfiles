@@ -33,7 +33,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Now that we have a model representing our meals, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It reads/writes the meals from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
-- Add a new meal
+- Create a new meal
 - Get all the meals
 - Find a specific meal thanks to its id
 
@@ -96,7 +96,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Now that we have a model representing our customers, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It reads/writes the customers from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
-- Add a new customer
+- Create a new customer
 - Get all the customers
 - Find a specific customer thanks to its id
 
