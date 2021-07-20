@@ -115,8 +115,8 @@ Escribe el código para implementar esto y haz el crash test del modelo en `irb`
 Ahora que ya tenemos un modelo que representa a nuestros pedidos, tenemos la necesidad de un repositorio para almacenarlos.
 
 Este repositorio se inicializa con una ruta de archivo CSV, lee/escribe los pedidos del archivo CSV y los almacena en memoria. La interfaz del repositorio permite lo siguiente:
-- Agregar un nuevo pedido al repositorio
-- Recuperar todos los pedidos no entregados del repositorio
+- Agregar un nuevo pedido
+- Recuperar todos los pedidos no entregados
 
 Ya que nuestro pedido tiene las **instancias** `meal`, `customer` y `employee`, tenemos que inicializar nuestro repositorio de pedidos, el de los platos (meals), el de los clientes (customers) y el de los empleados (employees).
 
