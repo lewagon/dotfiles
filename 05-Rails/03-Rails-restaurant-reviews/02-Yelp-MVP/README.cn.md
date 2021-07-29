@@ -208,3 +208,5 @@ POST "restaurants/38/reviews"
 ```
 
 请注意我们不再使用路由`GET "restaurants/38/reviews/new"`。这是因为review 表单**现在已经被嵌入了`restaurants/show.html.erb` 视图**。 🛏
+
+要为此版本运行适当的测试，请运行命令 `rspec -t refactoring`
