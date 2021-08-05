@@ -173,7 +173,7 @@ Then, we have to specify in the HTML, which element of the DOM should be targete
 
 The syntax to do this is using, guess what... `data-attributes`! More precisely: `data-CONTROLLER_NAME-target="TARGET_NAME"`.
 
-Therefore, let's add `data-check-all-checkbox-target='checkbox'` to all the `<input type="checkbox" ...>` element (except the "Check All" one).
+Therefore, let's add `data-check-all-checkboxes-target='checkbox'` to all the `<input type="checkbox" ...>` element (except the "Check All" one).
 
 Once this is done, the Stimulus controller can easily fetch the targets with some simple Stimulus syntax:
 
