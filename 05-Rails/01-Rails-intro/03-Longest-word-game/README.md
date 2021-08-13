@@ -27,7 +27,7 @@ Let's think about the UI for our game. What do we need?
 1. A page to display the game settings (random letters), with a form for the user to type a word. A button to submit this form.
 2. A page receiving this form, computing the user score and displaying it.
 
-### 1 - Routing & Controller
+### Routing & Controller
 
 Using the right command line command, generate the `GamesController` with two actions `new` and `score`. The `new` action will be used to display a new random grid and a form. The form will be submitted (with `POST`) to the `score` action.
 
@@ -39,13 +39,13 @@ Prefix Verb URI Pattern      Controller#Action
  score POST /score(.:format) games#score
 ```
 
-### 2 - Generating a new game
+### Generating a new game
 
 Have a look at your old Ruby code. How did you generate an `Array` of ten random letters? In the `new` action of the `GamesController`, create a new `@letters` instance variable storing these random letters from the alphabet. Then display it in the view. You should get something like this:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game.png)
 
-### 3 - Submitting a word
+### Submitting a word
 
 We need to add a form below the letters so that the user can fill a suggestion and submit it.
 
@@ -60,7 +60,7 @@ This will add a hidden input field with an `authenticity_token` that ensures the
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game_with_form.png)
 
-### 4 - At the other side of the form
+### At the other side of the form
 
 Let's check that the form is being correctly set by inspecting what we get in `params`. They are two ways, the first one is to add `raise` in your controller code:
 
@@ -91,7 +91,7 @@ end
 
 You need to `bundle install` and restart `rails s` for this change to take effect.
 
-### 5 - Computing the score
+### Computing the score
 
 Time to implement the `GamesController#score` logic. Do we have all the information at hand? What do we need? Do we need to pass more information through the `POST` request? Have a look at [`hidden_field_tag`](http://api.rubyonrails.org/v5.1/classes/ActionView/Helpers/FormTagHelper.html#method-i-hidden_field_tag).
 
@@ -111,7 +111,7 @@ At the bottom of the results, add a `link_to` to go back to the New game page.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/congrats.png)
 
-### 6 - Adding score (Optional)
+### Adding score (Optional)
 
 The user will play many games, it makes sense to store each score and add it to a grand total. We can have a rule where the score for each game is the number of letters in every valid words (but you can be more creative, take the square of the number of letters? Something else?).
 
@@ -119,7 +119,7 @@ Today is not about the database, so we don't have ActiveRecord to help us store 
 
 Try to use a Rails session to store, compute and display a grand score.
 
-### 7 - Testing (Optional)
+### Testing (Optional)
 
 First, delete the `test/controllers/games_controller_test.rb` file if it got generated. We will be doing [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). The goal of this kind of testing is to automate all the manual testing of "code editing / go to the browser / reload the page / check if this is working". Everything you did manually in the browser can be done _via_ code!
 
