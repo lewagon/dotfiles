@@ -123,7 +123,9 @@ Try to use a Rails session to store, compute and display a grand score.
 
 First, delete the `test/controllers/games_controller_test.rb` file if it got generated. We will be doing [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). The goal of this kind of testing is to automate all the manual testing of "code editing / go to the browser / reload the page / check if this is working". Everything you did manually in the browser can be done _via_ code!
 
-First, you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu. Then you need to install `chromedriver` (if you did this step in the previous exercise, just skip it):
+We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. Before running your system tests you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu.
+
+Then you need to install `chromedriver`:
 
 ```bash
  # macOS
@@ -133,20 +135,32 @@ brew install --cask chromedriver
 gem install chromedriver-helper
 ```
 
-We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. To do that, open the following file and replace **all** its content with:
+After the installation you can open the following file and replace **all** its content with:
+
+```ruby
+# test/test_helper.rb
+ENV['RAILS_ENV'] ||= 'test'
+require_relative '../config/environment'
+require 'rails/test_help'
+
+class ActiveSupport::TestCase
+  fixtures :all
+end
+
+Capybara.register_driver :headless_chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu window-size=1400,900])
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+Capybara.save_path = Rails.root.join('tmp/capybara')
+Capybara.javascript_driver = :headless_chrome
+```
+
+Then in the following file **update** this line:
 
 ```ruby
 # test/application_system_test_case.rb
-require "test_helper"
-
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  Capybara.register_driver(:headless_chrome) do |app|
-    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome \
-      chromeOptions: { args: %w[headless disable-gpu window-size=1280x760] }
-    Capybara::Selenium::Driver.new app,
-      browser: :chrome, desired_capabilities: capabilities
-  end
-  driven_by :headless_chrome
+  driven_by :headless_chrome # Update this line
 end
 ```
 
@@ -155,8 +169,7 @@ Ready? Let's dive into Rails Testing.
 In the terminal, run the following to create the test file:
 
 ```bash
-rails g system_test game
-rails test:system # Should say 0 tests, and not fail
+rails g system_test games
 ```
 
 Great! We have a brand new file in ` test/system/games_test.rb`! What do we want to test?
@@ -179,6 +192,12 @@ class GamesTest < ApplicationSystemTestCase
     assert_selector "li", count: 10
   end
 end
+```
+
+Run the test in the terminal with:
+
+```bash
+rails test:system
 ```
 
 In this test, I am visiting the `/new` URL and making sure I get ten letters to play with.
