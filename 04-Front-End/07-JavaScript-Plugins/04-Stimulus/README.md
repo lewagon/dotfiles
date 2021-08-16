@@ -95,6 +95,7 @@ Important: we know the controller will have to interact with the checkbox "Check
 
 <details>
   <summary>Hint</summary>
+  
   ```html
   <form data-controller='check-all-checkboxes'>
     <!-- ... -->
