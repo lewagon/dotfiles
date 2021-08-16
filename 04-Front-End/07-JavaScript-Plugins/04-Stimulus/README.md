@@ -94,7 +94,7 @@ Now, let's tweak our HTML to **connect** the controller:
 Important: we know the controller will have to interact with the checkbox "Check all", and also the 4 other category checkboxes. In Stimulus, a controller can interact only with elements within its scope - as in, only with children elements of the DOM element to which it's connected. So, the question here is: "Which element is wrapping both the 'Check All' checkbox and the category checkboxes?"
 
 <details>
-  <summary>Hint</summary>
+  <summary markdown='span'>Hint</summary>  
   
   ```html
   <form data-controller='check-all-checkboxes'>
