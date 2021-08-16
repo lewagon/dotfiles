@@ -1,7 +1,7 @@
 {
   "license": "UNLICENSED",
   "dependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "7.2",
     "@babel/eslint-parser": "^7.15.0",
     "chai": "^4.1.0",
     "eslint": "^7.32.0",
