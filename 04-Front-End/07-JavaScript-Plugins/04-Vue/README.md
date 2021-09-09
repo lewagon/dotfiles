@@ -6,7 +6,7 @@ Vue (pronounced /vjuː/, like view) is a progressive framework for building user
 
 The big upside of Vue is that if you use it, you will almost never have to do a manual `querySelector` or `addEventListener` anymore! Instead you will use conventional `v-` HTML attributes on specific element.
 
-Let's start to try our first challenge with Vue!
+Let's start our first challenge with Vue!
 
 ## Boilerplate
 
@@ -39,7 +39,7 @@ For prototyping or learning purposes, you can use the latest version with:
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 ```
 
-You can this line of code to `index.html` so as to use Vue.
+You can paste this line of code to `index.html` to use Vue.
 
 **NPM**
 NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as Webpack or Browserify. Vue also provides accompanying tools for authoring Single File Components.
@@ -54,25 +54,25 @@ And now you can start to work with Vue in your code.
 ## The logic
 
 Here is what we have to do:
-- Check the status of the "Check All" checkbox clicked.
+- Check the status of the "Check All" checkbox.
 - If it's checked, then, for all the checkbox targets, we will change their `checked` attribute to `true`
 - If it isn't checked, then, for all the checkbox targets, we will change their `checked` attribute to `false`
 
 ## Select the `div`
 
-To be able to interact with the DOM, we will need a `el` options inside our `new Vue({})` instance to select the div we want to interact with. This time, we can select the whole container so that we can interact with all the elements inside.
+To be able to interact with the DOM, we will need an `el` option inside our `new Vue({})` instance to select the div we want to interact with. This time, we can select the whole container so that we can interact with all the elements inside.
 
 ## Listen to an event
-In order to handle the click event happens on the `check-all` checkbox, we will need an event handler here. Hence, whenever the `check-add` checkbox is clicked, a method (`checkAllBoxes`) is triggered to help us there to implement the logic.
+In order to handle the click event happening on the `check-all` checkbox, we will need an event handler here. Hence, whenever the `check-all` checkbox is clicked, a method (`checkAllBoxes`) is triggered to help us execute the logic.
 
-Instead of `querySelector` and `addEventListener`, do you still remember how we handling events using Vue?
+Instead of `querySelector` and `addEventListener`, do you still remember how we handle events using Vue?
 
-And then, we can add a `method` option in our `new Vue({})` instance and edit the `checkAllBoxes` method there.
+You should then add a `method` option in our `new Vue({})` instance and edit the `checkAllBoxes` method there.
 
 <details>
   <summary markdown='span'>Hint</summary>  
   
-  We can attach `v-on:click` or `@click` in shortcut on `check-all` checkbox to listen to its `click` event.
+  We can attach `v-on:click` or `@click` as shortcut on the `check-all` checkbox to listen to its `click` event.
 
   ```html
   <input id='check-all' type="checkbox" class="form-check-input" @click="checkAllBoxes">
@@ -92,7 +92,7 @@ And then, we can add a `method` option in our `new Vue({})` instance and edit th
 
 ## Bind the attribute
 
-We want to be able to change the `checked` attribute for all targeted checkboxes, which includes `check-all` and `checkbox-categoryName`, and in Vue, there is directive expression can help us to bind the attribute. Hence whenever `checkAllBoxes` method is triggered, we can manipulate the value of this attribute dynamically.
+We want to be able to change the `checked` attribute for all targeted checkboxes, which includes `check-all` and `checkbox-categoryName`. In Vue, there is the _directive expression_ that can help us bind an attribute. Hence whenever `checkAllBoxes` method is triggered, we can manipulate the value of any attributes dynamically.
 
 <details>
   <summary markdown='span'>Hint</summary>  
@@ -102,9 +102,9 @@ We want to be able to change the `checked` attribute for all targeted checkboxes
   ```html
   <!-- index.html -->
   <!-- ... -->
-  <input id='check-all' type="checkbox" class="form-check-input" :checked="checkAllChecked" @click="checkAllBoxes">
+  <input id='check-all' type="checkbox" class="form-check-input" :checked="allChecked" @click="checkAllBoxes">
   <!-- ... -->
-  <input id='checkbox-appartment' type="checkbox" class="form-check-input" :checked="checkAllChecked">
+  <input id='checkbox-appartment' type="checkbox" class="form-check-input" :checked="allChecked">
   <!-- ... -->
   ```
 
@@ -113,9 +113,9 @@ We want to be able to change the `checked` attribute for all targeted checkboxes
   let app = new Vue({
     el: '#app',
     data: {
-      // Set the defalut to false, all the `checked` attribute will be false by default
-      checkAllChecked: false,
-    }
+      // Set the default to false for all the checkboxes
+      allChecked: false,
+    },
     methods: {
       checkAllBoxes(event){
         // Code Here
@@ -127,7 +127,7 @@ We want to be able to change the `checked` attribute for all targeted checkboxes
 
 ## Manipulate the attribute
 
-Then, the next step is to add some code in the `checkAllBoxes` method. Follow the logic we discussed at the beginning and think about how we want to manipulate the `checkAllChecked` property in `data`.
+The next step is to add some code in the `checkAllBoxes` method. Follow the logic we discussed at the beginning and think about how we want to manipulate the `allChecked` property in `data`.
 
 You've got everything in hand to tackle the rest of this challenge.
 
