@@ -55,8 +55,8 @@ And now you can start to work with Vue in your code.
 
 Here is what we have to do:
 - Check the status of the "Check All" checkbox.
-- If it's checked, then, for all the checkbox targets, we will change their `checked` attribute to `true`
-- If it isn't checked, then, for all the checkbox targets, we will change their `checked` attribute to `false`
+- If it's checked, then, for all the checkbox targets, we will change their `checked` attribute to `true`.
+- If it isn't checked, then, for all the checkbox targets, we will change their `checked` attribute to `false`.
 
 ## Select the `div`
 

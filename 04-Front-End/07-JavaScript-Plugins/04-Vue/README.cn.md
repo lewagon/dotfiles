@@ -1,105 +1,71 @@
 ## 背景和目标
 
-在这个练习中，我们将使用[Stimulus](https://stimulusjs.org/) JavaScript框架. 这个框架是由[Basecamp](https://basecamp.com/)创建的, 也是Ruby-on-Rails框架背后的公司。
+在这个练习中，我们将使用[Vue](https://vuejs.org/) JavaScript框架。
 
-这个框架的口号是“为你已经拥有的HTML提供一个适度的框架”。它是一个框架，你可以在项目期间使用它来帮助你组织JavaScript代码。它与rails配合得很好，因为它允许你在服务器端动态生成HTML（想想 MVC、Sinatra等），并插入一些JS行为。
+Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。
 
-Stimulus的一大好处是，如果你使用它，你几乎再也不用手动`querySelector`或 `addEventListener`！取而代之，你将在特定元素上使用常规的 `data-` HTML属性。
+Vue的一大好处是，如果你使用它，你几乎再也不用手动`querySelector`或 `addEventListener`！取而代之，你将在特定元素上使用常规的 `v-` HTML属性。
 
-这个框架使用[ES6 类](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), 这是自2015年（ES6发布年）以来为JavaScript添加面向对象编程(Object Oriented Programming)的完美补充。
+让我们一起开始我们的第一个Vue挑战练习！
 
-## 从JavaScript类开始
+## 模版
 
-让我们先用rake做一个小的Node练习:
+继续, 打开 `index.html` 和 `lib/index.js` 然后查看里面的代码。
 
-```bash
-rake
-```
+里面是一个带有许多选项框的HTML表单：
+- 1x ”Check All“ 选项框
+- 4x 带有各种种类名称的选项框
 
-你需要把三个测试变成绿色。你需要知道的一切都在[这个MDN页面](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). 我们希望你在 `lib/user.js` 文件实现 `User` 类：
-
-- 一个 `firstName` 实例变量
-- 一个 `lastName` 实例变量
-- 两个实例变量都由 `constructor` 初始化
-- 一个 `fullName()` 实例方法返回连接好的名字和姓氏
-
-这会是7行JS代码，想想你是如何在Ruby中进行面向对象编程的，这里的概念完全相同！
-
-## 我的第一个事件监听器, Take 2
-
-💡 这个挑战更像是一个帮助你探索Stimulus框架的教程。不要跳过任何一步，跟着我们的讲解走，会好的👌
-
-还记得[我的第一个事件监听器](?path=04-Front-End/05-DOM-and-Events/03-My-First-Event-Listener) 练习吗? 你点击一个按钮然后这个[Zelda Ocarina of Time](https://www.youtube.com/watch?v=g2wzMZzdNJA) (需要VPN 🛡 ) 声音开始播放！
-
-```html
-<button id="clickme" class="btn btn-primary btn-lg">
-  Click me!
-</button>
-```
-
-```js
-const button = document.querySelector('#clickme');
-const sound = new Audio('secret.mp3');
-
-button.addEventListener('click', (event) => {
-  const clickedButton = event.currentTarget;
-  clickedButton.setAttribute('disabled', '');
-  clickedButton.innerText = 'Bingo!';
-  sound.addEventListener("ended", () => {
-    clickedButton.removeAttribute('disabled');
-    clickedButton.innerText = "Click me!";
-  });
-  sound.play();
-});
-```
-
-继续, 打开 `index.html` 和 `lib/index.js` 文件然后把上面的代码复制粘贴。都做完了后启动服务器，然后在浏览器检查按钮是否如我们期望的那样好用：
-
+你可以启动webpack服务器：
 ```bash
 yarn install
 rake webpack
 ```
 
+然后再在你的浏览器中打开相应网页：
 ```bash
 open http://localhost:8080
 ```
 
-查看我们如何改善在 `audio` 元素上监听 `ended` 事件时你提出的解决方案。这样，当声音播放完毕后，我们重新启用按钮并放回初始文本。
+你可以分别逐一的点击这些选项框，但是“Check All”选项框还没有一次性选择所有选项框的功能。这就是我们想要现在实现的功能，得益于JavaScript，和我们的新朋友:Vue.js。
 
-### 用Stimulus重构代码
+## 第一步：安装Vue.js
 
-我们会用Stimulus框架重构代码。在我们跳转到代码之前，请花一些时间阅读手册的以下几页，掌握以下这个框架诞生背后的理念：
-
-- [Stimulus的起源](https://stimulusjs.org/handbook/origin)
-- [简介](https://stimulusjs.org/handbook/introduction)
-- [Hello Stimulus](https://stimulusjs.org/handbook/hello-stimulus)
-- [创建真实的东西](https://stimulusjs.org/handbook/building-something-real)
-
-结束后，我们用Stimulus[设置](https://stimulusjs.org/handbook/installing)我们的项目:
-
-```bash
-yarn add stimulus
-mkdir lib/controllers # This is where we will add our Stimulus code
-```
-
-然后打开 `lib/index.js` 文件并在文件**开头**添加以下内容：
+**CDN**
+对于制作原型或学习，你可以这样使用最新版本：
 
 ```js
-import { Application } from "stimulus";
-import { definitionsFromContext } from "stimulus/webpack-helpers";
-
-const application = Application.start();
-const context = require.context("./controllers", true, /\.js$/);
-application.load(definitionsFromContext(context));
-
-// The rest of the code with document.querySelector('#clickme');
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 ```
 
-现在我们实现我们的**第一个 Stimulus 控制器**!
+你可以复制这一行代码到`index.html`来使用Vue。
+
+**NPM**
+在用 Vue 构建大型应用时推荐使用 NPM 安装[1]。NPM 能很好地和诸如 webpack 或 Browserify 模块打包器配合使用。同时 Vue 也提供配套工具来开发单文件组件。
 
 ```bash
-touch lib/controllers/zelda_controller.js
+# 最新稳定版
+npm install vue
 ```
+
+接下来你可以继续使用Vue编写代码。
+
+## 整体逻辑
+
+我们需要做一下几件事：
+- 检查“Check All”选项框的选择状态。
+- 如果它被选择了，那么对于所有的目标选项框，我们将会`checked`属性改为`true`。
+- 如果它没有被选择，那么对于所有的目标选项框，我们将会`checked`属性改为`false`。
+
+## 选择`div`来进行交互
+
+为了能够使用JS来和DOM交互，我们需要在我们的`new Vue({})`实例中使用`el`选项来选择我们想要控制的元素。这一次，我们可以选择整一个带有`container`类的`div`来和其中的所有元素进行交互。
+
+## 监听一个事件
+我们需要一个事件处理器在这里来监听`check-all`选项框的点击事件。所以，当每一次`check-all`选项框被点击时，一个方法（`checkAllBoxes`）将会被触发来帮我们实现上方所提到的逻辑。
+
+除了我们之前学到的`querySelector`和`addEventListener`，你还记得我们在学习Vue的时候是如何处理事件的吗？
+
 
 ```js
 // lib/controllers/zelda_controller.js
