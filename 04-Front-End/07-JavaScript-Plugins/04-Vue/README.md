@@ -67,7 +67,7 @@ In order to handle the click event happening on the `check-all` checkbox, we wil
 
 Instead of `querySelector` and `addEventListener`, do you still remember how we handle events using Vue?
 
-You should then add a `method` option in our `new Vue({})` instance and edit the `checkAllBoxes` method there.
+You should then add a `methods` option in our `new Vue({})` instance and edit the `checkAllBoxes` method there.
 
 <details>
   <summary markdown='span'>Hint</summary>  
