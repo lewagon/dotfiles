@@ -1,28 +1,30 @@
 ## 背景和目标
 
-在这个练习中，我们将使用[Vue](https://vuejs.org/) JavaScript框架。
+在这个练习中，我们将使用[Vue](https://vuejs.org/)JavaScript框架。
 
-Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。
+Vue(读音 /vjuː/，类似于view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是,Vue被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。
 
-Vue的一大好处是，如果你使用它，你几乎再也不用手动`querySelector`或 `addEventListener`！取而代之，你将在特定元素上使用常规的 `v-` HTML属性。
+Vue的一大好处是，如果你使用它，你几乎再也不用手动`querySelector`或`addEventListener`！取而代之，你将在特定元素上使用常规的 `v-` HTML属性。
 
 让我们一起开始我们的第一个Vue挑战练习！
 
 ## 模版
 
-继续, 打开 `index.html` 和 `lib/index.js` 然后查看里面的代码。
+继续, 打开`index.html`和 `lib/index.js`然后查看里面的代码。
 
 里面是一个带有许多选项框的HTML表单：
 - 1x ”Check All“ 选项框
 - 4x 带有各种种类名称的选项框
 
 你可以启动webpack服务器：
+
 ```bash
 yarn install
 rake webpack
 ```
 
 然后再在你的浏览器中打开相应网页：
+
 ```bash
 open http://localhost:8080
 ```
@@ -34,14 +36,14 @@ open http://localhost:8080
 **CDN**
 对于制作原型或学习，你可以这样使用最新版本：
 
-```js
+```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 ```
 
 你可以复制这一行代码到`index.html`来使用Vue。
 
 **NPM**
-在用 Vue 构建大型应用时推荐使用 NPM 安装[1]。NPM 能很好地和诸如 webpack 或 Browserify 模块打包器配合使用。同时 Vue 也提供配套工具来开发单文件组件。
+在用 Vue 构建大型应用时推荐使用**NPM**安装[1]。NPM 能很好地和诸如webpack或Browserify模块打包器配合使用。同时 Vue 也提供配套工具来开发单文件组件。
 
 ```bash
 # 最新稳定版
