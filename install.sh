@@ -1,67 +1,40 @@
-backup() {
-  target=$1
-  if [ -e "$target" ]; then           # Does the config file already exist?
-    if [ ! -L "$target" ]; then       # as a pure file?
-      mv "$target" "$target.backup"   # Then backup it
-      echo "-----> Moved your old $target config file to $target.backup"
-    fi
-  fi
-}
+#!/bin/bash
 
-#!/bin/zsh
-for name in *; do
-  if [ ! -d "$name" ]; then
-    target="$HOME/.$name"
-    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ ! "$name" =~ '\.sublime-settings$' ]]; then
-      backup $target
+# make sure directory path is ok when script is started from anywhere
+MYDIR="$(dirname -- "$0")"
 
-      if [ ! -e "$target" ]; then
-        echo "-----> Symlinking your new $target"
-        ln -s "$PWD/$name" "$target"
-      fi
-    fi
-  fi
-done
+# .zshrc install
+rm -rf ~/.zshrc
+cp $MYDIR/zshrc ~/.zshrc
 
-REGULAR="\\033[0;39m"
-YELLOW="\\033[1;33m"
-GREEN="\\033[1;32m"
+# .vimrc install
+cp $MYDIR/vimrc ~/.vimrc
 
-# zsh plugins
-CURRENT_DIR=`pwd`
-ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
-mkdir -p "$ZSH_PLUGINS_DIR" && cd "$ZSH_PLUGINS_DIR"
-if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
-  echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
-  git clone https://github.com/zsh-users/zsh-autosuggestions
-  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-fi
-cd "$CURRENT_DIR"
+# .vim install
+rm -rf ~/.vim || true
+cp -r $MYDIR/vim ~/.vim
 
-setopt nocasematch
-if [[ ! `uname` =~ "darwin" ]]; then
-  git config --global core.editor "subl -n -w $@ >/dev/null 2>&1"
-  echo 'export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"' >> zshrc
-else
-  git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
-  bundler_editor="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-  echo "export BUNDLER_EDITOR=\"${bundler_editor} -a\"" >> zshrc
+# nvim install
+rm -rf ~/.config/nvim || true
+cp -r $MYDIR/nvim ~/.config/nvim
+
+# iterm2 config (sensible for mac only)
+case $OSTYPE in
+    darwin*)
+        # Specify the preferences directory
+        defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+        # Tell iTerm2 to use the custom preferences in the directory
+        defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+        ;;
+esac
+
+# .bash_aliases install
+cp $MYDIR/bash_aliases ~/.bash_aliases
+if [ -f ~/.zshrc ]; then
+    echo "[ -f ~/.bash_aliases ] && source ~/.bash_aliases" >> ~/.zshrc
 fi
 
-# Sublime Text
-if [[ ! `uname` =~ "darwin" ]]; then
-  SUBL_PATH=~/.config/sublime-text-3
-else
-  SUBL_PATH=~/Library/Application\ Support/Sublime\ Text\ 3
-fi
-mkdir -p $SUBL_PATH/Packages/User $SUBL_PATH/Installed\ Packages
-backup "$SUBL_PATH/Packages/User/Preferences.sublime-settings"
-curl -k https://sublime.wbond.net/Package%20Control.sublime-package > $SUBL_PATH/Installed\ Packages/Package\ Control.sublime-package
-ln -s $PWD/Preferences.sublime-settings $SUBL_PATH/Packages/User/Preferences.sublime-settings
-ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
-ln -s $PWD/SublimeLinter.sublime-settings $SUBL_PATH/Packages/User/SublimeLinter.sublime-settings
-ln -s $PWD/Anaconda.sublime-settings $SUBL_PATH/Packages/User/Anaconda.sublime-settings
+# Install coc extensions
+vim -c 'CocInstall -sync coc-json coc-html coc-css coc-tsserver coc-prettier coc-go coc-styled-components coc-graphql|q'
 
-zsh ~/.zshrc
-
-echo "👌  Carry on with git setup!"
+echo "dotfiles finished installing!"
