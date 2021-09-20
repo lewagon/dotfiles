@@ -44,9 +44,9 @@ case $OSTYPE in
 esac
 
 # .bash_aliases install
-cp $MYDIR/bash_aliases ~/.bash_aliases
+cp $MYDIR/aliases ~/.aliases
 if [ -f ~/.zshrc ]; then
-    echo "[ -f ~/.bash_aliases ] && source ~/.bash_aliases" >> ~/.zshrc
+    echo "[ -f ~/.aliases ] && source ~/.aliases" >> ~/.zshrc
 fi
 
 
