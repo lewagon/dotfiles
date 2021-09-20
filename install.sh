@@ -14,6 +14,12 @@ cp $MYDIR/vimrc ~/.vimrc
 rm -rf ~/.vim || true
 cp -r $MYDIR/vim ~/.vim
 
+# .profile and .zprofile install
+rm -rf ~/.profile || true
+cp -r $MYDIR/profile ~/.profile
+rm -rf ~/.zprofile || true
+cp -r $MYDIR/zprofile ~/.zprofile
+
 # nvim install
 rm -rf ~/.config/nvim || true
 cp -r $MYDIR/nvim ~/.config/nvim
