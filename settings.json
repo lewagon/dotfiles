@@ -1,0 +1,79 @@
+{
+    "editor.detectIndentation": false,
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.rulers":
+    [
+        80,
+        120
+    ],
+    "editor.renderControlCharacters": true,
+    "editor.snippetSuggestions": "top",
+    "editor.trimAutoWhitespace": true,
+    "editor.useTabStops": true,
+    "editor.fontSize": 17,
+    "editor.scrollBeyondLastLine": true,
+    "editor.showFoldingControls": "always",
+    "emmet.includeLanguages":
+    {
+        "erb": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "explorer.confirmDelete": false,
+    "window.restoreWindows": "none",
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.settings.useSplitJSON": true,
+    "workbench.iconTheme": "vscode-great-icons",
+    "files.hotExit": "off",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.exclude":
+    {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "node_modules": true,
+        "tmp": true,
+        "log": true,
+        ".asset-cache": true,
+        ".bundle": true,
+        ".ipynb_checkpoints": true,
+        ".pytest_cache": true,
+        ".sass-cache": true,
+        ".svn": true,
+        "__pycache__": true,
+        "_site": true,
+        "build": true,
+        "coverage": true,
+        "dist": true,
+        "public/packs": true,
+        "**/.egg-info": true
+    },
+    "files.watcherExclude":
+    {
+        "**/audits/**": true,
+        "**/coverage/**": true,
+        "**/log/**": true,
+        "**/node_modules/**": true,
+        "**/tmp/**": true,
+        "**/vendor/**": true
+    },
+    "git.enabled": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "[python]":
+    {
+        "editor.tabSize": 4
+    },
+    "python.pythonPath": "~/.pyenv/shims/python",
+    "python.formatting.provider": "yapf",
+    "ruby.lint":
+    {
+        "rubocop": true
+    },
+    "workbench.startupEditor": "newUntitledFile"
+}
