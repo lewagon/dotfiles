@@ -34,7 +34,7 @@ rm -rf ~/.zprofile || true
 cp -r $MYDIR/zprofile ~/.zprofile
 
 # installing z script
-rm -rm ~/.z/sh || true
+rm -rf ~/.z/sh || true
 cp -r $MYDIR/z ~/.z
 
 # iterm2 config (sensible for mac only)
@@ -48,10 +48,11 @@ case $OSTYPE in
 esac
 
 # .bash_aliases install
+rm -rf ∞/.aliases
 cp $MYDIR/aliases ~/.aliases
 if [ -f ~/.zshrc ]; then
     echo "[ -f ~/.aliases ] && source ~/.aliases" >> ~/.zshrc
 fi
 
 
-echo "dotfiles finished installing!"
+echo " ##### dotfiles finished installing! ##### "
