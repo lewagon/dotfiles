@@ -33,6 +33,10 @@ cp -r $MYDIR/profile ~/.profile
 rm -rf ~/.zprofile || true
 cp -r $MYDIR/zprofile ~/.zprofile
 
+# installing z script
+rm -rm ~/.z/sh || true
+cp -r $MYDIR/z ~/.z
+
 # iterm2 config (sensible for mac only)
 case $OSTYPE in
     darwin*)
