@@ -16,7 +16,7 @@ ruby app.rb
 ```
 
 It will create a router and start the app. The router is provided,
-you just have to code the controller methods in the `PostsController` class.
+you just have to code the controller methods in the `PostsController` and `PostsView` classes.
 Before that, put all the code you wrote in the previous exercises into the
 `Post` class.
 
