@@ -134,7 +134,7 @@ puts "What are you searching on Etsy?"
 article = gets.chomp
 
 # 1. We get the HTML page content thanks to open-uri
-html_content = open("https://www.etsy.com/search?q=#{article}").read
+html_content = URI.open("https://www.etsy.com/search?q=#{article}").read
 # 2. We build a Nokogiri document from this file
 doc = Nokogiri::HTML(html_content)
 
@@ -181,4 +181,4 @@ end
 ```
 
 - Find the best moment to load the gifts.
-- When do you need to save the gifts? 
+- When do you need to save the gifts?

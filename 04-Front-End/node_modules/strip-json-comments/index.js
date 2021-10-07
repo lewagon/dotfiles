@@ -1,32 +1,39 @@
 'use strict';
-var singleComment = 1;
-var multiComment = 2;
+const singleComment = Symbol('singleComment');
+const multiComment = Symbol('multiComment');
+const stripWithoutWhitespace = () => '';
+const stripWithWhitespace = (string, start, end) => string.slice(start, end).replace(/\S/g, ' ');
 
-function stripWithoutWhitespace() {
-	return '';
-}
+const isEscaped = (jsonString, quotePosition) => {
+	let index = quotePosition - 1;
+	let backslashCount = 0;
 
-function stripWithWhitespace(str, start, end) {
-	return str.slice(start, end).replace(/\S/g, ' ');
-}
+	while (jsonString[index] === '\\') {
+		index -= 1;
+		backslashCount += 1;
+	}
 
-module.exports = function (str, opts) {
-	opts = opts || {};
+	return Boolean(backslashCount % 2);
+};
 
-	var currentChar;
-	var nextChar;
-	var insideString = false;
-	var insideComment = false;
-	var offset = 0;
-	var ret = '';
-	var strip = opts.whitespace === false ? stripWithoutWhitespace : stripWithWhitespace;
+module.exports = (jsonString, options = {}) => {
+	if (typeof jsonString !== 'string') {
+		throw new TypeError(`Expected argument \`jsonString\` to be a \`string\`, got \`${typeof jsonString}\``);
+	}
 
-	for (var i = 0; i < str.length; i++) {
-		currentChar = str[i];
-		nextChar = str[i + 1];
+	const strip = options.whitespace === false ? stripWithoutWhitespace : stripWithWhitespace;
 
-		if (!insideComment && currentChar === '"') {
-			var escaped = str[i - 1] === '\\' && str[i - 2] !== '\\';
+	let insideString = false;
+	let insideComment = false;
+	let offset = 0;
+	let result = '';
+
+	for (let i = 0; i < jsonString.length; i++) {
+		const currentCharacter = jsonString[i];
+		const nextCharacter = jsonString[i + 1];
+
+		if (!insideComment && currentCharacter === '"') {
+			const escaped = isEscaped(jsonString, i);
 			if (!escaped) {
 				insideString = !insideString;
 			}
@@ -36,35 +43,35 @@ module.exports = function (str, opts) {
 			continue;
 		}
 
-		if (!insideComment && currentChar + nextChar === '//') {
-			ret += str.slice(offset, i);
+		if (!insideComment && currentCharacter + nextCharacter === '//') {
+			result += jsonString.slice(offset, i);
 			offset = i;
 			insideComment = singleComment;
 			i++;
-		} else if (insideComment === singleComment && currentChar + nextChar === '\r\n') {
+		} else if (insideComment === singleComment && currentCharacter + nextCharacter === '\r\n') {
 			i++;
 			insideComment = false;
-			ret += strip(str, offset, i);
+			result += strip(jsonString, offset, i);
 			offset = i;
 			continue;
-		} else if (insideComment === singleComment && currentChar === '\n') {
+		} else if (insideComment === singleComment && currentCharacter === '\n') {
 			insideComment = false;
-			ret += strip(str, offset, i);
+			result += strip(jsonString, offset, i);
 			offset = i;
-		} else if (!insideComment && currentChar + nextChar === '/*') {
-			ret += str.slice(offset, i);
+		} else if (!insideComment && currentCharacter + nextCharacter === '/*') {
+			result += jsonString.slice(offset, i);
 			offset = i;
 			insideComment = multiComment;
 			i++;
 			continue;
-		} else if (insideComment === multiComment && currentChar + nextChar === '*/') {
+		} else if (insideComment === multiComment && currentCharacter + nextCharacter === '*/') {
 			i++;
 			insideComment = false;
-			ret += strip(str, offset, i + 1);
+			result += strip(jsonString, offset, i + 1);
 			offset = i + 1;
 			continue;
 		}
 	}
 
-	return ret + (insideComment ? strip(str.substr(offset)) : str.substr(offset));
+	return result + (insideComment ? strip(jsonString.slice(offset)) : jsonString.slice(offset));
 };

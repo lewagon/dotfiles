@@ -12,10 +12,31 @@ rescue LoadError => e
 end
 
 describe "Order", :_order do
-  it "should be initialized with a hash of properties" do
-    properties = { id: 1, delivered: false }
-    order = Order.new(properties)
-    expect(order).to be_a(Order)
+  describe "#initialize" do
+    it "takes a hash of attributes as a parameter" do
+      properties = { id: 1, delivered: false }
+      order = Order.new(properties)
+      expect(order).to be_a(Order)
+    end
+
+    it "receives the :meal attribute, which is an instance of Meal" do
+      properties = { meal: Meal.new({}) }
+      order = Order.new(properties)
+      expect(order.instance_variable_get(:@meal)).to be_a(Meal)
+    end
+
+    it "receives the :customer attribute, which is an instance of Customer" do
+      properties = { customer: Customer.new({}) }
+      order = Order.new(properties)
+      expect(order.instance_variable_get(:@customer)).to be_a(Customer)
+    end
+
+    it "receives the :employee attribute, which is an instance of Employee" do
+      properties = { employee: Employee.new({}) }
+      order = Order.new(properties)
+      expect(order.instance_variable_get(:@employee)).to be_a(Employee)
+    end
+
   end
 
   describe "#id" do

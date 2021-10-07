@@ -1,3 +1,12 @@
+# 1.2.1
+- fix version
+
+# 1.2.0
+- add `List.remove`
+- build with LiveScript 1.6.0
+- update dependencies
+- remove coverage calculation
+
 # 1.1.2
 - add `Func.memoize`
 - fix `zip-all` and `zip-with-all` corner case (no input)

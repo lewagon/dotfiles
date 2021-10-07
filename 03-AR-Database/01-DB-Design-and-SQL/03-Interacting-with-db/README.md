@@ -4,7 +4,9 @@
 You can read more on [en.wikipedia.org/wiki/SQLite](http://en.wikipedia.org/wiki/SQLite).
 
 The goal of this first exercise is to use the command line to read and query
-a sample database called `jukebox.sqlite` that we give you
+a sample database called `jukebox.sqlite` that we give you. 
+
+To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewagon.com/), save it as an XML file and run `rake`!
 
 ### Setup
 

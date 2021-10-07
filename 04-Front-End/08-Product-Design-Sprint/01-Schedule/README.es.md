@@ -52,4 +52,4 @@ Tutorial en 🇫🇷
 - **Colores**: Encuentralos en [Color Hunt](https://colorhunt.co/) o usa una herramienta de  selección de colores (color picker) como [Colorzilla](http://www.colorzilla.com/)
 - **Imágenes**: puedes usar [unsplash](https://unsplash.com/)
 - **Iconos**: descarga y usa [Nucleo app](https://nucleoapp.com/) para iconos
-- **Kit UI**: para conseguir inspiración, ve a [Wireframe Kit](https://www.figma.com/resources/assets/wireframe-kit/)
+- **Kit UI**: para conseguir inspiración, ve a [Wireframe Kit](https://www.figma.com/templates/wireframe-kits/)

@@ -9,7 +9,7 @@ Ve a tu perfil (`profile`) y crea un directorio de imagenes (`images`) para alma
 ```bash
 cd profile
 mkdir images
-stt
+code .
 ```
 
 ## Servidor local

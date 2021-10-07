@@ -17,7 +17,7 @@ rake webpack
 
 ### Geocoding
 
-First, you will need to create an account with MapBox and get and API key (it's free to sign up!) Then, read the [MapBox Geocoding API documentation](https://www.mapbox.com/api-documentation/#geocoding). It boils down to doing an HTTP `GET` request with an address as a query string parameter.
+First, you will need to create an account with MapBox and get and API key (it's free to sign up!) Then, read the [MapBox Geocoding API documentation](https://docs.mapbox.com/api/search/geocoding/). It boils down to doing an HTTP `GET` request with an address as a query string parameter.
 
 ```js
 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=YOUR-API-KEY'
@@ -25,9 +25,9 @@ First, you will need to create an account with MapBox and get and API key (it's 
 
 NOTE: The request to the MapBox API will require your API key as one of the parameters in your request. You can find your key on your [account page](https://www.mapbox.com/account/) once you have created an account and signed in.
 
-Go ahead and add a form to your HTML page. It should contain an `input` of type `"text"` where a user can type an address in, and an `input` of type `"submit"` to display a button.
+Go ahead and check out the form already present in the `index.html` challenge boilerplate. It contains an `input` of type `"text"` where a user can type an address in, and an `input` of type `"submit"` to display a button.
 
-Once that's done, use the `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the AJAX query to the MapBox Geocoding service using `fetch` (go back to yesterday's lecture slides).
+Use the `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the AJAX query to the MapBox Geocoding service using `fetch` (go back to yesterday's lecture slides).
 
 As always when you fetch data from an API, start by `console.log()`ing what you get back from MapBox. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
 

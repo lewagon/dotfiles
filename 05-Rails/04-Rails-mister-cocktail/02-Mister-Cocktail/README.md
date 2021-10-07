@@ -4,17 +4,14 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 
 ## Rails app generation
 
-Let's install `yarn` if you haven't already!
+You should already have [yarn](https://yarnpkg.com) installed. Check it with:
 
 ```bash
-# macOS
-brew install yarn
-
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+yarn -v
+# You should see your yarn version here
 ```
+
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
 
 **Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
 
@@ -42,7 +39,7 @@ git push origin master
 Let's import the teacher's spec to be able to `rake` our progress.
 
 ```bash
-echo "gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]" >> Gemfile
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
 bundle install
 rails db:migrate
@@ -62,14 +59,14 @@ rspec spec/models                # Launch tests
 Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
 
 ```bash
-yarn add bootstrap jquery popper.js
+yarn add bootstrap@4.6 jquery popper.js
 ```
 
 And add the gems we're going to need:
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 ```

@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Antes de ir a la segunda parte del desafío Mister Cocktail, repasemos algunos de los principios que vimos ayer cuando vimos las técnicas modernas de frontend en Rails.
+Antes de ir a la segunda parte del desafío Watch list, repasemos algunos de los principios que vimos ayer cuando vimos las técnicas modernas de frontend en Rails.
 
 ## Especificaciones
 
@@ -9,7 +9,7 @@ Ve al archivo `lib/quiz.rb`. Ahí verás un quiz con algunos métodos para poner
 
 ### Pregunta 1
 
-Devuelve una cadena de caracteres (`String`) con el comando adecuado para crear una nueva app Rails llamada `mister-cocktail`.
+Devuelve una cadena de caracteres (`String`) con el comando adecuado para crear una nueva app Rails llamada `watch-list`.
 
 ### Pregunta 2
 

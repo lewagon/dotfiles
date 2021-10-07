@@ -10,7 +10,7 @@ cp -r ../02-Fonts-and-colors/profile .
 
 Play with the box model (`margin/border/padding/width/height`) by splitting your profile information into different `<div>` tags. Then, use advanced CSS selectors (id, class, grouping, descendant selectors) to fine-tune your page with a more subtle design.
 
-Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
+Don't forget to **hard refresh** your browser (`cmd + shift + r` on macOS, `ctrl` + `F5` on Windows) to clear your browser's cache if your page doesn't seem to display your current code!
 
 ## Specs
 

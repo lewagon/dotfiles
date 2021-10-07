@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Practicar las clases Bootstrap. Hacer el prototipo de la página del restaurante](http://lewagon.github.io/bootstrap-challenges/02-Bootstrap-prototyping) Deliveroo ¡usando Bootstrap! (no tienes permiso de escribir ningún código CSS).
+Practicar las clases Bootstrap. Hacer el [prototipo de la página del restaurante](http://lewagon.github.io/bootstrap-challenges/02-Bootstrap-prototyping) Deliveroo ¡usando Bootstrap! (no tienes permiso de escribir ningún código CSS).
 
 ## Especificaciones
 
