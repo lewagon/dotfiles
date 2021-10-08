@@ -15,10 +15,10 @@ Launch the ruby app with:
 ruby app.rb
 ```
 
-It will create a router and start the app. The router is provided,
-you just have to code the controller methods in the `PostsController` and `PostsView` classes.
-Before that, put all the code you wrote in the previous exercises into the
-`Post` class.
+The router is already provided. You just have to:
+- Put all the code you wrote in the previous exercises into the `Post` class.
+- Code the controller in the `PostsController` class.
+- Code the view and `PostsView` class.
 
 There are no specs for this exercise (still, you should rake for `rubocop`),
 so you'll need to test your controller methods by launching the app in your terminal.
