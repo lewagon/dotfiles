@@ -71,7 +71,7 @@ Saisir le <code>"I am going to work right now!"</code>, appuyer sur Entrée. Le 
 Les objectifs de cet exercice sont les suivants :
 
 -   Comprendre le **flow** d’un programme et apprendre à "lire" dans ton code, ligne par ligne
--   Découvrir les \*\*conditions""
+-   Découvrir les **conditions**
 -   Découvrir les structures de code qui permettent de modifier le flow de ton programme : `if/unless..else..end`, `while/until..end`, etc. Ce sont des [structures de contrôle](https://en.wikipedia.org/wiki/Control_flow)
 
 Spécifications
@@ -90,7 +90,7 @@ Nous allons maintenant créer une version améliorée de ton coach avec la méth
 
 Si tu te retrouves coincé dans une **boucle infinie**, appuie simplement sur `Ctrl` + `C` ! Le programme arrêtera de s’exécuter.
 
-тЪая╕П L’exercice n’est terminé que quand rake est complètement vert ! Tu dois t’assurer de vraiment pouvoir poser des questions à ton coach en exécutant ruby lib/interface.rb ЁЯШЙ
+⚠️ L’exercice n’est terminé que quand rake est complètement vert ! Tu dois t’assurer de vraiment pouvoir poser des questions à ton coach en exécutant ruby lib/interface.rb 😉
 
 Enseignements clés
 ------------------
@@ -98,6 +98,6 @@ Enseignements clés
 -   Quel est le flow habituel d’un programme ?
 -   Comment des structures de type `if..else..end` or `while..end` modifient-elles ce flow ?
 -   Comment ces structures fonctionnent-elles ?
--   Qu’est-ce qu’une condition ? Quelles valeurs peut-elle prendre ? Quelle est la différence entre `=` and `==` ?
+-   Qu’est-ce qu’une condition ? Quelles valeurs peut-elle prendre ? Quelle est la différence entre `=` et `==` ?
 -   Une méthode simple peut-elle modifier le flow de ton programme ?
 

@@ -5,7 +5,7 @@ Préparons ton poste de travail.
 
 1.  **10h15** : Pendant ce premier cours de 15 min, ton prof va te présenter les outils de développement que tu as besoin d’installer.
 
-2.  **10h30-13h** : Suis [attentivement la configuration du Wagon](https://github.com/lewagon/setup) et demande de l’aide chaque fois que tu rencontres une difficulté. Ça devrait te prendre toute la matinée, et peut-être même empiéter sur ta pause déjeuner si tu n’as pas de Mac ðŸ˜‰.
+2.  **10h30-13h** : Suis [attentivement la configuration du Wagon](https://github.com/lewagon/setup) et demande de l’aide chaque fois que tu rencontres une difficulté. Ça devrait te prendre toute la matinée, et peut-être même empiéter sur ta pause déjeuner si tu n’as pas de Mac 😉.
 
 3.  **14h-14h15** : Ce deuxième cours de 15 min aborde les concepts de base de la ligne de commande (naviguer dans le système de fichiers, créer des dossiers et des fichiers, lancer ton éditeur de texte depuis le terminal, etc.).
 
@@ -21,4 +21,4 @@ Préparons ton poste de travail.
 -   le **Terminal**, également appelé shell, où tu saisiras les commandes.
 -   **git**, l’outil de contrôle de versions qui te servira à visualiser ton code, obtenir un aperçu et envoyer tes tentatives sur Kitt !
 
-C’est trop cool de t’avoir parmi nous ! À ton clavier ðŸš€ðŸš€ðŸš€ !
+C’est trop cool de t’avoir parmi nous ! À ton clavier 🚀🚀🚀 !

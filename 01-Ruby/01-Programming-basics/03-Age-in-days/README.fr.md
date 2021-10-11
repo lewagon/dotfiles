@@ -1,7 +1,7 @@
 Contexte et objectifs
 ---------------------
 
--   Apprendre à "require" des scripts externes et à appeler des fonctions à partir de ces scripts
+-   Apprendre à « require » des scripts externes et à appeler des fonctions à partir de ces scripts
 -   **Maîtriser** les concepts de [variables]https://fr.wikipedia.org/wiki/Variable\_(informatique), d’assignation de variables, de définition de méthodes et d’appel de méthodes.
 
 Spécifications
@@ -38,7 +38,7 @@ Les questions qui suivent pourront sembler évidentes à la plupart d’entre vo
 ### À propos des variables
 
 -   Qu’est-ce qu’une variable ? Quelles sont les différentes variables utilisées dans ton programme ?
--   Que signifie "définir une variable" ? Quelle est la syntaxe à utiliser pour définir une variable ?
+-   Que signifie « définir une variable » ? Quelle est la syntaxe à utiliser pour définir une variable ?
 -   Peut-on utiliser une variable qui n’a pas été définie ?
 -   Peut-on assigner une nouvelle valeur à une variable qui a déjà été définie ? Comment ?
 -   Peux-tu décrire **précisément** et avec les bons mots ce que l’on fait dans les deux lignes de code ci-dessous ?
