@@ -16,7 +16,9 @@ Quelles sont les vraies couleurs des logos ? Elles sont cachées dans un **mess
 
 ### Écris les expressions régulières
 
-Ouvre le fichier `lib/double_rainbow.rb` qui contient une série de méthodes, toutes conçues pour extraire le texte du message secret : - Suis les astuces et les instructions pour créer tes expressions régulières. - Chaque méthode **prend une string** comme paramètre et **retourne une string**
+Ouvre le fichier `lib/double_rainbow.rb` qui contient une série de méthodes, toutes conçues pour extraire le texte du message secret :
+- Suis les astuces et les instructions pour créer tes expressions régulières.
+- Chaque méthode **prend une string** comme paramètre et **retourne une string**
 
 Si ta regex est correcte, elle choisira une couleur et déverrouillera un badge.
 

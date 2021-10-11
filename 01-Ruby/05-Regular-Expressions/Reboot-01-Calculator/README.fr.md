@@ -6,11 +6,11 @@ On va créer une calculatrice simple capable de réaliser les 4 opérations de 
 Indications
 -----------
 
-Cet exercice devrait te prendre **30 minutes ðŸ•’**
+Cet exercice devrait te prendre **30 minutes 🕒**
 
-1.  On va commencer l’exercice avec le/la prof (en live-code ðŸ’»)) et **écrire ensemble le pseudocode**.
+1.  On va commencer l’exercice avec le/la prof (en live-code 💻)) et **écrire ensemble le pseudocode**.
 2.  Tu auras ensuite 10 minutes pour essayer de trouver la solution tout·e seul·e.
-3.  Puis tu corrigeras l’exercice avec le/la prof (de nouveau en live-code ðŸ’»).
+3.  Puis tu corrigeras l’exercice avec le/la prof (de nouveau en live-code 💻).
 
 Pseudocode
 ----------
@@ -59,7 +59,7 @@ Il n’est pas possible de tester les exercices de reboot, mais tu peux toujours
 Étape 2 - Crée une boucle
 -------------------------
 
-C’est un peu pénible d’avoir à relancer ta calculatrice à chaque fois que ton programme se termine. Imagine une vraie calculatrice qui s’éteindrait après chaque opération ðŸ˜Š
+C’est un peu pénible d’avoir à relancer ta calculatrice à chaque fois que ton programme se termine. Imagine une vraie calculatrice qui s’éteindrait après chaque opération 😊
 
 Crée une boucle ! Réfléchis au moment où tu aimerais que ton programme arrête de tourner en boucle.
 

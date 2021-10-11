@@ -21,7 +21,9 @@ Spécifications
 
 Ta landing page est prête. Tu veux t’assurer que les visiteurs fournissent une adresse e-mail valide.
 
-Écris la méthode `valid?` qui retourne le bon booléen en fonction de la validité de l’adresse e-mail : - Identifie les différentes parties de l’adresse e-mail et rédige une expression régulière qui matche le motif d’une adresse e-mail classique - Rédige toi-même une expression régulière simple ; elle n’a pas besoin d’être parfaite (d’ailleurs, c’est impossible d’écrire une regex parfaite pour les adresses e-mail) !
+Écris la méthode `valid?` qui retourne le bon booléen en fonction de la validité de l’adresse e-mail :
+- Identifie les différentes parties de l’adresse e-mail et rédige une expression régulière qui matche le motif d’une adresse e-mail classique
+- Rédige toi-même une expression régulière simple ; elle n’a pas besoin d’être parfaite (d’ailleurs, c’est impossible d’écrire une regex parfaite pour les adresses e-mail) !
 
 **Attention :** Les expressions régulières ne sont pas suffisamment détaillées pour vérifier à 100 % la conformité des adresses e-mail, comme illustré dans [cette discussion Stack Overflow] (https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) et sur [ce site Web](https://emailregex.com/). Dans les environnements professionnels, il est préférable de faire appel à des services externes, comme celui fourni par [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) ou [Mailgun](https://www.mailgun.com/email-validation/), car ils utilisent une vaste base de données et l’apprentissage automatique (machine learning) pour déterminer si une adresse est correcte.
 
@@ -48,7 +50,9 @@ Mais il en existe [bien d’autres](https://fr.wikipedia.org/wiki/Liste_des_doma
 
 Quelques jours ont passé et ta base de données est déjà pleine de coordonnées utiles. Ton équipe marketing obtient d’autres données auprès d’un professionnel afin d’élargir son audience. Avant de lancer la campagne d’e-mailing, tu dois nettoyer la base de données et retirer toute adresse e-mail non valide.
 
-Écris la méthode `clean_database` : - Elle prend un array d’adresses e-mail - Elle retourne un array contenant uniquement les adresses e-mail valides
+Écris la méthode `clean_database` :
+- Elle prend un array d’adresses e-mail
+- Elle retourne un array contenant uniquement les adresses e-mail valides
 
 ### Statistiques de base
 
@@ -111,7 +115,11 @@ LOCALES = {
 }
 ```
 
-Écris la méthode `compose_translated_email`qui : - extrait le nom d’utilisateur, le nom de domaine et le TLD de l’adresse e-mail - déduit la langue parlée par l’utilisateur à partir du TLD - remplace le texte par la traduction correspondante - retourne un `Hash` au format ci-dessous :
+Écris la méthode `compose_translated_email`qui :
+- extrait le nom d’utilisateur, le nom de domaine et le TLD de l’adresse e-mail
+- déduit la langue parlée par l’utilisateur à partir du TLD
+- remplace le texte par la traduction correspondante
+- retourne un `Hash` au format ci-dessous :
 
 ``` {.ruby}
 {

@@ -7,7 +7,7 @@ Contexte et objectifs
 -   Apprendre la syntaxe à utiliser pour appeler une méthode avec un bloc.
 -   Comprendre ce qui se passe quand tu passes un paramètre au bloc.
 
-Dans le cadre de cet exercice, tu es sur le point d’ouvrir un \*restaurant de burgers\*\*. Tu dois donc exécuter des méthodes pour préparer des burgers à servir à tes premiers clients, de la cuisine au comptoir.
+Dans le cadre de cet exercice, tu es sur le point d’ouvrir un **restaurant de burgers**. Tu dois donc exécuter des méthodes pour préparer des burgers à servir à tes premiers clients, de la cuisine au comptoir.
 
 Spécifications
 --------------

@@ -1,7 +1,7 @@
 Avant de commencer
 ------------------
 
-N’oublie pas qu’à 14h, tu auras ton premier quiz écrit. Sans ordinateur et sans Google. Juste ta tête et un crayon. Ce n’est pas un examen et tu ne seras pas noté, ne t’inquiète pas pour ça ðŸ˜Š, mais cela te permettra d’identifier les points qui te posent encore problème et de les retravailler avant d’aller plus loin. Alors prends ton temps et essaie de répondre à tout aussi précisément que possible.
+N’oublie pas qu’à 14h, tu auras ton premier quiz écrit. Sans ordinateur et sans Google. Juste ta tête et un crayon. Ce n’est pas un examen et tu ne seras pas noté, ne t’inquiète pas pour ça 😊, mais cela te permettra d’identifier les points qui te posent encore problème et de les retravailler avant d’aller plus loin. Alors prends ton temps et essaie de répondre à tout aussi précisément que possible.
 
 À la fin du quiz, un·e prof prendra 15 minutes pour passer en revue tes réponses et essayer de clarifier les points que tu n’as pas compris. Cela te permettra de savoir quoi revoir pendant le week-end, et de décider si tu dois participer au groupe Reboot lundi et mardi prochains.
 
@@ -104,7 +104,7 @@ AGE_OF_STUDENTS = {
 ```
 
 Lis la documentation sur les [Hashes](https://ruby-doc.org/core-2.6.6/Hash.html).
-Tu vas t’en servir tout le temps, alors apprends à les aimer ðŸ˜Š
+Tu vas t’en servir tout le temps, alors apprends à les aimer 😊
 
 **Pour cet exercice, utilise des `Strings` pour tes clés, plutôt que des `Symbols`. C’est plus simple**
 

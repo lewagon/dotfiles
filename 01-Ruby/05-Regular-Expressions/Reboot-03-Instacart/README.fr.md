@@ -14,7 +14,7 @@ Indications
     pseudocode de cet exercice avec le prof.
 -   Tu devrais avoir besoin de tout l’après-midi pour le terminer.
 -   Valide et corrige chaque étape de l’exercice avec le prof avec un
-    live-code intermédiaire ðŸ’»
+    live-code intermédiaire 💻
 
 Pseudocode
 ----------
@@ -34,7 +34,7 @@ Comment ton programme doit-il fonctionner quand tu le lances ?
 
 **Peux-tu détailler un peu plus le pseudocode ?**
 
-Étape 1 - Fausse boutique ðŸ›�
+Étape 1 - Fausse boutique 🛍
 ------------------------------
 
 Voici la première version de notre programme :
@@ -44,11 +44,11 @@ ruby interface.rb
     > --------------------
 
 > Welcome to Instacart \> -------------------- In our store today: kiwi:
-> 1.25â‚¬ banana: 0.5â‚¬ mango: 4â‚¬ asparagus: 9â‚¬ \>
+> 1.25€ banana: 0.5€ mango: 4€ asparagus: 9€ \>
 > -------------------- Which item? (or 'quit' to checkout) kiwi Which
 > item? (or 'quit' to checkout) pineapple Sorry, we don’t have pineapple
 > today.. Which item? (or 'quit' to checkout) mango Which item? (or
-> 'quit' to checkout) quit -------BILL--------- TOTAL: 5.25â‚¬ \>
+> 'quit' to checkout) quit -------BILL--------- TOTAL: 5.25€ \>
 > --------------------
 
 ### Modéliser la boutique et le panier
@@ -60,7 +60,7 @@ ruby interface.rb
 
 **Réfléchis avec ton/ta prof avant de commencer !**
 
-Étape 2 - Ajouter la quantité ðŸ›�ðŸ›�
+Étape 2 - Ajouter la quantité 🛍🛍
 --------------------------------------
 
 ruby interface.rb
@@ -68,11 +68,11 @@ ruby interface.rb
     > --------------------
 
 > Welcome to Instacart \> -------------------- In our store today: kiwi:
-> 1.25â‚¬ banana: 0.5â‚¬ mango: 4â‚¬ asparagus: 9â‚¬ \>
+> 1.25€ banana: 0.5€ mango: 4€ asparagus: 9€ \>
 > -------------------- Which item? (or 'quit' to checkout) kiwi How
 > many? 2 Which item? (or 'quit' to checkout) mango How many? 3 Which
 > item? (or 'quit' to checkout) quit -------BILL--------- kiwi: 2 X
-> 1.25â‚¬ = 2.5â‚¬ mango: 3 X 4â‚¬ = 12â‚¬ TOTAL: 14.5â‚¬ \>
+> 1.25€ = 2.5€ mango: 3 X 4€ = 12€ TOTAL: 14.5€ \>
 > --------------------
 
 ### Modéliser la boutique et le panier
@@ -82,7 +82,7 @@ ruby interface.rb
 -   Que doit-on changer dans notre code avec cette nouvelle
     modélisation ?
 
-Étape 3 - Ajouter la disponibilité ðŸ›�ðŸ›�ðŸ›�
+Étape 3 - Ajouter la disponibilité 🛍🛍🛍
 -----------------------------------------------
 
 On va maintenant améliorer encore un peu le programme et gérer notre
@@ -93,8 +93,8 @@ ruby interface.rb
     > --------------------
 
 > Welcome to Instacart \> -------------------- In our store today: kiwi:
-> 1.25â‚¬ (5 available) banana: 0.5â‚¬ (4 available) mango: 4â‚¬ (1
-> available) asparagus: 9â‚¬ (5 available) \> -------------------- Which
+> 1.25€ (5 available) banana: 0.5€ (4 available) mango: 4€ (1
+> available) asparagus: 9€ (5 available) \> -------------------- Which
 > item? ('quit' to checkout) kiwi How many? 2 Which item? ('quit' to
 > checkout) kiwi How many? 4 Sorry, there are only 3 kiwis left.. \>
 > [...]

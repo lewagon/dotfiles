@@ -41,5 +41,5 @@ Suggestions et ressources complémentaires
 
 -   Pense à bien indiquer les bonnes options de codage (`encoding`) pour
     la lecture du CSV. Souviens-toi que certains titres sont en français
-    avec des caractères spéciaux ðŸ˜‰
+    avec des caractères spéciaux 😉
 

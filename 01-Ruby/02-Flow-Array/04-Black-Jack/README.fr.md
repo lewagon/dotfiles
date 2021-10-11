@@ -16,7 +16,7 @@ On va exécuter une version *simplifiée* du Black Jack :
 -   Le croupier commence avec un score entre `16` et `21`
 -   À chaque tour, le joueur peut :
 -   Tirer une carte d’une valeur aléatoire entre `1` et `11`. Cette valeur sera ajoutée à son score.
-    -Tirer une autre carte, ou conserver son score actuel et arrêter de jouer.
+-   Tirer une autre carte, ou conserver son score actuel et arrêter de jouer.
 -   Au final, il existe 5 possibilités :
 -   Si le score du joueur est \> à 21, il perd (`"Lose"`).
 -   Si le score du joueur est de 21, il a un `"Black Jack"` et gagne.
@@ -61,7 +61,7 @@ Card? 'y' or 'yes' to get a new card
 You beat the bank! You win.
 ```
 
-тЪая╕П L’exercice n’est terminé que quand `rake` est complètement vert ! Tu dois t’assurer de pouvoir jouer en exécutant `ruby lib/interface.rb` ЁЯШЙ
+⚠️ L’exercice n’est terminé que quand `rake` est complètement vert ! Tu dois t’assurer de pouvoir jouer en exécutant `ruby lib/interface.rb` 😉
 
 Enseignements clés
 ------------------

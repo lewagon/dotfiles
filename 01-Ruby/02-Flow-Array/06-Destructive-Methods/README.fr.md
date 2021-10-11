@@ -13,12 +13,12 @@ Spécifications
 Exemple : `["Abricot du Laudot", "Black Caviar", "Brigadier Gerard"]` doit devenir `["3-Brigadier Gerard!", "2-Black Caviar!", "1-Abricot du Laudot!"]` après mise en forme.
 C’est le seul format que le présentateur comprendra !
 
-**ðŸ¤” Astuce : **N’hésite pas à ouvrir le fichier dans le dossier `spec` et à **lire le code test** pour comprendre ce qui se passe. C’est le code qui s’exécute quand tu lances `rake` depuis ton terminal.
+**🤔 Astuce :** N’hésite pas à ouvrir le fichier dans le dossier `spec` et à **lire le code test** pour comprendre ce qui se passe. C’est le code qui s’exécute quand tu lances `rake` depuis ton terminal.
 
 Suggestions et ressources complémentaires
 -----------------------------------------
 
--   Inutile de te rappeler que tu dois utiliser des itérateurs destructifs dans ta méthode ðŸ˜Š
+-   Inutile de te rappeler que tu dois utiliser des itérateurs destructifs dans ta méthode 😊
 
 Enseignements clés
 ------------------

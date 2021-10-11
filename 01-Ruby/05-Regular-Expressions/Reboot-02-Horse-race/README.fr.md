@@ -11,13 +11,13 @@ n’ait plus d’argent.
 Indications
 -----------
 
-Cet exercice devrait te prendre **45 minutes ðŸ•’**
+Cet exercice devrait te prendre **45 minutes 🕒**
 
 1.  Comme pour le premier exercice, commence par écrire le pseudocode
-    avec ton/ta prof en live-code ðŸ’».
+    avec ton/ta prof en live-code 💻.
 2.  Tu auras ensuite 20 minutes pour essayer de trouver la solution
     tout·e seul·e.
-3.  Puis on corrigera l’exercice ensemble ! ðŸ’»
+3.  Puis on corrigera l’exercice ensemble ! 💻
 
 Pseudocode
 ----------
@@ -31,7 +31,7 @@ pseudocode !
 # Pseudo-code:
 # 1. Imprime Bienvenue et les noms des chevaux
 # 2. Obtiens le pari de l’utilisateur·rice
-# 3. Exécute la course ðŸ�´
+# 3. Exécute la course 🐴
 # 4. Imprime les résultats
 ```
 
@@ -51,7 +51,7 @@ le pseudocode. Comment allons-nous modéliser les chevaux ?
 ---------------------------
 
 Comment va-t-on ajouter une contrepartie au jeu ? Admettons que tu aies
-100â‚¬ au début de la course, tu gagnes 50â‚¬ si tu gagnes ton pari et
-perds 10â‚¬ si ton cheval ne gagne pas la course. Que dois-tu changer à
+100 € au début de la course, tu gagnes 50 € si tu gagnes ton pari et
+perds 10 € si ton cheval ne gagne pas la course. Que dois-tu changer à
 ton programme de courses de chevaux ? Assure-toi que l’utilisateur·rice
 ne peut pas jouer s’il/elle n’a pas suffisamment d’argent.
