@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Practicar el grid de bootstrap. Aprender a crear varios grids con diversos comportamientos receptivos.
+Practicar el grid de Bootstrap. Aprender a crear varios grids con diversos comportamientos receptivos.
 
 ## Especificaciones
 
