@@ -55,7 +55,7 @@ On va modifier notre méthode pour que cela fonctionne !
 
 `yield` est le mot-clé dont tu as besoin pour exécuter le bloc. Il intervient dans ta méthode pour appliquer les instructions des clients concernant le steak.
 
-[Note] (https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
+[Note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
 
 Améliore la méthode `burger` pour accueillir un bloc :
 
