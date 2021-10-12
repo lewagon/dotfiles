@@ -24,7 +24,7 @@ Open the `lib/validation.js` file. This is where you'll code the validation logi
 
 ## Further suggestions
 
-To display that an input is valid or invalid you can use the `.is-valid` & `.is-invalid` on your `input` from [Bootstrap server side validation classes](https://getbootstrap.com/docs/4.3/components/forms/#server-side) like this:
+To display that an input is valid or invalid you can use the `.is-valid` & `.is-invalid` on your `input` from [Bootstrap server side validation classes](https://getbootstrap.com/docs/5.1/forms/validation/#server-side) like this:
 
 ```html
 <input type="text" class="form-control is-valid">
