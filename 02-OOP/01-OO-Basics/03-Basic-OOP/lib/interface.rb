@@ -20,16 +20,6 @@ until is_dead
     puts "Your orange tree is dead :("
   else
     puts "Your orange tree is #{pluralize(orange_tree.age, 'year')} old, measures #{pluralize(orange_tree.height, 'meter')}, gives #{pluralize(orange_tree.fruits, 'fruit')}, and is still alive :)"
-    occurrences = rand(0..orange_tree.fruits)
-    if occurrences.positive?
-      print "You're fruit picking"
-      occurrences.times do
-        sleep(0.01)
-        print "."
-        orange_tree.pick_a_fruit!
-      end
-      puts "You've picked #{pluralize(occurrences, 'fruit')}, your orange tree has only #{pluralize(orange_tree.fruits, 'fruit')} left."
-    end
   end
   sleep(0.1)
   puts ""
