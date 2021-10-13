@@ -25,7 +25,7 @@ Spécifications
 -   **contrainte** : les mots composés d’une seule lettre comme "a" ne doivent pas être traduits
 -   **contrainte** : pour les mots qui commencent par une consonne ("chat", "trou"), tu devras prendre le premier *groupe de consonnes* (toutes les lettres avant la première voyelle) et le placer à la fin, ajouter un `l` au début du mot et ajouter un suffixe à la fin ("chat" doit donner "latchem" ou "latchoc")
 -   **contrainte**: les mots qui commencent par une voyelle ne changent pas, mais tu dois quand même ajouter un `l` au début du mot et un suffixe à la fin ("atout" doit donner "latoutoc" ou "latoutic")
--   **contrainte** : le suffixe aléatoire doit être l’un des suivants : `["em", "Ã©", "ji", "oc", "ic", "uche", "Ã¨s"]`
+-   **contrainte** : le suffixe aléatoire doit être l’un des suivants : `["em", "é", "ji", "oc", "ic", "uche", "ès"]`
 -   **perfectionnement** : dans l’idéal, ton programme doit être en mesure de traduire n’importe quelle phrase complexe, indépendamment de la ponctuation
 
 Suggestions et ressources complémentaires

@@ -7,7 +7,7 @@ Contexte et objectifs
 IRB est une boucle de lecture-évaluation-impression [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) pour Ruby. Elle fonctionne comme ceci :
 
 1.  Le **R** (première lettre de l’acronyme anglais REPL - Read) lit l’expression écrite par l’utilisateur ; il peut s’agir de n’importe quelle expression Ruby valide comme `"Hello"`, `2+2`, `"hello".upcase`…
-2.  Le \*E\*\* (deuxième lettre de l’acronyme anglais REPL - Evaluate) évalue le résultat de l’expression.
+2.  Le **E** (deuxième lettre de l’acronyme anglais REPL - Evaluate) évalue le résultat de l’expression.
 3.  Le **P** (troisième lettre de l’acronyme anglais REPL - Print) imprime ce résultat.
 4.  Le **L** (dernière lettre de l’acronyme anglais REPL - Loop) revient en boucle au point 1 et attend une nouvelle saisie de la part de l’utilisateur.
 

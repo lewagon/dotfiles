@@ -2,7 +2,7 @@ Contexte et objectifs
 ---------------------
 
 -   Apprendre à « require » des scripts externes et à appeler des fonctions à partir de ces scripts
--   **Maîtriser** les concepts de [variables]https://fr.wikipedia.org/wiki/Variable\_(informatique), d’assignation de variables, de définition de méthodes et d’appel de méthodes.
+-   **Maîtriser** les concepts de [variables](https://fr.wikipedia.org/wiki/Variable_(informatique)), d’assignation de variables, de définition de méthodes et d’appel de méthodes.
 
 Spécifications
 --------------

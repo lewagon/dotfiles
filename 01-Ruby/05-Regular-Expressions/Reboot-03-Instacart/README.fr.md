@@ -22,11 +22,12 @@ Pseudocode
 Comment ton programme doit-il fonctionner quand tu le lances ?
 **Écrivons le pseudocode**
 
-``` {.ruby}
+
+```ruby
 # interface.rb
 
-# Pseudocode
-# 1. Imprime Bienvenue
+# Pseudo-code
+# 1. Imprime Welcome
 # 2. Définis ta boutique (quels articles sont en vente ?)
 # 3. Obtiens les articles de l’utilisateur·rice (achat)
 # 4. Imprime la facture (paiement)
@@ -39,17 +40,31 @@ Comment ton programme doit-il fonctionner quand tu le lances ?
 
 Voici la première version de notre programme :
 
+```
 ruby interface.rb
 
-    > --------------------
-
-> Welcome to Instacart \> -------------------- In our store today: kiwi:
-> 1.25€ banana: 0.5€ mango: 4€ asparagus: 9€ \>
-> -------------------- Which item? (or 'quit' to checkout) kiwi Which
-> item? (or 'quit' to checkout) pineapple Sorry, we don’t have pineapple
-> today.. Which item? (or 'quit' to checkout) mango Which item? (or
-> 'quit' to checkout) quit -------BILL--------- TOTAL: 5.25€ \>
 > --------------------
+> Welcome to Instacart
+> --------------------
+> In our store today:
+> kiwi: 1.25€
+> banana: 0.5€
+> mango: 4€
+> asparagus: 9€
+> --------------------
+> Which item? (or 'quit' to checkout)
+> kiwi
+> Which item? (or 'quit' to checkout)
+> pineapple
+> Sorry, we don't have pineapple today..
+> Which item? (or 'quit' to checkout)
+> mango
+> Which item? (or 'quit' to checkout)
+> quit
+> -------BILL---------
+> TOTAL: 5.25€
+> --------------------
+```
 
 ### Modéliser la boutique et le panier
 
@@ -63,17 +78,34 @@ ruby interface.rb
 Étape 2 - Ajouter la quantité 🛍🛍
 --------------------------------------
 
+```
 ruby interface.rb
 
-    > --------------------
-
-> Welcome to Instacart \> -------------------- In our store today: kiwi:
-> 1.25€ banana: 0.5€ mango: 4€ asparagus: 9€ \>
-> -------------------- Which item? (or 'quit' to checkout) kiwi How
-> many? 2 Which item? (or 'quit' to checkout) mango How many? 3 Which
-> item? (or 'quit' to checkout) quit -------BILL--------- kiwi: 2 X
-> 1.25€ = 2.5€ mango: 3 X 4€ = 12€ TOTAL: 14.5€ \>
 > --------------------
+> Welcome to Instacart
+> --------------------
+> In our store today:
+> kiwi: 1.25€
+> banana: 0.5€
+> mango: 4€
+> asparagus: 9€
+> --------------------
+> Which item? (or 'quit' to checkout)
+> kiwi
+> How many?
+> 2
+> Which item? (or 'quit' to checkout)
+> mango
+> How many?
+> 3
+> Which item? (or 'quit' to checkout)
+> quit
+> -------BILL---------
+> kiwi: 2 X 1.25€ = 2.5€
+> mango: 3 X 4€ = 12€
+> TOTAL: 14.5€
+> --------------------
+```
 
 ### Modéliser la boutique et le panier
 
@@ -88,16 +120,29 @@ ruby interface.rb
 On va maintenant améliorer encore un peu le programme et gérer notre
 stock (avec la disponibilité) :
 
+```
 ruby interface.rb
 
-    > --------------------
-
-> Welcome to Instacart \> -------------------- In our store today: kiwi:
-> 1.25€ (5 available) banana: 0.5€ (4 available) mango: 4€ (1
-> available) asparagus: 9€ (5 available) \> -------------------- Which
-> item? ('quit' to checkout) kiwi How many? 2 Which item? ('quit' to
-> checkout) kiwi How many? 4 Sorry, there are only 3 kiwis left.. \>
+> --------------------
+> Welcome to Instacart
+> --------------------
+> In our store today:
+> kiwi: 1.25€ (5 available)
+> banana: 0.5€ (4 available)
+> mango: 4€ (1 available)
+> asparagus: 9€ (5 available)
+> --------------------
+> Which item? ('quit' to checkout)
+> kiwi
+> How many?
+> 2
+> Which item? ('quit' to checkout)
+> kiwi
+> How many?
+> 4
+> Sorry, there are only 3 kiwis left..
 > [...]
+```
 
 ### Modéliser la boutique et le panier
 

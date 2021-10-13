@@ -24,7 +24,7 @@ depuis le terminal :
 Voici comment la méthode doit fonctionner quand tu exécutes
 `ruby lib/interface.rb` :
 
-``` {.bash}
+```bash
 ********* Welcome to the longest word-game! *********
 Here is your grid:
 Q F M R K L I T P
@@ -85,6 +85,4 @@ d’aide :
     envoyer des requêtes HTTP à cette API et obtenir un résultat en
     JSON. Utilise le pack `json` pour parser les fichiers JSON
     retournés.
--   Pour tester l’intégration de la grille, essaie d’utiliser
-    Enumerable\#all?\`
-
+-   Pour tester l’intégration de la grille, essaie d’utiliser `Enumerable#all?`

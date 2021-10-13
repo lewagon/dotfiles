@@ -4,7 +4,7 @@ Indications
 L’hiver approche ⛄⛄⛄. On veut créer un programme pour gérer notre
 liste de cadeaux, marquer les articles achetés et enfin trouver
 l’inspiration sur un site Web externe comme Etsy. Ce challenge devrait
-te prendre la journée. ðŸŽ�
+te prendre la journée. 🎁
 
 Comme hier, commence par écrire le pseudocode en groupe en live-code
  💻.
@@ -14,14 +14,14 @@ Pseudocode
 
 Commençons par réfléchir ensemble au **pseudocode** :
 
-``` {.ruby}
+```ruby
 # interface.rb
 
-# Pseudo-code:
-# 1. Welcome
-# 2. Display menu (list / add / delete / mark )
-# 3. Get user action
-# 4. Perform the right action
+# Pseudo-code :
+# 1. Bienvenue
+# 2. Affiche le menu (list / add / delete / mark )
+# 3. Obtenir l'action utilisateur
+# 4. Effectuer la bonne action
 ```
 
 Étape 1 - La boucle de menu 🎁
@@ -30,7 +30,7 @@ Commençons par réfléchir ensemble au **pseudocode** :
 Commence par créer la boucle principale qui affiche les actions et
 récupère les données entrées par l’utilisateur :
 
-``` {.bash}
+```bash
 ruby interface.rb
 
 > Welcome to your Christmas gift list
@@ -64,7 +64,7 @@ Le moment est venu d’exécuter les actions simples (`list`, `add`,
 
 On veut pouvoir marquer tous les articles ayant été achetés :
 
-``` {.bash}
+```bash
 ruby interface.rb
 
 > Welcome to your Christmas gift list
@@ -98,7 +98,7 @@ Tu es à court d’idées pour Noël et tu aimerais trouver l’inspiration sur
 menu (en plus des actions `list`, `add`, `delete` et `mark`). Voici
 comment cette action peut fonctionner :
 
-``` {.bash}
+```bash
 What are you looking for on Etsy?
 > Jeans
 Here are Etsy results for "Jeans":
@@ -118,14 +118,14 @@ Voici un premier script pour t’aider à scraper (extraire les données) :
 scraper Etsy en temps réel ; on téléchargera une page html pour la
 scraper en local*
 
-``` {.bash}
+```bash
 # Télécharge la page à scraper dans ton répertoire de travail
 curl "https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR" > results.html
 # obtiens le chemin vers le fichier HTML
 pwd
 ```
 
-``` {.ruby}
+```ruby
 # lib/scraper.rb
 require 'nokogiri'
 
@@ -137,8 +137,8 @@ doc = Nokogiri::HTML(html_content)
 
 # 3. On recherche les éléments corrects contenant le titre des articles dans notre document HTML
 doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
- # 4. Pour chaque article trouvé, on extrait son titre et on l’imprime
- puts element.text.strip
+  # 4. Pour chaque article trouvé, on extrait son titre et on l’imprimes
+  puts element.text.strip
 end
 ```
 
@@ -146,22 +146,22 @@ Une fois que tu as réussi à scraper le fichier local `results.html`,
 actualise ton outil pour le connecter à la page de résultats d’Etsy et
 scraper la page en ligne :
 
-``` {.ruby}
+```ruby
 require 'open-uri'
 require 'nokogiri'
 
 puts "What are you searching on Etsy?"
 article = gets.chomp
 
-# 1. On obtient le contenu de la page HTML grâce à open-url
+# 1. We get the HTML page content thanks to open-uri
 html_content = URI.open("https://www.etsy.com/search?q=#{article}").read
-# 2. On crée un document Nokogiri à partir de ce fichier
+# 2. We build a Nokogiri document from this file
 doc = Nokogiri::HTML(html_content)
 
-# 3. On recherche les éléments corrects contenant le titre des articles dans notre document HTML
+# 3. We search for the correct elements containing the items' title in our HTML doc
 doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
- # 4. Pour chaque article trouvé, on extrait son titre et on l’imprime
- puts element.text.strip
+  # 4. For each item found, we extract its title and print it
+  puts element.text.strip
 end
 ```
 
@@ -178,29 +178,29 @@ localement.
 
 Parser un fichier CSV
 
-``` {.ruby}
+```ruby
 require 'csv'
 
 csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
-filepath = 'gifts.csv'
+filepath    = 'gifts.csv'
 
 CSV.foreach(filepath, csv_options) do |row|
- # TODO: build new gift from information stored in each row
+  # TODO: build new gift from information stored in each row
 end
 ```
 
 Stocker un fichier CSV
 
-``` {.ruby}
+```ruby
 require 'csv'
 
 csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
-filepath = 'gifts.csv'
+filepath    = 'gifts.csv'
 
 CSV.open(filepath, 'wb', csv_options) do |csv|
- # On avait des headers pour le fichier CSV
- csv << ['name', 'price', 'bought']
- #TODO: store each gift
+  # We had headers to the CSV
+  csv << ['name', 'price', 'bought']
+  #TODO: store each gift
 end
 ```
 
