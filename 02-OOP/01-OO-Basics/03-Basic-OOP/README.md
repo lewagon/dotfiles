@@ -8,48 +8,47 @@ Using built-in classes is good, but creating your *own* classes is even better!
 
 ## Specs
 
-Implement an `OrangeTree` class that models the life of an orange tree (its birth, life cycle and death).
+Implement an `OrangeTree` class that models the life of an orange tree (its birth, life cycle and death):
 
-To know the living status of the `OrangeTree`, you will need to code a `#dead?` **instance** method which returns a boolean.
+### Aging
+- When an orange tree is born, its age is 0.
+- Each year, the tree should age by 1 year.
+- The orange tree **cannot** die until it reaches 50 years old.
+- After 50 years, the probability of dying increases each year.
+- No tree can live more than 100 years.
+- You should be able to know the tree's age.
+- You should be able to find out if the tree is dead by calling the `#dead?` instance method.
+
+### Height
+- An orange tree grows 1 meter per year until it is 10 years old. Then it stops growing.
+- You should be able to measure the height of the tree.
+
+### Fruits
+- An orange tree produces 100 fruits a year once it is strictly more than 5 years old.
+- The tree produces 200 fruits a year once it reaches 10 years old.
+- The tree stop producing fruits once it reaches 15 years old.
+- You should be able to pick **a single fruit** from the tree by calling the `pick_a_fruit!` instance method on its (but only if there are some left).
+- At the end of each year, the fruits which have not been picked will fall off.
+- You should be able to find out how many fruits are left hanging on the tree.
 
 To simulate time passing, you will need to implement the following **instance** method:
 
 ```ruby
 def one_year_passes!
-  # TODO: age the tree by one year
   # TODO: check if the tree has survived
-  # TODO: if so, make the tree height grow
-  # TODO: if so, make the tree grow fruits
+  # TODO: if so, grow up the tree
+  # TODO: and grow fruits
 end
 ```
 
-These are the guidelines you have to implement:
-
-### Survival & Age
-- You should be able to find out if the tree is dead.
-- The orange tree **cannot** die until it reaches 50 years old.
-- After 50 years, the probability of dying increases each year.
-- No tree can live more than 100 years.
-- Each year, the tree should age by 1 year (it becomes older and taller, and eventually dies).
-
-### Height
-- You should be able to measure the height of the tree.
-- A tree grows 1 meter per year until it is 10 years old. Then it stops growing.
-
-### Fruits
-- A tree will produce 100 fruits a year once it is more than 5 years old.
-- A tree will produce 200 fruits a year when it reaches 10 years old.
-- A tree will not produce fruits once it reaches 15 years old.
-- You should be able to pick **a single fruit** from the tree by calling the `pick_a_fruit!` method on your tree (but only if there are some left).
-- At the end of each year, the fruits which have not been picked **will fall off**.
-- You should be able to find out how many fruits are left hanging on the tree.
-
 To test it, launch the interface (`ruby lib/interface.rb`) and see what happens ;).
 
-Once you're done implementing your **instance** method `#one_year_passes!` (and then only), you can refactor your code into smaller methods:
+### Refactoring
+
+Once you're done implementing your **instance** method `#one_year_passes!` and your `rake` is 100% green, refactor your code into **private** instance methods:
+- `#may_die!`
 - `#grow_up!`
 - `#grow_fruits!`
-- `#may_die!`
 
 ## Key learning points
 
