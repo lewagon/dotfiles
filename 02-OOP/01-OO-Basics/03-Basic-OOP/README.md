@@ -28,7 +28,7 @@ Implement an `OrangeTree` class that models the life of an orange tree (its birt
 - The tree produces 200 fruits a year once it reaches 10 years old.
 - The tree stops producing fruits once it reaches 15 years old.
 - You should be able to pick **a single fruit** from the tree by calling the `pick_a_fruit!` instance method on it (but only if there are some left).
-- At the end of each year, the fruits which have not been picked will fall off.
+- At the end of each year, the oranges which have not been picked will fall off.
 - You should be able to find out how many fruits are left hanging on the tree.
 
 To simulate time passing, you will need to implement the following **instance** method:
@@ -47,8 +47,8 @@ To test it, launch the interface (`ruby lib/interface.rb`) and see what happens 
 
 Once you're done implementing your **instance** method `#one_year_passes!` and your `rake` is 100% green, refactor your code into **private** instance methods:
 - `#may_die!`
-- `#grow_up!`
-- `#grow_fruits!`
+- `#grow!`
+- `#produce_fruits!`
 
 ## Key learning points
 
