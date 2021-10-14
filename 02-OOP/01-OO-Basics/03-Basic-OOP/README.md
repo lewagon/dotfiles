@@ -37,7 +37,7 @@ To simulate time passing, you will need to implement the following **instance** 
 def one_year_passes!
   # TODO: check if the tree has survived
   # TODO: if so, make the tree grow
-  # TODO: and grow fruits
+  # TODO: and produce fruits
 end
 ```
 
