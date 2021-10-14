@@ -53,7 +53,7 @@ Digamos que quieres mantenerte en la línea pero sigues comiendo en McDonald's..
   </tbody>
 </table>
 
-Debes guardar esta información en una [constante](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Variables_and_Constants#Constants) Ruby para crear este tipo de base de datos.
+Debes guardar esta información en una [constante](https://www.rubyguides.com/2017/07/ruby-constants/) Ruby para crear este tipo de base de datos.
 Por ejemplo, el siguiente es un ejemplo de un `Hash` - `AGE_OF_STUDENTS` - que contiene estudiantes y sus edades:
 
 ```ruby

@@ -20,7 +20,7 @@ terminal. If you want to determine what the Public IP Address of this Wifi route
 myip
 ```
 
-These commands are not standard, you have them thanks to the setup we did on the first day. You can review those aliases by opening the `~/.aliases` file with Sublime Text for instance.
+These commands are not standard, you have them thanks to the setup we did on the first day. You can review those aliases by opening the `~/.aliases` file with your text editor for instance.
 
 ## Specs
 

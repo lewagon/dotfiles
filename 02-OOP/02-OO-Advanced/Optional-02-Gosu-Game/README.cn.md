@@ -72,7 +72,7 @@ touch lib/snake.rb
 touch lib/food.rb
 curl https://themushroomkingdom.net/sounds/wav/smb/smb_bump.wav > lib/start.wav
 curl https://themushroomkingdom.net/sounds/wav/smb/smb_coin.wav > lib/eat.wav
-stt
+code .
 ```
 
 我们这样开启游戏：

@@ -54,7 +54,7 @@ Let's say you want to stay fit but keep eating McDonalds... You have the brillia
   </tbody>
 </table>
 
-You need to store this information in a ruby [constant](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Variables_and_Constants#Constants) to create a kind of database.
+You need to store this information in a ruby [constant](https://www.rubyguides.com/2017/07/ruby-constants/) to create a kind of database.
 For instance, below is an example of a `Hash` - `AGE_OF_STUDENTS` - that contains students and their ages:
 
 ```ruby

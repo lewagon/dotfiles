@@ -248,7 +248,7 @@ En la Terminal, corre lo siguiente para crear el archivo de test:
 rails g system_test questions
 ```
 
-Abre el archivo generado en Sublime Text y escribe tu primer test:
+Abre el archivo generado en tu editor de texto y escribe tu primer test:
 
 ```ruby
 # test/system/questions_test.rb
@@ -265,7 +265,6 @@ end
 Corre el test en la Terminal con:
 
 ```bash
-rails db:migrate
 rails test:system
 ```
 
