@@ -12,7 +12,7 @@ Launch your local webserver with:
 ```bash
 rake webpack
 ```
-and go to [`localhost:8080`](http://localhost:8080)
+and go to <a href="http://localhost:8080" target="_blank">`localhost:8080`</a>
 
 #### HTML
 
