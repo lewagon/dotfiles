@@ -62,7 +62,7 @@ rspec spec/models                # Launch tests
 Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap @popperjs/core
 ```
 
 And add the gems we're going to need:
@@ -79,6 +79,8 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
+Replace **all the content** of your `config/initializers/simple_form_bootstrap.rb` file with [this](https://github.com/heartcombo/simple_form-bootstrap/blob/main/config/initializers/simple_form_bootstrap.rb).
+
 Then let's download the Le Wagon's stylesheets:
 
 ```bash
@@ -87,37 +89,8 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-To enable Bootstrap responsiveness you will also need to add the following to your `<head>`:
+Finally let's import the Boostrap JS library:
 
-```html
-<!-- app/views/layouts/application.html.erb -->
-
-<!DOCTYPE html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <!-- [...] -->
-```
-
-Finally let's import Boostrap JS library using webpack:
-
-```js
-// config/webpack/environment.js
-const { environment } = require('@rails/webpacker')
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require('webpack')
-environment.plugins.prepend('Provide',
-  new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    Popper: ['popper.js', 'default']
-  })
-)
-
-module.exports = environment
-```
 ```js
 // app/javascript/packs/application.js
 import 'bootstrap';
