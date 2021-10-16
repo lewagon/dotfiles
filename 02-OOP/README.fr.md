@@ -1,6 +1,6 @@
 Le module OOP s’étale sur 6 jours.
 
-## `01 Classes & Instances`
+## `01 Classes et Instances`
 
 Jusqu’ici, tu as joué avec tout un tas d’objets intégrés en ruby
 (Integer, Hash, Date, etc.) Mais sais-tu définir tes propres classes ?

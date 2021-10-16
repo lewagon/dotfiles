@@ -134,7 +134,7 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 ```
 
 Tu peux travailler dans un fichier temporaire -- `parsing.rb` par
-exemple --pour trouver les bons sélecteurs et le code ruby pour obtenir
+exemple -- pour trouver les bons sélecteurs et le code ruby pour obtenir
 toutes les données que tu veux extraire du contenu HTML. Tu peux
 commencer par afficher simplement les informations extraites avec
 `puts`. Une fois que tu as trouvé tous les sélecteurs dont tu as besoin,
@@ -190,7 +190,7 @@ Cette nouvelle propriété doit être :
 
 ## 3 - (Action utilisateur) Marquer une recette comme réalisée
 
-Une fois que tu as fini avec la "Recherche", essaie d’ajouter une
+Une fois que tu as fini avec la « Recherche », essaie d’ajouter une
 fonction pour marquer une recette comme réalisée :
 
 ```bash
@@ -216,8 +216,7 @@ Cette nouvelle propriété doit également être :
 ## 5 - (Facultatif) Service
 
 Essaie d’extraire la logique de **parsing** du contrôleur et de la
-placer dans un [**objet
-Service**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html) :
+placer dans un [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html) :
 
 ``` ruby
 class ScrapeAllrecipesService

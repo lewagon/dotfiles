@@ -5,7 +5,7 @@ avec des classes comme `String`, `Integer`, `Array`, `Hash`, etc. En
 réalité, tu as même manipulé des *instances* de ces classes.
 
 Tu as bien noté que `String` est une classe, non ? Cela signifie que
-`"john lennon"` ou `"Hello!" sont tous deux des instances de`String\`.
+`"john lennon"` ou `"Hello!"` sont tous deux des instances de `String`.
 
 Utiliser des classes intégrées, c’est bien. Mais créer tes **propres**
 classes, c’est encore mieux !

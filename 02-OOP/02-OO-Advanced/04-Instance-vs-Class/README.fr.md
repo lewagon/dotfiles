@@ -47,7 +47,7 @@ Es-tu capable de répondre aux questions suivantes ? (Consulte la
 documentation si besoin)
 
 -   Entre `#rate` and `.filter_by_city`, laquelle est une méthode
-    d’instance ? Laquelle est une méthode de classe ?\
+    d’instance ? Laquelle est une méthode de classe ?
 -   Examine la liste ci-dessous. Qu’est-ce qui est quoi ?
 
 ``` ruby

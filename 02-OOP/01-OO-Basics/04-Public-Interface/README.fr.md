@@ -12,7 +12,7 @@ privées (accessibles uniquement au sein de l’objet) forment son
 
 En règle générale, on expose uniquement d’un objet ce dont les autres
 objets ont besoin pour interagir avec lui. **On ne crée pas d’objets
-perméables à moins d’avoir besoin qu’ils soient perméables**
+perméables à moins d’avoir besoin qu’ils soient perméables**.
 
 ## Objectifs
 
@@ -33,7 +33,7 @@ réaliser des transactions.
 L’interface publique de la classe, c’est-à-dire l’ensemble de ses
 méthodes publiques, est appelée contrat de classe (en savoir plus sur la
 notion de [DbC ou programmation par
-contrat](https://fr.wikipedia.org/wiki/Programmation_par_contrat). Il
+contrat](https://fr.wikipedia.org/wiki/Programmation_par_contrat)). Il
 s’agit d’une sorte de promesse faite par la classe aux autres objets ou
 programmes Ruby. Ci-dessous, on spécifie le contrat de notre classe
 `BankAccount`. On veut pouvoir réaliser les actions suivantes avec nos
@@ -107,20 +107,15 @@ comme suit ?
 
 Renseigne-toi sur le [principe de responsabilité
 unique](https://fr.wikipedia.org/wiki/Principe_de_responsabilit%C3%A9_unique),
-et interroge-toi : - Quelle est la responsabilité de la classe
-`BankAccount` ? Sa responsabilité principale est bien d’imprimer des
-informations de base sur le compte et de permettre les retraits/dépôts
-d’argent, n’est-ce-pas ? - Est-ce la responsabilité du compte bancaire
-d’assurer un suivi de la date de chaque transaction ou d’imprimer
-joliment chaque transaction ?
+et interroge-toi :
+- Quelle est la responsabilité de la classe `BankAccount` ? Sa responsabilité principale est bien d’imprimer des informations de base sur le compte et de permettre les retraits/dépôts d’argent, n’est-ce-pas ?
+- Est-ce la responsabilité du compte bancaire d’assurer un suivi de la date de chaque transaction ou d’imprimer joliment chaque transaction ?
 
 Le moment est peut-être venu de déléguer ces responsabilités à une autre
-classe `Transaction`, qui serait responsable : - du suivi de la date des
-dépôts et retraits, et de leur montant - de l’impression de ces
-informations dans un format convivial - Tu peux même envisager d’autres
-données pour cette classe, comme une variable d’instance `@message` pour
-stocker la string de référence pour chaque retrait/dépôt ("car rental",
-"ibiza weekend", "christmas shopping", etc.)
+classe `Transaction`, qui serait responsable :
+- du suivi de la date des dépôts et retraits, et de leur montant
+- de l’impression de ces informations dans un format convivial
+- Tu peux même envisager d’autres données pour cette classe, comme une variable d’instance `@message` pour stocker la string de référence pour chaque retrait/dépôt ("car rental", "ibiza weekend", "christmas shopping", etc.)
 
 Une fois que ta classe `Transaction` aura été implémentée, tu devras
 modifier ta classe `BankAccount` de façon à ce que les arrays de

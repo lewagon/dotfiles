@@ -16,20 +16,25 @@ classes !
 
 ### Parent et enfants
 
-Maintenant que tu connais les avantages de l’héritage, continue et : -
-Crée les trois classes vides - Définis la bonne relation d’héritage
+Maintenant que tu connais les avantages de l’héritage, continue et :
+- Crée les trois classes vides
+- Définis la bonne relation d’héritage
 entre les classes enfants et parentes
 
 Contrairement à l’exercice précédent, commence par coder les
-comportements communs dans la classe parente : - Au départ, un animal a
-zéro **énergie** - Tu peux **nourrir** un animal : cela augmentera son
+comportements communs dans la classe parente :
+- Au départ, un animal a
+zéro **énergie**
+- Tu peux **nourrir** un animal : cela augmentera son
 **énergie** de 1
 
 ### Les bruits des animaux
 
 Afin de déterminer les classes, commence par le **programme** que tu
-souhaites exécuter : - Ouvre `lib/farming_diary.rb`, lis *Day Three* et
-rassemble les informations nécessaires pour coder les classes. - Exécute
+souhaites exécuter :
+- Ouvre `lib/farming_diary.rb`, lis *Day Three* et
+rassemble les informations nécessaires pour coder les classes.
+- Exécute
 le fichier avec `ruby lib/farming_diary.rb`. Corrige les erreurs une par
 une en codant la méthode `talk` manquante dans `Cow` et `Chicken`.
 
@@ -51,9 +56,10 @@ concept s’appelle le
 [polymorphisme](https://thoughtbot.com/blog/back-to-basics-polymorphism-and-ruby)
  🤓
 
-Voici ce que tu dois savoir à propos de `feed!` : - `Cow` : en plus de
-gagner en énergie, une vache produit 2 litres de **@milk** (lait) -
-`Chicken` : en plus de gagner en énergie, une poule produit 2 **@eggs**
+Voici ce que tu dois savoir à propos de `feed!` :
+- `Cow` : en plus de
+gagner en énergie, une vache produit 2 litres de **@milk** (lait)
+- `Chicken` : en plus de gagner en énergie, une poule produit 2 **@eggs**
 (œufs) (les coqs aucun 🤷‍♂️)
 
 **Astuce** : la méthode enfant **étend** la méthode parente. N’oublie
@@ -73,14 +79,14 @@ The male chicken produced 0 eggs
 Félicitations ! Tu peux exécuter `rake` pour vérifier que ton code est
 bien organisé.
 
-Dans la classe enfant, il existe 4 sortes de méthodes : - des méthodes
-qui **héritent** de la classe parente : la méthode est uniquement
-définie dans la classe parente - des méthodes qui **étendent** la
-définition de la méthode parente : la méthode est légèrement différente
-dans les classes enfants - des méthodes qui **override** ou écrasent la
-méthode parente . la définition est complètement différente que dans la
-classe parente - des méthodes qui sont propres à la classe enfant :
-elles ne sont *pas du tout* définies dans la classe parente
+Dans la classe enfant, il existe 4 sortes de méthodes :
+- des méthodes qui **héritent** de la classe parente : la méthode est uniquement
+définie dans la classe parente
+- des méthodes qui **étendent** la définition de la méthode parente : la méthode est légèrement différente
+dans les classes enfants
+- des méthodes qui **override** ou écrasent la méthode parente . la définition est complètement différente que dans la
+classe parente
+- des méthodes qui sont propres à la classe enfant : elles ne sont *pas du tout* définies dans la classe parente
 
 Pour étendre une méthode, il faut utiliser le mot-clé `super` : il agit
 comme si tu copiais le corps de la méthode parente et le collais là où

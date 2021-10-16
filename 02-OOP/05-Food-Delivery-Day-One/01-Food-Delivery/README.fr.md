@@ -1,11 +1,11 @@
 Dans cet exercice, on va créer un programme de livraison d’aliments pour
 un restaurant !
 
-Voici les premières **actions utilisateur** de l’application : - En tant
-qu’utilisateur·rice, je peux ajouter un nouveau repas - - En tant
-qu’utilisateur·rice, je peux faire une liste de tous les repas - En tant
-qu’utilisateur·rice, je peux ajouter un·e nouveau/elle client·e - En
-tant qu’utilisateur·rice, je peux faire une liste de tou·te·s les
+Voici les premières **actions utilisateur** de l’application :
+- En tant qu’utilisateur·rice, je peux ajouter un nouveau repas
+- En tant qu’utilisateur·rice, je peux faire une liste de tous les repas
+- En tant qu’utilisateur·rice, je peux ajouter un·e nouveau/elle client·e
+- En tant qu’utilisateur·rice, je peux faire une liste de tou·te·s les
 client·e·s
 
 **ATTENTION**
@@ -18,7 +18,8 @@ Le logiciel est conçu pour **le personnel du restaurant uniquement**,
 alors inutile de concevoir une interface de connexion pour les
 client·e·s.
 
-Les premiers composants du logiciel sont donc les suivants : - **Repas**
+Les premiers composants du logiciel sont donc les suivants :
+- **Repas**
 - **Client·e·s**
 
 ## 1 - Repas
@@ -43,9 +44,10 @@ d’un repository pour les stocker.
 
 Ce repository s’initialise avec un chemin de fichier CSV. Il lit/écrit
 les repas depuis le fichier CSV et les stocke comme des objets dans un
-array. Le comportement souhaité du repository est le suivant : - créer
-un nouveau repas - récupérer tous les repas - trouver un repas
-spécifique grâce à son id
+array. Le comportement souhaité du repository est le suivant :
+- créer un nouveau repas
+- récupérer tous les repas
+- trouver un repas spécifique grâce à son id
 
 Écris du code pour implémenter cela et teste ton repository. Tu dois
 créer ton propre fichier CSV `meals.csv` dans le dossier `data`. Teste
@@ -86,8 +88,9 @@ Tout fonctionne correctement ? Parfait ! Le moment est venu de faire
 ### 1.4 - Contrôleur des repas
 
 On va passer au contrôleur. Voici les **actions utilisateur** qu’on veut
-implémenter : - ajouter (`add`) un nouveau repas - faire une liste
-(`list`) de tous les repas
+implémenter :
+- ajouter (`add`) un nouveau repas
+- faire une liste (`list`) de tous les repas
 
 Souviens-toi que le rôle du contrôleur est de déléguer et de coordonner
 le travail des autres composants de l’app (modèle, repository et vue) !
@@ -135,9 +138,10 @@ besoin d’un repository pour les stocker.
 
 Ce repository s’initialise avec un chemin de fichier CSV. Il lit/écrit
 les clients depuis le fichier CSV et les stocke comme des objets dans un
-array. Le comportement souhaité du repository est le suivant : - créer
-un·e nouveau·elle client·e - récupérer tou·te·s les client·e·s - trouver
-un·e client·e spécifique grâce à son id
+array. Le comportement souhaité du repository est le suivant :
+- créer un·e nouveau·elle client·e
+- récupérer tou·te·s les client·e·s
+- trouver un·e client·e spécifique grâce à son id
 
 Écris du code pour implémenter cela et teste ton repository. Tu dois
 créer ton propre fichier CSV `customers.csv` dans le dossier `data`.
@@ -149,8 +153,9 @@ et `push`.
 ### 2.3 - Contrôleur des client·e·s
 
 On va passer au contrôleur. Voici les **actions utilisateur** qu’on veut
-implémenter : - ajouter (`add`) un nouveau client - faire une liste
-(`list`) de tou·te·s les client·e·s
+implémenter :
+- ajouter (`add`) un nouveau client
+- faire une liste (`list`) de tou·te·s les client·e·s
 
 Souviens-toi que le rôle du contrôleur est de déléguer le travail aux
 autres composants de l’app (modèle, repository et vue) !
@@ -184,11 +189,11 @@ et `push`.
 Dans l’application, un·e utilisateur·rice ne peut pas modifier ou
 supprimer de repas ou de client·e existant·e.
 
-Implémente ces actions utilisateurs complémentaires : - En tant
-qu’utilisateur·rice, je peux modifier un repas existant - En tant
-qu’utilisateur·rice, je peux supprimer un repas existant - En tant
-qu’utilisateur·rice, je peux modifier un·e client·e existant·e - En tant
-qu’utilisateur·rice, je peux supprimer un·e client·e existant·e
+Implémente ces actions utilisateurs complémentaires :
+- En tant qu’utilisateur·rice, je peux modifier un repas existant
+- En tant qu’utilisateur·rice, je peux supprimer un repas existant
+- En tant qu’utilisateur·rice, je peux modifier un·e client·e existant·e
+- En tant qu’utilisateur·rice, je peux supprimer un·e client·e existant·e
 
 C’est bon ? Le moment est venu de `git add`, `commit` et `push`.
 
