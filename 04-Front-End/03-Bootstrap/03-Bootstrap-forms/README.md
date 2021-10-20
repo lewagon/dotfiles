@@ -72,7 +72,7 @@ Example of Bootstrap form **with labels**:
     <input type="email" id="email" class="form-control">
   </div>
   <div class="mb-3">
-    <label for="password">Your password</label>
+    <label for="password" class="form-label">Your password</label>
     <input type="password" id="password" class="form-control">
     <div id="password" class="form-text">Your password must be at least 6 characters long and contain letters and numbers.</div>
   </div>
