@@ -117,16 +117,16 @@ You can also add the `.row` class to your `<form>` and put different `col` dimen
 ```html
 <form action="#" class="row">
   <div class="col-6 mb-3">
-    <label>First name</label>
-    <input type="text" class="form-control" placeholder="First name">
+    <label for="first-name" class="form-label">First name</label>
+    <input id="first-name" type="text" class="form-control" placeholder="First name">
   </div>
   <div class="col-6 mb-3">
-    <label>Last name</label>
-    <input type="text" class="form-control" placeholder="Last name">
+    <label for="last-name" class="form-label">Last name</label>
+    <input id="last-name" type="text" class="form-control" placeholder="Last name">
   </div>
   <div class="col-12 mb-3">
-    <label>Address</label>
-    <input type="text" class="form-control" placeholder="Address">
+    <label for="address" class="form-label">Address</label>
+    <input id="address" type="text" class="form-control" placeholder="Address">
   </div>
   <!-- rest of the form below -->
 </form>
