@@ -68,7 +68,7 @@ Example of Bootstrap form **with labels**:
 ```html
 <form action="#">
   <div class="mb-3">
-    <label for="email">Your email</label>
+    <label for="email" class="form-label">Your email</label>
     <input type="email" id="email" class="form-control">
   </div>
   <div class="mb-3">
