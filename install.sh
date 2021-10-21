@@ -37,12 +37,16 @@ cp -r $MYDIR/zprofile ~/.zprofile
 rm -rf ~/.z/sh || true
 cp -r $MYDIR/z ~/.z
 
+# .taskrc install
+rm -rf ~/.irbrc
+cp $MYDIR/taskrc ~/.taskrc
+
 # iterm2 config (sensible for mac only)
 case $OSTYPE in
     darwin*)
         # Specify the preferences directory
         defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
-        # Tell iTerm2 to use the custom preferences in the directory
+        # Tell iTerm2 to
         defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
         ;;
 esac
