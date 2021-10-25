@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Maintenant, supposons que tu veuilles améliorer ton compteur de calories de façon à ce qu’il accepte une liste de boissons, burgers, garnitures **et REPAS**. On va ajouter ces 3 repas à notre menu :
 
@@ -43,8 +42,7 @@ McChicken, Salad, Sprite
 </table>
 
 
-Spécifications
---------------
+## Spécifications
 
 Tu voudras peut-être stocker ces repas dans une autre constante. Remarque : n’essaie pas de pré-calculer les calories de chaque repas,
 contente-toi de stocker les plats qui composent le repas. Comment pourrais-tu représenter les plats de chaque repas ?
@@ -56,8 +54,7 @@ orders = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
 puts calories_counter(orders)
 ```
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 -   Comment récupérer une valeur stockée dans un `Array` à l’intérieur d’un `Hash` ?
 -   Quelle structure de données utiliserais-tu pour stocker des noms d’animaux, triés par ordre alphabétique ?

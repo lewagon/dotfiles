@@ -1,12 +1,10 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 -   Te familiariser avec le format de parsing JSON
 -   Apprendre à séparer les responsabilités de ton programme en
     plusieurs sous-méthodes
 
-Spécifications
---------------
+## Spécifications
 
 Si tu regardes la télévision française, tu as sans doute déjà vu [*Des
 chiffres et des
@@ -61,16 +59,14 @@ données JSON retournées par cette API !
     envoyé. Plus le mot est long et envoyé rapidement, plus le score
     sera élevé ! Tu es libre d’inventer tes propres règles de sanction !
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 -   Qu’est-ce qu’un JSON ? En quoi est-il similaire à la structure d’un
     hash Ruby ?
 -   Comment peux-tu refactoriser ton code pour séparer les
     responsabilités de chaque méthode ?
 
-Suggestions et ressources complémentaires
------------------------------------------
+## Suggestions et ressources complémentaires
 
 Ce challenge n’est volontairement pas encadré. Voici quelques éléments
 d’aide :

@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 À première vue, les blocs et `yield` peuvent être déroutants… Mais tout est une question de pratique. Voici les objectifs :
 
@@ -9,8 +8,7 @@ Contexte et objectifs
 
 Dans le cadre de cet exercice, tu es sur le point d’ouvrir un **restaurant de burgers**. Tu dois donc exécuter des méthodes pour préparer des burgers à servir à tes premiers clients, de la cuisine au comptoir.
 
-Spécifications
---------------
+## Spécifications
 
 ### Étape 1 : Le burger basique
 
@@ -82,4 +80,4 @@ L’un de tes clients a demandé une plus grande portion de poisson. Transforme 
 
 ![Écris un bloc dans Ruby](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-syntax.svg?sanitize=true)
 
-Tu viens d’écrire ton premier bloc. Entraîne-toi tout·e seul·e avec les autres burgers !
+Tu viens d’écrire ton premier bloc. Entraîne-toi tout seul avec les autres burgers !

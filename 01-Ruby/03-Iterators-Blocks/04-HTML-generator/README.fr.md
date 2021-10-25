@@ -1,10 +1,8 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Dans cet exercice, on va continuer à s’entraîner avec les blocs. On va coder une autre méthode à appeler avec un bloc, mais cette fois-ci on verra comment les blocs permettent de nester des appels de méthodes, et en quoi cela peut être utile avec un exemple de la vie réelle. On apprendra également à définir des méthodes avec un deuxième paramètre facultatif, ce qui arrive souvent !
 
-Spécifications
---------------
+## Spécifications
 
 Exécute la méthode `#tag` qui crée des balises HTML autour du contenu qu’on lui passe dans le bloc. Exemple :
 

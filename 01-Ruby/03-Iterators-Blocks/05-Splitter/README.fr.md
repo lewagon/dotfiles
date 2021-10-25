@@ -1,10 +1,8 @@
 Contexte et objectifs
----------------------
 
 Combinons le pouvoir des enumerables (`#each`, `#map`, etc.) et des blocs (et `yield`). On va essayer de créer une méthode de **séparation** (splitter), qui prendra un array et le divisera en deux groupes en fonction d’une règle arbitraire. On pourrait, par exemple, diviser un groupe de personnes en fonction de leur âge.
 
 Spécifications
---------------
 
 ### Séparation par taille (Size Splitter)
 

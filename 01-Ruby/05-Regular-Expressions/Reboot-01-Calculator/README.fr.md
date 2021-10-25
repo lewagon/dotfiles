@@ -1,19 +1,16 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
-On va créer une calculatrice simple capable de réaliser les 4 opérations de base (`+`, `-` , `*`, `/`). Le programme demandera à l’utilisateur·rice deux nombres et un des quatre opérateurs pour pouvoir effectuer un calcul simple et afficher le résultat pour l’utilisateur·rice.
+On va créer une calculatrice simple capable de réaliser les 4 opérations de base (`+`, `-` , `*`, `/`). Le programme demandera à l’utilisateur deux nombres et un des quatre opérateurs pour pouvoir effectuer un calcul simple et afficher le résultat pour l’utilisateur.
 
-Indications
------------
+## Indications
 
 Cet exercice devrait te prendre **30 minutes 🕒**
 
 1.  On va commencer l’exercice avec le/la prof (en live-code 💻)) et **écrire ensemble le pseudocode**.
-2.  Tu auras ensuite 10 minutes pour essayer de trouver la solution tout·e seul·e.
+2.  Tu auras ensuite 10 minutes pour essayer de trouver la solution tout seul.
 3.  Puis tu corrigeras l’exercice avec le/la prof (de nouveau en live-code 💻).
 
-Pseudocode
-----------
+## Pseudocode
 
 On commencera toujours avec le fichier `interface.rb`. C’est le fichier que tu lanceras (avec la commande `ruby interface.rb`) pour exécuter ton programme. L’idéal est de toujours commencer avec l’interface et de te demander **"Que doit-il se passer quand je lance mon programme ?"**
 
@@ -32,8 +29,7 @@ Attaque toujours un exercice avec le/la prof en écrivant le *pseudocode*. Exemp
 
 **Écrire le pseudocode représente 80 % du travail !** Traduire en Ruby est la partie facile. Suis cette méthodologie du pseudocode pour **tous** les exercices de la session Reboot.
 
-Étape 1 - Calculatrice de base
-------------------------------
+## Étape 1 - Calculatrice de base
 
 Crée une simple calculatrice avec une interface utilisateur en ligne de commande :
 
@@ -56,8 +52,7 @@ ruby interface.rb
 
 Il n’est pas possible de tester les exercices de reboot, mais tu peux toujours exécuter `rake` pour vérifier le style de ton code.
 
-Étape 2 - Crée une boucle
--------------------------
+## Étape 2 - Crée une boucle
 
 C’est un peu pénible d’avoir à relancer ta calculatrice à chaque fois que ton programme se termine. Imagine une vraie calculatrice qui s’éteindrait après chaque opération 😊
 
@@ -86,8 +81,7 @@ ruby interface.rb
 > N
 ```
 
-Étape 3 - Refactorise ton code
-------------------------------
+## Étape 3 - Refactorise ton code
 
 -   Quel morceau de code fait vraiment partie de l’interface utilisateur (`gets` et `puts`) ?
 -   Quel morceau de code n’appartient pas à l’interface ?

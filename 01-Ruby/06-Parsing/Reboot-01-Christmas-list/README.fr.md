@@ -1,5 +1,4 @@
-Indications
------------
+## Indications
 
 L’hiver approche ⛄⛄⛄. On veut créer un programme pour gérer notre
 liste de cadeaux, marquer les articles achetés et enfin trouver
@@ -9,8 +8,7 @@ te prendre la journée. 🎁
 Comme hier, commence par écrire le pseudocode en groupe en live-code
  💻.
 
-Pseudocode
-----------
+## Pseudocode
 
 Commençons par réfléchir ensemble au **pseudocode** :
 
@@ -24,8 +22,7 @@ Commençons par réfléchir ensemble au **pseudocode** :
 # 4. Effectuer la bonne action
 ```
 
-Étape 1 - La boucle de menu 🎁
---------------------------------
+## Étape 1 - La boucle de menu 🎁
 
 Commence par créer la boucle principale qui affiche les actions et
 récupère les données entrées par l’utilisateur :
@@ -48,8 +45,7 @@ ruby interface.rb
 > Goodbye
 ```
 
-Étape 2 - Lister, ajouter, supprimer 🎁🎁
----------------------------------------------
+## Étape 2 - Lister, ajouter, supprimer 🎁🎁
 
 Le moment est venu d’exécuter les actions simples (`list`, `add`,
 `delete`).
@@ -59,8 +55,7 @@ Le moment est venu d’exécuter les actions simples (`list`, `add`,
 
 **Parles-en avec ton/ta prof avant de te lancer dans chaque action.**
 
-Étape 3 - Marquer un article comme acheté 🎁🎁🎁
-------------------------------------------------------
+## Étape 3 - Marquer un article comme acheté 🎁🎁🎁
 
 On veut pouvoir marquer tous les articles ayant été achetés :
 
@@ -90,8 +85,7 @@ ruby interface.rb
 
 Encore une fois, **parles-en avec ton/ta prof**
 
-Étape 4 - Trouver des idées sur Etsy 🎁🎁🎁🎁
------------------------------------------------------
+## Étape 4 - Trouver des idées sur Etsy 🎁🎁🎁🎁
 
 Tu es à court d’idées pour Noël et tu aimerais trouver l’inspiration sur
 [Etsy](https://www.etsy.com). Ajoute une nouvelle action `idea` à ton
@@ -169,8 +163,7 @@ end
 -   Tu peux aussi scraper d’autres informations en dehors du nom de
     l’article (par exemple son prix).
 
-[FACULTATIF] Enregistre les cadeaux dans un fichier CSV 🎁🎁🎁🎁🎁
-----------------------------------------------------------------------------
+## [FACULTATIF] Enregistre les cadeaux dans un fichier CSV 🎁🎁🎁🎁🎁
 
 On veut pouvoir récupérer la liste de cadeaux à chaque fois qu’on lance
 l’application. Crée un fichier `gifts.csv` pour conserver tes données

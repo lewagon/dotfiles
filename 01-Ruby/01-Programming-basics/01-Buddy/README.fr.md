@@ -1,10 +1,8 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 On va attaquer la journée avec un challenge facile :)
 
-Spécifications
---------------
+## Spécifications
 
 ### Retourne le nom de ton buddy
 

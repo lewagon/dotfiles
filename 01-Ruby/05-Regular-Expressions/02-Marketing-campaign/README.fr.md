@@ -1,19 +1,16 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Les e-mails constituent la pierre angulaire de n’importe quelle entreprise de SaaS (Software-as-a-Service) et il est impératif de savoir comment les manipuler du point de vue de la programmation.
 
 Sur la plupart des sites Web, une adresse e-mail est la clé pour créer un compte. Si elle est mal orthographiée, l’utilisateur ne pourra pas récupérer son mot de passe. Les professionnels du marketing, quant à eux, ont besoin de communiquer avec leurs utilisateurs et de faire en sorte que leur base de données de coordonnées reste un ensemble fiable d’adresses e-mail valides.
 
-Le cadre
---------
+## Le cadre
 
 Supposons dans cet exercice que tu dois lancer une application dans quelques semaines. Tu informeras tout le monde de la mise en ligne de ton site Web avec une grande campagne d’e-mailing. En attendant, tu as préparé une landing page pour collecter les adresses e-mail des visiteurs.
 
 ![Scénario](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-scenario.svg?sanitize=true)
 
-Spécifications
---------------
+## Spécifications
 
 ### Collecter des adresses e-mail valides
 

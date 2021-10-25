@@ -1,10 +1,8 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Bienvenue sur Kitt ! La/Le prof va maintenant te montrer comment réaliser un exercice.
 
-Spécifications
---------------
+## Spécifications
 
 L’objectif est de mettre en œuvre une méthode `circle_area` qui prend **un** paramètre,
 `radius`, et renvoie l’aire du cercle avec ce rayon. Pour rappel,

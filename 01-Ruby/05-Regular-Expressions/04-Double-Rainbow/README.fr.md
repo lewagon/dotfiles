@@ -1,12 +1,10 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Pendant ta formation au Wagon, tu vas découvrir de nombreux outils, services et langages. En voici les principaux logos, mais ils sont tous en noir et blanc pour le moment. Le but de cet exercice est de créer un jeu pour dévoiler leurs couleurs en utilisant des expressions régulières !
 
 ![Logos](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/double-rainbow_logos.png)
 
-Spécifications
---------------
+## Spécifications
 
 Quelles sont les vraies couleurs des logos ? Elles sont cachées dans un **message secret**. Ta mission consiste à rédiger les expressions régulières correctes pour les extraire !
 

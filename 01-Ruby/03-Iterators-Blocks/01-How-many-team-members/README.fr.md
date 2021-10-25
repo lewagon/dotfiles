@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Utiliser l’une des méthodes intégrées de la classe `Array` pour déterminer combien de membres de l’équipe sont dans l’array.
 
@@ -13,12 +12,10 @@ array.length
 array.size
 ```
 
-Spécifications
---------------
+## Spécifications
 
 -   Écris une méthode dans Ruby qui retourne le nombre de membres de l’équipe dans l’array de noms donné comme argument.
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 Utilise l’une des méthodes intégrées associées aux classes Ruby

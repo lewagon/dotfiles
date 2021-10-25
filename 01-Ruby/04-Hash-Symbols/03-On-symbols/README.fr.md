@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 ### À débattre avec le reste de ta classe
 
@@ -29,13 +28,11 @@ fox = { :color => "red", :species => "mammal" }
 
 Lis [cette réponse de Stack Overflow](http://stackoverflow.com/a/8189435/197944/) si tu veux vraiment connaître les nuances entre les Strings et les Symbols. Le concept de **mutabilité** est important ici.
 
-Spécifications
---------------
+## Spécifications
 
 Regarde le fichier `lib/symbols.rb`. Il contient un quiz vrai/faux et quelques méthodes pour tester ta capacité à utiliser des symboles plutôt que des strings.
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 Pour chaque exemple, quel type d’objet dois-tu utiliser ?
 

@@ -1,19 +1,17 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 -   Comprendre la structure du repo d’un exercice, et le lien vers ton compte GitHub.
 -   Apprendre à tester ton code en local avant d’envoyer ta solution.
 -   Apprendre les commandes git de base pour commit les modifications de ton code et faire le push vers GitHub.
 -   Découvrir les caractéristiques de la plateforme Kitt.
 
-Au cours de ces 9 semaines, tu travailleras à deux ou en groupe de 3 ou 4. Un·e buddy te sera assigné·e chaque jour selon l’algorithme du [tournoi toutes rondes](https://fr.wikipedia.org/wiki/Tournoi_toutes_rondes) mis en œuvre dans cette [gem](https://github.com/ssaunier/round_robin_tournament).
+Au cours de ces 9 semaines, tu travailleras à deux ou en groupe de 3 ou 4. Un buddy te sera assigné chaque jour selon l’algorithme du [tournoi toutes rondes](https://fr.wikipedia.org/wiki/Tournoi_toutes_rondes) mis en œuvre dans cette [gem](https://github.com/ssaunier/round_robin_tournament).
 
-Avant de démarrer un nouveau challenge, et avant même de rédiger une seule ligne de code, **demandez-vous l’un·e à l’autre ce que l’exercice vous demande de faire**. Vous pourrez ensuite faire du pair programming sur un écran, ou travailler côte à côte, en vérifiant toutes les 10 minutes si l’autre a besoin d’aide.
+Avant de démarrer un nouveau challenge, et avant même de rédiger une seule ligne de code, **demandez-vous l’un à l’autre ce que l’exercice vous demande de faire**. Vous pourrez ensuite faire du pair programming sur un écran, ou travailler côte à côte, en vérifiant toutes les 10 minutes si l’autre a besoin d’aide.
 
-Travailler à deux est une pratique courante en ingénierie logicielle. L’idée est que si tu travailles seul·e et te retrouves coincé·e, tu risques de perdre plusieurs heures à chercher le problème. Alors qu’avec un regard neuf, le problème sera identifié en quelques secondes. Ne sous-estime jamais cela !
+Travailler à deux est une pratique courante en ingénierie logicielle. L’idée est que si tu travailles seul et te retrouves coincé, tu risques de perdre plusieurs heures à chercher le problème. Alors qu’avec un regard neuf, le problème sera identifié en quelques secondes. Ne sous-estime jamais cela !
 
-Exercice 1 : Le `rake`.
------------------------
+## Exercice 1 : Le `rake`.
 
 Lorsqu’il est correct, cet exercice affiche 1 ligne verte sur 2. La deuxième ligne passera en vert lorsque tu auras terminé l’exercice 2.
 
@@ -28,8 +26,7 @@ Ouvre le fichier `lib/wagon_start.rb` dans ton éditeur de texte. C’est là qu
 -   Commit tes modifications et fais un push.
 -   Retourne sur Kitt et actualise la page. Ta solution devrait s’afficher à droite.
 
-Exercice 2 : Pratiquer les lignes de commande (Terminal)
---------------------------------------------------------
+## Exercice 2 : Pratiquer les lignes de commande (Terminal)
 
 Avant d’aller plus loin dans le dossier fullstack-challenges, on va commencer par travailler sur les lignes de commande que tu viens d’apprendre.
 
@@ -80,8 +77,7 @@ Le moment est venu de te comporter comme un vrai développeur ou une vraie déve
 
 Une fois que tu as terminé, tu peux jeter un œil aux liens ci-dessous.
 
-Aller plus loin
----------------
+## Aller plus loin
 
 Si tu as terminé la configuration de ton ordinateur et les exercices, jette un œil à ces ressources :
 

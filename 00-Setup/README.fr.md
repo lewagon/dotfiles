@@ -1,5 +1,4 @@
-Installation
-------------
+## Installation
 
 Préparons ton poste de travail.
 

@@ -1,11 +1,9 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Les méthodes destructives modifient le **récepteur** (l’objet sur lequel elles sont appelées).
 Elles peuvent être dangereuses. L’**usage** veut donc que l’on ajoute un point d’exclamation `!` à la fin.
 
-Spécifications
---------------
+## Spécifications
 
 -   Exécute `#horse_racing_format!` qui modifie l’array pris comme argument pour le rendre plus accessible au présentateur de la course
 -   **contrainte** : La méthode doit inverser l’array, ajouter la position du cheval avant son nom et un point d’exclamation après son nom.
@@ -15,13 +13,11 @@ C’est le seul format que le présentateur comprendra !
 
 **🤔 Astuce :** N’hésite pas à ouvrir le fichier dans le dossier `spec` et à **lire le code test** pour comprendre ce qui se passe. C’est le code qui s’exécute quand tu lances `rake` depuis ton terminal.
 
-Suggestions et ressources complémentaires
------------------------------------------
+## Suggestions et ressources complémentaires
 
 -   Inutile de te rappeler que tu dois utiliser des itérateurs destructifs dans ta méthode 😊
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 Tu t’en es sans doute déjà rendu compte, une méthode ne sert pas seulement à retourner le résultat d’un calcul… Une méthode peut également servir à effectuer des actions sur des objets pour les modifier. Assure-toi de maîtriser les notions suivantes avant de passer à la suite :
 

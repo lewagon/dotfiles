@@ -1,14 +1,12 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 C’est l’exercice le plus long de la journée. On va créer une interface
-de boutique simple, où l’utilisateur·trice peut voir quels articles sont
-disponibles et leur prix. L’utilisateur·trice peut ensuite sélectionner
-les articles qu’il/elle souhaite placer dans son panier et, une fois
-qu’il/elle a terminé, payer et consulter sa facture.
+de boutique simple, où l’utilisateur peut voir quels articles sont
+disponibles et leur prix. L’utilisateur peut ensuite sélectionner
+les articles qu’il souhaite placer dans son panier et, une fois
+qu’il a terminé, payer et consulter sa facture.
 
-Indications
------------
+## Indications
 
 -   Si tu as du temps avant le déjeuner, commence à réfléchir au
     pseudocode de cet exercice avec le prof.
@@ -16,8 +14,7 @@ Indications
 -   Valide et corrige chaque étape de l’exercice avec le prof avec un
     live-code intermédiaire 💻
 
-Pseudocode
-----------
+## Pseudocode
 
 Comment ton programme doit-il fonctionner quand tu le lances ?
 **Écrivons le pseudocode**
@@ -29,14 +26,13 @@ Comment ton programme doit-il fonctionner quand tu le lances ?
 # Pseudo-code
 # 1. Imprime Welcome
 # 2. Définis ta boutique (quels articles sont en vente ?)
-# 3. Obtiens les articles de l’utilisateur·rice (achat)
+# 3. Obtiens les articles de l’utilisateur (achat)
 # 4. Imprime la facture (paiement)
 ```
 
 **Peux-tu détailler un peu plus le pseudocode ?**
 
-Étape 1 - Fausse boutique 🛍
-------------------------------
+## Étape 1 - Fausse boutique 🛍
 
 Voici la première version de notre programme :
 
@@ -75,8 +71,7 @@ ruby interface.rb
 
 **Réfléchis avec ton/ta prof avant de commencer !**
 
-Étape 2 - Ajouter la quantité 🛍🛍
---------------------------------------
+## Étape 2 - Ajouter la quantité 🛍🛍
 
 ```
 ruby interface.rb
@@ -114,8 +109,7 @@ ruby interface.rb
 -   Que doit-on changer dans notre code avec cette nouvelle
     modélisation ?
 
-Étape 3 - Ajouter la disponibilité 🛍🛍🛍
------------------------------------------------
+## Étape 3 - Ajouter la disponibilité 🛍🛍🛍
 
 On va maintenant améliorer encore un peu le programme et gérer notre
 stock (avec la disponibilité) :

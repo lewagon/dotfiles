@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 -   Utiliser un pack de la librairie standard
 -   Travailler la saisie de fichiers CSV
@@ -25,8 +24,7 @@ require "date"
 Certains sont plus utiles que d’autres, alors prends le temps de
 regarder !
 
-Spécifications
---------------
+## Spécifications
 
 -   exécute `#most_successful` qui retourne les films (un certain
     `number` passé en paramètre) sortis avant une année donnée et les
@@ -36,8 +34,7 @@ Spécifications
     `year` et `earnings`. Exemple:
     `{ name: "Avatar", year: 2009, earnings: 760505847 }`
 
-Suggestions et ressources complémentaires
------------------------------------------
+## Suggestions et ressources complémentaires
 
 -   Pense à bien indiquer les bonnes options de codage (`encoding`) pour
     la lecture du CSV. Souviens-toi que certains titres sont en français

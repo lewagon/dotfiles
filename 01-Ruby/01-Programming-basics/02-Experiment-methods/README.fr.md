@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 -   Apprendre à chercher la bonne méthode dans la documentation Ruby.
 -   Te familiariser avec IRB pour tester de nouvelles méthodes et te les approprier.
@@ -24,22 +23,20 @@ IRB est une boucle de lecture-évaluation-impression [REPL](http://en.wikipedia.
 
 Dans Ruby, tout (texte, integer ou entier, float ou décimale, array ou tableau…) est un objet. On peut appeler des méthodes sur ces objets. Ces méthodes sont appelées des **méthodes d’instance**, car elles peuvent uniquement être appelées sur les instances d’une classe. L’objet sur lequel on appelle la méthode est le **récepteur**.
 
-Spécifications
---------------
+## Spécifications
 
 Trouve les bonnes méthodes Ruby pour la [classe String](http://ruby-doc.org/core-2.5.3/String.html), la [classe Integer](http://ruby-doc.org/core-2.5.3/Integer.html) et la [classe Array](http://ruby-doc.org/core-2.5.3/Array.html) pour exécuter les tests et faire en sorte qu’ils soient validés.
 
-Coder implique d’être malin·e et de savoir où et comment chercher l’info dont tu as besoin ! Souvent, le plus difficile est de bien formuler ta question à Google. Pour trouver les méthodes utiles à ce challenge, utilise :
+Coder implique d’être malin et de savoir où et comment chercher l’info dont tu as besoin ! Souvent, le plus difficile est de bien formuler ta question à Google. Pour trouver les méthodes utiles à ce challenge, utilise :
 
 -   Google et [Stack Overflow](http://stackoverflow.com/)
 -   [La documentation Ruby](http://ruby-doc.org) si tu as déjà une petite idée de la méthode que tu cherches.
 
 Une fois que tu penses avoir trouvé la méthode dont tu as besoin, et que tu penses savoir comment t’en servir, utilise IRB pour tester cette méthode sur quelque chose ! Les tests sur IRB représentent une étape clé pour les débutants.
 
-Enseignements clés
-------------------
+## Enseignements clés
 
-Es-tu capable de répondre aux questions suivantes ? Si ce n’est pas le cas, alors tu n’es pas prêt·e à passer à la suite !
+Es-tu capable de répondre aux questions suivantes ? Si ce n’est pas le cas, alors tu n’es pas prêt à passer à la suite !
 
 -   Combien de classes intégrées Ruby connais-tu ? Lesquelles ?
 -   Quelle est la syntaxe pour appeler une méthode sur un objet de ces classes ?

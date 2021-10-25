@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 L’exercice qui suit est un peu plus compliqué, car tu vas devoir utiliser des notions que l’on n’a pas encore abordées (conditions et boucles). Pas de panique, **on verra ces concepts demain**. Essaie de procéder étape par étape et demande-toi ce que tu cherches à faire avec ton programme avant de commencer à coder.
 
@@ -74,8 +73,7 @@ Les objectifs de cet exercice sont les suivants :
 -   Découvrir les **conditions**
 -   Découvrir les structures de code qui permettent de modifier le flow de ton programme : `if/unless..else..end`, `while/until..end`, etc. Ce sont des [structures de contrôle](https://en.wikipedia.org/wiki/Control_flow)
 
-Spécifications
---------------
+## Spécifications
 
 ### Réponse de ton coach
 
@@ -92,8 +90,7 @@ Si tu te retrouves coincé dans une **boucle infinie**, appuie simplement sur `C
 
 ⚠️ L’exercice n’est terminé que quand rake est complètement vert ! Tu dois t’assurer de vraiment pouvoir poser des questions à ton coach en exécutant ruby lib/interface.rb 😉
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 -   Quel est le flow habituel d’un programme ?
 -   Comment des structures de type `if..else..end` or `while..end` modifient-elles ce flow ?

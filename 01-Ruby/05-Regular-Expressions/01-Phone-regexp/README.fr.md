@@ -1,10 +1,8 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 On va aborder les expressions régulières et, cette fois-ci, on va se pencher sur les numéros. Plus précisément, on va apprendre à manipuler les numéros de téléphone dans ton application.
 
-Spécifications
---------------
+## Spécifications
 
 Écris une méthode `french_phone_number?` qui prend une string comme paramètre et retourne un booléen `true` quand le numéro de téléphone est un numéro de téléphone français valide :
 
@@ -27,7 +25,6 @@ french_phone_number?("06 65 36 36")
 #=> false
 ```
 
-Autres suggestions
-------------------
+## Autres suggestions
 
 Voici une autre ressource utile pour tester tes expressions régulières ou regex avant de rédiger du code : [Rubular](http://rubular.com/)

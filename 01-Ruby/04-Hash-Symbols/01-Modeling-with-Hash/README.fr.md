@@ -1,14 +1,12 @@
-Avant de commencer
-------------------
+## Avant de commencer
 
 N’oublie pas qu’à 14h, tu auras ton premier quiz écrit. Sans ordinateur et sans Google. Juste ta tête et un crayon. Ce n’est pas un examen et tu ne seras pas noté, ne t’inquiète pas pour ça 😊, mais cela te permettra d’identifier les points qui te posent encore problème et de les retravailler avant d’aller plus loin. Alors prends ton temps et essaie de répondre à tout aussi précisément que possible.
 
-À la fin du quiz, un·e prof prendra 15 minutes pour passer en revue tes réponses et essayer de clarifier les points que tu n’as pas compris. Cela te permettra de savoir quoi revoir pendant le week-end, et de décider si tu dois participer au groupe Reboot lundi et mardi prochains.
+À la fin du quiz, un prof prendra 15 minutes pour passer en revue tes réponses et essayer de clarifier les points que tu n’as pas compris. Cela te permettra de savoir quoi revoir pendant le week-end, et de décider si tu dois participer au groupe Reboot lundi et mardi prochains.
 
 Bonne chance et bon quiz !
 
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Supposons que tu aies envie de garder la ligne tout en continuant à manger McDo… Tu as une super idée : rédiger une méthode rapide pour calculer le nombre de calories d’une commande McDonald’s. On va se servir du tableau ci-dessous comme d’un condensé du menu McDonald’s :
 
@@ -108,8 +106,7 @@ Tu vas t’en servir tout le temps, alors apprends à les aimer 😊
 
 **Pour cet exercice, utilise des `Strings` pour tes clés, plutôt que des `Symbols`. C’est plus simple**
 
-Spécifications
---------------
+## Spécifications
 
 -   Crée une méthode `poor_calories_counter` qui retourne le nombre total de calories pour les trois éléments de ta commande.
 -   **contrainte** : ta méthode doit utiliser un hash (ça va de soi !)
@@ -117,8 +114,7 @@ Spécifications
 
 Exemple : `poor_calories_counter("McChicken", "French Fries", "Sprite")` doit retourner `730`.
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 -   Qu’est-ce qu’un hash ? - Comment l’utilise-t-on ?
 -   Comment récupérer une valeur stockée dans un `Hash` ?

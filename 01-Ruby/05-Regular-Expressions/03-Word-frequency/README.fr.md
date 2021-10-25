@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 -   Travailler avec des fichiers texte
 -   Créer un analyseur de texte en utilisant un Hash
@@ -14,8 +13,7 @@ File.open("my/file/path", "r").each_line do |line|
 end
 ```
 
-Spécifications
---------------
+## Spécifications
 
 -   Exécute la méthode `most_common_words` qui retourne le nombre d’occurrences des mots les plus fréquents dans un fichier texte. Par exemple, si on prend la Bible comme texte source :
 

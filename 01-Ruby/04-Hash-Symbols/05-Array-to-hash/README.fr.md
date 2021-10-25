@@ -1,10 +1,8 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
-Voici quelques petits exercices pour commencer à manipuler les arrays, les hashes et les blocs. Es-tu prêt·e à consolider tes compétences en Ruby ?
+Voici quelques petits exercices pour commencer à manipuler les arrays, les hashes et les blocs. Es-tu prêt à consolider tes compétences en Ruby ?
 
-Spécifications
---------------
+## Spécifications
 
 Écris une méthode `array_to_hash` qui prend un `Array` comme argument et retourne un `Hash`.
 
@@ -13,7 +11,6 @@ Spécifications
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/array_to_hash.png)
 
-Ressources
-----------
+## Ressources
 
 Jette un œil à [`Kernel#block_given?`](http://ruby-doc.org/core/Kernel.html#method-i-block_given-3F)

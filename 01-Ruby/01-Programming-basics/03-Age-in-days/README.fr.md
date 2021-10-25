@@ -1,11 +1,9 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 -   Apprendre à « require » des scripts externes et à appeler des fonctions à partir de ces scripts
 -   **Maîtriser** les concepts de [variables](https://fr.wikipedia.org/wiki/Variable_(informatique)), d’assignation de variables, de définition de méthodes et d’appel de méthodes.
 
-Spécifications
---------------
+## Spécifications
 
 ### Calcule l’âge
 
@@ -23,15 +21,13 @@ Le programme indique que tu as `0 years old`. Tu dois modifier le code de façon
 
 -   **Perfectionnement** : Des lignes de code se répètent-elles dans le fichier `interface.rb` ? Peux-tu refactoriser ces lines pour rendre ton code DRY (Don’t Repeat Yourself = Ne te répète pas) ?
 
-Suggestions et ressources complémentaires
------------------------------------------
+## Suggestions et ressources complémentaires
 
 -   Tu peux choisir d’utiliser la [classe Date](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html), que l’on charge dans notre fichier en utilisant la ligne `require 'date'`
 -   Utilise la console interactive Ruby (IRB) pour tester ta solution.
 -   Comme tu peux le voir dans le code donné, Ruby utilise la méthode `puts` pour imprimer des valeurs (te montrer les choses !) sur le terminal.
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 Les questions qui suivent pourront sembler évidentes à la plupart d’entre vous, **mais assure-toi de pouvoir y répondre précisément**. Les variables et les méthodes sont les bases de la programmation Ruby, et tu dois avoir une connaissance approfondie de ces concepts.
 

@@ -1,9 +1,8 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 Cet exercice a pour objectif de valider des concepts fondamentaux que tu as déjà vus et qui sont communs à la plupart des langages de programmation :
 
--   Lire des données entrées par un·e utilisateur·rice / Imprimer un résultat pour un·e utilisateur·rice
+-   Lire des données entrées par un utilisateur / Imprimer un résultat pour un utilisateur
 -   Variables et méthodes
 -   Flow de programmes et structures de contrôle
 -   Manipulation de strings et d’arrays
@@ -24,8 +23,7 @@ On va exécuter une version *simplifiée* du Black Jack :
 -   Si le score du joueur est \< au score du croupier, le joueur perd (`"Lose"`).
 -   Si le score du joueur est == au score du croupier, il y a `"Push"`. Le joueur récupère sa mise.
 
-Spécifications
---------------
+## Spécifications
 
 ### `black_jack.rb`
 
@@ -63,15 +61,13 @@ You beat the bank! You win.
 
 ⚠️ L’exercice n’est terminé que quand `rake` est complètement vert ! Tu dois t’assurer de pouvoir jouer en exécutant `ruby lib/interface.rb` 😉
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 -   Quelles sont les différentes façons de créer des boucles ?
 -   Quelles sont les différentes structures de condition disponibles ?
 -   Qu’est-ce que l’interpolation de string ?
 
-Suggestions et ressources complémentaires
------------------------------------------
+## Suggestions et ressources complémentaires
 
 -   Tu peux utiliser la [classe Random](http://www.ruby-doc.org/core-2.5.3/Random.html).
 -   Quand tu exécutes une boucle, tu as besoin d’une condition pour arrêter le jeu à un moment donné.

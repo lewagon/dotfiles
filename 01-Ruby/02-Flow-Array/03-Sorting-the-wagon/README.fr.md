@@ -1,5 +1,4 @@
-Contexte et objectifs
----------------------
+## Contexte et objectifs
 
 La [classe `Array`](http://www.ruby-doc.org/core-2.5.3/Array.html) est l’une des deux structures principales utilisées pour stocker et accéder à des données en Ruby. (L’autre est [Hash](http://www.ruby-doc.org/core-2.5.3/Hash.html), que l’on verra demain.)
 
@@ -9,8 +8,7 @@ Souviens-toi que les index des arrays commencent à `0`, et non à `1`.
 
 En développement, on doit souvent trier des choses ; on te conseille donc de te renseigner sur [les algorithmes de tri](https://fr.wikipedia.org/wiki/Algorithme\_de\_tri). Dans la documentation Ruby, tu devrais trouver plusieurs façons de trier un [Enumerable](http://ruby-doc.org/core-2.5.3/Enumerable.html). `Array` est une forme d’`Enumerable` ; tu peux donc utiliser toutes les méthodes référencées dans la documentation `Enumerable` quand tu utilises un `Array`, car `Array` **inclut** le module `Enumerable`.
 
-Spécifications
---------------
+## Spécifications
 
 -   Exécute une méthode `wagon_sort` qui prend un argument, un array de noms d’étudiants (`String`), et retourne un array de ces noms d’étudiants triés par ordre alphabétique.
 -   La méthode de tri ne doit pas tenir compte de la casse ; `bob` doit apparaître avant `Felix` (regarde la [table de caractères ASCII](http://www.asciitable.com/))
@@ -35,8 +33,7 @@ Congratulations! Your Wagon has 3 students:
 bob, Cedric and felix
 ```
 
-Enseignements clés
-------------------
+## Enseignements clés
 
 Familiarise-toi avec les opérations de base des arrays. Tu dois maintenant connaître la syntaxe à utiliser pour :
 
