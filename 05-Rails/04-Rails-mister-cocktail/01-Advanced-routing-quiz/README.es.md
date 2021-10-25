@@ -9,7 +9,7 @@ Ve al archivo `lib/quiz.rb`. Ahí encontrarás algunos métodos para poner a pru
 
 ### Pregunta 1
 
-Devuelve un arreglo (`Array`) de 7 cadenas de caracteres (`String`) que correspondan a las 7 rutas CRUD generadas por `resources :restaurants`.
+Implementa las 7 rutas convencionales que corresponden a las 7 rutas CRUD generadas por `resources :restaurants`.
 Pista: una ruta sigue el siguiente patrón: `verb "url", to: "controller#action"`
 /!\ En el contexto Rails, ¡una ruta no es una cadena de caracteres (String)!
 

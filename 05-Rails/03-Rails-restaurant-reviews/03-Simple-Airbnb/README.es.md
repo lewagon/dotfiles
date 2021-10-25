@@ -82,6 +82,12 @@ También podemos hacer que sea posible editar un apartamento para corregir error
 
 ¡No olvides actualizar `index.html.erb` y `show.html.erb` con los nuevos enlaces (links) de edición!
 
+### 8 - Como usuario/a, puedo suprimir un apartamento.
+
+Agreguemos la posibilidad de suprimir un apartamento de nuestro website. ¿Cómo podemos crear un `link_to` para destruir este apartamento y qué acción va realizar el controlador?
+
+Una vez más, actualice toda nuestra vista para poner este enlace de supresión.
+
 ### 9 - Adición de una `picture_url` al modelo flat (Opcional)
 
 Agrega un atributo url de imagen al modelo flat (solo para almacenar una cadena de caracteres (string) de la url de una imagen). Actualiza los formularios de creación y actualización para permitirle al/a la usuario/a especificar una imagen del apartamento que será mostrada en la página web. También puedes actualizar las páginas index y show con la nueva imagen.

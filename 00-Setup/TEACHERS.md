@@ -144,7 +144,7 @@ At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org
 
 ### Terminal & Git (teacher)
 
-1. **2pm-2pm15**: Second 15 min lecture on command line basics (navigate in filesystem, create directories & files, launch Sublime Text from terminal, etc.)
+1. **2pm-2pm15**: Second 15 min lecture on command line basics (navigate in filesystem, create directories & files, launch your text editor from terminal, etc.)
 
 2. **2pm15-2pm45**: Third 30 min lecture on git commands (`add`/`commit`/`push`).
 

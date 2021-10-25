@@ -10,7 +10,7 @@ cp -r ../02-Fonts-and-colors/profile .
 
 Juega con el modelo de caja (box model) (`margin/border/padding/width/height`) separando la información de tu perfil en distintas etiquetas `<div>`. Luego usa selectores CSS avanzados (id, class, grouping, selectores descendientes) para afinar detalles de diseño.
 
-¡No olvides hacer el **hard refresh** (forzar la actualización de la página) en tu navegador (`cmd + shift + r`) para limpiar el caché en caso de que tu página no muestre el código más reciente!
+¡No olvides hacer el **hard refresh** (forzar la actualización de la página) en tu navegador (`cmd + shift + r` on macOS, `ctrl` + `F5` on Windows) para limpiar el caché en caso de que tu página no muestre el código más reciente!
 
 ## Especificaciones
 

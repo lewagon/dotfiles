@@ -115,8 +115,8 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Now that we have a model representing our orders, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It reads/writes the orders from the CSV file and store them in memory. The interface of this repository allows to:
-- Add a new order to the repository
-- Get all the undelivered orders from the repository
+- Create a new order
+- Get all the undelivered orders
 
 Since an order has a `meal`, a `customer` and an `employee` **instances**, we also need to initialize our order repository with a meal repository, a customer repository and an employee repository.
 
