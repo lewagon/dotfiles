@@ -1,0 +1,24 @@
+[general]
+targets = pro_github
+annotation_links = True
+annotation_comments = False
+annotation_length = 160
+inline_links = False
+log.level = DEBUG
+log.file = /tmp/bugwarrior.log
+legacy_matching = False
+
+
+[pro_github]
+service = github
+github.username = <ORG>
+github.login = xavierosee
+github.password = <TOKEN>
+github.query = is:open is:issue assignee:xavierosee
+github.include_user_issues = False
+github.include_user_repos = False
+github.import_labels_as_tags = True
+github.label_template = {{label|replace("component__", "")|replace("priority__high", "")|replace("priority__medium", "")|replace("priority__low", "")|replace("type__", "")|replace("service__", "")|replace("task","") | trim}}
+github.default_priority = H
+github.project_template = {{project|upper}}
+github.description_template = {{githuburl}} {{githubtitle}}

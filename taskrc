@@ -14,86 +14,17 @@
 data.location=~/.task
 
 
-###############################################################################
-# Sample taskwarrior 1.9 (or later) dark 256-color theme, featuring green.
-#
-# taskwarrior - a command line task list manager.
-#
-# Copyright 2006-2014, Paul Beckingham, Federico Hernandez.
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included
-# in all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-#
-# http://www.opensource.org/licenses/mit-license.php
-#
-###############################################################################
+# Basic Config
+weekstart=monday
+default.command=ready limit:page
+tasksh.autoclear=true
+search.case.sensitive=no
+uda.priority.default=M
+priority.default=M
 
-color=on
-color.header=rgb031
-color.footnote=rgb031
-color.error=rgb031
-color.debug=rgb031
 
-color.summary.bar=white on rgb030
-color.summary.background=white on color0
-
-color.history.add=color0 on rgb010
-color.history.done=color0 on rgb030
-color.history.delete=color0 on rgb050
-
-color.burndown.pending=on rgb010
-color.burndown.started=on rgb030
-color.burndown.done=on gray4
-
-color.sync.added=gray4
-color.sync.changed=rgb030
-color.sync.rejected=red
-
-color.undo.before=rgb031
-color.undo.after=rgb053
-
-color.calendar.today=color0 on rgb151
-color.calendar.due=color0 on color249
-color.calendar.due.today=color0 on color225
-color.calendar.overdue=color0 on color255
-color.calendar.weekend=on color235
-color.calendar.holiday=rgb151 on rgb020
-color.calendar.weeknumber=rgb010
-
-color.recurring=rgb151
-color.overdue=color255
-color.due.today=color252
-color.due=color249
-color.active=bold white on rgb012
-color.uda.priority.none=
-color.uda.priority.H=rgb151
-color.uda.priority.M=rgb040
-color.uda.priority.L=rgb030
-color.tagged=none
-color.blocked=color249
-color.blocking=rgb240
-color.project.none=
-color.tag.none=
-color.alternate=on color233
-color.tag.next=white on rgb001
-color.tag.inprogress=white on rgb001
-
-####
+# Color Theme
+include /usr/share/taskwarrior/dark-violets-256.theme
 
 report.next.columns=id,project,priority,due,start.active,entry.age,urgency,description.desc,tags
 report.next.labels=ID,Proj,Pri,Due,A,Age,Urg,Description,Tags
@@ -101,57 +32,68 @@ report.next.labels=ID,Proj,Pri,Due,A,Age,Urg,Description,Tags
 report.ready.columns=id,project,priority,due,start.active,entry.age,urgency,description,tags
 report.ready.labels=ID,Proj,Pri,Due,A,Age,Urg,Description,Tags
 
-# use like task oneone modified.after:2014-12-18
+# Report to prepare One/One: use like task oneone modified.after:2014-12-18
 report.oneone.description=Mention - One-on-One
 report.oneone.columns=description.desc
 report.oneone.labels=Description
 report.oneone.filter=proj:mention ( status:completed or ( status:pending +ACTIVE ) or ( status:pending +review ) or status:waiting ) description.hasnt:triage
 report.oneone.sort=description
 
+# Work To-do
 report.mtn.description=Mention - To-Do
 report.mtn.columns=id,priority,start.active,urgency,due,description.desc,tags
 report.mtn.labels=ID,Pri,A,Urg,Due,Description,Tags
 report.mtn.filter=proj:mtn -idea -github_r_ -review status:pending limit:30 ( due.before:tomorrow or due: ) -WAITING -BLOCKED
 report.mtn.sort=due,urgency-
 
+# Work Tasks to check on
 report.mtncheck.description=Mention - Check
 report.mtncheck.columns=id,priority,start.active,urgency,description.desc,tags
 report.mtncheck.labels=ID,Pri,A,Urg,Description,Tags
 report.mtncheck.filter=proj:mtn status:pending ( +WAITING or +review or +github_r_ or +idea )
 report.mtncheck.sort=urgency-
 
+# Personal To Do
 report.personal.description=Personal - To-Do
 report.personal.columns=id,priority,start.active,urgency,due,description.desc,tags
 report.personal.labels=ID,Pri,A,Urg,Due,Description,Tags
 report.personal.filter=( proj: or proj:personal ) ( due.before:tomorrow or due: ) status:pending -WAITING -idea
 report.personal.sort=urgency-
 
+# Most used report : Tasks to to today
 report.today.description=Tasks for Today
 report.today.columns=id,project,priority,start.active,urgency,due,description.desc,tags
 report.today.labels=ID,Proj,Pri,A,Urg,Due,Description,Tags
 report.today.filter=status:pending -review and ( ( proj: and ( due.before:tomorrow or +respond or +today or +next or +inprogress) ) or +daytime or ( proj:moz and +today ) )
 report.today.sort=urgency-
 
+# Ongoing tasks
 report.active.description=Active Tasks
 report.active.columns=id,description.desc,tags
 report.active.labels=ID,Description,Tags
 report.active.filter=status:pending +ACTIVE
 report.active.sort=urgency-
 
-report.urls.columns=uuid,githubtype,githuburl
-report.urls.labels=uuid,githubtype,githuburl
+# Completed tasks
+report.completed.columns=id,uuid.short,entry,end,entry.age,depends,priority,project,tags,recur.indicator,due,description.count
+report.completed.labels=ID,UUID,Created,Completed,Age,Deps,P,Project,Tags,R,Due,Description
 
+# Child tasks inherit their parent's urgency if that's higher.
+urgency.inherit=on
+
+
+# How urgent something is depends upon what's waiting on it.
+urgency.blocking.coefficient=0
+urgency.blocked.coefficient=0
+
+# Sync!!
 taskd.server=freecinc.com:53589
 taskd.key=\/home\/xavierosee\/.task\/freecinc_b3caf6ed.key.pem
 taskd.certificate=\/home\/xavierosee\/.task\/freecinc_b3caf6ed.cert.pem
 taskd.ca=\/home\/xavierosee\/.task\/freecinc_b3caf6ed.ca.pem
 taskd.credentials=FreeCinc\/freecinc_b3caf6ed\/15651f3a-1328-4a52-8b0d-7ca3cbb7a94d
 
-uda.priority.default=M
-## not used anymore
-#task.default=personal
-priority.default=M
-
+# Custom Priorities
 urgency.blocking.coefficient=0
 urgency.annotations.coefficient=0
 urgency.user.tag.stalled.coefficient=-5
@@ -165,10 +107,14 @@ urgency.user.tag.deliverable.coefficient=-50
 urgency.user.tag.inprogress.coefficient=1.5
 urgency.user.tag.today.coefficient=2
 urgency.user.tag.plane.coefficient=-2
-
+# More sensible priorities, plz.
+uda.priority.values = H,M,,L
+urgency.uda.priority.L.coefficient=0
+urgency.uda.priority..coefficient=1.8
+# Costly tasks are most important.
+urgency.user.tag.costly.coefficient=3.0
 # relative priority adjustments
 urgency.user.tag.r14y.coefficient=3
-
 # recurring tasks' due dates aren't that important (especially before they're due)
 urgency.due.coefficient=0.5
 
@@ -202,7 +148,18 @@ confirmation = no
 bulk = 5
 recurrence.confirmation = no
 
-{% if not primary %}
-# don't process recurrence on this host, since it is not primary
-recurrence.limit = 0
-{% endif %}
+# Tasksh config
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-1week ) and ( +PENDING or +WAITING )
+
+# Contexts! I use these for everything!
+context.sfw=-nsfw
+context.nofun=project.not:fun -nsfw -fun
+context.fun=project:fun or +fun or +nsfw
+context.srs=project.not:fun project.not:social -nsfw -fun
+context.conference=-nsfw -xavier -INBOX project.not:xavier
+context.work=project.not:xavier or +Trello
