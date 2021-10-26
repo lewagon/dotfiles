@@ -1,7 +1,7 @@
 ## Contexte et objectifs
 
--   Apprendre à chercher la bonne méthode dans la documentation Ruby.
--   Te familiariser avec IRB pour tester de nouvelles méthodes et te les approprier.
+- Apprendre à chercher la bonne méthode dans la documentation Ruby.
+- Te familiariser avec IRB pour tester de nouvelles méthodes et te les approprier.
 
 IRB est une boucle de lecture-évaluation-impression [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) pour Ruby. Elle fonctionne comme ceci :
 
@@ -10,7 +10,7 @@ IRB est une boucle de lecture-évaluation-impression [REPL](http://en.wikipedia.
 3.  Le **P** (troisième lettre de l’acronyme anglais REPL - Print) imprime ce résultat.
 4.  Le **L** (dernière lettre de l’acronyme anglais REPL - Loop) revient en boucle au point 1 et attend une nouvelle saisie de la part de l’utilisateur.
 
--   **Teste les lignes suivantes** dans IRB :
+- **Teste les lignes suivantes** dans IRB :
 
 ``` {.ruby}
 "A string object".class
@@ -29,8 +29,8 @@ Trouve les bonnes méthodes Ruby pour la [classe String](http://ruby-doc.org/cor
 
 Coder implique d’être malin et de savoir où et comment chercher l’info dont tu as besoin ! Souvent, le plus difficile est de bien formuler ta question à Google. Pour trouver les méthodes utiles à ce challenge, utilise :
 
--   Google et [Stack Overflow](http://stackoverflow.com/)
--   [La documentation Ruby](http://ruby-doc.org) si tu as déjà une petite idée de la méthode que tu cherches.
+- Google et [Stack Overflow](http://stackoverflow.com/)
+- [La documentation Ruby](http://ruby-doc.org) si tu as déjà une petite idée de la méthode que tu cherches.
 
 Une fois que tu penses avoir trouvé la méthode dont tu as besoin, et que tu penses savoir comment t’en servir, utilise IRB pour tester cette méthode sur quelque chose ! Les tests sur IRB représentent une étape clé pour les débutants.
 
@@ -38,8 +38,8 @@ Une fois que tu penses avoir trouvé la méthode dont tu as besoin, et que tu pe
 
 Es-tu capable de répondre aux questions suivantes ? Si ce n’est pas le cas, alors tu n’es pas prêt à passer à la suite !
 
--   Combien de classes intégrées Ruby connais-tu ? Lesquelles ?
--   Quelle est la syntaxe pour appeler une méthode sur un objet de ces classes ?
--   Quelle doit être la toute première étape lorsque tu cherches à effectuer une opération standard (trier un array, mettre un mot en majuscules, etc.) ?
--   Quelle est la deuxième étape ? Histoire de vérifier que tu as bien compris la méthode que tu as trouvée.
+- Combien de classes intégrées Ruby connais-tu ? Lesquelles ?
+- Quelle est la syntaxe pour appeler une méthode sur un objet de ces classes ?
+- Quelle doit être la toute première étape lorsque tu cherches à effectuer une opération standard (trier un array, mettre un mot en majuscules, etc.) ?
+- Quelle est la deuxième étape ? Histoire de vérifier que tu as bien compris la méthode que tu as trouvée.
 

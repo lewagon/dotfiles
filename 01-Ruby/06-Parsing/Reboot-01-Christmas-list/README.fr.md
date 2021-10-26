@@ -50,8 +50,8 @@ ruby interface.rb
 Le moment est venu d’exécuter les actions simples (`list`, `add`,
 `delete`).
 
--   Comment modélises-tu ta liste de cadeaux (`gift_list`) ?
--   Utilises-tu un hash ? Un array ?
+- Comment modélises-tu ta liste de cadeaux (`gift_list`) ?
+- Utilises-tu un hash ? Un array ?
 
 **Parles-en avec ton/ta prof avant de te lancer dans chaque action.**
 
@@ -79,9 +79,9 @@ ruby interface.rb
 > 3 - [X] macbook pro
 ```
 
--   Comment modifies-tu ta liste de cadeaux (`gift_list`) pour stocker
+- Comment modifies-tu ta liste de cadeaux (`gift_list`) pour stocker
     le statut de chaque article ?
--   Comment cela affecte-t-il ton code ?
+- Comment cela affecte-t-il ton code ?
 
 Encore une fois, **parles-en avec ton/ta prof**
 
@@ -159,8 +159,8 @@ doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |elemen
 end
 ```
 
--   N’hésite pas à scraper un autre site Web en adaptant ce script.
--   Tu peux aussi scraper d’autres informations en dehors du nom de
+- N’hésite pas à scraper un autre site Web en adaptant ce script.
+- Tu peux aussi scraper d’autres informations en dehors du nom de
     l’article (par exemple son prix).
 
 ## [FACULTATIF] Enregistre les cadeaux dans un fichier CSV 🎁🎁🎁🎁🎁
@@ -197,6 +197,6 @@ CSV.open(filepath, 'wb', csv_options) do |csv|
 end
 ```
 
--   Trouve le meilleur moment pour charger les cadeaux.
--   Quand dois-tu enregistrer les cadeaux ?
+- Trouve le meilleur moment pour charger les cadeaux.
+- Quand dois-tu enregistrer les cadeaux ?
 

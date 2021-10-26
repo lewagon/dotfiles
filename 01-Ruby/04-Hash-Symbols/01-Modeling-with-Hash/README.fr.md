@@ -108,14 +108,14 @@ Tu vas t’en servir tout le temps, alors apprends à les aimer 😊
 
 ## Spécifications
 
--   Crée une méthode `poor_calories_counter` qui retourne le nombre total de calories pour les trois éléments de ta commande.
--   **contrainte** : ta méthode doit utiliser un hash (ça va de soi !)
--   **contrainte** : ta méthode doit utiliser **nos valeurs caloriques données** !
+- Crée une méthode `poor_calories_counter` qui retourne le nombre total de calories pour les trois éléments de ta commande.
+- **contrainte** : ta méthode doit utiliser un hash (ça va de soi !)
+- **contrainte** : ta méthode doit utiliser **nos valeurs caloriques données** !
 
 Exemple : `poor_calories_counter("McChicken", "French Fries", "Sprite")` doit retourner `730`.
 
 ## Enseignements clés
 
--   Qu’est-ce qu’un hash ? - Comment l’utilise-t-on ?
--   Comment récupérer une valeur stockée dans un `Hash` ?
+- Qu’est-ce qu’un hash ? - Comment l’utilise-t-on ?
+- Comment récupérer une valeur stockée dans un `Hash` ?
 

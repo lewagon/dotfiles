@@ -6,9 +6,9 @@ Ce qu’il y a de bien quand tu utilises un hash, c’est que cette dépendance 
 
 ## Spécification
 
--   Exécute la méthode `#better_refrain` pour briser la dépendance séquentielle des arguments dans `#refrain`
+- Exécute la méthode `#better_refrain` pour briser la dépendance séquentielle des arguments dans `#refrain`
 
 ## Enseignements clé
 
--   As-tu **vraiment** compris pourquoi `#better_refrain` est plus flexible ? Essaie de l’expliquer à ton ou ta buddy.
+- As-tu **vraiment** compris pourquoi `#better_refrain` est plus flexible ? Essaie de l’expliquer à ton ou ta buddy.
 

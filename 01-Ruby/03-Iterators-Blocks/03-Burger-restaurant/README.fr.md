@@ -2,9 +2,9 @@
 
 À première vue, les blocs et `yield` peuvent être déroutants… Mais tout est une question de pratique. Voici les objectifs :
 
--   Exécuter des méthodes de base utilisant `yield` pour en comprendre le mécanisme.
--   Apprendre la syntaxe à utiliser pour appeler une méthode avec un bloc.
--   Comprendre ce qui se passe quand tu passes un paramètre au bloc.
+- Exécuter des méthodes de base utilisant `yield` pour en comprendre le mécanisme.
+- Apprendre la syntaxe à utiliser pour appeler une méthode avec un bloc.
+- Comprendre ce qui se passe quand tu passes un paramètre au bloc.
 
 Dans le cadre de cet exercice, tu es sur le point d’ouvrir un **restaurant de burgers**. Tu dois donc exécuter des méthodes pour préparer des burgers à servir à tes premiers clients, de la cuisine au comptoir.
 
@@ -57,8 +57,8 @@ On va modifier notre méthode pour que cela fonctionne !
 
 Améliore la méthode `burger` pour accueillir un bloc :
 
--   Place `yield` là où tu veux appeler le bloc
--   Le bloc transformera uniquement `patty` (le steak)
+- Place `yield` là où tu veux appeler le bloc
+- Le bloc transformera uniquement `patty` (le steak)
 
 La méthode doit fonctionner **avec ou sans bloc**. Utilise la méthode [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) pour déterminer si un bloc est prêt à être utilisé.
 
@@ -75,8 +75,8 @@ L’un de tes clients a demandé une plus grande portion de poisson. Transforme 
 
 2.  Ajoute un bloc (pour la note) avec les instructions spéciales :
 
--   Il prend une string comme argument
--   Il transforme la string en majuscules
+- Il prend une string comme argument
+- Il transforme la string en majuscules
 
 ![Écris un bloc dans Ruby](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-syntax.svg?sanitize=true)
 

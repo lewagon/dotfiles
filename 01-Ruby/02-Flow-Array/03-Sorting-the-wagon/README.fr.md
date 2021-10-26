@@ -10,9 +10,9 @@ En développement, on doit souvent trier des choses ; on te conseille donc de t
 
 ## Spécifications
 
--   Exécute une méthode `wagon_sort` qui prend un argument, un array de noms d’étudiants (`String`), et retourne un array de ces noms d’étudiants triés par ordre alphabétique.
--   La méthode de tri ne doit pas tenir compte de la casse ; `bob` doit apparaître avant `Felix` (regarde la [table de caractères ASCII](http://www.asciitable.com/))
--   La méthode doit respecter l’orthographe des noms.
+- Exécute une méthode `wagon_sort` qui prend un argument, un array de noms d’étudiants (`String`), et retourne un array de ces noms d’étudiants triés par ordre alphabétique.
+- La méthode de tri ne doit pas tenir compte de la casse ; `bob` doit apparaître avant `Felix` (regarde la [table de caractères ASCII](http://www.asciitable.com/))
+- La méthode doit respecter l’orthographe des noms.
 
 ### Programme interactif
 
@@ -37,9 +37,9 @@ bob, Cedric and felix
 
 Familiarise-toi avec les opérations de base des arrays. Tu dois maintenant connaître la syntaxe à utiliser pour :
 
--   créer un array
--   ajouter un nouvel élément à l’array
--   accéder à un élément situé à une position n
--   mettre à jour un élément
--   supprimer une valeur à un index donné
+- créer un array
+- ajouter un nouvel élément à l’array
+- accéder à un élément situé à une position n
+- mettre à jour un élément
+- supprimer une valeur à un index donné
 

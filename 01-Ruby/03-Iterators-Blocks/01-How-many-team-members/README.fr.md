@@ -14,7 +14,7 @@ array.size
 
 ## Spécifications
 
--   Écris une méthode dans Ruby qui retourne le nombre de membres de l’équipe dans l’array de noms donné comme argument.
+- Écris une méthode dans Ruby qui retourne le nombre de membres de l’équipe dans l’array de noms donné comme argument.
 
 ## Enseignements clés
 

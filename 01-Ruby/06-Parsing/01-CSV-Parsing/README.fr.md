@@ -1,7 +1,7 @@
 ## Contexte et objectifs
 
--   Utiliser un pack de la librairie standard
--   Travailler la saisie de fichiers CSV
+- Utiliser un pack de la librairie standard
+- Travailler la saisie de fichiers CSV
 
 Pour lire un fichier CSV et en extraire les données, tu peux utiliser le
 pack `csv` de la librairie standard Ruby. Le fichier CSV donné en
@@ -26,17 +26,17 @@ regarder !
 
 ## Spécifications
 
--   exécute `#most_successful` qui retourne les films (un certain
+- exécute `#most_successful` qui retourne les films (un certain
     `number` passé en paramètre) sortis avant une année donnée et les
     recettes enregistrées.
--   **contrainte** : la liste retournée doit être un array de films.
+- **contrainte** : la liste retournée doit être un array de films.
     Chaque film doit être représenté par un hash avec les clés `name`,
     `year` et `earnings`. Exemple:
     `{ name: "Avatar", year: 2009, earnings: 760505847 }`
 
 ## Suggestions et ressources complémentaires
 
--   Pense à bien indiquer les bonnes options de codage (`encoding`) pour
+- Pense à bien indiquer les bonnes options de codage (`encoding`) pour
     la lecture du CSV. Souviens-toi que certains titres sont en français
     avec des caractères spéciaux 😉
 

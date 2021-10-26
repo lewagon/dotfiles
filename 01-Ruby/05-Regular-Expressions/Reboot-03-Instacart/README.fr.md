@@ -8,10 +8,10 @@ qu’il a terminé, payer et consulter sa facture.
 
 ## Indications
 
--   Si tu as du temps avant le déjeuner, commence à réfléchir au
+- Si tu as du temps avant le déjeuner, commence à réfléchir au
     pseudocode de cet exercice avec le prof.
--   Tu devrais avoir besoin de tout l’après-midi pour le terminer.
--   Valide et corrige chaque étape de l’exercice avec le prof avec un
+- Tu devrais avoir besoin de tout l’après-midi pour le terminer.
+- Valide et corrige chaque étape de l’exercice avec le prof avec un
     live-code intermédiaire 💻
 
 ## Pseudocode
@@ -64,9 +64,9 @@ ruby interface.rb
 
 ### Modéliser la boutique et le panier
 
--   Comment modéliser la boutique (`store`) et le panier (`cart`) ?
--   Quelle est la **structure la plus adaptée à chacun** ?
--   Faut-il utiliser un array ? Faut-il utiliser un hash (avec quelles
+- Comment modéliser la boutique (`store`) et le panier (`cart`) ?
+- Quelle est la **structure la plus adaptée à chacun** ?
+- Faut-il utiliser un array ? Faut-il utiliser un hash (avec quelles
     clés et quelles valeurs) ?
 
 **Réfléchis avec ton/ta prof avant de commencer !**
@@ -104,9 +104,9 @@ ruby interface.rb
 
 ### Modéliser la boutique et le panier
 
--   Comment modifier la boutique (`store`) et le panier (`cart`) pour
+- Comment modifier la boutique (`store`) et le panier (`cart`) pour
     prendre en compte la quantité ?
--   Que doit-on changer dans notre code avec cette nouvelle
+- Que doit-on changer dans notre code avec cette nouvelle
     modélisation ?
 
 ## Étape 3 - Ajouter la disponibilité 🛍🛍🛍
@@ -140,8 +140,8 @@ ruby interface.rb
 
 ### Modéliser la boutique et le panier
 
--   Comment modifier la boutique (`store`) et le panier (`cart`) pour
+- Comment modifier la boutique (`store`) et le panier (`cart`) pour
     prendre en compte la quantité ?
--   Que doit-on changer dans notre code avec cette nouvelle
+- Que doit-on changer dans notre code avec cette nouvelle
     modélisation ?
 

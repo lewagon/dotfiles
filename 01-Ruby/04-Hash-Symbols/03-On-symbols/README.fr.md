@@ -2,9 +2,9 @@
 
 ### À débattre avec le reste de ta classe
 
--   Quelles sont les différences entre une String et un Symbol ?
--   Quand dois-tu utiliser l’une plutôt que l’autre ?
--   En termes de mémoire, quel est le comportement de chacun ?
+- Quelles sont les différences entre une String et un Symbol ?
+- Quand dois-tu utiliser l’une plutôt que l’autre ?
+- En termes de mémoire, quel est le comportement de chacun ?
 
 ### Synthèse technique
 

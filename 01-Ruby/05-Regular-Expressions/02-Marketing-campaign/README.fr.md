@@ -36,8 +36,8 @@ Le domaine de premier niveau ou TLD (Top-Level Domain) est le dernier groupe de 
 
 Voici les principales catégories :
 
--   gLTD (generic top-level domains) : domaines de premier niveau génériques (tels que `.com`, `.net`, `.org`)
--   ccTLD (country code top-level domains) : domaines de premier niveau nationaux (tels que `.fr`, `.de`, `.jp`)
+- gLTD (generic top-level domains) : domaines de premier niveau génériques (tels que `.com`, `.net`, `.org`)
+- ccTLD (country code top-level domains) : domaines de premier niveau nationaux (tels que `.fr`, `.de`, `.jp`)
 
 Mais il en existe [bien d’autres](https://fr.wikipedia.org/wiki/Liste_des_domaines_Internet_de_premier_niveau)
 

@@ -33,8 +33,8 @@ Attaque toujours un exercice avec le/la prof en écrivant le *pseudocode*. Exemp
 
 Crée une simple calculatrice avec une interface utilisateur en ligne de commande :
 
--   capable de traiter seulement les additions pour commencer
--   puis toutes les opérations (multiplications, soustractions, divisions)
+- capable de traiter seulement les additions pour commencer
+- puis toutes les opérations (multiplications, soustractions, divisions)
 
 Elle doit fonctionner comme ceci :
 
@@ -83,8 +83,8 @@ ruby interface.rb
 
 ## Étape 3 - Refactorise ton code
 
--   Quel morceau de code fait vraiment partie de l’interface utilisateur (`gets` et `puts`) ?
--   Quel morceau de code n’appartient pas à l’interface ?
+- Quel morceau de code fait vraiment partie de l’interface utilisateur (`gets` et `puts`) ?
+- Quel morceau de code n’appartient pas à l’interface ?
 
 Essaie de refactoriser le code avec l’aide du/de la prof. Par exemple, tu peux créer un nouveau fichier `calculator.rb` :
 

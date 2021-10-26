@@ -1,7 +1,7 @@
 ## Contexte et objectifs
 
--   Travailler avec des fichiers texte
--   Créer un analyseur de texte en utilisant un Hash
+- Travailler avec des fichiers texte
+- Créer un analyseur de texte en utilisant un Hash
 
 ### Lire un fichier en Ruby
 
@@ -15,7 +15,7 @@ end
 
 ## Spécifications
 
--   Exécute la méthode `most_common_words` qui retourne le nombre d’occurrences des mots les plus fréquents dans un fichier texte. Par exemple, si on prend la Bible comme texte source :
+- Exécute la méthode `most_common_words` qui retourne le nombre d’occurrences des mots les plus fréquents dans un fichier texte. Par exemple, si on prend la Bible comme texte source :
 
 ``` {.ruby}
 most_common_words('source-text.txt', 'stop_words.txt', 3)

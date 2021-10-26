@@ -16,8 +16,8 @@ Préparons ton poste de travail.
 
 Ça y est, tu as tous les outils dont tu vas avoir besoin pendant les neuf semaines du bootcamp. Souviens-toi que tes nouveaux meilleurs amis sur ton ordinateur sont désormais :
 
--   **Visual Studio Code**, l’éditeur de texte qui te servira à coder en Ruby (et bien plus !)
--   le **Terminal**, également appelé shell, où tu saisiras les commandes.
--   **git**, l’outil de contrôle de versions qui te servira à visualiser ton code, obtenir un aperçu et envoyer tes tentatives sur Kitt !
+- **Visual Studio Code**, l’éditeur de texte qui te servira à coder en Ruby (et bien plus !)
+- le **Terminal**, également appelé shell, où tu saisiras les commandes.
+- **git**, l’outil de contrôle de versions qui te servira à visualiser ton code, obtenir un aperçu et envoyer tes tentatives sur Kitt !
 
 C’est trop cool de t’avoir parmi nous ! À ton clavier 🚀🚀🚀 !

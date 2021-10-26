@@ -1,9 +1,9 @@
 ## Background & Objectives
 
-* Understand the structure of an exercise's repo, and the link to your Github account.
-* Learn to test your code locally before submitting your solution.
-* Learn the basic git commands to commit modifications to your code and push them to Github.
-* Discover the features of the Kitt platform.
+- Understand the structure of an exercise's folder, and the link to your Github account.
+- Learn to test your code locally before submitting your solution.
+- Learn the basic `git` commands to commit modifications to your code and push them to Github.
+- Discover the features of the Kitt platform.
 
 During these 9 weeks, you'll work in pairs or groups of 3-4. A new buddy is assigned to you each day, following an algorithm of [round robin tournament](http://en.wikipedia.org/wiki/Round-robin_tournament) implemented in this [gem](https://github.com/ssaunier/round_robin_tournament).
 
