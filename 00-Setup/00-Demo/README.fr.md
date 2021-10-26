@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Bienvenue sur Kitt ! La/Le prof va maintenant te montrer comment réaliser un exercice.
+Bienvenue sur Kitt ! La ou le prof va maintenant te montrer comment réaliser un exercice.
 
 ## Spécifications
 
