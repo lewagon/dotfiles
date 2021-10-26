@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-- Apprendre à « require » des scripts externes et à appeler des fonctions à partir de ces scripts
+- Apprendre à « require » des scripts externes et à appeler des méthodes à partir de ces scripts
 - **Maîtriser** les concepts de [variables](https://fr.wikipedia.org/wiki/Variable_(informatique)), d’assignation de variables, de définition de méthodes et d’appel de méthodes.
 
 ## Spécifications
@@ -11,15 +11,15 @@
 
 ### Programme interactif
 
-- Une fois que ta méthode `age_in_days` sera correcte, on va l’utiliser avec le programme `lib/interface.rb`, qui exécute un outil de ligne de commande. Pour lancer ce programme, il te suffit d’exécuter la commande suivante dans ton terminal :
+- Une fois que ta méthode `age_in_days` est correcte, on veut l’utiliser avec le programme `lib/interface.rb`, qui exécute un outil de ligne de commande. Pour lancer ce programme, il te suffit d’exécuter la commande suivante dans ton terminal :
 
-``` {.bash}
+```bash
 ruby lib/interface.rb
 ```
 
 Le programme indique que tu as `0 years old`. Tu dois modifier le code de façon à ce que le programme utilise ta méthode `age_in_days`. Remarque : le code est disponible dans le fichier `interface.rb`, car on a écrit la commande `require_relative` au début du fichier.
 
-- **Perfectionnement** : Des lignes de code se répètent-elles dans le fichier `interface.rb` ? Peux-tu refactoriser ces lines pour rendre ton code DRY (Don’t Repeat Yourself = Ne te répète pas) ?
+- **Perfectionnement** : Des lignes de code se répètent-elles dans le fichier `interface.rb` ? Peux-tu refactoriser ces lignes pour rendre ton code DRY (Don’t Repeat Yourself = Ne te répète pas) ?
 
 ## Suggestions et ressources complémentaires
 
@@ -39,7 +39,7 @@ Les questions qui suivent pourront sembler évidentes à la plupart d’entre vo
 - Peut-on assigner une nouvelle valeur à une variable qui a déjà été définie ? Comment ?
 - Peux-tu décrire **précisément** et avec les bons mots ce que l’on fait dans les deux lignes de code ci-dessous ?
 
-``` {.ruby}
+```ruby
 some_number = 1
 some_number = some_number * 2
 ```
@@ -58,5 +58,4 @@ some_number = some_number * 2
 
 - Comment demande-t-on une valeur dans le terminal ?
 - Pourquoi utilise-t-on la méthode `chomp` ?
-- Pourquoi pas `to_i` ? À quoi sert cette méthode ?
-
+- Pourquoi utilise-t-on la méthode `to_i` ?

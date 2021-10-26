@@ -18,7 +18,7 @@ En développement, on doit souvent trier des choses ; on te conseille donc de t
 
 Ouvre le fichier `interface.rb` et vérifie que tu utilises bien la méthode `wagon_sort`. Elle doit fonctionner comme ceci :
 
-``` {.bash}
+```bash
 ruby lib/interface.rb
 
 Type a student name:

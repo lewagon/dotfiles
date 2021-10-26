@@ -6,7 +6,7 @@ Dans cet exercice, on va continuer à s’entraîner avec les blocs. On va coder
 
 Exécute la méthode `#tag` qui crée des balises HTML autour du contenu qu’on lui passe dans le bloc. Exemple :
 
-``` {.ruby}
+```ruby
 tag("h1") do
  "Some Title"
 end
@@ -15,7 +15,7 @@ end
 
 Cette méthode accepte un deuxième paramètre facultatif (regarde la section ci-dessus sur les arguments avec une valeur par défaut), ce qui permet de passer un array avec un attribut HTML et sa valeur, comme `["href", "www.google.com"]`.
 
-``` {.ruby}
+```ruby
 tag("a", ["href", "www.google.com"]) do
  "Google it"
 end
@@ -27,7 +27,7 @@ tu dois **échapper** ce caractère avec un antislash : `\"`.
 
 Ce qu’il y a de bien avec cette méthode, c’est que tu peux nester des appels de méthodes :
 
-``` {.ruby}
+```ruby
 tag("a", ["href", "www.google.com"]) do
  tag("h1") do
  "Google it"
@@ -42,7 +42,7 @@ Pratique, non ?
 
 Dans Ruby, tu peux attribuer une valeur par défaut à un argument. Ainsi, si aucune valeur n’est fournie pour l’argument, la valeur par défaut sera utilisée. Exemple :
 
-``` {.ruby}
+```ruby
 def sum(a, b, c = 0)
  return a + b + c
 end

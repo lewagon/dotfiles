@@ -11,7 +11,7 @@ On va aborder les expressions régulières et, cette fois-ci, on va se pencher s
 
 La méthode ne doit pas tenir compte des espaces ou des tirets entre les chiffres.
 
-``` {.ruby}
+```ruby
 french_phone_number?("0665363636")
 #=> true
 

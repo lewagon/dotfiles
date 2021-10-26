@@ -61,7 +61,7 @@ Ta landing page contient un formulaire très simple pour collecter uniquement de
 
 Exemple :
 
-``` {.ruby}
+```ruby
 {
  com: ["julien@mdn.com"],
  de: ["dimitri@berlin.de"],
@@ -77,7 +77,7 @@ Tu travailles maintenant le corps de l’e-mail et tu veux le personnaliser. Com
 
 Écris une méthode `compose_email` qui : - extrait le nom d’utilisateur, le domaine et le TLD de l’adresse e-mail - retourne un `Hash` au format ci-dessous :
 
-``` {.ruby}
+```ruby
 {
  username: seb,
  domain: lewagon,
@@ -89,7 +89,7 @@ Tu travailles maintenant le corps de l’e-mail et tu veux le personnaliser. Com
 
 Les statistiques que tu as dressées au sujet des TLD révèlent qu’un grand nombre de tes clients viennent d’Allemagne et de France. Tu commandes des traductions dans ces deux langues. Les traducteurs t’ont livré ceci :
 
-``` {.ruby}
+```ruby
 LOCALES = {
  en: {
  subject: "Our website is online",
@@ -118,7 +118,7 @@ LOCALES = {
 - remplace le texte par la traduction correspondante
 - retourne un `Hash` au format ci-dessous :
 
-``` {.ruby}
+```ruby
 {
  username: seb,
  domain: lewagon,
@@ -132,7 +132,7 @@ LOCALES = {
 
 **Astuce de refactorisation :** Si ta méthode a trop de lignes, tu peux la diviser en deux méthodes. Par exemple, en créant une méthode pour choisir la bonne traduction parmi les LOCALES, puis en l’utilisant dans `compose_translated_email` à chaque fois que tu as besoin qu’une phrase soit traduite.
 
-``` {.ruby}
+```ruby
 def translate(keyword, language)
  # TODO: return the translation
 end

@@ -93,7 +93,7 @@ Sprite
 Tu as besoin de stocker ces informations dans une [constante](https://www.rubyguides.com/2017/07/ruby-constants/) Ruby pour créer une sorte de base de données.
 Voici un exemple de `Hash` - `AGE_OF_STUDENTS` qui contient des étudiants et leur âge :
 
-``` {.ruby}
+```ruby
 AGE_OF_STUDENTS = {
  "Peter" => 21,
  "George" => 22,

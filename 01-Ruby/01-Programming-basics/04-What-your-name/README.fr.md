@@ -15,7 +15,7 @@
 
 Le fichier `lib/interface.rb` contient un programme pour interagir avec un utilisateur. Essaie avec :
 
-``` {.bash}
+```bash
 ruby lib/interface.rb
 ```
 

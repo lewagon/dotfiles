@@ -1,4 +1,5 @@
 ## Background & Objectives
+
 - Learn to look for the right method in the ruby doc.
 - Get familiar with using IRB to experiment with new methods and make them yours.
 
@@ -9,7 +10,7 @@ IRB is a [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loo
 3. It **P**-rints this result.
 4. It **L**-oops back to point 1, waiting for a new user input.
 
-* **Experiment the following lines** on IRB:
+- **Experiment the following lines** on IRB:
 
 ```ruby
 "A string object".class

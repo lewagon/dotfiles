@@ -14,7 +14,7 @@ Si tu utilises une string comme identifiant unique de ton programme, plutôt que
 
 C’est pour cette raison que de nombreuses clés de hachage sont des symboles, car elles servent surtout à identifier des choses et ne sont pas simplement du texte. Voici un exemple :
 
-``` {.ruby}
+```ruby
 fox = { color: "red", species: "mammal" }
 ```
 
@@ -22,7 +22,7 @@ fox = { color: "red", species: "mammal" }
 
 Remarque : de temps en temps, tu pourras aussi tomber sur cette autre (vieille) syntaxe :
 
-``` {.ruby}
+```ruby
 fox = { :color => "red", :species => "mammal" }
 ```
 
@@ -36,13 +36,13 @@ Regarde le fichier `lib/symbols.rb`. Il contient un quiz vrai/faux et quelques m
 
 Pour chaque exemple, quel type d’objet dois-tu utiliser ?
 
-``` {.ruby}
+```ruby
 { "temperature" => "10 deg", "pressure" => "10 bar" }
 # or
 { temperature: "10 deg", pressure: "10 bar" }
 ```
 
-``` {.ruby}
+```ruby
 user_name = :bob
 # or
 user_name = "bob"

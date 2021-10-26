@@ -49,7 +49,7 @@ contente-toi de stocker les plats qui composent le repas. Comment pourrais-tu re
 
 On va maintenant créer une méthode `#calories_counter` complète, qui nous permettra de calculer les calories en exécutant :
 
-``` {.ruby}
+```ruby
 orders = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
 puts calories_counter(orders)
 ```

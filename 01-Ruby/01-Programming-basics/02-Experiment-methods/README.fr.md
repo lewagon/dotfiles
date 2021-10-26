@@ -12,7 +12,7 @@ IRB est une boucle de lecture-évaluation-impression [REPL](http://en.wikipedia.
 
 - **Teste les lignes suivantes** dans IRB :
 
-``` {.ruby}
+```ruby
 "A string object".class
 19.class
 [1, 2, 3].class
@@ -21,13 +21,13 @@ IRB est une boucle de lecture-évaluation-impression [REPL](http://en.wikipedia.
 [1, 2, 3].shuffle
 ```
 
-Dans Ruby, tout (texte, integer ou entier, float ou décimale, array ou tableau…) est un objet. On peut appeler des méthodes sur ces objets. Ces méthodes sont appelées des **méthodes d’instance**, car elles peuvent uniquement être appelées sur les instances d’une classe. L’objet sur lequel on appelle la méthode est le **récepteur**.
+Dans Ruby, tout (une chaîne de caractères, un nombre entier ou décimal, un tableau…) est un objet. On peut appeler des méthodes sur ces objets. Ces méthodes sont appelées des **méthodes d’instance**, car elles peuvent uniquement être appelées sur les instances d’une classe. L’objet sur lequel on appelle la méthode est le **récepteur**.
 
 ## Spécifications
 
-Trouve les bonnes méthodes Ruby pour la [classe String](http://ruby-doc.org/core-2.5.3/String.html), la [classe Integer](http://ruby-doc.org/core-2.5.3/Integer.html) et la [classe Array](http://ruby-doc.org/core-2.5.3/Array.html) pour exécuter les tests et faire en sorte qu’ils soient validés.
+Trouve les bonnes méthodes Ruby dan [la classe String](http://ruby-doc.org/core-2.5.3/String.html), [la classe Integer](http://ruby-doc.org/core-2.5.3/Integer.html) et [la classe Array](http://ruby-doc.org/core-2.5.3/Array.html) à utiliser pour faire passer les tests en vert.
 
-Coder implique d’être malin et de savoir où et comment chercher l’info dont tu as besoin ! Souvent, le plus difficile est de bien formuler ta question à Google. Pour trouver les méthodes utiles à ce challenge, utilise :
+Coder implique d’être malin et de savoir où et comment chercher l’info dont tu as besoin ! Souvent, le plus difficile est de bien formuler la question que tu poses à Google. Pour trouver les méthodes utiles à ce challenge, utilise :
 
 - Google et [Stack Overflow](http://stackoverflow.com/)
 - [La documentation Ruby](http://ruby-doc.org) si tu as déjà une petite idée de la méthode que tu cherches.
@@ -38,8 +38,7 @@ Une fois que tu penses avoir trouvé la méthode dont tu as besoin, et que tu pe
 
 Es-tu capable de répondre aux questions suivantes ? Si ce n’est pas le cas, alors tu n’es pas prêt à passer à la suite !
 
-- Combien de classes intégrées Ruby connais-tu ? Lesquelles ?
+- Combien de classes intégrées à Ruby connais-tu ? Lesquelles ?
 - Quelle est la syntaxe pour appeler une méthode sur un objet de ces classes ?
 - Quelle doit être la toute première étape lorsque tu cherches à effectuer une opération standard (trier un array, mettre un mot en majuscules, etc.) ?
-- Quelle est la deuxième étape ? Histoire de vérifier que tu as bien compris la méthode que tu as trouvée.
-
+- Quelle est la deuxième étape à effectuer pour vérifier que tu as bien compris la méthode que tu as trouvée ?

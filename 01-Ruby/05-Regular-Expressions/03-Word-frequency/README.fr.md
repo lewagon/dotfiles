@@ -7,7 +7,7 @@
 
 Tu peux lire un fichier, ligne par ligne, avec
 
-``` {.ruby}
+```ruby
 File.open("my/file/path", "r").each_line do |line|
  # Do something with the line variable
 end
@@ -17,7 +17,7 @@ end
 
 - Exécute la méthode `most_common_words` qui retourne le nombre d’occurrences des mots les plus fréquents dans un fichier texte. Par exemple, si on prend la Bible comme texte source :
 
-``` {.ruby}
+```ruby
 most_common_words('source-text.txt', 'stop_words.txt', 3)
 #=> { 'lord' => 8722, 'God' => 7380, 'Jesus' => 2617 }
 ```

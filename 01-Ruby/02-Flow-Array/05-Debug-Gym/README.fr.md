@@ -9,7 +9,7 @@ Il n’y a qu’une seule chose à retenir de cet exercice : **LIS L’ERREUR 
 
 Exécute simplement
 
-``` {.bash}
+```bash
 rake
 ```
 

@@ -14,7 +14,7 @@ Dans le cadre de cet exercice, tu es sur le point d’ouvrir un **restaurant de 
 
 On va commencer par coder une méthode `burger` simple qui prend 3 paramètres (steak ou patty, sauce et garniture ou topping) et retourne le burger sous la forme d’un array de strings. Exemple :
 
-``` {.ruby}
+```ruby
 burger("steak", "ketchup", "onions")
 # => ["bread", "steak", "ketchup", "onions", "bread"]
 ```
@@ -35,7 +35,7 @@ Mais avant de nous lancer dans le code de la méthode, réfléchissons à une fa
 
 Pour cela, on va utiliser un bloc dans Ruby !
 
-``` {.ruby}
+```ruby
 burger("steak", "ketchup", "onions") do |patty|
  "grilled #{patty}"
 end
@@ -43,7 +43,7 @@ end
 
 Génial ! On a trouvé un moyen de transformer notre steak sans modifier l’argument. L’appel ci-dessus devrait donc retourner :
 
-``` {.ruby}
+```ruby
 # => ["bread", "grilled steak", "ketchup", "onions", "bread"]
 ```
 

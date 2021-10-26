@@ -26,11 +26,11 @@ Aide-toi de [Rubular](http://rubular.com/)
 
 Tu peux tester ton code en appelant tes méthodes avec le message secret et en exécutant `ruby lib/test.rb` :
 
-``` {.bash}
+```bash
 touch lib/test.rb
 ```
 
-``` {.ruby}
+```ruby
 # lib/test.rb
 require_relative "double_rainbow"
 

@@ -16,7 +16,7 @@ On commencera toujours avec le fichier `interface.rb`. C’est le fichier que tu
 
 Attaque toujours un exercice avec le/la prof en écrivant le *pseudocode*. Exemple :
 
-``` {.ruby}
+```ruby
 # interface.rb
 
 # Pseudo-code (what are the steps in plain english):
@@ -38,7 +38,7 @@ Crée une simple calculatrice avec une interface utilisateur en ligne de command
 
 Elle doit fonctionner comme ceci :
 
-``` {.bash}
+```bash
 ruby interface.rb
 
 > Enter a first number:
@@ -58,7 +58,7 @@ C’est un peu pénible d’avoir à relancer ta calculatrice à chaque fois que
 
 Crée une boucle ! Réfléchis au moment où tu aimerais que ton programme arrête de tourner en boucle.
 
-``` {.bash}
+```bash
 ruby interface.rb
 
 > Enter a first number:
@@ -88,7 +88,7 @@ ruby interface.rb
 
 Essaie de refactoriser le code avec l’aide du/de la prof. Par exemple, tu peux créer un nouveau fichier `calculator.rb` :
 
-``` {.ruby}
+```ruby
 # calculator.rb
 def calculate(first_number, second_number, operator)
  # compute and return result
@@ -97,7 +97,7 @@ end
 
 Et l’utiliser dans ton interface :
 
-``` {.ruby}
+```ruby
 # interface.rb
 require_relative "calculator"
 

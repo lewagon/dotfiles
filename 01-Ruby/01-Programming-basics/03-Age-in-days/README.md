@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-- Get familiar with requiring external scripts and calling functions from them
+- Get familiar with requiring external scripts and calling methods from them
 - **Fully** understand the concepts of [variables](http://en.wikipedia.org/wiki/Program_variable), variable assignation, method definition and method calls.
 
 ## Specs
@@ -29,7 +29,7 @@ You'll see that your program says you are `0 years old`. You must change the cod
 
 ## Key learning points
 
-The following questions may seem obvious to most of you, **but make 100% sure you can precisely answer all of them**. Variables and methods are the cornerstones of ruby programming, and you should have an in-depth understanding of these concepts.
+The following questions may seem obvious to most of you, **but make 100% sure you can precisely answer all of them**. Variables and methods are the cornerstones of Ruby programming, and you should have an in-depth understanding of these concepts.
 
 ### On variables
 

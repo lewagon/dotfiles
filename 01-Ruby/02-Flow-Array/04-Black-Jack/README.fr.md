@@ -39,7 +39,7 @@ On va exécuter une version *simplifiée* du Black Jack :
 
 - Exécute la méthode principale pour lancer une partie de Black Jack depuis le terminal. Elle doit fonctionner comme ceci :
 
-``` {.bash}
+```bash
 ruby lib/interface.rb
 
 Card? 'y' or 'yes' to get a new card

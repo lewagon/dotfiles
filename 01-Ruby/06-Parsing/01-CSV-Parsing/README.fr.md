@@ -17,7 +17,7 @@ s’il est inclus dans ton programme Ruby, te permet de manipuler
 facilement les dates. Un pack se charge au début de ton fichier Ruby
 avec :
 
-``` {.ruby}
+```ruby
 require "date"
 ```
 

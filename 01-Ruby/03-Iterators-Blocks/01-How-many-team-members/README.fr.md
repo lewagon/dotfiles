@@ -4,7 +4,7 @@ Utiliser l’une des méthodes intégrées de la classe `Array` pour déterminer
 
 Indice :
 
-``` {.ruby}
+```ruby
 array = [1, 2, 3]
 
 array.count

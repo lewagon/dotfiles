@@ -4,7 +4,7 @@ T’entraîner à utiliser `if/else` pour modifier le flow de ton code.
 
 Indice :
 
-``` {.ruby}
+```ruby
 if condition
  # execute if condition is truthy
 else

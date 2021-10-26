@@ -10,7 +10,7 @@ Exécute une première méthode `size_splitter` qui prend deux paramètres : un
 
 La méthode `size_splitter` doit retourner un array de deux arrays (les deux groupes définis ci-dessus) dont le contenu doit être trié **alphabétiquement**.
 
-``` {.ruby}
+```ruby
 words = %w(dog data ask my win two beer as)
 result = size_splitter(words, 3)
 
@@ -23,7 +23,7 @@ Dans l’exercice précédent, la règle arbitraire était fixée. Et si on voul
 
 Écris une méthode `block_splitter` de façon à ce que l’exemple suivant fonctionne :
 
-``` {.ruby}
+```ruby
 beatles = [ "John", "Paul", "Ringo", "George" ]
 result = block_splitter(beatles) { |beatle| beatle.start_with?("P") }
 
