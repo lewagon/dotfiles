@@ -30,7 +30,7 @@ Ouvre le fichier `lib/wagon_start.rb` dans ton éditeur de texte. C’est là qu
 
 Avant d’aller plus loin dans le dossier fullstack-challenges, on va commencer par travailler sur les lignes de commande que tu viens d’apprendre.
 
-REMARQUE : **Tu n’as pas le droit d’utiliser le Finder (ou ton explorateur de fichiers) !**
+NB : **Tu n’as pas le droit d’utiliser le Finder (ou ton explorateur de fichiers) !**
 
 ### Dossier tmp
 
