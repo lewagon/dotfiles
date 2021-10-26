@@ -38,7 +38,11 @@ rm -rf ~/.z/sh || true
 cp -r $MYDIR/z ~/.z
 
 # .taskrc install
-rm -rf ~/.irbrc
+rm -rf ~/.taskrc
+cp $MYDIR/taskrc ~/.taskrc
+
+# .bugwarriorrc install
+rm -rf ~/.taskrc
 cp $MYDIR/taskrc ~/.taskrc
 
 # iterm2 config (sensible for mac only)
