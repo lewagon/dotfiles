@@ -88,10 +88,10 @@ urgency.blocked.coefficient=0
 
 # Sync!!
 taskd.server=freecinc.com:53589
-taskd.key=\/home\/xavierosee\/.task\/freecinc_b3caf6ed.key.pem
-taskd.certificate=\/home\/xavierosee\/.task\/freecinc_b3caf6ed.cert.pem
-taskd.ca=\/home\/xavierosee\/.task\/freecinc_b3caf6ed.ca.pem
-taskd.credentials=FreeCinc\/freecinc_b3caf6ed\/15651f3a-1328-4a52-8b0d-7ca3cbb7a94d
+taskd.key=
+taskd.certificate=
+taskd.ca=
+taskd.credentials=
 
 # Custom Priorities
 urgency.blocking.coefficient=0
