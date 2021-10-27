@@ -9,7 +9,7 @@ Une ferme a deux types de **cultures** (riz et maïs).
 
 ![Cultures](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/crops.svg?sanitize=true)
 
-Réfléchis avec ton/ta buddy : de combien de classes as-tu besoin, et
+Réfléchis avec ton buddy : de combien de classes as-tu besoin, et
 comment les structurerais-tu ?
 
 **IMPORTANT :** Dans cet exercice, n’utilise pas `rake` pour coder tes
@@ -85,4 +85,4 @@ l’**encapsulation** ?
 Bravo ! Tu as pris le temps de laisser **le programme** te guider dans
 le codage de tes classes avant d’exécuter `rake`. C’est un aspect
 important de ton apprentissage pour gagner en autonomie en tant que
-développeur·se.
+développeur.

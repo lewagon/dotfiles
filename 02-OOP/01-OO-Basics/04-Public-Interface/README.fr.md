@@ -23,7 +23,7 @@ perméables à moins d’avoir besoin qu’ils soient perméables**.
 -   En savoir plus sur les exceptions personnalisées
 
 On va jouer avec la classe `BankAccount`, qui stocke des informations
-relatives à un compte bancaire et permet à un·e utilisateur·rice de
+relatives à un compte bancaire et permet à un utilisateur de
 réaliser des transactions.
 
 ## Spécifications
@@ -50,7 +50,7 @@ objets BankAccount **depuis le monde extérieur** :
 ### La méthode `to_s`
 
 Cette méthode signifie littéralement « to string » (transformer en
-string) et sert à donner des informations à un·e utilisateur·rice à
+string) et sert à donner des informations à un utilisateur à
 propos d’un objet. Avec une méthode `to_s` personnalisée, tu peux
 définir le comportement de ton choix, et tu verras ça souvent en Ruby.
 
@@ -61,7 +61,6 @@ implémentée, elle ressemblera à ça :
 account = BankAccount.new("John Lennon", "FR14-2004-1010-0505-0001-3M02-606", 200, "yoko")
 
 # le puts appellera la méthode `to_s` sur l'objet
-# the puts will call the `to_s` method on the object
 # =>  Owner: John Lennon - IBAN: FR14**************606 - Balance: 200 euros
 ```
 

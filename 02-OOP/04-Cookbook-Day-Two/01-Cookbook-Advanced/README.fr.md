@@ -23,7 +23,7 @@ cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
 ```
 
 Tu peux aussi te servir de la solution de la séance de livecode comme
-point de départ de l’exercice d’aujourd’hui (demande à ton/ta prof de le
+point de départ de l’exercice d’aujourd’hui (demande à ton prof de le
 partager dans Slack).
 
 Avant de commencer, exécute le code que tu as collé pour vérifier que
@@ -71,12 +71,12 @@ Importing "Strawberry slushie"...
 Pour cette nouvelle **action utilisateur** (et donc cette nouvelle
 **route**), on a besoin de :
 
-1.  demander à l’utilisateur·rice un mot-clé à rechercher
+1.  demander à l’utilisateur un mot-clé à rechercher
 2.  envoyer une requête HTTP au site Web de recettes avec le mot-clé
 3.  parser le document HTML pour extraire les 5 premières recettes
     suggérées et les stocker dans un Array
 4.  les afficher sous forme de liste indexée
-5.  demander à l’utilisateur·rice quelle recette il/elle veut importer
+5.  demander à l’utilisateur quelle recette il veut importer
     (demander un index)
 6.  l’ajouter au `Cookbook`
 
@@ -100,7 +100,7 @@ Conserve la page sur ton disque dur, car tu auras besoin d’exécuter des
 scripts Ruby dessus plusieurs centaines de fois pour tester ton code et
 il est beaucoup plus rapide d’ouvrir le fichier sur le disque que de
 demander au réseau d’appeler allrecipes à chaque fois (ce qui te
-vaudrait sans doute d’être blacklisté·e).
+vaudrait sans doute d’être blacklisté).
 
 ### Parser avec Nokogiri
 
@@ -182,7 +182,7 @@ Essaie d’exécuter ton Cookbook en ligne !
 
 Cette nouvelle propriété doit être :
 
--   demandée à l’utilisateur·rice lors de la création d’une nouvelle
+-   demandée à l’utilisateur lors de la création d’une nouvelle
     recette
 -   parsée depuis le Web lors de l’importation d’une nouvelle recette
 -   stockée dans le CSV
@@ -207,7 +207,7 @@ fonction pour marquer une recette comme réalisée :
 
 Cette nouvelle propriété doit également être :
 
--   demandée à l’utilisateur·rice lors de la création d’une nouvelle
+-   demandée à l’utilisateur lors de la création d’une nouvelle
     recette
 -   parsée depuis le Web lors de l’importation d’une nouvelle recette
 -   stockée dans le CSV

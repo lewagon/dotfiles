@@ -6,8 +6,8 @@ Un **setter** est une méthode qui **modifie** des
 informations sur une variable d’instance.
 
 Dans cet exercice, on va implémenter un distributeur simple (classe ruby
-`VendingMachine`) sur lequel un·e utilisateur·rice peut acheter des
-snacks à un prix donné. L’utilisateur·rice peut se rendre au
+`VendingMachine`) sur lequel un utilisateur peut acheter des
+snacks à un prix donné. L’utilisateur peut se rendre au
 distributeur, insérer de la monnaie, puis appuyer sur un bouton "Buy"
 (Acheter).
 
@@ -47,7 +47,7 @@ qu’il faut ajouter au fichier `lib/vending_machine.rb` !
 
 ### Tu peux enfin exécuter `rake`
 
-Lorsque tu es satisfait·e de la façon dont les deux scénarios
+Lorsque tu es satisfait de la façon dont les deux scénarios
 fonctionnent, vérifie que ton code est correct avec :
 
 ```bash

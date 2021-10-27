@@ -28,26 +28,26 @@ Continue d’ajouter des fonctionnalités à ton programme de livraison
 d’aliments !
 
 Voici toutes les **actions utilisateur** de l’application :
-[ ] En tant qu’employé·e, je peux me connecter
+[ ] En tant qu’employé, je peux me connecter
 [X] En tant que responsable, je peux ajouter un nouveau repas
 [X] En tant que responsable, je peux faire une liste de tous les repas
-[X] En tant que responsable, je peux ajouter un·e nouveau/elle client·e
-[X] En tant que responsable, je peux faire une liste de tou·te·s les client·e·s
+[X] En tant que responsable, je peux ajouter un nouveau client
+[X] En tant que responsable, je peux faire une liste de tous les clients
 [ ] En tant que responsable, je peux ajouter une nouvelle commande
 [ ] En tant que responsable, je peux faire une liste de toutes les commandes non livrées
-[ ] En tant que livreur·se, je peux marquer l’une de mes commandes comme livrée
-[ ] En tant que livreur·se, je peux faire une liste de toutes mes commandes non livrées
+[ ] En tant que livreur, je peux marquer l’une de mes commandes comme livrée
+[ ] En tant que livreur, je peux faire une liste de toutes mes commandes non livrées
 
 Il y a donc deux nouveaux composants :
-- **Employé·e·s**
+- **Employés**
 - **Commandes**
 
 ## 1 - `Employee`
 
 ### 1.1 - Modèle `Employee`
 
-Le restaurant a deux types d’employé·e·s, les **responsables** et les
-**livreurs·ses**. Les deux ont un id, un nom d’utilisateur et un mot de
+Le restaurant a deux types d’employés, les **responsables** et les
+**livreurs**. Les deux ont un id, un nom d’utilisateur et un mot de
 passe, mais ils ont différents privilèges liés à leur rôle.
 
 Écris du code pour implémenter cela et teste ton modèle dans `irb`.
@@ -58,16 +58,16 @@ Tout est en vert ? Parfait ! Le moment est venu de faire `git add`,
 
 ### 1.2 - Repository `Employee`
 
-Maintenant que tu as un modèle pour représenter les employé·e·s, tu as
+Maintenant que tu as un modèle pour représenter les employés, tu as
 besoin d’un repository pour les stocker.
 
 Ce repository s’initialise avec un chemin de fichier CSV. Il fonctionne
-en **lecture seule**, car seul·e l’administrateur·rice de l’app peut
+en **lecture seule**, car seul l’administrateur de l’app peut
 créer des comptes (inutile de créer une méthode `add`). L’interface de
 ce repository permet de :
-- récupérer tou·te·s les livreurs·ses du repository
-- trouver un·e employé·e spécifique grâce à son id
-- trouver un·e employé·e spécifique grâce à son nom d’utilisateur.
+- récupérer tous les livreurs du repository
+- trouver un employé spécifique grâce à son id
+- trouver un employé spécifique grâce à son nom d’utilisateur.
 
 Écris du code pour implémenter cela et teste ton repository dans `irb`.
 Tu dois créer ton propre fichier CSV `employees.csv` dans le dossier
@@ -82,12 +82,12 @@ On va maintenant implémenter une logique de **connexion** dans
 l’application.
 
 On veut qu’il y ait deux menus dans le routeur : un contenant les tâches
-des responsables, l’autre contenant les tâches des livreurs·ses. On veut
-aussi router le choix de l’employé·e vers l’action correspondante du
+des responsables, l’autre contenant les tâches des livreurs. On veut
+aussi router le choix de l’employé vers l’action correspondante du
 contrôleur correspondant.
 
 Pour cela, on va introduire la notion de **session**. Au niveau du
-routeur, on va stocker l’utilisateur·rice connecté·e à une session.
+routeur, on va stocker l’utilisateur connecté à une session.
 
 La séquence de connexion doit ressembler à ceci :
 
@@ -127,7 +127,7 @@ Le restaurant prend des commandes ; tu dois donc trouver une façon de
 représenter ce qu’est une commande.
 
 Une commande est ce qui lie tout ensemble. Chaque commande a une id, un
-repas, un·e client·e, un·e employé·e et un booléen `delivered` pour
+repas, un client, un employé et un booléen `delivered` pour
 indiquer si la commande a été livrée ou non.
 
 Écris du code pour implémenter cela et teste ton modèle dans `irb`.
@@ -149,8 +149,8 @@ de ce repository permet de :
 
 Puisqu’une commande a des **instances** `meal`, `customer` et
 `employee`, on doit également initialiser notre repository de commandes
-avec un repository de repas, un repository de client·e·s et un
-repository d’employé·e·s.
+avec un repository de repas, un repository de clients et un
+repository d’employés.
 
 Écris du code pour implémenter cela et teste ton repository dans `irb`.
 Tu dois créer ton propre fichier CSV `orders.csv` dans le dossier
@@ -178,8 +178,8 @@ On va passer au contrôleur. Voici les **actions utilisateur** qu’on veut
 implémenter :
 - En tant que responsable, je peux ajouter une nouvelle commande
 - En tant que responsable, je peux faire la liste de toutes les commandes non livrées
-- En tant que livreur·se, je peux marquer l’une de mes commandes comme livrée
-- En tant que livreur·se, je peux faire la liste de toutes mes commandes non livrées
+- En tant que livreur, je peux marquer l’une de mes commandes comme livrée
+- En tant que livreur, je peux faire la liste de toutes mes commandes non livrées
 
 Souviens-toi que le rôle du contrôleur est de déléguer le travail aux
 autres composants de l’app (modèle, repository et vues) !
@@ -218,7 +218,7 @@ end
 
 **Important** : Dans la mesure où les **id** ne commencent pas forcément
 à 1 et ne se suivent pas nécessairement, on va plutôt demander des
-**index** à l’utilisateur·rice pour améliorer l’expérience.
+**index** à l’utilisateur pour améliorer l’expérience.
 
 Tout est en vert ? Parfait ! Le moment est venu de faire `git add`,
 `commit` et `push`.
@@ -227,7 +227,7 @@ Tout est en vert ? Parfait ! Le moment est venu de faire `git add`,
 
 ### 3.1 - Implémenter les actions `edit` et `destroy` pour les commandes
 
-Dans l’application, un·e responsable ne peut pas modifier ou supprimer
+Dans l’application, un responsable ne peut pas modifier ou supprimer
 une commande existante.
 
 Implémente ces actions utilisateurs complémentaires :
@@ -236,9 +236,9 @@ Implémente ces actions utilisateurs complémentaires :
 
 C’est bon ? Le moment est venu de faire `git add`, `commit` et `push`.
 
-### 3.2 - Masquer le mot de passe de l’utilisateur·rice
+### 3.2 - Masquer le mot de passe de l’utilisateur
 
-Pour le moment, le mot de passe de l’utilisateur·rice est stocké
+Pour le moment, le mot de passe de l’utilisateur est stocké
 directement dans le CSV et visible de tous. Est-ce une bonne idée ? Que
 pourrait-on faire à la place ?
 

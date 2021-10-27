@@ -7,7 +7,7 @@ premiers animaux !
 
 ![Animaux](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/crops.svg?sanitize=true)
 
-Réfléchis avec ton/ta buddy : de combien de classes as-tu besoin, et
+Réfléchis avec ton buddy : de combien de classes as-tu besoin, et
 comment les structurerais-tu ?
 
 N’exécute pas `rake` ! Attends la toute fin de l’exercice, suis les

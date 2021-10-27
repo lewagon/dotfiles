@@ -11,7 +11,7 @@ appeler des méthodes d’instance et imprimer les résultats sur le
 terminal). Appelle ce fichier `interface.rb`.
 
 Choisis ensuite un objet du monde réel que tu aimerais modéliser. Des
-restaurants, des véhicules, des utilisateurs·rices, des jeux, des
+restaurants, des véhicules, des utilisateurs, des jeux, des
 recettes… *À toi de choisir !*
 
 Une fois que tu as fait ton choix, crée un fichier dans le répertoire
@@ -37,8 +37,8 @@ différents (avec `.new`).
 
 ### Quelles sont les propriétés internes de tes objets ?
 
-Quelles sont les caractéristiques d’un restaurant ? D’un·e
-utilisateur·rice ? D’un jeu ? Sélectionne quelques caractéristiques de
+Quelles sont les caractéristiques d’un restaurant ? D’un
+utilisateur ? D’un jeu ? Sélectionne quelques caractéristiques de
 ta classe que tu souhaites modéliser. Elles seront tes **variables
 d’instance**, parfois appelées **propriétés**.
 

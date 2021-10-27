@@ -15,7 +15,7 @@ Il existe 3 contextes :
 
 ### Trouve la combinaison gagnante
 
-* Examine le code suivant, qui contient un module, une classe et des méthodes nestés. Implémente le retour de chaque méthode, de façon à obtenir la combinaison gagnante ! Lorsque tu es sûr·e de l’avoir, teste-la pour vérifier !
+* Examine le code suivant, qui contient un module, une classe et des méthodes nestés. Implémente le retour de chaque méthode, de façon à obtenir la combinaison gagnante ! Lorsque tu es sûr de l’avoir, teste-la pour vérifier !
 
 ### Chaîner avec `self`
 

@@ -32,7 +32,7 @@ On reviendra sur le pattern MVC avec un récapitulatif en direct (pas de
 diapos, mais une simple démo du/de la prof), puis tu pourras terminer
 ton application de recettes commencée vendredi. Si tu es rapide et que
 tu finis tôt, tu pourras essayer d’adapter ton gestionnaire de recettes
-à une application Web avec la gem Sinatra. (Demande à un·e prof de te
+à une application Web avec la gem Sinatra. (Demande à un prof de te
 présenter brièvement Sinatra avant de commencer et jette un œil à ce
 [tutoriel](https://github.com/lewagon/sinatra-101))
 

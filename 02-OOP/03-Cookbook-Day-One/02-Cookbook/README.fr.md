@@ -13,11 +13,11 @@ utilisé dans Rails :
 
 -   Modèle : quel est l’objet de base que tu souhaites manipuler ?
 -   Vue : c’est l’endroit où on **affiche les informations** pour
-    l’utilisateur·rice (`puts`) et où on **demande des informations** à
-    l’utilisateur·rice (`gets`)
+    l’utilisateur (`puts`) et où on **demande des informations** à
+    l’utilisateur (`gets`)
 -   Contrôleur : il récupérera et stockera les données du Modèle, et
     indiquera à la Vue si elle doit montrer des données à
-    l’utilisateur·rice ou en obtenir
+    l’utilisateur ou en obtenir
 
 Avec une feuille et un crayon, commence par identifier tes composants et
 leurs responsabilités.
@@ -41,7 +41,7 @@ le dossier `lib` de l’application.
 ### Repository (dossier)
 
 Tu as maintenant besoin d’une structure pour les recettes de
-l’utilisateur·rice. On n’a pas encore de vraie base de données, alors on
+l’utilisateur. On n’a pas encore de vraie base de données, alors on
 va utiliser une classe se comportant comme telle (comme vu pendant le
 cours). Quand un programme Ruby se ferme, on perd toutes les données
 stockées dans des variables. Si on veut récupérer ces données la
@@ -51,7 +51,7 @@ un fichier CSV ! Le fichier est vide pour le moment ; tu ajouteras tes
 propres recettes plus tard via l’application.
 
 Dans le cadre de cet exercice, le repository stocke les recettes
-ajoutées par l’utilisateur·rice. En d’autres termes, il **est** le
+ajoutées par l’utilisateur. En d’autres termes, il **est** le
 **livre de recettes**. Nomme la classe `Cookbook` pour écrire du code
 explicite et qui a du sens, mais garde à l’esprit qu’il s’agit du
 **dossier** du diagramme de ce matin !
@@ -86,7 +86,7 @@ bien attention à ce que ces mots n’apparaissent nulle part ailleurs !
 
 ### Tout assembler
 
-Une fois que tu es prêt·e, teste ton programme avec :
+Une fois que tu es prêt, teste ton programme avec :
 
 ```bash
 ruby lib/app.rb
