@@ -1,7 +1,7 @@
 [general]
-targets = pro_github
+targets = pro_github, pro_trello
 annotation_links = True
-annotation_comments = False
+annotation_comments = True
 annotation_length = 160
 inline_links = False
 log.level = DEBUG
@@ -11,14 +11,26 @@ legacy_matching = False
 
 [pro_github]
 service = github
-github.username = <ORG>
+github.username = <ORG NAME>
 github.login = xavierosee
-github.password = <TOKEN>
+github.password = <API KEY>
 github.query = is:open is:issue assignee:xavierosee
 github.include_user_issues = False
 github.include_user_repos = False
 github.import_labels_as_tags = True
-github.label_template = {{label|replace("component__", "")|replace("priority__high", "")|replace("priority__medium", "")|replace("priority__low", "")|replace("type__", "")|replace("service__", "")|replace("task","") | trim}}
+github.label_template = {{label|replace("component__", "")|replace("priority__high", "")|replace("priority__medium",    "")|replace("priority__low", "")|replace("type__", "")|replace("service__", "")|replace("task","") | trim}}
 github.default_priority = H
 github.project_template = {{project|upper}}
 github.description_template = {{githuburl}} {{githubtitle}}
+
+[pro_trello]
+service = trello
+trello.api_key = <API KEY>
+trello.token = <API TOKEN>
+trello.include_boards = <BOARD ID>
+trello.include_lists = To Do, Doing, Pending, IN DEV
+trello.only_if_assigned = <USERNAME>
+trello.import_labels_as_tags = True
+trello.description_template = {{trellocard}}
+trello.project_template =
+trello.label_template = trello_{{trellolist|lower|replace(' ', '_')}}

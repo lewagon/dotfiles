@@ -64,7 +64,7 @@ report.personal.sort=urgency-
 report.today.description=Tasks for Today
 report.today.columns=id,project,priority,start.active,urgency,due,description.desc,tags
 report.today.labels=ID,Proj,Pri,A,Urg,Due,Description,Tags
-report.today.filter=status:pending -review and ( ( proj: and ( due.before:tomorrow or +respond or +today or +next or +inprogress) ) or +daytime or ( proj:moz and +today ) )
+report.today.filter=status:pending -review and ( due.before:tomorrow or +respond or +today or +next or +inprogress) or +daytime
 report.today.sort=urgency-
 
 # Ongoing tasks
@@ -141,6 +141,20 @@ uda.githubtype.type=string
 uda.githubtype.label=Github Type
 uda.githubnamespace.type=string
 uda.githubnamespace.label=Github Namespace
+uda.trelloboard.label=Board Name
+uda.trellocard.label=Card Name
+uda.trellocardid.label=Card ID
+uda.trellolist.label=List name
+uda.trelloshortlink.label=Short Link
+uda.trelloshorturl.label=Short URL
+uda.trellourl.label=Full URL
+uda.trelloboard.type=string
+uda.trellocard.type=string
+uda.trellocardid.type=string
+uda.trellolist.type=string
+uda.trelloshortlink.type=string
+uda.trelloshorturl.type=string
+uda.trellourl.type=string
 # END Bugwarrior UDAs
 
 # turn off confirmations
@@ -162,4 +176,5 @@ context.nofun=project.not:fun -nsfw -fun
 context.fun=project:fun or +fun or +nsfw
 context.srs=project.not:fun project.not:social -nsfw -fun
 context.conference=-nsfw -xavier -INBOX project.not:xavier
-context.work=project.not:xavier or +Trello
+context.work=project.not:xavier project.not:BLOG
+context=work
