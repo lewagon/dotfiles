@@ -1,12 +1,12 @@
-Contexte et objectifs
+## Contexte et objectifs
 
-Combinons le pouvoir des enumerables (`#each`, `#map`, etc.) et des blocs (et `yield`). On va essayer de créer une méthode de **séparation** (splitter), qui prendra un array et le divisera en deux groupes en fonction d’une règle arbitraire. On pourrait, par exemple, diviser un groupe de personnes en fonction de leur âge.
+Combinons le pouvoir des énumerables (`#each`, `#map`, etc.) et des blocs (et `yield`). On va essayer de créer une méthode de **séparation** (splitter), qui prendra un array et le divisera en deux groupes en fonction d’une règle arbitraire. On pourrait, par exemple, diviser un groupe de personnes en fonction de leur âge.
 
-Spécifications
+## Spécifications
 
 ### Séparation par taille (Size Splitter)
 
-Exécute une première méthode `size_splitter` qui prend deux paramètres : un array et un integer (la taille ou `size`). On partira du principe que l’array contient uniquement des mots, par ex. des `Strings`, et que la règle arbitraire consiste à former deux groupes : le premier avec des mots de la taille indiquée (deuxième paramètre de la méthode), et le second avec tous les autres mots.
+Implémente une première méthode `size_splitter` qui prend deux paramètres : un array et un integer (la taille ou `size`). On partira du principe que l’array contient uniquement des mots de type `String`, et que la règle arbitraire consiste à former deux groupes : le premier avec des mots de la taille indiquée (deuxième paramètre de la méthode), et le second avec tous les autres mots.
 
 La méthode `size_splitter` doit retourner un array de deux arrays (les deux groupes définis ci-dessus) dont le contenu doit être trié **alphabétiquement**.
 

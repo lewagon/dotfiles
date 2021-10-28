@@ -1,18 +1,17 @@
 ## Contexte et objectifs
 
 À première vue, les blocs et `yield` peuvent être déroutants… Mais tout est une question de pratique. Voici les objectifs :
-
-- Exécuter des méthodes de base utilisant `yield` pour en comprendre le mécanisme.
+- Implémenter des méthodes de base utilisant `yield` pour en comprendre le mécanisme.
 - Apprendre la syntaxe à utiliser pour appeler une méthode avec un bloc.
 - Comprendre ce qui se passe quand tu passes un paramètre au bloc.
 
-Dans le cadre de cet exercice, tu es sur le point d’ouvrir un **restaurant de burgers**. Tu dois donc exécuter des méthodes pour préparer des burgers à servir à tes premiers clients, de la cuisine au comptoir.
+Dans le cadre de cet exercice, tu es sur le point d’ouvrir un **restaurant de burgers**. Tu dois donc mettre en place des méthodes pour préparer des burgers à servir à tes premiers clients, de la cuisine au comptoir.
 
 ## Spécifications
 
 ### Étape 1 : Le burger basique
 
-On va commencer par coder une méthode `burger` simple qui prend 3 paramètres (steak ou patty, sauce et garniture ou topping) et retourne le burger sous la forme d’un array de strings. Exemple :
+On va commencer par coder une méthode `burger` simple qui prend 3 paramètres, la base (patty), la sauce (sauce) et la garniture (topping), et retourne le burger sous la forme d’un array de strings. Par exemple :
 
 ```ruby
 burger("steak", "ketchup", "onions")
@@ -25,7 +24,7 @@ Les clients peuvent composer leur burger en choisissant un élément de chaque 
 
 ### Étape 2 : Burger à la demande
 
-La méthode `burger` peut uniquement être appelée avec des arguments qui figurent dans les listes ci-dessus. Mais lorsqu’ils commandent, les clients ont souvent des demandes spéciales concernant leur **steak**, comme la cuisson, la taille de la portion ou une alternative.
+La méthode `burger` peut uniquement être appelée avec des arguments qui figurent dans les listes ci-dessus. Mais lorsqu’ils commandent, les clients ont souvent des demandes spéciales concernant leur **base**, comme la cuisson, la taille de la portion ou une alternative.
 
 Notre méthode n’est pas en mesure de recevoir ce genre de demandes spéciales pour le moment ; on va donc la retravailler.
 
@@ -41,7 +40,7 @@ burger("steak", "ketchup", "onions") do |patty|
 end
 ```
 
-Génial ! On a trouvé un moyen de transformer notre steak sans modifier l’argument. L’appel ci-dessus devrait donc retourner :
+Génial ! On a trouvé un moyen de transformer la base de notre burger sans modifier l’argument. L’appel ci-dessus devrait donc retourner :
 
 ```ruby
 # => ["bread", "grilled steak", "ketchup", "onions", "bread"]
@@ -49,32 +48,28 @@ Génial ! On a trouvé un moyen de transformer notre steak sans modifier l’ar
 
 On va modifier notre méthode pour que cela fonctionne !
 
-### De retour en cuisine
+#### De retour en cuisine
 
-`yield` est le mot-clé dont tu as besoin pour exécuter le bloc. Il intervient dans ta méthode pour appliquer les instructions des clients concernant le steak.
+`yield` est le mot-clé dont tu as besoin pour exécuter le bloc. Il intervient dans ta méthode pour appliquer les instructions des clients concernant la base de leur burger.
 
 ![Note](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/burger-restaurant-yield.svg?sanitize=true)
 
 Améliore la méthode `burger` pour accueillir un bloc :
-
 - Place `yield` là où tu veux appeler le bloc
-- Le bloc transformera uniquement `patty` (le steak)
+- Le bloc transformera uniquement `patty` (la base)
 
-La méthode doit fonctionner **avec ou sans bloc**. Utilise la méthode [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) pour déterminer si un bloc est prêt à être utilisé.
+La méthode doit fonctionner **avec ou sans bloc**. Utilise la méthode [`block_given?`](https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-block_given-3F) pour déterminer si un bloc a été passé à la méthode `burger` lors de son appel.
 
 ### Étape 3 : Préparation des burgers
 
 Les clients affluent, ils veulent tous goûter à tes délicieux burgers.
 Ouvre le fichier `interface.rb`, qui contient une liste de commandes à honorer. Écris toutes les instructions pour la préparation des burgers. Tu peux ensuite afficher les burgers avec `puts` or `p`.
 
-### Petit coup de pouce pour ton premier bloc
+#### Petit coup de pouce pour ton premier bloc
 
 L’un de tes clients a demandé une plus grande portion de poisson. Transforme ton burger classique en un plus grand burger pour lui et écris un bloc pour passer la string en majuscules :
-
 1.  Appelle la méthode `burger` avec "fish", "mayo" et "salad", **tout en minuscules**, et stocke le résultat dans la variable `bigger_burger`.
-
 2.  Ajoute un bloc (pour la note) avec les instructions spéciales :
-
 - Il prend une string comme argument
 - Il transforme la string en majuscules
 
