@@ -1,17 +1,17 @@
 ## Contexte et objectifs
 
-- Apprendre à « require » des scripts externes et à appeler des méthodes à partir de ces scripts
-- **Maîtriser** les concepts de [variables](https://fr.wikipedia.org/wiki/Variable_(informatique)), d’assignation de variables, de définition de méthodes et d’appel de méthodes.
+- Apprendre à `require` des scripts externes et à appeler des méthodes à partir de ces scripts
+- **Maîtriser** les concepts de [variables](https://fr.wikipedia.org/wiki/Variable_(informatique)), d'affectation de variables, de définition de méthodes et d’appel de méthodes.
 
 ## Spécifications
 
-### Calcule l’âge
+### Calcul de l’âge
 
 - Exécute la méthode `age_in_days` définie dans le fichier `lib/age_in_days.rb`. Cette méthode prend 3 arguments (`day`, `month` et `year`) et doit retourner un `Integer` qui correspond à ton âge en jours (c’est-à-dire le nombre de jours que tu as vécu sur la Terre).
 
 ### Programme interactif
 
-- Une fois que ta méthode `age_in_days` est correcte, on veut l’utiliser avec le programme `lib/interface.rb`, qui exécute un outil de ligne de commande. Pour lancer ce programme, il te suffit d’exécuter la commande suivante dans ton terminal :
+- Une fois que ta méthode `age_in_days` est correcte, on veut l’appeler dans le programme `lib/interface.rb`, qui exécute un outil en ligne de commande. Pour lancer ce programme, il te suffit d’exécuter la commande suivante dans ton terminal :
 
 ```bash
 ruby lib/interface.rb
@@ -25,11 +25,11 @@ Le programme indique que tu as `0 years old`. Tu dois modifier le code de façon
 
 - Tu peux choisir d’utiliser la [classe Date](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html), que l’on charge dans notre fichier en utilisant la ligne `require 'date'`
 - Utilise la console interactive Ruby (IRB) pour tester ta solution.
-- Comme tu peux le voir dans le code donné, Ruby utilise la méthode `puts` pour imprimer des valeurs (te montrer les choses !) sur le terminal.
+- Comme tu peux le voir dans le code donné, Ruby utilise la méthode `puts` pour afficher des valeurs (te montrer des choses !) sur le terminal.
 
 ## Enseignements clés
 
-Les questions qui suivent pourront sembler évidentes à la plupart d’entre vous, **mais assure-toi de pouvoir y répondre précisément**. Les variables et les méthodes sont les bases de la programmation Ruby, et tu dois avoir une connaissance approfondie de ces concepts.
+Les questions qui suivent pourront sembler évidentes à la plupart d’entre vous, **mais assure-toi de pouvoir y répondre précisément**. Les variables et les méthodes sont les bases de la programmation en Ruby, et tu dois avoir une connaissance approfondie de ces concepts.
 
 ### À propos des variables
 

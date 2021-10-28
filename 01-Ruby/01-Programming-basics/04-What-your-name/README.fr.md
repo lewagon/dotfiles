@@ -2,13 +2,13 @@
 
 - Vérifier encore une fois ta connaissance des méthodes et des variables.
 - Apprendre à utiliser l’interpolation de string.
-- Comprendre la différence entre les **single** et les **double** quotes (guillemets simples et doubles).
+- Comprendre la différence entre les guillemets simples (**single** quotes `'`) et les guillemets doubles (**double** quotes `"`).
 
 ## Spécifications
 
-### Forme le nom
+### Calcul du nom
 
-- Exécute la méthode `compute_name` définie dans le fichier `lib/compute_name.rb`. À partir de `first_name`, `middle_name` et `last_name`, elle doit retourner le nom complet de la personne.
+- Implémente la méthode `compute_name` définie dans le fichier `lib/compute_name.rb`. À partir de `first_name`, `middle_name` et `last_name`, elle doit retourner le nom complet de la personne.
 - **contrainte** : Tu dois utiliser l’**interpolation de string** avec `#{}` pour former ce nom complet.
 
 ### Programme interactif
@@ -28,25 +28,25 @@ En supposant que tu as saisi "Boris", puis "Alexandre" et enfin "Papillard", le 
 
 Pose-toi encore une fois ces questions et assure-toi d’être capable de répondre à toutes :
 
-### à propos des variables
+### À propos des variables
 
 - Quelles sont les variables utilisées dans ton code ?
-- Où assigne-t-on des valeurs à ces variables et où les utilise-t-on ?
-- Quel est le scope (portée) d’une variable ?
+- Où affecte-t-on des valeurs à ces variables et où les utilise-t-on ?
+- Quel est la portée (scope) d’une variable ?
 
-### à propos des méthodes
+### À propos des méthodes
 
 - Quelle est la méthode utilisée dans ton programme ? Où est-elle définie ?
 - Où appelles-tu cette méthode et avec quels arguments ?
-- Quel est le flow de ton programme lorsque tu essaies de le lire, ligne par ligne ?
+- Quel est le flux d'éxecution (execution flow) de ton programme lorsque tu essaies de le lire, ligne par ligne ?
 
-### à propos des strings
+### À propos des strings
 
 - Qu’est-ce que l’interpolation de string ? Quelle est la syntaxe à utiliser pour "insérer" une expression Ruby dans une string ?
 - Quelle est la différence entre les guillemets simples (single quotes `'`) et les guillemets doubles (double quotes) `""` lorsqu’on utilise l’interpolation de string ?
 
 ## Suggestions et ressources complémentaires
 
-- Pour obtenir une réponse/des données de l’utilisateur depuis le terminal, tu dois utiliser la méthode [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). Tu auras également besoin de [chomp](https://ruby-doc.org/core-2.5.3/String.html#method-i-chomp) la string obtenue
+- Pour obtenir une réponse ou des données de l’utilisateur depuis le terminal, tu dois utiliser la méthode [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). Tu auras également besoin de [chomp](https://ruby-doc.org/core-2.5.3/String.html#method-i-chomp) la string obtenue
 - Pour imprimer une question sur le terminal, tu dois utiliser la méthode [puts](http://www.ruby-doc.org/core-2.5.3/IO.html#method-i-puts)
 

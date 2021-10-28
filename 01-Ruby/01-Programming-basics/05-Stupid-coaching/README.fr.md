@@ -2,7 +2,7 @@
 
 L’exercice qui suit est un peu plus compliqué, car tu vas devoir utiliser des notions que l’on n’a pas encore abordées (conditions et boucles). Pas de panique, **on verra ces concepts demain**. Essaie de procéder étape par étape et demande-toi ce que tu cherches à faire avec ton programme avant de commencer à coder.
 
-Dans cet exercice, on va créer ton coach personnel.
+Dans cet exercice, on va créer ton propre coach personnel.
 Malheureusement, ton coach est un peu stupide et uniquement capable de se comporter de la façon suivante :
 
 1.  Si tu te contentes de lui **dire** au lieu de lui **demander** quelque chose (exemple : `"I met a girl last night"`), ton coach répondra simplement `"I don’t care, get dressed and go to work!"`
@@ -12,66 +12,41 @@ Malheureusement, ton coach est un peu stupide et uniquement capable de se compor
 Comparons le **monde réel** et le **monde du code**.
 
 <table class="table">
- <thead>
- <tr>
- <th>
-Monde réel
-</th>
- <th>
-Monde du code
-</th>
- </tr>
- </thead>
- <tbody>
- <tr>
- <td>
-Réveil
-</td>
- <td>
-Exécuter <code>ruby lib/interface.rb</code> dans le terminal
-</td>
- </tr>
- <tr>
- <td>
-Parler à ton coach
-</td>
- <td>
-Écrire une string dans le terminal et appuyer sur Entrée
-</td>
- </tr>
- <tr>
- <td>
-Faire parler ton coach
-</td>
- <td>
-Lire la réponse de ton coach imprimée sur le terminal avec <code>puts</code>
-</td>
- </tr>
- <tr>
- <td>
-Poser une question
-</td>
- <td>
-Écrire une phrase se terminant par <code>?</code> et appuyer sur Entrée
-</td>
- </tr>
- <tr>
- <td>
-Te débarrasser de ton coach
-</td>
- <td>
-Saisir le <code>"I am going to work right now!"</code>, appuyer sur Entrée. Le programme doit se fermer.
-</td>
- </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th>Monde réel</th>
+      <th>Monde du code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Réveil</td>
+      <td>Exécuter <code>ruby lib/interface.rb</code> dans le terminal</td>
+    </tr>
+    <tr>
+      <td>Parler à ton coach</td>
+      <td>Écrire une string dans le terminal et appuyer sur Entrée</td>
+    </tr>
+    <tr>
+      <td>Faire parler ton coach</td>
+      <td>Lire la réponse de ton coach imprimée sur le terminal avec <code>puts</code></td>
+    </tr>
+    <tr>
+      <td>Poser une question</td>
+      <td>Écrire une phrase se terminant par <code>?</code> et appuyer sur Entrée</td>
+    </tr>
+    <tr>
+      <td>Te débarrasser de ton coach</td>
+      <td>Saisir le <code>"I am going to work right now!"</code>, appuyer sur Entrée. Le programme doit se fermer.</td>
+    </tr>
+  </tbody>
 </table>
 
 
 Les objectifs de cet exercice sont les suivants :
-
-- Comprendre le **flow** d’un programme et apprendre à "lire" dans ton code, ligne par ligne
+- Comprendre le flux d'éxecution (**execution flow**) d’un programme et apprendre à « lire » dans ton code, ligne par ligne
 - Découvrir les **conditions**
-- Découvrir les structures de code qui permettent de modifier le flow de ton programme : `if/unless..else..end`, `while/until..end`, etc. Ce sont des [structures de contrôle](https://en.wikipedia.org/wiki/Control_flow)
+- Découvrir les structures de code qui permettent de modifier le flux d'exécution de ton programme : `if/unless..else..end`, `while/until..end`, etc. Ce sont des [structures de contrôle](https://en.wikipedia.org/wiki/Control_flow)
 
 ## Spécifications
 
@@ -83,7 +58,7 @@ Nous allons maintenant créer une version améliorée de ton coach avec la méth
 
 ### Programme interactif
 
-- Écris le code qui te permettra d’interagir avec ton coach par l’intermédiaire du terminal
+- Écris le code qui te permettra d’interagir avec ton coach par l’intermédiaire du terminal.
 - **contrainte** : Ce programme doit s’exécuter en **boucle**. Ton coach doit répondre à ton message et attendre le suivant jusqu’à ce que tu décides de t’en débarrasser. Utilise `while..end` ou `until..end` pour cela.
 
 Si tu te retrouves coincé dans une **boucle infinie**, appuie simplement sur `Ctrl` + `C` ! Le programme arrêtera de s’exécuter.
