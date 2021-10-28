@@ -23,7 +23,7 @@ Le programme indique que tu as `0 years old`. Tu dois modifier le code de façon
 
 ## Suggestions et ressources complémentaires
 
-- Tu peux choisir d’utiliser la [classe Date](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html), que l’on charge dans notre fichier en utilisant la ligne `require 'date'`
+- Tu peux choisir d’utiliser la [classe Date](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html), que l’on charge dans notre fichier en utilisant la ligne `require "date"`
 - Utilise la console interactive Ruby (IRB) pour tester ta solution.
 - Comme tu peux le voir dans le code donné, Ruby utilise la méthode `puts` pour afficher des valeurs (te montrer des choses !) sur le terminal.
 
