@@ -4,14 +4,14 @@ Emails are the lifeblood of any SaaS (software as a service) business, it is sup
 
 On most websites, they are the keys to create an account. If the email is misspelled, the user won't be able to retrieve his password. Also, as a marketer's point of view, you need to communicate with your users and maintain your contact database a reliable dataset of valid emails.
 
-
 ## Story
+
 In this challenge, let's assume you are launching an application in a few weeks. You will notify everyone with a great emailing campaign as soon as your website is online! In the meantime, you prepared a landing page to collect visitors' emails.
 
 ![Scenario](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-scenario.svg?sanitize=true)
 
-
 ## Specs
+
 ### Collect valid emails
 
 ![Collect valid emails](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step1.svg?sanitize=true)

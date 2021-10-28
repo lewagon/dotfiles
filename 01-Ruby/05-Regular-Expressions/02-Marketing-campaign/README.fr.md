@@ -1,12 +1,12 @@
 ## Contexte et objectifs
 
-Les e-mails constituent la pierre angulaire de n’importe quelle entreprise de SaaS (Software-as-a-Service) et il est impératif de savoir comment les manipuler du point de vue de la programmation.
+Les e-mails constituent la pierre angulaire de n’importe quelle entreprise de SaaS (Software-as-a-Service, logiciel en tant que service) et il est impératif de savoir comment les manipuler du point de vue de la programmation.
 
-Sur la plupart des sites Web, une adresse e-mail est la clé pour créer un compte. Si elle est mal orthographiée, l’utilisateur ne pourra pas récupérer son mot de passe. Les professionnels du marketing, quant à eux, ont besoin de communiquer avec leurs utilisateurs et de faire en sorte que leur base de données de coordonnées reste un ensemble fiable d’adresses e-mail valides.
+Sur la plupart des sites web, une adresse e-mail est la clé pour créer un compte. Si elle est mal orthographiée, l’utilisateur ne pourra pas récupérer son mot de passe. Les professionnels du marketing, quant à eux, ont besoin de communiquer avec leurs utilisateurs et de faire en sorte que leur base de données de coordonnées reste un ensemble fiable d’adresses e-mail valides.
 
 ## Le cadre
 
-Supposons dans cet exercice que tu dois lancer une application dans quelques semaines. Tu informeras tout le monde de la mise en ligne de ton site Web avec une grande campagne d’e-mailing. En attendant, tu as préparé une landing page pour collecter les adresses e-mail des visiteurs.
+Supposons dans cet exercice que tu doives lancer une application dans quelques semaines. Tu informeras tout le monde de sa mise en ligne avec une grande campagne d’envoi d'emails. En attendant, tu as préparé une landing page pour collecter les adresses e-mail des visiteurs.
 
 ![Scénario](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-scenario.svg?sanitize=true)
 
@@ -16,6 +16,7 @@ Supposons dans cet exercice que tu dois lancer une application dans quelques sem
 
 ![Collecter des adresses e-mail valides](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step1.svg?sanitize=true)
 
+<!-- TODO(dmilon) HERE -->
 Ta landing page est prête. Tu veux t’assurer que les visiteurs fournissent une adresse e-mail valide.
 
 Écris la méthode `valid?` qui retourne le bon booléen en fonction de la validité de l’adresse e-mail :
