@@ -2,15 +2,15 @@
 
 La [classe `Array`](http://www.ruby-doc.org/core-2.5.3/Array.html) est l’une des deux structures principales utilisées pour stocker et accéder à des données en Ruby. (L’autre est [Hash](http://www.ruby-doc.org/core-2.5.3/Hash.html), que l’on verra demain.)
 
-Un array est ordonné, si bien que chaque élément est accessible par son **index**. Cet exercice t’aidera
-à comprendre comment créer un array, comment stocker des données dedans et comment récupérer ces données en utilisant l’index.
-Souviens-toi que les index des arrays commencent à `0`, et non à `1`.
+Un array est ordonné, si bien que chaque élément est accessible par son **indice** (index). Cet exercice t’aidera
+à comprendre comment créer un array, comment stocker des données dedans et comment récupérer ces données en utilisant l’indice.
+Souviens-toi que les indices des arrays commencent à `0`, et non à `1`.
 
-En développement, on doit souvent trier des choses ; on te conseille donc de te renseigner sur [les algorithmes de tri](https://fr.wikipedia.org/wiki/Algorithme\_de\_tri). Dans la documentation Ruby, tu devrais trouver plusieurs façons de trier un [Enumerable](http://ruby-doc.org/core-2.5.3/Enumerable.html). `Array` est une forme d’`Enumerable` ; tu peux donc utiliser toutes les méthodes référencées dans la documentation `Enumerable` quand tu utilises un `Array`, car `Array` **inclut** le module `Enumerable`.
+On demande souvent aux développeurs de trier des choses ; on te conseille donc de te renseigner sur [les algorithmes de tri](https://fr.wikipedia.org/wiki/Algorithme\_de\_tri). Dans la documentation Ruby, tu devrais trouver plusieurs façons de trier un [Enumerable](http://ruby-doc.org/core-2.5.3/Enumerable.html). `Array` est une forme d’`Enumerable` ; tu peux donc utiliser toutes les méthodes référencées dans la documentation `Enumerable` quand tu utilises un `Array`, car `Array` **inclut** le module `Enumerable`.
 
 ## Spécifications
 
-- Exécute une méthode `wagon_sort` qui prend un argument, un array de noms d’étudiants (`String`), et retourne un array de ces noms d’étudiants triés par ordre alphabétique.
+- Implémente une méthode `wagon_sort` qui prend un argument, un array de noms d’étudiants (`String`), et retourne un array de ces noms d’étudiants triés par ordre alphabétique.
 - La méthode de tri ne doit pas tenir compte de la casse ; `bob` doit apparaître avant `Felix` (regarde la [table de caractères ASCII](http://www.asciitable.com/))
 - La méthode doit respecter l’orthographe des noms.
 
@@ -39,7 +39,6 @@ Familiarise-toi avec les opérations de base des arrays. Tu dois maintenant conn
 
 - créer un array
 - ajouter un nouvel élément à l’array
-- accéder à un élément situé à une position n
+- accéder au n-ième élément
 - mettre à jour un élément
-- supprimer une valeur à un index donné
-
+- supprimer un élément situé à un indice donné

@@ -42,7 +42,6 @@ Comparons le **monde réel** et le **monde du code**.
   </tbody>
 </table>
 
-
 Les objectifs de cet exercice sont les suivants :
 - Comprendre le flux d'éxecution (**execution flow**) d’un programme et apprendre à « lire » dans ton code, ligne par ligne
 - Découvrir les **conditions**
@@ -63,13 +62,12 @@ Nous allons maintenant créer une version améliorée de ton coach avec la méth
 
 Si tu te retrouves coincé dans une **boucle infinie**, appuie simplement sur `Ctrl` + `C` ! Le programme arrêtera de s’exécuter.
 
-⚠️ L’exercice n’est terminé que quand rake est complètement vert ! Tu dois t’assurer de vraiment pouvoir poser des questions à ton coach en exécutant ruby lib/interface.rb 😉
+⚠️ L’exercice n’est pas terminé que lorsque `rake` est complètement vert ! Tu dois aussi t’assurer de vraiment pouvoir poser des questions à ton coach en exécutant `ruby lib/interface.rb` 😉
 
 ## Enseignements clés
 
-- Quel est le flow habituel d’un programme ?
-- Comment des structures de type `if..else..end` or `while..end` modifient-elles ce flow ?
+- Quel est le flux d'éxecution (execution flow) habituel d’un programme ?
+- Comment des structures de type `if..else..end` or `while..end` modifient-elles ce flux ?
 - Comment ces structures fonctionnent-elles ?
 - Qu’est-ce qu’une condition ? Quelles valeurs peut-elle prendre ? Quelle est la différence entre `=` et `==` ?
-- Une méthode simple peut-elle modifier le flow de ton programme ?
-
+- Est-ce qu'un simple appel de méthode simple peut modifier le flux de ton programme ?

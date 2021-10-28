@@ -1,7 +1,6 @@
 ## Background & Objectives
 
-Learn the two ways to "loop" in ruby:
-
+Learn the two ways to "loop" in Ruby:
 - With a `for` loop
 - With a `while` loop
 

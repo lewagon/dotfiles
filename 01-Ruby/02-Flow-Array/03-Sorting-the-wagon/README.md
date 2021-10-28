@@ -41,4 +41,4 @@ Get familiar with basic array operations. You should now know the syntax used to
 - append a new element to the array
 - access the nth element
 - update an element
-- delete a value at a given index
+- delete an element at a given index
