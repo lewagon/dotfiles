@@ -1,18 +1,18 @@
 ## Contexte et objectifs
 
-### À débattre avec le reste de ta classe
+### À débattre avec ton buddy
 
-- Quelles sont les différences entre une String et un Symbol ?
+- Quelles sont les différences entre une string et un symbole ?
 - Quand dois-tu utiliser l’une plutôt que l’autre ?
 - En termes de mémoire, quel est le comportement de chacun ?
 
 ### Synthèse technique
 
-La compréhension des symboles peut s’avérer difficile pour les débutants sur Ruby. En règle générale, les symboles et les strings ou chaînes de caractères sont assez similaires, mais :
+La compréhension des symboles peut s’avérer difficile pour les débutants en Ruby. En règle générale, les symboles et les chaînes de caractères sont assez similaires, mais :
 
-Si tu utilises une string comme identifiant unique de ton programme, plutôt que pour son contenu, envisage alors d’utiliser un Symbol.
+Si tu utilises une string dans ton programme uniquement comme un identifiant plutôt que pour son contenu, tu devrais utiliser plutôt un symbole.
 
-C’est pour cette raison que de nombreuses clés de hachage sont des symboles, car elles servent surtout à identifier des choses et ne sont pas simplement du texte. Voici un exemple :
+C’est pour cette raison que de nombreuses clés dans les hashes sont des symboles, car elles servent surtout à identifier des choses et ne sont pas simplement du texte. Voici un exemple :
 
 ```ruby
 fox = { color: "red", species: "mammal" }
@@ -20,17 +20,17 @@ fox = { color: "red", species: "mammal" }
 
 `:color` et `:species` sont ici utilisés comme des identifiants ; on utilise donc des symboles. La valeur du texte a été choisie pour qu’une personne puisse rapidement comprendre ce que les clés représentent.
 
-Remarque : de temps en temps, tu pourras aussi tomber sur cette autre (vieille) syntaxe :
+Remarque : de temps en temps, tu pourras aussi tomber sur cette autre syntaxe plus ancienne :
 
 ```ruby
 fox = { :color => "red", :species => "mammal" }
 ```
 
-Lis [cette réponse de Stack Overflow](http://stackoverflow.com/a/8189435/197944/) si tu veux vraiment connaître les nuances entre les Strings et les Symbols. Le concept de **mutabilité** est important ici.
+Lis [cette réponse de Stack Overflow](http://stackoverflow.com/a/8189435/197944/) si tu veux vraiment connaître les nuances entre les strings et les symbols. Le concept de **mutabilité** (mutability) est important ici.
 
 ## Spécifications
 
-Regarde le fichier `lib/symbols.rb`. Il contient un quiz vrai/faux et quelques méthodes pour tester ta capacité à utiliser des symboles plutôt que des strings.
+Regarde le fichier `lib/symbols.rb`. Il contient un quiz dont les réponses sont vraies ou fausses et quelques méthodes pour tester ta capacité à utiliser des symboles plutôt que des strings.
 
 ## Enseignements clés
 
