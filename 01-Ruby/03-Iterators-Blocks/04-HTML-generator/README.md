@@ -40,7 +40,7 @@ Cool right?
 
 ### Arguments with default value
 
-In ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
+In Ruby you can supply a default value for an argument. This means that if a value for the argument isn’t supplied, the default value will be used instead, e.g.:
 
 ```ruby
 def sum(a, b, c = 0)

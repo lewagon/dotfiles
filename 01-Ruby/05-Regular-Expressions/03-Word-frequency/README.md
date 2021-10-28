@@ -3,7 +3,7 @@
 - Working with text files
 - Building a text analyzer using Hash
 
-### Reading a file in ruby
+### Reading a file in Ruby
 
 You can read a file, line by line, with
 

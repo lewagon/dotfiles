@@ -42,7 +42,7 @@ Again, ask yourself these questions and make sure you can answer all of them:
 
 ### on strings
 
-* What's string interpolation? What's the syntax to "insert" some ruby expression in a string?
+* What's string interpolation? What's the syntax to "insert" some Ruby expression in a string?
 * What's the difference between single-quotes `''` or double-quotes `""` when using string interpolation?
 
 ## Further suggestions & resources

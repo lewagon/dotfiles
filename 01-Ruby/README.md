@@ -2,7 +2,7 @@ The Ruby module has 6 days. The first 4 days deal with core notions you absolute
 
 ### `01 Programming Basics`
 
-Play with IRB, launch a ruby script from the terminal. Learn about variables, methods and built-in objects.
+Play with IRB, launch a Ruby script from the terminal. Learn about variables, methods and built-in objects.
 
 ### `02 Flow, Conditionals & Arrays`
 
@@ -10,13 +10,13 @@ Learn about conditional statements and loops; coding structures that modify the 
 
 ### `03 Iterators & Blocks`
 
-Embrace all the cool ruby iterators (`each`, `select`, `map` and more). Understand what's a ruby block and how a method can call a block with `yield`.
+Embrace all the cool Ruby iterators (`each`, `select`, `map` and more). Understand what's a Ruby block and how a method can call a block with `yield`.
 
 ### `04 Hash & Symbols`
 
 Finally, let's introduce hashes - data structures designed to store key-value pairs like dictionaries. Define and manipulate your own hashes. Understand symbols - objects a bit similar to strings but more adapted for storing "keywords" of your code. You'll often see symbols as hash keys, so get used to it!
 
-#### Friday ruby quiz
+#### Friday Ruby quiz
 
 On Friday afternoon, at 2pm there will be a short quiz (30mins). No computer, no Google, just pencil and paper. It's not high school and you won't be graded 😊 But it's very useful to understand what you got wrong, and identify your weakpoints. So take your time and try to answer as precisely as you can.
 

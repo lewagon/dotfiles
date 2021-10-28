@@ -8,7 +8,7 @@
 
 ### Technical overview
 
-For ruby beginners, understanding symbols can be quite tricky. As a rule of thumb, symbols are pretty similar to strings, but:
+For Ruby beginners, understanding symbols can be quite tricky. As a rule of thumb, symbols are pretty similar to strings, but:
 
 When you use a string less for its textual content, and more as a kind of unique identifier in your program, you should consider using a Symbol.
 

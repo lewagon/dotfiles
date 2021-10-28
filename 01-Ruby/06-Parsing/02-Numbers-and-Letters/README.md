@@ -39,7 +39,7 @@ This challenge will let you access a web-API, and parse JSON data returned by th
 
 ## Key learning points
 
-- What's a JSON? How is it similar to the structure of a ruby hash?
+- What's a JSON? How is it similar to the structure of a Ruby hash?
 - How could you refactor your code to separate the responsibilities of each method?
 
 ## Further suggestions & resources

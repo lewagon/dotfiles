@@ -82,8 +82,8 @@ puts "You are now #{age}"
 ## Methods
 
 1. **Factoring** your code
-2. Why methods? **concise** way to call a ruby code
-3. Apply a ruby code to **dynamic inputs**
+2. Why methods? **concise** way to call a Ruby code
+3. Apply a Ruby code to **dynamic inputs**
 
 Example **without** parameters
 

@@ -36,7 +36,7 @@ IRB是ruby的一个交互式编程环境[REPL](https://zh.wikipedia.org/wiki/读
 
 你可以回答一下问题吗？如果不能，你还没有准备好继续前进！
 
-- 你知道多少个ruby内置类（built-in ruby classes）？它们叫什么？
+- 你知道多少个ruby内置类（built-in Ruby classes）？它们叫什么？
 - 针对这些类的对象调用方法（method）的语法是什么？
 - 当你在执行标准操作（给数组排序， 把一个单词变成大写，等等）时，应该立即采取的第一步是什么？
 - 为了确保你真正理解了你找到的方法（method），应采取的第二步是什么？
