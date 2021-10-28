@@ -27,4 +27,4 @@ Our program has 7 modules
 - **14h00-17h30**: finish your challenges of the day with your buddy.
 -  **17h30-19h00**: "live-code session". The teacher introduces a new challenge in front of the class and solves it **from scratch** with the help of the class.
 
-Every day, there's 5 to 10 different challenges with their own test suite, and additional optional exercises for the fastest students.
+Every day, there's 5 to 10 different challenges with their own test suite, and additional optional challenges for the fastest students.

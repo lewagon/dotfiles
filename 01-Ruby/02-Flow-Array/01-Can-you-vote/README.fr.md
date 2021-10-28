@@ -20,7 +20,7 @@ end
 
 - Quelle est la syntaxe à utiliser avec une condition `if/else` ?
 
-## Facultatif
+## Optionnel
 
 - Sais-tu comment refactoriser ton code en utilisant une ligne seulement ?
 
