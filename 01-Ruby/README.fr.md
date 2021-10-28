@@ -1,4 +1,4 @@
-Le module Ruby est constitué de 6 blocs pédagogiques. Les 4 premiers traitent des notions fondamentales de la programmation que vous devez absolument maîtriser.
+The Ruby module has 6 days. The first 4 days deal with core notions you absolutely need to understand.
 
 ### `01 Programming Basics`
 
