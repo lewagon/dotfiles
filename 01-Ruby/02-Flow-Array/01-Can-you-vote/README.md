@@ -8,13 +8,13 @@ Hint:
 if condition
   # execute if condition is truthy
 else
-  # execute if condition is falsey
+  # execute if condition is falsy
 end
 ```
 
 ## Specs
 
-- Write a method in ruby that returns `true` if the age entered is old enough to vote, and `false` if not (people 18 years old and older can vote).
+- Write a method in Ruby that returns `true` if the age entered is old enough to vote, and `false` if not (people 18 years old and older can vote).
 
 ## Key learning points
 

@@ -4,14 +4,14 @@ Emails are the lifeblood of any SaaS (software as a service) business, it is sup
 
 On most websites, they are the keys to create an account. If the email is misspelled, the user won't be able to retrieve his password. Also, as a marketer's point of view, you need to communicate with your users and maintain your contact database a reliable dataset of valid emails.
 
-
 ## Story
+
 In this challenge, let's assume you are launching an application in a few weeks. You will notify everyone with a great emailing campaign as soon as your website is online! In the meantime, you prepared a landing page to collect visitors' emails.
 
 ![Scenario](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-scenario.svg?sanitize=true)
 
-
 ## Specs
+
 ### Collect valid emails
 
 ![Collect valid emails](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email-step1.svg?sanitize=true)
@@ -19,11 +19,10 @@ In this challenge, let's assume you are launching an application in a few weeks.
 Your landing page is ready. You want to make sure the visitors submit a valid email.
 
 Code the `valid?` method that returns the right boolean depending on the email's validity:
-- identify the different parts of the email and code a regular expression to match the pattern of a classic email
-- code a simple regexp yourself, no need to try and make it perfect (it is impossible to write a perfect regex for emails)!
+- Identify the different parts of the email and code a regular expression to match the pattern of a classic email
+- Code a simple regex yourself, no need to try and make it perfect (it is impossible to write a perfect regex for emails)!
 
 **Warning:** Regular expressions are not expressive enough to validate 100% of the compliant email addresses as [this Stackoverflow discussion](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) and [this website](https://emailregex.com/) illustrate. In professional environments, prefer the use of external services like the one provided by [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) or [Mailgun](https://www.mailgun.com/email-validation/) as it uses a huge database and machine learning to determine if an address is correct.
-
 
 #### Pattern of an email address
 
@@ -31,18 +30,15 @@ Every email address is the association of a **username** with a **domain name**.
 
 ![Pattern of an email address](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/email.svg?sanitize=true)
 
-
 ##### About domain names
 
 The Top Level Domain, also known as TLD is the last group of characters of the domain name, right after the **dot**, and can be chosen from a standard list. A very common one is `.com` for commercial website, but you may have heard about the historical TLDs, like `.net` and `.org`.
 
 Main categories are:
-
 - gTLD: generic top-level domains (such as `.com`, `.net`, `.org`)
 - ccTLD: country code top level domain (such as `.fr`, `.de`, `.jp`)
 
 But there are [many more](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
-
 
 ### Clean the database
 
@@ -53,7 +49,6 @@ A few days have passed and your database is already filled with some useful cont
 Code the `clean_database` method:
 - it takes an array of emails
 - it returns an array with valid emails only
-
 
 ### Build statistics
 
@@ -72,7 +67,6 @@ Example:
   fr:	["kevin@yahoo.fr", "edward@gmail.fr"]
 }
 ```
-
 
 ### Emailing campaign
 

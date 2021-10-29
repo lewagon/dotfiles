@@ -22,10 +22,7 @@ yarn install
 rake webpack
 ```
 
-and open the page in your browser:
-```bash
-open http://localhost:8080
-```
+and open [localhost:8080](http://localhost:8080) in your browser.
 
 You can check these checkboxes individually, but the "Check all" checkbox is not yet checking all the checkboxes. This is the behaviour we want to implement thanks to Javascript, and our new friend: Stimulus.
 
@@ -111,11 +108,11 @@ You should see the message `The 'check-all-checkboxes' controller is now loaded!
 We now want to check all checkboxes when we check the "Check all" one.
 It means, we want to listen to event happening on the "Check all" checkbox, and then trigger some code logic for the other checkboxes.
 
-If we read the Stimulus documentation, we can see (here the syntax)[https://stimulus.hotwire.dev/reference/actions] to listen to an event. In Stimulus, it's called an **Action**.
+If we read the Stimulus documentation, we can see [here the syntax](https://stimulus.hotwire.dev/reference/actions) to listen to an event. In Stimulus, it's called an **Action**.
 
 But which event are we listening to?
 
-According to this (MDN documentation page)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox], a checkbox emits 2 kind of events: `change` and `click`.
+According to this [MDN documentation page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox), a checkbox emits 2 kind of events: `change` and `click`.
 Let's use `change` (as in "change" of state).
 
 ```html

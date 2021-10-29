@@ -191,7 +191,7 @@ serve
 ![链接Link](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/link.png)
 
 1. 练习只用键盘导航。
-    - `⇥` TAB在页面中向前移动，`⇧` SHIFT + `⇥` TAB向后移动
+    - `⇥` TAB在页面中向前移动，`⇧` Shift + `⇥` TAB向后移动
     - `↑ ↓ ← →` 箭头键选择表单中的数值
     - 用 Space 空格键勾选复选框
     - `↵` 回车提交

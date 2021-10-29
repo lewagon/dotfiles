@@ -105,7 +105,7 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 
 需要可以在一个临时文件（例如，`parsing.rb`中工作）中找到正确的选择符和ruby代码，以获取要从HTML中需要提取的所有数据。你可以从用 `puts` 显示提取的信息开始。一旦你找到了所有你需要的选择符，继续在你的 cookbook 中编码操作。
 
-今天你将使用Nokogiri `.search（）` 方法，它将CSS选择符作为参数。如果你不记得语法，请看一下的这一节课[解析课](https://kitt.lewagon.com/karr/karr.kitt/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data&program_id=1#/3/6).
+今天你将使用Nokogiri `.search（）` 方法，它将CSS选择符作为参数。如果你不记得语法，请看一下的这一节课[解析课](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6).
 
 **资源**：想深入Nokogiri吗？这是一个[好的Nokogiri爬虫指南](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
 
