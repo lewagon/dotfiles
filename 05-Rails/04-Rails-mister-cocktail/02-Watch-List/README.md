@@ -244,7 +244,7 @@ Try to put the "New bookmark form" on the list page itself, not on a separate pa
 
 Let's try adding an npm package to our rails app! Let's follow the slides to see how we can add `select2` (and `jquery`) to our movies dropdown. You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/stimulus_utilities_select2) to get inspired!
 
-Don't forget to use a Stimulus controller to implement any JS logic in your app as we learnt this morning. 😉
+Don't forget to use a Stimulus controller to implement any JS logic in your app. 😉
 
 ### 8 - List reviews (Optional)
 
