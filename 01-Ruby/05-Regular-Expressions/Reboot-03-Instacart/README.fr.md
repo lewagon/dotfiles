@@ -9,15 +9,15 @@ qu’il a terminé, payer et consulter sa facture.
 ## Indications
 
 - Si tu as du temps avant le déjeuner, commence à réfléchir au
-    pseudocode de cet exercice avec le prof.
+    pseudo-code de cet exercice avec le prof.
 - Tu devrais avoir besoin de tout l’après-midi pour le terminer.
 - Valide et corrige chaque étape de l’exercice avec le prof avec un
     live-code intermédiaire 💻
 
-## Pseudocode
+## Pseudo-code
 
 Comment ton programme doit-il fonctionner quand tu le lances ?
-**Écrivons le pseudocode**
+**Écrivons le pseudo-code**
 
 
 ```ruby
@@ -30,7 +30,7 @@ Comment ton programme doit-il fonctionner quand tu le lances ?
 # 4. Imprime la facture (paiement)
 ```
 
-**Peux-tu détailler un peu plus le pseudocode ?**
+**Peux-tu détailler un peu plus le pseudo-code ?**
 
 ## Étape 1 - Fausse boutique 🛍
 

@@ -11,16 +11,16 @@ n’ait plus d’argent.
 
 Cet exercice devrait te prendre **45 minutes 🕒**
 
-1.  Comme pour le premier exercice, commence par écrire le pseudocode
+1.  Comme pour le premier exercice, commence par écrire le pseudo-code
     avec ton/ta prof en live-code 💻.
 2.  Tu auras ensuite 20 minutes pour essayer de trouver la solution
     tout seul.
 3.  Puis on corrigera l’exercice ensemble ! 💻
 
-## Pseudocode
+## Pseudo-code
 
 Comment ton programme doit-il fonctionner quand tu le lances ? Rédige le
-pseudocode !
+pseudo-code !
 
 ```ruby
 # interface.rb
@@ -41,7 +41,7 @@ On va modéliser une course de chevaux. L’utilisateur peut parier
 sur (choisir) un cheval, le cheval court (l’ordinateur choisit un
 vainqueur au hasard) et le vainqueur est imprimé sur le terminal avec un
 message indiquant à l’utilisateur s’il a gagné. Commençons par
-le pseudocode. Comment allons-nous modéliser les chevaux ?
+le pseudo-code. Comment allons-nous modéliser les chevaux ?
 
 ## Étape 2 - Crée une boucle !
 

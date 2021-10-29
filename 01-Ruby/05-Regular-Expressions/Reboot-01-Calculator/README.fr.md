@@ -6,15 +6,15 @@ On va créer une calculatrice simple capable de réaliser les 4 opérations de 
 
 Cet exercice devrait te prendre **30 minutes 🕒**
 
-1.  On va commencer l’exercice avec le/la prof (en live-code 💻)) et **écrire ensemble le pseudocode**.
+1.  On va commencer l’exercice avec le/la prof (en live-code 💻)) et **écrire ensemble le pseudo-code**.
 2.  Tu auras ensuite 10 minutes pour essayer de trouver la solution tout seul.
 3.  Puis tu corrigeras l’exercice avec le/la prof (de nouveau en live-code 💻).
 
-## Pseudocode
+## Pseudo-code
 
 On commencera toujours avec le fichier `interface.rb`. C’est le fichier que tu lanceras (avec la commande `ruby interface.rb`) pour exécuter ton programme. L’idéal est de toujours commencer avec l’interface et de te demander **"Que doit-il se passer quand je lance mon programme ?"**
 
-Attaque toujours un exercice avec le/la prof en écrivant le *pseudocode*. Exemple :
+Attaque toujours un exercice avec le/la prof en écrivant le *pseudo-code*. Exemple :
 
 ```ruby
 # interface.rb
@@ -27,7 +27,7 @@ Attaque toujours un exercice avec le/la prof en écrivant le *pseudocode*. Exemp
 # 5. etc.
 ```
 
-**Écrire le pseudocode représente 80 % du travail !** Traduire en Ruby est la partie facile. Suis cette méthodologie du pseudocode pour **tous** les exercices de la session Reboot.
+**Écrire le pseudo-code représente 80 % du travail !** Traduire en Ruby est la partie facile. Suis cette méthodologie du pseudo-code pour **tous** les exercices de la session Reboot.
 
 ## Étape 1 - Calculatrice de base
 

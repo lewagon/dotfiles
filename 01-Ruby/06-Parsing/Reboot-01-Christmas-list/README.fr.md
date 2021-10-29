@@ -5,12 +5,12 @@ liste de cadeaux, marquer les articles achetés et enfin trouver
 l’inspiration sur un site Web externe comme Etsy. Ce challenge devrait
 te prendre la journée. 🎁
 
-Comme hier, commence par écrire le pseudocode en groupe en live-code
+Comme hier, commence par écrire le pseudo-code en groupe en live-code
  💻.
 
-## Pseudocode
+## Pseudo-code
 
-Commençons par réfléchir ensemble au **pseudocode** :
+Commençons par réfléchir ensemble au **pseudo-code** :
 
 ```ruby
 # interface.rb
