@@ -1,13 +1,12 @@
 ## Background & Objectives
 
-Learn the two ways to "loop" in ruby:
-
+Learn the two ways to "loop" in Ruby:
 - With a `for` loop
 - With a `while` loop
 
 ## Specs
 
-- Write a method in ruby that computes the sum of the integers between a min value and a max value (min and max included).
+- Write a method in Ruby that computes the sum of the integers between a min value and a max value (min and max included).
 - If the min value is greater than the max value, it should return `-1`
 - You should implement the two simple versions at least, using `for..end` and `while..end` structures.
 
