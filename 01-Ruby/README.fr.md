@@ -1,40 +1,37 @@
-The Ruby module has 6 days. The first 4 days deal with core notions you absolutely need to understand.
+Le module Ruby est constitué de 6 blocs pédagogiques. Les 4 premiers traitent des notions fondamentales de la programmation que tu dois absolument maîtriser.
 
 ### `01 Programming Basics`
 
-Play with IRB, launch a Ruby script from the terminal. Learn about variables, methods and built-in objects.
+Manipuler IRB et exécuter un script Ruby depuis le terminal. Apprendre ce que sont les variables, les méthodes et les classes intégrées à la bibliothèque standard du Ruby.
 
 ### `02 Flow, Conditionals & Arrays`
 
-Learn about conditional statements and loops; coding structures that modify the flow of your programs. Define and play with arrays.
+Apprendre ce que sont les instructions conditionnelles (conditional statements) et les boucles (loops) en codant des programmes qui modifient le flux d'exécution (execution flow). Découvrir et manipuler les tableaux (arrays).
 
 ### `03 Iterators & Blocks`
 
-Embrace all the cool Ruby iterators (`each`, `select`, `map` and more). Understand what's a Ruby block and how a method can call a block with `yield`.
+Adopter les itérateurs Ruby (`each`, `select`, `map`, etc.), très pratiques. Comprendre ce qu'est un bloc Ruby et comment une méthode peut appeler un bloc avec `yield`.
 
 ### `04 Hash & Symbols`
 
-Finally, let's introduce hashes - data structures designed to store key-value pairs like dictionaries. Define and manipulate your own hashes. Understand symbols - objects a bit similar to strings but more adapted for storing "keywords" of your code. You'll often see symbols as hash keys, so get used to it!
+Découvrir et manipuler les tableaux associatifs (hashes), des structures de données conçues pour stocker des paires de clés et de valeurs, comme un dictionnaire. Comprendre les symboles, des objets similaires aux chaînes de caractères (strings) mais plus adaptés pour stocker des identifiants. Les symboles sont très souvent utilisés comme clés dans les hashes.
 
-#### Friday Ruby quiz
+#### Ruby quiz
 
-On Friday afternoon, at 2pm there will be a short quiz (30mins). No computer, no Google, just pencil and paper. It's not high school and you won't be graded 😊 But it's very useful to understand what you got wrong, and identify your weakpoints. So take your time and try to answer as precisely as you can.
-
-When the quiz is finished, teachers will take you one-by-one during 15-min reviews to go through your answers and try to re-explain things. This chat will help you know what to go over during the weekend and whether or not you should join the Reboot group next Monday-Tuesday (see next section).
+Au cours de ce quatrième bloc pédagogique a lieu un petit quiz sur le module Ruby. Ce quiz a été conçu pour que tu puisses évaluer ce que tu as appris jusqu'à présent. Il n'y a ni note ni classement, c'est juste pour toi 😊 Le professeur corrigera le quiz devant la classe, à la fin de la session.
 
 ## Advanced part
 
-The two last days of the Ruby module deal with more advanced stuff. These days are not mandatory. Every student should at least listen to the morning talk. But after that, the class should split between:
+Les deux derniers blocs pédagogiques du module Ruby abordent des notions plus avancées. Ces notions ne sont pas essentielles. Tous les étudiants doivent suivre le cours mais, pour les exercices, la classe est divisée en deux :
+- Un groupe "Reboot" qui va réviser les notions fondamentales abordées jusqu'ici (les variables, les méthodes, les arrays, les hashes et les itérateurs) en pratiquant sur de nouveaux exercices.
+- Le reste de la classe qui pratiquent ces notions avancées sur des exercices dédiés.
 
-- A "Reboot" group who will rehearse core notions on new challenges (ex: variables/methods/arrays/hashes/iterators).
-- An Advanced group who will keep on working on kitt challenges about regexp and parsing.
-
-If you're not 100% confident on the core notions, join the Reboot group! No shame about it, the Reboot is a buffer to rehearse what really matters for the rest of the bootcamp.
+Si tu ne te sens pas à l'aise avec les notions fondamentales, fais le Reboot ! Ce sera l'occasion de consolider tes acquis pour poursuivre la formation sereinement.
 
 ### `05 Regular Expressions`
 
-Play with these new objects representing "string patterns".
+Découvrir et manipuler les expressions regulières (regular expressions or regex) qui représentent des motifs de strings.
 
 ### `06 Parsing`
 
-Learn to read/write in standard data-files such as CSV and JSON, and play with your first API.
+Apprendre à lire et à écrire dans des fichiers de données au format CSV et JSON et interagir avec une API pour la première fois.
