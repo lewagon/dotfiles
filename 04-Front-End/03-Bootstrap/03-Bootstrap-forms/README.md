@@ -27,7 +27,7 @@ The best trick to make a form responsive is to inject it in a Bootstrap grid int
 
 ## HTML forms
 
-A HTML `<form>` is made up of different `<input>` lines (i.e. each field of the form). Each input may have an associated `<label>` or not. The button to submit the form is also an input with the `type="submit"`. Here is what a form looks like:
+An HTML `<form>` is made up of different `<input>` lines (i.e. each field of the form). Each input may have an associated `<label>` or not. The button to submit the form is also an input with the `type="submit"`. Here is what a form looks like:
 
 ```html
 <form action="#">
