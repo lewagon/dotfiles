@@ -74,7 +74,7 @@ cd ~/code/your-github-username/fullstack-challenges/03-AR-Database/01-DB-Design-
 sqlitebrowser lib/db/jukebox.sqlite
 ```
 
-Si l’erreur `could not initialize SDL` s'afficha quand tu ouvres ta DB,
+Si l’erreur `could not initialize SDL` s'affiche quand tu ouvres ta DB,
 tu dois ajouter une exception à Windows Defender pour autoriser le
 trafic public entrant de Xming sur les protocoles UDP et TCP. Utilise
 cette
