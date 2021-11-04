@@ -102,6 +102,7 @@ environment.plugins.prepend("Provide",
 
 module.exports = environment
 ```
+
 ```js
 // app/javascript/packs/application.js
 import "bootstrap";
