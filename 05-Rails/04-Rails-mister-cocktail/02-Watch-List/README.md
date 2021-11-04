@@ -4,17 +4,14 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 
 ## Rails app generation
 
-Let's install `yarn` if you haven't already!
+You should already have [yarn](https://yarnpkg.com) installed. Check it with:
 
 ```bash
-# macOS
-brew install yarn
-
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+yarn -v
+# You should see your yarn version here
 ```
+
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
 
 **Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
 
@@ -62,24 +59,22 @@ rspec spec/models                # Launch tests
 Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies
 
 ```bash
-yarn add bootstrap @popperjs/core
+yarn add bootstrap@4.6 jquery popper.js
 ```
 
 And add the gems we're going to need:
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.12.0'
-gem 'simple_form'
+gem "autoprefixer-rails", "10.2.5"
+gem "font-awesome-sass", "~> 5.12.0"
+gem "simple_form"
 ```
 
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
 ```
-
-Replace **all the content** of your `config/initializers/simple_form_bootstrap.rb` file with [this](https://github.com/heartcombo/simple_form-bootstrap/blob/main/config/initializers/simple_form_bootstrap.rb).
 
 Then let's download the Le Wagon's stylesheets:
 
@@ -89,11 +84,28 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Finally let's import the Boostrap JS library:
+Finally let's import Boostrap JS library using webpack:
+
+```js
+// config/webpack/environment.js
+const { environment } = require("@rails/webpacker")
+
+// Bootstrap 4 has a dependency over jQuery & Popper.js:
+const webpack = require("webpack")
+environment.plugins.prepend("Provide",
+  new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery",
+    Popper: ["popper.js", "default"]
+  })
+)
+
+module.exports = environment
+```
 
 ```js
 // app/javascript/packs/application.js
-import 'bootstrap';
+import "bootstrap";
 ```
 
 Don't forget to `commit` and `push` your work often.
