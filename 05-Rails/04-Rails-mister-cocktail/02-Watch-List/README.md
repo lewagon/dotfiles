@@ -84,7 +84,7 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Finally let's import Boostrap JS library using webpack:
+Finally let's import Boostrap JS library using Webpack:
 
 ```js
 // config/webpack/environment.js
