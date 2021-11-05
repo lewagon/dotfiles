@@ -4,17 +4,14 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 
 ## Rails app generation
 
-Let's install `yarn` if you haven't already!
+You should already have [yarn](https://yarnpkg.com) installed. Check it with:
 
 ```bash
-# macOS
-brew install yarn
-
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+yarn -v
+# You should see your yarn version here
 ```
+
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
 
 **Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
 
@@ -69,9 +66,9 @@ And add the gems we're going to need:
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.12.0'
-gem 'simple_form'
+gem "autoprefixer-rails", "10.2.5"
+gem "font-awesome-sass", "~> 5.12.0"
+gem "simple_form"
 ```
 
 ```bash
@@ -93,7 +90,7 @@ Finally let's import the Boostrap JS library:
 
 ```js
 // app/javascript/packs/application.js
-import 'bootstrap';
+import "bootstrap";
 ```
 
 Don't forget to `commit` and `push` your work often.
@@ -242,7 +239,9 @@ Try to put the "New bookmark form" on the list page itself, not on a separate pa
 
 ### 7 - Select2 on the movies dropdown (Optional)
 
-Let's try adding an npm package to our rails app! Let's follow the slides to see how we can add `select2` to our movies dropdown.
+Let's try adding an npm package to our Rails app! Let's follow the slides to see how we can add `select2` (and `jquery`) to our movies dropdown. You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/stimulus_utilities_select2) to get inspired!
+
+Don't forget to use a Stimulus controller to implement this JavaScript behavior in your app. 😉
 
 ### 8 - List reviews (Optional)
 
@@ -253,6 +252,8 @@ Everyone should be able to comment and tell us what they thought of our movie co
 ### 9 - Going further
 
 - Adding a possibility to search for movies.
-- Adding `typed.js` to have some funky title on our home page.
+- Adding [typed.js](http://www.mattboldt.com/demos/typed-js/) to have some funky title on our home page.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
 - Using [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) to display stars instead of a normal input in the reviews form.
+
+Again, use Stimulus controllers when implementing JavaScript behavior in your app. ⚠️
