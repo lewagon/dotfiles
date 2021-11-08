@@ -1,44 +1,38 @@
 {
+    "[python]":
+    {
+        "editor.tabSize": 4
+    },
     "editor.detectIndentation": false,
+    "editor.fontSize": 17,
     "editor.formatOnPaste": true,
+    "editor.insertSpaces": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
+    "editor.renderControlCharacters": true,
     "editor.rulers":
     [
         80,
         120
     ],
-    "editor.renderControlCharacters": true,
-    "editor.snippetSuggestions": "top",
-    "editor.trimAutoWhitespace": true,
-    "editor.useTabStops": true,
-    "editor.fontSize": 17,
     "editor.scrollBeyondLastLine": true,
     "editor.showFoldingControls": "always",
+    "editor.snippetSuggestions": "top",
+    "editor.tabSize": 2,
+    "editor.trimAutoWhitespace": true,
+    "editor.useTabStops": true,
     "emmet.includeLanguages":
     {
         "erb": "html"
     },
+    "emmet.showSuggestionsAsSnippets": true,
     "emmet.triggerExpansionOnTab": true,
     "explorer.confirmDelete": false,
-    "window.restoreWindows": "none",
-    "workbench.settings.editor": "json",
-    "workbench.settings.openDefaultSettings": true,
-    "workbench.settings.useSplitJSON": true,
-    "workbench.iconTheme": "vscode-great-icons",
-    "files.hotExit": "off",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
     "files.exclude":
     {
-        "**/.git": true,
         "**/.DS_Store": true,
-        "node_modules": true,
-        "tmp": true,
-        "log": true,
+        "**/.egg-info": true,
+        "**/.git": true,
         ".asset-cache": true,
         ".bundle": true,
         ".ipynb_checkpoints": true,
@@ -50,9 +44,15 @@
         "build": true,
         "coverage": true,
         "dist": true,
+        "log": true,
+        "node_modules": true,
         "public/packs": true,
-        "**/.egg-info": true
+        "tmp": true
     },
+    "files.hotExit": "off",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "files.watcherExclude":
     {
         "**/audits/**": true,
@@ -63,17 +63,18 @@
         "**/vendor/**": true
     },
     "git.enabled": false,
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "[python]":
-    {
-        "editor.tabSize": 4
-    },
-    "python.pythonPath": "~/.pyenv/shims/python",
     "python.formatting.provider": "yapf",
+    "python.pythonPath": "~/.pyenv/shims/python",
     "ruby.lint":
     {
         "rubocop": true
     },
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "window.restoreWindows": "none",
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.settings.useSplitJSON": true,
     "workbench.startupEditor": "newUntitledFile"
 }
