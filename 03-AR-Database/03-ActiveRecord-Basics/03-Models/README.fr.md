@@ -2,7 +2,7 @@
 
 Tu sais maintenant comment utiliser les migrations pour actualiser le
 schéma de base de données. On va pouvoir utiliser la base de données
-pour insérer quelques lignes et faire des requêtes Pour cela, on va
+pour insérer quelques lignes et faire des requêtes. Pour cela, on va
 continuer à travailler avec notre clone d’Hacker News.
 
 Avant de commencer cet exercice, pense à lire le [guide de démarrage

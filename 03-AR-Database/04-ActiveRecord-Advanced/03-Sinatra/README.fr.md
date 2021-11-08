@@ -147,7 +147,7 @@ Cet exercice est assez ouvert ; voici quelques éléments pour commencer :
 Amuse-toi !
 
 Il n’y a pas de test pour cet exercice ; `rake` exécutera simplement
-Rubocop pours vérifier que le style est bon ;)
+Rubocop pour vérifier que le style est bon ;)
 
 ### Partage
 
