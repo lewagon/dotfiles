@@ -182,7 +182,7 @@ avant de passer à la fonction suivante.
 Tout est en vert ? Parfait ! Le moment est venu de `git add`, `commit`
 et `push`.
 
-## 3 - Facultatif
+## 3 - Optionnel
 
 ### 3.1 - Implémenter les actions `edit` et `destroy` pour les repas et les clients
 

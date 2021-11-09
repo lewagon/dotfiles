@@ -55,7 +55,7 @@ Tu dois maintenant implémenter la méthode `#transactions_history`. Cette méth
 2.  retourner `"wrong password"` si le mot de passe ne correspond pas au mot de passe du compte
 3.  retourner `"no password given"` si la méthode est appelée sans arguments
 
-## (Facultatif) Ajouter une classe `Transaction`
+## (Optionnel) Ajouter une classe `Transaction`
 
 Et si tu améliorais ton compte bancaire, en ajoutant des informations concernant la date de chaque transaction ? Ou en modifiant la méthode d’historique des transactions afin qu’elle imprime les transactions comme suit ?
 

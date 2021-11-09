@@ -15,6 +15,7 @@ a_time_object.hour
 Can you spot the one method that differs from the others? Make sure you can find the intruder!
 
 ## Specs
+
 - Create a `Restaurant` class with two instance variables, `@city` and `@name`, set with the two parameters of `initialize`.
 - Define an instance method `#rate(new_rate)` enabling the rating of a restaurant object. This method should re-compute the restaurant average rating `@average_rating` every time it's called with a new rating. This `@average_rating` should be accessible to the external world.
 - Define a **class** method `.filter_by_city(restaurants, city)` that returns all the restaurants in a given city (this return should be an array of restaurant objects). For instance:

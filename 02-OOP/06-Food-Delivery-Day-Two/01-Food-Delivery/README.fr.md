@@ -223,7 +223,7 @@ end
 Tout est en vert ? Parfait ! Le moment est venu de faire `git add`,
 `commit` et `push`.
 
-## 3 - Facultatif
+## 3 - Optionnel
 
 ### 3.1 - Implémenter les actions `edit` et `destroy` pour les commandes
 

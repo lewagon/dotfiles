@@ -61,7 +61,7 @@ Félicitations ! Tu peux exécuter `rake` pour vérifier que ton code est bien 
 Dans la classe enfant, il existe 4 sortes de méthodes :
 - des méthodes qui **héritent** de la classe parente : la méthode est uniquement définie dans la classe parente
 - des méthodes qui **étendent** la définition de la méthode parente : la méthode est légèrement différente dans les classes enfants
-- des méthodes qui **override** ou écrasent la méthode parente . la définition est complètement différente que dans la classe parente
+- des méthodes qui **override** ou surchargent la méthode parente . la définition est complètement différente que dans la classe parente
 - des méthodes qui sont propres à la classe enfant : elles ne sont *pas du tout* définies dans la classe parente
 
 Pour étendre une méthode, il faut utiliser le mot-clé `super` : il agit comme si tu copiais le corps de la méthode parente et le collais là où `super` est invoqué.

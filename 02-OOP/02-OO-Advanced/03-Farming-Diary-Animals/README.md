@@ -10,7 +10,6 @@ Discuss with your buddy: how many classes do you think you need, and how would y
 
 Don't `rake`! Wait until the very end of the challenge, follow the guidelines and let the farming diary guide you into coding the classes!
 
-
 ### Parent and children
 
 We are now familiar with the benefits of inheritance, let's go ahead and:
@@ -20,7 +19,6 @@ We are now familiar with the benefits of inheritance, let's go ahead and:
 Unlike in the previous challenge, let's start by coding the common behaviour in the parent class:
 - An animal is initialized with zero **energy**
 - You can **feed** an animal: it will increase its **energy** by 1
-
 
 ### Animals Talk
 
