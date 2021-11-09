@@ -2,7 +2,7 @@
 
 There are two main ways to receive blocks in a method in Ruby. The first - as we have already seen - is to use the `yield` keyword. Sometimes however, we need to **store** the block in an object, either because we want to call it later or because the method that takes the block as an argument delegates to another method and needs to transfer the block to this sub-called method.
 
-Thankfully we can store blocks of ruby code in `Proc` objects.
+Thankfully we can store blocks of Ruby code in `Proc` objects.
 
 ## Ampersand block argument
 

@@ -29,7 +29,7 @@ end
 
 def random_subset(an_array, sample_size)
   # TODO: return a random subset of an_array with size sample_size
-  # example: random_subset(('a'..'z').to_a, 4) => ["u", "q", "l", "t"]
+  # example: random_subset(("a".."z").to_a, 4) => ["u", "q", "l", "t"]
 end
 
 def randomize(an_array)
