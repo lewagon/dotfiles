@@ -1,7 +1,6 @@
 ## Contexte et objectifs
 
-Voici un petit scénario de ferme à coder étape par étape pour découvrir
-les avantages de l’héritage.
+Voici un petit scénario de ferme à coder étape par étape pour découvrir les avantages de l’héritage.
 
 ## Spécifications
 
