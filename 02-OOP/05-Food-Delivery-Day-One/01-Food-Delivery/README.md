@@ -33,7 +33,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Now that we have a model representing our meals, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It reads and writes the meals from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
-- `create` a new `meal`
+- `create` a new meal
 - Get `all` the meals
 - `find` a specific meal thanks to its id
 

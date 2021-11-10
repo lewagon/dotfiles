@@ -2,7 +2,7 @@
 
 Entonces ¿por qué necesitamos a la herencia? ¡Porque no queremos tener la misma lógica repetida en varias partes de nuestro código! Si varias clases comparten el mismo comportamiento, entonces tal vez sea hora de incorporar la herencia.
 
-Por ejemplo, quieres codear un `Parser` genérico con las funcionalidades básicas (leer un archivo, almacenar su contenido, etc.). Luego decides que quieres crear parsers más específicos como `XmlParser` o un `JsonParser` para manejar formatos específicos. Al hacer que estas nuevas clases sean **hijos** de la clase `Parser` no tienes que escribir nuevamente todos los métodos del Parser y solo necesitas crear métodos que son **específicos** a las necesidades del Xml o Json. ¡Esto quiere decir que la herencia [evita que te repitas](https://es.wikipedia.org/wiki/No_te_repitas) (DRY, Don't Repeat Yourself)!
+Por ejemplo, quieres codear un `Parser` genérico con las funcionalidades básicas (leer un archivo, almacenar su contenido, etc.). Luego decides que quieres crear parsers más específicos como `XmlParser` o un `JsonParser` para manejar formatos específicos. Al hacer que estas nuevas clases sean **hijos** de la clase `Parser` no tienes que escribir nuevamente todos los métodos del Parser y solo necesitas crear métodos que son **específicos** a las necesidades del XML o JSON. ¡Esto quiere decir que la herencia [evita que te repitas](https://es.wikipedia.org/wiki/No_te_repitas) (DRY, Don't Repeat Yourself)!
 
 Leer más sobre herencia en [Ruby learning]http://rubylearning.com/satishtalim/ruby_inheritance.html).
 

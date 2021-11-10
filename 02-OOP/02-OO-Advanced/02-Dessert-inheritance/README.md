@@ -2,7 +2,7 @@
 
 So why do we need inheritance? Because we don't want to have the same logic repeated in multiple places in our code! If multiple classes share some of the same behaviour then it may be time to introduce inheritance.
 
-e.g. You want to code a generic `Parser` with the basic features (read a file, store its content, etc.). After a while, you decide you want to create more specific parsers like `XmlParser` or a `JsonParser` to handle specific formats. By making these new classes **children** of the `Parser` class, it means you don't have to re-write all the basic methods created in Parser, and you only need to create the methods that are **specific** to your Xml or Json needs. So inheritance keeps things [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself)!
+e.g. You want to code a generic `Parser` with the basic features (read a file, store its content, etc.). After a while, you decide you want to create more specific parsers like `XmlParser` or a `JsonParser` to handle specific formats. By making these new classes **children** of the `Parser` class, it means you don't have to re-write all the basic methods created in Parser, and you only need to create the methods that are **specific** to your XML or JSON needs. So inheritance keeps things [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself)!
 
 Read more about inheritance in [ruby learning](http://rubylearning.com/satishtalim/ruby_inheritance.html).
 

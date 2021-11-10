@@ -56,7 +56,7 @@ Now that we have a model representing our employees, we need a repository to sto
 This repository is initialized with a CSV file path. It has a **read-only** logic since only the administrator of our app can create accounts (no need for and `add` method). The interface of this repository allows to:
 - Get `all_riders` from the repository
 - `find` a specific employee thanks to its id
-- `find_by_username` a specific employee thanks to username
+- `find_by_username` a specific employee thanks to their username
 
 Write some code to implement this and crash-test your repository in `irb`. You should create your own `employees.csv` CSV file inside the `data` folder. Then test your code by running `rake employee`.
 

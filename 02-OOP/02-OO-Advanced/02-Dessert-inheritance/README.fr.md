@@ -2,7 +2,7 @@
 
 Pourquoi a-t-on besoin de l’héritage ? Parce qu’on ne veut pas que la même logique se répète à plusieurs endroits dans notre code ! Si plusieurs classes partagent certains aspects du même comportement, il est peut-être temps d’introduire l’héritage.
 
-Exemple : Tu veux coder un `Parser` générique avec des caractéristiques de base (lire un fichier, stocker son contenu, etc.). Au bout d’un moment, tu décides que tu veux créer des parsers plus spécifiques de type `XmlParser` ou `JsonParser` pour traiter certains formats. En faisant de ces nouvelles classes les **enfants** de la classe `Parser`, tu n’as pas besoin de réécrire toutes les méthodes de base créées dans Parser ; tu dois seulement créer les méthodes qui sont **propres** à tes besoins Xml ou Json. Avec l’héritage, ton code reste [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas) (Don't Repeat Yourself, Ne te répète pas) !
+Exemple : Tu veux coder un `Parser` générique avec des caractéristiques de base (lire un fichier, stocker son contenu, etc.). Au bout d’un moment, tu décides que tu veux créer des parsers plus spécifiques de type `XmlParser` ou `JsonParser` pour traiter certains formats. En faisant de ces nouvelles classes les **enfants** de la classe `Parser`, tu n’as pas besoin de réécrire toutes les méthodes de base créées dans Parser ; tu dois seulement créer les méthodes qui sont **propres** à tes besoins XML ou JSON. Avec l’héritage, ton code reste [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas) (Don't Repeat Yourself, Ne te répète pas) !
 
 En savoir plus sur l’héritage dans [l’apprentissage de Ruby](http://rubylearning.com/satishtalim/ruby_inheritance.html).
 
