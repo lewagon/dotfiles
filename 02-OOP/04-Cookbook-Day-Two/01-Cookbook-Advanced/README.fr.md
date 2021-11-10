@@ -93,7 +93,7 @@ Par exemple, si on veut trouver tous les éléments de la classe `student` dans 
 
 Tu peux utiliser le code suivant comme modèle pour commencer :
 
-``` ruby
+```ruby
 require "nokogiri"
 file = "strawberry.html"
 doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
@@ -111,7 +111,7 @@ Aujourd’hui, tu vas utiliser la méthode Nokogiri `.search()`, qui prend un s�
 
 Le moment est venu d’utiliser ton code de parsing sur une URL en ligne avec différentes requêtes (pas seulement `strawberry`). Utilise la bibliothèque [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) pour obtenir la réponse HTML d’une URL donnée :
 
-``` ruby
+```ruby
 require "nokogiri"
 require "open-uri"
 url = "http://the_url_here"
@@ -162,7 +162,7 @@ Cette nouvelle propriété doit également être :
 
 Essaie d’extraire la logique de **parsing** du contrôleur et de la placer dans un [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html) :
 
-``` ruby
+```ruby
 class ScrapeAllrecipesService
  def initialize(keyword)
  @keyword = keyword

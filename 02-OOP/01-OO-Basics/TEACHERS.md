@@ -121,7 +121,7 @@ class Car
 end
 ```
 
-This ruby syntax is far more convenient than writing all methods manually, right? Let's do the same adding writers on `@color` and `@brand`
+This Ruby syntax is far more convenient than writing all methods manually, right? Let's do the same adding writers on `@color` and `@brand`
 
 ```ruby
 class Car

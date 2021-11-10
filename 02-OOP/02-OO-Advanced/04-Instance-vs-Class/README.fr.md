@@ -4,7 +4,7 @@
 
 Quand tu utiliseras une gem ou un module de la bibliothèque standard, tu devras utiliser des méthodes de classe **APPELÉES DIRECTEMENT SUR LA CLASSE**, et non sur des instances de la classe. Lis les lignes suivantes dans IRB :
 
-``` ruby
+```ruby
 "this is a string object".upcase
 ["this", "is", "an", "array", "object"].shuffle
 Time.now
@@ -20,7 +20,7 @@ Peux-tu identifier une méthode qui diffère des autres ? Trouve l’intrus !
 - Définis une méthode d’instance `#rate(new_rate)` permettant de noter un objet restaurant. Cette méthode doit re-calculer la note moyenne `@average_rating` du restaurant à chaque fois qu’elle est appelée avec une nouvelle note. Cette `@average_rating` doit être accessible au monde extérieur.
 - Définis une méthode de **classe** `.filter_by_city(restaurants, city)` qui retourne tous les restaurants dans une ville donnée (elle doit retourner un array d’objets restaurants). Exemple :
 
-``` ruby
+```ruby
 jules_verne = Restaurant.new("paris", "Jules Verne")
 bluebird = Restaurant.new("london", "Bluebird")
 daniel = Restaurant.new("new york", "Daniel")
@@ -35,7 +35,7 @@ Es-tu capable de répondre aux questions suivantes ? (Consulte la documentation
 - Entre `#rate` and `.filter_by_city`, laquelle est une méthode d’instance ? Laquelle est une méthode de classe ?
 - Examine la liste ci-dessous. Qu’est-ce qui est quoi ?
 
-``` ruby
+```ruby
 Date.today
 Twitter::REST::Client#follow (cf. https://github.com/sferik/twitter)
 String#upcase

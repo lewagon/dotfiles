@@ -123,7 +123,7 @@ Puisqu’une commande a des **instances** `meal`, `customer` et `employee`, on d
 
 **Important** : Les tests `rake` sur `order_repository` **fonctionnent uniquement si tu définis les paramètres dans `#initialize` dans le même ordre que dans les tests** :
 
-``` ruby
+```ruby
 class OrderRepository
  def initialize(orders_csv_path, meal_repository, customer_repository, employee_repository)
     # [...]
@@ -159,7 +159,7 @@ Vérifie que ces quatre actions utilisateur fonctionnent avant de passer à la f
 
 **Important** : Les tests `rake` sur `orders_controller` **fonctionnent uniquement si tu définis les paramètres dans `#initialize` dans le même ordre que dans les tests** :
 
-``` ruby
+```ruby
 class OrdersController
  def initialize(meal_repository, customer_repository, employee_repository, order_repository)
     # [...]

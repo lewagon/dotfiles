@@ -22,7 +22,7 @@ Dans **animal.rb**, il y a un programme qui s’exécute avec des erreurs. On a 
 
 Voici ce qu’on souhaite pouvoir faire :
 
-``` ruby
+```ruby
 cat = Animal.new
 cat.name("garfield").color("orange")
 p cat

@@ -18,7 +18,7 @@ end
 - Modifie la définition de la classe `GermanShepherd`, de façon à ce qu’elle ait les méthodes d’instance et le comportement de la classe `Dog`.
 - Le code ci-dessous, par exemple, devrait fonctionner :
 
-``` ruby
+```ruby
 german_shepherd = GermanShepherd.new
 german_shepherd.bark # => "woof woof"
 ```

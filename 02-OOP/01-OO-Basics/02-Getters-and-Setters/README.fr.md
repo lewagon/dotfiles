@@ -2,7 +2,7 @@
 
 Un **getter** est une méthode qui **demande** des informations à une variable d’instance. Un **setter** est une méthode qui **modifie** des informations sur une variable d’instance.
 
-Dans cet exercice, on va implémenter un distributeur simple (classe ruby `VendingMachine`) sur lequel un utilisateur peut acheter des snacks à un prix donné. L’utilisateur peut se rendre au distributeur, insérer de la monnaie, puis appuyer sur un bouton "Buy" (Acheter).
+Dans cet exercice, on va implémenter un distributeur simple (classe Ruby `VendingMachine`) sur lequel un utilisateur peut acheter des snacks à un prix donné. L’utilisateur peut se rendre au distributeur, insérer de la monnaie, puis appuyer sur un bouton "Buy" (Acheter).
 
 ## Spécifications
 
