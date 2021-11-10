@@ -133,7 +133,7 @@ Now, it's time to implement all the routes you need to build this product!
 
 ### Views
 
-Let's turn our attention to frontend, because that is what our users are going to see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to set up your Rails frontend if you haven't done it at the beginning of the challenge (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that tomorrow!).
+Let's turn our attention to frontend, because that is what our users are going to see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/bootstrap-5/README.md) to set up your Rails frontend if you haven't done it at the beginning of the challenge (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that tomorrow!).
 
 #### Layout / partials
 
