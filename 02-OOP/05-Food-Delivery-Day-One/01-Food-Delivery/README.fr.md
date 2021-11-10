@@ -22,13 +22,13 @@ Les premiers composants du logiciel sont donc les suivants :
 
 Le restaurant vend des repas ; tu dois donc trouver une façon de représenter ce qu’est un repas (meal).
 
-Chaque `meal` a un `id`, un `name` et un `price`.
+Chaque repas `meal` a un identifiant `id`, un nom `name` et un prix `price`.
 
 Écris le code pour implémenter cela et teste ton modèle. Puis teste ton code en exécutant `rake meal`.
 
 Tout est vert ? Parfait ! Le moment est venu de faire `git add`, `commit` et `push`.
 
-### 1.2 - Dépôt des repas (meal repository)
+### 1.2 - Dépôt de repas (meal repository)
 
 Maintenant que tu as un modèle pour représenter les repas, tu as besoin d’un dépôt (repository) pour les stocker.
 
@@ -49,7 +49,7 @@ Le routeur est chargé d’afficher les tâches que l’utilisateur peut effectu
 
 Remplis les fichiers `router.rb` et `app.rb` pour implémenter cela. Si tu es coincé, retourne à l’exercice [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) et télécharge la solution pour trouver de l’inspiration. **Inutile d’instancier le routeur avec un contrôleur** puisque tu n’en as pas encore. Pour le moment, contente-toi d’imprimer `TODO` quand l’utilisateur sélectionne une tâche.
 
-Il n’y a pas de rake pour cette partie. Lance ton application et exécute cette commande dans le terminal :
+Il n’y a pas de rake pour cette partie. Lance ton application en exécutant cette commande dans le terminal :
 
 ```bash
 ruby app.rb
@@ -85,13 +85,13 @@ Tout est vert ? Parfait ! Le moment est venu de `git add`, `commit` et `push`.
 
 Le restaurant vend à des clients ; tu dois donc trouver une façon de représenter ce qu’est un client (customer).
 
-Chaque `customer` a un `id`, un `name` et une `address`.
+Chaque client `customer` a un identifiant `id`, un nom `name` et une adresse `address`.
 
 Écris le code pour implémenter cela et teste ton modèle. Puis teste ton code en exécutant `rake customer`.
 
 Tout est vert ? Parfait ! Le moment est venu de `git add`, `commit` et `push`.
 
-### 2.2 - Dépôt des clients (client repository)
+### 2.2 - Dépôt de client (client repository)
 
 Maintenant que tu as un modèle pour représenter les clients, tu as besoin d’un dépôt (repository) pour les stocker.
 

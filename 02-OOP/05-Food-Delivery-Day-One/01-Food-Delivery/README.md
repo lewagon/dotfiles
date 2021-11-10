@@ -33,9 +33,9 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Now that we have a model representing our meals, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It reads and writes the meals from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
-- Create a new `meal`
-- Get all the meals
-- Find a specific meal thanks to its id
+- `create` a new `meal`
+- Get `all` the meals
+- `find` a specific meal thanks to its id
 
 Write some code to implement this and crash-test your repository. You should create your own `meals.csv` CSV file inside the `data` folder. Then test your code by running `rake meal`.
 
@@ -96,9 +96,9 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Now that we have a model representing our customers, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It reads/writes the customers from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
-- Create a new customer
-- Get all the customers
-- Find a specific customer thanks to its id
+- `create` a new customer
+- Get `all` the customers
+- `find` a specific customer thanks to its id
 
 Write some code to implement this and crash-test your repository. You should create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
 
