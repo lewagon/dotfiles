@@ -46,6 +46,6 @@ Cet exercice te permettra d’accéder à une API Web et de parser les données 
 
 Ce challenge n’est volontairement pas encadré. Voici quelques éléments d’aide :
 - Écris le pseudo-code pour déterminer comment procéder avant de te lancer dans le code
-- Si tu utilises Chrome ou Edge comme navigateur web, tu peux installer l’extension [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) pour formater le JSON renvoyé par une API. Si tu utilises Firefox, pas besoin d'extension, ton navigateur formate déjà le JSON.
+- Si tu utilises Chrome ou Edge comme navigateur Web, tu peux installer l’extension [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) pour formater le JSON renvoyé par une API. Si tu utilises Firefox, pas besoin d'extension, ton navigateur formate déjà le JSON.
 - Utilise la bibliothèque  `open-uri` incluse dans la bibliothèque standard de Ruby pour envoyer des requêtes HTTP à cette API et obtenir un résultat en JSON. Utilise la bibliothèque `json` pour parser les fichiers JSON retournés.
 - Pour tester l’inclusion dans la grille, essaie d’utiliser `Enumerable#all?`
