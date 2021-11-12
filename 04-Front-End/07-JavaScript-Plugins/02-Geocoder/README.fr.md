@@ -17,7 +17,7 @@ rake webpack
 
 ### Geocoding
 
-Pour commencer, tu vas devoir créer un compte MapBox et obtenir une clé d'API (l'inscription est gratuite !). Lise ensuite la [documentation sur l'API Geocoding de MapBox](https://docs.mapbox.com/api/search/geocoding/). Tout se résumera à une requêtte HTTP `GET` avec une adresse comme paramètre de string de la requête.
+Pour commencer, tu vas devoir créer un compte MapBox et obtenir une clé d'API (l'inscription est gratuite !). Lis ensuite la [documentation sur l'API Geocoding de MapBox](https://docs.mapbox.com/api/search/geocoding/). Tout se résumera à une requête HTTP `GET` avec une adresse comme paramètre de string de la requête.
 
 ```js
 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=YOUR-API-KEY'

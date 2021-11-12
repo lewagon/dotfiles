@@ -1,7 +1,7 @@
 ## Contexte et objectifs
 
 Maintenant que tu t'es entraîné à créer des composants de base, tu vas apprendre à les utiliser et à les combiner pour construire une vraie page d'accueil ! Tout site Web qui se respecte possède une **jolie page d'accueil**. Elle est importante, car c'est la première page que les visiteurs voient ; elle doit donc être suffisamment séduisante pour qu'ils deviennent des clients 💰.
-Dans ce challenge, tu vas reproduire un design de page d'accueil classique comme [celle-ci](https://arthur-littm.github.io/startup-landing/)!
+Dans ce challenge, tu vas reproduire un design de page d'accueil classique comme [celle-ci](https://arthur-littm.github.io/startup-landing/) !
 
 Ta page d'accueil doit contenir **au moins** :
 
