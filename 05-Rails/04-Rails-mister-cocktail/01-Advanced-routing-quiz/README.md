@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Before we move on to the Watch list challenge, let's review some of the principles we saw yesterday when we looked at advanced routing.
+Before we move on to the Watch List challenge, let's review some of the principles we saw yesterday when we looked at advanced routing.
 
 ## Specs
 
@@ -22,7 +22,7 @@ If you have a one-to-many relationship between your models like `Restaurant` and
 
 ### Question 3
 
-Return a `String` of the ActiveRecord validation to make sure that no record is created without a `name`.
+Which ActiveRecord validation is used to make sure that no record is created without a name? Return this as a `String`.
 
 
 ## Key learning points
