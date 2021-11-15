@@ -79,7 +79,7 @@ puts account
 在实现 `Transaction` 类之后，必须更改你的 `BankAccount` 类，以便其事务数组存储 `Transaction` 对象而不是数字。你还必须在 *account.rb* 加载 *transaction.rb* 文件
 
 ```ruby
-require_relative 'transaction'
+require_relative "transaction"
 ```
 
 ## 学习要点

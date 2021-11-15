@@ -20,16 +20,14 @@ Let's play with a `BankAccount` class that stores information about a bank accou
 
 ### The `BankAccount` contract in `bank_account.rb`
 
-The public interface of the class, i.e. the set of all its public methods, is called the class contract (see the notion of [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). It is a sort of promise made by the class to other objects or other ruby programs. Below we specify our `BankAccount` class contract. We want to be able to do the following with our BankAccount objects **from the outside world**:
-
-* Access owner's full name and balance
-* Access only **partial** IBAN, e.g. IBAN: FR14**************606
-* Print partial account info in an user-friendly way
-* Withdraw or deposit money
-* Print transaction history if a password is provided
+The public interface of the class, i.e. the set of all its public methods, is called the class contract (see the notion of [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). It is a sort of promise made by the class to other objects or other Ruby programs. Below we specify our `BankAccount` class contract. We want to be able to do the following with our BankAccount objects **from the outside world**:
+- Access owner's full name and balance
+- Access only **partial** IBAN, e.g. IBAN: FR14**************606
+- Print partial account info in an user-friendly way
+- Withdraw or deposit money
+- Print transaction history if a password is provided
 
 ### The `to_s` method
-
 
 This method literally stands for "to string", and is used to give information to a user about an object. With a custom `to_s` method, you can define any behavior that you want, and you'll come across this a lot in Ruby.
 
@@ -68,7 +66,7 @@ What about enhancing our bank account, by adding info about the date of each tra
 ```
 
 Read about the [single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle), now ask yourself:
-- What is the responsibility of the `BankAccount` class? Its main responsibility is to print basic account info and enable for cash withdrawal/deposit, right?
+- What is the responsibility of the `BankAccount` class? Its main responsibility is to print basic account info and enable for cash withdrawal and deposit, right?
 - Is it the responsibility of the bank account to keep track of the date of each transaction or to print each transaction nicely?
 
 Here comes the time where you might delegate these responsibilities to another `Transaction` class which would be responsible for:
@@ -79,7 +77,7 @@ Here comes the time where you might delegate these responsibilities to another `
 After implementing your `Transaction` class, you will have to change your `BankAccount` class so that its transactions arrays store `Transaction` objects instead of numbers. You will also have to load the *transaction.rb* file in *account.rb* with
 
 ```ruby
-require_relative 'transaction'
+require_relative "transaction"
 ```
 
 ## Key learning points

@@ -1,16 +1,3 @@
-## Alerta
-
-⚠️ **Nunca hagas `sudo gem install rails` inclusive si la Terminal te lo pide!** ⚠️
-> Reinicia tu Terminal si esto pasa (`cmd + q` o `ctrl + q`). Levanta un ticket si continúa sucediendo.
-
-A continuación te mostramos la manera adecuada de instalar Rails:
-
-```bash
-gem install rails -v 6.0
-```
-
-Ahora cierra la Terminal y ábrela otra vez.
-
 ## Contexto y Objetivos
 
 ¿Recuerdas tus primeras semanas en Ruby? Solo teníamos la Terminal para la interfaz programa-usuario. Se terminaron esos días.¡Ahora usaremos Rails! Esto significa lo siguiente:
