@@ -111,7 +111,7 @@ Tu devrais voir apparaître le message `The 'check-all-checkboxes' controller is
 On veut maintenant que toutes les cases se cochent quand on coche la case « Tout cocher » ("Check all").
 Cela signifie qu'on veut écouter l'événement qui se produit sur la case « Tout cocher » ("Check all"), puis déclencher la logique du code pour les autres cases à cocher.
 
-Si tu lis la documentation Stimulus, tu verras (ici la syntaxe)[https://stimulus.hotwire.dev/reference/actions] pour écouter un événement. Dans Stimulus, on parle d'**Action**.
+Si tu lis la documentation Stimulus, tu verras [ici la syntaxe](https://stimulus.hotwire.dev/reference/actions) pour écouter un événement. Dans Stimulus, on parle d'**Action**.
 
 Mais quel événement vas-tu écouter ?
 
