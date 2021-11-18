@@ -8,7 +8,7 @@ To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewa
 
 ### Setup
 
-First test just to see if you have sqlite3 installed on your computer:
+First test just to see if you have `sqlite3` installed on your computer:
 
 ```bash
 sqlite3 --version
@@ -18,13 +18,13 @@ If you don't have it, you can install it by running:
 - macOS: `brew install sqlite`
 - Ubuntu: `sudo apt-get install sqlite3 libsqlite3-dev`
 
-You can open the database we provided you to make some queries on it:
+You can open the database we provided by running:
 
 ```bash
 sqlite3 lib/db/jukebox.sqlite
 ```
 
-You are now in the interactive sqlite3 console and you can write your SQL queries to the database. You can exit the sqlite3 console with `.quit` or `CTRL+D`.
+You are now in the interactive `sqlite3` console and you can write your SQL queries to the database. You can exit the `sqlite3` console with `.quit` or `Ctrl + D`.
 
 ## Tools
 

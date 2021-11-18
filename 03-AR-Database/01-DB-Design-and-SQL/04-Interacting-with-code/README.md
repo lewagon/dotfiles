@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now it is time to use ruby code to interact with the `jukebox` database. For that we need a gem called [sqlite3](http://rubygems.org/gems/sqlite3).
+Now it is time to use Ruby code to interact with the `jukebox` database. For that we need a gem called [sqlite3](http://rubygems.org/gems/sqlite3).
 
 To install the gem on your computer, run this in the terminal:
 
@@ -8,7 +8,7 @@ To install the gem on your computer, run this in the terminal:
 gem install sqlite3
 ```
 
-The goal of this challenge is to talk to the database **from our Ruby code**.
+The goal of this challenge is to communicate with the database **from our Ruby code**.
 
 ## Specs
 
