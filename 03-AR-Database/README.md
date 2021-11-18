@@ -16,8 +16,6 @@ Active Record is a powerful Ruby library to connect your object to a database. A
 
 Time to go deeper into Active Record and learn about validations and associations.
 
-## Quiz
+### Quiz
 
-At 2pm, it's your second paper quiz of the program!
-
-This one will take you up to 45 minutes, and the answers will be reviewed by the lead-teacher in live-code (for all the class at the same time and not in one-to-one reviews). Only one more quiz after this!
+During this fourth block, there is a short quiz on the Database module. It was designed to help you assess what you have learnt during this module. The teacher will correct the quiz in front of the class, at the end of the session.

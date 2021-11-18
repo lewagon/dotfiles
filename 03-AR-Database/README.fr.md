@@ -1,4 +1,4 @@
-Le module base de données et Active Record s’étale sur 4 blocs.
+Le module base de données et Active Record s’étale sur 4 blocs pédagogiques.
 
 ## `01 Conception de schéma et SQL`
 
@@ -16,8 +16,6 @@ Active Record est une puissante bibliothèque Ruby qui connecte ton objet à une
 
 Tu approfondiras ta connaissance d’Active Record et tu découvriras les validations et les associations.
 
-## Quiz
+### Quiz
 
-À 14h aura lieu ton deuxième quiz écrit du programme !
-
-Celui-ci devrait te prendre 45 minutes et les réponses seront vérifiées par le prof principal en direct (pour toute la classe en même temps, pas personnellement). Après celui-ci, il ne te restera plus qu’un quiz !
+Au cours de ce quatrième bloc pédagogique a lieu un petit quiz sur le module base de données. Ce quiz a été conçu pour que tu puisses évaluer ce que tu as appris au cours de ce module. Le professeur corrigera le quiz devant la classe, à la fin de la session.
