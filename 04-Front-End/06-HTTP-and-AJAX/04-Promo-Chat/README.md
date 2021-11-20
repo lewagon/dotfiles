@@ -46,7 +46,7 @@ The form `#comment-form` has two inputs (`#your-message` and `#your-name`). Star
 
 Your code does not post any data to the server for the moment. To do that, you have to enhance your javascript code by adding a `POST` request to send data to be stored in the API's database. Read the [documentation](https://github.com/lewagon/wagon-chat-api/blob/master/README.md) to figure out how to build your request using `fetch`.
 
-Here is an example on using `fetch` on the [JSON Placehoder API](https://jsonplaceholder.typicode.com/):
+Here is an example on using `fetch` on the [JSON Placeholder API](https://jsonplaceholder.typicode.com/):
 
 ```js
 const message = { name: "George", body: "Hello from Kitt" };

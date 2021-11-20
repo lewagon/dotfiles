@@ -8,8 +8,7 @@ Before you create your class, create a file in the `lib` directory to test out y
 
 Next, choose something from the real world that you would like to model. Restaurants, vehicles, users, games, recipes.. *It's your call!*
 
-Once chosen, create a file in the `lib` directory which has the name of your object.
-For instance, if you chose to model Restaurants, create the `restaurant.rb` file:
+Once chosen, create a file in the `lib` directory which has the name of your object. For instance, if you chose to model Restaurants, create the `restaurant.rb` file:
 
 ```bash
 touch lib/restaurant.rb
@@ -19,13 +18,11 @@ Now you can safely delete the `.gitkeep` file. This file is only there so that g
 
 ## Convention
 
-**Pay attention** to your class file and your class name. Remember, `lower_snake_case(.rb)` for file name,
-`UpperCamelCase` for class name in the class definition. **Both must be singular!** Remember, the class is the structure that allows you to create lots of different restaurants (with `.new`).
+**Pay attention** to your class file and your class name. Remember, `lower_snake_case(.rb)` for file name, `UpperCamelCase` for class name in the class definition. **Both must be singular!** Remember, the class is the structure that allows you to create lots of different restaurants (with `.new`).
 
 ### What are the inner properties of your objects?
 
-What are the characteristics of a restaurant? Of a user? Of a game?
-Choose some characteristics of your class that you want to model. They will be your **instance variables**, sometimes named **properties**.
+What are the characteristics of a restaurant? Of a user? Of a game? Choose some characteristics of your class that you want to model. They will be your **instance variables**, sometimes named **properties**.
 
 ### Define the constructor
 
@@ -41,6 +38,7 @@ class Car
   end
 end
 ```
+
 Now define the `initialize` method on the class you chose!
 
 To test it you may want to create a `lib/interface.rb` file and call the `.new` constructor on your class with the relevant arguments, e.g:
@@ -66,4 +64,3 @@ require_relative "car"
 car = Car.new("T", "Ford", 0)
 car.start
 ```
-

@@ -109,7 +109,7 @@ Project the calendar on the screen to go through the program with the class, wee
   - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson), mention restaurants around
 - **5 PM - 6 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class and teacher, the idea is to have an interactive session where everyone's involved.
 - **7 PM**:
-  - You've reached the end of the day! Have a beer in the neighborhood, get to know each others!
+  - You've reached the end of the day! Get to know each others!
   - Back home, don't code (your brains need to **rest**), but take a few minutes to read next day's lecture (you can also play flashcards, we'll show you later)
 
 ### Any questions?
