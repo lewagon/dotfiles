@@ -28,7 +28,7 @@ end
 👉 To try your code with `irb` (or in the `lib/queries.rb` file), you will need to build `db` yourself.
 
 ```ruby
-# ➜ 03-Interacting-with-code git:(master) ✗  irb
+# lib/queries.rb
 require "sqlite3"
 db = SQLite3::Database.new("lib/db/jukebox.sqlite")
 rows = db.execute("SELECT * FROM artists LIMIT 3")
@@ -55,8 +55,7 @@ There are five methods to implement:
 
 ## Tips
 
-SQL queries tend to get pretty long, especially when you start using `WHERE` or `JOIN`. In Ruby,
-you can use the [HEREDOC](https://www.rubyguides.com/2018/11/ruby-heredoc/) syntax to write **multi-line** strings:
+SQL queries tend to get pretty long, especially when you start using `WHERE` or `JOIN`. In Ruby, you can use the [HEREDOC](https://www.rubyguides.com/2018/11/ruby-heredoc/) syntax to write **multi-line** strings:
 
 ```ruby
 # Find the first 3 artists with the letter `Z` in their name.

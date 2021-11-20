@@ -12,8 +12,6 @@ L’objectif de cet exercice est de communiquer avec la base de données **depui
 
 ## Spécifications
 
-<!-- NOTE(dmilon): here -->
-
 👉 **IMPORTANT** : Chaque méthode prend un argument `db`, qui est une instance de `SQLite3::Database` sur laquelle on peut appeler la méthode `execute`. Cette `db` est **créée par le test et passée à la méthode**. Inutile d’en créer une toi-même pour faire plaisir à `rake`. Ta méthode ressemblera à ça :
 
 ```ruby
@@ -30,7 +28,7 @@ end
 👉 Pour tester ton code avec `irb` (ou dans le fichier `lib/queries.rb`), tu auras besoin de créer toi-même `db`.
 
 ```ruby
-# âžœ 03-Interacting-with-code git:(master) âœ— irb
+# lib/queries.rb
 require "sqlite3"
 db = SQLite3::Database.new("lib/db/jukebox.sqlite")
 rows = db.execute("SELECT * FROM artists LIMIT 3")
@@ -51,7 +49,7 @@ Il y a cinq méthodes à implémenter :
 
 - Combien de lignes la table `artists` contient-elle ?
 - Combien de lignes chaque table contient-elle (méthode générique) ?
-- Retourne la liste de tous les artistes classés par nom (par ordre alphabétique). **Astuce :** utilise le filtre SQL `ORDER BY`
+- Retourne la liste de tous les artistes classés par nom (par ordre alphabétique). **Astuce :** utilise le filtre SQL `ORDER BY`.
 - Trouve toutes les chansons d’amour (à savoir les chansons dont le titre contient le mot "love" **n'importe où**). **Astuce :** utilise les mots-clés SQL `WHERE` et `LIKE`.
 - Retourne toutes les chansons dont la durée est supérieure à une durée donnée et trie-les. **Astuce :** tu peux utiliser l’opérateur de comparaison `>` dans SQL.
 
@@ -84,4 +82,3 @@ Tu as découvert ces outils dans l’exercice précédent. Utilise-les !
 - [SQLite Pro (macOS uniquement, logiciel payant mais la version d’essai semble illimitée)](https://www.sqlitepro.com/)
 - [SQLStudio (gratuit)](http://sqlitestudio.pl/)
 - [SQLite Browser (gratuit)](http://sqlitebrowser.org/)
-
