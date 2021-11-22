@@ -3,6 +3,7 @@
     {
         "editor.tabSize": 4
     },
+    "editor.bracketPairColorization.enabled": true,
     "editor.detectIndentation": false,
     "editor.fontSize": 17,
     "editor.formatOnPaste": true,
