@@ -6,13 +6,16 @@ L'étape suivante consiste à insérer le nouveau code dans l'architecture MVC a
 
 ## Spécifications
 
-Lance l’application ruby avec :
+Lance l’application Ruby avec :
 
 ```bash
 ruby app.rb
 ```
 
-Cela créera un routeur et démarrera l’application. Le routeur est fourni, tu n’as plus qu'à coder les méthodes de contrôleur dans la classe `PostsController`. Mais avant cela, place tout le code que tu as écrit dans les exercices précédents dans la classe `Post`.
+Le routeur est déjà fourni. Tu as juste à :
+- Mettre tout le code que tu as écrit dans les exercices précédents dans la classe `Post`
+- Coder le contrôleur dans la classe `PostsController`
+- Coder la vue dans la classe `PostsView`
 
 Il n’y a pas de specs pour cet exercice (mais tu peux quand même utiliser rake pour `rubocop`) ; tu devras donc lancer l’application dans ton terminal pour tester tes méthodes de contrôleur. Pour t’assurer que la sauvegarde s’effectue, redémarre ton application et vérifie que tout est bien là. Tu peux aussi regarder directement dans le fichier de la base de données `db/posts.db` avec l’utilitaire de terminal `sqlite3` ou un outil comme SQLite Browser.
 
