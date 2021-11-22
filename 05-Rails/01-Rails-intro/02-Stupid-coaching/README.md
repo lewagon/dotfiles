@@ -1,15 +1,12 @@
-## Warning
+## Setup
 
-⚠️ **Never do `sudo gem install rails` even if the terminal tells you so!** ⚠️
-> Restart your terminal if it happens (`cmd + q` or `ctrl + q`) - open a ticket if it still happens
-
-This is the proper way to install rails:
+You should already have `rails` installed. Check it with:
 
 ```bash
-gem install rails -v 6.0
+rails -v
+# You should see your rails version here
 ```
-
-Now quit the Terminal, and restart it.
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#installing-some-gems) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#installing-some-gems) setup.
 
 ## Background & Objectives
 

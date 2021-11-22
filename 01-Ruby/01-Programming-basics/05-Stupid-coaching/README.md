@@ -43,8 +43,7 @@ Let's make a comparison between the **real world** and the **code world** on thi
 </table>
 
 The objectives of this challenge are:
-
-- Understand the **flow** of a program and learn how to "read" through your code, line by line
+- Understand the **execution flow** of a program and learn how to "read" through your code, line by line
 - Learn about **conditional** statements
 - Learn about coding structures that modify your program flow: `if/unless..else..end`, `while/until..end`, etc. They are [control structures](https://en.wikipedia.org/wiki/Control_flow)
 
@@ -58,12 +57,12 @@ Now let's implement an enhanced version of the coach, with the method `coach_ans
 
 ### Interactive Program
 
-- Write the code for the interface that lets you talk to your coach via the terminal
+- Write the code for the interface that lets you talk to your coach via the terminal.
 - **constraint**: This program should **"loop"**. Your coach should answer your message and wait for your next one until you decide to get rid of him. Use a `while..end` or `until..end` structure for that purpose.
 
 If you're getting stuck in an **infinite loop**, just hit `Ctrl` + `C`! It will kill the process.
 
-⚠️ For this exercise you're not finished when rake is 100% green! You need to make sure that you can actually ask questions to your coach by running ruby lib/interface.rb 😉
+⚠️ For this exercise you're not finished when `rake` is 100% green! You need to make sure that you can actually ask questions to your coach by running `ruby lib/interface.rb` 😉
 
 ## Key learning points
 

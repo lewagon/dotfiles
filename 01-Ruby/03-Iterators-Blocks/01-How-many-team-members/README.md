@@ -14,7 +14,7 @@ array.size
 
 ## Specs
 
-- Write a method in ruby that returns the number of team members in the array of names given as an argument.
+- Write a method that returns the number of team members in the array of names given as an argument.
 
 ## Key learning points
 
