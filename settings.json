@@ -6,6 +6,7 @@
     "editor.detectIndentation": false,
     "editor.fontSize": 17,
     "editor.formatOnPaste": true,
+    "editor.guides.bracketPairs": true,
     "editor.insertSpaces": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
