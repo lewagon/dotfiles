@@ -12,14 +12,6 @@ rake db:seed        # Populates your database with sample data
 rake db:timestamp   # Gives you a timestamp for your migration file name
 ```
 
-## Setup
-
-No olvides correr es código siguiente en tu Terminal:
-
-```bash
-gem install activerecord
-```
-
 ## Especificaciones
 
 Antes de empezar a trabajar en el cambio de la **estructura** de nuestro esquema de base de datos, vamos a practicar cómo crear una base de datos.

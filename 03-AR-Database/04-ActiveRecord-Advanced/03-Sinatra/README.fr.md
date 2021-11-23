@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Félicitations ! Tu es désormais un pro d’ActiveRecord 😊 Voici ce
+Félicitations ! Tu es désormais un pro d’Active Record 😊 Voici ce
 que tu as appris depuis le début :
 
 -   Stocker des informations dans des variables
@@ -26,7 +26,7 @@ t’aideront à créer des logiciels plus grands et plus complexes.
     un objet
 -   **MVC** - pour créer des logiciels dans lesquels chaque classe a une
     responsabilité unique
--   ActiveRecord - une couche appliquée par-dessus la base de données
+-   Active Record - une couche appliquée par-dessus la base de données
     pour abstraire les requêtes SQL (écrire du code Ruby plutôt que du
     SQL)
 

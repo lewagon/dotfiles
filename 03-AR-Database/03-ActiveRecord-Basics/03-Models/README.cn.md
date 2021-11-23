@@ -38,11 +38,11 @@ sqlite> .schema
 ruby app.rb
 ```
 
-打开`app/controllers/posts_controller.rb`并实现这些方法。记住 - **不要**写SQL。只要使用ActiveRecord方法和你的类模型。
+打开`app/controllers/posts_controller.rb`并实现这些方法。记住 - **不要**写SQL。只要使用Active Record方法和你的类模型。
 没有`rake`来测试练习的第二部分，所以你必须在终端启动它来测试你的应用程序。
 
 ## 关键学习点
 
 * 什么是ORM？它是如何简化你的生活的？
 * Active Record对象关系映射依靠的是什么命名规则？他背后的原理是什么？
-* 你能看出使用ActiveRecord比自己写所有的SQL要好得多吗？
+* 你能看出使用Active Record比自己写所有的SQL要好得多吗？

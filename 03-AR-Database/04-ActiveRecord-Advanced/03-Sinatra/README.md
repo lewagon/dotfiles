@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Congrats, you are now an expert in ActiveRecord 😊 Let's take a step back from
+Congrats, you are now an expert in Active Record 😊 Let's take a step back from
 what we've learnt so far since the very first day and the setup:
 
 - Store information in variables
@@ -15,7 +15,7 @@ Now though, you'll start covering more complex stuff that will help us build big
 
 - Class - to encapsulate **data** and **behavior** in an object
 - **MVC** - to build software where each class has a single responsibility
-- ActiveRecord - a layer on top of the database to abstract SQL queries (write Ruby code instead of SQL)
+- Active Record - a layer on top of the database to abstract SQL queries (write Ruby code instead of SQL)
 
 We are getting reaaaally close to Rails now :)
 There's one thing missing though - and you know it - it's the View level.

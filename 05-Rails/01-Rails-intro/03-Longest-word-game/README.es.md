@@ -115,7 +115,7 @@ En la parte inferior de los resultados, agrega un `link_to` para regresar a la p
 
 El/la usuario/a jugará muchas partidas, así que tiene sentido almacenar cada puntaje y agregarlo a un gran total. Podemos implementar una regla donde el puntaje para cada partida sea el número de letras de cada palabra válida (pero también puedes tomar el cuadrado del número de letras o hacer otra cosa).
 
-El día de hoy no es sobre base de datos, así que no tienes ActiveRecord para ayudarte a almacenar información y recuperarla entre dos peticiones HTTP. En Rails hay otro mecanismo para persistir información **a través de** peticiones HTTP: la [sesión](http://guides.rubyonrails.org/action_controller_overview.html#session).
+El día de hoy no es sobre base de datos, así que no tienes Active Record para ayudarte a almacenar información y recuperarla entre dos peticiones HTTP. En Rails hay otro mecanismo para persistir información **a través de** peticiones HTTP: la [sesión](http://guides.rubyonrails.org/action_controller_overview.html#session).
 
 Intenta usar una sesión Rails para almacenar, computar y mostrar el puntaje total.
 

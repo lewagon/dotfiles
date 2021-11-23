@@ -6,7 +6,7 @@ pour insérer quelques lignes et faire des requêtes. Pour cela, on va
 continuer à travailler avec notre clone d’Hacker News.
 
 Avant de commencer cet exercice, pense à lire le [guide de démarrage
-d’ActiveRecord](http://guides.rubyonrails.org/active_record_basics.html).
+d’Active Record](http://guides.rubyonrails.org/active_record_basics.html).
 
 ## Configuration
 
@@ -47,7 +47,7 @@ ruby app.rb
 
 Ouvre `app/controllers/posts_controller.rb` et implémente les méthodes.
 Rappel : n’écris **pas** de SQL. Contente-toi d’utiliser les méthodes
-ActiveRecord avec ton modèle de classe. Il n’y a pas de `rake` pour
+Active Record avec ton modèle de classe. Il n’y a pas de `rake` pour
 tester la deuxième partie de l’exercice : tu devras lancer ton
 application dans le terminal pour la tester.
 
@@ -55,8 +55,8 @@ application dans le terminal pour la tester.
 
 -   Qu’est-ce qu’un mapping objet-relationnel (ORM) ? Qu’est-ce que cela
     simplifie ?
--   De quelle convention de nommage le mapping ActiveRecord dépend-il ?
+-   De quelle convention de nommage le mapping Active Record dépend-il ?
     D’où la magie vient-elle ?
 -   As-tu remarqué qu’il est beaucoup plus pratique d’utiliser
-    ActiveRecord que d’écrire tout le SQL toi-même ?
+    Active Record que d’écrire tout le SQL toi-même ?
 

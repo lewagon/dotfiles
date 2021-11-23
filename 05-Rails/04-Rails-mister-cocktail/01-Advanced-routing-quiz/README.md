@@ -22,7 +22,7 @@ If you have a one-to-many relationship between your models like `Restaurant` and
 
 ### Question 3
 
-Which ActiveRecord validation is used to make sure that no record is created without a name? Return this as a `String`.
+Which Active Record validation is used to make sure that no record is created without a name? Return this as a `String`.
 
 
 ## Key learning points

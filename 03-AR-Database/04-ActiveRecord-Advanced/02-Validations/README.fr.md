@@ -40,7 +40,7 @@ rake db:migrate
 ### Bonus : Callbacks
 
 On ne les a pas abordés dans le cours, mais tu dois savoir que les
-« callbacks » existent dans ActiveRecord. **Un callback est un bout de
+« callbacks » existent dans Active Record. **Un callback est un bout de
 code appelé quand un événement est exécuté**. On utilisera beaucoup ce
 concept pour programmer avec JavaScript, plus tard pendant le bootcamp.
 
@@ -64,7 +64,7 @@ end
 ```
 
 Lis le [guide des callbacks
-ActiveRecord](http://guides.rubyonrails.org/active_record_callbacks.html)
+Active Record](http://guides.rubyonrails.org/active_record_callbacks.html)
 pour répondre à la dernière question facultative.
 
 Implémente un callback pour supprimer l’e-mail avant la validation.
