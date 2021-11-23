@@ -41,7 +41,7 @@ Message: Well Done!
 
 ## 关键学习要点
 
-- 什么是JSON？它和ruby哈希（hash）的数据结构有什么相似之处？
+- 什么是JSON？它和Ruby哈希（hash）的数据结构有什么相似之处？
 - 如何重构你的代码，以划分每种方法的职责？
 
 ## 进一步建议 & 资源
@@ -50,5 +50,5 @@ Message: Well Done!
 
 - 在深入研究代码之前，写下伪代码并送清楚如何着手。
 - 你可以安装扩展程序[Json Formatter for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) (需要VPN 🛡 ) 帮助你读取API（ 看看[JSONView for Mozilla](https://addons.mozilla.org/fr/firefox/addon/jsonview/)）提供的JSON。
-- 使用ruby标准库里的`open-uri` 软件包，向这个API发送HTTP请求并得到JSON结果。使用`json`软件包解析返回的JSON文件。
+- 使用Ruby标准库里的`open-uri` 软件包，向这个API发送HTTP请求并得到JSON结果。使用`json`软件包解析返回的JSON文件。
 - 为了测试网格是否包含所用字母，可以使用`Enumerable#all?`。

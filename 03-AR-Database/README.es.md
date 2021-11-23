@@ -1,4 +1,4 @@
-El módulo de base de datos (DB) y ActiveRecord se hace en 4 días.
+El módulo de base de datos (DB) y Active Record se hace en 4 días.
 
 ## `01 Diseño de esquema y SQL`
 
@@ -10,7 +10,7 @@ Es el segundo día de SQL. Primero nos familiarizamos con CRUD. Luego aprenderem
 
 ## `03 Fundamentos de Active Record`
 
-Esta es la primera etapa de Active Record - una librería Ruby poderosa que conecta tu objeto a la base de datos. Active Record es uno de los módulos fundamentales de Rails. Descubrirás como un modelo ActiveRecord está mágicamente enlazado a una tabla gracias a una simple **convención de nombres** ¡Esa es la magia de Active Record!
+Esta es la primera etapa de Active Record - una librería Ruby poderosa que conecta tu objeto a la base de datos. Active Record es uno de los módulos fundamentales de Rails. Descubrirás como un modelo Active Record está mágicamente enlazado a una tabla gracias a una simple **convención de nombres** ¡Esa es la magia de Active Record!
 
 ## `04 Asociaciones y Validaciones`
 

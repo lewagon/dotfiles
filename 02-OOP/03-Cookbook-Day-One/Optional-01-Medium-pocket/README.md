@@ -135,7 +135,7 @@ Feel free to try and do TDD on this challenge, with help from the previous days 
 
 ### Model
 
-As you know now, you should always start with your model. The model is the ruby class we need in order to manipulate the data in our program.
+As you know now, you should always start with your model. The model is the Ruby class we need in order to manipulate the data in our program.
 
 Here we want to play around with DEV **posts**, so let's go ahead and create a `Post` class. Before coding it, take the time to ask yourself about:
 
@@ -182,7 +182,7 @@ For each user story, you need to code an action (an instance method) in the cont
 
 This is the process you need to follow for each action:
 
-- Write pseudo-code to breakdown the problem in small steps that you can easily translate in ruby
+- Write pseudo-code to breakdown the problem in small steps that you can easily translate in Ruby
 - Remember that each instruction having to do with the data will be delegated to the repo, and every `puts` and `gets` will be handled by the view (again, think SRP)
 - Coding your actions will make you code your `View` class and its instance methods naturally, when the necessity arises
 - Everytime there's an emerging need (we need a new method in the repo or in the model), follow the flow and code it right away

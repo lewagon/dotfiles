@@ -1,6 +1,6 @@
 ##  背景和目标
 
-让我们玩一玩继承。在ruby中，可以调用类的 `ancestors` 来
+让我们玩一玩继承。在Ruby中，可以调用类的 `ancestors` 来
 弄一份类所有父类的名单。看看[这个问题](http://stackoverflow.com/questions/19045195/understanding-ruby-class-and-ancestors-methods)和Stack Overflow 建议的答案来初步了解类别继承体系。
 
 ## 详细说明

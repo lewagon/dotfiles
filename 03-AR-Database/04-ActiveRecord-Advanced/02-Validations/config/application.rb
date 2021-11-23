@@ -9,7 +9,7 @@ config_path = File.join(File.dirname(__FILE__), "database.yml")
 ActiveRecord::Base.configurations = YAML.load_file(config_path)
 ActiveRecord::Base.establish_connection(:development)
 
-# Set a logger so that you can view the SQL actually performed by ActiveRecord
+# Set a logger so that you can view the SQL actually performed by Active Record
 logger = Logger.new($stdout)
 logger.formatter = proc do |_severity, _datetime, _progname, msg|
   "#{msg}\n"
