@@ -6,7 +6,6 @@ A simple challenge to manipulate basic HTML tags and create a profile card with 
 
 Jump into your `profile` and create an `images` directory to store all your pictures:
 
-
 ```bash
 cd profile
 mkdir images
@@ -24,7 +23,7 @@ serve
 (it has been defined in an [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7))
 
 - You can now visit your files on [http://localhost:8000](http://localhost:8000)
-- ⚠️ Modern browsers cache the **file** returned by a given **url**. It keeps in memory a version of your HTML (`http://localhost:8000`), of your CSS (`http://localhost:8000/style.css`) and even of your images (`http://localhost:8000/images/logo.png`)! Sometimes, the older version remains and your newest code is not taken into consideration. To fix this, use `cmd + shift + r` to **hard refresh** your page (this clears the cache in the process) 👌
+- ⚠️ Modern browsers cache the **file** returned by a given **url**. It keeps in memory a version of your HTML (`http://localhost:8000`), of your CSS (`http://localhost:8000/style.css`) and even of your images (`http://localhost:8000/images/logo.png`)! Sometimes, the older version remains and your newest code is not taken into consideration. To fix this, use `Cmd + Shift + R` to **hard refresh** your page (this clears the cache in the process) 👌
 
 ## Specs
 
@@ -118,6 +117,3 @@ git push origin master
 # Copy folder into next exercise folder
 cp -r ../profile ../../02-Fonts-and-colors
 ```
-
-
-

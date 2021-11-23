@@ -4,8 +4,7 @@ L'objectif de ce challenge simple est de manipuler les balises HTML de base et d
 
 ## Configuration
 
-Va sur ton profil (`profile`) et crée un répertoire `images` pour stocker toutes tes photos :
-
+Va sur ton profil (`profile`) et crée un répertoire `images` pour stocker toutes tes photos :
 
 ```bash
 cd profile
@@ -24,7 +23,7 @@ serve
 (il a été défini dans un [alias](https://github.com/lewagon/dotfiles/blob/f894306fd81502f1fe513dd253e3129f4b56874d/aliases#L7))
 
 - Tu peux maintenant consulter tes fichiers sur [http://localhost:8000](http://localhost:8000)
-- ⚠️ Les navigateurs modernes mettent en cache le **fichier** retourné par une **url** donnée. Ils gardent en mémoire une version de ton HTML (`http://localhost:8000`), de ton CSS (`http://localhost:8000/style.css`) et même de tes images (`http://localhost:8000/images/logo.png`) ! Parfois, la version la plus ancienne est conservée et ton nouveau code n'est pas pris en compte. Pour régler ce problème, utilise `cmd + shift + r` pour forcer le rafraîchissement (**hard refresh**) de ta page (et vider le cache en même temps) 👌
+- ⚠️ Les navigateurs modernes mettent en cache le **fichier** retourné par une **url** donnée. Ils gardent en mémoire une version de ton HTML (`http://localhost:8000`), de ton CSS (`http://localhost:8000/style.css`) et même de tes images (`http://localhost:8000/images/logo.png`) ! Parfois, la version la plus ancienne est conservée et ton nouveau code n'est pas pris en compte. Pour régler ce problème, utilise `Cmd + Shift + R` pour forcer le rafraîchissement (**hard refresh**) de ta page (et vider le cache en même temps) 👌
 
 ## Spécifications
 
@@ -118,6 +117,3 @@ git push origin master
 # Copier le dossier dans le dossier de l'exercice suivant
 cp -r ../profile ../../02-Fonts-and-colors
 ```
-
-
-
