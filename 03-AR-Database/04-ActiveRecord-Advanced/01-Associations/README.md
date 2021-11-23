@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's continue with our HackerNews app. Today we want to add
+Let's continue with our Hacker News app. Today we want to add
 a user layer, so that you need to log in first before submitting a new post.
 
 (You don't need to log in to view posts though)

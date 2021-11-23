@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Tu vas continuer avec ton application HackerNews. Aujourd’hui, tu vas
+Tu vas continuer avec ton application Hacker News. Aujourd’hui, tu vas
 ajouter une couche utilisateur ; pour cela, tu dois te connecter avant
 de publier un nouveau post.
 
