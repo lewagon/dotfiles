@@ -53,7 +53,7 @@
   </tbody>
 </table>
 
-这些信息需要存储于一个ruby[常量(constant)](https://www.rubyguides.com/2017/07/ruby-constants/) 以此模仿数据库。
+这些信息需要存储于一个Ruby[常量(constant)](https://www.rubyguides.com/2017/07/ruby-constants/) 以此模仿数据库。
 例如，下面是一个`Hash`的例子 - `AGE_OF_STUDENTS`包含学生和他们的年龄：
 
 ```ruby

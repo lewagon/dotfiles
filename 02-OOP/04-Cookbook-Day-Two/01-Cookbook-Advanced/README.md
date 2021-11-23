@@ -101,7 +101,7 @@ doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 # Up to you to find the relevant CSS query.
 ```
 
-You can work in a temporary file -- `parsing.rb` for instance -- to find the right selectors and the ruby code to get all the data you want to extract from the HTML. You can start by just displaying the information extracted with `puts`. Once you found all the selectors you need, go on and code the action in your cookbook.
+You can work in a temporary file -- `parsing.rb` for instance -- to find the right selectors and the Ruby code to get all the data you want to extract from the HTML. You can start by just displaying the information extracted with `puts`. Once you found all the selectors you need, go on and code the action in your cookbook.
 
 For today you will be using the Nokogiri `.search()` method, which takes a CSS selector as a parameter. If you don't remember the syntax have a look at this section of the [parsing lecture](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6).
 

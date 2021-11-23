@@ -1,7 +1,7 @@
 ## Background & Objectives
 
 Sometimes, you will want to work with an existing database from an existing project.
-You might need to write some ruby code to manipulate data using Active Record, instead
+You might need to write some Ruby code to manipulate data using Active Record, instead
 of writing SQL queries.
 
 ## Specs
