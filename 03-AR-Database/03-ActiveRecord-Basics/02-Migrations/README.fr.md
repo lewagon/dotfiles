@@ -14,8 +14,8 @@ Dans `db/migrate`, on a créé un fichier `20141025152200_create_posts.rb` qui c
 Écris le code dans `20141025152200_create_posts.rb` pour créer la table `posts`.
 
 Ta table `posts` doit contenir les colonnes suivantes :
-- une `String` `title`
-- une `String` `url`
+- une string `title`
+- une string `url`
 - les timestamps `created_at` et `updated_at`
 
 Exécute ensuite cette migration avec `rake db:migrate`.
