@@ -1,6 +1,6 @@
 ## 背景和目标
 
-让我们来模仿设计一个[Medium文章](https://lewagon.github.io/medium-copycat/)，然后用Github Pages进行部署!
+让我们来模仿设计一个[Medium文章](https://lewagon.github.io/medium-copycat/)，然后用GitHub Pages进行部署!
 
 ## 设置
 
@@ -51,9 +51,9 @@ touch medium-article/style.css
 
 确保调整所有其他屏幕尺寸(`576px`, `768px`, `992px`和`1200px`)的容器大小。
 
-## 可选 - 将代码提交至Github Pages
+## 可选 - 将代码提交至GitHub Pages
 
-如果你想，你可以将你的页面推送到Github Pages! 如果你这样做，我们将再次需要将你的作品复制到fullstack challenges**之外的**文件夹中，这样我们就可以用git来跟踪它：
+如果你想，你可以将你的页面推送到GitHub Pages! 如果你这样做，我们将再次需要将你的作品复制到fullstack challenges**之外的**文件夹中，这样我们就可以用git来跟踪它：
 
 ```bash
 cp -r ./medium-article ~/code/<user.github_nickname>/medium-article

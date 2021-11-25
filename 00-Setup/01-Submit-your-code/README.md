@@ -1,8 +1,8 @@
 ## Background & Objectives
 
-- Understand the structure of an exercise's folder, and the link to your Github account.
+- Understand the structure of an exercise's folder, and the link to your GitHub account.
 - Learn to test your code locally before submitting your solution.
-- Learn the basic git commands to commit modifications to your code and push them to Github.
+- Learn the basic git commands to commit modifications to your code and push them to GitHub.
 - Discover the features of the Kitt platform.
 
 During these 9 weeks, you'll work in pairs or groups of 3-4. A new buddy is assigned to you each day, following an algorithm of [round robin tournament](http://en.wikipedia.org/wiki/Round-robin_tournament) implemented in this [gem](https://github.com/ssaunier/round_robin_tournament).
@@ -81,5 +81,5 @@ When you're done you can look at the links below.
 If you are done with your computer set up and the excercises, have a look at these resources:
 - [git cheat sheet](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 - [interactive cheat sheet](http://www.ndpsoftware.com/git-cheatsheet.html)
-- Watch [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) on how to use git/Github for usual projects (non-dev)
+- Watch [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) on how to use git/GitHub for usual projects (non-dev)
 - Read and practise all of this tutorial: [Learn Enough Command Line to Be Dangerous](http://www.learnenough.com/command-line/)

@@ -8,7 +8,7 @@ Verás muchos conceptos de HTML & CSS en los próximos días. Acá está una mue
 - Selectores CSS simples y avanzados
 - Recursos de diseño web para fuentes y colores (Google Fonts, Fontawesome, etc.).
 
-El objetivo de hoy es crear tu [perfil](https://papillard.github.io/my-profile/) y ponerlo en línea usando [Github Pages](https://pages.github.com/).
+El objetivo de hoy es crear tu [perfil](https://papillard.github.io/my-profile/) y ponerlo en línea usando [GitHub Pages](https://pages.github.com/).
 
 ## `02 Componentes CSS`
 

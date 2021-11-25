@@ -27,7 +27,7 @@ books = [
   "Component-Based Applications",
   "Computer Science Distilled",
   "Eloquent JavaScript",
-  "Github Explained",
+  "GitHub Explained",
   "Lead the Way",
   "Learn Ruby On Rails",
   "Markdown Guide",

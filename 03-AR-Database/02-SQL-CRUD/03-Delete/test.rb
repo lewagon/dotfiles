@@ -14,7 +14,7 @@ create_statement = "
     );"
 DB.execute(create_statement)
 DB.execute("INSERT INTO `posts` (title, url, votes) VALUES ('Le Wagon', 'www.lewagon.com', '9000')")
-DB.execute("INSERT INTO `posts` (title, url, votes) VALUES ('Github', 'www.github.com', '1600')")
+DB.execute("INSERT INTO `posts` (title, url, votes) VALUES ('GitHub', 'www.github.com', '1600')")
 DB.execute("INSERT INTO `posts` (title, url, votes) VALUES ('Slack', 'www.slack.com', '4000')")
 DB.execute("INSERT INTO `posts` (title, url, votes) VALUES ('Mozilla', 'www.mozilla.org', '3000')")
 DB.execute("INSERT INTO `posts` (title, url, votes) VALUES ('Stackoverflow', 'www.stackoverflow.com', '4300')")
