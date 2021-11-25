@@ -20,7 +20,7 @@ If you want a responsive design, you can add media queries in your CSS. To use m
 
 This allows your page to detect the screen width of the device you are using.
 
-Media queries work a bit like an `if` statement in ruby. Basically **you can define CSS rules that will only apply if the window is smaller than a given width**. For instance, if you want a responsive container, you can build it like this:
+Media queries work a bit like an `if` statement in Ruby. Basically **you can define CSS rules that will only apply if the window is smaller than a given width**. For instance, if you want a responsive container, you can build it like this:
 
 
 ```css
@@ -50,4 +50,4 @@ Try to resize your window to understand how media queries work.
 
 ### ⚠️⚠️⚠️ Be careful with the order of your media queries ⚠️⚠️⚠️
 
-As with `if` statements in ruby, order matters! If several conditions are `true`, the last CSS rule will be applied.
+As with `if` statements in Ruby, order matters! If several conditions are `true`, the last CSS rule will be applied.

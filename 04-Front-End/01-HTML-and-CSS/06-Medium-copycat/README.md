@@ -51,9 +51,9 @@ Here is an example of how you would re-size the container on any screen 992px wi
 
 Make sure to resize the container for all other screen sizes (`576px`, `768px`, `992px` and `1200px`).
 
-## Optional - Push to Github pages
+## Optional - Push to GitHub pages
 
-If you want to, you can also push your medium article to Github Pages! If you choose to do so, we will again need to copy your work to a folder **outside** of fullstack challenges so we can make it a separate git repository:
+If you want to, you can also push your medium article to GitHub Pages! If you choose to do so, we will again need to copy your work to a folder **outside** of fullstack challenges so we can make it a separate git repository:
 
 ```bash
 cp -r ./medium-article ~/code/<user.github_nickname>/medium-article

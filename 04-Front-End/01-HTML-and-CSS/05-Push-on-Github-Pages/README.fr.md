@@ -10,7 +10,7 @@ cd ~/code/<user.github_nickname>/profile
 
 ## Création du dépôt GitHub
 
-Tu peux **init**(ialiser) un dépôt git, versionner tes modifications et créer le dépôt Github associé :
+Tu peux **init**(ialiser) un dépôt git, versionner tes modifications et créer le dépôt GitHub associé :
 
 ```bash
 git init
@@ -27,7 +27,7 @@ gh repo view --web
 
 ## GitHub Pages
 
-[Github Pages](https://pages.github.com/) est un service de GitHub qui permet de déployer facilement n'importe quel **site Web statique** en 10 secondes (statique == même contenu pour tous les utilisateurs). Il est basé sur une branche "magique", appelée `gh-pages`. Quand GitHub détecte cette branche, il met ton site Web en ligne. Génial, non ? On va donc créer cette branche magique et la pousser. ✨🌿✨
+[GitHub Pages](https://pages.github.com/) est un service de GitHub qui permet de déployer facilement n'importe quel **site Web statique** en 10 secondes (statique == même contenu pour tous les utilisateurs). Il est basé sur une branche "magique", appelée `gh-pages`. Quand GitHub détecte cette branche, il met ton site Web en ligne. Génial, non ? On va donc créer cette branche magique et la pousser. ✨🌿✨
 
 ```bash
 git co -b gh-pages

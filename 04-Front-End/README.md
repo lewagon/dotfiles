@@ -8,7 +8,7 @@ You'll cover a lot of HTML & CSS concepts in the next few days, such as:
 - CSS simple and advanced selectors
 - Web-design resources for fonts & colors (google fonts, fontawesome, etc.)
 
-The objective of this day is to build [your profile page](https://papillard.github.io/my-profile/) and put it online using [Github Pages](https://pages.github.com/).
+The objective of this day is to build [your profile page](https://papillard.github.io/my-profile/) and put it online using [GitHub Pages](https://pages.github.com/).
 
 ## `02 CSS Components`
 

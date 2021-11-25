@@ -10,7 +10,7 @@ cd ~/code/<user.github_nickname>/profile
 
 ## Create the GitHub repo
 
-You can **init**(ialize) a git repository, commit your changes, and create the associated Github repo:
+You can **init**(ialize) a git repository, commit your changes, and create the associated GitHub repo:
 
 ```bash
 git init
@@ -25,9 +25,9 @@ To open the GitHub repo from your browser you can run:
 gh repo view --web
 ```
 
-## Github Pages
+## GitHub Pages
 
-[Github Pages](https://pages.github.com/) is a GitHub service that makes it easy to deploy any **static website** in 10 seconds (static == same content for all users). It is based on a "magic" branch, called `gh-pages`. When GitHub detects this branch, it puts your website online. Awesome right? Let's create this magic branch and push it. ✨🌿✨
+[GitHub Pages](https://pages.github.com/) is a GitHub service that makes it easy to deploy any **static website** in 10 seconds (static == same content for all users). It is based on a "magic" branch, called `gh-pages`. When GitHub detects this branch, it puts your website online. Awesome right? Let's create this magic branch and push it. ✨🌿✨
 
 ```bash
 git co -b gh-pages

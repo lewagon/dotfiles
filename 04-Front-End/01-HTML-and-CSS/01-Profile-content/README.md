@@ -58,7 +58,7 @@ Prepare your profile image file before starting to code. For this exercise You c
 
 ## Indent or die
 
-**Take your time to indent your HTML carefully**. HTML code has a lot of nesting - way more than ruby. If you don't indent, it's game over for your code!
+**Take your time to indent your HTML carefully**. HTML code has a lot of nesting - way more than Ruby. If you don't indent, it's game over for your code!
 
 Which code is easier to understand?
 
