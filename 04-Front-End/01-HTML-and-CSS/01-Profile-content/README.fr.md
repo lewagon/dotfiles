@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-L'objectif de ce challenge simple est de manipuler les balises HTML de base et de créer une card (carte) de profil avec des en-têtes, du texte, des listes et des images.
+L'objectif de ce challenge simple est de manipuler les balises HTML de base et de créer une card (carte) de profil avec des titres, du texte, des listes et des images.
 
 ## Configuration
 
@@ -109,11 +109,11 @@ Indente ton HTML ! Ton code doit ressembler à une [formation de canards en V](h
 Une fois que tu as terminé, tu peux pousser cet exercice et copier le contenu dans le dossier de l'exercice suivant avec cette commande :
 
 ```bash
-# Pousser sur gihtub
+# Pousser sur GitHub
 git add .
 git commit -m "Added content to my profile page"
 git push origin master
 
-# Copier le dossier dans le dossier de l'exercice suivant
+# Copier ton profil dans le dossier de l'exercice suivant
 cp -r ../profile ../../02-Fonts-and-colors
 ```

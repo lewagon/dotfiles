@@ -13,9 +13,9 @@ Utilise le fichier de configuration `app.json` pour ajouter encore un nouveau ch
 "pages/stories/stories"
 ```
 
-### 2. Crée un petit en-tête pour commencer
+### 2. Crée un petit titre pour commencer
 
-On va réutiliser le même [composant Bannière](https://uikit.lewagon.com/documentation#banners) que sur la page d'accueil et le transformer en un bel en-tête ! Tu peux à nouveau utiliser `inline CSS` pour personnaliser sa taille... Ex. : hauteur de 100px.
+On va réutiliser le même [composant Bannière](https://uikit.lewagon.com/documentation#banners) que sur la page d'accueil et le transformer en un beau titre ! Tu peux à nouveau utiliser `inline CSS` pour personnaliser sa taille... Ex. : hauteur de 100px.
 
 ### 3. Puis une card (carte) pour nos anecdotes...
 

@@ -1,10 +1,10 @@
 ## Contexte et objectifs
 
-On va créer un [article Medium](https://lewagon.github.io/medium-copycat/) et le déployer avec Github Pages !
+On va créer un [article Medium](https://lewagon.github.io/medium-copycat/) et le déployer avec GitHub Pages !
 
 ## Configuration
 
-On doit d'abord créer tous les fichiers/dossiers dont on va avoir besoin :
+On doit d'abord créer tous les fichiers et les dossiers dont on va avoir besoin :
 
 ```bash
 mkdir medium-article
@@ -18,11 +18,11 @@ Cette fois-ci, inutile de créer un dossier avec les images, car on va utiliser 
 
 Un article Medium ressemble [à ça](https://medium.com/le-wagon/from-bootstrapping-to-building-a-brand-that-scales-26b0eda92ddb). On va coder [une version simplifiée](https://lewagon.github.io/medium-copycat/).
 
-Avant de te lancer dans le code, analyse la structure de la page, réfléchis aux différents éléments qui la composent et aux différentes classes dont tu vas avoir besoin. Tu peux même dessiner la structure HTML sur papier (ça t'aidera à la coder). Voici les éléments dont on va avoir besoin :
+Avant de te lancer dans le code, analyse la structure de la page et réfléchis aux différents éléments qui la composent et aux différentes classes dont tu vas avoir besoin. Tu peux même dessiner la structure HTML sur papier (ça t'aidera à la coder). Voici les éléments dont on va avoir besoin :
 - Une bannière avec une image de fond, contenant un titre et une description
 - Un conteneur centré (avec une marge à gauche/droite automatique) pour le contenu de l'article
-- À l'intérieur de ce conteneur : des en-têtes, des paragraphes et des liens
-- Et aussi : un conteneur « responsive » + un effet de survol sympa sur les liens
+- À l'intérieur de ce conteneur : des titres, des paragraphes et des liens
+- Et aussi : un conteneur réactif (responsive) + un effet de survol sympa sur les liens
 
 ## Suggestions et ressources supplémentaires
 
@@ -34,11 +34,11 @@ Avant de te lancer dans le code, analyse la structure de la page, réfléchis au
 ### Conteneur
 
 - Centre-le avec `width` et `margin: 50px auto`
-- Le conteneur n'est pas encore « responsive » :
+- Le conteneur n'est pas encore responsive :
   - Remplace `width` par `max-width` (mauvaise approche)
-  - Ajoute des requêtes média (bonne approche)
+  - Ajoute des medias queries (bonne approche)
 
-Voici un exemple de comment redimensionner le conteneur sur n'importe quel écran de 992px ou moins de large :
+Voici un exemple de comment redimensionner le conteneur sur n'importe quel écran de largeur inférieure ou égale à 992px :
 
 ```css
 /* Media queries */
@@ -51,9 +51,9 @@ Voici un exemple de comment redimensionner le conteneur sur n'importe quel écra
 
 Assure-toi de bien redimensionner le conteneur pour toutes les autres tailles d'écran (`576px`, `768px`, `992px` et `1200px`).
 
-## Facultatif - Pousser sur Github Pages
+## Facultatif - Pousser sur GitHub Pages
 
-Si tu le souhaites, tu peux aussi pousser ton article Medium sur Github Pages ! Pour ce faire, tu vas encore devoir copier ton travail dans un dossier **en dehors** de fullstack challenges pour en garder une trace comme projet séparé avec git :
+Si tu le souhaites, tu peux aussi pousser ton article Medium sur GitHub Pages ! Pour ce faire, tu vas encore devoir copier ton travail dans un dossier **en dehors** de fullstack challenges pour en faire un dépôt git séparé :
 
 ```bash
 cp -r ./medium-article ~/code/<user.github_nickname>/medium-article
@@ -74,4 +74,4 @@ git checkout -b gh-pages
 git push origin gh-pages
 ```
 
-Va sur `http://<user.github_nickname>.github.io/medium-article/` pour mettre ta copie d'article Medium en ligne !
+Va sur `http://<user.github_nickname>.github.io/medium-article/` pour voir ta copie d'article Medium en ligne !
