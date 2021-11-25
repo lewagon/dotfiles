@@ -21,7 +21,7 @@
 
 ### 问题 3
 
-返回一个字符串`String`，内容是ActiveRecord验证（validation），用来确保在没有`name`的情况下不能创建数据库记录。
+返回一个字符串`String`，内容是Active Record验证（validation），用来确保在没有`name`的情况下不能创建数据库记录。
 
 ## 关键学习要点
 

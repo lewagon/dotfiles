@@ -64,7 +64,7 @@ At last, Rails!
 
 ### `09 搜索`
 
-今天的讲座涵盖了搜索主题，从使用ActiveRecord的search 101到ElasticSearch或Algolia等更强大的解决方案。
+今天的讲座涵盖了搜索主题，从使用Active Record的search 101到ElasticSearch或Algolia等更强大的解决方案。
 
 ### `10 Airbnb Rails中的Ajax`
 

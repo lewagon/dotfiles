@@ -27,7 +27,7 @@ sqlite3 lib/db/jukebox.sqlite
 ```
 
 现在你在交互式的sqlite3控制台中，你可以向数据库写入你的SQL查询。
-你可以用`.quit`或`Ctrl+D`退出sqlite3控制台。
+你可以用`.quit`或`CTRL+D`退出sqlite3控制台。
 
 ## 工具
 

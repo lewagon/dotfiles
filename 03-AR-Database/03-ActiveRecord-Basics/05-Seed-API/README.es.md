@@ -1,10 +1,10 @@
 ## Contexto y Objetivos
 
-La gema `faker` es interesante pero te imaginas poder importar los datos **reales** de HackerNews? ¡Pues sí, es posible! Lo podemos hacer gracias a su [API](https://github.com/HackerNews/API).
+La gema `faker` es interesante pero te imaginas poder importar los datos **reales** de Hacker News? ¡Pues sí, es posible! Lo podemos hacer gracias a su [API](https://github.com/HackerNews/API).
 
 ## Setup
 
-Vamos a usar [rest-client](https://github.com/rest-client/rest-client) para llamar a la API de HackerNews. Primero instala la gema en tu laptop:
+Vamos a usar [rest-client](https://github.com/rest-client/rest-client) para llamar a la API de Hacker News. Primero instala la gema en tu laptop:
 
 ```bash
 gem install rest-client
@@ -27,7 +27,7 @@ sqlite> SELECT * FROM posts;
 
 ## Especificaciones
 
-Abre el archivo `db/seeds.rb` y escribe el código necesario para insertar **10** posts (**NO 100**, de lo contrario nos prohibirán usar su API) y recuperar los datos de la API de HackerNews.
+Abre el archivo `db/seeds.rb` y escribe el código necesario para insertar **10** posts (**NO 100**, de lo contrario nos prohibirán usar su API) y recuperar los datos de la API de Hacker News.
 
 Puedes llamar al endpoint de la API [https://hacker-news.firebaseio.com/v0/topstories.json](https://hacker-news.firebaseio.com/v0/topstories.json). Te dará un arreglo (array) de los números de identificación (ids) de los 100 posts más recientes. Luego, llama a la API para recuperar los detalles de los primeros 10 posts (¡NO 100!).
 

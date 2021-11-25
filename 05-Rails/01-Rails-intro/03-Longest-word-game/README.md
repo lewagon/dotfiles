@@ -115,7 +115,7 @@ At the bottom of the results, add a `link_to` to go back to the New game page.
 
 The user will play many games, it makes sense to store each score and add it to a grand total. We can have a rule where the score for each game is the number of letters in every valid words (but you can be more creative, take the square of the number of letters? Something else?).
 
-Today is not about the database, so we don't have ActiveRecord to help us store information and retrieve it between two HTTP requests. In Rails, another mechanism exists to persist information **accross** HTTP requests: the [session](http://guides.rubyonrails.org/action_controller_overview.html#session).
+Today is not about the database, so we don't have Active Record to help us store information and retrieve it between two HTTP requests. In Rails, another mechanism exists to persist information **accross** HTTP requests: the [session](http://guides.rubyonrails.org/action_controller_overview.html#session).
 
 Try to use a Rails session to store, compute and display a grand score.
 

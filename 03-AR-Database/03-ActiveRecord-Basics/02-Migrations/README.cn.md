@@ -29,11 +29,11 @@ sqlite3 db/development.sqlite3
 sqlite> .schema
 ```
 
-你能看到不仅仅是你的`posts`表吗？那是ActiveRecord的内部管道😊。你能猜到它是干什么用的吗？
+你能看到不仅仅是你的`posts`表吗？那是Active Record的内部管道😊。你能猜到它是干什么用的吗？
 
 ### 2. 迁移以更新一个表
 
-回到讲座中，阅读[ActiveRecord Migration documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html)。它展示了在Rails上进行迁移是多么容易。但是我们还没有到Rails，所以我们必须手动创建我们的迁移文件。
+回到讲座中，阅读[Active Record Migration documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html)。它展示了在Rails上进行迁移是多么容易。但是我们还没有到Rails，所以我们必须手动创建我们的迁移文件。
 
 使用任务`rake db:timestamp`来为你的迁移文件名获取一个正确的时间戳。在一个新的文件`db/migrate/`中写一个新的迁移，为`posts`表增加一个新的列。
 
