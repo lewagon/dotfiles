@@ -49,7 +49,7 @@ Have a look at your old Ruby code. How did you generate an `Array` of ten random
 
 We need to add a form below the letters so that the user can fill a suggestion and submit it.
 
-Go ahead and add a `<form />` to your view. It should `POST` to the `/score` action in the `GamesController`.
+Go ahead and add a `<form>` to your view. It should `POST` to the `/score` action in the `GamesController`.
 
 You will need to add the line below into your `form`:
 

@@ -48,7 +48,7 @@ score    POST /score(.:format)  games#score
 ### 3 - 提交一个单词
 
 在这些字母下面，我们需要添加一个表单让用户来填一个单词并提交。
-在你的视图里添加一个表单`<form />` 。表单应该发送`POST`请求到`GamesController`控制器的`/score`动作。
+在你的视图里添加一个表单`<form>` 。表单应该发送`POST`请求到`GamesController`控制器的`/score`动作。
 
 你需要在`form`里添加下面这行代码：
 

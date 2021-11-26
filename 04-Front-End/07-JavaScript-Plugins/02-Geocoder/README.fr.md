@@ -40,7 +40,7 @@ Pour afficher une carte MapBox avec un marqueur à l'adresse spécifiée, on uti
 Pour l'utiliser, ajoute cette ligne dans le `head` de ton fichier HTML, afin de pouvoir utiliser la feuille de style de MapBox pour ta carte :
 
 ```html
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet'>
 ```
 
 Pour ajouter une carte, tu auras besoin d'un élément HTML de soutien vide. Par exemple :
