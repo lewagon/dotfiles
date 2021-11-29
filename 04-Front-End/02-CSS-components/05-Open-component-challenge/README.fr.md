@@ -1,14 +1,14 @@
 ## Contexte et objectifs
 
-Maintenant que tu as réussi à reproduire les designs qu'on t'a donnés, voyons voir comment tu t'en sors avec un défi libre autour des composants 😎.
+Maintenant que tu as réussi à reproduire les designs qu'on t'a donnés, voyons voir comment tu t'en sors avec un défi libre autour des composants 😎
 
 Tu devras trouver un composant que tu aimes sur Dribble et essayer de le reproduire.
 
-Lorsque tu crées un nouveau composant, tu dois toujours suivre le même processus :
+Lorsque tu crées un nouveau composant, tu dois toujours suivre le même processus :
 
 ### Étape 1 : Trouver l'inspiration 🤔
 
-Identifie le composant que tu veux créer (formulaire de connexion, onglets, barre de navigation, etc.). Voici un [ensemble de composants Dribbble](https://dribbble.com/arthur-littm/buckets/1030911-Open-Component-Challenge) qu'on a créé pour ce challenge. Choisis une image qui te plaît.
+Identifie le composant que tu veux créer (formulaire de connexion, onglets, barre de navigation, etc). Voici un [ensemble de composants Dribbble](https://dribbble.com/arthur-littm/buckets/1030911-Open-Component-Challenge) qu'on a créé pour ce challenge. Choisis une image qui te plaît.
 
 ### Étape 2 : Dessiner la structure HTML ✏️
 
