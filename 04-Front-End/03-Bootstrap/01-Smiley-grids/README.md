@@ -18,7 +18,7 @@ After that, you'll have to add different `.col-??-??` inside the `.row` dependin
 
 ⚠️ **Don't break the grid**
 
-Do NOT add boostrap grid classes on the same level as other CSS.
+Do NOT add Boostrap grid classes on the same level as other CSS.
 
 ```html
 <div class="container">
