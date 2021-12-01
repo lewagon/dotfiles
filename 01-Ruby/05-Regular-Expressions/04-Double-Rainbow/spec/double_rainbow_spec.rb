@@ -61,7 +61,7 @@ describe "Double Rainbow" do
       expect(word_contains_ll(@secret_message)).to eq "yellow"
       expect(word_contains_ll(test_string)).to eq "hello"
       javascript_test = true
-      puts "    #{colorized("", 226, 2)} Javascript color unlocked"
+      puts "    #{colorized("", 226, 2)} JavaScript color unlocked"
     end
   end
 
@@ -92,7 +92,7 @@ describe "Badges" do
     display_postgresql = test_helper("postgresql", 25, postgresql_test)
     display_css3 = test_helper("CSS3", 27, css3_test)
     display_rake = test_helper("rake", 36, rake_test)
-    display_javascript = test_helper("Javascript", 226, javascript_test)
+    display_javascript = test_helper("JavaScript", 226, javascript_test)
     display_html5 = test_helper("HTML5", 202, html5_test)
     display_ruby = test_helper("Ruby", 196, ruby_test)
 

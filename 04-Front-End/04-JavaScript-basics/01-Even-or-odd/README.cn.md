@@ -1,6 +1,6 @@
 ## 背景和目标
 
-今天是你学习Javascript的第一天。今天的目标是你可以认识到Javascript和Ruby一样，是一种编程语言。它也有变量，函数，条件，循环，等等。今天我们不会用到浏览器。取而代之的是用[Node.js](https://nodejs.org/en/)在终端直接执行Javascript代码。
+今天是你学习JavaScript的第一天。今天的目标是你可以认识到JavaScript和Ruby一样，是一种编程语言。它也有变量，函数，条件，循环，等等。今天我们不会用到浏览器。取而代之的是用[Node.js](https://nodejs.org/en/)在终端直接执行JavaScript代码。
 
 首先，请确认一下命令返回的版本比`10`更高：
 

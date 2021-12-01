@@ -32,7 +32,7 @@ This will copy the relative path of any file as defined by the project root. Gre
 
 Will add intellisense for any CSS class in your project, even those defined in external style sheets like Bootstrap.
 
-No-nonsense formatter for HTML, CSS, Javascript and more. It is opinionated and does not allow for much configuration. It is perfect if you want something simple and don't want to fiddle with configuration files.
+No-nonsense formatter for HTML, CSS, JavaScript and more. It is opinionated and does not allow for much configuration. It is perfect if you want something simple and don't want to fiddle with configuration files.
 
 Another formatter. This one is a ""meta formatter"" that uses other formatters. You can thus use Prettier for CSS and something else for HTML, all managed by Unibeautify. This is also the only formatter that I know of that does a decent job of handling ERB templates. Use the Pretty diff formatter for ERB templates and you will have a pretty good time.
 
