@@ -13,4 +13,4 @@ Mother.phone_kids
 ```
 
 说明为你提供了两个 `Mother` 的子类，因此你只需实现
-类方法 `phone_kids` 。你可能需要使用`Class` 中[`inherited`](http://www.ruby-doc.org/core-2.5.3/Class.html#method-i-inherited)方法。
+类方法 `phone_kids` 。你可能需要使用`Class` 中[`inherited`](https://ruby-doc.org/core-2.7.5/Class.html#method-i-inherited)方法。

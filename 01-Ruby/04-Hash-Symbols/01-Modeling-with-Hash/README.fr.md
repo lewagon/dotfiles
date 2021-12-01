@@ -56,7 +56,7 @@ AGE_OF_STUDENTS = {
 }
 ```
 
-Lis la documentation sur les [Hashes](https://ruby-doc.org/core-2.6.6/Hash.html).
+Lis la documentation sur les [Hashes](https://ruby-doc.org/core-2.7.5/Hash.html).
 Tu vas t’en servir tout le temps, alors apprends à les aimer 😊
 
 **Pour cet exercice, utilise des `Strings` pour tes clés, plutôt que des `Symbols`. C’est plus simple**
