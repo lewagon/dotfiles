@@ -25,7 +25,7 @@ dataset(burger);
 
 ### Aide
 
-N'oublie pas d'utiliser Chrome DevTools pour débuguer !
+N'oublie pas d'utiliser Chrome DevTools pour débugger !
 
 Si tu veux détecter **toutes les occurrences correspondantes** dans ta string, jette un œil au [modificateur `g`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Parameters).
 
