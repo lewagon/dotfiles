@@ -2,7 +2,7 @@
 
 Tu as passé pas mal de temps sur le concept d'OOP en Ruby au début du bootcamp (tu te souviens du livre de recettes ?).
 
-Mais Javascript est aussi un langage de programmation orientée objet et, depuis 2015 (ES6), il prend en charge les [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
+Mais JavaScript est aussi un langage de programmation orientée objet et, depuis 2015 (ES6), il prend en charge les [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
 
 Ce petit challenge présente les classes ES6.
 

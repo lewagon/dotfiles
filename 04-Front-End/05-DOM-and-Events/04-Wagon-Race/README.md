@@ -60,9 +60,9 @@ Once your HTML is finished, switch to CSS and design your race track! Example:
 
 You will update a player's position by moving the `active` class from one `td` to the next one. Of course, there are other solutions to implement this game. Using a table and a CSS class is one option. Just make sure you're able to "manually" produce all the board views you might need.
 
-It's always a good idea to do as much work as possible using smart HTML markup and CSS classes before jumping into JavaScript. Bad front-end developers spend time writing long javascript code that changes CSS values, instead of short scripts that play nicely with existing CSS classes.
+It's always a good idea to do as much work as possible using smart HTML markup and CSS classes before jumping into JavaScript. Bad front-end developers spend time writing long JavaScript code that changes CSS values, instead of short scripts that play nicely with existing CSS classes.
 
-#### Javascript
+#### JavaScript
 
 Write all your code in `lib/wagon_race.js`. We need a way for JavaScript to update the board state. Create simple JavaScript functions that update a player's position. Again, there are several ways to do the same thing. One example below:
 

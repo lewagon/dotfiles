@@ -27,7 +27,7 @@ Just one story is enough, we're just templating here.
 
 ### 4. Data binding introduction
 
-WXML is much more than HTML: it's a **templating language** allowing us to [inject javascript variables and even loop through our local data](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/data.html)! The magic happens when you use this syntax: `{{variable or operation}}`. 
+WXML is much more than HTML: it's a **templating language** allowing us to [inject JavaScript variables and even loop through our local data](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/data.html)! The magic happens when you use this syntax: `{{variable or operation}}`.
 
 We call it the **mustache syntax** 👨‍🦰 and it connects JS and HTML both ways...
 
@@ -75,7 +75,7 @@ Page({
 })
 ```
 
-Well done! Now you have a button firing a a "bindtap" event to the logical layer (the javascript file), and a function that re-sets the local data to another string... immediately rendered in the view. 
+Well done! Now you have a button firing a a "bindtap" event to the logical layer (the JavaScript file), and a function that re-sets the local data to another string... immediately rendered in the view.
 
 ⚠️ Do not break the Page object! **Each key-value pair is chained with a comma.** Notice how the Page object contains different keys provided by the framework: `onReady`, `onShow` etc. We call them [lifestyle functions](https://developers.weixin.qq.com/miniprogram/en/dev/framework/app-service/page.html).
 
