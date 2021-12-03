@@ -49,3 +49,6 @@
 
 [pull]
   rebase = false
+[user]
+	email = arnaud.aprahamian@gmail.com
+	name = arnaudaprahamian
