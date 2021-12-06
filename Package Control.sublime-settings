@@ -4,7 +4,11 @@
     "A File Icon",
     "AdvancedNewFile",
     "All Autocomplete",
+    "Anaconda",
+    "AutoPEP8",
     "Babel",
+    "BracketHighlighter",
+    "Color Highlight",
     "Emmet",
     "ERB Snippets",
     "Git",
@@ -13,7 +17,7 @@
     "Package Control",
     "SCSS",
     "SublimeLinter",
-    "SublimeLinter-rubocop",
-    "BracketHighlighter"
+    "SublimeLinter-flake8",
+    "SublimeLinter-rubocop"
   ]
 }
