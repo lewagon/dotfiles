@@ -1,8 +1,8 @@
 ## 背景与目标
 
-- 了解练习的仓储(repo)的结构，以及到你的Github帐户的链接。
+- 了解练习的仓储(repo)的结构，以及到你的GitHub帐户的链接。
 - 学习在提交你的代码之前，如何在本地测试代码。
-- 学习基本的git命令，来提交对代码的修改并把它推送到Github。
+- 学习基本的git命令，来提交对代码的修改并把它推送到GitHub。
 - 了解Kitt平台的功能。
 
 在这9周里，你将会以3-4人一组或两人一组的方式学习。系统会每天都会按照[循环赛]（http://en.wikipedia.org/wiki/Round-robin_tournament) 的算法给你分配一个新的伙伴, 在这个[gem](https://github.com/ssaunier/round_robin_tournament)里实现.
@@ -83,5 +83,5 @@
 
 - [git速查表](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 - [交互速查表](http://www.ndpsoftware.com/git-cheatsheet.html)
-- 看一下[这个 TED 演讲](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) 关于如何把 git/Github 用于平时的项目 (非dev类的)
+- 看一下[这个 TED 演讲](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) 关于如何把 git/GitHub 用于平时的项目 (非dev类的)
 - 阅读并练习这个教程的所有内容[学习足够多的命令行来变得危险](http://www.learnenough.com/command-line/)

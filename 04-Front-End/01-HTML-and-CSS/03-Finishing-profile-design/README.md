@@ -1,6 +1,6 @@
 ## Setup
 
-Again if you haven't copied the files from the previous exercise yet, let's move the profile folder from the previous exercise in the current directory of this challenge:
+Again if you haven't copied the files from the previous exercise yet, let's copy your profile from the previous challenge in the current directory of this challenge:
 
 ```bash
 cp -r ../02-Fonts-and-colors/profile .
@@ -34,7 +34,6 @@ Here is [your objective](https://lewagon.github.io/html-css-challenges/03-box-mo
 ### Step 2: Selectors
 
 Any time you want to **name** an element of your page, ask yourself:
-
 - Should I use a `class` or an `id`? Is it unique or re-usable?
 - What name should I pick for my class? Respect the `component-shape` convention
 - Should I split this design into several classes instead of one big class?
@@ -45,6 +44,7 @@ Here is an example of **bad** CSS code:
 #home-page-first-image {
   border-radius: 50%;
 }
+
 .home-card {
   text-align: center;
   background: white;
@@ -59,9 +59,11 @@ And here is the **good version** of it:
 .img-circle {
   border-radius: 50%;
 }
+
 .text-center {
   text-align: center;
 }
+
 .card-white {
   background: white;
   padding: 30px;
@@ -71,7 +73,6 @@ And here is the **good version** of it:
 
 - Making an image circle and centering texts are **very common design tasks**. They deserve their own re-usable class, not to be mixed in other classes or ids!
 - Don't repeat yourself and try to use **generic class names**. Consider each CSS class as a re-usable design that you can apply everywhere on your website. Getting this mindset is the main difficulty for CSS beginners.
-
 
 ## Further suggestions & resources
 
@@ -91,7 +92,6 @@ Here is the div centering technique for the main container:
 To design your lists of icons, you'll have to change the `block` behavior of list items by **inlining them**. Here is the corresponding CSS rules.
 
 ```css
-
 .list-inline > li {
   display: inline-block;
   padding: 0px 20px;
@@ -107,7 +107,7 @@ Even inline, a list `<ul>` has some `padding-left` and bullet points that you wi
 }
 ```
 
-From this exercise onwards, **it is critical that you use your developer tool (`inspect`)** to play with your CSS in the browser and test things out before you write the final code.
+From this exercise onwards, **it is critical that you use your Web browser inspector (right-click then "Inspect")** to play with your CSS in the browser and test things out before you write the final code.
 
 ## Finished?
 
@@ -119,7 +119,6 @@ git add .
 git commit -m "Added div to my profile page"
 git push origin master
 
-# Copy folder into next exercise folder
+# Copy your profile into the next exercise folder
 cp -r profile ../04-Responsive-profile
 ```
-

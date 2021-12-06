@@ -6,8 +6,7 @@ Let's familiarise with JavaScript's syntax.
 
 ## Specs
 
-Open the `lib/sum_of_negative.js`. Implement the `sumOfNegative` function which takes one `numbers` parameter (of type `Array`) and returns a `Number`: the sum of negative numbers in the array. For example:
-
+Open the `lib/sum_of_negative.js`. Implement the `sumOfNegative` function which takes one `numbers` parameter (of type `array`) and returns a `number`: the sum of negative numbers in the array. For example:
 - `sumOfNegative([-1, 4, -2, 9, 18])` should return `-3`
 - `sumOfNegative([15, 16, 17, 1000])` should return `0`
 

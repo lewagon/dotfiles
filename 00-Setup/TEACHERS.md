@@ -78,7 +78,7 @@ Project the calendar on the screen to go through the program with the class, wee
 #### Monday - Friday (Week 7) - Airbnb week
 - Airbnb clone! (no flats allowed).
 - Team up with your project buddies.
-- Collaborate on Github.
+- Collaborate on GitHub.
 - Make mistakes you won't make again during the Project's weeks 😊
 
 #### Monday (Week 8) - Friday (Week 9) - Project Weeks
@@ -135,7 +135,7 @@ At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org
 
 - Manager should approve them on his Slack channel
 - Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the wrong batch.
-- After this validation, students will receive 2 mails to join Le Wagon on Github and on Slack.
+- After this validation, students will receive 2 mails to join Le Wagon on GitHub and on Slack.
 
 ## 1 PM - 2 PM: Lunch time
 - Tell students to be back at 2 PM sharp for the first (short) lectures

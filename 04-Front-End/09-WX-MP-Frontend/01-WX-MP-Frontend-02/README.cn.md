@@ -27,7 +27,7 @@
 
 ### 4. 数据绑定（Data binding）介绍
 
-WXML不仅仅是HTML：它是一种**模板语言**，允许我们[注入javascript变量，甚至在本地数据中循环](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/data.html)! 当你使用这种语法时：`{{变量或操作}}`，既`{{variable or operation}}`，奇迹就会发生。
+WXML不仅仅是HTML：它是一种**模板语言**，允许我们[注入JavaScript变量，甚至在本地数据中循环](https://developers.weixin.qq.com/miniprogram/en/dev/framework/view/wxml/data.html)! 当你使用这种语法时：`{{变量或操作}}`，既`{{variable or operation}}`，奇迹就会发生。
 
 我们称它为**胡子语法（mustache syntax）**👨，它将JS和HTML双向连接......
 
@@ -74,7 +74,7 @@ Page({
 })
 ```
 
-你很棒！你有一个按钮向逻辑层(javascript文件)发出`bindtap`事件，并有一个函数将本地数据重新设置为另一个字符串后，立即呈现在视图中。
+你很棒！你有一个按钮向逻辑层(JavaScript文件)发出`bindtap`事件，并有一个函数将本地数据重新设置为另一个字符串后，立即呈现在视图中。
 
 ⚠️不要破坏Page对象! **每个键值对（key-value pair）都用逗号链起来**。注意Page对象包含框架提供的不同键（keys），如`onReady`、`onShow`等等。我们称它们为[生命周期函数](https://developers.weixin.qq.com/miniprogram/en/dev/framework/app-service/page.html)。
 

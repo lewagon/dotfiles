@@ -8,4 +8,4 @@ Suppose you have students (defined by the class `Student`) who each have an amou
 
 - When initializing a `Student`, you should pass 4 arguments representing the student name and the number of bills they own (fives, tens and twenties)
 - Implement a `wealth` instance method on `Student`
-- Implement [Comparable](http://www.ruby-doc.org/core-2.5.3/Comparable.html) on this method so that it's possible to compare 2 students, and to sort an `Array` of students. You can read more about the spaceship operator `<=>` and sorting objects [here](http://stackoverflow.com/a/28014514).
+- Implement [Comparable](https://ruby-doc.org/core-2.7.5/Comparable.html) on this method so that it's possible to compare 2 students, and to sort an `Array` of students. You can read more about the spaceship operator `<=>` and sorting objects [here](http://stackoverflow.com/a/28014514).

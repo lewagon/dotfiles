@@ -1,6 +1,6 @@
 ## 上传你的项目概述（pitch）
 
-**重要提醒**你有一个家庭作业! 下一节课，不是livecode，而是Pitch Night，你需要在此之前[上传你的pitch到kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products)!
+**重要提醒**你有一个家庭作业! 下一节课，不是livecode，而是Pitch Night，你需要在此之前[上传你的pitch到Kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products)!
 
 记住关键点：
 

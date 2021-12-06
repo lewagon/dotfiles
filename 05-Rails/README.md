@@ -64,7 +64,7 @@ Then, at 5pm, every group should demo the current version of their Airbnb clone 
 
 ### `09 Search`
 
-Today's lecture covers the search topic, from the search 101 using ActiveRecord to stronger solutions like ElasticSearch or Algolia.
+Today's lecture covers the search topic, from the search 101 using Active Record to stronger solutions like ElasticSearch or Algolia.
 
 ### `10 Airbnb Ajax in Rails`
 

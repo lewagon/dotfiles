@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-La [classe `Array`](http://www.ruby-doc.org/core-2.5.3/Array.html) est l’une des deux structures principales utilisées pour stocker et accéder à des données en Ruby. (L’autre est [Hash](http://www.ruby-doc.org/core-2.5.3/Hash.html), que l’on verra demain.)
+La [classe `Array`](https://ruby-doc.org/core-2.7.5/Array.html) est l’une des deux structures principales utilisées pour stocker et accéder à des données en Ruby. (L’autre est [Hash](https://ruby-doc.org/core-2.7.5/Hash.html), que l’on verra demain.)
 
 Un array est ordonné, si bien que chaque élément est accessible par son **indice** (index). Cet exercice t’aidera
 à comprendre comment créer un array, comment stocker des données dedans et comment récupérer ces données en utilisant l’indice.
