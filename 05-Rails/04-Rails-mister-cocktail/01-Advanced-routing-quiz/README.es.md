@@ -20,7 +20,7 @@ Si tienes una relación uno a muchos (one to many) entre tus modelos como por ej
 
 ### Pregunta 3
 
-Devuelve una cadena de caracteres (`String`) de una validación ActiveRecord para asegurarte de que ningún registro sea creado sin un nombre (`name`).
+Devuelve una cadena de caracteres (`String`) de una validación Active Record para asegurarte de que ningún registro sea creado sin un nombre (`name`).
 
 
 ## Puntos clave de aprendizaje

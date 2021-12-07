@@ -1,9 +1,8 @@
 ## Upload your pitch
 
-**Important Reminder** - you have homework! On the next session, instead of livecode, it's Pitch Night, which means you need to [upload your pitch on kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) before!
+**Important Reminder** - you have homework! On the next session, instead of livecode, it will be the pitch session! So you need to [upload your pitch on Kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) before!
 
 Remember the key points:
-
 - Who is the **target**? Define your customer segment accurately.
 - What's the **pain** your product tackles?
 - What's the **solution**?

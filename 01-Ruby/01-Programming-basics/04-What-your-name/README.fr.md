@@ -48,5 +48,5 @@ Pose-toi encore une fois ces questions et assure-toi d’être capable de répon
 ## Suggestions et ressources complémentaires
 
 - Pour obtenir une réponse ou des données de l’utilisateur depuis le terminal, tu dois utiliser la méthode [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). Tu auras également besoin de [chomp](https://ruby-doc.org/core-2.5.3/String.html#method-i-chomp) la string obtenue
-- Pour imprimer une question sur le terminal, tu dois utiliser la méthode [puts](http://www.ruby-doc.org/core-2.5.3/IO.html#method-i-puts)
+- Pour imprimer une question sur le terminal, tu dois utiliser la méthode [puts](https://ruby-doc.org/core-2.7.5/IO.html#method-i-puts)
 

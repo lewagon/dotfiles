@@ -13,4 +13,4 @@ Si tienes tiempo adicional, te recomendamos mejorar tu perfil (el que pusheaste 
 
 ## [Opcional] Flexbox Froggy
 
-Este ejercicio es para aquellos que quieran mejorar sus habilidades en flexbox. Aquí hay uno muy bueno sobre una ranita: [froggy game](http://flexboxfroggy.com/). Nosotros lo amamos porque somos franceses 🐸.
+Este ejercicio es para aquellos que quieran mejorar sus habilidades en flexbox. Aquí hay uno muy bueno sobre una ranita: [froggy game](http://flexboxfroggy.com/).

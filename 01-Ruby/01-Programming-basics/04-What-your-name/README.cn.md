@@ -42,5 +42,5 @@ ruby lib/interface.rb
 ## 进一步的建议 & 资源
 
 * 为了在终端中得到用户的输入/回答，你应该使用[gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html)。 你还将需要对结果字符串使用[chomp](https://ruby-doc.org/core-2.5.3/String.html#method-i-chomp)。
-* 要想在终端中输出一个问题，你应该使用[puts](http://www.ruby-doc.org/core-2.5.3/IO.html#method-i-puts)。
+* 要想在终端中输出一个问题，你应该使用[puts](https://ruby-doc.org/core-2.7.5/IO.html#method-i-puts)。
 

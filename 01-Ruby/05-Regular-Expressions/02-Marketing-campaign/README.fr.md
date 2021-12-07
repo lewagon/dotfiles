@@ -2,7 +2,7 @@
 
 Les e-mails constituent la pierre angulaire de n’importe quelle entreprise de SaaS (Software-as-a-Service, logiciel en tant que service) et il est impératif de savoir comment les manipuler du point de vue de la programmation.
 
-Sur la plupart des sites web, une adresse e-mail est la clé pour créer un compte. Si elle est mal orthographiée, l’utilisateur ne pourra pas récupérer son mot de passe. Les professionnels du marketing, quant à eux, ont besoin de communiquer avec leurs utilisateurs et de faire en sorte que leur base de données de coordonnées reste un ensemble fiable d’adresses e-mail valides.
+Sur la plupart des sites Web, une adresse e-mail est la clé pour créer un compte. Si elle est mal orthographiée, l’utilisateur ne pourra pas récupérer son mot de passe. Les professionnels du marketing, quant à eux, ont besoin de communiquer avec leurs utilisateurs et de faire en sorte que leur base de données de coordonnées reste un ensemble fiable d’adresses e-mail valides.
 
 ## Le cadre
 
@@ -32,7 +32,7 @@ Chaque adresse e-mail est l’association d’un **nom d’utilisateur** et d’
 
 #### À propos des noms de domaine
 
-Le domaine de premier niveau ou TLD (Top-Level Domain) est le dernier groupe de caractères du nom de domaine, juste après le **point**, et il peut être choisi dans une liste standard. `.com` est un TLD très courant pour les sites web commerciaux, mais tu as sans doute entendu parler de TLD historiques comme `.net` et `.org`.
+Le domaine de premier niveau ou TLD (Top-Level Domain) est le dernier groupe de caractères du nom de domaine, juste après le **point**, et il peut être choisi dans une liste standard. `.com` est un TLD très courant pour les sites Web commerciaux, mais tu as sans doute entendu parler de TLD historiques comme `.net` et `.org`.
 
 Voici les principales catégories :
 - gLTD (generic top-level domains) : domaines de premier niveau génériques (tels que `.com`, `.net`, `.org`)

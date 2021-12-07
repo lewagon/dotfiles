@@ -17,4 +17,4 @@
 ### 提示
 
 * 通过将单词的字母顺序进行排序，你可以很快分辨出两个词是否属于变位词，请记得大小写不重要！
-* 如果你好奇（且有耐心），你可以看看不同的[排序算法sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm) (需要VPN 🛡) 以及它们相应的时间复杂度。另外你也可以看看[这篇文章](http://www.igvita.com/2009/03/26/ruby-algorithms-sorting-trie-heaps/) ，学习哪个算法依赖于ruby的`排序（sort）`方法（method）。
+* 如果你好奇（且有耐心），你可以看看不同的[排序算法sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm) (需要VPN 🛡) 以及它们相应的时间复杂度。另外你也可以看看[这篇文章](http://www.igvita.com/2009/03/26/ruby-algorithms-sorting-trie-heaps/) ，学习哪个算法依赖于Ruby的`排序（sort）`方法（method）。

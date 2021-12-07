@@ -42,7 +42,7 @@
 
 ## 完成了吗？
 
-一旦你完成了，你可以提交这个练习到[Github pages](https://pages.github.com)，并且分享到你的slack上。
+一旦你完成了，你可以提交这个练习到[GitHub pages](https://pages.github.com)，并且分享到你的slack上。
 
 首先，从`fullstack-challenges`中复制一份出来，这样我们就可以把它作为一个单独的`git`项目来版本跟踪。
 

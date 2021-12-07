@@ -151,7 +151,7 @@ Our work on the models should make this one pretty easy. We can access all posts
 
 **See author's details**
 
-As always, start by breaking down the action in small steps in pseudo-code, then translate line by line in ruby and test regularly.
+As always, start by breaking down the action in small steps in pseudo-code, then translate line by line in Ruby and test regularly.
 
 Our user must see the following in the terminal when choosing Molly Struve:
 

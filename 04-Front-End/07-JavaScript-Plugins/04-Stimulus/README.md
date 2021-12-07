@@ -24,7 +24,7 @@ rake webpack
 
 and open [localhost:8080](http://localhost:8080) in your browser.
 
-You can check these checkboxes individually, but the "Check all" checkbox is not yet checking all the checkboxes. This is the behaviour we want to implement thanks to Javascript, and our new friend: Stimulus.
+You can check these checkboxes individually, but the "Check all" checkbox is not yet checking all the checkboxes. This is the behaviour we want to implement thanks to JavaScript, and our new friend: Stimulus.
 
 
 ## Getting Started: Stimulus installation

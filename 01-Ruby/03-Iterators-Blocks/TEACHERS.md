@@ -2,7 +2,7 @@
 
 1. Two-parts lecture.
 1. First part on **iterators**, these very powerful methods on array.
-1. Second part on **ruby blocks**, more advanced concepts.
+1. Second part on **Ruby blocks**, more advanced concepts.
 
 ## Rehearsal
 

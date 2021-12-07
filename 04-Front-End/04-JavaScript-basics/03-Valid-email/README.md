@@ -6,7 +6,7 @@ The only difference is the built-in way of testing one in JavaScript (vs. Ruby).
 
 ## Specs
 
-Open the `lib/valid_email.js`. Implement the `valid` function which takes one `email` parameter (of type `String`) and returns a `Boolean`: `true` if the email provided is valid, `false` if not. For example:
+Open the `lib/valid_email.js`. Implement the `valid` function which takes one `email` parameter (of type `string`) and returns a `boolean`: `true` if the email provided is valid, `false` if not. For example:
 
 - `valid('boris.lewagon.org')` should return `false`
 - `valid('boris@lewagon.org')` should return `true`

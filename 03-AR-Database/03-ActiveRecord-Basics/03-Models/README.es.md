@@ -2,7 +2,7 @@
 
 Ahora sabes más sobre el uso de migraciones para actualizar el esquema de la base de datos. Vamos a usar nuestra base de datos para insertar algunas filas y consultarlas. También vamos a seguir trabajando en el clon de Hacker News.
 
-Antes de empezar este ejercicio, asegúrate de leer [la Guía de Inicio de ActiveRecord](http://guides.rubyonrails.org/active_record_basics.html).
+Antes de empezar este ejercicio, asegúrate de leer [la Guía de Inicio de Active Record](http://guides.rubyonrails.org/active_record_basics.html).
 
 ## Configuración
 
@@ -36,11 +36,11 @@ Te damos la misma plantilla de aplicación que te dimos el viernes pasado. La pu
 ruby app.rb
 ```
 
-Abre `app/controllers/posts_controller.rb` e implementa los métodos. Recuerda **no** escribir SQL. Solo usa métodos ActiveRecord con tu modelo de clase.
+Abre `app/controllers/posts_controller.rb` e implementa los métodos. Recuerda **no** escribir SQL. Solo usa métodos Active Record con tu modelo de clase.
 No hay `rake` para testear esta segunda parte del ejercicio, así que tendrás que testear tu aplicación corriendo en la Terminal.
 
 ## Puntos clave de aprendizaje
 
 * ¿Qué es un ORM?¿De qué manera te facilita la vida?
-* ¿Qué convención de nombre se usa con el mapping de ActiveRecord?¿De dónde sale la magia?
-* ¿Te das cuenta de las ventajas de usar ActiveRecord en comparación con escribir todo el SQL tú mismo?
+* ¿Qué convención de nombre se usa con el mapping de Active Record?¿De dónde sale la magia?
+* ¿Te das cuenta de las ventajas de usar Active Record en comparación con escribir todo el SQL tú mismo?
