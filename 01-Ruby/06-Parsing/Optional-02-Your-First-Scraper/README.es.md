@@ -7,6 +7,7 @@ Primero abre tu Terminal e instala [Nokogiri](http://www.nokogiri.org/), una **g
 ```bash
 gem install nokogiri
 ```
+
 Luego puedes correr el siguiente código Ruby:
 
 ```ruby
