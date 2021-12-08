@@ -5,13 +5,14 @@ Avant de passer au challenge Watch-List, on va revenir sur quelques-uns des prin
 ## Spécifications
 
 Prends le fichier `lib/quiz.rb`. Il contient un quiz avec quelques méthodes pour tester tes connaissances Rails. Assure-toi que chacune des méthodes retourne les bonnes informations pour passer le quiz !
+
 ⚠️ Essaie d'y répondre avant de lancer `rake`.
 
 ### Question 1
 
 Code les 7 routes conventionnelles correspondant aux 7 routes CRUD générées par `resources :restaurants`.
-Conseil : une route obéit à ce pattern : `verb "url", to: "controller#action"`
-/!\ dans le contexte de Rails, une route n'est pas une String !
+
+Conseil : une route suit ce motif : `verb "url", to: "controller#action"`
 
 ### Question 2
 
@@ -21,7 +22,6 @@ Si tu as une relation 1:N entre tes modèles `Restaurant` et `Review` (belongs_t
 ### Question 3
 
 Retourne une `String` de la validation ActiveRecord pour t'assurer qu'aucun enregistrement n'est créé sans nom (`name`).
-
 
 ## Apprentissages clés
 
