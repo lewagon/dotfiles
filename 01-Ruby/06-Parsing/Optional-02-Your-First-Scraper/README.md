@@ -2,8 +2,7 @@
 
 ## Example
 
-First, open your terminal and install [Nokogiri](http://www.nokogiri.org/),
-a very useful **gem** when you want to scrape web page content.
+First, open your terminal and install [Nokogiri](http://www.nokogiri.org/), a very useful **gem** when you want to scrape web page content.
 
 ```bash
 gem install nokogiri
@@ -23,14 +22,11 @@ doc.search('.wt-grid .v2-listing-card__info .text-body').each_with_index do |ele
 end
 ```
 
-If you launch this code, it will print all the wallets found of
-the first page of results on [Etsy](https://www.etsy.com/search?q=wallet)
+If you launch this code, it will print all the wallets found of the first page of results on [Etsy](https://www.etsy.com/search?q=wallet)
 
 How did it work?
 
-The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
-and looks for all the HTML element in the page that match it. Here we used a **class** selector `.card-meta-row`
-because the [HTML source](https://support.mozilla.org/en-US/questions/873324) was something like:
+The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors) and looks for all the HTML element in the page that match it. Here we used a **class** selector `.card-meta-row` because the [HTML source](https://support.mozilla.org/en-US/questions/873324) was something like:
 
 ```html
 <div class="card-meta-row">
