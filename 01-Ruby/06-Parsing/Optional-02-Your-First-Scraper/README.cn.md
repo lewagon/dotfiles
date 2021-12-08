@@ -10,7 +10,6 @@ gem install nokogiri
 
 然后，你可以运行下面的Ruby代码：
 
-
 ```ruby
 require 'open-uri'
 require 'nokogiri'
