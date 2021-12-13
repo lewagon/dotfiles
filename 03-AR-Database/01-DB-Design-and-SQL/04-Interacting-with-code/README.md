@@ -59,8 +59,9 @@ SQL queries tend to get pretty long, especially when you start using `WHERE` or 
 
 ```ruby
 # Find the first 3 artists with the letter `Z` in their name.
-query = <<-SQL
-  SELECT * FROM artists
+query = <<~SQL
+  SELECT *
+  FROM artists
   WHERE name LIKE "%Z%"
   ORDER BY name
   LIMIT 3
