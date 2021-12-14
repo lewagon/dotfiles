@@ -22,7 +22,7 @@ Une fois que c'est fait :
 - Transforme `.tabs` en flexbox
 - Ajoute de la marge intérieure (`padding`) sur chaque onglet (`.tab`)
 - Tu n'as pas besoin d'espacer (`space-between`) ou d'aligner les éléments (`align-items`) ici, car les onglets sont déjà de la même hauteur (`height`)
-- Tu peux aussi créer les états actifs (**active**) et de survol (**hover**) des onglets en utilisant `.tab.active` et `.tab:hover`. Tu devras sans doute ajuster l'opacité (`opacity`) et la bordure inférieure (`border-bottom`) 😬
+- Tu peux aussi créer les états actifs (**active**) et de survol (**hover**) des onglets en utilisant `.tab:active` et `.tab:hover`. Tu devras sans doute ajuster l'opacité (`opacity`) et la bordure inférieure (`border-bottom`) 😬
 
 ## Design des notifications
 
