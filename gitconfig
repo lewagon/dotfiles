@@ -49,3 +49,5 @@
 [user]
 	email = ben.m.chavez@gmail.com
 	name = Ben Chavez
+[credential]
+	helper = cache

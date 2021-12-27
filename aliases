@@ -3,5 +3,15 @@ alias ip="curl ipinfo.io/ip"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 
+# Ruby on Rails Commands:
+alias be="bundle exec"
+
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
+alias up='cd ..'
+alias mouse='./mousewheel.sh'
+alias zsh_history_fix='./.shfiles/zsh_history_fix.sh'
+alias dplinux='ssh chaben@zhuang.cdm.depaul.edu'
+alias systemsii='ssh bchavez4_@mc.cdm.depaul.edu'
+alias dpu='cd /media/sf_Windows_benmc/OneDrive/Documents/Graduate\ School/DePaul\ CDM/2021\ -\ 2022\ Academic\ Year/Fall\ Quarter\ 2021'
+
