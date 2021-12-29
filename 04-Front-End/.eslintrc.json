@@ -1,5 +1,9 @@
 {
   "extends": "airbnb-base",
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false
+  },
   "rules": {
     "no-console": "off",
     "no-alert": "off",

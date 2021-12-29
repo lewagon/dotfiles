@@ -191,7 +191,7 @@ Only interactive elements can receive focus, content items (text and images) are
 ![Link](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/link.png)
 
 1. Practice the keyboard-only navigation:
-    - `⇥` TAB to move forward in the page / `⇧` SHIFT + `⇥` TAB to move backward
+    - `⇥` TAB to move forward in the page / `⇧` Shift + `⇥` TAB to move backward
     - `↑ ↓ ← →` Arrow keys to select values in a form
     - SPACE bar to tick checkboxes
     - `↵` ENTER to submit

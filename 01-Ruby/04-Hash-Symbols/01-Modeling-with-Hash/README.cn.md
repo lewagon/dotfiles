@@ -53,7 +53,7 @@
   </tbody>
 </table>
 
-这些信息需要存储于一个ruby[常量(constant)](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Variables_and_Constants#Constants) 以此模仿数据库。
+这些信息需要存储于一个Ruby[常量(constant)](https://www.rubyguides.com/2017/07/ruby-constants/) 以此模仿数据库。
 例如，下面是一个`Hash`的例子 - `AGE_OF_STUDENTS`包含学生和他们的年龄：
 
 ```ruby
@@ -64,7 +64,7 @@ AGE_OF_STUDENTS = {
 }
 ```
 
-阅读有关[哈希（Hashes）](https://ruby-doc.org/core-2.6.6/Hash.html)的文档。
+阅读有关[哈希（Hashes）](https://ruby-doc.org/core-2.7.5/Hash.html)的文档。
 你将总是会用到它们，所以和它们交个朋友吧 😊
 
 **在这个练习中，为了简单起见，使用`字符串（Strings）`而不是`符号（Symbols）`作为你的键**

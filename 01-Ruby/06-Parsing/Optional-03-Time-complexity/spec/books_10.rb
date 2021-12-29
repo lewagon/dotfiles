@@ -4,9 +4,9 @@ BOOKS_10 = [
   "Component-Based Applications",
   "Computer Science Distilled",
   "Eloquent JavaScript",
-  "Github Explained",
+  "GitHub Explained",
   "Lead the Way",
   "Learn Ruby On Rails",
   "Markdown Guide",
-  "Open Source",
+  "Open Source"
 ]

@@ -13,7 +13,8 @@ Then create the Heroku app and do your initial deploy. Check out [the Heroku lec
 Tip: always run `heroku run rails db:migrate` after pushing to Heroku to make sure your production database is up to date with any changes.
 
 ## Pair Programming
-It is hard to split the work and have everyone starting to code on an empty project. Start by generating your **core models** on the lead developer's machine, in [pair-programming](https://en.wikipedia.org/wiki/Pair_programming). Make sure you follow thoroughly the DB schema that was validated by the teaching staff.
+It is hard to split the work and have everyone starting to code on an empty project. Start by generating your **core models** on the lead developer's machine, in [pair-programming](https://en.wikipedia.org/wiki/Pair_programming). Make sure you follow thoroughly the DB schema that was validated by the teaching staff. You can refresh your Active Record knowledge [here](https://kitt.lewagon.com/knowledge/cheatsheets/activerecord) if you'd like before starting to create your models.
+
 Always start by generating the models that do not reference other models. Remember the syntax?
 
 
@@ -31,11 +32,13 @@ Once you generated all your models, don't forget to run
 rails db:migrate
 ```
 
-Then open your models and go on with **associations** and **validations** :ok_hand:
+Note: Some of your schemas may have more advanced relationships and foreign keys than we saw during Airbnb week. For example, a table that may need to store two instances (foreign keys) from another table (most often the `User` table). In this case you'll need to use something called `aliases`. Learn how to implement them with [this guide](https://kitt.lewagon.com/knowledge/cheatsheets/activerecord_advanced) on advanced Active Record.
+
+Once done, open your models and go on with **associations** and **validations** 👌
 
 ## Controllers
 
-Before splitting the work, you can also consider generating the main controllers (empty at this point).
+Before splitting the work, you can also consider generating the main controllers (keep empty at this point).
 
 ```bash
 # Generic syntax
@@ -54,4 +57,4 @@ As you likely found out during Airbnb Week, having a thorough and fully fleshed-
 While you created your initial mockup on the Product Design Sprint, now is the time to take another look and update it based on the decisions you & your team made earlier about user stories, routes, etc.
 Figma is an incredible tool with loads of cool features that you can utilize here to make a high-fidelity prototype. Make sure to create your [components library](https://help.figma.com/hc/en-us/articles/360038662654-Guide-to-Components-in-Figma), add some plugins like [unsplash](https://www.figma.com/community/plugin/738454987945972471/Unsplash), [color palettes](https://www.figma.com/community/search?model_type=public_plugins&q=color%20palettes) and explore even more in the [community](https://www.figma.com/community/explore) section.
 
-Choose a team member to work on improving the Figma while the others continue with the next tasks.
+Choose a team member to work on improving the Figma while the others continue with the remaining tasks.

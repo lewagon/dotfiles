@@ -8,33 +8,33 @@ cp -r profile ~/code/<user.github_nickname>
 cd ~/code/<user.github_nickname>/profile
 ```
 
-## Creación el repositorio Github
+## Creación el repositorio GitHub
 
-Puedes inicializar (**init**) un repositorio, hacer los commits de tus cambios y crear el respectivo repositorio Github:
+Puedes inicializar (**init**) un repositorio, hacer los commits de tus cambios y crear el respectivo repositorio GitHub:
 
 ```bash
 git init
 git add .
 git commit -m "my profile page"
-gh repo create # this creates the associated repo on Github!
+gh repo create # this creates the associated repo on GitHub!
 ```
 
-Para abrir el repositorio Github desde tu navegador, puedes correr el código siguiente:
+Para abrir el repositorio GitHub desde tu navegador, puedes correr el código siguiente:
 
 ```bash
 gh repo view --web
 ```
 
-## Github Pages
+## GitHub Pages
 
-[Github Pages](https://pages.github.com/) es un servicio asociado de Github que facilita la implementación de cualquier **página web estática** en 10 segundos  (estático == no es una aplicación Rails). Se basa en una rama "mágica" que se llama `gh-pages`. Github pone tu página en línea cuando  detecta esta rama. Genial, ¿no? Crea esta rama mágica y haz el push. ✨🌿✨
+[GitHub Pages](https://pages.github.com/) es un servicio asociado de GitHub que facilita la implementación de cualquier **página web estática** en 10 segundos  (estático == no es una aplicación Rails). Se basa en una rama "mágica" que se llama `gh-pages`. GitHub pone tu página en línea cuando  detecta esta rama. Genial, ¿no? Crea esta rama mágica y haz el push. ✨🌿✨
 
 ```bash
 git co -b gh-pages
 git push origin gh-pages # we push the gh-pages branch, not master!
 ```
 
-¡Ahora puedes construir la URL `http://<user.github_nickname>.github.io/profile/` (Github crea esta URL automáticamente) y ver lo que has creado en linea! Comparte el enlace con tus compañeros/as en Slack.
+¡Ahora puedes construir la URL `http://<user.github_nickname>.github.io/profile/` (GitHub crea esta URL automáticamente) y ver lo que has creado en linea! Comparte el enlace con tus compañeros/as en Slack.
 
 A partir de este momento y hasta el final del día puedes trabajar en tu directorio `~/code/<user.github_nickname>/profile` Y en la rama `gh-pages`. Esto quiere decir que cualquier actualización de tu perfil puede ser pusheada a `http://<user.github_nickname>.github.io/profile/` por medio de los comandos git habituales:
 

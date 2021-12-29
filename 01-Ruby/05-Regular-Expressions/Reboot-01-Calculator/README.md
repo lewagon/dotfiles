@@ -27,7 +27,7 @@ Always kickstart a challenge altogether with the teacher and write the *pseudo-c
 # 5. etc.
 ```
 
-**Writing the pseudo-code is 80% of the job!** Then translating english into ruby is really the easy part. Adopt this pseudo-code methodology for **every** challenge of the Reboot session.
+**Writing the pseudo-code is 80% of the job!** Then translating english into Ruby is really the easy part. Adopt this pseudo-code methodology for **every** challenge of the Reboot session.
 
 ## Step 1 - Dumb calculator
 

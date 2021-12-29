@@ -24,7 +24,7 @@ def nested_routes_for_one_to_many?
 end
 
 def validate_name
-  # TODO: Return a `string` of the ActiveRecord validation need to make sure no record is
+  # TODO: Return a `string` of the Active Record validation need to make sure no record is
   # created without a name. /!\ in Rails' context, a validation **is not** a String!
   # (it is only a String for the purpose of this exercise)
 end

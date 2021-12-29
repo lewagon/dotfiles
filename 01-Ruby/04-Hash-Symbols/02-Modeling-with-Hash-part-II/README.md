@@ -35,6 +35,7 @@ Let's now create a complete `#calories_counter` that will enable us to calculate
 ```ruby
 orders = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
 puts calories_counter(orders)
+# => 1575
 ```
 
 ## Key learning points
@@ -42,4 +43,3 @@ puts calories_counter(orders)
 - How do you retrieve a value stored in an `Array` within a `Hash`?
 - Which data structure would you use to store animal names, alphabetically sorted?
 - Which data structure would you use to store animal names and colors?
-

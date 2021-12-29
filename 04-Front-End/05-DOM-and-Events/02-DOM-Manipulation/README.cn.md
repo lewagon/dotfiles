@@ -22,6 +22,6 @@ rake webpack
 
 然后在你最爱的浏览器里打开[`localhost:8080`](http://localhost:8080)。打开控制台（Console）.
 
-修改一些`lib/dom.js`文件中的代码, 当你在Sublime Text里保存后, 在浏览器内网页会重新载入。
+修改一些`lib/dom.js`文件中的代码, 当你在代码编辑器里保存后, 在浏览器内网页会重新载入。
 
 你的目标是通过所有测试！

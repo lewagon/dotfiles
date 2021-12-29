@@ -1,15 +1,14 @@
 ## Background & Objectives
 
-### Discuss with classmates
+### Discuss with your buddy
 
-- What are the differences between a String and a Symbol?
+- What are the differences between a string and a symbol?
 - When should you use one vs the other?
 - Memory-wise, what's the behavior of each one?
 
 ### Technical overview
 
-For ruby beginners, understanding symbols can be quite tricky.
-As a rule of thumb, symbols are pretty similar to strings, but:
+For Ruby beginners, understanding symbols can be quite tricky. As a rule of thumb, symbols are pretty similar to strings, but:
 
 When you use a string less for its textual content, and more as a kind of unique identifier in your program, you should consider using a Symbol.
 
@@ -31,8 +30,7 @@ Read [this StackOverflow answer](http://stackoverflow.com/a/8189435/197944/) if 
 
 ## Specs
 
-Look at the `lib/symbols.rb`. You will find a true/false quiz
-and a few methods to test your ability to pick symbols over strings.
+Look at the `lib/symbols.rb`. You will find a true/false quiz and a few methods to test your ability to pick symbols over strings.
 
 ## Key learning points
 

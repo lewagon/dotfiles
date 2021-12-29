@@ -1,16 +1,3 @@
-## 注意
-
-⚠️ **就算终端告诉你要这样的，但是也千万不要运行 `sudo gem install rails`命令！** ⚠️
-> 如果出现这种情况，重启终端(`cmd + q` 或 `ctrl + q`) - 如果还是出现这种情况，提交一个ticket
-
-这是安装rails的正确方法：
-
-```bash
-gem install rails -v 6.0
-```
-
-退出并重启终端。
-
 ## 背景和目标
 
 还记得第一周的Ruby吗？我们开发的程序的用户界面只有终端。这些日子已经过去了，我们现在使用Rails！。这意味着：
@@ -100,7 +87,7 @@ ask          GET        /ask(.:format)       questions#ask
 **视图(View)**
 
 让我们来创建一个视图，这是显示form的最后一步！你还记得视图应该放在哪个文件夹，应该如何命名吗？
-这是Rails的其中一个约定，[动作视图约定](https://kitt.lewagon.com/karr/karr.kitt/lectures/rails/rails-intro-6/index.html?title=Rails+Basics&program_id=1#/6/6)。
+这是Rails的其中一个约定，[动作视图约定](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro-6/index.html?title=Rails+Basics#/6/6)。
 
 在[localhost:3000/ask](http://localhost:3000/ask)刷新页面，如果你的文件命名正确的话，最终你会看到一个没有任何错误的页面。现在这个页面还是空的，让我们来添加表单(`<form>`)。还记得语法吗？
 
@@ -256,7 +243,7 @@ end
 rails g system_test questions
 ```
 
-用Sublime Text打开生成的文件，写下你的第一个测试：
+用代码编辑器打开生成的文件，写下你的第一个测试：
 
 ```ruby
 # test/system/questions_test.rb

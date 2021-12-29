@@ -2,11 +2,11 @@ require "decoder"
 
 describe "decoder" do
   it "should decode '.-'" do
-    expect(decode('.-')).to eq('A')
+    expect(decode(".-")).to eq("A")
   end
 
   it "should decode '.... ..'" do
-    expect(decode('.... ..')).to eq('HI')
+    expect(decode(".... ..")).to eq("HI")
   end
 
   it "should detect pipe (|) character and convert it into a space between words" do

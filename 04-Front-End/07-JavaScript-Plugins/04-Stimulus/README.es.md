@@ -188,7 +188,7 @@ export default class extends Controller {
 }
 ```
 
-💡 Si usas el linter de Sublime, ESLint se quejará de un error de sintaxis. Este ejercicio no está configurado para soportar el paquete [`babel-eslint`](https://github.com/babel/babel-eslint) el cual permitiría este tipo de sintaxis. Simplemente continúa trabajando en este desafío ignorando este error ...
+💡 Si usas el linter de tu editor de texto, ESLint se quejará de un error de sintaxis. Este ejercicio no está configurado para soportar el paquete [`babel-eslint`](https://github.com/babel/babel-eslint) el cual permitiría este tipo de sintaxis. Simplemente continúa trabajando en este desafío ignorando este error ...
 
 Haz clic en el botón.¿Ves el `this.triggerTarget` en la consola? ¿Está referenciando el elemento `<button />` en el DOM?
 

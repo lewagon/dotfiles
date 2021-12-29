@@ -12,7 +12,7 @@ class Restaurant
 end
 ```
 
-- Let's define the "constructor", the method that is going to construct our objects. In ruby this method is called `initialize`:
+- Let's define the "constructor", the method that is going to construct our objects. In Ruby this method is called `initialize`:
 
 ```ruby
 def initialize(name, city, capacity, category)
@@ -249,7 +249,7 @@ fancy_place.add_reservation("romain")
 fancy_place.print_clients
 ```
 
-Let's comment the outputs. As you see, if you apply an instance method on an object, ruby will first look in the object class if there is a corresponding method, if not it will look for this method in the parent class.
+Let's comment the outputs. As you see, if you apply an instance method on an object, Ruby will first look in the object class if there is a corresponding method, if not it will look for this method in the parent class.
 
 #### `super` keyword
 

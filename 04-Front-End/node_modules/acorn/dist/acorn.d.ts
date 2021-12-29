@@ -12,7 +12,7 @@ declare namespace acorn {
   }
 
   interface Options {
-    ecmaVersion?: 3 | 5 | 6 | 7 | 8 | 9 | 10 | 2015 | 2016 | 2017 | 2018 | 2019
+    ecmaVersion?: 3 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020
     sourceType?: 'script' | 'module'
     onInsertedSemicolon?: (lastTokEnd: number, lastTokEndLoc?: Position) => void
     onTrailingComma?: (lastTokEnd: number, lastTokEndLoc?: Position) => void

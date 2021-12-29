@@ -103,7 +103,7 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 
 Puedes trabajar en un archivo temporal como `parsing.rb` para encontrar los selectores adecuados y el código Ruby para obtener todos los datos que quieres extraer del HTML. Puedes comenzar simplemente mostrando la información extraída con `puts`. Una vez que hayas encontrado todo los selectores que necesites puedes comenzar a escribir el código de la acción en tu recetario.
 
-Hoy usarás el método Nokogiri `.search()` el cual toma un selector CSS como parámetro. Si no recuerdas la sintaxis, échale un vistazo a esta sección de la [clase de parsing](https://kitt.lewagon.com/karr/karr.kitt/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data&program_id=1#/3/6).
+Hoy usarás el método Nokogiri `.search()` el cual toma un selector CSS como parámetro. Si no recuerdas la sintaxis, échale un vistazo a esta sección de la [clase de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6).
 
 **Recursso**: ¿Quieres saber más sobre Nokogiri? Aquí hay una [buena guía de scraping de Nokogiri](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
 

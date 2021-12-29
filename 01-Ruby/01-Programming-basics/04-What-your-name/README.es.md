@@ -49,4 +49,4 @@ Hazte las siguientes preguntas nuevamente y asegúrate de que las puedas respond
 ## Recomendaciones y recursos adicionales
 
 * Debes usar [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html) para obtener un input/respuesta desde la Terminal. También necesitarás [chomp](https://ruby-doc.org/core-2.5.3/String.html#method-i-chomp) para remover elementos que no forman parte del string (cadena de caracteres).
-* Debes usar [puts](http://www.ruby-doc.org/core-2.5.3/IO.html#method-i-puts) para imprimir una pregunta en la Terminal.
+* Debes usar [puts](https://ruby-doc.org/core-2.7.5/IO.html#method-i-puts) para imprimir una pregunta en la Terminal.

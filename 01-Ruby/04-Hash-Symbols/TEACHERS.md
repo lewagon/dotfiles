@@ -190,7 +190,7 @@ Note: You should not reveal the solution and live code it with students. Start b
 1. Explain it's easy to extract data as array or hash from standard files like CSV/JSON.
 2. Introduce CSV and JSON with the slides.
 3. Don't spend too much time => **full course on Parsing is next Tuesday**.
-4. If you have time, play a bit with Github API building an interactive program getting info on a user from the terminal.
+4. If you have time, play a bit with GitHub API building an interactive program getting info on a user from the terminal.
 5. You can install [JSON Viewer Chrome extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) to make JSON readable on your browser.
 
-Github API URL for user: https://api.github.com/users/ssaunier
+GitHub API URL for user: https://api.github.com/users/ssaunier

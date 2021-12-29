@@ -1,8 +1,6 @@
 ## Background & Objectives
 
-Congrats, you are now an expert in ActiveRecord 😊 Let's take a step back from
-what we've learnt so far since the very first day and the setup:
-
+Congrats, you are now an expert in Active Record 😊 Let's take a step back from what we've learnt so far since the very first day and the setup:
 - Store information in variables
 - Define methods to implement generic behavior on arguments and reuse code
 - Use several types, simple (`Integer`, `String`) or complex (`Hash`, `Array`)
@@ -15,11 +13,9 @@ Now though, you'll start covering more complex stuff that will help us build big
 
 - Class - to encapsulate **data** and **behavior** in an object
 - **MVC** - to build software where each class has a single responsibility
-- ActiveRecord - a layer on top of the database to abstract SQL queries (write Ruby code instead of SQL)
+- Active Record - a layer on top of the database to abstract SQL queries (write Ruby code instead of SQL)
 
-We are getting reaaaally close to Rails now :)
-There's one thing missing though - and you know it - it's the View level.
-We're here to build websites, not command line tools! Where's the HTML?! CSS?!
+We are getting reaaaally close to Rails now :) There's one thing missing though - and you know it - it's the View level. We're here to build websites, not command line tools! Where's the HTML?! CSS?!
 
 Let's play with the [Sinatra](http://www.sinatrarb.com) gem for a preview of how awesome it will be!
 
@@ -37,7 +33,7 @@ We've given you the migration and the seed already. Run them with:
 rake db:drop db:create db:migrate db:seed
 ```
 
-Launch the sinatra app.
+Launch the Sinatra app.
 
 ```bash
 ruby app.rb
@@ -47,8 +43,7 @@ Look! You can go to [http://localhost:4567](http://localhost:4567). You are now 
 
 ## Some words about Sinatra
 
-The `app.rb` file acts as the controller. The router layer is handled by Sinatra.
-We already created a controller method to handle the root of the web app. Sinatra maps the URL in the browser to the right method in `app.rb`. Take a look at the [routing doc](http://www.sinatrarb.com/intro.html#Routes) for more info.
+The `app.rb` file acts as the controller. The router layer is handled by Sinatra. We already created a controller method to handle the root of the web app. Sinatra maps the URL in the browser to the right method in `app.rb`. Take a look at the [routing doc](http://www.sinatrarb.com/intro.html#Routes) for more info.
 
 ```ruby
 # app.rb
@@ -69,7 +64,7 @@ Read about Views, Routing, `params` [here](https://github.com/lewagon/sinatra-10
 
 Have you heard about **templating**? It's a way to write HTML in which you can inject data **dynamically** using code.
 
-In a Ruby framework like Sinatra, we can use **erb** which stands for embedded ruby.
+In a Ruby framework like Sinatra, we can use **erb** which stands for embedded Ruby.
 
 The syntax is the following:
 
@@ -103,7 +98,6 @@ Make sure you define **instance variables with an `@`** in your controller for v
 ## Specs
 
 This exercise is quite open, here are a few things you can start with:
-
 - Display all posts on the homepage of the site
 - Each post should be clickable. The click will open a new tab and go to the website
 - Display posts in descending vote order (see [`scopes`](http://guides.rubyonrails.org/active_record_querying.html#scopes))
@@ -116,8 +110,7 @@ There are no tests for this exercise, so `rake` will just run Rubocop to make su
 
 ### Sharing
 
-Feel free to share you work on Slack with [`ngrok`](https://ngrok.com/). Install `ngrok` (with `brew install --cask ngrok` or [manually for Ubuntu](https://ngrok.com/download)), and run it
-in another window.
+Feel free to share you work on Slack with [`ngrok`](https://ngrok.com/). Install `ngrok` (with `brew install --cask ngrok` or [manually for Ubuntu](https://ngrok.com/download)), and run it in another window.
 
 ```bash
 ngrok http 4567

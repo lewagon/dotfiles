@@ -78,7 +78,7 @@ Project the calendar on the screen to go through the program with the class, wee
 #### Monday - Friday (Week 7) - Airbnb week
 - Airbnb clone! (no flats allowed).
 - Team up with your project buddies.
-- Collaborate on Github.
+- Collaborate on GitHub.
 - Make mistakes you won't make again during the Project's weeks 😊
 
 #### Monday (Week 8) - Friday (Week 9) - Project Weeks
@@ -109,7 +109,7 @@ Project the calendar on the screen to go through the program with the class, wee
   - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson), mention restaurants around
 - **5 PM - 6 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class and teacher, the idea is to have an interactive session where everyone's involved.
 - **7 PM**:
-  - You've reached the end of the day! Have a beer in the neighborhood, get to know each others!
+  - You've reached the end of the day! Get to know each others!
   - Back home, don't code (your brains need to **rest**), but take a few minutes to read next day's lecture (you can also play flashcards, we'll show you later)
 
 ### Any questions?
@@ -135,7 +135,7 @@ At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org
 
 - Manager should approve them on his Slack channel
 - Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the wrong batch.
-- After this validation, students will receive 2 mails to join Le Wagon on Github and on Slack.
+- After this validation, students will receive 2 mails to join Le Wagon on GitHub and on Slack.
 
 ## 1 PM - 2 PM: Lunch time
 - Tell students to be back at 2 PM sharp for the first (short) lectures
@@ -144,7 +144,7 @@ At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org
 
 ### Terminal & Git (teacher)
 
-1. **2pm-2pm15**: Second 15 min lecture on command line basics (navigate in filesystem, create directories & files, launch Sublime Text from terminal, etc.)
+1. **2pm-2pm15**: Second 15 min lecture on command line basics (navigate in filesystem, create directories & files, launch your text editor from terminal, etc.)
 
 2. **2pm15-2pm45**: Third 30 min lecture on git commands (`add`/`commit`/`push`).
 

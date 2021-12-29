@@ -1,8 +1,10 @@
 {
   "license": "UNLICENSED",
   "dependencies": {
+    "@babel/core": "7.8",
+    "@babel/eslint-parser": "^7.15.0",
     "chai": "^4.1.0",
-    "eslint": "^5.9.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^5.2.0",

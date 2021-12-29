@@ -8,7 +8,7 @@ Verás muchos conceptos de HTML & CSS en los próximos días. Acá está una mue
 - Selectores CSS simples y avanzados
 - Recursos de diseño web para fuentes y colores (Google Fonts, Fontawesome, etc.).
 
-El objetivo de hoy es crear tu [perfil](https://papillard.github.io/my-profile/) y ponerlo en línea usando [Github Pages](https://pages.github.com/).
+El objetivo de hoy es crear tu [perfil](https://papillard.github.io/my-profile/) y ponerlo en línea usando [GitHub Pages](https://pages.github.com/).
 
 ## `02 Componentes CSS`
 
@@ -31,7 +31,7 @@ Primero veremos el framework CSS de Bootstrap y todo lo que nos da. Luego explor
 
 ## `04 Bases de JavaScript`
 
-¡Es el primer día del submódulo de Javascript! Javascript es EL lenguaje de programación que los navegadores entienden. Sigue siendo un lenguaje de programación, como Ruby, con variables, funciones, etc. Pero la sintaxis en JavaScript es diferente de la de Ruby, así que debes familiarizarte con ella.
+¡Es el primer día del submódulo de JavaScript! JavaScript es EL lenguaje de programación que los navegadores entienden. Sigue siendo un lenguaje de programación, como Ruby, con variables, funciones, etc. Pero la sintaxis en JavaScript es diferente de la de Ruby, así que debes familiarizarte con ella.
 
 En el desafío de hoy dejaremos el navegador a un lado y trabajaremos en la Terminal ¡para jugar con algoritmos JavaScrip!
 
@@ -39,9 +39,9 @@ Luego, en lugar de hacer una sesión de codeo en vivo, ¡será noche de pitch! T
 
 ## `05 DOM & Events`
 
-Ahora que ya entendemos la sintaxis, vamos a ir al navegador y usar JavaScript como lenguaje de front end. Hoy introduciremos al DOM - la manera en la que el navegador procesa la página HTML - y veremos cómo podemos usar Javascript para interactuar con él.
+Ahora que ya entendemos la sintaxis, vamos a ir al navegador y usar JavaScript como lenguaje de front end. Hoy introduciremos al DOM - la manera en la que el navegador procesa la página HTML - y veremos cómo podemos usar JavaScript para interactuar con él.
 
-También veremos los diferentes eventos de usuario que podemos escuchar a través de Javascript para crear interfaces realmente dinámicas.
+También veremos los diferentes eventos de usuario que podemos escuchar a través de JavaScript para crear interfaces realmente dinámicas.
 
 ## `06 HTTP & AJAX`
 

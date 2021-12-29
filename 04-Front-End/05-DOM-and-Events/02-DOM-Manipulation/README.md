@@ -23,6 +23,6 @@ rake webpack
 
 Then open [`localhost:8080`](http://localhost:8080) in your favorite web browser. Open the Console.
 
-Change some code in the `lib/dom.js`, as soon as you save in Sublime Text, the page will reload in the browser.
+Change some code in the `lib/dom.js`, as soon as you save in your text editor, the page will reload in the browser.
 
 Your goal is to make all tests pass!

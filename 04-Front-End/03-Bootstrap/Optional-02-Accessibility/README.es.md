@@ -177,7 +177,7 @@ Solo los elementos interactivos son enfocables. Los ítems de contenido como tex
 ![Enlace](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/accessibility/link.png).
 
 1. Practíca la navegación por medio del teclado:
-    - `⇥` TAB para avanzar en la página  / `⇧` SHIFT + `⇥` TAB para ir hacia atrás
+    - `⇥` TAB para avanzar en la página  / `⇧` Shift + `⇥` TAB para ir hacia atrás
     - Teclas de flechas `↑ ↓ ← →` para seleccionar valores en un formulario
     - Barra de espacio (SPACE bar) para marcar casillas de verificación (checkboxes)
     - `↵` ENTER para enviar

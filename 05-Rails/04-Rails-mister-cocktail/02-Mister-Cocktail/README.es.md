@@ -67,7 +67,7 @@ Y también las gemas que vamos a necesitar:
 ```ruby
 # Gemfile
 gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.12.0'
+gem 'font-awesome-sass', '~> 5.15'
 gem 'simple_form'
 ```
 

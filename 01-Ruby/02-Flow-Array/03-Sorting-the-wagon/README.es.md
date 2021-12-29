@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-La [clase `Array` (arreglo)](http://www.ruby-doc.org/core-2.5.3/Array.html) es una de las estructuras principales para resguardar y acceder a información en Ruby (la otra es [Hash](http://www.ruby-doc.org/core-2.5.3/Hash.html), la cual veremos mañana).
+La [clase `Array`](https://ruby-doc.org/core-2.7.5/Array.html) es una de las estructuras principales para resguardar y acceder a información en Ruby (la otra es [Hash](https://ruby-doc.org/core-2.7.5/Hash.html), la cual veremos mañana).
 
 Un array se ordena de modo que se pueda acceder por su **index** (índice). Este ejercicio te ayudará a entender cómo crear un array, como guardar datos en él, y finalmente cómo recuperarlos usando el index.
 Recuerda que los índices de los arrays empiezan en `0`, y no `1`.

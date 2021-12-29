@@ -2,7 +2,7 @@
 
 1. Two-parts lecture.
 1. First part on **iterators**, these very powerful methods on array.
-1. Second part on **ruby blocks**, more advanced concepts.
+1. Second part on **Ruby blocks**, more advanced concepts.
 
 ## Rehearsal
 
@@ -52,7 +52,7 @@ for musician in musicians
   puts "Listen to #{musician}"
 end
 
-# We have better methods in ruby!
+# We have better methods in Ruby!
 ```
 
 ## Iterators
@@ -92,7 +92,7 @@ Blocks are pieces of code, a bit as **anonymous methods**.
 Important to make this disclaimer to the students:
 
 - Advanced concept, normal if they struggle!
-- They'll probably never have to **define** such methods in their ruby/Rails career.
+- They'll probably never have to **define** such methods in their Ruby/Rails career.
 - But they will **use** lots of them (like `each`, `map`, etc.)
 
 ### `yield` calls the block

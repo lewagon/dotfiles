@@ -1,15 +1,12 @@
-## Warning
+## Setup
 
-⚠️ **Never do `sudo gem install rails` even if the terminal tells you so!** ⚠️
-> Restart your terminal if it happens (`cmd + q` or `ctrl + q`) - open a ticket if it still happens
-
-This is the proper way to install rails:
+You should already have `rails` installed. Check it with:
 
 ```bash
-gem install rails -v 6.0
+rails -v
+# You should see your rails version here
 ```
-
-Now quit the Terminal, and restart it.
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#installing-some-gems) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#installing-some-gems) setup.
 
 ## Background & Objectives
 
@@ -97,7 +94,7 @@ Prefix Verb URI Pattern       Controller#Action
 
 **View**
 
-Last step to display the form, let's create a view! Do you remember in which folder it should be and how it should be named? That's one of Rails' conventions, the [Action View convention](https://kitt.lewagon.com/karr/karr.kitt/lectures/rails/rails-intro-6/index.html?title=Rails+Basics&program_id=1#/6/6). Refresh the page at [localhost:3000/ask](http://localhost:3000/ask), if you named your file properly you should finally see a page without an error! For now it's empty, let's finally add the `<form>`. Remember the syntax?
+Last step to display the form, let's create a view! Do you remember in which folder it should be and how it should be named? That's one of Rails' conventions, the [Action View convention](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro-6/index.html?title=Rails+Basics#/6/6). Refresh the page at [localhost:3000/ask](http://localhost:3000/ask), if you named your file properly you should finally see a page without an error! For now it's empty, let's finally add the `<form>`. Remember the syntax?
 
 ```html
 <form action="???">
@@ -248,7 +245,7 @@ In the terminal, run the following to create the test file:
 rails g system_test questions
 ```
 
-Open the generated file in Sublime Text, and write your first test:
+Open the generated file in your text editor, and write your first test:
 
 ```ruby
 # test/system/questions_test.rb
@@ -265,7 +262,6 @@ end
 Run the test in the terminal with:
 
 ```bash
-rails db:migrate
 rails test:system
 ```
 
