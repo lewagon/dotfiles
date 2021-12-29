@@ -3,7 +3,7 @@
 Un **getter** es un método que **solicita** información desde nuestra variable de instancia.
 Un **setter** es un método que **cambia** información en nuestra variable de instancia.
 
-En este ejercicio, implementaremos una máquina dispensadora simple  (`VendingMachine` ruby class) donde un/a usuario/a pueda comprar snacks por un precio dado. El/la usuario/a puede acercarse a la máquina, insertar algunas monedas y luego presionar el botón “Buy”.
+En este ejercicio, implementaremos una máquina dispensadora simple  (`VendingMachine` Ruby class) donde un usuario pueda comprar snacks por un precio dado. El usuario puede acercarse a la máquina, insertar algunas monedas y luego presionar el botón “Buy”.
 
 ## Especificaciones
 

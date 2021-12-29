@@ -22,7 +22,7 @@ Hence, the first components of our software are:
 
 Our restaurant sells meals, so we need a way to represent what a meal is.
 
-Each meal has an id, a name and a price.
+Each `meal` has an `id`, a `name` and a `price`.
 
 Write some code to implement this and crash-test your model. Then test your code by running `rake meal`.
 
@@ -32,10 +32,10 @@ All green? Good! Time to `git add`, `commit` and `push`.
 
 Now that we have a model representing our meals, we need a repository to store them.
 
-This repository is initialized with a CSV file path. It reads/writes the meals from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
-- Add a new meal
-- Get all the meals
-- Find a specific meal thanks to its id
+This repository is initialized with a CSV file path. It reads and writes the meals from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
+- `create` a new meal
+- Get `all` the meals
+- `find` a specific meal thanks to its id
 
 Write some code to implement this and crash-test your repository. You should create your own `meals.csv` CSV file inside the `data` folder. Then test your code by running `rake meal`.
 
@@ -96,9 +96,9 @@ All green? Good! Time to `git add`, `commit` and `push`.
 Now that we have a model representing our customers, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It reads/writes the customers from the CSV file and holds them as objects in an array. The behavior we want for the repository is to:
-- Add a new customer
-- Get all the customers
-- Find a specific customer thanks to its id
+- `create` a new customer
+- Get `all` the customers
+- `find` a specific customer thanks to its id
 
 Write some code to implement this and crash-test your repository. You should create your own `customers.csv` CSV file inside the `data` folder. Then test your code by running `rake customer`.
 
@@ -126,7 +126,7 @@ Make sure your two customer user actions work before moving on to the next featu
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-## 3 - Optionals
+## 3 - (Optionals)
 
 ### 3.1 - Implement `edit` and `destroy` actions for meals and customers
 
@@ -147,5 +147,3 @@ Done? Time to `git add`, `commit` and `push`.
 Write some code to implement this. It's a refactoring process so there is no new test for this part. If your `rake` was all green before, it should be all green after!
 
 Done? Time to `git add`, `commit` and `push`.
-
-You're done for today!

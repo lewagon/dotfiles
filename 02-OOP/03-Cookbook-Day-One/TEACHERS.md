@@ -134,7 +134,7 @@
     - Router: dispatch user’s intention to the right action in the controller
 - Parallel with Web
   - View: will generate the HTML to send back to the user’s browser
-  - Repository: out - ActiveRecord: in. Request DB directly from Model.
+  - Repository: out - Active Record: in. Request DB directly from Model.
   - Router: given by Rails. User intention == HTTP request.
 - What’s the major limit of our TODO-manager?
   - When we quit the program and relaunch it => data is lost

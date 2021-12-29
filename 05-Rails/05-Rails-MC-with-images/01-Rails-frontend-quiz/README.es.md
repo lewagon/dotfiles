@@ -22,5 +22,5 @@ Devuelve una cadena de caracteres (`String`) con el comando que se debe escribir
 ## Puntos clave de aprendizaje
 
 - Cómo hacer una nueva app Rails con webpack.
-- Entender dónde poner tu javascript en una app Rails.
+- Entender dónde poner tu JavaScript en una app Rails.
 - Cómo agregar paquetes JavaScript adicionales a tu app Rails.

@@ -25,7 +25,6 @@ german_shepherd.bark # => "woof woof"
 
 NOTE: do not add any code within the body of the `GermanShepherd` class!
 
-
 ## Key learning points
 
 - What is the syntax when we want one class to inherit from another?

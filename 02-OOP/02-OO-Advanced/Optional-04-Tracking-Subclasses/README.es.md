@@ -11,4 +11,4 @@ Mother.phone_kids
 # => should call Daughter.phone and Son.phone
 ```
 
-Las especificaciones te suministran dos clases hijos de Madre (`Mother`), así que solo debes implementar el método de clase `phone_kids`. Tal vez necesites el método [`inherited`](http://www.ruby-doc.org/core-2.5.3/Class.html#method-i-inherited) de `Class`.
+Las especificaciones te suministran dos clases hijos de Madre (`Mother`), así que solo debes implementar el método de clase `phone_kids`. Tal vez necesites el método [`inherited`](https://ruby-doc.org/core-2.7.5/Class.html#method-i-inherited) de `Class`.

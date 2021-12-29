@@ -116,7 +116,7 @@ end
 
 用户可能会玩很多次游戏，保存每一次游戏的得分，并且汇总到一个总得分里面是很合理的。我们可以有一个规则，每一局游戏的得分是每一个正确的单词的字母的数量（你也可以更有创意，字母数量的平方？使用其它算法？）。
 
-今天的重点不在数据库，所以我们不需要使用ActiveRecord来帮助我们在两个HTTP请求之间保存、读取信息。在Rails里，存在另一个**跨** HTTP请求持久化保存信息的机制：[会话session](http://guides.rubyonrails.org/action_controller_overview.html#session)。
+今天的重点不在数据库，所以我们不需要使用Active Record来帮助我们在两个HTTP请求之间保存、读取信息。在Rails里，存在另一个**跨** HTTP请求持久化保存信息的机制：[会话session](http://guides.rubyonrails.org/action_controller_overview.html#session)。
 
 尝试使用一个Rails会话来保存，计算，并显示总得分。
 

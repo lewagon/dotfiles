@@ -49,7 +49,7 @@ Las listas desplegables (drop-down) son diferentes. **Tienen su propias etiqueta
 <select id="favorite" name="language">
   <option value="ruby">Ruby</option>
   <option value="css">CSS</option>
-  <option value="javascript">Javascript</option>
+  <option value="javascript">JavaScript</option>
 </select>
 ```
 

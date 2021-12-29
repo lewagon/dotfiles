@@ -29,9 +29,9 @@
 'two: #{1 + 1}'      #=> "two: #{1 + 1}"
 "two: #{1 + 1}"      #=> "two: 2"
 
-'1984'.class        #=> String
-'1984'.to_i         #=> 1984
-'1984'.to_i.class   #=> Integer
+"1984".class        #=> String
+"1984".to_i         #=> 1984
+"1984".to_i.class   #=> Integer
 ```
 
 ### Integer
@@ -55,8 +55,8 @@
 1. Let's play 5 seconds (but we'll cover that tomorrow in details)
 
 ```ruby
-['Huey', 'Dewey', 'Louie'].size    #=> 3
-['Huey', 'Dewey', 'Louie'].sort    #=> ["Dewey", "Huey", "Louie"]
+["Huey", "Dewey", "Louie"].size    #=> 3
+["Huey", "Dewey", "Louie"].sort    #=> ["Dewey", "Huey", "Louie"]
 [3, 5, 1].sort                     #=> [1, 3, 5]
 ```
 
@@ -82,13 +82,13 @@ puts "You are now #{age}"
 ## Methods
 
 1. **Factoring** your code
-2. Why methods? **concise** way to call a ruby code
-3. Apply a ruby code to **dynamic inputs**
+2. Why methods? **concise** way to call a Ruby code
+3. Apply a Ruby code to **dynamic inputs**
 
 Example **without** parameters
 
 ```ruby
-require 'date'
+require "date"
 
 def tomorrow
   tomorrow_date = Date.today + 1

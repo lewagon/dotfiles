@@ -69,7 +69,7 @@ SQL
 rows = db.execute(query)
 ```
 
-¡Te darás cuenta que Sublime Text entiende Heredoc y la sintaxis resaltada es realmente SQL dentro del archivo Ruby!
+¡Te darás cuenta que tu editor de texto entiende Heredoc y la sintaxis resaltada es realmente SQL dentro del archivo Ruby!
 
 ## Recursos
 

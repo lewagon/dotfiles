@@ -9,10 +9,10 @@
 ⚠️ 在运行 `rake`命令之前，尝试回答这些问题。
 
 ### 问题 1
+
 实现与 `resources：restaurants` 生成的7条CRUD路线相对应的7条常规路线。
 
 提示: 路由遵循这样的模式：`verb "url", to: "controller#action"`
-/!\ 实际上在Rails里，路由并不是字符串!
 
 ### 问题 2
 返回`true` 或者 `false`来回答下面这个问题：
@@ -21,7 +21,7 @@
 
 ### 问题 3
 
-返回一个字符串`String`，内容是ActiveRecord验证（validation），用来确保在没有`name`的情况下不能创建数据库记录。
+返回一个字符串`String`，内容是Active Record验证（validation），用来确保在没有`name`的情况下不能创建数据库记录。
 
 ## 关键学习要点
 

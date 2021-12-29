@@ -23,7 +23,7 @@ Notarás que el programa te dice que tienes `0 years old`. Debes cambiar el cód
 
 ## Recomendaciones y recursos adicionales
 
-- Tal vez quieras usar la clase [Date](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html), que agregamos al archivo gracias a la línea `require 'date'`
+- Tal vez quieras usar la clase [Date](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html), que agregamos al archivo gracias a la línea `require "date"`
 - Usa la consola interactiva de Ruby (IRB) para experimentar.
 - Notarás que Ruby usa el método `puts` para sacar valores (¡mostrarte cosas!) a la Terminal.
 

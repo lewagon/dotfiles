@@ -1,16 +1,14 @@
 ## Background and Objectives
 
 This exercise is designed to validate the core concepts you have seen so far, common to most programming languages:
-
 - Read user input / Print output to user
 - Variables and methods
-- Program flow and control structures
+- Program execution flow and control structures
 - Manipulation of strings and arrays
 
 ### Black Jack - Rules
 
 We will implement a *simplified* version of Black Jack:
-
 - The player starts with no cards (score of 0)
 - The bank starts with a score between `16` and `21`
 - For each round, the player can:
@@ -33,7 +31,7 @@ We will implement a *simplified* version of Black Jack:
 ### `croupier.rb`
 
 - Implement the `#state_of_the_game` method which builds a message containing the bank and player's scores.
-- Implement the `#end_game_message` method to be called at the end of the game, containing the game outcome (win/lost/push)
+- Implement the `#end_game_message` method to be called at the end of the game, containing the game outcome (win, lose or push)
 
 ### `interface.rb`
 
@@ -42,19 +40,19 @@ We will implement a *simplified* version of Black Jack:
 ```bash
 ruby lib/interface.rb
 
-Card? 'y' or 'yes' to get a new card
+Card? "y" or "yes" to get a new card
 > yes
 Your score is 6, bank is 17
 
-Card? 'y' or 'yes' to get a new card
+Card? "y" or "yes" to get a new card
 > yes
 Your score is 16, bank is 17
 
-Card? 'y' or 'yes' to get a new card
+Card? "y" or "yes" to get a new card
 > yes
 Your score is 19, bank is 17
 
-Card? 'y' or 'yes' to get a new card
+Card? "y" or "yes" to get a new card
 > no
 You beat the bank! You win.
 ```
@@ -69,5 +67,5 @@ You beat the bank! You win.
 
 ## Further suggestions & resources
 
-- You might want to use the [Random class](http://www.ruby-doc.org/core-2.5.3/Random.html).
+- You might want to use the [Random class](https://ruby-doc.org/core-2.7.5/Random.html).
 - When looping, you need a condition to make your game loop stop at some point.

@@ -19,7 +19,7 @@ Ve a la carpeta del ejercicio con el comando que está al principio de esta pág
 
 * Corre `rake`. Todo debe estar en rojo (ya que no has comenzado a codear todavía).
 
-Abre el archivo `lib/wagon_start.rb` en Sublime Text. Ahí es donde tendrás que editar el código.
+Abre el archivo `lib/wagon_start.rb` en tu editor de texto. Ahí es donde tendrás que editar el código.
 
 * Haz que el método `wagon_start` devuelva `"That's how it starts"`
 * En la Terminal, corre `rake` y asegúrate de que tienes el resultado en verde para `#wagon_start` y con buen estilo (**sin ofensas**). Si tienes un estilo pobre, aún puedes continuar al siguiente ejercicio. Pero si quieres crear buenos hábitos de codeo, mejor ¡asegúrate de que tienes todo en verde antes de comenzar otro ejercicio!
@@ -43,7 +43,7 @@ El primer paso será crear todos nuestros archivos en un directorio llamado`tmp`
 ### Archivo README
 
 * Dentro del directorio `tmp`, crea un archivo llamado `README`
-* Abre este directorio `tmp` en Sublime Text. Escribe algo en el archivo `README`.
+* Abre este directorio `tmp` en tu editor de texto. Escribe algo en el archivo `README`.
 
 ### Directorio Nivel 1
 
@@ -83,5 +83,5 @@ Si ya terminaste toda la configuración de tu computadora y los ejercicios, éch
 
 * [ficha recordatoria git](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 * [fichas recordatorias interactivas](http://www.ndpsoftware.com/git-cheatsheet.html)
-* Ve este video [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) sobre cómo usar git/Github para proyectos habituales (que no son de desarrollo)
+* Ve este video [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) sobre cómo usar git/GitHub para proyectos habituales (que no son de desarrollo)
 * Lee y practica todo este tutorial: [Aprende lo suficiente sobre líneas de comando para ser peligroso](http://www.learnenough.com/command-line/)

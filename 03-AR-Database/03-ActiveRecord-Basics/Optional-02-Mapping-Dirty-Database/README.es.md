@@ -4,7 +4,7 @@ De vez en cuando te encontrarás con una base de datos con nombres de tablas y c
 
 ## Especificaciones
 
-- Abre la base de datos `db/dirty_jukebox.db` con el binario `sqlite3` y crea los modelos necesarios en `app/models` navegando por el `.schema` (tal vez sigas sin poder ver los archivos `db` en Sublime Text por la configuración de sus parámetros. Usa `ls -l db` en la Terminal para comprobar que el archivo esté ahí). Esta vez necesitarás esforzarte más para poder mapear correctamente los modelos a las tablas adecuadas.
+- Abre la base de datos `db/dirty_jukebox.db` con el binario `sqlite3` y crea los modelos necesarios en `app/models` navegando por el `.schema` (tal vez sigas sin poder ver los archivos `db` en tu editor de texto por la configuración de sus parámetros. Usa `ls -l db` en la Terminal para comprobar que el archivo esté ahí). Esta vez necesitarás esforzarte más para poder mapear correctamente los modelos a las tablas adecuadas.
 - Para algunas de las relaciones `has_many` / `belongs_to`, notarás que las claves foráneas (foreign keys) no siguen la convención. Tendrás que sobreescribirlas (override) manualmente para resolver esto.
 
 ## Sugerencias adicionales

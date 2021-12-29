@@ -4,8 +4,7 @@ Now it's time for something more complex. We'll be using `JOIN` queries to read 
 
 ## Specs
 
-Complete the code in `join_queries.rb`. Each method takes a `db` argument, which is an instance
-of `SQLite3::Database` on which you can call the `execute` method. Exactly like in the previous exercise.
+Complete the code in `join_queries.rb`. Each method takes a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. Exactly like in the previous exercise.
 
 ### Detailed Tracks
 
@@ -23,22 +22,21 @@ The method should return a Hash of statistics:
 ```ruby
 stats_on(db, "Rock")
 # => {
-#      category: "Rock",
-#      number_of_songs: 1297,
-#      avg_length: 4.7
-#    }
+# category: "Rock",
+# number_of_songs: 1297,
+# avg_length: 4.7
+# }
 ```
 
 ### Top 5
 
-Find the top 5 artists that made the most songs in a given genre. This method should return an
-array of arrays with this artist id, the artist name and the number of songs of the given genre for each artist.
+Find the top 5 artists that made the most songs in a given genre. This method should return an array of arrays with this artist id, the artist name and the number of songs of the given genre for each artist.
 
 ```ruby
 top_five_artists(db, 'Rock')
 # => [
-#      [ 22,  'Led Zeppelin', 114 ],  # Led Zeppelin has 114 Rock songs.
-#      [ 150, 'U2',           112 ]
-#      # etc.
-#    ]
+# [ 22, 'Led Zeppelin', 114 ], # Led Zeppelin has 114 Rock songs.
+# [ 150, 'U2', 112 ]
+# etc.
+# ]
 ```

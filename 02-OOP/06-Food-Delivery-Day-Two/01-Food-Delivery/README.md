@@ -39,30 +39,30 @@ Hence, there are two new components:
 - **Employees**
 - **Orders**
 
-## 1 - `Employee`
+## 1 - Employees
 
-### 1.1 - `Employee` model
+### 1.1 - Employee model
 
-Our restaurant has two types of employees, **managers** and **riders**. Both have an id, a username and a password, but they have different privileges depending of their roles.
+Our restaurant has two types of employees, **managers** and **riders**. Both have an `id`, a `username` and a `password`, but they have different privileges depending of their `role`.
 
-Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake employee`.
+Write some code to implement this and crash-test your model. Then test your code by running `rake employee`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-### 1.2 - `Employee` repository
+### 1.2 - Employee repository
 
 Now that we have a model representing our employees, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It has a **read-only** logic since only the administrator of our app can create accounts (no need for and `add` method). The interface of this repository allows to:
-- Get all the riders from the repository
-- Find a specific employee thanks to its id
-- Find a specific employee thanks to username
+- Get `all_riders` from the repository
+- `find` a specific employee thanks to its id
+- `find_by_username` a specific employee thanks to their username
 
 Write some code to implement this and crash-test your repository in `irb`. You should create your own `employees.csv` CSV file inside the `data` folder. Then test your code by running `rake employee`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-### 1.3 - `Session` controller
+### 1.3 - Sessions controller
 
 Let's implement a **login** logic in our app.
 
@@ -97,30 +97,29 @@ ruby app.rb
 
 Everything is working? Good! Time to `git add`, `commit` and `push`.
 
-## 2 - `Order`
+## 2 - Orders
 
-### 2.1 - `Order` model
+### 2.1 - Order model
 
 Our restaurant takes orders, so we need a way to represent what an order is.
 
-
 An order is what ties everything together. Each order has an id, a meal, a customer, an employee plus a `delivered` boolean to record whether or not the order has been delivered.
 
-Write some code to implement this and crash-test your model in `irb`. Then test your code by running `rake order`.
+Write some code to implement this and crash-test your model. Then test your code by running `rake order`.
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-### 2.2 - `Order` repository
+### 2.2 - Order repository
 
 Now that we have a model representing our orders, we need a repository to store them.
 
 This repository is initialized with a CSV file path. It reads/writes the orders from the CSV file and store them in memory. The interface of this repository allows to:
-- Add a new order to the repository
-- Get all the undelivered orders from the repository
+- Create a new order
+- Get all the undelivered orders
 
 Since an order has a `meal`, a `customer` and an `employee` **instances**, we also need to initialize our order repository with a meal repository, a customer repository and an employee repository.
 
-Write some code to implement this and crash-test your repository in `irb`. You should create your own `orders.csv` CSV file inside the `data` folder. Then test your code by running `rake order`.
+Write some code to implement this and crash-test your repository. You should create your own `orders.csv` CSV file inside the `data` folder. Then test your code by running `rake order`.
 
 **Important**: the `order_repository` tests run by `rake` **only work if you define the parameters in `#initialize` in the same order as in the tests**:
 
@@ -136,15 +135,15 @@ end
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-### 2.3 - `Order` controller
+### 2.3 - Orders controller
 
 Let's move to the controller. Here are the **user actions** we want to implement:
-- As a manager, I can add a new order
-- As a manager, I can list all the undelivered orders
-- As a rider, I can mark one of my orders as delivered
-- As a rider, I list all my undelivered orders
+- As a manager, I can `add` a new order
+- As a manager, I can `list_undelivered_orders`
+- As a rider, I `list_my_orders` to list all my undelivered orders
+- As a rider, I can `mark_as_delivered` one of my undelivered orders
 
-Remember that the role of the controller is to delegate the work to the other components of our app (model, repository and views)!
+Remember that the role of the controller is to delegate the work to the other components of our app (models, repositories and views)!
 
 Start by writing the **pseudocode**, breaking each user action into elementary steps and delegating each step to a component (model, repository or views). Then write the code to implement each step. Create the view and code it step by step.
 
@@ -174,7 +173,7 @@ end
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
-## 3 - Optionals
+## 3 - (Optionals)
 
 ### 3.1 - Implement `edit` and `destroy` actions for orders
 

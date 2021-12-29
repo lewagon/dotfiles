@@ -1,12 +1,12 @@
-require 'yaml'
+require "yaml"
 
 desc "Check default syllabus for wrong exercises path"
 task :check do
-  syllabus = YAML.load_file('syllabus.yml')
-  syllabus['default']['weeks'].each do |week|
-    week['days'].each do |day|
-      day['exercises'].each do |exercise|
-        path = exercise['path']
+  syllabus = YAML.load_file("syllabus.yml")
+  syllabus["default"]["weeks"].each do |week|
+    week["days"].each do |day|
+      day["exercises"].each do |exercise|
+        path = exercise["path"]
         raise Errno::ENOENT.new("Exercise path not found: #{path}") unless File.exists?(path)
       end
     end

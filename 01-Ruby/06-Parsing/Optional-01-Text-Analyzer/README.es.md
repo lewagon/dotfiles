@@ -2,7 +2,9 @@
 
 Vas a desarrollar un analizador de texto. Tu programa Ruby leerá un texto suministrado en un archivo por separado, lo analizará de acuerdo a ciertos patrones y estadísticas y le mostrará el resultado al usuario. Los programas de procesamiento son la base de muchos desarrollos de aplicaciones.
 
-Ruby está preparado para análisis de texto y documentos con sus herramientas de expresiones regulares y la facilidad de uso de `gsub`, `scan` y `split`. Esto lo usarás mucho en tu aplicación.
+Ruby está preparado para análisis de texto y documentos con sus herramientas de expresiones regulares y la facilidad de uso de `gsub`, `scan` y `split`.
+
+Esto lo usarás mucho en tu aplicación.
 
 ## Funcionalidades requeridas
 
@@ -45,7 +47,14 @@ Puedes obtener algunos datos txt de test [aquí](http://www.rubyinside.com/book/
 
 ### Incorporación de funcionalidades adicionales
 
-Tu analizador todavía no es muy atractivo :( Agreguemos algunas funcionalidades interesantes. El conteo de línea, párrafo y palabra es estadística útil pero con el poder de Ruby puedes hacer análisis aún mejores ¡El único límite es tu imaginación!
+Tu analizador todavía no es muy atractivo :(
 
-* **Porcentaje de palabras "útiles"**: la mayoría del material escrito contiene palabras como "the", "are",... A estas palabras se les llaman palabras vacías y normalmente son ignoradas por los sistemas de computación cuyo trabajo es analizar y buscar cosas a través de textos. Se omiten porque no son palabras que la mayoría de las personas buscan (Google es el ejemplo perfecto de esto).
-* **Resumen interesante**: Los procesadores de palabras como Microsoft Word generalmente tienen la función de generalización que puede seleccionar el extracto más significativo de una página dada y producir un resumen del mismo. Una de las técnicas para encontrar un buen extracto es seleccionar oraciones que tengan una longitud promedio y que contengan **sustantivos**. Las oraciones cortas probablemente no sean muy útiles y las que son largas probablemente sean muy largas para un resumen. Para saber si una oración tiene sustantivos, puedes buscar palabras como "is" o "are" las cuales son buenos indicadores ("There are x nouns", "Noun is", "Nouns are",...). **Pista:** primero debes decidir qué parte del texto original mantendrás para el resumen (por ejemplo: computado sobre el número de oraciones).
+Agreguemos algunas funcionalidades interesantes.
+
+El conteo de línea, párrafo y palabra es estadística útil pero con el poder de Ruby puedes hacer análisis aún mejores ¡El único límite es tu imaginación!
+
+* **Porcentaje de palabras "útiles"**: la mayoría del material escrito contiene palabras como "the", "are",... Estas palabras se les llaman palabras vacías y normalmente son ignoradas por los sistemas de computación cuyo trabajo es analizar y buscar cosas a través de textos. Se omiten porque no son palabras que la mayoría de las personas buscan (Google es el ejemplo perfecto de esto).
+
+* **Resumen interesante**: Los procesadores de palabras como Microsoft Word generalmente tienen la función de generalización que puede seleccionar el extracto más significativo de una página dada y producir un resumen del mismo. Una de las técnicas para encontrar un buen extracto es seleccionar oraciones que tengan una longitud promedio y que contenga **sustantivos**. Las oraciones cortas probablemente no sean muy útiles y las que son  largas probablemente sean muy largas para un resumen. Para saber si una oraciones tienen sustantivos, puedes buscar palabras como "is" o "are" los cuales son buenos indicadores ("There are x nouns", "Noun is", "Nouns are",...).
+
+**Pista:** primero debes decidir qué parte del texto original mantendrás para el resumen (por ejemplo: computado sobre el número de oraciones).

@@ -22,6 +22,6 @@ rake webpack
 
 Luego abre [`localhost:8080`](http://localhost:8080) en tu navegador favorito. Abre la Consola.
 
-Cambia algo del código en `lib/dom.js`. La página se cargará sola en el navegador tan pronto guardes los cambios en Sublime Text.
+Cambia algo del código en `lib/dom.js`. La página se cargará sola en el navegador tan pronto guardes los cambios en tu editor de texto.
 
 ¡Tu objetivo es hacer que pasen todos los tests!

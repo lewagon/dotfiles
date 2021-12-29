@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Continuemos con nuestra aplicación clon de HackerNews. Hoy queremos agregar la funcionalidad de usuario para que la gente tenga que iniciar sesión antes de subir un post.
+Continuemos con nuestra aplicación clon de Hacker News. Hoy queremos agregar la funcionalidad de usuario para que la gente tenga que iniciar sesión antes de subir un post.
 
 (Sin embargo, no tendrán que iniciar sesión para leerlos).
 

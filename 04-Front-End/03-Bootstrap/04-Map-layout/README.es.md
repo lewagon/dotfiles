@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Crea una [página de resultados con un mapa fijo (sticky map)](https://lewagon.github.io/layouts-demo/flexbox-grid-layout.html) como el que viste en clase. Fíjate que no hemos importado Bootstrap. ¡No está en ninguna parte del archivo `index.html`! Vas a tener que implementar este diseño de página (layout) en el archivo `pages/map.css` sin usar Bootstrap:
+Crea una [página de resultados con un mapa fijo (sticky map)](https://lewagon.github.io/layouts-demo/campuses-with-map.html) como el que viste en clase. Fíjate que no hemos importado Bootstrap. ¡No está en ninguna parte del archivo `index.html`! Vas a tener que implementar este diseño de página (layout) en el archivo `pages/map.css` sin usar Bootstrap:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/map-example.png)
 

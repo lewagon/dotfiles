@@ -13,4 +13,4 @@
 
 ## 可选 - 青蛙游戏 Flexbox Froggy
 
-对于那些想练习他们的Flexbox技能，这里有一个很酷的[青蛙游戏](http://flexboxfroggy.com/)。我们很喜欢它，因为我们是法国人 🐸
+对于那些想练习他们的Flexbox技能，这里有一个很酷的[青蛙游戏](http://flexboxfroggy.com/)。

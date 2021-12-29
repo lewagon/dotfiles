@@ -3,17 +3,18 @@ You now belong to a team with a clear concept for the MVP you are going to be bu
 
 The kick off will encompass the following parts:
 
-* Product Design :thinking_face:
+* Product Design 🤔
   * User Stories
   * DB Schema
   * Routes & Mockup
-* Building :hammer_and_wrench:
+* Building 🛠
   * Rails New
+  * Models/Controllers
   * Figma
+* Project Management
   * Kanban Board
   * Domain Name
   * Team Slack Channel
-  * Product Page
 
 For **each step of Product Design**, you must put in a ticket to get it validated by a TA before proceeding.
 
@@ -24,4 +25,4 @@ At the end of Kick-off,
 - your Heroku app should be up to let you deploy continuously during the next sessions
 - all your projects urls should be submitted on your product page
 
-Happy Kick-off :rocket: !
+Happy Kick-off 🚀!

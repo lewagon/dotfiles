@@ -37,7 +37,7 @@ BOOKS_100 = [
   "Functional Programming in Scala",
   "Game Programming Patterns",
   "Ghost in the Wires: My Adventures as the World's Most Wanted Hacker",
-  "Github Explained",
+  "GitHub Explained",
   "Grokking Algorithms An Illustrated Guide For Programmers and Other Curious People",
   "High Performance Browser Networking",
   "How Google Tests Software",

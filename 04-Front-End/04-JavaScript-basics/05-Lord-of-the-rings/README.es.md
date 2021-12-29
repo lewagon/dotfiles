@@ -1,16 +1,16 @@
 ## Especificaciones
 
-En este ejercicio tenemos Hobbits, Elfos (Elves), Enanos (Dwarves) y Águilas (Eagles) quienes irán a una batalla con los malvados Orcos (Orcs), Wargs, Duendes (Goblins), Uruk Hai y Trolls. Abre el archivo `lib/lord_of_the_rings.js`. Ahí encontrarás tres funciones que debes implementar.
+En este ejercicio tenemos Hobbits, Elfos (Elves), Enanos (Dwarves) y Águilas (Eagles) quienes irán a una batalla con los malvados Orcos (Orcs), Wargs, Duendes (Goblins), Uruk-hai y Trolls. Abre el archivo `lib/lord_of_the_rings.js`. Ahí encontrarás tres funciones que debes implementar.
 
 La primera función `isGood` toma como argumento a un soldado de tipo cadena de texto (`String`) y debe devolver verdadero (`true`) si el soldado pertenece al lado de los buenos.
 
 - `isGood("Hobbits")` debe devolver verdadero (`true`)
-- `isGood("Uruk Hai")` debe devolver falso (`false`)
+- `isGood("Uruk-hai")` debe devolver falso (`false`)
 
-La segunda función `buildSoldierObject` toma un `battlefield` (de tipo cadena de texto (`String`)) como parámetro y devuelve un objeto (`object`) Javascript. Las llaves (`keys`) de dicho objeto serán del tipo soldado (**soldier type**) y los valores (`values`) serán el **número de soldados de este tipo en el campo de batalla**. Aquí hay algunos ejemplos de cadenas de texto del campo de batalla que debes parsear (y convertir en objeto):
+La segunda función `buildSoldierObject` toma un `battlefield` (de tipo cadena de texto (`String`)) como parámetro y devuelve un objeto (`object`) JavaScript. Las llaves (`keys`) de dicho objeto serán del tipo soldado (**soldier type**) y los valores (`values`) serán el **número de soldados de este tipo en el campo de batalla**. Aquí hay algunos ejemplos de cadenas de texto del campo de batalla que debes parsear (y convertir en objeto):
 
 - `Elves:5,Orcs:4`
-- `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk Hai:1`
+- `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk-hai:1`
 
 Por ejemplo:
 

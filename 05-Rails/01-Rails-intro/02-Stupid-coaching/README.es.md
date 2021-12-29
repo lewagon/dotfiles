@@ -1,16 +1,3 @@
-## Alerta
-
-⚠️ **Nunca hagas `sudo gem install rails` inclusive si la Terminal te lo pide!** ⚠️
-> Reinicia tu Terminal si esto pasa (`cmd + q` o `ctrl + q`). Levanta un ticket si continúa sucediendo.
-
-A continuación te mostramos la manera adecuada de instalar Rails:
-
-```bash
-gem install rails -v 6.0
-```
-
-Ahora cierra la Terminal y ábrela otra vez.
-
 ## Contexto y Objetivos
 
 ¿Recuerdas tus primeras semanas en Ruby? Solo teníamos la Terminal para la interfaz programa-usuario. Se terminaron esos días.¡Ahora usaremos Rails! Esto significa lo siguiente:
@@ -97,7 +84,7 @@ Prefix Verb URI Pattern       Controller#Action
 
 **Vista**
 
-La creación de la vista es el último paso para mostrar el formulario.¡Hagámoslo!¿Recuerdas en qué carpeta debe estar y cómo debe nombrarse? Esa es una de las convenciones de Rails, la [convención acción vista](https://kitt.lewagon.com/karr/karr.kitt/lectures/rails/rails-intro-6/index.html?title=Rails+Basics&program_id=1#/6/6). Refresca la página en [localhost:3000/ask](http://localhost:3000/ask). Si nombraste tu archivo correctamente finalmente ¡verás una página sin error! Por ahora está vacía. Terminemos de agregar el  `<form>`.¿Recuerdas la sintaxis?
+La creación de la vista es el último paso para mostrar el formulario.¡Hagámoslo!¿Recuerdas en qué carpeta debe estar y cómo debe nombrarse? Esa es una de las convenciones de Rails, la [convención acción vista](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro-6/index.html?title=Rails+Basics#/6/6). Refresca la página en [localhost:3000/ask](http://localhost:3000/ask). Si nombraste tu archivo correctamente finalmente ¡verás una página sin error! Por ahora está vacía. Terminemos de agregar el  `<form>`.¿Recuerdas la sintaxis?
 
 ```html
 <form action="???">
@@ -248,7 +235,7 @@ En la Terminal, corre lo siguiente para crear el archivo de test:
 rails g system_test questions
 ```
 
-Abre el archivo generado en Sublime Text y escribe tu primer test:
+Abre el archivo generado en tu editor de texto y escribe tu primer test:
 
 ```ruby
 # test/system/questions_test.rb
@@ -265,7 +252,6 @@ end
 Corre el test en la Terminal con:
 
 ```bash
-rails db:migrate
 rails test:system
 ```
 
