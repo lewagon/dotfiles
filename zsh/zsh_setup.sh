@@ -1,7 +1,7 @@
-echo "Making zsh your defual shell"
+# echo "Making zsh your defual shell"
 # To set zsh as your default shell
-chsh -s /bin/zsh
-echo "Done"
+# chsh -s /bin/zsh
+# echo "Done"
 
 echo "Installing Oh My Zsh"
 # To install Oh My Zsh
