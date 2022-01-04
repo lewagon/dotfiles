@@ -203,10 +203,9 @@ Then you need to install `chromedriver`:
 ```bash
  # macOS
 brew install --cask chromedriver
-
-# Ubuntu
-gem install chromedriver-helper
 ```
+
+If you are using Ubuntu, you need to install the latest Chrome version and install compatible Chromedriver by following steps 2 and 3 of [this guide](https://cloudbytes.dev/snippets/run-selenium-and-chrome-on-wsl2).
 
 After the installation you can open the following file and replace **all** its content with:
 
