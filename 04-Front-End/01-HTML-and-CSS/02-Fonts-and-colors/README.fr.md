@@ -42,7 +42,7 @@ Choisis une couleur de fond (`background-color`), un style de police (`font-fami
 Par exemple, si tu veux utiliser Open-Sans et Poppins (avec des épaisseurs différentes), tu peux ajouter ceci en haut de ta feuille `style.css` :
 
 ```css
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
+@import url("http://fonts.googleapis.com/css2?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
 ```
 
 Tu peux ensuite l'appliquer au reste de ton CSS :

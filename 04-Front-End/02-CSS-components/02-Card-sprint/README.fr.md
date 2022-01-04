@@ -37,7 +37,7 @@ Puis dans `style.css`:
 
 ```css
 /* Importer les polices depuis Google Fonts */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700");
+@import url("http://fonts.googleapis.com/css2?family=Open+Sans:400,300,700|Raleway:300,400,500,700");
 
 /* Importer tous les fichiers de composants */
 @import url("components/cards.css");

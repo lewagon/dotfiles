@@ -42,7 +42,7 @@ Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-he
 For instance, if you wanted to use Open-Sans and Poppins (with different font-weights), you could add this at the top of your `style.css`:
 
 ```css
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
+@import url("http://fonts.googleapis.com/css2?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
 ```
 
 Then you can apply it in the rest of your CSS:
