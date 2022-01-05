@@ -1,6 +1,6 @@
 ## Pitch de producto (30min)
 
-Hace algunos días uno de tus compañeros presentó una idea que fue seleccionada para ser desarrollada. Ese premier pitch es el punto de partida de tu proceso de desarrollo de producto pero por ahora la transformaremos en un **Pitch de Producto**.
+Hace algunos días uno de tus compañeros presentó una idea que fue seleccionada para ser desarrollada. Ese primer pitch es el punto de partida de tu proceso de desarrollo de producto pero por ahora la transformaremos en un **Pitch de Producto**.
 
 El objetivo principal de hacer un pitch de producto es afinar la idea de tu proyecto, definir su alcance y compartir una visión clara de lo que vas a crear.
 
