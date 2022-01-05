@@ -10,32 +10,48 @@ Usar clases integradas es bueno pero crear nuestras *propias* clases ¡es aún m
 
 Implementa la clase `OrangeTree` la cual modela la vida de un árbol de naranja (su nacimiento, ciclo de vida y muerte).
 
+### Envejecimiento
+- Cuando nace un árbol de naranja, su edad es 0.
+- Cada año, el árbol debe envejecer 1 año.
+- El árbol de naranja **no puede** morir hasta alcanzar la edad de 50 años.
+- Luego de los 50 años, la probabilidad de que el árbol muera aumenta cada año.
+- Ningún árbol puede vivir más de 100 años.
+- Se debe poder saber la edad del árbol.
+- Se debe poder saber si el árbol ha muerto utilizando el método de instancia `#dead?`.
+
+### Altura
+- Un árbol de naranja crece 1 metro por año hasta los 10 años. Luego deja de crecer.
+- Se debe poder medir la altura del árbol.
+
+### Frutas
+- Un árbol de naranja da 100 frutas al año a partir de los 5 años.
+- El árbol da 200 frutas al año a partir de los 10 años.
+- El árbol deja de dar frutas cuando llega a los 15 años.
+- Se debe poder seleccionar **una sola fruta** del árbol al llamar al método de instancia `pick_a_fruit!` en el árbol (pero solo si todavía tiene frutas).
+- Al final del año las naranjas que no se recogieron caerán del árbol.
+- Se debe poder saber cuántas frutas quedan colgando del árbol.
+
+
 Para simular el transcurso del tiempo, necesitarás implementar el siguiente método de **instancia**:
 
 ```ruby
 def one_year_passes!
-  # TODO: age the tree by one year
   # TODO: check if the tree has survived
-  # TODO: if so, make the tree height grow
-  # TODO: if so, make the tree grow fruits
+  # TODO: if so, make the tree grow
+  # TODO: and produce fruits
 end
 ```
 
-- Se debe poder medir la altura del árbol.
-- Se debe poder saber si el árbol está muerto.
-- Cada año el árbol envejecerá 1 año (envejece, se incrementa su tamaño y eventualmente muere).
-- La altura de un árbol incrementa 1 metro anualmente hasta que tiene 10 años y deja de crecer.
-- El árbol de naranja **no puede** morir hasta que tenga 50 años.
-- Después de los 50, la probabilidad de que muera incrementa cada año.
-- Ningún árbol puede vivir más de 100 años.
-- Un árbol producirá 100 frutas al año cuando tenga más de 5 años.
-- Un árbol producirá 200 frutas al año cuando llegue a los 10 años.
-- Un árbol no producirá más frutas cuando alcance los 15 años.
-- Se debe poder tomar **una sola fruta** del árbol llamando al método `pick_a_fruit!` sobre el árbol (pero solo si todavía quedan frutas).
-- Al final de cada año, aquellas frutas que no hayan sido recogidas **caerán**.
-- Se debe poder saber el número de frutas que quedan colgando en el árbol.
+Las instrucciones de este método se traducen en verificar si el árbol está vivo. Si es el caso, hazlo crecer y haz que de frutas.
 
 Para testearlo, abre la interfaz (`ruby lib/interface.rb`) y averigua lo que pasa ;).
+
+### Refactoring
+
+Cuando termines de implementar tu método de **instancia** `#one_year_passes!` y tu `rake` está 100% en verde, haz el refactoring de tu código en los siguientes métodos de instancia **privados**:
+- `#may_die!` lo que significa que puede morir
+- `#grow!` que significa crecer
+- `#produce_fruits!` que significa dar frutos
 
 ## Puntos clave de aprendizaje
 
