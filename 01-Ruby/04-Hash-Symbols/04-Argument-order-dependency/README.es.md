@@ -10,4 +10,4 @@ La ventaja de usar un hash es que elimina esta dependencia. El orden ya no impor
 
 ## Puntos clave de aprendizaje
 
-- Realmente entiendes porque `#better_refrain` es una implementación más flexible? Trata de explicárselo a tu compañero del día.
+- Realmente entiendes porque `#better_refrain` es una implementación más flexible? Trata de explicárselo a tu compañero/a del día.

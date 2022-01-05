@@ -24,7 +24,7 @@ end
 
 Al ejecutar este código, este mostrará todas las billeteras encontradas en la primera página en [Etsy](https://www.etsy.com/search?q=wallet)
 
-Como funciona?
+¿Cómo funciona?
 
 El método `search` toma un [selector CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors) y busca todos los elementos HTML en la página que coincidan con el mismo. En este ejemplo utilizamos el selector de **clase** (class) `.card-meta-row` porque la [fuente HTML] [HTML source](https://support.mozilla.org/en-US/questions/873324) era algo como:
 

@@ -33,10 +33,10 @@ Implementa el método `analyze` que toma un texto de cadena de caracteres (`Stri
 
 ## Flujo de la aplicación
 
-1. Crea un `program.rb` que cargue el archivo que contiene el documento de texto y llama al método  `analyze`.
+1. Crea un `program.rb` que cargue el archivo que contiene el documento de texto y llame al método  `analyze`.
 1. En `analyze`, `text` es una cadena de caracteres (string) lo que significa que puedes medir su longitud fácilmente.
-1. Remueve temporalmente los espacios en blanco (whitespaces) y cuenta cuántos caracteres hay sin incluir los espacios (spaces).
-1. Separa todos los espacios en blanco (whitespaces) para averiguar cuántas palabras hay.
+1. Remueve temporalmente los espacios en blanco y cuenta cuántos caracteres hay sin incluir los espacios (spaces).
+1. Separa todos los espacios en blanco para averiguar cuántas palabras hay.
 1. Separa los puntos finales para saber cuántas oraciones hay.
 1. Separa los saltos de línea dobles para calcular el número de párrafos.
 1. Computa los promedios usando y tus contadores.

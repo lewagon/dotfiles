@@ -2,8 +2,8 @@
 
 Este desafío lo tendrás que hacer en **45 minutos 🕒**.
 
-1. Tal como en el primer ejercicio, comienza escribiendo el pseudocódigo con el/la profesor/a como en la sesión de codeo en vivo 💻.
-2. Luego pasa 20 minutos trabajando solo para tratar de llegar a la solución.
+1. Tal como en el primer ejercicio, comienza escribiendo el pseudocódigo con el/la profesor/a como en la sesión de live-code 💻.
+2. Luego pasa 20 minutos trabajando solo/a para tratar de llegar a la solución.
 3. ¡Después la corregimos juntos! 💻
 
 ## Pseudocódigo
@@ -24,7 +24,7 @@ Los pasos anteriores son muy generales, así que **trata de afinarlos agregando 
 
 ## Paso 1 - Carrera de caballos tonta
 
-Construyamos el modelo de la carrera. El usuario puede apostar (escoger) un caballo, los mismos participan en la carrera (la computadora selecciona un ganador aleatoriamente) y el ganador se muestra en la Terminal con un mensaje diciéndole al usuario que ha ganado. Comencemos con el pseudocódigo. ¿Cómo haremos el modelado de los caballos?
+Construyamos el modelo de la carrera. El/la usuario/a puede apostar (escoger) un caballo, los mismos participan en la carrera (la computadora selecciona un ganador aleatoriamente) y el ganador se muestra en la Terminal con un mensaje diciéndole al/a la usuario/a que ha ganado. Comencemos con el pseudocódigo. ¿Cómo haremos el modelado de los caballos?
 
 ## Paso 2 - ¡Hazlo correr en bucle (loop)!
 

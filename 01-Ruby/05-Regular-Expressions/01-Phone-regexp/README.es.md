@@ -5,7 +5,7 @@ En términos precisos, aprenderemos a manejar números de teléfono en tu aplica
 
 ## Especificaciones
 
-Escribe el método `french_phone_number?` que tome una cadena de texto (string) como parámetro y devuelva el booleano `true` cuando el número de teléfono sea un número francés válido:
+Escribe el método `french_phone_number?` que tome una cadena de caracteres (string) como parámetro y devuelva el booleano `true` cuando el número de teléfono sea un número francés válido:
 
 - es válido si empieza por `0` y contiene 10 dígitos. El segundo dígito no puede ser 0.
 - también es válido cuando comienza con `+33` y tiene 11 dígitos. El dígito que le sigue a `+33` no puede ser 0.
