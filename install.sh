@@ -23,13 +23,11 @@ symlink() {
 
 # For all files `$name` in the present folder except `*.sh`, `README.md`, `settings.json`,
 # and `config`, backup the target file located at `~/.$name` and symlink `$name` to `~/.$name`
-for name in *; do
+for name in aliases gitconfig irbrc rspec zprofile zshrc; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
-    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ "$name" != 'settings.json' ]] && [[ "$name" != 'config' ]]; then
-      backup $target
-      symlink $PWD/$name $target
-    fi
+    backup $target
+    symlink $PWD/$name $target
   fi
 done
 
@@ -44,7 +42,7 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
 fi
 cd "$CURRENT_DIR"
 
-# Symlink VS Code settings to the present `settings.json` file
+# Symlink VS Code settings and keybindings to the present `settings.json` and `keybindings.json` files
 # If it's a macOS
 if [[ `uname` =~ "Darwin" ]]; then
   CODE_PATH=~/Library/Application\ Support/Code/User
@@ -56,12 +54,14 @@ else
     CODE_PATH=~/.vscode-server/data/Machine
   fi
 fi
-target="$CODE_PATH/settings.json"
-backup $target
-symlink $PWD/settings.json $target
 
-# Symlink SSH config file to the present `config` file for macOS and add SSH
-# passphrase to the keychain
+for name in settings.json keybindings.json; do
+  target="$CODE_PATH/$name"
+  backup $target
+  symlink $PWD/$name $target
+done
+
+# Symlink SSH config file to the present `config` file for macOS and add SSH passphrase to the keychain
 if [[ `uname` =~ "Darwin" ]]; then
   target=~/.ssh/config
   backup $target
@@ -70,6 +70,6 @@ if [[ `uname` =~ "Darwin" ]]; then
 fi
 
 # Refresh the current terminal with the newly installed configuration
-zsh ~/.zshrc
+exec zsh
 
 echo "👌 Carry on with git setup!"
