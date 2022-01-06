@@ -79,7 +79,7 @@
     },
     "telemetry.telemetryLevel": "off",
     "window.restoreWindows": "none",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-great-icons",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
