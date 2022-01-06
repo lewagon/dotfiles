@@ -1,14 +1,18 @@
 {
     "[python]":
     {
-        "editor.tabSize": 4
+        "editor.tabSize": 4,
+        "editor.guides.bracketPairs": false,
+        "editor.bracketPairColorization.enabled": false,
+        "editor.fontSize": 14,
+        "editor.formatOnPaste": false,
+        "editor.multiCursorModifier": "alt" // similar to jupyter
     },
     "editor.bracketPairColorization.enabled": true,
     "editor.detectIndentation": false,
     "editor.fontSize": 17,
     "editor.formatOnPaste": true,
     "editor.guides.bracketPairs": true,
-    "editor.insertSpaces": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderControlCharacters": true,
@@ -17,12 +21,9 @@
         80,
         120
     ],
-    "editor.scrollBeyondLastLine": true,
     "editor.showFoldingControls": "always",
     "editor.snippetSuggestions": "top",
     "editor.tabSize": 2,
-    "editor.trimAutoWhitespace": true,
-    "editor.useTabStops": true,
     "emmet.includeLanguages":
     {
         "erb": "html"
@@ -65,16 +66,13 @@
         "**/vendor/**": true
     },
     "git.enabled": false,
-    "python.formatting.provider": "yapf",
-    "python.pythonPath": "~/.pyenv/shims/python",
     "ruby.lint":
     {
         "rubocop": true
     },
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "window.restoreWindows": "none",
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
