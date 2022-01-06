@@ -66,6 +66,7 @@
     },
     "git.enabled": false,
     "python.formatting.provider": "yapf",
+    "python.pythonPath": "~/.pyenv/shims/python",
     "python.defaultInterpreterPath": "~/.pyenv/shims/python",
     "python.terminal.activateEnvironment": false,
     "ruby.lint":
