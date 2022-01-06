@@ -1,21 +1,13 @@
 {
     "[python]":
     {
-        "editor.tabSize": 4,
-        "editor.guides.bracketPairs": false,
         "editor.bracketPairColorization.enabled": false,
-        "editor.fontSize": 14,
-        "editor.formatOnPaste": false,
-        "editor.multiCursorModifier": "alt" // similar to jupyter
+        "editor.guides.bracketPairs": false,
+        "editor.tabSize": 4
     },
-    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
-    "python.terminal.activateEnvironment": false,
-    "python.formatting.provider": "yapf",
-    
     "editor.bracketPairColorization.enabled": true,
     "editor.detectIndentation": false,
-    "editor.fontSize": 17,
-    "editor.formatOnPaste": true,
+    "editor.fontSize": 14,
     "editor.guides.bracketPairs": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
