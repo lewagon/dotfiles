@@ -8,6 +8,10 @@
         "editor.formatOnPaste": false,
         "editor.multiCursorModifier": "alt" // similar to jupyter
     },
+    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+    "python.terminal.activateEnvironment": false,
+    "python.formatting.provider": "yapf",
+    
     "editor.bracketPairColorization.enabled": true,
     "editor.detectIndentation": false,
     "editor.fontSize": 17,
