@@ -198,15 +198,6 @@ First, delete the `test/controllers/questions_controller_test.rb` file if it got
 
 We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. Before running your system tests you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu.
 
-Then you need to install `chromedriver`:
-
-```bash
- # macOS
-brew install --cask chromedriver
-```
-
-If you are using Ubuntu, you need to install the latest Chrome version and install compatible Chromedriver by following steps 2 and 3 of [this guide](https://cloudbytes.dev/snippets/run-selenium-and-chrome-on-wsl2).
-
 After the installation you can open the following file and replace **all** its content with:
 
 ```ruby
@@ -264,7 +255,21 @@ Run the test in the terminal with:
 rails test:system
 ```
 
-If you look closely at the test scenario, you can read it as:
+⚠️ If you are getting a `Webdrivers::BrowserNotFound: Failed to find Chrome binary` error, you need to install the latest version of Chrome:
+
+```ruby
+ # macOS
+brew install --cask google-chrome
+
+# Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
+```
+
+Once you have installed it, you can relaunch the tests with `rails test:system`.
+
+Now that they are running, if you look closely at the test scenario, you can read it as:
 
 1. Go to the `/ask` page
 2. Make sure the page got rendered and we can read `Ask your coach anything`.

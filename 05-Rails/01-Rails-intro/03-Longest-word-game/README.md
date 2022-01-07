@@ -125,16 +125,6 @@ First, delete the `test/controllers/games_controller_test.rb` file if it got gen
 
 We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. Before running your system tests you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu.
 
-Then you need to install `chromedriver`:
-
-```bash
- # macOS
-brew install --cask chromedriver
-
-# Ubuntu
-gem install chromedriver-helper
-```
-
 After the installation you can open the following file and replace **all** its content with:
 
 ```ruby
@@ -199,6 +189,20 @@ Run the test in the terminal with:
 ```bash
 rails test:system
 ```
+
+⚠️ If you are getting a `Webdrivers::BrowserNotFound: Failed to find Chrome binary` error, you need to install the latest version of Chrome:
+
+```ruby
+ # macOS
+brew install --cask google-chrome
+
+# Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
+```
+
+Once you have installed it, you can relaunch the tests with `rails test:system`.
 
 In this test, I am visiting the `/new` URL and making sure I get ten letters to play with.
 
