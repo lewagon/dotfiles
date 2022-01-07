@@ -257,7 +257,7 @@ rails test:system
 
 ⚠️ If you are getting a `Webdrivers::BrowserNotFound: Failed to find Chrome binary` error, you need to install the latest version of Chrome:
 
-```ruby
+```bash
  # macOS
 brew install --cask google-chrome
 
