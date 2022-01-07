@@ -1,5 +1,5 @@
 /* Import fonts from Google Fonts */
-@import url("http://fonts.googleapis.com/css2?family=Open+Sans:400,300,700|Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;500;700");
 
 /* Importing all components file */
 @import url("components/cards.css");

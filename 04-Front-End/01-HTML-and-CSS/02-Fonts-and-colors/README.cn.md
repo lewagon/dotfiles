@@ -42,7 +42,7 @@ touch style.css
 例如，如果你想使用Open-Sans和Poppins(它们各自的字重不同)，你可以在`style.css`的顶部添加以下内容：
 
 ```css
-@import url("http://fonts.googleapis.com/css2?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;700");
 ```
 
 然后你就可以把它应用在你的其他CSS中：
