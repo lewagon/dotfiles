@@ -174,10 +174,9 @@ Parser un fichier CSV
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 filepath    = 'gifts.csv'
 
-CSV.foreach(filepath, csv_options) do |row|
+CSV.foreach(filepath, col_sep: ',', quote_char: '"', headers: :first_row) do |row|
   # TODO: build new gift from information stored in each row
 end
 ```
@@ -187,10 +186,9 @@ Stocker un fichier CSV
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
 filepath    = 'gifts.csv'
 
-CSV.open(filepath, 'wb', csv_options) do |csv|
+CSV.open(filepath, 'wb', col_sep: ',', force_quotes: true, quote_char: '"') do |csv|
   # We had headers to the CSV
   csv << ['name', 'price', 'bought']
   #TODO: store each gift
