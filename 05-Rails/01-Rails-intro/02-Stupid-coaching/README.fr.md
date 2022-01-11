@@ -199,7 +199,7 @@ Pour le moment, ouvre (ou crée) simplement le fichier `app/assets/stylesheets/q
 
 Commence par supprimer le fichier `test/controllers/questions_controller_test.rb` s'il a été généré. On va procéder à des [**tests système**](http://guides.rubyonrails.org/testing.html#system-testing). L'objectif de ce genre de tests est d'automatiser les tests manuels des actions suivantes : « rédiger du code / aller au navigateur / recharger la page / vérifier si tout fonctionne ». Tout ce que tu faisais manuellement dans le navigateur peut être effectué _via_ du code !
 
-Pour les tests système, on va utiliser _Headless Chrome_. Il s'agit d'un navigateur sans interface utilisateur, adapté à ce genre de tests automatisés. Avant de lancer tes tests système, vérifie qu'une version **récente** de Chrome est installée sur ton système (pas Chromium). Il est disponible pour OSX et Ubuntu.
+Pour les tests système, on va utiliser _Headless Chrome_. Il s'agit d'un navigateur sans interface utilisateur, adapté à ce genre de tests automatisés. Avant de lancer tes tests système, vérifie qu'une version **récente** de Chrome est installée sur ton système (pas Chromium). Il est disponible pour macOS et Ubuntu.
 
 Tu peux ensuite ouvrir le fichier suivant et remplacer **tout** son contenu par :
 
