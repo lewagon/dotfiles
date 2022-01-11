@@ -58,7 +58,6 @@ Las listas desplegables (drop-down) son diferentes. **Tienen su propias etiqueta
 Hablemos de las clases Bootstrap para formularios:
 
 - `.form-control` diseña cada `<input>` o `<select>` excepto el botón de envío (submit button).
-- `.form-group` agrupa cada `<input>` o `<select>` con su`<label>` asociada.
 - `.form-text` nos permite agregar una pista debajo de un `<input>` o un `<select>`, como por ejemplo la longitud de una contraseña.
 - `.mb-3` agrupa cada `<input>` o `<select>` con su `<label>` asociada para agregar algo de espacio debajo de cada grupo
 
