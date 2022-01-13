@@ -1,1 +1,2 @@
 alias vim="nvim"
+alias pip="python -m pip"
