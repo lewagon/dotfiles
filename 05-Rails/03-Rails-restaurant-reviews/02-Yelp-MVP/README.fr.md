@@ -23,7 +23,7 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Avant de commencer à coder ton application, suis [notre guide Frontend Rails](https://github.com/lewagon/rails-stylesheets/blob/bootstrap-5/README.md) pour t'assurer de pouvoir utiliser un formulaire simple, Bootstrap, et d'avoir un dossier de feuilles de style sympas (⚠️ Pour le moment, contente-toi de mettre en œuvre la section **configuration**, ne te lance pas dans **Bootstrap JS** ; on verra ça demain !).
+Avant de commencer à coder ton application, suis [notre guide Frontend Rails](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) pour t'assurer de pouvoir utiliser un formulaire simple, Bootstrap, et d'avoir un dossier de feuilles de style sympas (⚠️ Pour le moment, contente-toi de mettre en œuvre la section **configuration**, ne te lance pas dans **Bootstrap JS** ; on verra ça demain !).
 
 ### Tester ton code
 
@@ -133,7 +133,7 @@ Maintenant, il est temps de coder toutes les routes dont tu as besoin pour crée
 
 ### Vues
 
-On va maintenant s'intéresser au frontend, car c'est ce que nos utilisateurs vont voir ! Suis [ce guide](https://github.com/lewagon/rails-stylesheets/blob/bootstrap-5/README.md) pour configurer ton frontend Rails si tu ne l'as pas fait au début du challenge (⚠️ Pour le moment, contente-toi de mettre en œuvre la section **configuration**, ne te lance pas dans **Bootstrap JS** ; on verra ça demain !).
+On va maintenant s'intéresser au frontend, car c'est ce que nos utilisateurs vont voir ! Suis [ce guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) pour configurer ton frontend Rails si tu ne l'as pas fait au début du challenge (⚠️ Pour le moment, contente-toi de mettre en œuvre la section **configuration**, ne te lance pas dans **Bootstrap JS** ; on verra ça demain !).
 
 #### Mises en page / Partials
 
