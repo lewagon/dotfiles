@@ -24,7 +24,7 @@ sqlite3 lib/db/jukebox.sqlite
 ```
 
 Ahora estás en la consola interactiva de sqlite3 y puedes escribir consultas SQL para la base de datos.
-Puedes salir de la consola sqlite3 con `.quit` o `Ctrl+D`.
+Puedes salir de la consola sqlite3 con `.quit` o `CTRL+D`.
 
 ## Herramientas
 

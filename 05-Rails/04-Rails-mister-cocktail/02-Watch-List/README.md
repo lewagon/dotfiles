@@ -67,7 +67,7 @@ And add the gems we're going to need:
 ```ruby
 # Gemfile
 gem "autoprefixer-rails", "10.2.5"
-gem "font-awesome-sass", "~> 5.12.0"
+gem "font-awesome-sass", "~> 5.15"
 gem "simple_form"
 ```
 
@@ -136,7 +136,7 @@ to only run tests in the `spec/models` folder. Make sure they're all green befor
 
 #### Validation
 
-- A movie must have a unique title.
+- A movie must have a unique title and an overview.
 - A list must have a unique name.
 - A bookmark must be linked to a movie and a list, and the [movie, list] pairings should be unique.
 - The comment of a bookmark cannot be shorter than 6 characters.

@@ -17,11 +17,11 @@ Implementaremos una versión simplificada de Black Jack:
   - Tomar una carta con un valor aleatorio entre `1` y `11`. Este número será incluido en su marcador.
   - Tomar otra carta o conformarse con el puntaje actual y terminar el juego.
 - Finalmente hay 5 posibilidades:
-  - Si el marcador del/de la jugador/a es > 21, él/ella `"Pierde"` (lose)(fracaso).
+  - Si el marcador del/de la jugador/a es > 21, él/ella pierde `"Lose"`.
   - Si el marcador del/de la jugador/a es 21, tiene `"Black Jack"` y gana.
-  - Si el marcador del/de la jugador/a es > que el del croupier, él/ella`"Gana"` (win).
-  - Si el marcador del/de la jugador/a es < que el del croupier, él/ella `"Pierde"` (lose).
-- Si el marcador del/de la jugador/a es == al del croupier, es un `"Empate"` (push). Al/a la jugador/a se le devuelve su dinero.
+  - Si el marcador del/de la jugador/a es > que el del croupier, él/ella gana `"Win"`.
+  - Si el marcador del/de la jugador/a es < que el del croupier, él/ella pierde `"Lose"`.
+- Si el marcador del/de la jugador/a es == al del croupier, es un empate `"Push"`. Al/a la jugador/a se le devuelve su dinero.
 
 ## Especificaciones
 
@@ -58,7 +58,7 @@ Card? 'y' or 'yes' to get a new card
 > no
 You beat the bank! You win.
 ```
-⚠️ ¡El ejercicio no termina cuando `rake`esta todo en verde! Debes asegurarte que realmente puedas jugar al correr `ruby lib/interface.rb` 😉.
+⚠️ ¡El ejercicio no termina cuando `rake`esta todo en verde! Debes asegurarte de que realmente puedas jugar al correr `ruby lib/interface.rb` 😉.
 
 ## Puntos clave de aprendizaje
 
@@ -68,5 +68,5 @@ You beat the bank! You win.
 
 ## Recomendaciones y recursos adicionales
 
-- Tal vez quieras utilizar la [clase Random](http://www.ruby-doc.org/core-2.5.3/Random.html).
+- Tal vez quieras utilizar la [clase Random](https://ruby-doc.org/core-2.7.5/Random.html).
 - Cuando ejecutes bucles (loops) necesitas una condición para detener el juego en cierto momento.

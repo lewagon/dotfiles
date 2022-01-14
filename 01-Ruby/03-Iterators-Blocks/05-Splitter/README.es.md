@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Combinemos el poder de enumerables (`#each`, `#map`, etc.) y bloques (and `yield`). Crearemos un método  **separador** (splitter) que tomará un array y lo dividirá en dos grupos de acuerdo con una regla arbitraria. Por ejemplo, nos podría interesar separar por edad si habláramos de un grupo de personas.
+Combinemos el poder de enumerables (`#each`, `#map`, etc.) con bloques (and `yield`). Crearemos un método  **separador** (splitter) que tomará un array y lo dividirá en dos grupos de acuerdo con una regla arbitraria. Por ejemplo, nos podría interesar separar por edad si habláramos de un grupo de personas.
 
 ## Especificaciones
 
@@ -21,7 +21,7 @@ result = size_splitter(words, 3)
 
 En el ejercicio anterior, se definió la regla arbitraria. ¿Y si quisiéramos permitirle a quien sea que llame al método poder escoger qué regla aplicar? ¡Podemos hacerlo gracias al poder de los bloques y de `yield`!
 
-Escribe un metodo `block_splitter` para que el siguiente ejemplo aplique:
+Escribe un método `block_splitter` para que el siguiente ejemplo aplique:
 
 ```ruby
 beatles = [ "John", "Paul", "Ringo", "George" ]

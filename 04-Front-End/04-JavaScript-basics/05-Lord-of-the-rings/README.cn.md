@@ -1,16 +1,16 @@
 ## 详细说明
 
-在这个练习里, 霍比特人(Hobbits)，精灵(Elves)，矮人(Dwarves)和老鹰(Eagles)会和邪恶的兽人(Orcs), 恶狼（Wargs）,妖怪（Goblins）,强兽人（Uruk Hai）和 巨魔(Trolls) 战斗. 打开文件`lib/lord_of_the_rings.js`。你会看到待实现的三个函数。
+在这个练习里, 霍比特人(Hobbits)，精灵(Elves)，矮人(Dwarves)和老鹰(Eagles)会和邪恶的兽人(Orcs), 恶狼（Wargs）,妖怪（Goblins）,强兽人（Uruk-hai）和 巨魔(Trolls) 战斗. 打开文件`lib/lord_of_the_rings.js`。你会看到待实现的三个函数。
 
 第一段函数`isGood`引入士兵类型（字符串[`String`])作为参数，如果这个士兵是好人一方的话，函数应该返回 `true`。
 
 - `isGood("Hobbits")` 应返回`true`
-- `isGood("Uruk Hai")` 应返回`false`
+- `isGood("Uruk-hai")` 应返回`false`
 
-第二个函数`buildSoldierObject` 使用`battlefield` (字符串`String`)作为参数， 并且应该返回一个Javascript对象[`object`]. 这个对象`keys`是一个 **士兵**, `values`是 **战场上同种类士兵的数量**. 这里有一些你需要解析的战场字符串（并转换成对象）:
+第二个函数`buildSoldierObject` 使用`battlefield` (字符串`String`)作为参数， 并且应该返回一个JavaScript对象[`object`]. 这个对象`keys`是一个 **士兵**, `values`是 **战场上同种类士兵的数量**. 这里有一些你需要解析的战场字符串（并转换成对象）:
 
 - `Elves:5,Orcs:4`
-- `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk Hai:1`
+- `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk-hai:1`
 
 例如:
 

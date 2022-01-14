@@ -13,7 +13,7 @@ listItem('milk');
 // => '<li class="list-group-item">milk</li>'
 ```
 
-Make sure you use [ES6 Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) and not concatenation (not the modern way to do this in JavaScript).
+Make sure you use [ES6 template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) and not concatenation (not the modern way to do this in JavaScript).
 
 ### Unordered list generator
 
@@ -29,7 +29,6 @@ When the `listItem` function passes all the tests, go on and code the `unordered
 ```
 
 **Just this once**, we won't mind if the indentation in the generated string isn't perfect!
-
 
 ### Going further
 

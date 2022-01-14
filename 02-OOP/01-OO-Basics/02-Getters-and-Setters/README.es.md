@@ -3,7 +3,7 @@
 Un **getter** es un método que **solicita** información desde nuestra variable de instancia.
 Un **setter** es un método que **cambia** información en nuestra variable de instancia.
 
-En este ejercicio, implementaremos una máquina dispensadora simple  (`VendingMachine` ruby class) donde un usuario pueda comprar snacks por un precio dado. El usuario puede acercarse a la máquina, insertar algunas monedas y luego presionar el botón “Buy”.
+En este ejercicio, implementaremos una máquina dispensadora simple  (`VendingMachine` Ruby class) donde un usuario pueda comprar snacks por un precio dado. El usuario puede acercarse a la máquina, insertar algunas monedas y luego presionar el botón “Buy”.
 
 ## Especificaciones
 
@@ -41,5 +41,5 @@ Tal vez tengas un poco de trabajo adicional en la clase `VendingMachine` 😉
 
 ## (Avanzado) Algunas preguntas abiertas 🤔
 
-1. Debes haberte dado cuenta que en ambos de los archivos de escenarios, hay un método `display`. ¿Cómo podemos refactorizar este código para que esté más "orientado a objetos"? Así mismo, ¿cómo podemos cambiar a nuestros readers para mostrar **menos** información al mundo exterior? El concepto que debes recordar aquí es [**Encapsulación**](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
+1. Debes haberte dado cuenta que en ambos archivos de escenarios, hay un método `display`. ¿Cómo podemos refactorizar este código para que esté más "orientado a objetos"? Así mismo, ¿cómo podemos cambiar a nuestros readers para mostrar **menos** información al mundo exterior? El concepto que debes recordar aquí es [**Encapsulación**](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
 2. Usaste un writer para actualizar el número de snacks cuando estabas cargando. ¿Cómo podemos cambiar este código para usar un método de instancia en vez de este writer? ¿Por qué es el método de instancia es mejor?

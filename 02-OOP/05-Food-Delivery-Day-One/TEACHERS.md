@@ -20,7 +20,7 @@ Make them find the class `Member`, from which `Coach` and `Player` inherit.
 So basically, the begininng of the presentation is on the whiteboard, and
 the slides are here for future reference, don't just stick on them. Once
 you have the specs written in plain english + the UML diagram, asks the question,
-"How to convert this diagram into ruby?"
+"How to convert this diagram into Ruby?"
 
 That's where you jump to live-code. Write all the models with `initialize` and
 instance variables. Then code the methods to link players, coaches and teams.

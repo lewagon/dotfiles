@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-¡Vamos a diseñar un [artículo Medium](https://lewagon.github.io/medium-copycat/) y a subirlo con Github pages!
+¡Vamos a diseñar un [artículo Medium](https://lewagon.github.io/medium-copycat/) y a subirlo con GitHub pages!
 
 ## Configuración
 
@@ -49,9 +49,9 @@ Aquí hay un ejemplo de cómo cambiarías el tamaño de un contenedor en cualqui
 
 Asegurate de ajustar el tamaño del contenedor para todos los demás tamaños (`576px`, `768px`, `992px` and `1200px`).
 
-## Opcional - Push a Github pages
+## Opcional - Push a GitHub pages
 
-¡Si quieres también puedes pushear el artículo Medium a Github Pages! Si decides hacerlo, necesitarás copiar tu trabajo nuevamente en una carpeta **fuera** de fullstack challenges para que podamos hacerle seguimiento con git como un proyecto aparte.
+¡Si quieres también puedes pushear el artículo Medium a GitHub Pages! Si decides hacerlo, necesitarás copiar tu trabajo nuevamente en una carpeta **fuera** de fullstack challenges para que podamos hacerle seguimiento con git como un proyecto aparte.
 
 ```bash
 cp -r ./medium-article ~/code/<user.github_nickname>/medium-article

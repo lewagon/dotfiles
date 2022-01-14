@@ -10,7 +10,7 @@ Work on three different button designs (two given by us, one of your choice). He
 
 Your job is now to write the associated CSS in `button.css`.
 
-Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
+Don't forget to **hard refresh** your browser (`Cmd + Shift + R`) to clear your browser's cache if your page doesn't seem to display your current code!
 
 ## Organize your CSS with component files
 

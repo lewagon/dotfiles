@@ -113,7 +113,7 @@ cp -r ../02-Fonts-and-colors/profile .
 一旦完成了，你就可以提交这个练习到github，并使用以下命令将代码复制到下一个练习文件夹：
 
 ```bash
-# 提交代码到 github
+# 提交代码到 GitHub
 git add .
 git commit -m "添加div到我的个人资料页面"
 git push origin master

@@ -8,7 +8,7 @@ You'll cover a lot of HTML & CSS concepts in the next few days, such as:
 - CSS simple and advanced selectors
 - Web-design resources for fonts & colors (google fonts, fontawesome, etc.)
 
-The objective of this day is to build [your profile page](https://papillard.github.io/my-profile/) and put it online using [Github Pages](https://pages.github.com/).
+The objective of this day is to build [your profile page](https://papillard.github.io/my-profile/) and put it online using [GitHub Pages](https://pages.github.com/).
 
 ## `02 CSS Components`
 
@@ -39,7 +39,7 @@ Then, instead of the live-code it's Pitch Night! You will have 5 minutes to pitc
 
 ## `05 DOM & Events`
 
-Now that we picked up the syntax, let's go back to the browser and use JavaScript as a frontend language. On this day, we will introduce the DOM – how the browser processes the HTML webpage – and how we can use Javascript to interact with it.
+Now that we picked up the syntax, let's go back to the browser and use JavaScript as a frontend language. On this day, we will introduce the DOM – how the browser processes the HTML webpage – and how we can use JavaScript to interact with it.
 
 We will also have a look at the different user events we can listen to with JavaScript in order to build highly dynamic interfaces.
 

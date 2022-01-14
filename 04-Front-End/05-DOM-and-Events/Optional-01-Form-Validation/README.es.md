@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Javascript es realmente útil para validar formularios del lado del cliente.
+JavaScript es realmente útil para validar formularios del lado del cliente.
 Cuando el usuario llena tu formulario es mejor darle retroalimentación tan pronto como sea posible en caso de que un campo haya sido completado incorrectamente.
 
 ## Especificaciones

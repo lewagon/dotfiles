@@ -12,14 +12,6 @@ rake db:seed        # Populates your database with sample data
 rake db:timestamp   # Gives you a timestamp for your migration file name
 ```
 
-## Setup
-
-Don't forget to run this in your terminal:
-
-```bash
-gem install activerecord -v 6.0
-```
-
 ## Specs
 
 Before we move on to changing the **structure** of our database schema, lets first practice creating our database. There is no need to worry about creating tables, or having models. For now, just create the database!

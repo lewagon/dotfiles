@@ -4,7 +4,7 @@ Hay dos formas principales de recibir bloques en métodos en Ruby. El primero - 
 
 Afortunadamente podemos guardar bloques de código Ruby en objetos `Proc`.
 
-## Argument de bloque ampersand (&)
+## Argumento de bloque ampersand (&)
 
 Al ponerle el prefijo ampersand (&) al último argumento en la firma de un método, se crea un objeto `Proc` a partir de cualquier bloque que se pase. Este objeto luego puede ser ejecutado con el método `call` como se muestra a continuación:
 
@@ -21,7 +21,7 @@ speak { "Hello" }
 **Un nuevo objeto `Proc` será creado a partir del bloque cada vez que se llame al método.**
 
 ## Creación de objetos Proc
-Tal vez quieras crear tus objetos `Proc` tú mismo y pasarselos al método como parámetros normales como se muestra a continuación:
+Tal vez quieras crear tus objetos `Proc` tú mismo y pasárselos al método como parámetros normales como se muestra a continuación:
 
 ```ruby
 def speak(block)
@@ -38,4 +38,4 @@ speak(message_block)
 
 ## Especificaciones
 
-¡Ahora es tu turno! Dile a tu mama cuanto la amas 😊. Implementa los métodos `#tell`, `#tell_mum`, `#tell_with_proc`, `#tell_mum_with_proc` los cuales utilizan argumentos de bloque ampersand (&) o pasales objetos `Proc` explícitamente.
+¡Ahora es tu turno! Dile a tu mamá cuánto la amas 😊. Implementa los métodos `#tell`, `#tell_mum`, `#tell_with_proc`, `#tell_mum_with_proc` los cuales utilizan argumentos de bloque ampersand (&) o pásales objetos `Proc` explícitamente.

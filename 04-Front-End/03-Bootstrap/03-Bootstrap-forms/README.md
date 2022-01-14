@@ -24,7 +24,6 @@ The best trick to make a form responsive is to inject it in a Bootstrap grid int
 - On tablet and larger devices, it will be centered (thanks to the `justify-content-center` alignment class) and will take 33% of the screen.
 - You can make it even more responsive if you like (fullscreen on mobile, half-screen centered on tablet, 33%-screen centered on laptop etc.)
 
-
 ## HTML forms
 
 A HTML `<form>` is made up of different `<input>` lines (i.e. each field of the form). Each input may have an associated `<label>` or not. The button to submit the form is also an input with the `type="submit"`. Here is what a form looks like:
@@ -50,15 +49,13 @@ Dropdown-lists are a bit different. **They have their own `<select>` tag and `<o
 <select id="favorite" name="language">
   <option value="ruby">Ruby</option>
   <option value="css">CSS</option>
-  <option value="javascript">Javascript</option>
+  <option value="javascript">JavaScript</option>
 </select>
 ```
-
 
 ## Bootstrap form classes
 
 Now let's speak about Bootstrap form classes:
-
 - `.form-control` designs every `<input>` or `<select>`, except the submit button.
 - `.form-group` groups each `<input>` or `<select>` with its associated `<label>`.
 

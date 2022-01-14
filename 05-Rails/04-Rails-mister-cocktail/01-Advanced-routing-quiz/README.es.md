@@ -5,13 +5,14 @@ Antes de empezar a ver el desafío Watch list, repasemos algunos de los principi
 ## Especificaciones
 
 Ve al archivo `lib/quiz.rb`. Ahí encontrarás algunos métodos para poner a prueba los conocimientos que has adquirido hasta ahora.¡Asegúrate de que cada uno de los métodos devuelva la información adecuada para pasar el quiz!
+
 ⚠️ Intenta hacer el ejercicio antes de correr `rake`.
 
 ### Pregunta 1
 
 Implementa las 7 rutas convencionales que corresponden a las 7 rutas CRUD generadas por `resources :restaurants`.
+
 Pista: una ruta sigue el siguiente patrón: `verb "url", to: "controller#action"`
-/!\ En el contexto Rails, ¡una ruta no es una cadena de caracteres (String)!
 
 ### Pregunta 2
 
@@ -20,8 +21,7 @@ Si tienes una relación uno a muchos (one to many) entre tus modelos como por ej
 
 ### Pregunta 3
 
-Devuelve una cadena de caracteres (`String`) de una validación ActiveRecord para asegurarte de que ningún registro sea creado sin un nombre (`name`).
-
+Devuelve una cadena de caracteres (`String`) de una validación Active Record para asegurarte de que ningún registro sea creado sin un nombre (`name`).
 
 ## Puntos clave de aprendizaje
 

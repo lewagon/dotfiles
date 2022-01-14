@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Javascript is really useful when it comes to validating forms on the client side.
+JavaScript is really useful when it comes to validating forms on the client side.
 When people are filling out your form, it's best to give them feedback as quickly as possible if a field has been incorrectly completed.
 
 ## Specs

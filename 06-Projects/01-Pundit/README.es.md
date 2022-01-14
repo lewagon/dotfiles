@@ -21,4 +21,4 @@ Abre la herramienta [DB Schema de Kitt](https://kitt.lewagon.com/db) y crea el *
 A partir de ese punto, define las **rutas** e incorporalas a tu hoja de cálculo junto a los **controladores** y las **acciones**correspondientes.
 
 #### Rails New
-Cuando empieces una nueva app Rails, **debes** usar una de las [**Plantilla Rails de Le Wagon**](https://github.com/lewagon/rails-templates/tree/stimulus).¡Asegúrate de usar la [Plantilla Devise](https://github.com/lewagon/rails-templates/tree/stimulus#devise) en caso de necesitar un modelo `User!
+Cuando empieces una nueva app Rails, **debes** usar una de las [**Plantilla Rails de Le Wagon**](https://github.com/lewagon/rails-templates).¡Asegúrate de usar la [Plantilla Devise](https://github.com/lewagon/rails-templates#devise) en caso de necesitar un modelo `User!

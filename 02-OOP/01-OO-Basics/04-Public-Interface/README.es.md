@@ -1,8 +1,8 @@
 ## Introducción
 
-Un buen diseño orientado a objetos depende de cuanto se **exponga** al objeto.
+Un buen diseño orientado a objetos se basa en saber cuánto de un objeto se debe **exponer**.
 
-Exponer un objeto implica darle al “público” acceso a sus propiedades (datos internos). Por ejemplo: a otros objetos en el programa o inclusive a otros programas. Los métodos de libre acceso conforman la **interfaz pública** de un objeto. Los métodos que son privados (accesibles solamente dentro del objeto en cuestión) forman su **interfaz privada**.
+Exponer a un objeto implica darle al “público” acceso a sus propiedades (datos internos). Por ejemplo: a otros objetos en el programa o inclusive a otros programas. Los métodos de libre acceso conforman la **interfaz pública** de un objeto. Los métodos que son privados (accesibles solamente dentro del objeto en cuestión) forman su **interfaz privada**.
 
 La regla general sostiene que solo se debe exponer cierta parte de un objeto necesaria para que otros objetos interactúen con él. **No diseñes objetos permeables si no necesitan serlo**.
 
@@ -14,13 +14,13 @@ La regla general sostiene que solo se debe exponer cierta parte de un objeto nec
 - Usar argumentos por defecto para los métodos
 - Aprender más sobre Excepciones personalizadas
 
-Practiquemos con una clase `BankAccount` la cual almacena información sobre una cuenta bancaria y le permite al usuario hacer transacciones.
+Practiquemos con una clase `BankAccount` la cual almacena información sobre una cuenta bancaria y le permite al/a la usuario/a hacer transacciones.
 
 ## Especificaciones
 
 ### El contrato `BankAccount` en `bank_account.rb`
 
-La interfaz pública de la clase, e.g. el conjunto de sus métodos públicos, se llama el contrato de la clase (ver noción sobre [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). Es como un tipo de promesa que la clase le hace a otros objetos u otros programas Ruby. A continuación se especifica el contrato de nuestra clase `BankAccount`. Queremos hacer lo siguiente con nuestros objetos BankAccount **desde el mundo exterior**.
+A la interfaz pública de la clase, e.g. el conjunto de sus métodos públicos, se le conoce como el contrato de la clase (ver noción sobre [DbC](http://en.wikipedia.org/wiki/Design_by_contract)). Es como un tipo de promesa que la clase le hace a otros objetos u otros programas Ruby. A continuación se especifica el contrato de nuestra clase `BankAccount`. Queremos hacer lo siguiente con nuestros objetos BankAccount **desde el mundo exterior**.
 
 * Acceder al nombre completo y el balance del titular
 * Acceder únicamente al IBAN **parcial** e.g. IBAN: FR14**************606
@@ -30,7 +30,7 @@ La interfaz pública de la clase, e.g. el conjunto de sus métodos públicos, se
 
 ### El método  `to_s`
 
-Este método literalmente significa “to string” (a cadena de caracteres) y se utiliza para darle al usuario información sobre un objeto. Con un método `to_s` personalizado puedes definir el comportamiento que quieras. Esto lo verás mucho en Ruby.
+Este método literalmente significa “to string” (a cadena de caracteres) y se utiliza para darle al/a la usuario/a información sobre un objeto. Con un método `to_s` personalizado puedes definir el comportamiento que quieras. Esto lo verás mucho en Ruby.
 
 Podemos usar este método para nuestra cuenta bancaria. Una vez implementado, se verá así:
 
@@ -66,19 +66,19 @@ Ahora tienes que implementar el método `#transactions_history`. Este método to
 + 1050 euros on 30/11/13 at 2:30pm
 ```
 
-Lee sobre el [principio de responsabilidad única](http://en.wikipedia.org/wiki/Single_responsibility_principle) y preguntate lo siguiente:
+Lee sobre el [principio de responsabilidad única](http://en.wikipedia.org/wiki/Single_responsibility_principle) y pregúntate lo siguiente:
 - ¿Cuál es la responsabilidad de la clase `BankAccount`? Su deber principal es mostrar información básica de la cuenta bancaria y permitir retiros/depósitos de efectivo, ¿cierto?
-- Es responsabilidad de la cuenta bancaria mantener un registro de la fecha de cada transacción o mostrar cada transacción de manera adecuada?
+- ¿Es responsabilidad de la cuenta bancaria mantener un registro de la fecha de cada transacción o mostrar cada transacción de manera adecuada?
 
 Ha llegado el momento en que tal vez delegues estas responsabilidades a otra clase `Transaction` la cual deberá:
 - Mantener un registro de la fecha de cada depósito o retiro así como de sus montos.
 - Mostrar la información de una manera amigable.
 - Inclusive puedes pensar en datos adicionales para esta cuenta como la variable de instancia `@message` para almacenar la cadena de caracteres (string) de referencia para cada retiro/depósito ("car rental", "ibiza weekend", "christmas shopping", etc.).
 
-Después de haber implementado la clase `Transaction`, tendrás que cambiar tu clase `BankAccount` para que su arreglo (array) de transacciones almacene objetos `Transaction` en lugar de números. Tambien debera cargar el archivo *transaction.rb* en *account.rb* con
+Después de haber implementado la clase `Transaction`, tendrás que cambiar tu clase `BankAccount` para que su arreglo (array) de transacciones almacene objetos `Transaction` en lugar de números. También deberá cargar el archivo *transaction.rb* en *account.rb* con
 
 ```ruby
-require_relative 'transaction'
+require_relative "transaction"
 ```
 
 ## Puntos clave de aprendizaje
@@ -86,8 +86,8 @@ require_relative 'transaction'
 - ¿Qué es la interfaz pública de una clase?
 - ¿Cuál es la diferencia entre un getter y un setter?
 - ¿Para qué se usa el método `to_s`?
-- ¿ Cuales son los argumentos predeterminados? ¿Cómo los usas?
-- En `bank_account.rb`, que sucede en las líneas 2-3 y 19?
+- ¿ Cuáles son los argumentos predeterminados? ¿Cómo los usas?
+- En `bank_account.rb`, ¿qué sucede en las líneas 2-3 y 19?
 
 ## Sugerencias y recursos suplementarios
 

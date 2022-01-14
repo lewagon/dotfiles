@@ -2,7 +2,7 @@
 
 - Si te queda tiempo antes del almuerzo, empieza a pensar en el pseudocódigo para este desafío con el/la profesor/a.
 - El desafío te tomará toda la tarde.
-- Valida cada paso con el/la profesor/a con una sesión de codeo intermedia 💻 para corregirlos uno por uno.
+- Valida cada paso con el/la profesor/a con una sesión de live-code 💻 para corregirlos uno por uno.
 
 ## Pseudocódigo
 
@@ -92,7 +92,7 @@ ruby interface.rb
 ### Modelado de la tienda y el carrito
 
 - ¿Cómo modificamos la tienda (`store`) y el carrito (`cart`) para considerar las cantidades?
-- Qué cambios debemos hacer en nuestro código con este modelo nuevo?
+- ¿Qué cambios debemos hacer en nuestro código con este modelo nuevo?
 
 ## Paso 3 - Incorporación de la disponibilidad 🛍🛍🛍
 
@@ -125,4 +125,4 @@ ruby interface.rb
 ### Modelado de la tienda y el carrito
 
 - ¿Cómo modificamos la tienda (`store`) y el carrito (`cart`) para considerar las cantidades?
-- Qué cambios debemos hacer en nuestro código con este modelo nuevo?
+- ¿Qué cambios debemos hacer en nuestro código con este modelo nuevo?

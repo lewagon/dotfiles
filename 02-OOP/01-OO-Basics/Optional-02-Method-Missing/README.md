@@ -27,12 +27,12 @@ uber_hash.color
 
 You might think that you just have to put an `attr_accessor :color` on `UberHash`, and that's it, but wait! We want to store **any** possible property like that.
 
-If you try to call an instance method that wasn't defined in the class, ruby calls a `method_missing` built-in method that raises a `NoMethodError`.
+If you try to call an instance method that wasn't defined in the class, Ruby calls a `method_missing` built-in method that raises a `NoMethodError`.
 
 To prevent the `NoMethodError` to be raised, you can define **your own** `method_missing` instance method in your class, and implement it to do whatever you want!
 
-You can read [this article](http://rubylearning.com/satishtalim/ruby_method_missing.html) to get a sense of how and when ruby calls `method_missing` ([docs here](https://ruby-doc.org/core-2.5.3/BasicObject.html#method-i-method_missing)).
+You can read [this article](https://emmanuelhayford.com/3-practical-uses-of-ruby-method-missing/) to get a sense of how and when Ruby calls `method_missing` ([docs here](https://ruby-doc.org/core-2.7.4/BasicObject.html#method-i-method_missing)).
 
-You may also want to read how Ruby lets you dynamically [get](https://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_get) or [set](https://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_set) an instance variable.
+You may also want to read how Ruby lets you dynamically [get](https://ruby-doc.org/core-2.7.4/Object.html#method-i-instance_variable_get) or [set](https://ruby-doc.org/core-2.7.4/Object.html#method-i-instance_variable_set) an instance variable.
 
 Good luck!

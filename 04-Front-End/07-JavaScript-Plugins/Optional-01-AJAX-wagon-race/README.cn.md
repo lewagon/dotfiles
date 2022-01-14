@@ -18,7 +18,7 @@ bundle install
 
 NB: 如果启动api时遇到问题，请尝试运行 `bundle exec rake db_reset`.
 
-**对于你的javascript代码:**
+**对于你的JavaScript代码:**
 
 * 使用`public` 文件夹内的文件
   * 把你的JS代码放在 `public/js/game.js` 内

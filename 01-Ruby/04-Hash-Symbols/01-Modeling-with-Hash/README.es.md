@@ -1,14 +1,14 @@
 ## Antes de comenzar
 
-No olvides que a las 2 p.m. tendrás tu primer quiz. Sin computadora. Sin Google. Solo lápiz, papel y tu cerebro. No es un examen y no será evaluado con una nota así que no te preocupes por eso 😊, pero será útil identificar los puntos donde tienes dificultades y trabajarlos antes de ir más lejos. Solo tómate el tiempo necesario para responder todo con la mayor precisión posible.
+No olvides que a las 2 p.m. tendrás tu primer quiz. Sin computadora. Sin Google. Solo lápiz y papel. No es un examen y no será evaluado con una nota así que no te preocupes por eso 😊, pero será útil identificar los puntos donde tienes dificultades y trabajarlos antes de ir más lejos. Solo tómate el tiempo necesario para responder todo con la mayor precisión posible.
 
-Cuando el quiz termine, los profesores se tomarán 15 minutos con cada uno de ustedes para revisar las respuestas y explicar lo que sea necesario. Esta conversación te ayudará a identificar qué es lo que debes estudiar nuevamente durante el fin de semana y si deberás formar parte del equipo de Reboot el próximo lunes y martes.
+Cuando el quiz termine, los/as profesores/as se tomarán 15 minutos con cada uno/a de ustedes para revisar las respuestas y explicar lo que sea necesario. Esta conversación te ayudará a identificar qué es lo que debes estudiar nuevamente durante el fin de semana y si deberás formar parte del equipo de Reboot el próximo lunes y martes.
 
 ¡Buena suerte! ¡Que lo disfrutes!
 
 ## Contexto y Objetivos
 
-Digamos que quieres mantenerte en la línea pero sigues comiendo en McDonald's... Se te ocurre la excelente idea de escribir un método rápido que compute el número de calorías en una orden de McDonald's. Usemos la tabla siguiente como nuestro menú acortado:
+Digamos que quieres mantenerte en la línea pero sigues comiendo en McDonald's... Se te ocurre la excelente idea de escribir un método rápido que compute el número de calorías en una orden de McDonald's. Usemos la tabla siguiente como nuestro menú resumido:
 
 <table class="table">
   <thead>
@@ -64,7 +64,7 @@ AGE_OF_STUDENTS = {
 }
 ```
 
-Lee la documentación sobre [Hashes](https://ruby-doc.org/core-2.6.6/Hash.html). Lo usarás todo el tiempo así que hazte amigo de ellos 😊.
+Lee la documentación sobre [Hashes](https://ruby-doc.org/core-2.7.5/Hash.html). Lo usarás todo el tiempo así que hazte amigo de ellos 😊.
 
 **Para este ejercicio, usa `Strings` para tus llaves (keys) en vez de `Symbols`, por cuestiones de simplicidad**
 
@@ -78,5 +78,5 @@ Por ejemplo, `poor_calories_counter("McChicken", "French Fries", "Sprite")` debe
 
 ## Puntos clave de aprendizaje
 
-- ¿Qué es un hash? ¿Cuando lo usas?
+- ¿Qué es un hash? ¿Cuándo lo usas?
 - ¿Cómo recuperas el valor almacenado en un `Hash`?
