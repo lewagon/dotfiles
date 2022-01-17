@@ -22,5 +22,5 @@
 
 ## 进一步的建议和资源
 
-- 一定要使用[Bootstrap文档](https://getbootstrap.com/docs/4.6)，它比起`btn`类提供了更多的东西！这是[最终结果](https://getbootstrap.com/docs/4.2)。
+- 一定要使用[Bootstrap文档](https://getbootstrap.com/docs/5.1)，它比起`btn`类提供了更多的东西！这是[最终结果](https://getbootstrap.com/docs/5.1)。
 - 对比一下你的作品和[最终结果](http://lewagon.github.io/bootstrap-challenges/02-Bootstrap-prototyping)。

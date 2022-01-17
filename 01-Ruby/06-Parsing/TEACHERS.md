@@ -15,8 +15,8 @@
 ## Parsing & Storing
 
 1. What's parsing? What's storing?
-1. **Live-code** parsing & storing on `data/beers.csv`
-1. **Live-code** parsing & storing on `data/beers.json`
+1. **Live-code** parsing & storing on `data/beatles.csv`
+1. **Live-code** parsing & storing on `data/beatles.json`
 1. Skip the XML live-code (just show the code in the slides to the students)
 
 ## Data from the Web

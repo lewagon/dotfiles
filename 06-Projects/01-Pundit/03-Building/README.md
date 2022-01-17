@@ -4,7 +4,7 @@ As not everyone will be able to code the app setup, now is the perfect time to d
 ## Rails New
 First, decide amongst your team who will be the Lead Developer for this project. This can be the same person from your Airbnb project, or a new team member can give it a go. That person will then continue with the following steps for setting up the app.
 
-When starting your rails project, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates/tree/master). Make sure you use the [Devise template](https://github.com/lewagon/rails-templates/tree/master#devise) if you need a `User` model!
+When starting your rails project, you **must** use one of the [**Wagon Rails Templates**](https://github.com/lewagon/rails-templates). Make sure you use the [Devise template](https://github.com/lewagon/rails-templates#devise) if you need a `User` model!
 
 After the app is created, create your Github Repository and add all teammates as collaborators. Check out the [Github lecture slides](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/05-Rails%2F06-Airbnb-Devise#/1/3/0) for an overview of the process.
 
