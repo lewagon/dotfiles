@@ -24,7 +24,7 @@ As you can see we already coded the `card` component for you, so all you have to
 
 **[Tip]** Draw the HTML structure before you get started!
 
-NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
+NB: don't forget to **hard refresh** (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
 
 ## New CSS organization
 

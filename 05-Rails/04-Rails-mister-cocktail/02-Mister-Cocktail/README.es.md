@@ -66,9 +66,9 @@ Y también las gemas que vamos a necesitar:
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.15'
-gem 'simple_form'
+gem "autoprefixer-rails", "10.2.5"
+gem "font-awesome-sass", "~> 5.15"
+gem "simple_form"
 ```
 
 ```bash
@@ -84,40 +84,28 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Para tener la receptividad de Bootstrap también necesitarás agregar lo siguiente a tu `<head>`:
-
-```html
-<!-- app/views/layouts/application.html.erb -->
-
-<!DOCTYPE html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <!-- [...] -->
-```
-
 Finalmente agrega la librería de Bootstrap JS usando webpack:
 
 ```js
 // config/webpack/environment.js
-const { environment } = require('@rails/webpacker')
+const { environment } = require("@rails/webpacker")
 
 // Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require('webpack')
-environment.plugins.prepend('Provide',
+const webpack = require("webpack")
+environment.plugins.prepend("Provide",
   new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    Popper: ['popper.js', 'default']
+    $: "jquery",
+    jQuery: "jquery",
+    Popper: ["popper.js", "default"]
   })
 )
 
 module.exports = environment
 ```
+
 ```js
 // app/javascript/packs/application.js
-import 'bootstrap';
+import "bootstrap";
 ```
 
 No olvides hacer el `commit` y el `push` de tu trabajo frecuentemente.
