@@ -119,7 +119,7 @@ pour exécuter uniquement les tests dans le dossier `spec/models`. Assure-toi qu
 
 #### Validation
 
-- Un film doit avoir un titre unique.
+- Un film doit avoir un titre unique et un aperçu.
 - Une liste doit avoir un nom unique.
 - Un signet doit être lié à un film et une liste, et les associations [film, liste] doivent être uniques.
 - Le commentaire associé à un signet ne peut pas avoir moins de 6 caractères.

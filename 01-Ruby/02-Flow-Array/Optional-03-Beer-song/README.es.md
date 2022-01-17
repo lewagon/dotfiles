@@ -37,7 +37,7 @@ puts "*** Command line arguments ***"
 p ARGV
 ```
 
-Ahora correlo en la Terminal de las siguientes maneras:
+Ahora córrelo en la Terminal de las siguientes maneras:
 
 ```bash
 ruby testing_argv.rb un deux trois

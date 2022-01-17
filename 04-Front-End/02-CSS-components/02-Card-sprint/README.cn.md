@@ -37,7 +37,7 @@
 
 ```css
 /* 从Google Fonts导入字体*/
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;500;700");
 
 /* 导入所有组件文件 */
 @import url("component/cards.css");
@@ -91,5 +91,3 @@ a {
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-position.png" alt="" width="400">
 </div>
-
-

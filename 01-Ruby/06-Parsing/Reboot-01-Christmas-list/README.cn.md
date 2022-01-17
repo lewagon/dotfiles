@@ -157,10 +157,9 @@ end
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 filepath    = 'gifts.csv'
 
-CSV.foreach(filepath, csv_options) do |row|
+CSV.foreach(filepath, col_sep: ',', quote_char: '"', headers: :first_row ) do |row|
   # TODO: 以每一行存储的信息，构建新的礼物
 end
 ```
@@ -170,10 +169,9 @@ end
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
 filepath    = 'gifts.csv'
 
-CSV.open(filepath, 'wb', csv_options) do |csv|
+CSV.open(filepath, 'wb', col_sep: ',', force_quotes: true, quote_char: '"') do |csv|
   # CSV有标题
   csv << ['name', 'price', 'bought']
   #TODO: 存储每个礼物

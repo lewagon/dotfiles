@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Sigamos practicando con los bloques. En este desafío vamos a codear otro método que se llamará por medio de un bloque. Esta vez veremos como los bloques permiten anidar llamadas y cómo esto puede ser útil en ejemplos realistas. También descubriremos cómo definir métodos con un parámetro secundario opcional, ¡lo cual es muy común!
+Sigamos practicando con los bloques. En este desafío vamos a escribir otro método que se llamará por medio de un bloque. Esta vez veremos como los bloques permiten anidar llamadas y cómo esto puede ser útil en ejemplos realistas. También descubriremos cómo definir métodos con un parámetro secundario opcional, ¡lo cual es muy común!
 
 ## Especificaciones
 
@@ -22,7 +22,7 @@ end
 #=> '<a href="www.google.com">Google it</a>'
 ```
 
-Tal vez necesites saber que para incluir el símbolo `"` dentro de un string delimitado por comillas dobles, debes **escapar** el caracter con una barra invertida: `\"`.
+Tal vez necesites saber que para incluir el símbolo `"` dentro de un string delimitado por comillas dobles, debes **escapar** el carácter con una barra invertida: `\"`.
 
 Lo bueno sobre este método es que puedes anidar llamadas de métodos:
 
