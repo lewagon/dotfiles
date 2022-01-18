@@ -37,6 +37,8 @@ let g:ale_fix_on_save = 1
 
 let g:nv_search_paths = ['~/workspace/xavierosee/notes','~/workspace/xavierosee/wiki', './notes.md', './doc', './notes']
 let g:nv_main_directory = '~/workspace/xavierosee/notes'
+let g:vimwiki_list = [{'path':'~/workspace/xavierosee/wiki/wiki', 'path_html':'~/workspace/xavierosee/export/html/', 'syntax': 'markdown'}]
+au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
 
 
 
@@ -86,4 +88,11 @@ function! s:show_documentation()
   endif
 endfunction
 
+" VimWiki diary settings
+command! Diary VimwikiDiaryIndex
+augroup vimwikigroup
+    autocmd!
+    " automatically update links on read diary
+    autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
+augroup end
 
