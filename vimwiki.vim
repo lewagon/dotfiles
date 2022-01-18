@@ -699,15 +699,3 @@ if vimwiki#vars#get_wikilocal('auto_generate_tags')
     au BufWritePre <buffer> call vimwiki#tags#generate_tags(0)
   augroup END
 endif 
-
-
-augroup vimwikigit
-  au! BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki
-        \ execute '!cd' . expand("<amatch>:p:h")
-        \ . '&& git pull'
-  au! BufWritePost * silent! ~/workspace/xavierosee/wiki/* 
-        \ execute '!cd ' . expand("<amatch>:p:h")
-        \ . '&& git add --all '
-        \ . '&& git commit -m "auto commit and push" '
-        \ . '&& git push'
-augroup END

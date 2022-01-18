@@ -37,7 +37,7 @@ let g:ale_fix_on_save = 1
 
 let g:nv_search_paths = ['~/workspace/xavierosee/notes','~/workspace/xavierosee/wiki', './notes.md', './doc', './notes']
 let g:nv_main_directory = '~/workspace/xavierosee/notes'
-let g:vimwiki_list = [{'path':'~/workspace/xavierosee/wiki/wiki', 'path_html':'~/workspace/xavierosee/export/html/'}]
+let g:vimwiki_list = [{'path':'~/workspace/xavierosee/wiki/wiki', 'path_html':'~/workspace/xavierosee/wiki/docs'}]
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
 
 
@@ -97,3 +97,12 @@ augroup vimwikigroup
     autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
 augroup end
 
+" VimWiki git sync
+augroup vimwikigitsync
+  " Make sure this window's working dir is the wiki repo dir whenever home.md is opened
+  au! BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki lcd ~/workspace/xavierosee/wiki
+  " Also do a git pull whenever home.md is opened
+  au BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki !git pull
+  " After writing to any file in the wiki dir, add all files in the repo, commit and push
+  au! BufWritePost ~/workspace/xavierosee/wiki/wiki/* !git add .;git commit -m "Autocommit and push";git push
+augroup END
