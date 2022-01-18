@@ -37,7 +37,7 @@ let g:ale_fix_on_save = 1
 
 let g:nv_search_paths = ['~/workspace/xavierosee/notes','~/workspace/xavierosee/wiki', './notes.md', './doc', './notes']
 let g:nv_main_directory = '~/workspace/xavierosee/notes'
-let g:vimwiki_list = [{'path':'~/workspace/xavierosee/wiki/wiki', 'path_html':'~/workspace/xavierosee/export/html/', 'syntax': 'markdown'}]
+let g:vimwiki_list = [{'path':'~/workspace/xavierosee/wiki/wiki', 'path_html':'~/workspace/xavierosee/export/html/'}]
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
 
 
@@ -55,6 +55,7 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <buffer> <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 let g:mdip_imgdir = 'img'
 nmap <silent> <c-s> :NV<CR>
+nmap <silent> <leader>ts "=strftime("%c")<CR>P
 
 
 " Custom Functions Section
