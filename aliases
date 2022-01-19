@@ -1,3 +1,4 @@
 alias vim="nvim"
 alias pip="python -m pip"
 alias cat="bat"
+alias ping="prettyping --nolegend"
