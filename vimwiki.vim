@@ -340,7 +340,7 @@ nnoremap <script><buffer> <Plug>Vimwiki2HTMLBrowse :Vimwiki2HTMLBrowse<CR>
 
 " default HTML key mappings
 if str2nr(vimwiki#vars#get_global('key_mappings').html)
-  call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'h', '<Plug>Vimwiki2HTML')
+  call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'h', '<Plug>VimwikiAll2HTML')
   call vimwiki#u#map_key('n', vimwiki#vars#get_global('map_prefix').'hh', '<Plug>Vimwiki2HTMLBrowse')
 endif
 

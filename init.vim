@@ -37,7 +37,12 @@ let g:ale_fix_on_save = 1
 
 let g:nv_search_paths = ['~/workspace/xavierosee/notes','~/workspace/xavierosee/wiki', './notes.md', './doc', './notes']
 let g:nv_main_directory = '~/workspace/xavierosee/notes'
-let g:vimwiki_list = [{'path':'~/workspace/xavierosee/wiki/wiki', 'path_html':'~/workspace/xavierosee/wiki/docs'}]
+let g:vimwiki_list = [{
+			\'path':'~/workspace/xavierosee/wiki/wiki', 
+			\'path_html':'~/workspace/xavierosee/wiki/docs', 
+			\'template_path': '~/workspace/xavierosee/wiki/templates',
+			\'template_default':'default',
+			\'template_ext':'.html'}]
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
 
 
