@@ -13,6 +13,7 @@
   pager = less -FRSX
 	editor = vim
 	visual = vim
+	excludesfile = /Users/xavierosee/.gitignore_global
 
 [alias]
   co = checkout
@@ -55,3 +56,7 @@
 	name = Xavier Rosee
 [init]
 	defaultBranch = main
+
+[pager]
+       diff = diff-so-fancy | less --tabs=1,5 -RFX
+       show = diff-so-fancy | less --tabs=1,5 -RFX
