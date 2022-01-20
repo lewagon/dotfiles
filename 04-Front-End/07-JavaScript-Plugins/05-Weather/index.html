@@ -10,15 +10,18 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 offset-sm-2">
+        <div class="col-sm-8 offset-sm-2" data-controller="weather">
+
           <form class="form-inline my-5">
-            <input type="text" placeholder="Enter city" class='form-control flex-grow-1'>
+            <input type="text" placeholder="Enter city" class="form-control flex-grow-1">
+            <a href="" class="d-none position"><i class="bi bi-geo-alt"></i></a>
             <input type="submit" value="Get the weather" class="btn btn-primary ml-3">
           </form>
           <div class="card mt-4 mb-5">
