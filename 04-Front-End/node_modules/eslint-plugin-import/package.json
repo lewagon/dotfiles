@@ -1,0 +1,107 @@
+{
+  "name": "eslint-plugin-import",
+  "version": "2.19.1",
+  "description": "Import with sanity.",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "lib",
+    "config",
+    "memo-parser"
+  ],
+  "scripts": {
+    "build": "babel --quiet --out-dir lib src",
+    "prebuild": "rimraf lib",
+    "watch": "npm run mocha -- --watch tests/src",
+    "pretest": "linklocal",
+    "posttest": "eslint .",
+    "mocha": "cross-env BABEL_ENV=test NODE_PATH=./src nyc -s mocha -R dot --recursive -t 5s",
+    "test": "npm run mocha tests/src",
+    "test-compiled": "npm run prepublish && NODE_PATH=./lib mocha --compilers js:babel-register --recursive tests/src",
+    "test-all": "npm test && for resolver in ./resolvers/*; do cd $resolver && npm test && cd ../..; done",
+    "prepublish": "npm run build",
+    "coveralls": "nyc report --reporter lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benmosher/eslint-plugin-import"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "es6",
+    "jsnext",
+    "modules",
+    "import",
+    "export"
+  ],
+  "author": "Ben Mosher <me@benmosher.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benmosher/eslint-plugin-import/issues"
+  },
+  "homepage": "https://github.com/benmosher/eslint-plugin-import",
+  "devDependencies": {
+    "@eslint/import-test-order-redirect-scoped": "file:./tests/files/order-redirect-scoped",
+    "@typescript-eslint/parser": "1.10.3-alpha.13",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-istanbul": "^4.1.6",
+    "babel-preset-es2015-argon": "latest",
+    "babel-register": "^6.26.0",
+    "babylon": "^6.18.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.6",
+    "cross-env": "^4.0.0",
+    "eslint": "2.x - 6.x",
+    "eslint-import-resolver-node": "file:./resolvers/node",
+    "eslint-import-resolver-typescript": "^1.0.2",
+    "eslint-import-resolver-webpack": "file:./resolvers/webpack",
+    "eslint-import-test-order-redirect": "file:./tests/files/order-redirect",
+    "eslint-module-utils": "file:./utils",
+    "eslint-plugin-import": "2.x",
+    "linklocal": "^2.8.2",
+    "mocha": "^3.5.3",
+    "nyc": "^11.9.0",
+    "redux": "^3.7.2",
+    "rimraf": "^2.7.1",
+    "semver": "^6.3.0",
+    "sinon": "^2.4.1",
+    "typescript": "~3.2.2",
+    "typescript-eslint-parser": "^22.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "2.x - 6.x"
+  },
+  "dependencies": {
+    "array-includes": "^3.0.3",
+    "array.prototype.flat": "^1.2.1",
+    "contains-path": "^0.1.0",
+    "debug": "^2.6.9",
+    "doctrine": "1.5.0",
+    "eslint-import-resolver-node": "^0.3.2",
+    "eslint-module-utils": "^2.4.1",
+    "has": "^1.0.3",
+    "minimatch": "^3.0.4",
+    "object.values": "^1.1.0",
+    "read-pkg-up": "^2.0.0",
+    "resolve": "^1.12.0"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+    "include": [
+      "src/",
+      "resolvers/"
+    ]
+  }
+}

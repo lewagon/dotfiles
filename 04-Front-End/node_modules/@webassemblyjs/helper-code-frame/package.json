@@ -1,0 +1,23 @@
+{
+  "name": "@webassemblyjs/helper-code-frame",
+  "version": "1.8.5",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xtuc/webassemblyjs.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Sven Sauleau",
+  "license": "MIT",
+  "dependencies": {
+    "@webassemblyjs/wast-printer": "1.8.5"
+  },
+  "devDependencies": {
+    "@webassemblyjs/ast": "1.8.5"
+  },
+  "gitHead": "77bc195e9bb463b4fa4cbdb6291eed446d454d49"
+}

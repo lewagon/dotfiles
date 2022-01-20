@@ -1,0 +1,3 @@
+---
+rules:
+  import/no-extraneous-dependencies: 1
