@@ -1,5 +1,6 @@
 # Inserts a blank line between shell prompts
 add_newline = true
+command_timeout = 1000
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
@@ -17,25 +18,28 @@ style = "bold red"
 
 [cmd_duration]
 min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
-format = " took [$duration]($style)"
+format = '\[[⏱ $duration ]($style)\]'
 
 [dart]
-format = "via [🔰 $version](bold red) "
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [directory]
 truncation_length = 5
-format = "[$path]($style)[$lock_symbol]($lock_style) "
+read_only = " "
 
 [docker_context]
-format = "via [🐋 $context](blue bold)"
+symbol = " "
+format = '\[[$symbol$context]($style)\]'
 
 [gcloud]
-disabled = true
+disabled = true 
+format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
 
 [git_branch]
-format = " [$symbol$branch]($style) "
-symbol = "🍣 "
-style = "bold yellow"
+format = '\[[$symbol$branch]($style)\]'
+symbol = " "
+style = "bold 148"
 
 [git_commit]
 commit_hash_length = 8
@@ -56,47 +60,81 @@ staged = "🗃️  ×${count}"
 renamed = "📛 ×${count}"
 deleted = "🗑️  ×${count}"
 style = "bright-white"
-format = "$all_status$ahead_behind"
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[golang]
+format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [hostname]
 ssh_only = false
 format = "<[$hostname]($style)> "
 trim_at = "-"
-style = "bold dimmed white"
+style = "bold dimmed bright-purple"
 disabled = false
 
 [julia]
-format = "[$symbol$version]($style) "
-symbol = "ஃ "
+format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 style = "bold green"
 
+[kotlin]
+format = '\[[$symbol($version)]($style)\]'
+
+[kubernetes]
+format = '\[[$symbol$context( \($namespace\))]($style)\]'
+
+[lua]
+format = '\[[$symbol($version)]($style)\]'
+
 [memory_usage]
-format = "$symbol[${ram}( | ${swap})]($style) "
+format = '\[$symbol[$ram( | $swap)]($style)\]'
 threshold = 70
-style = "bold dimmed white"
+style = "bold dimmed black"
+symbol = " "
 disabled = true 
+
+[nodejs]
+format = '\[[$symbol($version)]($style)\]'
+style = "bold 034"
+
 
 [package]
 disabled = true
+symbol = " "
+format = '\[[$symbol$version]($style)\]'
+
+[php]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [python]
-format = "[$symbol$version]($style) "
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 style = "bold green"
-pyenv_version_name = true
+symbol = " "
+
+[ruby]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [rust]
-format = "[$symbol$version]($style) "
+format = '\[[$symbol($version)]($style)\]'
 style = "bold green"
+symbol = " "
+
+[sudo]
+format = '\[[as $symbol]\]'
 
 [time]
 time_format = "%T"
-format = "🕙 $time($style) "
+format = '\[[$time]($style)\]'
 style = "bright-white"
 disabled = true
 
 [username]
 style_user = "bold dimmed blue"
 show_always = false
+format = '\[[$user]($style)\]'
 
 [vagrant]
-format = "via [⍱ $version](bold white) "
+format = '\[[$symbol($version)]($style)\]'
