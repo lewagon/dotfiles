@@ -4,7 +4,7 @@ Cet exercice est le prolongement du précédent : la ferme accueille ses premie
 
 ## Spécifications
 
-![Animaux](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/crops.svg?sanitize=true)
+![Animaux](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/animals.svg?sanitize=true)
 
 Réfléchis avec ton buddy : de combien de classes as-tu besoin, et comment les structurerais-tu ?
 
