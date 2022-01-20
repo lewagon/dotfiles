@@ -10,20 +10,19 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-6 offset-md-3">
-          <form class='form-inline my-5'>
+          <form class="form-inline my-5">
             <input type="text" class="form-control flex-grow-1 mr-2" placeholder="Type an address">
             <input type="submit" value="Geocode!" class="btn btn-primary">
           </form>
-          <p class='text-monospace lead text-center font-weight-bold'>
+          <p class="text-monospace lead text-center font-weight-bold">
             <!-- Display the coordinates here -->
           </p>
-          <div style="height: 300px">
+          <div id="map" style="height: 300px; width: 600px">
             <!-- Display the map in this div -->
           </div>
         </div>
