@@ -34,15 +34,13 @@ Once you managed to display the API's response in your browser, let's jump into 
 
 Go back to the Stimulus challenge to follow installation instructions.
 
-Go on and `console.log()` what you get back from the API to make sure everything works fine before going any further.
-
 ### Display data in your page
 
 With the data sent back by the API, go ahead and build the following page:
 
 ![Current Weather](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_api.png)
 
-To get the temperature in Celsius you can add `&units=metric` in your request's URL.
+To get the temperature in Celsius, you can add `&units=metric` in your request's URL.
 
 To get the icon image, from the icon id, you can use this URL: `https://openweathermap.org/img/w/{iconId}.png`
 
@@ -50,11 +48,11 @@ To get the icon image, from the icon id, you can use this URL: `https://openweat
 
 Now let's listen to the `submit` event on the `<form>` to get user data from the `<input>` and customize the URL before making the API call.
 
-Your page should update and display the right data, without reloading! If your HTML reloads, it means you forgot to **prevent** something...
+Your page should update and display the right data, without reloading! If your page reloads, it means you forgot to **prevent** something...
 
 ![Weather in Kuala Lumpur](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_in_kuala_lumpur.png)
 
-### Get current location
+### Get current location weather
 
 Now we want to be able to get the weather for our current location.
 
@@ -80,7 +78,7 @@ Our code currently uses city **names** to get the weather. Thankfully, there is 
 
 So go on, bind the click on the location icon to a new action in your Stimulus controller which will retrieve the current location of the user and update the page accordingly.
 
-If your HTML reloads, it means you forgot to **prevent** something...
+If your HTML page reloads, it means you forgot to **prevent** something...
 
 ### Time to reorganize your code!
 
