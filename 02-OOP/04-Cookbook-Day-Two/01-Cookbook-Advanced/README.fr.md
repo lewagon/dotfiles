@@ -22,7 +22,7 @@ Avant de commencer, exécute le code que tu as récupéré pour vérifier que le
 ruby lib/app.rb
 ```
 
-## 1 - Importer des recettes depuis le Web
+## Importer des recettes depuis le Web
 
 Tu peux scraper n’importe quel site Web que tu connais, mais [allrecipes](https://www.allrecipes.com) est plutôt pas mal. Cette fonctionnalité devrait fonctionner comme suit :
 
@@ -103,9 +103,9 @@ doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 
 Tu peux travailler dans un fichier temporaire -- `parsing.rb` par exemple -- pour trouver les bons sélecteurs et le code Ruby pour obtenir toutes les données que tu veux extraire du contenu HTML. Tu peux commencer par afficher simplement les informations extraites avec `puts`. Une fois que tu as trouvé tous les sélecteurs dont tu as besoin, code l’action dans ton cookbook.
 
-Aujourd’hui, tu vas utiliser la méthode Nokogiri `.search()`, qui prend un sélecteur CSS comme paramètre. Si tu ne te souviens pas de la syntaxe, jette un œil à cette section du [cours de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6).
+Aujourd’hui, tu vas utiliser la méthode Nokogiri `.search()`, qui prend un sélecteur CSS comme paramètre.
 
-**Ressources** : Tu veux en savoir un peu plus sur Nokogiri ? Voici un [bon guide de scraping Nokogiri](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
+Si tu ne te souviens pas de la syntaxe, jette un œil à [notre antisèche](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri).
 
 ### Récupérer des données HTML avec `open-uri`
 
@@ -128,7 +128,7 @@ Réfléchis à la **classe** que tu dois utiliser pour stocker des informations 
 
 Essaie d’exécuter ton Cookbook en direct !
 
-## 2 - Ajouter une propriété `@rating` à `Recipe`
+## Ajouter une propriété `@rating` à `Recipe`
 
 Cette nouvelle propriété doit être :
 - demandée à l’utilisateur lors de la création d’une nouvelle recette
@@ -136,7 +136,7 @@ Cette nouvelle propriété doit être :
 - stockée dans le CSV
 - imprimée lors de la création de la liste de recettes
 
-## 3 - (Action utilisateur) Marquer une recette comme réalisée
+## (Action utilisateur) Marquer une recette comme réalisée
 
 Une fois que tu as fini avec la « Recherche », essaie d’ajouter une fonction pour marquer une recette comme réalisée :
 
@@ -150,7 +150,7 @@ Une fois que tu as fini avec la « Recherche », essaie d’ajouter une foncti
 5. [ ] Christmas crumble (5 / 5)
 ```
 
-## 4 - Ajouter une propriété `@prep_time` à `Recipe`
+## Ajouter une propriété `@prep_time` à `Recipe`
 
 Cette nouvelle propriété doit également être :
 - demandée à l’utilisateur lors de la création d’une nouvelle recette
@@ -158,7 +158,7 @@ Cette nouvelle propriété doit également être :
 - stockée dans le CSV
 - imprimée lors de la création de la liste de recettes
 
-## 5 - (Optionnel) Service
+## (Optionnel) Service
 
 Essaie d’extraire la logique de **parsing** du contrôleur et de la placer dans un [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html) :
 

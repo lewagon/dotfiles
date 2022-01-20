@@ -22,7 +22,7 @@ Antes de empezar, corre el recetario que copiaste para asegurarte de que las fun
 ruby lib/app.rb
 ```
 
-## 1 - Importar recetas de la web
+## Importar recetas de la web
 
 Puedes hacer el scraping de cualquier página web que conozcas pero una buena es [allrecipes](https://www.allrecipes.com). Así es como debería funcionar esta funcionalidad:
 
@@ -94,28 +94,28 @@ Por ejemplo, si quieres encontrar todos los elementos con la clase `student` en 
 Puedes usar el siguiente código como plantilla para empezar:
 
 ```ruby
-require 'nokogiri'
-file = 'fraise.html'  # or 'strawberry.html'
-doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
+require "nokogiri"
+file = "strawberry.html"
+doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 
 # Up to you to find the relevant CSS query.
 ```
 
 Puedes trabajar en un archivo temporal como `parsing.rb` para encontrar los selectores adecuados y el código Ruby para obtener todos los datos que quieres extraer del HTML. Puedes comenzar simplemente mostrando la información extraída con `puts`. Una vez que hayas encontrado todo los selectores que necesites puedes comenzar a escribir el código de la acción en tu recetario.
 
-Hoy usarás el método Nokogiri `.search()` el cual toma un selector CSS como parámetro. Si no recuerdas la sintaxis, échale un vistazo a esta sección de la [clase de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6).
+Hoy usarás el método Nokogiri `.search()` el cual toma un selector CSS como parámetro.
 
-**Recursso**: ¿Quieres saber más sobre Nokogiri? Aquí hay una [buena guía de scraping de Nokogiri](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
+Si no recuerdas la sintaxis, échale un vistazo a [nuestra chuleta](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri).
 
 ### Obtención de datos HTML con `open-uri`
 
 Es hora de usar tu código de parseo en una URL en línea con consultas diferentes (no solamente con `[fraise|strawberry]`). Usa la librería [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) para obtener la respuesta HTML de una URL dada:
 
 ```ruby
-require 'nokogiri'
-require 'open-uri'
+require "nokogiri"
+require "open-uri"
 url = "http://the_url_here"
-doc = Nokogiri::HTML(URI.open(url).read, nil, 'utf-8')
+doc = Nokogiri::HTML(URI.open(url).read, nil, "utf-8")
 
 # Rest of the code
 ```
@@ -128,7 +128,7 @@ Piensa en la **clase** que debe ser usada para mantener la información de la we
 
 ¡Intenta correr tu recetario!
 
-## 2 - Agrega una propiedad `@rating` a tu `Recipe`
+## Agrega una propiedad `@rating` a tu `Recipe`
 
 Esta nueva propiedad debe ser:
 
@@ -137,7 +137,7 @@ Esta nueva propiedad debe ser:
 - almacenada en el CSV
 - Mostrada cuando se listen las recetas
 
-## 3 - (Acción de usuario) Marcar una receta como hecha
+## (Acción de usuario) Marcar una receta como hecha
 
 Una vez que termines con la “Búsqueda”, intenta agregar una funcionalidad para marcar recetas como hechas:
 
@@ -151,7 +151,7 @@ Una vez que termines con la “Búsqueda”, intenta agregar una funcionalidad p
 5. [ ] Christmas crumble (5 / 5)
 ```
 
-## 4 - Agrega una propiedad `@prep_time` a tu `Recipe`:
+## Agrega una propiedad `@prep_time` a tu `Recipe`:
 
 Esta nueva propiedad también debe ser:
 
@@ -160,7 +160,7 @@ Esta nueva propiedad también debe ser:
 - almacenada en el CSV
 - Mostrada cuando se listen las recetas
 
-## 5 - (Opcional) Servicio
+## (Opcional) Servicio
 
 Intenta extraer la lógica de **parseo** del controlador y de ponerla en un [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 

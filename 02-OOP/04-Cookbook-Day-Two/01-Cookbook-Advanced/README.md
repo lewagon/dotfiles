@@ -22,7 +22,7 @@ Before starting, run the code you've just imported to make sure that implemented
 ruby lib/app.rb
 ```
 
-## 1 - Import recipes from the web
+## Import recipes from the web
 
 You can scrape from any recipe website that you know, but a good one is [allrecipes](https://www.allrecipes.com). Here's how this feature should work:
 
@@ -103,9 +103,9 @@ doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 
 You can work in a temporary file -- `parsing.rb` for instance -- to find the right selectors and the Ruby code to get all the data you want to extract from the HTML. You can start by just displaying the information extracted with `puts`. Once you found all the selectors you need, go on and code the action in your cookbook.
 
-For today you will be using the Nokogiri `.search()` method, which takes a CSS selector as a parameter. If you don't remember the syntax have a look at this section of the [parsing lecture](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6).
+For today you will be using the Nokogiri `.search()` method, which takes a CSS selector as a parameter.
 
-**Resource**: Want to dive deeper in Nokogiri? Here's a [good Nokogiri scraping guide](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
+If you don't remember the syntax have a look at [our dedicated cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri).
 
 ### Get response HTML data using `open-uri`
 
@@ -128,7 +128,7 @@ Think about the **class** that should be used to hold information parsed from th
 
 Try it live running your Cookbook!
 
-## 2 - Add a `@rating` property to `Recipe`
+## Add a `@rating` property to `Recipe`
 
 This new property should be:
 - Asked to the user when creating a new recipe
@@ -136,7 +136,7 @@ This new property should be:
 - Stored in the CSV
 - Printed when listing the recipes
 
-## 3 - (User Action) Mark a recipe as done
+## (User Action) Mark a recipe as done
 
 Once you're done with the "Search", try to add a feature to mark a recipe as done:
 
@@ -150,7 +150,7 @@ Once you're done with the "Search", try to add a feature to mark a recipe as don
 5. [ ] Christmas crumble (5 / 5)
 ```
 
-## 4 - Add a `@prep_time` property to `Recipe`
+## Add a `@prep_time` property to `Recipe`
 
 Again, this new property should be:
 - Asked to the user when creating a new recipe
@@ -158,7 +158,7 @@ Again, this new property should be:
 - Stored in the CSV
 - Printed when listing the recipes
 
-## 5 - (Optional) Service
+## (Optional) Service
 
 Try to extract the **parsing** logic out of the controller and put it into a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
