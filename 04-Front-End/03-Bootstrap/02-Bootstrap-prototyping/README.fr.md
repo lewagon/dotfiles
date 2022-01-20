@@ -21,5 +21,5 @@ Tu ne dois **pas utiliser de CSS** pour cet exercice, uniquement des classes Boo
 
 ## Suggestions et ressources supplémentaires
 
-- Pense à consulter la [documentation Bootstrap](https://getbootstrap.com/docs/4.6). Tu y trouveras bien plus que les classes `btn` !
+- Pense à consulter la [documentation Bootstrap](https://getbootstrap.com/docs/5.1). Tu y trouveras bien plus que les classes `btn` !
 - Jette un œil au [résultat final](http://lewagon.github.io/bootstrap-challenges/02-Bootstrap-prototyping) pour le comparer avec ton travail.

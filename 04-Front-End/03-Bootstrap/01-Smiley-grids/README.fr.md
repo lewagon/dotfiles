@@ -50,7 +50,7 @@ Crée plutôt une grille autour du contenu, puis ajoute-la comme ceci :
 ## Suggestions et ressources supplémentaires
 
 - Lorsque tu codes une grille, commence toujours par la classe `.col` pour la plus petite résolution. Interroge-toi sur la proportion que tu souhaites obtenir sur un appareil mobile : plein écran (`.col-12`), moitié d'écran (`.col-6`), quart d'écran (`.col-3`) ?
-- Puis passe à la résolution suivante (`sm`) et pose-toi la même question 🤔. Et ainsi de suite jusqu'à `xl`.
-- Tu n'es pas obligé d'écrire toutes les classes `sm/md/lg/xl`. Si tu ne les écris pas toutes, c'est toujours la classe précédente qui s'applique. Par exemple, une grid (grille) `<div class="col-12 col-lg-6">` occupera tout l'écran sur un appareil mobile et un ordinateur portable, puis la moitié de l'écran sur des écrans plus grands (desktop).
+- Puis passe à la résolution suivante (`sm`) et pose-toi la même question 🤔. Et ainsi de suite jusqu'à `xxl`.
+- Tu n'es pas obligé d'écrire toutes les classes `sm/md/lg/xl/xxl`. Si tu ne les écris pas toutes, c'est toujours la classe précédente qui s'applique. Par exemple, une grid (grille) `<div class="col-12 col-lg-6">` occupera tout l'écran sur un appareil mobile et un ordinateur portable, puis la moitié de l'écran sur des écrans plus grands (desktop).
 
 N.B. : N'oublie pas de **forcer le rafraîchissement** de ton navigateur (`Cmd + Shift + R`) pour vider le cache si ta page n'affiche pas le code le plus récent !

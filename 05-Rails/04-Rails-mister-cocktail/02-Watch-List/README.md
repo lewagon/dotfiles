@@ -11,7 +11,7 @@ yarn -v
 # You should see your yarn version here
 ```
 
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn) setup.
 
 **Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
 
@@ -59,7 +59,7 @@ rspec spec/models                # Launch tests
 Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap @popperjs/core
 ```
 
 And add the gems we're going to need:
@@ -76,6 +76,8 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
+Replace **all the content** of your `config/initializers/simple_form_bootstrap.rb` file with [this](https://github.com/heartcombo/simple_form-bootstrap/blob/main/config/initializers/simple_form_bootstrap.rb).
+
 Then let's download the Le Wagon's stylesheets:
 
 ```bash
@@ -84,24 +86,7 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Finally let's import Boostrap JS library using Webpack:
-
-```js
-// config/webpack/environment.js
-const { environment } = require("@rails/webpacker")
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require("webpack")
-environment.plugins.prepend("Provide",
-  new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery",
-    Popper: ["popper.js", "default"]
-  })
-)
-
-module.exports = environment
-```
+Finally let's import the Boostrap JS library using Webpack:
 
 ```js
 // app/javascript/packs/application.js
@@ -271,4 +256,4 @@ Everyone should be able to comment and tell us what they thought of our movie co
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
 - Using [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) to display stars instead of a normal input in the reviews form.
 
-Again, use Stimulus controllers when implementing JavaScript behavior in your app. ⚠️
+Again, use Stimulus controllers when implementing JavaScript behavior in your app ⚠️

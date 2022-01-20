@@ -4,7 +4,7 @@ Tout le monde ne sera pas en mesure de s'occuper de la configuration de l'app ; 
 ## Rails new
 Commence par désigner le développeur principal pour ce projet au sein de ton équipe. Il peut s'agir de la même personne que pour le projet Airbnb, ou d'un autre membre. Cette personne sera ensuite chargée du reste de la configuration de l'app.
 
-Au début de ton projet Rails, tu **dois** utiliser l'un des [**modèles Rails du Wagon**](https://github.com/lewagon/rails-templates/tree/master). Assure-toi d'utiliser le [modèle Devise](https://github.com/lewagon/rails-templates/tree/master#devise) si tu as besoin d'un modèle `User` !
+Au début de ton projet Rails, tu **dois** utiliser l'un des [**modèles Rails du Wagon**](https://github.com/lewagon/rails-templates). Assure-toi d'utiliser le [modèle Devise](https://github.com/lewagon/rails-templates#devise) si tu as besoin d'un modèle `User` !
 
 Une fois l'app créée, crée ton dépôt Github et ajoute tous les membres de ton équipe en tant que collaborateurs. Réfère-toi aux [diapos du cours sur Github](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/05-Rails%2F06-Airbnb-Devise#/1/3/0) pour te faire une idée du processus.
 
