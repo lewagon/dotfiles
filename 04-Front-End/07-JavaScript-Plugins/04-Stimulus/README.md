@@ -4,7 +4,7 @@ In this exercise, we will use the [Stimulus](https://stimulus.hotwired.dev/) Jav
 
 The tagline of this framework is to be the "modest framework for the HTML you already have". It's a framework that you will be able to use during your projects to help you organize your JavaScript code. It plays well with Rails as it will allow you to dynamically generate HTML on the server side (remember MVC, Sinatra, etc.) and plug in some JS behavior.
 
-The big upside of Stimulus is that you will almost never have to do write `querySelector` or `addEventListener` anymore! Instead you will use conventional `data-` HTML attributes on specific element.
+The big upside of Stimulus is that you will never have to do write `querySelector` or `addEventListener` anymore! Instead you will use conventional `data-` HTML attributes on specific element.
 
 This framework uses [ES6 Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), a neat addition since 2015 (ES6 release year) to add Object Oriented Programming to JavaScript.
 
@@ -36,7 +36,7 @@ yarn add @hotwired/stimulus
 yarn add @hotwired/stimulus-webpack-helpers
 ```
 
-Then open the `lib/index.js` and add the following at the beginning of the file:
+Then open the `lib/index.js` and add the following lines at the beginning of the file:
 
 ```js
 import { Application } from "@hotwired/stimulus"
@@ -57,7 +57,7 @@ First, let's create the controllers folder, where you will add your code:
 mkdir lib/controllers
 ```
 
-Now, let's create your **first Stimulus controller**:
+Now, let's create your first Stimulus controller file:
 
 ```bash
 touch lib/controllers/check_all_checkboxes_controller.js
@@ -74,13 +74,13 @@ export default class extends Controller {
 }
 ```
 
-Notice the `connect()` method. This method is triggered when the controller is **connected** to the document, ie when the element with the `data-controller` attribute is present in the DOM.
+Notice the `connect()` method. This method is triggered when the controller is **connected** to the document, ie when the HTML element with the `data-controller` attribute is present in the DOM.
 
-The `connect()` is what we call a **lifecycle callback**. If you want to read more about Stimulus lifecycles callbacks, [read this documentation](https://stimulus.hotwire.dev/reference/lifecycle-callbacks).
+The `connect()` method is what we call a **lifecycle callback**. If you want to read more about Stimulus lifecycles callbacks, [read this documentation](https://stimulus.hotwire.dev/reference/lifecycle-callbacks).
 
 ## Bind the controller to the HTML
 
-Now, let's tweak our HTML to **connect** the controller:
+Now, let's tweak your HTML to **connect** the controller:
 - On which DOM element are you going to connect the controller?
 - What's the syntax to connect it?
 
@@ -146,7 +146,7 @@ But how do you access all the other checkboxes in this method? With Targets!
 
 ## Targets
 
-In addition to actions, which replace `addEventListener` in the context of a Stimulus controller, Stimulus introduces **targets** which replace all your `querySelector` or `getElementById` in the context of a Stimulus controller.
+In Stimulus, in addition to actions, which replace `addEventListener`, you can use **targets** to replace all your `querySelector` and `getElementById`.
 
 If we read the Stimulus documentation, we can see [here the syntax](https://stimulus.hotwire.dev/reference/targets) to add targets.
 
@@ -167,17 +167,17 @@ export default class extends Controller {
 }
 ```
 
-Then, you have to specify in the HTML, which element of the DOM should be targeted as a 'checkbox'.
+Then, you have to specify in the HTML which element of the DOM should be targeted as a 'checkbox'.
 
 The syntax to do this is using, guess what... `data-attributes`! More precisely: `data-CONTROLLER_NAME-target="TARGET_NAME"`.
 
 Therefore, let's add `data-check-all-checkboxes-target="checkbox"` to all the `<input type="checkbox" ...>` element (except the "Check All" one).
 
-Once this is done, the Stimulus controller can easily fetch the targets with some simple Stimulus syntax:
+Once this is done, the Stimulus controller can easily fetch the targets with some simple syntax:
 
 ```javascript
-this.checkboxTarget // -> return the first checkbox target
-this.checkboxTargets // -> return a collection (think Array) of all the checkbox targets
+this.checkboxTarget // -> return the first checkbox target, like querySelector
+this.checkboxTargets // -> return all the checkbox targets, like querySelectorAll
 ```
 
 ## Implementing the logic
@@ -191,7 +191,7 @@ Here is what we have to do:
 
 You've got everything in hand to tackle the rest of this challenge.
 
-Remember to try the behavior of your Stimulus controller in your web browser (test manually), and feel free to add `console.log` to understand what you're dealing with in the `checkAll` methods.
+Remember to try the behavior of your Stimulus controller in your web browser (test manually) and feel free to add `console.log` to understand what you're dealing with in the `checkAll` method.
 
 Your turn!
 

@@ -19,7 +19,7 @@ rake webpack
 
 Pour commencer, tu vas devoir créer un compte MapBox et obtenir une clé d'API (l'inscription est gratuite !). Lis ensuite la [documentation sur l'API Geocoding de MapBox](https://docs.mapbox.com/api/search/geocoding/). Tout se résumera à une requête HTTP `GET` avec une adresse comme paramètre de string de la requête.
 
-```js
+```javascript
 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=YOUR-API-KEY'
 ```
 
@@ -29,9 +29,13 @@ Continue et examine le formulaire déjà présent dans le texte standard du chal
 
 Utilise l'événement `submit` pour capturer le moment où le formulaire est envoyé par l'utilisateur. C'est à ce moment-là que tu voudras déclencher la requête AJAX au service Geocoding de MapBox Geocoding en utilisant `fetch` (relis les diapos du cours d'hier).
 
+**Rappel : tu dois coder ton JavaScript dans un contrôleur Stimulus**
+
+Retourne voir l'exercice Stimulus pour suivre les instructions d'installation.
+
 Comme toujours quand tu récupères des données d'une API, commence par afficher ce que tu obtiens de MapBox avec `console.log()`. C'est un énorme JSON ! Maintenant que tu l'as, détermine où se trouvent les coordonnées GPS et affiche-les à l'écran.
 
-ASTUCE : MapBox retourne les coordonnées avec la longitude d'abord, puis la latitude !
+Astuce : MapBox retourne les coordonnées avec la longitude d'abord, puis la latitude !
 
 ### [FACULTATIF] Afficher une carte
 
@@ -40,7 +44,7 @@ Pour afficher une carte MapBox avec un marqueur à l'adresse spécifiée, on uti
 Pour l'utiliser, ajoute cette ligne dans le `head` de ton fichier HTML, afin de pouvoir utiliser la feuille de style de MapBox pour ta carte :
 
 ```html
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet">
 ```
 
 Pour ajouter une carte, tu auras besoin d'un élément HTML de soutien vide. Par exemple :
@@ -51,20 +55,24 @@ Pour ajouter une carte, tu auras besoin d'un élément HTML de soutien vide. Par
 
 Pour créer facilement la carte et ajouter un marqueur dessus, on utilisera le [paquet mapbox-gl de npm](https://yarnpkg.com/en/package/mapbox-gl).
 
-Tu as déjà `package.json`, il te suffit donc d'ajouter `yarn add mapbox-gl` pour le télécharger localement dans `02-Geocoder/node_modules`.
+Il te faut `yarn add mapbox-gl` pour ajouter ce paquet à ton projet.
 
-Pour afficher une carte dans `#map` avec le paquet `mapbox-gl`, tu peux utiliser les lignes suivantes :
+Pour afficher une carte dans ton élément HTML `#map` avec le paquet `mapbox-gl`, tu dois d'abord importer ce paquet en haut de ton contrôleur Stimulus :
 
-```js
-import mapboxgl from 'mapbox-gl';
+```javascript
+import mapboxgl from "mapbox-gl"
+```
 
-mapboxgl.accessToken = 'yourApiKey';
+Puis ensuite, affiche la carte :
+
+```javascript
+mapboxgl.accessToken = "yourApiKey"
 const map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v9',
+  container: "map",
+  style: "mapbox://styles/mapbox/streets-v9",
   center: [ -0.077, 51.533 ],
   zoom: 12
-});
+})
 ```
 
 Pour ajouter un marqueur à la carte, si la variable `map` possède l'objet `mapboxgl`, tu peux exécuter :
@@ -72,7 +80,7 @@ Pour ajouter un marqueur à la carte, si la variable `map` possède l'objet `map
 ```js
 new mapboxgl.Marker()
   .setLngLat([ -0.077, 51.533 ])
-  .addTo(map);
+  .addTo(map)
 ```
 
 Amuse-toi bien à géocoder ! 🌎 🌍 🌏

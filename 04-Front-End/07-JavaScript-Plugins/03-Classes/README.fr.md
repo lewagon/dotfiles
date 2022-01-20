@@ -23,4 +23,4 @@ Il y a 3 tests à faire passer en vert. Tout ce que tu dois savoir se trouve sur
 
 Ce sont 7 lignes de code JS. Repense à la programmation orientée objet en Ruby, les concepts sont exactement les mêmes !
 
-Passons au challenge suivant à propos du modeste framework JavaScript **Stimulus**, basé sur la syntaxe de classe ES6.
+Passons au challenge suivant à propos du framework JavaScript **Stimulus**, basé sur la syntaxe de classe ES6.

@@ -14,7 +14,7 @@ Va à [`localhost:8080`](http://localhost:8080/) et ouvre ta console.
 
 ### Récupérer ta clé API (1 pour toi et ton buddy)
 
-Commence par aller à l'[API OpenWeatherMap](https://home.openweathermap.org/users/sign_up) et crée un compte pour obtenir ta clé API. Tu devrais la trouver [ici](https://home.openweathermap.org/api_keys). Vous allez tous créer un compte en même temps, ce qui risque de retarder l'activation des clés par Open Weather. Pour éviter ce problème, **partage ta clé API avec ton buddy** pour limiter le nombre de clés à activer.
+Commence par aller sur le site de l'[API OpenWeatherMap](https://home.openweathermap.org) et crée un compte pour obtenir ta clé API. Tu devrais la trouver [ici](https://home.openweathermap.org/api_keys). Vous allez tous créer un compte en même temps, ce qui risque de retarder l'activation des clés par Open Weather. Pour éviter ce problème, **partage ta clé API avec ton buddy** pour limiter le nombre de clés à activer.
 
 Tu as le droit de réaliser gratuitement 60 appels / minute, ce qui devrait largement suffire pour ce challenge.
 
@@ -28,99 +28,60 @@ Avant de coder, essaie d'ouvrir l'URL dans ton navigateur pour voir si tu obtien
 &appid=YOUR_API_KEY
 ```
 
-Une fois que tu as réussi à afficher la réponse de l'API dans ton navigateur, continue et commence à écrire ta requête `fetch` dans le fichier `lib/index.js`.
+Une fois que tu as réussi à afficher la réponse de l'API dans ton navigateur, passons à l'implémentation JavaScript.
 
-Tu te souviens de la syntaxe ? Utilise `console.log()` pour voir ce que tu as obtenu de l'API et t'assurer que tout fonctionne avant d'aller plus loin.
+**Rappel: tu dois coder ton JavaScript dans un contrôleur Stimulus**
 
-### Afficher des données sur ta page
+Retourne sur l'exercice Stimulus pour suivre les instructions d'installation.
+
+### Afficher les données sur ta page
 
 Avec les données renvoyées à l'API, construis la page suivante :
 
 ![Météo actuelle](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_api.png)
 
-**Ne te lance pas tout de suite** dans le code :
+Pour récupérer la température en degrés Celsius, tu peux ajouter `&unit=metric` dans l'URL de ta requête.
 
-- Commence par imaginer ton HTML avec un papier et un crayon ✏️
-- Code le HTML avec les bons attributs (principalement des `id`)
-- Code ton JS pour injecter des données aux bons endroits
-- Code ton CSS pour rendre tout ça joli ✨
-
-**Astuce :** Pour obtenir la température en degrés Celsius, tu peux ajouter `&units=metric` dans l'URL de ta requête.
+Pour récupérer l'image de l'icône, à partir de l'id de l'icône, tu peux utiliser cette URL : `https://openweathermap.org/img/w/{iconId}.png`
 
 ### Quel temps fait-il à Kuala Lumpur ?
 
-Maintenant, on va ajouter un formulaire (`<form>`) avec une entrée (`<input>`) de `type="text"` pour demander la météo dans n'importe quelle ville ! Ajoute un bouton `submit` et écoute l'événement `submit` du formulaire pour réaliser un nouvel appel API.
+Maintenant, écoute l'événement `submit` sur le `<form>` pour récupérer les données utilisateur dans l'`<input>` et modifie l'URL avant de faire ta requête à l'API.
 
-Ta page doit se mettre à jour et afficher les bonnes données, sans se recharger ! Si ton HTML se recharge, cela signifie que tu as oublié d'**empêcher** quelque chose...
+Ta page doit se mettre à jour et afficher les bonnes données, sans se recharger ! Si ta page se recharge, cela signifie que tu as oublié d'empêcher (**prevent**) quelque chose...
 
 ![Météo à Kuala Lumpur](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_in_kuala_lumpur.png)
 
-### Ajouter le paquet NPM Select2
+### Connaître la météo à la position actuelle
 
-Pendant le cours de ce matin, tu as vu comment ajouter [select2](https://select2.org/):
+Maintenant nous aimerions avoir la météo à la position où se trouve l'utilisateur.
 
-1. Télécharge `jquery` et `select2` avec yarn
-
-    ```bash
-    yarn add jquery select2
-    ```
-
-2. Ajoute select dans ton fichier `index.html` (supprime l'entrée) :
-
-    ```html
-    <select id="city-input" class="select2"></select>
-    ```
-
-3. Active `select2` avec :
-
-    ```js
-    import $ from 'jquery';
-    import 'select2';
-
-    $('#city-input').select2();
-    ```
-
-On veut maintenant injecter une liste de villes sans toucher au fichier HTML. Heureusement, select2 [propose une option pour le faire](https://select2.org/data-sources/arrays) !
-
-Copie-colle cet array dans ton code pour le passer à ton `select2` :
-
-```js
-const cities = ["Amsterdam","Bali","Barcelona","Belo Horizonte","Berlin","Bordeaux","Brussels","Buenos Aires","Casablanca","Chengdu","Copenhagen","Kyoto","Lausanne","Lille","Lisbon","London","Lyon","Madrid","Marseille","Melbourne","Mexico","Milan","Montréal","Nantes","Oslo","Paris","Rio de Janeiro","Rennes","Rome","São Paulo","Seoul","Shanghai","Shenzhen","Singapore","Stockholm","Tel Aviv","Tokyo"];
-
-$('#city-input').select2({ data: cities, width: '100%' }); // <-- ajoute les options `data` et `width`
-```
-
-Tu devrais voir apparaître les villes sur le select, mais pas très bien mises en page. C'est normal, on n'a pas encore ajouté le CSS de select2 au code ! Pour cela, ajoute ce qui suit dans le `<head>` de ton HTML :
+Tout d'abord, dans le HTML, retire la classe `d-none` du lien :
 
 ```html
-<link rel="stylesheet" href="node_modules/select2/dist/css/select2.css">
+<a href="" class="d-none position"><i class="bi bi-geo-alt"></i></a>
 ```
 
-C'est mieux, non ?
+Tu dois voir un icône de localisation apparaître.
 
-### Connaître la météo à l'emplacement actuel
+Tu peux récupérer la **position actuelle** d'un utilisateur avec la méthode [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) du navigateur :
 
-Pour finir, on va ajouter un lien pour connaître la météo à l'**emplacement actuel**. On peut le faire avec [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) depuis le navigateur.
-
-Ajoute une balise `<a>` dans ton fichier `index.html` et associe-la au rappel suivant :
-
-```js
+```javascript
 navigator.geolocation.getCurrentPosition((data) => {
-  console.log(data);
+  console.log(data)
 });
 ```
 
-Qu'est-ce que tu obtiens de ton navigateur ? Tes coordonnées GPS. Notre code utilise actuellement des **noms** de ville pour connaître la météo. Heureusement, il existe un endpoint (point de terminaison) qui prend les **coordonnées** dans l'URL. Tu peux faire défiler un peu [la doc](https://openweathermap.org/current) vers le bas pour trouver l'endpoint qui prend une latitude et une longitude comme paramètres.
+Qu'est-ce que tu obtiens de ton navigateur ? Tes coordonnées.
 
-Continue et définis une autre méthode `fetchWeatherByCoordinates` pour adapter l'URL que tu passes à ta requête `fetch`.
+Pour le moment, ton code utilise des **noms** de villes pour récupérer la météo. Heureusement, il existe un endpoint (point de terminaison) qui prend les **coordonnées** dans l'URL. Tu peux faire défiler un peu [la doc](https://openweathermap.org/current) vers le bas pour trouver l'endpoint qui prend une latitude et une longitude comme paramètres.
+
+Continue, relie le clique sur l'icône de localisation à une nouvelle action dans ton contrôleur Stimulus qui va récupérer la position actuelle de l'utilisateur et mettre à jour la page en fonction.
+
+Si ta page HTML se recharge, c'est sûrement parce que tu as oublié d'empêcher (**prevent**) quelque chose...
 
 ### Le moment est venu de réorganiser ton code !
 
-Tu n'as pas tout à fait fini. Si tout fonctionne, tu peux être tenté de laisser ton code en l'état. Réorganiser ton code pour pouvoir en assurer la maintenance à long terme est impératif si tu veux gagner du temps à l'avenir.
+Tu n'as pas tout à fait fini. Lorsque tout fonctionne, tu peux être tenté de laisser ton code en l'état. Réorganiser ton code pour pouvoir en assurer la maintenance à long terme est impératif si tu veux gagner du temps à l'avenir.
 
-Tu te souviens des règles ?
-
-- Écris les fonctions dans des fichiers séparés
-- Importe-les (`import`) dans `lib/index.js` pour les appeler
-
-Amuse-toi bien !
+Est-ce que tu vois du code qui se répète ? Tu devrais pouvoir refactoriser le code qui mets à jour la card dans une méthode privée (`private`). Pour définir une [méthode privée en JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), il te suffit de la préfixer avec un `#`.
