@@ -104,10 +104,8 @@ augroup end
 
 " VimWiki git sync
 augroup vimwikigitsync
-  " Make sure this window's working dir is the wiki repo dir whenever home.md is opened
-  au! BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki lcd ~/workspace/xavierosee/wiki
-  " Also do a git pull whenever home.md is opened
-  au BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki !git pull
+  " Make sure this window's working dir is the wiki repo dir whenever index.wiki is opened
+  au BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki !cd ~/workspace/xavierosee/wiki; git pull
   " After writing to any file in the wiki dir, add all files in the repo, commit and push
-  au! BufWritePost ~/workspace/xavierosee/wiki/wiki/* !git add .;git commit -m "Autocommit and push";git push
+  au! BufWritePost ~/workspace/xavierosee/wiki/* !cd ~/workspace/xavierosee/wiki; git add -A;git commit -m "Autocommit and push";git push
 augroup END
