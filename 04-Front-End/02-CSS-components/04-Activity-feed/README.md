@@ -22,7 +22,7 @@ Once that is done:
 - Make `.tabs` a flexbox
 - Add some `padding` on each `.tab`
 - You don't even need `space-between` or `align-items` here because the tabs already have the same `height`
-- You can also design the **active** and **hover** states of tabs using `.tab.active` & `.tab:hover`. You will probably need to play with the `opacity` and the `border-bottom` 😬
+- You can also design the **active** and **hover** states of tabs using `.tab:active` & `.tab:hover`. You will probably need to play with the `opacity` and the `border-bottom` 😬
 
 ## Notification design
 

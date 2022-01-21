@@ -28,6 +28,6 @@ NOTA: Por favor, haz caso omiso a la puntuación (ejemplo: `Seb's` debería ser 
 
 Añade un filtro en tu método para deshacerte de las [palabras vacías](http://en.wikipedia.org/wiki/Stop_words) como artículos, pronombres y preposiciones ("a", "the", "is" etc.).
 
-### Se creativo
+### Se creativo/a
 
 Copia/Pega cualquier texto de tu elección en el archivo fuente para experimentar con tu programa (un discurso político, el extracto de un libro, tu canción favorita, etc.)

@@ -57,19 +57,20 @@ Les listes dépliantes sont un peu différentes. **Elles ont leurs propres balis
 
 On va maintenant parler des classes de formulaire Bootstrap :
 - `.form-control` définit chaque entrée `<input>` ou sélection `<select>`, à l'exception du bouton de soumission.
-- `.form-group` regroupe chaque entrée `<input>` ou sélection `<select>` avec l'étiquette `<label>` associée.
+- `.mb-3` regroupe chaque entrée `<input>` ou sélection `<select>` avec l'étiquette `<label>` pour créer de l'espace sous chaque groupe.
 
 Exemple de formulaire Bootstrap **avec des étiquettes** :
 
 ```html
 <form action="#">
-  <div class="form-group">
-    <label for="email">Your email</label>
+  <div class="mb-3">
+    <label for="email" class="form-label">Your email</label>
     <input type="email" id="email" class="form-control">
   </div>
-  <div class="form-group">
-    <label for="password">Your password</label>
+  <div class="mb-3">
+    <label for="password" class="form-label">Your password</label>
     <input type="password" id="password" class="form-control">
+    <div id="password" class="form-text">Your password must be at least 6 characters long and contain letters and numbers.</div>
   </div>
   <input type="submit" value="Sign In" class="btn btn-primary">
 </form>
@@ -79,47 +80,53 @@ Exemple de formulaire Bootstrap **sans étiquette** :
 
 ```html
 <form action="#">
-  <div class="form-group">
+  <div class="mb-3">
     <input type="email" class="form-control">
   </div>
-  <div class="form-group">
+  <div class="mb-3">
     <input type="password" class="form-control">
    </div>
   <input type="submit" value="Sign In" class="btn btn-primary">
 </form>
 ```
 
-Maintenant, si tu veux un [formulaire en ligne](https://getbootstrap.com/docs/4.6/components/forms/#inline-forms), tu peux **ajouter la classe `.form-inline` au formulaire `<form>`** (comme la classe `.list-inline` pour une liste `<ul>`) :
+Maintenant, si tu veux un [formulaire en ligne](https://getbootstrap.com/docs/5.1/components/forms/#inline-forms), tu peux **ajouter la classe `.form-inline` au formulaire `<form>`** (comme la classe `.list-inline` pour une liste `<ul>`) :
+
+tu peux **ajouter les classes `.row` (qui est une flexbox) et `.row-cols-*-auto` au formulaire `<form>`** (la classe `.row-cols-*` te permet de décider à partir de quel breakpoint tu veux que tes champs `input` se mettent l'un à côté de l'autre. Par exemple, `.row-cols-sm-auto` signifie que sur mobile, chaque `input` prend la largeur totale alors que sur une tablette ou des écrans plus grands, les `input` seront l'un à côté de l'autre):
 
 ```html
-<form action="#" class="form-inline">
-  <div class="form-group">
+<form action="#" class="row row-cols-lg-auto">
+  <div class="col-12">
     <input type="email" class="form-control">
   </div>
-  <div class="form-group">
+  <div class="col-12">
     <input type="password" class="form-control">
-   </div>
-  <input type="submit" value="Sign In" class="btn btn-primary">
+  </div>
+  <div class="col-12">
+    <input type="submit" value="Sign In" class="btn btn-primary">
+  </div>
 </form>
 ```
 
-## Injecter une ligne `.form-row` dans le formulaire
+## Utiliser la grille Bootstrap pour construire des formulaires plus complexes
 
-Tu peux aussi injecter une ligne dans un formulaire en utilisant la classe `.form-row`. Voici un exemple pour avoir 2 entrées `<input>` sur la même ligne :
+Tu peux aussi ajouter la class `.row` à ton `<form>` et lui mettre plusieurs `col` de tailles différentes à l'intérieur. Par exemple, pour avoir deux `input` sur la même ligne avec un troisième `input` qui prend toute une ligne :
 
 ```html
-<form>
-  <div class="form-row">
-    <div class="col-6 form-group">
-      <label>First name</label>
-      <input type="text" class="form-control" placeholder="First name">
-    </div>
-    <div class="col-6 form-group">
-      <label>Last name</label>
-      <input type="text" class="form-control" placeholder="Last name">
-    </div>
+<form action="#" class="row">
+  <div class="col-6 mb-3">
+    <label for="first-name" class="form-label">First name</label>
+    <input id="first-name" type="text" class="form-control" placeholder="First name">
   </div>
-  <!-- rest of the form below -->
+  <div class="col-6 mb-3">
+    <label for="last-name" class="form-label">Last name</label>
+    <input id="last-name" type="text" class="form-control" placeholder="Last name">
+  </div>
+  <div class="col-12 mb-3">
+    <label for="address" class="form-label">Address</label>
+    <input id="address" type="text" class="form-control" placeholder="Address">
+  </div>
+  <!-- la suite du formulaire ici -->
 </form>
 ```
 

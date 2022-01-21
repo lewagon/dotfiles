@@ -49,7 +49,7 @@ Have a look at your old Ruby code. How did you generate an `Array` of ten random
 
 We need to add a form below the letters so that the user can fill a suggestion and submit it.
 
-Go ahead and add a `<form />` to your view. It should `POST` to the `/score` action in the `GamesController`.
+Go ahead and add a `<form>` to your view. It should `POST` to the `/score` action in the `GamesController`.
 
 You will need to add the line below into your `form`:
 
@@ -121,19 +121,11 @@ Try to use a Rails session to store, compute and display a grand score.
 
 ### Testing (Optional)
 
+⚠️ Please skip this section if you don't feel at ease yet with Rails internal. You can always come back here later in the day after completing the Longest Word Game exercise.
+
 First, delete the `test/controllers/games_controller_test.rb` file if it got generated. We will be doing [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). The goal of this kind of testing is to automate all the manual testing of "code editing / go to the browser / reload the page / check if this is working". Everything you did manually in the browser can be done _via_ code!
 
-We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. Before running your system tests you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both OSX and Ubuntu.
-
-Then you need to install `chromedriver`:
-
-```bash
- # macOS
-brew install --cask chromedriver
-
-# Ubuntu
-gem install chromedriver-helper
-```
+We will use _Headless Chrome_ for System Testing. It's a browser without a user interface, well-suited for this kind of automated tests. Before running your system tests you need to make sure you have a **recent** version of Chrome on your system (not Chromium). It's available for both macOS and Ubuntu.
 
 After the installation you can open the following file and replace **all** its content with:
 
@@ -199,6 +191,20 @@ Run the test in the terminal with:
 ```bash
 rails test:system
 ```
+
+⚠️ If you are getting a `Webdrivers::BrowserNotFound: Failed to find Chrome binary` error, you need to install the latest version of Chrome:
+
+```bash
+ # macOS
+brew install --cask google-chrome
+
+# Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
+```
+
+Once you have installed it, you can relaunch the tests with `rails test:system`.
 
 In this test, I am visiting the `/new` URL and making sure I get ten letters to play with.
 

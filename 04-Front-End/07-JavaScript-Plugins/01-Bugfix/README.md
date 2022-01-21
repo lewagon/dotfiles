@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-A simple challenge to start the day! This morning you saw how to work with multiple files in a frontend project. You'll find two JavaScript files in the `lib` folder. The code is currently broken, and your job is to fix it.
+A simple challenge to start the day! This morning you saw how to work with multiple files in a front-end project. You'll find two JavaScript files in the `lib` folder. The code is currently broken, and your job is to fix it.
 
 ## Specs
 

@@ -7,7 +7,7 @@ Para entender mejor el `yield`, intentemos implementar nuevamente el método [`E
 
 ### Mapa personalizado
 
-En este ejercicio necesitas implementar el método `#my_map`  el cual será llamado con un bloque como el método habitual `Enumerable#map`. Puedes usar  `Enumerable#each` en tu codigo para iterar a través de elementos.
+En este ejercicio necesitas implementar el método `#my_map`  el cual será llamado con un bloque como el método habitual `Enumerable#map`. Puedes usar  `Enumerable#each` en tu código para iterar a través de elementos.
 
 Acá hay dos ejemplos que deben funcionar en tu código:
 

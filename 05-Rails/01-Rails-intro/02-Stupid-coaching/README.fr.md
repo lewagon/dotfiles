@@ -1,15 +1,13 @@
-## Attention
+## Configuration
 
-⚠️ **N'exécute jamais `sudo gem install rails`, même si le terminal te demande de le faire !** ⚠️
-> Si cela se produit, redémarre ton terminal (`cmd + q` or `ctrl + q`) et si le problème persiste, crée un ticket.
-
-Voici la procédure à suivre pour installer Rails :
+Tu devrais déjà avoir Rails installé. Vérifions-le :
 
 ```bash
-gem install rails -v 6.0
+rails -v
+# You should see your rails version here
 ```
 
-Ferme le terminal et relance-le.
+Si ce n'est pas le cas, retourne à la section dédiée du setup [macOS](https://github.com/lewagon/setup/blob/master/macos.fr.md#installer-des-gems), [Windows](https://github.com/lewagon/setup/blob/master/windows.fr.md#installer-des-gems) ou [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.fr.md#installer-des-gems).
 
 ## Contexte et objectifs
 
@@ -199,17 +197,7 @@ Pour le moment, ouvre (ou crée) simplement le fichier `app/assets/stylesheets/q
 
 Commence par supprimer le fichier `test/controllers/questions_controller_test.rb` s'il a été généré. On va procéder à des [**tests système**](http://guides.rubyonrails.org/testing.html#system-testing). L'objectif de ce genre de tests est d'automatiser les tests manuels des actions suivantes : « rédiger du code / aller au navigateur / recharger la page / vérifier si tout fonctionne ». Tout ce que tu faisais manuellement dans le navigateur peut être effectué _via_ du code !
 
-Pour les tests système, on va utiliser _Headless Chrome_. Il s'agit d'un navigateur sans interface utilisateur, adapté à ce genre de tests automatisés. Avant de lancer tes tests système, vérifie qu'une version **récente** de Chrome est installée sur ton système (pas Chromium). Il est disponible pour OSX et Ubuntu.
-
-Installe ensuite `chromedriver` :
-
-```bash
- # macOS
-brew install --cask chromedriver
-
-# Ubuntu
-gem install chromedriver-helper
-```
+Pour les tests système, on va utiliser _Headless Chrome_. Il s'agit d'un navigateur sans interface utilisateur, adapté à ce genre de tests automatisés. Avant de lancer tes tests système, vérifie qu'une version **récente** de Chrome est installée sur ton système (pas Chromium). Il est disponible pour macOS et Ubuntu.
 
 Tu peux ensuite ouvrir le fichier suivant et remplacer **tout** son contenu par :
 
@@ -268,7 +256,21 @@ Exécute le test dans le terminal avec :
 rails test:system
 ```
 
-Si tu examines de plus près le scénario de test, tu peux le comprendre comme suit :
+⚠️ Si l'erreur `Webdrivers::BrowserNotFound: Failed to find Chrome binary` s'affiche, installe Chrome :
+
+```bash
+ # macOS
+brew install --cask google-chrome
+
+# Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
+```
+
+et relance les tests avec `rails test:system`.
+
+Une fois que la commande fonctionne, examines de plus près le scénario de test, tu peux le comprendre comme suit :
 
 1. Va à la page `/ask`.
 2. Assure-toi que la page a été générée et qu'on peut lire `Ask your coach anything`.

@@ -10,11 +10,11 @@
 ### Computar un nombre
 
 - Implementa el método `compute_name` que está definido en el archivo `lib/compute_name.rb`. Debe devolver el nombre completo de la persona de acuerdo con su `first_name`, `middle_name` y `last_name`.
-- **Limitación**: debes usar la **interpolación de strings** con `#{}` para construir el nombre completo.
+- **Limitación**: debes usar la **interpolación de strings (cadenas de texto)** con `#{}` para construir el nombre completo.
 
 ## Programa Interactivo
 
-El archivo  `lib/interface.rb` contiene un programa para interactuar con el usuario. Pruébalo ahora con:
+El archivo  `lib/interface.rb` contiene un programa para interactuar con el/la usuario/a. Pruébalo ahora con:
 
 ```bash
 ruby lib/interface.rb
@@ -27,7 +27,7 @@ Después, asumiendo que pusiste “Boris” y luego “Alexandre” y finalmente
 
 ## Puntos clave de aprendizaje
 
-Hazte las siguientes preguntas nuevamente y asegurate de que las puedas responder todas:
+Hazte las siguientes preguntas nuevamente y asegúrate de que las puedas responder todas:
 
 ### Variables
 

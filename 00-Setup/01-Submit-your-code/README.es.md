@@ -7,9 +7,9 @@
 
 A lo largo de las 9 semanas, trabajarás en pares o grupos de 3-4 personas. Se te asignará un/a compañero/a diariamente, siguiendo el algoritmo [systema de todos contra todos](http://en.wikipedia.org/wiki/Round-robin_tournament) el cual forma parte de la siguiente [gema](https://github.com/ssaunier/round_robin_tournament).
 
-Antes de empezar a resolver un nuevo desafío, **preguntense el uno al otro lo que el ejercicio les pide hacer y asegurense de que lo tengan bien claro** y esto debe ser **antes** de empezar a escribir la primera línea de código. Luego pueden programar en pares en una sola pantalla, o trabajar individualmente, haciendo seguimiento cada 10 minutos para ayudarse entre ustedes.
+Antes de empezar a resolver un nuevo desafío, **pregúntense entre ustedes lo que el ejercicio les pide hacer y asegúrense de que lo tengan bien claro** y esto debe ser **antes** de empezar a escribir la primera línea de código. Luego pueden programar en pares en una sola pantalla, o trabajar individualmente, haciendo seguimiento cada 10 minutos para ayudarse entre ustedes.
 
-Trabajar en pares es una práctica habitual en la ingeniería de software. La idea es que si trabajas solo y encuentras un obstáculo, es posible que pases horas intentando resolver el problema. En cambio, otro par de ojos pudiese encontrar el problema en segundos. ¡Nunca subestimes eso!
+Trabajar en pares es una práctica habitual en la ingeniería de software. La idea es que si trabajas solo/a y encuentras un obstáculo, es posible que pases horas intentando resolver el problema. En cambio, otro par de ojos podrían encontrar el problema en segundos. ¡Nunca subestimes eso!
 
 ## Ejercicio 1: El `rake`.
 
@@ -22,9 +22,9 @@ Ve a la carpeta del ejercicio con el comando que está al principio de esta pág
 Abre el archivo `lib/wagon_start.rb` en tu editor de texto. Ahí es donde tendrás que editar el código.
 
 * Haz que el método `wagon_start` devuelva `"That's how it starts"`
-* En la Terminal, corre `rake` y asegurate de que tienes el resultado en verde para `#wagon_start` y con buen estilo (**sin ofensas**). Si tienes un estilo pobre, aún puedes continuar al siguiente ejercicio. Pero si quieres crear buenos hábitos de codeo, mejor ¡asegúrate de que tienes todo en verde antes de comenzar otro ejercicio!
+* En la Terminal, corre `rake` y asegúrate de que tienes el resultado en verde para `#wagon_start` y con buen estilo (**sin ofensas**). Si tienes un estilo pobre, aún puedes continuar al siguiente ejercicio. Pero si quieres crear buenos hábitos de codeo, mejor ¡asegúrate de que tienes todo en verde antes de comenzar otro ejercicio!
 * Haz el commit de los cambios y luego haz el push de los mismos.
-* Regresa a Kitt y relanza la página. Verás tu solución en el lado derecho.
+* Regresa a Kitt y recarga la página. Verás tu solución en el lado derecho.
 
 ## Ejercicio 2: Práctica con líneas de comando (la Terminal)
 

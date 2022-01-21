@@ -2,15 +2,15 @@
 
 Este desafío lo tendrás que hacer en **30 minutos 🕒**
 
-1. Empecemos el desafío con el/la profesor/a (sesión de codeo en vivo 💻) y **escribe el pseudocódigo junto a él/ella**.
+1. Empecemos el desafío con el/la profesor/a (sesión de live-code 💻) y **escribe el pseudocódigo junto a él/ella**.
 2. Luego pasa 10 minutos solo para tratar de llegar a la solución.
-3. Luego la corregirás con el/la profesor/a (sesión de codeo en vivo 💻) .
+3. Luego la corregirás con el/la profesor/a (sesión de live-code 💻) .
 
 ## Pseudocódigo
 
-Siempre empezaremos con el archivo `interface.rb`. Ese es el archivo que ejecutarás (con el comando `ruby interface.rb`) para correr el programa. Siempre es recomendado empezar con la interface y preguntandote **¿"Qué debería pasar cuando corra el programa?"**
+Siempre empezaremos con el archivo `interface.rb`. Ese es el archivo que ejecutarás (con el comando `ruby interface.rb`) para correr el programa. Siempre es recomendado empezar con la interface y preguntándote **¿"Qué debería pasar cuando corra el programa?"**
 
-Siempre empieza los desafíos junto al/la profesor/a y escribe el *pseudocódigo*. Por ejemplo:
+Siempre empieza los desafíos junto al/a la profesor/a y escribe el *pseudocódigo*. Por ejemplo:
 
 ```ruby
 # interface.rb
@@ -23,7 +23,7 @@ Siempre empieza los desafíos junto al/la profesor/a y escribe el *pseudocódigo
 # 5. etc.
 ```
 
-**¡Escribir el pseudocódigo es el 80% del trabajo!** La traducción del inglés a Ruby es la parte más fácil. Adopta esta metodología de pseudocódigo para **cada** desafío de la session de Reboot.
+**¡Escribir el pseudocódigo es el 80% del trabajo!** La traducción del inglés a Ruby es la parte más fácil. Adopta esta metodología de pseudocódigo para **cada** desafío de la sessión de Reboot.
 
 
 ## Paso 1 - Calculadora tonta

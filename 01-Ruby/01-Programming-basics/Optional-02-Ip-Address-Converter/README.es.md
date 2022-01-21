@@ -12,18 +12,17 @@ Verás que `www.lewagon.com` está vinculado a un dominio en Heroku el cual est�
 
 ¿Quieres saber tu dirección IP? Tu computadora tiene una dirección local otorgada por el router WiFi y por lo tanto la puedes ver al escribir `ips` en tu terminal. Puedes type esto si quieres ver la dirección IP pública de este router, la que compartes con los otros estudiantes:
 
-
 ```bash
 myip
 ```
 
 ## Especificaciones
 
-Una dirección IPv4 es un número de 32 bits que identifica un dispositivo en Internet.
+Una dirección IPv4 es un número de 32 bits que identifica a un dispositivo en Internet.
 
-Las computadoras leen y escriben direcciones IP como números de 32 bits. Pero nosotros preferimos leerlo en notación decimal punteada, que realmente es el número separado en cuatro partes de 8 bits, transformado a decimal y delimitado por un punto.
+Las computadoras leen y escriben direcciones IP como números de 32 bits. Pero nosotros preferimos leerlas en notación decimal punteada, que realmente es el número separado en cuatro partes de 8 bits, transformado a decimal y delimitado por un punto.
 
-En este Kata, crearás la función `ip_to_num` que toma un string de dirección IP y la convierte en un número. También crearás la función `num_to_ip` la cual toma un número y lo convierte en una string de dirección IP.
+En este Kata, crearás la función `ip_to_num` que toma una cadena de caracteres (string) de dirección IP y la convierte en un número. También crearás la función `num_to_ip` la cual toma un número y lo convierte en un string de dirección IP.
 
 Así es como representamos un binario de 8 bits:
 
@@ -67,7 +66,7 @@ Si consideramos `37.160.113.170`, debemos comenzar por los primeros 8 bits: `37`
  0  |  0
 ```
 
-¿Puedo restarle `32` a `37`? Si. Así que le asignamos `1` a `32` y nos queda `5`.
+¿Puedo restarle `32` a `37`? Sí. Así que le asignamos `1` a `32` y nos queda `5`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
@@ -114,11 +113,11 @@ Bueno, ¡`37` es  `00100101` en binario! (`32 + 4 + 1`). Repite los pasos para l
 - ¡`113` es `01110001` en binario! (`64 + 32 + 16 + 1`).
 - ¡`170` es `10101010` en binario! (`128 + 32 + 8 + 2`).
 
-Quita el `.`  para obtener `00100101101000000111000110101010` y apicale nuestro método: `536870912 (2 elevado a 29) + 67108864 (2 elevado a 26) + 16777216 (2 elevado a 24) + 8388608 (2 elevado a 23) + 2097152 (2 elevado a 21) + 16384 (2 elevado a 14) + 8192 (2 elevado a 13) + 4096 (2 elevado a 12) + 256 (2 elevado a 8) + 128 (2 elevado a 7) + 32 (2 elevado a 5) + 8 (2 elevado a 3) + 2 (2 elevado a 1)  = 631271850`.
+Quita el `.`  para obtener `00100101101000000111000110101010` y aplícale nuestro método: `536870912 (2 elevado a 29) + 67108864 (2 elevado a 26) + 16777216 (2 elevado a 24) + 8388608 (2 elevado a 23) + 2097152 (2 elevado a 21) + 16384 (2 elevado a 14) + 8192 (2 elevado a 13) + 4096 (2 elevado a 12) + 256 (2 elevado a 8) + 128 (2 elevado a 7) + 32 (2 elevado a 5) + 8 (2 elevado a 3) + 2 (2 elevado a 1)  = 631271850`.
 
 Así que ```631271850``` es el número decimal para la dirección IP ```37.160.113.170```.
 
-El objetivo de tu código es tener 2 métodos. Uno para transformar una dirección IP a un número. Y otro para transformar un número a una dirección IP.
+El objetivo de tu código es tener 2 métodos. Uno para transformar una dirección IP a un número y otro para transformar un número a una dirección IP.
 
 ```ruby
 ip_to_num("37.160.113.170")

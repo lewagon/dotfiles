@@ -62,9 +62,9 @@ Example:
 
 ```ruby
 {
-  com:	["julien@mdn.com"],
-  de:	["dimitri@berlin.de"],
-  fr:	["kevin@yahoo.fr", "edward@gmail.fr"]
+  "com" =>	["julien@mdn.com"],
+  "de" =>	["dimitri@berlin.de"],
+  "fr" =>	["kevin@yahoo.fr", "edward@gmail.fr"]
 }
 ```
 

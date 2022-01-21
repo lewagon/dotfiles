@@ -1,6 +1,6 @@
 Un anagrama es una palabra que se obtiene al reordenar las letras de otra palabra. Por ejemplo:  "SPOT", "OPTS", "POTS" and "POST" son un grupo de anagramas porque tienen las mismas letras.
 
-Escribe un método que tome arreglos de cadenas de texto (array of strings) dados, los agrupe en grupos de anagramas y devuelva el arreglo (arrays) de dichos grupos. Las letras mayúsculas y minúsculas no son relevantes cuando se clasifican cadenas de texto (strings) en anagramas (pero se deben mantener para verlos en el resultado). El orden de los anagramas en el grupo tampoco es importante.
+Escribe un método que tome un array de strings dado, los agrupe en grupos de anagramas y devuelva el array de dichos grupos. Las letras mayúsculas y minúsculas no son relevantes cuando se clasifican strings en anagramas (pero se deben mantener para verlos en el resultado). El orden de los anagramas en el grupo tampoco es importante.
 
 ## Especificaciones
 

@@ -21,4 +21,4 @@
 从那里，找出**路线**，并将它们添加到表格中，以及相应的**控制器**和**操作**。
 
 #### 新的Rails
-开始你的Rails程序时，你们**必须**使用[**Wagon Rails 模版**](https://github.com/lewagon/rails-templates/tree/master)其中之一. 如果你们会有 `User` 模型，确保你们使用的是 [Devise 模版](https://github.com/lewagon/rails-templates/tree/master#devise) !
+开始你的Rails程序时，你们**必须**使用[**Wagon Rails 模版**](https://github.com/lewagon/rails-templates)其中之一. 如果你们会有 `User` 模型，确保你们使用的是 [Devise 模版](https://github.com/lewagon/rails-templates/#devise) !

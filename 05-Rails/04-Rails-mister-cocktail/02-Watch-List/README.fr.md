@@ -4,17 +4,14 @@ On va maintenant créer une application à 3 modèles ! Et tu l'auras deviné, o
 
 ## Générer l'application Rails
 
-Installe `yarn` si ce n'est pas déjà fait !
+Tu devrais déjà avoir [yarn](https://yarnpkg.com) installé sur ton ordinateur. Tu peux le vérifier en tapant :
 
 ```bash
-# macOS
-brew install yarn
-
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+yarn -v
+# You should see your yarn version here
 ```
+
+Si ce n'est pas le cas, retourne sur la section dédié du setup [macOS](https://github.com/lewagon/setup/blob/master/macos.fr.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) ou [Windows](https://github.com/lewagon/setup/blob/master/windows.fr.md#yarn).
 
 **Remarque** : Tu devrais maintenant pouvoir exécuter ces étapes sans cette fiche d'aide ! N'oublie pas la base de données `--database=postgresql` (on en parlera demain). 😉
 
@@ -87,37 +84,8 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Pour permettre à Bootstrap d'être responsive, tu vas devoir ajouter le code suivant dans ton `<head>` :
+Enfin, on va importer la bibliothèque JavaScript Bootstrap avec Webpack :
 
-```html
-<!-- app/views/layouts/application.html.erb -->
-
-<!DOCTYPE html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <!-- [...] -->
-```
-
-Enfin, on va importer la librairie JS Bootstrap avec webpack :
-
-```js
-// config/webpack/environment.js
-const { environment } = require('@rails/webpacker')
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require('webpack')
-environment.plugins.prepend('Provide',
-  new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    Popper: ['popper.js', 'default']
-  })
-)
-
-module.exports = environment
-```
 ```js
 // app/javascript/packs/application.js
 import 'bootstrap';
@@ -151,7 +119,7 @@ pour exécuter uniquement les tests dans le dossier `spec/models`. Assure-toi qu
 
 #### Validation
 
-- Un film doit avoir un titre unique.
+- Un film doit avoir un titre unique et un aperçu.
 - Une liste doit avoir un nom unique.
 - Un signet doit être lié à un film et une liste, et les associations [film, liste] doivent être uniques.
 - Le commentaire associé à un signet ne peut pas avoir moins de 6 caractères.
@@ -280,6 +248,8 @@ Tout le monde devrait pouvoir commenter et donner son avis sur notre collection 
 ### 9 - Aller plus loin
 
 - Ajoute la possibilité de rechercher des films.
-- Ajoute `typed.js` pour donner un titre sympa à la page d'accueil.
+- Ajoute [typed.js](http://www.mattboldt.com/demos/typed-js/) pour donner un titre sympa à la page d'accueil.
 - Ajoute des animations [animate on scroll](https://michalsnik.github.io/aos/) aux signets quand on fait défiler la page d'affichage des listes.
-- Utilise [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) pour afficher des étoiles au lieu d'un champ « input » normal dans le formulaire des avis.
+- Utilise [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) pour afficher des étoiles au lieu d'un champ `input` normal dans le formulaire des avis.
+
+Là encore, utilise des contrôleurs Stimulus lorsque tu implémentes du JavaScript dans ton app ⚠️

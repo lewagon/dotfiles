@@ -20,5 +20,5 @@ Recuerda que **no debes usar ningún CSS** en este ejercicio, ¡solo puedes usar
 
 ## Sugerencias y recursos adicionales
 
-- Asegúrate de usar la [documentación Bootstrap](https://getbootstrap.com/docs/4.6) ya que (https://getbootstrap.com/docs/4.2), ofrece mucho más que clases `btn`!
+- Asegúrate de usar la [documentación Bootstrap](https://getbootstrap.com/docs/5.1) ya que (https://getbootstrap.com/docs/5.1), ofrece mucho más que clases `btn`!
 - Échale un vistazo al [resultado final](http://lewagon.github.io/bootstrap-challenges/02-Bootstrap-prototyping) para compararlo con tu trabajo.
