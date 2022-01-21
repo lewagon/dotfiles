@@ -18,7 +18,7 @@ bundle install
 
 NB: If you have trouble launching the api, try to run `bundle exec rake db_reset`.
 
-**For YOUR javascript code:**
+**For YOUR JavaScript code:**
 
 * Use the files located in the `public` folder
   * Put your JS code in `public/js/game.js`

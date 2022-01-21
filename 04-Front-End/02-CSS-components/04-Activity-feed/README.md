@@ -19,11 +19,10 @@ Tabs are pretty easy to design. The HTML looks like this:
 ```
 
 Once that is done:
-
 - Make `.tabs` a flexbox
 - Add some `padding` on each `.tab`
 - You don't even need `space-between` or `align-items` here because the tabs already have the same `height`
-- You can also design the **active** and **hover** states of tabs using `.tab.active` & `.tab:hover`. You will probably need to play with the `opacity` and the `border-bottom` 😬
+- You can also design the **active** and **hover** states of tabs using `.tab:active` & `.tab:hover`. You will probably need to play with the `opacity` and the `border-bottom` 😬
 
 ## Notification design
 
@@ -52,4 +51,4 @@ You can select first (or last notification) with these selectors:
 
 It can be useful to get rid of `border-bottom` on the last notification of the feed for instance!
 
-NB: don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
+NB: don't forget to **hard refresh** your browser (`Cmd + Shift + R`) to clear your browser's cache if your page doesn't seem to display your current code!

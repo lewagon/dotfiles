@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-¡Bienvenido a Kitt!! Tu profesor/a te mostrará cómo hacer un ejercicio.
+¡Bienvenido/a a Kitt!! Tu profesor/a te mostrará cómo hacer un ejercicio.
 
 ## Especificaciones
 

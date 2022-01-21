@@ -1,6 +1,6 @@
 ## Sube tu pitch
 
-**Recordatorio importante** - ¡tienes tarea! La siguiente clase será noche de pitch en lugar de tener una sesión de código en vivo. Eso significa que tienes que ¡[cargar tu pitch en kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) con anticipacion!
+**Recordatorio importante** - ¡tienes tarea! La siguiente clase será noche de pitch en lugar de tener una sesión de código en vivo. Eso significa que tienes que ¡[cargar tu pitch en Kitt](https://kitt.lewagon.com/camps/<user.batch_slug>/products) con anticipacion!
 
 Recuerda los puntos clave:
 

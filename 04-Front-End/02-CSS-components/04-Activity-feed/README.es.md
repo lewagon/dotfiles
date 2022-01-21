@@ -23,7 +23,7 @@ Una vez que esto esté listo:
 - Convierte a `.tabs` en un flexbox.
 - Agrega algo de espacio de relleno (`padding`) a cada `.tab`.
 - Ni siquiera necesitas `space-between` o `align-items` aquí porque las pestañas (tabs) ya tienen la misma altura (`height`).
-- También puedes diseñar los estados de las pestañas (tabs) **active** y **hover** usando `.tab.active` y `.tab:hover`. Tal vez debas jugar con la opacidad (`opacity`) y con el borde inferior (`border-bottom`)😬.
+- También puedes diseñar los estados de las pestañas (tabs) **active** y **hover** usando `.tab:active` y `.tab:hover`. Tal vez debas jugar con la opacidad (`opacity`) y con el borde inferior (`border-bottom`)😬.
 
 ## Diseño de notificación
 

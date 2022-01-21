@@ -39,6 +39,6 @@ puts calories_counter(orders)
 ## Puntos clave de aprendizaje
 
 - ¿Cómo recuperas el valor guardado en un `Array` dentro de un `Hash`?
-- ¿Qué estructura de datos usaría para guardar nombres de animales ordenados alfabéticamente?
-- ¿Qué estructura de datos usaría para guardar nombres de animales y colores?
+- ¿Qué estructura de datos usarías para guardar nombres de animales ordenados alfabéticamente?
+- ¿Qué estructura de datos usarías para guardar nombres de animales y colores?
 

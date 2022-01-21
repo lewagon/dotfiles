@@ -49,7 +49,7 @@ Las listas desplegables (drop-down) son diferentes. **Tienen su propias etiqueta
 <select id="favorite" name="language">
   <option value="ruby">Ruby</option>
   <option value="css">CSS</option>
-  <option value="javascript">Javascript</option>
+  <option value="javascript">JavaScript</option>
 </select>
 ```
 
@@ -58,7 +58,8 @@ Las listas desplegables (drop-down) son diferentes. **Tienen su propias etiqueta
 Hablemos de las clases Bootstrap para formularios:
 
 - `.form-control` diseña cada `<input>` o `<select>` excepto el botón de envío (submit button).
-- `.form-group` agrupa cada `<input>` o `<select>` con sus etiquetas (`<label>`) asociadas.
+- `.form-text` nos permite agregar una pista debajo de un `<input>` o un `<select>`, como por ejemplo la longitud de una contraseña.
+- `.mb-3` agrupa cada `<input>` o `<select>` con su `<label>` asociada para agregar algo de espacio debajo de cada grupo
 
 Aquí está un ejemplo de un formulario Bootstrap **con etiquetas**:
 
@@ -90,17 +91,41 @@ Aquí está otro ejemplo. Este **no tiene etiquetas**:
 </form>
 ```
 
-Ahora, si buscas un [formulario alineado (inline)](https://getbootstrap.com/docs/4.2/components/forms/#inline-forms), puedes  **agregar la clase `.form-inline` al  `<form>`** (igual que la clase `.list-inline` para una lista `<ul>`):
+Ahora, si quieres un [inline form] (https://getbootstrap.com/docs/5.1/forms/layout/#inline-forms) puedes **agregarle `.row` (la cual es un flexbox) y las clases `.row-cols-*-auto` al `<form>`** (la clase `.row-cols-*` nos permite decidir a partir de qué breakpoint (los saltos en los que la pantalla cambia de layout) estarán posicionados tus campos de datos de entrada. Por ejemplo, `.row-cols-sm-auto` significa que en la versión mobile cada campo de datos de entrada toma el ancho completo mientras que en una tablet o en dispositivos más grandes todos los campos de datos de entrada están próximos entre sí ):
 
 ```html
-<form action="#" class="form-inline">
-  <div class="form-group">
+<form action="#" class="row row-cols-lg-auto">
+  <div class="col-12">
     <input type="email" class="form-control">
   </div>
-  <div class="form-group">
+  <div class="col-12">
     <input type="password" class="form-control">
-   </div>
-  <input type="submit" value="Sign In" class="btn btn-primary">
+  </div>
+  <div class="col-12">
+    <input type="submit" value="Sign In" class="btn btn-primary">
+  </div>
+</form>
+```
+
+## Uso del grid para crear formularios más complejos
+
+También puedes agregar la clase `.row` a tu `<form>` y ponerle dimensiones diferentes de `col` dentro. Aquí hay un ejemplo con 2 `input`s en la misma fila y el tercer `input` en una fila completa:
+
+```html
+  <form action="#" class="row">
+  <div class="col-6 mb-3">
+    <label for="first-name" class="form-label">First name</label>
+    <input id="first-name" type="text" class="form-control" placeholder="First name">
+  </div>
+  <div class="col-6 mb-3">
+    <label for="last-name" class="form-label">Last name</label>
+    <input id="last-name" type="text" class="form-control" placeholder="Last name">
+  </div>
+  <div class="col-12 mb-3">
+    <label for="address" class="form-label">Address</label>
+    <input id="address" type="text" class="form-control" placeholder="Address">
+  </div>
+  <!-- rest of the form below -->
 </form>
 ```
 

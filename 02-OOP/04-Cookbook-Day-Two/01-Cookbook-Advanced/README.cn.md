@@ -24,7 +24,7 @@ cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
 ruby lib/app.rb
 ```
 
-## 1 - 从web导入食谱
+## 从web导入食谱
 
 你可以从任何你知道的菜谱网站上爬虫，但好的网站是[allrecipes](https://www.allrecipes.com)或法语的[Marmiton](http://www.marmiton.org/)。以下是此功能的工作原理：
 
@@ -129,7 +129,7 @@ doc = Nokogiri::HTML(open(url).read, nil, 'utf-8')
 
 试试运行你的coobook！
 
-## 2 - 加一个 `@rating` 属性到 `Recipe`
+## 加一个 `@rating` 属性到 `Recipe`
 
 此新属性应为：
 
@@ -138,7 +138,7 @@ doc = Nokogiri::HTML(open(url).read, nil, 'utf-8')
 - 存储到CSV中
 - 列出菜谱时打印
 
-## 3 - （用户操作）将菜谱标记为已完成
+## （用户操作）将菜谱标记为已完成
 
 完成“搜索”后，尝试添加一个功能，将菜谱标记为已完成：
 
@@ -152,7 +152,7 @@ doc = Nokogiri::HTML(open(url).read, nil, 'utf-8')
 5. [ ] Christmas crumble (5 / 5)
 ```
 
-## 4 - 加一个 `@prep_time` 属性到 `Recipe`
+## 加一个 `@prep_time` 属性到 `Recipe`
 
 同样，这个新属性应该是：
 
@@ -161,7 +161,7 @@ doc = Nokogiri::HTML(open(url).read, nil, 'utf-8')
 - 存储到CSV中
 - 列出菜谱时打印
 
-## 5 -（选做部分）服务
+## （选做部分）服务
 
 尝试从控制器中提取 **解析** 逻辑并将其放入[**服务对象**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 

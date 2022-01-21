@@ -44,7 +44,7 @@
 
 **提示**: 你需要防止窗体提交的默认行为(使用 `preventDefault()` 方法).
 
-你的代码目前还不会将任何数据发布到服务器。为此，你需要通过添加一个 `POST` 请求来增强javascript代码，以发送要存储在API数据库中的数据。阅读 [文档](https://github.com/lewagon/wagon-chat-api/blob/master/README.md)，找出如何使用`fetch`生成请求。
+你的代码目前还不会将任何数据发布到服务器。为此，你需要通过添加一个 `POST` 请求来增强JavaScript代码，以发送要存储在API数据库中的数据。阅读 [文档](https://github.com/lewagon/wagon-chat-api/blob/master/README.md)，找出如何使用`fetch`生成请求。
 
 下面是一个在[JSON占位符API](https://jsonplaceholder.typicode.com/)上使用`fetch`的示例:
 

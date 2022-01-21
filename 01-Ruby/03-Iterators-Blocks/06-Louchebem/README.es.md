@@ -1,12 +1,12 @@
 ## Contexto y Objetivos
 
-Estás tomándote un trago con un emprendedor francés y él/ella te dice “¡Tengo una idea increíble: quiero que hacer que la gente vuelva a hablar louchebem!” Ahora tienes que ayudarlo/s 😊
+Estás tomándote un trago con un emprendedor francés y él/ella te dice “¡Tengo una idea increíble: quiero hacer que la gente vuelva a hablar louchebem!” Ahora tienes que ayudarlo/s 😊
 
 ## Un poco de historia
 
 * Louchébem es una jerga francesa que originalmente hablaban los carniceros parisinos. Lee [este artículo](https://en.wikipedia.org/wiki/Louch%C3%A9bem) para obtener un poco más de información al respecto.
-* Es muy simple, consideremos una palabra normal francesa como **"PATRON"**. Sustituyes el segundo grupo de consonantes (las letras antes de la primera vocal) por “L”. Luego mueves el ese primer grupo de consonantes hacia el final de la palabra, seguido de uno de los sufijos Louchébem e.g. -EM. **Así que "PATRON" se convierte en "LATRONPEM".** Fácil, ¿no? 😉
-* Pregúntate cuáles serán los problemas principales durante la creación del traductor (selección del sufijo final, como manejar el inicio de las palabras, los escenarios que habrán en una entrada de datos determinada ...)
+* Es muy simple, consideremos una palabra normal francesa como **"PATRON"**. Sustituyes el segundo grupo de consonantes (las letras antes de la primera vocal) por “L”. Luego mueves ese primer grupo de consonantes hacia el final de la palabra, seguido de uno de los sufijos Louchébem e.g. -EM. **Así que "PATRON" se convierte en "LATRONPEM".** Fácil, ¿no? 😉
+* Pregúntate cuáles serán los problemas principales durante la creación del traductor (la selección del sufijo final, cómo manejar el inicio de las palabras, los escenarios que habrán en una entrada de datos determinada ...).
 
 ### Escribe el pseudocódigo
 
@@ -28,5 +28,5 @@ El pseudocódigo se utiliza principalmente para comunicar la esencia de un algor
 
 ## Sugerencias y recursos adicionales
 
-- Ya todos conocemos el método `#split` pero ¿sabías que también puedes pasar un patrón de string como argumento del método `split` ? Por ahora no te preocupes por eso ya que pronto veremos Expresiones Regulares. Mientras tanto, intentemos con `"hello, friend!!".split(/\b/)` en irb, ¿te das cuenta de su utilidad para la sección de mejora del ejercicio? 😉
+- Ya todos conocemos el método `#split` pero ¿sabías que también puedes pasar un patrón de string como argumento del método `split` ? Por ahora no te preocupes por eso ya que pronto veremos Expresiones Regulares. Mientras tanto, intentemos con `"hello, friend!!".split(/\b/)` en irb, ¿Te das cuenta de lo útil que será para mejorar el ejercicio posteriormente? 😉
 - Tu pseudocódigo debe seguir [estos principios](http://www.cs.cornell.edu/courses/cs211/2000fa/materials/using_pseudo_code.htm)

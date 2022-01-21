@@ -16,13 +16,13 @@ On va maintenant créer un composant un peu plus complexe et travailler sur la c
 
 Tu dois maintenant ajouter du HTML dans chaque card (carte), et le CSS associé dans `cards.css` (le CSS des trois cartes peut aller dans le même fichier).
 
-**REMARQUE** : Essaie de créer le `card-trip` sans l'avatar de l'utilisateur dans le coin inférieur droit pour le moment. On l'ajoutera une fois qu'on aura terminé les cards (cartes).
+**REMARQUE** : Essaie de créer le `card-trip` sans l'avatar de l'utilisateur dans le coin inférieur droit pour le moment. On l'ajoutera une fois qu'on aura terminé les cartes.
 
-N'oublie pas de **forcer le rafraîchissement** de ton navigateur (`cmd + shift + r`) pour vider le cache si ta page n'affiche pas le code le plus récent !
+N'oublie pas de **forcer le rafraîchissement** de ton navigateur (`Cmd + Shift + R`) pour vider le cache si ta page n'affiche pas le code le plus récent !
 
 ## Organiser ton CSS avec des fichiers de composants
 
-Comme dans l'exercice précédent, on va utiliser la nouvelle structure professionnelle pour nos feuilles de style. On peut mettre tout le CSS de nos différentes classes dans un fichier CSS : `cards.css`:
+Comme dans l'exercice précédent, on va utiliser la nouvelle structure professionnelle pour nos feuilles de style. On peut mettre tout le CSS de nos différentes classes dans un fichier CSS `cards.css` :
 
 ```
 .
@@ -37,7 +37,7 @@ Puis dans `style.css`:
 
 ```css
 /* Importer les polices depuis Google Fonts */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;500;700");
 
 /* Importer tous les fichiers de composants */
 @import url("components/cards.css");
@@ -59,7 +59,7 @@ a {
 
 ```
 
-Ensuite, tu as seulement besoin d'**un lien unique vers `style.css`** dans ton fichier HTML :
+Ensuite, tu as seulement besoin d'**un lien unique vers `style.css`** dans ton fichier HTML :
 
 ```html
 <head>
@@ -69,12 +69,11 @@ Ensuite, tu as seulement besoin d'**un lien unique vers `style.css`** dans ton f
 
 ## Suggestions et ressources supplémentaires
 
-Maintenant que tu as créé tes trois cartes, on va mettre à jour ta dernière carte `card-trip` avec l'avatar d'un utilisateur dans le coin inférieur droit. Pour épingler un élément à un endroit précis au sein d'un autre élément, on va utiliser le [motif Relatif > Absolu](https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/). Voici les étapes à suivre pour positionner un élément en utilisant ce motif :
+Maintenant que tu as créé tes trois cartes, on va mettre à jour ta dernière carte `card-trip` avec l'avatar d'un utilisateur dans le coin inférieur droit. Pour épingler un élément à un endroit précis au sein d'un autre élément, on va utiliser le [motif Relatif > Absolu](https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/). Voici les étapes à suivre pour positionner un élément en utilisant ce motif :
 
 ### Définir la div principale comme `position: relative` :
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/position-relative.png)
-
 
 ### Épingler une div à l'intérieur avec `position: absolute` (relative à l'élément parent)
 
@@ -91,4 +90,3 @@ Tu peux maintenant utiliser cette technique pour ajouter un avatar en superposit
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-position.png" alt="" width="400">
 </div>
-

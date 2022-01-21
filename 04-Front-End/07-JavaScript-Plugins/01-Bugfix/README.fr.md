@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Un challenge simple pour commencer la journée ! Ce matin, on a vu comment travailler avec plusieurs fichiers dans un projet frontend. Le dossier `lib` contient deux fichiers JavaScript. Mais le code est cassé et ton travail est de le réparer.
+Un challenge simple pour commencer la journée ! Ce matin, on a vu comment travailler avec plusieurs fichiers dans un projet front-end. Le dossier `lib` contient deux fichiers JavaScript. Mais le code est cassé et ton travail est de le réparer.
 
 ## Spécifications
 

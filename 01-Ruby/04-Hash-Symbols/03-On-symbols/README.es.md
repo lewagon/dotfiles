@@ -1,14 +1,14 @@
 ## Contexto y Objetivos
 
-### Para discutir con tus compañeros
+### Para discutir con tus compañeros/as
 
-- ¿Cuales son las diferencias entre una cadena de texto (String) y un símbolo (Symbol)?
+- ¿Cuales son las diferencias entre un String y un Symbol?
 - ¿Cuándo deberías usar uno o el otro?
 - En cuanto a la memoria ¿Cuál es el comportamiento de cada uno?
 
 ### Resumen técnico
 
-El uso de símbolos (symbols) puede ser complicado para los principiantes de Ruby. Una regla general es que los símbolos (symbols) o las cadenas de texto (strings) son bastante similares pero:
+El uso de símbolos (symbols) puede ser complicado para los/as principiantes de Ruby. Una regla general es que los symbols o los strings son bastante similares pero:
 
 Cuando uses un string más como un identificador único en tu programa que como texto, debes considerar usar un símbolo (symbol).
 
@@ -30,7 +30,7 @@ Lee [la siguiente respuesta en StackOverflow](http://stackoverflow.com/a/8189435
 
 ## Especificaciones
 
-Abre el archivo `lib/symbols.rb`. Verás un quiz de verdadero/falso y algunos métodos para evaluar tu capacidad para seleccionar símbolos (symbols) en vez de cadenas de texto (strings).
+Abre el archivo `lib/symbols.rb`. Verás un quiz de verdadero/falso y algunos métodos para evaluar tu capacidad para seleccionar symbols en vez de strings.
 
 ## Puntos clave de aprendizaje
 

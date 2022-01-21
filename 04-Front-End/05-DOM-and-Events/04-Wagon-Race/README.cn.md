@@ -62,7 +62,7 @@ rake webpack
 
 大部分情况下，一个好的方法是在写JavaScript代码前，先尽可能多地写出好的HTML标记和CSS类。不大行的前端开发者通常花时间写很长的会改变CSS值的JS代码, 而不是写能够好好利用现有CSS类的简洁的代码。
 
-#### Javascript
+#### JavaScript
 
 把所有代码写在 `lib/wagon_race.js` 文件里. 我们需要想办法让JavaScript更新得分板的状态。需要创建可以更新玩家分数的简单的JS函数。再次声明，做到这个有不同的方法。一个例子是：
 

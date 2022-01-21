@@ -103,7 +103,7 @@ Te recomendamos usar [Unsplash](https://unsplash.com/search/photos/house) para a
 ¡Intenta agregar una barra de búsqueda para filtrar apartamentos en el index y poder encontrar el apartamento perfecto!
 
 - ¿Cómo podemos encontrar lo que busca el/la usuario/a?
-- ¿Qué método ActiceRecord podemos usar para crear un buscador simple? Esto te puede ayudar a comenzar `@flats = Flat.where("name LIKE '%garden%'")`. Asegúrate de que entiendas esa línea de código antes de dar un paso más
+- ¿Qué método ActiveRecord podemos usar para crear un buscador simple? Esto te puede ayudar a comenzar `@flats = Flat.where("name LIKE '%garden%'")`. Asegúrate de que entiendas esa línea de código antes de dar un paso más
 - ¿Cómo podemos asegurarnos de que la página siga funcionando como el index tradicional aunque el/la usuario/a no esté buscando nada?
 - ¿Cómo podemos asegurarnos de que la entrada (input) se complete parcialmente con la consulta de búsqueda cuando el usuario/a la escriba?
 
