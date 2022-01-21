@@ -41,7 +41,7 @@ rake webpack
 要使用它，你需要在HTML文件的 `head` 中添加这一行，这样就可以在你的地图上使用MapBox的样式表：
 
 ```html
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet'>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet">
 ```
 
 要添加地图的话，你需要一个空的支持性HTML元素。例如：

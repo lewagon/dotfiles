@@ -40,7 +40,7 @@ Para mostrar un mapa MapBox con el marcador de una dirección dada usaremos una 
 Para poder usarla debes agregar esta línea en el `head` de tu archivo HTML para así poder usar la hoja de estilo (stylesheet) de MapBox para tu mapa:
 
 ```html
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet'>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet">
 ```
 
 Para agregar un mapa necesitarás un elemento HTML vacío de soporte. Por ejemplo:
