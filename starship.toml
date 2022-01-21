@@ -1,6 +1,6 @@
 # Inserts a blank line between shell prompts
 add_newline = true
-command_timeout = 1000
+command_timeout = 10000
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
@@ -17,7 +17,7 @@ threshold = 30
 style = "bold red"
 
 [cmd_duration]
-min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+min_time = 10000  # Show command duration over 10,000 milliseconds (=10 sec)
 format = '\[[⏱ $duration ]($style)\]'
 
 [dart]
@@ -107,6 +107,7 @@ format = '\[[$symbol$version]($style)\]'
 [php]
 symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+style = "bold dimmed #8892BF"
 
 [python]
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'

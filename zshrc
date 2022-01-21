@@ -69,7 +69,7 @@ if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # The next line sets the theme for bat (cat replacement) to something legible on light mode
-export BAT_THEME="GitHub"
+export BAT_THEME="TwoDark"
 
 
 # Custom formatting for docker ps
