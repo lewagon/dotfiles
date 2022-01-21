@@ -19,6 +19,7 @@ Plug 'Alok/notational-fzf-vim'
 Plug 'ferrine/md-img-paste.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
+Plug 'junegunn/vim-emoji'
 call plug#end()
 
 " Config Section
@@ -60,7 +61,8 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <buffer> <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 let g:mdip_imgdir = 'img'
 nmap <silent> <c-s> :NV<CR>
-nmap <silent> <leader>ts "=strftime("%c")<CR>P
+nmap <silent> <leader>ts "=strftime("%c")<CR>
+nnoremap <silent> <leader>em :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
 
 
 " Custom Functions Section
@@ -109,3 +111,8 @@ augroup vimwikigitsync
   " After writing to any file in the wiki dir, add all files in the repo, commit and push
   au! BufWritePost ~/workspace/xavierosee/wiki/* !cd ~/workspace/xavierosee/wiki; git add -A;git commit -m "Autocommit and push";git push
 augroup END
+
+
+" Emoji Autocompletion
+set completefunc=emoji#complete
+
