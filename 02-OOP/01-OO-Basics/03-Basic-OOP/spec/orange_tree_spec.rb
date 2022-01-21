@@ -73,8 +73,8 @@ describe OrangeTree do
     expect(orange_tree.height).to eq 10
   end
 
-  it "should not be able to live 100 years or more" do
-    100.times do
+  it "should not be able to live more than 100 years" do
+    101.times do
       orange_tree.one_year_passes!
     end
 
