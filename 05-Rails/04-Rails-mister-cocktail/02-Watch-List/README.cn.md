@@ -4,19 +4,16 @@
 
 ## 生成Rails应用
 
-如果你还没有安装`yarn`的话，先安装`yarn`！
+你应该已安装过[yarn](https://yarnpkg.com)了。确认一下：
 
 ```bash
-# macOS
-brew install yarn
-
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+yarn -v
+# 你应该能看到你的yarn版本
 ```
 
-**注意**: 你现在应该可以在没有小抄的情况下完成这些步骤！不要忘了`--database=postgresql` （我们明天会学习这个）。 😉
+如果没看到的话，那请根据配置指南安装：[macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn)，[Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn)，[Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn)。
+
+**注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`--database=postgresql`（明天你就知道为什么了）😉
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -30,7 +27,7 @@ cd rails-watch-list
 rails db:create
 ```
 
-我们设置git，在GitHub上创建一个代码仓库，并且把我们的项目代码推送过去。
+我们需要设置git，在GitHub上创建一个代码仓库，并且把我们的项目代码推送过去。
 
 ```bash
 git add .
@@ -62,7 +59,7 @@ rspec spec/models                # 运行测试
 开始写代码之前，不要忘了设置Rails应用的前端。就像早上的课程里那样，设置Bootstrap和它的JavaScript依赖。
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap @popperjs/core
 ```
 
 添加我们要用到的gem：
@@ -79,6 +76,8 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
+把`config/initializers/simple_form_bootstrap.rb`文件里**所有的内容**都换成[这个](https://github.com/heartcombo/simple_form-bootstrap/blob/main/config/initializers/simple_form_bootstrap.rb)。
+
 下载Le Wagon的样式表:
 
 ```bash
@@ -87,41 +86,11 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-你需要在`<head>`里添加以下内容来启用Bootstrap的响应式设计：
+最后我们需要用webpack导入Boostrap JS库：
 
-```html
-<!-- app/views/layouts/application.html.erb -->
-
-<!DOCTYPE html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <!-- [...] -->
-```
-
-最后我们使用webpack来导入Boostrap JS库：
-
-```js
-// config/webpack/environment.js
-const { environment } = require('@rails/webpacker')
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-// Bootstrap 4 依赖 jQuery 和 Popper.js:
-const webpack = require('webpack')
-environment.plugins.prepend('Provide',
-  new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    Popper: ['popper.js', 'default']
-  })
-)
-
-module.exports = environment
-```
 ```js
 // app/javascript/packs/application.js
-import 'bootstrap';
+import "bootstrap";
 ```
 
 不要忘了经常`commit`和`push`你的代码。
@@ -130,7 +99,8 @@ import 'bootstrap';
 
 ### 1 - 模型Models
 
-和你的同伴一起在[db.lewagon.com](http://db.lewagon.com)画出数据库模式。我们需要三个数据库表，电影`movies`， 清单`lists`和书签`bookmarks`。思考这些表之间的关系和*哪一个表将会保存引用（references）*。😉
+和你的同伴一起在[db.lewagon.com](http://db.lewagon.com)画出数据库模式。
+我们需要三个数据库表， 电影`movies`， 清单`lists`和 书签`bookmarks`。思考这些表之间的关系和*哪一个表将会保存引用（references）*。😉
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
@@ -168,7 +138,7 @@ rspec spec/models
 
 ### 2 - 初始化电影movies
 
-**我们的应用不允许用户创建电影**
+**我们的应用不允许用户创建电影**。
 相反，我们会生成一些固定的电影供用户选择。
 就像这样：
 
@@ -197,6 +167,7 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 3. 在[这里](http://tmdb.lewagon.com/movie/top_rated)试一下
 
 **电影的图片Movie Images**
+
 仔细阅读这篇[文章](https://developers.themoviedb.org/3/getting-started/images)来理解如何从API获取电影的图片。
 
 ### 3 - 清单Lists的路由，控制器和视图
