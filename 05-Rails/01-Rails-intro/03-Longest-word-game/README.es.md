@@ -49,7 +49,7 @@ Prefix Verb URI Pattern      Controller#Action
 
 Necesitamos agregar un formulario debajo de las letras para que el/la usuario/a pueda agregar una sugerencia y enviarla.
 
-Agrega un `<form />` en tu vista. Debe hacer el `POST` a la acción `/score` en el `GamesController`.
+Agrega un `<form>` en tu vista. Debe hacer el `POST` a la acción `/score` en el `GamesController`.
 
 Tendrás que agregarle la siguiente línea a tu `form`:
 
