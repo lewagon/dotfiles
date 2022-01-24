@@ -62,7 +62,7 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <buffer> <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 let g:mdip_imgdir = 'img'
 nmap <silent> <c-s> :NV<CR>
-nmap <silent> <leader>ts "=strftime("%c")<CR>
+nmap <silent> <leader>ts i<C-R>=strftime("%a %d %b %Y %I:%M:%S %p %Z")<CR><Esc>
 nnoremap <silent> <leader>em :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
 
 
@@ -108,9 +108,9 @@ augroup end
 " VimWiki git sync
 augroup vimwikigitsync
   " Make sure this window's working dir is the wiki repo dir whenever index.wiki is opened
-  au BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki !cd ~/workspace/xavierosee/wiki; git pull
+  au BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki silent !cd ~/workspace/xavierosee/wiki; git pull
   " After writing to any file in the wiki dir, add all files in the repo, commit and push
-  au! BufWritePost ~/workspace/xavierosee/wiki/* !cd ~/workspace/xavierosee/wiki; git add -A;git commit -m "Autocommit and push";git push
+  au! BufWritePost ~/workspace/xavierosee/wiki/* silent !cd ~/workspace/xavierosee/wiki; git add -A;git commit -m "Autocommit and push";git push
 augroup END
 
 
