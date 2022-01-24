@@ -20,6 +20,7 @@ Plug 'ferrine/md-img-paste.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
 Plug 'junegunn/vim-emoji'
+Plug 'elzr/vim-json'
 call plug#end()
 
 " Config Section
