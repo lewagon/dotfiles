@@ -13,7 +13,7 @@ Verás que `www.lewagon.com` está vinculado a un dominio en Heroku el cual est�
 ¿Quieres saber tu dirección IP? Tu computadora tiene una dirección local otorgada por el router WiFi y por lo tanto la puedes ver al escribir `ips` en tu terminal. Puedes type esto si quieres ver la dirección IP pública de este router, la que compartes con los otros estudiantes:
 
 ```bash
-myip
+curl https://ipinfo.io/json
 ```
 
 ## Especificaciones
@@ -33,13 +33,13 @@ Así es como representamos un binario de 8 bits:
 11111111
 # => 255
 ```
+
 ¿Cómo pasamos de binario a decimal? Usamos el poder del 2.
 
 ```ruby
 2^7 | 2^6 | 2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0 |
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
 ```
-
 
 Así que una dirección IP de 32 bits sería:
 
@@ -86,6 +86,7 @@ Si consideramos `37.160.113.170`, debemos comenzar por los primeros 8 bits: `37`
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |  0  |  0  |
 ```
+
 ¿Puedo restarle `4` a `5`? Si. Así que le asignamos `1` a `4` y nos queda `1`.
 
 ```ruby
