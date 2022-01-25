@@ -1,10 +1,9 @@
-require 'bundler'
-Bundler.setup
-
-require 'json'
-require 'rabl'
-require 'sequel'
-require 'sinatra'
+require "sinatra"
+require "rabl"
+require "active_support/core_ext"
+require "active_support/inflector"
+require "builder"
+require "sequel"
 
 Rabl.configure do |config|
   config.include_json_root = false
