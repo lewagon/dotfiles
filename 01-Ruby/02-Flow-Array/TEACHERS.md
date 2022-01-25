@@ -137,7 +137,7 @@ puts "You won! Price was #{price_to_find}$"
 1. **Delete** an element
 1. Get **array's size**
 1. Loop with `each`
-1. Pick custom methods in the ruby doc with the class and test them
+1. Pick custom methods in the Ruby doc with the class and test them
 
 ```ruby
 # 1. Define an array

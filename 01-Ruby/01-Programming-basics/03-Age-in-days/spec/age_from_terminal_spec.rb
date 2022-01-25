@@ -1,13 +1,12 @@
-require 'open3'
-require 'age_in_days'
+require "open3"
+require "age_in_days"
 
-describe 'Interface' do
-
-  it 'should print out the age calculated from age_in_days' do
+describe "Interface" do
+  it "should print out the age calculated from age_in_days" do
     result = nil
     y, m, d = 1986, 11, 18
 
-    Open3.popen2('ruby ./lib/interface.rb') do |i, o, th|
+    Open3.popen2("ruby ./lib/interface.rb") do |i, o, th|
       # Send year
       i.puts y.to_s
       # Send month
@@ -22,5 +21,4 @@ describe 'Interface' do
     age = age_in_days(d, m, y)
     expect(result).to match(/You are #{age.to_s} days old/)
   end
-
 end

@@ -1,8 +1,8 @@
 ## Background & Objectives
 
-In frontend development, **data attributes** are a pretty handy way to inject values in your HTML that you can easily access in your JS.
+In front-end web development, **data attributes** are a pretty handy way to inject values in your HTML that you can easily access in your JavaScript.
 
-In this challenge, let's write a function that parses an HTML tag and extracts its data attributes into an `Object`.
+In this challenge, let's write a function that parses an HTML tag and extracts its data attributes into an `object`.
 
 ## Specs
 
@@ -25,7 +25,7 @@ dataset(burger);
 
 ### Help
 
-Don't forget to use Chrome DevTools to debug!
+Don't forget to use your Web browser devtools to debug!
 
 When you want to match **all the matching occurrences** in your string, you may want to look into the [`g` modifier](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Parameters).
 

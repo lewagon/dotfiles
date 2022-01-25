@@ -9,7 +9,7 @@ describe("Exercise 3", () => {
       });
     });
 
-    ["Orcs", "Wargs", "Goblins", "Uruk Hai", "Trolls"].forEach((soldierType) => {
+    ["Orcs", "Wargs", "Goblins", "Uruk-hai", "Trolls"].forEach((soldierType) => {
       it(`should return false for ${soldierType}`, () => {
         assert.equal(isGood(soldierType), false);
       });
@@ -35,7 +35,7 @@ describe("Exercise 3", () => {
     });
 
     [
-      ["Tie", "Elves:3,Eagles:5,Goblins:2,Uruk Hai:6"],
+      ["Tie", "Elves:3,Eagles:5,Goblins:2,Uruk-hai:6"],
       ["Good", "Hobbits:1"],
       ["Evil", "Goblin:2,Wargs:3"],
       ["Evil", "Hobbits:1,Elves:2,Dwarves:3,Eagles:4,Orcs:5,Wargs:6,Goblins:7"]

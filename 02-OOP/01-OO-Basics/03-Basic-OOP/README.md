@@ -8,7 +8,7 @@ Using built-in classes is good, but creating your *own* classes is even better!
 
 ## Specs
 
-Implement an `OrangeTree` class that models the life of an orange tree (its birth, life cycle and death):
+Implement an `OrangeTree` class that models the life of an orange tree (its birth, life cycle and death).
 
 ### Aging
 - When an orange tree is born, its age is 0.
@@ -41,7 +41,7 @@ def one_year_passes!
 end
 ```
 
-To test it, launch the interface (`ruby lib/interface.rb`) and see what happens ;).
+To test it, launch the interface (`ruby lib/interface.rb`) and see what happens ;)
 
 ### Refactoring
 

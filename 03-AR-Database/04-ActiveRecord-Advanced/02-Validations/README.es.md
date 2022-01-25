@@ -29,7 +29,7 @@ rake db:migrate
 
 ### Bonus: Callbacks
 
-Esto no estuvo en la clase pero necesitas saber que los callbacks existen en ActiveRecord. Una retrollamada **(un callback), también conocida como llamada de vuelta, es un pedazo de código que es llamado cuando un evento es generado**. Este concepto lo usaremos mucho cuando programemos en JavaScript más adelante en el bootcamp.
+Esto no estuvo en la clase pero necesitas saber que los callbacks existen en Active Record. Una retrollamada **(un callback), también conocida como llamada de vuelta, es un pedazo de código que es llamado cuando un evento es generado**. Este concepto lo usaremos mucho cuando programemos en JavaScript más adelante en el bootcamp.
 
 Ejemplo: cuando la instancia de usuario está a punto de ser validada, llama a un método para hacer algo de limpieza primero como cambiar un nombre de usuario (`username`) a minúsculas.
 

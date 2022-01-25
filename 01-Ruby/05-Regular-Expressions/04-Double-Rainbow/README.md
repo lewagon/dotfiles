@@ -4,19 +4,16 @@ During your journey at Le Wagon, you will discover a lot of tools, services and 
 
 ![Logos](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/double-rainbow_logos.png)
 
-
 ## Specs
 
 What are the logos actual colors? They are hidden in a **secret message**. Your mission is to build the correct regexes to extract them!
 
 ### The secret message
 
-*Reveal the logos' colors:
-Elegant shapes, some have evolved to a very iconized style.
-Definitely a vivid color scheme with bright orange and shiny yellow,
-many shades of blue, oscillating between purple and indigo! but not much green*
+*Reveal the logos' colors: Elegant shapes, some have evolved to a very iconized style. Definitely a vivid color scheme with bright orange and shiny yellow, many shades of blue, oscillating between purple and indigo! but not much green*
 
 ### Code the regexes
+
 Open `lib/double_rainbow.rb` where a series of methods await you, each one is designed to extract text from the secret message:
 - Follow hints and instructions to build your regex.
 - Each method **takes a string** as a parameter and **returns a string**
@@ -25,8 +22,8 @@ When your regex is correct, it will pick a color and unlock a badge.
 
 Get help with [Rubular](http://rubular.com/)
 
-
 ### Test your code
+
 You can test your code by calling your methods with the secret message and running `ruby lib/test.rb`:
 
 ```bash

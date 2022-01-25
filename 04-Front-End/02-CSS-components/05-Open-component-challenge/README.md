@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-OK now that you've reproduced the designs we've given to you let's see how you manage an open component challenge 😎.
+OK now that you've reproduced the designs we've given to you let's see how you manage an open component challenge 😎
 
 You will have to find a component that you like on Dribbble and try to reproduce it.
 

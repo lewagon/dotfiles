@@ -152,7 +152,7 @@ para que solamente se corran los tests en la carpeta `spec/models`. Asegúrate d
 
 #### Validación
 
-- Una película debe tener un título único.
+- Una película debe tener un título único y una descripción.
 - Una lista debe tener un nombre único.
 - Un bookmark debe estar enlazado a una película y a una lista, y los pares [movie, list] deben ser únicos.
 - El comentario en el bookmark no puede ser de menos de 6 caracteres.

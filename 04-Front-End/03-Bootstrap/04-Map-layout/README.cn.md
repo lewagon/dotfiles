@@ -1,6 +1,6 @@
 ## 背景和目标
 
-建立一个[带粘性地图的结果页](https://lewagon.github.io/layouts-demo/flexbox-grid-layout.html)。在这个练习中，请注意我们没有在`index.html`中的任何地方导入Bootstrap！你需要在`pages/map.css`文件中不使用Bootstrap来实现这个布局。你需要在`pages/map.css`文件中实现这个布局并不去使用Bootstrap。
+建立一个[带粘性地图的结果页](https://lewagon.github.io/layouts-demo/campuses-with-map.html)。在这个练习中，请注意我们没有在`index.html`中的任何地方导入Bootstrap！你需要在`pages/map.css`文件中不使用Bootstrap来实现这个布局。你需要在`pages/map.css`文件中实现这个布局并不去使用Bootstrap。
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/map-example.png)
 

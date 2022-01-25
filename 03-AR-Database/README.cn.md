@@ -1,4 +1,4 @@
-DB & ActiveRecord模块一共有4天的时间。
+DB & Active Record模块一共有4天的时间。
 
 ## `01 模式设计和SQL`
 
@@ -10,7 +10,7 @@ DB & ActiveRecord模块一共有4天的时间。
 
 ## `03 活跃记录基础知识`
 
-这是Active Record的第一部分，一个强大的Ruby库，用于连接你的对象和数据库。Active Record是Rails的核心模块之一。了解ActiveRecord模型如何通过一个简单的**命名惯例**神奇地与一个表相连接。这就是Active Record的魔力!
+这是Active Record的第一部分，一个强大的Ruby库，用于连接你的对象和数据库。Active Record是Rails的核心模块之一。了解Active Record模型如何通过一个简单的**命名惯例**神奇地与一个表相连接。这就是Active Record的魔力!
 
 ## `04 关联和验证`
 

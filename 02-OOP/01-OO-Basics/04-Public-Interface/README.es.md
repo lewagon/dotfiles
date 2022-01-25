@@ -78,7 +78,7 @@ Ha llegado el momento en que tal vez delegues estas responsabilidades a otra cla
 Después de haber implementado la clase `Transaction`, tendrás que cambiar tu clase `BankAccount` para que su arreglo (array) de transacciones almacene objetos `Transaction` en lugar de números. También deberá cargar el archivo *transaction.rb* en *account.rb* con
 
 ```ruby
-require_relative 'transaction'
+require_relative "transaction"
 ```
 
 ## Puntos clave de aprendizaje

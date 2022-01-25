@@ -19,7 +19,7 @@ rake db:migrate
 
 - A user should have a `username`
 - A user should have a **valid** `email`
-- Each should have a unique `username`
+- Each should have a **unique** `username`
 
 ### Add validations to the `Post` model
 
@@ -29,7 +29,7 @@ rake db:migrate
 
 ### Bonus: Callbacks
 
-We didn't cover this in the lecture, but you need to know that callbacks exist in ActiveRecord. **A callback is a piece of code that is called when an event is fired**. We will use this concept a lot when programming with JavaScript later in the bootcamp.
+We didn't cover this in the lecture, but you need to know that callbacks exist in Active Record. **A callback is a piece of code that is called when an event is fired**.
 
 Example: when a user instance is about to be validated, call a method to do some cleanup beforehand. For instance, we may want to put the `username` in lowercase.
 
@@ -53,8 +53,8 @@ Implement a callback to strip the email before validation.
 
 Implement a callback triggered after a user has been created to send a **welcome email** to this new user. Read about the [available callbacks](http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks) to figure out which callback to use.
 
-Right now we don't have Rails or utilities gems like [letter_opener](https://github.com/ryanb/letter_opener), so we'll simulate sending an email with the following method call:
+To simulate sending an email, you can use the following method call:
 
 ```ruby
-FakeMailer.instance.mail('boris@lewagon.org', 'Welcome to HN!')
+FakeMailer.instance.mail("boris@lewagon.org", "Welcome to HN!")
 ```

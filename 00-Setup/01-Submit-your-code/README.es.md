@@ -83,5 +83,5 @@ Si ya terminaste toda la configuración de tu computadora y los ejercicios, éch
 
 * [ficha recordatoria git](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 * [fichas recordatorias interactivas](http://www.ndpsoftware.com/git-cheatsheet.html)
-* Ve este video [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) sobre cómo usar git/Github para proyectos habituales (que no son de desarrollo)
+* Ve este video [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) sobre cómo usar git/GitHub para proyectos habituales (que no son de desarrollo)
 * Lee y practica todo este tutorial: [Aprende lo suficiente sobre líneas de comando para ser peligroso](http://www.learnenough.com/command-line/)

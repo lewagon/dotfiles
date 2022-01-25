@@ -10,8 +10,7 @@ host www.lewagon.com
 
 Verás que `www.lewagon.com` está vinculado a un dominio en Heroku el cual está mapeado a una dirección específica.
 
-¿Quieres saber tu dirección IP? Tu computadora tiene una dirección local otorgada por el router WiFi y por lo tanto la puedes ver al escribir `ips` en tu terminal. Puedes escribir `myip` si quieres ver la dirección IP pública de este router, la que compartes con los/as otros/as estudiantes.
-
+¿Quieres saber tu dirección IP? Tu computadora tiene una dirección local otorgada por el router WiFi y por lo tanto la puedes ver al escribir `ips` en tu terminal. Puedes type esto si quieres ver la dirección IP pública de este router, la que compartes con los otros estudiantes:
 
 ```bash
 myip

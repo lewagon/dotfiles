@@ -1,7 +1,6 @@
 ## Background & Objectives
 
-You now know how to use the `SQLite3::Database` instance to `execute` SQL queries
-against a SQLite database:
+You now know how to use the `SQLite3::Database` instance to `execute` SQL queries against a SQLite database:
 
 ```ruby
 DB = SQLite3::Database.new("a_file.db")
@@ -9,8 +8,7 @@ rows = DB.execute('SELECT * FROM table_name')
 # => rows is an Array of records, each record being an Array of columns.
 ```
 
-Before moving on to the main goal for today, let's rehearse making a query to the database.
-We will be using the same `jukebox` database from yesterday's exercises.
+Before moving on to the main goal for today, let's rehearse making a query to the database. We will be using the same `jukebox` database from yesterday's exercises.
 
 ## Specs
 

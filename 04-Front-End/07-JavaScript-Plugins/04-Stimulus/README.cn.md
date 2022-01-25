@@ -189,7 +189,7 @@ export default class extends Controller {
 
 💡 如果你使用代码编辑器的linter，那么ESLint会抱怨语法错误。此练习未配置来支持[`babel-eslint`](https://github.com/babel/babel-eslint) 允许这种语法的包。可以忽略这个错误继续挑战。
 
-继续，点击按钮。你能在控制台看到 `this.triggerTarget` 吗？它是否在引用文档对象模型（DOM）中的 `<button />` 元素？
+继续，点击按钮。你能在控制台看到 `this.triggerTarget` 吗？它是否在引用文档对象模型（DOM）中的 `<button>` 元素？
 
 我们现在可以安全地使用这个变量来运行以下代码，以满足上述的4个要求：
 

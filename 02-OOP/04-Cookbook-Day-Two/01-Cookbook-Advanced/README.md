@@ -1,6 +1,6 @@
 ⚠️ There's **no `rake`** for this exercise. Sorry 😉
 
-So now we want to enhance our cookbook by finding recipes online. We will use [🇬🇧 allrecipes](https://www.allrecipes.com), because their markup structure is pretty clean (making them good candidates for scraping). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
+So now we want to enhance our cookbook by finding recipes online. We will use [allrecipes](https://www.allrecipes.com), because their markup structure is pretty clean (making them good candidates for scraping). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
@@ -14,15 +14,15 @@ cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/04-Cookbook-Day-Two
 cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
 ```
 
-You can also take the solution from the livecode as a starting point for today (ask your teacher to share it in Slack).
+You can also take [the solution from the last livecode](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?feature=livecode&amp;path=02-OOP%2F03-Cookbook-Day-One&feature=livecode) as a starting point for today.
 
-Before starting, run your pasted cookbook to make sure that day one's user actions (list / create / destroy) are working!
+Before starting, run the code you've just imported to make sure that implemented user actions (list / create / destroy) are working!
 
 ```bash
 ruby lib/app.rb
 ```
 
-## 1 - Import recipes from the web
+## Import recipes from the web
 
 You can scrape from any recipe website that you know, but a good one is [allrecipes](https://www.allrecipes.com). Here's how this feature should work:
 
@@ -52,7 +52,7 @@ Which recipe would you like to import? (enter index)
 Importing "Strawberry slushie"...
 ```
 
-### Pseudo-code
+### Pseudocode
 
 For this new **user action** (hence new _route_), we need to:
 
@@ -67,7 +67,7 @@ For this new **user action** (hence new _route_), we need to:
 
 First, let's have a look at how we'll retrieve information from the Web.
 
-You can download an HTML document on your computer with the `curl` command. Get the following HTML page saved as a `.html` file in your working directory by running one of these two commands in the terminal:
+You can download an HTML document on your computer with the `curl` command. Get the following HTML page saved as a `.html` file in your working directory by running this command in your terminal:
 
 ```bash
 curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > strawberry.html
@@ -75,7 +75,7 @@ curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > s
 
 👆 **This step is really important**!
 
-The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to allrecipes every time (that would probably also get us blacklisted).
+The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to allrecipes every time (that would probably also get you blacklisted).
 
 ### Parsing with Nokogiri
 
@@ -94,50 +94,49 @@ For instance, if you want to find all elements with the `student` class in the f
 You can use the following boilerplate code to start:
 
 ```ruby
-require 'nokogiri'
-file = 'fraise.html'  # or 'strawberry.html'
-doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
+require "nokogiri"
+file = "strawberry.html"
+doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
 
 # Up to you to find the relevant CSS query.
 ```
 
-You can work in a temporary file -- `parsing.rb` for instance -- to find the right selectors and the ruby code to get all the data you want to extract from the HTML. You can start by just displaying the information extracted with `puts`. Once you found all the selectors you need, go on and code the action in your cookbook.
+You can work in a temporary file -- `parsing.rb` for instance -- to find the right selectors and the Ruby code to get all the data you want to extract from the HTML. You can start by just displaying the information extracted with `puts`. Once you found all the selectors you need, go on and code the action in your cookbook.
 
-For today you will be using the Nokogiri `.search()` method, which takes a CSS selector as a parameter. If you don't remember the syntax have a look at this section of the [parsing lecture](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6).
+For today you will be using the Nokogiri `.search()` method, which takes a CSS selector as a parameter.
 
-**Resource**: Want to dive deeper in Nokogiri? Here's a [good Nokogiri scraping guide](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
+If you don't remember the syntax have a look at [our dedicated cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri).
 
 ### Get response HTML data using `open-uri`
 
-Time to use your parsing code on a live URL with different queries (not just `[fraise|strawberry]`). Use the [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI:
+Time to use your parsing code on a live URL with different queries (not just `strawberry`). Use the [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI:
 
 ```ruby
-require 'nokogiri'
-require 'open-uri'
+require "nokogiri"
+require "open-uri"
 url = "http://the_url_here"
-doc = Nokogiri::HTML(URI.open(url).read, nil, 'utf-8')
+doc = Nokogiri::HTML(URI.open(url).read, nil, "utf-8")
 
 # Rest of the code
 ```
 
 ### `Controller` / `View` / `Router`
 
-Once you have this parsing logic, time to add this new user action in your `Controller`. Use the pseudo-code above as a guide of this new method. For your first attempt, you can copy-paste the working parsing code into your controller.
+Once you have this parsing logic, time to add this new user action in your `Controller`. Use the pseudocode above as a guide of this new method. For your first attempt, you can copy-paste the working parsing code into your controller.
 
 Think about the **class** that should be used to hold information parsed from the web, what is it?
 
 Try it live running your Cookbook!
 
-## 2 - Add a `@rating` property to `Recipe`
+## Add a `@rating` property to `Recipe`
 
 This new property should be:
-
 - Asked to the user when creating a new recipe
 - Parsed from the web when importing a new recipe
 - Stored in the CSV
 - Printed when listing the recipes
 
-## 3 - (User Action) Mark a recipe as done
+## (User Action) Mark a recipe as done
 
 Once you're done with the "Search", try to add a feature to mark a recipe as done:
 
@@ -151,16 +150,15 @@ Once you're done with the "Search", try to add a feature to mark a recipe as don
 5. [ ] Christmas crumble (5 / 5)
 ```
 
-## 4 - Add a `@prep_time` property to `Recipe`
+## Add a `@prep_time` property to `Recipe`
 
 Again, this new property should be:
-
 - Asked to the user when creating a new recipe
 - Parsed from the web when importing a new recipe
 - Stored in the CSV
 - Printed when listing the recipes
 
-## 5 - (Optional) Service
+## (Optional) Service
 
 Try to extract the **parsing** logic out of the controller and put it into a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
 
@@ -171,7 +169,7 @@ class ScrapeAllrecipesService
   end
 
   def call
-    # TODO: return a list of `Recipes` built from scraping the web.
+    # TODO: return a list of `Recipe` built from scraping the web.
   end
 end
 ```

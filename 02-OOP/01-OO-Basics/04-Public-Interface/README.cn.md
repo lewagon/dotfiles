@@ -20,7 +20,7 @@
 
 ### `bank_account.rb` 里的 `BankAccount` 类契约
 
-类的公共接口，即所有公共方法的集合，称为类契约（ 参见 [DbC] 契约式设计的概念）(http://en.wikipedia.org/wiki/Design_by_contract) (需要VPN 🛡 ). 它是类对其他对象或其他ruby程序所做的某种承诺。下面我们指定了我们的 `BankAccount` 类的契约。我们希望 **外部世界** 能够对银行账户对象 **执行以下操作**：
+类的公共接口，即所有公共方法的集合，称为类契约（ 参见 [DbC] 契约式设计的概念）(http://en.wikipedia.org/wiki/Design_by_contract) (需要VPN 🛡 ). 它是类对其他对象或其他Ruby程序所做的某种承诺。下面我们指定了我们的 `BankAccount` 类的契约。我们希望 **外部世界** 能够对银行账户对象 **执行以下操作**：
 
 * 访问所有者的全名和余额
 * 仅有权限查看 **部分** IBAN，例如IBAN: FR14**********606
@@ -79,7 +79,7 @@ puts account
 在实现 `Transaction` 类之后，必须更改你的 `BankAccount` 类，以便其事务数组存储 `Transaction` 对象而不是数字。你还必须在 *account.rb* 加载 *transaction.rb* 文件
 
 ```ruby
-require_relative 'transaction'
+require_relative "transaction"
 ```
 
 ## 学习要点

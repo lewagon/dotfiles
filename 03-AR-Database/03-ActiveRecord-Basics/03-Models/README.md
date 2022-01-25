@@ -1,8 +1,6 @@
 ## Background & Objectives
 
-Now you know about using migrations to update the database schema,
-let's use our database to insert a few rows and query them. We'll carry on working with our
-Hacker News clone.
+Now you know about using migrations to update the database schema, let's use our database to insert a few rows and query them. We'll carry on working with our Hacker News clone.
 
 Before starting this exercise, make sure you read the [Active Record starting guide](http://guides.rubyonrails.org/active_record_basics.html).
 
@@ -38,12 +36,10 @@ We've given you the same app skeleton as last Friday. You can launch it with:
 ruby app.rb
 ```
 
-Open the `app/controllers/posts_controller.rb` and implement the methods. Remember - do **not** write SQL. Just use ActiveRecord methods with your class model.
-There's no `rake` to test this second part of the exercise, so you'll have to test your app
-by launching it in the terminal.
+Open the `app/controllers/posts_controller.rb` and implement the methods. Remember - do **not** write SQL. Just use Active Record methods with your class model. There's no `rake` to test this second part of the exercise, so you'll have to test your app by launching it in the terminal.
 
 ## Key learning points
 
-* What's an ORM? How does it simplify your life?
-* What naming convention does Active Record mapping rely on? Where does the magic come from?
-* Can you see how much better it is to use ActiveRecord than writing all the SQL yourself?
+- What's an ORM? How does it simplify your life?
+- What naming convention does Active Record mapping rely on? Where does the magic come from?
+- Can you see how much better it is to use Active Record than writing all the SQL yourself?

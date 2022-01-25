@@ -1,9 +1,8 @@
 ## Background & Objectives
 
-A **getter** is a method that **requests** information from our instance variable.
-A **setter** is a method that **changes** information in our instance variable.
+A **getter** is a method that **requests** information from our instance variable. A **setter** is a method that **changes** information in our instance variable.
 
-In this exercise, we are going to implement a simple vending machine (`VendingMachine` ruby class) where a user can buy snacks for a given price. The user can go to the machine, insert some coins and then press a "Buy" button.
+In this exercise, we are going to implement a simple vending machine (`VendingMachine` Ruby class) where a user can buy snacks for a given price. The user can go to the machine, insert some coins and then press a "Buy" button.
 
 ## Specs
 
@@ -41,6 +40,5 @@ There might be a little more work to do in your `VendingMachine` class 😉
 
 ## (Advanced) Some open questions 🤔
 
-1. You may have noticed that in both scenario files, there is a `display` method. How could we refactor this code so that it may be more "object-oriented"? Doing so, how can we change our readers to expose **less** information to the external world? The concept you need to remember here is [**Encapsulation**](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
-2. You used a writer to update the amount of snacks when refilling. How could we change this code to use an instance method instead of this writer? Why is it better?
-
+1. You may have noticed that in both scenario files, there is a `display` method. How could we refactor this code so that it may be more "object-oriented"? Doing so, how can we change our getters to expose **less** information to the external world? The concept you need to remember here is [**Encapsulation**](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
+2. You used a setter to update the amount of snacks when refilling. How could we change this code to use an instance method instead of this writer? Why is it better?

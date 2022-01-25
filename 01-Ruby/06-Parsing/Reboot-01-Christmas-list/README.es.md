@@ -156,10 +156,9 @@ Parseo del CSV
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 filepath    = 'gifts.csv'
 
-CSV.foreach(filepath, csv_options) do |row|
+CSV.foreach(filepath, col_sep: ',', quote_char: '"', headers: :first_row) do |row|
   # POR HACER: crea un regalo nuevo a partir de la información almacenada en cada fila
 end
 ```
@@ -169,10 +168,9 @@ Almacenamiento del CSV
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
 filepath    = 'gifts.csv'
 
-CSV.open(filepath, 'wb', csv_options) do |csv|
+CSV.open(filepath, 'wb', col_sep: ',', force_quotes: true, quote_char: '"') do |csv|
   # Teníamos los encabezados para el CSV
   csv << ['name', 'price', 'bought']
   # POR HACER: guarda cada regalo

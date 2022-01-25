@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Javascript es realmente útil para validar formularios del lado del cliente.
+JavaScript es realmente útil para validar formularios del lado del cliente.
 Cuando el usuario llena tu formulario es mejor darle retroalimentación tan pronto como sea posible en caso de que un campo haya sido completado incorrectamente.
 
 ## Especificaciones
@@ -24,7 +24,7 @@ Abre el archivo `lib/validation.js`. Ahí es donde escribirás el código de val
 
 ## Sugerencias adicionales
 
-Para mostrar en una entrada de datos es válida o inválida puedes usar `.is-valid` y `.is-invalid` en tu `input` de las [clases Bootstrap validación de formulario en el lado del cliente](https://getbootstrap.com/docs/4.3/components/forms/#server-side) como esto:
+Para mostrar en una entrada de datos es válida o inválida puedes usar `.is-valid` y `.is-invalid` en tu `input` de las [clases Bootstrap validación de formulario en el lado del cliente](https://getbootstrap.com/docs/5.1/forms/validation/#server-side) como esto:
 
 ```html
 <input type="text" class="form-control is-valid">

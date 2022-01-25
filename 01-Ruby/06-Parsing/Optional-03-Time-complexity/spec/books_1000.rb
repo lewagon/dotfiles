@@ -340,7 +340,7 @@ BOOKS_1000 = [
   "Gilderoy Lockhart",
   "Gimli",
   "Ginny Weasley",
-  "Github Explained",
+  "GitHub Explained",
   "Give me honorable enemies rather than ambitious ones, and I'll sleep more easily by night.",
   "Gladden Fields",
   "Gladrags Wizardwear",
