@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Este es nuestro primer ejercicio AJAX. Vamos a crear una entrada con la capacidad de autocompletarse.¿Quieres saber de qué se trata? Ve a [Algolia Places](https://community.algolia.com/places/) para tener un ejemplo: tan pronto escribes **un** carácter en el campo de entrada recibes sugerencias debajo para autocompletar el campo.
+Este es nuestro primer ejercicio AJAX. Vamos a crear una entrada con la capacidad de autocompletarse.¿Quieres saber de qué se trata? Ve a [Google](https://www.google.com/) para tener un ejemplo: tan pronto escribes **un** carácter en el campo de entrada recibes sugerencias debajo para autocompletar el campo.
 
 Queremos crear una entrada que se autocomplete usando **Palabras de diccionario**.
 

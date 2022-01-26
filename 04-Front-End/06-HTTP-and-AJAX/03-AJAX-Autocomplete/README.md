@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-This is our first AJAX exercise. We will build an input with autocomplete capability. What's that? Head out to [Algolia Places](https://community.algolia.com/places/) for an example: as soon as you type **one** character in the input field, you get autocomplete suggestions underneath.
+This is our first AJAX exercise. We will build an input with autocomplete capability. What's that? Head out to [Google](https://www.google.com/) for an example: as soon as you type **one** character in the input field, you get autocomplete suggestions underneath.
 
 We want to build an autocomplete input with **Dictionary words**
 
