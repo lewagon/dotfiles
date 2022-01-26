@@ -539,10 +539,10 @@ function! s:CR(normal, just_mrkr) abort
 endfunction
 
 " insert mode table mappings
-if str2nr(vimwiki#vars#get_global('key_mappings').table_mappings)
-  inoremap <expr><buffer> <Tab> vimwiki#tbl#kbd_tab()
-  inoremap <expr><buffer> <S-Tab> vimwiki#tbl#kbd_shift_tab()
-endif
+"if str2nr(vimwiki#vars#get_global('key_mappings').table_mappings)
+"  inoremap <expr><buffer> <Tab> vimwiki#tbl#kbd_tab()
+"  inoremap <expr><buffer> <S-Tab> vimwiki#tbl#kbd_shift_tab()
+"endif
 
 " <Plug> table formatting definitions
 nnoremap <silent><buffer> <Plug>VimwikiTableAlignQ

@@ -11,7 +11,7 @@ Plug 'numirias/semshi'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'davidhalter/jedi'
+Plug 'davidhalter/jedi-vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
@@ -21,9 +21,15 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
 Plug 'junegunn/vim-emoji'
 Plug 'elzr/vim-json'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " Config Section
+set number
+set nocompatible
+filetype plugin on
+syntax on
+
 au BufNewFile,BufRead *.py \
   set foldmethod=indent
 
@@ -117,3 +123,5 @@ augroup END
 " Emoji Autocompletion
 set completefunc=emoji#complete
 
+" Coc & Jedi config
+let g:jedi#use_splits_not_buffers = "bottom"
