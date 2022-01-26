@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Dans ce premier exercice AJAX, on va construire une entrée avec fonction d'auto-remplissage. Qu'est-ce que c'est ? Va sur [Algolia Places](https://community.algolia.com/places/) pour obtenir un exemple : dès que tu commences à taper **un** caractère dans le champ de saisie, on te propose des suggestions d'auto-remplissage en dessous.
+Dans ce premier exercice AJAX, on va construire une entrée avec fonction d'auto-remplissage. Qu'est-ce que c'est ? Va sur [Google](https://www.google.com/) pour obtenir un exemple : dès que tu commences à taper **un** caractère dans le champ de saisie, on te propose des suggestions d'auto-remplissage en dessous.
 
 On va chercher à créer une entrée avec auto-remplissage avec des **mots du dictionnaire**
 
