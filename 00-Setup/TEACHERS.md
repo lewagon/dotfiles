@@ -32,7 +32,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - The first 3 weeks are **hard**. Only algo / software architecture
 - The equivalent of an entire year in coding schools
 - You will struggle, you may doubt, wonder where we're heading
-- Just hold on, stay motivated and trust us: 6000+ former students have experienced the program
+- Just hold on, stay motivated and trust us: 13000+ former students have experienced the program
 - It works, so at this point, **trust us** and fight for it!
 
 #### Monday (Week 1) - Setup
