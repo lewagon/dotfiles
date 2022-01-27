@@ -78,5 +78,5 @@ FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.Run
 # The next line enables Starship
 eval "$(starship init zsh)"
 
-# The next line enables ponyfied fortune cookies at every launch
-fortune | ponysay
+# The next line enables a ponyfied greeting at shell start
+ponysay -q
