@@ -44,9 +44,9 @@ Celle-ci ne peut pas accéder aux fichiers contenu dans le système WSL donc il 
 
 Pour cela, deux options :
 
-- Depuis la ligne de commande, exécutes `cp lib/db/jukebox.sqlite /mnt/c/Users/<ton nom Windows>/Downloads/`.
+Depuis la ligne de commande, exécute `cp lib/db/jukebox.sqlite /mnt/c/Users/<ton nom Windows>/Downloads/`.
 
-- Manuellement : exécute `explorer.exe .` dans ta ligne de commande afin d'ouvrir l'explorateur de fichier. Localise la database (dans `lib/db`) et copie le fichier `jukebox.sqlite`. Dans le même explorateur de fichier, rends-toi dans un dossier Windows et copie le fichier de database. Nous te conseillons d'aller dans `Documents` et d'y créer un dossier `databases` dans lequel tu peux copier `jukebox.sqlite` et les futures databases que tu souhaiteras ouvrir.
+Ou manuellement : exécute `explorer.exe .` dans ta ligne de commande afin d'ouvrir l'explorateur de fichier. Localise la database (dans `lib/db`) et copie le fichier `jukebox.sqlite`. Dans le même explorateur de fichier, rends-toi dans un dossier Windows et copie le fichier de database. Nous te conseillons d'aller dans `Documents` et d'y créer un dossier `databases` dans lequel tu peux copier `jukebox.sqlite` et les futures databases que tu souhaiteras ouvrir.
 
 Ouvre SQLStudio et sélectionne ce fichier (dans notre exemple, dans Documents/databases), et appuye sur Ouvrir.
 
