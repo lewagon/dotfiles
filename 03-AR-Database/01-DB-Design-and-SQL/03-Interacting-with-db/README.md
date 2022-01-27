@@ -46,7 +46,7 @@ You can either:
 
 Run `cp lib/db/jukebox.sqlite /mnt/c/Users/<your Windows username>/Downloads/`.
 
-Or do it the manual way by typing `exporer.exe .` in your command line to open a file explorer windows. Then locate the database file by opening the `lib` and `db` folder and copy the `jukebox.sqlite` database file.
+Or do it the manual way by typing `explorer.exe .` in your command line to open a file explorer windows. Then locate the database file by opening the `lib` and `db` folder and copy the `jukebox.sqlite` database file.
 Head to a folder inside your Windows filesystem and paste the database file there. We recommend you to create a folder `databases` in your `Documents` for instance, so you can store future sqlite databases there too.
 
 Now go back to SQLStudio and select the database file you just copied (in your `Documents/databases` folder in our example), and click on `Open`.
