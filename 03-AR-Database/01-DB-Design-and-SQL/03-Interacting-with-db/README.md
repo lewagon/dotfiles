@@ -31,34 +31,24 @@ You are now in the interactive `sqlite3` console and you can write your SQL quer
 You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
 
 - [SQLite Pro (macOS only, paying but trial seems unlimited)](https://www.sqlitepro.com/)
+- [SQLite Browser (Free, macOS only)](http://sqlitebrowser.org/)
 - [SQLStudio (Free)](http://sqlitestudio.pl/)
-- [SQLite Browser (Free)](http://sqlitebrowser.org/)
 
 ### Windows
 
-Copy the following commands in your Ubuntu terminal one line at a time:
+Go to [SQLStudio](http://sqlitestudio.pl/) and download their Windows version.
+Unzip all the files and double-click on SQLiteStudio to open the application.
 
-```bash
-sudo apt update
-sudo apt install -y sqlitebrowser
-echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0" >> ~/.zshrc
-source ~/.zshrc
-```
+It will asks you which database you want to open but it won't be able to open the one you have in the WSL filesystem so we first need to copy the db file over to your Windows filesystem.
 
-Install [Xming](https://sourceforge.net/projects/xming/) (Untick `Start Xming` at the end of the installer).
+The easiest way to do so is to type `exporer.exe .` in your command line to open a file explorer windows. Locate the database file by opening the `lib` and `db` folder and copy the `jukebox.sqlite` database file.
+Head to a folder inside your Windows filesystem (your Documents for instance), create a folder `databases` here and paste the database file there.
 
-Start XLaunch, leaving default settings but **add the following optional parameters** `-ac`.
+Now go back to SQLStudio and select the database file you just copied (in your Documents > databases folder in our example), and click on Open.
 
-![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
+Last step, click on `Database` on the top bar and `Connect to the database` to open the connection with it.
+You can now visualise all the tables within it or query it by going to `Tools` and `Open SQL Editor`. Happy querying!
 
-You can open your DB with:
-
-```bash
-cd ~/code/your-github-username/fullstack-challenges/03-AR-Database/01-DB-Design-and-SQL/03-Interacting-with-db
-sqlitebrowser lib/db/jukebox.sqlite
-```
-
-If you get the error `could not initialize SDL` when opening your DB, you need to add an exception in your Windows Defender to allow Xming public incomming traffic over UDP and TCP protocols. You can follow this [documentation](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule).
 
 ❓Should I use the command-line `sqlite3` or one of the visual tool above? Well, both are useful! It's good to learn a bit to manipulate the command line for two reasons. On the one hand, a [CLI](https://en.wikipedia.org/wiki/Command-line_interface) allows you to focus on the SQL queries. On the other hand, a [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) tool will prove helpful to explore a database schema structure (tables? columns? etc.). Try both!
 
