@@ -32,6 +32,7 @@ Tu peux aussi utiliser une application **SQLite viewer** pour lire la base de do
 
 - [SQLite Pro (macOS uniquement, logiciel payant mais la version d’essai semble illimitée)](https://www.sqlitepro.com/)
 - [SQLite Browser (gratuit, macOS uniquement)](http://sqlitebrowser.org/)
+- [SQLite Online (gratuit)](https://sqliteonline.com/)
 - [SQLStudio (gratuit)](http://sqlitestudio.pl/)
 
 ### Windows

@@ -32,6 +32,7 @@ You can also use a **SQLite viewer** application to read the SQLite database, ex
 
 - [SQLite Pro (macOS only, paying but trial seems unlimited)](https://www.sqlitepro.com/)
 - [SQLite Browser (Free, macOS only)](http://sqlitebrowser.org/)
+- [SQLite Online (gratuit)](https://sqliteonline.com/)
 - [SQLStudio (Free)](http://sqlitestudio.pl/)
 
 ### Windows
