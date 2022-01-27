@@ -31,34 +31,26 @@ Tu es maintenant dans la console interactive `sqlite3` et tu peux écrire tes re
 Tu peux aussi utiliser une application **SQLite viewer** pour lire la base de données SQLite, explorer le schéma et même **exécuter des requêtes SQL**.
 
 - [SQLite Pro (macOS uniquement, logiciel payant mais la version d’essai semble illimitée)](https://www.sqlitepro.com/)
+- [SQLite Browser (gratuit, macOS uniquement)](http://sqlitebrowser.org/)
+- [SQLite Online (gratuit)](https://sqliteonline.com/)
 - [SQLStudio (gratuit)](http://sqlitestudio.pl/)
-- [SQLite Browser (gratuit)](http://sqlitebrowser.org/)
 
 ### Windows
 
-Copie les commandes suivantes dans ton terminal Ubuntu, ligne par ligne :
+Si tu ne souhaites pas utiliser la ligne commande `sqlite3`, tu peux télécharger la version Windows de [SQLStudio](http://sqlitestudio.pl/).
+Ouvre et décompresse le dossier téléchargé et double-clique sur SQLiteStudio pour ouvrir l'application.
 
-```bash
-sudo apt update
-sudo apt install -y sqlitebrowser
-echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0" >> ~/.zshrc
-source ~/.zshrc
-```
+Celle-ci ne peut pas accéder aux fichiers contenu dans le système WSL donc il nous faut d'abord copier le fichier de database que tu souhaites ouvrir dans un de tes dossiers Windows.
 
-Installe [Xming](https://sourceforge.net/projects/xming/) (décoche `Start Xming` à la fin du programme d’installation).
+Pour cela, deux options :
 
-Lance XLaunch, en laissant les paramètres par défaut, mais **ajoute le paramètre optionnel suivant** `-ac`.
+- Depuis la ligne de commande, exécutes `cp lib/db/jukebox.sqlite /mnt/c/Users/<ton nom Windows>/Downloads/`.
 
-![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
+- Manuellement : exécute `explorer.exe .` dans ta ligne de commande afin d'ouvrir l'explorateur de fichier. Localise la database (dans `lib/db`) et copie le fichier `jukebox.sqlite`. Dans le même explorateur de fichier, rends-toi dans un dossier Windows et copie le fichier de database. Nous te conseillons d'aller dans `Documents` et d'y créer un dossier `databases` dans lequel tu peux copier `jukebox.sqlite` et les futures databases que tu souhaiteras ouvrir.
 
-Tu peux ouvrir ta base de données avec :
+Ouvre SQLStudio et sélectionne ce fichier (dans notre exemple, dans Documents/databases), et appuye sur Ouvrir.
 
-```bash
-cd ~/code/your-github-username/fullstack-challenges/03-AR-Database/01-DB-Design-and-SQL/03-Interacting-with-db
-sqlitebrowser lib/db/jukebox.sqlite
-```
-
-Si l’erreur `could not initialize SDL` s'affiche quand tu ouvres ta base de données, tu dois ajouter une exception à Windows Defender pour autoriser le trafic public entrant de Xming sur les protocoles UDP et TCP. Utilise cette [documentation](https://docs.microsoft.com/fr-fr/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule).
+Dernière étape, clique sur `Database` dans la barre d'outils et `Connect to the database` pour ouvrir la connection à la base de données `jukebox`. Tu peux désormais visualiser toutes les tables de la base ou exécuter des requêtes SQL depuis `Tools` et `Open SQL Editor`!
 
 ❓Dois-je utiliser la ligne de commande `sqlite3` ou l’un des outils visuels ci-dessus ? Les deux sont utiles ! Il est intéressant d’apprendre à manipuler la ligne de commande pour deux raisons. D’une part, une [interface en ligne de commande](https://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande) te permet de te concentrer sur les requêtes SQL. D’autre part, une [interface graphique](https://fr.wikipedia.org/wiki/Interface_graphique) sera utile pour explorer le schéma d’une base de données (tables, colonnes, etc.). Essaie les deux !
 
