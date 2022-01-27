@@ -38,12 +38,15 @@ Tu peux aussi utiliser une application **SQLite viewer** pour lire la base de do
 ### Windows
 
 Si tu ne souhaites pas utiliser la ligne commande `sqlite3`, tu peux télécharger la version Windows de [SQLStudio](http://sqlitestudio.pl/).
-Ouvre et décompresse le dossier télécharger et double-cliques sur SQLiteStudio pour ouvrir l'application.
+Ouvre et décompresse le dossier téléchargé et double-clique sur SQLiteStudio pour ouvrir l'application.
 
 Celle-ci ne peut pas accéder aux fichiers contenu dans le système WSL donc il nous faut d'abord copier le fichier de database que tu souhaites ouvrir dans un de tes dossiers Windows.
 
-Pour cela, exécutes `explorer.exe .` dans ta ligne de commande afin d'ouvrir l'exporateur de fichier. Localise la database (dans `lib/db`) et copie le fichier `jukebox.sqlite`.
-Dans le même explorateur de fichier, rends toi dans un dossier Windows et copies le fichier de database. Nous te conseillons d'aller dans `Documents` et d'y créer un dossier `databases` dans lequel tu peux copier `jukebox.sqlite` et les futures databases que tu souhaiteras ouvrir.
+Pour cela, deux options :
+
+- Depuis la ligne de commande, exécutes `cp lib/db/jukebox.sqlite /mnt/c/Users/<ton nom Windows>/Downloads/`.
+
+- Manuellement : exécutes `explorer.exe .` dans ta ligne de commande afin d'ouvrir l'exporateur de fichier. Localise la database (dans `lib/db`) et copie le fichier `jukebox.sqlite`. Dans le même explorateur de fichier, rends-toi dans un dossier Windows et copie le fichier de database. Nous te conseillons d'aller dans `Documents` et d'y créer un dossier `databases` dans lequel tu peux copier `jukebox.sqlite` et les futures databases que tu souhaiteras ouvrir.
 
 Ouvre SQLStudio et sélectionne ce fichier (dans notre exemple, dans Documents/databases), et appuye sur Ouvrir.
 

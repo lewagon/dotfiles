@@ -32,7 +32,7 @@ You can also use a **SQLite viewer** application to read the SQLite database, ex
 
 - [SQLite Pro (macOS only, paying but trial seems unlimited)](https://www.sqlitepro.com/)
 - [SQLite Browser (Free, macOS only)](http://sqlitebrowser.org/)
-- [SQLite Online (gratuit)](https://sqliteonline.com/)
+- [SQLite Online (Free)](https://sqliteonline.com/)
 - [SQLStudio (Free)](http://sqlitestudio.pl/)
 
 ### Windows
@@ -42,10 +42,13 @@ Unzip all the files and double-click on SQLiteStudio to open the application.
 
 It will asks you which database you want to open but it won't be able to open the one you have in the WSL filesystem so we first need to copy the db file over to your Windows filesystem.
 
-The easiest way to do so is to type `exporer.exe .` in your command line to open a file explorer windows. Locate the database file by opening the `lib` and `db` folder and copy the `jukebox.sqlite` database file.
+Two options:
+- The 'dev' way: run `cp lib/db/jukebox.sqlite /mnt/c/Users/<your Windows username>/Downloads/`.
+
+- The manual way: type `exporer.exe .` in your command line to open a file explorer windows. Locate the database file by opening the `lib` and `db` folder and copy the `jukebox.sqlite` database file.
 Head to a folder inside your Windows filesystem and paste the database file there. We recommend you to create a folder `databases` in your `Documents` for instance, so you can store future sqlite databases there too.
 
-Now go back to SQLStudio and select the database file you just copied (in your `Documents/databases` folder in our example), and click on Open.
+Now go back to SQLStudio and select the database file you just copied (in your `Documents/databases` folder in our example), and click on `Open`.
 
 Last step, click on `Database` on the top bar and `Connect to the database` to open the connection with it.
 You can now visualise all the tables within it or query it by going to `Tools` and `Open SQL Editor`. Happy querying!
