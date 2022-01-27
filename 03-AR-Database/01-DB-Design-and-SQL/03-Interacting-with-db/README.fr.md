@@ -46,11 +46,11 @@ Pour cela, deux options :
 
 - Depuis la ligne de commande, exécutes `cp lib/db/jukebox.sqlite /mnt/c/Users/<ton nom Windows>/Downloads/`.
 
-- Manuellement : exécutes `explorer.exe .` dans ta ligne de commande afin d'ouvrir l'exporateur de fichier. Localise la database (dans `lib/db`) et copie le fichier `jukebox.sqlite`. Dans le même explorateur de fichier, rends-toi dans un dossier Windows et copie le fichier de database. Nous te conseillons d'aller dans `Documents` et d'y créer un dossier `databases` dans lequel tu peux copier `jukebox.sqlite` et les futures databases que tu souhaiteras ouvrir.
+- Manuellement : exécute `explorer.exe .` dans ta ligne de commande afin d'ouvrir l'explorateur de fichier. Localise la database (dans `lib/db`) et copie le fichier `jukebox.sqlite`. Dans le même explorateur de fichier, rends-toi dans un dossier Windows et copie le fichier de database. Nous te conseillons d'aller dans `Documents` et d'y créer un dossier `databases` dans lequel tu peux copier `jukebox.sqlite` et les futures databases que tu souhaiteras ouvrir.
 
 Ouvre SQLStudio et sélectionne ce fichier (dans notre exemple, dans Documents/databases), et appuye sur Ouvrir.
 
-Dernière étape, cliques sur `Database` dans la barre d'outils et `Connect to the database` pour ouvrir la connection à la base de données `jukebox`. Tu peux désormais visualiser toutes les tables de la base ou exécuter des requêtes SQL depuis `Tools` et `Open SQL Editor`!
+Dernière étape, clique sur `Database` dans la barre d'outils et `Connect to the database` pour ouvrir la connection à la base de données `jukebox`. Tu peux désormais visualiser toutes les tables de la base ou exécuter des requêtes SQL depuis `Tools` et `Open SQL Editor`!
 
 ❓Dois-je utiliser la ligne de commande `sqlite3` ou l’un des outils visuels ci-dessus ? Les deux sont utiles ! Il est intéressant d’apprendre à manipuler la ligne de commande pour deux raisons. D’une part, une [interface en ligne de commande](https://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande) te permet de te concentrer sur les requêtes SQL. D’autre part, une [interface graphique](https://fr.wikipedia.org/wiki/Interface_graphique) sera utile pour explorer le schéma d’une base de données (tables, colonnes, etc.). Essaie les deux !
 

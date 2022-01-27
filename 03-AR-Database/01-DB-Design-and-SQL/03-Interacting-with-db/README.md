@@ -40,7 +40,7 @@ You can also use a **SQLite viewer** application to read the SQLite database, ex
 Go to [SQLStudio](http://sqlitestudio.pl/) and download their Windows version.
 Unzip all the files and double-click on SQLiteStudio to open the application.
 
-It will asks you which database you want to open but it won't be able to open the one you have in the WSL filesystem so we first need to copy the db file over to your Windows filesystem.
+It will ask you which database you want to open but it won't be able to open the one you have in the WSL filesystem so we first need to copy the db file over to your Windows filesystem.
 
 Two options:
 - The 'dev' way: run `cp lib/db/jukebox.sqlite /mnt/c/Users/<your Windows username>/Downloads/`.
