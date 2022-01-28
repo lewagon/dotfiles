@@ -13,7 +13,7 @@ yarn -v
 
 If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn) setup.
 
-**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this during the next session). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>

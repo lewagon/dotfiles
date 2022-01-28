@@ -4,7 +4,7 @@ Aujourd'hui, on a **trois objectifs** :
 
 1. Déployer notre watch-list sur Heroku
 2. Ajouter la fonctionnalité pour charger des images
-3. À 14h : quiz Rails !
+3. Un quiz Rails !
 
 ### Configuration
 
