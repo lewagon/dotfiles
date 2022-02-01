@@ -79,4 +79,4 @@ FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.Run
 eval "$(starship init zsh)"
 
 # The next line enables a ponyfied greeting at shell start
-ponysay -q
+fortune | ponysay
