@@ -33,4 +33,4 @@ Make sure you add the code in your models to allow you to access posts from a us
 
 Write a seed that populates your database with 5 users who each have between 5 and 10 posts. Feel free to use any strategy you want (faker or API).
 
-Don't spend to much time trying to use the API. Remember that our goal here is to work with associations.
+Don't spend too much time trying to use the API. Remember that our goal here is to work with associations.
