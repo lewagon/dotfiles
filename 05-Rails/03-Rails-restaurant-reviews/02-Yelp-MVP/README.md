@@ -23,7 +23,7 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure you can use simple form, Bootstrap, and have a cool stylesheets folder (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that tomorrow!).
+Before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure you can use simple form, Bootstrap, and have a cool stylesheets folder (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that at the next session!).
 
 ### Testing your code
 
