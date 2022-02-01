@@ -133,7 +133,7 @@ class OrderRepository
 end
 ```
 
-Also, make sure that your Orders CSV file stores the information in this order so you can pass the tests:
+Also, make sure that your Orders CSV file stores the information with these header names so you can pass the tests:
 `id, delivered, meal_id, customer_id, employee_id`
 
 All green? Good! Time to `git add`, `commit` and `push`.
