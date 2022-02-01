@@ -133,6 +133,9 @@ class OrderRepository
 end
 ```
 
+Fais également attention à ce que ton fichier CSV `orders.csv` stocke bien les informations avec ces noms de colonnes si tu veux passer les tests `rake`:
+`id, delivered, meal_id, customer_id, employee_id`
+
 Tout est vert ? Parfait ! Le moment est venu de faire `git add`, `commit` et `push`.
 
 ### 2.3 - Contrôleur des commandes (orders controller)
