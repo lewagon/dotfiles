@@ -15,7 +15,6 @@ Plug 'davidhalter/jedi-vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
-Plug 'Alok/notational-fzf-vim'
 Plug 'ferrine/md-img-paste.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
