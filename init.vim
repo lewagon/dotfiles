@@ -21,6 +21,7 @@ Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
 Plug 'junegunn/vim-emoji'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " Config Section
@@ -46,10 +47,13 @@ let g:nv_search_paths = ['~/workspace/xavierosee/notes','~/workspace/xavierosee/
 let g:nv_main_directory = '~/workspace/xavierosee/notes'
 let g:vimwiki_list = [{
 			\'path':'~/workspace/xavierosee/wiki/wiki', 
+			\'syntax': 'markdown', 'ext': '.md',
 			\'path_html':'~/workspace/xavierosee/wiki/docs', 
 			\'template_path': '~/workspace/xavierosee/wiki/templates',
 			\'template_default':'default',
 			\'template_ext':'.html'}]
+let g:vimwiki_global_ext = 0
+
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
 
 
