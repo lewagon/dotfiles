@@ -19,7 +19,7 @@ The manager should introduce the 9 week program and its philosophy, then detail 
 
 - You will tackle in 9 weeks what students learn in 2 years in "regular" CS degree (often during their last year)
 - At the end you'll be able to prototype any web product
-- It will be very hard but trust us, 6000+ students had gone throught the same steps!
+- It will be very hard but trust us, 13,000+ students had gone throught the same steps!
 
 _Ask students who among them wants to be a developer, who wants to found a startup, who has no idea yet?_
 
@@ -32,7 +32,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - The first 3 weeks are **hard**. Only algo / software architecture
 - The equivalent of an entire year in coding schools
 - You will struggle, you may doubt, wonder where we're heading
-- Just hold on, stay motivated and trust us: 13000+ former students have experienced the program
+- Just hold on, stay motivated and trust us: 13,000+ former students have experienced the program
 - It works, so at this point, **trust us** and fight for it!
 
 #### Monday (Week 1) - Setup
