@@ -51,7 +51,6 @@ load-nvmrc
 # So instead of running `bin/rails` like the doc says, just run `rails`
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
-
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
@@ -78,5 +77,9 @@ FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.Run
 # The next line enables Starship
 eval "$(starship init zsh)"
 
-# The next line enables a ponyfied greeting at shell start
-fortune | ponysay
+# The next lines enables a ponyfied greeting at shell start
+if (( RANDOM % 2 )); then
+	fortune | ponysay
+else
+	ponysay -q
+fi
