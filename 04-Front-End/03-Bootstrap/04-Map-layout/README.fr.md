@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Créer une [page de résultats avec une map sticky](https://lewagon.github.io/layouts-demo/flexbox-grid-layout.html) (carte collante) comme dans le cours. Pour cet exercice, tu remarqueras que Bootstrap n'est importé nulle part dans le fichier `index.html` ! Tu devras coder cette mise en page dans le fichier `pages/map.css` sans utiliser Bootstrap :
+Créer une [page de résultats avec une map sticky](https://lewagon.github.io/layouts-demo/campuses-with-map.html) (carte collante) comme dans le cours. Pour cet exercice, tu remarqueras que Bootstrap n'est importé nulle part dans le fichier `index.html` ! Tu devras coder cette mise en page dans le fichier `pages/map.css` sans utiliser Bootstrap :
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/map-example.png)
 
