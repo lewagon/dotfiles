@@ -48,6 +48,7 @@ let g:nv_main_directory = '~/workspace/xavierosee/notes'
 let g:vimwiki_list = [{
 			\'path':'~/workspace/xavierosee/wiki/wiki', 
 			\'syntax': 'markdown', 'ext': '.md',
+			\'custom_wiki2html': '~/workspace/xavierosee/wiki/wk2html.sh',
 			\'path_html':'~/workspace/xavierosee/wiki/docs', 
 			\'template_path': '~/workspace/xavierosee/wiki/templates',
 			\'template_default':'default',
