@@ -22,7 +22,7 @@ var Test = require('../test');
 module.exports = function(suite) {
   var suites = [suite];
 
-  suite.on('require', visit);
+  suite.on(Suite.constants.EVENT_FILE_REQUIRE, visit);
 
   function visit(obj, file) {
     var suite;
@@ -56,3 +56,5 @@ module.exports = function(suite) {
     }
   }
 };
+
+module.exports.description = 'Node.js module ("exports") style';
