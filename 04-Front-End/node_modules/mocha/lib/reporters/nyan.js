@@ -7,7 +7,13 @@
  */
 
 var Base = require('./base');
+var constants = require('../runner').constants;
 var inherits = require('../utils').inherits;
+var EVENT_RUN_BEGIN = constants.EVENT_RUN_BEGIN;
+var EVENT_TEST_PENDING = constants.EVENT_TEST_PENDING;
+var EVENT_TEST_PASS = constants.EVENT_TEST_PASS;
+var EVENT_RUN_END = constants.EVENT_RUN_END;
+var EVENT_TEST_FAIL = constants.EVENT_TEST_FAIL;
 
 /**
  * Expose `Dot`.
@@ -16,18 +22,17 @@ var inherits = require('../utils').inherits;
 exports = module.exports = NyanCat;
 
 /**
- * Initialize a new `Dot` matrix test reporter.
+ * Constructs a new `Nyan` reporter instance.
  *
- * @param {Runner} runner
- * @api public
  * @public
  * @class Nyan
  * @memberof Mocha.reporters
  * @extends Mocha.reporters.Base
+ * @param {Runner} runner - Instance triggers reporter actions.
+ * @param {Object} [options] - runner options
  */
-
-function NyanCat(runner) {
-  Base.call(this, runner);
+function NyanCat(runner, options) {
+  Base.call(this, runner, options);
 
   var self = this;
   var width = (Base.window.width * 0.75) | 0;
@@ -41,24 +46,24 @@ function NyanCat(runner) {
   this.trajectories = [[], [], [], []];
   this.trajectoryWidthMax = width - nyanCatWidth;
 
-  runner.on('start', function() {
+  runner.on(EVENT_RUN_BEGIN, function() {
     Base.cursor.hide();
     self.draw();
   });
 
-  runner.on('pending', function() {
+  runner.on(EVENT_TEST_PENDING, function() {
     self.draw();
   });
 
-  runner.on('pass', function() {
+  runner.on(EVENT_TEST_PASS, function() {
     self.draw();
   });
 
-  runner.on('fail', function() {
+  runner.on(EVENT_TEST_FAIL, function() {
     self.draw();
   });
 
-  runner.once('end', function() {
+  runner.once(EVENT_RUN_END, function() {
     Base.cursor.show();
     for (var i = 0; i < self.numberOfLines; i++) {
       write('\n');
@@ -75,7 +80,7 @@ inherits(NyanCat, Base);
 /**
  * Draw the nyan cat
  *
- * @api private
+ * @private
  */
 
 NyanCat.prototype.draw = function() {
@@ -90,7 +95,7 @@ NyanCat.prototype.draw = function() {
  * Draw the "scoreboard" showing the number
  * of passes, failures and pending tests.
  *
- * @api private
+ * @private
  */
 
 NyanCat.prototype.drawScoreboard = function() {
@@ -113,7 +118,7 @@ NyanCat.prototype.drawScoreboard = function() {
 /**
  * Append the rainbow.
  *
- * @api private
+ * @private
  */
 
 NyanCat.prototype.appendRainbow = function() {
@@ -132,7 +137,7 @@ NyanCat.prototype.appendRainbow = function() {
 /**
  * Draw the rainbow.
  *
- * @api private
+ * @private
  */
 
 NyanCat.prototype.drawRainbow = function() {
@@ -150,7 +155,7 @@ NyanCat.prototype.drawRainbow = function() {
 /**
  * Draw the nyan cat
  *
- * @api private
+ * @private
  */
 NyanCat.prototype.drawNyanCat = function() {
   var self = this;
@@ -184,7 +189,7 @@ NyanCat.prototype.drawNyanCat = function() {
 /**
  * Draw nyan cat face.
  *
- * @api private
+ * @private
  * @return {string}
  */
 
@@ -203,7 +208,7 @@ NyanCat.prototype.face = function() {
 /**
  * Move cursor up `n`.
  *
- * @api private
+ * @private
  * @param {number} n
  */
 
@@ -214,7 +219,7 @@ NyanCat.prototype.cursorUp = function(n) {
 /**
  * Move cursor down `n`.
  *
- * @api private
+ * @private
  * @param {number} n
  */
 
@@ -225,7 +230,7 @@ NyanCat.prototype.cursorDown = function(n) {
 /**
  * Generate rainbow colors.
  *
- * @api private
+ * @private
  * @return {Array}
  */
 NyanCat.prototype.generateColors = function() {
@@ -246,7 +251,7 @@ NyanCat.prototype.generateColors = function() {
 /**
  * Apply rainbow to the given `str`.
  *
- * @api private
+ * @private
  * @param {string} str
  * @return {string}
  */
@@ -267,3 +272,5 @@ NyanCat.prototype.rainbowify = function(str) {
 function write(string) {
   process.stdout.write(string);
 }
+
+NyanCat.description = '"nyan cat"';

@@ -8,6 +8,9 @@
 
 var Base = require('./base');
 var inherits = require('../utils').inherits;
+var constants = require('../runner').constants;
+var EVENT_RUN_END = constants.EVENT_RUN_END;
+var EVENT_RUN_BEGIN = constants.EVENT_RUN_BEGIN;
 
 /**
  * Expose `Min`.
@@ -16,29 +19,34 @@ var inherits = require('../utils').inherits;
 exports = module.exports = Min;
 
 /**
- * Initialize a new `Min` minimal test reporter (best used with --watch).
+ * Constructs a new `Min` reporter instance.
+ *
+ * @description
+ * This minimal test reporter is best used with '--watch'.
  *
  * @public
  * @class
  * @memberof Mocha.reporters
  * @extends Mocha.reporters.Base
- * @api public
- * @param {Runner} runner
+ * @param {Runner} runner - Instance triggers reporter actions.
+ * @param {Object} [options] - runner options
  */
-function Min(runner) {
-  Base.call(this, runner);
+function Min(runner, options) {
+  Base.call(this, runner, options);
 
-  runner.on('start', function() {
+  runner.on(EVENT_RUN_BEGIN, function() {
     // clear screen
     process.stdout.write('\u001b[2J');
     // set cursor position
     process.stdout.write('\u001b[1;3H');
   });
 
-  runner.once('end', this.epilogue.bind(this));
+  runner.once(EVENT_RUN_END, this.epilogue.bind(this));
 }
 
 /**
  * Inherit from `Base.prototype`.
  */
 inherits(Min, Base);
+
+Min.description = 'essentially just a summary';
