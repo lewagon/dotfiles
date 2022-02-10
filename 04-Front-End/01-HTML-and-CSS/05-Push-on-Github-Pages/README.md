@@ -10,13 +10,19 @@ cd ~/code/<user.github_nickname>/profile
 
 ## Create the GitHub repo
 
-You can **init**(ialize) a git repository, commit your changes, and create the associated GitHub repo:
+You can **init**(ialize) a git repository and commit your changes.
 
 ```bash
 git init
 git add .
 git commit -m "my profile page"
+```
+
+Then we will use the GitHub CLI (Command line interface) to create the associated GitHub repo. The GitHub CLI allows you to interact with GitHub through your terminal. For now we will be creating public repositories, but you can find more options [on the official documentation](https://cli.github.com/manual/).
+
+```bash
 gh repo create # this creates the associated repo on GitHub!
+# you will then be asked for a few different inputs
 ```
 
 To open the GitHub repo from your browser you can run:
