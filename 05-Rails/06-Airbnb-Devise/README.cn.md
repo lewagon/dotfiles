@@ -67,7 +67,7 @@ rails new \
 
 ```bash
 cd rails-airbnb-clone
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 

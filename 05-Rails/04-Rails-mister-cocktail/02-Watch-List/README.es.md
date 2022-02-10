@@ -35,7 +35,7 @@ Configura git, crea un repositorio en GitHub y haz el push de nuestro esqueleto.
 ```bash
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 

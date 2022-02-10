@@ -32,7 +32,7 @@ Let's set up git, create a repo on GitHub and push our skeleton.
 ```bash
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 

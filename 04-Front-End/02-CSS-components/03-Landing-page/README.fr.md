@@ -55,7 +55,7 @@ Puis assure le suivi du projet avec `git` et pousse-le sur une branche `gh-pages
 git init
 git add .
 git commit -m "my landing page"
-gh repo create
+gh repo create --public --source=.
 git push origin master # pousse sur master d'abord
 # puis pousse sur une branche `gh-pages`
 git co -b gh-pages
