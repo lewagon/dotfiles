@@ -12,7 +12,8 @@ node -v
 yarn -v
 # 你应该在这儿看到你yarn的版本号
 ```
-如果没有的话, 你可以回到关于[macOS](https://github.com/lewagon/setup/blob/master/macOS.md#node-with-nvm), 关于[Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#node-with-nvm) 或者 [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#node-with-nvm) 的设置内容.
+
+如果没有的话, 你可以回到关于[macOS](https://github.com/lewagon/setup/blob/master/macos.cn.md#nodejs), 关于[Linux](https://github.com/lewagon/setup/blob/master/ubuntu.cn.md#nodejs) 或者 [Windows](https://github.com/lewagon/setup/blob/master/windows.cn.md#nodejs) 的设置内容.
 
 ## 详细说明
 
@@ -30,14 +31,14 @@ rake webpack
 
 然后, 在你最爱的浏览器里打开 [`localhost:8080`](http://localhost:8080)。
 
-你应该会看到一个排好序的列表，里面是赢过FIFA世界杯次数最多的国家。
+你应该会看到一个排好序的列表，里面是赢过 FIFA 世界杯次数最多的国家。
 
 这个挑战的目标是选择法国的`<li>` 🇫🇷!
 
 从文档对象模型(DOM)里选择元素(element)最简单也最直接的方式是**使用`id`**:
 
 - 打开`index.html` 文件, 找到我们想要选择的元素然后给它设置一个`id`;
-- 打开`lib/select.js` 文件然后写下JavaScript代码，用设置好的id来选择那个对应的元素，让函数返回`return`它!
+- 打开`lib/select.js` 文件然后写下 JavaScript 代码，用设置好的 id 来选择那个对应的元素，让函数返回`return`它!
 
 祝大家选得开心 🎣
 
