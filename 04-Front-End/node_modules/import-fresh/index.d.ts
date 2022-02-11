@@ -21,8 +21,10 @@ importFresh('./foo')();
 
 importFresh('./foo')();
 //=> 1
+
+const foo = importFresh<typeof import('./foo')>('./foo');
 ```
 */
-declare function importFresh(moduleId: string): unknown;
+declare function importFresh<T>(moduleId: string): T;
 
 export = importFresh;

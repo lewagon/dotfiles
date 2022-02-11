@@ -77,7 +77,10 @@ function SockJS(url, protocols, options) {
   var secure = parsedUrl.protocol === 'https:';
   // Step 2 - don't allow secure origin with an insecure protocol
   if (loc.protocol === 'https:' && !secure) {
-    throw new Error('SecurityError: An insecure SockJS connection may not be initiated from a page loaded over HTTPS');
+    // exception is 127.0.0.0/8 and ::1 urls
+    if (!urlUtils.isLoopbackAddr(parsedUrl.hostname)) {
+      throw new Error('SecurityError: An insecure SockJS connection may not be initiated from a page loaded over HTTPS');
+    }
   }
 
   // Step 3 - check port access - no need here

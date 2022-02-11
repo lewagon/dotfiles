@@ -35,5 +35,6 @@ export declare function strConcat(c1: Code, c2: Code): Code;
 export declare function stringify(x: unknown): Code;
 export declare function safeStringify(x: unknown): string;
 export declare function getProperty(key: Code | string | number): Code;
+export declare function getEsmExportName(key: Code | string | number): Code;
 export declare function regexpCode(rx: RegExp): Code;
 export {};

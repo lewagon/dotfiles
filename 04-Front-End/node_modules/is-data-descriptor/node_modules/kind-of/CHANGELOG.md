@@ -32,6 +32,10 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
+## [6.0.3] - 2020-01-16
+
+- Merge pull request #31 for issue #30
+
 ## [6.0.0] - 2017-10-13
 
 - refactor code to be more performant
@@ -154,4 +158,3 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 [Unreleased]: https://github.com/jonschlinkert/kind-of/compare/0.1.2...HEAD
 [keep-a-changelog]: https://github.com/olivierlacan/keep-a-changelog
-

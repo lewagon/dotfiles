@@ -15,7 +15,7 @@ Functor.QUEUE_SIZE = 8;
 Functor.prototype.call = function(error, message, callback, context) {
   if (this._stopped) return;
 
-  var record = {error: error, message: message, callback: callback, context: context, done: false},
+  var record = { error: error, message: message, callback: callback, context: context, done: false },
       called = false,
       self   = this;
 

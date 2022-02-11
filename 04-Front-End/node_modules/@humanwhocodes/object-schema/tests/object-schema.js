@@ -266,6 +266,53 @@ describe("ObjectSchema", () => {
             assert.strictEqual(result.name.last, "z");
         });
 
+        it("should return separate objects when using subschema", () => {
+
+            schema = new ObjectSchema({
+                age: {
+                    merge: "replace",
+                    validate: "number"
+                },
+                address: {
+                    schema: {
+                        street: {
+                            schema: {
+                                number: {
+                                    merge: "replace",
+                                    validate: "number"
+                                },
+                                streetName: {
+                                    merge: "replace",
+                                    validate: "string"
+                                }
+                            }
+                        },
+                        state: {
+                            merge: "replace",
+                            validate: "string"
+                        }
+                    }
+                }
+            });
+
+            const baseObject = {
+                address: {
+                    street: {
+                        number: 100,
+                        streetName: "Foo St"
+                    },
+                    state: "HA"
+                }
+            };
+
+            const result = schema.merge(baseObject, {
+                age: 29
+            });
+
+            assert.notStrictEqual(result.address.street, baseObject.address.street);
+            assert.deepStrictEqual(result.address, baseObject.address);
+        });
+
         it("should not error when calling the merge strategy when there's a subschema and no matching key in second object", () => {
 
             schema = new ObjectSchema({
@@ -293,6 +340,42 @@ describe("ObjectSchema", () => {
 
             assert.strictEqual(result.name.first, "n");
             assert.strictEqual(result.name.last, "z");
+        });
+
+        it("should not error when calling the merge strategy when there's multiple subschemas and no matching key in second object", () => {
+
+            schema = new ObjectSchema({
+                user: {
+                    schema: {
+                        name: {
+                            schema: {
+                                first: {
+                                    merge: "replace",
+                                    validate: "string"
+                                },
+                                last: {
+                                    merge: "replace",
+                                    validate: "string"
+                                }
+                            }
+                        }
+
+                    }
+                }
+            });
+
+            const result = schema.merge({
+                user: {
+                    name: {
+                        first: "n",
+                        last: "z"
+                    }
+                }
+            }, {
+            });
+
+            assert.strictEqual(result.user.name.first, "n");
+            assert.strictEqual(result.user.name.last, "z");
         });
 
 

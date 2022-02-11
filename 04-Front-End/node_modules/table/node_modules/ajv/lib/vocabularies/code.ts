@@ -4,7 +4,7 @@ import type {KeywordCxt} from "../compile/validate"
 import {CodeGen, _, and, or, not, nil, strConcat, getProperty, Code, Name} from "../compile/codegen"
 import {alwaysValidSchema, Type} from "../compile/util"
 import N from "../compile/names"
-
+import {useFunc} from "../compile/util"
 export function checkReportMissingProp(cxt: KeywordCxt, prop: string): void {
   const {gen, data, it} = cxt
   gen.if(noPropertyInData(gen, data, prop, it.opts.ownProperties), () => {
@@ -90,12 +90,17 @@ export function callValidateCode(
   return context !== nil ? _`${func}.call(${context}, ${args})` : _`${func}(${args})`
 }
 
+const newRegExp = _`new RegExp`
+
 export function usePattern({gen, it: {opts}}: KeywordCxt, pattern: string): Name {
   const u = opts.unicodeRegExp ? "u" : ""
+  const {regExp} = opts.code
+  const rx = regExp(pattern, u)
+
   return gen.scopeValue("pattern", {
-    key: pattern,
-    ref: new RegExp(pattern, u),
-    code: _`new RegExp(${pattern}, ${u})`,
+    key: rx.toString(),
+    ref: rx,
+    code: _`${regExp.code === "new RegExp" ? newRegExp : useFunc(gen, regExp)}(${pattern}, ${u})`,
   })
 }
 

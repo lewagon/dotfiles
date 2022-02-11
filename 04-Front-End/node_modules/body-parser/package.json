@@ -1,7 +1,7 @@
 {
   "name": "body-parser",
   "description": "Node.js body parsing middleware",
-  "version": "1.19.0",
+  "version": "1.19.1",
   "contributors": [
     "Douglas Christopher Wilson <doug@somethingdoug.com>",
     "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)"
@@ -9,30 +9,30 @@
   "license": "MIT",
   "repository": "expressjs/body-parser",
   "dependencies": {
-    "bytes": "3.1.0",
+    "bytes": "3.1.1",
     "content-type": "~1.0.4",
     "debug": "2.6.9",
     "depd": "~1.1.2",
-    "http-errors": "1.7.2",
+    "http-errors": "1.8.1",
     "iconv-lite": "0.4.24",
     "on-finished": "~2.3.0",
-    "qs": "6.7.0",
-    "raw-body": "2.4.0",
-    "type-is": "~1.6.17"
+    "qs": "6.9.6",
+    "raw-body": "2.4.2",
+    "type-is": "~1.6.18"
   },
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-standard": "12.0.0",
-    "eslint-plugin-import": "2.17.2",
-    "eslint-plugin-markdown": "1.0.0",
-    "eslint-plugin-node": "8.0.1",
-    "eslint-plugin-promise": "4.1.1",
-    "eslint-plugin-standard": "4.0.0",
-    "istanbul": "0.4.5",
+    "eslint": "7.32.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-markdown": "2.2.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.2.0",
+    "eslint-plugin-standard": "4.1.0",
     "methods": "1.1.2",
-    "mocha": "6.1.4",
-    "safe-buffer": "5.1.2",
-    "supertest": "4.0.2"
+    "mocha": "9.1.3",
+    "nyc": "15.1.0",
+    "safe-buffer": "5.2.1",
+    "supertest": "6.1.6"
   },
   "files": [
     "lib/",
@@ -44,9 +44,9 @@
     "node": ">= 0.8"
   },
   "scripts": {
-    "lint": "eslint --plugin markdown --ext js,md .",
+    "lint": "eslint .",
     "test": "mocha --require test/support/env --reporter spec --check-leaks --bail test/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/"
+    "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
   }
 }

@@ -1,8 +1,13 @@
-var checkParameters = require('./lib/precondition')
 var native = require('crypto')
 
+var checkParameters = require('./lib/precondition')
+var defaultEncoding = require('./lib/default-encoding')
+var toBuffer = require('./lib/to-buffer')
+
 function nativePBKDF2 (password, salt, iterations, keylen, digest, callback) {
-  checkParameters(password, salt, iterations, keylen)
+  checkParameters(iterations, keylen)
+  password = toBuffer(password, defaultEncoding, 'Password')
+  salt = toBuffer(salt, defaultEncoding, 'Salt')
 
   if (typeof digest === 'function') {
     callback = digest
@@ -14,7 +19,9 @@ function nativePBKDF2 (password, salt, iterations, keylen, digest, callback) {
 }
 
 function nativePBKDF2Sync (password, salt, iterations, keylen, digest) {
-  checkParameters(password, salt, iterations, keylen)
+  checkParameters(iterations, keylen)
+  password = toBuffer(password, defaultEncoding, 'Password')
+  salt = toBuffer(salt, defaultEncoding, 'Salt')
   digest = digest || 'sha1'
   return native.pbkdf2Sync(password, salt, iterations, keylen, digest)
 }

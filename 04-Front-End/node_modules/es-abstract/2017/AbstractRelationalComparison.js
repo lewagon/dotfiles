@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $Number = GetIntrinsic('%Number%');
 var $TypeError = GetIntrinsic('%TypeError%');
@@ -13,7 +13,7 @@ var ToNumber = require('./ToNumber');
 var ToPrimitive = require('./ToPrimitive');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/5.1/#sec-11.8.5
+// https://262.ecma-international.org/5.1/#sec-11.8.5
 
 // eslint-disable-next-line max-statements
 module.exports = function AbstractRelationalComparison(x, y, LeftFirst) {
@@ -37,9 +37,6 @@ module.exports = function AbstractRelationalComparison(x, y, LeftFirst) {
 			return undefined;
 		}
 		if ($isFinite(nx) && $isFinite(ny) && nx === ny) {
-			return false;
-		}
-		if (nx === 0 && ny === 0) {
 			return false;
 		}
 		if (nx === Infinity) {

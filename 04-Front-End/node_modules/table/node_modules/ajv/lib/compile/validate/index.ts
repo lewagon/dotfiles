@@ -177,7 +177,7 @@ function checkNoDefault(it: SchemaObjCxt): void {
 
 function updateContext(it: SchemaObjCxt): void {
   const schId = it.schema[it.opts.schemaId]
-  if (schId) it.baseId = resolveUrl(it.baseId, schId)
+  if (schId) it.baseId = resolveUrl(it.opts.uriResolver, it.baseId, schId)
 }
 
 function checkAsyncSchema(it: SchemaObjCxt): void {

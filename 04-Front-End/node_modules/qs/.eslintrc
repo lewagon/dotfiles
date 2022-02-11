@@ -17,5 +17,19 @@
         "no-magic-numbers": 0,
         "no-restricted-syntax": [2, "BreakStatement", "DebuggerStatement", "ForInStatement", "LabeledStatement", "WithStatement"],
         "operator-linebreak": [2, "before"],
-    }
+    },
+
+    "overrides": [
+        {
+            "files": "test/**",
+            "rules": {
+                "function-paren-newline": 0,
+                "max-lines-per-function": 0,
+                "max-statements": 0,
+                "no-buffer-constructor": 0,
+                "no-extend-native": 0,
+                "no-throw-literal": 0,
+            }
+        }
+    ]
 }

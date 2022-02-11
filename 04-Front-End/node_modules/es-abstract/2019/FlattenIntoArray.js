@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
@@ -14,9 +14,9 @@ var IsArray = require('./IsArray');
 var ToLength = require('./ToLength');
 var ToString = require('./ToString');
 
-// https://ecma-international.org/ecma-262/10.0/#sec-flattenintoarray
+// https://262.ecma-international.org/10.0/#sec-flattenintoarray
 
-// eslint-disable-next-line max-params, max-statements
+// eslint-disable-next-line max-params
 module.exports = function FlattenIntoArray(target, source, sourceLen, start, depth) {
 	var mapperFunction;
 	if (arguments.length > 5) {

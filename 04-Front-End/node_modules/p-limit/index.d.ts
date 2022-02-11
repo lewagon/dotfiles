@@ -18,6 +18,15 @@ export interface Limit {
 	The number of promises that are waiting to run (i.e. their internal `fn` was not called yet).
 	*/
 	readonly pendingCount: number;
+
+	/**
+	Discard pending promises that are waiting to run.
+
+	This might be useful if you want to teardown the queue at the end of your program's lifecycle or discard any function calls referencing an intermediary state of your app.
+
+	Note: This does not cancel promises that are already running.
+	*/
+	clearQueue(): void;
 }
 
 /**

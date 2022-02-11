@@ -1,9 +1,10 @@
 'use strict';
 
+// eslint-disable-next-line consistent-return
 module.exports = function runSymbolTests(t) {
 	t.equal(typeof Symbol, 'function', 'global Symbol is a function');
 
-	if (typeof Symbol !== 'function') { return false };
+	if (typeof Symbol !== 'function') { return false; }
 
 	t.notEqual(Symbol(), Symbol(), 'two symbols are not equal');
 
@@ -15,9 +16,9 @@ module.exports = function runSymbolTests(t) {
 	);
 	*/
 
+	/*
 	var foo = Symbol('foo');
 
-	/*
 	t.notEqual(
 		String(foo),
 		String(Symbol('bar')),
@@ -39,6 +40,7 @@ module.exports = function runSymbolTests(t) {
 
 	var symVal = 42;
 	obj[sym] = symVal;
+	// eslint-disable-next-line no-restricted-syntax
 	for (sym in obj) { t.fail('symbol property key was found in for..in of object'); }
 
 	t.deepEqual(Object.keys(obj), [], 'no enumerable own keys on symbol-valued object');

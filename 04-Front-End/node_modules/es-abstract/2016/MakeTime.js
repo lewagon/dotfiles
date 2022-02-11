@@ -8,7 +8,7 @@ var msPerHour = timeConstants.msPerHour;
 
 var ToInteger = require('./ToInteger');
 
-// https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.11
+// https://262.ecma-international.org/5.1/#sec-15.9.1.11
 
 module.exports = function MakeTime(hour, min, sec, ms) {
 	if (!$isFinite(hour) || !$isFinite(min) || !$isFinite(sec) || !$isFinite(ms)) {

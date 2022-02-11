@@ -13,8 +13,16 @@ module.exports = class TryNextPlugin {
 
 	apply(resolver) {
 		const target = resolver.ensureHook(this.target);
-		resolver.getHook(this.source).tapAsync("TryNextPlugin", (request, resolveContext, callback) => {
-			resolver.doResolve(target, request, this.message, resolveContext, callback);
-		});
+		resolver
+			.getHook(this.source)
+			.tapAsync("TryNextPlugin", (request, resolveContext, callback) => {
+				resolver.doResolve(
+					target,
+					request,
+					this.message,
+					resolveContext,
+					callback
+				);
+			});
 	}
 };

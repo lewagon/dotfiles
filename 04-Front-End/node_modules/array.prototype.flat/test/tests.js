@@ -7,16 +7,16 @@ var testArray = function testArray(t, actual, expected, msg) {
 
 module.exports = function (flat, t) {
 	t.test('flattens', function (st) {
-		testArray(t, flat([1, [2], [[3]], [[['four']]]]), [1, 2, [3], [['four']]], 'missing depth only flattens 1 deep');
+		testArray(st, flat([1, [2], [[3]], [[['four']]]]), [1, 2, [3], [['four']]], 'missing depth only flattens 1 deep');
 
-		testArray(t, flat([1, [2], [[3]], [[['four']]]], 1), [1, 2, [3], [['four']]], 'depth of 1 only flattens 1 deep');
-		t.notDeepEqual(flat([1, [2], [[3]], [[['four']]]], 1), [1, 2, 3, ['four']], 'depth of 1 only flattens 1 deep: sanity check');
+		testArray(st, flat([1, [2], [[3]], [[['four']]]], 1), [1, 2, [3], [['four']]], 'depth of 1 only flattens 1 deep');
+		st.notDeepEqual(flat([1, [2], [[3]], [[['four']]]], 1), [1, 2, 3, ['four']], 'depth of 1 only flattens 1 deep: sanity check');
 
-		testArray(t, flat([1, [2], [[3]], [[['four']]]], 2), [1, 2, 3, ['four']], 'depth of 2 only flattens 2 deep');
-		t.notDeepEqual(flat([1, [2], [[3]], [[['four']]]], 2), [1, 2, 3, 'four'], 'depth of 2 only flattens 2 deep: sanity check');
+		testArray(st, flat([1, [2], [[3]], [[['four']]]], 2), [1, 2, 3, ['four']], 'depth of 2 only flattens 2 deep');
+		st.notDeepEqual(flat([1, [2], [[3]], [[['four']]]], 2), [1, 2, 3, 'four'], 'depth of 2 only flattens 2 deep: sanity check');
 
-		testArray(t, flat([1, [2], [[3]], [[['four']]]], 3), [1, 2, 3, 'four'], 'depth of 3 only flattens 3 deep');
-		testArray(t, flat([1, [2], [[3]], [[['four']]]], Infinity), [1, 2, 3, 'four'], 'depth of Infinity flattens all the way');
+		testArray(st, flat([1, [2], [[3]], [[['four']]]], 3), [1, 2, 3, 'four'], 'depth of 3 only flattens 3 deep');
+		testArray(st, flat([1, [2], [[3]], [[['four']]]], Infinity), [1, 2, 3, 'four'], 'depth of Infinity flattens all the way');
 
 		st.end();
 	});

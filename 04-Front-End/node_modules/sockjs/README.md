@@ -48,7 +48,7 @@ A simplified echo SockJS server could look more or less like:
 var http = require('http');
 var sockjs = require('sockjs');
 
-var echo = sockjs.createServer({ sockjs_url: 'http://cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js' });
+var echo = sockjs.createServer();
 echo.on('connection', function(conn) {
     conn.on('data', function(message) {
         conn.write(message);
@@ -90,7 +90,7 @@ var sockjs_server = sockjs.createServer(options);
 Where `options` is a hash which can contain:
 
 <dl>
-<dt>sockjs_url (string, required)</dt>
+<dt>sockjs_url (string)</dt>
 <dd>Transports which don't support cross-domain communication natively
    ('eventsource' to name one) use an iframe trick. A simple page is
    served from the SockJS server (using its foreign domain) and is
@@ -99,7 +99,7 @@ Where `options` is a hash which can contain:
    domain local to the SockJS server. This iframe also does need to
    load SockJS javascript client library, and this option lets you specify
    its url (if you're unsure, point it to
-   <a href="http://cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js">
+   <a href="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js">
    the latest minified SockJS client release</a>, this is the default).
    You must explicitly specify this url on the server side for security
    reasons - we don't want the possibility of running any foreign

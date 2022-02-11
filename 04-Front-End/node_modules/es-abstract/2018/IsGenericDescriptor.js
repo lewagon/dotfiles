@@ -6,7 +6,7 @@ var IsAccessorDescriptor = require('./IsAccessorDescriptor');
 var IsDataDescriptor = require('./IsDataDescriptor');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-isgenericdescriptor
+// https://ecma-international.org/ecma-262/6.0/#sec-isgenericdescriptor
 
 module.exports = function IsGenericDescriptor(Desc) {
 	if (typeof Desc === 'undefined') {

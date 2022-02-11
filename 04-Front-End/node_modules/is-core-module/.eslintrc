@@ -3,7 +3,6 @@
     "root": true,
     "rules": {
 		"func-style": 1,
-		"operator-linebreak": [2, "before"],
     },
     "overrides": [
         {

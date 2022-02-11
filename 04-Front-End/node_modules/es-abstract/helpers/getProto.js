@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var originalGetProto = GetIntrinsic('%Object.getPrototypeOf%', true);
 var $ArrayProto = GetIntrinsic('%Array.prototype%');

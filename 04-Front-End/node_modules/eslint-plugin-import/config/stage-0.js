@@ -9,4 +9,4 @@ module.exports = {
   rules: {
     'import/no-deprecated': 1,
   },
-}
+};

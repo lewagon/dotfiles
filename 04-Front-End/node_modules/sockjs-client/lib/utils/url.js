@@ -44,4 +44,8 @@ module.exports = {
 , addQuery: function (url, q) {
     return url + (url.indexOf('?') === -1 ? ('?' + q) : ('&' + q));
   }
+
+, isLoopbackAddr: function (addr) {
+    return /^127\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/i.test(addr) || /^\[::1\]$/.test(addr);
+  }
 };

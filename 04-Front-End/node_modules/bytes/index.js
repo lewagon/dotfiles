@@ -117,7 +117,11 @@ function format(value, options) {
   }
 
   if (thousandsSeparator) {
-    str = str.replace(formatThousandsRegExp, thousandsSeparator);
+    str = str.split('.').map(function (s, i) {
+      return i === 0
+        ? s.replace(formatThousandsRegExp, thousandsSeparator)
+        : s
+    }).join('.');
   }
 
   return str + unitSeparator + unit;

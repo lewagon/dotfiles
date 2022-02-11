@@ -1,6 +1,5 @@
 # es-abstract <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
-[![Build Status][travis-svg]][travis-url]
 [![dependency status][deps-svg]][deps-url]
 [![dev dependency status][dev-deps-svg]][dev-deps-url]
 [![License][license-image]][license-url]
@@ -8,11 +7,11 @@
 
 [![npm badge][npm-badge-png]][package-url]
 
-[![browser support][testling-svg]][testling-url]
-
 ECMAScript spec abstract operations.
-When different versions of the spec conflict, the default export will be the latest version of the abstract operation.
-All abstract operations will also be available under an `es5`/`es2015`/`es2016`/`es2017`/`es2018`/`es2019` entry point, and exported property, if you require a specific version.
+
+Every operation is available by edition/year and by name - for example, `es-abstract/2020/Call` gives you the `Call` operation from ES2020, `es-abstract/5/Type` gives you the `Type` operation from ES5.
+
+All abstract operations are also available under an `es5`/`es2015`/`es2016`/`es2017`/`es2018`/`es2019`/`es2020`/`es2021` entry point, and as a property on the `main` export, but using deep imports is highly encouraged for bundle size and performance reasons. Non-deep entry points will be removed in the next semver-major release.
 
 ## Example
 
@@ -32,15 +31,11 @@ Simply clone the repo, `npm install`, and run `npm test`
 Please email [@ljharb](https://github.com/ljharb) or see https://tidelift.com/security if you have a potential security vulnerability to report.
 
 [package-url]: https://npmjs.org/package/es-abstract
-[npm-version-svg]: http://versionbadg.es/ljharb/es-abstract.svg
-[travis-svg]: https://travis-ci.org/ljharb/es-abstract.svg
-[travis-url]: https://travis-ci.org/ljharb/es-abstract
+[npm-version-svg]: https://versionbadg.es/ljharb/es-abstract.svg
 [deps-svg]: https://david-dm.org/ljharb/es-abstract.svg
 [deps-url]: https://david-dm.org/ljharb/es-abstract
 [dev-deps-svg]: https://david-dm.org/ljharb/es-abstract/dev-status.svg
 [dev-deps-url]: https://david-dm.org/ljharb/es-abstract#info=devDependencies
-[testling-svg]: https://ci.testling.com/ljharb/es-abstract.png
-[testling-url]: https://ci.testling.com/ljharb/es-abstract
 [npm-badge-png]: https://nodei.co/npm/es-abstract.png?downloads=true&stars=true
 [license-image]: https://img.shields.io/npm/l/es-abstract.svg
 [license-url]: LICENSE

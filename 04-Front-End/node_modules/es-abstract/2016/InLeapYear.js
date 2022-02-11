@@ -1,13 +1,13 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $EvalError = GetIntrinsic('%EvalError%');
 
 var DaysInYear = require('./DaysInYear');
 var YearFromTime = require('./YearFromTime');
 
-// https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.3
+// https://262.ecma-international.org/5.1/#sec-15.9.1.3
 
 module.exports = function InLeapYear(t) {
 	var days = DaysInYear(YearFromTime(t));

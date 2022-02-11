@@ -1966,11 +1966,11 @@
   var dir = createLogger('dir');
 
   /**
-   * @version 2.6.1
+   * @version 2.6.2
    * @namespace async
    */
   var index = {
-    VERSION: '2.6.1',
+    VERSION: '2.6.2',
 
     // Collections
     each: each,
@@ -8024,6 +8024,8 @@
       _unshift = unshift;
       _callback = callback;
       arrayEachSync(_tasks, _exec);
+      // Avoid leaking the callback
+      _callback = undefined;
     }
 
     function kill() {
@@ -8240,7 +8242,7 @@
       return callback(null, results);
     }
     var runningTasks = 0;
-    var readyTasks = [];
+    var readyTasks = new DLL();
     var listeners = Object.create(null);
     callback = onlyOnce(callback || noop);
     concurrency = concurrency || rest;

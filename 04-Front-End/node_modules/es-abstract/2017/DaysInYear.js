@@ -1,17 +1,17 @@
 'use strict';
 
-var mod = require('../helpers/mod');
+var modulo = require('./modulo');
 
-// https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.3
+// https://262.ecma-international.org/5.1/#sec-15.9.1.3
 
 module.exports = function DaysInYear(y) {
-	if (mod(y, 4) !== 0) {
+	if (modulo(y, 4) !== 0) {
 		return 365;
 	}
-	if (mod(y, 100) !== 0) {
+	if (modulo(y, 100) !== 0) {
 		return 366;
 	}
-	if (mod(y, 400) !== 0) {
+	if (modulo(y, 400) !== 0) {
 		return 365;
 	}
 	return 366;

@@ -3,7 +3,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Node.js Version][node-version-image]][node-version-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][github-actions-ci-image]][github-actions-ci-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 Create and parse HTTP `Content-Disposition` header
@@ -16,8 +16,6 @@ $ npm install content-disposition
 
 ## API
 
-<!-- eslint-disable no-unused-vars -->
-
 ```js
 var contentDisposition = require('content-disposition')
 ```
@@ -27,8 +25,6 @@ var contentDisposition = require('content-disposition')
 Create an attachment `Content-Disposition` header value using the given file name,
 if supplied. The `filename` is optional and if no file name is desired, but you
 want to specify `options`, set `filename` to `undefined`.
-
-<!-- eslint-disable no-undef -->
 
 ```js
 res.setHeader('Content-Disposition', contentDisposition('∫ maths.pdf'))
@@ -69,8 +65,6 @@ Specifies the disposition type, defaults to `"attachment"`. This can also be
 it). The type is normalized to lower-case.
 
 ### contentDisposition.parse(string)
-
-<!-- eslint-disable no-undef, no-unused-vars -->
 
 ```js
 var disposition = contentDisposition.parse('attachment; filename="EURO rates.txt"; filename*=UTF-8\'\'%e2%82%ac%20rates.txt')
@@ -140,9 +134,9 @@ $ npm test
 [npm-url]: https://npmjs.org/package/content-disposition
 [node-version-image]: https://img.shields.io/node/v/content-disposition.svg
 [node-version-url]: https://nodejs.org/en/download
-[travis-image]: https://img.shields.io/travis/jshttp/content-disposition.svg
-[travis-url]: https://travis-ci.org/jshttp/content-disposition
 [coveralls-image]: https://img.shields.io/coveralls/jshttp/content-disposition.svg
 [coveralls-url]: https://coveralls.io/r/jshttp/content-disposition?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/content-disposition.svg
 [downloads-url]: https://npmjs.org/package/content-disposition
+[github-actions-ci-image]: https://img.shields.io/github/workflow/status/jshttp/content-disposition/ci/master?label=ci
+[github-actions-ci-url]: https://github.com/jshttp/content-disposition?query=workflow%3Aci

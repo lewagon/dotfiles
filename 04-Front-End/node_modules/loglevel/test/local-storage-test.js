@@ -96,6 +96,13 @@ define(['test/test-helpers'], function(testHelpers) {
                 expect("info").toBeTheStoredLevel();
                 expect("error").not.toBeTheStoredLevel();
             });
+
+            it("log.resetLevel() clears the saved level", function(log) {
+                log.resetLevel();
+
+                expect(undefined).toBeTheStoredLevel();
+                expect("info").not.toBeTheStoredLevel();
+            });
         });
 
         describe("If warn level is saved", function () {

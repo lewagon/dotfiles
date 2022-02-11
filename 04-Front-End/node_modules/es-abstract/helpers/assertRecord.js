@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 var $SyntaxError = GetIntrinsic('%SyntaxError%');
@@ -8,7 +8,7 @@ var $SyntaxError = GetIntrinsic('%SyntaxError%');
 var has = require('has');
 
 var predicates = {
-	// https://ecma-international.org/ecma-262/6.0/#sec-property-descriptor-specification-type
+	// https://262.ecma-international.org/6.0/#sec-property-descriptor-specification-type
 	'Property Descriptor': function isPropertyDescriptor(Type, Desc) {
 		if (Type(Desc) !== 'Object') {
 			return false;

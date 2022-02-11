@@ -124,11 +124,11 @@ var crypto = require('crypto'),
     large  = crypto.randomBytes(1 << 14),
     small  = new Buffer('hi');
 
-deflate.outgoing({data: large}, function() {
+deflate.outgoing({ data: large }, function() {
   console.log(1, 'large');
 });
 
-deflate.outgoing({data: small}, function() {
+deflate.outgoing({ data: small }, function() {
   console.log(2, 'small');
 });
 
@@ -205,7 +205,7 @@ order is preserved:
 
 ```js
 var stream  = require('stream'),
-    session = new stream.Transform({objectMode: true});
+    session = new stream.Transform({ objectMode: true });
 
 session._transform = function(message, _, callback) {
   var self = this;
@@ -276,11 +276,11 @@ above:
 ```js
 var functor = new Functor(deflate, 'outgoing');
 
-functor.call({data: large}, function() {
+functor.call({ data: large }, function() {
   console.log(1, 'large');
 });
 
-functor.call({data: small}, function() {
+functor.call({ data: small }, function() {
   console.log(2, 'small');
 });
 

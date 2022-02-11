@@ -1,11 +1,12 @@
 {
   "name": "require-main-filename",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "shim for require.main.filename() that works in as many environments as possible",
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "tap --coverage test.js"
+    "test": "tap --coverage test.js",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,9 @@
     "shim",
     "iisnode"
   ],
+  "files": [
+    "index.js"
+  ],
   "author": "Ben Coe <ben@npmjs.com>",
   "license": "ISC",
   "bugs": {
@@ -23,8 +27,9 @@
   },
   "homepage": "https://github.com/yargs/require-main-filename#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "standard": "^6.0.5",
-    "tap": "^5.2.0"
+    "chai": "^4.0.0",
+    "standard": "^10.0.3",
+    "standard-version": "^4.0.0",
+    "tap": "^11.0.0"
   }
 }

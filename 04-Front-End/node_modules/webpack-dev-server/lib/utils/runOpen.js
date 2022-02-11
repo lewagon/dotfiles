@@ -11,6 +11,9 @@ function runOpen(uri, options, log) {
   if (typeof options.open === 'string') {
     openOptions = Object.assign({}, openOptions, { app: options.open });
     openOptionValue = `: "${options.open}"`;
+  } else if (typeof options.open === 'object') {
+    openOptions = options.open;
+    openOptionValue = `: "${JSON.stringify(options.open)}"`;
   }
 
   const pages =

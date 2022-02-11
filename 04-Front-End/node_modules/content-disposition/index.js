@@ -255,7 +255,7 @@ function format (obj) {
 }
 
 /**
- * Decode a RFC 6987 field value (gracefully).
+ * Decode a RFC 5987 field value (gracefully).
  *
  * @param {string} str
  * @return {string}

@@ -1,3 +1,9 @@
+### 0.7.4 / 2020-05-22
+
+- Avoid crashing if `process.version` does not contain any digits
+- Emit `ping` and `pong` events from the `Server` driver
+- Require http-parser-js >=0.5.1 which fixes the bug we addressed in 0.7.3
+
 ### 0.7.3 / 2019-06-13
 
 - Cap version of http-parser-js below 0.4.11, which introduced a bug that

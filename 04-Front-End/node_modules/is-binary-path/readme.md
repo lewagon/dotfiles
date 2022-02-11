@@ -1,34 +1,34 @@
 # is-binary-path [![Build Status](https://travis-ci.org/sindresorhus/is-binary-path.svg?branch=master)](https://travis-ci.org/sindresorhus/is-binary-path)
 
-> Check if a filepath is a binary file
+> Check if a file path is a binary file
 
 
 ## Install
 
 ```
-$ npm install --save is-binary-path
+$ npm install is-binary-path
 ```
 
 
 ## Usage
 
 ```js
-var isBinaryPath = require('is-binary-path');
+const isBinaryPath = require('is-binary-path');
 
-isBinaryPath('src/unicorn.png');
+isBinaryPath('source/unicorn.png');
 //=> true
 
-isBinaryPath('src/unicorn.txt');
+isBinaryPath('source/unicorn.txt');
 //=> false
 ```
 
 
 ## Related
 
-- [`binary-extensions`](https://github.com/sindresorhus/binary-extensions) - List of binary file extensions
-- [`is-text-path`](https://github.com/sindresorhus/is-text-path) - Check if a filepath is a text file
+- [binary-extensions](https://github.com/sindresorhus/binary-extensions) - List of binary file extensions
+- [is-text-path](https://github.com/sindresorhus/is-text-path) - Check if a filepath is a text file
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com), [Paul Miller](https://paulmillr.com)

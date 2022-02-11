@@ -1,3 +1,5 @@
+'use strict';
+
 var Event = require('./event');
 
 var EventTarget = {

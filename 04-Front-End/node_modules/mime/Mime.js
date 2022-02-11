@@ -8,7 +8,7 @@ function Mime() {
   this._types = Object.create(null);
   this._extensions = Object.create(null);
 
-  for (var i = 0; i < arguments.length; i++) {
+  for (let i = 0; i < arguments.length; i++) {
     this.define(arguments[i]);
   }
 
@@ -37,16 +37,18 @@ function Mime() {
  * @param force (Boolean) if true, force overriding of existing definitions
  */
 Mime.prototype.define = function(typeMap, force) {
-  for (var type in typeMap) {
-    var extensions = typeMap[type].map(function(t) {return t.toLowerCase()});
+  for (let type in typeMap) {
+    let extensions = typeMap[type].map(function(t) {
+      return t.toLowerCase();
+    });
     type = type.toLowerCase();
 
-    for (var i = 0; i < extensions.length; i++) {
-      var ext = extensions[i];
+    for (let i = 0; i < extensions.length; i++) {
+      const ext = extensions[i];
 
       // '*' prefix = not the preferred type for this extension.  So fixup the
       // extension, and skip it.
-      if (ext[0] == '*') {
+      if (ext[0] === '*') {
         continue;
       }
 
@@ -64,8 +66,8 @@ Mime.prototype.define = function(typeMap, force) {
 
     // Use first extension as default
     if (force || !this._extensions[type]) {
-      var ext = extensions[0];
-      this._extensions[type] = (ext[0] != '*') ? ext : ext.substr(1)
+      const ext = extensions[0];
+      this._extensions[type] = (ext[0] !== '*') ? ext : ext.substr(1);
     }
   }
 };
@@ -75,11 +77,11 @@ Mime.prototype.define = function(typeMap, force) {
  */
 Mime.prototype.getType = function(path) {
   path = String(path);
-  var last = path.replace(/^.*[/\\]/, '').toLowerCase();
-  var ext = last.replace(/^.*\./, '').toLowerCase();
+  let last = path.replace(/^.*[/\\]/, '').toLowerCase();
+  let ext = last.replace(/^.*\./, '').toLowerCase();
 
-  var hasPath = last.length < path.length;
-  var hasDot = ext.length < last.length - 1;
+  let hasPath = last.length < path.length;
+  let hasDot = ext.length < last.length - 1;
 
   return (hasDot || !hasPath) && this._types[ext] || null;
 };
