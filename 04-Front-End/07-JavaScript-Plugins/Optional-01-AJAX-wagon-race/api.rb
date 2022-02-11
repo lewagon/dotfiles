@@ -2,7 +2,7 @@ require "sinatra"
 require "rabl"
 require "active_support/core_ext"
 require "active_support/inflector"
-require "builder"
+require "bundler"
 require "sequel"
 
 Rabl.configure do |config|
