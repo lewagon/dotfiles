@@ -118,7 +118,8 @@ export declare type JTDSchemaType<T, D extends Record<string, unknown> = Record<
         [K in keyof D]: JTDSchemaType<D[K], D>;
     };
 };
-declare type JTDDataDef<S, D extends Record<string, unknown>> = (S extends {
+declare type JTDDataDef<S, D extends Record<string, unknown>> = // ref
+(S extends {
     ref: string;
 } ? D extends {
     [K in S["ref"]]: infer V;

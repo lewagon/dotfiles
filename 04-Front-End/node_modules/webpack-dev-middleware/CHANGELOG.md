@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.7.3](https://github.com/webpack/webpack-dev-middleware/compare/v3.7.2...v3.7.3) (2020-12-15)
+
+
+### Bug Fixes
+
+* peer dependencies with webpack@5 ([#798](https://github.com/webpack/webpack-dev-middleware/issues/798)) ([71b2bdf](https://github.com/webpack/webpack-dev-middleware/commit/71b2bdf))
+
 ### [3.7.2](https://github.com/webpack/webpack-dev-middleware/compare/v3.7.1...v3.7.2) (2019-09-28)
 
 

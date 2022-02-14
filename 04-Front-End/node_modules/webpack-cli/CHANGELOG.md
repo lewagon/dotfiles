@@ -1,3 +1,23 @@
+<a name="3.3.12"></a>
+
+# 3.3.12 (2020-06-03)
+
+[Full Changelog](https://github.com/webpack/webpack-cli/compare/v3.3.11...v3.3.12)
+
+## Chore
+
+-   update dependencies
+
+<a name="3.3.11"></a>
+
+# 3.3.11 (2020-02-11)
+
+[Full Changelog](https://github.com/webpack/webpack-cli/compare/v3.3.10...v3.3.11)
+
+## Chore
+
+-   update dependencies
+
 <a name="3.3.10"></a>
 
 # 3.3.10 (2019-10-31)

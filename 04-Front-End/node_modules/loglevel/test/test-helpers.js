@@ -67,10 +67,12 @@ define(function () {
     };
 
     self.toBeTheLevelStoredByCookie = function toBeTheLevelStoredByCookie(name) {
-        var level = this.actual.toUpperCase();
+        var level = this.actual === undefined ? undefined : this.actual.toUpperCase();
         var storageKey = encodeURIComponent(getStorageKey(name));
 
-        if (window.document.cookie.indexOf(storageKey + "=" + level) !== -1) {
+        if(level === undefined) {
+            return window.document.cookie.indexOf(storageKey + "=") === -1;
+        } else if (window.document.cookie.indexOf(storageKey + "=" + level) !== -1) {
             return true;
         } else {
             return false;
@@ -78,7 +80,7 @@ define(function () {
     };
 
     self.toBeTheLevelStoredByLocalStorage = function toBeTheLevelStoredByLocalStorage(name) {
-        var level = this.actual.toUpperCase();
+        var level = this.actual === undefined ? undefined : this.actual.toUpperCase();
 
         if (window.localStorage[getStorageKey(name)] === level) {
             return true;

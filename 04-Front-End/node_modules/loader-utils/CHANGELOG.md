@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/webpack/loader-utils/compare/v1.3.0...v1.4.0) (2020-02-19)
+
+
+### Features
+
+* the `resourceQuery` is passed to the `interpolateName` method ([#163](https://github.com/webpack/loader-utils/issues/163)) ([cd0e428](https://github.com/webpack/loader-utils/commit/cd0e428))
+
+
+
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/webpack/loader-utils/compare/v1.2.3...v1.3.0) (2020-02-19)
+
+
+### Features
+
+* support the `[query]` template for the `interpolatedName` method ([#162](https://github.com/webpack/loader-utils/issues/162)) ([469eeba](https://github.com/webpack/loader-utils/commit/469eeba))
+
+
+
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/webpack/loader-utils/compare/v1.2.2...v1.2.3) (2018-12-27)
 

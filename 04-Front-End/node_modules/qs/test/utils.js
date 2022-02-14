@@ -130,7 +130,7 @@ test('isBuffer()', function (t) {
     var saferBuffer = SaferBuffer.from('abc');
     t.equal(utils.isBuffer(saferBuffer), true, 'SaferBuffer instance is a buffer');
 
-    var buffer = Buffer.from ? Buffer.from('abc') : new Buffer('abc');
+    var buffer = Buffer.from && Buffer.alloc ? Buffer.from('abc') : new Buffer('abc');
     t.equal(utils.isBuffer(buffer), true, 'real Buffer instance is a buffer');
     t.end();
 });

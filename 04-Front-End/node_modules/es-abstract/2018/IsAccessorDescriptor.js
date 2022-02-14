@@ -6,7 +6,7 @@ var assertRecord = require('../helpers/assertRecord');
 
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-isaccessordescriptor
+// https://ecma-international.org/ecma-262/6.0/#sec-isaccessordescriptor
 
 module.exports = function IsAccessorDescriptor(Desc) {
 	if (typeof Desc === 'undefined') {

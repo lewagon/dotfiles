@@ -12,8 +12,10 @@ module.exports = class NextPlugin {
 
 	apply(resolver) {
 		const target = resolver.ensureHook(this.target);
-		resolver.getHook(this.source).tapAsync("NextPlugin", (request, resolveContext, callback) => {
-			resolver.doResolve(target, request, null, resolveContext, callback);
-		});
+		resolver
+			.getHook(this.source)
+			.tapAsync("NextPlugin", (request, resolveContext, callback) => {
+				resolver.doResolve(target, request, null, resolveContext, callback);
+			});
 	}
 };

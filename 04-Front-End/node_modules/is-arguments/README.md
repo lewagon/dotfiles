@@ -1,14 +1,13 @@
-#is-arguments <sup>[![Version Badge][2]][1]</sup>
+# is-arguments <sup>[![Version Badge][2]][1]</sup>
 
-[![Build Status][3]][4]
+[![github actions][actions-image]][actions-url]
+[![coverage][codecov-image]][codecov-url]
 [![dependency status][5]][6]
 [![dev dependency status][7]][8]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
 
 [![npm badge][11]][1]
-
-[![browser support][9]][10]
 
 Is this an arguments object? It's a harder question than you think.
 
@@ -32,18 +31,17 @@ If you have modified an actual `arguments` object by giving it a `Symbol.toStrin
 Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/is-arguments
-[2]: http://versionbadg.es/ljharb/is-arguments.svg
-[3]: https://travis-ci.org/ljharb/is-arguments.svg
-[4]: https://travis-ci.org/ljharb/is-arguments
-[5]: https://david-dm.org/ljharb/is-arguments.svg
-[6]: https://david-dm.org/ljharb/is-arguments
-[7]: https://david-dm.org/ljharb/is-arguments/dev-status.svg
-[8]: https://david-dm.org/ljharb/is-arguments#info=devDependencies
-[9]: https://ci.testling.com/ljharb/is-arguments.png
-[10]: https://ci.testling.com/ljharb/is-arguments
+[2]: https://versionbadg.es/inspect-js/is-arguments.svg
+[5]: https://david-dm.org/inspect-js/is-arguments.svg
+[6]: https://david-dm.org/inspect-js/is-arguments
+[7]: https://david-dm.org/inspect-js/is-arguments/dev-status.svg
+[8]: https://david-dm.org/inspect-js/is-arguments#info=devDependencies
 [11]: https://nodei.co/npm/is-arguments.png?downloads=true&stars=true
-[license-image]: http://img.shields.io/npm/l/is-arguments.svg
+[license-image]: https://img.shields.io/npm/l/is-arguments.svg
 [license-url]: LICENSE
-[downloads-image]: http://img.shields.io/npm/dm/is-arguments.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=is-arguments
-
+[downloads-image]: https://img.shields.io/npm/dm/is-arguments.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=is-arguments
+[codecov-image]: https://codecov.io/gh/inspect-js/is-arguments/branch/main/graphs/badge.svg
+[codecov-url]: https://app.codecov.io/gh/inspect-js/is-arguments/
+[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/inspect-js/is-arguments
+[actions-url]: https://github.com/inspect-js/is-arguments/actions

@@ -1,3 +1,18 @@
+<a name="3.0.0"></a>
+# 3.0.0 (2019-05-12)
+
+* build: bye bower ([4acc7c0](https://github.com/kikobeats/emojis-list/commit/4acc7c0))
+* build: remove gulp and bower ([12c83f3](https://github.com/kikobeats/emojis-list/commit/12c83f3))
+* build: update meta ([de14b12](https://github.com/kikobeats/emojis-list/commit/de14b12))
+* moar emojis ([b4a153f](https://github.com/kikobeats/emojis-list/commit/b4a153f))
+* chore: drop support for Node.js 0.10 ([20ed4f1](https://github.com/kikobeats/emojis-list/commit/20ed4f1))
+
+
+### BREAKING CHANGE
+
+* This module no longer supports Node.js 0.10
+
+
 <a name="2.1.0"></a>
 # 2.1.0 (2016-10-03)
 

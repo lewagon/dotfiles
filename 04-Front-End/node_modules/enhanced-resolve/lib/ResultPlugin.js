@@ -10,13 +10,17 @@ module.exports = class ResultPlugin {
 	}
 
 	apply(resolver) {
-		this.source.tapAsync("ResultPlugin", (request, resolverContext, callback) => {
-			const obj = Object.assign({}, request);
-			if(resolverContext.log) resolverContext.log("reporting result " + obj.path);
-			resolver.hooks.result.callAsync(obj, resolverContext, err => {
-				if(err) return callback(err);
-				callback(null, obj);
-			});
-		});
+		this.source.tapAsync(
+			"ResultPlugin",
+			(request, resolverContext, callback) => {
+				const obj = Object.assign({}, request);
+				if (resolverContext.log)
+					resolverContext.log("reporting result " + obj.path);
+				resolver.hooks.result.callAsync(obj, resolverContext, err => {
+					if (err) return callback(err);
+					callback(null, obj);
+				});
+			}
+		);
 	}
 };

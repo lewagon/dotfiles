@@ -1,6 +1,6 @@
 {
   "name": "setprototypeof",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A small polyfill for Object.setprototypeof",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -12,7 +12,9 @@
     "node4": "NODE_VER=4 npm run testversion",
     "node6": "NODE_VER=6 npm run testversion",
     "node9": "NODE_VER=9 npm run testversion",
-    "node11": "NODE_VER=11 npm run testversion"
+    "node11": "NODE_VER=11 npm run testversion",
+    "prepublishOnly": "npm t",
+    "postpublish": "git push origin && git push origin --tags"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,7 @@
   },
   "homepage": "https://github.com/wesleytodd/setprototypeof",
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "standard": "^12.0.1"
+    "mocha": "^6.1.4",
+    "standard": "^13.0.2"
   }
 }

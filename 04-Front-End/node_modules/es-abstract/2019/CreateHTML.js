@@ -1,10 +1,10 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
-var callBound = require('../helpers/callBound');
+var callBound = require('call-bind/callBound');
 
 var $replace = callBound('String.prototype.replace');
 
@@ -12,7 +12,7 @@ var RequireObjectCoercible = require('./RequireObjectCoercible');
 var ToString = require('./ToString');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-createhtml
+// https://ecma-international.org/ecma-262/6.0/#sec-createhtml
 
 module.exports = function CreateHTML(string, tag, attribute, value) {
 	if (Type(tag) !== 'String' || Type(attribute) !== 'String') {

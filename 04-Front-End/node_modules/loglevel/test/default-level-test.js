@@ -56,5 +56,22 @@ define(['test/test-helpers'], function(testHelpers) {
                 expect("debug").not.toBeTheStoredLevel();
             });
         });
+
+        describe("log.resetLevel() resets the log", function() {
+            it("to warn if no explicit default is set", function(log) {
+                log.setLevel("debug");
+                log.resetLevel();
+
+                expect(log).toBeAtLevel("warn");
+            });
+
+            it("to info if default is set to info", function(log) {
+                log.setDefaultLevel("info");
+                log.setLevel("debug");
+                log.resetLevel();
+
+                expect(log).toBeAtLevel("info");
+            });
+        });
     });
 });

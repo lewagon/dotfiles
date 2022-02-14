@@ -1,15 +1,15 @@
 {
 	"name": "is-symbol",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Determine if a value is an ES6 Symbol or not.",
 	"main": "index.js",
 	"scripts": {
-		"prepublish": "safe-publish-latest",
+		"prepublishOnly": "safe-publish-latest",
+		"prepublish": "not-in-publish || npm run prepublishOnly",
 		"pretest": "npm run lint",
-		"tests-only": "node --es-staging --harmony test",
+		"tests-only": "nyc tape 'test/**/*.js'",
 		"test": "npm run tests-only",
-		"posttest": "npx aud",
-		"coverage": "covert test",
+		"posttest": "npx aud --production",
 		"lint": "eslint .",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
@@ -33,17 +33,17 @@
 		"url": "https://github.com/inspect-js/is-symbol/issues"
 	},
 	"dependencies": {
-		"has-symbols": "^1.0.1"
+		"has-symbols": "^1.0.2"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^15.0.2",
-		"auto-changelog": "^1.16.2",
-		"covert": "^1.1.1",
-		"eslint": "^6.6.0",
-		"object-inspect": "^1.7.0",
+		"@ljharb/eslint-config": "^17.6.0",
+		"aud": "^1.1.5",
+		"auto-changelog": "^2.2.1",
+		"eslint": "^7.26.0",
+		"nyc": "^10.3.2",
+		"object-inspect": "^1.10.3",
 		"safe-publish-latest": "^1.1.4",
-		"semver": "^6.3.0",
-		"tape": "^4.11.0"
+		"tape": "^5.2.2"
 	},
 	"testling": {
 		"files": "test/index.js",
@@ -71,6 +71,7 @@
 		"template": "keepachangelog",
 		"unreleased": false,
 		"commitLimit": false,
-		"backfillLimit": false
+		"backfillLimit": false,
+		"hideCredit": true
 	}
 }

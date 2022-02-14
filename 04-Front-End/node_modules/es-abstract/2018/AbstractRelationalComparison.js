@@ -1,21 +1,20 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $Number = GetIntrinsic('%Number%');
 var $TypeError = GetIntrinsic('%TypeError%');
 
 var $isNaN = require('../helpers/isNaN');
 var $isFinite = require('../helpers/isFinite');
-var isPrefixOf = require('../helpers/isPrefixOf');
 
+var IsStringPrefix = require('./IsStringPrefix');
 var ToNumber = require('./ToNumber');
 var ToPrimitive = require('./ToPrimitive');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/5.1/#sec-11.8.5
+// https://262.ecma-international.org/9.0/#sec-abstract-relational-comparison
 
-// eslint-disable-next-line max-statements
 module.exports = function AbstractRelationalComparison(x, y, LeftFirst) {
 	if (Type(LeftFirst) !== 'Boolean') {
 		throw new $TypeError('Assertion failed: LeftFirst argument must be a Boolean');
@@ -29,38 +28,34 @@ module.exports = function AbstractRelationalComparison(x, y, LeftFirst) {
 		py = ToPrimitive(y, $Number);
 		px = ToPrimitive(x, $Number);
 	}
-	var bothStrings = Type(px) === 'String' && Type(py) === 'String';
-	if (!bothStrings) {
-		var nx = ToNumber(px);
-		var ny = ToNumber(py);
-		if ($isNaN(nx) || $isNaN(ny)) {
-			return undefined;
-		}
-		if ($isFinite(nx) && $isFinite(ny) && nx === ny) {
+	if (Type(px) === 'String' && Type(py) === 'String') {
+		if (IsStringPrefix(py, px)) {
 			return false;
 		}
-		if (nx === 0 && ny === 0) {
-			return false;
-		}
-		if (nx === Infinity) {
-			return false;
-		}
-		if (ny === Infinity) {
+		if (IsStringPrefix(px, py)) {
 			return true;
 		}
-		if (ny === -Infinity) {
-			return false;
-		}
-		if (nx === -Infinity) {
-			return true;
-		}
-		return nx < ny; // by now, these are both nonzero, finite, and not equal
+		return px < py; // both strings, neither a prefix of the other. shortcut for steps 3 c-f
 	}
-	if (isPrefixOf(py, px)) {
+	var nx = ToNumber(px);
+	var ny = ToNumber(py);
+	if ($isNaN(nx) || $isNaN(ny)) {
+		return undefined;
+	}
+	if ($isFinite(nx) && $isFinite(ny) && nx === ny) {
 		return false;
 	}
-	if (isPrefixOf(px, py)) {
+	if (nx === Infinity) {
+		return false;
+	}
+	if (ny === Infinity) {
 		return true;
 	}
-	return px < py; // both strings, neither a prefix of the other. shortcut for steps c-f
+	if (ny === -Infinity) {
+		return false;
+	}
+	if (nx === -Infinity) {
+		return true;
+	}
+	return nx < ny; // by now, these are both nonzero, finite, and not equal
 };

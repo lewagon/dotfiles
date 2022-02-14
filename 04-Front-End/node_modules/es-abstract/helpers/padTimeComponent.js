@@ -1,6 +1,6 @@
 'use strict';
 
-var callBound = require('../helpers/callBound');
+var callBound = require('call-bind/callBound');
 
 var $strSlice = callBound('String.prototype.slice');
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
@@ -12,7 +12,7 @@ var MinFromTime = require('./MinFromTime');
 var SecFromTime = require('./SecFromTime');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/9.0/#sec-timestring
+// https://262.ecma-international.org/9.0/#sec-timestring
 
 module.exports = function TimeString(tv) {
 	if (Type(tv) !== 'Number' || $isNaN(tv)) {

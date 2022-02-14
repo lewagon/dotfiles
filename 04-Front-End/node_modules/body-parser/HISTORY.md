@@ -1,3 +1,18 @@
+1.19.1 / 2021-12-10
+===================
+
+  * deps: bytes@3.1.1
+  * deps: http-errors@1.8.1
+    - deps: inherits@2.0.4
+    - deps: toidentifier@1.0.1
+    - deps: setprototypeof@1.2.0
+  * deps: qs@6.9.6
+  * deps: raw-body@2.4.2
+    - deps: bytes@3.1.1
+    - deps: http-errors@1.8.1
+  * deps: safe-buffer@5.2.1
+  * deps: type-is@~1.6.18
+
 1.19.0 / 2019-04-25
 ===================
 

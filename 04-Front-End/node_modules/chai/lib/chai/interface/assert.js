@@ -1826,7 +1826,7 @@ module.exports = function (chai, util) {
    *     assert.hasAnyDeepKeys(new Set([{one: 'one'}, {two: 'two'}]), [{one: 'one'}, {three: 'three'}]);
    *     assert.hasAnyDeepKeys(new Set([{one: 'one'}, {two: 'two'}]), [{one: 'one'}, {two: 'two'}]);
    *
-   * @name doesNotHaveAllKeys
+   * @name hasAnyDeepKeys
    * @param {Mixed} object
    * @param {Array|Object} keys
    * @param {String} message
@@ -2260,7 +2260,7 @@ module.exports = function (chai, util) {
    * Asserts that `set1` and `set2` have the same members in the same order.
    * Uses a deep equality check.
    *
-   * assert.sameDeepOrderedMembers([ { a: 1 }, { b: 2 }, { c: 3 } ], [ { a: 1 }, { b: 2 }, { c: 3 } ], 'same deep ordered members');
+   *     assert.sameDeepOrderedMembers([ { a: 1 }, { b: 2 }, { c: 3 } ], [ { a: 1 }, { b: 2 }, { c: 3 } ], 'same deep ordered members');
    *
    * @name sameDeepOrderedMembers
    * @param {Array} set1
@@ -2281,8 +2281,8 @@ module.exports = function (chai, util) {
    * Asserts that `set1` and `set2` don't have the same members in the same
    * order. Uses a deep equality check.
    *
-   * assert.notSameDeepOrderedMembers([ { a: 1 }, { b: 2 }, { c: 3 } ], [ { a: 1 }, { b: 2 }, { z: 5 } ], 'not same deep ordered members');
-   * assert.notSameDeepOrderedMembers([ { a: 1 }, { b: 2 }, { c: 3 } ], [ { b: 2 }, { a: 1 }, { c: 3 } ], 'not same deep ordered members');
+   *     assert.notSameDeepOrderedMembers([ { a: 1 }, { b: 2 }, { c: 3 } ], [ { a: 1 }, { b: 2 }, { z: 5 } ], 'not same deep ordered members');
+   *     assert.notSameDeepOrderedMembers([ { a: 1 }, { b: 2 }, { c: 3 } ], [ { b: 2 }, { a: 1 }, { c: 3 } ], 'not same deep ordered members');
    *
    * @name notSameDeepOrderedMembers
    * @param {Array} set1
@@ -2702,7 +2702,7 @@ module.exports = function (chai, util) {
   }
 
   /**
-   * ### .increasesButNotBy(function, object, property, [message])
+   * ### .increasesButNotBy(function, object, property, delta, [message])
    *
    * Asserts that a function does not increase a numeric object property or function's return value by an amount (delta).
    *
@@ -2832,7 +2832,7 @@ module.exports = function (chai, util) {
    *     var fn = function() { obj.val = 5 };
    *     assert.doesNotDecreaseBy(fn, obj, 'val', 1);
    *
-   * @name doesNotDecrease
+   * @name doesNotDecreaseBy
    * @param {Function} modifier function
    * @param {Object} object or getter function
    * @param {String} property name _optional_

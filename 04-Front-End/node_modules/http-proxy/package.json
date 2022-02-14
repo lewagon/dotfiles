@@ -1,6 +1,6 @@
 {
   "name": "http-proxy",
-  "version": "1.18.0",
+  "version": "1.18.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/http-party/node-http-proxy.git"
@@ -35,7 +35,7 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "license": "MIT"
 }

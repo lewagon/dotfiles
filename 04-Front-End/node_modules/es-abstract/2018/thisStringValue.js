@@ -1,6 +1,6 @@
 'use strict';
 
-var $StringValueOf = require('../helpers/callBound')('String.prototype.valueOf');
+var $StringValueOf = require('call-bind/callBound')('String.prototype.valueOf');
 
 var Type = require('./Type');
 

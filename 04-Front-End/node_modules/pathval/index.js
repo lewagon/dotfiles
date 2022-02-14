@@ -76,13 +76,20 @@ function parsePath(path) {
   var str = path.replace(/([^\\])\[/g, '$1.[');
   var parts = str.match(/(\\\.|[^.]+?)+/g);
   return parts.map(function mapMatches(value) {
+    if (
+      value === 'constructor' ||
+      value === '__proto__' ||
+      value === 'prototype'
+    ) {
+      return {};
+    }
     var regexp = /^\[(\d+)\]$/;
     var mArr = regexp.exec(value);
     var parsed = null;
     if (mArr) {
       parsed = { i: parseFloat(mArr[1]) };
     } else {
-      parsed = { p: value.replace(/\\([.\[\]])/g, '$1') };
+      parsed = { p: value.replace(/\\([.[\]])/g, '$1') };
     }
 
     return parsed;
@@ -107,7 +114,7 @@ function parsePath(path) {
 function internalGetPathValue(obj, parsed, pathDepth) {
   var temporaryValue = obj;
   var res = null;
-  pathDepth = (typeof pathDepth === 'undefined' ? parsed.length : pathDepth);
+  pathDepth = typeof pathDepth === 'undefined' ? parsed.length : pathDepth;
 
   for (var i = 0; i < pathDepth; i++) {
     var part = parsed[i];
@@ -118,7 +125,7 @@ function internalGetPathValue(obj, parsed, pathDepth) {
         temporaryValue = temporaryValue[part.p];
       }
 
-      if (i === (pathDepth - 1)) {
+      if (i === pathDepth - 1) {
         res = temporaryValue;
       }
     }
@@ -152,7 +159,7 @@ function internalSetPathValue(obj, val, parsed) {
     part = parsed[i];
 
     // If it's the last part of the path, we set the 'propName' value with the property name
-    if (i === (pathDepth - 1)) {
+    if (i === pathDepth - 1) {
       propName = typeof part.p === 'undefined' ? part.i : part.p;
       // Now we set the property with the name held by 'propName' on object with the desired val
       tempObj[propName] = val;
@@ -199,7 +206,10 @@ function getPathInfo(obj, path) {
   var parsed = parsePath(path);
   var last = parsed[parsed.length - 1];
   var info = {
-    parent: parsed.length > 1 ? internalGetPathValue(obj, parsed, parsed.length - 1) : obj,
+    parent:
+      parsed.length > 1 ?
+        internalGetPathValue(obj, parsed, parsed.length - 1) :
+        obj,
     name: last.p || last.i,
     value: internalGetPathValue(obj, parsed),
   };

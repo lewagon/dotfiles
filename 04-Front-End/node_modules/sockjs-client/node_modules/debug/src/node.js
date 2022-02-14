@@ -160,7 +160,10 @@ var formatters = module.exports.formatters;
 
 formatters.o = function (v) {
   this.inspectOpts.colors = this.useColors;
-  return util.inspect(v, this.inspectOpts).replace(/\s*\n\s*/g, ' ');
+  return util.inspect(v, this.inspectOpts)
+    .split('\n')
+    .map(function (str) { return str.trim(); })
+    .join(' ');
 };
 /**
  * Map %O to `util.inspect()`, allowing multiple lines if needed.

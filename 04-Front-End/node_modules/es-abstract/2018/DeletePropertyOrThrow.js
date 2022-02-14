@@ -1,13 +1,13 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
 var IsPropertyKey = require('./IsPropertyKey');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-deletepropertyorthrow
+// https://ecma-international.org/ecma-262/6.0/#sec-deletepropertyorthrow
 
 module.exports = function DeletePropertyOrThrow(O, P) {
 	if (Type(O) !== 'Object') {

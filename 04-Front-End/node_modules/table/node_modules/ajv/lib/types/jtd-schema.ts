@@ -117,9 +117,8 @@ export type JTDSchemaType<T, D extends Record<string, unknown> = Record<string, 
               : never))
   // empty - empty schemas also treat nullable differently in that it's now fully ignored
   | (unknown extends T ? {nullable?: boolean} : never)
-  // all other types
-  | ((// numbers - only accepts the type number
-    true extends NullTypeEquality<T, number>
+  // all other types // numbers - only accepts the type number
+  | ((true extends NullTypeEquality<T, number>
       ? {type: NumberType}
       : // booleans - accepts the type boolean
       true extends NullTypeEquality<T, boolean>
@@ -198,8 +197,8 @@ export type JTDSchemaType<T, D extends Record<string, unknown> = Record<string, 
 }
 
 type JTDDataDef<S, D extends Record<string, unknown>> =
-  | (// ref
-    S extends {ref: string}
+  | // ref
+  (S extends {ref: string}
       ? D extends {[K in S["ref"]]: infer V}
         ? JTDDataDef<V, D>
         : never
@@ -228,27 +227,23 @@ type JTDDataDef<S, D extends Record<string, unknown>> =
           optionalProperties?: Record<string, unknown>
           additionalProperties?: boolean
         }
-      ? {-readonly [K in keyof S["properties"]]-?: JTDDataDef<S["properties"][K], D>} &
-          {
-            -readonly [K in keyof S["optionalProperties"]]+?: JTDDataDef<
-              S["optionalProperties"][K],
-              D
-            >
-          } &
-          ([S["additionalProperties"]] extends [true] ? Record<string, unknown> : unknown)
+      ? {-readonly [K in keyof S["properties"]]-?: JTDDataDef<S["properties"][K], D>} & {
+          -readonly [K in keyof S["optionalProperties"]]+?: JTDDataDef<
+            S["optionalProperties"][K],
+            D
+          >
+        } & ([S["additionalProperties"]] extends [true] ? Record<string, unknown> : unknown)
       : S extends {
           properties?: Record<string, unknown>
           optionalProperties: Record<string, unknown>
           additionalProperties?: boolean
         }
-      ? {-readonly [K in keyof S["properties"]]-?: JTDDataDef<S["properties"][K], D>} &
-          {
-            -readonly [K in keyof S["optionalProperties"]]+?: JTDDataDef<
-              S["optionalProperties"][K],
-              D
-            >
-          } &
-          ([S["additionalProperties"]] extends [true] ? Record<string, unknown> : unknown)
+      ? {-readonly [K in keyof S["properties"]]-?: JTDDataDef<S["properties"][K], D>} & {
+          -readonly [K in keyof S["optionalProperties"]]+?: JTDDataDef<
+            S["optionalProperties"][K],
+            D
+          >
+        } & ([S["additionalProperties"]] extends [true] ? Record<string, unknown> : unknown)
       : // values
       S extends {values: infer V}
       ? Record<string, JTDDataDef<V, D>>

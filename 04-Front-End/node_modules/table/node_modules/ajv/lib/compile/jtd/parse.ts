@@ -342,7 +342,7 @@ function parseRef(cxt: ParseCxt): void {
   const {gen, self, definitions, schema, schemaEnv} = cxt
   const {ref} = schema
   const refSchema = definitions[ref]
-  if (!refSchema) throw new MissingRefError("", ref, `No definition ${ref}`)
+  if (!refSchema) throw new MissingRefError(self.opts.uriResolver, "", ref, `No definition ${ref}`)
   if (!hasRef(refSchema)) return parseCode({...cxt, schema: refSchema})
   const {root} = schemaEnv
   const sch = compileParser.call(self, new SchemaEnv({schema: refSchema, root}), definitions)

@@ -2,5 +2,4 @@
 *.psd
 Gemfile.lock
 news.sqlite3
-04-Front-End/node_modules
 *.vscode/

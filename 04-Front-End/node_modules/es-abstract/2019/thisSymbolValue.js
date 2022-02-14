@@ -1,12 +1,12 @@
 'use strict';
 
-var callBound = require('../helpers/callBound');
+var callBound = require('call-bind/callBound');
 
 var $SymbolValueOf = callBound('Symbol.prototype.valueOf', true);
 
 var Type = require('./Type');
 
-// https://ecma-international.org/ecma-262/9.0/#sec-thissymbolvalue
+// https://262.ecma-international.org/9.0/#sec-thissymbolvalue
 
 module.exports = function thisSymbolValue(value) {
 	if (!$SymbolValueOf) {

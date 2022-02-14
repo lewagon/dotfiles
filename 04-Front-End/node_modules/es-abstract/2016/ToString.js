@@ -1,11 +1,11 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $String = GetIntrinsic('%String%');
 var $TypeError = GetIntrinsic('%TypeError%');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-tostring
+// https://ecma-international.org/ecma-262/6.0/#sec-tostring
 
 module.exports = function ToString(argument) {
 	if (typeof argument === 'symbol') {

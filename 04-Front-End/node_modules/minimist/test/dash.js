@@ -22,3 +22,10 @@ test('-a -- b', function (t) {
     t.deepEqual(parse([ '--a', '--', 'b' ]), { a: true, _: [ 'b' ] });
     t.deepEqual(parse([ '--a', '--', 'b' ]), { a: true, _: [ 'b' ] });
 });
+
+test('move arguments after the -- into their own `--` array', function(t) {
+    t.plan(1);
+    t.deepEqual(
+        parse([ '--name', 'John', 'before', '--', 'after' ], { '--': true }),
+        { name: 'John', _: [ 'before' ], '--': [ 'after' ] });
+});

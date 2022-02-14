@@ -138,11 +138,21 @@ module.exports = function (_chai, util) {
     if (!ok) {
       msg = util.getMessage(this, arguments);
       var actual = util.getActual(this, arguments);
-      throw new AssertionError(msg, {
+      var assertionErrorObjectProperties = {
           actual: actual
         , expected: expected
         , showDiff: showDiff
-      }, (config.includeStack) ? this.assert : flag(this, 'ssfi'));
+      };
+
+      var operator = util.getOperator(this, arguments);
+      if (operator) {
+        assertionErrorObjectProperties.operator = operator;
+      }
+
+      throw new AssertionError(
+        msg,
+        assertionErrorObjectProperties,
+        (config.includeStack) ? this.assert : flag(this, 'ssfi'));
     }
   };
 

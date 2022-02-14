@@ -3,7 +3,7 @@
 var test = require('tape');
 var defineProperties = require('define-properties');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
-var functionsHaveNames = function f() {}.name === 'f';
+var functionsHaveNames = require('functions-have-names')();
 
 var runTests = require('./tests');
 
@@ -30,8 +30,10 @@ test('native', function (t) {
 	// v8 in node 0.8 and 0.10 have non-enumerable string properties
 	var stringCharsAreEnumerable = isEnumerable.call('xy', 0);
 	t.test('when Object.assign is present and has pending exceptions', { skip: !stringCharsAreEnumerable || !Object.preventExtensions }, function (st) {
-		// Firefox 37 still has "pending exception" logic in its Object.assign implementation,
-		// which is 72% slower than our shim, and Firefox 40's native implementation.
+		/*
+		 * Firefox 37 still has "pending exception" logic in its Object.assign implementation,
+		 * which is 72% slower than our shim, and Firefox 40's native implementation.
+		 */
 		var thrower = Object.preventExtensions({ 1: '2' });
 		var error;
 		try { Object.assign(thrower, 'xy'); } catch (e) { error = e; }

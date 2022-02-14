@@ -5,28 +5,28 @@
 "use strict";
 
 module.exports = function forEachBail(array, iterator, callback) {
-	if(array.length === 0) return callback();
+	if (array.length === 0) return callback();
 	let currentPos = array.length;
 	let currentResult;
 	let done = [];
-	for(let i = 0; i < array.length; i++) {
+	for (let i = 0; i < array.length; i++) {
 		const itCb = createIteratorCallback(i);
 		iterator(array[i], itCb);
-		if(currentPos === 0) break;
+		if (currentPos === 0) break;
 	}
 
 	function createIteratorCallback(i) {
-		return(...args) => { // eslint-disable-line
-			if(i >= currentPos) return; // ignore
+		return (...args) => {
+			if (i >= currentPos) return; // ignore
 			done.push(i);
-			if(args.length > 0) {
+			if (args.length > 0) {
 				currentPos = i + 1;
 				done = done.filter(item => {
 					return item <= i;
 				});
 				currentResult = args;
 			}
-			if(done.length === currentPos) {
+			if (done.length === currentPos) {
 				callback.apply(null, currentResult);
 				currentPos = 0;
 			}
@@ -34,29 +34,33 @@ module.exports = function forEachBail(array, iterator, callback) {
 	}
 };
 
-module.exports.withIndex = function forEachBailWithIndex(array, iterator, callback) {
-	if(array.length === 0) return callback();
+module.exports.withIndex = function forEachBailWithIndex(
+	array,
+	iterator,
+	callback
+) {
+	if (array.length === 0) return callback();
 	let currentPos = array.length;
 	let currentResult;
 	let done = [];
-	for(let i = 0; i < array.length; i++) {
+	for (let i = 0; i < array.length; i++) {
 		const itCb = createIteratorCallback(i);
 		iterator(array[i], i, itCb);
-		if(currentPos === 0) break;
+		if (currentPos === 0) break;
 	}
 
 	function createIteratorCallback(i) {
-		return(...args) => { // eslint-disable-line
-			if(i >= currentPos) return; // ignore
+		return (...args) => {
+			if (i >= currentPos) return; // ignore
 			done.push(i);
-			if(args.length > 0) {
+			if (args.length > 0) {
 				currentPos = i + 1;
 				done = done.filter(item => {
 					return item <= i;
 				});
 				currentResult = args;
 			}
-			if(done.length === currentPos) {
+			if (done.length === currentPos) {
 				callback.apply(null, currentResult);
 				currentPos = 0;
 			}

@@ -45,6 +45,7 @@ function EventSource (url, eventSourceInitDict) {
 
   var self = this
   self.reconnectInterval = 1000
+  self.connectionInProgress = false
 
   function onConnectionClosed (message) {
     if (readyState === EventSource.CLOSED) return
@@ -58,9 +59,10 @@ function EventSource (url, eventSourceInitDict) {
       reconnectUrl = null
     }
     setTimeout(function () {
-      if (readyState !== EventSource.CONNECTING) {
+      if (readyState !== EventSource.CONNECTING || self.connectionInProgress) {
         return
       }
+      self.connectionInProgress = true
       connect()
     }, self.reconnectInterval)
   }
@@ -95,6 +97,10 @@ function EventSource (url, eventSourceInitDict) {
     // Legacy: this should be specified as `eventSourceInitDict.https.rejectUnauthorized`,
     // but for now exists as a backwards-compatibility layer
     options.rejectUnauthorized = !(eventSourceInitDict && !eventSourceInitDict.rejectUnauthorized)
+
+    if (eventSourceInitDict && eventSourceInitDict.createConnection !== undefined) {
+      options.createConnection = eventSourceInitDict.createConnection
+    }
 
     // If specify http proxy, make the request to sent to the proxy server,
     // and include the original url in path and Host headers
@@ -131,6 +137,7 @@ function EventSource (url, eventSourceInitDict) {
     }
 
     req = (isSecure ? https : http).request(options, function (res) {
+      self.connectionInProgress = false
       // Handle HTTP errors
       if (res.statusCode === 500 || res.statusCode === 502 || res.statusCode === 503 || res.statusCode === 504) {
         _emit('error', new Event('error', {status: res.statusCode, message: res.statusMessage}))
@@ -139,7 +146,7 @@ function EventSource (url, eventSourceInitDict) {
       }
 
       // Handle HTTP redirects
-      if (res.statusCode === 301 || res.statusCode === 307) {
+      if (res.statusCode === 301 || res.statusCode === 302 || res.statusCode === 307) {
         if (!res.headers.location) {
           // Server sent redirect response without Location header.
           _emit('error', new Event('error', {status: res.statusCode, message: res.statusMessage}))
@@ -174,6 +181,8 @@ function EventSource (url, eventSourceInitDict) {
       // Source/WebCore/page/EventSource.cpp
       var isFirst = true
       var buf
+      var startingPos = 0
+      var startingFieldLength = -1
       res.on('data', function (chunk) {
         buf = buf ? Buffer.concat([buf, chunk]) : chunk
         if (isFirst && hasBom(buf)) {
@@ -193,10 +202,10 @@ function EventSource (url, eventSourceInitDict) {
           }
 
           var lineLength = -1
-          var fieldLength = -1
+          var fieldLength = startingFieldLength
           var c
 
-          for (var i = pos; lineLength < 0 && i < length; ++i) {
+          for (var i = startingPos; lineLength < 0 && i < length; ++i) {
             c = buf[i]
             if (c === colon) {
               if (fieldLength < 0) {
@@ -211,7 +220,12 @@ function EventSource (url, eventSourceInitDict) {
           }
 
           if (lineLength < 0) {
+            startingPos = length - pos
+            startingFieldLength = fieldLength
             break
+          } else {
+            startingPos = 0
+            startingFieldLength = -1
           }
 
           parseEventStreamLine(buf, pos, fieldLength, lineLength)
@@ -228,6 +242,7 @@ function EventSource (url, eventSourceInitDict) {
     })
 
     req.on('error', function (err) {
+      self.connectionInProgress = false
       onConnectionClosed(err.message)
     })
 

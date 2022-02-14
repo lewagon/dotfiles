@@ -15,23 +15,11 @@
 npm install emojis-list --save
 ```
 
-If you want to use in the browser (powered by [Browserify](http://browserify.org/)):
-
-```bash
-bower install emojis-list --save
-```
-
-and later link in your HTML:
-
-```html
-<script src="bower_components/emojis-list/dist/emojis-list.js"></script>
-```
-
 ## Usage
 
-```
-var emojis = require('emojis-list');
-console.log(emojis[0]);
+```js
+const emojis = require('emojis-list')
+console.log(emojis[0])
 // => 🀄
 ```
 

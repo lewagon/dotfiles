@@ -1,3 +1,5 @@
+'use strict';
+
 var Event = function(eventType, options) {
   this.type = eventType;
   for (var key in options)

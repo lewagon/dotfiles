@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
@@ -12,7 +12,7 @@ var IsPropertyKey = require('./IsPropertyKey');
 var SameValue = require('./SameValue');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-createmethodproperty
+// https://ecma-international.org/ecma-262/6.0/#sec-createmethodproperty
 
 module.exports = function CreateMethodProperty(O, P, V) {
 	if (Type(O) !== 'Object') {

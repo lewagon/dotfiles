@@ -1,9 +1,9 @@
-import type {AnySchema, AnySchemaObject} from "../types"
+import type {AnySchema, AnySchemaObject, UriResolver} from "../types"
 import type Ajv from "../ajv"
+import type {URIComponents} from "uri-js"
 import {eachItem} from "./util"
 import * as equal from "fast-deep-equal"
 import * as traverse from "json-schema-traverse"
-import * as URI from "uri-js"
 
 // the hash of local references inside the schema (created by getSchemaRefs), used for inline resolution
 export type LocalRefs = {[Ref in string]?: AnySchemaObject}
@@ -67,14 +67,15 @@ function countKeys(schema: AnySchemaObject): number {
   return count
 }
 
-export function getFullPath(id = "", normalize?: boolean): string {
+export function getFullPath(resolver: UriResolver, id = "", normalize?: boolean): string {
   if (normalize !== false) id = normalizeId(id)
-  const p = URI.parse(id)
-  return _getFullPath(p)
+  const p = resolver.parse(id)
+  return _getFullPath(resolver, p)
 }
 
-export function _getFullPath(p: URI.URIComponents): string {
-  return URI.serialize(p).split("#")[0] + "#"
+export function _getFullPath(resolver: UriResolver, p: URIComponents): string {
+  const serialized = resolver.serialize(p)
+  return serialized.split("#")[0] + "#"
 }
 
 const TRAILING_SLASH_HASH = /#\/?$/
@@ -82,19 +83,19 @@ export function normalizeId(id: string | undefined): string {
   return id ? id.replace(TRAILING_SLASH_HASH, "") : ""
 }
 
-export function resolveUrl(baseId: string, id: string): string {
+export function resolveUrl(resolver: UriResolver, baseId: string, id: string): string {
   id = normalizeId(id)
-  return URI.resolve(baseId, id)
+  return resolver.resolve(baseId, id)
 }
 
 const ANCHOR = /^[a-z_][-a-z0-9._]*$/i
 
-export function getSchemaRefs(this: Ajv, schema: AnySchema): LocalRefs {
+export function getSchemaRefs(this: Ajv, schema: AnySchema, baseId: string): LocalRefs {
   if (typeof schema == "boolean") return {}
-  const {schemaId} = this.opts
-  const schId = normalizeId(schema[schemaId])
+  const {schemaId, uriResolver} = this.opts
+  const schId = normalizeId(schema[schemaId] || baseId)
   const baseIds: {[JsonPtr in string]?: string} = {"": schId}
-  const pathPrefix = getFullPath(schId, false)
+  const pathPrefix = getFullPath(uriResolver, schId, false)
   const localRefs: LocalRefs = {}
   const schemaRefs: Set<string> = new Set()
 
@@ -108,7 +109,9 @@ export function getSchemaRefs(this: Ajv, schema: AnySchema): LocalRefs {
     baseIds[jsonPtr] = baseId
 
     function addRef(this: Ajv, ref: string): string {
-      ref = normalizeId(baseId ? URI.resolve(baseId, ref) : ref)
+      // eslint-disable-next-line @typescript-eslint/unbound-method
+      const _resolve = this.opts.uriResolver.resolve
+      ref = normalizeId(baseId ? _resolve(baseId, ref) : ref)
       if (schemaRefs.has(ref)) throw ambiguos(ref)
       schemaRefs.add(ref)
       let schOrRef = this.refs[ref]

@@ -3,7 +3,7 @@
 var DayWithinYear = require('./DayWithinYear');
 var InLeapYear = require('./InLeapYear');
 
-// https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.4
+// https://262.ecma-international.org/5.1/#sec-15.9.1.4
 
 module.exports = function MonthFromTime(t) {
 	var day = DayWithinYear(t);

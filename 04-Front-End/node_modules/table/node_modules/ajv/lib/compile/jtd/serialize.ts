@@ -234,7 +234,7 @@ function serializeRef(cxt: SerializeCxt): void {
   const {gen, self, data, definitions, schema, schemaEnv} = cxt
   const {ref} = schema
   const refSchema = definitions[ref]
-  if (!refSchema) throw new MissingRefError("", ref, `No definition ${ref}`)
+  if (!refSchema) throw new MissingRefError(self.opts.uriResolver, "", ref, `No definition ${ref}`)
   if (!hasRef(refSchema)) return serializeCode({...cxt, schema: refSchema})
   const {root} = schemaEnv
   const sch = compileSerializer.call(self, new SchemaEnv({schema: refSchema, root}), definitions)

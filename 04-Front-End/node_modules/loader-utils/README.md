@@ -176,7 +176,8 @@ The following tokens are replaced in the `name` parameter:
 * `[ext]` the extension of the resource
 * `[name]` the basename of the resource
 * `[path]` the path of the resource relative to the `context` query parameter or option.
-* `[folder]` the folder of the resource is in.
+* `[folder]` the folder the resource is in
+* `[query]` the queryof the resource, i.e. `?foo=bar`
 * `[emoji]` a random emoji representation of `options.content`
 * `[emoji:<length>]` same as above, but with a customizable number of emojis
 * `[contenthash]` the hash of `options.content` (Buffer) (by default it's the hex digest of the md5 hash)
@@ -196,47 +197,66 @@ In loader context `[hash]` and `[contenthash]` are the same, but we recommend us
 Examples
 
 ``` javascript
-// loaderContext.resourcePath = "/app/js/javascript.js"
+// loaderContext.resourcePath = "/absolute/path/to/app/js/javascript.js"
 loaderUtils.interpolateName(loaderContext, "js/[hash].script.[ext]", { content: ... });
 // => js/9473fdd0d880a43c21b7778d34872157.script.js
 
-// loaderContext.resourcePath = "/app/js/javascript.js"
+// loaderContext.resourcePath = "/absolute/path/to/app/js/javascript.js"
+// loaderContext.resourceQuery = "?foo=bar"
+loaderUtils.interpolateName(loaderContext, "js/[hash].script.[ext][query]", { content: ... });
+// => js/9473fdd0d880a43c21b7778d34872157.script.js?foo=bar
+
+// loaderContext.resourcePath = "/absolute/path/to/app/js/javascript.js"
 loaderUtils.interpolateName(loaderContext, "js/[contenthash].script.[ext]", { content: ... });
 // => js/9473fdd0d880a43c21b7778d34872157.script.js
 
-// loaderContext.resourcePath = "/app/page.html"
+// loaderContext.resourcePath = "/absolute/path/to/app/page.html"
 loaderUtils.interpolateName(loaderContext, "html-[hash:6].html", { content: ... });
 // => html-9473fd.html
 
-// loaderContext.resourcePath = "/app/flash.txt"
+// loaderContext.resourcePath = "/absolute/path/to/app/flash.txt"
 loaderUtils.interpolateName(loaderContext, "[hash]", { content: ... });
 // => c31e9820c001c9c4a86bce33ce43b679
 
-// loaderContext.resourcePath = "/app/img/image.gif"
+// loaderContext.resourcePath = "/absolute/path/to/app/img/image.gif"
 loaderUtils.interpolateName(loaderContext, "[emoji]", { content: ... });
 // => 👍
 
-// loaderContext.resourcePath = "/app/img/image.gif"
+// loaderContext.resourcePath = "/absolute/path/to/app/img/image.gif"
 loaderUtils.interpolateName(loaderContext, "[emoji:4]", { content: ... });
 // => 🙍🏢📤🐝
 
-// loaderContext.resourcePath = "/app/img/image.png"
+// loaderContext.resourcePath = "/absolute/path/to/app/img/image.png"
 loaderUtils.interpolateName(loaderContext, "[sha512:hash:base64:7].[ext]", { content: ... });
 // => 2BKDTjl.png
 // use sha512 hash instead of md5 and with only 7 chars of base64
 
-// loaderContext.resourcePath = "/app/img/myself.png"
+// loaderContext.resourcePath = "/absolute/path/to/app/img/myself.png"
 // loaderContext.query.name =
 loaderUtils.interpolateName(loaderContext, "picture.png");
 // => picture.png
 
-// loaderContext.resourcePath = "/app/dir/file.png"
+// loaderContext.resourcePath = "/absolute/path/to/app/dir/file.png"
 loaderUtils.interpolateName(loaderContext, "[path][name].[ext]?[hash]", { content: ... });
 // => /app/dir/file.png?9473fdd0d880a43c21b7778d34872157
 
-// loaderContext.resourcePath = "/app/js/page-home.js"
+// loaderContext.resourcePath = "/absolute/path/to/app/js/page-home.js"
 loaderUtils.interpolateName(loaderContext, "script-[1].[ext]", { regExp: "page-(.*)\\.js", content: ... });
 // => script-home.js
+
+// loaderContext.resourcePath = "/absolute/path/to/app/js/javascript.js"
+// loaderContext.resourceQuery = "?foo=bar"
+loaderUtils.interpolateName(
+  loaderContext, 
+  (resourcePath, resourceQuery) => { 
+    // resourcePath - `/app/js/javascript.js`
+    // resourceQuery - `?foo=bar`
+
+    return "js/[hash].script.[ext]"; 
+  }, 
+  { content: ... }
+);
+// => js/9473fdd0d880a43c21b7778d34872157.script.js
 ```
 
 ### `getHashDigest`

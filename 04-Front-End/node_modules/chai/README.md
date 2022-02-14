@@ -94,7 +94,7 @@ Chai is an _assertion library_, similar to Node's built-in `assert`. It makes te
 
 `chai` is available on [npm](http://npmjs.org). To install it, type:
 
-    $ npm install chai
+    $ npm install --save-dev chai
 
 ### Browsers
 
