@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $RangeError = GetIntrinsic('%RangeError%');
 var $TypeError = GetIntrinsic('%TypeError%');
@@ -19,7 +19,7 @@ var ToString = require('./ToString');
 var ToUint32 = require('./ToUint32');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-arraysetlength
+// https://ecma-international.org/ecma-262/6.0/#sec-arraysetlength
 
 // eslint-disable-next-line max-statements, max-lines-per-function
 module.exports = function ArraySetLength(A, Desc) {

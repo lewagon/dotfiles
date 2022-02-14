@@ -14,14 +14,24 @@ module.exports = class CloneBasenamePlugin {
 
 	apply(resolver) {
 		const target = resolver.ensureHook(this.target);
-		resolver.getHook(this.source).tapAsync("CloneBasenamePlugin", (request, resolveContext, callback) => {
-			const filename = basename(request.path);
-			const filePath = resolver.join(request.path, filename);
-			const obj = Object.assign({}, request, {
-				path: filePath,
-				relativePath: request.relativePath && resolver.join(request.relativePath, filename)
+		resolver
+			.getHook(this.source)
+			.tapAsync("CloneBasenamePlugin", (request, resolveContext, callback) => {
+				const filename = basename(request.path);
+				const filePath = resolver.join(request.path, filename);
+				const obj = Object.assign({}, request, {
+					path: filePath,
+					relativePath:
+						request.relativePath &&
+						resolver.join(request.relativePath, filename)
+				});
+				resolver.doResolve(
+					target,
+					obj,
+					"using path: " + filePath,
+					resolveContext,
+					callback
+				);
 			});
-			resolver.doResolve(target, obj, "using path: " + filePath, resolveContext, callback);
-		});
 	}
 };

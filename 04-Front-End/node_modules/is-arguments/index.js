@@ -1,13 +1,15 @@
 'use strict';
 
-var hasToStringTag = typeof Symbol === 'function' && typeof Symbol.toStringTag === 'symbol';
-var toStr = Object.prototype.toString;
+var hasToStringTag = require('has-tostringtag/shams')();
+var callBound = require('call-bind/callBound');
+
+var $toString = callBound('Object.prototype.toString');
 
 var isStandardArguments = function isArguments(value) {
 	if (hasToStringTag && value && typeof value === 'object' && Symbol.toStringTag in value) {
 		return false;
 	}
-	return toStr.call(value) === '[object Arguments]';
+	return $toString(value) === '[object Arguments]';
 };
 
 var isLegacyArguments = function isArguments(value) {
@@ -18,8 +20,8 @@ var isLegacyArguments = function isArguments(value) {
 		typeof value === 'object' &&
 		typeof value.length === 'number' &&
 		value.length >= 0 &&
-		toStr.call(value) !== '[object Array]' &&
-		toStr.call(value.callee) === '[object Function]';
+		$toString(value) !== '[object Array]' &&
+		$toString(value.callee) === '[object Function]';
 };
 
 var supportsStandardArguments = (function () {

@@ -9,7 +9,7 @@ function setProtoOf (obj, proto) {
 
 function mixinProperties (obj, proto) {
   for (var prop in proto) {
-    if (!obj.hasOwnProperty(prop)) {
+    if (!Object.prototype.hasOwnProperty.call(obj, prop)) {
       obj[prop] = proto[prop]
     }
   }

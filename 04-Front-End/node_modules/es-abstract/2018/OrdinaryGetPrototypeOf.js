@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
@@ -8,7 +8,7 @@ var $getProto = require('../helpers/getProto');
 
 var Type = require('./Type');
 
-// https://ecma-international.org/ecma-262/7.0/#sec-ordinarygetprototypeof
+// https://262.ecma-international.org/7.0/#sec-ordinarygetprototypeof
 
 module.exports = function OrdinaryGetPrototypeOf(O) {
 	if (Type(O) !== 'Object') {

@@ -1,3 +1,8 @@
+### Version 0.4.1 (2021-02-01) ###
+
+- Improved: The package is now about 50% smaller, by excluding unnecessary
+  files. Thanks to Piotr Kuczynski (@pkuczynski)!
+
 ### Version 0.4.0 (2015-11-12) ###
 
 - Changed: sourceMappingURL comments used to be matched only when placed at

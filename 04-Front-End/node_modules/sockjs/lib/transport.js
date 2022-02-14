@@ -6,7 +6,7 @@
 
   stream = require('stream');
 
-  uuidv4 = require('uuid/v4');
+  uuidv4 = require('uuid').v4;
 
   utils = require('./utils');
 

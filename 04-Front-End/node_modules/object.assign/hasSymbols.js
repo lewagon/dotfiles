@@ -14,14 +14,16 @@ module.exports = function hasSymbols() {
 	if (Object.prototype.toString.call(sym) !== '[object Symbol]') { return false; }
 	if (Object.prototype.toString.call(symObj) !== '[object Symbol]') { return false; }
 
-	// temp disabled per https://github.com/ljharb/object.assign/issues/17
-	// if (sym instanceof Symbol) { return false; }
-	// temp disabled per https://github.com/WebReflection/get-own-property-symbols/issues/4
-	// if (!(symObj instanceof Symbol)) { return false; }
+	/*
+	 * temp disabled per https://github.com/ljharb/object.assign/issues/17
+	 * if (sym instanceof Symbol) { return false; }
+	 * temp disabled per https://github.com/WebReflection/get-own-property-symbols/issues/4
+	 * if (!(symObj instanceof Symbol)) { return false; }
+	 */
 
 	var symVal = 42;
 	obj[sym] = symVal;
-	for (sym in obj) { return false; }
+	for (sym in obj) { return false; } // eslint-disable-line no-unreachable-loop
 	if (keys(obj).length !== 0) { return false; }
 	if (typeof Object.keys === 'function' && Object.keys(obj).length !== 0) { return false; }
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var $strSlice = require('../helpers/callBound')('String.prototype.slice');
+var $strSlice = require('call-bind/callBound')('String.prototype.slice');
 
 module.exports = function isPrefixOf(prefix, string) {
 	if (prefix === string) {

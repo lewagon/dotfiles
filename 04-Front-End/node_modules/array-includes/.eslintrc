@@ -7,7 +7,16 @@
 		"complexity": 0,
 		"id-length": [2, { "min": 1, "max": 26 }],
 		"max-statements": [2, 14],
-		"new-cap": [2, { capIsNewExceptions: ["GetIntrinsic", "ToObject", "ToInteger", "ToLength", "SameValueZero", "RequireObjectCoercible"] }],
+		"new-cap": [2, {
+			"capIsNewExceptions": [
+				"GetIntrinsic",
+				"ToObject",
+				"ToIntegerOrInfinity",
+				"ToLength",
+				"SameValueZero",
+				"RequireObjectCoercible",
+			],
+		}],
 	},
 
 	"overrides": [

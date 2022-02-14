@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
@@ -13,7 +13,7 @@ var OrdinaryHasInstance = require('./OrdinaryHasInstance');
 var ToBoolean = require('./ToBoolean');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-instanceofoperator
+// https://ecma-international.org/ecma-262/6.0/#sec-instanceofoperator
 
 module.exports = function InstanceofOperator(O, C) {
 	if (Type(O) !== 'Object') {

@@ -1,6 +1,6 @@
 {
 	"name": "p-limit",
-	"version": "2.2.2",
+	"version": "2.3.0",
 	"description": "Run multiple promise-returning & async functions with limited concurrency",
 	"license": "MIT",
 	"repository": "sindresorhus/p-limit",

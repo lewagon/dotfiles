@@ -63,7 +63,7 @@ test('$NODE_PATH', function (t) {
         basedir: path.join(__dirname, 'node_path/x'),
         isDirectory: isDir
     }, function (err, res) {
-        var root = require('tap/package.json').main;
+        var root = require('tap/package.json').main; // eslint-disable-line global-require
         t.error(err);
         t.equal(res, path.resolve(__dirname, '..', 'node_modules/tap', root), 'tap resolves');
     });

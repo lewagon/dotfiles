@@ -12,6 +12,8 @@ ES2015-compliant shim for Object.is - differentiates between -0 and +0, and can 
 
 Essentially, Object.is returns the same value as === - but true for NaN, and false for -0 and +0.
 
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](https://tc39.es/ecma262).
+
 ## Example
 
 ```js

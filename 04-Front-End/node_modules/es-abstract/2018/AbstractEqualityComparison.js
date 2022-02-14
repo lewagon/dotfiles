@@ -4,7 +4,7 @@ var ToNumber = require('./ToNumber');
 var ToPrimitive = require('./ToPrimitive');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-abstract-equality-comparison
+// https://ecma-international.org/ecma-262/6.0/#sec-abstract-equality-comparison
 
 module.exports = function AbstractEqualityComparison(x, y) {
 	var xType = Type(x);

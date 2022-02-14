@@ -178,7 +178,7 @@
         log: function(severity, line) {
           return console.log(line);
         },
-        sockjs_url: 'https://cdn.jsdelivr.net/sockjs/1/sockjs.min.js'
+        sockjs_url: 'https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js'
       };
       if (user_options) {
         utils.objectExtend(this.options, user_options);

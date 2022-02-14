@@ -3,7 +3,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Node.js Version][node-version-image]][node-version-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][ci-image]][ci-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 Parse HTTP X-Forwarded-For header
@@ -45,12 +45,12 @@ $ npm test
 
 [MIT](LICENSE)
 
+[ci-image]: https://badgen.net/github/checks/jshttp/forwarded/master?label=ci
+[ci-url]: https://github.com/jshttp/forwarded/actions?query=workflow%3Aci
 [npm-image]: https://img.shields.io/npm/v/forwarded.svg
 [npm-url]: https://npmjs.org/package/forwarded
 [node-version-image]: https://img.shields.io/node/v/forwarded.svg
 [node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://img.shields.io/travis/jshttp/forwarded/master.svg
-[travis-url]: https://travis-ci.org/jshttp/forwarded
 [coveralls-image]: https://img.shields.io/coveralls/jshttp/forwarded/master.svg
 [coveralls-url]: https://coveralls.io/r/jshttp/forwarded?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/forwarded.svg

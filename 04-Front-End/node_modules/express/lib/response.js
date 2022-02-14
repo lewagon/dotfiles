@@ -284,9 +284,9 @@ res.jsonp = function jsonp(obj) {
 
   // allow status / body
   if (arguments.length === 2) {
-    // res.json(body, status) backwards compat
+    // res.jsonp(body, status) backwards compat
     if (typeof arguments[1] === 'number') {
-      deprecate('res.jsonp(obj, status): Use res.status(status).json(obj) instead');
+      deprecate('res.jsonp(obj, status): Use res.status(status).jsonp(obj) instead');
       this.statusCode = arguments[1];
     } else {
       deprecate('res.jsonp(status, obj): Use res.status(status).jsonp(obj) instead');
@@ -322,10 +322,15 @@ res.jsonp = function jsonp(obj) {
     // restrict callback charset
     callback = callback.replace(/[^\[\]\w$.]/g, '');
 
-    // replace chars not allowed in JavaScript that are in JSON
-    body = body
-      .replace(/\u2028/g, '\\u2028')
-      .replace(/\u2029/g, '\\u2029');
+    if (body === undefined) {
+      // empty argument
+      body = ''
+    } else if (typeof body === 'string') {
+      // replace chars not allowed in JavaScript that are in JSON
+      body = body
+        .replace(/\u2028/g, '\\u2028')
+        .replace(/\u2029/g, '\\u2029')
+    }
 
     // the /**/ is a specific security mitigation for "Rosetta Flash JSONP abuse"
     // the typeof check is just to reduce client error noise
@@ -364,7 +369,7 @@ res.sendStatus = function sendStatus(statusCode) {
  *
  * Automatically sets the _Content-Type_ response header field.
  * The callback `callback(err)` is invoked when the transfer is complete
- * or when an error occurs. Be sure to check `res.sentHeader`
+ * or when an error occurs. Be sure to check `res.headersSent`
  * if you wish to attempt responding, as the header and some data
  * may have already been transferred.
  *
@@ -446,7 +451,7 @@ res.sendFile = function sendFile(path, options, callback) {
  *
  * Automatically sets the _Content-Type_ response header field.
  * The callback `callback(err)` is invoked when the transfer is complete
- * or when an error occurs. Be sure to check `res.sentHeader`
+ * or when an error occurs. Be sure to check `res.headersSent`
  * if you wish to attempt responding, as the header and some data
  * may have already been transferred.
  *
@@ -623,7 +628,7 @@ res.type = function contentType(type) {
  *        res.send('<p>hey</p>');
  *      },
  *
- *      'appliation/json': function(){
+ *      'application/json': function () {
  *        res.send({ message: 'hey' });
  *      }
  *    });
@@ -726,7 +731,7 @@ res.append = function append(field, val) {
     // concat the new and prev vals
     value = Array.isArray(prev) ? prev.concat(val)
       : Array.isArray(val) ? [prev].concat(val)
-      : [prev, val];
+        : [prev, val]
   }
 
   return this.set(field, value);
@@ -1122,7 +1127,7 @@ function stringify (value, replacer, spaces, escape) {
     ? JSON.stringify(value, replacer, spaces)
     : JSON.stringify(value);
 
-  if (escape) {
+  if (escape && typeof json === 'string') {
     json = json.replace(/[<>&]/g, function (c) {
       switch (c.charCodeAt(0)) {
         case 0x3c:

@@ -2,7 +2,7 @@
 
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Downloads][npm-downloads-image]][npm-url]
-[![Linux Build][travis-image]][travis-url]
+[![Linux Build][github-actions-ci-image]][github-actions-ci-url]
 [![Windows Build][appveyor-image]][appveyor-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
@@ -17,8 +17,6 @@ $ npm install serve-static
 ```
 
 ## API
-
-<!-- eslint-disable no-unused-vars -->
 
 ```js
 var serveStatic = require('serve-static')
@@ -141,7 +139,7 @@ var http = require('http')
 var serveStatic = require('serve-static')
 
 // Serve up public/ftp folder
-var serve = serveStatic('public/ftp', { 'index': ['index.html', 'index.htm'] })
+var serve = serveStatic('public/ftp', { index: ['index.html', 'index.htm'] })
 
 // Create server
 var server = http.createServer(function onRequest (req, res) {
@@ -162,8 +160,8 @@ var serveStatic = require('serve-static')
 
 // Serve up public/ftp folder
 var serve = serveStatic('public/ftp', {
-  'index': false,
-  'setHeaders': setHeaders
+  index: false,
+  setHeaders: setHeaders
 })
 
 // Set header to force download
@@ -192,15 +190,15 @@ var serveStatic = require('serve-static')
 
 var app = express()
 
-app.use(serveStatic('public/ftp', { 'index': ['default.html', 'default.htm'] }))
+app.use(serveStatic('public/ftp', { index: ['default.html', 'default.htm'] }))
 app.listen(3000)
 ```
 
 #### Multiple roots
 
 This example shows a simple way to search through multiple directories.
-Files are look for in `public-optimized/` first, then `public/` second as
-a fallback.
+Files are searched for in `public-optimized/` first, then `public/` second
+as a fallback.
 
 ```js
 var express = require('express')
@@ -250,10 +248,10 @@ function setCustomCacheControl (res, path) {
 [appveyor-url]: https://ci.appveyor.com/project/dougwilson/serve-static
 [coveralls-image]: https://badgen.net/coveralls/c/github/expressjs/serve-static/master
 [coveralls-url]: https://coveralls.io/r/expressjs/serve-static?branch=master
+[github-actions-ci-image]: https://badgen.net/github/checks/expressjs/serve-static/master?label=linux
+[github-actions-ci-url]: https://github.com/expressjs/serve-static/actions?query=workflow%3Aci
 [node-image]: https://badgen.net/npm/node/serve-static
 [node-url]: https://nodejs.org/en/download/
 [npm-downloads-image]: https://badgen.net/npm/dm/serve-static
 [npm-url]: https://npmjs.org/package/serve-static
 [npm-version-image]: https://badgen.net/npm/v/serve-static
-[travis-image]: https://badgen.net/travis/expressjs/serve-static/master?label=linux
-[travis-url]: https://travis-ci.org/expressjs/serve-static

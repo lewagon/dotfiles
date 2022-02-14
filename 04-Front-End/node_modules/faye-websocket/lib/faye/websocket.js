@@ -1,8 +1,10 @@
 // API references:
 //
-// * http://dev.w3.org/html5/websockets/
-// * http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#interface-eventtarget
-// * http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#interface-event
+// * https://html.spec.whatwg.org/multipage/comms.html#network
+// * https://dom.spec.whatwg.org/#interface-eventtarget
+// * https://dom.spec.whatwg.org/#interface-event
+
+'use strict';
 
 var util   = require('util'),
     driver = require('websocket-driver'),
@@ -12,7 +14,7 @@ var WebSocket = function(request, socket, body, protocols, options) {
   options = options || {};
 
   this._stream = socket;
-  this._driver = driver.http(request, {maxLength: options.maxLength, protocols: protocols});
+  this._driver = driver.http(request, { maxLength: options.maxLength, protocols: protocols });
 
   var self = this;
   if (!this._stream || !this._stream.writable) return;

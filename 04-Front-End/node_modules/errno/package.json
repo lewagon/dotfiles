@@ -9,7 +9,7 @@
     "errno",
     "libuv"
   ],
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "errno.js",
   "dependencies": {
     "prr": "~1.0.1"

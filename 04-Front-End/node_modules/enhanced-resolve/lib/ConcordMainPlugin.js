@@ -17,17 +17,28 @@ module.exports = class ConcordMainPlugin {
 
 	apply(resolver) {
 		const target = resolver.ensureHook(this.target);
-		resolver.getHook(this.source).tapAsync("ConcordMainPlugin", (request, resolveContext, callback) => {
-			if(request.path !== request.descriptionFileRoot) return callback();
-			const concordField = DescriptionFileUtils.getField(request.descriptionFileData, "concord");
-			if(!concordField) return callback();
-			const mainModule = concord.getMain(request.context, concordField);
-			if(!mainModule) return callback();
-			const obj = Object.assign({}, request, {
-				request: mainModule
+		resolver
+			.getHook(this.source)
+			.tapAsync("ConcordMainPlugin", (request, resolveContext, callback) => {
+				if (request.path !== request.descriptionFileRoot) return callback();
+				const concordField = DescriptionFileUtils.getField(
+					request.descriptionFileData,
+					"concord"
+				);
+				if (!concordField) return callback();
+				const mainModule = concord.getMain(request.context, concordField);
+				if (!mainModule) return callback();
+				const obj = Object.assign({}, request, {
+					request: mainModule
+				});
+				const filename = path.basename(request.descriptionFilePath);
+				return resolver.doResolve(
+					target,
+					obj,
+					"use " + mainModule + " from " + filename,
+					resolveContext,
+					callback
+				);
 			});
-			const filename = path.basename(request.descriptionFilePath);
-			return resolver.doResolve(target, obj, "use " + mainModule + " from " + filename, resolveContext, callback);
-		});
 	}
 };

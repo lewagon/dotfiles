@@ -467,7 +467,7 @@ exports._defaultHosts = (function() {
     // - https://github.com/Microsoft/BashOnWindows/issues/468
     //
     // - Workaround is a mix of good work from the community:
-    //   - https://github.com/indexzero/node-portfinder/commit/8d7e30a648ff5034186551fa8a6652669dec2f2f
+    //   - https://github.com/http-party/node-portfinder/commit/8d7e30a648ff5034186551fa8a6652669dec2f2f
     //   - https://github.com/yarnpkg/yarn/pull/772/files
     if (e.syscall === 'uv_interface_addresses') {
       // swallow error because we're just going to use defaults

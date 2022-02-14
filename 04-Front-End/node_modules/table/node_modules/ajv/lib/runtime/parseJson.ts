@@ -9,7 +9,7 @@ export function parseJson(s: string, pos: number): unknown {
     parseJson.position = pos + s.length
     return JSON.parse(s)
   } catch (e) {
-    matches = rxParseJson.exec(e.message)
+    matches = rxParseJson.exec((e as Error).message)
     if (!matches) {
       parseJson.message = "unexpected end"
       return undefined
@@ -128,14 +128,16 @@ export function parseJsonString(s: string, pos: number): string | undefined {
         let code = 0
         while (count--) {
           code <<= 4
-          c = s[pos].toLowerCase()
+          c = s[pos]
+          if (c === undefined) {
+            errorMessage("unexpected end")
+            return undefined
+          }
+          c = c.toLowerCase()
           if (c >= "a" && c <= "f") {
             code += c.charCodeAt(0) - CODE_A + 10
           } else if (c >= "0" && c <= "9") {
             code += c.charCodeAt(0) - CODE_0
-          } else if (c === undefined) {
-            errorMessage("unexpected end")
-            return undefined
           } else {
             errorMessage(`unexpected token ${c}`)
             return undefined
@@ -147,6 +149,7 @@ export function parseJsonString(s: string, pos: number): string | undefined {
         errorMessage(`unexpected token ${c}`)
         return undefined
       }
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     } else if (c === undefined) {
       errorMessage("unexpected end")
       return undefined

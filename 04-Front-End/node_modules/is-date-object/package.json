@@ -1,6 +1,6 @@
 {
 	"name": "is-date-object",
-	"version": "1.0.2",
+	"version": "1.0.5",
 	"author": "Jordan Harband",
 	"funding": {
 		"url": "https://github.com/sponsors/ljharb"
@@ -9,19 +9,20 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"prepublish": "safe-publish-latest",
+		"prepublishOnly": "safe-publish-latest",
+		"prepublish": "not-in-publish || npm run prepublishOnly",
 		"pretest": "npm run lint",
-		"test": "npm run tests-only",
-		"tests-only": "node --harmony --es-staging test",
-		"posttest": "npx aud",
-		"coverage": "covert test/index.js",
+		"test": "npm run tests-only && npm run test:corejs",
+		"tests-only": "nyc tape 'test/**/*.js'",
+		"test:corejs": "nyc tape test-corejs.js",
+		"posttest": "aud --production",
 		"lint": "eslint .",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/ljharb/is-date-object.git"
+		"url": "git://github.com/inspect-js/is-date-object.git"
 	},
 	"keywords": [
 		"Date",
@@ -30,17 +31,21 @@
 		"@@toStringTag",
 		"Date object"
 	],
-	"dependencies": {},
+	"dependencies": {
+		"has-tostringtag": "^1.0.0"
+	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^15.0.2",
-		"auto-changelog": "^1.16.2",
-		"covert": "^1.1.1",
-		"eslint": "^6.7.2",
+		"@ljharb/eslint-config": "^17.6.0",
+		"aud": "^1.1.5",
+		"auto-changelog": "^2.3.0",
+		"core-js": "^3.12.0",
+		"eslint": "^7.32.0",
 		"foreach": "^2.0.5",
 		"indexof": "^0.0.1",
 		"is": "^3.3.0",
+		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^4.12.0"
+		"tape": "^5.3.0"
 	},
 	"testling": {
 		"files": "test/index.js",
@@ -68,6 +73,7 @@
 		"template": "keepachangelog",
 		"unreleased": false,
 		"commitLimit": false,
-		"backfillLimit": false
+		"backfillLimit": false,
+		"hideCredit": true
 	}
 }

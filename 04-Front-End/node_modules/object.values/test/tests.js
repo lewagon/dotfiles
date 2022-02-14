@@ -1,7 +1,7 @@
 'use strict';
 
 var keys = require('object-keys');
-var map = require('array-map');
+var map = require('array.prototype.map');
 var define = require('define-properties');
 
 var hasSymbols = typeof Symbol === 'function' && typeof Symbol('foo') === 'symbol';

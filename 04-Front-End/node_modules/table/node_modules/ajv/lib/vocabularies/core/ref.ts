@@ -16,7 +16,7 @@ const def: CodeKeywordDefinition = {
     const {root} = env
     if (($ref === "#" || $ref === "#/") && baseId === root.baseId) return callRootRef()
     const schOrEnv = resolveRef.call(self, root, baseId, $ref)
-    if (schOrEnv === undefined) throw new MissingRefError(baseId, $ref)
+    if (schOrEnv === undefined) throw new MissingRefError(it.opts.uriResolver, baseId, $ref)
     if (schOrEnv instanceof SchemaEnv) return callValidate(schOrEnv)
     return inlineRefSchema(schOrEnv)
 

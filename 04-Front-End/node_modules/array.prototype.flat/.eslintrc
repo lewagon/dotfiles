@@ -19,7 +19,7 @@
 				"HasProperty",
 				"IsArray",
 				"Set",
-				"ToInteger",
+				"ToIntegerOrInfinity",
 				"ToLength",
 				"ToObject",
 				"ToString"

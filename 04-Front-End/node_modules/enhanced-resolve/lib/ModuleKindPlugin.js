@@ -12,17 +12,25 @@ module.exports = class ModuleKindPlugin {
 
 	apply(resolver) {
 		const target = resolver.ensureHook(this.target);
-		resolver.getHook(this.source).tapAsync("ModuleKindPlugin", (request, resolveContext, callback) => {
-			if(!request.module) return callback();
-			const obj = Object.assign({}, request);
-			delete obj.module;
-			resolver.doResolve(target, obj, "resolve as module", resolveContext, (err, result) => {
-				if(err) return callback(err);
+		resolver
+			.getHook(this.source)
+			.tapAsync("ModuleKindPlugin", (request, resolveContext, callback) => {
+				if (!request.module) return callback();
+				const obj = Object.assign({}, request);
+				delete obj.module;
+				resolver.doResolve(
+					target,
+					obj,
+					"resolve as module",
+					resolveContext,
+					(err, result) => {
+						if (err) return callback(err);
 
-				// Don't allow other alternatives
-				if(result === undefined) return callback(null, null);
-				callback(null, result);
+						// Don't allow other alternatives
+						if (result === undefined) return callback(null, null);
+						callback(null, result);
+					}
+				);
 			});
-		});
 	}
 };

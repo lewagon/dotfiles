@@ -1,12 +1,12 @@
 'use strict';
 
-var callBound = require('../helpers/callBound');
+var callBound = require('call-bind/callBound');
 
 var $PromiseThen = callBound('Promise.prototype.then', true);
 
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-ispromise
+// https://ecma-international.org/ecma-262/6.0/#sec-ispromise
 
 module.exports = function IsPromise(x) {
 	if (Type(x) !== 'Object') {

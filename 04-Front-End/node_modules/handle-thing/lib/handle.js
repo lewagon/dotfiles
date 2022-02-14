@@ -7,7 +7,18 @@ var Buffer = require('buffer').Buffer
 var Queue = require('./queue')
 
 // Node.js version
+var match = /^v(\d+)\.(\d+)\./.exec(process.version)
+var version = match ? Number(match[1]) + Number('0.' + match[2]) : 11
+var onreadMode = version >= 11.1 ? 2 : 1
 var mode = 'modern'
+
+var setNRead
+if (onreadMode === 2) {
+  var sw = process.binding('stream_wrap')
+  setNRead = function (nread) {
+    sw.streamBaseState[sw.kReadBytesOrError] = nread
+  }
+}
 
 function Handle (stream, options) {
   EventEmitter.call(this)
@@ -29,6 +40,15 @@ Handle.mode = mode
 
 Handle.create = function create (stream, options) {
   return new Handle(stream, options)
+}
+
+Handle.prototype._onread = function _onread (nread, buffer) {
+  if (onreadMode === 1) {
+    this.onread(nread, buffer)
+  } else {
+    setNRead(nread)
+    this.onread(buffer)
+  }
 }
 
 Handle.prototype._queueReq = function _queueReq (type, req) {
@@ -81,17 +101,17 @@ var uv = process.binding('uv')
 Handle.prototype._flow = function flow () {
   var self = this
   this._stream.on('data', function (chunk) {
-    self.onread(chunk.length, chunk)
+    self._onread(chunk.length, chunk)
   })
 
   this._stream.on('end', function () {
-    self.onread(uv.UV_EOF, Buffer.alloc(0))
+    self._onread(uv.UV_EOF, Buffer.alloc(0))
   })
 
   this._stream.on('close', function () {
     setImmediate(function () {
       if (self._reading) {
-        self.onread(uv.UV_ECONNRESET, Buffer.alloc(0))
+        self._onread(uv.UV_ECONNRESET, Buffer.alloc(0))
       }
     })
   })

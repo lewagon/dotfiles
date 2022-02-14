@@ -119,7 +119,7 @@ modes.cbc.prototype.start = function(options) {
     throw new Error('Invalid IV parameter.');
   } else {
     // save IV as "previous" block
-    this._iv = transformIV(options.iv);
+    this._iv = transformIV(options.iv, this.blockSize);
     this._prev = this._iv.slice(0);
   }
 };
@@ -215,7 +215,7 @@ modes.cfb.prototype.start = function(options) {
     throw new Error('Invalid IV parameter.');
   }
   // use IV as first input
-  this._iv = transformIV(options.iv);
+  this._iv = transformIV(options.iv, this.blockSize);
   this._inBlock = this._iv.slice(0);
   this._partialBytes = 0;
 };
@@ -359,7 +359,7 @@ modes.ofb.prototype.start = function(options) {
     throw new Error('Invalid IV parameter.');
   }
   // use IV as first input
-  this._iv = transformIV(options.iv);
+  this._iv = transformIV(options.iv, this.blockSize);
   this._inBlock = this._iv.slice(0);
   this._partialBytes = 0;
 };
@@ -444,7 +444,7 @@ modes.ctr.prototype.start = function(options) {
     throw new Error('Invalid IV parameter.');
   }
   // use IV as first input
-  this._iv = transformIV(options.iv);
+  this._iv = transformIV(options.iv, this.blockSize);
   this._inBlock = this._iv.slice(0);
   this._partialBytes = 0;
 };
@@ -954,7 +954,7 @@ modes.gcm.prototype.generateSubHashTable = function(mid, bits) {
 
 /** Utility functions */
 
-function transformIV(iv) {
+function transformIV(iv, blockSize) {
   if(typeof iv === 'string') {
     // convert iv string into byte buffer
     iv = forge.util.createBuffer(iv);
@@ -968,9 +968,21 @@ function transformIV(iv) {
       iv.putByte(tmp[i]);
     }
   }
+
+  if(iv.length() < blockSize) {
+    throw new Error(
+      'Invalid IV length; got ' + iv.length() +
+      ' bytes and expected ' + blockSize + ' bytes.');
+  }
+
   if(!forge.util.isArray(iv)) {
     // convert iv byte buffer into 32-bit integer array
-    iv = [iv.getInt32(), iv.getInt32(), iv.getInt32(), iv.getInt32()];
+    var ints = [];
+    var blocks = blockSize / 4;
+    for(var i = 0; i < blocks; ++i) {
+      ints.push(iv.getInt32());
+    }
+    iv = ints;
   }
 
   return iv;

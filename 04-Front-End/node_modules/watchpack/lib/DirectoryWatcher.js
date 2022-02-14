@@ -6,7 +6,7 @@
 
 var EventEmitter = require("events").EventEmitter;
 var async = require("neo-async");
-var chokidar = require("chokidar");
+var chokidar = require("./chokidar");
 var fs = require("graceful-fs");
 var path = require("path");
 
@@ -282,7 +282,8 @@ DirectoryWatcher.prototype.onDirectoryUnlinked = function onDirectoryUnlinked(di
 	}
 };
 
-DirectoryWatcher.prototype.onWatcherError = function onWatcherError(/* err */) {
+DirectoryWatcher.prototype.onWatcherError = function onWatcherError(err) {
+	console.warn("Error from chokidar (" + this.path + "): " + err);
 };
 
 DirectoryWatcher.prototype.doInitialScan = function doInitialScan() {
@@ -356,7 +357,8 @@ DirectoryWatcher.prototype.getTimes = function() {
 
 DirectoryWatcher.prototype.close = function() {
 	this.initialScan = false;
-	this.watcher.close();
+	var p = this.watcher.close();
+	if(p && p.catch) p.catch(this.onWatcherError.bind(this));
 	if(this.nestedWatching) {
 		Object.keys(this.directories).forEach(function(dir) {
 			this.directories[dir].close();

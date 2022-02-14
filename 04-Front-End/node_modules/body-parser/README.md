@@ -2,7 +2,7 @@
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][github-actions-ci-image]][github-actions-ci-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 Node.js body parsing middleware.
@@ -48,8 +48,6 @@ $ npm install body-parser
 ```
 
 ## API
-
-<!-- eslint-disable no-unused-vars -->
 
 ```js
 var bodyParser = require('body-parser')
@@ -281,14 +279,15 @@ encoding of the request. The parsing can be aborted by throwing an error.
 
 ## Errors
 
-The middlewares provided by this module create errors depending on the error
-condition during parsing. The errors will typically have a `status`/`statusCode`
-property that contains the suggested HTTP response code, an `expose` property
-to determine if the `message` property should be displayed to the client, a
-`type` property to determine the type of error without matching against the
-`message`, and a `body` property containing the read body, if available.
+The middlewares provided by this module create errors using the
+[`http-errors` module](https://www.npmjs.com/package/http-errors). The errors
+will typically have a `status`/`statusCode` property that contains the suggested
+HTTP response code, an `expose` property to determine if the `message` property
+should be displayed to the client, a `type` property to determine the type of
+error without matching against the `message`, and a `body` property containing
+the read body, if available.
 
-The following are the common errors emitted, though any error can come through
+The following are the common errors created, though any error can come through
 for various reasons.
 
 ### content encoding unsupported
@@ -298,6 +297,20 @@ contained an encoding but the "inflation" option was set to `false`. The
 `status` property is set to `415`, the `type` property is set to
 `'encoding.unsupported'`, and the `charset` property will be set to the
 encoding that is unsupported.
+
+### entity parse failed
+
+This error will occur when the request contained an entity that could not be
+parsed by the middleware. The `status` property is set to `400`, the `type`
+property is set to `'entity.parse.failed'`, and the `body` property is set to
+the entity value that failed parsing.
+
+### entity verify failed
+
+This error will occur when the request contained an entity that could not be
+failed verification by the defined `verify` option. The `status` property is
+set to `403`, the `type` property is set to `'entity.verify.failed'`, and the
+`body` property is set to the entity value that failed verification.
 
 ### request aborted
 
@@ -435,9 +448,9 @@ app.use(bodyParser.text({ type: 'text/html' }))
 
 [npm-image]: https://img.shields.io/npm/v/body-parser.svg
 [npm-url]: https://npmjs.org/package/body-parser
-[travis-image]: https://img.shields.io/travis/expressjs/body-parser/master.svg
-[travis-url]: https://travis-ci.org/expressjs/body-parser
 [coveralls-image]: https://img.shields.io/coveralls/expressjs/body-parser/master.svg
 [coveralls-url]: https://coveralls.io/r/expressjs/body-parser?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/body-parser.svg
 [downloads-url]: https://npmjs.org/package/body-parser
+[github-actions-ci-image]: https://img.shields.io/github/workflow/status/expressjs/body-parser/ci/master?label=ci
+[github-actions-ci-url]: https://github.com/expressjs/body-parser?query=workflow%3Aci

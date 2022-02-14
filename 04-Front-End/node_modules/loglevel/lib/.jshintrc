@@ -10,6 +10,7 @@
   "boss": true,
   "eqnull": true,
   "es3": true,
+  "notypeof": true,
   "globals": {
     "console": false,
     "exports": false,

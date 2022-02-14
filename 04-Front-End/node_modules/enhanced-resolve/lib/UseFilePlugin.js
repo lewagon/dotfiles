@@ -13,13 +13,23 @@ module.exports = class UseFilePlugin {
 
 	apply(resolver) {
 		const target = resolver.ensureHook(this.target);
-		resolver.getHook(this.source).tapAsync("UseFilePlugin", (request, resolveContext, callback) => {
-			const filePath = resolver.join(request.path, this.filename);
-			const obj = Object.assign({}, request, {
-				path: filePath,
-				relativePath: request.relativePath && resolver.join(request.relativePath, this.filename)
+		resolver
+			.getHook(this.source)
+			.tapAsync("UseFilePlugin", (request, resolveContext, callback) => {
+				const filePath = resolver.join(request.path, this.filename);
+				const obj = Object.assign({}, request, {
+					path: filePath,
+					relativePath:
+						request.relativePath &&
+						resolver.join(request.relativePath, this.filename)
+				});
+				resolver.doResolve(
+					target,
+					obj,
+					"using path: " + filePath,
+					resolveContext,
+					callback
+				);
 			});
-			resolver.doResolve(target, obj, "using path: " + filePath, resolveContext, callback);
-		});
 	}
 };

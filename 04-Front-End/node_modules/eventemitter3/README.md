@@ -86,6 +86,8 @@ alternatives. To run the benchmarks run `npm run benchmark`.
 
 Tests and benchmarks are not included in the npm package. If you want to play
 with them you have to clone the GitHub repository.
+Note that you will have to run an additional `npm i` in the benchmarks folder
+before `npm run benchmark`.
 
 ## License
 

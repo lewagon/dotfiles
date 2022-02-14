@@ -3,7 +3,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Node.js Version][node-version-image]][node-version-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][github-actions-ci-image]][github-actions-ci-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 An HTTP content negotiator for Node.js
@@ -195,9 +195,9 @@ and more.
 [npm-url]: https://npmjs.org/package/negotiator
 [node-version-image]: https://img.shields.io/node/v/negotiator.svg
 [node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://img.shields.io/travis/jshttp/negotiator/master.svg
-[travis-url]: https://travis-ci.org/jshttp/negotiator
 [coveralls-image]: https://img.shields.io/coveralls/jshttp/negotiator/master.svg
 [coveralls-url]: https://coveralls.io/r/jshttp/negotiator?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/negotiator.svg
 [downloads-url]: https://npmjs.org/package/negotiator
+[github-actions-ci-image]: https://img.shields.io/github/workflow/status/jshttp/negotiator/ci/master?label=ci
+[github-actions-ci-url]: https://github.com/jshttp/negotiator/actions/workflows/ci.yml

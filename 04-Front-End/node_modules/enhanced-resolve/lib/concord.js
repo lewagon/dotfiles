@@ -16,9 +16,9 @@ function parseType(type) {
 }
 
 function isTypeMatched(baseType, testedType) {
-	if(typeof baseType === "string") baseType = parseType(baseType);
-	if(typeof testedType === "string") testedType = parseType(testedType);
-	if(testedType.type && testedType.type !== baseType.type) return false;
+	if (typeof baseType === "string") baseType = parseType(baseType);
+	if (typeof testedType === "string") testedType = parseType(testedType);
+	if (testedType.type && testedType.type !== baseType.type) return false;
 	return testedType.features.every(requiredFeature => {
 		return baseType.features.indexOf(requiredFeature) >= 0;
 	});
@@ -27,24 +27,29 @@ function isTypeMatched(baseType, testedType) {
 function isResourceTypeMatched(baseType, testedType) {
 	baseType = baseType.split("/");
 	testedType = testedType.split("/");
-	if(baseType.length !== testedType.length) return false;
-	for(let i = 0; i < baseType.length; i++) {
-		if(!isTypeMatched(baseType[i], testedType[i]))
-			return false;
+	if (baseType.length !== testedType.length) return false;
+	for (let i = 0; i < baseType.length; i++) {
+		if (!isTypeMatched(baseType[i], testedType[i])) return false;
 	}
 	return true;
 }
 
 function isResourceTypeSupported(context, type) {
-	return context.supportedResourceTypes && context.supportedResourceTypes.some(supportedType => {
-		return isResourceTypeMatched(supportedType, type);
-	});
+	return (
+		context.supportedResourceTypes &&
+		context.supportedResourceTypes.some(supportedType => {
+			return isResourceTypeMatched(supportedType, type);
+		})
+	);
 }
 
 function isEnvironment(context, env) {
-	return context.environments && context.environments.every(environment => {
-		return isTypeMatched(environment, env);
-	});
+	return (
+		context.environments &&
+		context.environments.every(environment => {
+			return isTypeMatched(environment, env);
+		})
+	);
 }
 
 const globCache = {};
@@ -68,19 +73,19 @@ function isConditionMatched(context, condition) {
 	return items.some(function testFn(item) {
 		item = item.trim();
 		const inverted = /^!/.test(item);
-		if(inverted) return !testFn(item.substr(1));
-		if(/^[a-z]+:/.test(item)) {
+		if (inverted) return !testFn(item.substr(1));
+		if (/^[a-z]+:/.test(item)) {
 			// match named condition
 			const match = /^([a-z]+):\s*/.exec(item);
 			const value = item.substr(match[0].length);
 			const name = match[1];
-			switch(name) {
+			switch (name) {
 				case "referrer":
 					return isGlobMatched(value, context.referrer);
 				default:
 					return false;
 			}
-		} else if(item.indexOf("/") >= 0) {
+		} else if (item.indexOf("/") >= 0) {
 			// match supported type
 			return isResourceTypeSupported(context, item);
 		} else {
@@ -91,12 +96,12 @@ function isConditionMatched(context, condition) {
 }
 
 function isKeyMatched(context, key) {
-	while(true) { //eslint-disable-line
+	for (;;) {
 		const match = /^\[([^\]]+)\]\s*/.exec(key);
-		if(!match) return key;
+		if (!match) return key;
 		key = key.substr(match[0].length);
 		const condition = match[1];
-		if(!isConditionMatched(context, condition)) {
+		if (!isConditionMatched(context, condition)) {
 			return false;
 		}
 	}
@@ -106,7 +111,7 @@ function getField(context, configuration, field) {
 	let value;
 	Object.keys(configuration).forEach(key => {
 		const pureKey = isKeyMatched(context, key);
-		if(pureKey === field) {
+		if (pureKey === field) {
 			value = configuration[key];
 		}
 	});
@@ -123,28 +128,28 @@ function getExtensions(context, configuration) {
 
 function matchModule(context, configuration, request) {
 	const modulesField = getField(context, configuration, "modules");
-	if(!modulesField) return request;
+	if (!modulesField) return request;
 	let newRequest = request;
 	const keys = Object.keys(modulesField);
 	let iteration = 0;
 	let match;
 	let index;
-	for(let i = 0; i < keys.length; i++) {
+	for (let i = 0; i < keys.length; i++) {
 		const key = keys[i];
 		const pureKey = isKeyMatched(context, key);
 		match = matchGlob(pureKey, newRequest);
-		if(match) {
+		if (match) {
 			const value = modulesField[key];
-			if(typeof value !== "string") {
+			if (typeof value !== "string") {
 				return value;
-			} else if(/^\(.+\)$/.test(pureKey)) {
+			} else if (/^\(.+\)$/.test(pureKey)) {
 				newRequest = newRequest.replace(getGlobRegExp(pureKey), value);
 			} else {
 				index = 1;
 				newRequest = value.replace(/(\/?\*)?\*/g, replaceMatcher);
 			}
 			i = -1;
-			if(iteration++ > keys.length) {
+			if (iteration++ > keys.length) {
 				throw new Error("Request '" + request + "' matches recursively");
 			}
 		}
@@ -152,12 +157,11 @@ function matchModule(context, configuration, request) {
 	return newRequest;
 
 	function replaceMatcher(find) {
-		switch(find) {
-			case "/**":
-				{
-					const m = match[index++];
-					return m ? "/" + m : "";
-				}
+		switch (find) {
+			case "/**": {
+				const m = match[index++];
+				return m ? "/" + m : "";
+			}
 			case "**":
 			case "*":
 				return match[index++];
@@ -167,14 +171,20 @@ function matchModule(context, configuration, request) {
 
 function matchType(context, configuration, relativePath) {
 	const typesField = getField(context, configuration, "types");
-	if(!typesField) return undefined;
+	if (!typesField) return undefined;
 	let type;
 	Object.keys(typesField).forEach(key => {
 		const pureKey = isKeyMatched(context, key);
-		if(isGlobMatched(pureKey, relativePath)) {
+		if (isGlobMatched(pureKey, relativePath)) {
 			const value = typesField[key];
-			if(!type && /\/\*$/.test(value))
-				throw new Error("value ('" + value + "') of key '" + key + "' contains '*', but there is no previous value defined");
+			if (!type && /\/\*$/.test(value))
+				throw new Error(
+					"value ('" +
+						value +
+						"') of key '" +
+						key +
+						"' contains '*', but there is no previous value defined"
+				);
 			type = value.replace(/\/\*$/, "/" + type);
 		}
 	});

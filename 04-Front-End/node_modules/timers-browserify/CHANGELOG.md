@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.12 - 2020-10-27
+
+### Fixed
+
+* Remove `.DS_Store` from published package
+* Upgrade `connect` dev dependency
+
 ## 2.0.11 - 2019-08-10
 
 ### Fixed

@@ -170,3 +170,9 @@ exports.isProxyEnabled = require('./isProxyEnabled');
  */
 
 exports.isNaN = require('./isNaN');
+
+/*!
+ * getOperator method
+ */
+
+exports.getOperator = require('./getOperator');

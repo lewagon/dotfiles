@@ -35,7 +35,7 @@ test('basic test', function() {
     ok(typeof logging.disableAll === "function", "disableAll is a function");
     ok(typeof logging.getLogger === "function", "getLogger is a function");
 
-    // Use the API to make sure it doesn't blantantly fail with exceptions
+    // Use the API to make sure it doesn't blatantly fail with exceptions
     logging.trace("a trace message");
     logging.debug("a debug message");
     logging.info("an info message");

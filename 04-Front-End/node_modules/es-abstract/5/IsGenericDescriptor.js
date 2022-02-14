@@ -6,7 +6,7 @@ var Type = require('./Type');
 
 var assertRecord = require('../helpers/assertRecord');
 
-// https://ecma-international.org/ecma-262/5.1/#sec-8.10.3
+// https://262.ecma-international.org/5.1/#sec-8.10.3
 
 module.exports = function IsGenericDescriptor(Desc) {
 	if (typeof Desc === 'undefined') {

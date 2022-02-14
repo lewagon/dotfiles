@@ -1,18 +1,18 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
 var isPrefixOf = require('../helpers/isPrefixOf');
 
-// var callBound = require('../helpers/callBound');
+// var callBound = require('call-bind/callBound');
 
 // var $charAt = callBound('String.prototype.charAt');
 
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/9.0/#sec-isstringprefix
+// https://262.ecma-international.org/9.0/#sec-isstringprefix
 
 module.exports = function IsStringPrefix(p, q) {
 	if (Type(p) !== 'String') {

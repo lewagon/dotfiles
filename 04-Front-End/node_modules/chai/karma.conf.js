@@ -10,7 +10,13 @@ module.exports = function(config) {
     , colors: true
     , logLevel: config.LOG_INFO
     , autoWatch: false
-    , browsers: [ 'PhantomJS' ]
+    , browsers: [ 'HeadlessChrome' ]
+    , customLaunchers: {
+      HeadlessChrome: {
+      base: 'ChromeHeadless'
+    , flags: [ '--no-sandbox',]
+    , }
+    , }
     , browserDisconnectTimeout: 10000
     , browserDisconnectTolerance: 2
     , browserNoActivityTimeout: 20000

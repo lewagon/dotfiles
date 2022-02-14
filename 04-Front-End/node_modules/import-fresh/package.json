@@ -1,13 +1,14 @@
 {
 	"name": "import-fresh",
-	"version": "3.2.1",
+	"version": "3.3.0",
 	"description": "Import a module while bypassing the cache",
 	"license": "MIT",
 	"repository": "sindresorhus/import-fresh",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
 		"node": ">=6"
