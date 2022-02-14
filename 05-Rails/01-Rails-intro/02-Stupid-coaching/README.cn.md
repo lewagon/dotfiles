@@ -87,7 +87,7 @@ ask          GET        /ask(.:format)       questions#ask
 **视图(View)**
 
 让我们来创建一个视图，这是显示form的最后一步！你还记得视图应该放在哪个文件夹，应该如何命名吗？
-这是Rails的其中一个约定，[动作视图约定](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro-6/index.html?title=Rails+Basics#/6/6)。
+这是Rails的其中一个约定，[动作视图约定](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro/index.html?title=Rails+Basics#/6/6)。
 
 在[localhost:3000/ask](http://localhost:3000/ask)刷新页面，如果你的文件命名正确的话，最终你会看到一个没有任何错误的页面。现在这个页面还是空的，让我们来添加表单(`<form>`)。还记得语法吗？
 
