@@ -13,7 +13,7 @@ Then create the Heroku app and do your initial deploy. Check out [the Heroku lec
 Tip: always run `heroku run rails db:migrate` after pushing to Heroku to make sure your production database is up to date with any changes.
 
 ## Pair Programming
-It is hard to split the work and have everyone starting to code on an empty project. Start by generating your **core models** on the lead developer's machine, in [pair-programming](https://en.wikipedia.org/wiki/Pair_programming). Make sure you follow thoroughly the DB schema that was validated by the teaching staff. You can refresh your Active Record knowledge [here](https://kitt.lewagon.com/knowledge/cheatsheets/active_record) if you'd like before starting to create your models.
+It is hard to split the work and have everyone starting to code on an empty project. Start by generating your **core models** on the lead developer's machine, in [pair-programming](https://en.wikipedia.org/wiki/Pair_programming). Make sure you follow thoroughly the DB schema that was validated by the teaching staff. You can refresh your Active Record knowledge [here](https://kitt.lewagon.com/knowledge/cheatsheets/active_record_basics) if you'd like before starting to create your models.
 
 Always start by generating the models that do not reference other models. Remember the syntax?
 
