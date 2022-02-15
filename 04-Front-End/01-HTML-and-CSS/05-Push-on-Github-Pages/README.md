@@ -23,13 +23,13 @@ Then we will use the GitHub CLI (Command line interface) to create the associate
 ```bash
 gh repo create # this creates the associated repo on GitHub!
 ```
-You will then be asked for a few different inputs regarding how you wish to create your new repository.
+You will be asked for a few different inputs regarding how you wish to create your new repository in the following order:
 
 - First select 'Push an existing local repository to GiHub', since this is exactly what we want to do now.
 
 - Then, we need to inform the correct file path to our project. You should already be on the right folder in your terminal, so all we need to do is either hit 'enter' or type '.' and 'enter' (. represents the current folder).
 
-- We can then name the repository on GitHub. You can either give it a new name or hit enter to keep the same name as the local repository. You'll be asked for a repository description as well. You can describe it as you want or just hit 'enter' to keep it empty.
+- We need to name the repository. You can either give it a new name or hit enter to keep the same name as the local repository. You'll be asked for a repository description as well. You can describe it as you want or just hit 'enter' to keep it empty.
 
 - We also need to determine the visibility of the repository. Use the arrow keys to select between [Public, Private, Internal]. Choose Public for now.
 
