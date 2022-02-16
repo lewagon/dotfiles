@@ -13,7 +13,7 @@ Then create the Heroku app and do your initial deploy. Check out [the Heroku lec
 Tip: always run `heroku run rails db:migrate` after pushing to Heroku to make sure your production database is up to date with any changes.
 
 ## Pair Programming
-It is hard to split the work and have everyone starting to code on an empty project. Start by generating your **core models** on the lead developer's machine, in [pair-programming](https://en.wikipedia.org/wiki/Pair_programming). Make sure you follow thoroughly the DB schema that was validated by the teaching staff. You can refresh your Active Record knowledge [here](https://kitt.lewagon.com/knowledge/cheatsheets/activerecord) if you'd like before starting to create your models.
+It is hard to split the work and have everyone starting to code on an empty project. Start by generating your **core models** on the lead developer's machine, in [pair-programming](https://en.wikipedia.org/wiki/Pair_programming). Make sure you follow thoroughly the DB schema that was validated by the teaching staff. You can refresh your Active Record knowledge [here](https://kitt.lewagon.com/knowledge/cheatsheets/active_record_basics) if you'd like before starting to create your models.
 
 Always start by generating the models that do not reference other models. Remember the syntax?
 
@@ -32,7 +32,7 @@ Once you generated all your models, don't forget to run
 rails db:migrate
 ```
 
-Note: Some of your schemas may have more advanced relationships and foreign keys than we saw during Airbnb week. For example, a table that may need to store two instances (foreign keys) from another table (most often the `User` table). In this case you'll need to use something called `aliases`. Learn how to implement them with [this guide](https://kitt.lewagon.com/knowledge/cheatsheets/activerecord_advanced) on advanced Active Record.
+Note: Some of your schemas may have more advanced relationships and foreign keys than we saw during Airbnb week. For example, a table that may need to store two instances (foreign keys) from another table (most often the `User` table). In this case you'll need to use something called `aliases`. Learn how to implement them with [this guide](https://kitt.lewagon.com/knowledge/cheatsheets/active_record_advanced) on advanced Active Record.
 
 Once done, open your models and go on with **associations** and **validations** 👌
 
