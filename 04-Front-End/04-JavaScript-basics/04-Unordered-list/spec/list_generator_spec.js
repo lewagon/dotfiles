@@ -7,7 +7,7 @@ describe("listItem", () => {
   });
 
   it("should return the right markup", () => {
-    assert.equal(listItem('milk'), '<li class="list-group-item">milk</li>');
+    assert.equal(listItem('eggs'), '<li class="list-group-item">eggs</li>');
   });
 });
 
@@ -17,6 +17,6 @@ describe("unorderedList", () => {
   });
 
   it("should return the right markup when passed items", () => {
-    assert.equal(unorderedList(['milk', 'bread']).replace(/(\n| {2})/g, ''), '<ul class="list-group"><li class="list-group-item">milk</li><li class="list-group-item">bread</li></ul>');
+    assert.equal(unorderedList(['eggs', 'bread']).replace(/(\n| {2})/g, ''), '<ul class="list-group"><li class="list-group-item">eggs</li><li class="list-group-item">bread</li></ul>');
   });
 });
