@@ -15,4 +15,4 @@ git push heroku master
 ## Resources
 
 - Remind yourself how to properly use git with [this cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/git_advanced).
-- Refresh your Active Record knowledge [here](https://kitt.lewagon.com/knowledge/cheatsheets/activerecord).
+- Refresh your Active Record knowledge [here](https://kitt.lewagon.com/knowledge/cheatsheets/active_record_basics).
