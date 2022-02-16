@@ -15,4 +15,4 @@ git push heroku master
 ## Ressources
 
 - Revois comment utiliser correctement git avec [cette fiche d'aide](https://kitt.lewagon.com/knowledge/cheatsheets/git_advanced).
-- Rafraichis tes connaissances Active Record [ici](https://kitt.lewagon.com/knowledge/cheatsheets/activerecord).
+- Rafraichis tes connaissances Active Record [ici](https://kitt.lewagon.com/knowledge/cheatsheets/active_record_basics).
