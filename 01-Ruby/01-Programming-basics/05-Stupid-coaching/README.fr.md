@@ -51,6 +51,8 @@ Les objectifs de cet exercice sont les suivants :
 
 ### Réponse de ton coach
 
+⚠️ Avant de commencer, assure-toi d'exécuter `rake` et de lire attentivement les spécifications. Ça te donnera une vision claire du résultat attendu pour chacune des méthodes.
+
 Le fichier `lib/coach_answer.rb` contient la définition de la méthode pour `coach_answer`. Cette méthode prend un argument, `your_message`, qui correspond à la phrase que tu dis à ton coach. La méthode doit retourner une `String` (à savoir la réponse de ton coach), qui dépendra de la valeur passée dans `your_message`.
 
 Nous allons maintenant créer une version améliorée de ton coach avec la méthode `coach_answer_enhanced`. Si tu t’adresses à ton coach **EN CRIANT**, il appréciera et ajoutera "I can feel your motivation!" avant sa réponse habituelle. Souviens-toi que pour crier sur Internet, il faut écrire en MAJUSCULES ! Et si tu cries "I AM GOING TO WORK RIGHT NOW!", alors ton coach te laissera tranquille.
