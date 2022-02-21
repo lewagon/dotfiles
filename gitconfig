@@ -53,3 +53,5 @@
 
 [pull]
   rebase = false
+[credential]
+	username = samrjenkins

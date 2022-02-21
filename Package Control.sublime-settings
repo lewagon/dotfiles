@@ -20,10 +20,13 @@
 		"GitGutter",
 		"Latest Migration",
 		"MagicPython",
+		"Monokai - Spacegray",
 		"Package Control",
+		"Revert All Files",
 		"SCSS",
 		"SublimeLinter",
 		"SublimeLinter-flake8",
-		"SublimeLinter-rubocop"
-	]
+		"SublimeLinter-rubocop",
+		"Theme - Monokai Pro",
+	],
 }

@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"color_scheme": "Packages/Monokai - Spacegray/Monokai - Spacegray Eighties.tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -28,7 +28,7 @@
 	"ignored_packages":
 	[
 		"Python",
-		"Vintage"
+		"Vintage",
 	],
 	"remember_open_files": false,
 	"rulers":
@@ -42,5 +42,5 @@
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 	"use_tab_stops": true,
-	"word_wrap": false
+	"word_wrap": false,
 }
