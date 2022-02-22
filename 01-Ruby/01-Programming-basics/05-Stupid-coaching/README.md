@@ -51,7 +51,7 @@ The objectives of this challenge are:
 
 ### Coach answer
 
-Before you start, please make sure to run `rake` and carefully read the requirements. It will give you a clear overview of what is the expected output for both methods.
+⚠️ Before you start, please make sure to run `rake` and carefully read the requirements. It will give you a clear overview of what the expected output for both methods is.
 
 In the `lib/coach_answer.rb` file, you will find method definition of `coach_answer`. You can see that it takes one argument, `your_message` which is the sentence you tell the coach. The method should return a `String` (i.e., the coach's answer) which will obviously depend on which value is passed in `your_message`.
 
