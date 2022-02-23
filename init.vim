@@ -1,5 +1,11 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Plugin Section
-call plug#begin("~/.vim/plugged")
+call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
@@ -43,14 +49,14 @@ let g:ale_fixers = {
       \}
 let g:ale_fix_on_save = 1
 
-let g:nv_search_paths = ['~/workspace/xavierosee/notes','~/workspace/xavierosee/wiki', './notes.md', './doc', './notes']
-let g:nv_main_directory = '~/workspace/xavierosee/notes'
+let g:nv_search_paths = ['~/workspace/perso/notes','~/workspace/perso/wiki', './notes.md', './doc', './notes']
+let g:nv_main_directory = '~/workspace/perso/notes'
 let g:vimwiki_list = [{
-			\'path':'~/workspace/xavierosee/wiki/wiki', 
+			\'path':'~/workspace/perso/wiki/wiki', 
 			\'syntax': 'markdown', 'ext': '.md',
-			\'custom_wiki2html': '~/workspace/xavierosee/wiki/wk2html.sh',
-			\'path_html':'~/workspace/xavierosee/wiki/docs', 
-			\'template_path': '~/workspace/xavierosee/wiki/templates',
+			\'custom_wiki2html': '~/workspace/perso/wiki/wk2html.sh',
+			\'path_html':'~/workspace/perso/wiki/docs', 
+			\'template_path': '~/workspace/perso/wiki/templates',
 			\'template_default':'default',
 			\'template_ext':'.html'}]
 let g:vimwiki_global_ext = 0
@@ -118,9 +124,9 @@ augroup end
 " VimWiki git sync
 augroup vimwikigitsync
   " Make sure this window's working dir is the wiki repo dir whenever index.wiki is opened
-  au BufRead ~/workspace/xavierosee/wiki/wiki/index.wiki silent !cd ~/workspace/xavierosee/wiki; git pull
+  au BufRead ~/workspace/perso/wiki/wiki/index.wiki silent !cd ~/workspace/perso/wiki; git pull
   " After writing to any file in the wiki dir, add all files in the repo, commit and push
-  au! BufWritePost ~/workspace/xavierosee/wiki/* silent !cd ~/workspace/xavierosee/wiki; git add -A;git commit -m "Autocommit and push";git push
+  au! BufWritePost ~/workspace/perso/wiki/* silent !cd ~/workspace/perso/wiki; git add -A;git commit -m "Autocommit and push";git push
 augroup END
 
 

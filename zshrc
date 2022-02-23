@@ -83,3 +83,5 @@ if (( RANDOM % 2 )); then
 else
 	ponysay -q
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
