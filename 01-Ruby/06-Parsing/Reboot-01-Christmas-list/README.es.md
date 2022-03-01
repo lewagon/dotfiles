@@ -117,7 +117,7 @@ html_content = File.open(filepath)
 doc = Nokogiri::HTML(html_content)
 
 # 3. Buscamos los elementos adecuados que contengan el  título de los ítems en nuestro documento HTML
-doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
+doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
   # 4. Extraemos e imprimimos el título de cada ítem encontrado
   puts element.text.strip
 end
@@ -138,7 +138,7 @@ html_content = open("https://www.etsy.com/search?q=#{article}").read
 doc = Nokogiri::HTML(html_content)
 
 # 3. Buscamos los elementos adecuados que contengan el  título de los ítems en nuestro documento HTML
-doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
+doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
   # 4. Extraemos e imprimimos el título de cada ítem encontrado
   puts element.text.strip
 end

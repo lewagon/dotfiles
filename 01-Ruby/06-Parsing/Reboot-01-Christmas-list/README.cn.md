@@ -120,7 +120,7 @@ html_content = File.open(filepath)
 doc = Nokogiri::HTML(html_content)
 
 # 3. 我们在HTML文档中搜索包含这个项目标题的正确的元素
-doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
+doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
   # 4. 对于每个找到的元素，我们提取它的标题并打印出来
   puts element.text.strip
 end
@@ -140,7 +140,7 @@ html_content = open("https://www.etsy.com/search?q=#{article}").read
 doc = Nokogiri::HTML(html_content)
 
 # 3. 我们在HTML文档中搜索包含这个项目标题的正确的元素
-doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
+doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
   # 4. 对于每个找到的元素，我们提取它的标题并打印出来
   puts element.text.strip
 end
