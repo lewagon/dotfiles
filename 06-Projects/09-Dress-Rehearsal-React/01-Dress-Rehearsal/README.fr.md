@@ -14,4 +14,4 @@ Tu vas assurer ! 💪
 
 ## Ressources
 
-Consulte les pitchs des [précédents demo days](https://www.youtube.com/playlist?list=PLkbmdtbypn7R_BN6nFX-XZc7uDyMSxhye) pour trouver l'inspiration et présenter ton parcours utilisateur de façon claire et amusante 👌
+Consulte les pitchs des [précédents demo days](https://www.youtube.com/playlist?list=PLkbmdtbypn7SoLjD5iYDs5FCwXx61S9iN) pour trouver l'inspiration et présenter ton parcours utilisateur de façon claire et amusante 👌
