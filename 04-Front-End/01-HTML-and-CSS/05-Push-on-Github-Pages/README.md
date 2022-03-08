@@ -21,7 +21,7 @@ git commit -m "my profile page"
 Then we will use the GitHub CLI (Command line interface) to create the associated GitHub repo. The GitHub CLI allows you to interact with GitHub through your terminal. For now we will be creating public repositories, but you can find more options [on the official documentation](https://cli.github.com/manual/).
 
 ```bash
-gh repo create # this creates the associated repo on GitHub!
+gh repo create # this launches an interactive mode to create the GitHub repo
 ```
 You will be asked for a few different inputs regarding how you wish to create your new repository in the following order:
 
