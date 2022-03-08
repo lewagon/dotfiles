@@ -62,7 +62,7 @@ cd ~/code/<user.github_nickname>/medium-article
 git init
 git add index.html style.css
 git commit -m "My medium copycat"
-gh repo create --public --source=. # will create a public repository with the same name as the folder.
+gh repo create --public --source=.
 git push
 gh repo view --web
 ```
