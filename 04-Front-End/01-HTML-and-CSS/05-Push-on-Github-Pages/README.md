@@ -23,27 +23,38 @@ Then we will use the GitHub CLI (Command line interface) to create the associate
 ```bash
 gh repo create # this launches an interactive mode to create the GitHub repo
 ```
-You will be asked for a few different inputs regarding how you wish to create your new repository in the following order:
+You will be asked to answer few questions regarding how you wish to create your repository on GitHub:
 
-- First select 'Push an existing local repository to GiHub', since this is exactly what we want to do now.
+- **What would you like to do?** Select _Push an existing local repository to GitHub_, since you've already created your local repository with `git init`.
 
-- Then, we need to inform the correct file path to our project. You should already be on the right folder in your terminal, so all we need to do is either hit 'enter' or type '.' and 'enter' (. represents the current folder).
+- **Path to local repository (.)** Type `ENTER` so it selects the default option (.) which is the current folder.
 
-- We need to name the repository. You can either give it a new name or hit enter to keep the same name as the local repository. You'll be asked for a repository description as well. You can describe it as you want or just hit 'enter' to keep it empty.
+- **Repository name (profile)** Type `ENTER` to select the default option (profile) which is the name of the current folder. If you want your GitHub repository to have a different name, type it in before pressing `ENTER`.
 
-- We also need to determine the visibility of the repository. Use the arrow keys to select between [Public, Private, Internal]. Choose Public for now.
+- **Description** Type `ENTER` to leave it empty for now. If you want to give your repository a description, type it in before pressing `ENTER`.
 
-- You will then be asked if you want to add a remote to your local repository. This is exactly what we want to do as it will link the local repository with the remote one on GitHub, so type 'Y' and hit enter. Afterwards, hit enter once more to give your remote the standard name of origin.
+- **Visibility** Select _Public_ and type `ENTER` so that your repository is visible by everyone.
 
-- The last question is if you would like to push commits from the current branch (in our case, master) to the origin branch. Type 'Y' and you are set!
+- **Add a remote? (Y/n)** Type `Y` then `ENTER`. Adding a remote is going add a link to your GitHub repository in your local git repository, so you can push your code to GitHub via git.
+- **What should the new remote be called? (origin)** Press `ENTER` to keep the default option (origin) which is the standard name of the main remote.
+
+- **Would you like to push commits from the current branch to the "origin"? (Y/n)** Type `Y` then `ENTER` to push your commits from your local git repository to your newly created GitHub repo.
 
 ![gh cli menu](https://github.com/lewagon/fullstack-images/blob/master/frontend/gh-repo-create.png?raw=true)
 
-To open the GitHub repo from your browser you can run:
+If you wish to create a **public** repository with a single command, then you can just use the following command:
+
+```bash
+gh repo create --public --source=.
+```
+
+With gh, you can also open a GitHub repo in your browser from your terminal:
 
 ```bash
 gh repo view --web
 ```
+
+You can find more information about gh in [the dedicated cheatsheet.](https://kitt.lewagon.com/knowledge/cheatsheets/gh_cli)
 
 ## GitHub Pages
 
