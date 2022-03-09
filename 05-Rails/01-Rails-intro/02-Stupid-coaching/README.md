@@ -190,7 +190,15 @@ We have not covered the Front-End aspect of a Rails project, but you can start o
 
 In a few days, we'll also see how to organize our stylesheets in multiple files, and load them using the `import` keyword!
 
-For now, just open (or create) the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
+For now let's enable `scss` support in your Rails application by uncommenting the following line in the `Gemfile`:
+
+```rb
+gem "sassc-rails"
+```
+
+⚠️ Restart your rails server after this step.
+
+Create then the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
 
 ### Testing (Optional)
 

@@ -186,6 +186,12 @@ ask          GET        /ask(.:format)       questions#ask
 
 在接下来的几天里，我们也会学习如何组织分散在多个文件里的样式表文件，并且使用`import`关键词来导入它们！
 
+现在让我们在你的Rails应用程序中启用`scss`支持，在`Gemfile`中取消注释以下一行。
+
+```rb
+gem "sassc-rails"
+```
+
 现在，只需要打开（或创建）`app/assets/stylesheets/questions.scss`文件。你可以直接编写一些scss代码，保存，刷新页面！你应该尝试让页面的设计至少和下面的截图相匹配。
 
 ### 测试（选做）

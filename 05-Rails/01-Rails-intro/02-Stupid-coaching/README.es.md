@@ -179,7 +179,15 @@ Si no recuerdas la lógica (pobre) del coach, aquí está:
 
 ¡En pocos días también verás cómo organizar tus hojas de estilo (stylesheets) en archivos múltiples y cargarlos usando la palabra clave `import`!
 
-Por ahora solamente abre (o crea) el archivo `app/assets/stylesheets/questions.scss`. Puedes escribir algo de código SCSS directamente, guardar y recargar la página! Debes tratar de que los diseños coincidan, por lo menos con las capturas de pantalla.
+Por ahora vamos a habilitar el soporte del `scss` en nuestra aplicación Rails descomentando la siguiente línea en el `Gemfile`:
+
+```rb
+gem "sassc-rails"
+```
+
+⚠️ Reinicie su servidor rails después de este paso.
+
+Crea el archivo `app/assets/stylesheets/questions.scss`. Puedes escribir algo de código SCSS directamente, guardar y recargar la página! Debes tratar de que los diseños coincidan, por lo menos con las capturas de pantalla.
 
 ### Testing (Opcional)
 

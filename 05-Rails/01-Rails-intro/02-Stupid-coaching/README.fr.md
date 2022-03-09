@@ -190,7 +190,15 @@ On n'a pas encore abordé l'aspect frontend d'un projet Rails, mais tu peux déj
 
 Dans quelques jours, tu apprendras également à organiser les feuilles de style en plusieurs fichiers, et à les charger en utilisant le mot-clé `import` !
 
-Pour le moment, ouvre (ou crée) simplement le fichier `app/assets/stylesheets/questions.scss`. Tu peux directement coder du SCSS, l'enregistrer et recharger la page ! Essaie de faire en sorte que le design corresponde aux captures d'écran.
+Pour le moment active le support du `scss` dans ton application Rails en décommentant la ligne suivante dans le `Gemfile`:
+
+```rb
+gem "sassc-rails"
+```
+
+⚠️ Relance ton serveur rails après cette étape.
+
+Crée ensuite le fichier `app/assets/stylesheets/questions.scss`. Tu peux directement coder du SCSS, l'enregistrer et recharger la page ! Essaie de faire en sorte que le design corresponde aux captures d'écran.
 
 ### Tests (optionnel)
 
