@@ -11,6 +11,7 @@
 cd ~/code/<user.github_nickname>
 rails new rails-stupid-coaching --skip-active-storage --skip-action-mailbox
 cd rails-stupid-coaching
+git branch -m main master
 git add .
 git commit -m "rails new"
 gh repo create
