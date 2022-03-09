@@ -76,6 +76,16 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
+⚠ Simple Form n'est pas encore complètement compatible avec Bootstrap 5.
+Pour pouvoir néanmoins utiliser Bootstrap 5 avec Simple Form, il faut que tu remplaces le contenu de ton fichier `config/initializers/simple_form_bootstrap.rb` avec [ceci](https://github.com/heartcombo/simple_form-bootstrap/blob/main/config/initializers/simple_form_bootstrap.rb).
+
+Tu peux le faire avec cette commande :
+
+```bash
+curl -L https://raw.githubusercontent.com/heartcombo/simple_form-bootstrap/main/config/initializers/simple_form_bootstrap.rb \
+  > config/initializers/simple_form_bootstrap.rb
+```
+
 Puis on va télécharger les feuilles de style du Wagon :
 
 ```bash
