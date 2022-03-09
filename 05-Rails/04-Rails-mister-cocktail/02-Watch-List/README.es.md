@@ -71,22 +71,12 @@ También debes agregar las gemas que vamos a necesitar:
 # Gemfile
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
-gem 'simple_form'
+gem 'simple_form', github: 'heartcombo/simple_form'
 ```
 
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
-```
-
-⚠ Simple Form aún no es totalmente compatible con Bootstrap 5.
-Para seguir utilizando Bootstrap 5 con Simple Form, debe sustituir el contenido de su archivo `config/initializers/simple_form_bootstrap.rb` por [este](https://github.com/heartcombo/simple_form-bootstrap/blob/main/config/initializers/simple_form_bootstrap.rb).
-
-Puedes hacerlo con este comando:
-
-```bash
-curl -L https://raw.githubusercontent.com/heartcombo/simple_form-bootstrap/main/config/initializers/simple_form_bootstrap.rb \
-  > config/initializers/simple_form_bootstrap.rb
 ```
 
 Después descarga los stylesheets de Le Wagon:

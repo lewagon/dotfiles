@@ -68,15 +68,13 @@ yarn add bootstrap @popperjs/core
 # Gemfile
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.15'
-gem 'simple_form'
+gem 'simple_form', github: 'heartcombo/simple_form'
 ```
 
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
 ```
-
-把`config/initializers/simple_form_bootstrap.rb`文件里**所有的内容**都换成[这个](https://github.com/heartcombo/simple_form-bootstrap/blob/main/config/initializers/simple_form_bootstrap.rb)。
 
 下载Le Wagon的样式表:
 
