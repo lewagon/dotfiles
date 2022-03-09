@@ -50,7 +50,16 @@ Prefix Verb URI Pattern      Controller#Action
 
 Necesitamos agregar un formulario debajo de las letras para que el/la usuario/a pueda agregar una sugerencia y enviarla.
 
-Agrega un `<form>` en tu vista. Debe hacer el `POST` a la acción `/score` en el `GamesController`.
+Debe hacer el `POST` a la acción `/score` en el `GamesController`.
+
+También desactivaremos por ahora una función de Rails que ajaxifica las peticiones `post` enviadas desde los formularios.
+La etiqueta HTML del formulario debería tener el siguiente aspecto:
+
+```html
+<form action="TODO" method="TODO" data-turbo="false">
+  <!-- ... -->
+</form>
+```
 
 Tendrás que agregarle la siguiente línea a tu `form`:
 

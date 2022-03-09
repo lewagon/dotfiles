@@ -51,6 +51,15 @@ score    POST /score(.:format)  games#score
 在这些字母下面，我们需要添加一个表单让用户来填一个单词并提交。
 在你的视图里添加一个表单`<form>` 。表单应该发送`POST`请求到`GamesController`控制器的`/score`动作。
 
+我们还将暂时禁用Rails的一个功能，即ajaxify从表单发送的`post`请求。
+你的HTML表单标签应该看起来像这样。
+
+```html
+<form action="TODO" method="TODO" data-turbo="false">
+  <!-- ... -->
+</form>
+```
+
 你需要在`form`里添加下面这行代码：
 
 ```erb

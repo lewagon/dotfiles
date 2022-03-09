@@ -50,7 +50,16 @@ Have a look at your old Ruby code. How did you generate an `Array` of ten random
 
 We need to add a form below the letters so that the user can fill a suggestion and submit it.
 
-Go ahead and add a `<form>` to your view. It should `POST` to the `/score` action in the `GamesController`.
+It should `POST` to the `/score` action in the `GamesController`.
+
+We will also disable for now a Rails feature which ajaxifies `post` requests sent from forms.
+Your HTML form tag should look like this:
+
+```html
+<form action="TODO" method="TODO" data-turbo="false">
+  <!-- ... -->
+</form>
+```
 
 You will need to add the line below into your `form`:
 

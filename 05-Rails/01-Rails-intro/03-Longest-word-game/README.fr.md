@@ -50,7 +50,17 @@ Jette un œil à ton ancien code Ruby. Comment as-tu généré un `Array` de 10 
 
 On a besoin d'ajouter un formulaire sous les lettres, pour que l'utilisateur puisse saisir une suggestion de mot et l'envoyer.
 
-Ajoute un formulaire (`<form />`) à ta vue. Il doit envoyer la requête (`POST`) à l'action `/score` dans le `GamesController`.
+Il doit envoyer la requête (`POST`) à l'action `/score` dans le `GamesController`.
+
+Nous allons désactiver pour le moment une fonctionalité qui `ajaxifie` les requèttes `post` envoyées depuis une formulaire.
+
+La balise HTML `form` doit avoir ce format:
+
+```html
+<form action="TODO" method="TODO" data-turbo="false">
+  <!-- ... -->
+</form>
+```
 
 Ajoute la ligne ci-dessous à ton formulaire (`form`) :
 
