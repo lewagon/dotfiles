@@ -14,6 +14,7 @@ Aquí no hay `rake`. Otra cosa, no crees la app Rails en `fullstack-challenges`.
 cd ~/code/<user.github_nickname>
 rails new rails-longest-word-game --skip-active-storage --skip-action-mailbox
 cd rails-longest-word-game
+git branch -m main master
 git add .
 git commit -m "rails new"
 gh repo create
@@ -184,4 +185,3 @@ end
 En este test, estoy visitando la URL `/new` y asegurándome de que obtenga diez letras con que jugar.
 
 ¡Ahora es tu turno! Intenta implementar los otros tres usando los métodos `fill_in` and `click_on` de Capybara.
-
