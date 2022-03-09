@@ -1,5 +1,5 @@
 # Default github account: perso
-Host github.com
+Host github-perso
    HostName github.com
    IdentityFile ~/.ssh/perso
    IdentitiesOnly yes
