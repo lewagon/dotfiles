@@ -9,6 +9,7 @@ Aquí no hay `rake`. También recuerda no crear tu app Rails en `fullstack-chall
 cd ~/code/<user.github_nickname>
 rails new rails-wikinimous --skip-active-storage --skip-action-mailbox
 cd rails-wikinimous
+git branch -m main master
 git add .
 git commit -m "rails new"
 gh repo create
