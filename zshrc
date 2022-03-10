@@ -7,7 +7,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search rbenv pyenv ssh-agent nvm gcloud)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
-export HOMEBREW_NO_ANALYTICS=1
+#export HOMEBREW_NO_ANALYTICS=1
 
 # Disable warning about insecure completion-dependent directories
 ZSH_DISABLE_COMPFIX=true
