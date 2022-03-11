@@ -16,7 +16,6 @@
 cd ~/code/<user.github_nickname>
 rails new rails-task-manager --skip-active-storage --skip-action-mailbox
 cd rails-task-manager
-git branch -m main master
 git add .
 git commit -m "rails new"
 gh repo create

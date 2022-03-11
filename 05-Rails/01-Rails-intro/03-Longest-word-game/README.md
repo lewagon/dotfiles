@@ -14,7 +14,6 @@ There is no `rake` here, and do not create your Rails app in `fullstack-challeng
 cd ~/code/<user.github_nickname>
 rails new rails-longest-word-game --skip-active-storage --skip-action-mailbox
 cd rails-longest-word-game
-git branch -m main master
 git add .
 git commit -m "rails new"
 gh repo create
