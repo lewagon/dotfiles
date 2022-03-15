@@ -146,7 +146,8 @@ end
 ```
 
 - Feel free to scrape another website adapting this script.
-- Also, you can scrape other information than just the name (for example the price of the item).
+- What kind of data structure should your scraper return?
+- Also, you can scrape other information than just the name. For example you could scrape the price of the item too. In this case, how should you update the data structure your scraper returns?
 
 ## [OPTIONAL] Save gifts in a CSV file 🎁🎁🎁🎁🎁
 We want to be able to retrieve the gift list any time we launch the app.
