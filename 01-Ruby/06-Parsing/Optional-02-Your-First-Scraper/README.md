@@ -46,5 +46,5 @@ This method should scrape successfully for London and New York. Therefore `scrap
 
 ### Going further
 
-To understand more about this gem, take a look at our [Nokogiri Cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri) on Kitt!
+To get more information about Nokogiri, take a look at our [dedicated cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri).
 
