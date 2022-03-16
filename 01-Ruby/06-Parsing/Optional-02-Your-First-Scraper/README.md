@@ -29,8 +29,12 @@ How did it work?
 The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors) and looks for all the HTML element in the page that match it. Here we used a **class** selector `.card-meta-row` because the [HTML source](https://support.mozilla.org/en-US/questions/873324) was something like:
 
 ```html
-<div class="card-meta-row">
-  Leather Wallet
+<div class="wt-grid">
+  <div class="v2-listing-card__info">
+    <div class="v2-listing-card__title">
+      Leather Wallet
+    </div>
+  </div>
 </div>
 ```
 
