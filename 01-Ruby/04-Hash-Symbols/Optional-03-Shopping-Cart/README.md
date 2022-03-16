@@ -15,7 +15,7 @@ Take the time to think about the data structures that will best describe a store
 
 - implement all functions in `store.rb` and `cart.rb`
 - don't forget to initialize the `cart` variable in `interface.rb`!
-- check that all tests pass
+- check that all tests pass and that your code working properly by running `lib/interface.rb`
 
 Here's the list of the products and their prices, that should be available in the store:
 - yogurts: 2€
@@ -28,7 +28,8 @@ As an extra:
 
 - Improve the `cart_to_s` method so that instead of returning something like
 "meat, vegetables, vegetables, meat, yoghurt, vegetables", you'd return
-"meat x 2, vegetables x 3, yoghurt". You might want to **change the data structure** you were using previously for your cart (the rake won't pass anymore).
+"meat x 2, vegetables x 3, yoghurt x 1". You might want to **change the data structure** you were using previously for your cart (the rake won't pass anymore).
+- Make sure that you test if your other methods still work after updating the cart's data structure, just passing the tests is not sufficient!
 
 ## Key learning points
 
