@@ -2,7 +2,7 @@
 
 ## Example
 
-First, open your terminal and install [Nokogiri](http://www.nokogiri.org/), a very useful **gem** when you want to scrape web page content. To understand more about this gem, take a look at our [Nokogiri Cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri) on Kitt!
+First, open your terminal and install [Nokogiri](http://www.nokogiri.org/), a very useful **gem** when you want to scrape web page content.
 
 ```bash
 gem install nokogiri
@@ -43,3 +43,8 @@ The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/d
 We would like to scrape **antiques** listed on [craigslist](https://craigslist.org/) for a given city. Open the `lib/scraper.rb` and implement the `scrape_craiglist_antiques` method. It should **return** an `Array` of antiques found on the website.
 
 This method should scrape successfully for London and New York. Therefore `scrape_craiglist_antiques("london")` and `scrape_craiglist_antiques("newyork")` should all return results. Are the craiglist urls for all the cities the same?
+
+### Going further
+
+To understand more about this gem, take a look at our [Nokogiri Cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri) on Kitt!
+
