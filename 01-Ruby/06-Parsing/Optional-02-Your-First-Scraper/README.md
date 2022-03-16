@@ -2,7 +2,7 @@
 
 ## Example
 
-First, open your terminal and install [Nokogiri](http://www.nokogiri.org/), a very useful **gem** when you want to scrape web page content. To understand more about Nokogiri, take a look at our [Nokogiri Cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri) on Kitt!
+First, open your terminal and install [Nokogiri](http://www.nokogiri.org/), a very useful **gem** when you want to scrape web page content. To understand more about this gem, take a look at our [Nokogiri Cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri) on Kitt!
 
 ```bash
 gem install nokogiri
