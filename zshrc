@@ -17,6 +17,9 @@ ZSH_DISABLE_COMPFIX=true
 source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
+# Load all script in home/usr/bin
+export PATH=$PATH:$HOME/bin
+
 # Load rbenv if installed (to manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
@@ -32,6 +35,13 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load tfenv (to menage your terraform versions)
 export PATH="$HOME/.tfenv/bin:$PATH"
+
+#Load goevn (to menage your go versions)
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+type -a goenv > /dev/null && eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
 
 # Rails and Ruby uses the local `bin` folder to store binstubs.
 # So instead of running `bin/rails` like the doc says, just run `rails`
