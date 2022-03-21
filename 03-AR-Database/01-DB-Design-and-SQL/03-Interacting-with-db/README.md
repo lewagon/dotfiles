@@ -8,15 +8,14 @@ To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewa
 
 ### Setup
 
-First test just to see if you have `sqlite3` installed on your computer:
+You should already have [SQLite](https://sqlite.org/index.html) installed in your computer. Check it with:
 
 ```bash
-sqlite3 --version
+  sqlite3 -version
+# You should see your sqlite version here
 ```
 
-If you don't have it, you can install it by running:
-- macOS: `brew install sqlite`
-- Ubuntu: `sudo apt-get install sqlite3 libsqlite3-dev`
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite) or  setup.
 
 You can open the database we provided by running:
 
@@ -32,16 +31,6 @@ You can also use the **[SQLite Extension](https://marketplace.visualstudio.com/i
 
 
 ### SQLite Extension Tutorial
-
-You should already have [SQLite](https://sqlite.org/index.html) installed. Check it with:
-
-```bash
-  sqlite3 -version
-# You should see your sqlite version here
-```
-
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite) or  setup.
-
 
 There a different commands you can use with this extensions to explore, and interact with your sqlite database.  To start typing commands remember to open your command pallet by pressing `cmd` + `shift` + `p`, or `ctrl` + `shift` + `p` if you're working with windows. You should see a little text box in your editor where you can type any command you want.
 
