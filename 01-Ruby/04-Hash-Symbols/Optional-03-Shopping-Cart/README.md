@@ -15,7 +15,7 @@ Take the time to think about the data structures that will best describe a store
 
 - implement all functions in `store.rb` and `cart.rb`
 - don't forget to initialize the `cart` variable in `interface.rb`!
-- check that all tests pass and that your code working properly by running `lib/interface.rb`
+- check that all tests pass and that your code is working properly by running `lib/interface.rb`
 
 Here's the list of the products and their prices, that should be available in the store:
 - yogurts: 2€
