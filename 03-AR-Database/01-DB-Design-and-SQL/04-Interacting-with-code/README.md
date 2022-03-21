@@ -76,10 +76,8 @@ You'll notice that your text editor understand Heredoc and the syntax highlighti
 * [SQL Commands](http://www.sqlcommands.net/)
 * [Course in 🇫🇷 about `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
-## Tools
+## VsCode SQLite:Extension - Writing queries
 
-You were introduced to those tools in the previous exercise. Use them!
+ You can use the `>SQLite: New Query` command to start writing your queries. Open your command pallet and run the `New Query` command. Visual Studio code will open a new tab with a `.sql` file, use this file to write your queries. Try typing in `SELECT * FROM artists;` and once your query is ready, you can run it with the command `>SQLite: Run Query` to see the results! Remember to select the data base your working with once you run the `>SQLite: Run Query` command.
 
-- [SQLite Pro (macOS only, paying but trial seems unlimited)](https://www.sqlitepro.com/)
-- [SQLStudio (Free)](http://sqlitestudio.pl/)
-- [SQLite Browser (Free)](http://sqlitebrowser.org/)
+## TODO: Upload sqlite_run_queries video to vimeo and embed here
