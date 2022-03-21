@@ -24,11 +24,7 @@ Here's the list of the products and their prices, that should be available in th
 - potatoes: 2€
 - rice: 1€
 
-As an extra:
-
-- Improve the `cart_to_s` method so that instead of returning something like
-"meat, vegetables, vegetables, meat, yoghurt, vegetables", you'd return
-"meat x 2, vegetables x 3, yoghurt".
+As an extra, improve the `cart_to_s` method so that instead of returning something like `meat, vegetables, vegetables, meat, yoghurt, vegetables`, you'd return `meat x 2, vegetables x 3, yoghurt`.
 
 ## Key learning points
 
