@@ -10,20 +10,62 @@ cd ~/code/<user.github_nickname>/profile
 
 ## Création du dépôt GitHub
 
-Tu peux **init**(ialiser) un dépôt git, versionner tes modifications et créer le dépôt GitHub associé :
+Tu peux **init**(ialiser) un dépôt git et versionner tes modifications :
 
 ```bash
 git init
 git add .
 git commit -m "my profile page"
-gh repo create # cela crée le dépôt associé sur GitHub !
 ```
 
-Pour ouvrir le dépôt GitHub depuis ton navigateur, tu peux exécuter :
+Puis nous allons utiliser le CLI GitHub (command line interface) pour créer le dépôt GitHub associé. le CLI GitHub te permet d'intéragir avec GitHub via ton terminal.
+
+### Utilisation du mode interactif de `gh`
+
+```bash
+gh repo create # this launches an interactive mode to create the GitHub repo
+```
+On va te demander de répondre à quelques questions pour savoir comment tu veux créer ton dépôt sur GitHub :
+
+**What would you like to do?**
+Sélectionne _Push an existing local repository to GitHub_, puisque tu as déjà créé ton dépôt local avec `git init`.
+
+**Path to local repository (.)**
+Tape `ENTER` pour sélectionner l'option par défaut (.) qui est le dossier courant.
+
+**Repository name (profile)**
+Tape `ENTER` pour sélectionner l'option par défaut (profile) qui est le nom du dossier courant. Si tu veux que ton dépôt GitHub ait un nom différent, saisie-le avant de presser `ENTER`.
+
+**Description**
+Tape `ENTER` pour laisser ce champ vide pour le moment. Si tu souhaites ajouter une description à ton dépôt qui apparaitra sur GitHub, saisie-la avant de presser `ENTER`.
+
+**Visibility**
+Sélectionne _Public_ and tape `ENTER` pour que ton dépôt soit visible par tout le monde.
+
+**Add a remote? (Y/n)**
+Tape `Y` puis `ENTER`. Ajouter un _remote_ va ajouter un lien vers ton dépôt GitHub dans ton dépôt local git, afin que tu puisses pousser ton code sur GitHub avec git.
+
+**What should the new remote be called? (origin)**
+Appuie sur `ENTER` pour garder l'option par défaut (origin) qui est le nom standard du _remote_ principal.
+
+**Would you like to push commits from the current branch to the "origin"? (Y/n)**
+Tape `Y` puis `ENTER` pour pousser tes commits depuis ton dépôt local git vers le dépôt GitHub que tu viens de créer.
+
+### Utilisation de la commande simple de `gh`
+
+Si tu souhaites plutôt créer un dépôt **publique** avec une commande simple, tu peux utiliser la commande suivante :
+
+```bash
+gh repo create --public --source=.
+```
+
+Avec gh, tu peux aussi ouvrir un dépôt GitHub dans ton navigateur depuis ton terminal :
 
 ```bash
 gh repo view --web
 ```
+
+Tu peux trouver plus d'informations à propos de gh dans [l'anti-sèche dédié.](https://kitt.lewagon.com/knowledge/cheatsheets/gh_cli).
 
 ## GitHub Pages
 
