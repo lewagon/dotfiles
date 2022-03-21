@@ -80,4 +80,4 @@ You'll notice that your text editor understand Heredoc and the syntax highlighti
 
  You can use the `>SQLite: New Query` command to start writing your queries. Open your command pallet and run the `New Query` command. Visual Studio code will open a new tab with a `.sql` file, use this file to write your queries. Try typing in `SELECT * FROM artists;` and once your query is ready, you can run it with the command `>SQLite: Run Query` to see the results! Remember to select the data base your working with once you run the `>SQLite: Run Query` command.
 
-## TODO: Upload sqlite_run_queries video to vimeo and embed here
+<iframe src="https://player.vimeo.com/video/690517802?h=78856bfcdb" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

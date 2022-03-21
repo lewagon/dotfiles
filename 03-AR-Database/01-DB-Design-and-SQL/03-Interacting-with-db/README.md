@@ -36,8 +36,7 @@ There a different commands you can use with this extensions to explore, and inte
 
 To explore the database, we are going to run the `Open Database` command. Go ahead and open your command pallet and type `>SQLite: OpenDatabase` and click it or press enter (Note`>` leading character). Then you will be prompted to `select a database`. Click on the jukebox database which will be the one used for this challenge. As soon as you select it, you will see that your left navigation bar changed a little. Now we have the `SQLITE EXPLORER` tab! You can now open your database and explore all the existing tables! You can also click on the `triangle icon` to have a more visual representation of your tables :raised_hands: Try it on the `tracks` table!
 
-## TODO: Upload sqlite_explore_database video to vimeo and embed here
-
+<iframe src="https://player.vimeo.com/video/690517736?h=3af456d7bb" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 ## Specs
