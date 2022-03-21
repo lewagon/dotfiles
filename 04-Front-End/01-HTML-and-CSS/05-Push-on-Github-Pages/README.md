@@ -18,7 +18,7 @@ git add .
 git commit -m "my profile page"
 ```
 
-Then we will use the GitHub CLI (Command line interface) to create the associated GitHub repo. The GitHub CLI allows you to interact with GitHub through your terminal. For now we will be creating public repositories, but you can find more options [on the official documentation](https://cli.github.com/manual/).
+Then we will use the GitHub CLI (Command line interface) to create the associated GitHub repo. The GitHub CLI allows you to interact with GitHub through your terminal:
 
 ```bash
 gh repo create # this launches an interactive mode to create the GitHub repo
@@ -48,8 +48,6 @@ Press `ENTER` to keep the default option (origin) which is the standard name of 
 
 **Would you like to push commits from the current branch to the "origin"? (Y/n)**
 Type `Y` then `ENTER` to push your commits from your local git repository to your newly created GitHub repo.
-
-![gh cli menu](https://github.com/lewagon/fullstack-images/blob/master/frontend/gh-repo-create.png?raw=true)
 
 If you wish to create a **public** repository with a single command, then you can just use the following command:
 
