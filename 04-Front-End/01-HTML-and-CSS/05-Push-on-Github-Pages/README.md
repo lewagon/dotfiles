@@ -25,20 +25,29 @@ gh repo create # this launches an interactive mode to create the GitHub repo
 ```
 You will be asked to answer few questions regarding how you wish to create your repository on GitHub:
 
-- **What would you like to do?** Select _Push an existing local repository to GitHub_, since you've already created your local repository with `git init`.
+**What would you like to do?**
+Select _Push an existing local repository to GitHub_, since you've already created your local repository with `git init`.
 
-- **Path to local repository (.)** Type `ENTER` so it selects the default option (.) which is the current folder.
+**Path to local repository (.)**
+Type `ENTER` so it selects the default option (.) which is the current folder.
 
-- **Repository name (profile)** Type `ENTER` to select the default option (profile) which is the name of the current folder. If you want your GitHub repository to have a different name, type it in before pressing `ENTER`.
+**Repository name (profile)**
+Type `ENTER` to select the default option (profile) which is the name of the current folder. If you want your GitHub repository to have a different name, type it in before pressing `ENTER`.
 
-- **Description** Type `ENTER` to leave it empty for now. If you want to give your repository a description, type it in before pressing `ENTER`.
+**Description**
+Type `ENTER` to leave it empty for now. If you want to give your repository a description, type it in before pressing `ENTER`.
 
-- **Visibility** Select _Public_ and type `ENTER` so that your repository is visible by everyone.
+**Visibility**
+Select _Public_ and type `ENTER` so that your repository is visible by everyone.
 
-- **Add a remote? (Y/n)** Type `Y` then `ENTER`. Adding a remote is going add a link to your GitHub repository in your local git repository, so you can push your code to GitHub via git.
-- **What should the new remote be called? (origin)** Press `ENTER` to keep the default option (origin) which is the standard name of the main remote.
+**Add a remote? (Y/n)**
+Type `Y` then `ENTER`. Adding a remote is going add a link to your GitHub repository in your local git repository, so you can push your code to GitHub via git.
 
-- **Would you like to push commits from the current branch to the "origin"? (Y/n)** Type `Y` then `ENTER` to push your commits from your local git repository to your newly created GitHub repo.
+**What should the new remote be called? (origin)**
+Press `ENTER` to keep the default option (origin) which is the standard name of the main remote.
+
+**Would you like to push commits from the current branch to the "origin"? (Y/n)**
+Type `Y` then `ENTER` to push your commits from your local git repository to your newly created GitHub repo.
 
 ![gh cli menu](https://github.com/lewagon/fullstack-images/blob/master/frontend/gh-repo-create.png?raw=true)
 
