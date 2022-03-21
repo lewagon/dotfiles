@@ -10,7 +10,7 @@ rails new rails-wikinimous --skip-active-storage --skip-action-mailbox
 cd rails-wikinimous
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 

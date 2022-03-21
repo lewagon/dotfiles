@@ -24,7 +24,7 @@ rails new rails-stupid-coaching --skip-active-storage --skip-action-mailbox
 cd rails-stupid-coaching
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 ```
 
 ```bash

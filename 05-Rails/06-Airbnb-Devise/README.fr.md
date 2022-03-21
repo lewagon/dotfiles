@@ -67,7 +67,7 @@ Seul le **développeur principal** doit s'occuper de cette étape, pas toute l'�
 
 ```bash
 cd rails-airbnb-clone
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 

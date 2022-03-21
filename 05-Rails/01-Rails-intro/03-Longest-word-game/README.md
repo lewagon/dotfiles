@@ -16,7 +16,7 @@ rails new rails-longest-word-game --skip-active-storage --skip-action-mailbox
 cd rails-longest-word-game
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 
