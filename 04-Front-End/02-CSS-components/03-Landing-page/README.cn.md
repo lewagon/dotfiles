@@ -57,7 +57,7 @@ cd ~/code/<user.github_nickname>/landing
 git init
 git add .
 git commit -m "我的着陆页"
-gh repo create
+gh repo create --public --source=.
 git push origin master # 先提交到 master
 # 然后提交到 "gh-pages "分支
 git co -b gh-pages
