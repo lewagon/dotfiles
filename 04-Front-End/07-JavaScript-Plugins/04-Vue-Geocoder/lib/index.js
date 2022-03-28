@@ -1,7 +1,5 @@
 // TODO: Import mapbox-gl
 
-// TODO: Create your Vue instance here
-
 // Disabled Vue production tip in the console
 Vue.config.productionTip = false
 
