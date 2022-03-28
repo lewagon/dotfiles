@@ -1,4 +1,4 @@
-// TODO: Setup Vue with options (el, data, methods)
+// TODO: Create your Vue instance here with options (el, data, methods)
 
 // TODO: A `fetchWeather` method to call the api
 

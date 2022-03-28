@@ -1,1 +1,1 @@
-// Setup Vue here
+// Create your Vue instance here
