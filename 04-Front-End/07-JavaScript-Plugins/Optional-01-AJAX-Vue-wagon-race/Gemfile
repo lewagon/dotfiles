@@ -1,0 +1,10 @@
+source "https://rubygems.org"
+
+gem "activesupport"
+gem "rabl"
+gem "rake"
+gem "sequel"
+gem "sinatra"
+gem "sinatra-contrib"
+gem "sqlite3"
+gem "thin"
