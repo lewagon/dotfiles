@@ -1,3 +1,5 @@
+export XDG_CONFIG_HOME=$HOME/.config
+
 COMPUTER_NAME="jmschp-macbook"
 
 osascript -e 'tell application "System Preferences" to quit'
