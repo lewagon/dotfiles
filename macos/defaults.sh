@@ -19,13 +19,13 @@ sudo scutil --set LocalHostName "$COMPUTER_NAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 # Set language and text formats
-defaults write NSGlobalDomain AppleLanguages -array "en" "pt_BR"
-defaults write NSGlobalDomain AppleLocale -string "pt_PT@currency=EUR"
+defaults write NSGlobalDomain AppleLanguages -array "en" "es-ES" "pt-PT" "pt-BR"
+defaults write NSGlobalDomain AppleLocale -string "en_PT"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
-sudo systemsetup -settimezone "Europe/Lisboa" > /dev/null
+sudo systemsetup -settimezone "Europe/Madrid" > /dev/null
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
