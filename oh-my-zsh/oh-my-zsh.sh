@@ -1,3 +1,4 @@
+#!/bin/zsh
 # echo "Making zsh your defual shell"
 # To set zsh as your default shell
 # chsh -s /bin/zsh
@@ -15,4 +16,16 @@ cd ~/Library/Fonts && { curl -O 'https://github.com/romkatv/powerlevel10k-media/
 cd ~/Library/Fonts && { curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf' ; cd -; }
 cd ~/Library/Fonts && { curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf' ; cd -; }
 echo "Done"
-echo "Please restart the terminal and folllow the Powerlevel10k configuration wizard"
+
+echo "Installing Powerlevel10k theme"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+echo "Done"
+
+echo "Installing zsh-users plugins"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+echo "Done"
+
+echo "Please restart the terminal and folllow the Powerlevel10k configuration wizard or use your on config file"
+exit
