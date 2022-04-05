@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 # git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # gem 'colored'
-# gem 'bundler'
+gem 'bundler'
 gem 'byebug'
 # gem 'debase'
 gem 'htmlbeautifier'
@@ -13,9 +13,9 @@ gem 'rails'
 gem 'rake'
 gem 'rubocop'
 gem 'rubocop-performance'
+gem 'rubocop-rails'
 gem 'ruby-debug-ide'
 gem 'solargraph'
-
 
 # Defualt gems
 # gem 'bigdecimal'
