@@ -1,49 +1,67 @@
-###### work in progress
 # Dotfiles
+
 This repositry was forked from from [Le Wagon Dotfiles](https://github.com/lewagon/dotfiles), and is used by [Le Wagon](https://www.lewagon.com) students during our 9-week [coding bootcamp](https://www.lewagon.com).
 
-I have made some personal customizations, based on:
-Lars Kappert and Mathias Bynens dotfiles.
-Thank you, for you awesome dotfiles repo.
-- https://github.com/webpro/dotfiles
-- https://github.com/mathiasbynens/dotfiles
+I have made some personal customizations, based on Lars Kappert and Mathias Bynens dotfiles. TThank you, for you awesome dotfiles repo.
 
-At the moment I am usign:
->Macbook Pro 15 2011 with macOS High Sierra 10.13
+- [Lars Kappert](https://github.com/webpro/dotfiles)
+- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
+
+At the moment I am using: **MacBook Pro (13-inch, M1, 2020), macOS Monterey 12.3.1**
 
 ## Installation
-### MacOS configuration
-#### Sytem update
-On a new installation of macOS open the terminal and run:
-```bash
-source softwareupdate -i -a
+
+### MacOS configuration System update
+
+On a new installation of macOS open the terminal and run `softwareupdate -i -a` to update macOS:
+
+```zsh
+softwareupdate -i -a
 ```
-To update macOS. After running sudo `softwareupdate -i -a` it might be necesary to restart the system. Then run:
-```bash
+
+Then run `xcode-select --install` to update macos CLI tools:
+
+```sh
 xcode-select --install
 ```
-#### Apply system preferences
-Run the `defaults.sh ` and `defaults-chrome` that is in the folder `macos`
-```bash
-source macos/defaults.sh
-source macos/defaults-chrome.sh
-```
-### Homebrew toolset
-Run `brew.sh ` in the `brew` folder this will install [Homebrew](https://brew.sh/), followed by the instalation of all the packages listed in the Brewfile.
-```bash
-source brew/brew.sh
-```
-#### zsh setup
-Homebrew as already installed
-- [Zsh](https://www.zsh.org/)
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme
-- [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) plugin
 
-Run the `zsh_setup.sh` file in the `zsh` folder to setup Zsh
-```bash
-source zsh/zsh_setup.sh
+### MacOS configuration apply system preferences
+
+Run the `11_macos.sh` that is in the folder `10_macos`:
+
+```sh
+source 10_macos/11_macos.sh
 ```
-This will make:
-1. zsh your defual shell
-2. Download [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
-3. Downloading fonts for Powerlevel10k theme
+
+### Homebrew toolset
+
+Run `21_homebrew.sh` in the `20_homebrew` folder this will install [Homebrew](https://brew.sh/), followed by the installation of all the packages listed in the Brewfile.
+
+```sh
+source 20_homebrew/21_homebrew.sh
+```
+
+#### Oh My Zsh setup
+
+Run `oh-my-zsh.sh` to install Oh My Zsh with theme Powerlevel10k, and some plugins.
+
+[Zsh](https://www.zsh.org/)
+
+- Theme:
+  - [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme
+- External plugins:
+  - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+  - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
+  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+
+```sh
+source 30_oh-my-zsh/oh-my-zsh.sh
+```
+
+#### Mackup
+
+Run `40_mackup.sh` to restore config files. First it will symlink the `mackup.cfg` to the home directory, and them it will restore config files.
+
+```sh
+source 40_mackup/40_mackup.sh
+```
