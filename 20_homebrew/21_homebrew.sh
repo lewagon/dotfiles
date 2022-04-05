@@ -6,10 +6,10 @@ echo "Installing Homebrew"
 echo "Done"
 
 echo "Installing Brew formulae"
-brew bundle --file=./Brewfile
+brew bundle --file=20_homebrew/Brewfile
 echo "Done"
 
 echo "Installing Brew casks"
-brew bundle --file=./Caskfile
+brew bundle --file=20_homebrew/Caskfile
 echo "Done"
 exit
