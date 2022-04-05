@@ -1,13 +1,19 @@
 # Dotfiles
 
-This repositry was forked from from [Le Wagon Dotfiles](https://github.com/lewagon/dotfiles), and is used by [Le Wagon](https://www.lewagon.com) students during our 9-week [coding bootcamp](https://www.lewagon.com).
+This repository was forked from from [Le Wagon Dotfiles](https://github.com/lewagon/dotfiles), and is used by [Le Wagon](https://www.lewagon.com) students during our 9-week coding bootcamp.
 
-I have made some personal customizations, based on Lars Kappert and Mathias Bynens dotfiles. TThank you, for you awesome dotfiles repo.
+I have made some personal customizations, based on Lars Kappert and Mathias Bynens dotfiles. Thank you, for you awesome dotfiles repo.
 
 - [Lars Kappert](https://github.com/webpro/dotfiles)
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
 
 At the moment I am using: **MacBook Pro (13-inch, M1, 2020), macOS Monterey 12.3.1**
+
+First clone the repository with:
+
+```sh
+git clone https://github.com/jmschp/dotfiles.git ~/code/dotfiles
+```
 
 ## Installation
 
@@ -15,11 +21,11 @@ At the moment I am using: **MacBook Pro (13-inch, M1, 2020), macOS Monterey 12.3
 
 On a new installation of macOS open the terminal and run `softwareupdate -i -a` to update macOS:
 
-```zsh
+```sh
 softwareupdate -i -a
 ```
 
-Then run `xcode-select --install` to update macos CLI tools:
+After updating macOS, usually its necessary to restart. Then run `xcode-select --install` to update macos CLI tools:
 
 ```sh
 xcode-select --install
