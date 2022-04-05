@@ -27,14 +27,18 @@ You are now in the interactive `sqlite3` console and you can write your SQL quer
 
 ## Tools
 
-You can also use the **[SQLite Extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)** to read the SQLite database, explore the schema and even **run SQL queries**.
+You can also use the **[SQLite Extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)** to read the SQLite database, explore the schema and even **run SQL queries**. This extension should've already been installed on setup day. If you don't have it, you can always go back to the setup dedicated section ([macOS](https://github.com/lewagon/setup/blob/master/macos.md#vscode_extensions) - [Windows](https://github.com/lewagon/setup/blob/master/windows.md#vscode_extensions) - [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#vscode_extensions)) or raise a ticket 🎫 🙌
 
 
-### SQLite Extension Tutorial
+### VS Code SQLite Extension - Exploring the database
 
-There a different commands you can use with this extensions to explore, and interact with your sqlite database.  To start typing commands remember to open your command pallet by pressing `cmd` + `shift` + `p`, or `ctrl` + `shift` + `p` if you're working with windows. You should see a little text box in your editor where you can type any command you want.
+There a different commands you can use with this extensions to explore, and interact with your sqlite database.  To start typing commands remember to open your command pallet by pressing `Cmd / Ctrl` + `Shift` + `p`. You should see a little text box in your editor where you can type any command you want. To explore the database, we are going to run the `Open Database` command by following this steps
 
-To explore the database, we are going to run the `Open Database` command. Go ahead and open your command pallet and type `>SQLite: OpenDatabase` and click it or press enter (Note`>` leading character). Then you will be prompted to `select a database`. Click on the jukebox database which will be the one used for this challenge. As soon as you select it, you will see that your left navigation bar changed a little. Now we have the `SQLITE EXPLORER` tab! You can now open your database and explore all the existing tables! You can also click on the `triangle icon` to have a more visual representation of your tables :raised_hands: Try it on the `tracks` table!
+- Open your command pallet with `Cmd / Ctrl` + `Shift` + `p`.
+- Type in `SQLite: Open Database`
+- Click on the database path pointing to your database
+
+You should see the `SQL EXPLORER` tab with your database loaded! Now you can open your database and explore all the existing tables! You can also click on the `triangle icon` to have a more visual representation of your tables 🙌 Try it on the `tracks` table!
 
 <iframe src="https://player.vimeo.com/video/690525143?h=75949ff5a2" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
