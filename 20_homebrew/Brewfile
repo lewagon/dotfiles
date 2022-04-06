@@ -3,7 +3,7 @@
 # tap 'goles/battery'
 # tap 'homebrew/bundle'
 # tap 'homebrew/core'
-# tap 'heroku/brew'
+tap 'heroku/brew'
 
 # brew 'bat'
 # brew 'bats-core'
