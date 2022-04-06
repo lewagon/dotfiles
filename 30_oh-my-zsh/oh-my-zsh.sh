@@ -13,10 +13,10 @@ echo "Done"
 
 echo "Downloading fonts for Powerlevel10k"
 # Download and install the fonts need for Powerlevel10K terminal theme
-cd ~/Library/Fonts && { curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf' ; cd -; }
-cd ~/Library/Fonts && { curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf' ; cd -; }
-cd ~/Library/Fonts && { curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf' ; cd -; }
-cd ~/Library/Fonts && { curl -O 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf' ; cd -; }
+cd ~/Library/Fonts && { curl -L 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf' -o 'MesloLGS NF Regular.ttf' ; cd -; }
+cd ~/Library/Fonts && { curl -L 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf' -o 'MesloLGS NF Bold.ttf' ; cd -; }
+cd ~/Library/Fonts && { curl -L 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf' -o 'MesloLGS NF Italic.ttf' ; cd -; }
+cd ~/Library/Fonts && { curl -L 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf' -o 'MesloLGS NF Bold Italic.ttf' ; cd -; }
 echo "Done"
 
 echo "Installing Powerlevel10k theme"
