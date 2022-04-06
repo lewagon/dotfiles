@@ -3,6 +3,8 @@ mkdir -p $XDG_CONFIG_HOME
 
 COMPUTER_NAME="jmschp-macbook"
 
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for the administrator password upfront
@@ -161,6 +163,24 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Finder: disable window animations and Get Info animations
 # defaults write com.apple.finder DisableAllAnimations -bool true
+
+# Set default path for new windows.
+# Computer     : `PfCm`
+# Volume       : `PfVo`
+# $HOME        : `PfHm`
+# Desktop      : `PfDe`
+# Documents    : `PfDo`
+# All My Files : `PfAF`
+# Other…       : `PfLo`
+# For other paths, use `PfLo` and `file:///full/path/here/`
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+# defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
+# Show icons for hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
