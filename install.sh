@@ -50,9 +50,9 @@ fi
 
 # Sublime Text
 if [[ ! `uname` =~ "darwin" ]]; then
-  SUBL_PATH=~/.config/sublime-text-3
+  SUBL_PATH=~/.config/sublime-text
 else
-  SUBL_PATH=~/Library/Application\ Support/Sublime\ Text\ 3
+  SUBL_PATH=~/Library/Application\ Support/Sublime\ Text
 fi
 mkdir -p $SUBL_PATH/Packages/User $SUBL_PATH/Installed\ Packages
 backup "$SUBL_PATH/Packages/User/Preferences.sublime-settings"
