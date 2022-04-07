@@ -1,5 +1,6 @@
 {
-	"color_scheme": "Packages/Monokai - Spacegray/Monokai - Spacegray Eighties.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"always_show_minimap_viewport": false,
 	"detect_indentation": false,
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -22,14 +23,9 @@
 		".pytest_cache",
 		"__pycache__"
 	],
-	"font_size": 12,
+	"font_size": 14,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
-	"ignored_packages":
-	[
-		"Python",
-		"Vintage",
-	],
 	"remember_open_files": false,
 	"rulers":
 	[
