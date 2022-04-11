@@ -52,3 +52,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = andras.nemeth02@gmail.com
+	name = andras nemeth
