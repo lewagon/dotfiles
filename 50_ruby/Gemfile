@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 # git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # gem 'colored'
-gem 'bundler'
+# gem 'bundler'
 gem 'byebug'
 # gem 'debase'
 gem 'htmlbeautifier'
