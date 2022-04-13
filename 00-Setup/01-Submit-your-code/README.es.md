@@ -13,8 +13,6 @@ Trabajar en pares es una práctica habitual en la ingeniería de software. La id
 
 ## Ejercicio 1: El `rake`.
 
-Verás 2 líneas en el resultado. 1 de ellas será verde cuando el ejercicio esté correcto. La otra se tornará verde cuando termines el ejercicio 2.
-
 Ve a la carpeta del ejercicio con el comando que está al principio de esta página.
 
 * Corre `rake`. Todo debe estar en rojo (ya que no has comenzado a codear todavía).
