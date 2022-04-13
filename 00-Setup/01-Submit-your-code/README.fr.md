@@ -81,6 +81,6 @@ Une fois que tu as terminé, tu peux jeter un œil aux liens ci-dessous.
 Si tu as terminé la configuration de ton ordinateur et les exercices, jette un œil à ces ressources :
 - [fiche de rappel git](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 - [fiche de rappel interactive](http://www.ndpsoftware.com/git-cheatsheet.html)
-- Regarde [cette conférence TED](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) sur l’utilisation de git/GitHub pour des projets courants (autres que de développement)
+- Regarde [cette conférence TED](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government) sur l’utilisation de git/GitHub pour des projets courants (autres que de développement)
 - Lis ce tutoriel et entraîne-toi : [En savoir suffisamment sur les lignes de commande pour être une menace](http://www.learnenough.com/command-line/)
 
