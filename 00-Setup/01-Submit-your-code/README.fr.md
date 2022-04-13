@@ -13,8 +13,6 @@ Travailler à deux est une pratique courante en génie logiciel. Si tu travaille
 
 ## Exercice 1 : Le `rake`.
 
-Lorsqu’il est correct, cet exercice affiche 1 ligne verte sur 2. La deuxième ligne passera en vert lorsque tu auras terminé l’exercice 2.
-
 Accède au dossier des exercices à l’aide de la commande en haut de cette page.
 
 - Exécute `rake`. Tout doit être en rouge (car tu n’as pas commencé à coder).
