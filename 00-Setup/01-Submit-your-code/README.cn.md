@@ -83,5 +83,5 @@
 
 - [git速查表](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 - [交互速查表](http://www.ndpsoftware.com/git-cheatsheet.html)
-- 看一下[这个 TED 演讲](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) 关于如何把 git/GitHub 用于平时的项目 (非dev类的)
+- 看一下[这个 TED 演讲](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government) 关于如何把 git/GitHub 用于平时的项目 (非dev类的)
 - 阅读并练习这个教程的所有内容[学习足够多的命令行来变得危险](http://www.learnenough.com/command-line/)
