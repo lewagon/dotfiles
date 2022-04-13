@@ -5,7 +5,7 @@ describe "#compute_name" do
     expect(compute_name("", "", "")).to be_a String
   end
 
-  it "should concatenate all parameters together" do
+  it "should interpolate all parameters inside the returned String" do
     expect(compute_name("Jean", "Michel", "Saurin")).to eq("Jean Michel Saurin")
   end
 end
