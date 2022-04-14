@@ -7,26 +7,24 @@ Let's create a Restaurant class:
 - As a first step we need to create the file, and filename should match class name: `restaurant.rb`:
 
 ```ruby
-# restaurant.rb
-class Restaurant
+# animal.rb
+class Animal
 end
 ```
 
 - Let's define the "constructor", the method that is going to construct our objects. In Ruby this method is called `initialize`:
 
 ```ruby
-def initialize(name, city, capacity, category)
+def initialize(name)
   @name = name
-  @city = city
-  @capacity = capacity
-  @category = category
 end
 ```
 
 - Now let's create a new instance of this class:
 
 ```ruby
-yaki = Restaurant.new("yaki", "Brussels", 35, "thai")
+simba = Animal.new('Simba')
+p simba #=> ?????
 ```
 
 - What if you want to print out the name of yaki, how would you do that? You will have to create a getter for that or otherwise you can't access it:
