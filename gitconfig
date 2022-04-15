@@ -52,3 +52,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = lorcanrae@outlook.com
+	name = Lorcan Rae
