@@ -49,7 +49,7 @@ describe "Interface" do
 
     end
 
-    it "should display the student list" do
+    it "should display the student list in the right manner. Names should be separated by commas, with the last two names by the word `and`" do
       expect(result_one).to match(/Alice, Bob and charlie/)
     end
   end
