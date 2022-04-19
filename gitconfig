@@ -52,3 +52,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = marcrodenbusch@gmail.com
+	name = Marc Rodenbusch
