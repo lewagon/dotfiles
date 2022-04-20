@@ -32,7 +32,7 @@ bob
 Type another student name or press enter to finish:
 
 Congratulations! Your Wagon has 3 students:
-bob, Cedric and felix
+bob, Cedric and felix # Notice the proper word separation.
 ```
 
 ## Key learning points
