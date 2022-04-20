@@ -59,16 +59,13 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # The next line sets the theme for bat (cat replacement) to something legible on light mode
 export BAT_THEME="TwoDark"
+
+# Flutter
+export PATH="$PATH:/home/xavierosee/.flutter/bin"
 
 
 # Custom formatting for docker ps
@@ -77,11 +74,14 @@ FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.Run
 # The next line enables Starship
 eval "$(starship init zsh)"
 
-# The next lines enables a ponyfied greeting at shell start
-if (( RANDOM % 2 )); then
-	fortune | ponysay
-else
-	ponysay -q
-fi
+# The next lines enables a ponyfied random word from the top1000 of the language you're trying to learn
+
+shuf -n 1 ~/.words | ponysay --f fluttershybathang fluttershybat fluttershygala fluttershy fluttershyshy fluttershystare pinkiehugfluttershy pinkiehugsfluttershy
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/xavierosee/google-cloud-sdk/path.zsh.inc' ]; then . '/home/xavierosee/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/xavierosee/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/xavierosee/google-cloud-sdk/completion.zsh.inc'; fi

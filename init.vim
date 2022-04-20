@@ -28,6 +28,7 @@ Plug 'junegunn/vim-emoji'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'fladson/vim-kitty'
 call plug#end()
 
 " Config Section
