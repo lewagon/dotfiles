@@ -60,7 +60,7 @@ cd ~/code/<user.github_nickname>/medium-article
 git init
 git add index.html style.css
 git commit -m "My medium copycat"
-gh repo create
+gh repo create --public --source=.
 git push
 gh repo view --web
 ```

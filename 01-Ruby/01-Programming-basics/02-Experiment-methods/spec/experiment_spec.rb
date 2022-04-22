@@ -20,6 +20,9 @@ end
 describe "#replace" do
   it "should correctly replace the letter(s) in the string" do
     expect(replace("casanova", "a", "o")).to eq "cosonovo"
+    expect(replace("casanova", "o", "a")).to eq "casanava"
+    expect(replace("hello world", "h", "y")).to eq "yello world"
+    expect(replace("hello world", "l", "i")).to eq "heiio worid"
   end
 end
 

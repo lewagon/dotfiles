@@ -28,19 +28,19 @@ Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard"
 
 Again, ask yourself these questions and make sure you can answer all of them:
 
-### on variables
+### On variables
 
 - What are the variables in your code?
 - Where do you assign values to these variables and where do you use them?
 - What's the scope of a variable?
 
-### on methods
+### On methods
 
 - What is the method of your program? Where do you define it?
 - Where do you call this method and with which arguments?
 - What's the flow of your program when you try to read it line by line?
 
-### on strings
+### On strings
 
 - What's string interpolation? What's the syntax to "insert" some Ruby expression in a string?
 - What's the difference between single-quotes `''` or double-quotes `""` when using string interpolation?

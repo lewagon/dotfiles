@@ -13,8 +13,6 @@ Trabajar en pares es una práctica habitual en la ingeniería de software. La id
 
 ## Ejercicio 1: El `rake`.
 
-Verás 2 líneas en el resultado. 1 de ellas será verde cuando el ejercicio esté correcto. La otra se tornará verde cuando termines el ejercicio 2.
-
 Ve a la carpeta del ejercicio con el comando que está al principio de esta página.
 
 * Corre `rake`. Todo debe estar en rojo (ya que no has comenzado a codear todavía).
@@ -83,5 +81,5 @@ Si ya terminaste toda la configuración de tu computadora y los ejercicios, éch
 
 * [ficha recordatoria git](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 * [fichas recordatorias interactivas](http://www.ndpsoftware.com/git-cheatsheet.html)
-* Ve este video [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) sobre cómo usar git/GitHub para proyectos habituales (que no son de desarrollo)
+* Ve este video [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government) sobre cómo usar git/GitHub para proyectos habituales (que no son de desarrollo)
 * Lee y practica todo este tutorial: [Aprende lo suficiente sobre líneas de comando para ser peligroso](http://www.learnenough.com/command-line/)

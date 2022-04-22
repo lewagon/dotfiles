@@ -1,0 +1,44 @@
+task :default
+
+task :api do
+  require_relative 'api'
+
+  puts
+  puts '*' * 100
+  puts
+  puts 'The API will start now and will be accessible on http://localhost:4567'
+  puts 'You can kill it by typing Ctrl-C'
+  puts
+  puts '*' * 100
+  puts
+
+  API.run!
+end
+
+task :db_reset do
+  require "sequel"
+  require "fileutils"
+  DB_FILE = "sessions.sqlite3"
+  FileUtils.rm(DB_FILE) if File.exists?(DB_FILE)
+  DB = Sequel.sqlite(DB_FILE)
+  DB.create_table :sessions do
+    primary_key :id
+    column :created_at, :datetime
+    column :updated_at, :datetime
+  end
+
+  DB.create_table :games do
+    primary_key :id
+    column :session_id,   :integer
+    column :winner,       :integer
+    column :status,       :string, default: 'started'
+    column :elapsed_time, :integer
+  end
+
+  DB.create_table :players do
+    primary_key :id
+    column :game_id, :integer
+    column :name,    :string
+  end
+  puts "Database has been reset! Now you can run `bundle exec rake api`"
+end

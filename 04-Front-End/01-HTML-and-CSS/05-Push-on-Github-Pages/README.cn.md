@@ -16,14 +16,57 @@ cd ~/code/<user.github_nickname>/profile
 git init
 git add .
 git commit -m "我的个人资料页"
-gh repo create # 这将在GitHub上创建相关的repo!
 ```
 
-要从浏览器中打开GitHub repo，你可以运行：
+然后我们使用GitHub CLI（命令行界面)来创建关联的Github代码仓。Github CLI让你可以在终端与Github进行互动。
+
+### 使用 `gh` 互动模式
+
+```bash
+gh repo create # 这个命令会打开创建Github代码仓的互动模式
+```
+
+你会看到一些问题，问你想如何创建你的Github代码仓：
+
+**What would you like to do?（你想干什么？）**
+选择 _Push an existing local repository to GitHub_，因为你已经用`git init`创建了本地的代码仓。
+
+**Path to local repository (.)（本地文件夹的路径）**
+直接敲击回车键来选择默认选项 -- 当前文件夹（.）
+
+**Repository name (profile)（代码仓名称）**
+直接敲击回车键来选择默认选项 -- 也就是当前文件夹的名称。如果你希望你的Github代码仓是另一个名字的话，先输入这个名字，再敲回车键。
+
+**Description（描述）**
+直接敲击回车键，暂时把它留成空白吧。如果你想写描述放在Github上的话，可以先输入描述，再敲击回车键。
+
+**Visibility（隐私）**
+选择 _Public_ 然后敲击回车键，这样大家都可以看到你的代码仓。别害羞 ：）
+
+**Add a remote? (Y/n)（添加一个remote？）**
+输入`Y`，然后敲击回车。增添一个remote的意思就是把你的Github的代码仓和本地的代码仓相连，这样你就可以用git把代码上传到Github了。
+
+**What should the new remote be called? (origin)（新的remote应该叫什么？（origin））**
+直接敲击回车键来选择默认选项（origin）-- 这是标准的主要remote名称。
+
+**Would you like to push commits from the current branch to the "origin"? (Y/n)（你想从当前分支上传commits到“origin”吗？）**
+输入`Y` 然后敲击回车键，这样你就可以从本地git代码仓上传到刚创建的Github代码仓了。
+
+### 用一行`gh`命令
+
+如果你想用一行代码创建一个**公开的**代码仓，那么你可以直接运行下面的命令：
+
+```bash
+gh repo create --public --source=.
+```
+
+你还可以在终端用`gh`操作浏览器打开Github 代码仓：
 
 ```bash
 gh repo view --web
 ```
+
+你可以在gh[快速指南](https://kitt.lewagon.com/knowledge/cheatsheets/gh_cli)里找到更多的信息。
 
 ## 页面 GitHub Pages
 

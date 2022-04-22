@@ -10,20 +10,62 @@ cd ~/code/<user.github_nickname>/profile
 
 ## Create the GitHub repo
 
-You can **init**(ialize) a git repository, commit your changes, and create the associated GitHub repo:
+You can **init**(ialize) a git repository and commit your changes:
 
 ```bash
 git init
 git add .
 git commit -m "my profile page"
-gh repo create # this creates the associated repo on GitHub!
 ```
 
-To open the GitHub repo from your browser you can run:
+Then we will use the GitHub CLI (command line interface) to create the associated GitHub repo. The GitHub CLI allows you to interact with GitHub through your terminal.
+
+### Use `gh` interactive mode
+
+```bash
+gh repo create # this launches an interactive mode to create the GitHub repo
+```
+You will be asked to answer few questions regarding how you wish to create your repository on GitHub:
+
+**What would you like to do?**
+Select _Push an existing local repository to GitHub_, since you've already created your local repository with `git init`.
+
+**Path to local repository (.)**
+Type `ENTER` so it selects the default option (.) which is the current folder.
+
+**Repository name (profile)**
+Type `ENTER` to select the default option (profile) which is the name of the current folder. If you want your GitHub repository to have a different name, type it in before pressing `ENTER`.
+
+**Description**
+Type `ENTER` to leave it empty for now. If you want to give your repository a description which will appear on GitHub, type it in before pressing `ENTER`.
+
+**Visibility**
+Select _Public_ and type `ENTER` so that your repository is visible by everyone.
+
+**Add a remote? (Y/n)**
+Type `Y` then `ENTER`. Adding a remote is going add a link to your GitHub repository in your local git repository, so you can push your code to GitHub via git.
+
+**What should the new remote be called? (origin)**
+Press `ENTER` to keep the default option (origin) which is the standard name of the main remote.
+
+**Would you like to push commits from the current branch to the "origin"? (Y/n)**
+Type `Y` then `ENTER` to push your commits from your local git repository to your newly created GitHub repo.
+
+### Use `gh` single-line command
+
+If you wish to create a **public** repository with a single-line command instead, then you can just use the following command:
+
+```bash
+gh repo create --public --source=.
+```
+
+With gh, you can also open a GitHub repo in your browser from your terminal:
 
 ```bash
 gh repo view --web
 ```
+
+You can find more information about gh in [the dedicated cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/gh_cli).
 
 ## GitHub Pages
 

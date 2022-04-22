@@ -32,7 +32,7 @@ rails db:create
 ```bash
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 
@@ -68,7 +68,7 @@ yarn add bootstrap @popperjs/core
 # Gemfile
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.15'
-gem 'simple_form'
+gem 'simple_form', github: 'heartcombo/simple_form'
 ```
 
 ```bash

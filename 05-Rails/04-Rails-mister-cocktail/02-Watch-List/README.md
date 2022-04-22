@@ -32,7 +32,7 @@ Let's set up git, create a repo on GitHub and push our skeleton.
 ```bash
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 
@@ -68,7 +68,7 @@ And add the gems we're going to need:
 # Gemfile
 gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 5.15"
-gem "simple_form"
+gem "simple_form", github: "heartcombo/simple_form"
 ```
 
 ```bash
