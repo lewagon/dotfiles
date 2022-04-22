@@ -20,7 +20,7 @@ sudo apt-get update && sudo apt-get install yarn
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list  -j webpack --database=postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -72,6 +72,7 @@ También debes agregar las gemas que vamos a necesitar:
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form', github: 'heartcombo/simple_form'
+gem "sassc-rails" # Uncomment this line
 ```
 
 ```bash

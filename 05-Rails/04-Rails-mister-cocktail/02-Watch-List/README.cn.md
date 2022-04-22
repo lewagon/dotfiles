@@ -17,7 +17,7 @@ yarn -v
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list  -j webpack --database=postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -69,6 +69,7 @@ yarn add bootstrap @popperjs/core
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.15'
 gem 'simple_form', github: 'heartcombo/simple_form'
+gem "sassc-rails" # Uncomment this line
 ```
 
 ```bash
