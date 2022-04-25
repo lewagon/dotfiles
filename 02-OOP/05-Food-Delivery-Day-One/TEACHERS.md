@@ -14,8 +14,7 @@ Keep that always on so that you can refer to it. Explain to the student
 that is the first point.
 
 Once those sentences are written down, try to guess which model classes
-the program should use. That would be `Team`, `Coach` and `Player`.
-Make them find the class `Member`, from which `Coach` and `Player` inherit.
+the program should use. That would be `Room` and `Patient`.
 
 So basically, the begininng of the presentation is on the whiteboard, and
 the slides are here for future reference, don't just stick on them. Once
@@ -23,7 +22,9 @@ you have the specs written in plain english + the UML diagram, asks the question
 "How to convert this diagram into Ruby?"
 
 That's where you jump to live-code. Write all the models with `initialize` and
-instance variables. Then code the methods to link players, coaches and teams.
+instance variables.
+
+Then add two new models to your diagram: appointments and doctors. Add these to your code and add the method to create an appointment and link doctors and patients.
 
 #### Introduction to the Food Delivery Exercise
 
