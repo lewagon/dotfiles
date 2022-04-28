@@ -1,3 +1,14 @@
+## Setup
+
+Debería tener ya instalado `rails`. Compruébalo con:
+
+```bash
+rails -v
+# You should see your rails version here
+```
+
+Si no es así, vuelva a la sección dedicada del setup [macOS](https://github.com/lewagon/setup/blob/rails-7/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/rails-7/windows.md#installing-some-gems) o [Ubuntu](https://github.com/lewagon/setup/blob/rails-7/ubuntu.md#installing-some-gems).
+
 ## Contexto y Objetivos
 
 ¿Recuerdas tus primeras semanas en Ruby? Solo teníamos la Terminal para la interfaz programa-usuario. Se terminaron esos días.¡Ahora usaremos Rails! Esto significa lo siguiente:
@@ -20,7 +31,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Agregamos el flag `--skip-active-storage` para evitar la instalación de [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilita la carga de archivos a un servicio de almacenamiento en la nube pero por ahora no lo necesitamos y agregaría rutas innecesarias a tu app.
+Agregamos el flag `--skip-active-storage` & `--skip-action-mailbox` para evitar la instalación de [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html) & [Action Mailbox](https://guides.rubyonrails.org/action_mailbox_basics.html) que no necesitamos por ahora.
 
 **Objetivo**: Implementaremos una aplicación Rails simple con 2 páginas:
 
@@ -137,56 +148,25 @@ Si no recuerdas la lógica (pobre) del coach, aquí está:
 
 ### ¡Haz que se vea bien!
 
-¡Todavía no hemos visto la parte de Front-End en un proyecto Rails pero puedes empezar por tu cuenta!
+Por ahora no hemos cubierto el aspecto del front-end de un proyecto Rails, pero puedes empezar a diseñar tu aplicación.
 
-**Algunas palabras sobre SCSS**
+**Instalar las hojas de estilo de Bootstrap**
 
-¡[.scss](https://sass-lang.com/guide) es una extensión de archivo que te permite escribir tu CSS de manera más fácil! Los navegadores solo hablan en css, así que hay una magia interna que ocurre en Rails para **preprocesar** el archivo y traducirlo en "vanilla" css. Las funcionalidades principales de `scss` que necesitas conocer son las siguientes:
+Siguiendo [la documentación](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), instala Bootstrap en tu aplicación Rails copiando y pegando el enlace en el `head` del layout `application.html.erb`:
 
-1. Variables
-
-    ```scss
-    // Defining a variable
-    $gray: #F4F4F4;
-
-    body {
-      background: $gray; // Using this variable
-    }
-    ```
-
-2. Nesting
-
-    ```scss
-    .banner {
-      background: red;
-      h1 {
-        font-size: 50px;
-      }
-    }
-    ```
-
-3. Chaining
-
-    ```scss
-    a {
-      color: grey;
-      &:hover {
-        color: black;
-      }
-    }
-    ```
-
-¡En pocos días también verás cómo organizar tus hojas de estilo (stylesheets) en archivos múltiples y cargarlos usando la palabra clave `import`!
-
-Por ahora vamos a habilitar el soporte del `scss` en nuestra aplicación Rails descomentando la siguiente línea en el `Gemfile`:
-
-```rb
-gem "sassc-rails"
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 ```
 
-⚠️ Reinicie su servidor rails después de este paso.
+Ahora puedes utilizar cualquier clase de Bootstrap en cualquier lugar de tus vistas Rails 🎉
 
-Crea el archivo `app/assets/stylesheets/questions.scss`. Puedes escribir algo de código SCSS directamente, guardar y recargar la página! Debes tratar de que los diseños coincidan, por lo menos con las capturas de pantalla.
+**Escribir un estilo personalizado**
+
+Escribe tu CSS personalizado en el archivo `app/assets/stylesheets/application.css`. Este archivo está vinculado en el `head` del diseño `application.html.erb` con la etiqueta `stylesheet_link_tag`.
+
+Adelante, que el diseño coincida con las capturas de pantalla 🎨
 
 ### Testing (Opcional)
 

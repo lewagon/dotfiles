@@ -4,7 +4,7 @@ Time to implement a "Longest-word game" with a cool web-interface! For some of y
 
 Before jumping into the exercise, [read the rules](https://github.com/lewagon/fullstack-challenges/tree/master/01-Ruby/06-Parsing/02-Numbers-and-Letters).
 
-⛔️ If you worked on that exercise, please do not copy/paste the solution, try to rewrite them from scratch.
+⛔️ If you worked on that exercise, please do not copy/paste the solution, try to rewrite it from scratch.
 
 ## Setup
 
