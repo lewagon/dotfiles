@@ -51,8 +51,7 @@ We need to add a form below the letters so that the user can fill a suggestion a
 
 It should `POST` to the `/score` action in the `GamesController`.
 
-We will also disable for now a Rails feature which ajaxifies `post` requests sent from forms.
-Your HTML form tag should look like this:
+We will also disable for now a Rails feature which ajaxifies `post` requests sent from forms. Your HTML form tag should look like this:
 
 ```html
 <form action="TODO" method="TODO" data-turbo="false">
@@ -119,6 +118,20 @@ At the bottom of the results, add a `link_to` to go back to the New game page.
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/not_english_word.png)
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/congrats.png)
+
+### Designing your app
+
+Install Bootstrap by copy-pasting the `link` tag [from the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css) in the `head` of your layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Write your custom CSS in the `app/assets/stylesheets/application.css` file.
+
+Try to match the design from the screenshots 🎨
 
 ### Adding score (Optional)
 
