@@ -7,7 +7,7 @@ rails -v
 # You should see your rails version here
 ```
 
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#installing-some-gems) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#installing-some-gems) setup.
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/rails-7/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/rails-7/windows.md#installing-some-gems) or [Ubuntu](https://github.com/lewagon/setup/blob/rails-7/ubuntu.md#installing-some-gems) setup.
 
 ## Background & Objectives
 
@@ -31,7 +31,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-We add the flag `--skip-active-storage` to avoid the installation of [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilitates uploading files to a cloud storage service, but we don't need it for the moment, and it will add to your app unnecessary routes.
+We add the flag `--skip-active-storage` & `--skip-action-mailbox` to skip the installation of [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html) & [Action Mailbox](https://guides.rubyonrails.org/action_mailbox_basics.html) which are two parts of Rails we don't need for now.
 
 **Objective**: We will implement a simple Rails application with 2 pages:
 
@@ -148,56 +148,25 @@ If you don't remember about the coach (poor) logic, here it is:
 
 ### Make it look nice!
 
-We have not covered the Front-End aspect of a Rails project, but you can start on your own!
+We have not covered the front-end aspect of a Rails project for now, but you can start designing your app!
 
-**A few words about SCSS**
+**Install Bootstrap stylesheets**
 
-[.scss](https://sass-lang.com/guide) is a file extension that allows you to write your css more easily! Browsers only speak css, so there's internal magic that happens in Rails to **pre-process** the file and translate it in "vanilla" css. The main features of `scss` you need to know are:
+Following [Bootstrap documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap to your Rails app by copy-pasting the link in the `head` of the `application.html.erb` layout:
 
-1. Variables
-
-    ```scss
-    // Defining a variable
-    $gray: #F4F4F4;
-
-    body {
-      background: $gray; // Using this variable
-    }
-    ```
-
-2. Nesting
-
-    ```scss
-    .banner {
-      background: red;
-      h1 {
-        font-size: 50px;
-      }
-    }
-    ```
-
-3. Chaining
-
-    ```scss
-    a {
-      color: grey;
-      &:hover {
-        color: black;
-      }
-    }
-    ```
-
-In a few days, we'll also see how to organize our stylesheets in multiple files, and load them using the `import` keyword!
-
-For now let's enable `scss` support in your Rails application by uncommenting the following line in the `Gemfile`:
-
-```rb
-gem "sassc-rails"
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 ```
 
-⚠️ Restart your rails server after this step.
+You can now use any Bootstrap class anywhere in your Rails views 🎉
 
-Create then the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
+**Write custom style**
+
+Write your custom CSS in the `app/assets/stylesheets/application.css` file. This file is linked in the `head` of the `application.html.erb` layout with the `stylesheet_link_tag`.
+
+Go on and make the design match the screenshots 🎨
 
 ### Testing (Optional)
 
@@ -314,7 +283,7 @@ The equivalent of `binding.pry` in the test world is to take screenshots. Let's 
 # Gemfile
 group :test do
   # [...]
-  gem 'launchy'
+  gem "launchy"
 end
 ```
 
