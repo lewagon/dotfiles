@@ -237,7 +237,7 @@ Try to put the "New bookmark form" on the list page itself, not on a separate pa
 
 ### 7 - Select2 on the movies dropdown (Optional)
 
-Let's try adding an npm package to our Rails app! Let's follow the slides to see how we can add `select2` (and `jquery`) to our movies dropdown. You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/stimulus_utilities_select2) to get inspired!
+Let's try adding an npm package to our Rails app! Let's follow the slides to see how we can add `tom-select` to our movies dropdown. You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/stimulus_utilities_select2) to get inspired!
 
 Don't forget to use a Stimulus controller to implement this JavaScript behavior in your app. 😉
 
@@ -252,6 +252,6 @@ Everyone should be able to comment and tell us what they thought of our movie co
 - Adding a possibility to search for movies.
 - Adding [typed.js](http://www.mattboldt.com/demos/typed-js/) to have some funky title on our home page.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
-- Using [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) to display stars instead of a normal input in the reviews form.
+- Using [`star-rating.js`](https://pryley.github.io/star-rating.js/) to display stars instead of a normal input in the reviews form.
 
 Again, use Stimulus controllers when implementing JavaScript behavior in your app ⚠️

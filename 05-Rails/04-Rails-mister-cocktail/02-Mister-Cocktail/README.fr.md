@@ -56,10 +56,10 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Avant de commencer à coder, n'oublie pas de configurer ton application Rails pour le frontend. Comme dans le cours de ce matin, on va ajouter Bootstrap et ses dépendances JavaScript.
+Avant de commencer à coder, n'oublie pas de configurer ton application Rails pour le frontend. Comme dans le cours de ce matin, on va ajouter Bootstrap.
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap @popperjs/core
 ```
 
 Et on va ajouter les gems dont on a besoin :
@@ -84,24 +84,7 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Enfin, on va importer la librairie JS Bootstrap avec webpack :
-
-```js
-// config/webpack/environment.js
-const { environment } = require("@rails/webpacker")
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require("webpack")
-environment.plugins.prepend("Provide",
-  new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery",
-    Popper: ["popper.js", "default"]
-  })
-)
-
-module.exports = environment
-```
+Enfin, on va importer la librairie JS Bootstrap:
 
 ```js
 // app/javascript/packs/application.js
