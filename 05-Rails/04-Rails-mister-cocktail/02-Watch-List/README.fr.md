@@ -17,7 +17,7 @@ Si ce n'est pas le cas, retourne sur la section dédié du setup [macOS](https:/
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list  -j webpack --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 

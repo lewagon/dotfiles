@@ -17,7 +17,7 @@ If not, go back to the dedicated section of the [macOS](https://github.com/lewag
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list -j webpack --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
