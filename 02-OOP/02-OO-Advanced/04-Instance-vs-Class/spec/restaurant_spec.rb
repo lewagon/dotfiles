@@ -32,5 +32,4 @@ describe Restaurant do
       expect(Restaurant.filter_by_city(restos,"lyon")).to eq [bocuse]
     end
   end
-
 end
