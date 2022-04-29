@@ -115,5 +115,4 @@ Add Font Awesome `link` tag in the `head` of your layout:
 
 You can now use any of the [free Font Awesome icons](https://fontawesome.com/search?m=free) 🎉 Try to find nice checkbox icons!
 
-
 In your view, use conditionals. If your task is completed, display the checked square, else, display an empty square.
