@@ -15,7 +15,7 @@ describe Restaurant do
 
   describe "#rate" do
     it "should update average restaurant rating" do
-      ratings = [10, 15, 20]
+      ratings = [11, 15, 19]
       average = ratings.reduce(:+).fdiv(ratings.length)
       ratings.each do |rating|
         bocuse.rate(rating)
