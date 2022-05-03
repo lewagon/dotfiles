@@ -56,7 +56,7 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies
+Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies:
 
 ```bash
 yarn add bootstrap @popperjs/core
@@ -172,6 +172,7 @@ To understand how to get the movie images from the API, make sure to carefully r
 ### 3 - Routing, Controller, Views for Lists
 
 **Important**
+
 Don't use `rake` to code the applicative part. It's time to launch a `rails s` in your terminal and open a browser at [http://localhost:3000/](http://localhost:3000/). Always code in silo:
 
 - start with the **route**,
@@ -236,11 +237,14 @@ Don't forget you can have local images in the `app/assets/images` folder. Or eve
 
 Try to put the "New bookmark form" on the list page itself, not on a separate page, so you won't have to leave the list page to add a new movie! What changes in the routes? And in the controllers?
 
-### 7 - Select2 on the movies dropdown (Optional)
+### 7 - tom-select on the movies dropdown (Optional)
 
-Let's try adding an npm package to our Rails app! Let's follow the slides to see how we can add `select2` (and `jquery`) to our movies dropdown. You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/stimulus_utilities_select2) to get inspired!
+Let's try adding an JavaScript package to our Rails app! For example, let's add [tom-select](https://tom-select.js.org/) to our movies dropdown.
 
-Don't forget to use a Stimulus controller to implement this JavaScript behavior in your app. 😉
+To do so:
+- Generate a dedicated Stimulus controller
+- Connect the Stimulus controller to the movies dropdown select
+- User one of the [basic examples](https://tom-select.js.org/examples/) code snippets to instanciate a Tom Select in the Stimulus controller
 
 ### 8 - List reviews (Optional)
 
@@ -253,6 +257,6 @@ Everyone should be able to comment and tell us what they thought of our movie co
 - Adding a possibility to search for movies.
 - Adding [typed.js](http://www.mattboldt.com/demos/typed-js/) to have some funky title on our home page.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
-- Using [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) to display stars instead of a normal input in the reviews form.
+- Using [star-rating.js](https://pryley.github.io/star-rating.js/) to display stars instead of a normal input in the reviews form.
 
 Again, use Stimulus controllers when implementing JavaScript behavior in your app ⚠️
