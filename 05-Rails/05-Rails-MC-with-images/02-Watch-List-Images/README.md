@@ -14,9 +14,9 @@ We'll continue working on yesterday's code, so go back to your folder:
 cd ~/code/<user.github_nickname>/rails-watch-list
 ```
 
-If you generated the rails app **without** the `--database` flag, we need to manually migrate this Rails app to Postgresql for heroku. You can check if the app is configured with postgresql if you have the `pg` gem in the gemfile.
+If you generated the rails app **without** the `-d` flag, we need to manually migrate this Rails app to Postgresql for Heroku. You can check if the app is configured with Postgresql if you have the `pg` gem in the Gemfile.
 
-If you need to change the app to postgres, open your Gemfile, find the `sqlite` line. **Replace** it with:
+If you need to change the app to Postgresql, open your Gemfile, find the `sqlite` line. **Replace** it with:
 
 ```ruby
 # Gemfile
@@ -68,10 +68,9 @@ For an overview about all the image helpers rails provides (`image_tag`, `image_
 
 If you're done with the images, try to add an anonymous review system to the movie lists so that everyone can comment on the movie selection of our lists!
 
-
 ## Going further
 Congrats on completing the Watch list challenge. You can now share your amazing app with the whole world!
 
 There is one problem though.. Anyone can create a list, add a bookmark to your lists, or delete your bookmarked movies. Also reviews are completely anonymous. 😔
 
-Next week we'll see how we can fix that problem. We'll introduce user authentication and user authorization during the next two sessions. 😉
+In the next session we'll see how we can fix that problem. We'll introduce user authentication and user authorization during the next two sessions. 😉
