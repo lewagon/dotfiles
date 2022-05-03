@@ -16,7 +16,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-**Nota**: ¡Ya debes poder hacer esto sin ver tus apuntes! No olvides el `--database=postgresql` (hablaremos de esto mañana). 😉
+**Nota**: ¡Ya debes poder hacer esto sin ver tus apuntes! No olvides el `-d postgresql` (hablaremos de esto mañana). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>

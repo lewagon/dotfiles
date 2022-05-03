@@ -13,11 +13,11 @@ yarn -v
 
 Sinon, retourne à la section dédiée de la configuration [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) ou [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn).
 
-**Remarque** : Tu devrais maintenant pouvoir exécuter ces étapes sans cette fiche d'aide ! N'oublie pas la base de données `--database=postgresql` (on en parlera demain). 😉
+**Remarque** : Tu devrais maintenant pouvoir exécuter ces étapes sans cette fiche d'aide ! N'oublie pas la base de données `-d postgresql` (on en parlera demain). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-mister-cocktail --database=postgresql --skip-action-mailbox -T
+rails new rails-mister-cocktail -d postgresql --skip-action-mailbox -T
 cd rails-mister-cocktail
 ```
 

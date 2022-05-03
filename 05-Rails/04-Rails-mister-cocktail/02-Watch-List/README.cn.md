@@ -13,7 +13,7 @@ yarn -v
 
 如果没看到的话，那请根据配置指南安装：[macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn)，[Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn)，[Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn)。
 
-**注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`--database=postgresql`（明天你就知道为什么了）😉
+**注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`-d postgresql`（明天你就知道为什么了）😉
 
 ```bash
 cd ~/code/<user.github_nickname>

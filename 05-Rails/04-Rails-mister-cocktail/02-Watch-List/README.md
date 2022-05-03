@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to many relationship (`n:n`). So what's the deal? Well, it’s time to build yourself a Watch List. You'll be able to create lists in which you will save your favourite movies.
+Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to many relationship (`N:N`). So what's the deal? Well, it’s time to build yourself a Watch List. You'll be able to create lists in which you will save your favourite movies.
 
 ## Rails app generation
 
@@ -13,7 +13,7 @@ yarn -v
 
 If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn) setup.
 
-**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this during the next session). 😉
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--d postgresql` (we will talk about this during the next session). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
