@@ -1,4 +1,3 @@
-
 Si le gros de ton back-end fonctionne et que tu n'as pas encore enrichi tes seeds, c'est le moment ! Pour rendre ton app encore plus légitime, tu as besoin d'une grande quantité de données réalistes et bien choisies. Pour cela, tu peux utiliser une gem comme faker ou les créer de zéro, ce qui est encore mieux mais prend du temps.
 
 ### As-tu envisagé d'utiliser une API ?

@@ -1,6 +1,5 @@
 ![Excited](https://telltaletv.com/wp-content/uploads/2016/08/picture-of-seinfeld-group-jumping-at-the-door-gif.gif)
 
-
 It's finally the day we've all been waiting for!
 
 Today there should be **no coding** -- unless there's a last minute fire to put out of course 😉

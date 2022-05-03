@@ -1,4 +1,3 @@
-
 If the majority of your backend is working and you haven't pimped out your seeds yet, now is the time. Having plenty of well-thought-out, realistic data in your app will make it seem that much more legit. Using a gem like faker is great and creating them all from scratch is even better but is too time-consuming.
 
 ### Have you thought about using an API?
