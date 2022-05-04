@@ -8,6 +8,4 @@ Par exemple, l'[API de balises JSON](https://jsonplaceholder.typicode.com/) four
 
 Si tu ne trouves pas le type de données dont tu as besoin depuis ton moteur de recherche, tu peux parcourir le catalogue [Any API](https://any-api.com/) ou créer ton propre JSON avec [Mockaroo](https://www.mockaroo.com/) !
 
-
 Tu peux ensuite utiliser [le code de ce cours](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/05-Rails%2F09-Airbnb-SMTP#/0/1/3) pour apprendre à importer et utiliser les données pour créer des instances de tes modèles dans ton fichier de seeds.
-

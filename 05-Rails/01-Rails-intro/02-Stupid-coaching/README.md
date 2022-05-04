@@ -152,7 +152,7 @@ We have not covered the front-end aspect of a Rails project for now, but you can
 
 **Install Bootstrap stylesheets**
 
-Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap to your Rails app by copy-pasting the link tag in the `head` of the `application.html.erb` layout:
+Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap to your Rails app by copy-pasting the `link` tag in the `head` of the `application.html.erb` layout:
 
 ```erb
 <!-- app/views/layouts/application.html.erb -->
@@ -164,7 +164,7 @@ You can now use any Bootstrap class anywhere in your Rails views 🎉
 
 **Write custom style**
 
-Write your custom CSS in the `app/assets/stylesheets/application.css` file. This file is linked in the `head` of the `application.html.erb` layout with the `stylesheet_link_tag`.
+Write your own CSS in the `app/assets/stylesheets/application.css` file. This file is linked in the `head` of the `application.html.erb` layout with the `stylesheet_link_tag`.
 
 Go on and make the design match the screenshots 🎨
 

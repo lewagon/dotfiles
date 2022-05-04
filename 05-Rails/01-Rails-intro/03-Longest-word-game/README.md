@@ -64,6 +64,7 @@ You will need to add the line below into your `form`:
 ```erb
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 ```
+
 This will add a hidden input field with an `authenticity_token` that ensures the `POST` request is coming from your website and not from another. Read [this stack overflow thread](https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token) if you want to learn more about [CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) and why Rails adds this security layer by default!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game_with_form.png)
@@ -129,7 +130,7 @@ Install Bootstrap by copy-pasting the `link` tag [from the documentation](https:
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 ```
 
-Write your custom CSS in the `app/assets/stylesheets/application.css` file.
+Write your own CSS in the `app/assets/stylesheets/application.css` file.
 
 Try to match the design from the screenshots 🎨
 

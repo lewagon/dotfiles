@@ -66,8 +66,9 @@ And add the gems we're going to need:
 
 ```ruby
 # Gemfile
-gem "autoprefixer-rails", "10.2.5"
-gem "font-awesome-sass", "~> 5.15"
+# [...]
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails" # Uncomment this line
 ```
@@ -243,8 +244,8 @@ Let's try adding an JavaScript package to our Rails app! For example, let's add 
 
 To do so:
 - Generate a dedicated Stimulus controller
-- Connect the Stimulus controller to the movies dropdown select
-- User one of the [basic examples](https://tom-select.js.org/examples/) code snippets to instanciate a Tom Select in the Stimulus controller
+- Connect this Stimulus controller to the movies dropdown `select` tag
+- Adapt one of the [basic examples](https://tom-select.js.org/examples/) code snippets to instanciate a Tom Select in the Stimulus controller
 
 ### 8 - List reviews (Optional)
 
@@ -256,7 +257,7 @@ Everyone should be able to comment and tell us what they thought of our movie co
 
 - Adding a possibility to search for movies.
 - Adding [typed.js](http://www.mattboldt.com/demos/typed-js/) to have some funky title on our home page.
-- Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
+- Adding some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
 - Using [star-rating.js](https://pryley.github.io/star-rating.js/) to display stars instead of a normal input in the reviews form.
 
 Again, use Stimulus controllers when implementing JavaScript behavior in your app ⚠️

@@ -55,6 +55,8 @@ You can now use any of the [free Font Awesome icons](https://fontawesome.com/sea
 To add [Simple Form](https://github.com/heartcombo/simple_form) to your app, add the gem to your Gemfile:
 
 ```ruby
+# Gemfile
+# [...]
 gem "simple_form", github: "heartcombo/simple_form"
 ```
 

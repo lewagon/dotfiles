@@ -1,6 +1,7 @@
 ## Contexte et objectifs
 
 L'objectif de ce challenge est de créer une application Rails à deux modèles avec un restaurant et des avis anonymes.
+
 Tu peux te référer au [guide Rails](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) pour voir un exemple similaire avec des articles et des commentaires.
 
 ## Générer l'application Rails
@@ -23,7 +24,36 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Avant de commencer à coder ton application, suis [notre guide Frontend Rails](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) pour t'assurer de pouvoir utiliser un formulaire simple, Bootstrap, et d'avoir un dossier de feuilles de style sympas (⚠️ Pour le moment, contente-toi de mettre en œuvre la section **configuration**, ne te lance pas dans **Bootstrap JS** ; on verra ça au prochain cours !).
+## Configuration front-end
+
+### Installe les feuilles de style Bootstrap
+
+En suivant [la documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), installe Bootstrap dans ton application Rails en copiant-collant la balise `link` dans le `head` de ton layout `application.html.erb` :
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Tu peux désormais utiliser n'importe quelle classe Bootstrap dans les vues de ton application Rails 🎉
+
+### Gemme Simple Form
+
+Pour ajouter [Simple Form](https://github.com/heartcombo/simple_form) à ton application, ajoute la gemme à ton Gemfile :
+
+```ruby
+# Gemfile
+# [...]
+gem "simple_form", github: "heartcombo/simple_form"
+```
+
+Puis exécute :
+
+```bash
+bundle install
+rails generate simple_form:install --bootstrap
+```
 
 ### Tester ton code
 
@@ -36,7 +66,7 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 Ensuite, tester ton code est aussi simple qu'avec la bonne vieille commande
 
 ```bash
-rake
+rspec
 ```
 
 Si tu as du mal à lancer `rake`, tu auras peut-être besoin d'exécuter `bin/rake`. Cela signifie que ton `$PATH` ne contient pas le dossier `./bin` ; tu peux corriger cela dans le fichier zshrc des répertoires cachés (consulte [notre configuration par défaut](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))
@@ -133,8 +163,6 @@ Maintenant, il est temps de coder toutes les routes dont tu as besoin pour crée
 
 ### Vues
 
-On va maintenant s'intéresser au frontend, car c'est ce que nos utilisateurs vont voir ! Suis [ce guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) pour configurer ton frontend Rails si tu ne l'as pas fait au début du challenge (⚠️ Pour le moment, contente-toi de mettre en œuvre la section **configuration**, ne te lance pas dans **Bootstrap JS** ; on verra ça demain !).
-
 #### Mises en page / Partials
 
 N'oublie pas de refactoriser tes vues en utilisant des mises en page et des partials (vues partielles). Par exemple :
@@ -158,12 +186,14 @@ Cela génère le HTML suivant :
 <a href="/restaurants/3" class="btn btn-primary">See details</a>
 ```
 
-##### [form_for](http://guides.rubyonrails.org/form_helpers.html)
+##### [simple_form_for](https://github.com/heartcombo/simple_form)
 
-Mais fais attention : les URL de tes avis sont maintenant imbriquées dans `/restaurants/:restaurant_id`. Cela signifie que tu ne peux pas utiliser `form_for` de la même façon qu'avec des ressources non imbriquées. Si tu écris :
+Puisque l'on a installé Simple Form, on va utiliser la méthode `simple_form_for` au lieu de `form_for` à partir de maintenant.
+
+Les URL de tes avis sont maintenant imbriquées dans `/restaurants/:restaurant_id`. Cela signifie que tu ne peux pas utiliser `simple_form_for` de la même façon qu'avec des ressources non imbriquées. Si tu écris :
 
 ```erb
-<%= form_for(@review) do |f| %>
+<%= simple_form_for(@review) do |f| %>
   <!-- [...] -->
 <% end %>
 ```
@@ -176,10 +206,10 @@ Cela générera ce HTML :
 </form>
 ```
 
-Ce n'est pas ce qu'on veut, car **on n'a pas de route pour `POST "reviews"`**. À la place, tu devras utiliser la syntaxe des ressources imbriquées pour `form_for` :
+Ce n'est pas ce qu'on veut, car **on n'a pas de route pour `POST "reviews"`**. À la place, tu devras utiliser la syntaxe des ressources imbriquées pour `simple_form_for` :
 
 ```erb
-<%= form_for [@restaurant, @review] do |f| %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
   <!-- [...] -->
 <% end %>
 ```
@@ -193,8 +223,6 @@ Cela générera le formulaire HTML suivant :
 ```
 
 Cette URL est maintenant cohérente avec la route `POST "restaurants/:restaurant_id/reviews"` que tu as définie dans `routes.rb`. Super ! Si tu veux un peu plus d'infos sur ce sujet, jette un œil à [ce post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
-
-**Astuce :** Installe la gem [simple_form](https://github.com/plataformatec/simple_form) pour obtenir des formulaires compatibles avec Bootstrap à la syntaxe plus légère.
 
 ### Améliore ton application
 

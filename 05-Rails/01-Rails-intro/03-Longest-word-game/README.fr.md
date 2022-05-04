@@ -51,9 +51,7 @@ On a besoin d'ajouter un formulaire sous les lettres, pour que l'utilisateur pui
 
 Il doit envoyer la requête (`POST`) à l'action `/score` dans le `GamesController`.
 
-Nous allons désactiver pour le moment une fonctionalité qui `ajaxifie` les requèttes `post` envoyées depuis une formulaire.
-
-La balise HTML `form` doit avoir ce format:
+Nous allons aussi désactiver pour le moment une fonctionalité qui "ajaxifie" les requêtes `post` envoyées depuis une formulaire. La balise HTML `form` doit avoir ce format :
 
 ```html
 <form action="TODO" method="TODO" data-turbo="false">
@@ -61,11 +59,12 @@ La balise HTML `form` doit avoir ce format:
 </form>
 ```
 
-Ajoute la ligne ci-dessous à ton formulaire (`form`) :
+Ajoute la ligne ci-dessous à ton formulaire `form` :
 
 ```erb
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 ```
+
 Un champ « input » masqué est créé avec un `authenticity_token` qui veille à ce que la requête `POST` vienne de ton site Web et pas d'un autre. Lis [ce fil Stack Overflow](https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token) si tu veux en savoir plus sur le [CSRF](https://fr.wikipedia.org/wiki/Cross-site_request_forgery) et pourquoi Rails ajoute cette couche de sécurité par défaut !
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game_with_form.png)
@@ -120,6 +119,20 @@ En bas des résultats, ajoute un lien (`link_to`) pour retourner à la page d'un
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/not_english_word.png)
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/congrats.png)
+
+### Rajoute du style à ton application
+
+Installe Bootstrap en copiant-collant la balise `link` [de la documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css) dans le `head` du layout :
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Écris ton propre CSS dans le fichier `app/assets/stylesheets/application.css`.
+
+Essaye de faire correspondre le style aux captures d'écran 🎨
 
 ### Ajouter le score (optionnel)
 

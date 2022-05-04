@@ -20,6 +20,7 @@ If you need to change the app to Postgresql, open your Gemfile, find the `sqlite
 
 ```ruby
 # Gemfile
+[...]
 gem "pg"
 ```
 
@@ -69,6 +70,7 @@ For an overview about all the image helpers rails provides (`image_tag`, `image_
 If you're done with the images, try to add an anonymous review system to the movie lists so that everyone can comment on the movie selection of our lists!
 
 ## Going further
+
 Congrats on completing the Watch list challenge. You can now share your amazing app with the whole world!
 
 There is one problem though.. Anyone can create a list, add a bookmark to your lists, or delete your bookmarked movies. Also reviews are completely anonymous. 😔

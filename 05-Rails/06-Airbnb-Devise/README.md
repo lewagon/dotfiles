@@ -76,7 +76,7 @@ git push origin master
 
 Go to [your Github repo settings](https://github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration) and add your teammates as **collaborators** to the repo.
 
-The other teammates can now **clone** the project. ⚠️**Be careful, use `SSH` url**⚠️
+The other teammates can now **clone** the project. ⚠️**Be careful, use `SSH` URL**⚠️
 
 Then, the teammates should run:
 

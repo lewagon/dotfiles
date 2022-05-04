@@ -43,6 +43,8 @@ You can now use any Bootstrap class anywhere in your Rails views 🎉
 To add [Simple Form](https://github.com/heartcombo/simple_form) to your app, add the gem to your Gemfile:
 
 ```ruby
+# Gemfile
+# [...]
 gem "simple_form", github: "heartcombo/simple_form"
 ```
 
@@ -52,7 +54,6 @@ Then run:
 bundle install
 rails generate simple_form:install --bootstrap
 ```
-
 
 ### Testing your code
 
