@@ -1,6 +1,9 @@
 source "https://rubygems.org"
 
 gem "activesupport"
+gem "better_errors"
+gem "binding_of_caller"
+gem "pry-byebug"
 gem "rabl"
 gem "rake"
 gem "sequel"
