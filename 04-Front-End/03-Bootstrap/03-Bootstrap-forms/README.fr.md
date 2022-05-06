@@ -90,7 +90,7 @@ Exemple de formulaire Bootstrap **sans étiquette** :
 </form>
 ```
 
-Maintenant, si tu veux un [formulaire en ligne](https://getbootstrap.com/docs/5.1/components/forms/#inline-forms), tu peux **ajouter la classe `.form-inline` au formulaire `<form>`** (comme la classe `.list-inline` pour une liste `<ul>`) :
+Maintenant, si tu veux un [formulaire en ligne](https://getbootstrap.com/docs/5.1/forms/layout/#inline-forms), tu peux **ajouter la classe `.form-inline` au formulaire `<form>`** (comme la classe `.list-inline` pour une liste `<ul>`) :
 
 tu peux **ajouter les classes `.row` (qui est une flexbox) et `.row-cols-*-auto` au formulaire `<form>`** (la classe `.row-cols-*` te permet de décider à partir de quel breakpoint tu veux que tes champs `input` se mettent l'un à côté de l'autre. Par exemple, `.row-cols-sm-auto` signifie que sur mobile, chaque `input` prend la largeur totale alors que sur une tablette ou des écrans plus grands, les `input` seront l'un à côté de l'autre):
 
