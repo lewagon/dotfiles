@@ -72,7 +72,6 @@
     },
     "telemetry.telemetryLevel": "off",
     "window.restoreWindows": "none",
-    "workbench.colorTheme": "GitHub Light",
     "workbench.editor.enablePreview": true,
     "workbench.iconTheme": "vscode-great-icons",
     "workbench.settings.editor": "json",
