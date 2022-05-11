@@ -49,5 +49,8 @@ describe "User" do
     FakeMailer.instance.reset
     user = User.new(username: "bob", email: "bob@lebonge.com")
     expect { user.save }.to change { FakeMailer.instance.email_sent }.from(0).to(1)
+
+    mail_recipient = FakeMailer.instance.recipient
+    expect(mail_recipient).to eq(user.email)
   end
 end
