@@ -23,7 +23,7 @@ CREATE TABLE `posts` (
 
 ### `initialize`
 
-Ajoute la méthode `initialize` pour stocker les colonnes ci-dessous dans des variables d’instance. Ajoute les readers (lecteurs) et accessors (accesseurs) nécessaires.
+Ajoute la méthode `initialize` pour stocker les colonnes ci-dessus dans des variables d’instance. Ajoute les readers (lecteurs) et accessors (accesseurs) nécessaires.
 
 ### `find`
 

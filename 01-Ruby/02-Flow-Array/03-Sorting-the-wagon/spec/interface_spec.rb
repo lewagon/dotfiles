@@ -46,7 +46,6 @@ describe "Interface" do
   context "when the input has 3 students" do
     it "should display the number of students" do
       expect(result_one).to match(/3 students/)
-
     end
 
     it "should display the student list" do
@@ -73,5 +72,4 @@ describe "Interface" do
       expect(result_three).to match(/^Alice$/)
     end
   end
-
 end
