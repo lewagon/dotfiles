@@ -29,11 +29,14 @@ Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'fladson/vim-kitty'
+Plug 'sirver/UltiSnips'
+
 call plug#end()
 
 " Config Section
 set number
 set nocompatible
+set smartindent
 filetype plugin on
 syntax on
 
@@ -63,6 +66,7 @@ let g:vimwiki_list = [{
 let g:vimwiki_global_ext = 0
 
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
+autocmd FileType sql setlocal shiftwidth=2 tabstop=2
 
 
 

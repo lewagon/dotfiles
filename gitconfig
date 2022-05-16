@@ -13,7 +13,7 @@
   pager = less -FRSX
 	editor = vim
 	visual = vim
-	excludesfile = /Users/xavierosee/.gitignore_global
+	excludesfile = /Users/xavierosee/.gitignore
 
 [alias]
   co = checkout
