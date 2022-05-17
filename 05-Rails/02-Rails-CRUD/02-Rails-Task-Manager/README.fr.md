@@ -46,7 +46,7 @@ Pour tester ta vue, tu as besoin de tâches dans la base de données ! Pour en c
 
 ```ruby
 Task.create(title: "Laundry", details: "Do not mix colors!")
-Task.create title: "Studying", details: "A lot of flashcards to do", completed: true)
+Task.create(title: "Studying", details: "A lot of flashcards to do", completed: true)
 ```
 
 ⚠️ Dans la vue, n'essaie pas de coder les visuels des cases à cocher pour le moment. Tu auras l'occasion de le faire dans les questions optionnelles.
