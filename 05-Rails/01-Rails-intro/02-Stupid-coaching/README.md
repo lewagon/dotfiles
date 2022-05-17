@@ -98,7 +98,7 @@ Prefix Verb URI Pattern       Controller#Action
 Last step to display the form, let's create a view! Do you remember in which folder it should be and how it should be named? That's one of Rails' conventions, the [Action View convention](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro/index.html?title=Rails+Basics#/6/6). Refresh the page at [localhost:3000/ask](http://localhost:3000/ask), if you named your file properly you should finally see a page without an error! For now it's empty, let's finally add the `<form>`. Remember the syntax?
 
 ```html
-<form action="???">
+<form action="???" data-turbo="false">
   <input type="text" name="???">
   <input type="submit" value="Ask!">
 </form>

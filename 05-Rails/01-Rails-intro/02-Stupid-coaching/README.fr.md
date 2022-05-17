@@ -98,7 +98,7 @@ Prefix Verb URI Pattern       Controller#Action
 Dernière étape de la création du formulaire : créer une vue ! Tu te souviens du dossier dans lequel tu dois la placer et du nom que tu dois lui donner ? C'est l'une des conventions de Rails : la [convention Action View](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro/index.html?title=Rails+Basics#/6/6). Rafraîchis la page sur [localhost:3000/ask](http://localhost:3000/ask). Si tu as nommé ton fichier correctement, tu devrais enfin voir une page sans erreur ! Pour le moment, elle est vide. On va ajouter le formulaire (`<form>`). Tu te souviens de la syntaxe ?
 
 ```html
-<form action="???">
+<form action="???" data-turbo="false">
   <input type="text" name="???">
   <input type="submit" value="Ask!">
 </form>
