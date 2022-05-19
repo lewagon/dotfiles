@@ -80,7 +80,7 @@ Then let's download the Le Wagon's stylesheets:
 
 ```bash
 rm -rf app/assets/stylesheets
-curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip
+curl -L https://github.com/lewagon/stylesheets/archive/rails-7.zip > stylesheets.zip
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
