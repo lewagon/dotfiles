@@ -71,6 +71,14 @@ gem "font-awesome-sass", "~> 5.15"
 gem "simple_form"
 ```
 
+Add this line in `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
+Then run
+
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
