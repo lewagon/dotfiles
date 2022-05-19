@@ -62,6 +62,12 @@ Avant de commencer à coder, n'oublie pas de configurer ton application Rails po
 yarn add bootstrap@4.6 jquery popper.js
 ```
 
+Ajoute cette ligne dans `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 Et on va ajouter les gems dont on a besoin :
 
 ```ruby
