@@ -78,6 +78,12 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
+Ajoute cette ligne dans `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 Puis on va télécharger les feuilles de style du Wagon :
 
 ```bash

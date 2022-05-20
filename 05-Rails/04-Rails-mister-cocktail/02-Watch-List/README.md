@@ -78,6 +78,12 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
+Add this line to `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 Then let's download the Le Wagon's stylesheets:
 
 ```bash
