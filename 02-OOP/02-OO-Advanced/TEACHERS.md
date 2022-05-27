@@ -2,112 +2,66 @@
 
 So yesterday you've had your first introduction into Object Oriented Programming. These are big steps in your web development career. Before we continue on that path, let's do a recap to make sure you understand the concepts.
 
-Let's create a Restaurant class:
+Let's create a House class:
 
-- As a first step we need to create the file, and filename should match class name: `restaurant.rb`:
+- As a first step we need to create the file, and filename should match class name: `house.rb`:
 
 ```ruby
-# animal.rb
-class Animal
+# house.rb
+class House
 end
 ```
 
 - Let's define the "constructor", the method that is going to construct our objects. In Ruby this method is called `initialize`:
 
 ```ruby
-def initialize(name)
+def initialize(name, width, length)
   @name = name
+  @width = width
+  @length = length
 end
 ```
 
 - Now let's create a new instance of this class:
 
 ```ruby
-simba = Animal.new('Simba')
-p simba #=> ?????
+country_side_house = House.new('My blue house', 500, 400)
+p my_country_side_house #=> ?????
 ```
 
-- What if you want to print out the name of yaki, how would you do that? You will have to create a getter for that or otherwise you can't access it:
+- What if you want to print out the name, width and length of my house, how would you do that? You will have to create a getter for that or otherwise you can't access it:
 
 ```ruby
 def name
   return @name
 end
-```
 
-- Now let's say that the capacity changed and you need to change this for your yaki object, then you need a setter. But you should also create a getter to check if we actually changed it
-
-```ruby
-def capacity=(capacity)
-  @capacity = capacity
+def width
+  return @width
 end
 
-def capacity
-  return @capacity
+def length
+  return @length
 end
 ```
 
-- As you can see this is really annoying, if we have to do this for our 4 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_methods`. Let's refacto our class:
+- As you can see this is really annoying, if we have to do this for our 3 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_methods`. Let's refacto our class:
 
 ```ruby
-class Restaurant
-  attr_reader :name
-  attr_accessor :capacity
+class House
+  attr_reader :name, :width, :length
 
-  def initialize(name, city, capacity, category)
+  def initialize(name, width, length)
     @name = name
-    @city = city
-    @capacity = capacity
-    @category = category
+    @width = width
+    @length = length
   end
 end
 
-yaki = Restaurant.new("yaki", "Brussels", 35, "thai")
-p yaki.name
-p yaki.capacity
-yaki.capacity = 40
-p yaki.capacity
-```
-
-- One more thing: let's add cool instance methods on our Restaurant class to handle reservations and opening hours.
-
-```ruby
-class Restaurant
-  attr_reader :name, :clients
-  attr_accessor :capacity
-
-  def initialize(name, city, capacity, category)
-    @name = name
-    @city = city
-    @capacity = capacity
-    @category = category
-
-    @clients = []
-  end
-
-  def add_reservation(name)
-    @clients << name
-  end
-
-  def closed?
-    !open?
-  end
-
-  def open?
-   Time.now.hour > 18 and Time.now.hour < 22
-  end
-end
-
-yaki = Restaurant.new("yaki", "Brussels", 35, "thai")
-p yaki.name
-p yaki.capacity
-yaki.capacity = 40
-p yaki.capacity
-
-yaki.add_reservation("lien")
-p yaki.clients
-p yaki.open?
-
+my_country_side_house = House.new('My blue house', 500, 400)
+p my_country_side_house.name
+p my_country_side_house.length
+p my_country_side_house.width
 ```
 
 ## Lecture
@@ -118,63 +72,95 @@ Now time to move on to the real content of the lecture. We'll see three importan
 - Class methods
 - `self`
 
+- Imagine you had three classes, each one to create a different type of building. 
+
+```ruby
+class House
+end
+
+class Skyscraper
+end
+
+class Castle
+end
+```
+
+- They share some properties. They all have a name, a width and a length. For every building we have a way to calculate the floor area
+
+```ruby
+class House
+  attr_reader :name, :width, :length
+  def initialize(name, width, length)
+    @name = name
+    @width, @length = width, length
+  end
+
+  def floor_area
+    @width * @length
+  end
+end
+
+class Skyscraper
+  attr_reader :name, :width, :length
+  def initialize(name, width, length)
+    @name = name
+    @width, @length = width, length
+  end
+
+  def floor_area
+    @width * @length
+  end
+end
+
+class Castle
+  attr_reader :name, :width, :length
+  def initialize(name, width, length)
+    @name = name
+    @width, @length = width, length
+  end
+
+  def floor_area
+    @width * @length
+  end
+end
+```
+
+- Wow, lots of duplicated code here... and we know the wheel Don't Repeat Yourself. Let's apply inheritance and put all common parts in the parent class.
+
+```ruby
+class Building
+  attr_reader :name, :width, :length
+
+  def initialize(name, width, length)
+    @name = name
+    @width, @length = width, length
+  end
+
+  def floor_area
+    @width * @length
+  end
+end
+
+class House < Building
+end
+
+class Skyscraper < Building
+end
+
+class Castle < Building
+end
+
+some_castle = Castle.new('Tower of London', 32, 35)
+some_castle.name #=> "Tower of London"
+some_castle.floor_area #=> 1120
+
+some_house = House.new('White House', 26, 51)
+some_house.name #=> "White House"
+some_house.floor_area #=> 1326
+```
+
 ### Inheritance
-
-#### Restaurants
-
-Let's stay in the food business but be more specific about restaurant kinds (because we're French 😉)
-
-```ruby
-class Fastfood
-  attr_reader :name, :city, :preparation_time, :clients
-
-  def initialize(name, city, preparation_time)
-    @name = name
-    @city = city
-    @preparation_time = preparation_time
-    @clients = []
-  end
-
-  def add_reservation(name)
-    @clients << name
-  end
-end
-
-class StarRestaurant
-  attr_reader :name, :city, :stars, :clients
-
-  def initialize(name, city, stars)
-    @name = name
-    @city = city
-    @stars = stars
-    @clients = []
-  end
-
-  def add_reservation(name)
-    @clients << name
-  end
-end
-```
-
-Wow, lots of duplicated code here... Let's apply inheritance and put all common parts in the parent class:
-
-```ruby
-class Restaurant
-  attr_reader :name, :city, :clients
-
-  def initialize(name, city)
-    @name = name
-    @city = city
-    @clients = []
-  end
-
-  def add_reservation(name)
-    @clients << name
-  end
-end
-```
-
-Now how can we make our classes inherit from this? The syntax is pretty simple:
+- Now how can we make our classes inherit from this. The syntax is pretty simple:
 
 ```ruby
 class SuperClass
@@ -184,146 +170,125 @@ class SubClass < SuperClass
 end
 ```
 
-So for us:
+- Let's add some behavior to our classes and play with it. Only a castle may have a butler, so it's a specific behavior.
 
 ```ruby
-class Fastfood < Restaurant
-  attr_reader :preparation_time
+class Castle < Building
+  attr_accessor :butler
 
-  def initialize(name, city, preparation_time)
-    @name = name
-    @city = city
-    @preparation_time = preparation_time
-    @clients = []
+  def has_a_butler?
+    @butler != nil
   end
 end
 
-class StarRestaurant < Restaurant
-  attr_reader :stars
+some_castle = Castle.new('Chambord', 156, 117)
+some_castle.has_a_butler? # => false
+some_castle.butler = "George"
+some_castle.has_a_butler? # => true
 
-  def initialize(name, city, stars)
-    @name = name
-    @city = city
-    @stars = stars
-    @clients = []
-  end
-end
-
-mcdonald = Fastfood.new("mcdo", "brussels", 5)
-puts "#{mcdonald.name} takes #{mcdonald.preparation_time} minutes"
-mcdonald.add_reservation("boris")
+some_house = House.new('White House', 26, 51)
+some_house.has_a_butler? #=> Undefined method `has_a_butler?`
 ```
-
-Let's add some behavior to our classes and play with it.
-
-```ruby
-class Restaurant
-  def print_clients
-    @clients.each_with_index do |client, index|
-      puts "#{index + 1} - #{client}"
-    end
-  end
-end
-
-class FastFood < Restaurant
-end
-
-class StarRestaurant < Restaurant
-  def print_clients
-    puts "you don't have access to star restaurant clients!"
-  end
-end
-
-mcdonald = Fastfood.new("mcdo", "berlin", 5)
-mcdonald.add_reservation("boris")
-mcdonald.add_reservation("seb")
-mcdonald.add_reservation("romain")
-mcdonald.print_clients
-
-fancy_place = StarRestaurant.new("fancy", "paris", 4)
-fancy_place.add_reservation("boris")
-fancy_place.add_reservation("seb")
-fancy_place.add_reservation("romain")
-fancy_place.print_clients
-```
-
-Let's comment the outputs. As you see, if you apply an instance method on an object, Ruby will first look in the object class if there is a corresponding method, if not it will look for this method in the parent class.
-
 #### `super` keyword
 
-Now, let's refacto our classes using `super` keyword:
+- We all know that a Castle in usually bigger than a House (bigger floor_area). How can we make sure that this behavior is translated into code ? We need to change an inherited method. With the super keyword, which calls the parent's method with the same name. Now, let's refacto our classes using `super` keyword:
 
 ```ruby
-class Restaurant
-  attr_reader :name, :city, :clients
-
-  def initialize(name, city)
-    @name = name
-    @city = city
-    @clients = []
-  end
-
-  def add_reservation(name)
-    @clients << name
-  end
-
-  def print_clients
-    @clients.each_with_index do |client, index|
-      puts "#{index + 1} - #{client}"
-    end
+class Castle < Building
+  # A castle always has a garden of 300 sq. m
+  def floor_area
+    super + 300  # `super` calls `floor_area` of `Building`
   end
 end
 
-class Fastfood < Restaurant
-  attr_reader :preparation_time
-
-  def initialize(name, city, preparation_time)
-    super(name, city)
-    @preparation_time = preparation_time
-  end
-
-  def print_clients
-    puts "----#{@name}----"
-    super
-    puts "----------------"
-  end
-end
-
-class StarRestaurant < Restaurant
-  attr_reader :stars
-
-  def initialize(name, city, stars)
-    super(name, city)
-    @stars = stars
-  end
-
-  def print_clients
-    puts "you don't have access to star restaurants clients!"
-  end
-end
-
-mcdonald = Fastfood.new("mcdo", "berlin", 5)
-mcdonald.add_reservation("boris")
-mcdonald.add_reservation("seb")
-mcdonald.add_reservation("romain")
-mcdonald.print_clients
-
-fancy_place = StarRestaurant.new("fancy", "paris", 4)
-fancy_place.add_reservation("boris")
-fancy_place.add_reservation("seb")
-fancy_place.add_reservation("romain")
-fancy_place.print_clients
+some_castle = Castle.new('Tower of London', 32, 35)
+some_castle.floor_area # => 1420
 ```
 
 As you see, `super` is making a call to the method with the same name in the Super-Class (other word for Parent Class).
 
 #### Disclaimer
 
+REAL WORLD EXAMPLE : IO
+
+Inheritance is used when classes need to share behavior and properties
+
+Subclasses inherit methods and instance variables from parents
+
+On top of that, subclasses can define more instance variables and methods
+
+Use super to access the parent method with the same name
+
 As with `yield`, not often will you have to define your own parent/child classes, but you need to understand how it works, cause you will often inherit your classes from classes already coded by developers.
+
+But you'll often inherit from Rails classes (ActiveRecord::Base, ActionController::Base, ...)
 
 ### Class Methods
 
-Last week, we've seen things like this:
+REMINDER: INSTANCE VS CLASS
+
+A class is used to create instances using the new method
+
+```ruby
+# castle.rb
+  class Castle # This is a class
+  end
+  my_castle = Castle.new('Tower of London', 32, 35) # This is an instance of the Castle class
+```
+
+Instance Methods
+```ruby
+  class Castle < Building
+    def has_a_butler?
+      @butler != nil
+    end
+  end
+```
+The has_a_butler? method is an instance method
+We can call it on a single Castle instance
+my_castle.has_a_butler? #=> false
+Not on the Castle class directly
+Castle # This is the Castle class
+Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
+
+Class Methods
+
+The are called on the class directly.
+Castle.categories
+
+```ruby
+  class Castle < Building
+    def self.categories
+      return ['Medieval', 'Norman', 'Ancient']
+    end
+  end
+```
+Note the self on the method definition.
+
+You can't call class methods on instances!
+some_castle = Castle.new('Tower of London', 32, 35)
+some_castle.categories #=> Undefined method `categories`
+
+WHEN TO CREATE CLASS METHODS?
+MAKES SENSE TO USE A CLASS METHOD
+```ruby 
+  class House
+    # [...]
+  end
+
+  def self.price_per_square_meter(city)
+    case city
+    when "Paris" then 9000
+    when "Brussels" then 3000
+    else raise Exception.new("No data for #{city}")
+    end
+  end
+```
+puts House.price_per_square_meter("Paris") # => 9000
+IN A NUTSHELL, You create a class method if it does not need/is not relevant to a single instance. You will use class methods more than you define them.
+
+Last week, we've seen real world examples:
+
 
 ```ruby
 require "nokogiri"
@@ -337,76 +302,91 @@ JSON.parse('{ "key": "value", "other_key": "other_value" }')
 
 `now` and `parse` are methods called on the class `Time`, `JSON`, etc. not on instances of these classes. Methods like this, as you can guess, are called **class methods** and you can create them too if you want to.
 
-```ruby
-# Defining your own class methods
-
-class Restaurant
-  attr_accessor :name, :city, :clients
-
-  def self.categories
-    return %w(bistrot japanese italian french)
-  end
-  def self.price_for(category)
-    case category
-    when "japanese"
-      price = 13
-    when "italian"
-      price = 20
-    end
-    return price
-  end
-
-  def initialize(name, city)
-    @name, @city = name, city
-    @clients = []
-  end
-
-  def print_clients
-    @clients.each_with_index do |client, index|
-      puts "Client ##{index + 1} => #{client}"
-    end
-  end
-end
-
-puts Restaurant.categories
-puts Restaurant.price_for("italian")
-```
-
 As you see, `self` represent the class itself in this context. But put inside an instance method, `self` represents the instance on which the method is called. Let's see it with a nice example to understand.
+
 
 ### Self keyword
 
+2 use cases:
+
+1.Inside an instance method
+2.Inside a Class definition, to define Class methods
+
+1.Inside of an instance method: self refers to the instance on which the instance method was called
+
+  1.1 self is not mandatory:
 ```ruby
-class Chief
-  attr_accessor :name, :years, :restaurant
-  def initialize(name, years, restaurant)
-    @name, @years = name, years
-    @restaurant = restaurant
-  end
-end
-
-class Restaurant
-  attr_accessor :name, :city, :clients, :chief
-
-  def initialize(name, city, chief_name, chief_years)
-    @name, @city = name, city
-    @clients = []
-    @chief = Chief.new(chief_name, chief_years, self)
-  end
-
-  def print_clients()
-    @clients.each_with_index do |client, index|
-      puts "Client ##{index + 1} => #{client}"
+class Skyscraper < Building
+  def type_of_owner
+    if @length > 50
+      "this #{self.capitalized_name} is a skyscraper for Spider-Man."
+    else
+      "this #{self.capitalized_name} is a skyscraper for beginners"
     end
   end
+
+  def capitalized_name
+    @name.capitalize
+  end
 end
 
-bristol = Restaurant.new("Le Bristol", "Paris", "Frechont", 20)
-
-frechont = bristol.chief
-
-puts "#{frechont.restaurant.name}'s chief is #{frechont.name}"
-puts "He's been cooking for about #{frechont.years} years"
+nyc_skyscraper = Skyscraper.new("empire State Building", 30, 60)
+nyc_skyscraper.type_of_owner # => "This Empire State Building is a skyscrapper for Spider-Man."
 ```
 
-As you see, here we need `self` in `Restaurant#initialize` in order to build a chief who is aware of the restaurant she/he cooks for! Otherwise it would be a terrible chief..
+
+  1.2 When do we actually need it explicitly? Self is mandatory
+```ruby
+class Butler
+  def initialize(castle)
+    @castle = castle # We want @castle to store an instance of Castle.
+  end
+
+  def clean_castle
+    puts "#{@castle.name} is cleaned!"
+  end
+end
+
+class Castle < Building
+  attr_reader :butler, :ruler
+
+  def initialize(name, width, length, ruler)
+    super(name, width, length)
+    @ruler = ruler
+    @butler = Butler.new(???) # We need to pass the current instance of Castle
+  end
+end
+
+class Castle < Building
+  attr_reader :butler, :ruler
+
+  def initialize(name, width, length, ruler)
+    super(name, width, length)
+    @ruler = ruler
+    @butler = Butler.new(self)
+  end
+
+  def ownership_details
+    "#{@name} is ruled by #{ruler_name}"
+  end
+
+  def ruler_name
+    @ruler.capitalize
+  end
+end
+
+aladdin_castle = Castle.new("The magical Sultan palace", 410, 520, 'Aladdin')
+aladdin_castle.ownership_details # => "The magical sultan palace is ruled by Aladdin"
+aladdin_castle.butler.clean_castle # => "The magical sultan palace is cleaned!"
+```
+As you see, here we need `self` in `Castlet#initialize` in order to build a Butler who is aware of the Castle she/he works for!
+
+
+2.Inside a class definition - To define Class methods
+```ruby
+class House
+  def self.price_per_square_meter(city)
+    # [...]
+  end
+end
+```
