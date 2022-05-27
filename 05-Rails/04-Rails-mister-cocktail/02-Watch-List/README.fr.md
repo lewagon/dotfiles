@@ -62,6 +62,13 @@ Avant de commencer à coder, n'oublie pas de configurer ton application Rails po
 yarn add bootstrap@4.6 jquery popper.js
 ```
 
+Ajoute les node_modules aux assets :
+
+```ruby
+# config/initializers/asset.rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 Et on va ajouter les gems dont on a besoin :
 
 ```ruby
@@ -87,7 +94,7 @@ unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails
 Enfin, on va importer la bibliothèque JavaScript Bootstrap avec Webpack :
 
 ```js
-// app/javascript/packs/application.js
+// app/javascript/application.js
 import 'bootstrap';
 ```
 
