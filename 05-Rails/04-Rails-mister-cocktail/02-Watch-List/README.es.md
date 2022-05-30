@@ -16,11 +16,11 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-**Nota**: ¡Ya debes poder hacer esto sin ver tus apuntes! No olvides el `--database=postgresql` (hablaremos de esto mañana). 😉
+**Nota**: ¡Ya debes poder hacer esto sin ver tus apuntes! No olvides el `-d postgresql` (hablaremos de esto mañana). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -77,6 +77,7 @@ También debes agregar las gemas que vamos a necesitar:
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form', github: 'heartcombo/simple_form'
+gem "sassc-rails" # Uncomment this line
 ```
 
 ```bash

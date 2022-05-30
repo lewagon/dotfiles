@@ -13,11 +13,11 @@ yarn -v
 
 如果没看到的话，那请根据配置指南安装：[macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn)，[Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn)，[Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn)。
 
-**注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`--database=postgresql`（明天你就知道为什么了）😉
+**注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`-d postgresql`（明天你就知道为什么了）😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -74,6 +74,7 @@ Rails.application.config.assets.paths << Rails.root.join("node_modules")
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.15'
 gem 'simple_form', github: 'heartcombo/simple_form'
+gem "sassc-rails" # Uncomment this line
 ```
 
 ```bash

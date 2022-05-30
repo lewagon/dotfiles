@@ -1,6 +1,7 @@
 ## Background & Objectives
 
 The objective of this challenge is to build a two-model Rails app with a restaurant and anonymous reviews.
+
 You can refer to the [Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model) for a similar example using articles and comments.
 
 ## Rails app generation
@@ -23,7 +24,36 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure you can use simple form, Bootstrap, and have a cool stylesheets folder (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that at the next session!).
+## Front-end setup
+
+### Install Bootstrap stylesheets
+
+Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap stylesheets to your Rails app by copy-pasting the link tag in the `head` of the `application.html.erb` layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+You can now use any Bootstrap class anywhere in your Rails views 🎉
+
+### Simple Form gem
+
+To add [Simple Form](https://github.com/heartcombo/simple_form) to your app, add the gem to your Gemfile:
+
+```ruby
+# Gemfile
+# [...]
+gem "simple_form", github: "heartcombo/simple_form"
+```
+
+Then run:
+
+```bash
+bundle install
+rails generate simple_form:install --bootstrap
+```
 
 ### Testing your code
 
@@ -36,7 +66,7 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 Then testing your code is as simple as usual with a good ol'
 
 ```bash
-rake
+rspec
 ```
 
 If you have trouble running `rake`, you may need to run `bin/rake`. It means that your `$PATH` does not contain the `./bin` folder, something you can fix in your dotfiles' zshrc (see [our default conf](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))
@@ -133,8 +163,6 @@ Now, it's time to implement all the routes you need to build this product!
 
 ### Views
 
-Let's turn our attention to frontend, because that is what our users are going to see! Follow [this guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to set up your Rails frontend if you haven't done it at the beginning of the challenge (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that tomorrow!).
-
 #### Layout / partials
 
 Remember to refactor your views using layouts and partials. For example:
@@ -158,12 +186,14 @@ This generates the following HTML:
 <a href="/restaurants/3" class="btn btn-primary">See details</a>
 ```
 
-##### [form_for](http://guides.rubyonrails.org/form_helpers.html)
+##### [simple_form_for](https://github.com/heartcombo/simple_form)
 
-Be careful though - your reviews URLs are now nested in `/restaurants/:restaurant_id`. This means you can't use `form_for` the same way you did with a non-nested resource. If you write:
+Since we installed Simple Form, we are going to use the `simple_form_for` helper instead of `form_for` from now on.
+
+Your reviews URLs are now nested in `/restaurants/:restaurant_id`. This means you can't use `simple_form_for` the same way you did with a non-nested resource. If you write:
 
 ```erb
-<%= form_for(@review) do |f| %>
+<%= simple_form_for(@review) do |f| %>
   <!-- [...] -->
 <% end %>
 ```
@@ -179,7 +209,7 @@ It will generate this HTML:
 That's not what we want because **we don't have a route for `POST "reviews"`**. Instead, you will have to use the nested resource syntax for `form_for`:
 
 ```erb
-<%= form_for [@restaurant, @review] do |f| %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
   <!-- [...] -->
 <% end %>
 ```
@@ -193,8 +223,6 @@ This will generate the following HTML form:
 ```
 
 This URL is now consistent with the route `POST "restaurants/:restaurant_id/reviews"` you have defined in `routes.rb`. Yeah! For a bit more info on this, have a read of [this post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
-
-**Hint:** Install the [simple_form](https://github.com/plataformatec/simple_form) gem to get bootstrap-compatible forms with a lighter syntax.
 
 ### Improve your app
 

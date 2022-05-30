@@ -1,7 +1,6 @@
 ## Background & Objectives
 
-We want to build an anonymous wiki (like [this one](https://wagon-wikinimous.herokuapp.com)) where anyone can create a new article
-or update an existing one.
+We want to build an anonymous wiki (like [this one](https://wagon-wikinimous.herokuapp.com)) where anyone can create a new article or update an existing one.
 
 There is no `rake` here, and do not create your Rails app in `fullstack-challenges` ⛔️
 
@@ -19,7 +18,7 @@ git push origin master
 
 ### 1 - Model
 
-Generate the `Article` model through the right rails generator. It should have at least the following columns:
+Generate the `Article` model through the right Rails generator. It should have at least the following columns:
 
 - `title`, as a `string`
 - `content`, as a `text`
@@ -35,9 +34,7 @@ Article.last        # => should be the one you just saved
 
 ### 2 - Seed
 
-Add the [`faker` gem](https://github.com/stympy/faker) to your `Gemfile` and
-run `bundle install`. Use this gem to generate 10 fake articles in
-`db/seeds.rb`. When your code is done, you can run:
+Add the [`faker` gem](https://github.com/stympy/faker) to your `Gemfile` and run `bundle install`. Use this gem to generate 10 fake articles in `db/seeds.rb`. When your code is done, you can run:
 
 ```bash
 rails db:seed
@@ -45,9 +42,34 @@ rails db:seed
 
 ### 3 - Routes, Controller & Views
 
-Generate your controller, and implement all 7 CRUD default actions to
-list, show, create, update and destroy an article, like we did for the task manager.
+Generate your controller, and implement all 7 CRUD default actions to list, show, create, update and destroy an article, like we did for the task manager.
 
 You can now directly use the `resources` shortcut in your routes.
 
 Have a look at the [live app](https://wagon-wikinimous.herokuapp.com) to see what it should look like. 😉
+
+### 4 - Front-end
+
+**Install Bootstrap stylesheets**
+
+Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap to your Rails app by copy-pasting the link tag in the `head` of the `application.html.erb` layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+You can now use any Bootstrap class anywhere in your Rails views 🎉
+
+**Install Font Awesome**
+
+Add Font Awesome `link` tag in the `head` of your layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+```
+
+You can now use any of the [free Font Awesome icons](https://fontawesome.com/search?m=free) 🎉

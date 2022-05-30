@@ -8,7 +8,11 @@ We want to build a simple airbnb clone (like [this one](https://rails-simple-air
 - As a user, I can edit the details of a flat if I made a mistake
 - As a user, I can delete a flat from the website, in case I don't want to rent it anymore
 
-There is no `rake` here, and do not create your Rails app in `fullstack-challenges` ⛔
+There is no `rake` for this challenge.
+
+## Rails app generation
+
+Create a new Rails app in your GitHub nickname folder:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -18,6 +22,49 @@ git add .
 git commit -m "rails new"
 gh repo create --public --source=.
 git push origin master
+```
+
+## Front-end setup
+
+### Bootstrap stylesheets
+
+Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap stylesheets to your Rails app by copy-pasting the link tag in the `head` of the `application.html.erb` layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+You can now use any Bootstrap class anywhere in your Rails views 🎉
+
+### Font Awesome
+
+Add Font Awesome `link` tag in the `head` of your layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+```
+
+You can now use any of the [free Font Awesome icons](https://fontawesome.com/search?m=free) anywhere in your Rails views 🎉
+
+### Simple Form gem
+
+To add [Simple Form](https://github.com/heartcombo/simple_form) to your app, add the gem to your Gemfile:
+
+```ruby
+# Gemfile
+# [...]
+gem "simple_form", github: "heartcombo/simple_form"
+```
+
+Then run:
+
+```bash
+bundle install
+rails generate simple_form:install --bootstrap
 ```
 
 ## Specs
@@ -34,7 +81,7 @@ Generate the `Flat` model through the right rails generator. It should have the 
 
 ### 2 - Controller & Routes
 
-Generate an empty (no actions) `FlatsController` with the right rails generator.
+Generate an empty (no action) `FlatsController` with the right rails generator.
 
 We can start off by adding all our 7 CRUD routes in our `config/routes.rb` as we will be building them all! What keyword can you use to generate all of them directly?
 
@@ -58,7 +105,7 @@ Do you remember why we use `.create!` instead of just `.create`? Ask around if y
 
 Let's add the correct action in our `FlatsController` (hint: it's `index` 😉). The action in the controller should fetch all flats in our database (we have Active Record for that!) and pass in onto the view.
 
-The view should loop over these to display them, like in the screenshot below. Let start designing right from the begining. We can use [font awesome](https://fontawesome.com/icons) or [materialize](http://materializecss.com/icons.html) for icons.
+The view should loop over these to display them, like in the screenshot below. Let start designing right from the begining. You can use [font awesome](https://fontawesome.com/search?m=free) for icons.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png)
 

@@ -8,7 +8,6 @@ La propagation DNS peut (parfois) prendre jusqu'à 24 heures. Si ton domaine ne 
 
 Une fois que c'est fait, rends-toi sur la [page Produits](https://kitt.lewagon.com/camps/<user.batch_slug>/products) de ton batch, sélectionne le tien et clique sur `view details`. Puis ajoute ton domaine là où cela t'est demandé. Cela permettra aux profs d'avoir un aperçu de ton projet.
 
-
 Le Wagon est un partenaire officiel de GitHub depuis 2015 et, grâce à ce partenariat, tu peux accéder au [Github Student Developer Pack](https://education.github.com/pack). Retrouve toutes les infos [ici](https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3).
 
 ## Aperçu
