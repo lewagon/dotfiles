@@ -208,6 +208,13 @@ controller.action_name # 替换为要测试的操作的真实名称
 ruby lib/test.rb
 ```
 
+**提示**：如果你在搜刮时遇到`403 Forbidden Bots (OpenURI::HTTPError)`，有一个简单的方法，就是在HTTP请求的头文件中指定一个`User-Agent`。下面是一个使用`open-uri`的例子。
+
+```ruby
+USER_AGENT = "Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
+html_content = URI.open(url, "User-Agent" => USER_AGENT).read
+```
+
 ### 路由
 
 在Cookbook上，我们给了你router路由。这次，试着自己编写你自己的路由代码吧！记住，在一天结束时，我们要调用 `app.rb` 里的 `router.run` ，这应要启动我们的应用程序！

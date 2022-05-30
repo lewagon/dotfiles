@@ -65,6 +65,11 @@ Antes de comenzar a escribir tu código, no olvides configurar tu app Rails para
 yarn add bootstrap@4.6 jquery popper.js
 ```
 
+``ruby
+# config/initializers/asset.rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 También debes agregar las gemas que vamos a necesitar:
 
 ```ruby
@@ -120,7 +125,7 @@ environment.plugins.prepend('Provide',
 module.exports = environment
 ```
 ```js
-// app/javascript/packs/application.js
+// app/javascript/application.js
 import 'bootstrap';
 ```
 

@@ -62,6 +62,13 @@ Before starting to code, don't forget to setup your Rails app for Front-end, lik
 yarn add bootstrap @popperjs/core
 ```
 
+We need to add the node modules to the assets path:
+
+```ruby
+# config/initializers/asset.rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 And add the gems we're going to need:
 
 ```ruby
@@ -95,7 +102,7 @@ unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails
 Finally let's import the Boostrap JS library using Webpack:
 
 ```js
-// app/javascript/packs/application.js
+// app/javascript/application.js
 import "bootstrap";
 ```
 

@@ -62,6 +62,11 @@ rspec spec/models                # 运行测试
 yarn add bootstrap @popperjs/core
 ```
 
+``ruby
+# config/initializers/asset.rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 添加我们要用到的gem：
 
 ```ruby
@@ -88,7 +93,7 @@ unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails
 最后我们需要用webpack导入Boostrap JS库：
 
 ```js
-// app/javascript/packs/application.js
+// app/javascript/application.js
 import "bootstrap";
 ```
 
