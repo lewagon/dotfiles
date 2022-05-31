@@ -38,7 +38,7 @@ ruby lib/farming_diary.rb
 Crée une classe `Rice` et copie/colle toutes les méthodes de la classe `Corn`.
 - Ajuste la production de grains dans `water!` : ajoute seulement 5 grains.
 - `ripe?` a le même comportement que dans `Corn`.
-- `Rice` a une méthode spécifique appelée `transplant!`, qui produit 10 fois plus de grains.
+- `Rice` a une méthode spécifique appelée `transplant!`, qui produit 10 grains supplémentaires.
 
 Complète ton calendrier agricole en plantant du riz le jour 2 (**Day Two**).
 
