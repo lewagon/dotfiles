@@ -30,6 +30,7 @@ Plug 'ervandew/supertab'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'fladson/vim-kitty'
 Plug 'sirver/UltiSnips'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
