@@ -125,7 +125,17 @@ class Castle
 end
 ```
 
-- Wow, lots of duplicated code here... and we know the wheel Don't Repeat Yourself. Let's apply inheritance and put all common parts in the parent class.
+### Inheritance
+
+- Wow, lots of duplicated code here... and we know the rule of thumb: Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class.We can make our classes inherit from a more generic SuperClass called Building. The syntax is pretty simple:
+
+```ruby
+class SuperClass
+end
+
+class SubClass < SuperClass
+end
+```
 
 ```ruby
 class Building
@@ -159,17 +169,6 @@ some_house.name #=> "White House"
 some_house.floor_area #=> 1326
 ```
 
-### Inheritance
-- Now how can we make our classes inherit from this. The syntax is pretty simple:
-
-```ruby
-class SuperClass
-end
-
-class SubClass < SuperClass
-end
-```
-
 - Let's add some behavior to our classes and play with it. Only a castle may have a butler, so it's a specific behavior.
 
 ```ruby
@@ -189,6 +188,7 @@ some_castle.has_a_butler? # => true
 some_house = House.new('White House', 26, 51)
 some_house.has_a_butler? #=> Undefined method `has_a_butler?`
 ```
+
 #### `super` keyword
 
 - We all know that a Castle in usually bigger than a House (bigger floor_area). How can we make sure that this behavior is translated into code ? We need to change an inherited method. With the super keyword, which calls the parent's method with the same name. Now, let's refacto our classes using `super` keyword:
@@ -263,14 +263,14 @@ Castle.categories
     end
   end
 ```
-Note the self on the method definition.
+Note the self on the method definition. Self represents the ceiling he is inside of. Here the ceiling of self in the class. So self represents the class itself.
 
 You can't call class methods on instances!
 some_castle = Castle.new('Tower of London', 32, 35)
 some_castle.categories #=> Undefined method `categories`
 
-WHEN TO CREATE CLASS METHODS?
-MAKES SENSE TO USE A CLASS METHOD
+When to create class methods?
+
 ```ruby 
   class House
     # [...]
@@ -285,10 +285,9 @@ MAKES SENSE TO USE A CLASS METHOD
   end
 ```
 puts House.price_per_square_meter("Paris") # => 9000
-IN A NUTSHELL, You create a class method if it does not need/is not relevant to a single instance. You will use class methods more than you define them.
+In a nutshell, You create a class method if it does not need/is not relevant to a single instance. You will use class methods more than you define them.
 
 Last week, we've seen real world examples:
-
 
 ```ruby
 require "nokogiri"
@@ -309,12 +308,22 @@ As you see, `self` represent the class itself in this context. But put inside an
 
 2 use cases:
 
-1.Inside an instance method
-2.Inside a Class definition, to define Class methods
+1.Inside a Class definition, to define Class methods (as we just did in the second chapter of the lecture)
+2.Inside an instance method
 
-1.Inside of an instance method: self refers to the instance on which the instance method was called
 
-  1.1 self is not mandatory:
+1.Inside a class definition - To define Class methods.
+```ruby
+class House
+  def self.price_per_square_meter(city)
+    # [...]
+  end
+end
+```
+
+2.Inside of an instance method: self refers to the instance on which the instance method was called
+
+  2.1 self is not mandatory:
 ```ruby
 class Skyscraper < Building
   def type_of_owner
@@ -335,7 +344,7 @@ nyc_skyscraper.type_of_owner # => "This Empire State Building is a skyscrapper f
 ```
 
 
-  1.2 When do we actually need it explicitly? Self is mandatory
+  2.1 When do we actually need it explicitly? Self is mandatory
 ```ruby
 class Butler
   def initialize(castle)
@@ -381,12 +390,6 @@ aladdin_castle.butler.clean_castle # => "The magical sultan palace is cleaned!"
 ```
 As you see, here we need `self` in `Castlet#initialize` in order to build a Butler who is aware of the Castle she/he works for!
 
+As a key takeway, self represents the ceiling he is inside of, if its ceiling is a class, it represents the class, if it is inside of an instance method it represents the instance.(mandatory or not)
 
-2.Inside a class definition - To define Class methods
-```ruby
-class House
-  def self.price_per_square_meter(city)
-    # [...]
-  end
-end
-```
+
