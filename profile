@@ -25,3 +25,14 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# set PATH so it includes pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+source ~/google-cloud-sdk/path.bash.inc
+# The next line enables bash completion for gcloud.
+source ~/google-cloud-sdk/completion.bash.inc
