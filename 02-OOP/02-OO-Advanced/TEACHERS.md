@@ -75,21 +75,21 @@ Now time to move on to the real content of the lecture. We'll see three importan
 Imagine you had three classes, each one to create a different type of building. Make sure you create 3 files to show the students again about the require_relative concept again.
 
 ```ruby
-  # house.rb  
-  class House
-  end
+# house.rb  
+class House
+end
 ```
 
 ```ruby
-  # skyscraper.rb
-  class Skyscraper
-  end
+# skyscraper.rb
+class Skyscraper
+end
 ```
 
 ```ruby
-  # castle.rb
-  class Castle
-  end
+# castle.rb
+class Castle
+end
 ```
 
 - They share some properties. They all have a `name`, a `width` and a `length`. For every building we have a way to calculate the floor area. You can create 3 files and repeat 3 times the same thing to show them the power of inheritance later and the DRY principle.
@@ -236,15 +236,10 @@ some_castle.floor_area # => 1420
 #### Wrap up the inheritance chapter
 
 - Inheritance is used when classes need to share behavior and properties
-
 - Subclasses inherit methods and instance variables from parents
-
 - On top of that, subclasses can define more instance variables and methods
-
 - Use super to access the parent method with the same name
-
 - As with `yield`, not often will you have to define your own parent/child classes, but you need to understand how it works, cause you will often inherit your classes from classes already coded by developers.
-
 - But you'll often inherit from Rails classes (ActiveRecord::Base, ActionController::Base, ...)
 
 ### Second chapter: Class Methods
@@ -254,25 +249,25 @@ some_castle.floor_area # => 1420
 
 ```ruby
 # castle.rb
-  class Castle # This is a class Castle
-  end
-  my_castle = Castle.new('Tower of London', 32, 35) # This is an instance of the Castle class
+class Castle # This is a class Castle
+end
+my_castle = Castle.new('Tower of London', 32, 35) # This is an instance of the Castle class
 ```
 
 Instance Methods
 ```ruby
-  class Castle < Building
-    def has_a_butler?
-      @butler != nil
-    end
+class Castle < Building
+  def has_a_butler?
+    @butler != nil
   end
+end
 
-  #The has_a_butler? method is an instance method
-  #We can call the instance method has_a_butler? on a single Castle instance
-  p my_castle.has_a_butler? #=> false
+#The has_a_butler? method is an instance method
+#We can call the instance method has_a_butler? on a single Castle instance
+p my_castle.has_a_butler? #=> false
 
-  #We cannot call the instance method has_a_butler on the Castle class directly
-  p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
+#We cannot call the instance method has_a_butler on the Castle class directly
+p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
 ```
 Instance methods are called on instances
 Class methods are called on classes.
@@ -284,11 +279,11 @@ What are class methods ?
 - Castle.categories
 
 ```ruby
-  class Castle < Building
-    def self.categories
-      return ['Medieval', 'Norman', 'Ancient']
-    end
+class Castle < Building
+  def self.categories
+    return ['Medieval', 'Norman', 'Ancient']
   end
+end
 ```
 
 - Note the self on the method definition. In terms of way to remember it, you can use the following metaphor: Self represents the ceiling he is inside of. Here the ceiling of self in the class. So self represents the class itself.
@@ -303,19 +298,19 @@ some_castle.categories #=> Undefined method `categories`
 When to create class methods and why?
 
 ```ruby 
-  class House < Building
-    # [...]
-  end
+class House < Building
+  # [...]
+end
 
-  def self.price_per_square_meter(city)
-    case city
-    when "Paris" then 9000
-    when "Brussels" then 3000
-    else raise Exception.new("No data for #{city}")
-    end
+def self.price_per_square_meter(city)
+  case city
+  when "Paris" then 9000
+  when "Brussels" then 3000
+  else raise Exception.new("No data for #{city}")
   end
+end
 
-  puts House.price_per_square_meter("Paris") # => 9000
+puts House.price_per_square_meter("Paris") # => 9000
 ```
 - In a nutshell, You create a class method if it does not need/is not relevant to a single instance. You will use class methods more than you define them.
 
