@@ -269,9 +269,9 @@ p my_castle.has_a_butler? #=> false
 #We cannot call the instance method has_a_butler on the Castle class directly
 p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
 ```
-Instance methods are called on instances
-Class methods are called on classes.
 
+- Instance methods are called on instances
+- Class methods are called on classes.
 
 What are class methods ?
 
@@ -287,8 +287,7 @@ end
 ```
 
 - Note the self on the method definition. In terms of way to remember it, you can use the following metaphor: Self represents the ceiling he is inside of. Here the ceiling of self in the class. So self represents the class itself.
-
-= You can't call class methods on instances!
+- You can't call class methods on instances!
 
 ```ruby 
 some_castle = Castle.new('Tower of London', 32, 35)
@@ -334,8 +333,8 @@ As you see, `self` represent the class itself in this context. But put inside an
 ### Third chapter: Self keyword
 
 - 2 use cases:
-  - 1.Inside a Class definition, to define Class methods (as we just did in the second chapter of the lecture)
-  - 2.Inside an instance method
+  - 1. Inside a Class definition, to define Class methods (as we just did in the second chapter of the lecture)
+  - 2. Inside an instance method
 
 
 1.Inside a class definition - To define Class methods.
