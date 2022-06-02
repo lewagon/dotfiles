@@ -368,7 +368,7 @@ nyc_skyscraper = Skyscraper.new("empire State Building", 30, 60)
 nyc_skyscraper.type_of_owner # => "This Empire State Building is a skyscrapper for Spider-Man."
 ```
 
-When do we actually need it explicitly? Case in which Self is mandatory
+When do we actually need it explicitly? Let's now see the case in which Self is mandatory
 ```ruby
 class Butler
   def initialize(castle)
