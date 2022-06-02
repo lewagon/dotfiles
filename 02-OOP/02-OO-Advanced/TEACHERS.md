@@ -85,7 +85,7 @@ class Castle
 end
 ```
 
-- They share some properties. They all have a name, a width and a length. For every building we have a way to calculate the floor area
+- They share some properties. They all have a name, a width and a length. For every building we have a way to calculate the floor area. You can create 3 files and repeat 3 times the same thing to show them the power of inheritance later and the DRY principle.
 
 ```ruby
 class House
