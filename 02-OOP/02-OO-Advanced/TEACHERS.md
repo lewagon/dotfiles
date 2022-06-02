@@ -70,27 +70,29 @@ Now time to move on to the real content of the lecture. We'll see three importan
 
 - Inheritance
 - Class methods
-- self
+- Self
 
-
-- Imagine you had three classes, each one to create a different type of building. Make sure you create 3 files to show the students again about the require_relative concept again.
+Imagine you had three classes, each one to create a different type of building. Make sure you create 3 files to show the students again about the require_relative concept again.
 
 ```ruby
+  # house.rb  
   class House
   end
 ```
 
 ```ruby
+  # skyscraper.rb
   class Skyscraper
   end
 ```
 
 ```ruby
+  # castle.rb
   class Castle
   end
 ```
 
-- They share some properties. They all have a name, a width and a length. For every building we have a way to calculate the floor area. You can create 3 files and repeat 3 times the same thing to show them the power of inheritance later and the DRY principle.
+- They share some properties. They all have a `name`, a `width` and a `length`. For every building we have a way to calculate the floor area. You can create 3 files and repeat 3 times the same thing to show them the power of inheritance later and the DRY principle.
 
 ```ruby
 class House
@@ -132,7 +134,7 @@ end
 
 ### First chapter: Inheritance
 
-- Wow, lots of duplicated code here... let's respect the principle Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class.We can make our classes inherit from a more generic SuperClass/ParentClass called Building. The syntax is pretty simple:
+- Wow, lots of duplicated code here... let's respect the principle Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class.We can make our classes inherit from a more generic SuperClass/ParentClass called Building. The syntax of inheritance is pretty simple:
 
 ```ruby
 class SuperClass
@@ -142,7 +144,8 @@ class SubClass < SuperClass
 end
 ```
 
-```ruby #building.rb
+```ruby 
+# building.rb
 class Building
   attr_reader :name, :width, :length
 
@@ -157,6 +160,7 @@ class Building
 end
 ```
 ```ruby 
+# house.rb
 require_relative 'building' # don't forget the require_relative 'building' here
 
 class House < Building
@@ -168,6 +172,7 @@ some_house.floor_area #=> 1326
 ```
 
 ```ruby 
+# skyscraper.rb
 require_relative 'building' 
 
 class Skyscraper < Building
@@ -179,6 +184,7 @@ some_skyscraper.floor_area #=> 3000
 ```
 
 ```ruby
+# castle.rb
 require_relative 'building' 
 
 class Castle < Building
@@ -187,8 +193,6 @@ end
 some_castle = Castle.new('Tower of London', 32, 35)
 some_castle.name #=> "Tower of London"
 some_castle.floor_area #=> 1120
-```
-
 ```
 
 - Let's add some behavior to our classes and play with it. Only a castle may have a butler, so it's a specific behavior.
