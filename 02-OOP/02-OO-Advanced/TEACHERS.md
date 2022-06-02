@@ -72,21 +72,22 @@ Now time to move on to the real content of the lecture. We'll see three importan
 - Class methods
 - self
 
-- Imagine you had three classes, each one to create a different type of building. 
 
-```ruby #house.rb
-class House
-end
+- Imagine you had three classes, each one to create a different type of building. Make sure you create 3 files to show the students again about the require_relative concept again.
+
+```ruby
+  class House
+  end
 ```
 
-```ruby #skyscrapper.rb
-class Skyscraper
-end
+```ruby
+  class Skyscraper
+  end
 ```
 
-```ruby #castle.rb
-class Castle
-end
+```ruby
+  class Castle
+  end
 ```
 
 - They share some properties. They all have a name, a width and a length. For every building we have a way to calculate the floor area. You can create 3 files and repeat 3 times the same thing to show them the power of inheritance later and the DRY principle.
