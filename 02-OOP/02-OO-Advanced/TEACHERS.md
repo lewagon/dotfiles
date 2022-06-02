@@ -276,7 +276,7 @@ p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
 What are class methods ?
 
 - The are called on the class directly.
-- Castle.categories
+- `Castle.categories`
 
 ```ruby
 class Castle < Building
@@ -333,11 +333,11 @@ As you see, `self` represent the class itself in this context. But put inside an
 ### Third chapter: Self keyword
 
 - 2 use cases:
-  - 1. Inside a Class definition, to define Class methods (as we just did in the second chapter of the lecture)
-  - 2. Inside an instance method
+  - Inside a Class definition, to define Class methods (as we just did in the second chapter of the lecture)
+  - Inside an instance method
 
 
-1.Inside a class definition - To define Class methods.
+1. Inside a class definition - To define Class methods.
 ```ruby
 class House
   def self.price_per_square_meter(city)
@@ -346,7 +346,7 @@ class House
 end
 ```
 
-2.Inside of an instance method: self refers to the instance on which the instance method was called
+2. Inside of an instance method: self refers to the instance on which the instance method was called.
 
   2.1 self is not mandatory:
 ```ruby
@@ -367,7 +367,6 @@ end
 nyc_skyscraper = Skyscraper.new("empire State Building", 30, 60)
 nyc_skyscraper.type_of_owner # => "This Empire State Building is a skyscrapper for Spider-Man."
 ```
-
 
   2.1 When do we actually need it explicitly? Self is mandatory
 ```ruby
