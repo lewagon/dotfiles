@@ -12,7 +12,7 @@ class House
 end
 ```
 
-- Let's define the "constructor", the method that is going to construct our objects. In Ruby this method is called `initialize`:
+- Let's define the "constructor", the method that is going to define the state/properties of our object. In Ruby this method is called `initialize`:
 
 ```ruby
 def initialize(name, width, length)
@@ -45,7 +45,7 @@ def length
 end
 ```
 
-- As you can see this is really annoying, if we have to do this for our 3 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_methods`. Let's refacto our class:
+- As you can see this is really annoying, if we have to do this for our 3 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_methods`. Let's use it:
 
 ```ruby
 class House
@@ -70,17 +70,21 @@ Now time to move on to the real content of the lecture. We'll see three importan
 
 - Inheritance
 - Class methods
-- `self`
+- self
 
 - Imagine you had three classes, each one to create a different type of building. 
 
-```ruby
+```ruby #house.rb
 class House
 end
+```
 
+```ruby #skyscrapper.rb
 class Skyscraper
 end
+```
 
+```ruby #castle.rb
 class Castle
 end
 ```
@@ -125,9 +129,9 @@ class Castle
 end
 ```
 
-### Inheritance
+### First chapter: Inheritance
 
-- Wow, lots of duplicated code here... and we know the rule of thumb: Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class.We can make our classes inherit from a more generic SuperClass called Building. The syntax is pretty simple:
+- Wow, lots of duplicated code here... let's respect the principle Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class.We can make our classes inherit from a more generic SuperClass/ParentClass called Building. The syntax is pretty simple:
 
 ```ruby
 class SuperClass
@@ -137,7 +141,7 @@ class SubClass < SuperClass
 end
 ```
 
-```ruby
+```ruby #building.rb
 class Building
   attr_reader :name, :width, :length
 
@@ -150,12 +154,31 @@ class Building
     @width * @length
   end
 end
+```
+```ruby 
+require_relative 'building' # don't forget the require_relative 'building' here
 
 class House < Building
 end
 
+some_house = House.new('White House', 26, 51)
+some_house.name #=> "White House"
+some_house.floor_area #=> 1326
+```
+
+```ruby 
+require_relative 'building' 
+
 class Skyscraper < Building
 end
+
+some_skyscraper = Skyscraper.new('Empire State Building', 50, 60)
+some_skyscraper.name #=> "Empire State Building"
+some_skyscraper.floor_area #=> 3000
+```
+
+```ruby
+require_relative 'building' 
 
 class Castle < Building
 end
@@ -163,10 +186,8 @@ end
 some_castle = Castle.new('Tower of London', 32, 35)
 some_castle.name #=> "Tower of London"
 some_castle.floor_area #=> 1120
+```
 
-some_house = House.new('White House', 26, 51)
-some_house.name #=> "White House"
-some_house.floor_area #=> 1326
 ```
 
 - Let's add some behavior to our classes and play with it. Only a castle may have a butler, so it's a specific behavior.
@@ -191,7 +212,7 @@ some_house.has_a_butler? #=> Undefined method `has_a_butler?`
 
 #### `super` keyword
 
-- We all know that a Castle in usually bigger than a House (bigger floor_area). How can we make sure that this behavior is translated into code ? We need to change an inherited method. With the super keyword, which calls the parent's method with the same name. Now, let's refacto our classes using `super` keyword:
+- We all know that a Castle in usually bigger than a House (bigger floor_area). How can we make sure that this behavior is translated into code ? We need to change an inherited method. This can be done with the super keyword, which calls the parent's method with the same name. Now, let's refacto our classes using `super` keyword:
 
 ```ruby
 class Castle < Building
@@ -205,33 +226,30 @@ some_castle = Castle.new('Tower of London', 32, 35)
 some_castle.floor_area # => 1420
 ```
 
-As you see, `super` is making a call to the method with the same name in the Super-Class (other word for Parent Class).
+- As you see, `super` is making a call to the method with the same name in the parent class.
 
-#### Disclaimer
+#### Wrap up the inheritance chapter
 
-REAL WORLD EXAMPLE : IO
+- Inheritance is used when classes need to share behavior and properties
 
-Inheritance is used when classes need to share behavior and properties
+- Subclasses inherit methods and instance variables from parents
 
-Subclasses inherit methods and instance variables from parents
+- On top of that, subclasses can define more instance variables and methods
 
-On top of that, subclasses can define more instance variables and methods
+- Use super to access the parent method with the same name
 
-Use super to access the parent method with the same name
+- As with `yield`, not often will you have to define your own parent/child classes, but you need to understand how it works, cause you will often inherit your classes from classes already coded by developers.
 
-As with `yield`, not often will you have to define your own parent/child classes, but you need to understand how it works, cause you will often inherit your classes from classes already coded by developers.
+- But you'll often inherit from Rails classes (ActiveRecord::Base, ActionController::Base, ...)
 
-But you'll often inherit from Rails classes (ActiveRecord::Base, ActionController::Base, ...)
+### Second chapter: Class Methods
 
-### Class Methods
-
-REMINDER: INSTANCE VS CLASS
-
-A class is used to create instances using the new method
+- Remind the sutdents about the difference between instance and class
+- A class is used to create instances using the new method
 
 ```ruby
 # castle.rb
-  class Castle # This is a class
+  class Castle # This is a class Castle
   end
   my_castle = Castle.new('Tower of London', 32, 35) # This is an instance of the Castle class
 ```
@@ -243,18 +261,22 @@ Instance Methods
       @butler != nil
     end
   end
+
+  #The has_a_butler? method is an instance method
+  #We can call the instance method has_a_butler? on a single Castle instance
+  p my_castle.has_a_butler? #=> false
+
+  #We cannot call the instance method has_a_butler on the Castle class directly
+  p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
 ```
-The has_a_butler? method is an instance method
-We can call it on a single Castle instance
-my_castle.has_a_butler? #=> false
-Not on the Castle class directly
-Castle # This is the Castle class
-Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
+Instance methods are called on instances
+Class methods are called on classes.
 
-Class Methods
 
-The are called on the class directly.
-Castle.categories
+What are class methods ?
+
+- The are called on the class directly.
+- Castle.categories
 
 ```ruby
   class Castle < Building
@@ -263,16 +285,20 @@ Castle.categories
     end
   end
 ```
-Note the self on the method definition. Self represents the ceiling he is inside of. Here the ceiling of self in the class. So self represents the class itself.
 
-You can't call class methods on instances!
-some_castle = Castle.new('Tower of London', 32, 35)
-some_castle.categories #=> Undefined method `categories`
+- Note the self on the method definition. In terms of way to remember it, you can use the following metaphor: Self represents the ceiling he is inside of. Here the ceiling of self in the class. So self represents the class itself.
 
-When to create class methods?
+= You can't call class methods on instances!
 
 ```ruby 
-  class House
+some_castle = Castle.new('Tower of London', 32, 35)
+some_castle.categories #=> Undefined method `categories`
+```
+
+When to create class methods and why?
+
+```ruby 
+  class House < Building
     # [...]
   end
 
@@ -283,9 +309,10 @@ When to create class methods?
     else raise Exception.new("No data for #{city}")
     end
   end
+
+  puts House.price_per_square_meter("Paris") # => 9000
 ```
-puts House.price_per_square_meter("Paris") # => 9000
-In a nutshell, You create a class method if it does not need/is not relevant to a single instance. You will use class methods more than you define them.
+- In a nutshell, You create a class method if it does not need/is not relevant to a single instance. You will use class methods more than you define them.
 
 Last week, we've seen real world examples:
 
@@ -304,12 +331,11 @@ JSON.parse('{ "key": "value", "other_key": "other_value" }')
 As you see, `self` represent the class itself in this context. But put inside an instance method, `self` represents the instance on which the method is called. Let's see it with a nice example to understand.
 
 
-### Self keyword
+### Third chapter: Self keyword
 
-2 use cases:
-
-1.Inside a Class definition, to define Class methods (as we just did in the second chapter of the lecture)
-2.Inside an instance method
+- 2 use cases:
+  - 1.Inside a Class definition, to define Class methods (as we just did in the second chapter of the lecture)
+  - 2.Inside an instance method
 
 
 1.Inside a class definition - To define Class methods.
@@ -390,6 +416,6 @@ aladdin_castle.butler.clean_castle # => "The magical sultan palace is cleaned!"
 ```
 As you see, here we need `self` in `Castlet#initialize` in order to build a Butler who is aware of the Castle she/he works for!
 
-As a key takeway, self represents the ceiling he is inside of, if its ceiling is a class, it represents the class, if it is inside of an instance method it represents the instance.(mandatory or not)
+As a key takeway, self represents the ceiling he is inside of, if its ceiling is a class, it represents the class, if it is inside of an instance method it represents the instance(mandatory or not)
 
 
