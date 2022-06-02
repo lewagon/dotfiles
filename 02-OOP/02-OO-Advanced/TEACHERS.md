@@ -337,7 +337,7 @@ As you see, `self` represent the class itself in this context. But put inside an
   - Inside an instance method
 
 
-1. Inside a class definition - To define Class methods.
+- Inside a class definition - To define Class methods.
 ```ruby
 class House
   def self.price_per_square_meter(city)
@@ -346,9 +346,9 @@ class House
 end
 ```
 
-2. Inside of an instance method: self refers to the instance on which the instance method was called.
+- Inside of an instance method: self refers to the instance on which the instance method was called.
 
-  2.1 self is not mandatory:
+Self is not mandatory:
 ```ruby
 class Skyscraper < Building
   def type_of_owner
@@ -368,7 +368,7 @@ nyc_skyscraper = Skyscraper.new("empire State Building", 30, 60)
 nyc_skyscraper.type_of_owner # => "This Empire State Building is a skyscrapper for Spider-Man."
 ```
 
-  2.1 When do we actually need it explicitly? Self is mandatory
+When do we actually need it explicitly? Case in which Self is mandatory
 ```ruby
 class Butler
   def initialize(castle)
