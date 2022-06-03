@@ -1,26 +1,26 @@
 ## Contexto y Objetivos
 
-Ya has pasado bastante tiempo aprendiendo el concepto de Programación Orientada a Objetos en Ruby desde que empezó el bootcamp (¿Alguien se acuerda del Cookbook?).
+Ya ha pasado algo de tiempo desde que comenzaste a aprender el concepto de Programación Orientada a Objetos en Ruby al principio del bootcamp (¿Recuerdas el Cookbook?).
 
-Pero JavaScript también es un lenguaje de Programación Orientada a Objetos, y desde el 2015 (ES6), soporta [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
+Pero JavaScript también es un lenguaje de Programación Orientada a Objetos y soporta [Clases](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) desde el 2015 (ES6).
 
-En este pequeño desafío conocerás las clases de ES6.
+En este pequeño desafío te presentaremos a las clases ES6.
 
-## Primeros pasos: Clases de JavaScript
+## Primeros pasos: Clases JavaScript
 
-Puedes ejecutar las pruebas de este pequeño ejercicio de Node con tu viejo amigo rake:
+Corre los tests de este pequeño ejercicio de Node con el viejo `rake`:
 
 ```bash
 rake
 ```
 
-Tienes que ejecutar 3 pruebas y todas deben salir en verde. Todo lo que necesitas saber está en [esta página de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). Queremos que implementes la clase `User` en el archivo `lib/user.js`con lo siguiente:
+Hay 3 tests que deben pasar en verde. Todo lo que necesitas saber está en [esta página de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). Queremos que implementes la clase `User` en el archivo `lib/user.js` con:
 
 - Una variable de instancia `firstName`
 - Una variable de instancia `lastName`
 - Ambas variables de instancia son inicializadas por el `constructor`
-- Un método de instancia `fullName()` que devuelva el nombre y el apellido concatenados
+- Un método de instancia `fullName()` que devuelva la concatenación del primer y segundo nombre
 
-Eso son 7 líneas de código JS, piensa en cómo trabajaste con la programación orientada a objetos en Ruby, ¡los conceptos son exactamente los mismos aquí!
+Eso representa 7 líneas de código JS. Piensa en cómo aplicaste la Programación Orientada a Objetos en Ruby. ¡Los conceptos son exactamente iguales aquí!
 
-El siguiente desafío acerca es acerca del framework de JavaScript Stimulus, basado en la sintaxis de ES6 Class. ¡Comencemos!
+Ahora vamos a comenzar el desafío del framework de JavaScript llamado **Stimulus** basado en la sintaxis de la clase ES6.
