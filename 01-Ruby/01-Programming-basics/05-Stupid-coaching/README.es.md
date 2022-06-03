@@ -51,6 +51,8 @@ Los objetivos de este desafío son:
 
 ### Respuesta del entrenador/a
 
+⚠️ Antes de comenzar, asegúrate de ejecutar `rake` y leer atentamente los requisitos. Te dará una visión general clara de cuál es el resultado esperado para ambos métodos.
+
 En el archivo `lib/coach_answer.rb`, encontrarás la definición del método `coach_answer`. Verás que toma un argumento, `your_message`, el cual es lo que le dices a tu entrenador/a.
 El método debe devolver una cadena de caracteres `String` (e.g. la respuesta de tu entrenador/a) la cual dependerá de los valores que le pases en `your_message`.
 
