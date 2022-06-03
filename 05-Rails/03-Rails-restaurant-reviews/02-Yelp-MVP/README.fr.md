@@ -107,7 +107,7 @@ GET "restaurants/new"
 POST "restaurants"
 ```
 
-- Un visiteur peut ajouter les détails d'un restaurant, avec tous les avis associés au restaurant.
+- Un visiteur peut voir les détails d'un restaurant, avec tous les avis associés au restaurant.
 
 ```
 GET "restaurants/38"
