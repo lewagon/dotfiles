@@ -40,7 +40,7 @@ Avec les données renvoyées à l'API, construis la page suivante :
 
 ![Météo actuelle](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/weather_api.png)
 
-Pour récupérer la température en degrés Celsius, tu peux ajouter `&unit=metric` dans l'URL de ta requête.
+Pour récupérer la température en degrés Celsius, tu peux ajouter `&units=metric` dans l'URL de ta requête.
 
 Pour récupérer l'image de l'icône, à partir de l'id de l'icône, tu peux utiliser cette URL : `https://openweathermap.org/img/w/{iconId}.png`
 

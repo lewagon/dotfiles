@@ -38,7 +38,7 @@ rake db:drop db:create db:migrate db:seed
 Corre la aplicación Sinatra.
 
 ```bash
-ruby app.rb
+ruby lib/app.rb
 ```
 
 ¡Para mirar, puedes ir a [http://localhost:4567](http://localhost:4567)! Estás corriendo un pequeño servidor web y estás accediendo a él desde tu navegador. ¡Dile adiós a las líneas de comando!

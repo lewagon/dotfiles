@@ -23,6 +23,6 @@ Qu'est-ce qui fait une bonne démo ?
 - Entraîne-toi, encore et encore !
 
 Prépare ta démo en te familiarisant avec des projets antérieurs. C'est un bon moyen de comprendre ce qui fait un bon parcours utilisateur et un bon pitch. Tu en trouveras tout un tas en ligne.
-Explore les [précédents demo days](https://www.youtube.com/playlist?list=PLkbmdtbypn7R_BN6nFX-XZc7uDyMSxhye) de ta ville et d'ailleurs 🚀
+Explore les [précédents demo days](https://www.youtube.com/playlist?list=PLkbmdtbypn7QvNokOhyxcuK4A_OSky6D5) de ta ville et d'ailleurs 🚀
 
 Pendant les démos, assure-toi que les membres de l'équipe qui ne présentent pas prennent note des retours de l'équipe enseignante. Tu en auras besoin pour apporter les corrections nécessaires la semaine prochaine !

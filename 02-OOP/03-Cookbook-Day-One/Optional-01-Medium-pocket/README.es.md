@@ -208,6 +208,13 @@ Luego testea con:
 ruby lib/test.rb
 ```
 
+**Indicio**: si te encuentras con un `403 Forbidden Bots (OpenURI::HTTPError)` mientras haces scraping, hay una forma fácil de evitarlo especificando un `User-Agent` en las **cabeceras** de tu solicitud HTTP. Aquí hay un ejemplo usando `open-uri`:
+
+```ruby
+USER_AGENT = "Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
+html_content = URI.open(url, "User-Agent" => USER_AGENT).read
+```
+
 ### Ruteador
 
 En el Recetario (Cookbook) te dimos el ruteador. Esta vez, ¡intenta crearlo tú mismo/a! Recuerda que al final del día vas a querer llamar a `router.run` en `app.rb` y esto ¡iniciará nuestra aplicación!
