@@ -16,7 +16,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'numirias/semshi'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'dense-analysis/ale'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'davidhalter/jedi-vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'vimwiki/vimwiki'
@@ -29,7 +28,6 @@ Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'fladson/vim-kitty'
-Plug 'sirver/UltiSnips'
 Plug 'github/copilot.vim'
 
 call plug#end()
