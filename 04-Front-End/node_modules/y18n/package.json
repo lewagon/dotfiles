@@ -1,6 +1,6 @@
 {
   "name": "y18n",
-  "version": "4.0.0",
+  "version": "4.0.3",
   "description": "the bare-bones internationalization library used by yargs",
   "main": "index.js",
   "scripts": {

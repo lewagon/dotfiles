@@ -1,6 +1,6 @@
 {
   "name": "prelude-ls",
-  "version": "1.1.2",
+  "version": "1.2.1",
   "author": "George Zahariev <z@georgezahariev.com>",
   "description": "prelude.ls is a functionally oriented utility library. It is powerful and flexible. Almost all of its functions are curried. It is written in, and is the recommended base library for, LiveScript.",
   "keywords": [
@@ -25,12 +25,7 @@
   ],
   "homepage": "http://preludels.com",
   "bugs": "https://github.com/gkz/prelude-ls/issues",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.github.com/gkz/prelude-ls/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -42,11 +37,10 @@
     "test": "make test"
   },
   "devDependencies": {
-    "livescript": "~1.4.0",
-    "uglify-js": "~2.4.12",
-    "mocha": "~2.2.4",
-    "istanbul": "~0.2.4",
-    "browserify": "~3.24.13",
-    "sinon": "~1.10.2"
+    "livescript": "^1.6.0",
+    "uglify-js": "^3.8.1",
+    "mocha": "^7.1.1",
+    "browserify": "^16.5.1",
+    "sinon": "~8.0.1"
   }
 }

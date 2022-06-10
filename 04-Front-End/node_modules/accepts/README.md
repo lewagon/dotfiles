@@ -3,7 +3,7 @@
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Downloads][npm-downloads-image]][npm-url]
 [![Node.js Version][node-version-image]][node-version-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][github-actions-ci-image]][github-actions-ci-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 Higher level content negotiation based on [negotiator](https://www.npmjs.com/package/negotiator).
@@ -28,8 +28,6 @@ $ npm install accepts
 ```
 
 ## API
-
-<!-- eslint-disable no-unused-vars -->
 
 ```js
 var accepts = require('accepts')
@@ -133,10 +131,10 @@ curl -I -H'Accept: text/html' http://localhost:3000/
 
 [coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/accepts/master
 [coveralls-url]: https://coveralls.io/r/jshttp/accepts?branch=master
+[github-actions-ci-image]: https://badgen.net/github/checks/jshttp/accepts/master?label=ci
+[github-actions-ci-url]: https://github.com/jshttp/accepts/actions/workflows/ci.yml
 [node-version-image]: https://badgen.net/npm/node/accepts
 [node-version-url]: https://nodejs.org/en/download
 [npm-downloads-image]: https://badgen.net/npm/dm/accepts
 [npm-url]: https://npmjs.org/package/accepts
 [npm-version-image]: https://badgen.net/npm/v/accepts
-[travis-image]: https://badgen.net/travis/jshttp/accepts/master
-[travis-url]: https://travis-ci.org/jshttp/accepts

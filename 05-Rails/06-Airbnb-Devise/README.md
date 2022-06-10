@@ -67,7 +67,7 @@ Again, only the **lead developer** will do this! Not everyone in the team...
 
 ```bash
 cd rails-airbnb-clone
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 

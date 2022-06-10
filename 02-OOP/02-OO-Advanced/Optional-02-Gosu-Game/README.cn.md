@@ -56,9 +56,9 @@ echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'
 
 2. 我们将画一个 `20x20` 的白色正方形来代表蛇的 **头**。让我们引入一个带有 `SIZE` 常量的 `Snake` 类，并重构 `Game` 的 `initialize` 方法来构建一个与Snake大小成比例的窗口。
 
-3. Let's do some modelling on the `Snake`. What should be its state? What about its behavior? You may need [`Gosu::draw_rect`](http://www.rubydoc.info/github/gosu/gosu/Gosu.draw_rect) 和 `Gosu::Color::WHITE`.
+3. Let's do some modelling on the `Snake`. What should be its state? What about its behavior? You may need [`Gosu::draw_rect`](https://www.rubydoc.info/gems/gosu/Gosu.draw_rect) 和 `Gosu::Color::WHITE`.
 
-4. 让我们将 **方向** 的概念添加到 `Snake`中。现在我们有了一个方向，让我们在 `Snake` 中添加一个 `#move` 方法。记住，如果超出窗口它会死。按下按钮时方向如何变化？你可能需要 [`Gosu.button_down?`](http://www.rubydoc.info/github/gosu/gosu/Gosu#button_down%3F-class_method) 和`Gosu::KB_LEFT`。
+4. 让我们将 **方向** 的概念添加到 `Snake`中。现在我们有了一个方向，让我们在 `Snake` 中添加一个 `#move` 方法。记住，如果超出窗口它会死。按下按钮时方向如何变化？你可能需要 [`Gosu.button_down?`](https://www.rubydoc.info/gems/gosu/Gosu.button_down%3F) 和`Gosu::KB_LEFT`。
 
 5. 为什么这么快😱 ? 让我们试着让蛇爬慢一点。
 6. 让我们做些 `Food` 吧。 Food 将是一个和蛇一样大小的红方块。它需要随机出现在屏幕上。实例变量应该是什么？实现一个 `draw` 方法。
@@ -78,7 +78,7 @@ code .
 我们这样开启游戏：
 
 ```bash
-ruby game.rb
+ruby lib/game.rb
 ```
 
 ## 更进一步

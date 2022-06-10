@@ -64,7 +64,7 @@ Luego a las 5 p.m. cada grupo hará una demostración de su versión/clon de Air
 
 ### `09 Search`
 
-Esta clase es sobre búsquedas. Abarca desde search 101 usando ActiveRecord a soluciones más robustas como ElasticSearch o Algolia.
+Esta clase es sobre búsquedas. Abarca desde search 101 usando Active Record a soluciones más robustas como ElasticSearch o Algolia.
 
 ### `10 Airbnb Ajax en Rails`
 

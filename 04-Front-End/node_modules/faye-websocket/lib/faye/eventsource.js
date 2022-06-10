@@ -1,3 +1,5 @@
+'use strict';
+
 var Stream      = require('stream').Stream,
     util        = require('util'),
     driver      = require('websocket-driver'),

@@ -18,11 +18,11 @@ Your job is now to add HTML inside each card, and the associated CSS in `cards.c
 
 **NOTE**: Try building the `card-trip` without the user avatar in the bottom right hand corner for now. We will add that after we complete our cards.
 
-Don't forget to **hard refresh** your browser (`cmd + shift + r`) to clear your browser's cache if your page doesn't seem to display your current code!
+Don't forget to **hard refresh** your browser (`Cmd + Shift + R`) to clear your browser's cache if your page doesn't seem to display your current code!
 
 ## Organize your CSS with component files
 
-Much like in the last exercise, we will use the new professional structure for our stylesheets. We can put all the css for our different card classes in one css file: `cards.css`:
+Much like in the last exercise, we will use the new professional structure for our stylesheets. We can put all the css for our different card classes in one css file `cards.css`:
 
 ```
 .
@@ -37,7 +37,7 @@ Then in `style.css`:
 
 ```css
 /* Import fonts from Google Fonts */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;500;700");
 
 /* Importing all components file */
 @import url("components/cards.css");
@@ -75,7 +75,6 @@ Now that you have designed your three cards, let's update your last card `card-t
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/position-relative.png)
 
-
 ### Pin a div inside with `position: absolute` (relative to parent)
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/position-top.png)
@@ -91,4 +90,3 @@ Now you can play this technique to add a cool overlay avatar on your `.card-trip
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/card-position.png" alt="" width="400">
 </div>
-

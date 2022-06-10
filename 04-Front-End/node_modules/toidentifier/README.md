@@ -2,7 +2,7 @@
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][github-actions-ci-image]][github-actions-ci-url]
 [![Test Coverage][codecov-image]][codecov-url]
 
 > Convert a string of words to a JavaScript identifier
@@ -48,10 +48,10 @@ the following rules and the new string will be returned:
 [codecov-url]: https://codecov.io/gh/component/toidentifier
 [downloads-image]: https://img.shields.io/npm/dm/toidentifier.svg
 [downloads-url]: https://npmjs.org/package/toidentifier
+[github-actions-ci-image]: https://img.shields.io/github/workflow/status/component/toidentifier/ci/master?label=ci
+[github-actions-ci-url]: https://github.com/component/toidentifier?query=workflow%3Aci
 [npm-image]: https://img.shields.io/npm/v/toidentifier.svg
 [npm-url]: https://npmjs.org/package/toidentifier
-[travis-image]: https://img.shields.io/travis/component/toidentifier/master.svg
-[travis-url]: https://travis-ci.org/component/toidentifier
 
 
 ##

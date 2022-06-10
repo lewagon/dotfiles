@@ -27,7 +27,7 @@ books = [
   "Component-Based Applications",
   "Computer Science Distilled",
   "Eloquent JavaScript",
-  "Github Explained",
+  "GitHub Explained",
   "Lead the Way",
   "Learn Ruby On Rails",
   "Markdown Guide",
@@ -49,8 +49,8 @@ Escribe el método `find_book_enhanced`:
 
 1. Escoge el libro en el medio del arreglo (array).
 1. Compara este libro con el título que buscas:
-  - Es tu libro? Devuelve su índice (index) y ¡ya terminaste!
-  - Tu libro está antes o después del libro pivote? ¡Sigue al paso 3!
+  - ¿Es tu libro? Devuelve su índice (index) y ¡ya terminaste!
+  - ¿Tu libro está antes o después del libro pivote? ¡Sigue al paso 3!
 1. Selecciona la sección del arreglo (array) donde está tu libro.
 1. Repite todo el proceso nuevamente.
 
@@ -70,6 +70,6 @@ La función `find_book_enhanced` es O(log2 n): cada búsqueda tiene el doble de 
 
 ## Sugerencias y recursos complementarios
 
-- Si quieres convertirte en desarrollador, es probable que tengas preguntas sobre Complejidad Temporal en las entrevistas.
+- Si quieres convertirte en desarrollador/a, es probable que tengas preguntas sobre Complejidad Temporal en las entrevistas.
 - Ruby implementa [native binary search](https://ruby-doc.org/core-2.6.5/Array.html#method-i-bsearch)
 - Para leer: [WTF is time complexity?](https://remimercier.com/wtf-time-complexity), written by [Rémi Mercier](https://kitt.lewagon.com/alumni/merciremi)

@@ -1,5 +1,5 @@
 # NOTE: Read about BasicObject#object_id
-# http://www.ruby-doc.org/core-2.5.3/BasicObject.html#method-i-__id__
+# https://ruby-doc.org/core-2.7.5/BasicObject.html#method-i-__id__
 
 # You can try launching `irb` to test some values
 # irb> :foo.object_id
@@ -17,8 +17,8 @@ end
 
 
 # Remember, RTFM! Your doc is your friend
-# - http://www.ruby-doc.org/core-2.5.3/String.html
-# - http://www.ruby-doc.org/core-2.5.3/Symbol.html
+# - https://ruby-doc.org/core-2.7.5/String.html
+# - https://ruby-doc.org/core-2.7.5/Symbol.html
 
 def convert_string_to_symbol(a_string)
   # TODO: return the symbol version of the parameter `a_string` passed to this method

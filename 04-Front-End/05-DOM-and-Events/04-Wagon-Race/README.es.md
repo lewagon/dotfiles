@@ -61,7 +61,7 @@ Actualizamos la posición de un jugador moviendo la clase `active` de un `td` al
 
 Siempre es buena idea hacer lo más que se pueda en markup HTML y clases CSS antes de pasar a JavaScript. Los programadores malos de frontend pasan tiempo escribiendo largos códigos JavaScript que cambian los valores CSS en lugar de algo corto que trabaje bien con las clases CSS.
 
-#### Javascript
+#### JavaScript
 
 Escribe todo el código en `lib/wagon_race.js`. Necesitamos una manera para que JavaScript actualice el estado del tablero. Crea funciones JavaScript simples que actualicen la posición de un jugador. Nuevamente hay varias maneras de hacer esto. Aquí hay un ejemplo:
 

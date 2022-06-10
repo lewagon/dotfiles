@@ -1,5 +1,5 @@
 var path = require('path');
-var parse = path.parse || require('path-parse');
+var parse = path.parse || require('path-parse'); // eslint-disable-line global-require
 
 var getNodeModulesDirs = function getNodeModulesDirs(absoluteStart, modules) {
     var prefix = '/';

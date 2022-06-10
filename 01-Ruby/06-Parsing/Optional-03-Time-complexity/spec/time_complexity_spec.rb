@@ -7,7 +7,7 @@ require "graph.rb"
 
 describe "#find_book" do
   it "should return the book index" do
-    expect(find_book(BOOKS_10, "Github Explained")).to eq 5
+    expect(find_book(BOOKS_10, "GitHub Explained")).to eq 5
     expect(find_book(BOOKS_100, "Data Structures and Algorithms")).to eq 21
   end
 
@@ -18,7 +18,7 @@ end
 
 describe "#find_book_enhanced" do
   it "should return the book index" do
-    expect(find_book_enhanced(BOOKS_10, "Github Explained")).to eq 5
+    expect(find_book_enhanced(BOOKS_10, "GitHub Explained")).to eq 5
     expect(find_book_enhanced(BOOKS_100, "Data Structures and Algorithms")).to eq 21
   end
 

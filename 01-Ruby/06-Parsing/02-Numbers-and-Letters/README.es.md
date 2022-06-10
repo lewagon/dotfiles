@@ -5,7 +5,7 @@
 
 ## Especificaciones
 
-Si eres fan de la televisión francesa, tal vez hayas visto [_Des chiffres et des lettres_](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres). Si eres inglés o te gusta la televisión inglesa, tal vez estés más familiarizado con [_Countdown_](https://www.youtube.com/watch?v=GvV8aVEJmiU)!
+Si eres fan de la televisión francesa, tal vez hayas visto [_Des chiffres et des lettres_](https://en.wikipedia.org/wiki/Des_chiffres_et_des_lettres). Si eres inglés/inglesa o te gusta la televisión inglesa, tal vez estés más familiarizado/a con [_Countdown_](https://www.youtube.com/watch?v=GvV8aVEJmiU)!
 
 El objetivo de este desafío es escribir una versión simplificada de este juego desde la Terminal donde:
 
@@ -35,9 +35,9 @@ Message: Well Done!
 
 - Usarás el Diccionario API de Le Wagon. Veamos lo que recibimos de la API cuando suministramos una [palabra inglesa correcta](https://wagon-dictionary.herokuapp.com/apple)  y una [incorrecta](https://wagon-dictionary.herokuapp.com/zzzz). Presta atención a la estructura de la URL.
 Tu cuadrícula debe ser aleatoria y también debe poder recibir los mismos caracteres varias veces.
-- Asegurate de validar que **1)** tu palabra realmente es una palabra inglesa y **2)** que cada letra de tu palabra esté en la cuadrícula (recuerda que sólo puedes usar las letras una sola vez).
+- Asegúrate de validar que **1)** tu palabra realmente sea una palabra inglesa y **2)** que cada letra de tu palabra esté en la cuadrícula (recuerda que sólo puedes usar las letras una sola vez).
 - Si la palabra no es válida o no está en la cuadrícula, el puntaje será 0 (y deberá estar acompañado por un mensaje para el/la jugador/a explicando porque no obtuvo ningún puntaje).
-- El puntaje depende el tiempo que se tome el/la jugador/a para responder así como de la longitud de la palabra que suministre ¡Mientras más larga sea la pregunta y más corto sea el tiempo de respuesta, mejor será el puntaje! ¡Siéntete libre inventar tus propias reglas para penalidades!
+- El puntaje depende el tiempo que se tome el/la jugador/a para responder, así como de la longitud de la palabra que suministre ¡Mientras más larga sea la pregunta y más corto sea el tiempo de respuesta, mejor será el puntaje! ¡Siéntete libre inventar tus propias reglas para penalidades!
 
 ## Puntos clave de aprendizaje
 

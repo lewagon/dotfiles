@@ -7,7 +7,7 @@
 if condition
   # execute if condition is truthy
 else
-  # execute if condition is falsey
+  # execute if condition is falsy
 end
 ```
 

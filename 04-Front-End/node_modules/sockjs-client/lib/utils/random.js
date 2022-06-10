@@ -1,6 +1,5 @@
 'use strict';
 
-/* global crypto:true */
 var crypto = require('crypto');
 
 // This string has length 32, a power of 2, so the modulus doesn't introduce a

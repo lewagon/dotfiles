@@ -4,14 +4,18 @@
 */
 "use strict";
 
-module.exports = function createInnerContext(options, message, messageOptional) {
+module.exports = function createInnerContext(
+	options,
+	message,
+	messageOptional
+) {
 	let messageReported = false;
 	const childContext = {
 		log: (() => {
-			if(!options.log) return undefined;
-			if(!message) return options.log;
-			const logFunction = (msg) => {
-				if(!messageReported) {
+			if (!options.log) return undefined;
+			if (!message) return options.log;
+			const logFunction = msg => {
+				if (!messageReported) {
 					options.log(message);
 					messageReported = true;
 				}

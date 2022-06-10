@@ -96,9 +96,9 @@ HttpParser.METHODS = {
   32: 'UNLINK'
 };
 
-var VERSION = (process.version || '')
-              .match(/[0-9]+/g)
-              .map(function(n) { return parseInt(n, 10) });
+var VERSION = process.version
+  ? process.version.match(/[0-9]+/g).map(function(n) { return parseInt(n, 10) })
+  : [];
 
 if (VERSION[0] === 0 && VERSION[1] === 12) {
   HttpParser.METHODS[16] = 'REPORT';

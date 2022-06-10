@@ -1,8 +1,8 @@
 ## Contexto y Objetivos
 
-Los correos electrónicos son el alma de cualquier negocio Software como un Servicio (SaaS - software as a service). Es super importante ser capaz de manipularlos programaticamente.
+Los correos electrónicos son el alma de cualquier negocio Software como un Servicio (SaaS - software as a service). Es super importante ser capaz de manipularlos programáticamente.
 
-En la mayoría de las páginas web, los correos electrónicos son claves en la creación de cuentas. Si se deletrea mal, el usuario no podrá recuperar su clave de acceso. Desde la perspectiva del comerciante, es necesario comunicarse con los usuarios y mantener una base de datos de contactos fiable con correos electrónicos válidos.
+En la mayoría de las páginas web, los correos electrónicos son claves en la creación de cuentas. Si se deletrea mal, el/la usuario/la no podrá recuperar su clave de acceso. Desde la perspectiva del comerciante, es necesario comunicarse con los/as usuarios/as y mantener una base de datos de contactos fiable con correos electrónicos válidos.
 
 ## Contexto
 En este desafío asumimos que lanzarás una aplicación en algunas semanas. ¡Informarás a todo el mundo por medio de una campaña de correo electrónico tan pronto la página web esté en línea! Mientras tanto usarás una página de inicio que has creado para recolectar direcciones de correo electrónico.
@@ -21,7 +21,7 @@ Escribe el método `valid?` que devuelva el booleano adecuado dependiendo de la 
 - identifica las distintas partes de una dirección de correo electrónico y escribe una expresión regular que coincida con la dirección de correo electrónico clásica.
 - escribe una expresión regular simple ¡No es necesario que sea perfecta (es imposible escribir una regexp perfecta para direcciones de correo electrónico)!
 
-**Advertencia:** Las expresiones regulares no son lo suficientemente detalladas para validar la conformidad de las direcciones de correo electrónico al 100% como verás en [esta discusión en Stackoverflow](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) y en [esta pagina web](https://emailregex.com/). En el entorno profesional, se de la preferencia a servicios externos como el que proveen [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) o [Mailgun](https://www.mailgun.com/email-validation/) ya que usan una gran base de datos y el aprendizaje automático (machine learning) para determinar si una dirección es válida.
+**Advertencia:** Las expresiones regulares no son lo suficientemente detalladas para validar la conformidad de las direcciones de correo electrónico al 100% como verás en [esta discusión en Stackoverflow](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) y en [esta pagina web](https://emailregex.com/). En el entorno profesional, se le da preferencia a servicios externos como el que provee [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) o [Mailgun](https://www.mailgun.com/email-validation/) ya que usan una gran base de datos y el aprendizaje automático (machine learning) para determinar si una dirección es válida.
 
 
 #### Patrón de una dirección de correo electrónico

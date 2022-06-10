@@ -1,6 +1,6 @@
 ## Setup
 
-We want to continue building our profile page. If you haven't already, let's copy our previous profile into this challenge's folder and add a CSS file to it:
+We want to continue building our profile page. If you haven't already, let's copy your profile into this challenge's folder and add a CSS file to it:
 
 ```bash
 cp -r ../01-Profile-content/profile . # don't forget the trailing dot!
@@ -41,9 +41,8 @@ Pick a nice `background-color`, `font-family`, `color`, `font-size` and `line-he
 
 For instance, if you wanted to use Open-Sans and Poppins (with different font-weights), you could add this at the top of your `style.css`:
 
-
 ```css
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;700");
 ```
 
 Then you can apply it in the rest of your CSS:
@@ -57,17 +56,16 @@ body {
 
 **Feel free to choose other fonts on Google fonts and be creative 😎🌈!**
 
-
 ## Finished?
 
 Once you've finished you can push this exercise and copy the content to the next exercise folder with this command:
 
 ```bash
-# Push to gihtub
+# Push to GitHub
 git add .
 git commit -m "Added fonts & colors to my profile page"
 git push origin master
 
-# Copy folder into next exercise folder
+# Copy your profile into the next exercise folder
 cp -r profile ../03-Finishing-profile-design
 ```

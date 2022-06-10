@@ -1,3 +1,5 @@
+'use strict';
+
 var Stream      = require('stream').Stream,
     util        = require('util'),
     driver      = require('websocket-driver'),
@@ -63,6 +65,8 @@ API.OPEN       = 1;
 API.CLOSING    = 2;
 API.CLOSED     = 3;
 
+API.CLOSE_TIMEOUT = 30000;
+
 var instance = {
   write: function(data) {
     return this.send(data);
@@ -101,7 +105,15 @@ var instance = {
                       "The code must be either 1000, or between 3000 and 4999. " +
                       code + " is neither.");
 
+    if (this.readyState < API.CLOSING) {
+      var self = this;
+      this._closeTimer = setTimeout(function() {
+        self._beginClose('', 1006);
+      }, API.CLOSE_TIMEOUT);
+    }
+
     if (this.readyState !== API.CLOSED) this.readyState = API.CLOSING;
+
     this._driver.close(reason, code);
   },
 
@@ -121,7 +133,7 @@ var instance = {
     });
   },
 
- _open: function() {
+  _open: function() {
     if (this.readyState !== API.CONNECTING) return;
 
     this.readyState = API.OPEN;
@@ -137,7 +149,7 @@ var instance = {
 
     if (this.readable) this.emit('data', data);
 
-    var event = new Event('message', {data: data});
+    var event = new Event('message', { data: data });
     event.initEvent('message', false, false);
     this.dispatchEvent(event);
   },
@@ -145,7 +157,7 @@ var instance = {
   _emitError: function(message) {
     if (this.readyState >= API.CLOSING) return;
 
-    var event = new Event('error', {message: message});
+    var event = new Event('error', { message: message });
     event.initEvent('error', false, false);
     this.dispatchEvent(event);
   },
@@ -156,7 +168,7 @@ var instance = {
     this._closeParams = [reason, code];
 
     if (this._stream) {
-      this._stream.end();
+      this._stream.destroy();
       if (!this._stream.readable) this._finalizeClose();
     }
   },
@@ -165,6 +177,7 @@ var instance = {
     if (this.readyState === API.CLOSED) return;
     this.readyState = API.CLOSED;
 
+    if (this._closeTimer) clearTimeout(this._closeTimer);
     if (this._pingTimer) clearInterval(this._pingTimer);
     if (this._stream) this._stream.end();
 
@@ -174,7 +187,7 @@ var instance = {
     var reason = this._closeParams ? this._closeParams[0] : '',
         code   = this._closeParams ? this._closeParams[1] : 1006;
 
-    var event = new Event('close', {code: code, reason: reason});
+    var event = new Event('close', { code: code, reason: reason });
     event.initEvent('close', false, false);
     this.dispatchEvent(event);
   }

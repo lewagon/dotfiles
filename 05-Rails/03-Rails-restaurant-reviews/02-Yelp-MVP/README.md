@@ -13,7 +13,7 @@ rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
@@ -23,7 +23,7 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure you can use simple form, Bootstrap, and have a cool stylesheets folder (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that tomorrow!).
+Before starting to code your app, follow [our Rails Frontend guide](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) to make sure you can use simple form, Bootstrap, and have a cool stylesheets folder (⚠️ only do the **setup** section, don't try to implement **Bootstrap JS**, we will cover that at the next session!).
 
 ### Testing your code
 
@@ -37,34 +37,6 @@ Then testing your code is as simple as usual with a good ol'
 
 ```bash
 rake
-
-# [...]
-# Failed examples:
-#
-# rspec ./spec/controllers/restaurants_controller_spec.rb:84 # RestaurantsController should exist
-# rspec ./spec/controllers/reviews_controller_spec.rb:77 # ReviewsController should exist
-# rspec ./spec/models/restaurant_spec.rb:13 # Restaurant has a name
-# rspec ./spec/models/restaurant_spec.rb:18 # Restaurant has an address
-# rspec ./spec/models/restaurant_spec.rb:23 # Restaurant has a phone number
-# rspec ./spec/models/restaurant_spec.rb:28 # Restaurant has a category
-# rspec ./spec/models/restaurant_spec.rb:33 # Restaurant name cannot be blank
-# rspec ./spec/models/restaurant_spec.rb:40 # Restaurant address cannot be blank
-# rspec ./spec/models/restaurant_spec.rb:47 # Restaurant category cannot be blank
-# rspec ./spec/models/restaurant_spec.rb:54 # Restaurant neptunian is not a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant chinese is a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant italian is a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant japanese is a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant french is a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant belgian is a valid category
-# rspec ./spec/models/restaurant_spec.rb:70 # Restaurant has many reviews
-# rspec ./spec/models/restaurant_spec.rb:75 # Restaurant should destroy child reviews when destroying self
-# rspec ./spec/models/review_spec.rb:20 # Review has a content
-# rspec ./spec/models/review_spec.rb:25 # Review has a rating (stored as integer)
-# rspec ./spec/models/review_spec.rb:30 # Review content cannot be blank
-# rspec ./spec/models/review_spec.rb:37 # Review rating cannot be blank
-# rspec ./spec/models/review_spec.rb:44 # Review parent restaurant cannot be nil
-# rspec ./spec/models/review_spec.rb:51 # Review rating should be an integer
-# rspec ./spec/models/review_spec.rb:58 # Review rating should be a number between 0 and 5
 ```
 
 If you have trouble running `rake`, you may need to run `bin/rake`. It means that your `$PATH` does not contain the `./bin` folder, something you can fix in your dotfiles' zshrc (see [our default conf](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))
@@ -88,15 +60,17 @@ Make sure you think twice before choosing the data type, it might not always be 
 - A restaurant's category must belong to this fixed list: `["chinese", "italian", "japanese", "french", "belgian"]`.
 - When a restaurant is destroyed, all of its reviews must be destroyed as well.
 - A review must belong to a restaurant.
-- A review must have content and a rating.
+- A review must have a content.
+- A review must have a rating.
 - A review's rating must be a number between 0 and 5.
+- A review's rating must be an integer. For example, a review with a rating of 2.5 should be invalid!
 
 Validate all model tests before moving to the routing layer. You can use this command:
 
 ```bash
-rspec spec/models
+rspec spec/01_models
 ```
-to selectively run tests in the `spec/models` folder.
+to selectively run tests in the `spec/01_models` folder.
 
 You can also manually test your code with the `rails console`. Don't forget to `reload!` between each code change!
 
@@ -237,3 +211,5 @@ POST "restaurants/38/reviews"
 ```
 
 Notice that we got rid of the route `GET "restaurants/38/reviews/new"`. This is because the review form is **now embedded in the `restaurants/show.html.erb` view**. 🛏
+
+To run the appropriate tests for this version, run the command `rspec -t refactoring`.

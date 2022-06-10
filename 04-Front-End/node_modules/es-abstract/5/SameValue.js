@@ -2,7 +2,7 @@
 
 var $isNaN = require('../helpers/isNaN');
 
-// http://www.ecma-international.org/ecma-262/5.1/#sec-9.12
+// http://262.ecma-international.org/5.1/#sec-9.12
 
 module.exports = function SameValue(x, y) {
 	if (x === y) { // 0 === -0, but they are not identical.

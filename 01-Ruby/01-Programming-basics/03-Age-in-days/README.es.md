@@ -23,13 +23,13 @@ Notarás que el programa te dice que tienes `0 years old`. Debes cambiar el cód
 
 ## Recomendaciones y recursos adicionales
 
-- Tal vez quieras usar la clase [Date](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html), que agregamos al archivo gracias a la línea `require 'date'`
+- Tal vez quieras usar la clase [Date](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html), que agregamos al archivo gracias a la línea `require "date"`
 - Usa la consola interactiva de Ruby (IRB) para experimentar.
 - Notarás que Ruby usa el método `puts` para sacar valores (¡mostrarte cosas!) a la Terminal.
 
 ## Puntos clave de aprendizaje
 
-Tal vez las siguientes preguntas les parezcan triviales a la mayoría de ustedes, **pero asegurate de que puedas responderlas todas con precisión**. Las variables y los métodos son los pilares de la programación en Ruby y por lo tanto debes dominar estos conceptos.
+Tal vez las siguientes preguntas les parezcan triviales a la mayoría de ustedes, **pero asegúrate de que puedas responderlas todas con precisión**. Las variables y los métodos son los pilares de la programación en Ruby y por lo tanto debes dominar estos conceptos.
 
 
 ### Variables
@@ -56,6 +56,6 @@ some_number = some_number * 2
 
 ### Adicional
 
-- ¿Cómo se obtiene en la Terminal data aportada por el usuario?
+- ¿Cómo se obtiene en la Terminal data aportada por el/la usuario/a?
 - ¿Por qué se usa el método `chomp`?
 - ¿Qué hay de `to_i`?¿Qué hace ese método?

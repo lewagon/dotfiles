@@ -1,3 +1,5 @@
+'use strict';
+
 var util   = require('util'),
     net    = require('net'),
     tls    = require('tls'),
@@ -6,14 +8,14 @@ var util   = require('util'),
     API    = require('./api'),
     Event  = require('./api/event');
 
-var DEFAULT_PORTS    = {'http:': 80, 'https:': 443, 'ws:':80, 'wss:': 443},
+var DEFAULT_PORTS    = { 'http:': 80, 'https:': 443, 'ws:':80, 'wss:': 443 },
     SECURE_PROTOCOLS = ['https:', 'wss:'];
 
 var Client = function(_url, protocols, options) {
   options = options || {};
 
   this.url     = _url;
-  this._driver = driver.client(this.url, {maxLength: options.maxLength, protocols: protocols});
+  this._driver = driver.client(this.url, { maxLength: options.maxLength, protocols: protocols });
 
   ['open', 'error'].forEach(function(event) {
     this._driver.on(event, function() {
@@ -22,20 +24,25 @@ var Client = function(_url, protocols, options) {
     });
   }, this);
 
-  var proxy     = options.proxy || {},
-      endpoint  = url.parse(proxy.origin || this.url),
-      port      = endpoint.port || DEFAULT_PORTS[endpoint.protocol],
-      secure    = SECURE_PROTOCOLS.indexOf(endpoint.protocol) >= 0,
-      onConnect = function() { self._onConnect() },
-      originTLS = options.tls || {},
-      socketTLS = proxy.origin ? (proxy.tls || {}) : originTLS,
-      self      = this;
+  var proxy      = options.proxy || {},
+      endpoint   = url.parse(proxy.origin || this.url),
+      port       = endpoint.port || DEFAULT_PORTS[endpoint.protocol],
+      secure     = SECURE_PROTOCOLS.indexOf(endpoint.protocol) >= 0,
+      onConnect  = function() { self._onConnect() },
+      netOptions = options.net || {},
+      originTLS  = options.tls || {},
+      socketTLS  = proxy.origin ? (proxy.tls || {}) : originTLS,
+      self       = this;
+
+  netOptions.host = socketTLS.host = endpoint.hostname;
+  netOptions.port = socketTLS.port = port;
 
   originTLS.ca = originTLS.ca || options.ca;
+  socketTLS.servername = socketTLS.servername || endpoint.hostname;
 
   this._stream = secure
-               ? tls.connect(port, endpoint.hostname, socketTLS, onConnect)
-               : net.connect(port, endpoint.hostname, onConnect);
+               ? tls.connect(socketTLS, onConnect)
+               : net.connect(netOptions, onConnect);
 
   if (proxy.origin) this._configureProxy(proxy, originTLS);
 
@@ -60,12 +67,12 @@ Client.prototype._configureProxy = function(proxy, originTLS) {
     for (name in proxy.headers) this._proxy.setHeader(name, proxy.headers[name]);
   }
 
-  this._proxy.pipe(this._stream, {end: false});
+  this._proxy.pipe(this._stream, { end: false });
   this._stream.pipe(this._proxy);
 
   this._proxy.on('connect', function() {
     if (secure) {
-      var options = {socket: self._stream, servername: uri.hostname};
+      var options = { socket: self._stream, servername: uri.hostname };
       for (name in originTLS) options[name] = originTLS[name];
       self._stream = tls.connect(options);
       self._configureStream();

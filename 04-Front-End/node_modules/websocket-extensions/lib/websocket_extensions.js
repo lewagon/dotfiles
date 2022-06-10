@@ -112,7 +112,7 @@ var instance = {
   },
 
   validFrameRsv: function(frame) {
-    var allowed = {rsv1: false, rsv2: false, rsv3: false},
+    var allowed = { rsv1: false, rsv2: false, rsv3: false },
         ext;
 
     if (Extensions.MESSAGE_OPCODES.indexOf(frame.opcode) >= 0) {

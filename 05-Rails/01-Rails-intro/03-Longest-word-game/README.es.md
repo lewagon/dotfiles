@@ -6,9 +6,9 @@ Antes de ir al ejercicio, [lee las reglas](https://github.com/lewagon/fullstack-
 
 ⛔️ Si ya trabajaste en este ejercicio, por favor no copies/pegues soluciones de ejercicios anteriores. Trata de reescribirlos desde cero.
 
-## Configuracion
+## Configuración
 
-Aquí no hay `rake`. Otra cosa, no crees la app Rails en `fullstack-challenges`.
+Aquí no hay `rake`. Otra cosa, no crees la app Rails en `fullstack-challenges`. Deberías crearla en el siguiente directorio (lamentablemente, Kitt ya no mostrará tu puntaje)
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -16,7 +16,7 @@ rails new rails-longest-word-game --skip-active-storage --skip-action-mailbox
 cd rails-longest-word-game
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 
@@ -49,7 +49,7 @@ Prefix Verb URI Pattern      Controller#Action
 
 Necesitamos agregar un formulario debajo de las letras para que el/la usuario/a pueda agregar una sugerencia y enviarla.
 
-Agrega un `<form />` en tu vista. Debe hacer el `POST` a la acción `/score` en el `GamesController`.
+Agrega un `<form>` en tu vista. Debe hacer el `POST` a la acción `/score` en el `GamesController`.
 
 Tendrás que agregarle la siguiente línea a tu `form`:
 
@@ -77,7 +77,7 @@ Ve a la página `/new`. Agrega una palabra y envía el formulario. Rails te debe
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/raise.png).
 
-La forma más limpia es agregando la gema `pry-byebug` (puedes deshacerte de la que viene por defecto `byebug` de `rails new`) y agrega `binding.pry` en el código de tu controlador. De esta manera puedes pausar la petición Rails en la Terminal, inspeccionar y escribir `continue` para dejarla ir y terminar de renderizar la vista..
+La forma más limpia es agregando la gema `pry-byebug` (puedes deshacerte de la que viene por defecto `byebug` de `rails new`) y agrega `binding.pry` en el código de tu controlador. De esta manera puedes pausar la petición Rails en la Terminal, inspeccionar y escribir `continue` para dejarla ir y terminar de renderizar la vista.
 
 ```ruby
 # Gemfile
@@ -115,38 +115,44 @@ En la parte inferior de los resultados, agrega un `link_to` para regresar a la p
 
 El/la usuario/a jugará muchas partidas, así que tiene sentido almacenar cada puntaje y agregarlo a un gran total. Podemos implementar una regla donde el puntaje para cada partida sea el número de letras de cada palabra válida (pero también puedes tomar el cuadrado del número de letras o hacer otra cosa).
 
-El día de hoy no es sobre base de datos, así que no tienes ActiveRecord para ayudarte a almacenar información y recuperarla entre dos peticiones HTTP. En Rails hay otro mecanismo para persistir información **a través de** peticiones HTTP: la [sesión](http://guides.rubyonrails.org/action_controller_overview.html#session).
+El día de hoy no es sobre base de datos, así que no tienes Active Record para ayudarte a almacenar información y recuperarla entre dos peticiones HTTP. En Rails hay otro mecanismo para persistir información **a través de** peticiones HTTP: la [sesión](http://guides.rubyonrails.org/action_controller_overview.html#session).
 
 Intenta usar una sesión Rails para almacenar, computar y mostrar el puntaje total.
 
 ### 7 - Testing (Opcional)
 
+⚠️ Haz caso omiso a esta sección si aún no te sientes cómodo con la parte interna de Rails. Puedes volver a esta parte más adelante el día de hoy después de haber completado el ejercicio del Luego de Palabras más Largo.
+
 Primero borra el archivo `test/controllers/games_controller_test.rb` si fue generado. Vamos a trabajar con [**System Testing**](http://guides.rubyonrails.org/testing.html#system-testing). El objetivo de este tipo de testing es automatizar todo el testeo manual de "editar código / ir al navegador / recargar la página / comprobar que funciona".¡Todo lo que hiciste manualmente puede hacerse _por_medio_de_ código!
 
-Primero asegúrate de que tienes una versión **reciente** de Chrome en tu sistema (no Chromium). Está disponible tanto para OSX como Ubuntu. Luego tienes que instalar `chromedriver` (si hiciste esto en el ejercicio anterior salta este paso):
+Usaremos _Headless Chrome_ para System Testing. Es un navegador sin interfaz de usuario que está bien adaptado a este tipo de tests automatizados. Primero asegúrate de que tienes una versión **reciente** de Chrome en tu sistema (no Chromium). Está disponible tanto para OSX como Ubuntu.
 
-```bash
- # macOS
-brew install --cask chromedriver
+ Después de la instalación, el siguiente archivo y reemplaza **todo** su contenido por:
 
-# Ubuntu
-gem install chromedriver-helper
+```ruby
+# test/test_helper.rb
+ENV['RAILS_ENV'] ||= 'test'
+require_relative '../config/environment'
+require 'rails/test_help'
+
+class ActiveSupport::TestCase
+  fixtures :all
+end
+
+Capybara.register_driver :headless_chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu window-size=1400,900])
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+Capybara.save_path = Rails.root.join('tmp/capybara')
+Capybara.javascript_driver = :headless_chrome
 ```
 
-Usaremos _Headless Chrome_ para System Testing. Es un navegador sin interfaz de usuario que está bien adaptado a este tipo de tests automatizados. Para hacerlo, abre el siguiente archivo y reemplaza **todo** su contenido por:
+Luego, en el siguiente archivo, **actualiza** esta línea
 
 ```ruby
 # test/application_system_test_case.rb
-require "test_helper"
-
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  Capybara.register_driver(:headless_chrome) do |app|
-    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome \
-      chromeOptions: { args: %w[headless disable-gpu window-size=1280x760] }
-    Capybara::Selenium::Driver.new app,
-      browser: :chrome, desired_capabilities: capabilities
-  end
-  driven_by :headless_chrome
+  driven_by :headless_chrome # Update this line
 end
 ```
 
@@ -155,8 +161,7 @@ end
 En la Terminal, corre lo siguiente para crear el archivo de test:
 
 ```bash
-rails g system_test game
-rails test:system # Should say 0 tests, and not fail
+rails g system_test games
 ```
 
 ¡Genial!¡Tenemos un archivo totalmente nuevo en ` test/system/games_test.rb`!¿Qué queremos testear?
@@ -180,6 +185,26 @@ class GamesTest < ApplicationSystemTestCase
   end
 end
 ```
+
+Ejecuta la prueba en la terminal con:
+
+```bash
+rails test:system
+```
+
+⚠️ Si obtienes un error `Webdrivers::BrowserNotFound: Failed to find Chrome binary`, necesitas instalar la última versión de Chrome:
+
+```bash
+ # macOS
+brew install --cask google-chrome
+
+# Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
+```
+
+Una vez que lo hayas instalado, reinicia las pruebas con `rails test:system`.
 
 En este test, estoy visitando la URL `/new` y asegurándome de que obtenga diez letras con que jugar.
 

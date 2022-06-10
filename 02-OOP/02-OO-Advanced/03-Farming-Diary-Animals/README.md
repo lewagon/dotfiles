@@ -2,7 +2,6 @@
 
 This challenge is an extension of the previous one: the farm welcomes its first animals!
 
-
 ## Specs
 
 ![Animals](https://raw.githubusercontent.com/lewagon/fullstack-images/master/ruby/farming-diary/animals.svg?sanitize=true)
@@ -11,8 +10,8 @@ Discuss with your buddy: how many classes do you think you need, and how would y
 
 Don't `rake`! Wait until the very end of the challenge, follow the guidelines and let the farming diary guide you into coding the classes!
 
-
 ### Parent and children
+
 We are now familiar with the benefits of inheritance, let's go ahead and:
 - Create the three empty classes
 - Set the proper inheritance relationship between the children and the parent classes
@@ -21,8 +20,8 @@ Unlike in the previous challenge, let's start by coding the common behaviour in 
 - An animal is initialized with zero **energy**
 - You can **feed** an animal: it will increase its **energy** by 1
 
-
 ### Animals Talk
+
 To figure out the classes, let's start by the **program** we want to run:
 - Open the `lib/farming_diary.rb`, read _Day Three_ and gather information to code the classes.
 - Run the file with `ruby lib/farming_diary.rb`. Solve one error at a time by coding the missing `talk` method in `Cow` and `Chicken`.
@@ -37,6 +36,7 @@ The male chicken says cock-a-doodle-doo
 ```
 
 ### Feed The Animals
+
 Let's move on to the Day Four and feed all the animals at once with an iteration. Remember your animals have a shared `feed!` method? You can call the same method on two objects of different types! This concept is called [polymorphism](https://thoughtbot.com/blog/back-to-basics-polymorphism-and-ruby) 🤓
 
 Here is what you need to know about `feed!`:

@@ -20,7 +20,7 @@ rails new \
 cd stories-api
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 
@@ -71,7 +71,7 @@ Dado que vamos a usar endpoints de historias para los comentarios, no necesitamo
 
 ### 4 - Página Index de las Historias
 
-Agrega la acción adecuada en nuestro `StoriesController` (Pista: Es `index` 😉). Dicha acción debe recuperar todas las historias en nuestra base de datos (¡para eso tenemos ActiveRecord!) y pasarla a la vista json:
+Agrega la acción adecuada en nuestro `StoriesController` (Pista: Es `index` 😉). Dicha acción debe recuperar todas las historias en nuestra base de datos (¡para eso tenemos Active Record!) y pasarla a la vista json:
 
 ```ruby
 # app/views/api/v1/stories/index.json.jbuilder
@@ -146,6 +146,6 @@ En cuanto a tus rutas, piensa en usar rutas anidadas para especificar la histori
 ¡Intenta agregar una barra de búsqueda para poder filtrar historias en el index y poder encontrar la historia perfecta!
 
 - ¿Cómo podemos encontrar la historia que el/la usuario/a busca?
-- ¿Qué método ActiveRecord podemos usar para crear un buscador simple? Esto te ayudará a empezar `@stories = Story.where("name LIKE '%garden%'")`. Asegúrate de que entiendes esta línea de código antes de dar un paso más.
+- ¿Qué método Active Record podemos usar para crear un buscador simple? Esto te ayudará a empezar `@stories = Story.where("name LIKE '%garden%'")`. Asegúrate de que entiendes esta línea de código antes de dar un paso más.
 - ¿Cómo podemos asegurarnos de que la página index todavía funciona, inclusive cuando el/la usuario/a no está buscando nada?
 - ¿Cómo podemos asegurarnos de que la entrada se complete parcialmente en la consulta de búsqueda cuando el/la usuario/a la esté haciendo?

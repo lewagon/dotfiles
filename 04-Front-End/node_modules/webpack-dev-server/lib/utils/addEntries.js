@@ -68,7 +68,14 @@ function addEntries(config, options, server) {
 
         Object.keys(originalEntry).forEach((key) => {
           // entry[key] should be a string here
-          clone[key] = prependEntry(originalEntry[key], additionalEntries);
+          const entryDescription = originalEntry[key];
+          if (typeof entryDescription === 'object' && entryDescription.import) {
+            clone[key] = Object.assign({}, entryDescription, {
+              import: prependEntry(entryDescription.import, additionalEntries),
+            });
+          } else {
+            clone[key] = prependEntry(entryDescription, additionalEntries);
+          }
         });
 
         return clone;

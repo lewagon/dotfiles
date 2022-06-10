@@ -1,7 +1,9 @@
-sudo: false
+dist: xenial
+os: linux
 language: node_js
 node_js:
-  - stable
+  - 'stable'
+  - 'lts/*'
   - '0.12'
 script:
   - npm test

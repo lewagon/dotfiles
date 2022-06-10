@@ -57,12 +57,7 @@
       }
       r = r.concat(['', '']);
       try {
-        res.write(r.join('\r\n'));
-      } catch (error1) {
-        x = error1;
-      }
-      try {
-        return res.end();
+        return res.write(r.join('\r\n'));
       } catch (error1) {
         x = error1;
       }

@@ -31,12 +31,12 @@ It gives you:
 
 Stable version:
 ```bash
-npm i yargs --save
+npm i yargs
 ```
 
 Bleeding edge version with the most recent features:
 ```bash
-npm i yargs@next --save
+npm i yargs@next
 ```
 
 ## Usage :

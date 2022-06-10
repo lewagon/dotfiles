@@ -24,8 +24,15 @@ var assert = require('assert');
 var events = require('../');
 var util = require('util');
 
-var listener = function listener() {};
-var listener2 = function listener2() {};
+function listener() {}
+function listener2() {}
+function listener3() {
+  return 0;
+}
+function listener4() {
+  return 1;
+}
+
 function TestStream() {}
 util.inherits(TestStream, events.EventEmitter);
 
@@ -146,4 +153,16 @@ util.inherits(TestStream, events.EventEmitter);
   ee.emit('foo');
   assert.strictEqual(wrappedListeners.length, 2);
   assert.strictEqual(wrappedListeners[1].listener, listener);
+}
+
+{
+  var ee = new events.EventEmitter();
+  ee.once('foo', listener3);
+  ee.on('foo', listener4);
+  var rawListeners = ee.rawListeners('foo');
+  assert.strictEqual(rawListeners.length, 2);
+  assert.strictEqual(rawListeners[0](), 0);
+  var rawListener = ee.rawListeners('foo');
+  assert.strictEqual(rawListener.length, 1);
+  assert.strictEqual(rawListener[0](), 1);
 }

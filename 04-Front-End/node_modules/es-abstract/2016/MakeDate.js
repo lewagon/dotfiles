@@ -3,7 +3,7 @@
 var $isFinite = require('../helpers/isFinite');
 var msPerDay = require('../helpers/timeConstants').msPerDay;
 
-// https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.13
+// https://262.ecma-international.org/5.1/#sec-15.9.1.13
 
 module.exports = function MakeDate(day, time) {
 	if (!$isFinite(day) || !$isFinite(time)) {

@@ -7,5 +7,14 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js"
   },
-  devtool: "sourcemap"
+  devtool: "sourcemap",
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
+    ]
+  }
 };

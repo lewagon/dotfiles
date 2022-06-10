@@ -1,7 +1,10 @@
 {
   "name": "mkdirp",
   "description": "Recursively mkdir, like `mkdir -p`",
-  "version": "0.5.1",
+  "version": "0.5.5",
+  "publishConfig": {
+    "tag": "legacy"
+  },
   "author": "James Halliday <mail@substack.net> (http://substack.net)",
   "main": "index.js",
   "keywords": [
@@ -16,12 +19,16 @@
     "test": "tap test/*.js"
   },
   "dependencies": {
-    "minimist": "0.0.8"
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
-    "tap": "1",
-    "mock-fs": "2 >=2.7.0"
+    "mock-fs": "^3.7.0",
+    "tap": "^5.4.2"
   },
   "bin": "bin/cmd.js",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "bin",
+    "index.js"
+  ]
 }

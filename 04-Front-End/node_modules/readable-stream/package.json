@@ -1,6 +1,6 @@
 {
   "name": "readable-stream",
-  "version": "2.3.6",
+  "version": "2.3.7",
   "description": "Streams3, a user-land copy of the stream library from Node.js",
   "main": "readable.js",
   "dependencies": {

@@ -1,3 +1,27 @@
+0.3.24
+======
+  * Remove excess file from npm package
+
+0.3.23
+======
+  * Fix `uuid` usage
+
+0.3.22
+======
+  * Update `uuid`
+
+0.3.21
+======
+  * Update `faye-websocket` and `websocket-driver` to address DDoS vulnerability #275
+
+0.3.20
+======
+  * Updated `node-uuid` and `coffeescript`
+  * Exclude `examples`, `tests`, and `Makefile` from npm package
+  * Update examples to use latest jQuery and sockjs-client #271
+  * Don't call `res.end` in `writeHead` #266
+  * Pin `websocket-driver` as later versions cause some tests from `sockjs-protocol` to fail
+
 0.3.19
 ======
 

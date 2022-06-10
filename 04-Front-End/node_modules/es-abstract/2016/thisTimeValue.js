@@ -1,6 +1,6 @@
 'use strict';
 
-var $DateValueOf = require('../helpers/callBound')('Date.prototype.valueOf');
+var $DateValueOf = require('call-bind/callBound')('Date.prototype.valueOf');
 
 // https://ecma-international.org/ecma-262/6.0/#sec-properties-of-the-date-prototype-object
 

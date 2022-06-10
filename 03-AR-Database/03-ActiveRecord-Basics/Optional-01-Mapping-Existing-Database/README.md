@@ -1,7 +1,7 @@
 ## Background & Objectives
 
 Sometimes, you will want to work with an existing database from an existing project.
-You might need to write some ruby code to manipulate data using ActiveRecord, instead
+You might need to write some Ruby code to manipulate data using Active Record, instead
 of writing SQL queries.
 
 ## Specs
@@ -12,7 +12,7 @@ the tests before you've created the models with the `has_many` and `belongs_to`
 relationships based on the schema foreign keys. The specs will give you too many clues.
 - Once your models are created, add some methods and validations.
 - Open the `app/queries.rb` file and fetch the relevant results from database with
-ActiveRecord queries (no SQL allowed!)
+Active Record queries (no SQL allowed!)
 
 ## Further suggestions
 

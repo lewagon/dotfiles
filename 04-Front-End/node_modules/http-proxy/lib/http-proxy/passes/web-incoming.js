@@ -129,7 +129,9 @@ module.exports = {
 
     // Enable developers to modify the proxyReq before headers are sent
     proxyReq.on('socket', function(socket) {
-      if(server) { server.emit('proxyReq', proxyReq, req, res, options); }
+      if(server && !proxyReq.getHeader('expect')) {
+        server.emit('proxyReq', proxyReq, req, res, options);
+      }
     });
 
     // allow outgoing socket to timeout so that we could

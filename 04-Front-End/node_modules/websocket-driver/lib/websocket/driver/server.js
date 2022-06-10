@@ -14,7 +14,7 @@ var Server = function(options) {
 util.inherits(Server, Base);
 
 var instance = {
-  EVENTS: ['open', 'message', 'error', 'close'],
+  EVENTS: ['open', 'message', 'error', 'close', 'ping', 'pong'],
 
   _bindEventListeners: function() {
     this.messages.on('error', function() {});

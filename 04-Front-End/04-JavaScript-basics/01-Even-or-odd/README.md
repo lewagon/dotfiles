@@ -4,17 +4,18 @@ Today is your first day of JavaScript. The goal of this first day is for you to 
 
 Today we won't need the browser. Instead, we'll use [Node.js](https://nodejs.org/en/) to execute some JavaScript directly in our terminal.
 
-Make sure that the following command returns a version greater than `10`:
+You should already have `node` installed with a version greater than `10`. Check it with:
 
 ```bash
 node -v
+# You should see your node version here
 ```
 
-If not, Node might not be installed on your system. Please have a look at the Setup section in the lecture slides.
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#nodejs), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#nodejs) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#nodejs) setup.
 
 ## Specs
 
-Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `Number`) and returns a `String`:
+Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `number`) and returns a `string`:
 
 - `"even"` if the number is even (0, 2, 4, etc.)
 - `"odd"` if the number is odd (1, 3, 5, etc.)

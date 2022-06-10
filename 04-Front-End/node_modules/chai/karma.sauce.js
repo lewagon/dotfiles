@@ -26,7 +26,7 @@ module.exports = function(config) {
   }
 
   config.browsers = config.browsers.concat(browsers);
-  config.customLaunchers = browserConfig;
+  Object.assign(config.customLaunchers, browserConfig);
   config.reporters.push('saucelabs');
   config.captureTimeout = 300000;
 

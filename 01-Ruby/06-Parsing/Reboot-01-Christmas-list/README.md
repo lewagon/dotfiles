@@ -118,7 +118,7 @@ html_content = File.open(filepath)
 doc = Nokogiri::HTML(html_content)
 
 # 3. We search for the correct elements containing the items' title in our HTML doc
-doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
+doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
   # 4. For each item found, we extract its title and print it
   puts element.text.strip
 end
@@ -139,14 +139,15 @@ html_content = URI.open("https://www.etsy.com/search?q=#{article}").read
 doc = Nokogiri::HTML(html_content)
 
 # 3. We search for the correct elements containing the items' title in our HTML doc
-doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
+doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
   # 4. For each item found, we extract its title and print it
   puts element.text.strip
 end
 ```
 
 - Feel free to scrape another website adapting this script.
-- Also, you can scrape other information than just the name (for example the price of the item).
+- What kind of data structure should your scraper return?
+- Also, you can scrape other information than just the name. For example you could scrape the price of the item too. In this case, how should you update the data structure your scraper returns?
 
 ## [OPTIONAL] Save gifts in a CSV file 🎁🎁🎁🎁🎁
 We want to be able to retrieve the gift list any time we launch the app.
@@ -157,10 +158,9 @@ Parsing CSV
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 filepath    = 'gifts.csv'
 
-CSV.foreach(filepath, csv_options) do |row|
+CSV.foreach(filepath, col_sep: ',', quote_char: '"', headers: :first_row) do |row|
   # TODO: build new gift from information stored in each row
 end
 ```
@@ -170,10 +170,9 @@ Storing CSV
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
 filepath    = 'gifts.csv'
 
-CSV.open(filepath, 'wb', csv_options) do |csv|
+CSV.open(filepath, 'wb', col_sep: ',', force_quotes: true, quote_char: '"') do |csv|
   # We had headers to the CSV
   csv << ['name', 'price', 'bought']
   #TODO: store each gift

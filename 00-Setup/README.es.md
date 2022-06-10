@@ -2,7 +2,7 @@
 
 Organicemos tu puesto de trabajo:
 
-1. **10:15am**: Primera clase. Sólo dura 15 min y verás con tu profesor/a las herramientas de desarrollador que necesitarás instalar.
+1. **10:15am**: Primera clase. Sólo dura 15 min y verás con tu profesor/a las herramientas de desarrollo web que necesitarás instalar.
 
 2. **10:30am-1pm**: Sigue [la configuración de Le Wagon detalladamente](https://github.com/lewagon/setup) y pide ayuda cada vez que encuentres un obstáculo y no puedas avanzar. Te debería tomar toda la mañana. Si no tienes una Mac, tal vez te quite un poco del tiempo de tu almuerzo 😉.
 

@@ -1,12 +1,3 @@
-## Before you start
-
-Don't forget, at 2pm you'll do your first paper quiz. No computer, no Google, just a pen and your brain. It's not an exam and you won't receive grades, so don't worry about that 😊, but it's very useful to find the areas you may be struggling with and to iron out your creases before we progress any further. Just take your time and try to answer everything as precisely as you can.
-
-When the quiz is finished, a teacher will take each of you for a 15-min review to go through your answers and try to clarify anything you don't understand. It will help you know what to go back to over this weekend, and also whether or not you should join the Reboot group next Monday-Tuesday.
-
-Good luck and happy quizzing!
-
-
 ## Background & Objectives
 
 Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonalds order. Let's use the table below as our abridged McDonalds menu:
@@ -54,7 +45,7 @@ Let's say you want to stay fit but keep eating McDonalds... You have the brillia
   </tbody>
 </table>
 
-You need to store this information in a ruby [constant](https://www.rubyguides.com/2017/07/ruby-constants/) to create a kind of database.
+You need to store this information in a Ruby [constant](https://www.rubyguides.com/2017/07/ruby-constants/) to create a kind of database.
 For instance, below is an example of a `Hash` - `AGE_OF_STUDENTS` - that contains students and their ages:
 
 ```ruby
@@ -65,7 +56,7 @@ AGE_OF_STUDENTS = {
 }
 ```
 
-Read the documentation about [Hashes](https://ruby-doc.org/core-2.6.6/Hash.html).
+Read the documentation about [Hashes](https://ruby-doc.org/core-2.7.5/Hash.html).
 You'll use them all the time, so make friends with them 😊
 
 **For this exercise, use `Strings` for your keys rather than `Symbols`, just for simplicity's sake**

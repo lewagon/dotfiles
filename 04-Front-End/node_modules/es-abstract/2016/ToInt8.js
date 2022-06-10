@@ -2,7 +2,7 @@
 
 var ToUint8 = require('./ToUint8');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-toint8
+// https://ecma-international.org/ecma-262/6.0/#sec-toint8
 
 module.exports = function ToInt8(argument) {
 	var int8bit = ToUint8(argument);

@@ -1,6 +1,6 @@
 {
   "name": "flat-cache",
-  "version": "2.0.1",
+  "version": "3.0.4",
   "description": "A stupidly simple key/value storage using files to persist some data",
   "repository": "royriojas/flat-cache",
   "license": "MIT",
@@ -8,14 +8,14 @@
     "name": "Roy Riojas",
     "url": "http://royriojas.com"
   },
-  "main": "cache.js",
+  "main": "src/cache.js",
   "files": [
-    "cache.js",
-    "utils.js",
-    "del.js"
+    "src/cache.js",
+    "src/del.js",
+    "src/utils.js"
   ],
   "engines": {
-    "node": ">=4"
+    "node": "^10.12.0 || >=12.0.0"
   },
   "precommit": [
     "npm run verify --silent"
@@ -24,13 +24,11 @@
     "npm run verify --silent"
   ],
   "scripts": {
-    "beautify": "esbeautifier 'cache.js' 'utils.js' 'del.js' 'test/specs/**/*.js'",
-    "beautify-check": "npm run beautify -- -k",
-    "eslint": "eslinter 'cache.js' 'utils.js' 'del.js' 'specs/**/*.js'",
+    "eslint": "eslint --cache --cache-location=node_modules/.cache/ ./src/**/*.js ./test/**/*.js",
     "eslint-fix": "npm run eslint -- --fix",
-    "autofix": "npm run beautify && npm run eslint-fix",
-    "check": "npm run beautify-check && npm run eslint",
-    "verify": "npm run check && npm run test:cache",
+    "autofix": "npm run eslint-fix",
+    "check": "npm run eslint",
+    "verify": "npm run eslint && npm run test:cache",
     "install-hooks": "prepush install && changelogx install-hook && precommit install",
     "changelog": "changelogx -f markdown -o ./changelog.md",
     "do-changelog": "npm run changelog && git add ./changelog.md && git commit -m 'DOC: Generate changelog' --no-verify",
@@ -65,23 +63,22 @@
     "projectName": "flat-cache"
   },
   "devDependencies": {
-    "chai": "^3.2.0",
-    "changelogx": "3.0.0",
-    "esbeautifier": "10.1.1",
-    "eslinter": "^3.2.1",
-    "glob-expand": "0.2.1",
-    "istanbul": "0.4.5",
-    "mocha": "5.2.0",
-    "precommit": "^1.1.5",
-    "prepush": "^3.1.4",
-    "proxyquire": "^1.7.2",
-    "sinon": "^1.16.1",
-    "sinon-chai": "^2.8.0",
-    "watch-run": "^1.2.2"
+    "chai": "^4.2.0",
+    "changelogx": "^5.0.6",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "glob-expand": "^0.2.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^8.2.1",
+    "precommit": "^1.2.2",
+    "prepush": "^3.1.11",
+    "prettier": "^2.1.2",
+    "watch-run": "^1.2.5"
   },
   "dependencies": {
-    "flatted": "^2.0.0",
-    "rimraf": "2.6.3",
-    "write": "1.0.3"
+    "flatted": "^3.1.0",
+    "rimraf": "^3.0.2"
   }
 }

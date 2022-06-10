@@ -2,7 +2,7 @@
 
 Ya va a llegar el invierno ⛄⛄⛄. Queremos crear un programa que maneje nuestra lista de regalos, marcar los ítems como comprados y eventualmente buscar algo de inspiración en una página externa como Etsy. Este desafío te tomará todo el día. 🎁
 
-Tal como hiciste ayer, empieza escribiendo el pseudocódigo en el grupo como una sesión de codeo en vivo 💻.
+Tal como hiciste ayer, empieza escribiendo el pseudocódigo en el grupo como una sesión de live-code 💻.
 
 ## Pseudocódigo
 
@@ -51,7 +51,7 @@ Implementemos tres simples acciones (`list`, `add`, `delete`).
 
 ## Paso 3 - Marcar un ítem como comprado  🎁🎁🎁
 
-Queremos poder ser capaces de marcar cualquier ítem como comprado:
+Queremos tener la opción de marcar cualquier ítem como comprado:
 
 
 ```bash
@@ -101,9 +101,9 @@ Aquí hay un script inicial para ayudarte a hacer la extracción de datos (web s
 _Alerta: para evitar ser bloqueados en Etsy, no vamos a hacer el scraping en tiempo real sino que descargaremos una página HTML y haremos el scraping localmente_
 
 ```bash
-# Download the page to be scraped inside your working directory
+# Descarga la página a scrapear en tu directorio de trabajo
 curl "https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR" > results.html
-# get the path to the HTML file
+# Obtén la ruta al archivo HTML
 pwd
 ```
 ```ruby
@@ -111,19 +111,19 @@ pwd
 require 'nokogiri'
 
 filepath = "/path/to/the/HTML/file.html"
-# 1. We get the HTML page content
+# 1. Obtenemos el contenido HTML de la página
 html_content = File.open(filepath)
-# 2. We build a Nokogiri document from this file
+# 2. Creamos un documento Nokogiri a partir de este archivo
 doc = Nokogiri::HTML(html_content)
 
-# 3. We search for the correct elements containing the items' title in our HTML doc
-doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
-  # 4. For each item found, we extract its title and print it
+# 3. Buscamos los elementos adecuados que contengan el  título de los ítems en nuestro documento HTML
+doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
+  # 4. Extraemos e imprimimos el título de cada ítem encontrado
   puts element.text.strip
 end
 ```
 
-Una vez que el scraping funcione en tu archivo local  `results.html`, actualízalo para conectarlo a la página de resultados de Etsy para cualquier palabra clave y hacer el scraping de la pagina en linea:
+Una vez que el scraping funcione en tu archivo local  `results.html`, actualízalo para conectarlo a la página de resultados de Etsy para cualquier palabra clave y hacer el scraping de la página en línea:
 
 ```ruby
 require 'open-uri'
@@ -132,14 +132,14 @@ require 'nokogiri'
 puts "What are you searching on Etsy?"
 article = gets.chomp
 
-# 1. We get the HTML page content thanks to open-uri
-html_content = URI.open("https://www.etsy.com/search?q=#{article}").read
-# 2. We build a Nokogiri document from this file
+# 1. Obtenemos el contenido HTML de la página gracias a open-uri
+html_content = open("https://www.etsy.com/search?q=#{article}").read
+# 2. Creamos un documento Nokogiri a partir de este archivo
 doc = Nokogiri::HTML(html_content)
 
-# 3. We search for the correct elements containing the items' title in our HTML doc
-doc.search('.v2-listing-card .v2-listing-card__info .text-body').each do |element|
-  # 4. For each item found, we extract its title and print it
+# 3. Buscamos los elementos adecuados que contengan el  título de los ítems en nuestro documento HTML
+doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
+  # 4. Extraemos e imprimimos el título de cada ítem encontrado
   puts element.text.strip
 end
 ```
@@ -151,33 +151,31 @@ end
 Queremos poder ser capaces de recuperar la lista de regalos cada vez que ejecutemos la aplicación.
 Crea un archivo para persistir tus datos localmente.
 
-Parseo CSV
+Parseo del CSV
 
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 filepath    = 'gifts.csv'
 
-CSV.foreach(filepath, csv_options) do |row|
-  # TODO: build new gift from information stored in each row
+CSV.foreach(filepath, col_sep: ',', quote_char: '"', headers: :first_row) do |row|
+  # POR HACER: crea un regalo nuevo a partir de la información almacenada en cada fila
 end
 ```
 
-Almacenado de CSV
+Almacenamiento del CSV
 
 ```ruby
 require 'csv'
 
-csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
 filepath    = 'gifts.csv'
 
-CSV.open(filepath, 'wb', csv_options) do |csv|
-  # We had headers to the CSV
+CSV.open(filepath, 'wb', col_sep: ',', force_quotes: true, quote_char: '"') do |csv|
+  # Teníamos los encabezados para el CSV
   csv << ['name', 'price', 'bought']
-  #TODO: store each gift
+  # POR HACER: guarda cada regalo
 end
 ```
 
 - Encuentra el mejor momento para guardar los regalos.
-- ¿Cuándo necesitas guardar los regalos?
+- ¿Cuándo necesitas guardarlos?

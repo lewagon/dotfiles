@@ -27,5 +27,5 @@ obj.foo() // bar
 TypeScript is also supported:
 
 ```typescript
-import setPrototypeOf = require('setprototypeof')
+import setPrototypeOf from 'setprototypeof'
 ```

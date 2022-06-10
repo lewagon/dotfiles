@@ -2,7 +2,7 @@
 
 You've spent quite some time learning OOP concept in Ruby at the beginning of the bootcamp (Cookbook, anyone?).
 
-But Javascript is also an Object Oriented Programming language, and since 2015 (ES6), it supports [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
+But JavaScript is also an Object Oriented Programming language, and since 2015 (ES6), it supports [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
 
 In this small challenge, you'll be introduced to ES6 classes.
 
@@ -23,4 +23,4 @@ There are 3 tests you need to turn green. Everything you need to know is on [thi
 
 That's 7 lines of JS code, think about how you did Object Oriented Programming in Ruby, the concepts are exactly the same here!
 
-Now, let's start the next challenge about the modest Javascript framework **Stimulus**, based on the ES6 Class syntax.
+Now, let's start the next challenge about the JavaScript framework **Stimulus**, based on the ES6 Class syntax.

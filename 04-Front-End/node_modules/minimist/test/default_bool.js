@@ -18,3 +18,18 @@ test('boolean default false', function (t) {
     t.equal(argv.somefalse, false);
     t.end();
 });
+
+test('boolean default to null', function (t) {
+    var argv = parse([], {
+        boolean: 'maybe',
+        default: { maybe: null }
+    });
+    t.equal(argv.maybe, null);
+    var argv = parse(['--maybe'], {
+        boolean: 'maybe',
+        default: { maybe: null }
+    });
+    t.equal(argv.maybe, true);
+    t.end();
+
+})

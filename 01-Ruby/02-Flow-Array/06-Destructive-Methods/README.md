@@ -20,6 +20,5 @@ That's the only format the anchorman can understand!
 ## Key learning points
 
 As you've probably already realized, a method is not only used to return the result of a calculation... A method can also be used to perform actions on objects that it will modify. Make sure your are comfortable with the following notions before moving on:
-
 - What's an object id? Type `"something".object_id` in IRB to figure it out.
 - What's an object equality? When you use `a==b` in a conditional statement, do you test object equality? What do you test exactly?

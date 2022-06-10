@@ -58,13 +58,13 @@ Following on from Devise, we will teach you how to handle **authorization** in y
 
 ### `08 Geocoding`
 
-Morning lecture on geocoding (with the `geocoder` gem) plus a bit about using the Google API to add autocomplete on address form inputs.
+Morning lecture on geocoding (with the `geocoder` gem) and Mapbox to add a map to your application and autocomplete on address form inputs.
 
 Then, at 5pm, every group should demo the current version of their Airbnb clone in front of the class.
 
 ### `09 Search`
 
-Today's lecture covers the search topic, from the search 101 using ActiveRecord to stronger solutions like ElasticSearch or Algolia.
+Today's lecture covers the search topic, from the search 101 using Active Record to stronger solutions like ElasticSearch or Algolia.
 
 ### `10 Airbnb Ajax in Rails`
 

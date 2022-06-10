@@ -2,7 +2,7 @@
 
 > Get the visual width of a string - the number of columns required to display it
 
-Some Unicode characters are [fullwidth](https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms) and use double the normal width. [ANSI escape codes](http://en.wikipedia.org/wiki/ANSI_escape_code) are stripped and doesn't affect the width.
+Some Unicode characters are [fullwidth](https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms) and use double the normal width. [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code) are stripped and doesn't affect the width.
 
 Useful to be able to measure the actual width of command-line output.
 
@@ -10,7 +10,7 @@ Useful to be able to measure the actual width of command-line output.
 ## Install
 
 ```
-$ npm install --save string-width
+$ npm install string-width
 ```
 
 
@@ -27,6 +27,9 @@ stringWidth('\u001b[1m古\u001b[22m');
 
 stringWidth('a');
 //=> 1
+
+stringWidth('\u001B]8;;https://github.com\u0007Click\u001B]8;;\u0007');
+// => 5
 ```
 
 

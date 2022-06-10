@@ -32,11 +32,15 @@ exports['SL_IE'] = {
   , browserName: 'internet explorer'
 };
 
+/*!
+ * TODO: fails because of Uint8Array support
+ *
 exports['SL_IE_Old'] = {
     base: 'SauceLabs'
   , browserName: 'internet explorer'
   , version: 10
 };
+*/
 
 exports['SL_Edge'] = {
     base: 'SauceLabs'

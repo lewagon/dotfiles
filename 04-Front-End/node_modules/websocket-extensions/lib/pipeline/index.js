@@ -5,7 +5,7 @@ var Cell   = require('./cell'),
 
 var Pipeline = function(sessions) {
   this._cells   = sessions.map(function(session) { return new Cell(session) });
-  this._stopped = {incoming: false, outgoing: false};
+  this._stopped = { incoming: false, outgoing: false };
 };
 
 Pipeline.prototype.processIncomingMessage = function(message, callback, context) {
@@ -19,7 +19,7 @@ Pipeline.prototype.processOutgoingMessage = function(message, callback, context)
 };
 
 Pipeline.prototype.close = function(callback, context) {
-  this._stopped = {incoming: true, outgoing: true};
+  this._stopped = { incoming: true, outgoing: true };
 
   var closed = this._cells.map(function(a) { return a.close() });
   if (callback)

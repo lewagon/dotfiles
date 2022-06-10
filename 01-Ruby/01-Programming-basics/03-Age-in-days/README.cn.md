@@ -23,7 +23,7 @@ ruby lib/interface.rb
 
 ## 进一步的建议和资源
 
-- 你可能需要使用[日期类(Date class)](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html)。我们可以用`require 'date'`这行命令将其加载到我们的文件中。
+- 你可能需要使用[日期类(Date class)](https://ruby-doc.org/stdlib-2.2.10/libdoc/date/rdoc/Date.html)。我们可以用`require "date"`这行命令将其加载到我们的文件中。
 - 使用交互式ruby控制台（IRB）进行试用。
 - 正如你在这段代码中看到的，在ruby中，可以使用`puts`方法（method）在终端上输出数值（展示你的成果！）。
 

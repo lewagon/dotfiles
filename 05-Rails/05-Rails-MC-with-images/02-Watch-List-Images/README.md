@@ -4,7 +4,7 @@ Today, we have **three goals**:
 
 1. Deploy our Watch List on Heroku
 2. Add the Image Upload features
-3. There's a Rails Quiz at 2pm!
+3. Take the Rails Quiz!
 
 ### Setup
 

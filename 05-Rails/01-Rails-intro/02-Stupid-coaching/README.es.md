@@ -1,15 +1,13 @@
-## Alerta
+## Setup
 
-⚠️ **Nunca hagas `sudo gem install rails` inclusive si la Terminal te lo pide!** ⚠️
-> Reinicia tu Terminal si esto pasa (`cmd + q` o `ctrl + q`). Levanta un ticket si continúa sucediendo.
-
-A continuación te mostramos la manera adecuada de instalar Rails:
+Ya deberías tener `rails` instalado. Compruébalo con:
 
 ```bash
-gem install rails -v 6.0
+rails -v
+# You should see your rails version here
 ```
 
-Ahora cierra la Terminal y ábrela otra vez.
+Si no, vuelve a la sección del setup para [macOS](https://github.com/lewagon/setup/blob/master/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#installing-some-gems) o [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#installing-some-gems).
 
 ## Contexto y Objetivos
 
@@ -26,7 +24,7 @@ rails new rails-stupid-coaching --skip-active-storage --skip-action-mailbox
 cd rails-stupid-coaching
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 ```
 
 ```bash
@@ -97,7 +95,7 @@ Prefix Verb URI Pattern       Controller#Action
 
 **Vista**
 
-La creación de la vista es el último paso para mostrar el formulario.¡Hagámoslo!¿Recuerdas en qué carpeta debe estar y cómo debe nombrarse? Esa es una de las convenciones de Rails, la [convención acción vista](https://kitt.lewagon.com/karr/karr.kitt/lectures/rails/rails-intro-6/index.html?title=Rails+Basics&program_id=1#/6/6). Refresca la página en [localhost:3000/ask](http://localhost:3000/ask). Si nombraste tu archivo correctamente finalmente ¡verás una página sin error! Por ahora está vacía. Terminemos de agregar el  `<form>`.¿Recuerdas la sintaxis?
+La creación de la vista es el último paso para mostrar el formulario.¡Hagámoslo!¿Recuerdas en qué carpeta debe estar y cómo debe nombrarse? Esa es una de las convenciones de Rails, la [convención acción vista](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro/index.html?title=Rails+Basics#/6/6). Refresca la página en [localhost:3000/ask](http://localhost:3000/ask). Si nombraste tu archivo correctamente finalmente ¡verás una página sin error! Por ahora está vacía. Terminemos de agregar el  `<form>`.¿Recuerdas la sintaxis?
 
 ```html
 <form action="???">
@@ -201,16 +199,6 @@ Primero, borra el archivo `test/controllers/questions_controller_test.rb` si fue
 
 Usaremos _Headless Chrome_ para el System Testing. Es un navegador sin interfaz de usuario que está bien adaptado a este tipo de tests. Antes de correr tus system tests debes asegurarte de que tienes una versión **reciente** de Chrome en tu sistema (no Chromium). Está disponible tanto para OSX como para Ubuntu.
 
-Luego tienes que instalar `chromedriver`:
-
-```bash
- # macOS
-brew install --cask chromedriver
-
-# Ubuntu
-gem install chromedriver-helper
-```
-
 Después de la instalación puedes abrir el siguiente archivo y reemplazar **todo** su contenido con:
 
 ```ruby
@@ -268,7 +256,21 @@ Corre el test en la Terminal con:
 rails test:system
 ```
 
-Si prestas atención al detalle del escenario, puedes leer el test de la siguiente manera:
+⚠️ Si obtienes un error `Webdrivers::BrowserNotFound: Failed to find Chrome binary`, debes instalar la última versión de Chrome:
+
+```bash
+ # macOS
+brew install --cask google-chrome
+
+# Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
+```
+
+Una vez que lo hayas instalado, reinicia las pruebas con `rails test:system`.
+
+Ahora que se están ejecutando, si prestas atención al detalle del escenario, puedes leer el test de la siguiente manera:
 
 1. Ve a la página `/ask`
 2. Asegúrate de que la página haya sido renderizada y que podamos leer `Ask your coach anything`.

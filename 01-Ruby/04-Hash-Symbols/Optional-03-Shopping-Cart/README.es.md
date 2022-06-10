@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Hacer compras puede ser fastidioso, ¿no? Ya que eres un buen programador Ruby, ¡tal vez pienses que es más interesante crear el código de tu propio carrito de compras!
+Hacer compras puede ser fastidioso, ¿no? Ya que eres un/a buen/a programador/a Ruby, ¡tal vez pienses que es más interesante crear el código de tu propio carrito de compras!
 
 Ya hemos empezado por ti: el archivo `interface.rb` está listo para recibir la lista de compras y los archivos `store.rb` y `cart.rb` tienen la lógica de la tienda y del carrito de compras.
 
@@ -11,7 +11,7 @@ Puedes probar tu código corriendo `ruby lib/interface.rb`.
 
 ## Especificaciones
 
-Tomate tu tiempo para pensar en las estructuras de datos que mejor describan el inventario de una tienda y de un carrito de compras. Luego:
+Tómate tu tiempo para pensar en las estructuras de datos que mejor describan el inventario de una tienda y de un carrito de compras. Luego:
 
 - implementa todas las funciones en `store.rb` y `cart.rb`
 - ¡no te olvides de iniciar la variable `cart` en `interface.rb`!

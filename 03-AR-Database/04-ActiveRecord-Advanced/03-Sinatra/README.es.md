@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-¡Felicitaciones! Ya eres experto en ActiveRecord 😊. Miremos en retrospectiva lo que hemos aprendido desde el primer día.
+¡Felicitaciones! Ya eres experto en Active Record 😊. Miremos en retrospectiva lo que hemos aprendido desde el primer día.
 
 - Almacenar información en variables
 - Definir métodos para implementar comportamientos en argumentos y reusar código
@@ -14,7 +14,7 @@ A partir de ahora empezarás a trabajar con conceptos más complejos que nos ayu
 
 - Class: para encapsular **datos** y **comportamientos** en un objeto
 - **MVC** para crear programas donde cada clase tenga una sola responsabilidad
-- ActiveRecord: una capa sobre la base de datos para consultas SQL (y escribir código Ruby en lugar de SQL).
+- Active Record: una capa sobre la base de datos para consultas SQL (y escribir código Ruby en lugar de SQL).
 
 Ya nos estamos acercando muuuucho a Rails :).
 Sin embargo, todavía nos falta algo, y lo sabes. Es la Vista.
@@ -38,7 +38,7 @@ rake db:drop db:create db:migrate db:seed
 Corre la aplicación Sinatra.
 
 ```bash
-ruby app.rb
+ruby lib/app.rb
 ```
 
 ¡Para mirar, puedes ir a [http://localhost:4567](http://localhost:4567)! Estás corriendo un pequeño servidor web y estás accediendo a él desde tu navegador. ¡Dile adiós a las líneas de comando!

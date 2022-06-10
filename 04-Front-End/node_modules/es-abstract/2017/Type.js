@@ -2,7 +2,7 @@
 
 var ES5Type = require('../5/Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-tostring
+// https://ecma-international.org/ecma-262/6.0/#sec-ecmascript-data-types-and-values
 
 module.exports = function Type(x) {
 	if (typeof x === 'symbol') {

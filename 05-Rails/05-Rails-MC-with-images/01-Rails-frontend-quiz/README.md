@@ -15,7 +15,7 @@ Return a `String` with the right command to create a new rails app called `watch
 
 ### Question 2
 
-Return a `String` of what you have to add to `application.html.erb` if you want to import the javascript file `application.js` that is inside of `app/javascript`.
+Return a `String` of what you have to add to `application.html.erb` if you want to import the JavaScript file `application.js` that is inside of `app/javascript`.
 
 ### Question 3
 

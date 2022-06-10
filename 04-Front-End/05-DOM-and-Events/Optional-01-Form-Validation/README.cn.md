@@ -1,6 +1,6 @@
 ## 背景和目标
 
-Javascript在客户端验证窗体时非常有用。
+JavaScript在客户端验证窗体时非常有用。
 当人们填写你的窗体时，如果一个地方填写错误最好尽快给他们反馈。
 
 ## 详细说明
@@ -24,7 +24,7 @@ rake webpack
 
 ## 进一步建议
 
-要显示输入是否有效的话，可以在[Bootstrap服务端验证类](https://getbootstrap.com/docs/4.3/components/forms/#server-side)的 `input`上使用 `.is-valid` 和 `.is-invalid`。像这样：
+要显示输入是否有效的话，可以在[Bootstrap服务端验证类](https://getbootstrap.com/docs/5.1/forms/validation/#server-side)的 `input`上使用 `.is-valid` 和 `.is-invalid`。像这样：
 
 ```html
 <input type="text" class="form-control is-valid">

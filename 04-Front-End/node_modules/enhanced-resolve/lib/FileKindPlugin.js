@@ -12,11 +12,13 @@ module.exports = class FileKindPlugin {
 
 	apply(resolver) {
 		const target = resolver.ensureHook(this.target);
-		resolver.getHook(this.source).tapAsync("FileKindPlugin", (request, resolveContext, callback) => {
-			if(request.directory) return callback();
-			const obj = Object.assign({}, request);
-			delete obj.directory;
-			resolver.doResolve(target, obj, null, resolveContext, callback);
-		});
+		resolver
+			.getHook(this.source)
+			.tapAsync("FileKindPlugin", (request, resolveContext, callback) => {
+				if (request.directory) return callback();
+				const obj = Object.assign({}, request);
+				delete obj.directory;
+				resolver.doResolve(target, obj, null, resolveContext, callback);
+			});
 	}
 };

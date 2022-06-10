@@ -1,10 +1,12 @@
 'use strict';
 
-var callBound = require('../helpers/callBound');
+var GetIntrinsic = require('get-intrinsic');
+var callBind = require('call-bind');
 
-var $PromiseResolve = callBound('Promise.resolve', true);
+var $resolve = GetIntrinsic('%Promise.resolve%', true);
+var $PromiseResolve = $resolve && callBind($resolve);
 
-// https://ecma-international.org/ecma-262/9.0/#sec-promise-resolve
+// https://262.ecma-international.org/9.0/#sec-promise-resolve
 
 module.exports = function PromiseResolve(C, x) {
 	if (!$PromiseResolve) {

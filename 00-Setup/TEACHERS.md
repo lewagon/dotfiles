@@ -19,7 +19,7 @@ The manager should introduce the 9 week program and its philosophy, then detail 
 
 - You will tackle in 9 weeks what students learn in 2 years in "regular" CS degree (often during their last year)
 - At the end you'll be able to prototype any web product
-- It will be very hard but trust us, 6000+ students had gone throught the same steps!
+- It will be very hard but trust us, 13,000+ students had gone throught the same steps!
 
 _Ask students who among them wants to be a developer, who wants to found a startup, who has no idea yet?_
 
@@ -32,7 +32,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - The first 3 weeks are **hard**. Only algo / software architecture
 - The equivalent of an entire year in coding schools
 - You will struggle, you may doubt, wonder where we're heading
-- Just hold on, stay motivated and trust us: 6000+ former students have experienced the program
+- Just hold on, stay motivated and trust us: 13,000+ former students have experienced the program
 - It works, so at this point, **trust us** and fight for it!
 
 #### Monday (Week 1) - Setup
@@ -78,7 +78,7 @@ Project the calendar on the screen to go through the program with the class, wee
 #### Monday - Friday (Week 7) - Airbnb week
 - Airbnb clone! (no flats allowed).
 - Team up with your project buddies.
-- Collaborate on Github.
+- Collaborate on GitHub.
 - Make mistakes you won't make again during the Project's weeks 😊
 
 #### Monday (Week 8) - Friday (Week 9) - Project Weeks
@@ -109,7 +109,7 @@ Project the calendar on the screen to go through the program with the class, wee
   - _Paris_ Introduce Le Wagon [tips](https://github.com/lewagon/tips/blob/master/paris.geojson), mention restaurants around
 - **5 PM - 6 PM**: Livecode. You'll gather in the classroom with the teacher and we'll work together on a brand new exercise. You'll code from scratch, guided by the class and teacher, the idea is to have an interactive session where everyone's involved.
 - **7 PM**:
-  - You've reached the end of the day! Have a beer in the neighborhood, get to know each others!
+  - You've reached the end of the day! Get to know each others!
   - Back home, don't code (your brains need to **rest**), but take a few minutes to read next day's lecture (you can also play flashcards, we'll show you later)
 
 ### Any questions?
@@ -135,7 +135,7 @@ At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org
 
 - Manager should approve them on his Slack channel
 - Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the wrong batch.
-- After this validation, students will receive 2 mails to join Le Wagon on Github and on Slack.
+- After this validation, students will receive 2 mails to join Le Wagon on GitHub and on Slack.
 
 ## 1 PM - 2 PM: Lunch time
 - Tell students to be back at 2 PM sharp for the first (short) lectures

@@ -42,7 +42,7 @@
 
 ## 完成了吗？
 
-一旦你完成了，你可以提交这个练习到[Github pages](https://pages.github.com)，并且分享到你的slack上。
+一旦你完成了，你可以提交这个练习到[GitHub pages](https://pages.github.com)，并且分享到你的slack上。
 
 首先，从`fullstack-challenges`中复制一份出来，这样我们就可以把它作为一个单独的`git`项目来版本跟踪。
 
@@ -57,7 +57,7 @@ cd ~/code/<user.github_nickname>/landing
 git init
 git add .
 git commit -m "我的着陆页"
-gh repo create
+gh repo create --public --source=.
 git push origin master # 先提交到 master
 # 然后提交到 "gh-pages "分支
 git co -b gh-pages

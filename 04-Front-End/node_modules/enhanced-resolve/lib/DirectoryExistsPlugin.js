@@ -12,22 +12,35 @@ module.exports = class DirectoryExistsPlugin {
 
 	apply(resolver) {
 		const target = resolver.ensureHook(this.target);
-		resolver.getHook(this.source).tapAsync("DirectoryExistsPlugin", (request, resolveContext, callback) => {
-			const fs = resolver.fileSystem;
-			const directory = request.path;
-			fs.stat(directory, (err, stat) => {
-				if(err || !stat) {
-					if(resolveContext.missing) resolveContext.missing.add(directory);
-					if(resolveContext.log) resolveContext.log(directory + " doesn't exist");
-					return callback();
+		resolver
+			.getHook(this.source)
+			.tapAsync(
+				"DirectoryExistsPlugin",
+				(request, resolveContext, callback) => {
+					const fs = resolver.fileSystem;
+					const directory = request.path;
+					fs.stat(directory, (err, stat) => {
+						if (err || !stat) {
+							if (resolveContext.missing) resolveContext.missing.add(directory);
+							if (resolveContext.log)
+								resolveContext.log(directory + " doesn't exist");
+							return callback();
+						}
+						if (!stat.isDirectory()) {
+							if (resolveContext.missing) resolveContext.missing.add(directory);
+							if (resolveContext.log)
+								resolveContext.log(directory + " is not a directory");
+							return callback();
+						}
+						resolver.doResolve(
+							target,
+							request,
+							"existing directory",
+							resolveContext,
+							callback
+						);
+					});
 				}
-				if(!stat.isDirectory()) {
-					if(resolveContext.missing) resolveContext.missing.add(directory);
-					if(resolveContext.log) resolveContext.log(directory + " is not a directory");
-					return callback();
-				}
-				resolver.doResolve(target, request, "existing directory", resolveContext, callback);
-			});
-		});
+			);
 	}
 };

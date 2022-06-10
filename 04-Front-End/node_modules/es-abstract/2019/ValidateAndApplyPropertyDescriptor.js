@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
@@ -16,8 +16,8 @@ var IsPropertyKey = require('./IsPropertyKey');
 var SameValue = require('./SameValue');
 var Type = require('./Type');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-validateandapplypropertydescriptor
-// https://www.ecma-international.org/ecma-262/8.0/#sec-validateandapplypropertydescriptor
+// https://ecma-international.org/ecma-262/6.0/#sec-validateandapplypropertydescriptor
+// https://ecma-international.org/ecma-262/8.0/#sec-validateandapplypropertydescriptor
 
 // eslint-disable-next-line max-lines-per-function, max-statements, max-params
 module.exports = function ValidateAndApplyPropertyDescriptor(O, P, extensible, Desc, current) {

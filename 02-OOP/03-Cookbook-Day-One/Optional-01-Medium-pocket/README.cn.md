@@ -135,7 +135,7 @@ Bye bye!
 
 ### 模型
 
-正如你现在知道的，你应该先从你的模型开始。模型是我们需要的ruby类，以便在我们的程序中操作数据。
+正如你现在知道的，你应该先从你的模型开始。模型是我们需要的Ruby类，以便在我们的程序中操作数据。
 
 在这里我们想查看DEV **posts**，所以让我们继续创建一个 `Post` 类。在编写代码之前，花点时间问问自己：
 
@@ -182,7 +182,7 @@ CSV.foreach("posts.csv", encoding: 'ISO-8859-1') do |row|
 
 这是每个操作需要遵循的流程：
 
-- 编写伪代码，将问题分解为小步骤，你可以轻松地在ruby中进行翻译
+- 编写伪代码，将问题分解为小步骤，你可以轻松地在Ruby中进行翻译
 - 记住，每个与数据有关的指令都将交给数据库，每个 `puts` 和 `gets` 都将由视图处理（同样，请考虑单一责任原则）
 - 编写代码情景期间，你只需要在必要时自然地编写 `View`  类及其实例方法
 - 每当出现新的需求（我们需要在回购或模型中使用新方法）时，请遵循流程并立即编写代码
@@ -206,6 +206,13 @@ controller.action_name # 替换为要测试的操作的真实名称
 
 ```bash
 ruby lib/test.rb
+```
+
+**提示**：如果你在搜刮时遇到`403 Forbidden Bots (OpenURI::HTTPError)`，有一个简单的方法，就是在HTTP请求的头文件中指定一个`User-Agent`。下面是一个使用`open-uri`的例子。
+
+```ruby
+USER_AGENT = "Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
+html_content = URI.open(url, "User-Agent" => USER_AGENT).read
 ```
 
 ### 路由

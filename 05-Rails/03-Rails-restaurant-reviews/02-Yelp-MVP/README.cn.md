@@ -14,7 +14,7 @@ rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
@@ -36,34 +36,6 @@ rails db:migrate RAILS_ENV=test  # 添加了一个数据库迁移之后运行
 
 ```bash
 rake
-
-# [...]
-# Failed examples:
-#
-# rspec ./spec/controllers/restaurants_controller_spec.rb:84 # RestaurantsController should exist
-# rspec ./spec/controllers/reviews_controller_spec.rb:77 # ReviewsController should exist
-# rspec ./spec/models/restaurant_spec.rb:13 # Restaurant has a name
-# rspec ./spec/models/restaurant_spec.rb:18 # Restaurant has an address
-# rspec ./spec/models/restaurant_spec.rb:23 # Restaurant has a phone number
-# rspec ./spec/models/restaurant_spec.rb:28 # Restaurant has a category
-# rspec ./spec/models/restaurant_spec.rb:33 # Restaurant name cannot be blank
-# rspec ./spec/models/restaurant_spec.rb:40 # Restaurant address cannot be blank
-# rspec ./spec/models/restaurant_spec.rb:47 # Restaurant category cannot be blank
-# rspec ./spec/models/restaurant_spec.rb:54 # Restaurant neptunian is not a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant chinese is a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant italian is a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant japanese is a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant french is a valid category
-# rspec ./spec/models/restaurant_spec.rb:62 # Restaurant belgian is a valid category
-# rspec ./spec/models/restaurant_spec.rb:70 # Restaurant has many reviews
-# rspec ./spec/models/restaurant_spec.rb:75 # Restaurant should destroy child reviews when destroying self
-# rspec ./spec/models/review_spec.rb:20 # Review has a content
-# rspec ./spec/models/review_spec.rb:25 # Review has a rating (stored as integer)
-# rspec ./spec/models/review_spec.rb:30 # Review content cannot be blank
-# rspec ./spec/models/review_spec.rb:37 # Review rating cannot be blank
-# rspec ./spec/models/review_spec.rb:44 # Review parent restaurant cannot be nil
-# rspec ./spec/models/review_spec.rb:51 # Review rating should be an integer
-# rspec ./spec/models/review_spec.rb:58 # Review rating should be a number between 0 and 5
 ```
 如果运行`rake`不顺利的话，你需要运行`bin/rake`。这意味着你的环境变量`$PATH`没有包含`./bin` 文件夹，你可以通过dotfiles的zshrc来修复这个问题(查看[我们的默认配置](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))。
 
@@ -91,9 +63,9 @@ rake
 
 在开发路由层之前，验证所有的模型测试。你可以使用下面的命令：
 ```bash
-rspec spec/models
+rspec spec/01_models
 ```
-来选择性地运行`spec/models`文件夹下面的测试。
+来选择性地运行`spec/01_models`文件夹下面的测试。
 
 你也可以使用`rails console` 来手动测试你的代码。在每次代码修改之后，不要忘了使用`reload!`!
 
@@ -236,3 +208,5 @@ POST "restaurants/38/reviews"
 ```
 
 请注意我们不再使用路由`GET "restaurants/38/reviews/new"`。这是因为review 表单**现在已经被嵌入了`restaurants/show.html.erb` 视图**。 🛏
+
+要为此版本运行适当的测试，请运行命令 `rspec -t refactoring`

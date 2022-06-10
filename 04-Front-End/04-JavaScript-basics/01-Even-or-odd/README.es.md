@@ -4,22 +4,23 @@ Hoy es nuestro primer día de JavaScript. El objetivo de este día es que te des
 
 Hoy, en lugar de usar el navegador, vamos a usar [Node.js](https://nodejs.org/en/) para correr código JavaScript directamente en la Terminal.
 
-Asegúrate que el comando siguiente devuelve una versión mayor a `10`:
+Debería tener ya instalado `node` con una versión superior a `10`. Compruébalo con:
 
 ```bash
 node -v
+# You should see your node version here
 ```
 
-De otra manera Node no se instalará en tu sistema. Échale un vistazo a la sección de configuración en las diapositivas de la clase, por favor.
+Si no es así, vuelva a la sección dedicada de la configuración de [macOS](https://github.com/lewagon/setup/blob/master/macos.md#nodejs), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#nodejs) o [Windows](https://github.com/lewagon/setup/blob/master/windows.md#nodejs).
 
 ## Especificaciones
 
-Comencemos con un algoritmo muy simple. Abre el archivo `lib/even_or_odd.js`. Implementa la función `evenOrOdd` que toma el parámetro `number` (de tipo `Number`) y devuelve una cadena de texto (`String`):
+Comencemos con un algoritmo muy simple. Abre el archivo `lib/even_or_odd.js`. Implementa la función `evenOrOdd` que toma el parámetro `number` (de tipo `number`) y devuelve una cadena de texto (`string`):
 
 - `"even"` si el número es par (0, 2, 4, etc.)
 - `"odd"` si el número es impar (1, 3, 5, etc.)
 
-**⚠️ Advertencia**: En JavaScript necesitas escribir **explicitamente** la palabra clave `return`. De lo contrario [la función devolverá `undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return#Syntax)! La única excepción a esta regla es cuando usas una expresión de función flecha (one-liner arrow function) con retorno implícito ([implicit return])(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body).
+**⚠️ Advertencia**: En JavaScript necesitas escribir **explicitamente** la palabra clave `return`. De lo contrario [la función devolverá `undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return#Syntax)! La única excepción a esta regla es cuando usas una expresión de función flecha (one-liner arrow function) con [retorno implícito](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body).
 
  _Pista: ¿Recuerdas el Ruby modulo orperator?¡También existe en JavaScript y puede ser útil!_
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var $BooleanValueOf = require('../helpers/callBound')('Boolean.prototype.valueOf');
+var $BooleanValueOf = require('call-bind/callBound')('Boolean.prototype.valueOf');
 
 var Type = require('./Type');
 

@@ -2,7 +2,7 @@
 
 Quisiéramos crear una pequeña aplicación web [Sinatra](http://www.sinatrarb.com/) para mostrar toda la información de la base de datos de la Rocola (Jukebox).
 
-Este ejercicio tiene rake para testear tu aplicación Sinatra. Para que funcione debes correr `gem install rack-test` en la Terminal.
+Este ejercicio tiene rake para testear tu aplicación Sinatra. Ejecutalo con el comando habitual `rake`.
 
 ## Configuración
 

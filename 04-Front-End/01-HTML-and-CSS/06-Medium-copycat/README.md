@@ -1,10 +1,10 @@
 ## Background and Objectives
 
-Let's design a [Medium article](https://lewagon.github.io/medium-copycat/) and deploy it with Github pages!
+Let's design a [Medium article](https://lewagon.github.io/medium-copycat/) and deploy it with GitHub pages!
 
 ## Setup
 
-Firstly, we will need to create all the files/folders we will need:
+Firstly, we will need to create all the files and folders we will need:
 
 ```bash
 mkdir medium-article
@@ -51,9 +51,9 @@ Here is an example of how you would re-size the container on any screen 992px wi
 
 Make sure to resize the container for all other screen sizes (`576px`, `768px`, `992px` and `1200px`).
 
-## Optional - Push to Github pages
+## Optional - Push to GitHub pages
 
-If you want to, you can also push your medium article to Github Pages! If you choose to do so, we will again need to copy your work to a folder **outside** of fullstack challenges so we can track it with git as a seperate project:
+If you want to, you can also push your medium article to GitHub Pages! If you choose to do so, we will again need to copy your work to a folder **outside** of fullstack challenges so we can make it a separate git repository:
 
 ```bash
 cp -r ./medium-article ~/code/<user.github_nickname>/medium-article
@@ -62,7 +62,7 @@ cd ~/code/<user.github_nickname>/medium-article
 git init
 git add index.html style.css
 git commit -m "My medium copycat"
-gh repo create
+gh repo create --public --source=.
 git push
 gh repo view --web
 ```
@@ -74,4 +74,4 @@ git checkout -b gh-pages
 git push origin gh-pages
 ```
 
-Go to `http://<user.github_nickname>.github.io/medium-article/` to your medium copycat article online!
+Go to `http://<user.github_nickname>.github.io/medium-article/` to see your medium copycat article online!

@@ -1,13 +1,13 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 var $Number = GetIntrinsic('%Number%');
 var $RegExp = GetIntrinsic('%RegExp%');
 var $parseInteger = GetIntrinsic('%parseInt%');
 
-var callBound = require('../helpers/callBound');
+var callBound = require('call-bind/callBound');
 var regexTester = require('../helpers/regexTester');
 var isPrimitive = require('../helpers/isPrimitive');
 
@@ -34,7 +34,7 @@ var $trim = function (value) {
 
 var ToPrimitive = require('./ToPrimitive');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-tonumber
+// https://ecma-international.org/ecma-262/6.0/#sec-tonumber
 
 module.exports = function ToNumber(argument) {
 	var value = isPrimitive(argument) ? argument : ToPrimitive(argument, $Number);
@@ -48,12 +48,12 @@ module.exports = function ToNumber(argument) {
 			return ToNumber($parseInteger($strSlice(value, 2), 8));
 		} else if (hasNonWS(value) || isInvalidHexLiteral(value)) {
 			return NaN;
-		} else {
-			var trimmed = $trim(value);
-			if (trimmed !== value) {
-				return ToNumber(trimmed);
-			}
 		}
+		var trimmed = $trim(value);
+		if (trimmed !== value) {
+			return ToNumber(trimmed);
+		}
+
 	}
 	return $Number(value);
 };

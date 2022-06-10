@@ -12,7 +12,8 @@ node -v
 yarn -v
 # You should see your yarn version here
 ```
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#node-with-nvm), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#node-with-nvm) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#node-with-nvm) setup.
+
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#nodejs), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#nodejs) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#nodejs) setup.
 
 ## Specs
 

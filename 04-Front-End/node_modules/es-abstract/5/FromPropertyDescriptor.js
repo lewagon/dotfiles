@@ -1,6 +1,6 @@
 'use strict';
 
-var GetIntrinsic = require('../GetIntrinsic');
+var GetIntrinsic = require('get-intrinsic');
 
 var $TypeError = GetIntrinsic('%TypeError%');
 
@@ -10,7 +10,7 @@ var IsAccessorDescriptor = require('./IsAccessorDescriptor');
 
 var assertRecord = require('../helpers/assertRecord');
 
-// https://ecma-international.org/ecma-262/5.1/#sec-8.10.4
+// https://262.ecma-international.org/5.1/#sec-8.10.4
 
 module.exports = function FromPropertyDescriptor(Desc) {
 	if (typeof Desc === 'undefined') {
@@ -33,7 +33,7 @@ module.exports = function FromPropertyDescriptor(Desc) {
 			enumerable: !!Desc['[[Enumerable]]'],
 			configurable: !!Desc['[[Configurable]]']
 		};
-	} else {
-		throw new $TypeError('FromPropertyDescriptor must be called with a fully populated Property Descriptor');
 	}
+	throw new $TypeError('FromPropertyDescriptor must be called with a fully populated Property Descriptor');
+
 };

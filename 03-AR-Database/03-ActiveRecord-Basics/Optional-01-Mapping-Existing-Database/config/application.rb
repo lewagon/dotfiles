@@ -12,7 +12,7 @@ ActiveRecord::Base.establish_connection(:development)
 # when the console is launched
 Dir["#{__dir__}/../app/models/*.rb"].sort.each { |file| require file }
 
-# Set a logger so that you can view the SQL actually performed by ActiveRecord
+# Set a logger so that you can view the SQL actually performed by Active Record
 logger = Logger.new($stdout)
 logger.formatter = proc do |_severity, _datetime, _progname, msg|
   "#{msg}\n"

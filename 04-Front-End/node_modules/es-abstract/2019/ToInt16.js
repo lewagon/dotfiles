@@ -2,7 +2,7 @@
 
 var ToUint16 = require('./ToUint16');
 
-// https://www.ecma-international.org/ecma-262/6.0/#sec-toint16
+// https://ecma-international.org/ecma-262/6.0/#sec-toint16
 
 module.exports = function ToInt16(argument) {
 	var int16bit = ToUint16(argument);

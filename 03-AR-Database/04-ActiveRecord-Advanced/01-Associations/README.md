@@ -1,7 +1,6 @@
 ## Background & Objectives
 
-Let's continue with our HackerNews app. Today we want to add
-a user layer, so that you need to log in first before submitting a new post.
+Let's continue with our Hacker News app. Today we want to add a user layer, so that you need to log in first before submitting a new post.
 
 (You don't need to log in to view posts though)
 
@@ -20,9 +19,7 @@ rake db:migrate
 
 We provide you the basic schema of posts (see existing migration in `db/migrate` folder).
 
-First generate a new migration to
-create the `User` model. The model should have the following fields:
-
+First generate a new migration to create the `User` model. The model should have the following fields:
 - `username`
 - `email`
 
@@ -30,11 +27,10 @@ create the `User` model. The model should have the following fields:
 
 Generate another migration to create a one-to-many reference between `User` and `Post`.
 
-Make sure you add the code in your models to allow you to access posts from a user instance,
-and the user from a given post instance.
+Make sure you add the code in your models to allow you to access posts from a user instance, and the user from a given post instance.
 
 ### Seed with user and posts
 
 Write a seed that populates your database with 5 users who each have between 5 and 10 posts. Feel free to use any strategy you want (faker or API).
 
-Don't spend to much time trying to use the API. Remember that our goal here is to work with associations.
+Don't spend too much time trying to use the API. Remember that our goal here is to work with associations.

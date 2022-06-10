@@ -1,7 +1,7 @@
 ## Background & Objectives
 
 We'd like to build a small [Sinatra](http://www.sinatrarb.com/) web application to display all the information from that Jukebox Database.
-There is a rake for this exercise that will test your sinatra app, for it to work, run `gem install rack-test` in the Terminal.
+There is a rake for this exercise that will test your sinatra app. Just launch it with the usual `rake` command.
 
 ## Setup
 
