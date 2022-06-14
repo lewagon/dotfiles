@@ -8,14 +8,14 @@ To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewa
 
 ### Setup
 
-You should already have [SQLite](https://sqlite.org/index.html) installed in your computer. Check it with:
+You should already have [SQLite](https://sqlite.org/index.html) installed on your computer. Check it with:
 
 ```bash
-  sqlite3 -version
+sqlite3 -version
 # You should see your sqlite version here
 ```
 
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite) or  setup.
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite) setup.
 
 You can open the database we provided by running:
 
@@ -27,12 +27,11 @@ You are now in the interactive `sqlite3` console and you can write your SQL quer
 
 ## Tools
 
-You can also use the **[SQLite Extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)** to read the SQLite database, explore the schema and even **run SQL queries**. This extension should've already been installed on setup day. If you don't have it, you can always go back to the setup dedicated section ([macOS](https://github.com/lewagon/setup/blob/master/macos.md#vscode_extensions) - [Windows](https://github.com/lewagon/setup/blob/master/windows.md#vscode_extensions) - [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#vscode_extensions)) or raise a ticket 🎫 🙌
+You can also use the [VS Code SQLite extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) to read the SQLite database, explore the schema and even **run SQL queries**. This extension should've already been installed on setup day. If you don't have it, you can always go back to the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#vscode_extensions), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#vscode_extensions) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#vscode_extensions) section of the setup.
 
+### VS Code SQLite extension - Exploring the database
 
-### VS Code SQLite Extension - Exploring the database
-
-There a different commands you can use with this extensions to explore, and interact with your sqlite database.  To start typing commands remember to open your command pallet by pressing `Cmd / Ctrl` + `Shift` + `p`. You should see a little text box in your editor where you can type any command you want. To explore the database, we are going to run the `Open Database` command by following this steps
+There are different commands you can use with this extension to explore and interact with your sqlite database. To start typing commands remember to open your command palette by pressing `Cmd / Ctrl` + `Shift` + `p`. You should see a little text box in your editor where you can type any command you want. To explore the database, we are going to run the `Open Database` command by following these steps:
 
 - Open your command pallet with `Cmd / Ctrl` + `Shift` + `p`.
 - Type in `SQLite: Open Database`
