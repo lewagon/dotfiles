@@ -72,7 +72,7 @@ Now time to move on to the real content of the lecture. We'll see three importan
 - Class methods
 - Self
 
-Imagine you had three classes, each one to create a different type of building. Make sure you create 3 files to show the students again about the require_relative concept again.
+Imagine you had three classes, each one to create a different type of building. Make sure you create 3 files to show the students about the `require_relative` concept again.
 
 ```ruby
 # house.rb  
