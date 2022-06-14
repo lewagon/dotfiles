@@ -262,7 +262,7 @@ class Castle < Building
   end
 end
 
-#The has_a_butler? method is an instance method
+# The has_a_butler? method is an instance method
 # We can call the instance method has_a_butler? on a single Castle instance
 p my_castle.has_a_butler? #=> false
 
