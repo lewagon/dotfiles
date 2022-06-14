@@ -134,7 +134,7 @@ end
 
 ### First chapter: Inheritance
 
-- Wow, lots of duplicated code here... let's respect the principle Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class.We can make our classes inherit from a more generic SuperClass/ParentClass called Building. The syntax of inheritance is pretty simple:
+- Wow, lots of duplicated code here... let's respect the principle Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class. We can make our classes inherit from a more generic SuperClass/ParentClass called Building. The syntax of inheritance is pretty simple:
 
 ```ruby
 class SuperClass
