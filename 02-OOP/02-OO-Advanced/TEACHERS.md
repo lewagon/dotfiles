@@ -190,7 +190,7 @@ require_relative "building"
 class Castle < Building
 end
 
-some_castle = Castle.new('Tower of London', 32, 35)
+some_castle = Castle.new("Tower of London", 32, 35)
 some_castle.name #=> "Tower of London"
 some_castle.floor_area #=> 1120
 ```
