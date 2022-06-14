@@ -273,7 +273,7 @@ p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
 - Instance methods are called on instances
 - Class methods are called on classes.
 
-What are class methods ?
+What are class methods?
 
 - The are called on the class directly.
 - `Castle.categories`
