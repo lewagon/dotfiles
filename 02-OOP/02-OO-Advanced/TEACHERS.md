@@ -281,7 +281,7 @@ What are class methods?
 ```ruby
 class Castle < Building
   def self.categories
-    return ['Medieval', 'Norman', 'Ancient']
+    return ["Medieval", "Norman", "Ancient"]
   end
 end
 ```
