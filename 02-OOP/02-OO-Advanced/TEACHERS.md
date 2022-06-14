@@ -227,7 +227,7 @@ class Castle < Building
   end
 end
 
-some_castle = Castle.new('Tower of London', 32, 35)
+some_castle = Castle.new("Tower of London", 32, 35)
 some_castle.floor_area # => 1420
 ```
 
