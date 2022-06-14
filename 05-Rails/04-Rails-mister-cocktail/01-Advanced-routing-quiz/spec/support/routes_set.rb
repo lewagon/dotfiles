@@ -11,6 +11,7 @@ class RoutesSet
   %i(get post delete patch put).each do |http_verb|
     define_method http_verb do |path, to_controller|
       controller_name, controller_action = to_controller[:to].split("#")
+      path = path.gsub(/^\//, "")
 
       route = Route.new(http_verb, path, controller_name, controller_action)
       @routes << route

@@ -13,8 +13,6 @@
 
 ## 练习 1: 我们一起 `rake`.
 
-运行正确后，这个练习会给你2个结果行中的1个绿色结果。完成练习2后，另一行会变成绿色。
-
 使用这一页顶部的命令，转到练习文件夹。
 
 - 运行 `rake`. 它应该都是红色的(因为你还没开始写码).
@@ -83,5 +81,5 @@
 
 - [git速查表](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 - [交互速查表](http://www.ndpsoftware.com/git-cheatsheet.html)
-- 看一下[这个 TED 演讲](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) 关于如何把 git/GitHub 用于平时的项目 (非dev类的)
+- 看一下[这个 TED 演讲](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government) 关于如何把 git/GitHub 用于平时的项目 (非dev类的)
 - 阅读并练习这个教程的所有内容[学习足够多的命令行来变得危险](http://www.learnenough.com/command-line/)

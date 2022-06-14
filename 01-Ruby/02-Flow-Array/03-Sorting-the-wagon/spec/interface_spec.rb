@@ -46,10 +46,9 @@ describe "Interface" do
   context "when the input has 3 students" do
     it "should display the number of students" do
       expect(result_one).to match(/3 students/)
-
     end
 
-    it "should display the student list" do
+    it "should display the student list in the right manner. Names should be separated by commas, with the last two names by the word `and`" do
       expect(result_one).to match(/Alice, Bob and charlie/)
     end
   end
@@ -73,5 +72,4 @@ describe "Interface" do
       expect(result_three).to match(/^Alice$/)
     end
   end
-
 end

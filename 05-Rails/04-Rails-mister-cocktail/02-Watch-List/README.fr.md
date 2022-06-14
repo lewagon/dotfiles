@@ -32,7 +32,7 @@ On va maintenant configurer git, créer un dépôt sur Github et pousser notre s
 ```bash
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 

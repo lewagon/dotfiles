@@ -13,8 +13,6 @@ Working in pairs is a common practice in software engineering. The idea is that 
 
 ## Exercise 1: Let's `rake`.
 
-When correct, this exercise will give you 1 green result line out of 2. The other line will be green when you're done with exercise 2.
-
 Move to the exercise folder with the command at the top of this page.
 
 - Run `rake`. It should all be red (as you have not started coding).
@@ -81,5 +79,5 @@ When you're done you can look at the links below.
 If you are done with your computer set up and the excercises, have a look at these resources:
 - [git cheat sheet](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
 - [interactive cheat sheet](http://www.ndpsoftware.com/git-cheatsheet.html)
-- Watch [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html) on how to use git/GitHub for usual projects (non-dev)
+- Watch [this TED conference](http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government) on how to use git/GitHub for usual projects (non-dev)
 - Read and practise all of this tutorial: [Learn Enough Command Line to Be Dangerous](http://www.learnenough.com/command-line/)

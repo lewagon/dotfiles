@@ -13,7 +13,7 @@ rails new rails-yelp-mvp --skip-active-storage --skip-action-mailbox -T
 cd rails-yelp-mvp
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
 echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
@@ -60,8 +60,10 @@ Réfléchis bien avant de choisir le type de données, ta première idée ne ser
 - La catégorie du restaurant doit appartenir à cette liste fixe : `["chinese", "italian", "japanese", "french", "belgian"]`.
 - Quand un restaurant est supprimé, tous ses avis doivent aussi être supprimés.
 - Un avis doit appartenir à un restaurant.
-- Un avis doit avoir un contenu et une note.
-- La note associée à un avis doit être un nombre entre 0 et 5.
+- Un avis doit avoir un contenu.
+- Un avis doit avoir une note.
+- La note d'un avis doit être un nombre entre 0 et 5.
+- La note d'un avis doit être un entier. Par exemple, un avis avec une note de 2,5 doit être invalide !
 
 Valide tous les tests du modèle avant de passer à la définition des routes. Tu peux utiliser cette commande :
 
@@ -107,7 +109,7 @@ GET "restaurants/new"
 POST "restaurants"
 ```
 
-- Un visiteur peut ajouter les détails d'un restaurant, avec tous les avis associés au restaurant.
+- Un visiteur peut voir les détails d'un restaurant, avec tous les avis associés au restaurant.
 
 ```
 GET "restaurants/38"

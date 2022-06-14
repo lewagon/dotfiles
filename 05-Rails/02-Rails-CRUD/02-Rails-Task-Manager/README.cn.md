@@ -18,7 +18,7 @@ rails new rails-task-manager --skip-active-storage --skip-action-mailbox
 cd rails-task-manager
 git add .
 git commit -m "rails new"
-gh repo create
+gh repo create --public --source=.
 git push origin master
 ```
 
