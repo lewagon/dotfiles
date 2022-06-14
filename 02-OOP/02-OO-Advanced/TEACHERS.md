@@ -251,7 +251,7 @@ As you see, `super` is making a call to the method with the same name in the par
 # castle.rb
 class Castle # This is a class Castle
 end
-my_castle = Castle.new('Tower of London', 32, 35) # This is an instance of the Castle class
+my_castle = Castle.new("Tower of London", 32, 35) # This is an instance of the Castle class
 ```
 
 Instance Methods
