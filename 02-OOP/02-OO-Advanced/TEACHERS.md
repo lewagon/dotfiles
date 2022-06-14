@@ -178,7 +178,7 @@ require_relative "building"
 class Skyscraper < Building
 end
 
-some_skyscraper = Skyscraper.new('Empire State Building', 50, 60)
+some_skyscraper = Skyscraper.new("Empire State Building", 50, 60)
 some_skyscraper.name #=> "Empire State Building"
 some_skyscraper.floor_area #=> 3000
 ```
