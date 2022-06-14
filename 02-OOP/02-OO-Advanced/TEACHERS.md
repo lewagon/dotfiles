@@ -166,7 +166,7 @@ require_relative "building" # don't forget the require_relative 'building' here
 class House < Building
 end
 
-some_house = House.new('White House', 26, 51)
+some_house = House.new("White House", 26, 51)
 some_house.name #=> "White House"
 some_house.floor_area #=> 1326
 ```
