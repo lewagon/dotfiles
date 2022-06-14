@@ -290,7 +290,7 @@ end
 - You can't call class methods on instances!
 
 ```ruby 
-some_castle = Castle.new('Tower of London', 32, 35)
+some_castle = Castle.new("Tower of London", 32, 35)
 some_castle.categories #=> Undefined method `categories`
 ```
 
