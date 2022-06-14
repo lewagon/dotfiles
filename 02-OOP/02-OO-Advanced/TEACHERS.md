@@ -206,7 +206,7 @@ class Castle < Building
   end
 end
 
-some_castle = Castle.new('Chambord', 156, 117)
+some_castle = Castle.new("Chambord", 156, 117)
 some_castle.has_a_butler? # => false
 some_castle.butler = "George"
 some_castle.has_a_butler? # => true
