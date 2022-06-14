@@ -231,7 +231,7 @@ some_castle = Castle.new("Tower of London", 32, 35)
 some_castle.floor_area # => 1420
 ```
 
-- As you see, `super` is making a call to the method with the same name in the parent class.
+As you see, `super` is making a call to the method with the same name in the parent class.
 
 #### Wrap up the inheritance chapter
 
