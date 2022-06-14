@@ -29,7 +29,7 @@ country_side_house = House.new("My blue house", 500, 400)
 p my_country_side_house #=> ?????
 ```
 
-- What if you want to print out the name, width and length of my house, how would you do that? You will have to create a getter for that or otherwise you can't access it:
+- What if you want to print out the name, width and length of the house, how would you do that? You will have to create a getter for that or otherwise you can't access it:
 
 ```ruby
 def name
