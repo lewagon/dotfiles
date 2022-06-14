@@ -25,7 +25,7 @@ end
 - Now let's create a new instance of this class:
 
 ```ruby
-country_side_house = House.new('My blue house', 500, 400)
+country_side_house = House.new("My blue house", 500, 400)
 p my_country_side_house #=> ?????
 ```
 
