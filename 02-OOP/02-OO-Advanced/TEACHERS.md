@@ -217,7 +217,7 @@ some_house.has_a_butler? #=> Undefined method `has_a_butler?`
 
 #### `super` keyword
 
-- We all know that a Castle in usually bigger than a House (bigger floor_area). How can we make sure that this behavior is translated into code ? We need to change an inherited method. This can be done with the super keyword, which calls the parent's method with the same name. Now, let's refacto our classes using `super` keyword:
+We all know that a Castle in usually bigger than a House (bigger floor_area). How can we make sure that this behavior is translated into code? We need to change an inherited method. This can be done with the `super` keyword, which calls the parent's method with the same name. Now, let's refacto our classes using `super` keyword:
 
 ```ruby
 class Castle < Building
