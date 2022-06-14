@@ -266,7 +266,7 @@ end
 #We can call the instance method has_a_butler? on a single Castle instance
 p my_castle.has_a_butler? #=> false
 
-#We cannot call the instance method has_a_butler on the Castle class directly
+# We cannot call the instance method has_a_butler on the Castle class directly
 p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
 ```
 
