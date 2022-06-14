@@ -58,7 +58,7 @@ class House
   end
 end
 
-my_country_side_house = House.new('My blue house', 500, 400)
+my_country_side_house = House.new("My blue house", 500, 400)
 p my_country_side_house.name
 p my_country_side_house.length
 p my_country_side_house.width
