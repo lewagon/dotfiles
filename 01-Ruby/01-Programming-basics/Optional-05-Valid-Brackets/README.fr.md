@@ -32,9 +32,9 @@ Mets à jour la méthode `valid_brackets?` pour faire passer tous les tests.
 ## Exemples
 
 ```ruby
-"(){}[]"   =>  True
-"([{}])"   =>  True
-"(}"       =>  False
-"[(])"     =>  False
-"[({})](]" =>  False
+"(){}[]"   =>  true
+"([{}])"   =>  true
+"(}"       =>  false
+"[(])"     =>  false
+"[({})](]" =>  false
 ```
