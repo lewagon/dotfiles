@@ -161,7 +161,7 @@ end
 ```
 ```ruby 
 # house.rb
-require_relative 'building' # don't forget the require_relative 'building' here
+require_relative "building" # don't forget the require_relative 'building' here
 
 class House < Building
 end
