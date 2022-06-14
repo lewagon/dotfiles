@@ -185,7 +185,7 @@ some_skyscraper.floor_area #=> 3000
 
 ```ruby
 # castle.rb
-require_relative 'building' 
+require_relative "building"
 
 class Castle < Building
 end
