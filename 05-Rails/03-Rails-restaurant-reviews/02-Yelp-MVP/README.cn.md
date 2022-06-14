@@ -54,12 +54,14 @@ rake
 
 #### 验证Validation
 
-- 一个 restaurant 必须要有name，address 和 category。
-- 一个 restaurant的 category 必须在这个固定的清单里: `["chinese", "italian", "japanese", "french", "belgian"]`。
+- 一个restaurant必须要有name，address 和 category。
+- 一个restaurant的category 必须在这个固定的清单里: `["chinese", "italian", "japanese", "french", "belgian"]`。
 - 一个restaurant被删除之后，它所有的reviews也必须被删除。
-- 一个 review 必须属于一个restaurant。
-- 一个 review 必须要有content 和 rating。
-- 一个 review 的 rating 必须是一个介于0和5之间的整数。
+- 一个review必须属于一个restaurant。
+- 一个review必须要有content。
+- 一个review必须要有 rating。
+- 一个review的rating必须介于0和5之间。
+- 一个review的rating必须是个整数。比如，rating如果是2.5就是无效的。
 
 在开发路由层之前，验证所有的模型测试。你可以使用下面的命令：
 ```bash
