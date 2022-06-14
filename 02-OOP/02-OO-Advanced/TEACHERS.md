@@ -173,7 +173,7 @@ some_house.floor_area #=> 1326
 
 ```ruby 
 # skyscraper.rb
-require_relative 'building' 
+require_relative "building"
 
 class Skyscraper < Building
 end
