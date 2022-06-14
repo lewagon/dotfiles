@@ -211,7 +211,7 @@ some_castle.has_a_butler? # => false
 some_castle.butler = "George"
 some_castle.has_a_butler? # => true
 
-some_house = House.new('White House', 26, 51)
+some_house = House.new("White House", 26, 51)
 some_house.has_a_butler? #=> Undefined method `has_a_butler?`
 ```
 
