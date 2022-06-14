@@ -1,6 +1,6 @@
 ## Recap
 
-So yesterday you've had your first introduction into Object Oriented Programming. These are big steps in your web development career. Before we continue on that path, let's do a recap to make sure you understand the concepts.
+So yesterday you've had your first introduction to Object Oriented Programming. These are big steps in your web development career. Before we continue on that path, let's do a recap to make sure you understand the concepts.
 
 Let's create a House class:
 
