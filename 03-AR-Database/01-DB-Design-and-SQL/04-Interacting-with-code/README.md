@@ -2,7 +2,14 @@
 
 Now it is time to use Ruby code to interact with the `jukebox` database. For that we need a gem called [sqlite3](http://rubygems.org/gems/sqlite3).
 
-To install the gem on your computer, run this in the terminal:
+It should already be installed installed on your computer. Check it with:
+
+```bash
+gem list sqlite3
+# You should see your sqlite3 gem version here
+```
+
+If not, install it with:
 
 ```bash
 gem install sqlite3
@@ -76,10 +83,18 @@ You'll notice that your text editor understand Heredoc and the syntax highlighti
 * [SQL Commands](http://www.sqlcommands.net/)
 * [Course in 🇫🇷 about `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
-## Tools
+## VS Code SQLite extension - Executing queries
 
-You were introduced to those tools in the previous exercise. Use them!
+This time we will be running the  `SQLite: New Query` command. In order to do so, please follow these steps:
 
-- [SQLite Pro (macOS only, paying but trial seems unlimited)](https://www.sqlitepro.com/)
-- [SQLStudio (Free)](http://sqlitestudio.pl/)
-- [SQLite Browser (Free)](http://sqlitebrowser.org/)
+- Open your command palette with `Cmd / Ctrl` + `Shift` + `p`.
+- Type in `SQLite: New Query`
+- Write your query in the opened `.sql` file
+- Once your query is ready open your command pallet again and type in `SQLite: Run Query`
+- Select the database you want to run your query on
+
+And that's it! You should see your results!
+
+<iframe src="https://player.vimeo.com/video/690525239?h=ca70e032e8" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+👉 You can find more information about the VS Code SQLite extension in our [dedicated cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/sqlite_extension).
