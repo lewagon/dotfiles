@@ -12,7 +12,7 @@ class House
 end
 ```
 
-- Let's define the "constructor", the method that is going to define the state/properties of our object. In Ruby this method is called `initialize`:
+- Let's define the "constructor", the method which is going to be executed when we build objects. In Ruby this method is called `initialize`:
 
 ```ruby
 def initialize(name, width, length)
