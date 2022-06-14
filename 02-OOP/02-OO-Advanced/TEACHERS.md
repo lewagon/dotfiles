@@ -244,7 +244,7 @@ As you see, `super` is making a call to the method with the same name in the par
 
 ### Second chapter: Class Methods
 
-- Remind the sutdents about the difference between instance and class
+- Remind the students about the difference between instance and class
 - A class is used to create instances using the new method
 
 ```ruby
