@@ -59,7 +59,7 @@ rake
 - 一个restaurant被删除之后，它所有的reviews也必须被删除。
 - 一个review必须属于一个restaurant。
 - 一个review必须要有content。
-- 一个review必须要有 rating。
+- 一个review必须要有rating。
 - 一个review的rating必须介于0和5之间。
 - 一个review的rating必须是个整数。比如，rating如果是2.5就是无效的。
 
