@@ -2,14 +2,7 @@
 
 Now it is time to use Ruby code to interact with the `jukebox` database. For that we need a gem called [sqlite3](http://rubygems.org/gems/sqlite3).
 
-It should already be installed installed on your computer. Check it with:
-
-```bash
-gem list sqlite3
-# You should see your sqlite3 gem version here
-```
-
-If not, install it with:
+To install the gem on your computer, run this in the terminal:
 
 ```bash
 gem install sqlite3
