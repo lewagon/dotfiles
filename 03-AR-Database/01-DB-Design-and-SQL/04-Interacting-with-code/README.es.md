@@ -2,13 +2,13 @@
 
 Es hora de usar código Ruby para interactuar con la base de datos `jukebox`. Para ello necesitamos la gema [sqlite3](http://rubygems.org/gems/sqlite3).
 
-Corre el siguiente código en tu Terminal  para instalarla en tu computadora:
+Corre el siguiente código en tu Terminal para instalarla en tu computadora:
 
 ```bash
 gem install sqlite3
 ```
 
-El objetivo de este desafío es hablar con la base de datos **por medio de código Ruby**.
+El objetivo de este desafío es comunicarse con la base de datos **por medio de código Ruby**.
 
 ## Especificaciones
 
@@ -25,7 +25,7 @@ def the_method(db)
 end
 ```
 
-👉 Para probar tu código con `irb` (o en el archivo `lib/queries.rb`) deberás crear `db` tú mismo/a.
+👉 Para probar tu código con `irb` (o en el archivo `lib/queries.rb`) deberás crear `db` tú mismo.
 
 ```ruby
 # ➜ 03-Interacting-with-code git:(master) ✗  irb
@@ -34,7 +34,7 @@ db = SQLite3::Database.new("lib/db/jukebox.sqlite")
 rows = db.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
 ```
-También puedes importar tu méthodas:
+También puedes importar tu métodos:
 
 ```ruby
 require_relative "lib/queries"
@@ -42,9 +42,7 @@ artist_count(db)
 # => [...]
 ```
 
-Abre el archivo  `lib/queries.rb` para responder las siguientes preguntas:
-
-No olvides que puedes ver el interior de la base de datos corriendo`sqlite3 lib/db/jukebox.sqlite` en la Terminal o usando algunas de las herramientas que se mencionaron en el ejercicio anterior (SQLite Pro, SQLStudio o SQLite Browser).
+Abre el archivo `lib/queries.rb` para responder las siguientes preguntas. No olvides que puedes ver el interior de la base de datos corriendo `sqlite3 lib/db/jukebox.sqlite` en la Terminal o usando algunas de las herramientas que se mencionaron en el ejercicio anterior (SQLite Pro, SQLStudio o SQLite Browser).
 
 Estos son los cinco métodos que hay que implementar:
 
@@ -69,17 +67,26 @@ SQL
 rows = db.execute(query)
 ```
 
-¡Te darás cuenta que tu editor de texto entiende Heredoc y la sintaxis resaltada es realmente SQL dentro del archivo Ruby!
+¡Te darás cuenta de que tu editor de texto entiende Heredoc y la sintaxis resaltada es realmente SQL dentro del archivo Ruby!
 
 ## Recursos
 
 * [Comandos SQL](http://www.sqlcommands.net/)
 * [Curso en 🇫🇷 sobre `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
-## Herramientas
+## Extensión SQLite de VS Code - Ejecución de queries
 
-Ya las conociste en el ejercicio anterior.¡Usalas!
+Esta vez ejecutaremos el comando `SQLite: New Query` Para hacerlo, sigue estos pasos:
 
-- [SQLite Pro (solo para macOS. Es paga pero parece que no hay restricciones para probarlo](https://www.sqlitepro.com/)
-- [SQLStudio (Gratis)](http://sqlitestudio.pl/)
-- [SQLite Browser (Gratis)](http://sqlitebrowser.org/)
+- Abre tu paleta de comandos con `Cmd / Ctrl` + `Shift` + `p`.
+- Escribe `SQLite: New Query`
+- Escribe tu consulta en el archivo `.sql` abierto
+- Una vez que tu consulta esté lista, abre tu paleta de comandos nuevamente y escribe `SQLite: Run Query`
+- Selecciona la base de datos donde desees ejecutar tu consulta
+
+¡Y eso es todo! ¡Deberías poder ver tus resultados!
+
+<iframe src="https://player.vimeo.com/video/690525239?h=ca70e032e8" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+👉 Encontrarás más información sobre la extensión SQLite de VS Code en nuestra [hoja de apuntes respectiva](https://kitt.lewagon.com/knowledge/cheatsheets/sqlite_extension).
+
