@@ -23,6 +23,6 @@ What makes a good demo?
 - Practice, practice, practice!
 
 Get some inspiration on how to prepare your own demo by familiarising yourself with previous projects. This is a super useful way to understand what makes a good user journey and pitch. There are many, many, many available to watch online.
-Browse through [previous demo days](https://www.youtube.com/playlist?list=PLkbmdtbypn7R_BN6nFX-XZc7uDyMSxhye) from your city and beyond 🚀
+Browse through [previous demo days](https://www.youtube.com/playlist?list=PLkbmdtbypn7QvNokOhyxcuK4A_OSky6D5) from your city and beyond 🚀
 
 During the demos, make sure that the team members who aren't presenting take notes on the feedbacks that the teaching team will be giving afterward. You'll need to have this in order to implement the feedbacks next week!

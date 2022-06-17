@@ -36,7 +36,7 @@ rake db:drop db:create db:migrate db:seed
 Lance l’application Sinatra.
 
 ```bash
-ruby app.rb
+ruby lib/app.rb
 ```
 
 Regarde ! Tu peux maintenant aller sur <http://localhost:4567>. Tu exécutes désormais un petit serveur Web auquel tu accèdes avec ton navigateur. Plus de ligne de commande !

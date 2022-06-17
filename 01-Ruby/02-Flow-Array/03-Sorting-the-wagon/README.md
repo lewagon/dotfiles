@@ -16,7 +16,9 @@ Programmers are often asked to sort things, that's why you should read about som
 
 ### Interactive Program
 
-Open the `interface.rb` file and make sure to use the `wagon_sort` method. It should work like this:
+Open the `interface.rb` file and make sure to use the `wagon_sort` method. The interface should have a properly stylized output. The names should be separated by commas (`, `) except for the last two that must be separed by the word `and`.
+
+It should work like this:
 
 ```bash
 ruby lib/interface.rb
@@ -30,7 +32,7 @@ bob
 Type another student name or press enter to finish:
 
 Congratulations! Your Wagon has 3 students:
-bob, Cedric and felix
+bob, Cedric and felix # Notice the proper word separation.
 ```
 
 ## Key learning points
