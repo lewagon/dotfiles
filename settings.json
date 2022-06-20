@@ -79,4 +79,5 @@
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.panel.defaultLocation": "right",
 }
