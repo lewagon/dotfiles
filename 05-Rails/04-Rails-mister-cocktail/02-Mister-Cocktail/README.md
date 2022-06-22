@@ -59,7 +59,7 @@ rspec spec/models                # Launch tests
 Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap  @popperjs/core
 ```
 
 And add the gems we're going to need:
@@ -92,24 +92,7 @@ curl -L https://github.com/lewagon/stylesheets/archive/rails-7.zip > stylesheets
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Finally let's import Boostrap JS library using webpack:
-
-```js
-// config/webpack/environment.js
-const { environment } = require("@rails/webpacker")
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require("webpack")
-environment.plugins.prepend("Provide",
-  new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery",
-    Popper: ["popper.js", "default"]
-  })
-)
-
-module.exports = environment
-```
+Finally let's import Boostrap JS library:
 
 ```js
 // app/javascript/packs/application.js

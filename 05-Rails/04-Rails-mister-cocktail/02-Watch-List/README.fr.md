@@ -271,6 +271,6 @@ Tout le monde devrait pouvoir commenter et donner son avis sur notre collection 
 - Ajoute la possibilité de rechercher des films.
 - Ajoute [typed.js](http://www.mattboldt.com/demos/typed-js/) pour donner un titre sympa à la page d'accueil.
 - Ajoute des animations [animate on scroll](https://michalsnik.github.io/aos/) aux signets quand on fait défiler la page d'affichage des listes.
-- Utilise [star-rating.js](https://pryley.github.io/star-rating.js/) pour afficher des étoiles au lieu d'un champ `input` normal dans le formulaire des avis.
+- Utilise [star-rating.js](https://kitt.lewagon.com/knowledge/tutorials/star_rating) pour afficher des étoiles au lieu d'un champ `input` normal dans le formulaire des avis.
 
 Là encore, utilise des contrôleurs Stimulus lorsque tu implémentes du JavaScript dans ton app ⚠️
