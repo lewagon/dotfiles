@@ -1,13 +1,13 @@
 ## Setup
 
-Debería tener ya instalado `rails`. Compruébalo con:
+Ya deberías tener `rails` instalado. Compruébalo con:
 
 ```bash
 rails -v
 # You should see your rails version here
 ```
 
-Si no es así, vuelva a la sección dedicada del setup [macOS](https://github.com/lewagon/setup/blob/rails-7/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/rails-7/windows.md#installing-some-gems) o [Ubuntu](https://github.com/lewagon/setup/blob/rails-7/ubuntu.md#installing-some-gems).
+Si no, vuelve a la sección del setup para [macOS](https://github.com/lewagon/setup/blob/rails-7/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/rails-7/windows.md#installing-some-gems) o [Ubuntu](https://github.com/lewagon/setup/blob/rails-7/ubuntu.md#installing-some-gems).
 
 ## Contexto y Objetivos
 
@@ -176,16 +176,6 @@ Primero, borra el archivo `test/controllers/questions_controller_test.rb` si fue
 
 Usaremos _Headless Chrome_ para el System Testing. Es un navegador sin interfaz de usuario que está bien adaptado a este tipo de tests. Antes de correr tus system tests debes asegurarte de que tienes una versión **reciente** de Chrome en tu sistema (no Chromium). Está disponible tanto para OSX como para Ubuntu.
 
-Luego tienes que instalar `chromedriver`:
-
-```bash
- # macOS
-brew install --cask chromedriver
-
-# Ubuntu
-gem install chromedriver-helper
-```
-
 Después de la instalación puedes abrir el siguiente archivo y reemplazar **todo** su contenido con:
 
 ```ruby
@@ -243,7 +233,21 @@ Corre el test en la Terminal con:
 rails test:system
 ```
 
-Si prestas atención al detalle del escenario, puedes leer el test de la siguiente manera:
+⚠️ Si obtienes un error `Webdrivers::BrowserNotFound: Failed to find Chrome binary`, debes instalar la última versión de Chrome:
+
+```bash
+ # macOS
+brew install --cask google-chrome
+
+# Ubuntu
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
+```
+
+Una vez que lo hayas instalado, reinicia las pruebas con `rails test:system`.
+
+Ahora que se están ejecutando, si prestas atención al detalle del escenario, puedes leer el test de la siguiente manera:
 
 1. Ve a la página `/ask`
 2. Asegúrate de que la página haya sido renderizada y que podamos leer `Ask your coach anything`.

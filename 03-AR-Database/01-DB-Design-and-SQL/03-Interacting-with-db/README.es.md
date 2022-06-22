@@ -4,20 +4,20 @@
 
 El objetivo de este primer ejercicio es usar la línea de comando para leer y hacer consultas de una base de datos de muestra que se llama `jukebox.sqlite` que te daremos.
 
+Para completar el desafío, dibuja el esquema de la base de datos en [db.lewagon.com](http://db.lewagon.com/), guárdalo como archivo XML y ejecuta `rake`!
+
 ### Configuracion
 
-Primero comprueba que tienes sqlite3 instalado en tu computadora:
+Ya deberías tener [SQLite](https://sqlite.org/index.html) instalado en tu computadora. Compruébalo con:
 
 ```bash
-sqlite3 --version
+sqlite3 -version
+# You should see your sqlite version here
 ```
 
-Si no es el caso, la puedes instalar corriendo el siguiente código:
+Si no es el caso, vuelve a la sección respectiva de configuración para [macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite) o [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite).
 
-- macOS: `brew install sqlite`
-- Ubuntu: `sudo apt-get install sqlite3 libsqlite3-dev`
-
-Puedes abrir la base de datos que te hemos suministrado para hacer algunas consultas en ella:
+Puedes abrir la base de datos que te hemos suministrado ejecutando lo siguiente:
 
 ```bash
 sqlite3 lib/db/jukebox.sqlite
@@ -28,46 +28,26 @@ Puedes salir de la consola sqlite3 con `.quit` o `CTRL+D`.
 
 ## Herramientas
 
-También puedes usar una aplicación **SQLite viewer** para leer la base de datos SQLite, explorar el esquema e inclusive **correr consultas SQL**.
+También puedes usar la [extensión SQLite de VS Code](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) para leer la base de datos SQLite, explorar el esquema e incluso **ejecutar consultas SQL**. Debiste haber instalado esta extensión el día de la instalación. Si no la tienes, puedes volver a la sección de configuración para [macOS](https://github.com/lewagon/setup/blob/master/macos.md#vscode_extensions), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#vscode_extensions) o [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#vscode_extensions).
 
-- [SQLite Pro (solo para macOS. Es paga pero parece que no hay restricciones para probarlo](https://www.sqlitepro.com/)
-- [SQLStudio (Gratis)](http://sqlitestudio.pl/)
-- [SQLite Browser (Gratis)](http://sqlitebrowser.org/)
+### Extensión SQLite de VS Code - Explorando la base de datos
 
-### Windows
+Existen varios comandos que puedes usar con esta extensión para explorar e interactuar con tu base de datos sqlite. Para comenzar a escribir comandos, recuerda abrir tu paleta de comandos presionando `Cmd / Ctrl` + `Shift` + `p`. Deberías ver un pequeño cuadro de texto en tu editor donde podrás escribir cualquier comando que desees. Para explorar la base de datos, vamos a ejecutar el comando `Open Database` siguiendo estos pasos:
 
-Copia los siguientes comandos en tu Terminal Ubuntu línea por línea:
-```bash
-sudo apt update
-sudo apt install -y sqlitebrowser
-echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0" >> ~/.zshrc
-source ~/.zshrc
-```
+- Abre tu paleta de comandos con `Cmd / Ctrl` + `Shift` + `p`.
+- Escribe `SQLite: Open Database`
+- Haz clic en la ruta de la base de datos que apunta a tu base de datos
 
-Instala [Xming](https://sourceforge.net/projects/xming/) (Deseleciona `Start Xming` al final de la instalación).
+¡Deberías ver la pestaña `SQL EXPLORER` con tu base de datos cargada! ¡Ahora puedes abrir tu base de datos y explorar todas las tablas existentes! También puedes hacer clic en el `triangle icon` para tener una representación más visual de tus tablas 🙌 ¡Pruébalo en la tabla `tracks`!
 
-Arranca XLaunch dejando los ajustes predeterminados pero **agrega el siguiente parámetro opcional** `-ac`.
-
-![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
-
-Puedes abrir tu base de datos (DB) con lo siguiente:
-```bash
-cd ~/code/your-github-username/fullstack-challenges/03-AR-Database/01-DB-Design-and-SQL/03-Interacting-with-db
-sqlitebrowser lib/db/jukebox.sqlite
-```
-
-Si te aparece el error `could no initialize SDL` al abrir tu base de datos (DB) necesitas agregar una excepción para Windows Defender para permitir tráfico público de entrada Xming en protocolos UDP y TCP. Puedes guiarte con las siguiente [documentación](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule).
-
-
-
-❓ ¿Debo usar la línea de comando `sqlite3` o alguna de las herramientas visuales anteriores?¡Bueno, ambas son útiles! Es bueno aprender un poco sobre cómo manipular líneas de comando por dos razones. Por un lado, una [CLI](https://en.wikipedia.org/wiki/Command-line_interface) te permite concentrarte en consultas SQL. Por otro lado, una herramienta [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) será util para explorar la estructura del esquema de una base de datos (tablas, columnas, etc.).¡Te recomendamos probar las dos opciones!
+<iframe src="https://player.vimeo.com/video/690525143?h=75949ff5a2" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Especificaciones
 
 El objetivo de este ejercicio es explorar la base de datos Jukebox y entender su esquema. Responde las siguientes preguntas:
 
-- ¿Cuál es el esquema de base de datos? (e.g. ¿Qué son las tablas? y ¿Cuáles son las relaciones entre ellas?)
+- ¿Cuál es el esquema de base de datos? (e.g. ¿Cuáles son las tablas? y ¿Cuáles son las relaciones entre ellas?)
 - Usa la herramienta de diseño SQL para dibujar el esquema de esta base de datos.
-- ¿Cuántas filas contiene una tabla?¿Cuáles son los nombres de las columnas de cada tabla?
+- ¿Cuántas filas contiene una tabla? ¿Cuáles son los nombres de las columnas de cada tabla?
 
 Usa [db.lewagon.com](http://db.lewagon.com/) para dibujar el esquema de Jukebox. Guardalo en formato XML como `jukebox.xml` y compruebalo con `rake`.

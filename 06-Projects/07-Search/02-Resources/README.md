@@ -1,5 +1,5 @@
 - Behold the holy grail of [all things simple form](https://kitt.lewagon.com/knowledge/cheatsheets/simple_form), including how to target specific simple-form-generated CSS classes
-- Need any realtime content streams for your users, like for a chat? Use [ActionCable](https://kitt.lewagon.com/knowledge/cheatsheets/actioncable)
+- Need any realtime content streams for your users, like for a chat? Use [ActionCable](https://kitt.lewagon.com/knowledge/cheatsheets/action_cable)
 - Position things perfectly with [flexbox](https://kitt.lewagon.com/knowledge/cheatsheets/flexbox)
 - Need a calendar in your app? Check out t[he Simple Calendar gem](https://kitt.lewagon.com/knowledge/tutorials/simple_calendar)
 - Add [a star rating](https://kitt.lewagon.com/knowledge/tutorials/star_rating) to your reviews
