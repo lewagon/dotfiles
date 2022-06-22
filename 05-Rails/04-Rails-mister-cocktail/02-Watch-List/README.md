@@ -235,7 +235,7 @@ Don't forget you can have local images in the `app/assets/images` folder. Or eve
 
 Try to put the "New bookmark form" on the list page itself, not on a separate page, so you won't have to leave the list page to add a new movie! What changes in the routes? And in the controllers?
 
-### 7 - Select2 on the movies dropdown (Optional)
+### 7 - Tom Select on the movies dropdown (Optional)
 
 Let's try adding an npm package to our Rails app! Let's follow the slides to see how we can add `tom-select` to our movies dropdown. You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/stimulus_utilities_select2) to get inspired!
 
