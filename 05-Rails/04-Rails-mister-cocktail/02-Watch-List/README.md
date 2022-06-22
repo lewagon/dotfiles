@@ -237,7 +237,7 @@ Try to put the "New bookmark form" on the list page itself, not on a separate pa
 
 ### 7 - Tom Select on the movies dropdown (Optional)
 
-Let's try adding an npm package to our Rails app! Let's follow the slides to see how we can add `tom-select` to our movies dropdown. You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/stimulus_utilities_select2) to get inspired!
+Let's add a JavaScript package to our Rails app! You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/tom-select) to get inspired!
 
 Don't forget to use a Stimulus controller to implement this JavaScript behavior in your app. 😉
 
