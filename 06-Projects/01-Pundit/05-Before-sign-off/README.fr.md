@@ -1,8 +1,9 @@
 ## Page produit
+
 Sur Kitt, on va également centraliser les différents liens de ton projet. Rends-toi sur la [page Produits](https://kitt.lewagon.com/camps/<user.batch_slug>/products) de ton batch, sélectionne le tien et clique sur `view details`. Prends le temps de renseigner les différentes sections de ta page produit. Cela permettra aux profs d'avoir un aperçu de ton projet.
 
-
 ## Fin du kick-off
+
 Avant de te déconnecter, demande à tes coéquipiers si le travail peut être mergé dans `master` et déployé 🚀
 
 ```zsh

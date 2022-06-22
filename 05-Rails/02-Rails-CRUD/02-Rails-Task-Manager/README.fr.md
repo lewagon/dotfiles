@@ -45,8 +45,8 @@ Commence par ajouter une nouvelle route pour lister les tâches, en respectant l
 Pour tester ta vue, tu as besoin de tâches dans la base de données ! Pour en créer, lance une console `rails console` dans un autre onglet du terminal et exécute ensuite :
 
 ```ruby
-Task.create title: 'Laundry', details: 'Do not mix colors!'
-Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: true
+Task.create(title: "Laundry", details: "Do not mix colors!")
+Task.create(title: "Studying", details: "A lot of flashcards to do", completed: true)
 ```
 
 ⚠️ Dans la vue, n'essaie pas de coder les visuels des cases à cocher pour le moment. Tu auras l'occasion de le faire dans les questions optionnelles.
@@ -89,10 +89,30 @@ Examine ton code d'un œil critique et introduis les éléments de refactorisati
 1. Utilise `before_action` dans le contrôleur `TasksController`.
 1. Et si on épurait (DRY - Don't Repeat Yourself) un peu les vues `new` et `edit` ? Comment gérer le fait que le formulaire `new` ne doit **pas** afficher « Terminée » ? ([conseil](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F))
 
-### 9 - Visuels des cases à cocher (Optionnel)
+### 9 - Front-end (Optionnel)
 
-Les cases à cocher n'en sont pas vraiment ! Ce sont simplement des icônes Font Awesome.
+**Installe les feuilles de style Bootstrap**
 
-Pour créer les visuels des cases à cocher pour chaque tâche dans ta vue, importe les CDN Bootstrap et Font Awesome dans le `<head>` de ton `application.html.erb`.
+En suivant [la documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), installe Bootstrap dans ton application Rails en copiant-collant la balise `link` dans le `head` de ton layout `application.html.erb` :
 
-Puis dans ta vue, utilise des conditions. Si ta tâche est terminée, affiche un carré coché ; sinon, affiche un carré vide (conseil 😉 : cherche les icônes `check-square` et `square` sur fontawesome 😉).
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Tu peux désormais utiliser n'importe quelle classe Bootstrap dans les vues de ton application Rails 🎉
+
+**Installe Font Awesome**
+
+Ajoute la balise `link` de Font Awesome dans le `head` de ton layout :
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+```
+
+Tu peux désormais utiliser n'importe quel [icône Font Awesome gratuit](https://fontawesome.com/search?m=free) 🎉 Essaye de trouver des icônes de cases à cocher sympas !
+
+Dans ta vue, utilise des conditiosn. Si la tâche est terminée, affiche une case cochée, sinon affiche une case non cochée.

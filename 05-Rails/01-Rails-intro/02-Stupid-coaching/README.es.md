@@ -31,7 +31,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Agregamos el flag `--skip-active-storage` para evitar la instalación de [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilita la carga de archivos a un servicio de almacenamiento en la nube pero por ahora no lo necesitamos y agregaría rutas innecesarias a tu app.
+Agregamos el flag `--skip-active-storage` & `--skip-action-mailbox` para evitar la instalación de [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html) & [Action Mailbox](https://guides.rubyonrails.org/action_mailbox_basics.html) que no necesitamos por ahora.
 
 **Objetivo**: Implementaremos una aplicación Rails simple con 2 páginas:
 
@@ -98,7 +98,7 @@ Prefix Verb URI Pattern       Controller#Action
 La creación de la vista es el último paso para mostrar el formulario.¡Hagámoslo!¿Recuerdas en qué carpeta debe estar y cómo debe nombrarse? Esa es una de las convenciones de Rails, la [convención acción vista](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro/index.html?title=Rails+Basics#/6/6). Refresca la página en [localhost:3000/ask](http://localhost:3000/ask). Si nombraste tu archivo correctamente finalmente ¡verás una página sin error! Por ahora está vacía. Terminemos de agregar el  `<form>`.¿Recuerdas la sintaxis?
 
 ```html
-<form action="???">
+<form action="???" data-turbo="false">
   <input type="text" name="???">
   <input type="submit" value="Ask!">
 </form>
@@ -148,48 +148,25 @@ Si no recuerdas la lógica (pobre) del coach, aquí está:
 
 ### ¡Haz que se vea bien!
 
-¡Todavía no hemos visto la parte de Front-End en un proyecto Rails pero puedes empezar por tu cuenta!
+Por ahora no hemos cubierto el aspecto del front-end de un proyecto Rails, pero puedes empezar a diseñar tu aplicación.
 
-**Algunas palabras sobre SCSS**
+**Instalar las hojas de estilo de Bootstrap**
 
-¡[.scss](https://sass-lang.com/guide) es una extensión de archivo que te permite escribir tu CSS de manera más fácil! Los navegadores solo hablan en css, así que hay una magia interna que ocurre en Rails para **preprocesar** el archivo y traducirlo en "vanilla" css. Las funcionalidades principales de `scss` que necesitas conocer son las siguientes:
+Siguiendo [la documentación](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), instala Bootstrap en tu aplicación Rails copiando y pegando el enlace en el `head` del layout `application.html.erb`:
 
-1. Variables
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
 
-    ```scss
-    // Defining a variable
-    $gray: #F4F4F4;
+Ahora puedes utilizar cualquier clase de Bootstrap en cualquier lugar de tus vistas Rails 🎉
 
-    body {
-      background: $gray; // Using this variable
-    }
-    ```
+**Escribir un estilo personalizado**
 
-2. Nesting
+Escribe tu CSS personalizado en el archivo `app/assets/stylesheets/application.css`. Este archivo está vinculado en el `head` del diseño `application.html.erb` con la etiqueta `stylesheet_link_tag`.
 
-    ```scss
-    .banner {
-      background: red;
-      h1 {
-        font-size: 50px;
-      }
-    }
-    ```
-
-3. Chaining
-
-    ```scss
-    a {
-      color: grey;
-      &:hover {
-        color: black;
-      }
-    }
-    ```
-
-¡En pocos días también verás cómo organizar tus hojas de estilo (stylesheets) en archivos múltiples y cargarlos usando la palabra clave `import`!
-
-Por ahora solamente abre (o crea) el archivo `app/assets/stylesheets/questions.scss`. Puedes escribir algo de código SCSS directamente, guardar y recargar la página! Debes tratar de que los diseños coincidan, por lo menos con las capturas de pantalla.
+Adelante, que el diseño coincida con las capturas de pantalla 🎨
 
 ### Testing (Opcional)
 

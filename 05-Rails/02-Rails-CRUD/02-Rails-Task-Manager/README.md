@@ -45,8 +45,8 @@ First, add a new route to list the tasks, following the convention from the lect
 To test your view, you need some tasks in the database! To create some, run a `rails console` in another terminal tab and then run:
 
 ```ruby
-Task.create title: 'Laundry', details: 'Do not mix colors!'
-Task.create title: 'Studying', details: 'A lot of flashcards to do', completed: true
+Task.create(title: "Laundry", details: "Do not mix colors!")
+Task.create(title: "Studying", details: "A lot of flashcards to do", completed: true)
 ```
 
 ⚠️ In the view, do not focus on coding the checkboxes visual for now. You will have the opportunity to code it in the optional questions.
@@ -89,10 +89,30 @@ Have a critical look at your code and introduce the following refactoring:
 1. Use a `before_action` in the `TasksController`
 1. Should we DRY a bit the `new` and `edit` views? How can we handle the fact that the `new` form should **not** display "Completed"? ([hint](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F))
 
-### 9 - Checkboxes Visuals (Optional)
+### 9 - Front-end (Optional)
 
-The checkboxes are not real ones! They are simply Font Awesome icons.
+**Install Bootstrap stylesheets**
 
-To create the checkboxes visuals in your view for each task, import Bootstrap & Font Awesome CDNs in the `<head>` of your `application.html.erb`.
+Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap to your Rails app by copy-pasting the `link` tag in the `head` of the `application.html.erb` layout:
 
-Then, in your view, use conditionals. If your task is completed, display the checked square, else, display an empty square (as a hint 😉, search for `check-square` and `square` icons on fontawesome 😉).
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+You can now use any Bootstrap class anywhere in your Rails views 🎉
+
+**Install Font Awesome**
+
+Add Font Awesome `link` tag in the `head` of your layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+```
+
+You can now use any of the [free Font Awesome icons](https://fontawesome.com/search?m=free) 🎉 Try to find nice checkbox icons!
+
+In your view, use conditionals. If your task is completed, display the checked square, else, display an empty square.

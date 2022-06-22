@@ -7,7 +7,7 @@ rails -v
 # You should see your rails version here
 ```
 
-Si ce n'est pas le cas, retourne à la section dédiée du setup [macOS](https://github.com/lewagon/setup/blob/master/macos.fr.md#installer-des-gems), [Windows](https://github.com/lewagon/setup/blob/master/windows.fr.md#installer-des-gems) ou [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.fr.md#installer-des-gems).
+Si ce n'est pas le cas, retourne à la section dédiée du setup [macOS](https://github.com/lewagon/setup/blob/rails-7/macos.fr.md#installer-des-gems), [Windows](https://github.com/lewagon/setup/blob/rails-7/windows.fr.md#installer-des-gems) ou [Ubuntu](https://github.com/lewagon/setup/blob/rails-7/ubuntu.fr.md#installer-des-gems).
 
 ## Contexte et objectifs
 
@@ -31,7 +31,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-On ajoute le flag `--skip-active-storage` pour éviter l'installation d'[Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilite le chargement de fichiers dans un service de stockage cloud, mais il ajoute des routes inutiles à ton application et tu n'en as pas besoin pour le moment.
+On ajoute les options `--skip-active-storage` et `--skip-action-mailbox` pour ne pas installer [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html) et [Action Mailbox](https://guides.rubyonrails.org/action_mailbox_basics.html) qui sont deux bibliothèques de Rails dont nous n'avons pas besoin pour le moment.
 
 **Objectif** : créer une application Rails simple de 2 pages.
 
@@ -98,7 +98,7 @@ Prefix Verb URI Pattern       Controller#Action
 Dernière étape de la création du formulaire : créer une vue ! Tu te souviens du dossier dans lequel tu dois la placer et du nom que tu dois lui donner ? C'est l'une des conventions de Rails : la [convention Action View](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro/index.html?title=Rails+Basics#/6/6). Rafraîchis la page sur [localhost:3000/ask](http://localhost:3000/ask). Si tu as nommé ton fichier correctement, tu devrais enfin voir une page sans erreur ! Pour le moment, elle est vide. On va ajouter le formulaire (`<form>`). Tu te souviens de la syntaxe ?
 
 ```html
-<form action="???">
+<form action="???" data-turbo="false">
   <input type="text" name="???">
   <input type="submit" value="Ask!">
 </form>
@@ -148,48 +148,25 @@ Si tu ne te souviens pas de la logique (médiocre) du coach, la voici :
 
 ### Crée quelque chose de joli !
 
-On n'a pas encore abordé l'aspect frontend d'un projet Rails, mais tu peux déjà commencer tout seul !
+On n'a pas encore abordé l'aspect front-end d'un projet Rails pour le moment, mais tu peux déjà commencer à rajouter du style à ton application !
 
-**Quelques mots à propos de SCSS**
+**Installe les feuilles de style de Bootstrap**
 
-[.scss](https://sass-lang.com/guide) est une extension de fichier qui te permet de rédiger plus facilement ton CSS ! Les navigateurs comprennent uniquement CSS. Rails **traite en amont** le fichier et le traduit en CSS « conventionnel ». Les principales caractéristiques `scss` que tu dois connaître sont les suivantes :
+En suivant [la documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), installe Bootstrap dans ton application Rails en copiant et en collant la balise `link` dans le `head` de ton fichier de layout `application.html.erb`:
 
-1. Variables
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
 
-    ```scss
-    // Définir une variable
-    $gray: #F4F4F4;
+Tu peux maintenant utiliser n'importe quelle classe Bootstrap dans les vues de ton application Rails 🎉
 
-    body {
-      background: $gray; // Using this variable
-    }
-    ```
+**Écris du style personnalisé**
 
-2. Imbrication
+Écris ton propre CSS dans le fichier `app/assets/stylesheets/application.css`. Ce fichier est lié dans le `head` du fichier de layout `application.html.erb` avec le `stylesheet_link_tag`.
 
-    ```scss
-    .banner {
-      background: red;
-      h1 {
-        font-size: 50px;
-      }
-    }
-    ```
-
-3. Chaînage
-
-    ```scss
-    a {
-      color: grey;
-      &:hover {
-        color: black;
-      }
-    }
-    ```
-
-Dans quelques jours, tu apprendras également à organiser les feuilles de style en plusieurs fichiers, et à les charger en utilisant le mot-clé `import` !
-
-Pour le moment, ouvre (ou crée) simplement le fichier `app/assets/stylesheets/questions.scss`. Tu peux directement coder du SCSS, l'enregistrer et recharger la page ! Essaie de faire en sorte que le design corresponde aux captures d'écran.
+Continue et fais en sorte que le style corresponde aux captures d'écran 🎨
 
 ### Tests (optionnel)
 
@@ -306,7 +283,7 @@ L'équivalent de `binding.pry` dans l'univers des tests consiste à prendre des 
 # Gemfile
 group :test do
   # [...]
-  gem 'launchy'
+  gem "launchy"
 end
 ```
 

@@ -8,7 +8,11 @@ On veut créer un clone simple d'Airbnb (comme [celui-ci](https://rails-simple-a
 - En tant qu'utilisateur, je peux modifier les détails d'un appartement si j'ai fait une erreur
 - En tant qu'utilisateur, je peux supprimer un appartement du site Web si je ne veux plus le louer
 
-Tu n'utiliseras pas `rake` ici. Et ne crée pas ton application Rails dans `fullstack-challenges` ⛔
+Il n'y a pas de `rake` pour cet exercice.
+
+## Génération de l'application Rails
+
+Crée une nouvelle application Rails dans le dossier dont le nom est celui de ton compte GitHub :
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -18,6 +22,49 @@ git add .
 git commit -m "rails new"
 gh repo create --public --source=.
 git push origin master
+```
+
+## Configuration front-end
+
+### Feuille de style Bootstrap
+
+En suivant [la documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), installe Bootstrap dans ton application Rails en copiant-collant la balise `link` dans le `head` de ton layout `application.html.erb` :
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Tu peux désormais utiliser n'importe quelle classe Bootstrap dans les vues de ton application Rails 🎉
+
+### Font Awesome
+
+Ajoute la balise `link` de Font Awesome dans le `head` de ton layout :
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+```
+
+Tu peux désormais utiliser n'importe quel [icône Font Awesome gratuit](https://fontawesome.com/search?m=free) 🎉
+
+### Gemme Simple Form
+
+Pour ajouter [Simple Form](https://github.com/heartcombo/simple_form) à ton application, ajoute la gemme à ton Gemfile :
+
+```ruby
+# Gemfile
+# [...]
+gem "simple_form", github: "heartcombo/simple_form"
+```
+
+Puis exécute :
+
+```bash
+bundle install
+rails generate simple_form:install --bootstrap
 ```
 
 ## Spécifications
@@ -34,7 +81,7 @@ Génère le modèle `Flat` avec le bon générateur Rails. Il doit avoir les col
 
 ### 2 - Contrôleur et routes
 
-Génère un contrôleur `FlatsController` vide (sans actions) avec le bon générateur Rails.
+Génère un contrôleur `FlatsController` vide (sans action) avec le bon générateur Rails.
 
 On peut commencer par ajouter nos 7 routes CRUD dans `config/routes.rb`, car on va toutes les construire ! Quel mot-clé peux-tu utiliser pour toutes les générer directement ?
 
@@ -58,7 +105,7 @@ Te souviens-tu pourquoi on utilise `.create!` au lieu de `.create` ? Si tu as o
 
 On va ajouter l'action correcte dans le contrôleur `FlatsController` (indice : il s'agit d'`index` 😉). L'action dans le contrôleur doit récupérer tous les appartements dans la base de données (pour cela, on a Active Record !) et les passer à la vue.
 
-La vue doit faire une boucle dessus pour les afficher, comme sur la capture d'écran ci-dessous. On va tout créer depuis le début. On peut utiliser [font awesome](https://fontawesome.com/icons) ou [materialize](http://materializecss.com/icons.html) pour les icônes.
+La vue doit faire une boucle dessus pour les afficher, comme sur la capture d'écran ci-dessous. On va tout créer depuis le début. Tu peux utiliser [font awesome](https://fontawesome.com/search?m=free) pour les icônes.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png)
 

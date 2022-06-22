@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to many relationship (`n:n`). So what's the deal? Well, it’s time to build yourself a Watch List. You'll be able to create lists in which you will save your favourite movies.
+Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to many relationship (`N:N`). So what's the deal? Well, it’s time to build yourself a Watch List. You'll be able to create lists in which you will save your favourite movies.
 
 ## Rails app generation
 
@@ -13,11 +13,11 @@ yarn -v
 
 If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn) setup.
 
-**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this during the next session). 😉
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--d postgresql` (we will talk about this during the next session). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -56,19 +56,28 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies
+Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies:
 
 ```bash
 yarn add bootstrap @popperjs/core
+```
+
+We need to add the node modules to the assets path:
+
+```ruby
+# config/initializers/asset.rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
 And add the gems we're going to need:
 
 ```ruby
 # Gemfile
-gem "autoprefixer-rails", "10.2.5"
-gem "font-awesome-sass", "~> 5.15"
+# [...]
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
+gem "sassc-rails" # Uncomment this line
 ```
 
 ```bash
@@ -76,18 +85,24 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
+Add this line to `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 Then let's download the Le Wagon's stylesheets:
 
 ```bash
 rm -rf app/assets/stylesheets
-curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip
-unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
+curl -L https://github.com/lewagon/stylesheets/archive/rails-7.zip > stylesheets.zip
+unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-rails-7 app/assets/stylesheets
 ```
 
 Finally let's import the Boostrap JS library using Webpack:
 
 ```js
-// app/javascript/packs/application.js
+// app/javascript/application.js
 import "bootstrap";
 ```
 
@@ -171,6 +186,7 @@ To understand how to get the movie images from the API, make sure to carefully r
 ### 3 - Routing, Controller, Views for Lists
 
 **Important**
+
 Don't use `rake` to code the applicative part. It's time to launch a `rails s` in your terminal and open a browser at [http://localhost:3000/](http://localhost:3000/). Always code in silo:
 
 - start with the **route**,
@@ -239,7 +255,10 @@ Try to put the "New bookmark form" on the list page itself, not on a separate pa
 
 Let's add a JavaScript package to our Rails app! You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/tom_select) to get inspired!
 
-Don't forget to use a Stimulus controller to implement this JavaScript behavior in your app. 😉
+To do so:
+- Generate a dedicated Stimulus controller
+- Connect this Stimulus controller to the movies dropdown `select` tag
+- Adapt one of the [basic examples](https://tom-select.js.org/examples/) code snippets to instanciate a Tom Select in the Stimulus controller
 
 ### 8 - List reviews (Optional)
 

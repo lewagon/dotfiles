@@ -92,7 +92,7 @@ ask          GET        /ask(.:format)       questions#ask
 在[localhost:3000/ask](http://localhost:3000/ask)刷新页面，如果你的文件命名正确的话，最终你会看到一个没有任何错误的页面。现在这个页面还是空的，让我们来添加表单(`<form>`)。还记得语法吗？
 
 ```html
-<form action="???">
+<form action="???" data-turbo="false">
   <input type="text" name="???">
   <input type="submit" value="Ask!">
 </form>
