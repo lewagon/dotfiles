@@ -8,15 +8,14 @@ To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewa
 
 ### Setup
 
-First test just to see if you have `sqlite3` installed on your computer:
+You should already have [SQLite](https://sqlite.org/index.html) installed on your computer. Check it with:
 
 ```bash
-sqlite3 --version
+sqlite3 -version
+# You should see your sqlite version here
 ```
 
-If you don't have it, you can install it by running:
-- macOS: `brew install sqlite`
-- Ubuntu: `sudo apt-get install sqlite3 libsqlite3-dev`
+If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite) setup.
 
 You can open the database we provided by running:
 
@@ -28,34 +27,19 @@ You are now in the interactive `sqlite3` console and you can write your SQL quer
 
 ## Tools
 
-You can also use a **SQLite viewer** application to read the SQLite database, explore the schema and even **run SQL queries**.
+You can also use the [VS Code SQLite extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) to read the SQLite database, explore the schema and even **run SQL queries**. This extension should've already been installed on setup day. If you don't have it, you can always go back to the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#vscode_extensions), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#vscode_extensions) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#vscode_extensions) section of the setup.
 
-- [SQLite Pro (macOS only, paying but trial seems unlimited)](https://www.sqlitepro.com/)
-- [SQLite Browser (Free, macOS only)](http://sqlitebrowser.org/)
-- [SQLite Online (Free)](https://sqliteonline.com/)
-- [SQLStudio (Free)](http://sqlitestudio.pl/)
+### VS Code SQLite extension - Exploring the database
 
-### Windows
+There are different commands you can use with this extension to explore and interact with your sqlite database. To start typing commands remember to open your command palette by pressing `Cmd / Ctrl` + `Shift` + `p`. You should see a little text box in your editor where you can type any command you want. To explore the database, we are going to run the `Open Database` command by following these steps:
 
-Go to [SQLStudio](http://sqlitestudio.pl/) and download their Windows version.
-Unzip all the files and double-click on SQLiteStudio to open the application.
+- Open your command pallet with `Cmd / Ctrl` + `Shift` + `p`.
+- Type in `SQLite: Open Database`
+- Click on the database path pointing to your database
 
-It will ask you which database you want to open but it won't be able to open the one you have in the WSL filesystem so we first need to copy the db file over to your Windows filesystem.
+You should see the `SQL EXPLORER` tab with your database loaded! Now you can open your database and explore all the existing tables! You can also click on the `triangle icon` to have a more visual representation of your tables 🙌 Try it on the `tracks` table!
 
-You can either:
-
-Run `cp lib/db/jukebox.sqlite /mnt/c/Users/<your Windows username>/Downloads/`.
-
-Or do it the manual way by typing `explorer.exe .` in your command line to open a file explorer windows. Then locate the database file by opening the `lib` and `db` folder and copy the `jukebox.sqlite` database file.
-Head to a folder inside your Windows filesystem and paste the database file there. We recommend you to create a folder `databases` in your `Documents` for instance, so you can store future sqlite databases there too.
-
-Now go back to SQLStudio and select the database file you just copied (in your `Documents/databases` folder in our example), and click on `Open`.
-
-Last step, click on `Database` on the top bar and `Connect to the database` to open the connection with it.
-You can now visualise all the tables within it or query it by going to `Tools` and `Open SQL Editor`. Happy querying!
-
-
-❓Should I use the command-line `sqlite3` or one of the visual tool above? Well, both are useful! It's good to learn a bit to manipulate the command line for two reasons. On the one hand, a [CLI](https://en.wikipedia.org/wiki/Command-line_interface) allows you to focus on the SQL queries. On the other hand, a [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) tool will prove helpful to explore a database schema structure (tables? columns? etc.). Try both!
+<iframe src="https://player.vimeo.com/video/690525143?h=75949ff5a2" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Specs
 

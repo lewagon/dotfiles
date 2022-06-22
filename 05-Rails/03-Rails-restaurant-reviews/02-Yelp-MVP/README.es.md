@@ -60,8 +60,10 @@ Asegúrate de pensarlo dos veces antes de seleccionar el tipo de datos.¡No siem
 - La categoría de un restaurante debe pertenecer a esta lista fija: `["chinese", "italian", "japanese", "french", "belgian"]`.
 - Cuando un restaurante es eliminado, todos sus reviews también deben ser eliminados
 - Un review debe pertenecer a un restaurante.
-- Un review debe tener un contenido (content) y una calificación (rating).
+- Un review debe tener un contenido (content).
+- Un review debe tener una calificación (rating).
 - La calificación de un review debe ser un número entre 0 y 5.
+- La calificación de un review debe ser un número entero. Por ejemplo, un review con una calificación de 2,5 ne debería ser válida.
 
 Valida todos los tests de los modelos antes de empezar a trabajar con las rutas. Puedes usar el siguiente comando:
 

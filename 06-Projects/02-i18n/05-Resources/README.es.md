@@ -1,0 +1,3 @@
+- Algunos de tus esquemas pueden tener relaciones más avanzadas y foreign keys que las que vimos durante la semana de Airbnb. Por ejemplo, una tabla que necesite almacenar dos instancias (foreign keys) de otra tabla (la mayoría de las veces, la tabla User). En este caso, deberás usar algo llamado alias. Aprende a implementar esto con [una guía](https://kitt.lewagon.com/knowledge/cheatsheets/active_record_advanced) sobre Active Record avanzado.
+- Asegúrate de autorizar tus acciones de usuario con [Pundit](https://kitt.lewagon.com/knowledge/cheatsheets/pundit)
+- Comienza a crear tu interfaz tomando componentes del [Kit UI de Le Wagon](https://uikit.lewagon.com/documentation) y a personalizarlos de acuerdo a tu diseño.
