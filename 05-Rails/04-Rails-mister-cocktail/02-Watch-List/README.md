@@ -237,7 +237,7 @@ Try to put the "New bookmark form" on the list page itself, not on a separate pa
 
 ### 7 - Tom Select on the movies dropdown (Optional)
 
-Let's add a JavaScript package to our Rails app! You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/tom-select) to get inspired!
+Let's add a JavaScript package to our Rails app! You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/tom_select) to get inspired!
 
 Don't forget to use a Stimulus controller to implement this JavaScript behavior in your app. 😉
 
@@ -252,6 +252,6 @@ Everyone should be able to comment and tell us what they thought of our movie co
 - Adding a possibility to search for movies.
 - Adding [typed.js](http://www.mattboldt.com/demos/typed-js/) to have some funky title on our home page.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
-- Using [`star-rating.js`](https://pryley.github.io/star-rating.js/) to display stars instead of a normal input in the reviews form.
+- Using [`star-rating.js`](https://kitt.lewagon.com/knowledge/tutorials/star_rating) to display stars instead of a normal input in the reviews form.
 
 Again, use Stimulus controllers when implementing JavaScript behavior in your app ⚠️
