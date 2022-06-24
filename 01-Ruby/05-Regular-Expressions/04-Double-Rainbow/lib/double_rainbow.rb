@@ -1,5 +1,5 @@
-def word_contains_two_p(sentence)
-  # TODO: return the first word in `sentence` containing two 'p's
+def word_contains_at_least_two_p(sentence)
+  # TODO: return the first word in `sentence` containing two 'p's or more
   regexp = /YOUR_REGEXP/
   sentence.match(regexp)[0]
 end
