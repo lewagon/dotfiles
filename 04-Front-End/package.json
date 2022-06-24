@@ -5,6 +5,8 @@
     "@babel/eslint-parser": "^7.15.0",
     "@babel/plugin-proposal-class-properties": "^7.17.12",
     "@babel/preset-env": "^7.18.2",
+    "@hotwired/stimulus": "^3.0.1",
+    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "chai": "^4.1.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^13.1.0",
