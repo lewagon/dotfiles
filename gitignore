@@ -1,0 +1,22 @@
+# General
+log/
+*.log
+
+# Mac
+.DS_Store
+
+# Node
+npm-debug.log
+
+# Python
+.python-version
+
+# vi
+*~
+
+# WebStorm
+.idea/
+
+# Windows
+Thumbs.db
+
