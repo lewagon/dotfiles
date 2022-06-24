@@ -15,11 +15,11 @@ describe "Double Rainbow" do
  many shades of blue, oscillating between purple and indigo! but not much green"
   end
 
-  describe "#word_contains_two_p" do
-    it "returns the first word containing two 'p'" do
-      test_string = "perfect apocalypse"
-      expect(word_contains_two_p(@secret_message)).to eq "purple"
-      expect(word_contains_two_p(test_string)).to eq "apocalypse"
+  describe "#word_contains_at_least_two_p" do
+    it "returns the first word containing two 'p' or more" do
+      test_string = "appropriate perfect apocalypse"
+      expect(word_contains_at_least_two_p(@secret_message)).to eq "purple"
+      expect(word_contains_at_least_two_p(test_string)).to eq "appropriate"
       heroku_test = true
       puts "    #{colorized("", 53, 2)} Heroku color unlocked"
     end
