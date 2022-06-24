@@ -1,0 +1,64 @@
+{
+  "name": "@hotwired/stimulus",
+  "version": "3.0.1",
+  "license": "MIT",
+  "description": "A modest JavaScript framework for the HTML you already have.",
+  "author": "Basecamp, LLC",
+  "contributors": [
+    "David Heinemeier Hansson <david@basecamp.com>",
+    "Javan Makhmali <javan@javan.us>",
+    "Sam Stephenson <sstephenson@gmail.com>"
+  ],
+  "homepage": "https://stimulus.hotwired.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hotwired/stimulus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hotwired/stimulus/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "dist/stimulus.js",
+  "main": "dist/stimulus.umd.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/stimulus.js",
+    "dist/stimulus.umd.js",
+    "dist/types/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -fr dist",
+    "types": "tsc --noEmit false --declaration true --emitDeclarationOnly true --outDir dist/types",
+    "build": "yarn types && rollup -c",
+    "build:test": "tsc -b tsconfig.test.json",
+    "watch": "rollup -wc",
+    "prerelease": "yarn build && git --no-pager diff && echo && npm pack --dry-run",
+    "release": "npm publish",
+    "start": "concurrently \"npm:watch\" \"npm:start:examples\"",
+    "start:examples": "cd examples && yarn install && node server.js",
+    "test": "yarn build:test && karma start karma.conf.cjs",
+    "test:watch": "yarn test --auto-watch --no-single-run"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/qunit": "^2.9.0",
+    "@types/webpack-env": "^1.14.0",
+    "concurrently": "^6.2.1",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-qunit": "^4.0.0",
+    "karma-sauce-launcher": "^4.3.6",
+    "karma-webpack": "^4.0.2",
+    "qunit": "^2.9.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.53",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-loader": "^6.0.4",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5",
+    "webpack": "^4.39.1"
+  }
+}

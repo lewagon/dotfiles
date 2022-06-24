@@ -1,0 +1,47 @@
+{
+  "name": "@hotwired/stimulus-webpack-helpers",
+  "version": "1.0.1",
+  "module": "dist/stimulus-webpack-helpers.js",
+  "main": "dist/stimulus-webpack-helpers.umd.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/stimulus-webpack-helpers.js",
+    "dist/stimulus-webpack-helpers.umd.js",
+    "dist/types/index.d.ts"
+  ],
+  "license": "MIT",
+  "description": "Webpack helpers for Stimulus.",
+  "author": "Basecamp, LLC",
+  "homepage": "https://stimulus.hotwired.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hotwired/stimulus-webpack-helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hotwired/stimulus-webpack-helpers/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rm -fr dist",
+    "types": "tsc --noEmit false --declaration true --emitDeclarationOnly true --outDir dist/types",
+    "build": "yarn types && rollup -c",
+    "watch": "rollup -wc",
+    "prerelease": "yarn build && git --no-pager diff && echo && npm pack --dry-run",
+    "release": "npm publish"
+  },
+  "devDependencies": {
+    "@hotwired/stimulus": "^3.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "rollup": "^2.56.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3",
+    "webpack": "^5.52.1"
+  },
+  "peerDependencies": {
+    "@hotwired/stimulus": ">= 3.0"
+  }
+}
