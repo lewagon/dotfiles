@@ -16,7 +16,7 @@ describe "Double Rainbow" do
   end
 
   describe "#word_contains_at_least_two_p" do
-    it "returns the first word containing two 'p'" do
+    it "returns the first word containing two 'p' or more" do
       test_string = "appropriate perfect apocalypse"
       expect(word_contains_at_least_two_p(@secret_message)).to eq "purple"
       expect(word_contains_at_least_two_p(test_string)).to eq "appropriate"
