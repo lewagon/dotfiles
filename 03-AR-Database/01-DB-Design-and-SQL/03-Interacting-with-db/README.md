@@ -33,7 +33,7 @@ You can also use the [VS Code SQLite extension](https://marketplace.visualstudio
 
 There are different commands you can use with this extension to explore and interact with your sqlite database. To start typing commands remember to open your command palette by pressing `Cmd / Ctrl` + `Shift` + `p`. You should see a little text box in your editor where you can type any command you want. To explore the database, we are going to run the `Open Database` command by following these steps:
 
-- Open your command pallet with `Cmd / Ctrl` + `Shift` + `p`.
+- Open your command palette with `Cmd / Ctrl` + `Shift` + `p`.
 - Type in `SQLite: Open Database`
 - Click on the database path pointing to your database
 
