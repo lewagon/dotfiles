@@ -1,20 +1,3 @@
-[color]
-  branch = auto
-  diff = auto
-  interactive = auto
-  status = auto
-  ui = auto
-
-[color "branch"]
-  current = green
-  remote = yellow
-
-[core]
-  pager = less -FRSX
-	editor = vim
-	visual = vim
-	excludesfile = /Users/xavierosee/.gitignore
-
 [alias]
   co = checkout
   st = status -sb
@@ -40,23 +23,46 @@
   # Removes a file from the index
   unstage = reset HEAD --
 
-[help]
-  autocorrect = 1
-
-[push]
-	default = simple
-
 [branch "main"]
   mergeoptions = --no-edit
 
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+
+[color "branch"]
+  current = green
+  remote = yellow
+
+[core]
+  pager = delta
+  editor = vim
+  visual = vim
+  excludesfile = /Users/xavierosee/.gitignore
+
+[delta]
+  navigate = true
+  line-numbers = true
+  side-by-side = true
+
+[help]
+  autocorrect = 1
+
+[init]
+  defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
+
 [pull]
   rebase = false
-[user]
-	email = xrosee@live.cn
-	name = Xavier Rosee
-[init]
-	defaultBranch = main
 
-[pager]
-       diff = diff-so-fancy | less --tabs=1,5 -RFX
-       show = diff-so-fancy | less --tabs=1,5 -RFX
+[push]
+  default = simple
+
+[user]
+  email = xrosee@live.cn
+  name = Xavier Rosee
