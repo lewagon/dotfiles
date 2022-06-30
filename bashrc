@@ -109,7 +109,7 @@ if ! shopt -oq posix; then
 fi
 
 # enable z script
-. ~/.z.sh
+. ~/.z
 
 # change default theme for bat (cat replacement)
 export BAT_THEME="Coldark-Dark"
