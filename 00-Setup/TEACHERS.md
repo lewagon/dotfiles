@@ -125,9 +125,8 @@ Run the first lecture on [Setup and Tools](https://karr.lewagon.org/lectures/set
 At the end of the lecture
 
 - Tell all students to start [Le Wagon's setup](https://github.com/lewagon/setup)
-- Students on Mac should click on the apple, Linux on the penguin
-- Students on Linux should gather with a dedicated teacher
-- If you struggle on Linux setup: first read [WINDOWS.md](https://github.com/lewagon/setup/blob/master/WINDOWS.md) and [UBUNTU_ISSUES.md](https://github.com/lewagon/setup/blob/master/UBUNTU_ISSUES.md).
+- Students should click on the icon corresponding to their operating system
+- If you encounter bugs, please refer to [each OS cheatsheet](https://github.com/lewagon/setup/tree/master/docs)
 
 ### Student validation (end of morning setup)
 
