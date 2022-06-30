@@ -76,11 +76,18 @@ rows = db.execute(query)
 * [SQL命令](http://www.sqlcommands.net/)
 * [关于`SELECT`的课程](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
-## 工具
+## VS Code SQLite 插件 - 执行查询
 
-在之前的练习中，你已经认识了这些工具。使用它们吧!
+这次我们会执行`SQLite: New Query`命令。 根据下面步骤来操作吧:
 
-- [SQLite Pro (仅限macOS，可以试用)](https://www.sqlitepro.com/)
-- [SQLStudio（免费）](http://sqlitestudio.pl/)
-- [SQLite浏览器（免费）](http://sqlitebrowser.org/)
+- 打开命令面板 `Cmd / Ctrl` + `Shift` + `p`
+- 输入 `SQLite: New Query`
+- 在打开的`.sql`文件中写下查询
+- 写好查询后，打开命令面板然后输入`SQLite: Run Query`
+- 选择你想要执行查询的数据库
 
+这样就好啦！你就可以看到结果了！
+
+<iframe src="https://player.vimeo.com/video/690525239?h=ca70e032e8" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+👉 如果想了解更多关于VS Code SQLite插件的话，可以查看这个[专门的总结](https://kitt.lewagon.com/knowledge/cheatsheets/sqlite_extension)。

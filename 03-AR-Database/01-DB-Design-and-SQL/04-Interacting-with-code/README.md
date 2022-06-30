@@ -83,7 +83,7 @@ This time we will be running the  `SQLite: New Query` command. In order to do so
 - Open your command palette with `Cmd / Ctrl` + `Shift` + `p`.
 - Type in `SQLite: New Query`
 - Write your query in the opened `.sql` file
-- Once your query is ready open your command pallet again and type in `SQLite: Run Query`
+- Once your query is ready open your command palette again and type in `SQLite: Run Query`
 - Select the database you want to run your query on
 
 And that's it! You should see your results!
