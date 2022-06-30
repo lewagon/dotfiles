@@ -1,4 +1,4 @@
-## AirBnB Week
+## Airbnb Week
 
 You will spend the next sessions with your Project Group working on an Airbnb clone (you don't have to rent **flats**, be creative!)
 
@@ -58,7 +58,7 @@ cd ~/code/<user.github_nickname>
 rails new \
   -d postgresql \
   -j webpack \
-  -m https://raw.githubusercontent.com/lewagon/rails-templates/rails-7/minimal.rb \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
 

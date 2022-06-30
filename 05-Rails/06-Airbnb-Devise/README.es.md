@@ -1,4 +1,4 @@
-## Semana AirBnB
+## Semana Airbnb
 
 Trabajarás con tu equipo de proyecto en las próximas sesiones para crear un clon de AirBnB (¡no tienes que alquilar **apartamentos**. Sé creativo!)
 
