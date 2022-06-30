@@ -1,6 +1,6 @@
 ## Cómo usar los branch
 
-El flujo de trabajo que usamos se llama **Feature Branching**. Esto significa que cada rama (o branch, en inglés) es una feature, o **parte de una feature**. Idealmente, no deberías trabajar en el mismo branch por más de un día. Si el backend y el frontend básico están listos, haz el push y luego crea un nuevo branch para terminar de darle estilo. Tu branch debe tener un nombre claro y descriptivo, como `restaurants-show` or `dashboard-page-frontend` o `animated-menu-items`.
+El flujo de trabajo que usamos se llama **Feature Branching**. Esto significa que cada rama (o branch, en inglés) es una feature, o **parte de una feature**. Idealmente, no deberías trabajar en el mismo branch por más de un día. Si el backend y el front-end básico están listos, haz el push y luego crea un nuevo branch para terminar de darle estilo. Tu branch debe tener un nombre claro y descriptivo, como `restaurants-show` or `dashboard-page-front-end` o `animated-menu-items`.
 
 NOTA: Esto también significa que **nunca programamos en el master**. Si te das cuenta de que accidentalmente has estado trabajando en el master, ¡no te preocupes! Simplemente muévete a un branch existente o crea uno nuevo, y los cambios no confirmados se irán contigo. Puedes revisar el flujo de git [aquí](https://kitt.lewagon.com/knowledge/cheatsheets/git_advanced). Si por algún motivo tienes problemas para mudarte a un nuevo branch, abre un ticket.
 

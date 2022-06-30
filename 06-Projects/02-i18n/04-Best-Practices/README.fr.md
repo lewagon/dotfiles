@@ -1,6 +1,6 @@
 ## Comment créer des branches
 
-Le workflow que l'on utilise consiste à créer des **branches de fonctionnalités** : chaque branche correspond à une fonctionnalité, ou **une partie d'une fonctionnalité**. Dans l'idéal, tu ne devrais pas travailler plus d'une journée sur la même branche. Si le back-end et le front-end de base sont prêts, pousse-les et crée une nouvelle branche pour embellir la vue. Ta branche doit avoir un nom clair et descriptif, comme `restaurants-show`, `dashboard-page-frontend` ou `animated-menu-items`.
+Le workflow que l'on utilise consiste à créer des **branches de fonctionnalités** : chaque branche correspond à une fonctionnalité, ou **une partie d'une fonctionnalité**. Dans l'idéal, tu ne devrais pas travailler plus d'une journée sur la même branche. Si le back-end et le front-end de base sont prêts, pousse-les et crée une nouvelle branche pour embellir la vue. Ta branche doit avoir un nom clair et descriptif, comme `restaurants-show`, `dashboard-page-front-end` ou `animated-menu-items`.
 
 REMARQUE : Cela signifie aussi qu'**on ne doit jamais coder sur master**. Si tu te rends compte que tu as codé par accident sur master, ne t'inquiète pas ! Passe simplement à une branche existante ou crées-en une nouvelle, et les modifications qui n'ont pas encore été enregistrées te suivront. Tu peux revoir le flux git [ici](https://kitt.lewagon.com/knowledge/cheatsheets/git_advanced). Si tu as du mal à passer à une nouvelle branche, ouvre un ticket.
 

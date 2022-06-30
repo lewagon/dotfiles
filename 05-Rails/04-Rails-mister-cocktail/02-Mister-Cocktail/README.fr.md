@@ -56,7 +56,7 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Avant de commencer à coder, n'oublie pas de configurer ton application Rails pour le frontend. Comme dans le cours de ce matin, on va ajouter Bootstrap.
+Avant de commencer à coder, n'oublie pas de configurer ton application Rails pour le front-end. Comme dans le cours de ce matin, on va ajouter Bootstrap.
 
 ```bash
 yarn add bootstrap @popperjs/core
@@ -209,7 +209,7 @@ A-t-on besoin d'un contrôleur `IngredientsController` ?
 
 ### 5 - Mise en page au fil de l'eau
 
-On va maintenant créer un chouette frontend ! Pour cela, on va jouer avec le CSS 😊 Est-ce que tu rejoindras le Hall of Fame ? Jette un œil à [dribbble](https://dribbble.com/) ou [onepagelove](https://onepagelove.com/) pour trouver l'inspiration.
+On va maintenant créer un chouette front-end ! Pour cela, on va jouer avec le CSS 😊 Est-ce que tu rejoindras le Hall of Fame ? Jette un œil à [dribbble](https://dribbble.com/) ou [onepagelove](https://onepagelove.com/) pour trouver l'inspiration.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_1.png)
 

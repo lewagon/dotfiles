@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Antes de ir a la segunda parte del desafío Watch list, repasemos algunos de los principios que vimos ayer cuando vimos las técnicas modernas de frontend en Rails.
+Antes de ir a la segunda parte del desafío Watch list, repasemos algunos de los principios que vimos ayer cuando vimos las técnicas modernas de front-end en Rails.
 
 ## Especificaciones
 

@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Los **atributos de datos** son muy útiles en el desarrollo frontend para inyectar valores en tu HTML los cuales puedes acceder fácilmente en tu JS.
+Los **atributos de datos** son muy útiles en el desarrollo front-end para inyectar valores en tu HTML los cuales puedes acceder fácilmente en tu JS.
 
 En este desafío vamos a escribir una función que parsee una etiqueta HTML y extraiga los atributos de datos hacia un objeto (`Object`).
 

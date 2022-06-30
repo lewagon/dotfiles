@@ -1,6 +1,6 @@
 ## Proyectos
 
-Ahora estamos comenzando el último módulo del programa. Es tu oportunidad de brillar. Sentirás que el tiempo vuela, así que asegúrate de hacer los deploy a producción de manera regular y ¡**no descuides tu frontend**! Recuerda que la gente verá primero el frontend el día de la demo (Demo Day).
+Ahora estamos comenzando el último módulo del programa. Es tu oportunidad de brillar. Sentirás que el tiempo vuela, así que asegúrate de hacer los deploy a producción de manera regular y ¡**no descuides tu front-end**! Recuerda que la gente verá primero el front-end el día de la demo (Demo Day).
 
 Buena suerte. Verás que todo saldrá genial. Aquí están los puntos importantes:
 

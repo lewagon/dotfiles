@@ -24,13 +24,13 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Avant de commencer à coder ton application, assure-toi d'avoir terminé ton mini programme WeChat du cours de frontend WeChat avec toutes les user stories spécifiées dans les [challenges de cette journée](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). Il s'agit de l'application frontend pour laquelle tu vas créer l'API.
+Avant de commencer à coder ton application, assure-toi d'avoir terminé ton mini programme WeChat du cours de front-end WeChat avec toutes les user stories spécifiées dans les [challenges de cette journée](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). Il s'agit de l'application front-end pour laquelle tu vas créer l'API.
 
 ## Spécifications
 
 ### 1 - Modèles
 
-Génère le modèle `Story` avec le bon générateur Rails. Il doit avoir les colonnes suivantes. N'hésite pas à en ajouter autant que nécessaire pour ton application frontend ! 😊
+Génère le modèle `Story` avec le bon générateur Rails. Il doit avoir les colonnes suivantes. N'hésite pas à en ajouter autant que nécessaire pour ton application front-end ! 😊
 
 - `name`, sous forme de `string`
 - `text`, sousforme de `string`
@@ -47,7 +47,7 @@ N'oublie pas d'ajouter `has_many` pour lier les modèles ensemble dans le code e
 
 On va créer quelques stories dans la console `rails console`. Encore mieux : crée une seed pour ton application.
 
-Cela te permettra de commencer à créer les endpoints de l'API à afficher dans l'application frontend, même si on ne peut pas (encore) ajouter de commentaire via le frontend.
+Cela te permettra de commencer à créer les endpoints de l'API à afficher dans l'application front-end, même si on ne peut pas (encore) ajouter de commentaire via le front-end.
 
 Dans le fichier `db/seeds.rb`, on va créer des stories avec des commentaires.
 
@@ -83,7 +83,7 @@ end
 
 Conseil : familiarise-toi avec jbuilder en affichant seulement la première story avec les champs nécessaires pour l'endpoint (ex. : `created_at` est inutile). Après cela, essaie d'afficher toutes les stories dans un array.
 
-On va également mettre à jour la vue (`index.js`) de l'application frontend pour appeler l'API et obtenir les données dynamiques :
+On va également mettre à jour la vue (`index.js`) de l'application front-end pour appeler l'API et obtenir les données dynamiques :
 
 ```js
 wx.request({
@@ -114,18 +114,18 @@ end
 
 Si tu affiches l'heure du commentaire, n'oublie pas d'utiliser `strftime` pour mettre en forme le timestamp.
 
-On va également mettre à jour la vue (`show.js`) de l'application frontend pour appeler l'API et obtenir les données dynamiques.
+On va également mettre à jour la vue (`show.js`) de l'application front-end pour appeler l'API et obtenir les données dynamiques.
 
 ### 6 - Page de création d'une story
 
 Souviens-toi que pour créer une story dans une API, on a uniquement besoin d'une route. On n'a pas besoin d'une nouvelle route pour afficher le formulaire de nouvelle story, uniquement d'une nouvelle route pour gérer la requête `POST` générée à l'envoi du formulaire.
 
-On va également mettre à jour la vue (`create.js`) de l'application frontend pour appeler l'API et envoyer les données générées par l'utilisateur. Quel verbe HTTP permet de créer des données ? (GET, POST, PUT, or DELETE)
+On va également mettre à jour la vue (`create.js`) de l'application front-end pour appeler l'API et envoyer les données générées par l'utilisateur. Quel verbe HTTP permet de créer des données ? (GET, POST, PUT, or DELETE)
 
 
 ### 7 - Page de modification des stories
 
-On peut aussi ajouter la possibilité d'éditer une story, pour supprimer des coquilles après la création d'une story. Et si l'on refactorisait le formulaire `create.wxml` frontend en partial `form.wxml` à utiliser dans `new.wxml` ?
+On peut aussi ajouter la possibilité d'éditer une story, pour supprimer des coquilles après la création d'une story. Et si l'on refactorisait le formulaire `create.wxml` front-end en partial `form.wxml` à utiliser dans `new.wxml` ?
 
 N'oublie pas de mettre à jour `show.wxml` et `show.js` avec le nouveau bouton d'édition de la story !
 
@@ -138,7 +138,7 @@ Une fois encore, mets à jour la vue de la show pour ajouter le bouton de suppre
 
 ### 9 - Ajouter des commentaires  (optionnel)
 
-On va ajouter un point de terminaison d'API pour créer des commentaires à partir du contrôleur (en stockant cette story comme celle à laquelle l'endpoint appartient). On va mettre à jour la page d'affichage avec un bouton permettant à l'utilisateur d'ajouter un commentaire avec son nom et une photo à afficher à côté du commentaire. On peut également ajouter une nouvelle page au frontend pour un formulaire qui utilisera cet endpoint de création de commentaires.
+On va ajouter un point de terminaison d'API pour créer des commentaires à partir du contrôleur (en stockant cette story comme celle à laquelle l'endpoint appartient). On va mettre à jour la page d'affichage avec un bouton permettant à l'utilisateur d'ajouter un commentaire avec son nom et une photo à afficher à côté du commentaire. On peut également ajouter une nouvelle page au front-end pour un formulaire qui utilisera cet endpoint de création de commentaires.
 
 Pour tes routes, réfléchis à tes routes imbriquées pour spécifier la story à laquelle le nouveau commentaire appartient.
 

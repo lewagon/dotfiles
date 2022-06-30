@@ -56,7 +56,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - Now that you know how to build software, you need to learn how to save **data**.
 - Database, SQL, you'll find it easier, the pace slows down a little at this point.
 
-#### Wednesday (Week 4) -> Thursday (Week 5) - Frontend
+#### Wednesday (Week 4) -> Thursday (Week 5) - Front-end
 - What's missing now? A proper interface. We'll replace the terminal by a web browser.
 - Front-end: HTML, CSS, Bootstrap, less painful, and more graphical, good way to express your creativity, fresh air for your minds.
 - Monday night: you'll get to pitch a product, vote for your favorite products and join a team.

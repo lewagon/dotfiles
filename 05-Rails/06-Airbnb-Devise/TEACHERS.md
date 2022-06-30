@@ -75,7 +75,7 @@ end
 
 ## Le Wagon's minimal template (Monday afternoon)
 
-Don't let students waste time and creating their Rails app from scratch. Use our minimal template with already a frontend setup (Bootstrap, Simple Form)
+Don't let students waste time and creating their Rails app from scratch. Use our minimal template with already a front-end setup (Bootstrap, Simple Form)
 
 ```bash
 cd ~/code/<user.github_nickname>

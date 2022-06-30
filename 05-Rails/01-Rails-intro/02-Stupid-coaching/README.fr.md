@@ -7,7 +7,7 @@ rails -v
 # You should see your rails version here
 ```
 
-Si ce n'est pas le cas, retourne à la section dédiée du setup [macOS](https://github.com/lewagon/setup/blob/rails-7/macos.fr.md#installer-des-gems), [Windows](https://github.com/lewagon/setup/blob/rails-7/windows.fr.md#installer-des-gems) ou [Ubuntu](https://github.com/lewagon/setup/blob/rails-7/ubuntu.fr.md#installer-des-gems).
+Si ce n'est pas le cas, retourne à la section dédiée du setup [macOS](https://github.com/lewagon/setup/blob/master/macos.fr.md#installer-des-gems), [Windows](https://github.com/lewagon/setup/blob/master/windows.fr.md#installer-des-gems) ou [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.fr.md#installer-des-gems).
 
 ## Contexte et objectifs
 

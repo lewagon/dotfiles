@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Before we move on to looking the second part of Watch list challenge let's review some of the principles we saw yesterday when we looked at rails modern frontend techniques.
+Before we move on to looking the second part of Watch list challenge let's review some of the principles we saw yesterday when we looked at rails modern front-end techniques.
 
 ## Specs
 

@@ -1,6 +1,6 @@
 ## How to Branch
 
-The workflow we use is called **Feature Branching**. This means that each branch is one feature, or **part of one feature**. Ideally, you should not be working on the same branch for more than a day. If the backend and basic frontend is done, push it and then create a new branch to finish beautifying the view. Your branch should have a clear, descriptive name, like `restaurants-show` or `dashboard-page-frontend` or `animated-menu-items`.
+The workflow we use is called **Feature Branching**. This means that each branch is one feature, or **part of one feature**. Ideally, you should not be working on the same branch for more than a day. If the backend and basic front-end is done, push it and then create a new branch to finish beautifying the view. Your branch should have a clear, descriptive name, like `restaurants-show` or `dashboard-page-front-end` or `animated-menu-items`.
 
 NOTE: This also means **we never code on master**. If you realize you've accidentally been coding on master, don't fret! Just move into an existing branch or create a new one, and the un-committed changes will be brought along with you. You can review the git flow [here](https://kitt.lewagon.com/knowledge/cheatsheets/git_advanced). If for some reason you're having issues moving into a new branch, please open a ticket.
 

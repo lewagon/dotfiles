@@ -51,7 +51,7 @@ Before splitting the tasks among the team, set your project up together. The **l
 
 #### 1. Create the Rails project with a Postgres config
 
-Use Le Wagon's minimal template, which already has a good frontend setup:
+Use Le Wagon's minimal template, which already has a good front-end setup:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -110,7 +110,7 @@ You must always start with the **core models** in your app that all future featu
 - Integrate `User` with Devise signin/signup
 - Integrate `Flat` with listing (`index`) and creation (`new/create`)
 
-**group #2 - Frontend kick-start**:
+**group #2 - Front-end kick-start**:
 - Work on a clean layout with navbar/footer
 - Build a simple, attractive home page
 
