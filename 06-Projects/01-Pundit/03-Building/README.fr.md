@@ -2,9 +2,10 @@ Tout le monde ne sera pas en mesure de s'occuper de la configuration de l'app ; 
 
 
 ## Rails new
+
 Commence par désigner le développeur principal pour ce projet au sein de ton équipe. Il peut s'agir de la même personne que pour le projet Airbnb, ou d'un autre membre. Cette personne sera ensuite chargée du reste de la configuration de l'app.
 
-Au début de ton projet Rails, tu **dois** utiliser l'un des [**modèles Rails du Wagon**](https://github.com/lewagon/rails-templates). Assure-toi d'utiliser le [modèle Devise](https://github.com/lewagon/rails-templates#devise) si tu as besoin d'un modèle `User` !
+Au début de ton projet Rails, tu **dois** utiliser l'un des [**modèles Rails du Wagon**](https://github.com/lewagon/rails-templates/tree/master). Assure-toi d'utiliser le [modèle Devise](https://github.com/lewagon/rails-templates/tree/master#devise) si tu as besoin d'un modèle `User` !
 
 Une fois l'app créée, crée ton dépôt Github et ajoute tous les membres de ton équipe en tant que collaborateurs. Réfère-toi aux [diapos du cours sur Github](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/05-Rails%2F06-Airbnb-Devise#/1/3/0) pour te faire une idée du processus.
 
@@ -13,6 +14,7 @@ Crée ensuite l'app Heroku et procède à ton premier déploiement. Réfère-toi
 Conseil : Exécute toujours `heroku run rails db:migrate` après avoir poussé sur Heroku pour t'assurer que ta base de données de production est à jour.
 
 ## Programmer ensemble (Pair Programming)
+
 Se répartir le travail et commencer à coder peut être difficile avec un projet vide. Génère tes **modèles principaux** sur l'ordinateur du développeur principal en [pair-programming](https://en.wikipedia.org/wiki/Pair_programming). Assure-toi de bien suivre le schéma de base de données qui a été validé par les profs. Si besoin, tu peux rafraîchir tes connaissances sur Active Record [ici](https://kitt.lewagon.com/knowledge/cheatsheets/active_record_basics) avant de commencer à créer tes modèles.
 
 Commence toujours par générer les modèles qui ne font référence à aucun autre modèle. Tu te souviens de la syntaxe ?
@@ -52,6 +54,7 @@ rails g controller pets
 
 
 ## Figma
+
 Tu l'auras sans doute remarqué pendant la semaine Airbnb, avoir un prototype Figma riche et complet peut faire toute la différence et faciliter le travail de ton équipe. Savoir exactement ce à quoi ressemblera chaque fonctionnalité, avec un design pattern cohérent, te permettra de créer une app de niveau supérieur !
 
 Tu as créé ta première maquette lors du design sprint de produit ; tu vas maintenant la reprendre et la mettre à jour en fonction des décisions que ton équipe et toi avez prises plus tôt à propos des stories utilisateurs, des routes, etc.

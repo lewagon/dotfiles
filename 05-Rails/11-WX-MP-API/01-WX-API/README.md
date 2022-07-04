@@ -24,13 +24,13 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Before starting to code your app, make sure you completed your WeChat Mini Program from the WeChat Frontend course with all the user stories specified in the [challenges of that day](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). This is the frontend application for which you'll be making the API.
+Before starting to code your app, make sure you completed your WeChat Mini Program from the WeChat Front-end course with all the user stories specified in the [challenges of that day](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). This is the front-end application for which you'll be making the API.
 
 ## Specs
 
 ### 1 - Models
 
-Generate the `Story` model through the right rails generator. It should have the following columns. Feel free to add as many as your frontend app needs! 😊
+Generate the `Story` model through the right rails generator. It should have the following columns. Feel free to add as many as your front-end app needs! 😊
 
 - `name`, as a `string`
 - `text`, as a `string`
@@ -47,7 +47,7 @@ Don't forget to add `has_many` to link the models together in code as well as in
 
 Let's create some stories in the `rails console` or even better, let's build a little seed for our app.
 
-This will help us to get started designing the api endpoints to show in the frontend app, even though we can't actually add a comment through our frontend (yet).
+This will help us to get started designing the api endpoints to show in the front-end app, even though we can't actually add a comment through our front-end (yet).
 
 In the `db/seeds.rb` file, let's create around some stories with comments.
 
@@ -83,7 +83,7 @@ end
 
 Tip: Get to know jbuilder by just showing the first story with the needed fields for the endpoint (e.g. no `created_at`).  After that, try to show all the stories in an array.
 
-Let's also update the frontend app's view (`index.js`)  to call the api to get the dynamic data:
+Let's also update the front-end app's view (`index.js`)  to call the api to get the dynamic data:
 
 ```js
 wx.request({
@@ -114,18 +114,18 @@ end
 
 If you're displaying the time of the comment, don't forget to use `strftime` to format the timestamp
 
-Let's also update the frontend app's view (`show.js`)  to call the api to get the dynamic data.
+Let's also update the front-end app's view (`show.js`)  to call the api to get the dynamic data.
 
 ### 6 - Story Create Page
 
 Remember that to create a story in an API, we will need only one route. We do not need a new route to display the new story form, only a new route to handle the `POST` request generated when submitting this form.
 
-Let's also update the frontend app's view (`create.js`)  to call the api to send the user generated data. What HTTP verb is appropriate for creating data? (GET, POST, PUT, or DELETE)
+Let's also update the front-end app's view (`create.js`)  to call the api to send the user generated data. What HTTP verb is appropriate for creating data? (GET, POST, PUT, or DELETE)
 
 
 ### 7 - Stories Edit Page
 
-We can also add the ability to edit a story, to remove typos after creating a story. What about refactoring the frontend `create.wxml` form into a partial `form.wxml` to be used in `new.wxml` too?
+We can also add the ability to edit a story, to remove typos after creating a story. What about refactoring the front-end `create.wxml` form into a partial `form.wxml` to be used in `new.wxml` too?
 
 Don't forget to update the `show.wxml` and `show.js` with the new edit story button!
 
@@ -138,7 +138,7 @@ Once again, also update the show view to put in this destroy button.
 
 ### 9 - Adding Comments  (Optional)
 
-Let's add an API endpoint to create comments from the stories controller (storing the story of the comment as the story the endpoint belongs to). Lets update our show page with a button to allow the user to add a comment with his/her name and picture to be displayed next to the comment. We can also add a new page in the frontend for a form that will use this create comments endpoint.
+Let's add an API endpoint to create comments from the stories controller (storing the story of the comment as the story the endpoint belongs to). Lets update our show page with a button to allow the user to add a comment with his/her name and picture to be displayed next to the comment. We can also add a new page in the front-end for a form that will use this create comments endpoint.
 
 For your routes, think about using nested routes to specifiy the story the new comment belongs to.
 

@@ -14,12 +14,13 @@ Tu vas continuer à travailler sur le code d'hier. Retourne dans ton dossier :
 cd ~/code/<user.github_nickname>/rails-watch-list
 ```
 
-Si tu as généré l'application Rails **sans** le flag `--database`, tu vas devoir migrer manuellement cette application Rails vers Postgresql pour Heroku. Tu peux vérifier si l'application est configurée avec postgresql si la gem `pg` se trouve dans ton fichier de gems.
+Si tu as généré l'application Rails **sans** l'option `-d`, tu vas devoir migrer manuellement cette application Rails vers Postgresql pour Heroku. Tu peux vérifier que l'application est configurée avec Postgresql si la gem `pg` se trouve dans ton fichier de gems.
 
-Si tu as besoin de modifier l'application pour postgres, ouvre ton fichier Gemfile et trouve la ligne `sqlite`. **Remplace**-la par :
+Si tu as besoin de modifier l'application pour Postgresql, ouvre ton fichier Gemfile et trouve la ligne `sqlite`. **Remplace**-la par :
 
 ```ruby
 # Gemfile
+[...]
 gem "pg"
 ```
 
@@ -68,10 +69,10 @@ Pour avoir un aperçu de tous les helpers d'images fournis par Rails (`image_tag
 
 Si tu as terminé avec les images, essaie d'ajouter un système d'avis anonymes aux listes de films, pour que tout le monde puisse donner son avis sur la sélection de films de nos listes !
 
-
 ## Aller plus loin
+
 Félicitations, tu as terminé le challenge Watch-List ! Tu peux maintenant partager ta super application avec tout le monde !
 
 Mais il y a un problème... N'importe qui peut créer une liste, ajouter des signets à tes listes ou supprimer tes films favoris. Et les avis sont complètement anonymes. 😔
 
-La semaine prochaine, on verra comment régler ce problème. On abordera l'authentification et l'autorisation des utilisateurs au cours des deux prochaines séances. 😉
+Lors de la prochaine session, on verra comment régler ce problème. On abordera l'authentification et l'autorisation des utilisateurs au cours des deux prochaines séances. 😉

@@ -13,11 +13,11 @@ yarn -v
 
 Sinon, retourne à la section dédiée de la configuration [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) ou [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn).
 
-**Remarque** : Tu devrais maintenant pouvoir exécuter ces étapes sans cette fiche d'aide ! N'oublie pas la base de données `--database=postgresql` (on en parlera demain). 😉
+**Remarque** : Tu devrais maintenant pouvoir exécuter ces étapes sans cette fiche d'aide ! N'oublie pas la base de données `-d postgresql` (on en parlera demain). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-mister-cocktail --database=postgresql --skip-action-mailbox -T
+rails new rails-mister-cocktail -d postgresql --skip-action-mailbox -T
 cd rails-mister-cocktail
 ```
 
@@ -56,10 +56,16 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Avant de commencer à coder, n'oublie pas de configurer ton application Rails pour le frontend. Comme dans le cours de ce matin, on va ajouter Bootstrap et ses dépendances JavaScript.
+Avant de commencer à coder, n'oublie pas de configurer ton application Rails pour le front-end. Comme dans le cours de ce matin, on va ajouter Bootstrap.
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap @popperjs/core
+```
+
+Ajoute cette ligne dans `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
 Et on va ajouter les gems dont on a besoin :
@@ -84,24 +90,7 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Enfin, on va importer la librairie JS Bootstrap avec webpack :
-
-```js
-// config/webpack/environment.js
-const { environment } = require("@rails/webpacker")
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require("webpack")
-environment.plugins.prepend("Provide",
-  new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery",
-    Popper: ["popper.js", "default"]
-  })
-)
-
-module.exports = environment
-```
+Enfin, on va importer la librairie JS Bootstrap:
 
 ```js
 // app/javascript/packs/application.js
@@ -220,7 +209,7 @@ A-t-on besoin d'un contrôleur `IngredientsController` ?
 
 ### 5 - Mise en page au fil de l'eau
 
-On va maintenant créer un chouette frontend ! Pour cela, on va jouer avec le CSS 😊 Est-ce que tu rejoindras le Hall of Fame ? Jette un œil à [dribbble](https://dribbble.com/) ou [onepagelove](https://onepagelove.com/) pour trouver l'inspiration.
+On va maintenant créer un chouette front-end ! Pour cela, on va jouer avec le CSS 😊 Est-ce que tu rejoindras le Hall of Fame ? Jette un œil à [dribbble](https://dribbble.com/) ou [onepagelove](https://onepagelove.com/) pour trouver l'inspiration.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_1.png)
 

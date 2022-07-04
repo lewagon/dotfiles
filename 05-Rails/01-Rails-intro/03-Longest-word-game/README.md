@@ -4,7 +4,7 @@ Time to implement a "Longest-word game" with a cool web-interface! For some of y
 
 Before jumping into the exercise, [read the rules](https://github.com/lewagon/fullstack-challenges/tree/master/01-Ruby/06-Parsing/02-Numbers-and-Letters).
 
-⛔️ If you worked on that exercise, please do not copy/paste the solution, try to rewrite them from scratch.
+⛔️ If you worked on that exercise, please do not copy/paste the solution, try to rewrite it from scratch.
 
 ## Setup
 
@@ -49,13 +49,22 @@ Have a look at your old Ruby code. How did you generate an `Array` of ten random
 
 We need to add a form below the letters so that the user can fill a suggestion and submit it.
 
-Go ahead and add a `<form>` to your view. It should `POST` to the `/score` action in the `GamesController`.
+It should `POST` to the `/score` action in the `GamesController`.
+
+We will also disable for now a Rails feature which ajaxifies `post` requests sent from forms. Your HTML form tag should look like this:
+
+```html
+<form action="TODO" method="TODO" data-turbo="false">
+  <!-- ... -->
+</form>
+```
 
 You will need to add the line below into your `form`:
 
 ```erb
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 ```
+
 This will add a hidden input field with an `authenticity_token` that ensures the `POST` request is coming from your website and not from another. Read [this stack overflow thread](https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token) if you want to learn more about [CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) and why Rails adds this security layer by default!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/new_game_with_form.png)
@@ -110,6 +119,20 @@ At the bottom of the results, add a `link_to` to go back to the New game page.
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/not_english_word.png)
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/congrats.png)
+
+### Designing your app
+
+Install Bootstrap by copy-pasting the `link` tag [from the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css) in the `head` of your layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Write your own CSS in the `app/assets/stylesheets/application.css` file.
+
+Try to match the design from the screenshots 🎨
 
 ### Adding score (Optional)
 

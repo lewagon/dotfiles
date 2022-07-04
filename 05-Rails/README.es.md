@@ -16,14 +16,14 @@ En el primer día verás el flujo estándar de Rails `ruta > controlador > vista
 
 Hoy agregaremos un segundo modelo de aplicación Rails creando un clon de dos modelos de Yelp con restaurantes y reviews. La clase matinal es sobre **ir más allá de CRUD** con ruteo avanzado y validaciones en Rails.
 
-### `04 Frontend en Rails`
+### `04 Front-end en Rails`
 
-Aprenderás la mejor forma de implementar Bootstrap SASS + librerías frontend y a pasar de `form_for` a `simple_form_for` usando la configuración de Simple Form de Bootstrap.
+Aprenderás la mejor forma de implementar Bootstrap SASS + librerías front-end y a pasar de `form_for` a `simple_form_for` usando la configuración de Simple Form de Bootstrap.
 
 Aprenderás sobre el asset pipeline y webpacker.
 
 En cuanto a los ejercicios, comenzarás con la creación de una app de cócteles que tomará dos días. Dicha app tendrá 3 modelos `Cocktail`, `Ingredient` y `Dose`. Tendrás que:
-- seguir la configuración frontend detenidamente para poder crear una app que luzca bien.
+- seguir la configuración front-end detenidamente para poder crear una app que luzca bien.
 
 ### `05 Hosting y la Carga de Imágenes`
 

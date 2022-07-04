@@ -1,4 +1,4 @@
-## AirBnB Week
+## Airbnb Week
 
 You will spend the next sessions with your Project Group working on an Airbnb clone (you don't have to rent **flats**, be creative!)
 
@@ -51,12 +51,13 @@ Before splitting the tasks among the team, set your project up together. The **l
 
 #### 1. Create the Rails project with a Postgres config
 
-Use Le Wagon's minimal template, which already has a good frontend setup:
+Use Le Wagon's minimal template, which already has a good front-end setup:
 
 ```bash
 cd ~/code/<user.github_nickname>
 rails new \
-  --database postgresql \
+  -d postgresql \
+  -j webpack \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
@@ -75,7 +76,7 @@ git push origin master
 
 Go to [your Github repo settings](https://github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration) and add your teammates as **collaborators** to the repo.
 
-The other teammates can now **clone** the project. ⚠️**Be careful, use `SSH` url**⚠️
+The other teammates can now **clone** the project. ⚠️**Be careful, use `SSH` URL**⚠️
 
 Then, the teammates should run:
 
@@ -109,11 +110,11 @@ You must always start with the **core models** in your app that all future featu
 - Integrate `User` with Devise signin/signup
 - Integrate `Flat` with listing (`index`) and creation (`new/create`)
 
-**group #2 - Frontend kick-start**:
+**group #2 - Front-end kick-start**:
 - Work on a clean layout with navbar/footer
-- Build a simple, attractive home page.
+- Build a simple, attractive home page
 
-Once both groups are done (it should take you ~2h each) and once you have all merged your work on Github, you can move on and split tasks for the remaining features.
+Once both groups are done (it should take you around 2h each) and once you have all merged your work on GitHub, you can move on and split tasks for the remaining features.
 
 #### Tasks organization
 

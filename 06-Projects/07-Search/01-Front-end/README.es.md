@@ -1,4 +1,4 @@
-Si tu frontend necesita algo de trabajo, ahora es el momento de darle el amor y la atención que se merece.
+Si tu front-end necesita algo de trabajo, ahora es el momento de darle el amor y la atención que se merece.
 
 - Mira hacia atrás en los comentarios acerca de la interfaz de usuario de tu demo intermedia e implementa los cambios necesarios
 - Pide un poco de apoyo adicional si es necesario y llama a un TA para que te de feedback adicional sobre posibles áreas de mejora.

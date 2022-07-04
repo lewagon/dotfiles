@@ -51,12 +51,13 @@ Avant de répartir les tâches au sein de votre équipe, configurez le projet to
 
 #### 1. Créer le projet Rails avec une configuration Postgres
 
-Utilisez le modèle minimal du Wagon, qui contient déjà une bonne configuration frontend :
+Utilisez le modèle minimal du Wagon, qui contient déjà une bonne configuration front-end :
 
 ```bash
 cd ~/code/<user.github_nickname>
 rails new \
-  --database postgresql \
+  -d postgresql \
+  -j webpack \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
@@ -75,8 +76,7 @@ git push origin master
 
 Allez sur [les paramètres de ton dépôt Github](https://github.com/<user.github_nickname>/rails-airbnb-clone/settings/collaboration) et ajoutez les membres du groupe en tant que **collaborateurs** sur le dépôt.
 
-Les autres membres de l'équipe peuvent maintenant **cloner** le projet.
-⚠️**Attention à utiliser l'URL `SSH`**⚠️
+Les autres membres de l'équipe peuvent maintenant **cloner** le projet. ⚠️**Attention à utiliser l'URL `SSH`**⚠️
 
 Les autres membres de l'équipe devront ensuite exécuter :
 
@@ -110,11 +110,11 @@ Commencez toujours par les **modèles principaux** de votre application, dont to
 - Intégrer `User` en se connectant/s'inscrivant à Devise
 - Intégrer `Flat` avec les actions `index` et `new/create`
 
-**groupe #2 - Lancement du frontend** :
+**groupe #2 - Lancement du front-end** :
 - Travailler sur une mise en page soignée avec barre de navigation/pied-de-page
 - Créer une page d'accueil simple et attractive
 
-Une fois que les deux groupes ont terminé (cela devrait prendre ~2h à chaque groupe) et une fois que vous avez tous mergé votre travail sur Github, vous pouvez passer à la répartition des tâches pour le reste des fonctionnalités.
+Une fois que les deux groupes ont terminé (cela devrait prendre environ 2h à chaque groupe) et une fois que vous avez tous mergé votre travail sur GitHub, vous pouvez passer à la répartition des tâches pour le reste des fonctionnalités.
 
 #### Organisation des tâches
 

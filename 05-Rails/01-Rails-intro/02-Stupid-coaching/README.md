@@ -31,7 +31,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-We add the flag `--skip-active-storage` to avoid the installation of [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html). Active Storage facilitates uploading files to a cloud storage service, but we don't need it for the moment, and it will add to your app unnecessary routes.
+We add the flag `--skip-active-storage` & `--skip-action-mailbox` to skip the installation of [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html) & [Action Mailbox](https://guides.rubyonrails.org/action_mailbox_basics.html) which are two parts of Rails we don't need for now.
 
 **Objective**: We will implement a simple Rails application with 2 pages:
 
@@ -98,7 +98,7 @@ Prefix Verb URI Pattern       Controller#Action
 Last step to display the form, let's create a view! Do you remember in which folder it should be and how it should be named? That's one of Rails' conventions, the [Action View convention](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/rails/rails-intro/index.html?title=Rails+Basics#/6/6). Refresh the page at [localhost:3000/ask](http://localhost:3000/ask), if you named your file properly you should finally see a page without an error! For now it's empty, let's finally add the `<form>`. Remember the syntax?
 
 ```html
-<form action="???">
+<form action="???" data-turbo="false">
   <input type="text" name="???">
   <input type="submit" value="Ask!">
 </form>
@@ -148,48 +148,25 @@ If you don't remember about the coach (poor) logic, here it is:
 
 ### Make it look nice!
 
-We have not covered the Front-End aspect of a Rails project, but you can start on your own!
+We have not covered the front-end aspect of a Rails project for now, but you can start designing your app!
 
-**A few words about SCSS**
+**Install Bootstrap stylesheets**
 
-[.scss](https://sass-lang.com/guide) is a file extension that allows you to write your css more easily! Browsers only speak css, so there's internal magic that happens in Rails to **pre-process** the file and translate it in "vanilla" css. The main features of `scss` you need to know are:
+Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap to your Rails app by copy-pasting the `link` tag in the `head` of the `application.html.erb` layout:
 
-1. Variables
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
 
-    ```scss
-    // Defining a variable
-    $gray: #F4F4F4;
+You can now use any Bootstrap class anywhere in your Rails views 🎉
 
-    body {
-      background: $gray; // Using this variable
-    }
-    ```
+**Write custom style**
 
-2. Nesting
+Write your own CSS in the `app/assets/stylesheets/application.css` file. This file is linked in the `head` of the `application.html.erb` layout with the `stylesheet_link_tag`.
 
-    ```scss
-    .banner {
-      background: red;
-      h1 {
-        font-size: 50px;
-      }
-    }
-    ```
-
-3. Chaining
-
-    ```scss
-    a {
-      color: grey;
-      &:hover {
-        color: black;
-      }
-    }
-    ```
-
-In a few days, we'll also see how to organize our stylesheets in multiple files, and load them using the `import` keyword!
-
-For now, just open (or create) the `app/assets/stylesheets/questions.scss` file. You can directly code some SCSS, save, and reload the page! You should try to make the design match at least the screenshots.
+Go on and make the design match the screenshots 🎨
 
 ### Testing (Optional)
 
@@ -306,7 +283,7 @@ The equivalent of `binding.pry` in the test world is to take screenshots. Let's 
 # Gemfile
 group :test do
   # [...]
-  gem 'launchy'
+  gem "launchy"
 end
 ```
 

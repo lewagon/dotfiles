@@ -1,6 +1,6 @@
 ## Tareas como Features
 
-El propósito de los proyectos es que **todos aprendan**. No debemos encasillarnos entre nosotros ni en el frontend ni en el backend, sino asegurarnos de que todos puedan tener una experiencia global. Por esta razón, cuando dividas tus tareas en tu equipo, debes asignarlas como **features** para que el miembro del equipo las vea desde el backend hasta el frontend.
+El propósito de los proyectos es que **todos aprendan**. No debemos encasillarnos entre nosotros ni en el front-end ni en el backend, sino asegurarnos de que todos puedan tener una experiencia global. Por esta razón, cuando dividas tus tareas en tu equipo, debes asignarlas como **features** para que el miembro del equipo las vea desde el backend hasta el front-end.
 
 Eso significa que el flujo de features es:
 `route > controller action > view WITH initial (if not all) css`
@@ -12,4 +12,4 @@ Una gran parte de decidir cómo asignar tareas es primero averiguar qué feature
 Formas de abordar las dependencias de las features:
 - Si tienes suficientes historias de usuario, dale a cada uno una feature que no tenga ninguna dependencia
 - O, comienza con una feature principal de la que dependan otras y créala programando en parejas hasta que pueda separarse en tareas individuales
-- Divide las tareas entre frontend y backend mientras se realiza la feature dependiente, luego vuelve a la etapa de creación de features.
+- Divide las tareas entre front-end y backend mientras se realiza la feature dependiente, luego vuelve a la etapa de creación de features.

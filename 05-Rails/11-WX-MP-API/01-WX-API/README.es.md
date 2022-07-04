@@ -24,13 +24,13 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Antes de empezar a trabajar en tu app, asegúrate de haber completado tu programa WeChat Mini del curso WeChat Frontend con todas las user stories especificadas en los [desafíos de ese día](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). Esta es la aplicación frontend para la cual harás la API.
+Antes de empezar a trabajar en tu app, asegúrate de haber completado tu programa WeChat Mini del curso WeChat Front-end con todas las user stories especificadas en los [desafíos de ese día](https://kitt.lewagon.com/camps/236/challenges?path=04-Front-End/09-WX-MP-Frontend/01-WX-MP-Frontend-01). Esta es la aplicación front-end para la cual harás la API.
 
 ## Especificaciones
 
 ### 1 - Modelos
 
-Genera el modelo `Story` por medio del generador Rails adecuado. Debe tener las siguientes columnas. ¡Puedes agregar todas las columnas que tu app frontend necesite! 😊
+Genera el modelo `Story` por medio del generador Rails adecuado. Debe tener las siguientes columnas. ¡Puedes agregar todas las columnas que tu app front-end necesite! 😊
 
 - Nombre (`name`), como una cadena de caracteres (`string`)
 - Texto (`text`), como una cadena de caracteres (`string`)
@@ -47,7 +47,7 @@ No olvides agregar `has_many` para enlazar los modelos en el código y también 
 
 Crea algunas historias en la `rails console`. Mejor aún, crea un pequeño seed para nuestra app.
 
-Esto nos ayudará a comenzar el diseño de los endpoints de la  API que se mostrarán en la app frontend a pesar de que todavía no podemos agregar un comentario por medio de nuestro frontend.
+Esto nos ayudará a comenzar el diseño de los endpoints de la  API que se mostrarán en la app front-end a pesar de que todavía no podemos agregar un comentario por medio de nuestro front-end.
 
 En el archivo `db/seeds.rb`, crea algunas historias con comentarios.
 
@@ -82,7 +82,7 @@ end
 
 Consejo: Familiarizate con jbuilder mostrando la primera historia con los campos necesarios para el endpoint (e.g. no hay `created_at`). Luego intenta mostrar todas las historias en un arreglo (array).
 
-También actualiza la vista de la app frontend (`index.js`) para llamar a la API y obtener datos dinámicos:
+También actualiza la vista de la app front-end (`index.js`) para llamar a la API y obtener datos dinámicos:
 
 ```js
 wx.request({
@@ -112,18 +112,18 @@ end
 
 Si muestras la hora en la que se hizo el comentario, no olvides usar `strftime` para darle formato a la marca de tiempo (timestamp).
 
-Aprovecha y actualiza la vista (`show.js`) de la app frontend para llamar la API y obtener datos dinámicos.
+Aprovecha y actualiza la vista (`show.js`) de la app front-end para llamar la API y obtener datos dinámicos.
 
 ### 6 - Página Create de la Historia
 
 Recuerda que para crear una historia en una API solo necesitamos una ruta. No necesitamos una ruta para mostrar el formulario de una nueva historia, solo una nueva ruta para manejar la petición `POST` generada cuando se envía el formulario.
 
-Aprovecha y actualiza la vista  (`create.js`) de la app frontend para llamar a la API y enviar datos generados por el usuario.¿Cual es el verbo adecuado para crear datos? (GET, POST, PUT, o DELETE).
+Aprovecha y actualiza la vista  (`create.js`) de la app front-end para llamar a la API y enviar datos generados por el usuario.¿Cual es el verbo adecuado para crear datos? (GET, POST, PUT, o DELETE).
 
 
 ### 7 - Página Edit de la Historia
 
-También podemos hacer que se pueda editar una historia para remover errores ortográficos luego de haber creado la historia.¿Y qué hay de refactorizar el formulario frontend `create.wxml` en un partial `form.wxml` para usarlo en `new.wxml` también?
+También podemos hacer que se pueda editar una historia para remover errores ortográficos luego de haber creado la historia.¿Y qué hay de refactorizar el formulario front-end `create.wxml` en un partial `form.wxml` para usarlo en `new.wxml` también?
 
 ¡No olvides actualizar el `show.wxml` y `show.js` con nuevo botón de edición!
 
@@ -136,7 +136,7 @@ Una vez más, actualiza la vista show para ponerla en el botón de eliminación.
 
 ### 9 - Adición de comentarios (Opcional)
 
-Agrega un endpoint de API para crear comentarios desde el controlador de historias (almacenando dicha historia como a la que pertenece el comentario). También actualiza la página show con un botón para permitirle al/la usuario/a agregar un comentario con su nombre y foto mostrándose al lado del comentario. También podemos agregar una nueva página en el frontend para un formulario que usará este endpoint de creación de comentarios.
+Agrega un endpoint de API para crear comentarios desde el controlador de historias (almacenando dicha historia como a la que pertenece el comentario). También actualiza la página show con un botón para permitirle al/la usuario/a agregar un comentario con su nombre y foto mostrándose al lado del comentario. También podemos agregar una nueva página en el front-end para un formulario que usará este endpoint de creación de comentarios.
 
 En cuanto a tus rutas, piensa en usar rutas anidadas para especificar la historia a la que el comentario pertenece.
 

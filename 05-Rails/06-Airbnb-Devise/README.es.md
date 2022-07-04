@@ -1,4 +1,4 @@
-## Semana AirBnB
+## Semana Airbnb
 
 Trabajarás con tu equipo de proyecto en las próximas sesiones para crear un clon de AirBnB (¡no tienes que alquilar **apartamentos**. Sé creativo!)
 
@@ -55,7 +55,7 @@ Antes de decidir quién va a hacer qué, creen el proyecto juntos. El **lead dev
 
 #### 1. Crear el proyecto Rails con configuración Postgres
 
-Usa la plantilla minimal de Le Wagon la cual ya tiene una buena configuración de frontend:
+Usa la plantilla minimal de Le Wagon la cual ya tiene una buena configuración de front-end:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -113,7 +113,7 @@ Siempre debes comenzar con los **modelos fundamentales** de tu app de los cuales
 - Integra `User` con el registro e inicio de sesión (signin/signup) de  Devise
 - Integra `Flat` con la lista (`index`) y la creación (`new/create`)
 
-**grupo #2 - Frontend para comenzar**:
+**grupo #2 - Front-end para comenzar**:
 - Trabaja en una distribución (layout) limpia con navbar/footer
 - Crea una página de inicio (homepage) simple y atractiva.
 

@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-On va maintenant créer une application à 3 modèles ! Et tu l'auras deviné, on va introduire une relation `n:n`. Qu'est-ce qu'on va créer ? Une application avec des listes dans lesquelles tu pourras enregistrer tes films préférés.
+On va maintenant créer une application à 3 modèles ! Et tu l'auras deviné, on va introduire une relation `N:N`. Qu'est-ce qu'on va créer ? Une application avec des listes dans lesquelles tu pourras enregistrer tes films préférés.
 
 ## Générer l'application Rails
 
@@ -13,11 +13,11 @@ yarn -v
 
 Si ce n'est pas le cas, retourne sur la section dédié du setup [macOS](https://github.com/lewagon/setup/blob/master/macos.fr.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) ou [Windows](https://github.com/lewagon/setup/blob/master/windows.fr.md#yarn).
 
-**Remarque** : Tu devrais maintenant pouvoir exécuter ces étapes sans cette fiche d'aide ! N'oublie pas la base de données `--database=postgresql` (on en parlera au prochain cours). 😉
+**Remarque** : Tu devrais maintenant pouvoir exécuter ces étapes sans cette fiche d'aide ! N'oublie pas la base de données `-d postgresql` (on en parlera au prochain cours). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -56,24 +56,39 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Avant de commencer à coder, n'oublie pas de configurer ton application Rails pour le frontend. Comme dans le cours de ce matin, on va ajouter Bootstrap et ses dépendances JavaScript.
+Avant de commencer à coder, n'oublie pas de configurer ton application Rails pour le front-end. Comme dans le cours de ce matin, on va ajouter Bootstrap et ses dépendances JavaScript:
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap @popperjs/core
+```
+
+Ajoute les node_modules aux assets :
+
+```ruby
+# config/initializers/asset.rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
 Et on va ajouter les gems dont on a besoin :
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.12.0'
-gem 'simple_form', github: 'heartcombo/simple_form'
+# [...]
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form", github: "heartcombo/simple_form"
+gem "sassc-rails" # Uncomment this line
 ```
 
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
+```
+
+Ajoute cette ligne dans `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
 Puis on va télécharger les feuilles de style du Wagon :
@@ -87,7 +102,7 @@ unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails
 Enfin, on va importer la bibliothèque JavaScript Bootstrap avec Webpack :
 
 ```js
-// app/javascript/packs/application.js
+// app/javascript/application.js
 import 'bootstrap';
 ```
 
@@ -103,6 +118,7 @@ dont on a besoin sont `movies`, `lists` et `bookmarks`. Réfléchis aux relati
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
 **Important**
+
 N'utilise pas `rake` mais :
 
 ```bash
@@ -223,7 +239,7 @@ A-t-on besoin d'un contrôleur  `MoviesController` ?
 
 ### 5 - Mise en page au fil de l'eau
 
-On va maintenant créer un chouette frontend ! Pour cela, on va jouer avec le CSS 😊 Est-ce que tu rejoindras le Hall of Fame ? Jette un œil à [dribbble](https://dribbble.com/) ou [onepagelove](https://onepagelove.com/) pour trouver l'inspiration.
+On va maintenant créer un chouette front-end ! Pour cela, on va jouer avec le CSS 😊 Est-ce que tu rejoindras le Hall of Fame ? Jette un œil à [dribbble](https://dribbble.com/) ou [onepagelove](https://onepagelove.com/) pour trouver l'inspiration.
 
 N'oublie pas que tu peux avoir des images locales dans le dossier `app/assets/images`. Encore mieux : tu peux demander à l'utilisateur une `image_url` au moment de l'envoi.
 
@@ -235,9 +251,14 @@ N'oublie pas que tu peux avoir des images locales dans le dossier `app/assets/im
 
 Essaie de placer le formulaire de nouveau signet sur la page de la liste, pas sur une page séparée, pour ne pas avoir à quitter la page de la liste pour ajouter un nouveau film ! Qu'est-ce que ça change dans les routes ? Et dans les contrôleurs ?
 
-### 7 - Select2 sur le menu dépliant des films (optionnel)
+### 7 - tom-select sur le menu dépliant des films (optionnel)
 
-On va essayer d'ajouter un paquet npm à notre application Rails ! Reporte-toi aux diapos pour voir comment ajouter `select2` au menu dépliant des films.
+On va essayer d'ajouter un paquet JavaScript à notre application Rails ! Par exemple, ajoutons [tom-select](https://tom-select.js.org/) au menu dépliant des films.
+
+Pour cela :
+- Génère un contrôleur Stimulus dédié
+- Connecte ce contrôleur Stimulus à la balise `select` du menu dépliant des films
+- Adapte l'un des bouts de code des [exemples basiques](https://tom-select.js.org/examples/) pour instancier Tom Select dans le contrôleur Stimulus
 
 ### 8 - Avis sur les listes (optionnel)
 
@@ -250,6 +271,6 @@ Tout le monde devrait pouvoir commenter et donner son avis sur notre collection 
 - Ajoute la possibilité de rechercher des films.
 - Ajoute [typed.js](http://www.mattboldt.com/demos/typed-js/) pour donner un titre sympa à la page d'accueil.
 - Ajoute des animations [animate on scroll](https://michalsnik.github.io/aos/) aux signets quand on fait défiler la page d'affichage des listes.
-- Utilise [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) pour afficher des étoiles au lieu d'un champ `input` normal dans le formulaire des avis.
+- Utilise [star-rating.js](https://kitt.lewagon.com/knowledge/tutorials/star_rating) pour afficher des étoiles au lieu d'un champ `input` normal dans le formulaire des avis.
 
 Là encore, utilise des contrôleurs Stimulus lorsque tu implémentes du JavaScript dans ton app ⚠️

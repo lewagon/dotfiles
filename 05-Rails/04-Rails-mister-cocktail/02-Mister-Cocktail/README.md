@@ -13,11 +13,11 @@ yarn -v
 
 If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
 
-**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--database=postgresql` (we will talk about this tomorrow). 😉
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `-d postgresql` (we will talk about this tomorrow). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-mister-cocktail --database=postgresql --skip-action-mailbox -T
+rails new rails-mister-cocktail -d postgresql --skip-action-mailbox -T
 cd rails-mister-cocktail
 ```
 
@@ -59,7 +59,7 @@ rspec spec/models                # Launch tests
 Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and it's JavaScript dependencies
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap  @popperjs/core
 ```
 
 And add the gems we're going to need:
@@ -70,6 +70,14 @@ gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 5.15"
 gem "simple_form"
 ```
+
+Add this line in `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
+Then run
 
 ```bash
 bundle install
@@ -84,24 +92,7 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Finally let's import Boostrap JS library using webpack:
-
-```js
-// config/webpack/environment.js
-const { environment } = require("@rails/webpacker")
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require("webpack")
-environment.plugins.prepend("Provide",
-  new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery",
-    Popper: ["popper.js", "default"]
-  })
-)
-
-module.exports = environment
-```
+Finally let's import Boostrap JS library:
 
 ```js
 // app/javascript/packs/application.js

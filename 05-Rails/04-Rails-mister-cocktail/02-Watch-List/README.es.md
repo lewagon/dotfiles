@@ -16,11 +16,11 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-**Nota**: ¡Ya debes poder hacer esto sin ver tus apuntes! No olvides el `--database=postgresql` (hablaremos de esto mañana). 😉
+**Nota**: ¡Ya debes poder hacer esto sin ver tus apuntes! No olvides el `-d postgresql` (hablaremos de esto mañana). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list --database=postgresql --skip-action-mailbox -T
+rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -65,6 +65,11 @@ Antes de comenzar a escribir tu código, no olvides configurar tu app Rails para
 yarn add bootstrap@4.6 jquery popper.js
 ```
 
+``ruby
+# config/initializers/asset.rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 También debes agregar las gemas que vamos a necesitar:
 
 ```ruby
@@ -72,6 +77,7 @@ También debes agregar las gemas que vamos a necesitar:
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form', github: 'heartcombo/simple_form'
+gem "sassc-rails" # Uncomment this line
 ```
 
 ```bash
@@ -119,7 +125,7 @@ environment.plugins.prepend('Provide',
 module.exports = environment
 ```
 ```js
-// app/javascript/packs/application.js
+// app/javascript/application.js
 import 'bootstrap';
 ```
 

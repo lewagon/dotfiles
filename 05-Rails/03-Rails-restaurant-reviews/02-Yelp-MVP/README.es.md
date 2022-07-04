@@ -23,7 +23,7 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Antes de empezar a escribir el código de tu app, sigue [nuestra guía Rails de Frontend](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) para asegurarte de que puedas usar Simple Form, Bootstrap y también tengas una buena carpeta de hojas de estilo (stylesheets) (⚠️ solo haz la sección de **configuración**. No intentes implementar **Bootstrap JS**.¡Eso lo cubriremos mañana!).
+Antes de empezar a escribir el código de tu app, sigue [nuestra guía Rails de front-end](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) para asegurarte de que puedas usar Simple Form, Bootstrap y también tengas una buena carpeta de hojas de estilo (stylesheets) (⚠️ solo haz la sección de **configuración**. No intentes implementar **Bootstrap JS**.¡Eso lo cubriremos mañana!).
 
 ### Testeo de tu código
 
@@ -134,7 +134,7 @@ Sabemos que es un MVC muy básico pero solo debemos entender que **cada ruta es 
 
 ### Vistas
 
-¡Prestemos atención al frontend ya que eso es lo que los/las usuarios/as van a ver! Sigue [esta guía](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) para configurar el frontend de tu app Rails si no lo hiciste al inicio de este desafío (⚠️ solo haz la sección de **configuración**.¡No intentes implementar **Bootstrap JS**. Eso lo veremos mañana!).
+¡Prestemos atención al front-end ya que eso es lo que los/las usuarios/as van a ver! Sigue [esta guía](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) para configurar el frontend de tu app Rails si no lo hiciste al inicio de este desafío (⚠️ solo haz la sección de **configuración**.¡No intentes implementar **Bootstrap JS**. Eso lo veremos mañana!).
 
 #### Distribución (layouts) / partials
 

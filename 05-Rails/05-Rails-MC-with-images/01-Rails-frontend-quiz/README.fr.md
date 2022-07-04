@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Avant de passer à la deuxième partie du challenge Watch-List, on va revenir sur quelques-uns des principes vus hier avec les techniques de frontend moderne de Rails.
+Avant de passer à la deuxième partie du challenge Watch-List, on va revenir sur quelques-uns des principes vus hier avec les techniques de front-end moderne de Rails.
 
 ## Spécifications
 
