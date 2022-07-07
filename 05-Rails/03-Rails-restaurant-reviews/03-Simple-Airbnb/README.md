@@ -45,7 +45,7 @@ Add Font Awesome `link` tag in the `head` of your layout:
 ```erb
 <!-- app/views/layouts/application.html.erb -->
 <!-- [...] -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 ```
 
 You can now use any of the [free Font Awesome icons](https://fontawesome.com/search?m=free) anywhere in your Rails views 🎉
