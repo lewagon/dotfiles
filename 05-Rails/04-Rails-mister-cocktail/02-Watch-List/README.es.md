@@ -74,9 +74,9 @@ También debes agregar las gemas que vamos a necesitar:
 
 ```ruby
 # Gemfile
-gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.12.0'
-gem 'simple_form', github: 'heartcombo/simple_form'
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails" # Uncomment this line
 ```
 

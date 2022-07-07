@@ -51,7 +51,7 @@ Prepara el archivo de tu foto de perfil antes de comenzar a escribir código. Pa
 
 ```html
 <!-- Fontawesome Stylesheet -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 ```
 
 - Puedes usar el atributo `target="_blank"` para que abran en una nueva página al hacer clic sobre ellos.
