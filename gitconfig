@@ -52,3 +52,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = chahbar.zakaria@gmail.com
+	name = Zakaria Chahbar chahbar.zakaria@gmail.com
