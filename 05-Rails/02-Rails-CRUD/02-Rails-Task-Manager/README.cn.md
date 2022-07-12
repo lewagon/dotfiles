@@ -88,10 +88,31 @@ Task.create title: '学习', details: '有很多卡片要学习', completed: tru
 2. 在`TasksController`使用`before_action`
 3. 我们可以在`new` 和 `edit`视图不要重复自己`DRY`吗？我们如何让新建任务的表单**不要**显示已完成？([提示](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F))
 
-### 9 - 复选框外观视觉效果（选做）
+### 9 - 前端（选做）
 
-复选框还不是真的复选框！它们只是Font Awesome图标。
+**安装Bootstrap样式**
 
-在`application.html.erb`文件的`<head>`里导入Bootstrap & Font Awesome CDNs(内容分发网络,Content Delivery Network)，并在你的视图里给每一个任务都创建复选框的外观视觉效果。
+跟着[这个文档](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css)来安装Bootstrap在你的Rails应用上。你可以复制粘贴下方代码在`application.html.erb`的`head`中添加一个`link`标签：
 
-然后，在你的视图里，使用条件语句。如果该任务是已完成状态，显示选中的方块。如果是未完成状态，则显示空的方块（提示😉，在fontawesome搜索`check-square` 和 `square`😉）。
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+你现在可以在你Rails应用的各个页面里使用Bootstrap class啦！🎉
+
+**安装Font Awesome**
+
+在你的layout里的`head`中添加下方的`link`标签：
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+```
+
+你现在可以随意使用任何[免费的Font Awesome图标](https://fontawesome.com/search?m=free)啦！ 🎉尝试找找一些好看的选项框图标吧！
+
+然后，在你的view里，使用条件语句。如果该任务是已完成状态，显示选中的方块。如果是未完成状态，则显示空的方块。
+
