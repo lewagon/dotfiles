@@ -358,7 +358,7 @@ class Skyscraper < Building
   end 
 
   def type_of_owner
-    if @length > 50
+    if @height > 50
       "this #{self.capitalized_name} is a skyscraper for Spider-Man."
     else
       "this #{self.capitalized_name} is a skyscraper for beginners"
