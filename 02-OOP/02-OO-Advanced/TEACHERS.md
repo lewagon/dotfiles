@@ -370,7 +370,7 @@ class Skyscraper < Building
   end
 end
 
-nyc_skyscraper = Skyscraper.new("empire State Building", 30, 60)
+nyc_skyscraper = Skyscraper.new("empire State Building", 30, 60, 381)
 nyc_skyscraper.type_of_owner # => "This Empire State Building is a skyscrapper for Spider-Man."
 ```
 
