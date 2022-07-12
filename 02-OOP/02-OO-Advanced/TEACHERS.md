@@ -351,6 +351,12 @@ end
 Self is not mandatory:
 ```ruby
 class Skyscraper < Building
+
+  def initialize(name, width, length, height)
+    super(name, width, length)
+    @height = height
+  end 
+
   def type_of_owner
     if @length > 50
       "this #{self.capitalized_name} is a skyscraper for Spider-Man."
