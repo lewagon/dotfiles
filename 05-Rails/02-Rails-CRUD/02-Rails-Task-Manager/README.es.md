@@ -90,10 +90,30 @@ Analiza tu código con ojo crítico e introduce los siguientes cambios:
 1. Usa un `before_action` en el `TasksController`
 1. ¿Deberíamos repetirnos (DRY) un poco con las vistas `new` y `edit`?¿Cómo deberíamos manejar el hecho de que el formulario `new` **no** debe mostrar "Completed"? ([hint](http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F)).
 
-### 9 - Casillas de verificación (checkboxes) (Opcional)
+### 9 - Front-End (Opcional)
 
-Las casillas de verificación (checkboxes) solamente son iconos de Font Awesome.
+**Instala las hojas de estilo de Bootstrap**
 
-Para crear el visual de las "checkboxes" para cada tarea en la vista, importa Bootstrap & Font Awesome CDNs en el `<head>` del `application.html.erb`.
+Sigue las instrucciones de [la documentación](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css) e instala Bootstrap en tu Rails app copiando y pegando el `link` tag en el `head` del layout en `application.html.erb`:
 
-Entonces, en la vista, usa condicionales. Si la tarea está completada, muestra la casilla marcada, de lo contrario, muestra la casilla vacia (como pista 😉, busca los iconos `check-square` y `square` en fontawesome).
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Ahora puedes usar cualquier clase Bootstrap en cualquier lugar de tus vistas de Rails. 🎉
+
+**Instala Font Awesome**
+
+Agrega el `link` tag de Font Awesome en el `head` de tu layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+```
+
+Ahora puedes usar cualquiera de los [íconos gratuitos de Font Awesome](https://fontawesome.com/search?m=free) 🎉 ¡Trata de encontrar buenos íconos de casilla de verificación!
+
+Usa declaraciones condicionales en tu vista. Si la tarea está completada, muestra la casilla marcada, de lo contrario, muestra la casilla vacia.
