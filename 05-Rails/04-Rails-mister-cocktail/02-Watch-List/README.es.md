@@ -4,19 +4,17 @@
 
 ## Creación de la app Rails app
 
-¡Instala `yarn` si todavía no lo tienes!
+a deberías tener [yarn](https://yarnpkg.com) instalado.
+Compruébalo con:
 
 ```bash
-# macOS
-brew install yarn
-
-# Ubuntu
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+yarn -v
+# You should see your yarn version here
 ```
 
-**Nota**: ¡Ya debes poder hacer esto sin ver tus apuntes! No olvides el `-d postgresql` (hablaremos de esto mañana). 😉
+Si no, vuelve a la sección correspondiente de la configuración de [macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) o [Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn).
+
+**Nota**: ¡Ya debes poder hacer esto sin ver estos apuntes! No olvides el `-d postgresql` (hablaremos de esto mañana). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -39,7 +37,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Importa las especificaciones del/de la profesor/a para monitorear el progreso con `rake`.
+Importa las especificaciones del profesor para monitorear nuestro progreso con `rake`.
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
@@ -62,15 +60,17 @@ rspec spec/models                # Launch tests
 Antes de comenzar a escribir tu código, no olvides configurar tu app Rails para el Front-end. Tal como se mencionó en la clase de esta mañana, agrega las dependencias de Bootstrap y JavaScript
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap @popperjs/core
 ```
 
-``ruby
+Debemos agregar los node modules al assets path:
+
+```ruby
 # config/initializers/asset.rb
 Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
-También debes agregar las gemas que vamos a necesitar:
+Y agrega las gemas que vamos a necesitar:
 
 ```ruby
 # Gemfile
@@ -85,6 +85,12 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
+Agrega esta línea en `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
 Después descarga los stylesheets de Le Wagon:
 
 ```bash
@@ -93,37 +99,8 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Para tener el responsiveness de Bootstrap deberás agregar lo siguiente al `<head>`:
-
-```html
-<!-- app/views/layouts/application.html.erb -->
-
-<!DOCTYPE html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <!-- [...] -->
-```
-
 Finalmente, importa la librería Boostrap JS utilizando webpack:
 
-```js
-// config/webpack/environment.js
-const { environment } = require('@rails/webpacker')
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require('webpack')
-environment.plugins.prepend('Provide',
-  new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    Popper: ['popper.js', 'default']
-  })
-)
-
-module.exports = environment
-```
 ```js
 // app/javascript/application.js
 import 'bootstrap';
@@ -136,7 +113,7 @@ No olvides hacer el `commit` y el `push` de tu trabajo regularmente.
 ### 1 - Modelos
 
 Ve a [db.lewagon.com](http://db.lewagon.com)
-y dibuja el esquema con tu compañero/a. Necesitamos las siguientes tablas: `movies`, `lists` y `bookmarks`. Piensa en el tipo de relaciones entre las tablas y quién almacenará las *referencias*. 😉
+y dibuja el esquema con tu compañero. Necesitamos las siguientes tablas: `movies`, `lists` y `bookmarks`. Piensa en el tipo de relaciones entre las tablas y quién almacenará las *referencias*. 😉
 
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
@@ -154,7 +131,7 @@ para que solamente se corran los tests en la carpeta `spec/models`. Asegúrate d
 
 - Una película **movie** tiene un título **title** (e.g. `"Wonder Woman 1984"`), una pequeña descripción **overview** (`"Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s!"`), un **poster url** y un **rating** (6.9).
 - Una lista **list** tiene un nombre **name** (e.g. `"Drama"`, `"Comedy"`, `"Classic"`, `"To rewatch"`, ... )
-- Un **bookmark** agrega una película a una lista (e.g. Wonder Woman has been added to the "Girl Power" watch list). Así que cada **bookmark** referencia a una película y a una lista con un **comment**. El campo del **comment** es para que el/la usuario/a agregue una nota en el bookmark (e.g. Alan Turing recommended this movie).
+- Un **bookmark** agrega una película a una lista (e.g. Wonder Woman has been added to the "Girl Power" watch list). Así que cada **bookmark** hace referencia a una película y a una lista con un **comment**. El campo del **comment** es para que el usuario agregue una nota en el bookmark (e.g. Alan Turing recommended this movie).
 
 #### Validación
 
@@ -175,7 +152,7 @@ para que solamente se corran los tests en la carpeta `spec/models`. Asegúrate d
 
 ### 2 - Seed de las películas
 
-**Nuestra app no les permitirá a los/las usuarios/as crear películas**.
+**Nuestra app no les permitirá a los usuarios crear películas**.
 En cambio, generaremos un seed estático de películas para escoger.
 Ejemplo de seed:
 
@@ -191,21 +168,21 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 Diviértete y crea un seed de películas falsas utilizando la gema [faker](https://github.com/faker-ruby/faker).
 
-Si quieres ir más allá, puedes hacer un seed de películas reales utilizando [esta API](https://developers.themoviedb.org/3/movies/get-top-rated-movies) (con las librerías ruby `open-uri` y `json`).
+Si quieres ir más lejos, puedes hacer un seed de películas reales utilizando [esta API](https://developers.themoviedb.org/3/movies/get-top-rated-movies) (con las librerías ruby `open-uri` y `json`).
 
 **Configuración de la API**
 
-Los endpoints de la API te piden que crees una cuenta de usuario y generes una API key. Ya que ese proceso toma tiempo, el equipo de Le Wagon te proporciona un **proxy** para esa API. Gracias a esta proxy podrás utilizar la API sin necesidad de generar la API key por tu cuenta. ¡Te pedimos que solo uses esta herramienta para este desafío! ¡Confiamos en ti!
+Los endpoints de la API te piden que crees una cuenta de usuario y generes una API key. Dado que ese proceso toma tiempo, el equipo de Le Wagon te ha dado un **proxy** para esa API. Gracias a esta proxy podrás utilizar la API sin necesidad de generar la API key por tu cuenta. ¡Te pedimos que solo uses esta herramienta para este desafío! ¡Confiamos en ti!
 
 A continuación te explicamos cómo funciona:
 
 1. La API dirá: usa `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>`
-2. Lo que deberás hacer es reemplazar esta parte de la url `https://api.themoviedb.org/3` por  `http://tmdb.lewagon.com`
+2. Lo que deberás hacer es reemplazar esta parte de la url `https://api.themoviedb.org/3` por `http://tmdb.lewagon.com`
 3. Practica [aquí](http://tmdb.lewagon.com/movie/top_rated)
 
 **Imágenes de las Películas**
 
-Para entender cómo obtener imágenes de las películas de la API, asegúrate de leer cuidadosamente [esta página](https://developers.themoviedb.org/3/getting-started/images) que se encuentra en los docs.
+Para entender cómo obtener imágenes de las películas de la API, asegúrate de leer cuidadosamente [esta página](https://developers.themoviedb.org/3/getting-started/images) que se encuentra en la documentación.
 
 ### 3 - Ruta, Controlador, Vistas para las Listas
 
@@ -221,21 +198,21 @@ Cuando termines tu feature (y se vea bien), ¡comienza a trabajar en la siguient
 Cuando pienses que hayas terminado **todo** el desafío, usa `rake` para asegurarte que cumples con las especificaciones.
 
 **Features**
-Te recordamos nuevamente que debes tener una idea precisa de las features de tu app para crear las rutas. Aquí tienes la lista de features:
+Te recordamos nuevamente que debes tener una idea precisa de las features de tu app para crear las rutas. Aquí tienes la lista que las necesitas:
 
-- Un/a usuario puede ver todas las listas
+- Un usuario puede ver todas las listas
 
 ```
 GET "lists"
 ```
 
-- Un/a usuario puede ver el nombre y el detalle de una lista específica
+- Un usuario puede ver el nombre y el detalle de una lista específica
 
 ```
 GET "lists/42"
 ```
 
-- Un/a usuario puede crear una nueva lista
+- Un usuario puede crear una nueva lista
 
 ```
 GET "lists/new"
@@ -244,15 +221,15 @@ POST "lists"
 
 ### 4 - Routa, Controlador, Vista para los bookmarks
 
-- Un/a usuario puede agregar un nuevo bookmark (par movie/list) en una lista existente
-- Revisa la [doc] de `simple_form`(https://github.com/heartcombo/simple_form#associations) sobre `f.association` para crear de forma fácil un menú de selección desplegable (dropdown) para nuestra lista de películas.
+- Un usuario puede agregar un nuevo bookmark (par movie/list) en una lista existente
+- Revisa la [documentación](https://github.com/heartcombo/simple_form#associations) de `simple_form` sobre `f.association` para crear de forma fácil un menú de selección desplegable para nuestra lista de películas.
 
 ```
 GET "lists/42/bookmarks/new"
 POST "lists/42/bookmarks"
 ```
 
-- Un/a usuario/a puede borrar un bookmark de una lista. ¿Cómo podemos crear un link de delete?
+- Un usuario puede borrar un bookmark de una lista. ¿Cómo podemos crear un link de delete?
 
 ```
 DELETE "bookmarks/25"
@@ -264,7 +241,7 @@ DELETE "bookmarks/25"
 ¡Es hora de crear un front-end cool jugando con CSS! 😊 Revisa [dribbble](https://dribbble.com/) o [onepagelove](https://onepagelove.com/)
 para inspirarte.
 
-No olvides que puedes tener imágenes locales en la carpeta `app/assets/images`. O aún mejor, puedes pedirle al/a la usuario/a un `image_url` cuando él/ella agrege una nueva lista.
+No olvides que puedes tener imágenes locales en la carpeta `app/assets/images`. O aún mejor, puedes pedirle al usuario un `image_url` cuando agrege una nueva lista.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/homepage.png)
 
@@ -274,19 +251,26 @@ No olvides que puedes tener imágenes locales en la carpeta `app/assets/images`.
 
 Intenta poner el "Formulario de nuevo bookmark" en la página de la propia lista, y no en una página por separado. ¡Así no tendrás que dejar la página de la lista para agregar una nueva película! ¿Qué cambia en las rutas y en los controladores?
 
-### 7 - Select2 en el dropdown de las películas (Opcional)
+### 7 - Tom Select en el dropdown de las películas (Opcional)
 
-¡Intenta agregar un npm package a tu app rails! Sigue los lineamiento de los slides para saber cómo agregar `select2` al dropdown de las películas.
+¡Agrega un paquete JavaScript a nuestra app Rails! Échale un vistazo a [nuestro tutorial](https://kitt.lewagon.com/knowledge/tutorials/tom_select)
+
+Para hacerlo:
+- Genera un controlodador de Stimulus dedicado a eso
+- Conecta este controlador Stimulus al `select` tag del dropdown de las películas
+- Adapta uno de los snipets de código de [ejemplos básicos](https://tom-select.js.org/examples/) para instanciar un Tom Select en el controlador Stimulus
 
 ### 8 - Reviews de la Lista (Opcional)
 
-Todos/as deberían tener la opción de escribir comentarios y decirnos lo que piensan de nuestra selección de películas. ¡Agrega algunos reviews a tus listas!
+Todos deberían tener la opción de escribir comentarios y decirnos lo que piensan de nuestra selección de películas. ¡Agrega algunos reviews a tus listas!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/reviews.png)
 
 ### 9 - Yendo más lejos
 
 - Agrega la posibilidad de hacer una búsqueda de películas.
-- Agrega `typed.js` para tener títulos divertidos en tu home page.
+- Agrega [typed.js](http://www.mattboldt.com/demos/typed-js/) para tener títulos divertidos en tu home page.
 - Agrega [animación con scroll](https://michalsnik.github.io/aos/) a tus bookmarks
-- Usando [jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) para mostrar estrellas en lugar de una entrada normal en el formulario de reviews.
+- Usa [`star-rating.js`](https://kitt.lewagon.com/knowledge/tutorials/star_rating) para mostrar estrellas en lugar de una entrada normal en el formulario de reviews.
+
+Te recordamos nuevamente que uses controladores Stimulus cuando implementes comportamiento JavaScript en tu aplicación ⚠️
