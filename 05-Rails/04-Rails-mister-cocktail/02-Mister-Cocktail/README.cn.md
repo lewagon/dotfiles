@@ -106,11 +106,41 @@ import "bootstrap";
 
 ### 1 - 模型Models
 
-### 2 - 成分Seed
+前往[db.lewagon.com](http://db.lewagon.com)并且和你的伙伴一起绘制模式Schema。我们需要的表有`cocktails`, `ingredients`和`doses`。思考一下各个表之间的关系还有谁会储存着*应用references*。
 
-### 3 - 鸡尾酒的路由Routing，控制器Controller，试图Views
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/db.png)
 
-### 4 - 剂量的路由Routing，控制器Controller，试图Views
+**重点**
+不要使用`rake`，但是可以用：
+
+```bash
+rspec spec/models
+```
+
+来只在`spec/models`文件夹里运行测试。请保证测试结果都变绿色了再继续挑战接下来的应用部分。
+
+#### 属性
+
+- 一杯**鸡尾酒cocktail**有一个名字name（例如`"Mint Julep"`, `"Whiskey Sour"`, `"Mojito"`）
+- 一个**成分ingredient**有一个名字name（例如`"lemon"`, `"ice"`, `"mint leaves"`）
+- 一个**剂量dose**是在一杯鸡尾酒里每个成分需要的量（例如Mojito鸡尾酒需要**6cl**的柠檬汁）。所以每个剂量会引用一个鸡尾酒cocktail，一个成分ingredient并有一段描述description。
+
+#### 验证
+
+- 一杯鸡尾酒cocktail必须有个唯一的名字name。
+- 一个成分ingredient必须又个唯一的名字name。
+- 一个剂量dose必须有一个描述description，一个鸡尾酒cocktail，一个成分ingredient并且[鸡尾酒cocktail, 成分ingredient]的搭配是唯一的。
+
+#### 关联
+
+
+
+
+### 2 - 成分ingredient的Seed
+
+### 3 - 鸡尾酒cocktails的路由Routing，控制器Controller，试图Views
+
+### 4 - 剂量doses的路由Routing，控制器Controller，试图Views
 
 ### 5 - 开始设计我们的应用
 
