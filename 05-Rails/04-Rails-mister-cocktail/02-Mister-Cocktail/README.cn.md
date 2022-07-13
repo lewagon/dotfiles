@@ -133,10 +133,27 @@ rspec spec/models
 
 #### 关联
 
-
-
+- 一杯鸡尾酒cocktail有许多剂量doses
+- 一杯鸡尾酒cocktail通过剂量doses有许多成分ingredient
+- 一个成分ingredient有许多剂量doses
+- 一个剂量dose属于一个成分ingredient
+- 一个剂量dose属于一杯鸡尾酒cocktail
+- 你不能删除一个成分ingredient如果它已经被至少一杯cocktail使用
+- 你可以删除一杯鸡尾酒，你可以删除相关联的剂量doses（但不能删除成分ingredients因为它们有可能正被其他的鸡尾酒cocktails使用着）
 
 ### 2 - 成分ingredient的Seed
+
+**我们的应用不允许用户去创造成分ingredients**
+我们将会生成一个静态的成分数据来给用户做选择。创建Seed，例如：
+
+```ruby
+# db/seeds.rb
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+```
+
+**选做**：可以使用[这个JSON列表](http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list) (需要使用`open-uri`和`json`ruby库)来使用一些真实的成分数据。
 
 ### 3 - 鸡尾酒cocktails的路由Routing，控制器Controller，试图Views
 
