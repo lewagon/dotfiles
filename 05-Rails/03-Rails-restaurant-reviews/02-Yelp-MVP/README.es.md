@@ -101,7 +101,7 @@ rspec spec/01_models
 ```
 Para correr tests selectivamente en la carpeta `spec/01_models`.
 
-También puedes testear tu código manualmente con la `rails console`.¡No olvides `¡recargar!` entre cada cambio que hagas en el código!
+También puedes testear tu código manualmente con la `rails console`.¡No olvides hacer `reload!` entre cada cambio que hagas en el código!
 
 ```bash
 rails c
