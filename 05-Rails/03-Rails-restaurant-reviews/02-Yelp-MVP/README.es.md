@@ -5,7 +5,7 @@ Puedes ver la [guía Rails](http://guides.rubyonrails.org/getting_started.html#a
 
 ## Generación de la app Rails
 
-Vas a usar especificaciones externas que fueron escritas por los/as profesores/as para testear tu app Rails. Por eso especificamos `-T` lo que significa "no generes los tests integrados de Rails". Aquí está la configuración que necesitamos:
+Vas a usar especificaciones externas que fueron escritas por los profesores para testear tu app Rails. Por eso especificamos `-T` lo que significa "no generes los tests integrados de Rails". Aquí está la configuración que necesitamos:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -81,7 +81,7 @@ Si tienes problemas corriendo `rake`, tal vez tengas que correr `bin/rake`. Eso 
 
 Asegúrate de pensarlo dos veces antes de seleccionar el tipo de datos.¡No siempre resulta ser la primera selección!
 
-**Pregunta**:¿Puedes dibujar este esquema simple en [db.lewagon.com](http://db.lewagon.com)? Háblalo con tu compañero/a (buddy).
+**Pregunta**:¿Puedes dibujar este esquema simple en [db.lewagon.com](http://db.lewagon.com)? Háblalo con tu compañero (buddy).
 
 #### Validación
 
@@ -124,7 +124,7 @@ rails c
 
 ### Rutas / Controladores
 
-Preguntarse a uno/a mismo/a qué rutas necesitamos es un paso muy importante en el proceso de creación de la app. **Las rutas deben reflejar exactamente los user stories de tus productos**. Así que vamos a definir lo mínimo que tiene nuestro producto aquí:
+Preguntarse a uno mismo qué rutas necesitamos es un paso muy importante en el proceso de creación de la app. **Las rutas deben reflejar exactamente los user stories de tus productos**. Así que vamos a definir lo mínimo que tiene nuestro producto aquí:
 
 - Un visitante puede ver la lista de todos los restaurantes.
 
