@@ -157,15 +157,86 @@ Ingredient.create(name: "mint leaves")
 
 ### 3 - 鸡尾酒cocktails的路由Routing，控制器Controller，试图Views
 
+**重点**
+不要使用`rake`来编写应用部分。是时候在你的终端里启动`rails s`并在浏览器里打开[http://localhost:3000/](http://localhost:3000/)。请在开发时保持你的代码相对独立：
+
+- 从**路由route**开始
+- 然后开始开发**控制器controller**
+- 接下来开发**视图view**并刷新浏览器页面
+
+但你的新功能完成了（并且看起来不错），就可以开始下一步并重复上面的步骤！
+
+但你认为你完成了**整个**挑战，使用`rake`来保证它满足了说明里的所有要求。
+
+**功能**
+再一次，你必须对你应用的功能有一个准确的想法来打造你的路由。以下是功能的列表：
+
+- 一个用户可以看见鸡尾酒列表
+
+```
+GET "cocktails"
+```
+
+- 一个用户可以查看一杯鸡尾酒的细节，包括每个成分所需要的剂量
+
+```
+GET "cocktails/42"
+```
+
+- 一个用户可以创建一个新的鸡尾酒
+
+```
+GET "cocktails/new"
+POST "cocktails"
+```
+
 ### 4 - 剂量doses的路由Routing，控制器Controller，试图Views
+
+- 一个用户可以在一个已有的鸡尾酒上添加一个新的剂量dose（一对成分ingredient/说明description）
+- 查看`simple_form` [文档](https://github.com/heartcombo/simple_form#associations)中有关`f.association`的部分，来轻松地给我们的成分列表创建一个选项下拉列表。
+
+```
+GET "cocktails/42/doses/new"
+POST "cocktails/42/doses"
+```
+
+- 一个用户可以删除已有鸡尾酒cocktail的一个剂量dose。我们如何再创建一个删除链接？
+
+```
+DELETE "doses/25"
+```
+
+我们需要一个`IngredientsController`嘛？
 
 ### 5 - 开始设计我们的应用
 
+现在我们可以做一个精美的前端！可以玩弄CSS啦！你可以把它变成一个名人堂/小红书页面的样子嘛？可以查看[dribbble](https://dribbble.com/)或者[onepagelove](https://onepagelove.com/) 来获取更多灵感。
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_1.png)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_2.png)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_3.png)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_4.png)
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/show_1.png)
+
+不要忘记将本地图片储存在`app/assets/images`文件夹里。或者更好一些，你可以询问用户，让他们在创建新鸡尾酒的时候填写一个`image_url`图片的链接。
+
 ### 6 - 鸡尾酒show页面上的新剂量表单（选做）
+
+尝试在鸡尾酒页面放入一个“新剂量表单”，而不是分开的另个页面上。路由有什么改变？控制器呢？
 
 ### 7 - 在成分选择上应用Select2下拉列表
 
+让我们尝试在我们的rails应用中加一个npm包！让我们回到幻灯片看看如何将`select2`加到我们的成分选择下拉列表里。
+
 ### 8 - 让我们为这些出色的鸡尾酒加一些评论！（选做）
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/show_2.png)
 
 ### 9 - 进阶
 
+- 添加一个搜索鸡尾酒的功能并且在搜索栏里添加使用`typed.js`。
+- 在我们鸡尾酒列表上，当我们滚动页面的时候，可以使用一些漂亮的[页面滚动动画](https://michalsnik.github.io/aos/)。
