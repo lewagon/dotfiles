@@ -92,7 +92,7 @@ Asegúrate de pensarlo dos veces antes de seleccionar el tipo de datos.¡No siem
 - Un review debe tener un contenido (content).
 - Un review debe tener una calificación (rating).
 - La calificación de un review debe ser un número entre 0 y 5.
-- La calificación de un review debe ser un número entero. Por ejemplo, un review con una calificación de 2,5 ne debería ser válida.
+- La calificación de un review debe ser un número entero. Por ejemplo, un review con una calificación de 2,5 no debería ser válida.
 
 Valida todos los tests de los modelos antes de empezar a trabajar con las rutas. Puedes usar el siguiente comando:
 
@@ -155,11 +155,11 @@ POST "restaurants/38/reviews"
 
 En nuestro MVP, un visitante no puede actualizar / borrar un restaurante ni un review. Este es el papel del administrador (e.g. **tú**). Como programador/a tienes el poder de manipular la base de datos (DB) desde la `rails console` si quisieras actualizar / borrar algún registro.
 
-Sabemos que es un MVC muy básico pero solo debemos entender que **cada ruta es una representación de un user story**. No escribas las 7 rutas CRUD ciegamente para cada modelo de tu app. Esa es la mejor manera de confundirse con tu propio producto y olvidar lo que el MVP realmente es.
+Sabemos que es un MVP muy básico pero solo debemos entender que **cada ruta es una representación de un user story**. No escribas las 7 rutas CRUD ciegamente para cada modelo de tu app. Esa es la mejor manera de confundirse con tu propio producto y olvidar lo que el MVP realmente es.
 
 ¡Es hora de implementar todas las rutas que necesites para crear este producto!
 
-**Pista:** para manejar la ruta `GET "restaurants/38/reviews/new"`, tendrás que usar recursos anidados ([nested resources])(http://guides.rubyonrails.org/routing.html#nested-resources).
+**Pista:** para manejar la ruta `GET "restaurants/38/reviews/new"`, tendrás que usar [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
 ### Vistas
 
