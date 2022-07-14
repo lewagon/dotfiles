@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's say you want to stay fit but keep eating McDonalds... You have the brilliant idea to write a quick method that computes the number of calories in a McDonalds order. Let's use the table below as our abridged McDonalds menu:
+Let's say you want to stay fit while learning how to code :)  You have the brilliant idea to write a quick method that computes the number of calories in a restaurant order. Let's use the table below as our abridged restaurant menu:
 
 <table class="table">
   <thead>
@@ -19,15 +19,15 @@ Let's say you want to stay fit but keep eating McDonalds... You have the brillia
       <td>300</td>
     </tr>
     <tr>
-      <td>Big Mac</td>
+      <td>Veggie Burger</td>
       <td>540</td>
     </tr>
     <tr>
-      <td>McChicken</td>
+      <td>Vegan Burger</td>
       <td>350</td>
     </tr>
     <tr>
-      <td>French Fries</td>
+      <td>Sweet Potatoes</td>
       <td>230</td>
     </tr>
     <tr>
@@ -35,12 +35,12 @@ Let's say you want to stay fit but keep eating McDonalds... You have the brillia
       <td>15</td>
     </tr>
     <tr>
-      <td>Coca Cola</td>
-      <td>150</td>
+      <td>Iced Tea</td>
+      <td>70</td>
     </tr>
     <tr>
-      <td>Sprite</td>
-      <td>150</td>
+      <td>Lemonade</td>
+      <td>90</td>
     </tr>
   </tbody>
 </table>
@@ -50,9 +50,9 @@ For instance, below is an example of a `Hash` - `AGE_OF_STUDENTS` - that contain
 
 ```ruby
 AGE_OF_STUDENTS = {
-  "Peter" => 21,
-  "George" => 22,
-  "Mary" => 20
+  "Laura" => 23,
+  "Peter" => 20,
+  "Mary" => 27
 }
 ```
 
