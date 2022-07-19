@@ -6,3 +6,4 @@ This repository is used by [Le Wagon](https://www.lewagon.com) students.
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [git](https://git-scm.com/)
 # score_locker
+# score_locker
