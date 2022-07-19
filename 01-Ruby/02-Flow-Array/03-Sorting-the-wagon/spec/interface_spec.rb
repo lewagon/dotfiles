@@ -1,10 +1,9 @@
-require 'open3'
+require "open3"
 
 describe "Interface" do
-
   let(:result_one) do
     result_one = ""
-    Open3.popen2('ruby ./lib/interface.rb') do |i, o, th|
+    Open3.popen2("ruby ./lib/interface.rb") do |i, o, th|
       i.puts "Alice"
       i.puts "charlie"
       i.puts "Bob"
@@ -18,7 +17,7 @@ describe "Interface" do
 
   let(:result_two) do
     result_two = ""
-    Open3.popen2('ruby ./lib/interface.rb') do |i, o, th|
+    Open3.popen2("ruby ./lib/interface.rb") do |i, o, th|
       i.puts "Alice"
       i.puts "charlie"
       i.puts "daniel"
@@ -33,7 +32,7 @@ describe "Interface" do
 
   let(:result_three) do
     result_three = ""
-    Open3.popen2('ruby ./lib/interface.rb') do |i, o, th|
+    Open3.popen2("ruby ./lib/interface.rb") do |i, o, th|
       i.puts "Alice"
       i.puts ""
       i.close
@@ -48,7 +47,7 @@ describe "Interface" do
       expect(result_one).to match(/3 students/)
     end
 
-    it "should display the student list in the right manner. Names should be separated by commas, with the last two names by the word `and`" do
+    it "should display the student list, properly formatted" do
       expect(result_one).to match(/Alice, Bob and charlie/)
     end
   end
@@ -58,18 +57,18 @@ describe "Interface" do
       expect(result_two).to match(/4 students/)
     end
 
-    it "should display the student list" do
+    it "should display the student list, properly formatted" do
       expect(result_two).to match(/Alice, Bob, charlie and daniel/)
     end
   end
 
   context "when the input has 1 student" do
     it "should display the number of students" do
-      expect(result_three).to match(/1 student\b/)
+      expect(result_three).to match(/1 student/)
     end
 
-    it "should only display the name if there is only one student" do
-      expect(result_three).to match(/^Alice$/)
+    it "should display the student list, properly formatted" do
+      expect(result_three).to match(/Alice/)
     end
   end
 end
