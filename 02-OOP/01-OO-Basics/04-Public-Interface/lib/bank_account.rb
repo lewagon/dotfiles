@@ -14,7 +14,7 @@ class BankAccount
   MIN_DEPOSIT = 100
 
   def initialize(name, iban, initial_deposit, password)
-    fail DepositError, "Insufficient deposit" unless initial_deposit > MIN_DEPOSIT
+    fail DepositError, "Insufficient deposit" unless initial_deposit >= MIN_DEPOSIT
 
     @password     = password
     @transactions = []
