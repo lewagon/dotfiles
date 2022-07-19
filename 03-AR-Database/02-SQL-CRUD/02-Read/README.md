@@ -41,6 +41,8 @@ Implement a **class** method `all` on the `Post` class which takes no argument a
 
 An SQL injection is a type of attack where the person using your application won't just pass a regular integer `id` to the `find` method, but will add an evil string to damage your data. If you look at the SQL query in the spec, you'll see what we mean.
 
+SQL Injection is a serious web security issue, where an attacker can interfere with your application by means of malicious queries to the database. Potential effects are, for example, allowing an ill intended user to view restricted data (social security numbers, credit cards, passwords). This can be data from multiple users or any other type of data available to the application. In some cases, the attacker can change or delete data, permanently damaging the application.
+
 You can read [this Medium article](https://medium.com/@yelstin.fernandes/how-to-add-items-to-a-database-table-using-ruby-sqlite3-74dcd8f931f9) and [this StackOverflow answer](https://stackoverflow.com/questions/13462112/inserting-ruby-string-into-sqlite#answer-13462218) to wrap your head around SQL injections 👌
 
 **Never trust user data**!
