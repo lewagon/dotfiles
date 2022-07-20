@@ -209,7 +209,7 @@ DELETE "doses/25"
 
 ### 5 - 开始设计我们的应用
 
-现在我们可以做一个精美的前端！可以玩弄CSS啦！你可以把它变成一个名人堂/小红书页面的样子嘛？可以查看[dribbble](https://dribbble.com/)或者[onepagelove](https://onepagelove.com/) 来获取更多灵感。
+现在我们可以做一个精美的前端！加CSS啦！你可以把它变成一个名人堂/小红书页面的样子嘛？可以查看[dribbble](https://dribbble.com/)或者[onepagelove](https://onepagelove.com/) 来获取更多灵感。
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_1.png)
 
