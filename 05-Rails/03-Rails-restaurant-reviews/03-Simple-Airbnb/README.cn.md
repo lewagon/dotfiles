@@ -12,7 +12,7 @@
 
 ## 生成一个Rails应用
 
-在你Github名称的文件夹里创建一个Rails应用：
+在你Github用户名的文件夹里创建一个Rails应用：
 
 ```bash
 cd ~/code/<user.github_nickname>
