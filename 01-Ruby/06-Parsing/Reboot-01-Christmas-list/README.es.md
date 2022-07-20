@@ -102,7 +102,7 @@ _Alerta: para evitar ser bloqueados en Etsy, no vamos a hacer el scraping en tie
 
 ```bash
 # Descarga la página a scrapear en tu directorio de trabajo
-curl "https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR" > results.html
+curl -H "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"  https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR > results.html
 # Obtén la ruta al archivo HTML
 pwd
 ```
@@ -133,7 +133,7 @@ puts "What are you searching on Etsy?"
 article = gets.chomp
 
 # 1. Obtenemos el contenido HTML de la página gracias a open-uri
-html_content = open("https://www.etsy.com/search?q=#{article}").read
+html_content = URI.open("https://www.etsy.com/search?q=#{article}", "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0").read
 # 2. Creamos un documento Nokogiri a partir de este archivo
 doc = Nokogiri::HTML(html_content)
 
