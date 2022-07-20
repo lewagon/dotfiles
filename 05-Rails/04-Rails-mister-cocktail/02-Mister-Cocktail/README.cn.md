@@ -6,7 +6,6 @@
 
 你应该已经安装了[yarn](https://yarnpkg.com)，你可以用以下指令来检验：
 
-
 ```bash
 yarn -v
 # 你应该在这儿看到你的yarn版本
