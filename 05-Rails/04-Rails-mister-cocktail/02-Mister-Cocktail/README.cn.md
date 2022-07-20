@@ -199,7 +199,7 @@ GET "cocktails/42/doses/new"
 POST "cocktails/42/doses"
 ```
 
-- 一个用户可以删除已有鸡尾酒cocktail的一个剂量dose。我们如何再创建一个删除链接？
+- 用户可以删除已有鸡尾酒的剂量。我们如何再创建一个删除链接？
 
 ```
 DELETE "doses/25"
