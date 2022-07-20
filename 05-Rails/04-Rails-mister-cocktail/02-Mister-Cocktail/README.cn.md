@@ -191,7 +191,7 @@ POST "cocktails"
 
 ### 4 - 剂量doses的路由Routing，控制器Controller，试图Views
 
-- 一个用户可以在一个已有的鸡尾酒上添加一个新的剂量dose（一对成分ingredient/说明description）
+- 用户可以在一个已有的鸡尾酒上添加一个新的剂量dose（一对成分ingredient/说明description）
 - 查看`simple_form` [文档](https://github.com/heartcombo/simple_form#associations)中有关`f.association`的部分，来轻松地给我们的成分列表创建一个选项下拉列表。
 
 ```
