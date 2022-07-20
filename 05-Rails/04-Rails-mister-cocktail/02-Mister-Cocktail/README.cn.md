@@ -176,7 +176,7 @@ Ingredient.create(name: "mint leaves")
 GET "cocktails"
 ```
 
-- 一个用户可以查看一杯鸡尾酒的细节，包括每个成分所需要的剂量
+- 用户可以查看一杯鸡尾酒的细节，包括每个成分所需要的剂量
 
 ```
 GET "cocktails/42"
