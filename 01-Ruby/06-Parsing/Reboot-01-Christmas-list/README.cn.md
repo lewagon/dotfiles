@@ -105,7 +105,7 @@ _免责声明：为了避免Etsy封禁IP，我们不会实时爬取Etsy的实时
 
 ```bash
 # 在你工作目录里下载爬取的页面
-curl "https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR" > results.html
+curl -H "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"  https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR > results.html
 # 得到HTML文件的路径
 pwd
 ```
@@ -135,7 +135,7 @@ puts "What are you searching on Etsy?"
 article = gets.chomp
 
 # 1. 多亏了open-uri，我们得到了HTNML页面内容
-html_content = open("https://www.etsy.com/search?q=#{article}").read
+html_content = URI.open("https://www.etsy.com/search?q=#{article}", "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0").read
 # 2. 我们从这个文件构建了一个 Nokogiri 文档
 doc = Nokogiri::HTML(html_content)
 
