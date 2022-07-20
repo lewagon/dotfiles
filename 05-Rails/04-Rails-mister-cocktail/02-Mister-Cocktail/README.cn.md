@@ -36,7 +36,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-让我们来导入下方的详细来让我们可以`rake`我们的进度。
+导入老师的测试来`rake`我们的进度。
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
