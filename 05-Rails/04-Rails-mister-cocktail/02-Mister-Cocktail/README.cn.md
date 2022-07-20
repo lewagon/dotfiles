@@ -170,7 +170,7 @@ Ingredient.create(name: "mint leaves")
 **功能**
 再强调一次，你必须对每个功能有一个精准的想法，才可以编写你的路由。以下是功能的列表：
 
-- 一个用户可以看见鸡尾酒列表
+- 用户可以看见鸡尾酒（cocktail）列表
 
 ```
 GET "cocktails"
