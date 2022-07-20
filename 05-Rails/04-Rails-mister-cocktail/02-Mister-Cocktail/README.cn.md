@@ -182,7 +182,7 @@ GET "cocktails"
 GET "cocktails/42"
 ```
 
-- 一个用户可以创建一个新的鸡尾酒
+- 用户可以创建一个新的鸡尾酒
 
 ```
 GET "cocktails/new"
