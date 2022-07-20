@@ -157,7 +157,7 @@ Ingredient.create(name: "mint leaves")
 ### 3 - 鸡尾酒cocktails的路由Routing，控制器Controller，试图Views
 
 **重点**
-不要使用`rake`来编写应用部分。是时候在你的终端里启动`rails s`并在浏览器里打开[http://localhost:3000/](http://localhost:3000/)。请在开发时保持你的代码相对独立：
+不要使用`rake`来编写应用部分。是时候在你的终端里启动`rails s`并在浏览器里打开[http://localhost:3000/](http://localhost:3000/)。功能请一个一个地进行开发：
 
 - 从**路由route**开始
 - 然后开始开发**控制器controller**
