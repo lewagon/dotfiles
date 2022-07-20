@@ -56,7 +56,7 @@ rails db:migrate RAILS_ENV=test  # 如果你加了一个migration
 rspec spec/models                # 开启测试
 ```
 
-在我们正式开始写码之前，不要忘记给你的Rails应用设置好前端，就像今天早上的课上，让我们加好Bootstrap和它的JavaScript依赖。
+在我们正式开始写码之前，不要忘记给你的Rails应用设置好前端，就像今天早上的课上，让我们加好Bootstrap和它的JavaScript依赖项。
 
 ```bash
 yarn add bootstrap @popperjs/core
