@@ -67,7 +67,7 @@ You'll use them all the time, so make friends with them 😊
 - **constraint**: your method should make use of a hash (obviously!)
 - **constraint**: your method must use **our given calorie values**!
 
-For example `poor_calories_counter("McChicken", "French Fries", "Sprite")` should return `730`.
+For example `poor_calories_counter("Cheese Burger", "Sweet Potatoes", "Iced Tea")` should return `600`.
 
 ## Key learning points
 
