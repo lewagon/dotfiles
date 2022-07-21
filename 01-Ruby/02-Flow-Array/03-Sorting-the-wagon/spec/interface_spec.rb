@@ -68,7 +68,7 @@ describe "Interface" do
     end
 
     it "should display the student list, properly formatted" do
-      expect(result_three).to match(/Alice/)
+      expect(result_three).to match(/^Alice$/)
     end
   end
 end
