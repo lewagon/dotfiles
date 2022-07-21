@@ -5,7 +5,7 @@ Puedes ver la [guía Rails](http://guides.rubyonrails.org/getting_started.html#a
 
 ## Generación de la app Rails
 
-Vas a usar especificaciones externas que fueron escritas por los/as profesores/as para testear tu app Rails. Por eso especificamos `-T` lo que significa "no generes los tests integrados de Rails". Aquí está la configuración que necesitamos:
+Vas a usar especificaciones externas que fueron escritas por los profesores para testear tu app Rails. Por eso especificamos `-T` lo que significa "no generes los tests integrados de Rails". Aquí está la configuración que necesitamos:
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -23,7 +23,36 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-Antes de empezar a escribir el código de tu app, sigue [nuestra guía Rails de front-end](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) para asegurarte de que puedas usar Simple Form, Bootstrap y también tengas una buena carpeta de hojas de estilo (stylesheets) (⚠️ solo haz la sección de **configuración**. No intentes implementar **Bootstrap JS**.¡Eso lo cubriremos mañana!).
+## Configuración del Front-end
+
+### Instala las hojas de estilo de Bootstrap
+
+Siguiendo las instrucciones de [la documentación](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), instala las hojas de estilo de Bootstrap en tu Rails app copiando y pegando el link tag en el `head` del layout en `application.html.erb`:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Ahora puedes usar cualquier clase Bootstrap en cualquier lugar de tus vistas de Rails 🎉
+
+### La gema Simple Form
+
+Para agregar [Simple Form](https://github.com/heartcombo/simple_form) a tu aplicación, agrega la gema en tu Gemfile:
+
+```ruby
+# Gemfile
+# [...]
+gem "simple_form", github: "heartcombo/simple_form"
+```
+
+Luego ejecuta esto:
+
+```bash
+bundle install
+rails generate simple_form:install --bootstrap
+```
 
 ### Testeo de tu código
 
@@ -52,7 +81,7 @@ Si tienes problemas corriendo `rake`, tal vez tengas que correr `bin/rake`. Eso 
 
 Asegúrate de pensarlo dos veces antes de seleccionar el tipo de datos.¡No siempre resulta ser la primera selección!
 
-**Pregunta**:¿Puedes dibujar este esquema simple en [db.lewagon.com](http://db.lewagon.com)? Háblalo con tu compañero/a (buddy).
+**Pregunta**:¿Puedes dibujar este esquema simple en [db.lewagon.com](http://db.lewagon.com)? Háblalo con tu compañero (buddy).
 
 #### Validación
 
@@ -63,7 +92,7 @@ Asegúrate de pensarlo dos veces antes de seleccionar el tipo de datos.¡No siem
 - Un review debe tener un contenido (content).
 - Un review debe tener una calificación (rating).
 - La calificación de un review debe ser un número entre 0 y 5.
-- La calificación de un review debe ser un número entero. Por ejemplo, un review con una calificación de 2,5 ne debería ser válida.
+- La calificación de un review debe ser un número entero. Por ejemplo, un review con una calificación de 2,5 no debería ser válida.
 
 Valida todos los tests de los modelos antes de empezar a trabajar con las rutas. Puedes usar el siguiente comando:
 
@@ -72,7 +101,7 @@ rspec spec/01_models
 ```
 Para correr tests selectivamente en la carpeta `spec/01_models`.
 
-También puedes testear tu código manualmente con la `rails console`.¡No olvides `¡recargar!` entre cada cambio que hagas en el código!
+También puedes testear tu código manualmente con la `rails console`.¡No olvides hacer `reload!` entre cada cambio que hagas en el código!
 
 ```bash
 rails c
@@ -95,7 +124,7 @@ rails c
 
 ### Rutas / Controladores
 
-Preguntarse a uno/a mismo/a qué rutas necesitamos es un paso muy importante en el proceso de creación de la app. **Las rutas deben reflejar exactamente los user stories de tus productos**. Así que vamos a definir lo mínimo que tiene nuestro producto aquí:
+Preguntarse a uno mismo qué rutas necesitamos es un paso muy importante en el proceso de creación de la app. **Las rutas deben reflejar exactamente los user stories de tus productos**. Así que vamos a definir lo mínimo que tiene nuestro producto aquí:
 
 - Un visitante puede ver la lista de todos los restaurantes.
 
@@ -126,17 +155,15 @@ POST "restaurants/38/reviews"
 
 En nuestro MVP, un visitante no puede actualizar / borrar un restaurante ni un review. Este es el papel del administrador (e.g. **tú**). Como programador/a tienes el poder de manipular la base de datos (DB) desde la `rails console` si quisieras actualizar / borrar algún registro.
 
-Sabemos que es un MVC muy básico pero solo debemos entender que **cada ruta es una representación de un user story**. No escribas las 7 rutas CRUD ciegamente para cada modelo de tu app. Esa es la mejor manera de confundirse con tu propio producto y olvidar lo que el MVP realmente es.
+Sabemos que es un MVP muy básico pero solo debemos entender que **cada ruta es una representación de un user story**. No escribas las 7 rutas CRUD ciegamente para cada modelo de tu app. Esa es la mejor manera de confundirse con tu propio producto y olvidar lo que el MVP realmente es.
 
 ¡Es hora de implementar todas las rutas que necesites para crear este producto!
 
-**Pista:** para manejar la ruta `GET "restaurants/38/reviews/new"`, tendrás que usar recursos anidados ([nested resources])(http://guides.rubyonrails.org/routing.html#nested-resources).
+**Pista:** para manejar la ruta `GET "restaurants/38/reviews/new"`, tendrás que usar [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
 ### Vistas
 
-¡Prestemos atención al front-end ya que eso es lo que los/las usuarios/as van a ver! Sigue [esta guía](https://github.com/lewagon/rails-stylesheets/blob/master/README.md) para configurar el frontend de tu app Rails si no lo hiciste al inicio de este desafío (⚠️ solo haz la sección de **configuración**.¡No intentes implementar **Bootstrap JS**. Eso lo veremos mañana!).
-
-#### Distribución (layouts) / partials
+#### Layouts / partials
 
 Recuerda refactorizar tus vistas usando distribuciones y partials. Por ejemplo:
 
@@ -159,15 +186,18 @@ Esto genera el siguiente HTML:
 <a href="/restaurants/3" class="btn btn-primary">See details</a>
 ```
 
-##### [form_for](http://guides.rubyonrails.org/form_helpers.html)
+##### [simple_form_for](https://github.com/heartcombo/simple_form)
 
-Pero ten cuidado. Las URL de tus reviews ahora están anidadas en `/restaurants/:restaurant_id`. Esto significa que no puedes usar `form_for` de la misma manera que lo hiciste con elementos no anidados (non-nested resources). Si escribes:
+Dado que instalamos Simple Form, de ahora en adelante vamos a utilizar el helper `simple_form_for` en lugar de `form_for`.
+
+Las URLs de tus reviews ahora están anidadas en `/restaurants/:restaurant_id`. Esto significa que no puedes usar `simple_form_for` de la misma manera que lo hiciste con elementos no anidados (non-nested resources). Si escribes:
 
 ```erb
-<%= form_for(@review) do |f| %>
+<%= simple_form_for(@review) do |f| %>
   <!-- [...] -->
 <% end %>
 ```
+
 Generará este HTML:
 
 ```html
@@ -176,10 +206,10 @@ Generará este HTML:
 </form>
 ```
 
-Eso no es lo que queremos porque **no tenemos una ruta para hacer `POST de "reviews"`**. En cambio, tendrás que usar la sintaxis de recursos anidados para el `form_for`:
+Eso no es lo que queremos porque **no tenemos una ruta para `POST "reviews"`**. En cambio, tendrás que usar la sintaxis de recursos anidados para el `form_for`:
 
 ```erb
-<%= form_for [@restaurant, @review] do |f| %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
   <!-- [...] -->
 <% end %>
 ```
@@ -194,8 +224,6 @@ Eso generará el siguiente formulario HTML:
 
 Ahora esta URL es consistente con la ruta `POST "restaurants/:restaurant_id/reviews"` que definiste en `routes.rb`.¡Siii! Para obtener más información al respecto, lee [este post](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources).
 
-**Pista:** Instala la gema [simple_form](https://github.com/plataformatec/simple_form) para obtener formularios compatibles con Bootstrap con sintaxis más ligeras.
-
 ### Mejora tu app
 
 **Una vez que hayas terminado tu primera versión de tu resto-review app**, intenta mejorarla metiendo tu formulario de reviews dentro de cada vista show de "restaurant". Esto quiere decir que tus nuevas rutas serán:
@@ -207,3 +235,7 @@ GET "restaurants/38"
 POST "restaurants"
 POST "restaurants/38/reviews"
 ```
+
+Date cuenta que eliminamos la ruta `GET "restaurants/38/reviews/new"`. Esto se debe a que el formulario de review **ahora está incrustado en la vista `restaurants/show.html.erb`**. 🛏
+
+Para correr las pruebas correspondientes a esta versión, ejecuta el comando `rspec -t refactoring`.

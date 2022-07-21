@@ -49,3 +49,31 @@ Genera tu controlador e implementa las 7 acciones CRUD por defecto para listar, 
 Ahora sí puedes usar el atajo `resources` directamente en tus rutas.
 
 Échale un vistazo a la [live app](https://wagon-wikinimous.herokuapp.com) para tener una idea de cómo debe lucir. 😉
+
+### 4 - Front-end
+
+**Instala las hojas de estilo de Bootstrap**
+
+Sigue las instrucciones de [la documentación](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css) e instala Bootstrap en tu Rails app copiando y pegando el link tag en el `head` del layout en `application.html.erb`:
+
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Ahora puedes usar cualquier clase Bootstrap en cualquier lugar de tus vistas de Rails 🎉
+
+**Instala Font Awesome**
+
+Agrega el `link` tag en el `head` de tu layout:
+
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+```
+
+Ahora puedes usar cualquiera de los [íconos gratuitos de Font Awesome](https://fontawesome.com/search?m=free) 🎉
