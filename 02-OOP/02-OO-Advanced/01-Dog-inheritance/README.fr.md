@@ -14,13 +14,13 @@ end
 ### Héritage de la classe `Dog`
 
 - On a créé une classe `Dog` avec une méthode d’instance : `bark`.
-- On a également créé une classe `GermanShepherd` qui est vide.
-- Modifie la définition de la classe `GermanShepherd`, de façon à ce qu’elle ait les méthodes d’instance et le comportement de la classe `Dog`.
+- On a également créé une classe "GermanShepherd" dans un fichier séparé.
+- Modifiez la définition de la classe "GermanShepherd", afin qu'elle ait les méthodes d'instance et le comportement de la classe "Chien". N'oubliez pas d'indiquer `require_relative` au bon fichier.
 - Le code ci-dessous, par exemple, devrait fonctionner :
 
 ```ruby
 german_shepherd = GermanShepherd.new
-german_shepherd.bark # => "woof woof"
+p german_shepherd.bark # => "woof woof"
 ```
 
 REMARQUE : N’ajoute pas de code dans le corps de la classe `GermanShepherd` !

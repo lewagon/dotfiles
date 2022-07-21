@@ -14,13 +14,13 @@ end
 #### Herencia del perro
 
 - Hemos creado una clase `Dog` con un método de instancia: `bark`.
-- También hemos creado una clase `GermanShepherd` que está vacía.
-- Cambia la definición de la clase `GermanShepherd` para que tenga los métodos de instancia y el comportamiento de la clase `Dog`.
+- También hemos creado una clase `GermanShepherd` en un archivo separado.
+- Cambia la definición de la clase `GermanShepherd`, para que tenga los métodos de instancia y el comportamiento de la clase `Dog`. No te olvides de `require_relative` el archivo correcto.
 - Por ejemplo, el código siguiente debe funcionar:
 
 ```ruby
 german_shepherd = GermanShepherd.new
-german_shepherd.bark # => "woof woof"
+p german_shepherd.bark # => "woof woof"
 ```
 
 NOTA: ¡no agregues ningún código al cuerpo de la clase `GermanShepherd`!
