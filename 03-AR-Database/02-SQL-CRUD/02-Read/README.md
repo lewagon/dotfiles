@@ -31,7 +31,13 @@ Implement a **class** method `find(id)` on the `Post` class that takes an intege
 
 (Assume there is a global variable `DB` defined in the program, no need for you to instantiate it)
 
-We want you to protect the `find` method against **SQL injections**. What is an SQL injection you may ask? Well, if you [hack this bank](https://www.hacksplaining.com/exercises/sql-injection#/start), you'll get the picture!. Here's a hint on the exercise: You might need to pass several arguments to the `.execute` method using [placeholders](http://ruby.bastardsbook.com/chapters/sql/#placeholders-sqlite-gem).
+We want you to protect the `find` method against **SQL injections**. 
+
+SQL injection is a serious security issue, where an attacker can interfere with your application by means of malicious queries to the database. Potential effects are, for example, allowing an ill intended user to view restricted data (social security numbers, credit cards, passwords). This can be data from multiple users or any other type of data available to the application. In some cases, the attacker can change or delete data, permanently damaging the application.
+
+To protect your database against SQL injections, you must never interpolate SQL queries with user data but use `?` [placeholders](http://ruby.bastardsbook.com/chapters/sql/#placeholders-sqlite-gem) instead. 
+
+For this exercise, you might need to pass several arguments to the `.execute` method.
 
 ### `all`
 
@@ -42,5 +48,7 @@ Implement a **class** method `all` on the `Post` class which takes no argument a
 An SQL injection is a type of attack where the person using your application won't just pass a regular integer `id` to the `find` method, but will add an evil string to damage your data. If you look at the SQL query in the spec, you'll see what we mean.
 
 You can read [this Medium article](https://medium.com/@yelstin.fernandes/how-to-add-items-to-a-database-table-using-ruby-sqlite3-74dcd8f931f9) and [this StackOverflow answer](https://stackoverflow.com/questions/13462112/inserting-ruby-string-into-sqlite#answer-13462218) to wrap your head around SQL injections 👌
+
+If you wish to see SQL Injections in action, [hack this bank](https://www.hacksplaining.com/exercises/sql-injection#/start) and you'll get the picture!
 
 **Never trust user data**!
