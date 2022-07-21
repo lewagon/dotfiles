@@ -20,7 +20,7 @@ end
 
 ```ruby
 german_shepherd = GermanShepherd.new
-german_shepherd.bark # => returns "woof woof"
+p german_shepherd.bark # => "woof woof"
 ```
 
 NOTE: do not add any code within the BODY of the `GermanShepherd` class!
