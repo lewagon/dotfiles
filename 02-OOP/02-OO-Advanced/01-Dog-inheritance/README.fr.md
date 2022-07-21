@@ -15,7 +15,7 @@ end
 
 - On a créé une classe `Dog` avec une méthode d’instance : `bark`.
 - On a également créé une classe `GermanShepherd` dans un fichier séparé.
-- Modifiez la définition de la classe "GermanShepherd", afin qu'elle ait les méthodes d'instance et le comportement de la classe "Chien". N'oubliez pas d'indiquer `require_relative` au bon fichier.
+- Modifie la définition de la classe `GermanShepherd`, afin qu'elle ait les méthodes d'instance et le comportement de la classe `Dog`. N'oublie pas de `require_relative` le bon fichier.
 - Le code ci-dessous, par exemple, devrait fonctionner :
 
 ```ruby
