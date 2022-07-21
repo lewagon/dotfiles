@@ -1,4 +1,4 @@
-require 'dog'
+require 'german_shepherd'
 
 describe GermanShepherd do
 
