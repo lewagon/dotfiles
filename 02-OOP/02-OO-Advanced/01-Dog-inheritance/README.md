@@ -23,7 +23,7 @@ german_shepherd = GermanShepherd.new
 p german_shepherd.bark # => "woof woof"
 ```
 
-NOTE: do not add any code within the BODY of the `GermanShepherd` class!
+NOTE: do not add any code within the body of the `GermanShepherd` class!
 
 ## Key learning points
 
