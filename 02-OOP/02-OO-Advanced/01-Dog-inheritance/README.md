@@ -15,7 +15,7 @@ end
 
 - We have created a `Dog` class with one instance method: `bark`.
 - We have also created a `GermanShepherd` class in a separate file.
-- Change the definition of the `GermanShepherd` class, so that it has the instance methods and behaviour of the `Dog` class. Don't forget to require_relative the correct file.
+- Change the definition of the `GermanShepherd` class, so that it has the instance methods and behaviour of the `Dog` class. Don't forget to `require_relative` the correct file.
 - For example, the code below should work:
 
 ```ruby
