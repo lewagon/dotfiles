@@ -6,7 +6,9 @@ Un array est ordonné, si bien que chaque élément est accessible par son **ind
 à comprendre comment créer un array, comment stocker des données dedans et comment récupérer ces données en utilisant l’indice.
 Souviens-toi que les indices des arrays commencent à `0`, et non à `1`.
 
-On demande souvent aux développeurs de trier des choses ; on te conseille donc de te renseigner sur [les algorithmes de tri](https://fr.wikipedia.org/wiki/Algorithme\_de\_tri). Dans la documentation Ruby, tu devrais trouver plusieurs façons de trier un [Enumerable](http://ruby-doc.org/core-2.5.3/Enumerable.html). `Array` est une forme d’`Enumerable` ; tu peux donc utiliser toutes les méthodes référencées dans la documentation `Enumerable` quand tu utilises un `Array`, car `Array` **inclut** le module `Enumerable`.
+On demande souvent aux développeurs de trier des choses ; on te conseille donc de te renseigner sur [les algorithmes de tri](https://fr.wikipedia.org/wiki/Algorithme\_de\_tri).
+
+Dans la documentation Ruby, tu devrais trouver plusieurs façons de trier un [Enumerable](http://ruby-doc.org/core-2.5.3/Enumerable.html). `Array` est une forme d’`Enumerable` ; tu peux donc utiliser toutes les méthodes référencées dans la documentation `Enumerable` quand tu utilises un `Array`, car `Array` **inclut** le module `Enumerable`.
 
 ## Spécifications
 

@@ -1,7 +1,7 @@
 ## 背景和目标
 
 本练习的目标是开发一个2个模型的Rails应用，一个restaurant模型和匿名的review模型。
-你可以在这里看到一个类似的例子，使用articles和comments模型，[Rails guide](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model)。
+你可以在这里看到一个类似的例子，使用articles和comments模型，[Rails指南](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model)。
 
 ## 生成Rails应用
 
@@ -24,7 +24,36 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-开发你的app之前，记得遵守我们的[Rails前端指南](https://github.com/lewagon/rails-stylesheets/blob/master/README.md)，确保你使用了simple form, Bootstrap，而且有stylesheets文件夹(⚠️ 只做 **setup** 这个环节, 不要使用 **Bootstrap JS**，这是明天的内容！)。
+## 前端设置
+
+### 安装Bootstrap样式
+
+跟着[这个文档](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css)来安装Bootstrap在你的Rails应用上。你可以复制粘贴下方代码在`application.html.erb`的`head`中添加一个`link`标签：
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+你现在可以在你Rails应用的各个页面里使用Bootstrap class啦！🎉
+
+### Simple Form库
+
+加入下方gem到你的Gemfile里，来将[Simple Form](https://github.com/heartcombo/simple_form)加到你的应用中：
+
+```ruby
+# Gemfile
+# [...]
+gem "simple_form", github: "heartcombo/simple_form"
+```
+
+然后运行：
+
+```bash
+bundle install
+rails generate simple_form:install --bootstrap
+```
 
 ### 测试你的代码
 每次在你添加了一个数据库迁移文件之后（比如说 运行了`rails g model ...`之后），不要忘了在**测试数据库**上运行数据库迁移：
@@ -35,7 +64,7 @@ rails db:migrate RAILS_ENV=test  # 添加了一个数据库迁移之后运行
 测试你的代码是非常简单方便的
 
 ```bash
-rake
+rspec
 ```
 如果运行`rake`不顺利的话，你需要运行`bin/rake`。这意味着你的环境变量`$PATH`没有包含`./bin` 文件夹，你可以通过dotfiles的zshrc来修复这个问题(查看[我们的默认配置](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))。
 
@@ -64,6 +93,7 @@ rake
 - 一个review的rating必须是个整数。比如，rating如果是2.5就是无效的。
 
 在开发路由层之前，验证所有的模型测试。你可以使用下面的命令：
+
 ```bash
 rspec spec/01_models
 ```
@@ -121,20 +151,15 @@ POST "restaurants/38/reviews"
 
 - 就这么多了!
 
-
 在我们的最小可行性产品MVP, 访客不可以更新或者删除任何的restaurant或者review。这是admin用户才可以做的 (比如说 **你**) - 如果你想更新/删除任何数据库记录的话，做为开发者你有权限从`rails console`去操作数据库。
 
-
 我们知道这只是一个最基础的最小可行性产品，但是我们想让你理解的是**一个路由就是一个用户故事的体现**。在你的应用里，不要为所有的模型盲目地写下7个增删查改CRUD路由。这很容易让你被自己的产品搞糊涂，从而忘了你的最小可行性产品到底是什么。
-
 
 现在是时候实现这个产品所需要的所有路由了！
 
 **提示:** 你需要使用[嵌套资源](http://guides.rubyonrails.org/routing.html#nested-resources)来处理路由`GET "restaurants/38/reviews/new"`。
 
 ### 视图Views
-
-现在把我们的注意力转向前端，因为前端是我们的用户所看到的！如果在练习开始的时候你没有做设置，要遵循这个[指南](https://github.com/lewagon/rails-stylesheets/blob/master/README.md)来设置你的Rails前端(⚠️ 只做 **setup** 这个环节, 不要使用 **Bootstrap JS**，这是明天的内容！)。
 
 #### 布局Layout / 局部视图partials
 
@@ -146,7 +171,6 @@ POST "restaurants/38/reviews"
 #### 帮助方法Helpers
 
 使用Rails帮助方法的时候，就像`link_to`方法，你可以传递一个包括了HTML属性的哈希hash做为参数。这让你可以把Bootstrap CSS类名称添加到链接里。下面是一个例子：
-
 
 ##### [link_to](http://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to)
 
@@ -160,12 +184,14 @@ POST "restaurants/38/reviews"
 <a href="/restaurants/3" class="btn btn-primary">See details</a>
 ```
 
-##### [form_for](http://guides.rubyonrails.org/form_helpers.html)
+##### [simple_form_for](https://github.com/heartcombo/simple_form)
 
-注意了 - 你的reviews链接是嵌套在`/restaurants/:restaurant_id`里面的。这意味着你不能像非嵌套资源那样使用`form_for`。 如果你写了这样的代码:
+因为我们安装了Simple Form， 我们将会从现在开始使用`simple_form_for`而不是`form_for`。
+
+你的reviews链接是嵌套在`/restaurants/:restaurant_id`里面的。这意味着你不能像非嵌套资源那样使用`simple_form_for`。 如果你写了这样的代码:
 
 ```erb
-<%= form_for(@review) do |f| %>
+<%= simple_form_for(@review) do |f| %>
   <!-- [...] -->
 <% end %>
 ```
@@ -181,11 +207,12 @@ POST "restaurants/38/reviews"
 这不是我们想要的结果，因为**我们没有一个路由是`POST "reviews"`**。我们必须要使用符合嵌套资源语法规则的`form_for`：
 
 ```erb
-<%= form_for [@restaurant, @review] do |f| %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
   <!-- [...] -->
 <% end %>
 ```
-会生成这样的HTML表单：
+
+这会生成这样的HTML表单：
 
 ```html
 <form action="/restaurants/42/reviews">
@@ -194,8 +221,6 @@ POST "restaurants/38/reviews"
 ```
 
 这个URL是和你在`routes.rb`里定义的路由`POST "restaurants/:restaurant_id/reviews"`保持一致的。可以看一下这篇[文章](http://stackoverflow.com/questions/2034700/form-for-with-nested-resources)，有更多的信息。
-
-**提示:** 安装[simple_form](https://github.com/plataformatec/simple_form) gem， 可以使用更轻量化语法的而且和bootstrap兼容的表单。
 
 ### 改进你的应用
 

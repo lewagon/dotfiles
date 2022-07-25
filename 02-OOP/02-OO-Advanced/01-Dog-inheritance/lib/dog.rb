@@ -1,8 +1,5 @@
 class Dog
   def bark
-    puts "woof woof"
+    return "woof woof"
   end
-end
-
-class GermanShepherd
 end

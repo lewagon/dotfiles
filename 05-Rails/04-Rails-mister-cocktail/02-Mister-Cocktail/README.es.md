@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-¡Es hora de hacer una app de 3 modelos! Y si. Vamos a introducir las relaciones muchos a muchos (many to many `n:n`). Bueno y ¿qué es lo que vamos a crear? Un gestor de cócteles (cocktail manager) para almacenar nuestras recetas de cócteles favoritas.
+¡Es hora de hacer una app de 3 modelos! Y sí. Vamos a introducir las relaciones muchos a muchos (many to many `n:n`). Bueno y ¿qué es lo que vamos a crear? Un gestor de cócteles (cocktail manager) para almacenar nuestras recetas de cócteles favoritas.
 
 ## Generación de la app Rails
 
@@ -8,10 +8,10 @@ Ya debes tener [yarn](https://yarnpkg.com) instalado. Compruébalo con:
 
 ```bash
 yarn -v
- # Debería ver yarn versión aquí
+ # You should see your yarn version here
 ```
 
-Si no es así, vuelva a la sección dedicada del [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn) setup.
+Si no es así, vuelve a la sección de configuración correspondiente a [macOS](https://github.com/lewagon/setup/blob/master/macOS.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/UBUNTU.md#yarn) o [Windows](https://github.com/lewagon/setup/blob/master/WINDOWS.md#yarn).
 
 **Nota**: ¡Ya deberías ser capaz de seguir estos pasos sin esta guía! No olvides `-d postgresql` (hablaremos de eso mañana). 😉
 
@@ -36,7 +36,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Importa las especificaciones del/la profesor/a para poder hacer `rake` de lo que creamos.
+Importa las especificaciones del profesor para poder hacer `rake` de lo que crearemos.
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
@@ -56,21 +56,28 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Antes de empezar a escribir código, no olvides configurar el Front en tu app Rails. Agrega las dependencias de Bootstrap y JavaScript como viste en la clase de esta mañana.
+Antes de empezar a escribir código, no olvides configurar el Front-end de tu app Rails. Agrega las dependencias de Bootstrap y JavaScript como viste en la clase de esta mañana.
 
 ```bash
-yarn add bootstrap@4.6 jquery popper.js
+yarn add bootstrap  @popperjs/core
 ```
 
 Y también las gemas que vamos a necesitar:
 
 ```ruby
 # Gemfile
-gem "autoprefixer-rails"
-gem "font-awesome-sass", "~> 6.1"
-gem "simple_form", github: "heartcombo/simple_form"
-gem "sassc-rails" # Uncomment this line
+gem "autoprefixer-rails", "10.2.5"
+gem "font-awesome-sass", "~> 5.15"
+gem "simple_form"
 ```
+
+Agrega esta línea en `config/asset.rb`
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
+Luego ejecuta esto
 
 ```bash
 bundle install
@@ -85,24 +92,7 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-Finalmente agrega la librería de Bootstrap JS usando webpack:
-
-```js
-// config/webpack/environment.js
-const { environment } = require("@rails/webpacker")
-
-// Bootstrap 4 has a dependency over jQuery & Popper.js:
-const webpack = require("webpack")
-environment.plugins.prepend("Provide",
-  new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery",
-    Popper: ["popper.js", "default"]
-  })
-)
-
-module.exports = environment
-```
+Finalmente importa la librería de Bootstrap JS:
 
 ```js
 // app/javascript/packs/application.js
@@ -115,7 +105,7 @@ No olvides hacer el `commit` y el `push` de tu trabajo frecuentemente.
 
 ### 1 - Modelos
 
-Ve a [db.lewagon.com](http://db.lewagon.com) y dibuja el esquema con tu compañero/a (buddy). Las tablas que necesitamos son las siguientes: `cocktails`, `ingredients` y `doses`. Piensa en las relaciones que hay entre las tablas y en cuál de ellas almacena las referencias (*references*). 😉
+Ve a [db.lewagon.com](http://db.lewagon.com) y dibuja el esquema con tu compañero (buddy). Las tablas que necesitamos son las siguientes: `cocktails`, `ingredients` y `doses`. Piensa en las relaciones que hay entre las tablas y en cuál de ellas almacena las *referencias*. 😉
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/db.png).
 
@@ -138,7 +128,7 @@ Para solo correr tests en la carpeta `spec/models`. Asegúrate de que todas est�
 
 - Un cóctel debe tener un nombre (name) único.
 - Un ingrediente debe tener un nombre (name) único.
-- Una dosis debe tener una descripción, un cóctel y un ingrediente. También debe tener pares de cóctel et ingrediente ([cocktail, ingredient]) únicos.
+- Una dosis debe tener una descripción, un cóctel y un ingrediente. También debe tener pares [cocktail, ingredient] únicos.
 
 #### Asociaciones
 
@@ -152,7 +142,7 @@ Para solo correr tests en la carpeta `spec/models`. Asegúrate de que todas est�
 
 ### 2 - Seed de ingredientes
 
-**Nuestra app no le permitirá a los/las usuarios/as crear ingredientes**.
+**Nuestra app no les permitirá a los usuarios crear ingredientes**.
 En lugar de ello generaremos un seed estático de ingredientes que se podrán seleccionar.
 Por ejemplo, escribe este código de seed
 
@@ -174,26 +164,26 @@ No uses `rake` en la escritura del código aplicado. Es hora de usar un `rails s
 - luego empieza a escribir el código del **controlador**,
 - comienza a escribir el código de la **vista** y refresca tu navegador.
 
-¡Cuando tu funcionalidad esté lista (y se vea bien), avanza a la siguiente y repite este proceso!
+¡Cuando tu feature esté lista (y se vea bien), avanza a la siguiente y repite este proceso!
 
 Cuando pienses que ya has terminado **todo** el desafío, usa `rake` para asegurarte de que cumple con todas las especificaciones.
 
-**Funcionalidades (features)**
-Una vez más, debes tener una idea precisa de las funcionalidades de tu app para poder crear las rutas. Aquí hay una lista de funcionalidades:
+**Features**
+Una vez más, debes tener una idea precisa de las funcionalidades de tu app para poder crear las rutas. Aquí está la lista de las nuestras:
 
-- Un/a usuario/a puede ver la lista de todos los cócteles
+- Un usuario puede ver la lista de todos los cócteles
 
 ```
 GET "cocktails"
 ```
 
-- Un/a usuario/a puede ver los detalles de un cóctel determinado con la dosis necesaria de cada ingrediente
+- Un usuario puede ver los detalles de un cóctel determinado con la dosis necesaria de cada ingrediente
 
 ```
 GET "cocktails/42"
 ```
 
-- Un/a usuario/a puede crear un nuevo cóctel
+- Un usuario puede crear un nuevo cóctel
 
 ```
 GET "cocktails/new"
@@ -202,7 +192,7 @@ POST "cocktails"
 
 ### 4 - Ruta, Controlador y Vistas de las Dosis
 
-- Un/a usuario/a puede agregar una nueva dosis (el par ingrediente/descripción) a un cóctel existente
+- Un usuario puede agregar una nueva dosis (el par ingrediente/descripción) a un cóctel existente
 - Revisa la [documentación](https://github.com/heartcombo/simple_form#associations) de `simple_form` y lee sobre `f.association` para poder crear fácilmente una lista de selección desplegable (dropdown) para nuestros ingredientes.
 
 ```
@@ -210,7 +200,7 @@ GET "cocktails/42/doses/new"
 POST "cocktails/42/doses"
 ```
 
-- Un/a usuario/a puede borrar una dosis que pertenezca a un cóctel existente.¿Cómo es que hacemos el enlace de eliminar (delete link)?
+- Un usuario puede borrar una dosis que pertenezca a un cóctel existente.¿Cómo es que hacemos el enlace de delete?
 
 ```
 DELETE "doses/25"
@@ -220,7 +210,7 @@ DELETE "doses/25"
 
 ### 5 - Diseño sobre la marcha
 
-¡Es hora de hacer un buen front-end!¡Juega un poco con CSS! 😊¿Puedes crear un diseño digno del Salón de la Fama? Ve a [dribbble](https://dribbble.com/) o [onepagelove](https://onepagelove.com/) para buscar un poco de inspiración.
+¡Es hora de hacer un buen front-end! ¡Juega un poco con CSS! 😊 ¿Puedes crear un diseño digno del Salón de la Fama? Ve a [dribbble](https://dribbble.com/) o [onepagelove](https://onepagelove.com/) para buscar un poco de inspiración.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/index_1.png).
 
@@ -232,15 +222,15 @@ DELETE "doses/25"
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/mister_cocktail_d1/show_1.png).
 
-No olvides que puedes tener imágenes locales en la carpeta `app/assets/images`. O mejor aún, puedes pedirle al/a la usuario/s una `image_url` cuando cree un cóctel.
+No olvides que puedes tener imágenes locales en la carpeta `app/assets/images`. O mejor aún, puedes pedirle al usuario una `image_url` cuando cree un cóctel.
 
 ### 6 - Formulario de nueva dosis en la página show del cóctel (Opcional)
 
-Intenta poner el formulario de nueva dosis ("New dose form") en la página del cóctel en lugar de tenerlo en una página diferente.¿Qué cambia en las rutas y en los controladores?
+Intenta poner el formulario de nueva dosis ("New dose form") en la página del cóctel en lugar de tenerlo en una página diferente. ¿Qué cambia en las rutas y en los controladores?
 
-### 7 - Select2 en la lista desplegable (dropdown) de ingredientes (Opcional)
+### 7 - Select2 en la lista desplegable de ingredientes (Opcional)
 
-¡Intenta agregar un paquete npm a tu app Rails! Sigue las diapositivas para averiguar cómo se agrega `select2` a nuestra lista desplegable (dropdown) de ingredientes.
+¡Intenta agregar un paquete npm a tu app Rails! Sigue las diapositivas para averiguar cómo se agrega `select2` a nuestra lista desplegable de ingredientes.
 
 ### 8 - ¡Agrégale reviews a esos cócteles increíbles! (Opcional)
 

@@ -2,13 +2,18 @@
 
 Queremos crear un clon simple de Airbnb (como [este](https://rails-simple-airbnb.herokuapp.com)). Estas deben ser las únicas user stories de nuestra app:
 
-- Como usuario/a, puedo ver la lista de todos los apartamentos disponibles en nuestra página web.
-- Como usuario/a, puedo publicar un apartamento en la página web especificando su nombre y dirección
-- Como usuario/a, puedo ver información detallada de un apartamento dado
-- Como usuario/a, puedo editar detalles de un apartamento en caso de haber cometido un error
-- Como usuario/a, puedo borrar un apartamento si ya no lo quiero ofrecer para la renta.
+- Como usuario, puedo ver la lista de todos los apartamentos disponibles en nuestra página web.
+- Como usuario, puedo publicar un apartamento en la página web especificando su nombre y dirección
+- Como usuario, puedo ver información detallada de un apartamento dado
+- Como usuario, puedo editar detalles de un apartamento en caso de haber cometido un error
+- Como usuario, puedo borrar un apartamento si ya no lo quiero ofrecer para la renta.
 
-Aquí no hay `rake`. También recuerda no crear tu app Rails en `fullstack-challenges` ⛔️
+En este desafío no hay `rake`.
+
+## Creación de la Rails app
+
+Crea una nueva Rails app en tu carpeta GitHub:
+
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -20,23 +25,66 @@ gh repo create --public --source=.
 git push origin master
 ```
 
+## Configuración del Front-end
+
+### Hojas de estilo de Bootstrap
+
+Siguiendo las instrucciones de [la documentación](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), instala las hojas de estilo de Bootstrap en tu Rails app copiando y pegando el link tag en el `head` del layout en `application.html.erb`:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+Ahora puedes usar cualquier clase Bootstrap en cualquier lugar de tus vistas de Rails 🎉
+
+### Font Awesome
+
+Añade el `link` tag de Font Awesome en el `head` de tu layout:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+```
+
+Ahora puedes usar cualquiera de los [íconos gratuitos de Font Awesome](https://fontawesome.com/search?m=free) en cualquier lugar de tus vistas de Rails 🎉
+
+### La gema Simple Form
+
+Para agregar [Simple Form](https://github.com/heartcombo/simple_form) a tu aplicación, agrega la gema a tu Gemfile:
+
+```ruby
+# Gemfile
+# [...]
+gem "simple_form", github: "heartcombo/simple_form"
+```
+
+Luego ejecuta esto:
+
+```bash
+bundle install
+rails generate simple_form:install --bootstrap
+```
+
 ## Especificaciones
 
 ### 1 - Modelo
 
-Genera el modelo `Flat` usando el generador Rails correcto. STiene que tener las siguientes columnas. ¡También puedes agregar las columnas adicionales que desees! 😊
+Genera el modelo `Flat` usando el generador Rails correcto. Tiene que tener las siguientes columnas. ¡También puedes agregar las columnas adicionales que desees! 😊
 
-- `name`, como una cadena de caracteres (`string`)
-- `address`, como una cadena de caracteres (`string`)
+- `name`, como un `string`
+- `address`, como un `string`
 - `description`, como `text`
-- `price_per_night`, como un entero (`integer`)
-- `number_of_guests`, como un entero (`integer`)
+- `price_per_night`, como un `integer`
+- `number_of_guests`, como un `integer`
 
 ### 2 - Controlador y Rutas
 
-Genera un `FlatsController` vacío (sin acciones)usando el generador Rails correcto
+Genera un `FlatsController` vacío (sin acciones) usando el generador Rails correcto
 
-Vamos a empezar agregando nuestras 7 rutas CRUD en nuestro `config/routes.rb` ya que ¡las vamos a crear todas! ¿Qué palabra clave se usa para generarlas todas al mismo tiempo?
+¡Vamos a empezar agregando nuestras 7 rutas CRUD en nuestro `config/routes.rb` ya que las vamos a crear todas! ¿Qué palabra clave se usa para generarlas todas al mismo tiempo?
 
 ### 3 - Seed
 
@@ -54,43 +102,43 @@ Flat.create!(
 
 ¿Recuerdas por qué usamos `.create!` en lugar de simplemente `.create`? Pregunta por ahí si lo olvidaste. 😊
 
-### 4 - Como usuario/a, puedo ver la lista de todos los apartamentos disponibles.
+### 4 - Como usuario, puedo ver la lista de todos los apartamentos disponibles.
 
 Agrega la acción adecuada en nuestro `FlatsController` (pista: Es `index` 😉). La acción en el controlador debe recuperar todos los apartamentos en nuestra base de datos (¡para eso tenemos Active Record!) y pasarlos a la vista.
 
-La lista debe hacer un bucle sobre ellas y mostrarlas como se muestra en la captura de pantalla siguiente. Empieza a diseñar desde el principio. Puedes usar [Font Awesome](https://fontawesome.com/icons) o [Materialize](http://materializecss.com/icons.html) para los icons.
+La lista debe hacer un bucle sobre ellas y mostrarlas como se muestra en la captura de pantalla siguiente. Empieza a diseñar desde el principio. Puedes usar [Font Awesome](https://fontawesome.com/icons) para los icons.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png).
 
-### 5 - Como usuario/a, puedo publicar un apartamento
+### 5 - Como usuario, puedo publicar un apartamento
 
 Recuerda que para crear un apartamento se necesitan dos rutas. Una de ellas muestra el formulario de creación y la otra maneja la petición `POST` que se genera cuando se envía el formulario. Intenta usar el helper `form_for` directamente en la vista y ¡haz que se vea bien!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png).
 
-### 6 - Como usuario/a, puedo ver información detallada de un apartamento dado
+### 6 - Como usuario, puedo ver información detallada de un apartamento dado
 
-Es hora de agregar la acción adecuada para mostrar toda la información de un apartamento dado. ¿Cómo podemos saber qué apartamento quiere ver el/la usuario/a?
+Es hora de agregar la acción adecuada para mostrar toda la información de un apartamento dado. ¿Cómo podemos saber qué apartamento quiere ver el usuario?
 
-También actualiza la vista `index.html.erb` con el helper `link_to` para crear enlaces (links) dinámicos.
+También actualiza la vista `index.html.erb` con el helper `link_to` para crear enlaces dinámicos.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show.png).
 
-### 7 - Como usuario/a, puedo editar detalles de un apartamento
+### 7 - Como usuario, puedo editar detalles de un apartamento
 
-También podemos hacer que sea posible editar un apartamento para corregir errores ortográficos cometidos durante su creación.¿Qué dices si refactorizamos un poco y ponemos nuestro formulario `new.html.erb` en un partial?
+También podemos hacer que sea posible editar un apartamento para corregir errores ortográficos cometidos durante su creación. ¿Qué dices si refactorizamos un poco y ponemos nuestro formulario `new.html.erb` en un partial?
 
-¡No olvides actualizar `index.html.erb` y `show.html.erb` con los nuevos enlaces (links) de edición!
+¡No olvides actualizar `index.html.erb` y `show.html.erb` con los nuevos enlaces de edición!
 
-### 8 - Como usuario/a, puedo suprimir un apartamento.
+### 8 - Como usuario, puedo suprimir un apartamento.
 
 Agreguemos la posibilidad de suprimir un apartamento de nuestro website. ¿Cómo podemos crear un `link_to` para destruir este apartamento y qué acción va realizar el controlador?
 
-Una vez más, actualice toda nuestra vista para poner este enlace de supresión.
+Una vez más, actualiza toda nuestra vista para poner este enlace de supresión.
 
-### 9 - Adición de una `picture_url` al modelo flat (Opcional)
+### 9 - Agregar una `picture_url` al modelo flat (Opcional)
 
-Agrega un atributo url de imagen al modelo flat (solo para almacenar una cadena de caracteres (string) de la url de una imagen). Actualiza los formularios de creación y actualización para permitirle al/a la usuario/a especificar una imagen del apartamento que será mostrada en la página web. También puedes actualizar las páginas index y show con la nueva imagen.
+Agrega un atributo url de imagen al modelo flat (solo para almacenar un string de la url de una imagen). Actualiza los formularios de creación y actualización para permitirle al usuario especificar una imagen del apartamento que será mostrado en la página web. También puedes actualizar las páginas index y show con la nueva imagen.
 
 Te recomendamos usar [Unsplash](https://unsplash.com/search/photos/house) para alimentar tu seed con buenas imágenes de viviendas.
 
@@ -102,9 +150,9 @@ Te recomendamos usar [Unsplash](https://unsplash.com/search/photos/house) para a
 
 ¡Intenta agregar una barra de búsqueda para filtrar apartamentos en el index y poder encontrar el apartamento perfecto!
 
-- ¿Cómo podemos encontrar lo que busca el/la usuario/a?
+- ¿Cómo podemos encontrar lo que busca el usuario?
 - ¿Qué método ActiveRecord podemos usar para crear un buscador simple? Esto te puede ayudar a comenzar `@flats = Flat.where("name LIKE '%garden%'")`. Asegúrate de que entiendas esa línea de código antes de dar un paso más
-- ¿Cómo podemos asegurarnos de que la página siga funcionando como el index tradicional aunque el/la usuario/a no esté buscando nada?
-- ¿Cómo podemos asegurarnos de que la entrada (input) se complete parcialmente con la consulta de búsqueda cuando el usuario/a la escriba?
+- ¿Cómo podemos asegurarnos de que la página siga funcionando como el index tradicional aunque el usuario no esté buscando nada?
+- ¿Cómo podemos asegurarnos de que la entrada (input) se complete parcialmente con la consulta de búsqueda cuando el usuario la escriba?
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index_4.png).

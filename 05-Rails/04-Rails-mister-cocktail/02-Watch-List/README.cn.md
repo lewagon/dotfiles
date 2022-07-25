@@ -62,6 +62,8 @@ rspec spec/models                # 运行测试
 yarn add bootstrap @popperjs/core
 ```
 
+我们需要添加node modules到我们的assets路径：
+
 ``ruby
 # config/initializers/asset.rb
 Rails.application.config.assets.paths << Rails.root.join("node_modules")
@@ -82,7 +84,13 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
-下载Le Wagon的样式表:
+在`config/assets.rb`里添加下面这一行：
+
+```rb
+Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```
+
+然后下载Le Wagon的样式表:
 
 ```bash
 rm -rf app/assets/stylesheets
@@ -244,7 +252,13 @@ DELETE "bookmarks/25"
 ### 7 - 电影的下拉选择框使用Select2(选做)
 我们在Rails应用里添加一个npm包！我们看看课件，如何把`select2`添加到电影的下拉选择框里。
 
+在Vue里使用：
+- 设置Vue，创建一个Vue实例并在`el`中选中相应页面
+- 应用`select`标签
+- 使用[基本案例](https://tom-select.js.org/examples/)代码片段中的一个来在Vue中实例化一个Tom Select。
+
 ### 8 - 清单的点评(选做)
+
 任何用户都可以对我们的电影收藏做评价（告诉我们他们的想法）。给我们的清单添加一些点评reviews！
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/reviews.png)
@@ -254,4 +268,6 @@ DELETE "bookmarks/25"
 - 添加搜索电影的功能。
 - 使用`typed.js`在主页添加一些有趣的标题。
 - 当我们在清单list的show页面向下滚动的时候，可以使用一些用于书签bokmarks的非常好的[滚动动画](https://michalsnik.github.io/aos/)
-- 在点评reviews表单里使用[jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) 来显示星级，而不是常规的输入框
+- 在点评reviews表单里使用[jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) 来显示星级，而不是常规的输入框。
+
+注意，请在你的应用中使用Vue来应用JavaScript。

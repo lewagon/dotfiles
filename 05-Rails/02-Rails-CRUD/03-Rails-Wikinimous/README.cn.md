@@ -49,3 +49,29 @@ rails db:seed
 你现在可以在路由里直接使用`resources` 快捷方法。
 
 看一下这个[应用](https://wagon-wikinimous.herokuapp.com)来看看我们的应用应该开发成什么样子。😉
+
+### 4 - 前端（选做）
+
+**安装Bootstrap样式**
+
+跟着[这个文档](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css)来安装Bootstrap在你的Rails应用上。你可以复制粘贴下方代码在`application.html.erb`的`head`中添加一个`link`标签：
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
+你现在可以在你Rails应用的各个页面里使用Bootstrap class啦！🎉
+
+**安装Font Awesome**
+
+在你的layout里的`head`中添加下方的`link`标签：
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<!-- [...] -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+```
+
+你现在可以随意使用任何[免费的Font Awesome图标](https://fontawesome.com/search?m=free)啦！ 🎉
