@@ -85,7 +85,7 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
-Add this line to `config/asset.rb`
+Add this line to `config/initializers/assets.rb`
 
 ```rb
 Rails.application.config.assets.paths << Rails.root.join("node_modules")
