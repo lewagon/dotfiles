@@ -1,11 +1,6 @@
 require_relative 'cookbook_helper'
-
-begin
-  require 'recipe_factory'
-  require 'view'
-rescue LoadError
-end
-
+require_relative 'load_error_check'
+require 'recipe_factory'
 
 cookbook_helper = CookbookHelper.new(
   file_name: "view",
@@ -13,7 +8,7 @@ cookbook_helper = CookbookHelper.new(
 )
 
 describe "View", unless: cookbook_helper.file_and_class_valid? do
-  it '`view.rb` file should exist' do 
+  it '`view.rb` file should exist' do
     expect(cookbook_helper.file_exists?).to be(true)
   end
 

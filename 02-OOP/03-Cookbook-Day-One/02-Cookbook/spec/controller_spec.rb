@@ -1,9 +1,5 @@
 require_relative 'cookbook_helper'
-
-begin
-  require "controller"
-rescue LoadError
-end
+require_relative 'load_error_check'
 
 cookbook_helper = CookbookHelper.new(
   file_name: "controller",

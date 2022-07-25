@@ -1,9 +1,5 @@
 require_relative 'cookbook_helper'
-
-begin
-  require 'recipe_factory'
-rescue
-end
+require_relative 'load_error_check'
 
 cookbook_helper = CookbookHelper.new(
   file_name: "recipe",
@@ -11,7 +7,7 @@ cookbook_helper = CookbookHelper.new(
 )
 
 describe "Recipe", unless: cookbook_helper.file_and_class_valid? do
-  it '`recipe.rb` file should exist' do 
+  it '`recipe.rb` file should exist' do
     expect(cookbook_helper.file_exists?).to be(true)
   end
 

@@ -1,11 +1,7 @@
 require "csv"
 require 'recipe_factory'
 require_relative 'cookbook_helper'
-
-begin
-  require "cookbook"
-rescue LoadError
-end
+require_relative 'load_error_check'
 
 class Helper
   def self.write_csv(file, data)
