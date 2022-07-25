@@ -1,3 +1,14 @@
+## 设置
+
+你应该已经安装好`rails`了。用以下指令来检查：
+
+```bash
+rails -v
+# 你应该在这儿看到你的rails版本
+```
+
+如果没有的话，请回到[macOS](https://github.com/lewagon/setup/blob/master/macos.md#installing-some-gems), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#installing-some-gems) 或者 [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#installing-some-gems)的相关章节去设置。
+
 ## 背景和目标
 
 还记得第一周的Ruby吗？我们开发的程序的用户界面只有终端。这些日子已经过去了，我们现在使用Rails！。这意味着：
@@ -69,7 +80,7 @@ verb "url", to: "controller#action"
 
 你还记得如何在终端显示你所有的路由吗？
 
-<details><summary markdown='span'>View solution
+<details><summary markdown='span'>查看答案
 </summary>
 
 ```bash
