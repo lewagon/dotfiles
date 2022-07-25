@@ -190,7 +190,7 @@ Instead, we want to use **indexes** to improve the user experience:
 2 - burger
 3 - salad
 
-Please choose an id:
+Please choose an index:
 >
 ```
 
