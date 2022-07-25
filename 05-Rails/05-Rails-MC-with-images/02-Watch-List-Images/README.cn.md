@@ -14,12 +14,13 @@
 cd ~/code/<user.github_nickname>/rails-watch-list
 ```
 
-如果生成的rails应用程序**没有** `--database` 标签，我们需要手动将这个rails应用程序迁移到Postgresql for heroku。如果Gemfile中有 `pg` gem，你可以检查应用程序是否配置了postgresql。
+如果生成的rails应用程序**没有** `-d` 标签，我们需要手动将这个rails应用程序迁移到Postgresql for heroku。如果Gemfile中有 `pg` gem，你可以检查应用程序是否配置了postgresql。
 
 如果需要将应用程序更改为postgres，请打开Gemfile，找到 `sqlite` 行。把它**替换**为：
 
 ```ruby
 # Gemfile
+[...]
 gem "pg"
 ```
 

@@ -1,6 +1,6 @@
 ## 背景和目标
 
-是时候开发一个有3个模型的应用了！就像你猜想的那样，我们将会引入多对多关系(`n:n`)。那将是什么呢，为你自己创建一个观影清单Watch List应用。你可以创建清单，在清单里保存你喜欢的电影。
+是时候开发一个有3个模型的应用了！就像你猜想的那样，我们将会引入多对多关系(`N:N`)。那将是什么呢，为你自己创建一个观影清单Watch List应用。你可以创建清单，在清单里保存你喜欢的电影。
 
 ## 生成Rails应用
 
@@ -8,7 +8,7 @@
 
 ```bash
 yarn -v
-# 你应该能看到你的yarn版本
+# 你应该能在这看到你的yarn版本
 ```
 
 如果没看到的话，那请根据配置指南安装：[macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn)，[Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn)，[Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn)。
