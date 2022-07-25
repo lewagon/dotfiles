@@ -172,7 +172,29 @@ class OrdersController
 end
 ```
 
-**Important** : Dans la mesure où les **id** ne commencent pas forcément à 1 et ne se suivent pas nécessairement, on va plutôt demander des **indices** à l’utilisateur pour améliorer son expérience.
+**Attention** ⚠️ Dans la mesure où les **id** ne commencent pas forcément à 1 et ne se suivent pas nécessairement, c'est une **mauvaise pratique de demander un id à un utilisateur**.
+
+Imagie que nous ayons 3 meal, avec les ids `1234`, `4242` et `987654`. Nous **ne voulons pas** afficher :
+
+```bash
+1234 - pizza
+4242 - burger
+987654 - salad
+
+Please choose an id:
+>
+```
+
+On veut plutôt utiliser des **indices** pour améliorer l'expérience de l'utilisateur :
+
+```bash
+1 - pizza
+2 - burger
+3 - salad
+
+Please choose an index:
+>
+```
 
 Tout est vert ? Parfait ! Le moment est venu de faire `git add`, `commit` et `push`.
 

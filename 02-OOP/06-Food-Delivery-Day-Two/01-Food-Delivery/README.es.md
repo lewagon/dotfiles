@@ -170,7 +170,29 @@ class OrdersController
 end
 ```
 
-**Importante**: ya que los **ids** no necesariamente empiezan en 1 y no son necesariamente continuos, le preguntaremos al/a la usuario/a por índices (indexes) y así mejorar la experiencia de usuario.
+**Atención** ⚠️ Dado que los **ids** no empiezan necesariamente por 1 y no son necesariamente continuos, es una **mala práctica pedir a un usuario un id**.
+
+Imaginemos que tenemos 3 meals, con id `1234`, `4242` y `987654`. **No** queremos mostrar:
+
+```bash
+1234 - pizza
+4242 - burger
+987654 - salad
+
+Please choose an id:
+>
+```
+
+Pero queremos utilizar **índices** para mejorar la experiencia del usuario:
+
+```bash
+1 - pizza
+2 - burger
+3 - salad
+
+Please choose an index:
+>
+```
 
 ¿Todo en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
 
