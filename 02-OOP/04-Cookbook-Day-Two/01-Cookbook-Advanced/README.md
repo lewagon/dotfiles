@@ -160,7 +160,7 @@ Again, this new property should be:
 
 ## (Optional) Service
 
-Try to extract the **parsing** logic out of the controller and put it into a [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
+Try to extract the **parsing** logic out of the controller and put it into a [**Service Object**](https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial):
 
 ```ruby
 class ScrapeAllrecipesService
