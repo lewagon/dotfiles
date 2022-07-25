@@ -172,7 +172,9 @@ class OrdersController
 end
 ```
 
-**Warning** ⚠️ Since **ids** do not necessarily start from 1 and are not necessarily continuous, it's a **bad practice to ask a user for an id**. Imagine we have 3 meals, with id `1234`, `4242` and `987654`. We **don't** want to display:
+**Warning** ⚠️ Since **ids** do not necessarily start from 1 and are not necessarily continuous, it's a **bad practice to ask a user for an id**.
+
+Imagine we have 3 meals, with id `1234`, `4242` and `987654`. We **don't** want to display:
 
 ```bash
 1234 - pizza
