@@ -162,7 +162,7 @@ Esta nueva propiedad también debe ser:
 
 ## (Opcional) Servicio
 
-Intenta extraer la lógica de **parseo** del controlador y de ponerla en un [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html):
+Intenta extraer la lógica de **parseo** del controlador y de ponerla en un [**Service Object**](https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial):
 
 ```ruby
 class ScrapeAllrecipesService
