@@ -99,7 +99,7 @@ describe "OrderRepository", :_order do
       expect(loaded_orders.length).to eq(3)
     end
 
-    it "should fill the `@orders` with instance of `Order`, setting the correct types on each property" do
+    it "should fill the `@orders` or `@elements` array of orders with instance of `Order`, setting the correct types on each property" do
       repo = OrderRepository.new(orders_csv_path, meal_repository, customer_repository, employee_repository)
       loaded_orders = elements(repo) || []
       fail if loaded_orders.empty?
