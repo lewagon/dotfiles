@@ -33,7 +33,7 @@ rails db:create
 git add .
 git commit -m "rails new"
 gh repo create --public --source=.
-git push origin master
+git push origin main
 ```
 
 我们导入老师写好的spec以便来`rake`我们的进度。
@@ -56,38 +56,62 @@ rails db:migrate RAILS_ENV=test  # 如果你已经添加了数据库迁移
 rspec spec/models                # 运行测试
 ```
 
-开始写代码之前，不要忘了设置Rails应用的前端。就像早上的课程里那样，设置Bootstrap和它的JavaScript依赖。
+开始写代码之前，不要忘了设置Rails应用的前端。就像早上的课程里那样，移除Stimulus，设置Vue，Bootstrap和它的JavaScript依赖。
 
-```bash
-yarn add bootstrap @popperjs/core
+让我们先来移除Stimulus相关的内容，并安装Vue。
+
+移除以下内容：
+
+```rb
+# config/importmap.rb
+pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
+pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
+pin_all_from "app/javascript/controllers", under: "controllers"
 ```
 
-我们需要添加node modules到我们的assets路径：
-
-``ruby
-# config/initializers/asset.rb
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```js
+// app/javascript/application.js
+import "controllers"
 ```
+
+以及，下面的文件夹
+
+<pre class="bash hljs">
+.
+└── <strong style="color: #117B8D">app</strong>
+    └── <strong style="color: #117B8D">javascript</strong>
+        └── <strong style="color: #117B8D">controllers</strong>
+</pre>
 
 添加我们要用到的gem：
 
 ```ruby
 # Gemfile
 gem "autoprefixer-rails"
+gem "bootstrap"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails" # Uncomment this line
 ```
 
+使用importmap安装Bootstrap和Vue:
+
 ```bash
-bundle install
-rails generate simple_form:install --bootstrap
+importmap pin bootstrap
 ```
 
-在`config/assets.rb`里添加下面这一行：
-
 ```rb
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
+# config/importmap.rb
+
+# add these two lines
+pin "vue", to: 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.esm.browser.min.js'
+pin_all_from "app/javascript/components", under: "components"
+```
+
+```bash
+mkdir app/assets/javascript/components
+bundle install
+rails generate simple_form:install --bootstrap
 ```
 
 然后下载Le Wagon的样式表:
@@ -98,7 +122,7 @@ curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.
 unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
 ```
 
-最后我们需要用webpack导入Boostrap JS库：
+最后我们需要导入Boostrap JS库：
 
 ```js
 // app/javascript/application.js
@@ -250,7 +274,13 @@ DELETE "bookmarks/25"
 尝试把"新建书签bookmark的表单"放在清单list的show页面，而不是一个单独的页面。这样你就不需要离开清单list页面来添加一个新的电影了！路由会有哪些改变？控制器有哪些改变？
 
 ### 7 - 电影的下拉选择框使用Select2(选做)
-我们在Rails应用里添加一个npm包！我们看看课件，如何把`select2`添加到电影的下拉选择框里。
+我们在Rails应用里添加一个包！我们看看课件，如何把`select2`添加到电影的下拉选择框里。
+
+使用importmap安装`select2`：
+
+```bash
+importmap pin select2
+```
 
 在Vue里使用：
 - 设置Vue，创建一个Vue实例并在`el`中选中相应页面
@@ -270,4 +300,4 @@ DELETE "bookmarks/25"
 - 当我们在清单list的show页面向下滚动的时候，可以使用一些用于书签bokmarks的非常好的[滚动动画](https://michalsnik.github.io/aos/)
 - 在点评reviews表单里使用[jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) 来显示星级，而不是常规的输入框。
 
-注意，请在你的应用中使用Vue来应用JavaScript。
+注意，请在你的应用中使用Vue来应用JavaScript ⚠️
