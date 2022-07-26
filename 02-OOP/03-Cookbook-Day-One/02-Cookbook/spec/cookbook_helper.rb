@@ -11,7 +11,7 @@ class CookbookHelper
   end
 
   def require_error(e)
-    absolute_path_pattern = /.*\/fullstack-challenges.*\d+-Cookbook\//
+    absolute_path_pattern = Regexp.new(__dir__.gsub(/\/spec\z/, ""))
     backtrace_message = e.backtrace.first.gsub(absolute_path_pattern, '')
     relative_path = e.path.gsub(absolute_path_pattern, '')
     RequireError.new("#{backtrace_message} failed to find #{relative_path}")

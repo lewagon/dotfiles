@@ -1,5 +1,10 @@
 require_relative 'cookbook_helper'
-require 'recipe_factory'
+
+begin
+  require 'recipe_factory'
+  require 'view'
+rescue LoadError
+end
 
 cookbook_helper = CookbookHelper.new(
   file_name: "view",

@@ -1,5 +1,10 @@
 require_relative 'cookbook_helper'
 
+begin
+  require 'recipe_factory'
+rescue
+end
+
 cookbook_helper = CookbookHelper.new(
   file_name: "recipe",
   class_name: "Recipe"

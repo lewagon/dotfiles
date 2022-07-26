@@ -2,6 +2,11 @@ require "csv"
 require 'recipe_factory'
 require_relative 'cookbook_helper'
 
+begin
+  require "cookbook"
+rescue LoadError
+end
+
 class Helper
   def self.write_csv(file, data)
     CSV.open(file, 'w') do |csv|
