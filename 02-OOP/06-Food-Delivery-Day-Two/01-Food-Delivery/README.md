@@ -172,7 +172,29 @@ class OrdersController
 end
 ```
 
-**Important**: since **ids** do not necessarily start from 1 and are not necessarily continuous, let's instead ask the user for **indexes** to improve the user experience.
+**Warning** ⚠️ Since **ids** do not necessarily start from 1 and are not necessarily continuous, it's a **bad practice to ask a user for an id**.
+
+Imagine we have 3 meals, with id `1234`, `4242` and `987654`. We **don't** want to display:
+
+```bash
+1234 - pizza
+4242 - burger
+987654 - salad
+
+Please choose an id:
+>
+```
+
+Instead, we want to use **indexes** to improve the user experience:
+
+```bash
+1 - pizza
+2 - burger
+3 - salad
+
+Please choose an index:
+>
+```
 
 All green? Good! Time to `git add`, `commit` and `push`.
 
