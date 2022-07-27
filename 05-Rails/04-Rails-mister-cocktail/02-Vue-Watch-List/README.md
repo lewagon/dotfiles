@@ -56,39 +56,62 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies:
+Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's remove Stimulus, add Vue, Bootstrap and its JavaScript dependencies:
 
-```bash
-yarn add bootstrap @popperjs/core
+Let's first remove Stimulus related codes and install Vue.
+
+Remove the codes below in your repo:
+
+```rb
+# config/importmap.rb
+pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
+pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
+pin_all_from "app/javascript/controllers", under: "controllers"
 ```
 
-We need to add the node modules to the assets path:
-
-```ruby
-# config/initializers/asset.rb
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
+```js
+// app/javascript/application.js
+import "controllers"
 ```
 
-And add the gems we're going to need:
+And the folders below:
+
+<pre class="bash hljs">
+.
+└── <strong style="color: #117B8D">app</strong>
+    └── <strong style="color: #117B8D">javascript</strong>
+        └── <strong style="color: #117B8D">controllers</strong>
+</pre>
+
+Adding required gems for this challenge:
 
 ```ruby
 # Gemfile
-# [...]
 gem "autoprefixer-rails"
+gem "bootstrap"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails" # Uncomment this line
 ```
 
+Install Bootstrap and Vue using importmap:
+
 ```bash
-bundle install
-rails generate simple_form:install --bootstrap
+importmap pin bootstrap
 ```
 
-Add this line to `config/asset.rb`
-
 ```rb
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
+# config/importmap.rb
+
+# add these two lines
+pin "vue", to: 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.esm.browser.min.js'
+pin_all_from "app/javascript/components", under: "components"
+```
+
+```bash
+mkdir app/assets/javascript/components
+bundle install
+rails generate simple_form:install --bootstrap
 ```
 
 Then let's download the Le Wagon's stylesheets:
@@ -253,12 +276,18 @@ Try to put the "New bookmark form" on the list page itself, not on a separate pa
 
 ### 7 - Tom Select on the movies dropdown (Optional)
 
-Let's add a JavaScript package to our Rails app! You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/tom_select) to get inspired!
+Let's add a JavaScript package to our Rails app! You can have a look at the lecture and try to apply `select2` to your movies dropdown.
+
+Using importmap to install `select2`:
+
+```bash
+importmap pin select2
+```
 
 To do so:
-- Generate a dedicated Stimulus controller
-- Connect this Stimulus controller to the movies dropdown `select` tag
-- Adapt one of the [basic examples](https://tom-select.js.org/examples/) code snippets to instanciate a Tom Select in the Stimulus controller
+- Setting Vue, create a Vue instance and select the page in `el` property.
+- Using the movies dropdown `select` tag
+- Adapt one of the [basic examples](https://tom-select.js.org/examples/) code snippets to instanciate a Tom Select in the Vue instance.
 
 ### 8 - List reviews (Optional)
 
@@ -271,6 +300,6 @@ Everyone should be able to comment and tell us what they thought of our movie co
 - Adding a possibility to search for movies.
 - Adding [typed.js](http://www.mattboldt.com/demos/typed-js/) to have some funky title on our home page.
 - Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
-- Using [`star-rating.js`](https://kitt.lewagon.com/knowledge/tutorials/star_rating) to display stars instead of a normal input in the reviews form.
+- Using [`star-rating.js`](https://github.com/pryley/star-rating.js/blob/master/README.md) to display stars instead of a normal input in the reviews form.
 
-Again, use Stimulus controllers when implementing JavaScript behavior in your app ⚠️
+Again, use Vue when implementing JavaScript behavior in your app ⚠️

@@ -298,6 +298,6 @@ importmap pin select2
 - 添加搜索电影的功能。
 - 使用`typed.js`在主页添加一些有趣的标题。
 - 当我们在清单list的show页面向下滚动的时候，可以使用一些用于书签bokmarks的非常好的[滚动动画](https://michalsnik.github.io/aos/)
-- 在点评reviews表单里使用[jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) 来显示星级，而不是常规的输入框。
+- 在点评reviews表单里使用[`star-rating.js`](https://github.com/pryley/star-rating.js/blob/master/README.md) 来显示星级，而不是常规的输入框。
 
 注意，请在你的应用中使用Vue来应用JavaScript ⚠️
