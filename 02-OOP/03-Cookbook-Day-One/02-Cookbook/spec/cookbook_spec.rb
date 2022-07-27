@@ -27,6 +27,12 @@ describe "Cookbook", unless: cookbook_helper.file_and_class_valid? do
     expect(cookbook_helper.file_exists?).to be(true)
   end
 
+  it '`cookbook.rb` can require and require_relative files without errors' do
+    require "cookbook"
+  rescue LoadError => e
+    raise cookbook_helper.require_error(e)
+  end
+
   it '`Cookbook` class should be defined' do
     expect(cookbook_helper.class_defined?).to be(true)
   end

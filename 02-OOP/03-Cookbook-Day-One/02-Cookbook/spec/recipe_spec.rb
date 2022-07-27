@@ -11,8 +11,14 @@ cookbook_helper = CookbookHelper.new(
 )
 
 describe "Recipe", unless: cookbook_helper.file_and_class_valid? do
-  it '`recipe.rb` file should exist' do 
+  it '`recipe.rb` file should exist' do
     expect(cookbook_helper.file_exists?).to be(true)
+  end
+
+  it '`recipe.rb` can require and require_relative files without errors' do
+    require "recipe"
+  rescue LoadError => e
+    raise cookbook_helper.require_error(e)
   end
 
   it '`Recipe` class should be defined' do
