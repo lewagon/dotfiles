@@ -51,7 +51,7 @@ Prepare your profile image file before starting to code. For this exercise You c
 
 ```html
 <!-- Fontawesome Stylesheet -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
 ```
 
 - You can use the `target="_blank"` attribute on your links to open them on new tabs once clicked.

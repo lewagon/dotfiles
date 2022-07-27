@@ -73,7 +73,7 @@ Agrega el `link` tag en el `head` de tu layout:
 ```erb
 <!-- app/views/layouts/application.html.erb -->
 <!-- [...] -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
 ```
 
 Ahora puedes usar cualquiera de los [íconos gratuitos de Font Awesome](https://fontawesome.com/search?m=free) 🎉

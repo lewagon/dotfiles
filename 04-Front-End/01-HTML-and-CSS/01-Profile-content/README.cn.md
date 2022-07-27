@@ -51,7 +51,7 @@ serve
 
 ```html
 <!-- Fontawesome Stylesheet -->
-<link rel="styleheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">。
+<link rel="styleheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">。
 ```
 
 - 你可以在你的链接上使用`target="_blank"`属性，一旦点击它们就会在新的标签页上打开。

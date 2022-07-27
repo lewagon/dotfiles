@@ -51,7 +51,7 @@ Prépare le fichier de l'image de ton profil avant de commencer à coder. Pour c
 
 ```html
 <!-- Fontawesome Stylesheet -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
 ```
 
 - Tu peux utiliser l'attribut `target="_blank"` sur tes liens pour qu'ils s'ouvrent dans de nouveaux onglets quand on clique dessus.

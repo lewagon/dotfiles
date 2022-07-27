@@ -45,7 +45,7 @@ Ajoute la balise `link` de Font Awesome dans le `head` de ton layout :
 ```erb
 <!-- app/views/layouts/application.html.erb -->
 <!-- [...] -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
 ```
 
 Tu peux désormais utiliser n'importe quel [icône Font Awesome gratuit](https://fontawesome.com/search?m=free) 🎉
