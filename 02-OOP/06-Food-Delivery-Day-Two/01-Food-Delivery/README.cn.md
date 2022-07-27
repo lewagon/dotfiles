@@ -166,7 +166,29 @@ class OrdersController
 end
 ```
 
-**重要提示**：由于**id**不一定从1开始，也不一定是连续的，因此让我们向用户请求 **索引**，以改善用户体验。
+**警告**：由于**id**不一定从1开始，也不一定是连续的，所以向用户索要**id**会是一个比较糟糕的用户体验。
+
+假设我们有三道餐，分别有着id`1234`,`4242`和`987654`。我们**不想要**显示：
+
+```bash
+1234 - pizza
+4242 - burger
+987654 - salad
+
+Please choose an id:
+>
+```
+
+取而代之的，我们可以使用**索引indexes**来优化用户体验：
+
+```bash
+1 - pizza
+2 - burger
+3 - salad
+
+Please choose an index:
+>
+```
 
 都是绿色的？很好！是时候 `git add`, `commit` 和 `push` 了。
 
