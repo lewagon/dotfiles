@@ -10,7 +10,8 @@ end
 
 require_relative "../config/application"
 
-set :views, (proc { File.join(root, "../app/views") })
+set :root, File.expand_path("..", __dir__)
+set :views, (proc { File.join(root, "app/views") })
 set :bind, '0.0.0.0'
 
 after do
