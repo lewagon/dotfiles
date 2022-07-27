@@ -160,7 +160,7 @@ Cette nouvelle propriété doit également être :
 
 ## (Optionnel) Service
 
-Essaie d’extraire la logique de **parsing** du contrôleur et de la placer dans un [**Service Object**](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html) :
+Essaie d’extraire la logique de **parsing** du contrôleur et de la placer dans un [**Service Object**](https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial) :
 
 ```ruby
 class ScrapeAllrecipesService

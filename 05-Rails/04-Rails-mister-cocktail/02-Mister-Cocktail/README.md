@@ -71,7 +71,7 @@ gem "font-awesome-sass", "~> 5.15"
 gem "simple_form"
 ```
 
-Add this line in `config/asset.rb`
+Add this line in `config/initializers/assets.rb`
 
 ```rb
 Rails.application.config.assets.paths << Rails.root.join("node_modules")

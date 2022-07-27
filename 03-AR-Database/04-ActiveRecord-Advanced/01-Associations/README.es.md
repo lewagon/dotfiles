@@ -28,7 +28,7 @@ Primero genera la nueva migración para crear el modelo del usuario (`User`). Di
 
 Genera otra migración para crear una referencia uno a muchos (one-to-many) entre el usuario (`User`) y el post (`Post`).
 
-Aseguúate de agregar el código necesario en tus modelos para darte acceso a los posts desde una instancia de usuario y al usuario a partir de una instancia de post dada.
+Asegúrate de agregar el código necesario en tus modelos para darte acceso a los posts desde una instancia de usuario y al usuario a partir de una instancia de post dada.
 
 ### Seed con usuario y posts
 

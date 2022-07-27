@@ -62,7 +62,7 @@ Avant de commencer à coder, n'oublie pas de configurer ton application Rails po
 yarn add bootstrap @popperjs/core
 ```
 
-Ajoute cette ligne dans `config/asset.rb`
+Ajoute cette ligne dans `config/initializers/assets.rb`
 
 ```rb
 Rails.application.config.assets.paths << Rails.root.join("node_modules")
