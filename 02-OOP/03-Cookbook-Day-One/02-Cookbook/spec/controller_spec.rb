@@ -1,6 +1,7 @@
 require_relative 'cookbook_helper'
 
 begin
+  require "cookbook"
   require "controller"
 rescue LoadError
 end
