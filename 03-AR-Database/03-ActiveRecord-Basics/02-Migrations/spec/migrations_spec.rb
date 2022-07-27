@@ -16,9 +16,9 @@ describe "Migration" do
       ") }.not_to raise_error
 
       post = db.execute("SELECT * FROM posts").first
-      expect(post[0]).to eq 1  # id
-      expect(post[1]).to eq "Le Wagon"
-      expect(post[2]).to eq "http://www.lewagon.com"
+      expect(post["id"]).to eq 1 # id
+      expect(post["title"]).to eq "Le Wagon"
+      expect(post["url"]).to eq "http://www.lewagon.com"
     end
   end
 
@@ -33,10 +33,10 @@ describe "Migration" do
       ") }.not_to raise_error
 
       post = db.execute("SELECT * FROM posts").first
-      expect(post[0]).to eq 1  # id
-      expect(post[1]).to eq "Le Wagon"
-      expect(post[2]).to eq "http://www.lewagon.com"
-      expect(post[5]).to eq 42
+      expect(post["id"]).to eq 1  # id
+      expect(post["title"]).to eq "Le Wagon"
+      expect(post["url"]).to eq "http://www.lewagon.com"
+      expect(post["votes"]).to eq 42
     end
 
     it "should have added 0 as a default value for the column" do
@@ -49,10 +49,10 @@ describe "Migration" do
       ") }.not_to raise_error
 
       post = db.execute("SELECT * FROM posts").first
-      expect(post[0]).to eq 1  # id
-      expect(post[1]).to eq "Le Wagon"
-      expect(post[2]).to eq "http://www.lewagon.com"
-      expect(post[5]).to eq 0
+      expect(post["id"]).to eq 1  # id
+      expect(post["title"]).to eq "Le Wagon"
+      expect(post["url"]).to eq "http://www.lewagon.com"
+      expect(post["votes"]).to eq 0
     end
   end
 end
