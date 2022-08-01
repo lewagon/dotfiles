@@ -20,6 +20,7 @@ cd ~/code/<user.github_nickname>/rails-watch-list
 
 ```ruby
 # Gemfile
+[...]
 gem "pg"
 ```
 
