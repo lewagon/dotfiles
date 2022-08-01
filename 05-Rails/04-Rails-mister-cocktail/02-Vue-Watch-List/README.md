@@ -4,20 +4,9 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 
 ## Rails app generation
 
-You should already have [yarn](https://yarnpkg.com) installed. Check it with:
-
-```bash
-yarn -v
-# You should see your yarn version here
-```
-
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn) setup.
-
-**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--d postgresql` (we will talk about this during the next session). 😉
-
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
+rails new rails-watch-list -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -118,8 +107,8 @@ Then let's download the Le Wagon's stylesheets:
 
 ```bash
 rm -rf app/assets/stylesheets
-curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip
-unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
+curl -L https://github.com/lewagon/stylesheets/archive/vue.zip > stylesheets.zip
+unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-vue app/assets/stylesheets
 ```
 
 Finally let's import the Boostrap JS library using Webpack:
