@@ -8,7 +8,7 @@ rows = DB.execute('SELECT * FROM table_name')
 # => rows is an Array of records, each record being an Array of columns.
 ```
 
-Antes de trabajar en el primer objetivo del día, repasemos cómo se hacen consultas a la base de datos. Usaremos la misma base de datos `jukebox` de los ejercicios de ayer.
+Antes de pasar al objetivo principal de hoy, vamos a hacer un pequeño calentamiento y ensayar una consulta a la base de datos. Utilizaremos la misma base de datos `jukebox` de los ejercicios de ayer antes de pasar a otra diferente en el segundo ejercicio.
 
 ## Especificaciones
 
