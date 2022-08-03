@@ -8,7 +8,7 @@ rows = DB.execute('SELECT * FROM table_name')
 # => les lignes sont un Array d’enregistrements et chaque enregistrement est un Array de colonnes.
 ```
 
-Avant de passer au premier objectif du jour, on va revoir comment requêter la base de données. Pour cela, on utilisera la base de données `jukebox` des exercices d’hier.
+Avant de passer à l'objectif principal d'aujourd'hui, nous allons faire un petit échauffement et nous entraîner à interroger la base de données. Nous utiliserons la même base de données `jukebox` que dans les exercices d'hier avant de passer à une autre dans le deuxième exercice.
 
 ## Spécifications
 
