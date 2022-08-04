@@ -88,5 +88,4 @@ Esta vez ejecutaremos el comando `SQLite: New Query` Para hacerlo, sigue estos p
 
 <iframe src="https://player.vimeo.com/video/690525239?h=ca70e032e8" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-👉 Encontrarás más información sobre la extensión SQLite de VS Code en nuestra [hoja de apuntes respectiva](https://kitt.lewagon.com/knowledge/cheatsheets/sqlite_extension).
-
+👉 Encontrarás más información sobre la extensión SQLite de VS Code en nuestra [hoja de apuntes respectiva](https://kitt.lewagon.com/knowledge/cheatsheets/vs_code_sqlite_extension).

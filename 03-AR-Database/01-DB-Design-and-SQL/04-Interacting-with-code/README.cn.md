@@ -90,4 +90,4 @@ rows = db.execute(query)
 
 <iframe src="https://player.vimeo.com/video/690525239?h=ca70e032e8" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-👉 如果想了解更多关于VS Code SQLite插件的话，可以查看这个[专门的总结](https://kitt.lewagon.com/knowledge/cheatsheets/sqlite_extension)。
+👉 如果想了解更多关于VS Code SQLite插件的话，可以查看这个[专门的总结](https://kitt.lewagon.com/knowledge/cheatsheets/vs_code_sqlite_extension)。
