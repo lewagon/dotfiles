@@ -90,4 +90,4 @@ And that's it! You should see your results!
 
 <iframe src="https://player.vimeo.com/video/690525239?h=ca70e032e8" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-👉 You can find more information about the VS Code SQLite extension in our [dedicated cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/sqlite_extension).
+👉 You can find more information about the VS Code SQLite extension in our [dedicated cheatsheet](https://kitt.lewagon.com/knowledge/cheatsheets/vs_code_sqlite_extension).
