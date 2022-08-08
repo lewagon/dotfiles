@@ -11,16 +11,16 @@ Maintenant, supposons que tu veuilles améliorer ton compteur de calories de fa�
   </thead>
   <tbody>
     <tr>
-      <td>Happy Meal</td>
-      <td>Cheese Burger, French Fries, Coca Cola</td>
+      <td>Cheesy Combo</td>
+      <td>Cheese Burger, Sweet Potatoes, Lemonade</td>
     </tr>
     <tr>
-      <td>Best Of Big Mac</td>
-      <td>Big Mac, French Fries, Coca Cola</td>
+      <td>Veggie Combo</td>
+      <td>Veggie Burger, Sweet Potatoes, Iced Tea</td>
     </tr>
     <tr>
-      <td>Best Of McChicken</td>
-      <td>McChicken, Salad, Sprite</td>
+      <td>Vegan Combo</td>
+      <td>Vegan Burger, Salad, Lemonade</td>
     </tr>
   </tbody>
 </table>
@@ -33,7 +33,7 @@ contente-toi de stocker les plats qui composent le repas. Comment pourrais-tu re
 On va maintenant créer une méthode `#calories_counter` complète, qui nous permettra de calculer les calories en exécutant :
 
 ```ruby
-orders = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
+orders = ["Sweet Potatoes", "Cheesy Combo", "Lemonade", "Vegan Combo"]
 puts calories_counter(orders)
 # => 1575
 ```
