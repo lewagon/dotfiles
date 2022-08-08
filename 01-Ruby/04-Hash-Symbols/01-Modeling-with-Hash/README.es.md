@@ -8,7 +8,7 @@ Cuando el quiz termine, los/as profesores/as se tomarán 15 minutos con cada uno
 
 ## Contexto y Objetivos
 
-Digamos que quieres mantenerte en la línea pero sigues comiendo en McDonald's... Se te ocurre la excelente idea de escribir un método rápido que compute el número de calorías en una orden de McDonald's. Usemos la tabla siguiente como nuestro menú resumido:
+Digamos que quieres mantenerte en forma mientras aprendes a programar :)  Se te ocurre la excelente idea de escribir un método rápido que calcule el número de calorías de un pedido de restaurante.Utilicemos la siguiente tabla como nuestro menú de restaurante abreviado:
 
 <table class="table">
   <thead>
@@ -27,15 +27,15 @@ Digamos que quieres mantenerte en la línea pero sigues comiendo en McDonald's..
       <td>300</td>
     </tr>
     <tr>
-      <td>Big Mac</td>
+      <td>Veggie Burger</td>
       <td>540</td>
     </tr>
     <tr>
-      <td>McChicken</td>
+      <td>Vegan Burger</td>
       <td>350</td>
     </tr>
     <tr>
-      <td>French Fries</td>
+      <td>Sweet Potatoes</td>
       <td>230</td>
     </tr>
     <tr>
@@ -43,24 +43,25 @@ Digamos que quieres mantenerte en la línea pero sigues comiendo en McDonald's..
       <td>15</td>
     </tr>
     <tr>
-      <td>Coca Cola</td>
-      <td>150</td>
+      <td>Iced Tea</td>
+      <td>70</td>
     </tr>
     <tr>
-      <td>Sprite</td>
-      <td>150</td>
+      <td>Lemonade</td>
+      <td>90</td>
     </tr>
   </tbody>
 </table>
+
 
 Debes guardar esta información en una [constante](https://www.rubyguides.com/2017/07/ruby-constants/) Ruby para crear este tipo de base de datos.
 Por ejemplo, el siguiente es un ejemplo de un `Hash` - `AGE_OF_STUDENTS` - que contiene estudiantes y sus edades:
 
 ```ruby
 AGE_OF_STUDENTS = {
-  "Peter" => 21,
-  "George" => 22,
-  "Mary" => 20
+  "Laura" => 23,
+  "Peter" => 20,
+  "Mary" => 27
 }
 ```
 
@@ -74,7 +75,7 @@ Lee la documentación sobre [Hashes](https://ruby-doc.org/core-2.7.5/Hash.html).
 - **limitación**: Tu método debe usar un hash (¡obviamente!).
 - **limitación**: ¡Tu método debe usar **nuestros valores calóricos dados**!
 
-Por ejemplo, `poor_calories_counter("McChicken", "French Fries", "Sprite")` debe devolver `730`.
+Por ejemplo, `poor_calories_counter("Cheese Burger", "Sweet Potatoes", "Iced Tea")` debe devolver `600`.
 
 ## Puntos clave de aprendizaje
 
