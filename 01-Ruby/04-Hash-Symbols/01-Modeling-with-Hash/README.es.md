@@ -8,7 +8,7 @@ Cuando el quiz termine, los/as profesores/as se tomarán 15 minutos con cada uno
 
 ## Contexto y Objetivos
 
-Digamos que quieres mantenerte en forma mientras aprendes a programar :)  Se te ocurre la excelente idea de escribir un método rápido que calcule el número de calorías de un pedido de restaurante.Utilicemos la siguiente tabla como nuestro menú de restaurante abreviado:
+Digamos que quieres mantenerte en forma mientras aprendes a programar :)  Se te ocurre la excelente idea de escribir un método rápido que calcule el número de calorías de un pedido de restaurante. Usemos la tabla siguiente como nuestro menú resumido:
 
 <table class="table">
   <thead>
@@ -52,7 +52,6 @@ Digamos que quieres mantenerte en forma mientras aprendes a programar :)  Se te 
     </tr>
   </tbody>
 </table>
-
 
 Debes guardar esta información en una [constante](https://www.rubyguides.com/2017/07/ruby-constants/) Ruby para crear este tipo de base de datos.
 Por ejemplo, el siguiente es un ejemplo de un `Hash` - `AGE_OF_STUDENTS` - que contiene estudiantes y sus edades:
