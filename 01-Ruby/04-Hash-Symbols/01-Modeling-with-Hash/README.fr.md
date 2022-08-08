@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Supposons que tu aies envie de garder la ligne tout en continuant à manger McDo… Tu as une super idée : rédiger une méthode rapide pour calculer le nombre de calories d’une commande McDonald’s. On va se servir du tableau ci-dessous comme d’un résumé de la carte McDonald’s :
+Supposons que tu aies envie de garder la ligne tout en apprenant à coder :) Tu as une super idée : rédiger une méthode rapide pour calculer le nombre de calories d’une commande d'un restaurant. On va se servir du tableau ci-dessous comme d’un résumé de la carte du restaurant en question:
 
 <table class="table">
   <thead>
@@ -19,15 +19,15 @@ Supposons que tu aies envie de garder la ligne tout en continuant à manger McDo
       <td>300</td>
     </tr>
     <tr>
-      <td>Big Mac</td>
+      <td>Veggie Burger</td>
       <td>540</td>
     </tr>
     <tr>
-      <td>McChicken</td>
+      <td>Vegan Burger</td>
       <td>350</td>
     </tr>
     <tr>
-      <td>French Fries</td>
+      <td>Sweet Potatoes</td>
       <td>230</td>
     </tr>
     <tr>
@@ -35,12 +35,12 @@ Supposons que tu aies envie de garder la ligne tout en continuant à manger McDo
       <td>15</td>
     </tr>
     <tr>
-      <td>Coca Cola</td>
-      <td>150</td>
+      <td>Iced Tea</td>
+      <td>70</td>
     </tr>
     <tr>
-      <td>Sprite</td>
-      <td>150</td>
+      <td>Lemonade</td>
+      <td>90</td>
     </tr>
   </tbody>
 </table>
@@ -50,9 +50,9 @@ Voici un exemple de `Hash` - `AGE_OF_STUDENTS` qui contient des étudiants et le
 
 ```ruby
 AGE_OF_STUDENTS = {
- "Peter" => 21,
- "George" => 22,
- "Mary" => 20
+  "Laura" => 23,
+  "Peter" => 20,
+  "Mary" => 27
 }
 ```
 
@@ -67,7 +67,7 @@ Tu vas t’en servir tout le temps, alors apprends à les aimer 😊
 - **contrainte** : ta méthode doit utiliser un hash (ça va de soi !)
 - **contrainte** : ta méthode doit utiliser **nos valeurs caloriques données** !
 
-Exemple : `poor_calories_counter("McChicken", "French Fries", "Sprite")` doit retourner `730`.
+Exemple : `poor_calories_counter("Cheese Burger", "Sweet Potatoes", "Iced Tea")` doit retourner `600`.
 
 ## Enseignements clés
 
