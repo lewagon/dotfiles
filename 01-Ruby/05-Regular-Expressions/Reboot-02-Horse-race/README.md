@@ -1,5 +1,7 @@
 ## Background and Objectives
 
+To help you master the keys objectives of this reboot day you can redo the 2 following decks of flashcards: **Flow, Conditions, Arrays** as well as the ones on **Iterators & Blocks**.
+
 In this challenge we will build a program that simulates a horse race. Like in a real race, the user will see a list of competing horses, choose on which horse they wish to bet on and finally find out if their preferred sprinter won or not. The user will be able to place bets until they run out of money.
 
 ## Guidelines

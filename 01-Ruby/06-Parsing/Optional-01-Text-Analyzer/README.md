@@ -1,5 +1,7 @@
 ## Background & Objectives
 
+To help you master the keys objectives of this reboot day you can redo the following deck of flashcards: **Hash & Symbols**.
+
 You are going to develop a text analyzer. Your Ruby program will read a text supplied in a separate file, analyze it for various patterns and statistics, and print out the result for the user.Text processing programs are the bread and butter of most application development.
 
 Ruby is well suited for text and document analysis with its regular expression features along with the ease of use of `gsub`, `scan` and `split`.
