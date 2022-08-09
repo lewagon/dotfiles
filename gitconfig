@@ -31,7 +31,6 @@
   diff = auto
   interactive = auto
   status = auto
-  ui = auto
 
 [color "branch"]
   current = green
@@ -41,12 +40,13 @@
   pager = delta
   editor = vim
   visual = vim
-  excludesfile = /Users/xavierosee/.gitignore
+	excludesFile = ~/.gitignore
 
 [delta]
   navigate = true
   line-numbers = true
   side-by-side = true
+  syntax-theme = GitHub
 
 [help]
   autocorrect = 1

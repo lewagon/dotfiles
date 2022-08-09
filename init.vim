@@ -38,6 +38,13 @@ set nocompatible
 set smartindent
 filetype plugin on
 syntax on
+set expandtab
+
+" Security Section
+set noswapfile
+set nobackup
+set nowritebackup
+set viminfo=
 
 au BufNewFile,BufRead *.py \
   set foldmethod=indent
@@ -65,7 +72,7 @@ let g:vimwiki_list = [{
 let g:vimwiki_global_ext = 0
 
 au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
-autocmd FileType sql setlocal shiftwidth=2 tabstop=2
+autocmd FileType sql setlocal shiftwidth=4 tabstop=4
 
 
 
@@ -84,6 +91,8 @@ let g:mdip_imgdir = 'img'
 nmap <silent> <c-s> :NV<CR>
 nmap <silent> <leader>ts i<C-R>=strftime("%a %d %b %Y %I:%M:%S %p %Z")<CR><Esc>
 nnoremap <silent> <leader>em :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
+inoremap <silent> ALT-) <Plug>(copilot-next)
+inoremap <silent> ALT-( <Plug>(copilot-previous)
 
 
 " Custom Functions Section

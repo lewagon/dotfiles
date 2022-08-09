@@ -2,6 +2,9 @@
 log/
 *.log
 
+# Ansible
+ansible_shared_secret*
+
 # Mac
 .DS_Store
 
