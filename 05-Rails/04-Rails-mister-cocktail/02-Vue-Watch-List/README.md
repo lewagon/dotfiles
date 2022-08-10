@@ -4,6 +4,8 @@ Now it's time to make a 3-model app! And you guessed it, we'll be introducing a 
 
 ## Rails app generation
 
+**Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `--d postgresql` (we will talk about this during the next session). 😉
+
 ```bash
 cd ~/code/<user.github_nickname>
 rails new rails-watch-list -d postgresql --skip-action-mailbox -T
