@@ -4,20 +4,11 @@
 
 ## 生成Rails应用
 
-你应该已安装过[yarn](https://yarnpkg.com)了。确认一下：
-
-```bash
-yarn -v
-# 你应该能在这看到你的yarn版本
-```
-
-如果没看到的话，那请根据配置指南安装：[macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn)，[Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn)，[Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn)。
-
 **注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`-d postgresql`（明天你就知道为什么了）😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
+rails new rails-watch-list -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -118,8 +109,8 @@ rails generate simple_form:install --bootstrap
 
 ```bash
 rm -rf app/assets/stylesheets
-curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip
-unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
+curl -L https://github.com/lewagon/stylesheets/archive/vue.zip > stylesheets.zip
+unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-vue app/assets/stylesheets
 ```
 
 最后我们需要导入Boostrap JS库：
