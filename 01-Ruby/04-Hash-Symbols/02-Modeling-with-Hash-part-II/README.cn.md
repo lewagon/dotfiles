@@ -11,16 +11,16 @@
   </thead>
   <tbody>
     <tr>
-      <td>Happy Meal</td>
-      <td>Cheese Burger, French Fries, Coca Cola</td>
+      <td>Cheesy Combo</td>
+      <td>Cheese Burger, Sweet Potatoes, Lemonade</td>
     </tr>
     <tr>
-      <td>Best Of Big Mac</td>
-      <td>Big Mac, French Fries, Coca Cola</td>
+      <td>Veggie Combo</td>
+      <td>Veggie Burger, Sweet Potatoes, Iced Tea</td>
     </tr>
     <tr>
-      <td>Best Of McChicken</td>
-      <td>McChicken, Salad, Sprite</td>
+      <td>Vegan Combo</td>
+      <td>Vegan Burger, Salad, Lemonade</td>
     </tr>
   </tbody>
 </table>
@@ -32,7 +32,7 @@
 现在让我们试着创建一个完整的`#calories_counter`，它能够帮我们计算卡路里，只需运行：
 
 ```ruby
-orders = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
+orders = ["Sweet Potatoes", "Cheesy Combo", "Lemonade", "Vegan Combo"]
 puts calories_counter(orders)
 ```
 
