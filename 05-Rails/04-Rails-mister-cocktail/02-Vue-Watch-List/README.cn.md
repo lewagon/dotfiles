@@ -264,13 +264,13 @@ DELETE "bookmarks/25"
 
 尝试把"新建书签bookmark的表单"放在清单list的show页面，而不是一个单独的页面。这样你就不需要离开清单list页面来添加一个新的电影了！路由会有哪些改变？控制器有哪些改变？
 
-### 7 - 电影的下拉选择框使用Select2(选做)
-我们在Rails应用里添加一个包！我们看看课件，如何把`select2`添加到电影的下拉选择框里。
+### 7 - 电影的下拉选择框使用Tom Select(选做)
+我们在Rails应用里添加一个包！我们看看课件，如何把`tom-select`添加到电影的下拉选择框里。
 
-使用importmap安装`select2`：
+使用importmap安装`tom-select`：
 
 ```bash
-importmap pin select2
+importmap pin tom-select
 ```
 
 在Vue里使用：
