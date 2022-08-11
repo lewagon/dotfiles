@@ -11,16 +11,16 @@ Now, let's say you want to improve your calorie counter, so that it can accept a
   </thead>
   <tbody>
     <tr>
-      <td>Happy Meal</td>
-      <td>Cheese Burger, French Fries, Coca Cola</td>
+      <td>Cheesy Combo</td>
+      <td>Cheese Burger, Sweet Potatoes, Lemonade</td>
     </tr>
     <tr>
-      <td>Best Of Big Mac</td>
-      <td>Big Mac, French Fries, Coca Cola</td>
+      <td>Veggie Combo</td>
+      <td>Veggie Burger, Sweet Potatoes, Iced Tea</td>
     </tr>
     <tr>
-      <td>Best Of McChicken</td>
-      <td>McChicken, Salad, Sprite</td>
+      <td>Vegan Combo</td>
+      <td>Vegan Burger, Salad, Lemonade</td>
     </tr>
   </tbody>
 </table>
@@ -33,7 +33,7 @@ just store the dishes that make up the meal. How do you think you could represen
 Let's now create a complete `#calories_counter` that will enable us to calculate calories by running:
 
 ```ruby
-orders = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
+orders = ["Sweet Potatoes", "Cheesy Combo", "Lemonade", "Vegan Combo"]
 puts calories_counter(orders)
 # => 1575
 ```
