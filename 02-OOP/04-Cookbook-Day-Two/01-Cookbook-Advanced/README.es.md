@@ -75,7 +75,7 @@ curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > s
 
 👆 ¡**Este paso es muy importante**!
 
-La razón por la cual mantenemos la página en nuestro disco duro es porque tenemos que correr scripts Ruby en ella cientos de veces para testear nuestro código. Es más rápido abrir el archivo que está en el disco duro que hacer que nuestra red llame a allrecipes cada vez (esto probablemente hará que te metan en la lista negra y te veten de la página).
+La razón por la cual mantenemos la página en nuestro disco duro es porque tenemos que correr scripts Ruby en ella cientos de veces para testear nuestro código. Es más rápido abrir el archivo que está en el disco duro que hacer que nuestra red llame a allrecipes cada vez (esto probablemente hará que te veten de la página).
 
 ### Parseo con Nokogiri
 

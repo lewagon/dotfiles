@@ -75,7 +75,7 @@ curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > s
 
 👆 **This step is really important**!
 
-The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to allrecipes every time (that would probably also get you blacklisted).
+The reason why we keep the page on our hard drive is that we need to run Ruby scripts over it hundreds of times to test our code. It's much faster to open the file on disk rather than making a network call to allrecipes every time (that would probably also get you banned).
 
 ### Parsing with Nokogiri
 
