@@ -88,7 +88,26 @@ Va sur la page `/new` page, tape un mot et envoie le formulaire. Tu devrais obte
 
 Un autre moyen consiste à ajouter soit le mot-clé `binding.break`, `binding.b` ou `debugger` comme point d'arrêt dans le code de ton contrôleur et de déclencher la requête en soumettant le formulaire. Cela ouvrira session de débogage dans le processus `rails s` de ton terminal. Tu pourras alors taper `next` pour exécuter la ligne suivante ou `continue` pour afficher la vue finale:
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/debugger.png)
+```bash
+Started POST "/score" for 127.0.0.1 at 2022-08-16 14:42:49 +0200
+Processing by GamesController#score as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "letters"=>"I G U E Z Y T H E W", "word"=>"toto"}
+[8, 17] in ~/code/lewagon/rails-longest-word-game/app/controllers/games_controller.rb
+     8|     @letters += Array.new(5) { (('A'..'Z').to_a - VOWELS).sample }
+     9|     @letters.shuffle!
+    10|   end
+    11|
+    12|   def score
+=>  13|     debugger
+    14|   end
+    15|
+    16|   private
+    17|
+=>#0  GamesController#score at ~/code/lewagon/rails-longest-word-game/app/controllers/games_controller.rb:13
+  #1  ActionController::BasicImplicitRender#send_action(method="score", args=[]) at ~/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_controller/metal/basic_implicit_render.rb:6
+  # and 68 frames (use `bt' command for all frames)
+(rdbg)
+```
 
 ### Calculer le score
 
