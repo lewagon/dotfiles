@@ -88,7 +88,26 @@ Go to the `/new` page, fill a word and submit the form. You should get a **Runti
 
 Another way is to add either the `binding.break`, `binding.b` or `debugger` keyword as a breakpoint in your controller code and to trigger the request by submitting the form. It will open a debugging session in your terminal `rails s` process. You can then type `next` to execute the next line or `continue` to finish rendering the view:
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/debugger.png)
+```bash
+Started POST "/score" for 127.0.0.1 at 2022-08-16 14:42:49 +0200
+Processing by GamesController#score as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "letters"=>"I G U E Z Y T H E W", "word"=>"toto"}
+[8, 17] in ~/code/lewagon/rails-longest-word-game/app/controllers/games_controller.rb
+     8|     @letters += Array.new(5) { (('A'..'Z').to_a - VOWELS).sample }
+     9|     @letters.shuffle!
+    10|   end
+    11|
+    12|   def score
+=>  13|     debugger
+    14|   end
+    15|
+    16|   private
+    17|
+=>#0  GamesController#score at ~/code/lewagon/rails-longest-word-game/app/controllers/games_controller.rb:13
+  #1  ActionController::BasicImplicitRender#send_action(method="score", args=[]) at ~/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_controller/metal/basic_implicit_render.rb:6
+  # and 68 frames (use `bt' command for all frames)
+(rdbg)
+```
 
 ### Computing the score
 
