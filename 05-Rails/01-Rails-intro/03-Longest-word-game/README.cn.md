@@ -71,8 +71,7 @@ score    POST /score(.:format)  games#score
 
 ### 4 - 表单的另外一面
 
-让我们来检查一下在`params`参数里得到了什么，来看看表单是不是设置正确了。
-有两种方法，第一个是在控制器代码里添加`raise`：
+让我们来检查一下在`params`参数里得到了什么，来看看表单是不是设置正确了。有两种方法，第一个是在控制器代码里添加`raise`：
 
 ```ruby
 # app/controllers/games_controller.rb
@@ -89,17 +88,7 @@ score    POST /score(.:format)  games#score
 
 另外一个更加方便的方法是添加`pry-byebug`gem(你可以在`rails new`的时候不使用默认的`byebug`)，然后在控制器代码里添加`binding.pry`。这样你可以在终端里暂停Rails请求，检查，并输入`next`来执行下一行代码，或者输入`continue`来完成视图渲染。
 
-```ruby
-# Gemfile
-
-# [...]
-group :development, :test do
-  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-byebug'
-end
-```
-
-你需要运行`bundle install`和`rails s`重启rails来让这些修改生效。
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/debugger.png)
 
 ### 5 - 计算得分
 

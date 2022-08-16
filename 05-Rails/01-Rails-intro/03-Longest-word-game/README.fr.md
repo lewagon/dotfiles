@@ -86,19 +86,9 @@ Va sur la page `/new` page, tape un mot et envoie le formulaire. Tu devrais obte
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/raise.png)
 
-Le moyen le plus « propre » consiste à ajouter la gem `pry-byebug` (tu peux te débarrasser de la gem `byebug` par défaut de `rails new`) et `binding.pry` dans le code de ton contrôleur. De cette façon, tu pourras suspendre la requête Rails dans le terminal, l'inspecter et taper `next` pour exécuter la ligne suivante ou `continue` pour afficher la vue finale.
+Un autre moyen consiste à ajouter soit le mot-clé `binding.break`, `binding.b` ou `debugger` comme point d'arrêt dans le code de ton contrôleur et de déclencher la requête en soumettant le formulaire. Cela ouvrira session de débogage dans le processus `rails s` de ton terminal. Tu pourras alors taper `next` pour exécuter la ligne suivante ou `continue` pour afficher la vue finale:
 
-```ruby
-# Gemfile
-
-# [...]
-group :development, :test do
-  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-byebug'
-end
-```
-
-Tu dois exécuter `bundle install` et redémarrer `rails s` pour que cette modification soit prise en compte.
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/debugger.png)
 
 ### Calculer le score
 

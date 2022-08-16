@@ -86,19 +86,9 @@ Ve a la página `/new`. Agrega una palabra y envía el formulario. Rails te debe
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/raise.png).
 
-La forma más limpia es agregando la gema `pry-byebug` (puedes deshacerte de la que viene por defecto `byebug` de `rails new`) y agrega `binding.pry` en el código de tu controlador. De esta manera puedes pausar la petición Rails en la Terminal, inspeccionar y escribir `continue` para dejarla ir y terminar de renderizar la vista.
+Otra forma es añadir la palabra clave `binding.break`, `binding.b` o `debugger` como punto de ruptura en el código de tu controlador y activar la petición al enviar el formulario. Se abrirá una sesión de debugging en el proceso `rails s` en el terminal. Entonces puedes escribir `next` para ejecutar la siguiente línea o `continue` para terminar de renderizar la vista:
 
-```ruby
-# Gemfile
-
-# [...]
-group :development, :test do
-  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-byebug'
-end
-```
-
-Tienes que hacer `bundle install` y reiniciar `rails s` para que esto haga efecto.
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/debugger.png)
 
 ### 5 - Cómputo del puntaje
 

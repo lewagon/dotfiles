@@ -86,19 +86,9 @@ Go to the `/new` page, fill a word and submit the form. You should get a **Runti
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/raise.png)
 
-The cleaner way is to add the `pry-byebug` gem (you can get rid of the default `byebug` one from `rails new`) and add `binding.pry` in your Controller code. This way you can pause the Rails request in the terminal, inspect, and type `next` to execute the next line or `continue` to finish rendering the view.
+Another way is to add either the `binding.break`, `binding.b` or `debugger` keyword as a breakpoint in your controller code and to trigger the request by submitting the form. It will open a debugging session in your terminal `rails s` process. You can then type `next` to execute the next line or `continue` to finish rendering the view:
 
-```ruby
-# Gemfile
-
-# [...]
-group :development, :test do
-  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-byebug'
-end
-```
-
-You need to `bundle install` and restart `rails s` for this change to take effect.
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/debugger.png)
 
 ### Computing the score
 
