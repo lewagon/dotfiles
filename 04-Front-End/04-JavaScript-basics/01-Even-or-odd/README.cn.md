@@ -32,4 +32,3 @@ node -v
 - `eslint`, 一个JavaScript代码检查器[JavaScript linter](http://eslint.org/), 在Ruby中和Rubocop一样。
 - `mocha`, 一个JavaScript检测框架[JavaScript testing framework](https://mochajs.org), 在Ruby中和Rspec一样。
 
-这两个命令是从 `node_modules` 文件里运行的.它是在运行`04-Front-End`文件里(`cd ../..`)的`yarn install`时读取`package.json`文件(打开它!)被创建的。

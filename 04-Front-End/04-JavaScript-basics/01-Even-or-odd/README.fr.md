@@ -34,5 +34,3 @@ Ouvre le fichier `Rakefile` dans ton éditeur de texte. Il contient deux tâches
 
 - `eslint`, un [linter JavaScript](http://eslint.org/), l'équivalent de Rubocop dans l'univers Ruby.
 - `mocha`, un [framework de test JavaScript](https://mochajs.org), l'équivalent de Rspec dans l'univers Ruby.
-
-Ces deux commandes sont exécutées depuis le dossier `node_modules`, qui est utilisé pour sauvegarder tous les paquets téléchargés depuis npm sur votre ordinateur pour le projet JavaScript sur lequel vous travaillez.
