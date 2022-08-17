@@ -17,8 +17,6 @@ yarn -v
 
 ## 详细说明
 
-让我们首先确保练习中所需要的以下所有依赖（dependencies）都已经安装好了：
-
 ```bash
 yarn install
 ```
