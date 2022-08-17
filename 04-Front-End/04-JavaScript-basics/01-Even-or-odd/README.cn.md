@@ -31,4 +31,3 @@ node -v
 
 - `eslint`, 一个JavaScript代码检查器[JavaScript linter](http://eslint.org/), 在Ruby中和Rubocop一样。
 - `mocha`, 一个JavaScript检测框架[JavaScript testing framework](https://mochajs.org), 在Ruby中和Rspec一样。
-
