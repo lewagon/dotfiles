@@ -18,7 +18,7 @@ Hoy agregaremos un segundo modelo de aplicación Rails creando un clon de dos mo
 
 ### `04 Front-end en Rails`
 
-Aprenderás la mejor forma de implementar Bootstrap SASS + librerías front-end y a pasar de `form_for` a `simple_form_for` usando la configuración de Simple Form de Bootstrap.
+Aprenderás la mejor forma de implementar Bootstrap SASS + librerías front-end y a pasar de `form_with` a `simple_form_for` usando la configuración de Simple Form de Bootstrap.
 
 Aprenderás sobre el asset pipeline y webpacker.
 

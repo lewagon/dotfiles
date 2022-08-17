@@ -18,7 +18,7 @@ Today you will add a second model to a Rails app by building a two model clone o
 
 ### `04 Rails front-end`
 
-Learn the best setup for implementing Bootstrap SASS + front-end libraries, and switch from `form_for` to `simple_form_for` using Simple Form Bootstrap config.
+Learn the best setup for implementing Bootstrap SASS + front-end libraries, and switch from `form_with` to `simple_form_for` using Simple Form Bootstrap config.
 
 Learn about the asset pipeline and webpacker.
 

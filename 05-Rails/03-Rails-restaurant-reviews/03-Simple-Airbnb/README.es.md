@@ -112,7 +112,7 @@ La lista debe hacer un bucle sobre ellas y mostrarlas como se muestra en la capt
 
 ### 5 - Como usuario, puedo publicar un apartamento
 
-Recuerda que para crear un apartamento se necesitan dos rutas. Una de ellas muestra el formulario de creación y la otra maneja la petición `POST` que se genera cuando se envía el formulario. Intenta usar el helper `form_for` directamente en la vista y ¡haz que se vea bien!
+Recuerda que para crear un apartamento se necesitan dos rutas. Una de ellas muestra el formulario de creación y la otra maneja la petición `POST` que se genera cuando se envía el formulario. Intenta usar el helper `form_with` directamente en la vista y ¡haz que se vea bien!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png).
 

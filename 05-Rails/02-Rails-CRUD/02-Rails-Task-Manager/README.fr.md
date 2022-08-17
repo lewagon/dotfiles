@@ -65,7 +65,7 @@ Mets à jour la vue `index.html.erb` avec l'objet d'aide ou helper `link_to` pou
 
 ### 5 - En tant qu'utilisateur, je peux ajouter une nouvelle tâche
 
-En respectant les conventions vues pendant le cours, ajoute deux routes pour assurer la création d'une tâche. Une route sert à afficher le formulaire Task, l'autre à gérer la requête `POST` générée lors de l'envoi du formulaire. Essaie d'utiliser directement l'objet d'aide `form_for` dans ta vue.
+En respectant les conventions vues pendant le cours, ajoute deux routes pour assurer la création d'une tâche. Une route sert à afficher le formulaire Task, l'autre à gérer la requête `POST` générée lors de l'envoi du formulaire. Essaie d'utiliser directement l'objet d'aide `form_with` dans ta vue.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/new.gif)
 

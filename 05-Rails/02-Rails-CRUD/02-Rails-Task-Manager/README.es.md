@@ -65,7 +65,7 @@ Actualiza la vista `index.html.erb` con el helper `link_to` para crear los enlac
 
 ### 5 - Como usuario, puedo agregar una nueva tarea
 
-Siguiendo las convenciones vistas en clase, agrega dos rutas para manejar la creación de una tarea. Una ruta existe para mostrar el formulario del Task y la otra tiene como función manejar la petición `POST` generada cuando se envía dicho formulario. Intenta usar el helper `form_for` directamente en tu vista.
+Siguiendo las convenciones vistas en clase, agrega dos rutas para manejar la creación de una tarea. Una ruta existe para mostrar el formulario del Task y la otra tiene como función manejar la petición `POST` generada cuando se envía dicho formulario. Intenta usar el helper `form_with` directamente en tu vista.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/new.gif).
 

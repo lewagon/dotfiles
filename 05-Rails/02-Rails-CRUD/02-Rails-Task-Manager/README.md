@@ -65,7 +65,7 @@ Update the `index.html.erb` view with the `link_to` helper to build the links.
 
 ### 5 - As a user, I can add a new task
 
-Following the lecture conventions, add two routes to handle the creation of a task. One route is there to display the Task form, and another one is there to handle the `POST` request generated when submitting this form. Try to use directly the `form_for` helper in your view.
+Following the lecture conventions, add two routes to handle the creation of a task. One route is there to display the Task form, and another one is there to handle the `POST` request generated when submitting this form. Try to use directly the `form_with` helper in your view.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/new.gif)
 

@@ -190,7 +190,7 @@ This generates the following HTML:
 
 ##### [simple_form_for](https://github.com/heartcombo/simple_form)
 
-Since we installed Simple Form, we are going to use the `simple_form_for` helper instead of `form_for` from now on.
+Since we installed Simple Form, we are going to use the `simple_form_for` helper instead of `form_with` from now on.
 
 Your reviews URLs are now nested in `/restaurants/:restaurant_id`. This means you can't use `simple_form_for` the same way you did with a non-nested resource. If you write:
 
@@ -208,7 +208,7 @@ It will generate this HTML:
 </form>
 ```
 
-That's not what we want because **we don't have a route for `POST "reviews"`**. Instead, you will have to use the nested resource syntax for `form_for`:
+That's not what we want because **we don't have a route for `POST "reviews"`**. Instead, you will have to use the nested resource syntax for `form_with`:
 
 ```erb
 <%= simple_form_for [@restaurant, @review] do |f| %>

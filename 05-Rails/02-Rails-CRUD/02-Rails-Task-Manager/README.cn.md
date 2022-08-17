@@ -64,7 +64,7 @@ Task.create title: '学习', details: '有很多卡片要学习', completed: tru
 
 ### 5 - 做为用户，我可以添加一个新任务
 
-遵守课件里的rails约定，添加2个路由来创建一个新任务。一个路由用来显示添加任务的表单，另外一个路由用来处理提交表单的时候产生的`POST`请求。尝试在视图里直接使用`form_for`帮助方法。
+遵守课件里的rails约定，添加2个路由来创建一个新任务。一个路由用来显示添加任务的表单，另外一个路由用来处理提交表单的时候产生的`POST`请求。尝试在视图里直接使用`form_with`帮助方法。
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/tasks-manager/new.gif)
 

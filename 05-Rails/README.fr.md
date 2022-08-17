@@ -18,7 +18,7 @@ Aujourd'hui, tu ajouteras un deuxième modèle à une application Rails en créa
 
 ### `04 Front-end Rails`
 
-Tu découvriras la meilleure configuration pour utiliser Bootstrap SASS + des librairies front-end, et comment passer de `form_for` à `simple_form_for` en utilisant la configuration Simple Form de Bootstrap.
+Tu découvriras la meilleure configuration pour utiliser Bootstrap SASS + des librairies front-end, et comment passer de `form_with` à `simple_form_for` en utilisant la configuration Simple Form de Bootstrap.
 
 Tu découvriras l'asset pipeline (pipeline d'actifs) et webpacker.
 
