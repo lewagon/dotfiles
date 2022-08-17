@@ -35,4 +35,4 @@ Abre `Rakefile` en tu editor de texto. Ahí encontrarás dos actividades:
 - `eslint` es un [linter de JavaScript](http://eslint.org/), el equivalente a Rubocop en el mundo Ruby.
 - `mocha` es un [framework de testing de JavaScript](https://mochajs.org), el equivalente a Rspec en el mundo Ruby.
 
-Estos dos comandos se corren desde la carpeta `node_modules`. La misma fue creada corriendo `yarn install` en la carpeta `04-Front-End` (`cd ../..`) leyendo el archivo `package.json` (¡Ábrelo!).
+Estos dos comandos se ejecutan desde la carpeta `node_modules`, que se utiliza para guardar todos los paquetes descargados de npm en su ordenador para el proyecto de JavaScript en el que está trabajando.
