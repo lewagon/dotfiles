@@ -17,12 +17,6 @@ Si ce n'est pas le cas, retourne à la section dédiée du processus d'installat
 
 ## Spécifications
 
-Vérifie que toutes les dépendances pour cet exercice sont bien installées avec :
-
-```bash
-yarn install
-```
-
 Lance un serveur local Web en exécutant :
 
 ```bash

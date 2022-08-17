@@ -17,12 +17,6 @@ Si no es así, vuelva a la sección dedicada del [macOS](https://github.com/lewa
 
 ## Especificaciones
 
-Asegúrate de que todas las dependencias para este ejercicio estén instaladas corriendo el siguiente código:
-
-```bash
-yarn install
-```
-
 Inicia tu servidor web local corriendo lo siguiente:
 
 ```bash

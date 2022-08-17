@@ -17,12 +17,6 @@ If not, go back to the dedicated section of the [macOS](https://github.com/lewag
 
 ## Specs
 
-Let's make sure that all dependencies for this exercise are installed with the following:
-
-```bash
-yarn install
-```
-
 Let's launch a local webserver by running:
 
 ```bash

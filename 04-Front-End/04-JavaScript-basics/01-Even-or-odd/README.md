@@ -34,5 +34,3 @@ Open the `Rakefile` in your text editor. You will find two tasks:
 
 - `eslint`, a [JavaScript linter](http://eslint.org/), the equivalent of Rubocop in the Ruby world.
 - `mocha`, a [JavaScript testing framework](https://mochajs.org), the equivalent of Rspec in the Ruby world.
-
-These two commands are run from the `node_modules` folder. It was created by running `yarn install` in the `04-Front-End` folder (`cd ../..`), reading the `package.json` file (open it!).
