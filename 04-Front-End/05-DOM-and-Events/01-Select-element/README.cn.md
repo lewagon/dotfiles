@@ -17,10 +17,6 @@ yarn -v
 
 ## 详细说明
 
-```bash
-yarn install
-```
-
 我们来运行以下代码来启动本地服务器：
 
 ```bash
