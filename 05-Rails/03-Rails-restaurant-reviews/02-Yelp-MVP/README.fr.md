@@ -190,7 +190,7 @@ Cela génère le HTML suivant :
 
 ##### [simple_form_for](https://github.com/heartcombo/simple_form)
 
-Puisque l'on a installé Simple Form, on va utiliser la méthode `simple_form_for` au lieu de `form_for` à partir de maintenant.
+Puisque l'on a installé Simple Form, on va utiliser la méthode `simple_form_for` au lieu de `form_with` à partir de maintenant.
 
 Les URL de tes avis sont maintenant imbriquées dans `/restaurants/:restaurant_id`. Cela signifie que tu ne peux pas utiliser `simple_form_for` de la même façon qu'avec des ressources non imbriquées. Si tu écris :
 

@@ -112,7 +112,7 @@ Flat.create!(
 
 ### 5 - 做为用户，我可以添加一个公寓
 
-一定要记得，我们需要两个路由来创建一个公寓。一个路由是用来显示添加新公寓的表单，另外一个路由是用来处理提交表单时产生的`POST` 请求。尝试在视图里直接使用`form_for`帮助方法，而且要让表单好看一些。
+一定要记得，我们需要两个路由来创建一个公寓。一个路由是用来显示添加新公寓的表单，另外一个路由是用来处理提交表单时产生的`POST` 请求。尝试在视图里直接使用`form_with`帮助方法，而且要让表单好看一些。
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png)
 

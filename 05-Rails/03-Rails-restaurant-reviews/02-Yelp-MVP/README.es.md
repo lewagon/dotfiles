@@ -188,7 +188,7 @@ Esto genera el siguiente HTML:
 
 ##### [simple_form_for](https://github.com/heartcombo/simple_form)
 
-Dado que instalamos Simple Form, de ahora en adelante vamos a utilizar el helper `simple_form_for` en lugar de `form_for`.
+Dado que instalamos Simple Form, de ahora en adelante vamos a utilizar el helper `simple_form_for` en lugar de `form_with`.
 
 Las URLs de tus reviews ahora están anidadas en `/restaurants/:restaurant_id`. Esto significa que no puedes usar `simple_form_for` de la misma manera que lo hiciste con elementos no anidados (non-nested resources). Si escribes:
 
@@ -206,7 +206,7 @@ Generará este HTML:
 </form>
 ```
 
-Eso no es lo que queremos porque **no tenemos una ruta para `POST "reviews"`**. En cambio, tendrás que usar la sintaxis de recursos anidados para el `form_for`:
+Eso no es lo que queremos porque **no tenemos una ruta para `POST "reviews"`**. En cambio, tendrás que usar la sintaxis de recursos anidados para el `form_with`:
 
 ```erb
 <%= simple_form_for [@restaurant, @review] do |f| %>

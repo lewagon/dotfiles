@@ -18,7 +18,7 @@ At last, Rails!
 
 ### `04 Rails前端`
 
-了解实现Bootstrap SASS和前端库的最佳设置，并使用Simple Form Bootstrap设置将`form_for`切换到`simple_form_for`。
+了解实现Bootstrap SASS和前端库的最佳设置，并使用Simple Form Bootstrap设置将`form_with`切换到`simple_form_for`。
 
 了解asset pipeline和webpacker。
 

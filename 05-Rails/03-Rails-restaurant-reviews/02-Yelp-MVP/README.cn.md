@@ -186,7 +186,7 @@ POST "restaurants/38/reviews"
 
 ##### [simple_form_for](https://github.com/heartcombo/simple_form)
 
-因为我们安装了Simple Form， 我们将会从现在开始使用`simple_form_for`而不是`form_for`。
+因为我们安装了Simple Form， 我们将会从现在开始使用`simple_form_for`而不是`form_with`。
 
 你的reviews链接是嵌套在`/restaurants/:restaurant_id`里面的。这意味着你不能像非嵌套资源那样使用`simple_form_for`。 如果你写了这样的代码:
 
@@ -204,7 +204,7 @@ POST "restaurants/38/reviews"
 </form>
 ```
 
-这不是我们想要的结果，因为**我们没有一个路由是`POST "reviews"`**。我们必须要使用符合嵌套资源语法规则的`form_for`：
+这不是我们想要的结果，因为**我们没有一个路由是`POST "reviews"`**。我们必须要使用符合嵌套资源语法规则的`form_with`：
 
 ```erb
 <%= simple_form_for [@restaurant, @review] do |f| %>
