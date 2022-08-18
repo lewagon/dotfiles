@@ -1,7 +1,7 @@
 ## 背景和目标
 
 我们已经有了一些经验，也建立了一些基本的组件，现在来看看如何使用它们，并将它们组合成一个真正的着陆页（Landing page）! 任何网站都必须有一个**漂亮的着陆页（Landing Page）**。因为那是是访客看到的第一个页面，需要足够好，才能将他们转化为客户💰。
-在这个挑战中，你将重现一个经典的着陆页设计，比如[这个](https://arthur-littm.github.io/startup-landing/)!
+在这个挑战中，你将重现一个经典的着陆页设计，比如[这个](https://lewagon.github.io/landing-page-challenge)!
 
 你的着陆页**至少**应该包括以下内容：
 

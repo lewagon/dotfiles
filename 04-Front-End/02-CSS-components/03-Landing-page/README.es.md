@@ -1,7 +1,7 @@
 ## Contexto y Objetivos
 
 Ya que hemos ganado experiencia en la creación de componentes básicos, ¡veamos cómo podemos usarlos y combinarlos para crear una página de inicio (landing page)! Toda página web debe tener una **pagina de inicio hermosa**. Es importante porque es la primera página que los visitantes ven y debe ser lo suficientemente buena para convertirlos en clientes 💰.
-En este desafío vas a reproducir una página de inicio de diseño clásico  ¡[como esta](https://arthur-littm.github.io/startup-landing/)!
+En este desafío vas a reproducir una página de inicio de diseño clásico  ¡[como esta](https://lewagon.github.io/landing-page-challenge)!
 
 Tu página de inicio debe incluir **por lo menos** los siguientes elementos:
 

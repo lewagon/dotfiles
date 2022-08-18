@@ -2,7 +2,7 @@
 
 Maintenant que tu t'es entraîné à créer des composants de base, tu vas apprendre à les utiliser et à les combiner pour construire une vraie page de renvoi (landing page) ! Tout site Web qui se respecte possède une **jolie landing page**. Elle est importante, car c'est la première page que les visiteurs voient ; elle doit donc être suffisamment séduisante pour qu'ils deviennent des clients 💰.
 
-Dans ce challenge, tu vas reproduire un design de landing page classique comme [celle-ci](https://arthur-littm.github.io/startup-landing/) !
+Dans ce challenge, tu vas reproduire un design de landing page classique comme [celle-ci](https://lewagon.github.io/landing-page-challenge) !
 
 Ta landing page doit contenir **au moins** :
 - une section **Hero / Banner** présentant ton produit avec un appel à l'action (CTA)
