@@ -62,10 +62,11 @@ Avant de commencer à coder, n'oublie pas de configurer ton application Rails po
 yarn add bootstrap @popperjs/core
 ```
 
-Ajoute les node_modules aux assets :
+Pour les node_modules aux assets, on va ajouter cette ligne dans `config/initializers/assets.rb`:
 
 ```ruby
-# config/initializers/asset.rb
+# config/initializers/assets.rb
+# [...]
 Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
@@ -83,12 +84,6 @@ gem "sassc-rails" # Uncomment this line
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
-```
-
-Ajoute cette ligne dans `config/initializers/assets.rb`
-
-```rb
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
 Puis on va télécharger les feuilles de style du Wagon :

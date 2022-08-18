@@ -4,8 +4,7 @@
 
 ## Creación de la app Rails app
 
-a deberías tener [yarn](https://yarnpkg.com) instalado.
-Compruébalo con:
+a deberías tener [yarn](https://yarnpkg.com) instalado. Compruébalo con:
 
 ```bash
 yarn -v
@@ -63,10 +62,11 @@ Antes de comenzar a escribir tu código, no olvides configurar tu app Rails para
 yarn add bootstrap @popperjs/core
 ```
 
-Debemos agregar los node modules al assets path:
+Para agregar los node modules al assets path, Agrega esta línea en `config/initializers/assets.rb`:
 
 ```ruby
-# config/initializers/asset.rb
+# config/initializers/assets.rb
+# [...]
 Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
@@ -74,6 +74,7 @@ Y agrega las gemas que vamos a necesitar:
 
 ```ruby
 # Gemfile
+[...]
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
@@ -83,12 +84,6 @@ gem "sassc-rails" # Uncomment this line
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
-```
-
-Agrega esta línea en `config/initializers/assets.rb`
-
-```rb
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
 Después descarga los stylesheets de Le Wagon:

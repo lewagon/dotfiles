@@ -62,10 +62,11 @@ Before starting to code, don't forget to setup your Rails app for Front-end, lik
 yarn add bootstrap @popperjs/core
 ```
 
-We need to add the node modules to the assets path:
+To add the node modules to the assets path, add this line to `config/initializers/assets.rb`:
 
 ```ruby
-# config/initializers/asset.rb
+# config/initializers/assets.rb
+# [...]
 Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
@@ -83,12 +84,6 @@ gem "sassc-rails" # Uncomment this line
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
-```
-
-Add this line to `config/initializers/assets.rb`
-
-```rb
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
 Then let's download the Le Wagon's stylesheets:

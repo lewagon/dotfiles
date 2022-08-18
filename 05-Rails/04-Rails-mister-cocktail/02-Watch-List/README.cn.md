@@ -64,8 +64,9 @@ yarn add bootstrap @popperjs/core
 
 我们需要添加node modules到我们的assets路径：
 
-``ruby
-# config/initializers/asset.rb
+```ruby
+# config/initializers/assets.rb
+# [...]
 Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
@@ -73,6 +74,7 @@ Rails.application.config.assets.paths << Rails.root.join("node_modules")
 
 ```ruby
 # Gemfile
+# [...]
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
@@ -82,12 +84,6 @@ gem "sassc-rails" # Uncomment this line
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
-```
-
-在`config/initializers/assets.rb`里添加下面这一行：
-
-```rb
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
 ```
 
 然后下载Le Wagon的样式表:
