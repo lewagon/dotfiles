@@ -50,3 +50,7 @@ Comment va-t-on ajouter une contrepartie au jeu ? Admettons que tu aies
 perds 10 € si ton cheval ne gagne pas la course. Que dois-tu changer à
 ton programme de courses de chevaux ? Assure-toi que l’utilisateur
 ne peut pas jouer s’il n’a pas suffisamment d’argent.
+
+## Flashcards
+
+Pour vous aider à maîtriser les objectifs clés de cette journée reboot, vous pouvez refaire les 2 jeux de flashcards suivants : **Flow, Conditions, Arrays** ainsi que ceux sur **Iterators & Blocks**.
