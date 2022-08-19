@@ -1,6 +1,6 @@
 ## Intro
 
-To help the students master the keys objectives of this reboot day you can encourage them to redo the following deck of flashcards: **Hash & Symbols**.
+To help you master the keys objectives of the reboot you must redo the following deck of flashcards at the end of the session: **Hash & Symbols**.
 
 1. Before the lecture, **clone our [demo boilerplate](https://github.com/lewagon/parsing-demo)**
 1. First part of the course describes data files (CSV / XML / JSON).
