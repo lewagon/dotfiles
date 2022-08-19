@@ -1,12 +1,12 @@
 DISHES_CALORIES = {
   "Hamburger" => 250,
   "Cheese Burger" => 300,
-  "Big Mac" => 540,
-  "McChicken" => 350,
-  "French Fries" => 230,
+  "Veggie Burger" => 540,
+  "Vegan Burger" => 350,
+  "Sweet Potatoes" => 230,
   "Salad" => 15,
-  "Coca Cola" => 150,
-  "Sprite" => 150
+  "Iced Tea" => 70,
+  "Lemonade" => 90
 }
 
 def poor_calories_counter(burger, side, beverage)
