@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-To help you master the keys objectives of this reboot day you can redo the 2 following decks of flashcards: **Flow, Conditions, Arrays** as well as the ones on **Iterators & Blocks**.
+To help you master the keys objectives of the reboot you must redo the 2 following decks of flashcards at the end of the session: **Flow, Conditions, Arrays** and **Iterators & Blocks**.
 
 We will build a simple calculator capable of handling the 4 basic operations (`+`, `-` , `*`, `/`). The program will ask the user for two numbers and one of the four operators in order to be able to perform a simple calculation and display the result to the user.
 
