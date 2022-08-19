@@ -11,16 +11,16 @@ Ahora digamos que quieres mejorar tu contador de calorías para que acepte una l
   </thead>
   <tbody>
     <tr>
-      <td>Happy Meal</td>
-      <td>Cheese Burger, French Fries, Coca Cola</td>
+      <td>Cheesy Combo</td>
+      <td>Cheese Burger, Sweet Potatoes, Lemonade</td>
     </tr>
     <tr>
-      <td>Best Of Big Mac</td>
-      <td>Big Mac, French Fries, Coca Cola</td>
+      <td>Veggie Combo</td>
+      <td>Veggie Burger, Sweet Potatoes, Iced Tea</td>
     </tr>
     <tr>
-      <td>Best Of McChicken</td>
-      <td>McChicken, Salad, Sprite</td>
+      <td>Vegan Combo</td>
+      <td>Vegan Burger, Salad, Lemonade</td>
     </tr>
   </tbody>
 </table>
@@ -32,7 +32,7 @@ Tal vez quieras guardar estas comidas en otra constante. Nota: no intentes hacer
 Creemos un `#calories_counter` completo que nos permitirá calcular las calorías al correr siguiente código:
 
 ```ruby
-orders = ["French Fries", "Happy Meal", "Sprite", "Best Of McChicken"]
+orders = ["Sweet Potatoes", "Cheesy Combo", "Lemonade", "Vegan Combo"]
 puts calories_counter(orders)
 ```
 
