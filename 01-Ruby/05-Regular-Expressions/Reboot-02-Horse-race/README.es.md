@@ -29,3 +29,7 @@ Construyamos el modelo de la carrera. El/la usuario/a puede apostar (escoger) un
 ## Paso 2 - ¡Hazlo correr en bucle (loop)!
 
 ¿Qué te parece si balanceamos el juego? Digamos que llegas a la carrera con 100€, ganas 50€ si haces la apuesta correcta y pierdes 10€ si tu caballo no gana. ¿Qué necesitas cambiar en tu programa de carrera? Asegurémonos que el usuario no pueda jugar si no tiene suficiente dinero.
+
+## Flashcards
+
+Para ayudarte a dominar los objetivos clave de este día de reboot puedes rehacer los 2 mazos de flashcards siguientes: **Flujo, Condiciones, Matrices** así como las de **Iteradores y Bloques**.
