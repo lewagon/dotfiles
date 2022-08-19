@@ -6,4 +6,4 @@ Antes de comenzar a trabajar en nuestra aplicación del recetario (cookbook), de
 
 ### Modelo
 
-Siempre debes comenzar con tu modelo. Los datos son lo más importante en tu aplicación y los modelos te permiten manipular cualquier datos que tengas. Entonces crea un nuevo archivo `recipe.rb` (en la carpeta `lib`) para definir la clase `Recipe`. Debe tener dos variables de instancia: `@name` y `@description`. Deberíamos poder obtener el `@name` y la `@description` de una instancia de Receta llamando a los métodos `name` y `description`.
+Siempre debes comenzar con tu modelo. Los datos son lo más importante en tu aplicación y los modelos te permiten manipular cualquier datos que tengas. Entonces crea un nuevo archivo `recipe.rb` (en la carpeta `lib`) para definir la clase `Recipe`. Debe tener dos variables de instancia: `@name` y `@description`. Deberíamos poder obtener el `@name` y la `@description` de una instancia de `Recipe` llamando a los métodos `name` y `description`.
