@@ -145,3 +145,6 @@ ruby interface.rb
 - Que doit-on changer dans notre code avec cette nouvelle
     modélisation ?
 
+## Flashcards
+
+Pour vous aider à maîtriser les objectifs clés de cette journée reboot, vous pouvez refaire les 2 jeux de flashcards suivants : **Flow, Conditions, Arrays** ainsi que ceux sur **Iterators & Blocks**.

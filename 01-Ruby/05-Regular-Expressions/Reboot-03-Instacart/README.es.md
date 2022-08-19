@@ -126,3 +126,8 @@ ruby interface.rb
 
 - ¿Cómo modificamos la tienda (`store`) y el carrito (`cart`) para considerar las cantidades?
 - ¿Qué cambios debemos hacer en nuestro código con este modelo nuevo?
+
+
+## Flashcards
+
+Para ayudarte a dominar los objetivos clave de este día de reboot puedes rehacer los 2 mazos de flashcards siguientes: **Flujo, Condiciones, Matrices** así como las de **Iteradores y Bloques**.

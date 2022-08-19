@@ -197,3 +197,8 @@ end
 
 - Trouve le meilleur moment pour charger les cadeaux.
 - Quand dois-tu enregistrer les cadeaux ?
+
+
+## Flashcards
+
+Pour vous aider à maîtriser les objectifs clés de cette journée reboot, vous pouvez refaire le jeu de flashcards suivant : **Hash & Symboles**.

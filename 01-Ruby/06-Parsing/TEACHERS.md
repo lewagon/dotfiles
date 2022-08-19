@@ -24,3 +24,7 @@
 1. How can we get data from the web? well, **2 options**
 1. Using **JSON API**: make a demo using **Chuck Norris API** (like in the slides) or another one of your choice.
 1. **Scraping the HTML**: make a demo using **Epicurious** (like in the slides) or another website with a decent markup.
+
+## Flashcards
+
+To help the students master the keys objectives of this reboot day you can encourage them to redo the following deck of flashcards: **Hash & Symbols**.

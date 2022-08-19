@@ -181,3 +181,8 @@ end
 
 - Find the best moment to load the gifts.
 - When do you need to save the gifts?
+
+
+## Flashcards
+
+To help you master the keys objectives of this reboot day you can redo the following deck of flashcards: **Hash & Symbols**.

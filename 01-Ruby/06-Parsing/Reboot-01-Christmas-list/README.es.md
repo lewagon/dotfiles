@@ -179,3 +179,7 @@ end
 
 - Encuentra el mejor momento para guardar los regalos.
 - ¿Cuándo necesitas guardarlos?
+
+## Flashcards
+
+Para ayudarte a dominar los objetivos clave de este día de reboot puedes rehacer el siguiente mazo de flashcards: **Hash & Symbols**.

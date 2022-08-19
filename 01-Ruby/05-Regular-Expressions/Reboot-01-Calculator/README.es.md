@@ -99,3 +99,7 @@ require_relative "calculator"
 
 # [...]
 ```
+
+## Flashcards
+
+Para ayudarte a dominar los objetivos clave de este día de reboot puedes rehacer los 2 mazos de flashcards siguientes: **Flujo, Condiciones, Matrices** así como las de **Iteradores y Bloques**.

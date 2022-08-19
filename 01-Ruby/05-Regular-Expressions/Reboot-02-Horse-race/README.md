@@ -33,3 +33,7 @@ Let's model a horse race. The user can bet on (choose) a horse, the horses run t
 ## Step 2 - Make it loop!
 
 What about adding a balance to the game? Let's say you arrive to the horse race with 100€, win 50€ if you place a correct bet and lose 10€ if your horse does not win. What do you need to change to your horse race program? Let's make sure the user can't play if she/he does not have enough money.
+
+## Flashcards
+
+To help you master the keys objectives of this reboot day you can redo the 2 following decks of flashcards: **Flow, Conditions, Arrays** as well as the ones on **Iterators & Blocks**.

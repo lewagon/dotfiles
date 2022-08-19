@@ -103,3 +103,7 @@ require_relative "calculator"
 
 # [...]
 ```
+
+## Flashcards
+
+Pour vous aider à maîtriser les objectifs clés de cette journée reboot, vous pouvez refaire les 2 jeux de flashcards suivants : **Flow, Conditions, Arrays** ainsi que ceux sur **Iterators & Blocks**.
