@@ -1,7 +1,5 @@
 ## Intro
 
-To help the students master the keys objectives of this reboot day you can encourage them to redo the following deck of flashcards: **Hash & Symbols**.
-
 1. Before the lecture, **clone our [demo boilerplate](https://github.com/lewagon/parsing-demo)**
 1. First part of the course describes data files (CSV / XML / JSON).
 1. Second part shows how to read/write from CSV and JSON
@@ -26,3 +24,7 @@ To help the students master the keys objectives of this reboot day you can encou
 1. How can we get data from the web? well, **2 options**
 1. Using **JSON API**: make a demo using **Chuck Norris API** (like in the slides) or another one of your choice.
 1. **Scraping the HTML**: make a demo using **Epicurious** (like in the slides) or another website with a decent markup.
+
+## Flashcards
+
+To help the students master the keys objectives of this reboot day you can encourage them to redo the following deck of flashcards: **Hash & Symbols**.

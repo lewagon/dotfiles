@@ -1,7 +1,5 @@
 ## Background and Objectives
 
-To help you master the keys objectives of this reboot day you can redo the 2 following decks of flashcards: **Flow, Conditions, Arrays** as well as the ones on **Iterators & Blocks**.
-
 This is the largest exercise of the day. We will build a simple store interface program, where the user can see which items are available and their respective prices. The user can then select which items they wish to put in their shopping cart and, when they are done, checkout and see their final bill.
 
 ## Guidelines
@@ -132,3 +130,7 @@ ruby interface.rb
 
 - How do we modify the `store` and the `cart` to take the quantity into consideration?
 - What do we need to change in our code with this new modelling?
+
+## Flashcards
+
+To help you master the keys objectives of this reboot day you can redo the 2 following decks of flashcards: **Flow, Conditions, Arrays** as well as the ones on **Iterators & Blocks**.
