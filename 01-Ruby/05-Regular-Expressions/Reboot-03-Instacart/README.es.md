@@ -40,7 +40,7 @@ ruby interface.rb
 > kiwi
 > Which item? (or 'quit' to checkout)
 > pineapple
-> Sorry, we don't have pineapple today..
+> Sorry, we don't have pineapple today.
 > Which item? (or 'quit' to checkout)
 > mango
 > Which item? (or 'quit' to checkout)
@@ -118,7 +118,7 @@ ruby interface.rb
 > kiwi
 > How many?
 > 4
-> Sorry, there are only 3 kiwis left..
+> Sorry, there are only 3 kiwis left.
 > [...]
 ```
 
