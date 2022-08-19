@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-To help you master the keys objectives of this reboot day you can redo the 2 following decks of flashcards: **Flow, Conditions, Arrays** as well as the ones on **Iterators & Blocks**.
+To help you master the keys objectives of the reboot you must redo the 2 following decks of flashcards at the end of the session: **Flow, Conditions, Arrays** and **Iterators & Blocks**.
 
 This is the largest exercise of the day. We will build a simple store interface program, where the user can see which items are available and their respective prices. The user can then select which items they wish to put in their shopping cart and, when they are done, checkout and see their final bill.
 
