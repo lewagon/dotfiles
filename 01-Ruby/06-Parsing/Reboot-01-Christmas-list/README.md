@@ -1,6 +1,6 @@
 ## Guidelines
 
-To help you master the keys objectives of this reboot day you can redo the following deck of flashcards: **Hash & Symbols**.
+To help you master the keys objectives of the reboot you must redo the following deck of flashcards at the end of the session: **Hash & Symbols**.
 
 Winter is coming ⛄⛄⛄. We want to build a program to handle our gift list, mark items as bought and eventually find some inspiration from an external website like Etsy. This challenge should take you all day. 🎁
 
