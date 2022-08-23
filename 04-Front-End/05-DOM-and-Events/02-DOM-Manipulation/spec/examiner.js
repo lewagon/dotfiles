@@ -44,7 +44,7 @@ function check(email, teamCount, sum) {
   assertEqual(teamCount, 14);
   assertEqual(document.querySelectorAll('tbody > tr').length, 15);
   assertEqual(sum, 859);
-  assertEqual(document.querySelector('th').style.backgroundColor, 'rgb(221, 244, 255)');
+  assertEqual(Array.from(document.querySelectorAll('th')).map(element => element.style.backgroundColor).toString(), ["rgb(221, 244, 255)", "rgb(221, 244, 255)", "rgb(221, 244, 255)"].toString());
   assertEqual(document.getElementsByTagName('label').length, 0);
 }
 
