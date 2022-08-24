@@ -27,6 +27,8 @@ Cette commande copie le fichier `recipe.rb` de l’exercice précédent dans le 
 
 Tu as maintenant besoin d’une structure pour les recettes de l’utilisateur. On n’a pas encore de vraie base de données, alors on va utiliser une classe se comportant comme telle (comme vu pendant le cours). Quand un programme Ruby se ferme, on perd toutes les données stockées dans des variables. Si on veut récupérer ces données la prochaine fois qu’on exécute le programme, on doit les rendre persistantes et les stocker sur le disque dur. Pour cela, on va utiliser un fichier CSV ! Le fichier est vide pour le moment ; tu ajouteras tes propres recettes plus tard via l’application.
 
+Si tu veux te rappeler la syntaxe pour parser et stocker de la donnée dans un fichier CSV, jette un œil aux [slides du cours de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6)
+
 Dans le cadre de cet exercice, le repository stocke les recettes ajoutées par l’utilisateur. En d’autres termes, il **est** le **livre de recettes**. Nomme la classe `Cookbook` pour écrire du code explicite et qui a du sens, mais garde à l’esprit qu’il s’agit du **repository** du diagramme du cours !
 
 Implémente la classe `Cookbook` avec 4 méthodes :
