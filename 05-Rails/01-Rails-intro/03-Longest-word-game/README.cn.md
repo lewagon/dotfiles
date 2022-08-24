@@ -86,7 +86,7 @@ score    POST /score(.:format)  games#score
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/longest-word-game/raise.png)
 
-另外一个更加方便的方法是添加`pry-byebug`gem(你可以在`rails new`的时候不使用默认的`byebug`)，然后在控制器代码里添加`binding.pry`。这样你可以在终端里暂停Rails请求，检查，并输入`next`来执行下一行代码，或者输入`continue`来完成视图渲染。
+另一个方法是在代码中添加下列三个关键词中的一个：`binding.break`、`binding.b`、`debugger`。当你提交表单时，在终端的`rails s`进程中，一个调试的会话就会出现，它会正好停在你加关键词的地方。你可以输入`next`来执行下一行代码，或者输入`continue`来完成视图渲染。
 
 ```bash
 Started POST "/score" for 127.0.0.1 at 2022-08-16 14:42:49 +0200
