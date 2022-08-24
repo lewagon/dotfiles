@@ -2,6 +2,15 @@
 
 On va maintenant créer une application à 3 modèles ! Et tu l'auras deviné, on va introduire une relation `N:N`. Qu'est-ce qu'on va créer ? Une application avec des listes dans lesquelles tu pourras enregistrer tes films préférés.
 
+Voici les **actions utilisateur** que nous voulons implémenter dans notre application :
+- En tant qu'utilisateur, je peux voir toutes mes listes de films.
+- En tant qu'utilisateur, je peux créer une liste de films.
+- En tant qu'utilisateur, je peux voir les détails d'une liste de films.
+- En tant qu'utilisateur, je peux marquer (`bookmark`) un film dans une liste de films.
+- En tant qu'utilisateur, je peux détruire un `bookmark`.
+
+**Attention** les films seront créés dans la base de données avec une seed, il n'est donc pas nécessaire d'implémenter aucune action utilisateur autour du modèle de `movie`.
+
 ## Générer l'application Rails
 
 Tu devrais déjà avoir [yarn](https://yarnpkg.com) installé sur ton ordinateur. Tu peux le vérifier en tapant :

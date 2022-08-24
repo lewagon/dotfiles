@@ -2,6 +2,15 @@
 
 ¡Es hora de hacer una app de tres modelos! Y como lo sospechabas, vamos a introducir una relación de muchos a muchos (`n:n`). Bueno, ¿qué implica esto? Debes crear una Watch List para almacenar tus películas favoritas.
 
+Aquí están las **acciones de usuario** que queremos implementar en nuestra aplicación:
+- Como usuario, puedo ver todas mis listas de películas
+- Como usuario, puedo crear una lista de películas
+- Como usuario, puedo ver los detalles de una lista de películas
+- Como usuario, puedo marcar (`bookmark`) una película dentro de una lista de películas
+- Como usuario, puedo destruir un `bookmark`
+
+**Advertencia** las películas serán sembradas en la base de datos, así que no hay necesidad implementar ninguna acción del usuario en torno al modelo `movie`.
+
 ## Creación de la app Rails app
 
 a deberías tener [yarn](https://yarnpkg.com) instalado. Compruébalo con:
