@@ -130,3 +130,7 @@ ruby interface.rb
 
 - 我们如何修改`store`和`cart`以将数量纳入考虑范围？
 - 在这个新的建模里，我们需要如何改变我们的代码？
+
+## 记忆卡片（Flashcards）
+
+ 你可以重新做这两组记忆卡片，来帮助你巩固今天的知识：**Flow, Conditions, Arrays**和**Iterators & Blocks**。

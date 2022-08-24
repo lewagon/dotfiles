@@ -103,3 +103,7 @@ require_relative "calculator"
 
 # [...]
 ```
+
+## 记忆卡片（Flashcards）
+
+ 你可以重新做这两组记忆卡片，来帮助你巩固这今天的知识：**Flow, Conditions, Arrays**和**Iterators & Blocks**。
