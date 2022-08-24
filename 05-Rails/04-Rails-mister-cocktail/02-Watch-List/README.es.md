@@ -9,7 +9,7 @@ Aquí están las **acciones de usuario** que queremos implementar en nuestra apl
 - Como usuario, puedo marcar (`bookmark`) una película dentro de una lista de películas
 - Como usuario, puedo destruir un `bookmark`
 
-**Advertencia** las películas serán sembradas en la base de datos, así que no hay necesidad implementar ninguna acción del usuario en torno al modelo `movie`.
+**Advertencia** las películas se crearán en la base de datos con una seed, así que no hay necesidad implementar ninguna acción del usuario en torno al modelo `movie`.
 
 ## Creación de la app Rails app
 
