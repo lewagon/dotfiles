@@ -18,21 +18,25 @@ describe "The schema in jukebox.xml" do
   end
 
   describe "the `albums` table" do
-    it "should have an `artist_id` column, foreign key to `artists` table" do
+    it "should have one foreign key only: `artist_id` references to the `artists` table" do
+      expect(foreign_key_count("albums")).to eq 1
       expect(foreign_key_exists?("artist_id", "albums", "artists")).to eq true
     end
   end
 
   describe "the `tracks` table" do
-    it "should have an `album_id` column, foreign key to `albums` table" do
+    it "should have three foreign keys only: `album_id` references to the `albums` table" do
+      expect(foreign_key_count("tracks")).to eq 3
       expect(foreign_key_exists?("album_id", "tracks", "albums")).to eq true
     end
 
-    it "should have a `genre_id` column, foreign key to `genres` table" do
+    it "should have three foreign keys only: `genre_id` references to the `genres` table" do
+      expect(foreign_key_count("tracks")).to eq 3
       expect(foreign_key_exists?("genre_id", "tracks", "genres")).to eq true
     end
 
-    it "should have a `media_type_id` column, foreign key to `media_types` table" do
+    it "should have one three foreign keys only: `media_type_id` references to the `media_types` table" do
+      expect(foreign_key_count("tracks")).to eq 3
       expect(foreign_key_exists?("media_type_id", "tracks", "media_types")).to eq true
     end
   end
@@ -41,13 +45,18 @@ describe "The schema in jukebox.xml" do
     !table(table_name).nil?
   end
 
+  def foreign_key_count(table_name)
+    table = table(table_name)
+    rows = table.elements.each("row") { |row| row }
+    foreign_keys = rows.select { |row| row.elements["relation"] }
+    foreign_keys.count
+  end
+
   def foreign_key_exists?(key_name, table_name, foreign_table_name)
     table = table(table_name)
     rows = table.elements.each("row") { |row| row }
-    related_rows = rows.select { |row| row.attributes["name"] == key_name && row.elements["relation"] }
-    return false unless related_rows.one?
-
-    related_rows.first.elements["relation"].attributes["table"] == foreign_table_name
+    row = rows.find { |row| row.attributes["name"] == key_name }
+    row.elements["relation"].attributes["table"] == foreign_table_name
   end
 
   def table_names

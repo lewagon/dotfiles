@@ -27,7 +27,8 @@ describe "The schema in survey.xml" do
     it "should have a `id` column" do
       expect(column_exists?("id", "surveys")).to eq true
     end
-    it "should have a `user_id` column, foreign key to `users` table" do
+    it "should have one foreign key only: `user_id` references to the `users` table" do
+      expect(foreign_key_count("surveys")).to eq 1
       expect(foreign_key_exists?("user_id", "surveys", "users")).to eq true
     end
   end
@@ -36,7 +37,8 @@ describe "The schema in survey.xml" do
     it "should have a `id` column" do
       expect(column_exists?("id", "questions")).to eq true
     end
-    it "should have a `survey_id` column, foreign key to `surveys` table" do
+    it "should have one foreign key only: `survey_id` references to the `surveys` table" do
+      expect(foreign_key_count("questions")).to eq 1
       expect(foreign_key_exists?("survey_id", "questions", "surveys")).to eq true
     end
   end
@@ -45,7 +47,8 @@ describe "The schema in survey.xml" do
     it "should have a `id` column" do
       expect(column_exists?("id", "answers")).to eq true
     end
-    it "should have a `question_id` column, foreign key to `questions` table" do
+    it "should have one foreign key only: `question_id` references to the `questions` table" do
+      expect(foreign_key_count("answers")).to eq 1
       expect(foreign_key_exists?("question_id", "answers", "questions")).to eq true
     end
   end
@@ -54,17 +57,26 @@ describe "The schema in survey.xml" do
     it "should have a `id` column" do
       expect(column_exists?("id", "user_answers")).to eq true
     end
-    it "should have a `user_id` column, foreign key to `users` table" do
+    it "should have two foreign keys only: `user_id` references to the `users` table" do
+      expect(foreign_key_count("user_answers")).to eq 2
       expect(foreign_key_exists?("user_id", "user_answers", "users")).to eq true
     end
 
-    it "should have a `answer_id` column, foreign key to `answers` table" do
+    it "should have two foreign keys only: `answer_id` references to the `answers` table" do
+      expect(foreign_key_count("user_answers")).to eq 2
       expect(foreign_key_exists?("answer_id", "user_answers", "answers")).to eq true
     end
   end
 
   def table_exist?(table_name)
     !table(table_name).nil?
+  end
+
+  def foreign_key_count(table_name)
+    table = table(table_name)
+    rows = table.elements.each("row") { |row| row }
+    foreign_keys = rows.select { |row| row.elements["relation"] }
+    foreign_keys.count
   end
 
   def foreign_key_exists?(key_name, table_name, foreign_table_name)
