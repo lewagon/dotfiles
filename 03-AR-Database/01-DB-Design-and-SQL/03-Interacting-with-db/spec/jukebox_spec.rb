@@ -44,8 +44,10 @@ describe "The schema in jukebox.xml" do
   def foreign_key_exists?(key_name, table_name, foreign_table_name)
     table = table(table_name)
     rows = table.elements.each("row") { |row| row }
-    row = rows.find { |row| row.attributes["name"] == key_name }
-    row.elements["relation"].attributes["table"] == foreign_table_name
+    related_rows = rows.select { |row| row.attributes["name"] == key_name && row.elements["relation"] }
+    return false unless related_rows.one?
+
+    related_rows.first.elements["relation"].attributes["table"] == foreign_table_name
   end
 
   def table_names
