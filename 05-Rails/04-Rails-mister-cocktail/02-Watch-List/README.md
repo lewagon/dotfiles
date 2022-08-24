@@ -2,6 +2,15 @@
 
 Now it's time to make a 3-model app! And you guessed it, we'll be introducing a many to many relationship (`N:N`). So what's the deal? Well, it’s time to build yourself a Watch List. You'll be able to create lists in which you will save your favourite movies.
 
+Here are the **user actions** we want to implement in our app:
+- As a user, I can see all my movie lists
+- As a user, I can create a movie list
+- As a user, I can see the details of a movie list
+- As a user, I can bookmark a movie inside a movie list
+- As a user, I can destroy a bookmark
+
+**Warning** the movies will be seeded in the database so no need to implement any user action around the `movie` model.
+
 ## Rails app generation
 
 You should already have [yarn](https://yarnpkg.com) installed. Check it with:
