@@ -25,10 +25,10 @@ end
 
 def concatenate(array)
   # TODO: Concatenate all strings given in the array.
-  #       You should use of Enumerable#reduce
+  #       You should use Enumerable#reduce
 end
 
 def sorted_pairs(array)
   # TODO: Reorganize an array into slices of 2 elements, and sort each slice alphabetically.
-  #       You should use of Enumerable#each_slice
+  #       You should use Enumerable#each_slice
 end
