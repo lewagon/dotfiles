@@ -31,12 +31,12 @@ describe "View", if: cookbook_helper.file_and_class_valid? do
 
   let(:view) { View.new() }
 
-  describe '#display' do
+  describe '#display_list' do
     it 'should implement a method to display recipes' do
       recipes = []
       recipes << RecipeFactory.build('Winter Soup', 'Warm vegetable soup')
       allow(STDOUT).to receive(:puts)
-      view.display(recipes)
+      view.display_list(recipes)
 
       expect(STDOUT).to have_received(:puts).with(/.*(Winter Soup).*/)
     end
