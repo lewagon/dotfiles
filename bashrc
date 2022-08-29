@@ -109,10 +109,10 @@ if ! shopt -oq posix; then
 fi
 
 # enable z script
-. ~/.z
+. ~/.z.sh
 
 # change default theme for bat (cat replacement)
-export BAT_THEME="Coldark-Dark"
+export BAT_THEME="GitHub"
 
 # update PATH so it includes pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -124,9 +124,6 @@ eval "$(pyenv init -)"
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-# launch Starship
-# eval "$(starship init bash)"
 
 # Create a command prompt with useful git information.
 #
