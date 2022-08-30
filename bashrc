@@ -146,11 +146,11 @@ function my_prompt_command {
     local proj_subdir=$(echo $proj_dir | perl -pe 's|.+?/||')
     # TODO: Call 'git status' only once.
     #local untracked_files=$(git ls-files --other --exclude-standard 2> /dev/null  | wc -l)
-    local untracked_files=$(git status . --porcelain 2> /dev/null | grep -E '^ ?\?\? ' 2> /dev/null | wc -l)
-    local added_files=$(git status . --porcelain 2> /dev/null | grep -E '^ ?A ' 2> /dev/null | wc -l)
-    local modified_files=$(git status . --porcelain 2> /dev/null | grep -E '^ ?M ' 2> /dev/null | wc -l)
-    local deleted_files=$(git status . --porcelain 2> /dev/null | grep -E '^ ?D ' 2> /dev/null | wc -l)
-    local renamed_files=$(git status . --porcelain 2> /dev/null | grep -E '^ ?R ' 2> /dev/null | wc -l)
+    local untracked_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?\?\? ' 2> /dev/null)
+    local added_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?A ' 2> /dev/null)
+    local modified_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?M ' 2> /dev/null)
+    local deleted_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?D ' 2> /dev/null)
+    local renamed_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?R ' 2> /dev/null)
 
     # Delimiter to distinguish from other output.
     # PS1="________________________________________________________________________________"
