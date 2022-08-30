@@ -1,6 +1,6 @@
 ## 背景与目标
 
-现在是时候熟悉[可枚举（Enumerable）](http://ruby-doc.org/core/Enumerable.html) 模块的方法了。`Enumerable`模块是由类似数组（Array）和哈希（Hash）这样的集合类的[混入(mixed-in)](http://rubylearning.com/satishtalim/modules_mixins.html)。其中有些方法在执行时需要一个Ruby命令语句块。这个练习的目标不是理解Ruby语句块的语法（你很快就会看到这个部分），而是学习如何使用这些方法。当你对集合执行运算时，会发现它们用起来非常方便。
+现在是时候熟悉[可枚举（Enumerable）](http://ruby-doc.org/core/Enumerable.html) 模块的方法了。`Enumerable`模块是由类似数组（Array）和哈希（Hash）这样的集合类的混入(included)。其中有些方法在执行时需要一个Ruby命令语句块。这个练习的目标不是理解Ruby语句块的语法（你很快就会看到这个部分），而是学习如何使用这些方法。当你对集合执行运算时，会发现它们用起来非常方便。
 
 - **主要学习要点**：当你想对一个集合（例如一个数组）执行运算时，95%的情况下，需要一个迭代器（iterator）来提取你寻找的东西！那就去文档里找一找好用的可枚举方法（`Enumerable#method`）😊
 - 理解每个迭代器(iterator)是如何工作的，它返回什么，它如何将语句块应用于集合中的元素。
