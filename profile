@@ -9,10 +9,10 @@
 #umask 022
 
 # if running bash
-if [ -n "$BASH_VERSION" ]; then
+if [ -n "$BASH_VERSION" -a -n "$PS1" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+    . "$HOME/.bashrc"
     fi
 fi
 
@@ -31,8 +31,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-
-# The next line updates PATH for the Google Cloud SDK.
-source ~/google-cloud-sdk/path.bash.inc
-# The next line enables bash completion for gcloud.
-source ~/google-cloud-sdk/completion.bash.inc

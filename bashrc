@@ -213,10 +213,10 @@ PROMPT_COMMAND=my_prompt_command
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Update PATH for the Google Cloud SDK.
-if [ -f '/home/xavierosee/google-cloud-sdk/path.bash.inc' ]; then . '/home/xavierosee/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/home/xavierosee/.google-cloud-sdk/path.bash.inc' ]; then . '/home/xavierosee/.google-cloud-sdk/path.bash.inc'; fi
 
 # Enable shell command completion for gcloud.
-if [ -f '/home/xavierosee/google-cloud-sdk/completion.bash.inc' ]; then . '/home/xavierosee/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/home/xavierosee/.google-cloud-sdk/completion.bash.inc' ]; then . '/home/xavierosee/.google-cloud-sdk/completion.bash.inc'; fi
 
 # Enable shell command completion for dbt
 [ -f ~/.dbt-completion.bash ] && source ~/.dbt-completion.bash
