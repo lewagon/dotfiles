@@ -39,6 +39,8 @@ set smartindent
 filetype plugin on
 syntax on
 set expandtab
+set tabstop=4
+set shiftwidth=4
 
 " Security Section
 set noswapfile
@@ -48,6 +50,8 @@ set viminfo=
 
 au BufNewFile,BufRead *.py \
   set foldmethod=indent
+
+au BufNewFile,BufRead Jenkinsfile setf groovy
 
 let g:ale_linters = {
       \   'python': ['flake8', 'pylint'],
