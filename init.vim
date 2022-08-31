@@ -29,6 +29,7 @@ Plug 'ervandew/supertab'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'fladson/vim-kitty'
 Plug 'github/copilot.vim'
+Plug 'projekt0n/github-nvim-theme'
 
 call plug#end()
 
@@ -152,3 +153,6 @@ set completefunc=emoji#complete
 
 " Coc & Jedi config
 let g:jedi#use_splits_not_buffers = "bottom"
+
+" Set Github Color Scheme
+colorscheme github_light
