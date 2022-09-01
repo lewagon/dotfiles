@@ -8,10 +8,6 @@ case $- in
       *) return;;
 esac
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
-    exec tmux
-fi
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -94,6 +90,10 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # alias definitions
 if [ -f ~/.aliases ]; then
     . ~/.aliases
+fi
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
+   ta 
 fi
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -200,7 +200,7 @@ function my_prompt_command {
     else
         branch_dirname=${branch_dirname}/
     fi
-    PS1="${PS1} ${branch_dirname}\[\e[1;33m\]$(basename ${git_branch})\[\e[0m\]"
+    PS1="${PS1} ${branch_dirname}\[\e[0;35m\]$(basename ${git_branch})\[\e[0m\]"
 
 
   fi

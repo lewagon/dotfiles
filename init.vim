@@ -30,6 +30,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'fladson/vim-kitty'
 Plug 'github/copilot.vim'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
@@ -156,3 +159,29 @@ let g:jedi#use_splits_not_buffers = "bottom"
 
 " Set Github Color Scheme
 colorscheme github_light
+
+" Automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" Zoom a vim pane, <C-w>= to rebalance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+" Tune VTR to not mess up Python syntaxic whitespace
+let g:VtrStripLeadingWhitespace = 0
+let g:VtrClearEmptyLines = 0
+let g:VtrAppendNewline = 1
+
+" Update all buffers before navigating from Vim to tmux pane
+let g:tmux_navigator_save_on_switch = 1
+
+" Open a script runner attached to the current vim session
+nnoremap <leader>osr :VtrOpenRunner {'orientation': 'h', 'percentage': 50}<cr>
+nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
+nnoremap <leader>ipy :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'ipython'}<cr>
+
+
+" other VTR shortcuts
+nnoremap <leader>sl :VtrSendLinesToRunner<cr>
+nnoremap <leader>sd :VtrSendCtrlD<cr>
+nnoremap <leader>sc :VtrSendCommandToRunner<cr>
