@@ -27,7 +27,7 @@ This is copying the `recipe.rb` file from the previous exercise, into the `lib` 
 
 We now need a structure to store our user's recipes. We don't have a proper database yet, so we will use a class that acts like one (as we saw in the lecture). When a Ruby program exits, we lose all the data that we stored in variables. If we want to retrieve the data next time we run the program, we need to persist them, on the hard drive. We'll use a CSV file for that! The file is empty at this time of the challenge, you'll add your own recipes later through the app.
 
-If you want to remember the syntax about how to parse and store data in a CSV file, take a look at [the parsing lecture slides](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6)
+If you want to remember the syntax about how to parse and store data in a CSV file, take a look at [the parsing lecture slides](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/2/3)
 
 In the context of this challenge, the repository stores the recipes added by the user. In other words, it **is** the **cookbook**. Let's name the class `Cookbook` to write explicit and meaningful code, but keep in mind that it's the **repository** from the lecture's diagram!
 
