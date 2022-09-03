@@ -37,7 +37,7 @@ describe Post do
   end
 
   it "should not allow the external world to change the number of votes directly" do
-    expect { Post.new({}).vote += 1 }.to raise_error NoMethodError
+    expect { Post.new({}).votes += 1 }.to raise_error NoMethodError
   end
 
   it "should allow the external world to change the title" do
