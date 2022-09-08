@@ -2,7 +2,7 @@
 
 You are now going to code a Cookbook application that manages recipes.
 
-The idea is quite simple: you love cooking, but you need to remember all the recipes you like. This is your cookbook! It'll keep a list of your recipes, allowing you to `list` them, `add` new recipes and `delete` others.
+The idea is quite simple: you love cooking, but you need to remember all the recipes you like. This is your cookbook! It'll keep a list of your recipes, allowing you to `list` them, `create` new recipes and `delete` others.
 
 You will build this app using the MVC **pattern**, also used in Rails:
 - Model: what is the basic object you want to manipulate?
@@ -34,7 +34,7 @@ In the context of this challenge, the repository stores the recipes added by the
 Implement the `Cookbook` class with 4 methods:
 - `initialize(csv_file_path)` which loads existing `Recipe` from the CSV
 - `all` which returns all the recipes
-- `add_recipe(recipe)` which adds a new recipe to the cookbook
+- `create_recipe(recipe)` which creates and adds a new recipe to the cookbook
 - `remove_recipe(recipe_index)` which removes a recipe from the cookbook.
 
 ### Controller
@@ -42,7 +42,7 @@ Implement the `Cookbook` class with 4 methods:
 The controller will gather data from the cookbook to hand them over to the view. It will also ask the view for information to create new recipes. Here are the methods to implement:
 - `initialize(cookbook)` takes an instance of the `Cookbook` as an argument.
 - `list` all the recipes
-- `create` a new recipe
+- `add` a new recipe
 - `destroy` an existing recipe
 
 ### View

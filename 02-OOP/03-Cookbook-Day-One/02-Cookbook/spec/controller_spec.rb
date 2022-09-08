@@ -46,9 +46,9 @@ describe "Controller", if: cookbook_helper.file_and_class_valid? do
     end
   end
 
-  describe '#create' do
-    it 'should implement a method to create a cookbook recipe' do
-      expect(controller).to respond_to :create
+  describe '#add' do
+    it 'should implement a method to add a cookbook recipe' do
+      expect(controller).to respond_to :add
     end
   end
 
