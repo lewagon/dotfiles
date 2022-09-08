@@ -75,10 +75,10 @@ describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
       end
     end
 
-    describe "#add_recipe" do
-      it 'should add a recipe to the cookbook' do
+    describe "#create_recipe" do
+      it 'should create and add a recipe to the cookbook' do
         size_before = @cookbook.all.length
-        @cookbook.add_recipe(RecipeFactory.build("Risotto", "Good stuff"))
+        @cookbook.create_recipe(RecipeFactory.build("Risotto", "Good stuff"))
         expect(@cookbook.all.length).to eq (size_before + 1)
       end
     end
@@ -119,10 +119,10 @@ describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
       end
     end
 
-    describe '#add_recipe' do
+    describe '#create_recipe' do
       it 'should store the new recipe in CSV' do
         size_before = @cookbook.all.length
-        @cookbook.add_recipe(RecipeFactory.build("Risotto","Good stuff"))
+        @cookbook.create_recipe(RecipeFactory.build("Risotto","Good stuff"))
 
         # Reload from CSV
         new_cookbook = Cookbook.new(csv_path)
