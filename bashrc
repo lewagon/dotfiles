@@ -112,9 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# enable z script
-. ~/.z.sh
-
 # change default theme for bat (cat replacement)
 export BAT_THEME="GitHub"
 
