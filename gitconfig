@@ -12,7 +12,8 @@
   sweep = !git branch --merged main | grep -v 'main$' | xargs git branch -d && git remote prune origin
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log
-  lg = log --graph --all --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)%an%Creset %C(yellow)%d%Creset'
+  lg = log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
 
   # Serve local repo. http://coderwall.com/p/eybtga
   # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
@@ -34,13 +35,13 @@
 
 [color "branch"]
   current = green
-  remote = yellow
+  remote = magenta
 
 [core]
   pager = delta
-  editor = vim
-  visual = vim
-	excludesFile = ~/.gitignore
+  editor = nvim
+  visual = nvim
+  excludesFile = ~/.gitignore
 
 [delta]
   navigate = true

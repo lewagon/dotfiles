@@ -37,7 +37,14 @@ Plug 'kien/ctrlp.vim'
 call plug#end()
 
 " Config Section
+
 set number
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
+
 set nocompatible
 set smartindent
 filetype plugin on
@@ -61,6 +68,7 @@ let g:ale_linters = {
       \   'python': ['flake8', 'pylint'],
       \   'ruby': ['standardrb', 'rubocop'],
       \   'javascript': ['eslint'],
+      \   'sql': ['sqlfluff', 'sqlint', 'sqllint'],
       \}
 let g:ale_fixers = {
       \    'python': ['black'],
