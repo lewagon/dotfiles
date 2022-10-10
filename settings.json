@@ -6,6 +6,7 @@
     },
     "editor.bracketPairColorization.enabled": true,
     "editor.detectIndentation": false,
+    "editor.fontFamily": "Consolas, Menlo, Monaco",
     "editor.fontSize": 14,
     "editor.guides.bracketPairs": true,
     "editor.minimap.enabled": false,
@@ -80,4 +81,6 @@
     "workbench.settings.useSplitJSON": true,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.panel.defaultLocation": "right",
+    "workbench.colorTheme": "Sublime Monokai",
+    "kite.showWelcomeNotificationOnStartup": false,
 }
