@@ -1,3 +1,5 @@
+:warning: **Disclaimer!** This challenge _does not_ work on Windows, please skip it if you use this OS (or pair with someone on macOS / Linux).
+
 ## Background & Objectives
 
 Time to make a game! For this, we will use a gem called `gosu`.
@@ -23,27 +25,6 @@ sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
   libsndfile-dev libmpg123-dev
 gem install gosu
 ```
-
-### Windows
-
-Copy the following commands in your Ubuntu terminal one line at a time:
-```bash
-sudo apt-get update
-sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
-  libpango1.0-dev libgl1-mesa-dev libfreeimage-dev libopenal-dev\
-  libsndfile-dev libmpg123-dev
-gem install gosu
-echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0" >> ~/.zshrc
-```
-
-Restart your terminal.
-
-Install [Xming](https://sourceforge.net/projects/xming/).
-Start XLaunch, leaving default settings but **add the following optional parameters** `-ac`.
-
-![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
-
-If you get the error `could not initialize SDL` when running your game, you need to add an exception in your Windows Defender to allow Xming public incomming traffic over UDP and TCP protocols. You can follow this [documentation](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule).
 
 ## Snake
 
