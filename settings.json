@@ -1,6 +1,5 @@
 {
-    "[python]":
-    {
+    "[python]": {
         "editor.bracketPairColorization.enabled": false,
         "editor.guides.bracketPairs": false,
         "editor.tabSize": 4
@@ -12,34 +11,31 @@
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderControlCharacters": true,
-    "editor.rulers":
-    [
+    "editor.rulers": [
         80,
         120
     ],
     "editor.showFoldingControls": "always",
     "editor.snippetSuggestions": "top",
     "editor.tabSize": 2,
-    "emmet.includeLanguages":
-    {
+    "emmet.includeLanguages": {
         "erb": "html"
     },
     "emmet.showSuggestionsAsSnippets": true,
     "emmet.triggerExpansionOnTab": true,
     "explorer.confirmDelete": false,
-    "files.exclude":
-    {
-        "**/.DS_Store": true,
-        "**/.egg-info": true,
-        "**/.git": true,
+    "files.exclude": {
+        "__pycache__": true,
+        "_site": true,
         ".asset-cache": true,
         ".bundle": true,
         ".ipynb_checkpoints": true,
         ".pytest_cache": true,
         ".sass-cache": true,
         ".svn": true,
-        "__pycache__": true,
-        "_site": true,
+        "**/.DS_Store": true,
+        "**/.egg-info": true,
+        "**/.git": true,
         "build": true,
         "coverage": true,
         "dist": true,
@@ -52,8 +48,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "files.watcherExclude":
-    {
+    "files.watcherExclude": {
         "**/audits/**": true,
         "**/coverage/**": true,
         "**/log/**": true,
@@ -62,18 +57,27 @@
         "**/vendor/**": true
     },
     "git.enabled": false,
+    "notebook.diff.ignoreMetadata": true,
+    "notebook.lineNumbers": "on",
+    "notebook.markup.fontSize": 13,
     "python.defaultInterpreterPath": "~/.pyenv/shims/python",
     "python.formatting.provider": "yapf",
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": false,
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylintEnabled": false,
     "python.terminal.activateEnvironment": false,
-    "ruby.lint":
-    {
+    "ruby.lint": {
         "rubocop": true
     },
     "telemetry.telemetryLevel": "off",
     "window.restoreWindows": "none",
+    "window.newWindowDimensions": "maximized",
+    "workbench.editor.enablePreview": true,
     "workbench.iconTheme": "vscode-great-icons",
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.panel.defaultLocation": "right",
 }
