@@ -41,9 +41,6 @@ Ruby的正则表达式（Regular Expression），以及`gsub`，`scan`和`split`
 6. 拆分双换行符以计算段落数量
 7. 使用你的计数器计算平均值
 
-### 测试数据
-
-你可以在[这里](http://www.rubyinside.com/book/oliver.txt)得到一些测试txt数据
 
 ### 增加额的功能
 

@@ -43,7 +43,7 @@ Implement a method `analyze` which takes a text (`String`) as an argument (text 
 
 ### Testing data
 
-You can get some testing txt data [here](http://www.rubyinside.com/book/oliver.txt)
+You can get some testing `.txt` data through a [Google Search](https://www.google.com/search?q=The+Philosopher's+Stone.txt)
 
 ### Adding extra features
 
