@@ -34,6 +34,7 @@
 ```ruby
 orders = ["Sweet Potatoes", "Cheesy Combo", "Lemonade", "Vegan Combo"]
 puts calories_counter(orders)
+# => 1395
 ```
 
 ## 关键学习要点
