@@ -34,7 +34,7 @@ In the context of this challenge, the repository stores the recipes added by the
 Implement the `Cookbook` class with 4 methods:
 - `initialize(csv_file_path)` which loads existing `Recipe` from the CSV
 - `all` which returns all the recipes
-- `create(recipe)` which creates and adds a new recipe to the cookbook
+- `create(recipe)` which creates a recipe and adds it to the cookbook
 - `remove_recipe(recipe_index)` which removes a recipe from the cookbook.
 
 ### Controller
