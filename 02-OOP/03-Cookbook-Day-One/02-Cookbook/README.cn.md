@@ -34,7 +34,7 @@ cp ../01-Recipe/lib/recipe.rb lib
 
 - `initialize(csv_file_path)` 从CSV文件加载现有的 `Recipe`
 - `all` 返回所有的食谱
-- `add_recipe(recipe)` 加了一个新的食谱到cookbook
+- `create(recipe)` 加了一个新的食谱到cookbook
 - `remove_recipe(recipe_index)` 从cookbook中删除一个食谱
 
 
@@ -44,7 +44,7 @@ cp ../01-Recipe/lib/recipe.rb lib
 
 - `initialize(cookbook)` 以 `Cookbook` 的实例作为参数。
 - `list` （列出）所有的食谱
-- `create` （创建）一个新的食谱
+- `add` （创建）一个新的食谱
 - `destroy` （删除）一个现有食谱
 
 ### 视图
