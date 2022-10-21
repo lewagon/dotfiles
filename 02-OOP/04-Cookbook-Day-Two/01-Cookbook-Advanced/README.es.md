@@ -16,7 +16,7 @@ cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
 
 También puedes tomar la solución de la sesión de codeo en vivo como punto de partida para hoy (pídele a tu profesor/a que lo comparta por Slack).
 
-Antes de empezar, corre el recetario que copiaste para asegurarte de que las funciones del/de la usuario/a (listar / crear / destruir) funcionan bien!
+Antes de empezar, ejecuta el código que acabas de importar para asegurarte de que las acciones de usuario implementadas (listar / añadir / destruir) funcionan bien.
 
 ```bash
 ruby lib/app.rb
