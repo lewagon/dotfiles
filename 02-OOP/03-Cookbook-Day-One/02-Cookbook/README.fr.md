@@ -34,7 +34,7 @@ Dans le cadre de cet exercice, le repository stocke les recettes ajoutées par l
 Implémente la classe `Cookbook` avec 4 méthodes :
 - `initialize(csv_file_path)`, qui charge les recettes `Recipe` existantes à partir du fichier CSV
 - `all`, qui retourne toutes les recettes
-- `add_recipe(recipe)`, qui ajoute une nouvelle recette au cookbook
+- `create(recipe)`, qui crée une recette et l'ajoute au livre de recettes
 - `remove_recipe(recipe_index)`, qui supprime une recette du cookbook
 
 ### Contrôleur (controller)
@@ -42,7 +42,7 @@ Implémente la classe `Cookbook` avec 4 méthodes :
 Le contrôleur rassemblera les données du cookbook pour les transmettre à la vue. Il demandera également à la vue des informations pour créer de nouvelles recettes. Voici les méthodes à implémenter :
 - `initialize(cookbook)` prend une instance de `Cookbook` comme argument.
 - `list` fait une liste de toutes les recettes
-- `create` ajoute une nouvelle recette
+- `add` ajoute une nouvelle recette
 - `destroy` supprime une recette existante
 
 ### Vue (view)

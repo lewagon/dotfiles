@@ -36,8 +36,8 @@ Implementa la clase `Cookbook` con 4 métodos:
 
 - `initialize(csv_file_path)` que carga el `Recipe` existente desde el CSV.
 - `all` el cual devuelve todas las recetas.
-- `add_recipe(recipe)` la cual agrega una nueva receta al recetario.
-- `remove_recipe(recipe_index)` el cual borra una receta del recetario.
+- `create(recipe)` que crea una receta y la añade al recetario
+- `remove_recipe(recipe_index)` el cual borra una receta del recetario
 
 
 ### Controlador
@@ -46,7 +46,7 @@ El controlador recopilará datos del recetario para dárselos a la vista. Tambi�
 
 - `initialize(cookbook)` toma una instancia de `Cookbook` como argumento
 - `list` para mostrar la lista de todas las recetas
-- `create` para crear una nueva receta
+- `add` para crear una nueva receta
 - `destroy` para borrar una receta actual
 
 ### Vista
