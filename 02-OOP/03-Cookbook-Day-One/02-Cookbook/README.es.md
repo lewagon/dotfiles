@@ -34,8 +34,8 @@ En el contexto de este desafío, el repositorio almacena las recetas que han sid
 
 Implementa la clase `Cookbook` con 4 métodos:
 
-- `initialize(csv_file_path)` que carga el `Recipe` existente desde el CSV.
-- `all` el cual devuelve todas las recetas.
+- `initialize(csv_file_path)` que carga el `Recipe` existente desde el CSV
+- `all` el cual devuelve todas las recetas
 - `create(recipe)` que crea una receta y la añade al recetario
 - `remove_recipe(recipe_index)` el cual borra una receta del recetario
 
