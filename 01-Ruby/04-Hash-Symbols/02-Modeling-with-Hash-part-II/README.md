@@ -35,7 +35,7 @@ Let's now create a complete `#calories_counter` that will enable us to calculate
 ```ruby
 orders = ["Sweet Potatoes", "Cheesy Combo", "Lemonade", "Vegan Combo"]
 puts calories_counter(orders)
-# => 1575
+# => 1395
 ```
 
 ## Key learning points

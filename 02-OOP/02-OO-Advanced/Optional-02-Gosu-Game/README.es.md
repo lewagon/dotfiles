@@ -1,3 +1,5 @@
+:warning: **¡Aviso!** Este reto _no funciona_ en Windows, por favor, sáltatelo si usas este sistema operativo (o emparéjate con alguien en macOS / Linux).
+
 ## Contexto y Objetivos
 
 ¡Ya es hora de crear un juego! Para esto usaremos una gema que se llama `gosu`.
@@ -23,27 +25,6 @@ sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
   libsndfile-dev libmpg123-dev
 gem install gosu
 ```
-
-### Windows
-
-Copia los comandos siguientes en tu Terminal en Ubuntu línea por línea:
-```bash
-sudo apt-get update
-sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
-  libpango1.0-dev libgl1-mesa-dev libfreeimage-dev libopenal-dev\
-  libsndfile-dev libmpg123-dev
-gem install gosu
-echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0" >> ~/.zshrc
-```
-
-Reinicia tu Terminal:
-
-Instala  [Xming](https://sourceforge.net/projects/xming/).
-Inicia XLaunch, sin modificar los parámetros preestablecidos pero **agrega este parámetro opcional** `-ac`.
-
-![xlaunch](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/xlaunch.jpg)
-
-Si al correr tu juego ves el siguiente error `could not initialize SDL` , debes agregar una excepción en tu Windows Defender para permitir el tráfico de entrada Xming en protocolos UDP y TCP. Puedes guiarte con esta [documentación](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule).
 
 ## Snake
 

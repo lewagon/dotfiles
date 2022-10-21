@@ -72,7 +72,7 @@ Importing "Strawberry slushie"...
 你可以使用 `curl` 命令在计算机上下载 HTML 文档。通过在终端中运行以下两个命令之一，将以下HTML页保存为工作目录中的 `.html` 文件：
 
 ```bash
-curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > strawberry.html
+curl --silent "https://www.allrecipes.com/search?q=strawberry" > strawberry.html
 ```
 
 👆 **这一步非常重要**!

@@ -45,8 +45,8 @@ Primero, agrega una nueva ruta a la lista de tareas siguiendo la convención vis
 ¡Para testear tu vista necesitas algunas tareas en la base de datos! Para crear algunas, corre un `rails console` en otra ventana de Terminal y luego corre lo siguiente:
 
 ```ruby
-Task.create (title: "Laundry", details: "Do not mix colors!")
-Task.create (title: "Studying", details: "A lot of flashcards to do", completed: true)
+Task.create(title: "Laundry", details: "Do not mix colors!")
+Task.create(title: "Studying", details: "A lot of flashcards to do", completed: true)
 ```
 
 ⚠️ En la vista, no trabajes en la parte visual de las casillas de verificación (checkboxes) por ahora. Podremos hacerlo en las preguntas opcionales.

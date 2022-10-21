@@ -70,7 +70,7 @@ Commence par réfléchir à la façon dont tu vas récupérer les informations d
 Tu peux télécharger un document HTML sur ton ordinateur avec la commande `curl`. Récupère la page HTML suivante enregistrée en tant que fichier `.html` dans ton répertoire de travail en exécutant cette commande dans ton terminal :
 
 ```bash
-curl --silent "https://www.allrecipes.com/search/results/?search=strawberry" > strawberry.html
+curl --silent "https://www.allrecipes.com/search?q=strawberry" > strawberry.html
 ```
 
 👆 **Cette étape est très importante** !

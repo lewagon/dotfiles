@@ -1,3 +1,5 @@
+:warning: 免责声明! 这项挑战在Windows上不适用，如果你使用这个操作系统，请跳过它（或与使用macOS/Linux的人配对）。
+
 ## 背景和目标
 
 Time to make a game! For this, we will use a gem called `gosu`.
@@ -23,28 +25,6 @@ sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
   libsndfile-dev libmpg123-dev
 gem install gosu
 ```
-
-### Windows
-
-在Ubuntu终端上一次复制一行以下命令：
-```bash
-sudo apt-get update
-sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
-  libpango1.0-dev libgl1-mesa-dev libfreeimage-dev libopenal-dev\
-  libsndfile-dev libmpg123-dev
-gem install gosu
-echo "export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0" >> ~/.zshrc
-```
-
-重新启动终端。
-
-安装[Xming](https://sourceforge.net/projects/xming/).
-启动XLaunch，保留默认设置，但需要同时 **添加以下可选参数** `-ac`。
-
-![xlaunch](https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/xlaunch.jpg)
-
-如果在运行游戏时出现错误 `could not initialize SDL` ，则需要在Windows Defender中添加一个异常，以允许Xming 通过UDP和TCP协议输入公共流量。你可以参照这个[文件](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule)。
-
 ## 蛇
 
 让我们编写一个好的游戏 **贪吃蛇** 游戏。控制很简单： 箭头键。我们的目标是通过吃食物来生长并保持活力（不要撞到窗口的边缘！）。

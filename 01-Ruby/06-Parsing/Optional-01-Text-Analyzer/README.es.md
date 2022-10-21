@@ -43,7 +43,7 @@ Implementa el método `analyze` que toma un texto de cadena de caracteres (`Stri
 
 ### Test de datos
 
-Puedes obtener algunos datos txt de test [aquí](http://www.rubyinside.com/book/oliver.txt)
+Puedes obtener algunos datos `.txt` de test via [Google Search](https://www.google.com/search?q=The+Philosopher's+Stone.txt)
 
 ### Incorporación de funcionalidades adicionales
 

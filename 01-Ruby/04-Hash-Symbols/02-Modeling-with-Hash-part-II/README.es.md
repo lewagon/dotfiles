@@ -34,6 +34,7 @@ Creemos un `#calories_counter` completo que nos permitirá calcular las caloría
 ```ruby
 orders = ["Sweet Potatoes", "Cheesy Combo", "Lemonade", "Vegan Combo"]
 puts calories_counter(orders)
+# => 1395
 ```
 
 ## Puntos clave de aprendizaje
