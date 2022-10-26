@@ -23,7 +23,7 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (to manage your Python versions)
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-if ! (( $+commands[foobar] ))
+if ! (( $+commands[virtualenv] ))
 then
     type -a pyenv > /dev/null && eval "$(pyenv init -)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 else
