@@ -54,11 +54,24 @@ Dernière étape, clique sur `Database` dans la barre d'outils et `Connect to th
 
 ❓Dois-je utiliser la ligne de commande `sqlite3` ou l’un des outils visuels ci-dessus ? Les deux sont utiles ! Il est intéressant d’apprendre à manipuler la ligne de commande pour deux raisons. D’une part, une [interface en ligne de commande](https://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande) te permet de te concentrer sur les requêtes SQL. D’autre part, une [interface graphique](https://fr.wikipedia.org/wiki/Interface_graphique) sera utile pour explorer le schéma d’une base de données (tables, colonnes, etc.). Essaie les deux !
 
+### L'extension VS Code SQLite - Parcourir la base de données
+
+Il y a différentes commandes que vous pouvez utiliser avec cette extension afin de parcourir et interroger votre base de données sqlite. Pour commencer à taper des commandes, souvenez-vous d’ouvrir votre palette de commande en tapant Cmd / Ctrl + Shift + p. Vous devriez voir une petite fenêtre de texte s'ouvrir sur votre éditeur où vous pouvez taper n’importe quelle commande.
+Afin de parcourir la base de données, nous allons lancer la commande Open Database en suivant les différente étapes :
+
+Ouvrez votre palette de commande avec Cmd / Ctrl + Shift + p.
+Tapez SQLite: Open Database
+Cliquez sur le chemin d’accès à la base de données qui pointe vers votre base de données.
+Vous devriez voir un onglet SQL EXPLORER  avec votre base de données chargée ! Maintenant vous pouvez ouvrir votre base de données et la parcourir avec toutes les tables existantes ! Vous pouvez également cliquer sur l’icône triangle pour avoir une représentation plus visuelle de vos tables. 🙌
+Essayez-le avec la table tracks.
+
+<iframe src="https://player.vimeo.com/video/690525143?h=75949ff5a2" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 ## Spécifications
 
-L’objectif de cet exercice est d’explorer la base de données Jukebox et de comprendre son schéma. Réponds aux questions suivantes :
-- Quel est le schéma de la base de données ? (quelles sont les tables et les relations entre les tables)
+L’objectif de cet exercice est d’explorer la base de données Jukebox et de comprendre son schéma. Réponds aux questions suivantes :
+- Quel est le schéma de la base de données ? (quelles sont les tables et les relations entre les tables)
 - Utilise l’outil SQL Design pour dessiner le schéma de cette base de données.
-- Combien de lignes chaque table contient-elle ? Quels sont les noms des colonnes pour chaque table ?
+- Combien de lignes chaque table contient-elle ? Quels sont les noms des colonnes pour chaque table ?
 
 Utilise [db.lewagon.com](http://db.lewagon.com/) pour dessiner le schéma de Jukebox. Enregistre-le au format XML dans `jukebox.xml` et vérifie-le avec `rake`.

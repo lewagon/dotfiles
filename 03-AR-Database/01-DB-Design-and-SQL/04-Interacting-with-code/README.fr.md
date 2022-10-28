@@ -75,10 +75,16 @@ Tu remarqueras que ton éditeur de texte comprend Heredoc et que la syntaxe en s
 - [Commandes SQL](http://www.sqlcommands.net/)
 - [Cours en 🇫🇷 sur `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
-## Outils
+## L’extention VS Code SQLite - Exécuter des requêtes
 
-Tu as découvert ces outils dans l’exercice précédent. Utilise-les !
+Cette fois, nous lancerons la commande `SQLite: New Query`. Afin de le faire, vous pouvez suivre les étapes suivantes :
+- Ouvrez votre palette de commande avec `Cmd / Ctrl + Shift + p`.
+- Tapez  `SQLite: New Query`
+- Ecrivez votre requête dans le fichier .sql ouvert
+- Une fois que votre requête est prête, ouvrez de nouveau votre palette de commande et tapez dedans `SQLite: Run Query`
+- Sélectionnez la base de données sur laquelle vous souhaitez exécuter votre requête
+Et c’est tout ! Vous devriez voir le résultat.
 
-- [SQLite Pro (macOS uniquement, logiciel payant mais la version d’essai semble illimitée)](https://www.sqlitepro.com/)
-- [SQLStudio (gratuit)](http://sqlitestudio.pl/)
-- [SQLite Browser (gratuit)](http://sqlitebrowser.org/)
+<iframe src="https://player.vimeo.com/video/690525239?h=ca70e032e8" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+:point_right: Vous pouvez trouver plus d’information sur l’extension VS Code SQLite sur notre [page dédiée](https://kitt.lewagon.com/knowledge/cheatsheets/vs_code_sqlite_extension).
