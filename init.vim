@@ -11,24 +11,28 @@ Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf.vim'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'jeetsukumaran/vim-pythonsense'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'numirias/semshi'
 Plug 'dense-analysis/ale'
 Plug 'davidhalter/jedi-vim'
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'vimwiki/vimwiki'
-Plug 'mattn/calendar-vim'
-Plug 'ferrine/md-img-paste.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
 Plug 'junegunn/vim-emoji'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'github/copilot.vim'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'honza/vim-snippets'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
+" Plugins - Python
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'jeetsukumaran/vim-pythonsense'
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
+" PLugins - Tmux
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'kien/ctrlp.vim'
@@ -146,23 +150,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-" VimWiki diary settings
-command! Diary VimwikiDiaryIndex
-augroup vimwikigroup
-    autocmd!
-    " automatically update links on read diary
-    autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
-augroup end
-
-" VimWiki git sync
-augroup vimwikigitsync
-  " Make sure this window's working dir is the wiki repo dir whenever index.wiki is opened
-  au BufRead ~/workspace/perso/wiki/wiki/index.wiki silent !cd ~/workspace/perso/wiki; git pull
-  " After writing to any file in the wiki dir, add all files in the repo, commit and push
-  au! BufWritePost ~/workspace/perso/wiki/* silent !cd ~/workspace/perso/wiki; git add -A;git commit -m "Autocommit and push";git push
-augroup END
-
 
 " Emoji Autocompletion
 set completefunc=emoji#complete
