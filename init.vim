@@ -6,6 +6,7 @@ endif
 
 " Plugin Section
 call plug#begin()
+
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
@@ -31,6 +32,12 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'kien/ctrlp.vim'
+" Plugins - Flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/dartlang-snippets'
+Plug 'thosakwe/vim-flutter'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 
 call plug#end()
 
@@ -162,6 +169,10 @@ set completefunc=emoji#complete
 
 " Coc & Jedi config
 let g:jedi#use_splits_not_buffers = "bottom"
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-flutter',
+  \ ]
 
 " Set Github Color Scheme
 colorscheme github_light

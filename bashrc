@@ -221,3 +221,9 @@ if [ -f '/home/xavierosee/.google-cloud-sdk/completion.bash.inc' ]; then . '/hom
 
 # Enable shell command completion for dbt
 [ -f ~/.dbt-completion.bash ] && source ~/.dbt-completion.bash
+
+# Enable PATH for Flutter
+if [ -d "$HOME/workspace/xavierosee/flutter/bin" ] ; then
+    PATH="$HOME/workspace/xavierosee/flutter/bin:$PATH"
+fi
+export ANDROID_HOME=$HOME/Library/Android/sdk
