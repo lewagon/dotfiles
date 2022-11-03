@@ -83,11 +83,11 @@ describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
       end
     end
 
-    describe "#remove_recipe" do
+    describe "#destroy" do
       it 'should remove a recipe from the cookbook' do
         @cookbook.instance_variable_set("@recipes", [RecipeFactory.build("Risotto", "Good stuff")])
         size_before = @cookbook.all.length
-        @cookbook.remove_recipe(0)
+        @cookbook.destroy(0)
         expect(@cookbook.all.length).to eq (size_before - 1)
       end
     end
@@ -130,10 +130,10 @@ describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
       end
     end
 
-    describe '#remove_recipe' do
+    describe '#destroy' do
       it 'should remove the recipe from the CSV' do
         size_before = @cookbook.all.length
-        @cookbook.remove_recipe(0)
+        @cookbook.destroy(0)
 
         # Reload from CSV
         new_cookbook = Cookbook.new(csv_path)
