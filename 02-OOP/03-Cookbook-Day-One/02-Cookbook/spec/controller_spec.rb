@@ -53,7 +53,7 @@ describe "Controller", if: cookbook_helper.file_and_class_valid? do
   end
 
   describe '#remove' do
-    it 'should implement a method to destroy a cookbook recipe' do
+    it 'should implement a method to remove a cookbook recipe' do
       expect(controller).to respond_to :remove
     end
   end
