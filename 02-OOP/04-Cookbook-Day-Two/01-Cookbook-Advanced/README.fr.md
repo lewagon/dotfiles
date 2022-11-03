@@ -16,7 +16,7 @@ cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
 
 Tu peux aussi repartir de [la solution du dernier livecode](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?feature=livecode&amp;path=02-OOP%2F03-Cookbook-Day-One&feature=livecode) comme point de départ de l’exercice d’aujourd’hui.
 
-Avant de commencer, exécute le code que tu as récupéré pour vérifier que les actions utilisateur implémentées (faire une liste, ajouter, supprimer) fonctionnent bien !
+Avant de commencer, exécute le code que tu as récupéré pour vérifier que les actions utilisateur implémentées (list/add/remove) fonctionnent bien !
 
 ```bash
 ruby lib/app.rb

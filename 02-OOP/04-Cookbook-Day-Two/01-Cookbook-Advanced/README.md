@@ -16,7 +16,7 @@ cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
 
 You can also take [the solution from the last livecode](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?feature=livecode&amp;path=02-OOP%2F03-Cookbook-Day-One&feature=livecode) as a starting point for today.
 
-Before starting, run the code you've just imported to make sure that implemented user actions (list / add / destroy) are working!
+Before starting, run the code you've just imported to make sure that implemented user actions (list / add / remove) are working!
 
 ```bash
 ruby lib/app.rb
