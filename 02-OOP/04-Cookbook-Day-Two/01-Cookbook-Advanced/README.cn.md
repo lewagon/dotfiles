@@ -18,7 +18,7 @@ cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
 
 你也可以把livecode中的答案作为今天的出发点（让你的老师在Slack上分享）。
 
-在开始之前，运行粘贴好的Cookbook，确保当天的用户操作（list/add/remove）正常运行！
+在开始之前，运行粘贴好的Cookbook，确保当天的用户操作（list / add / remove）正常运行！
 
 ```bash
 ruby lib/app.rb
