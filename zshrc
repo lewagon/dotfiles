@@ -53,3 +53,8 @@ export PATH=$PATH:$GOROOT/bin
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+
+
+# Homebrew To activate the syntax highlighting, add the following at the end of your .zshrc:
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
