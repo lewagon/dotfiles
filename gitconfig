@@ -48,7 +48,7 @@
   mergeoptions = --no-edit
 [user]
 	email = cesarlewagon@gmail.com
-	name = cesar quirino
+	name = Cesar Quirino
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
