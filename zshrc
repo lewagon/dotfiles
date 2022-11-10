@@ -58,3 +58,9 @@ export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bi
 
 # Homebrew To activate the syntax highlighting, add the following at the end of your .zshrc:
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ # This loads nvm
+ [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" 
+
+ # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
