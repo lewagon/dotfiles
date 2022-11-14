@@ -49,9 +49,9 @@ end
 
 Lis le [guide sur les callbacks Active Record](http://guides.rubyonrails.org/active_record_callbacks.html) pour répondre à la dernière question facultative.
 
-Implémente un callback pour supprimer l’e-mail avant la validation.
+Implémente un callback pour retirer les espaces qui auraient été saisis au début ou à la fin de l’e-mail par l'utilisateur, à déclencher avant les validations.
 
-Implémente un callback qui se déclenche lors de la création d’un utilisateur pour lui envoyer un **e-mail de bienvenue**. Découvre les [callbacks disponibles](http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks) et détermine quel callback utiliser.
+Implémente un callback qui se déclenche après la création d’un utilisateur, pour lui envoyer un **e-mail de bienvenue**. Découvre les [callbacks disponibles](http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks) et détermine quel callback utiliser.
 
 Pour simuler l’envoi d’un e-mail, tu peux utiliser la méthode suivante :
 
