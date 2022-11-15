@@ -16,7 +16,7 @@ Hopefully, the Ruby doc will give you several ways of sorting an [Enumerable](ht
 
 ### Interactive Program
 
-Open the `interface.rb` file and make sure to use the `wagon_sort` method. The interface should have a properly stylized output. The names should be separated by commas (`, `) except for the last two that must be separed by the word `and`.
+Open the `interface.rb` file and make sure to use the `wagon_sort` method. The interface should have a properly stylized output. The names should be separated by commas (`, `) except for the last two that must be separed by the word `and`. The names should also be on a new line.
 
 It should work like this:
 

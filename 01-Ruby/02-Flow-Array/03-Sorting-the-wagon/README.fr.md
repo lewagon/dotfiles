@@ -18,7 +18,9 @@ Dans la documentation Ruby, tu devrais trouver plusieurs façons de trier un [En
 
 ### Programme interactif
 
-Ouvre le fichier `interface.rb` et vérifie que tu utilises bien la méthode `wagon_sort`. Elle doit fonctionner comme ceci :
+Ouvrez le fichier `interface.rb` et assurez-vous d'utiliser la méthode `wagon_sort`. L'interface devrait avoir une sortie correctement stylisée. Les noms doivent être séparés par des virgules (`, `) sauf pour les deux derniers qui doivent être séparés par le mot `and`. Les noms doivent également être sur une nouvelle ligne.
+
+Elle doit fonctionner comme ceci :
 
 ```bash
 ruby lib/interface.rb
