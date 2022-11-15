@@ -44,7 +44,7 @@ cp ../01-Recipe/lib/recipe.rb lib
 
 - `initialize(cookbook)` 以 `Cookbook` 的实例作为参数。
 - `list` （列出）所有的食谱
-- `add` （创建）一个新的食谱
+- `add` （增加）一个新的食谱
 - `destroy` （删除）一个现有食谱
 
 ### 视图
