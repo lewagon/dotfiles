@@ -70,7 +70,7 @@ rails new \
 #### 2. Haz el Push del proyecto a Github
 
 ```bash
-cd rails-airbnb-clone
+cd your-rails-app-name
 gh repo create --public --source=.
 git push origin master
 ```
