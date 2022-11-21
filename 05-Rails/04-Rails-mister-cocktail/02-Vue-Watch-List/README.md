@@ -109,7 +109,7 @@ pin_all_from "app/javascript/components", under: "components"
 ```
 
 ```bash
-mkdir app/assets/javascript/components
+mkdir app/javascript/components
 bundle install
 rails generate simple_form:install --bootstrap
 ```
