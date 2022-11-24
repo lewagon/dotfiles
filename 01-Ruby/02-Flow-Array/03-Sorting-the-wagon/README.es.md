@@ -16,7 +16,7 @@ Esperemos que la documentación de Ruby te proporcione distintas maneras de orde
 
 ### Programa interactivo
 
-Abre el archivo `interface.rb` y asegúrate de usar el método `wagon_sort`. La interfaz debe tener una output estilizada. Los nombres deben estar separados por comas (`, `) excepto los dos últimos que deben estar separados por la palabra `and`.
+Abre el archivo `interface.rb` y asegúrate de usar el método `wagon_sort`. La interfaz debe tener una output estilizada. Los nombres deben estar separados por comas (`, `) excepto los dos últimos que deben estar separados por la palabra `and`. Los nombres también deben estar en una nueva línea.
 
 Debe funcionar de la siguiente manera:
 
