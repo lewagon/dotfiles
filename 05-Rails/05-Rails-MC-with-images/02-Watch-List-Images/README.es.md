@@ -50,7 +50,7 @@ rails db:seed
 
 ### Primer Deployment
 
-Regresa a la lecture y sigue los pasos para hacer el deploy de tu app a producción en Heroku. Deberás registrarte.
+Regresa a la lecture y sigue los pasos para hacer el deploy de tu app a producción en Heroku. Deberás registrarte y canjea tus Créditos Gratis.
 
 ### Image Upload
 

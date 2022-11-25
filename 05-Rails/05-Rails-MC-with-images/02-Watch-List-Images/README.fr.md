@@ -51,7 +51,7 @@ rails db:seed
 
 ### Premier déploiement
 
-Réfère-toi au cours et suis les étapes pour déployer ton application en production sur Heroku. Pour cela, tu devras t'inscrire au service.
+Réfère-toi au cours et suis les étapes pour déployer ton application en production sur Heroku. Pour cela, tu devras t'inscrire au service et récupérer tes crédits gratuits.
 
 ### Chargement d'images
 
