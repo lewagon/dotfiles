@@ -51,7 +51,7 @@ rails db:seed
 
 ### First Deployment
 
-Go back to the lecture and follow the step to deploy your app in production on Heroku. You will need to sign up to the service.
+Go back to the lecture and follow the step to deploy your app in production on Heroku. You will need to sign up to the service, and redeem your Free Credits
 
 ### Image Upload
 
