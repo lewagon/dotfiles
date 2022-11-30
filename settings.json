@@ -60,7 +60,6 @@
     "notebook.diff.ignoreMetadata": true,
     "notebook.lineNumbers": "on",
     "notebook.markup.fontSize": 13,
-    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
     "python.formatting.provider": "yapf",
     "python.languageServer": "Pylance",
     "python.linting.enabled": false,
@@ -69,6 +68,10 @@
     "python.terminal.activateEnvironment": false,
     "ruby.lint": {
         "rubocop": true
+    },
+    "search.exclude": {
+      // Inherits all glob patterns from the `files.exclude` setting.
+      "**/.venv": true
     },
     "telemetry.telemetryLevel": "off",
     "window.restoreWindows": "none",
