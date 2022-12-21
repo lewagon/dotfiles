@@ -2,7 +2,7 @@
 
 现在，你将编写一个用于管理食谱的Cookbook应用程序。
 
-想法很简单：你喜欢烹饪，但你需要记住所有你喜欢的食谱。这是你的cookbook！它会保存你的食谱列表，允许你 `list` 它们， `add` 新食谱和 `delete` 其他食谱。
+想法很简单：你喜欢烹饪，但你需要记住所有你喜欢的食谱。这是你的cookbook！它会保存你的食谱列表，允许你 `list` 它们， `add` 新食谱和 `remove` 其他食谱。
 
 你将使用模型-视图-控制器 **模式** 构建此应用程序，该模式也用于Rails：
 
@@ -34,8 +34,8 @@ cp ../01-Recipe/lib/recipe.rb lib
 
 - `initialize(csv_file_path)` 从CSV文件加载现有的 `Recipe`
 - `all` 返回所有的食谱
-- `add_recipe(recipe)` 加了一个新的食谱到cookbook
-- `remove_recipe(recipe_index)` 从cookbook中删除一个食谱
+- `create(recipe)` 加了一个新的食谱到cookbook
+- `destroy(recipe_index)` 从cookbook中删除一个食谱
 
 
 ### 控制器
@@ -44,8 +44,8 @@ cp ../01-Recipe/lib/recipe.rb lib
 
 - `initialize(cookbook)` 以 `Cookbook` 的实例作为参数。
 - `list` （列出）所有的食谱
-- `create` （创建）一个新的食谱
-- `destroy` （删除）一个现有食谱
+- `add` （创建）一个新的食谱
+- `remove` （删除）一个现有食谱
 
 ### 视图
 

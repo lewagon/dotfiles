@@ -2,7 +2,7 @@
 
 Ahora vas crear una aplicación que maneja un recetario (Cookbook).
 
-La idea es muy simple: te encanta cocinar pero siempre debes memorizar todas las recetas que te gustan. Bueno ¡este será tu recetario! Tendrá una lista de tus recetas, permitiéndote hacer una lista de ellas (`list`), agregar (`add`) nuevas recetas y borrar (`delete`) otras.
+La idea es muy simple: te encanta cocinar pero siempre debes memorizar todas las recetas que te gustan. Bueno ¡este será tu recetario! Tendrá una lista de tus recetas, permitiéndote hacer una lista de ellas (`list`), agregar (`add`) nuevas recetas y borrar (`remove`) otras.
 
 Construirás el código de tu aplicación siguiendo el **patron** Modelo, Vista, COntrolador - MVC que también se usa en Rails:
 
@@ -34,10 +34,10 @@ En el contexto de este desafío, el repositorio almacena las recetas que han sid
 
 Implementa la clase `Cookbook` con 4 métodos:
 
-- `initialize(csv_file_path)` que carga el `Recipe` existente desde el CSV.
-- `all` el cual devuelve todas las recetas.
-- `add_recipe(recipe)` la cual agrega una nueva receta al recetario.
-- `remove_recipe(recipe_index)` el cual borra una receta del recetario.
+- `initialize(csv_file_path)` que carga el `Recipe` existente desde el CSV
+- `all` el cual devuelve todas las recetas
+- `create(recipe)` que crea una receta y la añade al recetario
+- `destroy(recipe_index)` el cual borra una receta del recetario
 
 
 ### Controlador
@@ -46,8 +46,8 @@ El controlador recopilará datos del recetario para dárselos a la vista. Tambi�
 
 - `initialize(cookbook)` toma una instancia de `Cookbook` como argumento
 - `list` para mostrar la lista de todas las recetas
-- `create` para crear una nueva receta
-- `destroy` para borrar una receta actual
+- `add` para crear una nueva receta
+- `remove` para borrar una receta actual
 
 ### Vista
 
