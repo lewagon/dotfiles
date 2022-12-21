@@ -234,7 +234,7 @@ Lighthouse是一个审计工具，用于测试可访问性和其他方面。你�
 - [developer.google上的"无障碍"](https://developers.google.com/web/fundamentals/accessibility/)
 - ["Accessible to all" on web.dev](https://web.dev/accessible/)
 - [Adobe博客上的"The POUR Methodology"](https://theblog.adobe.com/design-with-accessibility-in-mind-the-pour-methodology/)
-- [a11y项目](https://www.a11yproject.com/about/#what-does-the-term-a11y-mean)
+- [a11y项目](https://www.a11yproject.com/)
 - ["A11ycasts with Rob Dodson" on Youtube](https://www.youtube.com/watch?v=HtTyRajRuyY&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 - [视障人士如何浏览网络](https://uxdesign.cc/how-visually-impaired-people-navigate-the-web-7f9eab9d9c37)
 - ["An overview of accessible web applications and widgets" on MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)

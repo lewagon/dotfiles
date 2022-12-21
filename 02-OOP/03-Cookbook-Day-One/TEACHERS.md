@@ -40,9 +40,9 @@
   - Emerging need: where should we store our tasks?
 - Class to act as our in-memory DB? **Repository**
   - State? `@tasks = []` - # Stores INSTANCES of Task!
-  - Behavior? `#add(task)`, `#remove(task)`
+  - Behavior? `#create(task)`, `#destroy(task)`
   - Code [class](https://github.com/lewagon/oop-todolist/blob/master/lib/task_repository.rb)
-  - Test in `irb`: `repo.add(cleaning)`, `repo.add(cooking)`, `repo.remove(cleaning)` => OK
+  - Test in `irb`: `repo.create(cleaning)`, `repo.create(cooking)`, `repo.destroy(cleaning)` => OK
   - Emerging need: how do we display tasks in the terminal?
 - Class to display/ fetch data to/ from user? **View**
   - State? None! There’s nothing to characterise a View! Only behavior.
@@ -55,7 +55,7 @@
 - Class to articulate everything: **Controller**
   - Responsibility: serve user actions
   - State? Hard to guess here (not concrete enough). We’ll discover it when we code the actions.
-  - Behavior? ACTIONS: `#list`, `#create`, `#mark_as_done`, `#destroy`
+  - Behavior? ACTIONS: `#list`, `#add`, `#mark_as_done`, `#remove`
 
   **List**
   - Pseudo code
@@ -69,14 +69,14 @@
   - Add `#done?` in `Task`
   - Test => OK
 
-  **Create**
+  **Add**
   - Pseudo code
     - Get description from `@view`
     - Create new task with description
     - Store it in `@repo`
   - Code
     - Necessity to code `View#ask_user_for_description`
-  - Add `controller.create` in `test.rb`
+  - Add `controller.add` in `test.rb`
   - Test => OK
 
   **Mark as done**
@@ -93,13 +93,13 @@
   - Add action in `test.rb`
   - Test => OK
 
-  **Destroy** (if there’s enough time left)
+  **Remove** (if there’s enough time left)
   - Pseudo code
     - Display tasks
     - Ask user for index
     - Remove it from repo
   - Code
-    - Replace `#remove(task)` by `#remove(task_index)` (better UX)
+    - Replace `#destroy(task)` by `#destroy(task_index)` (better UX)
   - Add action in `test.rb`
   - Test => OK
 - Class to route user’s request to the right controller’s action: **Router**

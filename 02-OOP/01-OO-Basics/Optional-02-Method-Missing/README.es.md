@@ -31,7 +31,7 @@ Si intentas llamar a un método de instancia que no fue definido anteriormente e
 
 Para evitar que se levante el `NoMethodError` puedes definir **tu propio** método de instancia `method_missing` en tu clase e implementarlo para ¡hacer lo que quieras!
 
-Para entender cómo y cuándo Ruby llama al `method_missing` ([docs here](https://ruby-doc.org/core-2.5.3/BasicObject.html#method-i-method_missing)) te recomendamos leer [este artículo](https://emmanuelhayford.com/3-practical-uses-of-ruby-method-missing/).
+Para entender cómo y cuándo Ruby llama al `method_missing` ([docs here](https://ruby-doc.org/core-2.5.3/BasicObject.html#method-i-method_missing)) te recomendamos leer [este artículo](https://manny.codes/3-practical-uses-of-ruby-method-missing/).
 
 Tal vez también quieras leer sobre como Ruby te deja [get](https://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_get) o [set](https://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_set) una variable de instancia dinámicamente.
 

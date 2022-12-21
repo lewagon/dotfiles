@@ -2,7 +2,7 @@
 
 Tu vas maintenant coder une application Cookbook qui gère des recettes.
 
-L’idée est simple : tu adores cuisiner, mais tu as besoin de te souvenir de toutes les recettes que tu aimes. Voici ton livre de recettes ! Il conservera une liste de tes recettes et te permettra de les lister (`list`), d’en ajouter de nouvelles (`add`) et d’en supprimer d’autres (`delete`).
+L’idée est simple : tu adores cuisiner, mais tu as besoin de te souvenir de toutes les recettes que tu aimes. Voici ton livre de recettes ! Il conservera une liste de tes recettes et te permettra de les lister (`list`), d’en ajouter de nouvelles (`add`) et d’en supprimer d’autres (`remove`).
 
 Tu construiras cette app en utilisant le pattern **MVC**, également utilisé dans Rails :
 - Modèle : quel est l’objet de base que tu souhaites manipuler ?
@@ -34,16 +34,16 @@ Dans le cadre de cet exercice, le repository stocke les recettes ajoutées par l
 Implémente la classe `Cookbook` avec 4 méthodes :
 - `initialize(csv_file_path)`, qui charge les recettes `Recipe` existantes à partir du fichier CSV
 - `all`, qui retourne toutes les recettes
-- `add_recipe(recipe)`, qui ajoute une nouvelle recette au cookbook
-- `remove_recipe(recipe_index)`, qui supprime une recette du cookbook
+- `create(recipe)`, qui crée une recette et l'ajoute au livre de recettes
+- `destroy(recipe_index)`, qui supprime une recette du cookbook
 
 ### Contrôleur (controller)
 
 Le contrôleur rassemblera les données du cookbook pour les transmettre à la vue. Il demandera également à la vue des informations pour créer de nouvelles recettes. Voici les méthodes à implémenter :
 - `initialize(cookbook)` prend une instance de `Cookbook` comme argument.
 - `list` fait une liste de toutes les recettes
-- `create` ajoute une nouvelle recette
-- `destroy` supprime une recette existante
+- `add` ajoute une nouvelle recette
+- `remove` supprime une recette existante
 
 ### Vue (view)
 

@@ -84,7 +84,7 @@ describe "CustomerRepository", :customer do
       expect(rucola_customer.id).to eq(5)
     end
 
-    it "should start auto-incremting at 1 if it is the first customer created" do
+    it "should start auto-incrementing at 1 if it is the first customer created" do
       csv_path = "unexisting_empty_customers.csv"
       FileUtils.remove_file(csv_path, force: true)
 

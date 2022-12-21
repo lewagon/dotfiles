@@ -66,7 +66,7 @@ rails new \
 #### 2. 把项目上传到Github
 
 ```bash
-cd rails-airbnb-clone
+cd your-rails-app-name
 gh repo create --public --source=.
 git push origin master
 ```

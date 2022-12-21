@@ -67,7 +67,7 @@ Seul le **développeur principal** doit s'occuper de cette étape, pas toute l'�
 #### 2. Pousser le projet sur Github
 
 ```bash
-cd rails-airbnb-clone
+cd your-rails-app-name
 gh repo create --public --source=.
 git push origin master
 ```

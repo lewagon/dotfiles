@@ -15,7 +15,7 @@
 
 ### 交互式编程
 
-打开`interface.rb`文件，并确保使用`wagon_sort`方法（method）。它应该像这样运行：
+打开`interface.rb`文件，确保使用`wagon_sort`方法。该接口应该有一个正确的风格化的输出。名称应该用逗号（`, `）分开，除了最后两个必须用`和`字隔开。名字也应该在一个新的行上。它应该像这样工作。
 
 ```bash
 ruby lib/interface.rb
