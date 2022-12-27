@@ -1,5 +1,4 @@
 #!/bin/zsh
-export XDG_CONFIG_HOME=$HOME/.config
 
 # echo "Making zsh your defual shell"
 # To set zsh as your default shell

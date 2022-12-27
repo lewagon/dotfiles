@@ -1,5 +1,4 @@
 #!/bin/zsh
-export XDG_CONFIG_HOME=$HOME/.config
 
 echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
