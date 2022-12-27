@@ -57,7 +57,7 @@ source 20_homebrew/homebrew.sh
 
 ### 4. Oh My Zsh setup
 
-Run `oh-my-zsh.sh` to install Oh My Zsh with theme Powerlevel10k, and some plugins.
+Run `oh-my-zsh.sh` to install [Oh My Zsh](https://ohmyz.sh/) with theme Powerlevel10k, and some plugins.
 
 [Zsh](https://www.zsh.org/)
 
