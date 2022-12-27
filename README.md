@@ -7,7 +7,7 @@ I have made some personal customizations, based on Lars Kappert and Mathias Byne
 - [Lars Kappert](https://github.com/webpro/dotfiles)
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
 
-At the moment I am using: **MacBook Pro (13-inch, M1, 2020), macOS Monterey 12.3.1**
+At the moment I am using: **MacBook Pro (14-inch, M1, 2021), macOS Ventura**
 
 First clone the repository with:
 
