@@ -77,7 +77,7 @@ source 30_oh-my-zsh/oh-my-zsh.sh
 Run `40_mackup.sh` to restore config files. First it will symlink the `mackup.cfg` to the home directory, and them it will restore config files.
 
 ```sh
-source 40_mackup/40_mackup.sh
+source 40_mackup/mackup.sh
 ```
 
 ### 6. Ruby
