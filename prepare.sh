@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+sudo -v
+
 echo "Creating config folder"
 mkdir -p "${HOME}/.config"
 echo "Done"

@@ -1,9 +1,6 @@
 #!/bin/zsh
 
-# echo "Making zsh your defual shell"
-# To set zsh as your default shell
-# chsh -s /bin/zsh
-# echo "Done"
+sudo -v
 
 echo "Installing Oh My Zsh"
 # To install Oh My Zsh

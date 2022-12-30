@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+sudo -v
+
 echo "Installing rbenv-aliases"
 mkdir -p "$(rbenv root)/plugins"
 git clone https://github.com/tpope/rbenv-aliases.git "$(rbenv root)/plugins/rbenv-aliases"
