@@ -78,7 +78,7 @@ sudo pmset -a standbydelay 86400
 # sudo nvram StartupMute=%01
 
 # Menu bar: show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent YES
+# defaults write com.apple.menuextra.battery ShowPercent YES
 
 # Disable opening and closing window animations
 # defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
