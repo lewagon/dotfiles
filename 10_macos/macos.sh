@@ -313,6 +313,18 @@ defaults delete com.apple.dock wvous-bl-modifier
 defaults delete com.apple.dock wvous-br-corner
 defaults delete com.apple.dock wvous-br-modifier
 
+# Prefer tabs when opening documents options are "manual" or "fullscreen" or "always"
+defaults delete NSGlobalDomain AppleWindowTabbingMode -string "always"
+
+# Automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
+# When switching to an application, switch to the Space with the open windows for the application
+defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool true
+
+# Group windows by application
+defaults write com.apple.dock expose-group-apps -bool true
+
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
