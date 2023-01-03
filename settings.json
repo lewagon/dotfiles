@@ -47,7 +47,6 @@
     "files.hotExit": "off",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
         "**/audits/**": true,
         "**/coverage/**": true,
