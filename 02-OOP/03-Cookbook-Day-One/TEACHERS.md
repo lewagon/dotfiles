@@ -146,3 +146,4 @@
 - Really close from this morning's livecode
 - Add persistency
 - The challenge is to organize your code properly!
+- If students manage to reach the part with [Nokogiri](https://nokogiri.org/) to scrape recipes from the web at the end of the challenge, you can remind them about [our dedicated cheathseet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri).
