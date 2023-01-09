@@ -139,11 +139,11 @@
 - What’s the major limit of our TODO-manager?
   - When we quit the program and relaunch it => data is lost
   - Repository only holds an in-memory DB role
-  - In today’s exercise => you’ll add persistency to your hard drives by using a CSV file!
+  - In this block’s exercise => you’ll add persistency to your hard drives by using a CSV file!
 
 ## Cookbook challenge (1')
 
-- Really close from this morning's livecode
+- Really close from the lecture's livecode
 - Add persistency
 - The challenge is to organize your code properly!
 - If students manage to reach the part with [Nokogiri](https://nokogiri.org/) to scrape recipes from the web at the end of the challenge, you can remind them about [our dedicated cheathseet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri).
