@@ -4,17 +4,15 @@ So now we want to enhance our cookbook by finding recipes online. We will use [a
 
 ## Setup
 
-First, let's copy paste your Cookbook's code in today's challenge `lib` folder:
+First, let's copy paste your Cookbook's code in this challenge `lib` folder:
 
 ```bash
 # make sure you're in the right directory
-cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/04-Cookbook-Day-Two/01-Cookbook-Advanced
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook-Day-One/03-Cookbook-With-Scraping
 
-# copy your code from Cookbook Day 1
-cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
+# copy your code from Cookbook Challenge 2
+cp -r ../02-Cookbook/lib .
 ```
-
-You can also take [the solution from the last livecode](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?feature=livecode&amp;path=02-OOP%2F03-Cookbook-Day-One&feature=livecode) as a starting point for today.
 
 Before starting, run the code you've just imported to make sure that implemented user actions (list / add / remove) are working!
 
