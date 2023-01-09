@@ -14,8 +14,6 @@ cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook-Day-One
 cp -r ../02-Cookbook/lib .
 ```
 
-También puedes tomar la solución de la sesión de codeo en vivo como punto de partida para hoy (pídele a tu profesor/a que lo comparta por Slack).
-
 Antes de empezar, ejecuta el código que acabas de importar para asegurarte de que las acciones de usuario implementadas (list / add / remove) funcionan bien.
 
 ```bash
