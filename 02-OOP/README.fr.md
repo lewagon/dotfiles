@@ -1,8 +1,8 @@
-Le module OOP comprend sur 6 blocs pédagogiques.
+Le module OOP comprend sur 5 blocs pédagogiques.
 
 ## `01 Classes et Instances`
 
-Jusqu’ici, tu as manipulé tout un tas d’objets intégrés en Ruby (Integer, Hash, Date, etc.) Mais sais-tu définir tes propres classes ? Le premier jour, tu apprendras à manipuler les classes, les instances, les variables d’instance et les méthodes d’instance. Tu verras également ce que sont les constructeurs et les accesseurs. Prépare-toi à construire tes premières classes !
+Jusqu’ici, tu as manipulé tout un tas d’objets intégrés en Ruby (Integer, Hash, Date, etc.) Mais sais-tu définir tes propres classes ? Durant le premier bloc, tu apprendras à manipuler les classes, les instances, les variables d’instance et les méthodes d’instance. Tu verras également ce que sont les constructeurs et les accesseurs. Prépare-toi à construire tes premières classes !
 
 ## `02 Héritage et Self`
 

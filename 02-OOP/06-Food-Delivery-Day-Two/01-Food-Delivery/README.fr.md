@@ -2,7 +2,7 @@ N’oublie pas d’exécuter les commandes ci-dessus 👆
 
 **IMPORTANT** 👇
 
-Copie le code d’hier :
+Copie le code du bloc précédent :
 
 ```bash
 cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # le point à la fin est important

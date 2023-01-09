@@ -22,7 +22,7 @@
 
 ## 详细说明
 
-首先导航到Cookbook day one 的 DEV Pocket挑战并下载解决方案。这将是你编写这个扩展版本的起点。
+首先导航到Cookbook 的 DEV Pocket挑战并下载解决方案。这将是你编写这个扩展版本的起点。
 
 ### 模型
 

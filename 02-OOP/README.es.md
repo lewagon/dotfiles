@@ -1,4 +1,4 @@
-El módulo de POO - Programación Orientada a Objetos (OOP en inglés) toma 6 días.
+El módulo de POO - Programación Orientada a Objetos (OOP en inglés) toma 5 días.
 
 ## `01 Clases e Instancias`
 

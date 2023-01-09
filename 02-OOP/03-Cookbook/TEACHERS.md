@@ -1,7 +1,7 @@
 ## Intro (1')
 
 - Until now, scripts in 1 or 2 files
-- Today: we’ll build a software from scratch
+- In this block: we’ll build a software from scratch
 - How to figure out the classes we need to code?
 
 ## How to figure out a class (10')

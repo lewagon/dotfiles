@@ -131,7 +131,7 @@ You'll find the answer at the end of this readme.
 
 This time you'll code without any help, `rake` will only give you style offenses 👌
 
-Feel free to try and do TDD on this challenge, with help from the previous days livecodes corrections.
+Feel free to try and do TDD on this challenge, with help from the previous livecodes corrections.
 
 ### Model
 
