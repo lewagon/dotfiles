@@ -91,3 +91,4 @@ require_relative "transaction"
 ## Further suggestions & resources
 
 - You could use `Time#strftime` method to format your date in `Transaction#to_s`.
+- Ruby has many built-in exceptions, but `DepositError` isn't one! We created our own custom exception here to provide a better described error message, which will help us debugging in the future. See [this article](https://launchschool.medium.com/getting-started-with-ruby-exceptions-d6318975b8d1), in particular the `Raising Custom Exceptions` paragraph for more details about it.

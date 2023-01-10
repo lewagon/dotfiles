@@ -91,3 +91,4 @@ require_relative "transaction"
 ## Suggestions et ressources complémentaires
 
 -   Tu peux utiliser la méthode `Time#strftime` pour mettre en forme la date dans `Transaction#to_s`.
+- De nombreuses exceptions sont intégrées et définies dans Ruby, mais nous pouvons également définir nos propres exceptions, comme `DepositError`! Cela nous permet de fournir un message d'erreur plus détaillé et compréhensible qui nous aidera plus tard pour débugger. Tu peux lire [cet article](https://launchschool.medium.com/getting-started-with-ruby-exceptions-d6318975b8d1), et en particulier le paragraphe `Raising Custom Exceptions` pour en apprendre plus sur le sujet.
