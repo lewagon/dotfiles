@@ -10,7 +10,7 @@ First, let's copy paste your Cookbook's code in today's challenge `lib` folder:
 
 ```bash
 # 确保你在正确的目录中
-cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook-Day-One/03-Cookbook-With-Scraping
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cookbook-With-Scraping
 
 # 将你的代码从Cookbook的第一个练习中复制过来
 cp -r ../02-Cookbook/lib .

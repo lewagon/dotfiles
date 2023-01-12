@@ -8,7 +8,7 @@ Commence par copier-coller le code de ton Cookbook dans le dossier `lib` de l’
 
 ```bash
 # vérifie que tu es dans le bon répertoire
-cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook-Day-One/03-Cookbook-With-Scraping
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cookbook-With-Scraping
 
 # copie ton code de l’exercice 2 de Cookbook
 cp -r ../02-Cookbook/lib .
