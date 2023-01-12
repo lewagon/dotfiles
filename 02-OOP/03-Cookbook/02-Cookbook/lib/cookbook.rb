@@ -1,4 +1,4 @@
-# Define your Cookbook class here, which will be our repository
+# The Cookbook class here will be our repository
 require "csv"
 
 class Cookbook
