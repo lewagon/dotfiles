@@ -96,7 +96,7 @@ Tu peux utiliser le code suivant comme modèle pour commencer :
 ```ruby
 require "nokogiri"
 file = "strawberry.html"
-doc = Nokogiri::HTML(File.open(file), nil, "utf-8")
+doc = Nokogiri::HTML.parse(File.open(file), nil, "utf-8")
 
 # À toi de trouver la requête CSS pertinente.
 ```
@@ -115,7 +115,7 @@ Le moment est venu d’utiliser ton code de parsing sur une URL en ligne avec di
 require "nokogiri"
 require "open-uri"
 url = "http://the_url_here"
-doc = Nokogiri::HTML(URI.open(url).read, nil, "utf-8")
+doc = Nokogiri::HTML.parse(URI.open(url).read, nil, "utf-8")
 
 # Reste du code
 ```

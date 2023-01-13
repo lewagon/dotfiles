@@ -98,7 +98,7 @@ Nokogiri是一个很酷和著名用于解析HTML文档的gem，（它也可以�
 ```ruby
 require 'nokogiri'
 file = 'fraise.html'  # 或 'strawberry.html'
-doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
+doc = Nokogiri::HTML.parse(File.open(file), nil, 'utf-8')
 
 # 由你来查找相关的CSS选择符。
 ```
@@ -117,7 +117,7 @@ doc = Nokogiri::HTML(File.open(file), nil, 'utf-8')
 require 'nokogiri'
 require 'open-uri'
 url = "http://the_url_here"
-doc = Nokogiri::HTML(open(url).read, nil, 'utf-8')
+doc = Nokogiri::HTML.parse(open(url).read, nil, 'utf-8')
 
 # 代码的其余部分
 ```
