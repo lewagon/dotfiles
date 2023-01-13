@@ -10,13 +10,11 @@ It's always the same 3-step process:
 
 ## Specs
 
-Launch your local webserver with:
+Open the html page in your browser with:
 
 ```bash
-rake webpack
+open index.html
 ```
-
-Open [`localhost:8080`](http://localhost:8080) in your browser.
 
 You should see a big green button saying `Click me!`. The goal of this challenge is to display an [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) saying `Thank you!` when you click on it.
 
