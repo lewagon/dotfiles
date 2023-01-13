@@ -12,10 +12,10 @@ Time to play with [`dataset`s](https://developer.mozilla.org/en-US/docs/Web/API/
 
 ## Specs
 
-Launch your local webserver with:
+Open the html page in your browser with:
 
 ```bash
-rake webpack
+open index.html
 ```
 
 Open [`localhost:8080`](http://localhost:8080) in your browser.

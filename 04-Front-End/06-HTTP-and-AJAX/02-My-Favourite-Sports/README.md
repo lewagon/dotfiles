@@ -8,10 +8,10 @@ Again it will come down to **selecting** elements, **binding** them to an event 
 
 ## Specs
 
-Launch your local webserver with:
+Open the html page in your browser with:
 
 ```bash
-rake webpack
+open index.html
 ```
 
 Open [`localhost:8080`](http://localhost:8080) in your browser.

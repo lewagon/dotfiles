@@ -6,10 +6,10 @@ We want to build an autocomplete input with **Dictionary words**
 
 ## Specs
 
-Launch your local webserver with:
+Open the html page in your browser with:
 
 ```bash
-rake webpack
+open index.html
 ```
 
 There are three files you need to update:

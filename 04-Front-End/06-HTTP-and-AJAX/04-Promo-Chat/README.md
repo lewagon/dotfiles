@@ -13,6 +13,12 @@ The [documentation of the wagon-chat API](https://github.com/lewagon/wagon-chat-
 
 ## Specs
 
+Open the html page in your browser with:
+
+```bash
+open index.html
+```
+
 ### View logic
 
 In the `index.html` file of the challenge, you'll find a page structured into two main parts:
