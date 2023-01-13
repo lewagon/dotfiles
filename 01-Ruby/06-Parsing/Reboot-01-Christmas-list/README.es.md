@@ -114,7 +114,7 @@ filepath = "/path/to/the/HTML/file.html"
 # 1. Obtenemos el contenido HTML de la página
 html_content = File.open(filepath)
 # 2. Creamos un documento Nokogiri a partir de este archivo
-doc = Nokogiri::HTML(html_content)
+doc = Nokogiri::HTML.parse(html_content)
 
 # 3. Buscamos los elementos adecuados que contengan el  título de los ítems en nuestro documento HTML
 doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
@@ -135,7 +135,7 @@ article = gets.chomp
 # 1. Obtenemos el contenido HTML de la página gracias a open-uri
 html_content = URI.open("https://www.etsy.com/search?q=#{article}", "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0").read
 # 2. Creamos un documento Nokogiri a partir de este archivo
-doc = Nokogiri::HTML(html_content)
+doc = Nokogiri::HTML.parse(html_content)
 
 # 3. Buscamos los elementos adecuados que contengan el  título de los ítems en nuestro documento HTML
 doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
