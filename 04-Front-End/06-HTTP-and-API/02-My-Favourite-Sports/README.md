@@ -14,8 +14,6 @@ Open the html page in your browser with:
 open index.html
 ```
 
-Open [`localhost:8080`](http://localhost:8080) in your browser.
-
 You should see a grid of 6 sports boxes that look like they are clickable. When you hover over one of them, you see that the UI changes to suggest you to click. However, nothing happens when you click... yet! Let's fix that!
 
 - When you click on a sport, you should toggle the `active` css class on the element (no need to write any css in this challenge)

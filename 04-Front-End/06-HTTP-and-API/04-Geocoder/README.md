@@ -9,10 +9,10 @@ In this exercise, we'll practise our AJAX skills. Let's start simple with a `GET
 
 ## Specs
 
-You can launch your local server with:
+Open the html page in your browser with:
 
 ```bash
-rake webpack
+open index.html
 ```
 
 ### Geocoding

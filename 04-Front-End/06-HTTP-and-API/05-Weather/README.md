@@ -4,13 +4,13 @@ In this challenge, we are going to play around with the [OpenWeatherMap API](htt
 
 ## Specs
 
-You can launch your local server with:
+Open the html page in your browser with:
 
 ```bash
-rake webpack
+open index.html
 ```
 
-Go to [`localhost:8080`](http://localhost:8080/) and open your console.
+Once the page is loaded open your console.
 
 ### Get your API key (1 for you and your buddy)
 
