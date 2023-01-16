@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In this exercise, we'll practise our AJAX skills. Let's start simple with a `GET` request. Here we'll use the [MapBox Geocoding API](https://www.mapbox.com/search/). We want to build a tool where we can input an address, hit a button, and get the **GPS Coordinates** back! For the cherry on top, we'll display the map as well.
+In this exercise, we'll practise our API skills. Let's start simple with a `GET` request. Here we'll use the [MapBox Geocoding API](https://www.mapbox.com/search/). We want to build a tool where we can input an address, hit a button, and get the **GPS Coordinates** back! For the cherry on top, we'll display the map as well.
 
 
 <div class="text-center">
@@ -27,13 +27,9 @@ NOTE: The request to the MapBox API will require your API key as one of the para
 
 Go ahead and check out the form already present in the `index.html` challenge boilerplate. It contains an `input` of type `"text"` where a user can type an address in, and an `input` of type `"submit"` to display a button.
 
-Use the `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the AJAX query to the MapBox Geocoding service using `fetch` (go back to yesterday's lecture slides).
+Use the `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the API request to query the MapBox Geocoding service using `fetch` (go back to yesterday's lecture slides).
 
-**Reminder: you should code your JavaScript inside a Stimulus controller**
-
-Go back to the Stimulus challenge to follow installation instructions.
-
-As always when you fetch data from an API, start by `console.log()`ing what you get back from MapBox. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
+When you fetch data from an API, start by `console.log()`ing what you get back from MapBox. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
 
 Hint: Mapbox returns coordinates with longitude first, and latitude second!
 

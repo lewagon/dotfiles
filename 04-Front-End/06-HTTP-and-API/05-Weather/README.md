@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In this challenge, we are going to play around with the [OpenWeatherMap API](https://openweathermap.org/)! We'll practise AJAX again, and discover how we can ask users for their current position!
+In this challenge, we are going to play around with the [OpenWeatherMap API](https://openweathermap.org/)! We'll practise calling an API again, and discover how we can ask users for their current position!
 
 ## Specs
 
@@ -29,10 +29,6 @@ Before coding anything, try opening the url in your browser to see if you get a 
 ```
 
 Once you managed to display the API's response in your browser, let's jump into the JavaScript implementation.
-
-**Reminder: you should code your JavaScript inside a Stimulus controller**
-
-Go back to the Stimulus challenge to follow installation instructions.
 
 ### Display data in your page
 
