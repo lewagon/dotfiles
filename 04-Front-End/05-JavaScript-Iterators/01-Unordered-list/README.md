@@ -30,9 +30,9 @@ When the `listItem` function passes all the tests, go on and code the `unordered
 
 **Just this once**, we won't mind if the indentation in the generated string isn't perfect!
 
-### Going further
+### Refactoring with `Map()`
 
-If your solution passes the tests using `forEach()`, try and find a better solution using [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)!
+If your solution passes the tests using `forEach()`, the last step is to find a better solution using [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)!
 
 Here's an example:
 
