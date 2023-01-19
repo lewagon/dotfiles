@@ -39,7 +39,7 @@ Implement the `Cookbook` class with 4 methods:
 - `create(recipe)` which creates a recipe and adds it to the cookbook
 - `destroy(recipe_index)` which removes a recipe from the cookbook.
 
-To load and store the data in the CSV, we will implement two **private** methods:
+To load and store the data in the CSV, we will implement 2 **private** methods:
 - `load_csv`, which loads the existing data from the CSV file to our application
 - `save_csv`, which adds the new recipes as **new rows** in our CSV file
 
