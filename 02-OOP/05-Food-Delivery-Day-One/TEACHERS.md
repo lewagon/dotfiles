@@ -2,9 +2,9 @@
 
 ### Morning Lecture
 
-This morning lecture is an introduction for the **next 2 days**. People will
+This lecture is an introduction for the **next 2 blocks**. People will
 work on their first app with several models / controllers, on the
-next 2 days (they won't be any lecture tomorrow morning, last day of OO).
+next 2 blocks (there won't be any lectures for the next block, the last one of OOP).
 
 #### Methodology
 
@@ -30,7 +30,7 @@ Then add two new models to your diagram: appointments and doctors. Add these to 
 
 You should make a good introduction for the food delivery:
 
-- It will last 2 days
+- It will last 2 blocks
 - Do a demo of what they should program (in the `fullstack-solutions` repo, launch `ruby app.rb`)
 - Explain there will be a logged in access
 - Explain that they will have several models, controllers and views
