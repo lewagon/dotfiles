@@ -4,19 +4,13 @@ This is what you'll build in this challenge:
 
 ![Dynamic form Gif](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/booking-form.gif)
 
-We won't do AJAX in this challenge, we just want to **update the form's UI** when a user clicks on the `-` / `+` buttons.
+We want to **update the form's UI** when a user clicks on the `-` / `+` buttons.
 
 Submitting the form is not expected to have any effects.
 
 Time to play with [`dataset`s](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)!
 
 ## Specs
-
-Launch your local webserver with:
-
-```bash
-rake webpack
-```
 
 Open [`localhost:8080`](http://localhost:8080) in your browser.
 
@@ -36,7 +30,7 @@ The `-` button should not allow `0` or negative values! When you want to "disabl
 
 ```js
 button.addEventListener('click', (event) => {
-  event.preventDefault();  
+  event.preventDefault();
 });
 
 ```
