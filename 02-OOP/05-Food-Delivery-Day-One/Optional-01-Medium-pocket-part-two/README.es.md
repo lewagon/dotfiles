@@ -2,7 +2,7 @@
 
 ¡Bravo! Pudiste con la primera parte del desafío de Entrega de Comida a Domicilio (Food Delivery).
 
-En este desafío extenderemos el ejercicio DEV Pocket (el opcional de Cookbook Day One) con el modelo `Author`. Vamos a modelar la siguiente relación entre `Post` y `Author`:
+En este desafío extenderemos el ejercicio DEV Pocket (el primero opcional de Cookbook) con el modelo `Author`. Vamos a modelar la siguiente relación entre `Post` y `Author`:
 
 ![Database schema](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/pocket_reader.png)
 
@@ -23,7 +23,7 @@ Como te debes estar imaginando, la información sobre los autores la obtendremos
 
 ## Especificaciones
 
-Comienza navegando por el desafío opcional DEV Pocket de Cookbook day one y descarga la solución. Este será tu punto de partida para esta versión extendida.
+Comienza navegando por el desafío opcional DEV Pocket de Cookbook y descarga la solución. Este será tu punto de partida para esta versión extendida.
 
 ### Modelos
 

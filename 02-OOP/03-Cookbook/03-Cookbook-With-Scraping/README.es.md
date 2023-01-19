@@ -8,13 +8,11 @@ Primero copia y pega el código del Recetario (Cookbook) en la carpeta `lib` del
 
 ```bash
 # make sure you're in the right directory
-cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/04-Cookbook-Day-Two/01-Cookbook-Advanced
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cookbook-With-Scraping
 
-# copy your code from Cookbook Day 1
-cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
+# copy your code from Cookbook Challenge 2
+cp -r ../02-Cookbook/lib .
 ```
-
-También puedes tomar la solución de la sesión de codeo en vivo como punto de partida para hoy (pídele a tu profesor/a que lo comparta por Slack).
 
 Antes de empezar, ejecuta el código que acabas de importar para asegurarte de que las acciones de usuario implementadas (list / add / remove) funcionan bien.
 

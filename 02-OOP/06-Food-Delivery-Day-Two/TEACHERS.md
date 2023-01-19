@@ -1,6 +1,6 @@
-No lecture for today.
+No lecture for this block.
 
-The goal is to take the code from yesterday's livecode, [lewagon/food-delivery@livecode-day-one](https://github.com/lewagon/food-delivery/tree/livecode-day-one) and implement the "Sign in" feature.
+The goal is to take the code from last block's livecode, [lewagon/food-delivery@livecode-day-one](https://github.com/lewagon/food-delivery/tree/livecode-day-one) and implement the "Sign in" feature.
 
 - First you'll need to implement the `Employee` and the `EmployeeRepository` model
 - Then add a `SessionsController` to implement the `sign_in`

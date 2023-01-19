@@ -1,7 +1,7 @@
 ## Intro (1')
 
 - Until now, scripts in 1 or 2 files
-- Today: we’ll build a software from scratch
+- In this block: we’ll build a software from scratch
 - How to figure out the classes we need to code?
 
 ## How to figure out a class (10')
@@ -139,10 +139,11 @@
 - What’s the major limit of our TODO-manager?
   - When we quit the program and relaunch it => data is lost
   - Repository only holds an in-memory DB role
-  - In today’s exercise => you’ll add persistency to your hard drives by using a CSV file!
+  - In this block’s exercise => you’ll add persistency to your hard drives by using a CSV file!
 
 ## Cookbook challenge (1')
 
-- Really close from this morning's livecode
+- Really close from the lecture's livecode
 - Add persistency
 - The challenge is to organize your code properly!
+- If students manage to reach the part with [Nokogiri](https://nokogiri.org/) to scrape recipes from the web at the end of the third challenge, you can remind them about [our dedicated cheathseet](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri).

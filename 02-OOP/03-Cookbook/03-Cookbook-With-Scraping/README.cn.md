@@ -10,13 +10,11 @@ First, let's copy paste your Cookbook's code in today's challenge `lib` folder:
 
 ```bash
 # 确保你在正确的目录中
-cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/04-Cookbook-Day-Two/01-Cookbook-Advanced
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cookbook-With-Scraping
 
-# 从第一天的Cookbook Day 复制你的代码
-cp -r ../../03-Cookbook-Day-One/02-Cookbook/lib .
+# 将你的代码从Cookbook的第一个练习中复制过来
+cp -r ../02-Cookbook/lib .
 ```
-
-你也可以把livecode中的答案作为今天的出发点（让你的老师在Slack上分享）。
 
 在开始之前，运行粘贴好的Cookbook，确保当天的用户操作（list / add / remove）正常运行！
 

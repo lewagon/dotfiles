@@ -2,7 +2,7 @@ Make sure you execute the commands above 👆
 
 **IMPORTANT** 👇
 
-Copy the code from yesterday:
+Copy the code from the last block:
 
 ```bash
 cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
