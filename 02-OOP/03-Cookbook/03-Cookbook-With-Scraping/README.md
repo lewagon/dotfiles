@@ -1,6 +1,6 @@
 ⚠️ There's **no `rake`** for this exercise. Sorry 😉
 
-So now we want to enhance our cookbook by finding recipes online. We will use [allrecipes](https://www.allrecipes.com), because their markup structure is pretty clean (making them good candidates for scraping). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
+Our goal in this challenge is to enhance our existing cookbook, coded in the previous challenge, by finding recipes online. We will use [allrecipes](https://www.allrecipes.com), because their markup structure is pretty clean (making them good candidates for scraping). If you want to choose another recipe website, please go ahead! It just needs to have a **search** feature where the search keywords are passed in the [query string](https://en.wikipedia.org/wiki/Query_string).
 
 ## Setup
 
