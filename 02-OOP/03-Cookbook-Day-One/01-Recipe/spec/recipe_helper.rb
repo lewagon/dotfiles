@@ -5,7 +5,7 @@ class RecipeHelper
     @class_name = 'Recipe'
   end
 
-  def file_exists?
+  def file_exist?
     File.exist?("#{__dir__}/../lib/#{@file_name}.rb")
   end
 
@@ -14,7 +14,7 @@ class RecipeHelper
   end
 
   def file_and_class_valid?
-    file_exists? && class_defined?
+    file_exist? && class_defined?
   end
 
   def load_file

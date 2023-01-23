@@ -14,7 +14,7 @@ crop_helper = FileHelper.new(
 
 describe "Crop", unless: crop_helper.file_and_class_valid? do
   it '`crop.rb` file should exist' do
-    expect(crop_helper.file_exists?).to be(true)
+    expect(crop_helper.file_exist?).to be(true)
   end
 
   it '`Crop` class should be defined' do
