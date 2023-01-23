@@ -7,7 +7,7 @@ task :check do
     week["days"].each do |day|
       day["exercises"].each do |exercise|
         path = exercise["path"]
-        raise Errno::ENOENT.new("Exercise path not found: #{path}") unless File.exists?(path)
+        raise Errno::ENOENT.new("Exercise path not found: #{path}") unless File.exist?(path)
       end
     end
   end

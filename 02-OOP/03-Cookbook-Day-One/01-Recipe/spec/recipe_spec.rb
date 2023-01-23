@@ -2,16 +2,16 @@ require_relative 'recipe_helper'
 
 recipe_helper = RecipeHelper.new
 
-describe 'lib folder', unless: recipe_helper.file_exists? do
+describe 'lib folder', unless: recipe_helper.file_exist? do
   it 'should contain a recipe.rb file' do
-    expect(recipe_helper.file_exists?).to eq(true)
+    expect(recipe_helper.file_exist?).to eq(true)
   end
 end
 
 
-describe 'Recipe', if: recipe_helper.file_exists? do
+describe 'Recipe', if: recipe_helper.file_exist? do
 
-  recipe_helper.load_file if recipe_helper.file_exists?
+  recipe_helper.load_file if recipe_helper.file_exist?
 
   let(:recipe_one) { Recipe.new('Brownie', 'Delicious chocolate cake') }
   let(:recipe_two) { Recipe.new('Lasagna', 'Italian lasagna recipe from grandma') }

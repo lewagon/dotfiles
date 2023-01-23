@@ -24,7 +24,7 @@ cookbook_helper = CookbookHelper.new(
 
 describe "Cookbook", unless: cookbook_helper.file_and_class_valid? do
   it '`cookbook.rb` file should exist' do
-    expect(cookbook_helper.file_exists?).to be(true)
+    expect(cookbook_helper.file_exist?).to be(true)
   end
 
   it '`cookbook.rb` can require and require_relative files without errors' do
