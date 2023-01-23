@@ -19,7 +19,7 @@ task :db_reset do
   require "sequel"
   require "fileutils"
   DB_FILE = "sessions.sqlite3"
-  FileUtils.rm(DB_FILE) if File.exists?(DB_FILE)
+  FileUtils.rm(DB_FILE) if File.exist?(DB_FILE)
   DB = Sequel.sqlite(DB_FILE)
   DB.create_table :sessions do
     primary_key :id

@@ -13,7 +13,7 @@ cookbook_helper = CookbookHelper.new(
 
 describe "View", unless: cookbook_helper.file_and_class_valid? do
   it '`view.rb` file should exist' do
-    expect(cookbook_helper.file_exists?).to be(true)
+    expect(cookbook_helper.file_exist?).to be(true)
   end
 
   it '`view.rb` can require and require_relative files without errors' do

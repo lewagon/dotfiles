@@ -25,7 +25,7 @@ puts "
 
 describe "Corn", unless: corn_helper.file_and_class_valid? do
   it '`corn.rb` file should exist' do
-    expect(corn_helper.file_exists?).to be(true)
+    expect(corn_helper.file_exist?).to be(true)
   end
 
   it '`Corn` class should be defined' do

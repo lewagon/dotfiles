@@ -6,8 +6,8 @@ class CookbookHelper
     @class_name = params[:class_name]
   end
 
-  def file_exists?
-    File.exists?("#{__dir__}/../lib/#{@file_name}.rb")
+  def file_exist?
+    File.exist?("#{__dir__}/../lib/#{@file_name}.rb")
   end
 
   def require_error(e)
@@ -22,6 +22,6 @@ class CookbookHelper
   end
 
   def file_and_class_valid?
-    file_exists? && class_defined?
+    file_exist? && class_defined?
   end
 end
