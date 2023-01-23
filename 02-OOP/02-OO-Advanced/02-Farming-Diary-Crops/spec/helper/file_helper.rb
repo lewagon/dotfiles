@@ -5,7 +5,7 @@ class FileHelper
   end
 
   def file_exists?
-    File.exists?("#{__dir__}/../../lib/#{@file_name}.rb")
+    File.exist?("#{__dir__}/../../lib/#{@file_name}.rb")
   end
 
   def class_defined?
