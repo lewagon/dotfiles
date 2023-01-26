@@ -74,7 +74,7 @@ Here comes the time where you might delegate these responsibilities to another `
 - Printing this info in a user-friendly fashion
 - You could even think of additional data for this class such as a `@message` instance variable to store the reference string for each withdrawal/deposit ("car rental", "ibiza weekend", "christmas shopping", etc.)
 
-After implementing your `Transaction` class, you will have to change your `BankAccount` class so that its transactions arrays store `Transaction` objects instead of numbers. You will also have to load the *transaction.rb* file in *account.rb* with
+After implementing your `Transaction` class, you will have to change your `BankAccount` class so that its transactions arrays store `Transaction` objects instead of numbers. You will also have to load the `transaction.rb` file in `bank_account.rb` with
 
 ```ruby
 require_relative "transaction"
