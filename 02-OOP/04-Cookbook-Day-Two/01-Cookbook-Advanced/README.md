@@ -109,7 +109,7 @@ If you don't remember the syntax have a look at [our dedicated cheatsheet](https
 
 ### Get response HTML data using `open-uri`
 
-Time to use your parsing code on a live URL with different queries (not just `strawberry`). Use the [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) library to get the HTML response from a given URI:
+Time to use your parsing code on a live URL with different queries (not just `strawberry`). Use the [open-uri](https://ruby-doc.org/stdlib-2.6.3/libdoc/open-uri/rdoc/index.html) library to get the HTML response from a given URI:
 
 ```ruby
 require "nokogiri"

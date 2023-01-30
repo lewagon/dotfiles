@@ -109,7 +109,7 @@ Si no recuerdas la sintaxis, échale un vistazo a [nuestra chuleta](https://kitt
 
 ### Obtención de datos HTML con `open-uri`
 
-Es hora de usar tu código de parseo en una URL en línea con consultas diferentes (no solamente con `[fraise|strawberry]`). Usa la librería [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) para obtener la respuesta HTML de una URL dada:
+Es hora de usar tu código de parseo en una URL en línea con consultas diferentes (no solamente con `[fraise|strawberry]`). Usa la librería [open-uri](https://ruby-doc.org/stdlib-2.6.3/libdoc/open-uri/rdoc/index.html) para obtener la respuesta HTML de una URL dada:
 
 ```ruby
 require "nokogiri"
