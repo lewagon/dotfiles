@@ -111,7 +111,7 @@ doc = Nokogiri::HTML.parse(File.open(file), nil, 'utf-8')
 
 ### 使用 `open uri` 获取响应HTML数据
 
-是时候用你的爬虫代码，在实时URL上使用解析代码了。（不仅仅是 `[fraise|strawberry]` ）。 使用[open uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html)从给定URI获取HTML响应的库：
+是时候用你的爬虫代码，在实时URL上使用解析代码了。（不仅仅是 `[fraise|strawberry]` ）。 使用[open uri](https://ruby-doc.org/core/stdlibs/open-uri/OpenURI.html)从给定URI获取HTML响应的库：
 
 ```ruby
 require 'nokogiri'

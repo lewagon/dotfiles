@@ -109,7 +109,7 @@ Si tu ne te souviens pas de la syntaxe, jette un œil à [notre antisèche](http
 
 ### Récupérer des données HTML avec `open-uri`
 
-Le moment est venu d’utiliser ton code de parsing sur une URL en ligne avec différentes requêtes (pas seulement `strawberry`). Utilise la bibliothèque [open-uri](http://www.ruby-doc.org/stdlib/libdoc/open-uri/rdoc/OpenURI.html) pour obtenir la réponse HTML d’une URL donnée :
+Le moment est venu d’utiliser ton code de parsing sur une URL en ligne avec différentes requêtes (pas seulement `strawberry`). Utilise la bibliothèque [open-uri](https://ruby-doc.org/core/stdlibs/open-uri/OpenURI.html) pour obtenir la réponse HTML d’une URL donnée :
 
 ```ruby
 require "nokogiri"
