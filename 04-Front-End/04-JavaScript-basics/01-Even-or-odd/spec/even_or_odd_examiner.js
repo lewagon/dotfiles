@@ -1,5 +1,4 @@
 const runChallenges = (result_1, result_2, result_3) => {
-
   let EXERCISE_NUMBER = 1;
 
   function addSuccess() {
