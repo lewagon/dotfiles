@@ -5,7 +5,7 @@ tap 'homebrew/cask-drivers'
 # tap 'homebrew/cask-fonts'
 # tap 'homebrew/cask-versions'
 
-cask 'adobe-acrobat-reader'
+# cask 'adobe-acrobat-reader'
 cask 'dbeaver-community'
 cask 'clickup'
 # cask 'clockify'
