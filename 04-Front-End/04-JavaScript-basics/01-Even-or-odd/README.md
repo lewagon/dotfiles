@@ -1,17 +1,14 @@
 ## Background & Objectives
 
-Today is your first day of JavaScript. The goal of this first day is for you to realize that it's a programming language, like Ruby. It has variables, functions, conditions, loops, etc.
+Today is your first day of JavaScript. The goal of this first day is for you to realize that it's a programming language, like Ruby. It has variables, functions, conditions, loops, etc. Additionally, you can also select and manipulate elements from the DOM with JavaScript.
 
-Today we won't need the browser. Instead, we'll use [Node.js](https://nodejs.org/en/) to execute some JavaScript directly in our terminal.
+We will work directly in the browser to execude some JavaScript code.
 
-You should already have `node` installed with a version greater than `10`. Check it with:
+Lauch your program with the `serve` command and go to [http://localhost:8000](http://localhost:8000).
 
 ```bash
-node -v
-# You should see your node version here
+ serve
 ```
-
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#nodejs), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#nodejs) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#nodejs) setup.
 
 ## Specs
 
@@ -24,13 +21,15 @@ Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Im
 
  _Hint: remember the Ruby modulo operator? It also exists in JavaScript and might be useful!_
 
-Run `rake` to check your style and the correctness of your function!
 
 Once the first exercise is all green (style + tests), **please commit and push** 🙏
 
 ## About the testing setup
 
-Open the `Rakefile` in your text editor. You will find two tasks:
+When you open your browser you will see a list of checks which are red. Your goal is to fix the `evenOrOdd` function so that all the checks pass. Whenever you make a change in your JS file you need to **refresh the browser** to see your code reflected.
 
-- `eslint`, a [JavaScript linter](http://eslint.org/), the equivalent of Rubocop in the Ruby world.
-- `mocha`, a [JavaScript testing framework](https://mochajs.org), the equivalent of Rspec in the Ruby world.
+On Setup day you installed  the `eslint` extension in yout text editor which checks the style of your JavaScript code, so it will tell you when there is a missing semicolon. If you don't see this extension in VSCode run:
+
+```bash
+code --install-extension dbaeumer.vscode-eslint
+```
