@@ -1,5 +1,8 @@
-const dataset = (element) => {
-  // TODO: return the element's data attributes in an object
+const showNewPrice = () => {
+  // TODO: Add a price data attribute to the .card element in your HTML
+
+  // TODO: Select the data attribute to get the new price
+  // TODO: Replace the current price of 15€ with the new one!
 };
 
-module.exports = dataset; // Do not remove.
+showNewPrice(); // Do not remove!

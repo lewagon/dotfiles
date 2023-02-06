@@ -1,49 +1,82 @@
 ## Background & Objectives
 
-In front-end web development, **data attributes** are a pretty handy way to inject values in your HTML that you can easily access in your JavaScript.
+In front-end web development, **data attributes** are a pretty handy way to inject and store values in your HTML that you can easily access in your JavaScript.
 
-In this challenge, let's write a function that parses an HTML tag and extracts its data attributes into an `object`.
+Remember the attributes you have already seen, such as **id**, **class**, **scr**, **style**. Theses are standard attributes which are used for a specific purpose. But sometimes we need to store other kinds of data in the HTML and we can do by creating a data attribute which we give our own name.
+
+In this challenge you will learn how you can create your own data attribute and select it from the DOM with an API so that you can use it in your JavaScript code.
+
+
+## Setup
+
+Start by running a server and go togo to [localhost:8000](http://localhost:8000).
+
+```bash
+serve
+```
+
+You can see a burger card with a category, a title and a price. Imagine you have a special deal on this burger for one evening. You don't really want to change the price in the database because then you'd have to change it back again the next day.
+
+Instead we can add a **data attribute** on this burger with the temporary price and replace the actual one with it using JavaScript.
+
+
+### Adding a data attribute
+
+Data attributes look exactly like "normal" attributes, except that they have the prefix `data-`. After the `data-` you can choose your own name for the attribute, ideally it should be something which reflects the data you want to inject.
+
+For example, if you put an `id` to your `.card` class you would say
+
+```html
+<div class="card" id="burger">
+```
+
+If you want to inject the id of a record which is stored in your database you can do that with a data attribute like this
+
+```html
+<div class="card" data-id="42">
+```
+
+This can be useful when you combine dynamic behaviour with the information coming from your database, such has creating tabs for your dynamic data (you'll see more of this when you start working with Rails).
+
+
+### Selecting the data attribute
+
+Now that we know how to add a `data-attribute` to our HTML let's see how we can access it from the DOM!
+
+**With `.getAttribute()`**
+
+Just like any other attribute you can get it by using the method `getAttribute(attributeName)` and call it on the element you put the attribute on.
+
+To go back to our example
+
+```html
+<div class="card" data-id="burger">
+```
+
+We can get the `id` by saying
+
+```javascript
+const burger = document.querySelector(".card");
+burger.getAttribute("data-id");
+```
+
+**With `.dataset`**
+
+Specifically for datas attribute we can also use the [dataset API]("https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset").
+
+For this we simply call `dataset` and then the name of our attribute on the element and we get the same result.
+
+```javascript
+const burger = document.querySelector(".card");
+burger.dataset.id;
+```
+
 
 ## Specs
 
-Implement the `dataset` function which takes one `element` parameter (of type `String`) and returns an `Object` with the right keys and values:
+Add a data `price` attribute to the `.card` class element in your HTML and give it the value of `13`. Then go to the `lib/dataset.js` file and select this data attribute using the dataset API.
 
-```js
-const burger = `<div class="card" data-id="42" data-price="15" data-category="popular">
-  <div class="card-category">Popular</div>
-  <div class="card-description">
-    <h2>The best burger in town (15€)</h2>
-  </div>
-</div>`;
+Lastly, use JavaScript code to replace the current price of 15€ with the new price of 13€.
 
-dataset(burger);
-// => { id: 42, price: 15, category: 'popular' }
-```
 
-- It should only return the dataset of the **wrapping** element regardless of its children
-- It should cast the values to the right type (in the example, `42` and `15` should be `number`s)
-
-### Help
-
-Don't forget to use your Web browser devtools to debug!
-
-When you want to match **all the matching occurrences** in your string, you may want to look into the [`g` modifier](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Parameters).
-
-### Improvements
-
-We don't test this in the `specs` but you can implement the translation of "compound" data attributes from `kebab-case` to `lowerCamelCase` keys:
-
-```js
-const element = `<div class="card" data-meal-id="42">ANY CONTENT</div>`;
-
-dataset(element);
-// => { mealId: 42 }
-```
-
-### Going further
-
-Starting tomorrow, we'll write JavaScript that runs in the **browser**, in the context of a [DOM](https://en.wikipedia.org/wiki/Document_Object_Model). In this context, you'll be able to call `.dataset` on any HTML element selected from the DOM, and it will return the same kind of objects as in this challenge!
-
-This is a pretty handy way to pass data from your HTML to your JavaScript code, to react dynamically to DOM events or make remote calls to a server.
-
-You'll learn more about these applications in the following days, in the meantime, you can read more about the [dataset property](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).
+There is no `rake` for this challenge but you know you have completed if when the price of your burger show 13€!
