@@ -1,3 +1,7 @@
+global.document = {
+  addEventListener: () => {} // mock document
+};
+
 const assert = require('assert');
 const splitTheBill = require('../lib/split_the_bill');
 

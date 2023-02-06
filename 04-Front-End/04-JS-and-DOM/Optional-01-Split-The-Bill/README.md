@@ -31,7 +31,7 @@ should give back to each individual. In our example it should return:
 }
 ```
 
-## Further suggestions & resources
+## Hint
 
 To iterate over a JavaScript object, your can use the [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) method.
 
@@ -44,3 +44,9 @@ Object.keys(character).forEach((key) => {
   console.log(`The character ${key} is ${value}`);
 });
 ```
+
+## Display the values
+
+Once you have implemented the `splitTheBill(group)` you can rake it to check your code.
+
+Now it's time to update the HTML file and add a list of who has to pay how much. First write this list with empty values and then complete the `updatePriceList()` function in your JS file to insert the correct values into the HTML.
