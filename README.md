@@ -17,6 +17,14 @@ git clone https://github.com/jmschp/dotfiles.git ~/code/dotfiles
 
 ## Installation
 
+### Prepare installation
+
+This creates `~/.config/`, and sets XDG_CONFIG_HOME to it. It creates if it does not exist the `~/.zshenv`, which in the end will be replaced by the [Mackup](https://github.com/lra/mackup) version.
+
+```sh
+source prepare.sh
+```
+
 ### 1. MacOS configuration System update
 
 On a new installation of macOS open the terminal and run `softwareupdate -i -a` to update macOS:
@@ -31,23 +39,15 @@ After updating macOS, usually its necessary to restart. Then run `xcode-select -
 xcode-select --install
 ```
 
-### 2. Prepare installation
+#### MacOS configuration apply system preferences
 
-This creates `~/.config/`, and sets XDG_CONFIG_HOME to it. It creates if it does not exist the `~/.zshenv`, which in the end will be replaced by the [Mackup](https://github.com/lra/mackup) version.
-
-```sh
-source prepare.sh
-```
-
-### 3. MacOS configuration apply system preferences
-
-Run the `11_macos.sh` that is in the folder `10_macos`:
+Run the `11_macos.sh` that is in the folder `10_macos`. This script will restart the machine.
 
 ```sh
 source 10_macos/macos.sh
 ```
 
-### Homebrew toolset
+### 2. Homebrew
 
 Run `21_homebrew.sh` in the `20_homebrew` folder this will install [Homebrew](https://brew.sh/), followed by the installation of all the packages listed in the [Brewfile](./20_homebrew/Brewfile).
 
@@ -55,7 +55,7 @@ Run `21_homebrew.sh` in the `20_homebrew` folder this will install [Homebrew](ht
 source 20_homebrew/homebrew.sh
 ```
 
-### 4. Oh My Zsh setup
+### 3. [Oh My Zsh](https://ohmyz.sh/)
 
 Run `oh-my-zsh.sh` to install [Oh My Zsh](https://ohmyz.sh/) with theme Powerlevel10k, and some plugins.
 
@@ -72,7 +72,7 @@ Run `oh-my-zsh.sh` to install [Oh My Zsh](https://ohmyz.sh/) with theme Powerlev
 source 30_oh-my-zsh/oh-my-zsh.sh
 ```
 
-### 5. Mackup
+### 4. [Mackup](https://github.com/lra/mackup)
 
 Run `40_mackup.sh` to restore config files. First it will symlink the `mackup.cfg` to the home directory, and them it will restore config files.
 
@@ -80,10 +80,10 @@ Run `40_mackup.sh` to restore config files. First it will symlink the `mackup.cf
 source 40_mackup/mackup.sh
 ```
 
-### 6. Ruby
+### 5. [asdf](https://asdf-vm.com/)
 
-Run `ruby.sh` to install the latest Ruby version and [rbenv alias](https://github.com/tpope/rbenv-aliases). This will also install the gem in the [Gemfile](./50_ruby/Gemfile).
+Run `asdf.sh` to add Ruby and Node.js [asdf](https://asdf-vm.com/) plugins and install the versions specified in `$HOME/.tool-versions`.
 
 ```sh
-source 50_ruby/ruby.sh
+source 50_asdf/asdf.sh
 ```
