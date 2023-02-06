@@ -5,6 +5,7 @@
 # tap 'homebrew/core'
 tap 'heroku/brew'
 
+brew 'asdf'
 brew 'awscli'
 brew 'aws-elasticbeanstalk'
 brew 'bash'
