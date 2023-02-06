@@ -2,10 +2,9 @@
 
 In front-end web development, **data attributes** are a pretty handy way to inject and store values in your HTML that you can easily access in your JavaScript.
 
-Remember the attributes you have already seen, such as **id**, **class**, **scr**, **style**. Theses are standard attributes which are used for a specific purpose. But sometimes we need to store other kinds of data in the HTML and we can do by creating a data attribute which we give our own name.
+Remember that you have already worked with attributes, such as **id**, **class**, **scr**, **style**, etc. Theses are standard attributes which are used for a specific purpose. But sometimes we need to store other kinds of data in the HTML and create our own attributes to do so. This is where the **data attributes** come in.
 
 In this challenge you will learn how you can create your own data attribute and select it from the DOM with an API so that you can use it in your JavaScript code.
-
 
 ## Setup
 
@@ -15,16 +14,15 @@ Start by running a server and go togo to [localhost:8000](http://localhost:8000)
 serve
 ```
 
-You can see a burger card with a category, a title and a price. Imagine you have a special deal on this burger for one evening. You don't really want to change the price in the database because then you'd have to change it back again the next day.
+You can see a burger card with a category, a title and a price. Imagine you have a special deal on this burger for one evening to get 2€ off of the original price. You don't really want to change the price in the database because then you'd have to change it back again the next day.
 
-Instead we can add a **data attribute** on this burger with the temporary price and replace the actual one with it using JavaScript.
-
+Instead we can add a **data attribute** to this burger with the temporary price and replace the actual one with it using JavaScript.
 
 ### Adding a data attribute
 
 Data attributes look exactly like "normal" attributes, except that they have the prefix `data-`. After the `data-` you can choose your own name for the attribute, ideally it should be something which reflects the data you want to inject.
 
-For example, if you put an `id` to your `.card` class you would say
+For example, if you put an `id` to your `.card` class to style it you would say
 
 ```html
 <div class="card" id="burger">
@@ -70,7 +68,6 @@ For this we simply call `dataset` and then the name of our attribute on the elem
 const burger = document.querySelector(".card");
 burger.dataset.id;
 ```
-
 
 ## Specs
 

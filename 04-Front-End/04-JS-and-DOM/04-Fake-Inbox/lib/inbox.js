@@ -17,22 +17,6 @@ const refresh = () => {
   //       append it to the DOM. Update the unread counter in title as well.
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Do not remove these lines:
 document.addEventListener("DOMContentLoaded", () => {
   setInterval(refresh, 1000); // Every 1 second, the `refresh` function is called.

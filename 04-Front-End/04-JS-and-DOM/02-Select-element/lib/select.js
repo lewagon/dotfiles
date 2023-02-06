@@ -4,7 +4,8 @@ import runChallenges from "../spec/select_examiner.js";
 
 const franceElement = () => {
   // TODO 2: select the France list item and return it!
-  return document.getElementById("france");
+
 };
 
+// Checking exercise answers. DO NOT MODIFY THIS LINE
 runChallenges(franceElement());

@@ -1,7 +1,9 @@
 ## Background & Objectives
 
-You can serve this exercise for a visual interface, but we'll stay in the terminal to rake the code. The goal is to understand
+For the first part of this exercsie we'll stay in the terminal to rake the code. The goal is to understand
 how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
+
+Afterwards you need to change the HTML and write a new JavaScript function to display the results in the browser.
 
 ## Specs
 
@@ -45,8 +47,8 @@ Object.keys(character).forEach((key) => {
 });
 ```
 
-## Display the values
+## Display the results
 
-Once you have implemented the `splitTheBill(group)` you can rake it to check your code.
+Once you have implemented the `splitTheBill(group)` function you can rake it to check your code.
 
-Now it's time to update the HTML file and add a list of who has to pay how much. First write this list with empty values and then complete the `updatePriceList()` function in your JS file to insert the correct values into the HTML.
+Now it's time to update the HTML file and add a list of who has to pay how much. First create a list with empty values in the `index.html` file and then complete the `updatePriceList()` function in your JS file to display the correct values.
