@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-We'll stay in the terminal here with Node.js, and another exercise. The goal is to understand
+You can serve this exercise for a visual interface, but we'll stay in the terminal to rake the code. The goal is to understand
 how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
 ## Specs
