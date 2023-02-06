@@ -2,7 +2,7 @@
 
 Today is your first day of JavaScript. The goal of this first day is for you to realize that it's a programming language, like Ruby. It has variables, functions, conditions, loops, etc. Additionally, you can also select and manipulate elements from the DOM with JavaScript.
 
-We will work directly in the browser to execude some JavaScript code.
+We will work directly in the browser to execute some JavaScript code.
 
 Lauch your program with the `serve` command and go to [http://localhost:8000](http://localhost:8000).
 
