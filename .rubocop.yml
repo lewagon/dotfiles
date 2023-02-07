@@ -54,10 +54,18 @@ Style/ExplicitBlockArgument:
   Enabled: false
 Style/OptionalBooleanParameter:
   Enabled: false
+Lint/EmptyClass:
+  Enabled: false
+Lint/EmptyFile:
+  Enabled: false
+Naming/BlockForwarding:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.1
   Exclude:
     - '**/Rakefile'
     - '**/spec/**/*'

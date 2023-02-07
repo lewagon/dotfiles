@@ -1,3 +1,5 @@
+# rubocop:disable Lint/UselessAssignment
+
 # This "require_relative" line loads your own "age_in_days.rb" file. Notice the
 # "_relative" suffix: the given path is relative to the location of the file
 # from which "require_relative" is called
@@ -21,3 +23,5 @@ calculated_age = 0
 
 # Finally, print user's age in days:
 puts "You are #{calculated_age} days old... phew!"
+
+# rubocop:enable Lint/UselessAssignment
