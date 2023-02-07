@@ -32,4 +32,4 @@ sqlite> SELECT * FROM posts;
 
 你可以调用API端点[https://hacker-news.firebaseio.com/v0/topstories.json](https://hacker-news.firebaseio.com/v0/topstories.json)。它将给你一个最新的100个帖子ID的数组。然后，对于前十个（不是一百个！）id，你必须调用API来检索一个帖子的细节。
 
-举个例子，如果你想知道`8863`这个帖子的细节，你必须调用[https://hacker-news.firebaseio.com/v0/item/8863.json](https://hacker-news.firebaseio.com/v0/item/8863.json)
+举个例子，如果你想知道`20916749`这个帖子的细节，你必须调用[https://hacker-news.firebaseio.com/v0/item/20916749.json](https://hacker-news.firebaseio.com/v0/item/20916749.json)

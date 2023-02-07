@@ -31,4 +31,4 @@ Ouvre le fichier `db/seeds.rb` et écris du code pour insérer **10** posts, (*
 
 Tu peux appeler l'endpoint de l’API <https://hacker-news.firebaseio.com/v0/topstories.json>. Cela te donnera un array des 100 derniers id de posts. Puis pour les 10 premiers (PAS 100 !) id, tu dois appeler l’API pour obtenir les détails d’un post.
 
-À titre d’exemple, si tu veux obtenir des détails sur le post `8863`, tu dois appeler <https://hacker-news.firebaseio.com/v0/item/8863.json>
+À titre d’exemple, si tu veux obtenir des détails sur le post `20916749`, tu dois appeler <https://hacker-news.firebaseio.com/v0/item/20916749.json>
