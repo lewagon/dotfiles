@@ -1,3 +1,5 @@
+# rubocop:disable Lint/UselessAssignment
+
 # TODO: Below are five questions for you to answer. Read each of the questions
 # and make sure each of the methods return the correct answer.
 
@@ -12,9 +14,9 @@ def rails_flow
   # steps required to add a new page to your rails app. Add these variables
   # to the Array returned so that these steps are in the correct order.
 
-  a = 'generate controller and action'
-  b = 'create view'
-  c = 'add routes'
+  a = "generate controller and action"
+  b = "create view"
+  c = "add routes"
 
   return []
 end
@@ -37,3 +39,5 @@ def naming_conventions
   # application) to the view corresponding to the controller action generated
   # in the question above (the `about` action, in the `pages` controller).
 end
+
+# rubocop:enable Lint/UselessAssignment

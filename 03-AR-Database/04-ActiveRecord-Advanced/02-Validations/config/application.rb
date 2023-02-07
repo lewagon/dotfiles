@@ -1,7 +1,7 @@
-require 'active_record'
-require 'sqlite3'
-require 'yaml'
-require_relative 'fake_mailer'
+require "active_record"
+require "sqlite3"
+require "yaml"
+require_relative "fake_mailer"
 
 # This is some boilerplate code to read the config/database.yml file
 # And connect to the database
