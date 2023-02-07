@@ -8,9 +8,11 @@ on:
 
 jobs:
   rubocop:
-    if: ${{ github.event.pull_request.head.repo.full_name == 'lewagon' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
