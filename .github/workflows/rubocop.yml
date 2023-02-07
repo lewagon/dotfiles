@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   rubocop:
+    if: ${{ github.event.pull_request.head.repo.full_name == 'lewagon' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
