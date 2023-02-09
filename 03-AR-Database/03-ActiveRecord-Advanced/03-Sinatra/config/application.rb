@@ -16,7 +16,7 @@ end
 ActiveRecord::Base.logger = logger
 
 # Load models
-Dir["#{__dir__}/../app/models/*.rb"].sort.each { |file| require file }
+Dir["#{__dir__}/../app/models/*.rb"].each { |file| require file }
 
 
 # Discard warning message for i18n errors

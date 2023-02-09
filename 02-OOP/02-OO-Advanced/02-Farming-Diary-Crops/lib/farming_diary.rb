@@ -1,3 +1,4 @@
+# rubocop:disable Lint/LiteralInInterpolation
 # DO NOT remove the two lines below, needed for display purposes
 require_relative "../spec/helper/board"
 
@@ -32,3 +33,5 @@ puts "The rice crop is #{'TODO'}"
 
 # DO NOT remove the two lines below, needed for display purposes
 Board.new.display
+
+# rubocop:enable Lint/LiteralInInterpolation
