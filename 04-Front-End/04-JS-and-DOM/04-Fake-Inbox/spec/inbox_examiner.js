@@ -46,8 +46,8 @@ const runChallenges = (hasNewMessage, newMessage) => {
       }
     }
 
-    assertIsAbove(trueCount, 100, "For 100 calls, should return true at least 10 times");
-    assertIsBelow(trueCount, 300, "For 100 calls, should return true at most 30 times");
+    assertIsAbove(trueCount, 100, "For 1000 calls, should return true at least 100 times");
+    assertIsBelow(trueCount, 300, "For 1000 calls, should return true at most 300 times");
   }
 
   const unique = (a) => {
@@ -71,7 +71,6 @@ const runChallenges = (hasNewMessage, newMessage) => {
   }
 
   const haveLengthAbove = (array, n) => {
-    console.log(array)
     if (array.length > n) {
       addSuccess();
     } else {
