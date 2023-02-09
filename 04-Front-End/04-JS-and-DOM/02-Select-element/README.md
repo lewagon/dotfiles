@@ -18,10 +18,10 @@ You should see the countries that won the most FIFA World Cups in an ordered lis
 
 The goal of the challenge is to select France's `<li>` 🇫🇷!
 
-The easiest and most straightforward way to select an element from the DOM is **with an `id`**:
+The easiest and most straightforward way to select an element from the DOM is **with its `id`**:
 
 - Open the `index.html` file, spot the element we want to select and set an `id` to it;
-- Open the `lib/select.js` file and write the JavaScript to select the element with the given id, and make the function `return` it!
+- Open the `lib/select.js` file and write the corresponding JavaScript code to select the element with the given `id`, and make the function `return` the element!
 
 Happy selecting 🎣
 
