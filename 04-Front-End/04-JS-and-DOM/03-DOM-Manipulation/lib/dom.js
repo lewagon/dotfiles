@@ -62,4 +62,4 @@ const summarizePoints = () => {
 
 
 // Checking exercise answers. DO NOT MODIFY THIS LINE
-runChallenges(borisesEmail, teamCountBeforeAddition, summarizePoints());
+runChallenges(borisesEmail, teamCountBeforeAddition, summarizePoints);

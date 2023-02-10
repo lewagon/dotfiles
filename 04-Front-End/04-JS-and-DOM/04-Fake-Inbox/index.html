@@ -11,26 +11,38 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 col-md-8">
         <h1>Inbox <small id="count">(1)</small></h1>
+      </div>
+      <div class="col-12 col-md-4">
+        <h1>Results</h1>
       </div>
     </div>
   </div>
   <div class="container" id="inbox">
-    <div class="row message unread">
-      <div class="col-3">DHH</div>
-      <div class="col-9">A new job awaits you!</div>
-    </div>
-    <div class="row message read">
-      <div class="col-3">JavaScript Weekly</div>
-      <div class="col-9">How to become a JS pro in 3 days</div>
-    </div>
-    <div class="row message read">
-      <div class="col-3">Boris Paillard</div>
-      <div class="col-9">Welcome to Le Wagon :)</div>
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="row message unread">
+          <div class="col-3">DHH</div>
+          <div class="col-9">A new job awaits you!</div>
+        </div>
+        <div class="row message read">
+          <div class="col-3">JavaScript Weekly</div>
+          <div class="col-9">How to become a JS pro in 3 days</div>
+        </div>
+        <div class="row message read">
+          <div class="col-3">Boris Paillard</div>
+          <div class="col-9">Welcome to Le Wagon :)</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div id="results-wrapper">
+          <ul id="results" class="list-unstyled"></ul>
+        </div>
+      </div>
     </div>
   </div>
 
-  <script src="lib/inbox.js"></script>
+  <script type="module" src="lib/inbox.js"></script>
 </body>
 </html>

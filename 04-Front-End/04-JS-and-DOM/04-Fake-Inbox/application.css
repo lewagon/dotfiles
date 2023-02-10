@@ -27,3 +27,25 @@ h1 small {
   font-weight: bold;
   background-color: white;
 }
+
+.blue {
+  color: blue;
+}
+
+.error, .success {
+  padding: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+.error {
+  background-color: red;
+  color: white;
+}
+
+.success {
+  background-color: lightgreen;
+}
+
+#results-wrapper, #results-wrapper #results  {
+  position: relative;
+}

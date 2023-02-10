@@ -1,3 +1,5 @@
+import runChallenges from "../spec/split_the_bill_examiner.js";
+
 const splitTheBill = (group) => {
   // TODO 1: Implement the function and return an Object
 
@@ -13,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePriceList();
 });
 
-module.exports = splitTheBill; // Do not remove this line.
+// module.exports = splitTheBill; // Do not remove this line.
+runChallenges(splitTheBill);

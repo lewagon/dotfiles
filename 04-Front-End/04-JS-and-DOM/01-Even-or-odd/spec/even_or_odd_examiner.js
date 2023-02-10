@@ -1,21 +1,21 @@
-const runChallenges = (result_1, result_2, result_3) => {
+const runChallenges = (evenOrOdd) => {
   let EXERCISE_NUMBER = 1;
 
-  function addSuccess() {
+  const addSuccess = () => {
     document.getElementById('results').insertAdjacentHTML(
       'beforeend',
       `<div class="col-3 text-center success mx-2">Exercise ${EXERCISE_NUMBER} OK</div>`);
     EXERCISE_NUMBER += 1;
   }
 
-  function addError(msg) {
+  const addError = (msg) => {
     document.getElementById('results').insertAdjacentHTML(
       'beforeend',
       `<div class="col-3 text-center error mx-2">Exercise ${EXERCISE_NUMBER} KO: ${msg} </div>`);
     EXERCISE_NUMBER += 1;
   }
 
-  function assertEqual(actual, expected) {
+  const assertEqual = (actual, expected) => {
     if (actual === expected) {
       addSuccess();
     } else if (typeof expected === "number") {
@@ -25,7 +25,7 @@ const runChallenges = (result_1, result_2, result_3) => {
     }
   }
 
-  function assertNotEqual(actual, notExpected) {
+  const assertNotEqual = (actual, notExpected) => {
     if (actual !== notExpected) {
       addSuccess();
     } else if (typeof notExpected === "number") {
@@ -35,14 +35,14 @@ const runChallenges = (result_1, result_2, result_3) => {
     }
   }
 
-  function check(result_1, result_2, result_3) {
-    assertEqual(result_1, "even");
-    assertEqual(result_2, "odd");
-    assertEqual(result_3, "even");
+  const check = (evenOrOdd) => {
+    assertEqual(evenOrOdd(0), "even");
+    assertEqual(evenOrOdd(1), "odd");
+    assertEqual(evenOrOdd(2), "even");
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    check(result_1, result_2, result_3);
+    check(evenOrOdd);
   });
 }
 

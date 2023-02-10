@@ -8,4 +8,4 @@ const franceElement = () => {
 };
 
 // Checking exercise answers. DO NOT MODIFY THIS LINE
-runChallenges(franceElement());
+runChallenges(franceElement);
