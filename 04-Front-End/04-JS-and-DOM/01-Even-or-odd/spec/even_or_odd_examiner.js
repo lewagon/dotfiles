@@ -1,4 +1,4 @@
-const runChallenges = (result_1, result_2, result_3) => {
+const runChallenges = (evenOrOdd) => {
   let EXERCISE_NUMBER = 1;
 
   const addSuccess = () => {
@@ -35,14 +35,14 @@ const runChallenges = (result_1, result_2, result_3) => {
     }
   }
 
-  const check = (result_1, result_2, result_3) => {
-    assertEqual(result_1, "even");
-    assertEqual(result_2, "odd");
-    assertEqual(result_3, "even");
+  const check = (evenOrOdd) => {
+    assertEqual(evenOrOdd(0), "even");
+    assertEqual(evenOrOdd(1), "odd");
+    assertEqual(evenOrOdd(2), "even");
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    check(result_1, result_2, result_3);
+    check(evenOrOdd);
   });
 }
 
