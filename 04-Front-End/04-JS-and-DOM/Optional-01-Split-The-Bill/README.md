@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-For the first part of this exercsie we'll stay in the terminal to rake the code. The goal is to understand
+For the first part of this exercsie you need to make the tests in the browser pass. The goal is to understand
 how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
 Afterwards you need to change the HTML and write a new JavaScript function to display the results in the browser.
@@ -49,6 +49,6 @@ Object.keys(character).forEach((key) => {
 
 ## Display the results
 
-Once you have implemented the `splitTheBill(group)` function you can rake it to check your code.
+Once you have implemented the `splitTheBill(group)` function all the tests should be green.
 
 Now it's time to update the HTML file and add a list of who has to pay how much. First create a list with empty values in the `index.html` file and then complete the `updatePriceList()` function in your JS file to display the correct values.
