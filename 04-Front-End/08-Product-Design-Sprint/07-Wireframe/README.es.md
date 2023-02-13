@@ -2,7 +2,7 @@
 
 Es hora de volver a tu user flow y crear tu wireframe con la ayuda de tu Kit UI. El objetivo es crear un lo-fi mock-up de cada pantalla de tu producto.
 
-Comienza creando una nueva página en Figma y agregále un nuevo frame. Puedes dibujar un rectángulo en tu nuevo frame y centrarlo para ponerle márgenes en ambos lados:
+Comienza creando una nueva página en Figma y agregále un nuevo frame. Puedes dibujar un rectángulo en tu nuevo frame y centrarlo para ponerle márgenes en ambos lados (marque 'Rulers' en el menú Figma/View):
 
 ![Agregar márgenes en ambos lados del frame](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_wireframe_create_frame_with_margins.gif)
 
