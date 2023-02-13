@@ -2,6 +2,16 @@
 
 In this challenge, we want you to generate the HTML of an **unordered list** from raw data.
 
+### Setup
+
+Let's launch a local webserver by running:
+
+```bash
+serve
+```
+
+Then, open [`localhost:8000`](http://localhost:8000) in your browser.
+
 ## Specs
 
 ### List item generator

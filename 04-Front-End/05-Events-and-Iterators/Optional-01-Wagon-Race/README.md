@@ -6,6 +6,16 @@ The goal here is to learn more about JavaScript, the DOM, and asynchronous event
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/wagon_race.gif)
 
+### Setup
+
+Let's launch a local webserver by running:
+
+```bash
+serve
+```
+
+Then, open [`localhost:8000`](http://localhost:8000) in your browser.
+
 ## Specs
 
 Open the `index.html` in your browser.
