@@ -12,13 +12,7 @@
 
 ## 详细说明
 
-启动本地Web服务器：
-
-```bash
-rake webpack
-```
-
-在浏览器打开[`localhost:8080`](http://localhost:8080)。
+在你的浏览器中打开`index.html`。
 
 ### 添加参与者
 

@@ -7,12 +7,8 @@ L'objectif est d'en apprendre davantage sur JavaScript, le DOM et la gestion des
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/wagon_race.gif)
 
 ## Spécifications
-Lance ton serveur Web local avec :
 
-```bash
-rake webpack
-```
-et va sur http://localhost:8080
+Ouvre le fichier `index.html`.
 
 #### HTML
 

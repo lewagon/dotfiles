@@ -4,12 +4,6 @@ We covered how to select a DOM element, read information on it and update it (te
 
 ## Specs
 
-Launch your local webserver with:
-
-```bash
-rake webpack
-```
-
 Open the `index.html` file. You can see we are using Bootstrap. Also, there is a big button in the `<body>`.
 
 Your goal is to implement some JavaScript in the `lib/listener.js` file. **You should react to the click on the blue button.** When clicked, we want:

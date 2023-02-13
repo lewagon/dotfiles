@@ -4,12 +4,6 @@ Ayer trabajamos en la selección de un elemento DOM. Leímos información en él
 
 ## Especificaciones
 
-Inicia tu servidor web local con:
-
-```bash
-rake webpack
-```
-
 Abre el archivo `index.html`. Notarás que estamos usando Bootstrap. También verás un gran botón en el `<body>`.
 
 Tu objetivo es implementar algo de JavaScript en el archivo `lib/listener.js`. **Debes reaccionar al clic en el botón azul.** Al hacer clic queremos que pase lo siguiente:

@@ -4,12 +4,6 @@ Hier, on a vu comment sélectionner un élément du DOM, lire des informations d
 
 ## Spécifications
 
-Lance ton serveur Web local avec :
-
-```bash
-rake webpack
-```
-
 Ouvre le fichier `index.html`. Tu remarqueras qu'on utilise Bootstrap. Il y a aussi un gros bouton dans le corps (`<body>`).
 
 L'objectif est de coder du JavaScript dans le fichier `lib/listener.js`. **Tu dois réagir à un clic sur le bouton bleu.** Quand on clique sur ce bouton, on veut que :

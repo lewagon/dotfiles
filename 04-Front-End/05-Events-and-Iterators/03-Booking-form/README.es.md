@@ -12,13 +12,7 @@ Es hora de jugar con los [`dataset`](https://developer.mozilla.org/en-US/docs/We
 
 ## Especificaciones
 
-Inicia tu servidor web local con::
-
-```bash
-rake webpack
-```
-
-Abre [`localhost:8080`](http://localhost:8080) en tu navegador.
+Abra el `index.html` en su navegador.
 
 ### Agregar participantes
 

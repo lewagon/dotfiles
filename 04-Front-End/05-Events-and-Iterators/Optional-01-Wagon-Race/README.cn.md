@@ -7,12 +7,8 @@
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/wagon_race.gif)
 
 ## 详细说明
-启动你的本地网页服务器：
 
-```bash
-rake webpack
-```
-然后去 http://localhost:8080
+在你的浏览器中打开`index.html`。
 
 #### HTML
 

@@ -7,12 +7,8 @@ El objetivo es aprender más JavaScript, sobre el DOM y sobre la gestión de eve
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/wagon_race.gif)
 
 ## Especificaciones
-Inicia tu servidor web local con:
 
-```bash
-rake webpack
-```
-Y ve a http://localhost:8080
+Abra el `index.html` en su navegador.
 
 #### HTML
 
