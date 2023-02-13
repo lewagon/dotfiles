@@ -30,6 +30,15 @@ When the `listItem` function passes all the tests, go on and code the `unordered
 
 **Just this once**, we won't mind if the indentation in the generated string isn't perfect!
 
+### Display the list
+
+Now, call your `unorderedList` function to generate the HTML of the groceries list and display it in the `#list` element of the `index.html` page.
+
+The groceries list should look as follows:
+```js
+const groceries = ['milk', 'butter', 'bread'];
+```
+
 ### Refactoring with `Map()`
 
 If your solution passes the tests using `forEach()`, the last step is to find a better solution using [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)!

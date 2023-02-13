@@ -1,4 +1,0 @@
-task :mocha do
-  system "../../node_modules/.bin/mocha spec/*.js"
-end
-
