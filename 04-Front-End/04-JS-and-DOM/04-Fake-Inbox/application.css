@@ -1,0 +1,51 @@
+body {
+  margin: 2em 0;
+  background-color: #2c3e50;
+}
+
+h1 {
+  color: #eee;
+  margin-bottom: 1em;
+}
+
+h1 small {
+  font-weight: normal;
+  color: #ddd;
+}
+
+.message {
+  border-bottom: 1px solid #ccc;
+  padding: 0.4em 0;
+  cursor: pointer;
+}
+
+.read {
+  background-color: #eee;
+}
+
+.unread {
+  font-weight: bold;
+  background-color: white;
+}
+
+.blue {
+  color: blue;
+}
+
+.error, .success {
+  padding: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+.error {
+  background-color: red;
+  color: white;
+}
+
+.success {
+  background-color: lightgreen;
+}
+
+#results-wrapper, #results-wrapper #results  {
+  position: relative;
+}

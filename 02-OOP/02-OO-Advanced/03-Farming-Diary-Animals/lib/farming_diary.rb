@@ -1,3 +1,4 @@
+# rubocop:disable Lint/LiteralInInterpolation
 # DO NOT remove the line below, written for display purpose
 require_relative "../spec/helper/board"
 
@@ -16,7 +17,7 @@ puts "The male chicken says #{male_chicken.talk}"
 
 puts "\n\n"
 puts "📝 Day Four: Feed The Animals"
-# 1. Store all your animals in an `animals` array 
+# 1. Store all your animals in an `animals` array
 
 
 # 2. Call the `feed!` method on each animal (use `each` on the array)
@@ -30,3 +31,5 @@ puts "The male chicken produced #{'TODO'} eggs"
 
 # DO NOT remove the line below, written for display purpose
 Board.new.display
+
+# rubocop:enable Lint/LiteralInInterpolation
