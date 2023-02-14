@@ -5,8 +5,8 @@ Once you have moved all the numbers inside the puzzle into the right order you w
 
 ## Specs
 
-For this challenge we will see a new JavaScript concept: an event listener. You will learn more about event listeners in the next lecture so for it has been written for you in the challenge.
-How does it work? We want to execute our JavaScript code only when a specific event happens, not directly on page load. In our case, we want to move our empty tile only when we click on another tile, otherwise nothing should happen. We can do this by adding the following code:
+For this challenge we are using a new JavaScript concept: an event listener. You will learn more about event listeners in the next lecture so for now it has been written for you in the challenge.
+How does it work? We want to execute our JavaScript code only when a specific event happens, not directly on page load (which is what we have done until now). In our case, we want to move our empty tile only when we click on another tile, otherwise nothing should happen. We can do this by adding the following code:
 
 ```js
 tiles.forEach((tile) => {
