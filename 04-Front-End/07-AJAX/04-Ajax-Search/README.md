@@ -8,8 +8,8 @@ In this exercise, you'll have to implement a `GET` request to OMDb API in order 
 ![Highlights Gif](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-search.gif)
 
 ## Resources
-The [documentation of the OMDb API](https://www.omdbapi.com/)
 
+The [documentation of the OMDb API](https://www.omdbapi.com/)
 
 ## Specs
 
