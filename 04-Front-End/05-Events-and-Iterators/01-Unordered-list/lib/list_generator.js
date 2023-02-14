@@ -10,7 +10,8 @@ const unorderedList = (items) => {
 
 // Do not remove these lines:
 document.addEventListener("DOMContentLoaded", () => {
-  // TODO: call unorderedList() with the right arguments
+  // TODO: call unorderedList() passing the right element
+  // TODO: display the list in the browser
 });
 
 
