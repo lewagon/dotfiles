@@ -56,12 +56,11 @@ button.addEventListener('click', (event) => {
 继续, 打开 `index.html` 和 `lib/index.js` 文件然后把上面的代码复制粘贴。都做完了后启动服务器，然后在浏览器检查按钮是否如我们期望的那样好用：
 
 ```bash
-yarn install
-rake webpack
+serve
 ```
 
 ```bash
-open http://localhost:8080
+open http://localhost:8000
 ```
 
 查看我们如何改善在 `audio` 元素上监听 `ended` 事件时你提出的解决方案。这样，当声音播放完毕后，我们重新启用按钮并放回初始文本。

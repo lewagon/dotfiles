@@ -16,14 +16,13 @@ It's an HTML form with category checkboxes:
 - 1x checkbox "Check All"
 - 4x checkbox with Categories
 
-You can launch the webpack server:
+You can launch the server:
 
 ```bash
-yarn install
-rake webpack
+serve
 ```
 
-and open [localhost:8080](http://localhost:8080) in your browser.
+and open [localhost:8000](http://localhost:8000) in your browser.
 
 You can check these checkboxes individually, but the "Check all" checkbox is not yet checking all the checkboxes. This is the behaviour you want to implement thanks to JavaScript, and your new friend: Stimulus.
 
