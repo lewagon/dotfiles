@@ -1,0 +1,17 @@
+## ES6 Classes
+
+
+## Goal
+
+- ...
+
+
+## Specs
+
+Run the server from your terminal with:
+
+```bash
+serve
+```
+
+And visit `localhost:8000`
