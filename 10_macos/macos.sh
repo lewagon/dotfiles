@@ -428,5 +428,3 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 102
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
-
-sudo shutdown -r now
