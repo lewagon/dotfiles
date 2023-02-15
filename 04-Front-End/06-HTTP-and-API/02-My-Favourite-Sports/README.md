@@ -8,13 +8,11 @@ Again it will come down to **selecting** elements, **binding** them to an event 
 
 ## Specs
 
-Launch your local webserver with:
+Open the html page in your browser with:
 
 ```bash
-serve
+open index.html
 ```
-
-Open [`localhost:8000`](http://localhost:8000) in your browser.
 
 You should see a grid of 6 sports boxes that look like they are clickable. When you hover over one of them, you see that the UI changes to suggest you to click. However, nothing happens when you click... yet! Let's fix that!
 

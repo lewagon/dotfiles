@@ -12,13 +12,13 @@ Time to play with [`dataset`s](https://developer.mozilla.org/en-US/docs/Web/API/
 
 ## Specs
 
-Launch your local webserver with:
+Open the html page in your browser with:
 
 ```bash
-serve
+open index.html
 ```
 
-Open [`localhost:8000`](http://localhost:8000) in your browser.
+Open [`localhost:8080`](http://localhost:8080) in your browser.
 
 ### Add participants
 
