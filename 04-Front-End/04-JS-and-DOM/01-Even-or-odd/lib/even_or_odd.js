@@ -8,4 +8,4 @@ const evenOrOdd = (number) => {
 };
 
 // Checking exercise answers. DO NOT MODIFY THIS LINE
-runChallenges(evenOrOdd(0), evenOrOdd(1), evenOrOdd(2));
+runChallenges(evenOrOdd);
