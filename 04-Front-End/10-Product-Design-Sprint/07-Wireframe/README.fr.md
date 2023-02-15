@@ -2,7 +2,7 @@
 
 Il est temps de reprendre ton flux utilisateur et de créer ta maquette fonctionnelle en t'aidant de ton kit UI. L'objectif ici est de créer une maquette faible fidélité pour chaque écran de ton produit.
 
-Commence par créer une nouvelle page sur Figma et ajoute un nouveau cadre dessus. Tu peux dessiner un rectangle sur ton nouveau cadre et le centrer pour mettre des marges de chaque côté :
+Commence par créer une nouvelle page sur Figma et ajoute un nouveau cadre dessus. Tu peux dessiner un rectangle sur ton nouveau cadre et le centrer pour mettre des marges de chaque côté (coche 'Rulers' dans le menu Figma/View):
 
 ![Ajouter des marges de chaque côté du cadre](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_wireframe_create_frame_with_margins.gif)
 
