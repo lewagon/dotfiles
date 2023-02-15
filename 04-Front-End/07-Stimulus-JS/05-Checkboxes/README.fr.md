@@ -16,13 +16,14 @@ C'est un formulaire HTML avec des cases à cocher :
 - 1 case à cocher « Tout cocher » ("Check All")
 - 4 cases à cocher avec des catégories
 
-Tu peux lancer le serveur:
+Tu peux lancer le serveur webpack :
 
 ```bash
-serve
+yarn install
+rake webpack
 ```
 
-et ouvrir [localhost:8000](http://localhost:8000) dans ton navigateur.
+et ouvrir [localhost:8080](http://localhost:8080) dans ton navigateur.
 
 Tu peux cocher chacune des cases individuellement, mais la case à cocher « Tout cocher » ("Check all") ne fonctionne pas encore. C'est le comportement qu'on va chercher à coder avec JavaScript et ton nouvel ami : Stimulus.
 

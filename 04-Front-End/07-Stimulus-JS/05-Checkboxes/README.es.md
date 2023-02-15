@@ -18,13 +18,14 @@ Es un formulario HTML con casillas de categorías:
 - 1x casilla "Check All" que las selecciona todas
 - 4x casillas con Categories
 
-Inicia el servidor:
+Inicia el servidor webpack:
 
 ```bash
-serve
+yarn install
+rake webpack
 ```
 
-y abre [localhost:8000](http://localhost:8000) en tu navegador.
+y abre [localhost:8080](http://localhost:8080) en tu navegador.
 
 Puedes seleccionar las casillas individualmente pero la "Check all" todavía no selecciona todas las casillas. Este es justamente el comportamiento que debes implementar con la magia de JavaScript y de nuestro nuevo amigo: Stimulus.
 
