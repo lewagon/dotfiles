@@ -1,15 +1,15 @@
 ## Background & Objectives
 
 In this challenge you will play with [OMDb API](https://www.omdbapi.com/) (The Open Movie Database).
-This API will allow you to retrieve informations about movies from a keyword.
+This API will allow you to retrieve information about movies from a keyword.
 
-In this exercise, you'll have to implement a `GET` request to OMDb API in order to retrieve informations about movies you're looking for and implement a callback to inject a card for each movie in the DOM.
+In this exercise, you'll have to implement a `GET` request to OMDb API in order to retrieve information about movies you're looking for and implement a callback to inject a card for each movie in the DOM.
 
 ![Highlights Gif](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-search.gif)
 
 ## Resources
 
-The [documentation of the OMDb API](https://www.omdbapi.com/)
+The [documentation for the OMDb API](https://www.omdbapi.com/)
 
 ## Specs
 
@@ -26,14 +26,13 @@ Here is the URL structure you should use to make a request to the API:
 http://www.omdbapi.com/?s=MOVIE_TITLE&apikey=YOUR_API_KEY
 ```
 
-For example, here a is a request to search `Harry Potter` movies:
-
+For example, this is what request to search for `Harry Potter` movies would look like:
 
 ```
 http://www.omdbapi.com/?s=Harry Potter&apikey=adf1f2d7
 ```
 
-Here is 3 API keys to make your requests (don't hesitate to change it if your requests don't work anymore):
+Here are 3 API keys to make your requests (don't hesitate to change it if your requests don't work anymore):
 
 ```
 - adf1f2d7
@@ -45,19 +44,19 @@ Code your JavaScript in `lib/index.js`.
 
 ### Capture the movie title and make the request
 
-Add the proper event listener to capture the keyword enter by the user when they click on the `Search` button or when they hit the `enter` key of the keyboard.
+Add the proper event listener to capture the keyword entered by the user when they click on the `Search` button or when they hit the `enter` key of the keyboard.
 
-Then store this keyboard in a variable and build the url you will use in the `fetch`.
+Then store this keyword in a variable and build the url you will use in the `fetch` request.
 
-Don't forget that this API will return a JSON, so you will have to make several operation before accessing the results.
+Don't forget that this API will return a JSON, so you will have to make several operations before accessing the results.
 
-At each step, think to add some `console.log` to see the object your manipulating.
+At each step, consider adding some `console.log` to see the object that you are manipulating.
 
 ### Inject a card for each movie
 
-As soon as you'll be able to `console.log` the results of API, start to implement the call which will inject a card for each movie in the div with the `movie-cards` id.
+As soon as you are able to `console.log` the results of the API request, start to implement the callback which will inject a card for each movie in the div with the `movie-cards` id.
 
-Here is the html of card you can use (but feel free to create yours):
+Here is the html of card you can use (but feel free to create your own):
 
 ```html
 <div class="col-lg-3 col-md-4 col-sm-6 col-12">

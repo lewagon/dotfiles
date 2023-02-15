@@ -23,7 +23,7 @@ For example, this url will predict the age for `michael`:
 https://api.agify.io?name=michael
 ```
 
-Once the request is done, update the content of the paragraph wiht the `your-name` id. Try to create a display the avec in sentence like `You're ${data.age} years old according.`
+Once the request is done, update the content of the paragraph with the `your-name` id. Try to display a message with a sentence like `You're ${data.age} years old.`
 
 
 Happy agifying!
