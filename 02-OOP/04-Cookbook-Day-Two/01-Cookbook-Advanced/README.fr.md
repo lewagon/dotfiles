@@ -122,7 +122,7 @@ doc = Nokogiri::HTML.parse(URI.open(url).read, nil, "utf-8")
 
 ### `Controller` / `View` / `Router`
 
-Maintenant que tu as la logique de parsing, le moment est venu d’ajouter une action utilisateur dans ton `Controller`. Utilise le pseudo-code ci-dessous pour te guider dans cette nouvelle méthode. Pour ton premier essai, tu peux copier-coller le code de parsing dans ton contrôleur.
+Maintenant que tu as la logique de parsing, le moment est venu d’ajouter une action utilisateur dans ton `Controller`. Utilise le pseudo-code ci-dessus pour te guider dans cette nouvelle méthode. Pour ton premier essai, tu peux copier-coller le code de parsing dans ton contrôleur.
 
 Réfléchis à la **classe** que tu dois utiliser pour stocker des informations parsées depuis le Web. Laquelle est-ce ?
 
