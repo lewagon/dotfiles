@@ -2,6 +2,16 @@
 
 In this challenge, we want you to generate the HTML of an **unordered list** from raw data.
 
+### Setup
+
+Let's launch a local webserver by running:
+
+```bash
+serve
+```
+
+Then, open [`localhost:8000`](http://localhost:8000) in your browser.
+
 ## Specs
 
 ### List item generator
@@ -29,6 +39,15 @@ When the `listItem` function passes all the tests, go on and code the `unordered
 ```
 
 **Just this once**, we won't mind if the indentation in the generated string isn't perfect!
+
+### Display the list
+
+Now, call your `unorderedList` function to generate the HTML of the groceries list and display it in the `#list` element of the `index.html` page.
+
+The groceries list should look as follows:
+```js
+const groceries = ['milk', 'butter', 'bread'];
+```
 
 ### Refactoring with `Map()`
 

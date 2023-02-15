@@ -10,6 +10,16 @@ Submitting the form is not expected to have any effects.
 
 Time to play with [`dataset`s](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)!
 
+### Setup
+
+Let's launch a local webserver by running:
+
+```bash
+serve
+```
+
+Then, open [`localhost:8000`](http://localhost:8000) in your browser.
+
 ## Specs
 
 Open the `index.html` in your browser.
