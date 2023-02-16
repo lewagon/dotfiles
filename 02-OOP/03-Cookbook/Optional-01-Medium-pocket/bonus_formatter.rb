@@ -9,6 +9,7 @@ class BonusFormatter < RSpec::Core::Formatters::DocumentationFormatter
   end
 end
 
+# rubocop:disable Style/RedundantStringEscape
 BONUS = "
 
       _.--._  _.--._
@@ -23,3 +24,4 @@ BONUS = "
 
 
 "
+# rubocop:enable Style/RedundantStringEscape
