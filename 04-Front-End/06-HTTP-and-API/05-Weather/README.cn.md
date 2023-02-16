@@ -6,10 +6,10 @@
 启动你的本地网络服务器：
 
 ```bash
-rake webpack
+serve
 ```
 
-打开[`localhost:8080`](http://localhost:8080/)然后打开控制台。
+打开[`localhost:8000`](http://localhost:8000/)然后打开控制台。
 
 ### 获取你的API密钥 (你和你的伙伴需要1个）
 

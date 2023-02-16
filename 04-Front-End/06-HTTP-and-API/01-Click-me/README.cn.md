@@ -13,10 +13,10 @@
 启动你的本地网络服务器：
 
 ```bash
-rake webpack
+serve
 ```
 
-在浏览器中打开 [`localhost:8080`](http://localhost:8080)。
+在浏览器中打开 [`localhost:8000`](http://localhost:8000)。
 
 你应该可以看到一个大的绿色按钮写着 `Click me!`。这个挑战的目的是当你点击按钮的时候，一个写着`Thank you!` 的[`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) 会出现。
 

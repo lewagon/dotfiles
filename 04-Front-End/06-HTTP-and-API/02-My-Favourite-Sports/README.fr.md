@@ -11,10 +11,10 @@ Il s'agira donc à nouveau de **sélectionner** des éléments, de les **lier** 
 Lance ton serveur Web local avec :
 
 ```bash
-rake webpack
+serve
 ```
 
-Ouvre [`localhost:8080`](http://localhost:8080) dans ton navigateur.
+Ouvre [`localhost:8000`](http://localhost:8000) dans ton navigateur.
 
 Tu devrais voir apparaître une grid (grille) avec 6 cases de sports qui semblent cliquables. Quand tu en survoles une, l'interface utilisateur change et te propose de cliquer. Mais rien ne se passe quand tu cliques ! On va corriger ça.
 

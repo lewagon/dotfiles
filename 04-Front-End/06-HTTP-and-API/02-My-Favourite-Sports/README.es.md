@@ -11,10 +11,10 @@ En este desafío queremos reproducir la experiencia de usuario (UX) que cada vez
 Inicia tu servidor web local con:
 
 ```bash
-rake webpack
+serve
 ```
 
-Abre [`localhost:8080`](http://localhost:8080) en tu navegador.
+Abre [`localhost:8000`](http://localhost:8000) en tu navegador.
 
 Verás una cuadrícula (grid) de 6 casillas de deportes que parecen cliqueables. Cuando pasas el cursor sobre ellas (hover) fíjate que la interfaz de usuario (UI) cambia y te sugiere que hagas clic. Sin embargo, no pasa nada cuando haces clic... ¡por ahora!¡Arreglemos eso!
 

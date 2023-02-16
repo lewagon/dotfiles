@@ -12,7 +12,7 @@
 启动你的本地网络服务器：
 
 ```bash
-rake webpack
+serve
 ```
 
 ### 地理编码

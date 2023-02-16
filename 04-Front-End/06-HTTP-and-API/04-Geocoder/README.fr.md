@@ -12,7 +12,7 @@ Dans cet exercice, on va pratiquer nos compétences en AJAX. On va commencer sim
 Tu peux lancer ton serveur local avec :
 
 ```bash
-rake webpack
+serve
 ```
 
 ### Geocoding
