@@ -8,7 +8,7 @@ In this exercise, we'll take a closer look at the Fork API that we saw during th
 Open the html page in your browser with:
 
 ```bash
-open index.html
+serve
 ```
 
 ### ...
