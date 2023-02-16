@@ -4,13 +4,11 @@ In this challenge, we are going to play around with the [OpenWeatherMap API](htt
 
 ## Specs
 
-Launch your local webserver with:
+Open the html page in your browser with:
 
 ```bash
-serve
+open index.html
 ```
-
-Open [`localhost:8000`](http://localhost:8000) in your browser.
 
 Once the page is loaded open your console.
 
