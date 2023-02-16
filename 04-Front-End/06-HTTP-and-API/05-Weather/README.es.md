@@ -7,10 +7,10 @@
 Puedes iniciar tu servidor local con:
 
 ```bash
-rake webpack
+serve
 ```
 
-Ve a [`localhost:8080`](http://localhost:8080/) y abre la consola.
+Ve a [`localhost:8000`](http://localhost:8000/) y abre la consola.
 
 ### Obten tu clave API (1 para ti y otra para tu compañero/a (buddy))
 

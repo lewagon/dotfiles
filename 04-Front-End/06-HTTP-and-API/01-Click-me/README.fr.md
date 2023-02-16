@@ -13,10 +13,10 @@ C'est toujours le même processus en 3 étapes :
 Lance ton serveur Web local avec :
 
 ```bash
-rake webpack
+serve
 ```
 
-Ouvre [`localhost:8080`](http://localhost:8080) dans ton navigateur.
+Ouvre [`localhost:8000`](http://localhost:8000) dans ton navigateur.
 
 Tu devrais voir apparaître un gros bouton vert disant `Click me!`. L'objectif de ce challenge est d'afficher une [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) disant `Thank you!` quand tu cliques dessus.
 
