@@ -1,16 +1,17 @@
-// note(valerieschraauwers): they don't know stimulus yet now that we moved this exercise
 // TODO: Call the Weather API when the form is submitted
 
+// TODO: Create a function to get the weather info
 const getWeatherInfo = () => {
-  const url = '...?'
+  // TODO: Replace the following line with the correct url
+  const url = '...'
 
-  fetch(url, {
-    method: 'POST',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(message)
-  })
-  .then(response => response.json())
-  .then((data) => {
-    console.log(data);
-  });
+  fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data);
+      // TODO: Insert the weather info in the DOM (description, date, temperature...)
+    });
 }
+
+// TODO: Add an event listener to the form
+// TODO: On submit, in the callback, call the getWeatherInfo function
