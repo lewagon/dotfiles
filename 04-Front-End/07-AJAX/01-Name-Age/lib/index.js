@@ -8,4 +8,4 @@ const displayAge = (event) => {
 }
 
 const form = document.getElementById("fetch-age");
-form.addEventListener("submit", displayAge)
+form.addEventListener("submit", displayAge);
