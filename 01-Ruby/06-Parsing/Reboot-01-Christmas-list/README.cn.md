@@ -117,7 +117,7 @@ filepath = "/path/to/the/HTML/file.html"
 # 1. 我们拿到了HTML页面内容
 html_content = File.open(filepath)
 # 2. 我们从这个文件构建了一个 Nokogiri 文档
-doc = Nokogiri::HTML(html_content)
+doc = Nokogiri::HTML.parse(html_content)
 
 # 3. 我们在HTML文档中搜索包含这个项目标题的正确的元素
 doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
@@ -137,7 +137,7 @@ article = gets.chomp
 # 1. 多亏了open-uri，我们得到了HTNML页面内容
 html_content = URI.open("https://www.etsy.com/search?q=#{article}", "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0").read
 # 2. 我们从这个文件构建了一个 Nokogiri 文档
-doc = Nokogiri::HTML(html_content)
+doc = Nokogiri::HTML.parse(html_content)
 
 # 3. 我们在HTML文档中搜索包含这个项目标题的正确的元素
 doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|

@@ -17,7 +17,7 @@ Hay muchos más paquetes útiles a disposición, así que no dejes de leerla!
 
 ## Especificaciones
 
-- implementa `#most_successful` el cual devuelve las películas (de acuerdo con un cierto `number` que se le pasa como parámetro) publicadas antes de un año dado y las ganancias respectivas.
+- implementa `#most_successful` el cual devuelve las películas (de acuerdo con un cierto `number` que se le pasa como parámetro) ordenadas por `earnings` descendentes y publicadas antes de un año dado y las ganancias respectivas.
 - **limitación**: la lista devuelta debe ser un arreglo (array) de películas. Cada película debe representarse con un hash con las llaves (keys) `name`, `year` y `earnings`. Por ejemplo: `{ name: "Avatar", year: 2009, earnings: 760505847 }`
 
 ## Sugerencias y recursos adicionales

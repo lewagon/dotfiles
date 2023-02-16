@@ -44,7 +44,7 @@ describe "Inheritance", unless: all_helpers_valid([animal_helper, cow_helper, ch
   
   describe 'Animal' do
     it '`animal.rb` file should exist' do
-      expect(animal_helper.file_exists?).to be(true)
+      expect(animal_helper.file_exist?).to be(true)
     end
 
     it '`Animal` class should be defined' do
@@ -54,7 +54,7 @@ describe "Inheritance", unless: all_helpers_valid([animal_helper, cow_helper, ch
   
   describe 'Cow' do
     it '`cow.rb` file should exist' do
-      expect(cow_helper.file_exists?).to be(true)
+      expect(cow_helper.file_exist?).to be(true)
     end
 
     it '`Cow` class should be defined' do
@@ -68,7 +68,7 @@ describe "Inheritance", unless: all_helpers_valid([animal_helper, cow_helper, ch
   
   describe 'Chicken' do
     it '`chicken.rb` file should exist' do
-      expect(chicken_helper.file_exists?).to be(true)
+      expect(chicken_helper.file_exist?).to be(true)
     end
     
     it '`Chicken` class should be defined' do

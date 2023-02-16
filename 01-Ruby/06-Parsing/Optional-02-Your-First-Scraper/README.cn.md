@@ -15,7 +15,7 @@ require 'open-uri'
 require 'nokogiri'
 
 html_content = open('https://www.etsy.com/search?q=wallet').read
-doc = Nokogiri::HTML(html_content)
+doc = Nokogiri::HTML.parse(html_content)
 
 doc.search('.wt-grid .v2-listing-card__info .v2-listing-card__title').each_with_index do |element, index|
   puts "#{index + 1}. #{element.text.strip}"

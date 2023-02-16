@@ -89,6 +89,7 @@ require_relative "transaction"
 - ¿ Cuáles son los argumentos predeterminados? ¿Cómo los usas?
 - En `bank_account.rb`, ¿qué sucede en las líneas 2-3 y 19?
 
-## Sugerencias y recursos suplementarios
+## Otras sugerencias y recursos
 
-- Puedes usar el método `Time#strftime` para definir el formato de tu fecha en `Transaction#to_s`.
+- Puedes usar el método `Time#strftime` para formatear tu fecha en `Transaction#to_s`.
+- Ruby tiene muchas excepciones incorporadas, ¡pero `DepositError` no es una de ellas! Hemos creado nuestra propia excepción personalizada aquí para proporcionar un mensaje de error mejor descrito, que nos ayudará a depurar en el futuro. Mira [este artículo](https://launchschool.medium.com/getting-started-with-ruby-exceptions-d6318975b8d1), en particular el párrafo `Raising Custom Exceptions` para más detalles al respecto.

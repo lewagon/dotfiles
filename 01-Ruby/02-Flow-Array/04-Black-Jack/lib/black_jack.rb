@@ -5,4 +5,3 @@ end
 def pick_player_card
   # TODO: Use Random to get a new random card
 end
-
