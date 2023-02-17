@@ -7,10 +7,10 @@ Dans ce challenge, on va jouer avec l'[API OpenWeatherMap](https://openweatherma
 Tu peux lancer ton serveur local avec :
 
 ```bash
-rake webpack
+serve
 ```
 
-Va à [`localhost:8080`](http://localhost:8080/) et ouvre ta console.
+Va à [`localhost:8000`](http://localhost:8000/) et ouvre ta console.
 
 ### Récupérer ta clé API (1 pour toi et ton buddy)
 
