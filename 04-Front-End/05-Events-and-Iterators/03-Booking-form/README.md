@@ -12,25 +12,17 @@ Time to play with [`dataset`s](https://developer.mozilla.org/en-US/docs/Web/API/
 
 ### Setup
 
-<<<<<<< HEAD:04-Front-End/05-Events-and-Iterators/03-Booking-form/README.md
 Let's launch a local webserver by running:
-=======
-Open the html page in your browser with:
->>>>>>> http-and-api:04-Front-End/06-HTTP-and-API/Optional-01-Booking-form/README.md
 
 ```bash
-open index.html
+serve
 ```
 
-<<<<<<< HEAD:04-Front-End/05-Events-and-Iterators/03-Booking-form/README.md
 Then, open [`localhost:8000`](http://localhost:8000) in your browser.
 
 ## Specs
 
 Open the `index.html` in your browser.
-=======
-Open [`localhost:8080`](http://localhost:8080) in your browser.
->>>>>>> http-and-api:04-Front-End/06-HTTP-and-API/Optional-01-Booking-form/README.md
 
 ### Add participants
 
