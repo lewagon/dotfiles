@@ -3,6 +3,18 @@
 Let's build a puzzle game 🧩
 Once you have moved all the numbers inside the puzzle into the right order you will get a notification that you won the game.
 
+![js-puzzle](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/js_puzzle.gif)
+
+## Setup
+
+As usual, you can test your code by running this command:
+
+```bash
+serve
+```
+
+Then open [`localhost:8000`](http://localhost:800) in your browser.
+
 ## Specs
 
 For this challenge we are using a new JavaScript concept: an event listener. You will learn more about event listeners in the next lecture so for now it has been written for you in the challenge.
