@@ -59,3 +59,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = ianmeldrum97@gmail.com
+	name = Ian Meldrum
