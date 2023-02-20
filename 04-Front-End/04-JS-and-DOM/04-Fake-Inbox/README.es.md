@@ -25,14 +25,12 @@ o
 }
 ```
 
-Puedes usar `rake` para los 2 métodos.
-
 Ahora vamos a testear el código usando el navegador (ya no hay más `rake` a disposición). Corre el siguiente código en otra Terminal:
 
 ```bash
-rake webpack
+serve
 ```
-Y ve a [localhost:8080](http://localhost:8080).
+Y ve a [localhost:8000](http://localhost:8000).
 
 ## Tareas
 

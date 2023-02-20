@@ -8,7 +8,7 @@ A esto se le conoce como la manipulación del [Document Object Model](http://en.
 - Remover nodos
 - Agregar nodos
 
-Al realizar cualquiera de las acciones anteriores la página cambia instantáneamente sin necesidad de refrescarla ("Refresh").
+Recuerda que tienes que refrescar la página cada vez que hagas un cambio.
 
 ## Especificaciones
 
@@ -17,10 +17,10 @@ Abre el archivo `lib/dom.js`. Ahí encontrarás una lista de desafíos que compl
 Para testear tu código, abre una nueva Terminal y corre el siguiente comando:
 
 ```bash
-rake webpack
+serve
 ```
 
-Luego abre [`localhost:8080`](http://localhost:8080) en tu navegador favorito. Abre la Consola.
+Luego abre [`localhost:8000`](http://localhost:8000) en tu navegador favorito. Abre la Consola.
 
 Cambia algo del código en `lib/dom.js`. La página se cargará sola en el navegador tan pronto guardes los cambios en tu editor de texto.
 

@@ -4,16 +4,13 @@
 
 ### Configuración
 
-Ya debes tener `node` y `yarn` instalados. Compruébalo con:
+Inicia tu servidor web local corriendo lo siguiente:
 
 ```bash
-node -v
-# Debería ver node versión aquí
-yarn -v
-# Debería ver yarn versión aquí
+serve
 ```
 
-Si no es así, vuelva a la sección dedicada del [macOS](https://github.com/lewagon/setup/blob/master/macos.md#nodejs), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#nodejs) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#nodejs) setup.
+Luego abre [`localhost:8000`](http://localhost:8000) en tu navegador favorito.
 
 ## Especificaciones
 

@@ -2,16 +2,13 @@
 
 Aujourd'hui c'est ton premier jour de JavaScript. L'objectif de cette première journée est de te montrer qu'il s'agit d'un langage de programmation, comme Ruby, avec des variables, des fonctions, des conditions, des boucles, etc.
 
-Pas besoin de navigateur aujourd'hui. À la place, on utilisera [Node.js](https://nodejs.org/en/) pour exécuter un peu de JavaScript directement dans le terminal.
+Nous allons travailler directement dans le navigateur pour exécuter du code JavaScript.
 
-Tu devrais déjà avoir `node` installé avec une version supérieure à `10`. Vérifie-le en exécutant :
+Lance ton programme avec la commande `serve` et va sur [http://localhost:8000](http://localhost:8000).
 
 ```bash
-node -v
-# Tu devrais voir ta version de node ici
+ serve
 ```
-
-Si ce n'est pas le cas, retourne à la section correspondante du setup [macOS](https://github.com/lewagon/setup/blob/master/macos.fr.md#nodejs), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.fr.md#nodejs) ou [Windows](https://github.com/lewagon/setup/blob/master/windows.fr.md#nodejs).
 
 ## Spécifications
 

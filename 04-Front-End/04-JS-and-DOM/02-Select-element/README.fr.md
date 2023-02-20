@@ -4,26 +4,15 @@ Dans ce premier challenge, on va sélectionner un élément du DOM !
 
 ### Configuration
 
-`node` et `yarn` doivent déjà être installés. Vérifie avec :
-
-```bash
-node -v
-# Tu dois voir ta version de node ici
-yarn -v
-# Tu dois voir ta version de yarn ici
-```
-
-Si ce n'est pas le cas, retourne à la section dédiée du processus d'installation [macOS](https://github.com/lewagon/setup/blob/master/macos.fr.md#nodejs), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.fr.md#nodejs) ou [Windows](https://github.com/lewagon/setup/blob/master/windows.fr.md#nodejs).
-
-## Spécifications
-
 Lance un serveur local Web en exécutant :
 
 ```bash
-rake webpack
+serve
 ```
 
-Puis ouvre [`localhost:8080`](http://localhost:8080) dans ton navigateur Web préféré.
+Puis ouvre [`localhost:8000`](http://localhost:8000) dans ton navigateur.
+
+## Spécifications
 
 Tu devrais voir une liste ordonnée des pays qui ont remporté le plus de fois la Coupe du monde de la FIFA.
 

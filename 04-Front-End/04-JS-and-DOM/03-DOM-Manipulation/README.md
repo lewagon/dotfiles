@@ -20,7 +20,7 @@ To test your code, open a new terminal and run this command:
 serve
 ```
 
-Then open [`localhost:8000`](http://localhost:800) in your browser.
+Then open [`localhost:8000`](http://localhost:8000) in your browser.
 
 Change some code in the `lib/dom.js`, as soon as you save in your text editor, reload the page in the browser.
 

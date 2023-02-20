@@ -8,7 +8,7 @@ On parle de manipulation du [Modèle Objet de Document ou Document Object Model]
 - supprimer des nœuds ;
 - ajouter des nœuds.
 
-Chacune de ces actions modifiera instantanément l'aspect de la page sans que tu aies besoin de la rafraîchir.
+N'oublie pas de rafraîchir la page pour voir les changements.
 
 ## Spécifications
 
@@ -17,10 +17,10 @@ Ouvre le fichier `lib/dom.js`. Il contient une liste de challenges à relever.
 Pour tester ton code, ouvre une nouvelle fenêtre de terminal et exécute cette commande :
 
 ```bash
-rake webpack
+serve
 ```
 
-Puis ouvre [`localhost:8080`](http://localhost:8080) dans ton navigateur Web préféré. Ouvre la Console.
+Puis ouvre [`localhost:8000`](http://localhost:8000) dans ton navigateur Web préféré. Ouvre la Console.
 
 Modifie le code dans `lib/dom.js`. Dès que tu l'enregistreras dans ton éditeur de texte, la page se chargera à nouveau dans le navigateur.
 
