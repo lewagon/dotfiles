@@ -5,7 +5,7 @@ Make sure you execute the commands above 👆
 Copy the code from the last block:
 
 ```bash
-cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
+cp -r ../../04-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
 ```
 
 Then, before you start, check that it still works by launching your app:

@@ -5,7 +5,7 @@ Asegurate de ejecutar lo comandos anteriores 👆
 Copia el código de ayer:
 
 ```bash
-cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
+cp -r ../../04-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
 ```
 
 Luego, comprueba que todo todavía funciona antes de empezar iniciando tu aplicación:

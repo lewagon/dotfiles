@@ -5,7 +5,7 @@
 复制昨天的代码：
 
 ```bash
-cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # 尾随点很重要
+cp -r ../../04-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # 尾随点很重要
 ```
 
 然后，在开始之前，通过启动应用程序检查它是否仍然有效：

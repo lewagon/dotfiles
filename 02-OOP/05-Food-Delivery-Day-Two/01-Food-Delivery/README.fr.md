@@ -5,7 +5,7 @@ N’oublie pas d’exécuter les commandes ci-dessus 👆
 Copie le code du bloc précédent :
 
 ```bash
-cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # le point à la fin est important
+cp -r ../../04-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # le point à la fin est important
 ```
 
 Avant de commencer, vérifie que tout fonctionne encore en lançant ton app :
