@@ -11,6 +11,7 @@
     <script type="importmap">
       {
         "imports": {
+          "stimulus": "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js",
           "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         }
       }
@@ -18,6 +19,11 @@
     <script src="javascript/application.js" type="module"></script>
   </head>
   <body>
-
+    <div class="container">
+      <div>
+        <textarea rows="3" placeholder="Type something" class="form-control mb-2"></textarea>
+        <i><!-- TODO: Add the correct target for displaying the counter --></i>
+      </div>
+    </div>
   </body>
 </html>
