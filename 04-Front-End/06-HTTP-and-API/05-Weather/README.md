@@ -82,4 +82,4 @@ If your HTML page reloads, it means you forgot to **prevent** something...
 
 You are not done yet. When your features work, it's tempting to leave the code as it is. Reorganizing your code to make it maintainable in the long run is key if you want to save tons of time in the future.
 
-Do you see any common code there? You should be able to refactor the code in separate methods for better readability 🙌
+Do you see any common code there? You should be able to refactor the code in seperate methods for better readability 🙌
