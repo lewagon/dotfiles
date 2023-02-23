@@ -51,14 +51,14 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 <div id="map" style="height: 300px; width: 600px"></div>
 ```
 
+
 To easily build the map and add a marker to it, we'll add [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/install/).
+To display a map in your `#map` HTML element with Mapbox GL JS, you will have to add these lines in your `index.html`.
 
 ```html
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
 ```
-
-To display a map in your `#map` HTML element with the `mapbox-gl` package, you will have to add these lines in your `index.html`.
 
 And then display a map:
 
