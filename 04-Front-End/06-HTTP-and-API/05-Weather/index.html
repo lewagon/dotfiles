@@ -17,19 +17,19 @@
       <div class="row justify-content-center">
         <div class="col-sm-8">
           <form class="d-flex my-5">
-            <input type="text" placeholder="Enter city" class="form-control flex-grow-1">
-            <a href="" class="d-none position"><i class="bi bi-geo-alt"></i></a>
+            <input type="text" placeholder="Enter city" id="input" class="form-control flex-grow-1">
+            <a href="" id="currentLocation" class="d-none position"><i class="bi bi-geo-alt"></i></a>
             <input type="submit" value="Get the weather" class="btn btn-primary ms-3">
           </form>
           <div class="card mt-4 mb-5">
             <div class="card-body">
-              <h1>Weather in <span> <!-- TODO: CITY NAME --> </span></h1>
-              <h3 class="text-secondary"><!-- TODO: DATE --></h3>
-              <div>
-                <p><!-- TODO: DESCRIPTION --></p>
+              <h1>Weather in <span id="city"> <!-- TODO: CITY NAME --> </span></h1>
+              <h3 id="date" class="text-secondary"><!-- TODO: DATE --></h3>
+              <div id="weather">
+                <p id="description"><!-- TODO: DESCRIPTION --></p>
                 <div class="d-flex">
-                  <img src="" alt="Weather Icon">
-                  <h2><!-- TODO: TEMPERATURE --></h2>
+                  <img src="" alt="Weather Icon" id="icon">
+                  <h2 id="temperature"><!-- TODO: TEMPERATURE --></h2>
                 </div>
               </div>
             </div>
