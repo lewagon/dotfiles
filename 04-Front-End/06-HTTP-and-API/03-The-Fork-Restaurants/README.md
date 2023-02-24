@@ -22,7 +22,7 @@ You should see a form with all the different restaurant categories.
 - You can use the Bootstrap [**flush list**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) to display the restaurants. But feel free to be creative if you like!
 
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.gif" alt="The Fork Challenge demo" width="100%">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png" alt="The Fork Challenge demo" width="100%">
 </div>
 
 ## Read the documentation
@@ -45,5 +45,5 @@ At the end, your code should be easily readable and have no more than 1 indentat
 Once your search works for a category, let's add the location in, so we can search both by category and also by location 🎉
 
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.gif" alt="The Fork Challenge demo" width="100%">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png" alt="The Fork Challenge demo" width="100%">
 </div>
