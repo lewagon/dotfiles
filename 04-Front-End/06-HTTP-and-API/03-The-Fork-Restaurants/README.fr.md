@@ -22,7 +22,7 @@ Tu devrais voir un formulaire avec toutes les différentes catégories de restau
 - Tu peux utiliser les listes Bootstrap avec la classe [**flush list**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) pour afficher les restaurants. Mais n'hésite pas à être créatif si tu le souhaites !
 
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.gif" alt="The Fork Challenge demo" width="100%">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png" alt="The Fork Challenge demo" width="100%">
 </div>
 
 ## Lis la documentation
@@ -45,5 +45,5 @@ A la fin, ton code doit être facilement lisible et ne plus avoir qu'un niveau d
 Une fois que ta recherche fonctionne pour une catégorie choisie, tu peux ajouter la recherche par lieu, pour pouvoir rechercher à la fois par ces deux critères à la fois 🎉.
 
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.gif" alt="The Fork Challenge demo" width="100%">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png" alt="The Fork Challenge demo" width="100%">
 </div>
