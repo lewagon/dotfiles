@@ -1,6 +1,6 @@
 // TODO: Use the Fork Api to get a filtered list of restaurants, depending on the category selected (and as a bonus, the location)
 
-const searchForm = document.getElementById("searchForm")
+const searchForm = document.getElementById("searchForm");
 
 // Todo: select the HTML elements you need
 
@@ -10,7 +10,7 @@ searchForm.addEventListener("submit", (event) => {
 
 
   fetch("the-endpoint-url")
-    .then(response => response.json())
+    .then(response => response.json());
     .then((data) => {
       // Todo: Insert results into the list
 
