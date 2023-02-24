@@ -29,7 +29,7 @@ NOTE: The request to the MapBox API will require your API key as one of the para
 
 Go ahead and check out the form already present in the `index.html` challenge boilerplate. It contains an `input` of type `"text"` where a user can type an address in, and an `input` of type `"submit"` to display a button.
 
-Use the `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the API request to query the MapBox Geocoding service using `fetch` (go back to yesterday's lecture slides).
+Use the `submit` event to catch the moment the form is posted by the user. That's when you'll want to trigger the API request to query the MapBox Geocoding service using `fetch` (more on this in the next lecture).
 
 When you fetch data from an API, start by `console.log()`ing what you get back from MapBox. It's a massive JSON! Now you've got that, figure out where the GPS coordinates are buried and display them on screen.
 
@@ -51,14 +51,13 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 <div id="map" style="height: 300px; width: 600px"></div>
 ```
 
-To easily build the map and add a marker to it, we'll use [npm's mapbox-gl package](https://yarnpkg.com/en/package/mapbox-gl).
 
-You need to `yarn add mapbox-gl` to add this package to your project.
+To easily build the map and add a marker to it, we'll add [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/install/).
+To display a map in your `#map` HTML element with Mapbox GL JS, you will have to add these lines in your `index.html`.
 
-To display a map in your `#map` HTML element with the `mapbox-gl` package, first import the package at the top of your Stimulus controller:
-
-```javascript
-import mapboxgl from "mapbox-gl"
+```html
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
 And then display a map:
