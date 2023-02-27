@@ -5,7 +5,7 @@ require 'colorize'
 desc "Run tests on challenge"
 task :watir do
   serve_running_check = system "lsof -wni 'tcp:8000'"
-  if !serve_running_check
+  unless serve_running_check
     pid = Process.spawn("ruby -run -e httpd . -p 8000")
   end
   browser = Watir::Browser.new
@@ -27,7 +27,9 @@ task :watir do
     end
   end
   puts "Tests passed: #{passing_tests.size}/#{number_of_tests}"
-  Process.kill(:QUIT, pid) && Process.wait
+  unless serve_running_check
+    Process.kill(:QUIT, pid) && Process.wait
+  end
 end
 
 task default: [:watir]
