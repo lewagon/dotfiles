@@ -10,6 +10,8 @@ Lauch your program with the `serve` command and go to [http://localhost:8000](ht
  serve
 ```
 
+To check your code, run the usual `rake`.
+
 ## Specs
 
 Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `number`) and returns a `string`:
