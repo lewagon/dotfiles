@@ -1,0 +1,33 @@
+require 'rake'
+require 'watir'
+require 'colorize'
+
+desc "Run tests on challenge"
+task :watir do
+  serve_running_check = system "lsof -wni 'tcp:8000'"
+  if !serve_running_check
+    pid = Process.spawn("ruby -run -e httpd . -p 8000")
+  end
+  browser = Watir::Browser.new
+  browser.goto("http://localhost:8000/")
+  li_suite = browser.li(class: 'suite')
+  testing_function = li_suite.h1
+  puts testing_function.text
+  ul = li_suite.ul
+  number_of_tests = ul.lis.size
+  passing_tests = []
+  ul.lis.each do |element|
+    element_classes = element.attribute_value("class")
+    match_data = element.h2.text.match(/(?<test>.*)/)
+    if element_classes.include?("pass")
+      passing_tests << element.h2.text
+      puts match_data[:test].green
+    elsif element_classes.include?("fail")
+      puts match_data[:test].red
+    end
+  end
+  puts "Tests passed: #{passing_tests.size}/#{number_of_tests}"
+  Process.kill(:QUIT, pid) && Process.wait
+end
+
+task default: [:watir]
