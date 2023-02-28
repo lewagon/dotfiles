@@ -1,6 +1,6 @@
 ## Recap
 
-So yesterday you've had your first introduction to Object Oriented Programming. These are big steps in your web development career. Before we continue on that path, let's do a recap to make sure you understand the concepts.
+So on the previous block you've had your first introduction to Object Oriented Programming. These are big steps in your web development career. Before we continue on that path, let's do a recap to make sure you understand the concepts.
 
 Let's create a House class:
 
@@ -66,7 +66,7 @@ p my_country_side_house.width
 
 ## Lecture
 
-Now time to move on to the real content of the lecture. We'll see three important parts today:
+Now time to move on to the real content of the lecture. We'll see three important parts during this block:
 
 - Inheritance
 - Class methods
