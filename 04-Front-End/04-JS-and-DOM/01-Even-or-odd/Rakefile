@@ -11,11 +11,14 @@ task :watir do
   browser = Watir::Browser.new
   browser.goto("http://localhost:8000/")
   li_suite = browser.li(class: 'suite')
+  5.times do
+    puts ""
+  end
   testing_function = li_suite.h1
   puts testing_function.text
   ul = li_suite.ul
-  number_of_tests = ul.lis.size
   passing_tests = []
+  failing_tests = []
   ul.lis.each do |element|
     element_classes = element.attribute_value("class")
     match_data = element.h2.text.match(/(?<test>.*)/)
@@ -23,10 +26,15 @@ task :watir do
       passing_tests << element.h2.text
       puts match_data[:test].green
     elsif element_classes.include?("fail")
+      failing_tests << element.h2.text
       puts match_data[:test].red
     end
   end
-  puts "Tests passed: #{passing_tests.size}/#{number_of_tests}"
+  puts "#{passing_tests.size} passing".green
+  puts "#{failing_tests.size} failing".red unless failing_tests.size.zero?
+  5.times do
+    puts ""
+  end
   unless serve_running_check
     Process.kill(:QUIT, pid) && Process.wait
   end
