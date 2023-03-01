@@ -16,9 +16,9 @@ To test your code in the browser, launch your program with the `serve` command a
  serve
 ```
 
-When you open your browser you will see a list of checks which are red. Your goal is to fix the `evenOrOdd` function so that all the checks pass. Whenever you make a change in your JS file you need to **refresh the browser** to see your code reflected.
+When you open your browser, you will see a list of checks which are red. Your goal is to fix the `evenOrOdd` function so that all the checks pass. Whenever you make a change in your JS file you need to **refresh the browser** to see your code reflected.
 
-Try to put a `console.log(number)` in your `eventOrOdd` function, open your browser's console and have a look. You should see 3 results: `0`, `1` and `2`. These come from the `check` function in the `event_or_odd_examiner.js` file in the `spec` folder. These specs (or tests) outputs what you see in your current browser?
+Try to put a `console.log(number)` in your `eventOrOdd` function, open your browser's console and have a look. You should see 3 results: `0`, `1` and `2`. These come from the `check` function in the `event_or_odd_examiner.js` file in the `spec` folder. 
 
 As long as the `eventOrOdd` function is not done, the tests will be red. They will turn green once you have implemented the correct function.
 
@@ -54,14 +54,14 @@ nvm list
 ```
 and then choose the version you have installed, for example:
 ```bash
-nvm use global 16.15.1
+nvm use 16.15.1
 ```
 
 Now, make sure all your tests in the terminal are also green. Then, **please commit and push** 🙏.
 
 ## VSCode tips
 
-On Setup day you installed  the `eslint` extension in yout text editor which checks the style of your JavaScript code, so it will tell you when there is a missing semicolon. If you don't see this extension in VSCode run:
+On Setup day you installed the `eslint` extension in your text editor which checks the style of your JavaScript code, so it will tell you when there is a missing semicolon. If you don't see this extension in VSCode run:
 
 ```bash
 code --install-extension dbaeumer.vscode-eslint
