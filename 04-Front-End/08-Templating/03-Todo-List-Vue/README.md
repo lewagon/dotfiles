@@ -11,7 +11,7 @@ You will learn the basics of Vue by building a to-do list APP, with which you ca
 - Remove a to-do item
 - Mark/unmark a to-do item as done
 
-// TODO: insert to-do list GIF
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-list-vue-user-flow.gif)
 
 ### Setup
 
@@ -128,7 +128,9 @@ We can use a built-in directives [`v-for`](https://vuejs.org/api/built-in-direct
 
 #### Attribute Binding
 
-The `done` boolean is represented by the checkbox. Todo: insert a image of items done/not done
+The `done` boolean is represented by the checkbox.
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-checkbox.png)
 
 A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) is checked depending on the `chekced` property.
 
@@ -155,9 +157,7 @@ What happens when a user adds a to-do? The user:
 2. User clicks a button
 3. the to-do is added and appears on the list.
 
-// TODO: insert a GIF
-
-Basically, when the button is clicked, the Vue instance needs to take care of getting the data and adding it to the list. We will create a [method](https://vuejs.org/api/options-state.html#methods) called `addTodo()` to take care of all these.
+When the button is clicked, the Vue instance needs to take care of getting the data and adding it to the list. We will create a [method](https://vuejs.org/api/options-state.html#methods) called `addTodo()` to take care of all these.
 
 Methods are defined in `methods` option:
 
@@ -245,7 +245,7 @@ If you haven't already, add a delete button to the to-do element. You can use [B
 
 We want to also add a **cross** and make the text **gray** when marking a to-do as done, in addition to checkbox change.
 
-// TODO: insert an image
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/cross-to-do-item.png)
 
 We need to dynamically render some CSS clasess based on `done`. You can do `v-bind` on `class` attribute, and pass a JavaScript object, that's made of the pairs of **class name** and **a boolean** indicating whether the class will be applied or not:
 
@@ -274,7 +274,9 @@ Because `v-bind` is only from the Vue instance to the HTML, it doesn't know what
 
 #### v-cloak 🧥
 
-Did you notice that everytime you refresh the page, there's a flash of unready HTML elements? // TODO: insert GIF
+Did you notice that everytime you refresh the page, there's a flash of unready HTML elements?
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/vue-un-compiled-flash.gif)
 
 That's because the HTML is not yet compiled when we refresh. We can use `v-cloak` to temporarily hide un-compiled HTML. Read [the documentation](https://vuejs.org/api/built-in-directives.html#v-cloak), and implement for your APP! Remember to **hard refresh** when you change the CSS file.
 
@@ -297,7 +299,9 @@ To read data from `localStorage`, you can use `getItem()`
 localStorage.getItem('myCat'); // => 'Tom'
 ```
 
-To see the `localStorage` in your browser, open up the inspector. For Chrome, you can find it in `Application`. // TODO: insert image of browser
+To see the `localStorage` in your browser, open up the inspector. For Chrome, you can find it in `Application`.
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/browser-local-storage.png)
 
 Each time `todos` is modified, we should set `localStorage` with the newest `todos`. That means each time a to-do is added, deleted or modified(marked as done). Where should you set the localStorage in the Vue instance?
 
