@@ -1,3 +1,7 @@
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable prefer-const */
+/* eslint-disable import/extensions */
+
 import runChallenges from "../spec/split_the_bill_examiner.js";
 
 const splitTheBill = (group) => {
