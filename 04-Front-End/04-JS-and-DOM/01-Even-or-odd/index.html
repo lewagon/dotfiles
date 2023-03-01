@@ -14,22 +14,29 @@
     <div class="container">
       <div class="row">
         <h1 class="text-center my-5">Even or odd? 🧮</h1>
+        <div class="col-12 mt-5 mb-3">
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <h2 class="text-center">0</h2>
+            </div>
+            <div class="col-3">
+              <h2 class="text-center">1</h2>
+            </div>
+            <div class="col-3">
+              <h2 class="text-center">2</h2>
+            </div>
+          </div>
+        </div>
+    
+        <!-- This div is used to output the JS tests, do not remove! -->
+        <div class="col-12">
+          <div id="results-wrapper">
+            <div id="results" class="row justify-content-center"></div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- This div is used to output the JS tests, do not remove! -->
-    <div id="mocha"></div>
-
-    <script src="https://unpkg.com/chai/chai.js"></script>
-    <script src="https://unpkg.com/mocha/mocha.js"></script>
-    <script class="mocha-init">
-      mocha.setup('bdd');
-      mocha.checkLeaks();
-    </script>
-    <script src="lib/even_or_odd.js"></script>
-    <script src="test/even_or_odd.test.js"></script>
-    <script class="mocha-exec">
-      mocha.run();
-    </script>
+    
+    <script type="module" src="./lib/even_or_odd.js"></script>
   </body>
 </html>
