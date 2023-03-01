@@ -7,13 +7,15 @@ const splitTheBill = (group) => {
 
 const updatePriceList = () => {
   // TODO 2: Call the `splitTheBill(group)` function and display the results of what everyone needs to pay in the HTML
-
 }
 
 // Do not remove these lines:
-document.addEventListener("DOMContentLoaded", () => {
-  updatePriceList();
-});
+if (typeof window === "object") {
+  document.addEventListener("DOMContentLoaded", () => {
+    updatePriceList();
+  });
+}
 
 // module.exports = splitTheBill; // Do not remove this line.
 runChallenges(splitTheBill);
+export { splitTheBill };
