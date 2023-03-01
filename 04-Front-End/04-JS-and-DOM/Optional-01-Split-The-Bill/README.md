@@ -5,6 +5,10 @@ how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs
 
 Afterwards you need to change the HTML and write a new JavaScript function to display the results in the browser.
 
+In this exercise, you can run your tests:
+- in the browser (run `serve` and follow the flow)
+- in the terminal with a `rake` command
+
 ## Specs
 
 You went on a trip with a group of friends. Each one of you paid for different things (food, car, hotel, etc.), and now
