@@ -1,4 +1,4 @@
-import { strict as assert } from 'assert';
+import { assert } from 'chai';
 import { evenOrOdd } from "../lib/even_or_odd.js";
 
 describe("evenOrOdd", () => {
