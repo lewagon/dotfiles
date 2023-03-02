@@ -6,6 +6,16 @@ L'objectif est d'en apprendre davantage sur JavaScript, le DOM et la gestion des
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/wagon_race.gif)
 
+### Setup
+
+On va lancer un serveur web local en tapant :
+
+```bash
+serve
+```
+
+Puis, ouvre [`localhost:8000`](http://localhost:8000) dans ton navigateur.
+
 ## Spécifications
 
 Ouvre le fichier `index.html`.
