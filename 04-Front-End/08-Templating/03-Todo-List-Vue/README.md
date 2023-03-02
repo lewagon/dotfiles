@@ -266,7 +266,7 @@ generates the following HTML:
 
 Find the Boostrap classes that gray out and cross out the text. Don't reinvent the wheel!
 
-You may notice that checking and unchecking the to-do *doesn't* really make the text crossed and gray. Well, print the the `done` property as itself in the HTML with `{{ todo.done }}`, and you will notice something.
+You may notice that checking and unchecking the to-do *doesn't* really make the text crossed and gray. Try and print the `done` property as itself in the HTML with `{{ todo.done }}` to see what it returns, and you will notice something. 👀 
 
 Checking and unchecking the checkbox doesn't change `done`! 🫢
 
