@@ -37,9 +37,7 @@ It looks quite strange at first, so our first step is making it prettier. How do
 Tips:
 
 - Think about why the images are all squished together. How can we make them grow to take up the entire width of the screen?
-
 - Don't forget to make each individual panel a flex container as well to help style everything. (Consider adding `display: flex` to the panels).
-
 - You might notice that the top and lower words of each panel should be out of view. We need to make sure that they aren't visible, but are still on the page so they can be moved into view. Maybe [Translate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate) could help?
 
 ### JavaScript problem breakdown
