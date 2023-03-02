@@ -20,9 +20,9 @@ Then, open [`localhost:8000`](http://localhost:8000) in your browser.
 
 ### Specs
 
-The objective is to code a neat JavaScript effect for your page. To do that, you will need to use JavaScript iterators and DOM events, together a little bit of CSS styling. You will also need to style the page using FlexBox and then add some nice JavaScript behavior to it so we can click on each panel to reveal the full image and the corresponding message.
+The objective is to code a neat JavaScript effect for your page. To do that, you will need to use JavaScript iterators and DOM events, together with a little bit of CSS styling. You will also need to style the page using FlexBox and then add a nice JavaScript behavior to it so we can click on each panel to reveal the full image and the corresponding message.
 
-We want to code this effect. Whenever we click on a panel it should expand and reveal the full text like this:
+Whenever we click on a panel it should expand and reveal the full text like this:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/flex-panels-reference.gif)
 
