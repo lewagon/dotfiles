@@ -124,7 +124,7 @@ How do we dynamically render the list?
 
 We can use a built-in directives [`v-for`](https://vuejs.org/api/built-in-directives.html#v-for). It's like `.each` in Ruby. Read the documentation, and write your code in `index.html` to render your to-do list based on `todos`.
 
-ℹ️ You already coded a to-do list in today's first challenge. You can resue some of the HTML.
+ℹ️ You already coded a to-do list in the first challenge so feel free to re-use some of the HTML you previously wrote.
 
 #### Attribute Binding
 
