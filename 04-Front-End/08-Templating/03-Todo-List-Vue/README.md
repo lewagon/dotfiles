@@ -230,7 +230,7 @@ If you haven't already, add a delete button to the to-do element. You can use [B
 1. Bind an event to the delete button that triggers a method
 2. The method remove the to-do from `todos`
 
-#### Quesiton & Hint
+#### Question & Hint
 
 ❓How does this method know which to-do to delete?
 ❓What is the unique identifier of each to-do? You can use this to identify which to-do to delete.
