@@ -283,7 +283,7 @@ That's because the HTML is not yet compiled when we refresh. We can use `v-cloak
 
 ### 5. Persist data(Optional)
 
-So far, each refresh will reset the to-do data. We can store the data in the browser with [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). `localStorage` is in ` UTF-16 string` format, so you need to turn the JavaScript object into a string(`JSON.stringify()`) when storing, and turn the string back into an object(`JSON.parse()`) when reading. Sound familiar? Yes, we have done it with Ruby before.
+So far, each refresh will reset the to-do data. We can store the data in the browser with [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). `localStorage` is in ` UTF-16 string` format, so you need to turn the JavaScript object into a string (`JSON.stringify()`) when storing, and turn the string back into an object (`JSON.parse()`) when reading. Sound familiar? Yes, we have done it with Ruby before.
 
 #### Set localStorage
 
@@ -303,7 +303,7 @@ To see the `localStorage` in your browser, open up the inspector. For Chrome, yo
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/browser-local-storage.png)
 
-Each time `todos` is modified, we should set `localStorage` with the newest `todos`. That means each time a to-do is added, deleted or modified(marked as done). Where should you set the localStorage in the Vue instance?
+Each time `todos` property is updated, we should set `localStorage` with the newest `todos`. i.e. each time a to-do is added, deleted or updated(marked as done). Where should you set the localStorage in the Vue instance?
 
 #### Read localStorage
 
