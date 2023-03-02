@@ -151,7 +151,7 @@ We can use [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) to 
 
 ### 2. Add a to-do
 
-What happens when a user adds a to-do? The user:
+What happens when a user adds a to-do?
 
 1. User fills in the to-do title
 2. User clicks a button
