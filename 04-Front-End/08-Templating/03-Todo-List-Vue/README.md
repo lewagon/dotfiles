@@ -182,7 +182,7 @@ createApp({
 <button v-on:click="addTodo">Add</button>
 ```
 
-Check in your browser console, is it printing the `console.log` in your method? If so, then your event binding is successful.
+Check in your browser console, can you see the `console.log` you added in your method? If so, then your event binding is successful!
 
 #### Form Input Binding
 
