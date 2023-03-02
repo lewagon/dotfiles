@@ -21,7 +21,8 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-6" id="results">
-        <div class="row">
+        <h5>Browse recipes by ingredient</h5>
+        <div class="row my-3">
           <div class="col-6">
             <input type="text" class="form-control" id="search-input" placeholder="Search for a recipe...">
           </div>
@@ -29,15 +30,30 @@
             <button class="btn btn-primary" id="search-button">Search</button>
           </div>
         </div>
-        <div class="row" id="results-list">
+        <div class="row">
+          <div class="col-12">
+            <template id="recipe-template">
+              <div class="col-6">
+                <div class="card my-2 position-relative">
+                  <i class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"></i>
+                  <img src="" class="card-img-top" alt="">
+                  <div class="card-body d-flex">
+                    <h6 class="card-title">Recipe Title</h6>
+                  </div>
+                </div>
+              </div>
+            </template>
 
+            <ul class="row p-0 align-content-stretch" id="recipes-container">
+            </ul>
+          </div>
         </div>
 
       </div>
-      <div class="col-4 card">
-        <h3>My favourites</h3>
-        <ul id="favourites" class="ps-0">
-          <p>Start adding a recipe by clicking on the bookmark icon <i class="fa-solid fa-bookmark text-primary"></i></p>
+      <div class="col-4 card p-4">
+        <h5>My favourites</h5>
+        <ul class="row p-0 align-content-stretch" id="favourites-container">
+          <p class="mb-0">Add a recipe by clicking on the bookmark icon <i class="fa-solid fa-bookmark text-danger"></i></p>
         </ul>
       </div>
     </div>
