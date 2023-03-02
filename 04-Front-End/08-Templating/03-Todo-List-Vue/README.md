@@ -214,7 +214,7 @@ Note that every property in `data()` is accessible with `this.propertyName`. Now
 
 One thing cool about Vue is its [**reactivity**](https://vuejs.org/guide/extras/reactivity-in-depth.html). `data()` is reactive, meaning that changes in `data()` trigger an update in the DOM. See how changing `this.todos` automatically updates the DOM.
 
-You may also notice that after adding a to-do, user's input stays in the input field. Considering `v-model` is two-ways, how would you reset the input?
+You may also notice that after adding a to-do, user's input stays in the input field. Considering that `v-model`'s binding is two-ways, how would you reset the input?
 
 
 ### 3. Delete a to-do
@@ -232,18 +232,18 @@ If you haven't already, add a delete button to the to-do element. You can use [B
 
 #### Question & Hint
 
-❓How does this method know which to-do to delete?
-❓What is the unique identifier of each to-do? You can use this to identify which to-do to delete.
+❓ How does this method know which to-do to delete?
+❓ What is the unique identifier of each to-do? You can use this to identify which to-do to delete.
 
-💡You can pass an argument to a method.
-💡You have access to index in `v-for`.
+💡 You can pass an argument to a method.
+💡 You have access to index in `v-for`.
 
 
 ### 4. Mark as done
 
 #### Upgrade the style
 
-We want to also add a **cross** and make the text **gray** when marking a to-do as done, in addition to checkbox change.
+When marking a to-do as done, we want not only the checkbox to be ticked, but also the text to be **crossed** and **grey**.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/cross-to-do-item.png)
 
@@ -266,7 +266,7 @@ generates the following HTML:
 
 Find the Boostrap classes that gray out and cross out the text. Don't reinvent the wheel!
 
-You may notice that checking and unchecking the to-do *doesn't* really make the text crossed and gray. Try and print the `done` property as itself in the HTML with `{{ todo.done }}` to see what it returns, and you will notice something. 👀 
+You may notice that checking and unchecking the to-do *doesn't* really make the text crossed and grey. Try and print the `done` property as itself in the HTML with `{{ todo.done }}` to see what it returns, and you will notice something. 👀
 
 Checking and unchecking the checkbox doesn't change `done`! 🫢
 
@@ -287,13 +287,13 @@ So far, each refresh will reset the to-do data. We can store the data in the bro
 
 #### Set localStorage
 
-To add data in `localStorage`, you can use `setItem()`.
+To add data in `localStorage`, you can use `setItem()`:
 
 ```js
 localStorage.setItem('myCat', 'Tom');
 ```
 
-To read data from `localStorage`, you can use `getItem()`
+To read data from `localStorage`, you can use `getItem()`:
 
 ```js
 localStorage.getItem('myCat'); // => 'Tom'
