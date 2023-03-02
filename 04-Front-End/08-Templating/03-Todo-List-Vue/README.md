@@ -132,7 +132,7 @@ The `done` boolean is represented by the checkbox.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-checkbox.png)
 
-A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) is checked depending on the `chekced` property.
+A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) is checked depending on the `checked` property.
 
 ```html
 <!-- this checkbox is checked -->
