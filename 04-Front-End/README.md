@@ -29,31 +29,49 @@ We will first have a look at the CSS framework Bootstrap and everything it gives
 - Using flexboxes for horizontal or vertical alginment of components
 - Using CSS grid to build mosaic of cards
 
-## `04 JavaScript Basics`
+## `04 JS & DOM`
 
 First day of the JavaScript submodule! JavaScript is THE programming language that is understood by browsers. It's still a programming language, like Ruby, with types, variables, functions etc. But the syntax in JavaScript is different from Ruby's, so you need to familiarise with it.
 
-For today's challenges, we'll leave the browser and go back to the terminal to play with algorithmics in JavaScript!
+On this day, we will also introduce the DOM – how the browser processes the HTML webpage – and how we can use JavaScript to interact with it.
 
-Then, instead of the live-code it's Pitch Night! You will have 5 minutes to pitch your idea in front of the class. Have a look at `Front-End/Bootstrap/Pitch-Preparation` if you want a head-start on preparing.
+For today's challenges, we'll practice the syntax of JavaScript by writing a few functions and playing with DOM elements in the browser.
 
-## `05 DOM & Events`
+## `05 Iterators & Events`
 
-Now that we picked up the syntax, let's go back to the browser and use JavaScript as a front-end language. On this day, we will introduce the DOM – how the browser processes the HTML webpage – and how we can use JavaScript to interact with it.
+Now that we picked up the syntax, let's unreveal the full potential of JavaScript by adding the concept of event listeners. We will also have a look at the different user events we can listen to with JavaScript in order to build highly dynamic interfaces.
 
-We will also have a look at the different user events we can listen to with JavaScript in order to build highly dynamic interfaces.
+We will also use the `forEach` iterator to loop over arrays and manipulate or play with the DOM.
 
-## `06 HTTP & AJAX`
+## `06 HTTP & API`
 
 Let's rehearse the basics of the Web with HTTP requests / response cycles.
 
+The objective of this day is to get make sure you know how to communicate with APIs by sending them requests HTTP requests! Also, you will learn how to decipher their responses and how to manipulate the data you get back.
+
+Then, instead of the live-code it's Pitch Night! You will have 5 minutes to pitch your idea in front of the class. Have a look at `Front-End/Bootstrap/Pitch-Preparation` if you want a head-start on preparing.
+
+## `07 AJAX`
+
 We will discover how to fetch content dynamically using AJAX and JavaScript without having to reload the page.
 
-## `07 JavaScript Plugins`
+In the previous unit, you've been using `fetch()` without going into details. Today, we'll go deeper into the concept of AJAX and how to use it to fetch data from an API.
 
-In this lecture, we will download external JavaScript packages with **[Yarn](https://yarnpkg.com/en/)** and use them in our interfaces. We'll also see how to organise our code in several files in a front-end app.
+## `08 Templating`
 
-## `08 Product Design Sprint`
+This unit is about discovering the concept of JS templating. 
+
+This is a technique that allows you to generate HTML code from a JavaScript object. It's a very powerful technique that will allow you to build dynamic webpages without having to write HTML code by hand.
+
+Also, you will discover some powerful front-end frameworks like Vue.js or React which are being used to build modern web applications.
+
+## `09 Stimulus JS`
+
+At Le Wagon, we like to do things the Rails way. We use the default settings advised by the Rails team. 
+
+[Stimulus](https://stimulus.hotwired.dev/) is a framework created by the Rails team designed to build on your HTML to enable JavaScript.
+
+## `10 Product Design Sprint`
 
 This is a special day. **No coding 😱, just prototyping and Product design 🖌🖍📝**. The objective is to:
 
