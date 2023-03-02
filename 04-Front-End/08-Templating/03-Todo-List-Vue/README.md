@@ -274,7 +274,7 @@ Because `v-bind` is only from the Vue instance to the HTML, it doesn't know what
 
 #### v-cloak 🧥
 
-Did you notice that everytime you refresh the page, there's a flash of unready HTML elements?
+Did you notice that every time you refresh the page, there's a flash of unloaded HTML elements?
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/vue-un-compiled-flash.gif)
 
