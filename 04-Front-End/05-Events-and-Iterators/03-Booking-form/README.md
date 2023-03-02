@@ -8,7 +8,7 @@ We want to **update the form's UI** when a user clicks on the `-` / `+` buttons.
 
 Submitting the form is not expected to have any effects.
 
-Time to play with [`dataset`s](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)!
+Time to play with [`datasets`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)!
 
 ### Setup
 
@@ -34,7 +34,7 @@ The page displays a booking form that we want to make **dynamic**. When the user
 
 To do so, take a good look at the `index.html` file, especially **the `data-` attributes** that hold precious values to help you!
 
-Remember how we select HTML elements? Once you have selected one with `document.querySelector()` you can access it's data attributes like so:
+Remember how we select HTML elements? Once you have selected one with `document.querySelector()` you can access its data attributes like so:
 
 ```html
   <div class="card" data-id="1"></div>
