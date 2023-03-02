@@ -103,7 +103,7 @@ A list of to-dos in `JSON` format should look like this:
 ]
 ```
 
-We can put this list in `data` option as initial data, and assign it to a meaningful property, like `todos` or `items`. It is important to name things in a meaniful way, so your code is readable to your future self and others.
+We can put this list in `data` option as initial data, and assign it to a meaningful property, like `todos` or `items`. It is important to name things in a meaningful way, so your code is readable to your future self and others.
 
 ```js
 createApp({
