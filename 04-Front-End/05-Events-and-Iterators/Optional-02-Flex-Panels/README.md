@@ -30,7 +30,7 @@ We want to code this effect. Whenever we click on a panel it should expand and r
 
 We have a simple HTML structure with panels. Each panel has a background image and some text in it separated in 3 paragraph elements.
 
-It looks quite strange at first, so our first step is making it prettier. How do we place the pictures side by side? [Flexbox](https://kitt.lewagon.com/knowledge/cheatsheets/flexbox) is your friend in this styling part of the exercise. We need to get our page looking like this before moving onto the JavaScript part of the exercise:
+It looks quite strange at first, so our first step is making it prettier. How do we place the pictures side by side? [Flexbox](https://kitt.lewagon.com/knowledge/cheatsheets/flexbox) is your friend in this styling part of the exercise. The page needs to look like this before moving onto the JavaScript part of the exercise:
 
 <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/flex-panels-styled.png"  width="600" height="300">
 
@@ -38,7 +38,7 @@ Tips:
 
 - Think about why the images are all squished together. How can we make them grow to take up the entire width of the screen?
 
-- Don't forget to make each individual panel a flex container as well to help you finish styling the page. (Consider adding `display: flex` to the panels).
+- Don't forget to make each individual panel a flex container as well to help style everything. (Consider adding `display: flex` to the panels).
 
 - You might notice that the top and lower words of each panel should be out of view. We need to make sure that they aren't visible, but are still on the page so they can be moved into view. Maybe [Translate](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate) could help?
 
@@ -52,7 +52,7 @@ Remember to:
 
 - Select the correct HTML elements
 - Add event listeners to them (perfect place for Iteration) in the form of a click.
-- Code what needs to happen when the event is trigerred. We might need to add a new class on the panel to change its styling. How about adding `.open` and `.closed` classes?
+- Code what needs to happen when the event is trigerred. How about adding `.open` and `.closed` classes?
 - The `flex-grow` attribute is proportional. An element that has `flex-grow: 2` will grow at twice the rate of an element that has `flex-grow: 1`.
 
 
