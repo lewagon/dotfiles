@@ -66,7 +66,7 @@ Have a look at the `javascript/application.js` file.
 createApp({
   data() {
     return {
-      message: "If you see this message in your browswer, that means Vue is successfully mounted! 🙌"
+      message: "If you see this message in your browser, that means Vue is successfully mounted! 🙌"
     }
   }
 }).mount('#app')
