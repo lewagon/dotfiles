@@ -209,7 +209,7 @@ Note that every property in `data()` is accessible with `this.propertyName`. Now
 
 ##### Pseudo-code for addTodo()
 
-1. Construct a to-do object based on user input
+1. Construct a to-do object based on user input.
 2. Add it to the `todos` list.
 
 One thing cool about Vue is its [**reactivity**](https://vuejs.org/guide/extras/reactivity-in-depth.html). `data()` is reactive, meaning that changes in `data()` trigger an update in the DOM. See how changing `this.todos` automatically updates the DOM.
