@@ -89,7 +89,7 @@ A Vue instance is already created with `createApp()` function. You will code you
 
 #### Data structure
 
-Think about what information should a to-do item *at least* contain?
+Think about what a to-do item should *at least* contain? What kind of information?
 
 - `title`: a string that contains what the item is about.
 - `done`: a boolean that indicates whether the item is done or not.
