@@ -32,9 +32,11 @@ const runChallenges = (listItem, unorderedList) => {
     assertEqual(unorderedList(['eggs', 'bread']) && unorderedList(['eggs', 'bread']).replace(/(\n| {2})/g, ''), '<ul class="list-group"><li class="list-group-item">eggs</li><li class="list-group-item">bread</li></ul>');
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    check(listItem, unorderedList);
-  });
+  if (typeof window === "object") {
+    document.addEventListener("DOMContentLoaded", () => {
+      check(listItem, unorderedList);
+    });
+  };
 };
 
 export default runChallenges;

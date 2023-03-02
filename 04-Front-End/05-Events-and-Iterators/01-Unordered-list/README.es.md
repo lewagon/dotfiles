@@ -2,6 +2,24 @@
 
 En este desafío queremos generar el código HTML de una lista no ordenada (**unordered list**) a partir de datos en bruto.
 
+## Configuración
+
+Para empezar, ejecuta el servidor local con el comando:
+
+```bash
+serve
+```
+
+Luego, abre [`localhost:8000`](http://localhost:8000) en tu navegador.
+
+En este ejercicio, tendremos dos procesos para probar nuestro código:
+- en el navegador
+- en la terminal
+
+Ambos procesos prueban las mismas cosas pero en diferentes interfaces.
+
+Comenzá trabajando con los tests en el navegador. Cuando termines, usá `rake` para probar en la terminal.
+
 ## Especificaciones
 
 ### Generador de los ítems de la lista
@@ -30,8 +48,16 @@ Cuando la función `listItem` pase todos los tests, escribe el código de la fun
 
 **Solo por esta vez**: ¡no nos importa si la tabulación no es perfecta!
 
+### Mostrar la lista
 
-### Un paso más lejos
+Ahora, llamá a tu función `unorderedList` para generar el código HTML de la lista de compras y mostralo en el elemento `#list` de la página `index.html`.
+
+La lista de compras debería verse así:
+```js
+const groceries = ['milk', 'butter', 'bread'];
+```
+
+### Refactorizando con `Map()`
 
 Si tu solución pasa los tests `forEach()`, ¡intenta encontrar una mejor solución usando [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)!
 
