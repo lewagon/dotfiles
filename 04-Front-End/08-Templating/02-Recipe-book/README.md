@@ -52,9 +52,9 @@ Let's first create in the HTML a template element with the following structure:
 </template>
 ```
 
-Then, let's create a function `insertRecipes` that will insert the results in our list. Which parameter should be passed to it?
+Then, let's create a function `insertRecipes` that will insert the results in our list. Which parameter(s) should be passed to it?
 
-Let's create the function with a parameter: `recipes`, `container`. The first one will be the array of recipes we get from the API, and the second one will be the container where we want to insert the recipes.
+Let's create the function with two parameters: `recipes`, `container`. The first one will be the array of recipes we get from the API, and the second one will be the container where we want to insert the recipes.
 
 We will use the `forEach` method to iterate over the array of recipes, and for each recipe, we will clone the template element, and insert the recipe data in the right place. Your turn! (hint: check the lecture notes to see how we cloned the template element)
 
@@ -68,7 +68,7 @@ You should see a recipe list using the ingredient you entered in the search inpu
 
 Now that we can search recipes, let's add the functionality to bookmark them.
 
-Let's add an event listener to the bookmark icons, and when we click on one, we will store the recipe in a `favourites` variable and display them in the `#favourites-container` list. What data type should `favourites` be?
+Let's select all the `fa-bookmark` icons and add an `eventListener` to each of them. When we will click on one, we will add the recipe to a `favourites` variable and display all of them in the `#favourites-container` list. What data type should `favourites` be?
 
 We only see the bookmark icons on the recipe cards **after** we searched by ingredient. So we will need to add the event listeners to the bookmark icons **after** we insert the recipes in the list, in the same `fetch` method.
 
@@ -76,11 +76,11 @@ To do so, let's create a `addFavouriteListeners` function that will add the even
 
 ### Add the recipe to the favourites list
 
-Once clicked, we need to retrieve all the elements of a recipe (its `idMeal`, `strMeal`, `strMealThumb`) before we store it in the `favourites` variable.
-
 For this, let's create a function `addRecipeToFavourites` as the `callback` function of each bookmark's event listener.
 
-We will need to pass the recipe to this function, so we can access the data we need to display it. From the `event` you can reconstruct the recipe object:
+Once clicked, we need to retrieve all the elements of a recipe (its `idMeal`, `strMeal`, `strMealThumb`) before we store it in the `favourites` variable.
+
+We will need to pass the recipe as a parameter of this function, so we can access the data we need to display it. From the `event` you can reconstruct the recipe object:
 
 ```js
 const newRecipeToAdd = { idMeal: ..., strMeal: ..., strMealThumb: ... };
@@ -100,10 +100,12 @@ Our app enables us to search for recipes by ingredient and add them to our favou
 
 To fix this, we could use the [`localStorage` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store our favourites in the browser. We could then retrieve them when the page loads. You will learn more about `localStorage` in the next challenge!
 
-That's why apps are sometimes composed of two apps in reality: one of the back-end to store the data, and one front-end that will retrieve the data and display it with a framework.
+NB: Web-apps are often composed of two apps in reality: one of the back-end to store the data, and one front-end that will retrieve the data and display it with a framework. In this challenge, we created a front-end application that handles the user interface, while we are getting data from an API.
+
 We will see in the next module that Rails handles both at the same time 💪
 
 ## Bonus (optional)
 
+- Use the `includes` method to check that a recipe is already favourited.
 - Clear the search input after a search.
 - Add a button to clear the favourites list.
