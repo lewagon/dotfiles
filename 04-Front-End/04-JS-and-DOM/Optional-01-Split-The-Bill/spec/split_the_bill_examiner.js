@@ -68,9 +68,11 @@ const runChallenges = (splitTheBill) => {
     assertEqual(fourDifferentValues.George, 200);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    check(splitTheBill);
-  });
+  if (typeof window === "object") {
+    document.addEventListener("DOMContentLoaded", () => {
+      check(splitTheBill);
+    });
+  }
 }
 
 export default runChallenges;

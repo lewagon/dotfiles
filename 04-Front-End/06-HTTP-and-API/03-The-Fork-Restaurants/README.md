@@ -40,7 +40,7 @@ Let's create two new functions to extract some of our logic out of the `addEvent
 
 At the end, your code should be easily readable and have no more than 1 indentation level!
 
-## Bonus (optional)
+## Going further
 
 Once your search works for a category, let's add the location in, so we can search both by category and also by location 🎉
 

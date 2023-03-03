@@ -109,9 +109,11 @@ const runChallenges = (hasNewMessage, newMessage) => {
     checkUniqueness(newMessage);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    check(hasNewMessage, newMessage);
-  });
+  if (typeof window === "object") {
+    document.addEventListener("DOMContentLoaded", () => {
+      check(hasNewMessage, newMessage);
+    });
+  };
 }
 
 export default runChallenges;

@@ -1,8 +1,11 @@
+/* DO NOT REMOVE */
+
 .blue {
   color: blue;
 }
 
-.error, .success {
+.error,
+.success {
   padding: 0.5em;
   margin-bottom: 0.2em;
 }
@@ -16,6 +19,7 @@
   background-color: lightgreen;
 }
 
-#results-wrapper, #results-wrapper #results  {
+#results-wrapper,
+#results-wrapper #results {
   position: relative;
 }

@@ -2,6 +2,24 @@
 
 Dans cet exercice, on va chercher à générer le HTML d'une **liste non ordonnée** à partir de données brutes.
 
+### Mise en place
+
+Pour commencer, lance un serveur local en tapant la commande suivante dans ton terminal :
+
+```bash
+serve
+```
+
+Puis, ouvre [`localhost:8000`](http://localhost:8000) dans ton navigateur.
+
+Dans cet exercice, on va utiliser deux processus pour tester notre code :
+- dans le navigateur
+- dans le terminal
+
+Les deux processus testent les mêmes choses mais dans deux interfaces différentes.
+
+Commence par travailler avec les tests dans le navigateur. Quand tu auras fini, utilise `rake` pour tester dans le terminal.
+
 ## Spécifications
 
 ### Générateur d'éléments d'une liste
@@ -30,7 +48,16 @@ Une fois que la fonction `listItem` a passé tous les tests, code la fonction `u
 
 **Pour cette fois**, ce n'est pas grave si l'indentation n'est pas parfaite !
 
-### Aller plus loin
+### Afficher la liste
+
+Maintenant, appelle ta fonction `unorderedList` pour générer le HTML de la liste de courses et affiche-le dans l'élément `#list` de la page `index.html`.
+
+La liste de courses devrait ressembler à ceci :
+```js
+const groceries = ['milk', 'butter', 'bread'];
+```
+
+### Refactoring avec `Map()`
 
 Si ta solution passe tous les tests avec `forEach()`, essaie de trouver une meilleure solution en utilisant [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)!
 

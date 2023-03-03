@@ -10,6 +10,16 @@ No se espera que el envío de formulario tenga algún tipo de efecto.
 
 Es hora de jugar con los [`dataset`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)!
 
+## Configuración
+
+Para lanzar un servidor local ejecuta:
+
+```bash
+serve
+```
+
+Luego abre [`localhost:8000`](http://localhost:8000) en tu navegador.
+
 ## Especificaciones
 
 Abra el `index.html` en su navegador.

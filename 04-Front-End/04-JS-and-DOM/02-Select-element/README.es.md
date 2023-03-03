@@ -14,14 +14,6 @@ Luego abre [`localhost:8000`](http://localhost:8000) en tu navegador favorito.
 
 ## Especificaciones
 
-Inicia tu servidor web local corriendo lo siguiente:
-
-```bash
-rake webpack
-```
-
-Luego abre [`localhost:8080`](http://localhost:8080) en tu navegador favorito.
-
 Deberías ver los países que han ganado las copas mundiales de fútbol FIFA en un lista no ordenada
 
 ¡El objetivo del desafío es seleccionar la de Francia `<li>` 🇫🇷!

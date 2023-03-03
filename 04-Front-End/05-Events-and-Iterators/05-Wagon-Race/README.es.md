@@ -6,6 +6,16 @@ El objetivo es aprender más JavaScript, sobre el DOM y sobre la gestión de eve
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/wagon_race.gif)
 
+### Setup
+
+Lanza un servidor local ejecutando:
+
+```bash
+serve
+```
+
+Luego, abre [`localhost:8000`](http://localhost:8000) en tu navegador.
+
 ## Especificaciones
 
 Abra el `index.html` en su navegador.
