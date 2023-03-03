@@ -336,4 +336,69 @@ createApp({
 }).mount('#app')
 ```
 
-Congratulations on your first Vue APP! 🥳
+Congratulations! The MVP of your Vue to-do list is done! 🥳
+
+
+### Improvement: Integration with Weather API
+
+Let's make our APP fancier by adding a current weather display!
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-with-weather.png)
+
+You may wonder where we deal with API calls in a Vue component?
+In the [`created()`](https://vuejs.org/api/options-lifecycle.html#created) lifecycle hook! This is when `data` and `methods` are ready, but the DOM is not. Perfect stage for making API calls!
+
+```js
+createApp({
+  data() {
+  // ...
+  },
+  methods: {
+  // ...
+  },
+  created() {
+    // TODO: get user location & call weather api
+  }
+}).mount('#app')
+```
+
+#### 1. Get current location
+
+We can retrieve the **current location** of a user with the browser native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition):
+
+```javascript
+navigator.geolocation.getCurrentPosition((data) => {
+  console.log(data)
+})
+```
+
+Make sure your OS and browser allow you to share the location.
+
+#### 2. Get weather information
+
+The goal of this step is to get the weather information of the current location. We will use the same OpenWeatherMap API that we used a few lectures ago.
+
+Go to [OpenWeatherMap API](https://home.openweathermap.org/) and log in to your account to get your API key. You should find it [here](https://home.openweathermap.org/api_keys). You all will be creating accounts at the same time, which can create some delay in the keys activation by Open Weather. To avoid this problem, **share your API key with your buddy** to limit the number of keys to activate.
+
+You are allowed to perform 60 calls / minute for free, which should be plenty enough for this challenge.
+
+Go to [Current weather data](https://openweathermap.org/current)  to read about how to get the current weather of a location.
+weather icon
+
+#### 3. Turn the weather information into an icon
+
+If you successfully retrieved the current weather, in the response, you should be able to find a string that represents the weather's icon. Read about the [weather icons](https://openweathermap.org/weather-conditions#Icon-list) and make an icon URL based on your fetched weather information.
+
+#### 4. Display it in HTML
+
+Use the icon URL with `<img>` to display it in the HTML. How do we make the icon URL accessible in the HTML? Which attribute should you bind the URL to?
+
+#### 5. Spinner
+
+You may notice that it takes time for the weather API to get the weather information. Instead of letting the icon appear abruptly, let's display a spinner when weather is still loading.
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-with-weather.gif)
+
+You can use [Bootstrap spinner](https://getbootstrap.com/docs/4.2/components/spinners/) and [`v-if` and `v-else`](https://vuejs.org/api/built-in-directives.html#v-if) to conditionally render the elemnts.
+
+That's it! Congratulations on your first Vue APP! 🥂
