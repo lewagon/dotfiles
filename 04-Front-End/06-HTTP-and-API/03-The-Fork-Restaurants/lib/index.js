@@ -10,7 +10,7 @@ searchForm.addEventListener("submit", (event) => {
 
   // Todo: Replace "the-endpoint-url" with the URL you built
   fetch("the-endpoint-url")
-    .then(response => response.json());
+    .then(response => response.json())
     .then((data) => {
       // Todo: Insert results into the list
 
