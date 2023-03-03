@@ -57,7 +57,7 @@ Pour ajouter [Simple Form](https://github.com/heartcombo/simple_form) à ton app
 ```ruby
 # Gemfile
 # [...]
-gem "simple_form", github: "heartcombo/simple_form"
+gem "simple_form"
 ```
 
 Puis exécute :
