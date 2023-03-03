@@ -44,7 +44,7 @@ Para agregar [Simple Form](https://github.com/heartcombo/simple_form) a tu aplic
 ```ruby
 # Gemfile
 # [...]
-gem "simple_form", github: "heartcombo/simple_form"
+gem "simple_form"
 ```
 
 Luego ejecuta esto:

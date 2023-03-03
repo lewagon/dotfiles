@@ -57,7 +57,7 @@ git push origin master
 ```ruby
 # Gemfile
 # [...]
-gem "simple_form", github: "heartcombo/simple_form"
+gem "simple_form"
 ```
 
 然后运行：

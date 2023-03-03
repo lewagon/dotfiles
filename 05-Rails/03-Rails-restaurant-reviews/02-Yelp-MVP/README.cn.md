@@ -45,7 +45,7 @@ git commit -m "Prepare rails app with external specs"
 ```ruby
 # Gemfile
 # [...]
-gem "simple_form", github: "heartcombo/simple_form"
+gem "simple_form"
 ```
 
 然后运行：
