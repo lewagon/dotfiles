@@ -1,5 +1,5 @@
-const assert = require("assert");
-const evenOrOdd = require("../lib/even_or_odd");
+import { assert } from 'chai';
+import { evenOrOdd } from "../lib/even_or_odd.js";
 
 describe("evenOrOdd", () => {
   it("should return 'even' for 0", () => {

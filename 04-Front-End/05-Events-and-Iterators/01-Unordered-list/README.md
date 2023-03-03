@@ -12,6 +12,14 @@ serve
 
 Then, open [`localhost:8000`](http://localhost:8000) in your browser.
 
+In this challenge, we will also have 2 processes to test our code:
+- In the browser
+- In the terminal
+
+They both test the same things but in 2 separate interfaces.
+
+Start by working with the tests in the browser. When you are done, use `rake` to test in the browser.
+
 ## Specs
 
 ### List item generator

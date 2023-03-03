@@ -2,6 +2,16 @@
 
 Hier, on a vu comment sélectionner un élément du DOM, lire des informations dessus et le mettre à jour (texte, CSS, etc.). Aujourd'hui, on va voir comment réagir à des [événements du DOM](https://developer.mozilla.org/en-US/docs/Web/Events) pour créer des sites Web interactifs.
 
+### Installation
+
+Lance un serveur web local en exécutant :
+
+```bash
+serve
+```
+
+Puis ouvre [`localhost:8000`](http://localhost:8000) dans ton navigateur.
+
 ## Spécifications
 
 Ouvre le fichier `index.html`. Tu remarqueras qu'on utilise Bootstrap. Il y a aussi un gros bouton dans le corps (`<body>`).

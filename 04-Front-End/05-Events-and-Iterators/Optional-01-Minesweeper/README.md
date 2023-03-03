@@ -8,6 +8,16 @@ A boilerplate is provided to get you started, containing:
 - `minseweeper.css`: contains classes that you can apply to your table cells (`td`) to display the relevant tile image. Here, we are using an svg file as the `background-image`. Then, we set the file size to 24 pixels (you can make it bigger or smaller if you want)
 - `lib/minesweeper.js`: this is where you should put your code!
 
+### Setup
+
+Let's launch a local webserver by running:
+
+```bash
+serve
+```
+
+Then, open [`localhost:8000`](http://localhost:8000) in your browser.
+
 ## Specs
 
 Take some time to think of the rules of the game. How would you start?

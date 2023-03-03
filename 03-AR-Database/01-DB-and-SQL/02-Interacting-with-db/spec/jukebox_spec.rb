@@ -35,7 +35,7 @@ describe "The schema in jukebox.xml" do
       expect(foreign_key_exists?("genre_id", "tracks", "genres")).to eq true
     end
 
-    it "should have one three foreign keys only: `media_type_id` references to the `media_types` table" do
+    it "should have three foreign keys only: `media_type_id` references to the `media_types` table" do
       expect(foreign_key_count("tracks")).to eq 3
       expect(foreign_key_exists?("media_type_id", "tracks", "media_types")).to eq true
     end

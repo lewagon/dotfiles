@@ -10,10 +10,10 @@ It's always the same 3-step process:
 
 ## Specs
 
-Open the html page in your browser with:
+As usual, open the html page in your browser on `localhost:8000` with:
 
 ```bash
-open index.html
+serve
 ```
 
 You should see a big green button saying `Click me!`. The goal of this challenge is to display an [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) saying `Thank you!` when you click on it.

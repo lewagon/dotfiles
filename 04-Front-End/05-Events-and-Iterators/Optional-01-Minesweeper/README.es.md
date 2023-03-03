@@ -8,6 +8,14 @@ Te hemos suministrado una plantilla para ayudarte a comenzar:
 - `minseweeper.css`: contiene clases que puedes aplicarle a las celdas de tu tabla (`td`) para mostrar el título correspondiente a una imagen. Aquí estamos usando un archivo svg como imagen de fondo (`background-image`). Luego fijamos el tamaño del archivo a 24 pixeles (si quieres lo puedes hacer más grande o más pequeño).
 - `lib/minesweeper.js`: ¡aquí es donde deberías poner tu código!
 
+### Configuración
+
+Para lanzar un servidor local, ejecuta:
+
+```bash
+serve
+```
+
 ## Especificaciones
 
 Tomate un tiempo para pensar en las reglas del juego.¿Cómo empezarías?

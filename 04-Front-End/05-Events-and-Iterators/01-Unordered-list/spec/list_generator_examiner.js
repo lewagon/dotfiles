@@ -25,16 +25,22 @@ const runChallenges = (listItem, unorderedList) => {
     }
   }
 
-  const check = (listItem, unorderedList) => {
-    assertEqual(listItem(''), '<li class="list-group-item"></li>');
-    assertEqual(listItem('eggs'), '<li class="list-group-item">eggs</li>');
-    assertEqual(unorderedList([]) && unorderedList([]).replace(/(\n| {2})/g, ''), '<ul class="list-group"></ul>');
-    assertEqual(unorderedList(['eggs', 'bread']) && unorderedList(['eggs', 'bread']).replace(/(\n| {2})/g, ''), '<ul class="list-group"><li class="list-group-item">eggs</li><li class="list-group-item">bread</li></ul>');
+  const HTMLSafe = (str) => {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    check(listItem, unorderedList);
-  });
+  const check = (listItem, unorderedList) => {
+    assertEqual(listItem(''), HTMLSafe('<li class="list-group-item"></li>'));
+    assertEqual(listItem('eggs'), HTMLSafe('<li class="list-group-item">eggs</li>'));
+    assertEqual(unorderedList([]) && unorderedList([]).replace(/(\n| {2})/g, ''), HTMLSafe('<ul class="list-group"></ul>'));
+    assertEqual(unorderedList(['eggs', 'bread']) && unorderedList(['eggs', 'bread']).replace(/(\n| {2})/g, ''), HTMLSafe('<ul class="list-group"><li class="list-group-item">eggs</li><li class="list-group-item">bread</li></ul>'));
+  }
+
+  if (typeof window === "object") {
+    document.addEventListener("DOMContentLoaded", () => {
+      check(listItem, unorderedList);
+    });
+  };
 };
 
 export default runChallenges;

@@ -9,11 +9,13 @@ In this exercise, we'll practise our API skills. Let's start simple with a `GET`
 
 ## Specs
 
-Open the html page in your browser with:
+Start your local web server with:
 
 ```bash
-open index.html
+serve
 ```
+
+Open [`localhost:8000`](http://localhost:8000) in your browser.
 
 ### Geocoding
 
