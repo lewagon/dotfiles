@@ -11,7 +11,7 @@ You will learn the basics of Vue by building a to-do list APP, with which you ca
 - Remove a to-do item
 - Mark/unmark a to-do item as done
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-list-vue-user-flow.gif)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-list-vue-user-flow.gif)
 
 ### Setup
 
@@ -130,7 +130,7 @@ We can use a built-in directives [`v-for`](https://vuejs.org/api/built-in-direct
 
 The `done` boolean is represented by the checkbox.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-checkbox.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-checkbox.png)
 
 A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) is checked depending on the `checked` property.
 
@@ -245,7 +245,7 @@ If you haven't already, add a delete button to the to-do element. You can use [B
 
 When marking a to-do as done, we want not only the checkbox to be ticked, but also the text to be **crossed** and **grey**.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/cross-to-do-item.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/cross-to-do-item.png)
 
 We need to dynamically render some CSS clasess based on `done`. You can do `v-bind` on `class` attribute, and pass a JavaScript object, that's made of the pairs of **class name** and **a boolean** indicating whether the class will be applied or not:
 
@@ -276,7 +276,7 @@ Because `v-bind` is only from the Vue instance to the HTML, it doesn't know what
 
 Did you notice that every time you refresh the page, there's a flash of unloaded HTML elements?
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/vue-un-compiled-flash.gif)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/vue-un-compiled-flash.gif)
 
 That's because the HTML is not yet compiled when we refresh. We can use `v-cloak` to temporarily hide un-compiled HTML. Read [the documentation](https://vuejs.org/api/built-in-directives.html#v-cloak), and implement for your APP! Remember to **hard refresh** when you change the CSS file.
 
@@ -301,7 +301,7 @@ localStorage.getItem('myCat'); // => 'Tom'
 
 To see the `localStorage` in your browser, open up the inspector. For Chrome, you can find it in `Application`.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/browser-local-storage.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/browser-local-storage.png)
 
 Each time `todos` property is updated, we should set `localStorage` with the newest `todos`. i.e. each time a to-do is added, deleted or updated(marked as done). Where should you set the localStorage in the Vue instance?
 
@@ -343,7 +343,7 @@ Congratulations! The MVP of your Vue to-do list is done! 🥳
 
 Let's make our APP fancier by adding a current weather display!
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-with-weather.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-with-weather.png)
 
 You may wonder where we deal with API calls in a Vue component?
 In the [`created()`](https://vuejs.org/api/options-lifecycle.html#created) lifecycle hook! This is when `data` and `methods` are ready, but the DOM is not. Perfect stage for making API calls!
@@ -397,7 +397,7 @@ Use the icon URL with `<img>` to display it in the HTML. How do we make the icon
 
 You may notice that it takes time for the weather API to get the weather information. Instead of letting the icon appear abruptly, let's display a spinner when weather is still loading.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/templating/frontend/to-do-with-weather.gif)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-with-weather.gif)
 
 You can use [Bootstrap spinner](https://getbootstrap.com/docs/4.2/components/spinners/) and [`v-if` and `v-else`](https://vuejs.org/api/built-in-directives.html#v-if) to conditionally render the elemnts.
 
