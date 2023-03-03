@@ -305,6 +305,11 @@ To see the `localStorage` in your browser, open up the inspector. For Chrome, yo
 
 Each time `todos` property is updated, we should set `localStorage` with the newest `todos`. i.e. each time a to-do is added, deleted or updated(marked as done). Where should you set the localStorage in the Vue instance?
 
+##### Watchers (Optional)
+
+To make your code cleaner, you can set up a [watchers](https://vuejs.org/guide/essentials/watchers.html#watchers) to watch for `todos` property's changes, and store the data. You will need to use the [Deep Watchers](https://vuejs.org/guide/essentials/watchers.html#deep-watchers) since `todos` is an array.
+
+
 #### Read localStorage
 
 We should read from the local storage, when the APP is first loaded. How do we tell our Vue instance to do so in a particular stage?
