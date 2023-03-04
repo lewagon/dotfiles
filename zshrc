@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search ssh-agent direnv)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -30,7 +30,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Call `nvm use` automatically in a directory with a `.nvmrc` file
+#cd ~/code/$GITHUB_USERNAME/dotfiles && zsh git_setup.sh Call `nvm use` automatically in a directory with a `.nvmrc` file
 autoload -U add-zsh-hook
 load-nvmrc() {
   if nvm -v &> /dev/null; then
@@ -70,3 +70,7 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# add environment variables
+export GOOGLE_APPLICATION_CREDENTIALS=/home/shan/code/shandamonke/gcp/le-wagon-bootcamp-374904-4a24e87fef09.json
+export PYTHONPATH="/home/shan/code/shandamonke/data-context-and-setup"

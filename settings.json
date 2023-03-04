@@ -60,7 +60,7 @@
     "notebook.diff.ignoreMetadata": true,
     "notebook.lineNumbers": "on",
     "notebook.markup.fontSize": 13,
-    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+    "python.defaultInterpreterPath": "/home/shan/.pyenv/versions/3.10.6/envs/lewagon",
     "python.formatting.provider": "yapf",
     "python.languageServer": "Pylance",
     "python.linting.enabled": false,
