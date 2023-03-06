@@ -13,6 +13,8 @@ La [documentation de l'API wagon-chat](https://github.com/lewagon/wagon-chat-api
 
 ## Spécifications
 
+Lance ton serveur local avec `serve`. Va sur `localhost:8000`.
+
 ### Logique de la vue
 
 Dans le fichier `index.html` du challenge, tu trouveras une page structurée en deux parties :

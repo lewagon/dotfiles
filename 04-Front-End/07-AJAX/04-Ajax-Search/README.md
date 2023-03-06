@@ -13,6 +13,8 @@ The [documentation for the OMDb API](https://www.omdbapi.com/)
 
 ## Specs
 
+Start your local server with `serve`. Go to `localhost:8000`.
+
 ### View logic
 
 In the `index.html` file of the exercise, you'll find a page structured into two main parts:
