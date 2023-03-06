@@ -70,7 +70,7 @@ Do you see what you get from your browser? Your coordinates.
 
 Our code currently uses city **names** to get the weather. Thankfully, there is also an endpoint that takes **coordinates** in the URL. You can scroll down a little [in the doc](https://openweathermap.org/current) to find the endpoint that takes a latitude and a longitude as parameters.
 
-So go on, add an event listener to when you click on the location icon and make the API call which will retrieve the current location of the user and update the page accordingly.
+So go on, add an event listener when you click on the location icon and make the API call which will retrieve the current location of the user and update the page accordingly.
 
 If your HTML page reloads, it means you forgot to **prevent** something...
 
