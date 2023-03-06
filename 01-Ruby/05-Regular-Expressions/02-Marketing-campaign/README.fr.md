@@ -62,9 +62,9 @@ Exemple :
 
 ```ruby
 {
- com: ["julien@mdn.com"],
- de: ["dimitri@berlin.de"],
- fr: ["kevin@yahoo.fr", "edward@gmail.fr"]
+ "com" => ["julien@mdn.com"],
+ "de" => ["dimitri@berlin.de"],
+ "fr" => ["kevin@yahoo.fr", "edward@gmail.fr"]
 }
 ```
 
@@ -92,23 +92,23 @@ Les statistiques que tu as dressées au sujet des TLD révèlent qu’un grand n
 
 ```ruby
 LOCALES = {
- en: {
- subject: "Our website is online",
- body: "Come and visit us!",
- closing: "See you soon",
- signature: "The Team"
+  en: {
+    subject: "Our website is online",
+    body: "Come and visit us!",
+    closing: "See you soon",
+    signature: "The Team"
   },
- fr: {
- subject: "Notre site est en ligne",
- body: "Venez nous rendre visite !",
- closing: "A bientôt",
- signature: "L’équipe"
+  fr: {
+    subject: "Notre site est en ligne",
+    body: "Venez nous rendre visite !",
+    closing: "A bientot",
+    signature: "L'équipe"
   },
- de: {
- subject: "Unsere Website ist jetzt online",
- body: "Komm und besuche uns!",
- closing: "Bis bald",
- signature: "Das Team"
+  de: {
+    subject: "Unsere Website ist jetzt online",
+    body: "Komm und besuche uns!",
+    closing: "Bis bald",
+    signature: "Das Team"
   }
 }
 ```

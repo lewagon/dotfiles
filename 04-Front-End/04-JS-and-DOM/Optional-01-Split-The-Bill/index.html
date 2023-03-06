@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Split the bill</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="application.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row my-5">
+      <!-- This is the data given to you for the exercise, do not remove! -->
+      <div class="col-12 col-md-8">
+        <h2 class="text-center">Expenses</h2>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">John</th>
+              <td>120€</td>
+            </tr>
+            <tr>
+              <th scope="row">Paul</th>
+              <td>30€</td>
+            </tr>
+            <tr>
+              <th scope="row">Ringo</th>
+              <td>150€</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- This div is used to output the JS tests, do not remove! -->
+      <div class="col-12 col-md-4">
+        <h2>Results</h2>
+        <div id="results-wrapper">
+          <ul id="results" class="list-unstyled"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="lib/split_the_bill.js"></script>
+</body>
+</html>

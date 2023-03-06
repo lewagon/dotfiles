@@ -17,7 +17,7 @@ Some are more useful than others, so make sure you have a read at the documentat
 
 ## Specs
 
-- Implement `#most_successful` that returns the movies (a certain `number` passed as a parameter) published prior to `max_year`, with associated earnings.
+- Implement `#most_successful` that returns the movies (a certain `number` passed as a parameter) sorted by descending total earnings and published prior to `max_year`, with associated earnings.
 - **Constraint**: the returned list should be an array of movies. Each movie should be represented by a hash with keys `name`, `year` and `earnings`. Ex: `{ name: "Avatar", year: 2009, earnings: 760505847 }`
 
 ## Further suggestions & resources

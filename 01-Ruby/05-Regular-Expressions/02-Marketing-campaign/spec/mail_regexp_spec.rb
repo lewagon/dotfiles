@@ -3,6 +3,8 @@ require "mail_regexp"
 describe "#valid?" do
   it "should return true with a valid email" do
     expect(valid?("boris@lewagon.com")).to be true
+    expect(valid?("boris@lewagon.fr")).to be true
+    expect(valid?("toni@lewagon.de")).to be true
   end
 
   it "should return false with an invalid email" do

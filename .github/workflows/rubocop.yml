@@ -1,0 +1,23 @@
+name: rubocop
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 1-5"
+
+jobs:
+  rubocop:
+    if: ${{ github.repository_owner == 'lewagon' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.2' # Keep in sync with https://github.com/lewagon/setup/blob/master/build.rb#L4
+      - name: Install latest Rubocop
+        run: |
+          gem install rubocop
+      - name: Run Rubocop
+        run: |
+          rubocop

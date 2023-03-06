@@ -92,4 +92,5 @@ require_relative "transaction"
 
 ## 进一步建议和资源
 
-- 你可以使用 `Time#strftime` 方法在`Transaction#to_s`去格式化日期。
+- 你可以使用`Time#strftime`方法来改变`Transaction#to_s`中的日期的格式。
+- Ruby有很多内置的异常（exception），但`DepositError`并不是。 我们可以创建自定义的异常来提供更好的错误信息， 这样可以帮助我们更方便地调试。读一读[这篇文章](https://launchschool.medium.com/getting-started-with-ruby-exceptions-d6318975b8d1) - 特别是关于 `Raising Custom Exceptions（提出自定义异常）` 的段落可以仔细看看。

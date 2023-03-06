@@ -1,8 +1,8 @@
 require "scraper"
 
 describe "#scrape_craiglist_antiques" do
-  it "should return an array of New York antiques" do
-    antiques = scrape_craiglist_antiques("newyork")
+  it "should return an array of Paris antiques" do
+    antiques = scrape_craiglist_antiques("paris")
     verify_antiques(antiques)
   end
 
