@@ -14,7 +14,7 @@ serve
 
 Then, open [`localhost:8000`](http://localhost:8000) in your browser.
 
-### To-do item HTML(template)
+### To-do item HTML
 
 Let's start by coding the HTML. Here is how a to-do item should look like. You can use Bootstrap to style your HTML! Open your `index.html` and start coding a single to-do item.
 
@@ -38,7 +38,7 @@ const todos = [
 ]
 ```
 
-In `javascript/application.js`, use the above JSON to generate the to-do HTML dynamically, and insert it into the DOM one by one.
+In `lib/to-do-list.js`, use the above JSON to generate the to-do HTML dynamically, and insert it into the DOM one by one.
 
 #### How to render checkbox dynamically
 
