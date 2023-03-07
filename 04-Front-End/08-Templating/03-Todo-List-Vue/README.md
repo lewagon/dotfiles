@@ -88,42 +88,45 @@ A Vue instance is already created with `createApp()` function. You will code you
 
 #### Data structure
 
-Think about what a to-do item should *at least* contain? What kind of information?
+<details>
+  <summary>Think about what a to-do item should *at least* contain? What kind of information?</summary>
 
-- `title`: a string that contains what the item is about.
-- `done`: a boolean that indicates whether the item is done or not.
+  - `title`: a string that contains what the item is about.
+  - `done`: a boolean that indicates whether the item is done or not.
 
-A list of to-dos in `JSON` format should look like this:
+  A list of to-dos in `JSON` format should look like this:
 
-```js
-[
-  { title: "Code a to-do list", done: true },
-  { title: "Code a to-do list in Vue", done: false }
-]
-```
+  ```js
+  [
+    { title: "Code a to-do list", done: true },
+    { title: "Code a to-do list in Vue", done: false }
+  ]
+  ```
 
-We can put this list in `data` option as initial data, and assign it to a meaningful property, like `todos` or `items`. It is important to name things in a meaningful way, so your code is readable to your future self and others.
+  We can put this list in `data` option as initial data, and assign it to a meaningful property, like `todos` or `items`. It is important to name things in a meaningful way, so your code is readable to your future self and others.
 
-```js
-createApp({
-  data() {
-    return {
-      todos: [
-        { title: "Code a to-do list", done: true },
-        { title: "Code a to-do list in Vue", done: false }
-      ]
+  ```js
+  createApp({
+    data() {
+      return {
+        todos: [
+          { title: "Code a to-do list", done: true },
+          { title: "Code a to-do list in Vue", done: false }
+        ]
+      }
     }
-  }
-}).mount('#app')
-```
+  }).mount('#app')
+  ```
+</details>
 
 #### List Rendering
+<details>
+  <summary>How do we dynamically render the list?</summary>
 
-How do we dynamically render the list?
+  We can use a built-in directives [`v-for`](https://vuejs.org/api/built-in-directives.html#v-for). It's like `.each` in Ruby. Read the documentation, and write your code in `index.html` to render your to-do list based on `todos`.
 
-We can use a built-in directives [`v-for`](https://vuejs.org/api/built-in-directives.html#v-for). It's like `.each` in Ruby. Read the documentation, and write your code in `index.html` to render your to-do list based on `todos`.
-
-ℹ️ You already coded a to-do list in the first challenge so feel free to re-use some of the HTML you previously wrote.
+  ℹ️ You already coded a to-do list in the first challenge so feel free to re-use some of the HTML you previously wrote.
+</details>
 
 #### Attribute Binding
 
@@ -141,80 +144,97 @@ A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/che
 <input type="checkbox" name="Checkbox 2">
 ```
 
-We can use [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) to dynamically render HTML attributes. In the checkbox's case, we can do the following:
+<details>
+  <summary>How do we bind `done` with the checkbox?</summary>
 
-```html
-<input type="checkbox" v-bind:checked="the_done_boolean_goes_here">
-```
+  We can use [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) to dynamically render HTML attributes. In the checkbox's case, we can do the following:
 
+  ```html
+  <input type="checkbox" v-bind:checked="the_done_boolean_goes_here">
+  ```
+</details>
 
 ### 2. Add a to-do
 
-What happens when a user adds a to-do?
+<details>
+  <summary>What happens when a user adds a to-do?</summary>
 
-1. User fills in the to-do title
-2. User clicks a button
-3. the to-do is added and appears on the list.
+  1. User fills in the to-do title
+  2. User clicks a button
+  3. the to-do is added and appears on the list.
 
-When the button is clicked, the Vue instance needs to take care of getting the data and adding it to the list. We will create a [method](https://vuejs.org/api/options-state.html#methods) called `addTodo()` to take care of all these.
+  When the button is clicked, the Vue instance needs to take care of getting the data and adding it to the list. We will create a [method](https://vuejs.org/api/options-state.html#methods) called `addTodo()` to take care of all these.
 
-Methods are defined in `methods` option:
+  Methods are defined in `methods` option:
 
-```js
-createApp({
-  data() {
-  // ...
-  },
-  methods: {
-    addTodo() {
-      console.log("Adding a todo...")
+  ```js
+  createApp({
+    data() {
+    // ...
+    },
+    methods: {
+      addTodo() {
+        console.log("Adding a todo...")
+      }
     }
-  }
-}).mount('#app')
-```
+  }).mount('#app')
+  ```
+</details>
+
 
 #### Event Binding
 
-`addTodo()` needs to be triggered when the add button is clicked. We can use [`v-on`](https://vuejs.org/api/built-in-directives.html#v-on) to listen to the click event.
+`addTodo()` needs to be triggered when the add button is clicked.
 
-```html
-<button v-on:click="addTodo">Add</button>
-```
+<details>
 
-Check in your browser console, can you see the `console.log` you added in your method? If so, then your event binding is successful!
+  <summary>How can we bind the `click` event to the button?</summary>
+
+  We can use [`v-on`](https://vuejs.org/api/built-in-directives.html#v-on) to listen to the click event.
+
+  ```html
+  <button v-on:click="addTodo">Add</button>
+  ```
+
+  Check in your browser console, can you see the `console.log` you added in your method? If so, then your event binding is successful!
+</details>
 
 #### Form Input Binding
 
-Now, how do we pass the input data to the Vue instance? We can use [`v-model`](https://vuejs.org/guide/essentials/forms.html#form-input-bindings). It's similar to `v-bind`. `v-bind` creates a **one-way binding** - from Vue instance to the HTML. `v-model` is **two-ways**. It's often used in forms, because we need to sync the state of form input with corresponding state in JavaScript.
+<details>
+  <summary>Now, how do we pass the input data to the Vue instance?</summary>
 
-To use `v-model`, we should first have a property declared in `data()` option.
+  We can use [`v-model`](https://vuejs.org/guide/essentials/forms.html#form-input-bindings). It's similar to `v-bind`. `v-bind` creates a **one-way binding** - from Vue instance to the HTML. `v-model` is **two-ways**. It's often used in forms, because we need to sync the state of form input with corresponding state in JavaScript.
 
-```js
-data() {
-  return {
-    // ...
-    newTodo: null
-  }
-},
-```
+  To use `v-model`, we should first have a property declared in `data()` option.
 
-Then we bind it to the input element in HTML.
+  ```js
+  data() {
+    return {
+      // ...
+      newTodo: null
+    }
+  },
+  ```
 
-```html
-<input v-model="newTodo" placeholder="Your to-do goes here" />
-```
+  Then we bind it to the input element in HTML.
 
-Note that every property in `data()` is accessible with `this.propertyName`. Now you can access user's input with `this.newTodo` in the Vue instance. Try it out!
+  ```html
+  <input v-model="newTodo" placeholder="Your to-do goes here" />
+  ```
 
-##### Pseudo-code for addTodo()
+  Note that every property in `data()` is accessible with `this.propertyName`. Now you can access user's input with `this.newTodo` in the Vue instance. Try it out!
 
-1. Construct a to-do object based on user input.
-2. Add it to the `todos` list.
 
-One thing cool about Vue is its [**reactivity**](https://vuejs.org/guide/extras/reactivity-in-depth.html). `data()` is reactive, meaning that changes in `data()` trigger an update in the DOM. See how changing `this.todos` automatically updates the DOM.
+  ##### Pseudo-code for addTodo()
 
-You may also notice that after adding a to-do, user's input stays in the input field. Considering that `v-model`'s binding is two-ways, how would you reset the input?
+  1. Construct a to-do object based on user input.
+  2. Add it to the `todos` list.
 
+  One thing cool about Vue is its [**reactivity**](https://vuejs.org/guide/extras/reactivity-in-depth.html). `data()` is reactive, meaning that changes in `data()` trigger an update in the DOM. See how changing `this.todos` automatically updates the DOM.
+
+  You may also notice that after adding a to-do, user's input stays in the input field. Considering that `v-model`'s binding is two-ways, how would you reset the input?
+</details>
 
 ### 3. Delete a to-do
 
@@ -246,30 +266,35 @@ When marking a to-do as done, we want not only the checkbox to be ticked, but al
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/cross-to-do-item.png)
 
-We need to dynamically render some CSS clasess based on `done`. You can do `v-bind` on `class` attribute, and pass a JavaScript object, that's made of the pairs of **class name** and **a boolean** indicating whether the class will be applied or not:
+<details>
+  <summary>How do we dynamically render some CSS clasess based on `done`?</summary>
 
-```html
-<div class="container" v-bind:class="{ 'cssClassName1': true, 'cssClassName2': false }">
-  Hello
-</div>
-```
+  You can do `v-bind` on `class` attribute, and pass a JavaScript object, that's made of the pairs of **class name** and **a boolean** indicating whether the class will be applied or not:
 
-generates the following HTML:
+  ```html
+  <div class="container" v-bind:class="{ 'cssClassName1': true, 'cssClassName2': false }">
+    Hello
+  </div>
+  ```
+
+  generates the following HTML:
 
 
-```html
-<div class="container cssClassName1">
-  Hello
-</div>
-```
+  ```html
+  <div class="container cssClassName1">
+    Hello
+  </div>
+  ```
 
-Find the Boostrap classes that gray out and cross out the text. Don't reinvent the wheel!
+  Find the Boostrap classes that gray out and cross out the text. Don't reinvent the wheel!
+</details>
 
 You may notice that checking and unchecking the to-do *doesn't* really make the text crossed and grey. Try and print the `done` property as itself in the HTML with `{{ todo.done }}` to see what it returns, and you will notice something. 👀
 
 Checking and unchecking the checkbox doesn't change `done`! 🫢
 
 Because `v-bind` is only from the Vue instance to the HTML, it doesn't know what the user changes. Let's make this mark as done real by changing `v-bind` to `v-model`.
+
 
 #### v-cloak 🧥
 
@@ -284,7 +309,7 @@ That's because the HTML is not yet compiled when we refresh. We can use `v-cloak
 
 So far, each refresh will reset the to-do data. We can store the data in the browser with [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). `localStorage` is in ` UTF-16 string` format, so you need to turn the JavaScript object into a string (`JSON.stringify()`) when storing, and turn the string back into an object (`JSON.parse()`) when reading. Sound familiar? Yes, we have done it with Ruby before.
 
-#### Set localStorage
+#### LocalStorage
 
 To add data in `localStorage`, you can use `setItem()`:
 
@@ -302,38 +327,47 @@ To see the `localStorage` in your browser, open up the inspector. For Chrome, yo
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/browser-local-storage.png)
 
-Each time `todos` property is updated, we should set `localStorage` with the newest `todos`. i.e. each time a to-do is added, deleted or updated(marked as done). Where should you set the localStorage in the Vue instance?
+#### Write local storage
 
-##### Watchers (Optional)
+Each time `todos` property is updated, we should set `localStorage` with the newest `todos`. i.e. each time a to-do is added, deleted or updated(marked as done).
 
-To make your code cleaner, you can set up a [watchers](https://vuejs.org/guide/essentials/watchers.html#watchers) to watch for `todos` property's changes, and store the data. You will need to use the [Deep Watchers](https://vuejs.org/guide/essentials/watchers.html#deep-watchers) since `todos` is an array.
+<details>
+  <summary>Where should you write the `localStorage` in the Vue instance?</summary>
 
+  #### Watchers
+
+  When the action that you want to do depends on a data property change, you can set up a [watchers](https://vuejs.org/guide/essentials/watchers.html#watchers) to watch for `todos` property's changes - each time it changes, you need to write `localStorage`. You will need to use the [Deep Watchers](https://vuejs.org/guide/essentials/watchers.html#deep-watchers) since `todos` is an array.
+</details>
 
 #### Read localStorage
 
-We should read from the local storage, when the APP is first loaded. How do we tell our Vue instance to do so in a particular stage?
+We should read from the local storage, when the APP is first loaded.
 
-##### Lifecycle Hooks
+<details>
+  <summary>How do we tell our Vue instance to do so in a particular stage?</summary>
 
-Each Vue component instance goes through a series of initialization steps when it's created - for example, it needs to set up data observation, compile the template, mount the instance to the DOM, and update the DOM when data changes. Along the way, it also runs functions called lifecycle hooks, giving users the opportunity to add their own code at specific stages. See all the [lifecycle hooks](https://vuejs.org/api/options-lifecycle.html).
+  ##### Lifecycle Hooks
 
-We will read `localStorage` in [`mounted()`](https://vuejs.org/api/options-lifecycle.html).
+  Each Vue component instance goes through a series of initialization steps when it's created - for example, it needs to set up data observation, compile the template, mount the instance to the DOM, and update the DOM when data changes. Along the way, it also runs functions called lifecycle hooks, giving users the opportunity to add their own code at specific stages. See all the [lifecycle hooks](https://vuejs.org/api/options-lifecycle.html).
 
-```js
-createApp({
-  data() {
-  // ...
-  },
-  methods: {
-  // ...
-  },
-  mounted() {
-    // TODO:
-    // 1. Read todos from localStorage
-    // 2. Set `this.todos` based on the data
-  }
-}).mount('#app')
-```
+  We will read `localStorage` in [`mounted()`](https://vuejs.org/api/options-lifecycle.html).
+
+  ```js
+  createApp({
+    data() {
+    // ...
+    },
+    methods: {
+    // ...
+    },
+    mounted() {
+      // TODO:
+      // 1. Read todos from localStorage
+      // 2. Set `this.todos` based on the data
+    }
+  }).mount('#app')
+  ```
+</details>
 
 Congratulations! The MVP of your Vue to-do list is done! 🥳
 
@@ -344,22 +378,25 @@ Let's make our APP fancier by adding a current weather display!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-with-weather.png)
 
-You may wonder where we deal with API calls in a Vue component?
-In the [`created()`](https://vuejs.org/api/options-lifecycle.html#created) lifecycle hook! This is when `data` and `methods` are ready, but the DOM is not. Perfect stage for making API calls!
+<details>
+  <summary>Where do we deal with API calls in a Vue component?</summary>
 
-```js
-createApp({
-  data() {
-  // ...
-  },
-  methods: {
-  // ...
-  },
-  created() {
-    // TODO: get user location & call weather api
-  }
-}).mount('#app')
-```
+  In the [`created()`](https://vuejs.org/api/options-lifecycle.html#created) lifecycle hook! This is when `data` and `methods` are ready, but the DOM is not. Perfect stage for making API calls!
+
+  ```js
+  createApp({
+    data() {
+    // ...
+    },
+    methods: {
+    // ...
+    },
+    created() {
+      // TODO: get user location & call weather api
+    }
+  }).mount('#app')
+  ```
+</details>
 
 #### 1. Get current location
 
@@ -375,14 +412,18 @@ Make sure your OS and browser allow you to share the location.
 
 #### 2. Get weather information
 
-The goal of this step is to get the weather information of the current location. We will use the same OpenWeatherMap API that we used a few lectures ago.
+The goal of this step is to get the weather information of the current location. We will use the same [OpenWeatherMap API](https://home.openweathermap.org/) that we used a few lectures ago.
 
-Go to [OpenWeatherMap API](https://home.openweathermap.org/) and log in to your account to get your API key. You should find it [here](https://home.openweathermap.org/api_keys). You all will be creating accounts at the same time, which can create some delay in the keys activation by Open Weather. To avoid this problem, **share your API key with your buddy** to limit the number of keys to activate.
+<details>
+  <summary>Here's a recap of how to use the API.</summary>
 
-You are allowed to perform 60 calls / minute for free, which should be plenty enough for this challenge.
+  Go to [OpenWeatherMap API](https://home.openweathermap.org/) and log in to your account to get your API key. You should find it [here](https://home.openweathermap.org/api_keys). You all will be creating accounts at the same time, which can create some delay in the keys activation by Open Weather. To avoid this problem, **share your API key with your buddy** to limit the number of keys to activate.
 
-Go to [Current weather data](https://openweathermap.org/current)  to read about how to get the current weather of a location.
-weather icon
+  You are allowed to perform 60 calls / minute for free, which should be plenty enough for this challenge.
+
+  Go to [Current weather data](https://openweathermap.org/current)  to read about how to get the current weather of a location.
+  weather icon
+</details>
 
 #### 3. Turn the weather information into an icon
 
