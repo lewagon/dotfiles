@@ -120,6 +120,7 @@ A Vue instance is already created with `createApp()` function. You will code you
 </details>
 
 #### List Rendering
+
 <details>
   <summary>How do we dynamically render the list?</summary>
 
@@ -130,22 +131,22 @@ A Vue instance is already created with `createApp()` function. You will code you
 
 #### Attribute Binding
 
-The `done` boolean is represented by the checkbox.
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-checkbox.png)
-
-A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) is checked depending on the `checked` property.
-
-```html
-<!-- this checkbox is checked -->
-<input type="checkbox" name="Checkbox 1" checked>
-
-<!-- this checkbox is unchecked -->
-<input type="checkbox" name="Checkbox 2">
-```
-
 <details>
   <summary>How do we bind `done` with the checkbox?</summary>
+
+  The `done` boolean is represented by the checkbox.
+
+  ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-checkbox.png)
+
+  A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) is checked depending on the `checked` property.
+
+  ```html
+  <!-- this checkbox is checked -->
+  <input type="checkbox" name="Checkbox 1" checked>
+
+  <!-- this checkbox is unchecked -->
+  <input type="checkbox" name="Checkbox 2">
+  ```
 
   We can use [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) to dynamically render HTML attributes. In the checkbox's case, we can do the following:
 
@@ -238,25 +239,22 @@ A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/che
 
 ### 3. Delete a to-do
 
-It is very similar to adding a to-do. Follow the steps, and take the advantage of [the documentation of Vue](https://vuejs.org/guide/introduction.html).
+First, you should make sure to add a delete button to the to-do element. You can use [Boostrap's close button](https://getbootstrap.com/docs/5.0/components/close-button/), or [fontawesome's trash icon](https://fontawesome.com/search?q=trash&o=r).
 
-#### Delete button
-
-If you haven't already, add a delete button to the to-do element. You can use [Boostrap's close button](https://getbootstrap.com/docs/5.0/components/close-button/), or [fontawesome's trash icon](https://fontawesome.com/search?q=trash&o=r).
-
-#### Steps
+The rest of is very similar to adding a to-do. Take the advantage of [the documentation of Vue](https://vuejs.org/guide/introduction.html) to implement the following steps:
 
 1. Bind an event to the delete button that triggers a method
 2. The method remove the to-do from `todos`
 
-#### Question & Hint
+<details>
+  <sumamry>Question & Hint</summary>
 
-❓ How does this method know which to-do to delete?
-❓ What is the unique identifier of each to-do? You can use this to identify which to-do to delete.
+  ❓ How does this method know which to-do to delete?
+  ❓ What is the unique identifier of each to-do? You can use this to identify which to-do to delete.
 
-💡 You can pass an argument to a method.
-💡 You have access to index in `v-for`.
-
+  💡 You can pass an argument to a method.
+  💡 You have access to index in `v-for`.
+</details>
 
 ### 4. Mark as done
 
@@ -287,14 +285,14 @@ When marking a to-do as done, we want not only the checkbox to be ticked, but al
   ```
 
   Find the Boostrap classes that gray out and cross out the text. Don't reinvent the wheel!
+
+
+  You may notice that checking and unchecking the to-do *doesn't* really make the text crossed and grey. Try and print the `done` property as itself in the HTML with `{{ todo.done }}` to see what it returns, and you will notice something. 👀
+
+  Checking and unchecking the checkbox doesn't change `done`! 🫢
+
+  Because `v-bind` is only from the Vue instance to the HTML, it doesn't know what the user changes. Let's make this mark as done real by changing `v-bind` to `v-model`.
 </details>
-
-You may notice that checking and unchecking the to-do *doesn't* really make the text crossed and grey. Try and print the `done` property as itself in the HTML with `{{ todo.done }}` to see what it returns, and you will notice something. 👀
-
-Checking and unchecking the checkbox doesn't change `done`! 🫢
-
-Because `v-bind` is only from the Vue instance to the HTML, it doesn't know what the user changes. Let's make this mark as done real by changing `v-bind` to `v-model`.
-
 
 #### v-cloak 🧥
 
