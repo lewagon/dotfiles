@@ -33,7 +33,7 @@ We [import Vue with Import Maps](https://vuejs.org/guide/quick-start.html#enabli
 ```
 
 ```js
-// javascript/application.js
+// lib/to-do-list.js
 import { createApp } from 'vue'
 // ...
 ```
@@ -59,10 +59,9 @@ code --install-extension Vue.volar
 
 ### Vue Warm Up
 
-Have a look at the `javascript/application.js` file.
+Have a look at the `lib/to-do-list.js` file.
 
 ```js
-// javascript/application.js
 createApp({
   data() {
     return {

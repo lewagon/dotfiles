@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Dans cet exercice, on va pratiquer nos compétences en AJAX. On va commencer simple avec une requête `GET`. Ici, on utilisera l'[API Geocoding de MapBox](https://www.mapbox.com/search/). On va chercher à créer un outil dans lequel il sera possible de saisir une adresse, d'appuyer sur un bouton et d'obtenir des **coordonnées GPS** en retour ! Et pour couronner le tout, on affichera la carte.
+Dans cet exercice, on va pratiquer nos compétences en API. On va commencer simple avec une requête `GET`. Ici, on utilisera l'[API Geocoding de MapBox](https://www.mapbox.com/search/). On va chercher à créer un outil dans lequel il sera possible de saisir une adresse, d'appuyer sur un bouton et d'obtenir des **coordonnées GPS** en retour ! Et pour couronner le tout, on affichera la carte.
 
 
 <div class="text-center">
@@ -27,11 +27,7 @@ REMARQUE : La requête à l'API Mapbox aura besoin de ta clé API comme paramèt
 
 Continue et examine le formulaire déjà présent dans le texte standard du challenge `index.html`. Il contient une entrée (`input`) de type `"text"` où un utilisateur peut saisir une adresse, et une entrée (`input`) de type `"submit"` pour afficher un bouton.
 
-Utilise l'événement `submit` pour capturer le moment où le formulaire est envoyé par l'utilisateur. C'est à ce moment-là que tu voudras déclencher la requête AJAX au service Geocoding de MapBox Geocoding en utilisant `fetch` (relis les diapos du cours d'hier).
-
-**Rappel : tu dois coder ton JavaScript dans un contrôleur Stimulus**
-
-Retourne voir l'exercice Stimulus pour suivre les instructions d'installation.
+Utilise l'événement `submit` pour capturer le moment où le formulaire est envoyé par l'utilisateur. C'est à ce moment-là que tu voudras déclencher la requête AJAX au service Geocoding de MapBox Geocoding en utilisant `fetch` (nous en parlerons plus dans le prochain cours!).
 
 Comme toujours quand tu récupères des données d'une API, commence par afficher ce que tu obtiens de MapBox avec `console.log()`. C'est un énorme JSON ! Maintenant que tu l'as, détermine où se trouvent les coordonnées GPS et affiche-les à l'écran.
 
@@ -53,14 +49,12 @@ Pour ajouter une carte, tu auras besoin d'un élément HTML de soutien vide. Par
 <div id="map" style="height: 300px; width: 600px"></div>
 ```
 
-Pour créer facilement la carte et ajouter un marqueur dessus, on utilisera le [paquet mapbox-gl de npm](https://yarnpkg.com/en/package/mapbox-gl).
+Pour créer facilement la carte et ajouter un marqueur dessus, on utilisera le [paquet Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/install/).
+Pour l'installer et afficher la carte dans l'élement `#map`, tu dois ajouter ces lignes dans ton `index.html` :
 
-Il te faut `yarn add mapbox-gl` pour ajouter ce paquet à ton projet.
-
-Pour afficher une carte dans ton élément HTML `#map` avec le paquet `mapbox-gl`, tu dois d'abord importer ce paquet en haut de ton contrôleur Stimulus :
-
-```javascript
-import mapboxgl from "mapbox-gl"
+```html
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
 Puis ensuite, affiche la carte :

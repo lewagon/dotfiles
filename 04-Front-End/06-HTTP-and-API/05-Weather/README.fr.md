@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Dans ce challenge, on va jouer avec l'[API OpenWeatherMap](https://openweathermap.org/) ! On continuera à s'entraîner avec L'AJAX et on découvrira comment demander aux utilisateurs leur position actuelle  !
+Dans ce challenge, on va jouer avec l'[API OpenWeatherMap](https://openweathermap.org/) ! On continuera à s'entraîner à appeler des APIs et on découvrira comment demander aux utilisateurs leur position actuelle  !
 
 ## Spécifications
 
@@ -29,10 +29,6 @@ Avant de coder, essaie d'ouvrir l'URL dans ton navigateur pour voir si tu obtien
 ```
 
 Une fois que tu as réussi à afficher la réponse de l'API dans ton navigateur, passons à l'implémentation JavaScript.
-
-**Rappel: tu dois coder ton JavaScript dans un contrôleur Stimulus**
-
-Retourne sur l'exercice Stimulus pour suivre les instructions d'installation.
 
 ### Afficher les données sur ta page
 
@@ -76,7 +72,7 @@ Qu'est-ce que tu obtiens de ton navigateur ? Tes coordonnées.
 
 Pour le moment, ton code utilise des **noms** de villes pour récupérer la météo. Heureusement, il existe un endpoint (point de terminaison) qui prend les **coordonnées** dans l'URL. Tu peux faire défiler un peu [la doc](https://openweathermap.org/current) vers le bas pour trouver l'endpoint qui prend une latitude et une longitude comme paramètres.
 
-Continue, relie le clique sur l'icône de localisation à une nouvelle action dans ton contrôleur Stimulus qui va récupérer la position actuelle de l'utilisateur et mettre à jour la page en fonction.
+Continue et ajoute un event listener au clic de l'icone de localisation, qui va appeler l'API avec les coordonnées de l'utilisateur, et mettre à jour la page avec les bonnes données.
 
 Si ta page HTML se recharge, c'est sûrement parce que tu as oublié d'empêcher (**prevent**) quelque chose...
 
@@ -84,4 +80,4 @@ Si ta page HTML se recharge, c'est sûrement parce que tu as oublié d'empêcher
 
 Tu n'as pas tout à fait fini. Lorsque tout fonctionne, tu peux être tenté de laisser ton code en l'état. Réorganiser ton code pour pouvoir en assurer la maintenance à long terme est impératif si tu veux gagner du temps à l'avenir.
 
-Est-ce que tu vois du code qui se répète ? Tu devrais pouvoir refactoriser le code qui mets à jour la card dans une méthode privée (`private`). Pour définir une [méthode privée en JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), il te suffit de la préfixer avec un `#`.
+Est-ce que tu vois du code qui se répète ? Tu devrais pouvoir réécrire ton code dans des méthodes séparées afin qu'il devienne plus lisible 🙌
