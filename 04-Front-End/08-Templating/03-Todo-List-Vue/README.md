@@ -247,7 +247,7 @@ The rest of is very similar to adding a to-do. Take the advantage of [the docume
 2. The method remove the to-do from `todos`
 
 <details>
-  <sumamry>Question & Hint</summary>
+  <summary>Question & Hint</summary>
 
   ❓ How does this method know which to-do to delete?
   ❓ What is the unique identifier of each to-do? You can use this to identify which to-do to delete.
