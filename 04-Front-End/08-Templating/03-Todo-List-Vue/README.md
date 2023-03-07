@@ -89,11 +89,7 @@ A Vue instance is already created with `createApp()` function. You will code you
 #### Data structure
 
 <details>
-  <summary>
-
-  Think about what a to-do item should *at least* contain? What kind of information?
-
-  </summary>
+  <summary>Think about what a to-do item should at least contain? What kind of information?</summary>
 
   - `title`: a string that contains what the item is about.
   - `done`: a boolean that indicates whether the item is done or not.
@@ -192,7 +188,7 @@ A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/che
 
 <details>
 
-  <summary>How can we bind the `click` event to the button?</summary>
+  <summary>How can we bind the click event to the button?</summary>
 
   We can use [`v-on`](https://vuejs.org/api/built-in-directives.html#v-on) to listen to the click event.
 
@@ -315,21 +311,25 @@ So far, each refresh will reset the to-do data. We can store the data in the bro
 
 #### LocalStorage
 
-To add data in `localStorage`, you can use `setItem()`:
+<details>
+  <summary>Here's how you manipulate local storage:</summary>
 
-```js
-localStorage.setItem('myCat', 'Tom');
-```
+  To add data in `localStorage`, you can use `setItem()`:
 
-To read data from `localStorage`, you can use `getItem()`:
+  ```js
+  localStorage.setItem('myCat', 'Tom');
+  ```
 
-```js
-localStorage.getItem('myCat'); // => 'Tom'
-```
+  To read data from `localStorage`, you can use `getItem()`:
 
-To see the `localStorage` in your browser, open up the inspector. For Chrome, you can find it in `Application`.
+  ```js
+  localStorage.getItem('myCat'); // => 'Tom'
+  ```
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/browser-local-storage.png)
+  To see the `localStorage` in your browser, open up the inspector. For Chrome, you can find it in `Application`.
+
+  ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/browser-local-storage.png)
+</details>
 
 #### Write local storage
 
@@ -402,47 +402,51 @@ Let's make our APP fancier by adding a current weather display!
   ```
 </details>
 
-#### 1. Get current location
-
-We can retrieve the **current location** of a user with the browser native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition):
-
-```javascript
-navigator.geolocation.getCurrentPosition((data) => {
-  console.log(data)
-})
-```
-
-Make sure your OS and browser allow you to share the location.
-
-#### 2. Get weather information
-
-The goal of this step is to get the weather information of the current location. We will use the same [OpenWeatherMap API](https://home.openweathermap.org/) that we used a few lectures ago.
-
 <details>
-  <summary>Here's a recap of how to use the API.</summary>
+  <summary>Here's the detailed instructions of breaked down steps:</summary>
 
-  Go to [OpenWeatherMap API](https://home.openweathermap.org/) and log in to your account to get your API key. You should find it [here](https://home.openweathermap.org/api_keys). You all will be creating accounts at the same time, which can create some delay in the keys activation by Open Weather. To avoid this problem, **share your API key with your buddy** to limit the number of keys to activate.
+  #### 1. Get current location
 
-  You are allowed to perform 60 calls / minute for free, which should be plenty enough for this challenge.
+  We can retrieve the **current location** of a user with the browser native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition):
 
-  Go to [Current weather data](https://openweathermap.org/current)  to read about how to get the current weather of a location.
-  weather icon
+  ```javascript
+  navigator.geolocation.getCurrentPosition((data) => {
+    console.log(data)
+  })
+  ```
+
+  Make sure your OS and browser allow you to share the location.
+
+  #### 2. Get weather information
+
+  The goal of this step is to get the weather information of the current location. We will use the same [OpenWeatherMap API](https://home.openweathermap.org/) that we used a few lectures ago.
+
+  <details>
+    <summary>Here's a recap of how to use the API.</summary>
+
+    Go to [OpenWeatherMap API](https://home.openweathermap.org/) and log in to your account to get your API key. You should find it [here](https://home.openweathermap.org/api_keys). You all will be creating accounts at the same time, which can create some delay in the keys activation by Open Weather. To avoid this problem, **share your API key with your buddy** to limit the number of keys to activate.
+
+    You are allowed to perform 60 calls / minute for free, which should be plenty enough for this challenge.
+
+    Go to [Current weather data](https://openweathermap.org/current)  to read about how to get the current weather of a location.
+    weather icon
+  </details>
+
+  #### 3. Turn the weather information into an icon
+
+  If you successfully retrieved the current weather, in the response, you should be able to find a string that represents the weather's icon. Read about the [weather icons](https://openweathermap.org/weather-conditions#Icon-list) and make an icon URL based on your fetched weather information.
+
+  #### 4. Display it in HTML
+
+  Use the icon URL with `<img>` to display it in the HTML. How do we make the icon URL accessible in the HTML? Which attribute should you bind the URL to?
+
+  #### 5. Spinner
+
+  You may notice that it takes time for the weather API to get the weather information. Instead of letting the icon appear abruptly, let's display a spinner when weather is still loading.
+
+  ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-with-weather.gif)
+
+  You can use [Bootstrap spinner](https://getbootstrap.com/docs/4.2/components/spinners/) and [`v-if` and `v-else`](https://vuejs.org/api/built-in-directives.html#v-if) to conditionally render the elemnts.
+
+  That's it! Congratulations on your first Vue APP! 🥂
 </details>
-
-#### 3. Turn the weather information into an icon
-
-If you successfully retrieved the current weather, in the response, you should be able to find a string that represents the weather's icon. Read about the [weather icons](https://openweathermap.org/weather-conditions#Icon-list) and make an icon URL based on your fetched weather information.
-
-#### 4. Display it in HTML
-
-Use the icon URL with `<img>` to display it in the HTML. How do we make the icon URL accessible in the HTML? Which attribute should you bind the URL to?
-
-#### 5. Spinner
-
-You may notice that it takes time for the weather API to get the weather information. Instead of letting the icon appear abruptly, let's display a spinner when weather is still loading.
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-with-weather.gif)
-
-You can use [Bootstrap spinner](https://getbootstrap.com/docs/4.2/components/spinners/) and [`v-if` and `v-else`](https://vuejs.org/api/built-in-directives.html#v-if) to conditionally render the elemnts.
-
-That's it! Congratulations on your first Vue APP! 🥂
