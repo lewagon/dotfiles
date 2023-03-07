@@ -2,7 +2,7 @@
 
 ## Background & Objectives
 
-We covered how to select a DOM element, read information on it and update it (text, CSS, etc.). Now we'll see how we can react to [DOM events](https://developer.mozilla.org/en-US/docs/Web/Events) to create interactive websites.
+The goal of this challenge is to get you to manipulate the DOM with JavaScript but *with [Stimulus](https://stimulus.hotwired.dev/)* instead. This is a very simple demo to get you started with Stimulus. You probably recognize it from the lecture 😉. Try to do it on your own.
 
 ## Setup
 
@@ -43,7 +43,7 @@ Stimulus.register("event-listener", EventListenerController);
 
 Then in the empty `controllers` folders, create a `event_listener_controller.js` file. This is where we'll write the code to react to the click on the button. Copy paste this in the file as a boilerplate to start with:
 ```javascript
-// event_listener_controller.js
+// lib/controllers/event_listener_controller.js
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
@@ -53,14 +53,14 @@ export default class extends Controller {
 }
 ```
 
-Try to `console.log` something from the connect method. If you see it in the console, you're good to go!
+Try to `console.log` something from the connect method. If you see it in the console, you're good to go! If you don't see anything, check that you have correctly attached your Stimulus controller to the DOM. For example, you can do that by adding the `data-controller="event-listener"` attribute to the `<button>` in the `index.html` file.
 
 ## Specs
 
-Your goal is to implement some JavaScript in the `javascript/listener.js` file. **You should react to the click on the blue button.** When clicked, we want:
+Your goal is to implement some JavaScript in the `lib/controllers/event_listener_controller.js` file. **You should react to the click on the blue button.** When clicked, the controller will trigger a `disable()` function which will:
 
-- The button to be disabled. This can be done by adding the `.disabled` class.
-- The button text to change from "Click me!" to "Bingo!"
+- Disable the button. This can be done by adding the `.disabled` class.
+- Change the text inside the button from "Click me!" to "Bingo!"
 - Optional: the `sound.mp3` [plays in the Browser](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript)
 
 The sound might not work on some browsers running on **Ubuntu**. To fix it, just run:
