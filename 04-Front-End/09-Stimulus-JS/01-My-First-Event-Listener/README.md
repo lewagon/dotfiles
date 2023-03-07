@@ -1,5 +1,3 @@
-## My First Event Listener
-
 ## Background & Objectives
 
 The goal of this challenge is to get you to manipulate the DOM with JavaScript but *with [Stimulus](https://stimulus.hotwired.dev/)* instead. This is a very simple demo to get you started with Stimulus. You probably recognize it from the lecture 😉. Try to do it on your own.
