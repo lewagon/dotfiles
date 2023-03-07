@@ -18,7 +18,7 @@ Then, open [`localhost:8000`](http://localhost:8000) in your browser.
 
 Let's start by coding the HTML. Here is how a to-do item should look like. You can use Bootstrap to style your HTML! Open your `index.html` and start coding a single to-do item.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-item-layout.gif)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-item-layout.png)
 
 ### List rendering
 
