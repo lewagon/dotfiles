@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stimulus 101</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="application.css">
+    
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@hotwired/stimulus": "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col col-6">
+          <form class="mt-5">
+            <h3>Categories</h3>
+            <div class="form-check">
+              <input id="check-all" type="checkbox" class="form-check-input"> 
+              <label for="check-all">Check all</label>
+            </div>
+            <hr>
+            <div>
+              <div class="form-check">
+                <input id="checkbox-appartment" type="checkbox" class="form-check-input">
+                <label for="checkbox-appartment">Appartment 🏢</label>
+              </div>
+              <div class="form-check">
+                <input id="checkbox-house" type="checkbox" class="form-check-input">
+                <label for="checkbox-house">House 🏡</label>
+              </div>
+              <div class="form-check">
+                <input id="checkbox-igloo" type="checkbox" class="form-check-input">
+                <label for="checkbox-igloo">Igloo 🧊</label>
+              </div>
+              <div class="form-check">
+                <input id="checkbox-cabin" type="checkbox" class="form-check-input">
+                <label for="checkbox-cabin">Cabin 🌳</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="lib/index.js" type="module"></script>
+  </body>
+</html>
