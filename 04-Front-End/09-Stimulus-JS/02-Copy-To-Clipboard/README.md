@@ -4,7 +4,7 @@ In this unit, we'll be spending some time coding useful components for your futu
 
 In this challenge, you'll be coding a Copy to Clipboard component. This component will be used to copy a text to the clipboard.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/copy_to_clipboard.gif)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/tutorials/stimulus-utilities/stimulus_utilities_clipboard_screenshot.png)
 
 ## Setup
 
@@ -38,7 +38,7 @@ We're good to go!
 
 Your goal is to implement a button that copies the text in the value of the input to the clipboard.
 
-You can then use ctrl+v to paste the text in another text area.
+Once you click on the *Copy to Clipboard* button, you can then use `ctrl + v` to paste the text in another text area.
 
 ### 1. Prepare your HTML
 
