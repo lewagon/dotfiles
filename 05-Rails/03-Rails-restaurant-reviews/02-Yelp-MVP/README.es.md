@@ -122,9 +122,9 @@ rails c
 - Alimenta tu base de datos de restaurante en `db/seeds.rb` con al menos 5 registros de restaurantes válidos.
 - Corre `rails db:seed` para iniciar el script del seed.
 
-### Rutas / Controladores
+### Historias de usuarios
 
-Preguntarse a uno mismo qué rutas necesitamos es un paso muy importante en el proceso de creación de la app. **Las rutas deben reflejar exactamente los user stories de tus productos**. Así que vamos a definir lo mínimo que tiene nuestro producto aquí:
+Preguntarse qué historias de usuario compondrán su aplicación y qué rutas necesitará es un paso muy importante en el proceso de creación de su aplicación web. **Las rutas deben reflejar exactamente las historias de usuario de tu producto**. Así que vamos a definir nuestro producto mínimo aquí:
 
 - Un visitante puede ver la lista de todos los restaurantes.
 
@@ -157,7 +157,15 @@ En nuestro MVP, un visitante no puede actualizar / borrar un restaurante ni un r
 
 Sabemos que es un MVP muy básico pero solo debemos entender que **cada ruta es una representación de un user story**. No escribas las 7 rutas CRUD ciegamente para cada modelo de tu app. Esa es la mejor manera de confundirse con tu propio producto y olvidar lo que el MVP realmente es.
 
-¡Es hora de implementar todas las rutas que necesites para crear este producto!
+### Codificación en Silo: Route/Controller/View
+
+¡Implementa cada historia de usuario por separado! Empieza escribiendo la ruta (puedes mirar las rutas más arriba 😉 ), luego codifica la acción del controlador correspondiente y finalmente la view. ¡No empieces varias historias de usuario a la vez! Codifica una historia cada vez, asegurándote de que todo funciona perfectamente ejecutando el `rails s` y probando tu código.
+
+Recuerda, necesitarás diferentes controladores para los diferentes modelos que usarás en este ejercicio y necesitas generarlos en la terminal. Aquí tienes un [recordatorio útil](https://kitt.lewagon.com/knowledge/cheatsheets/rails_commands):
+
+```bash
+rails generate controller restaurants
+```
 
 **Pista:** para manejar la ruta `GET "restaurants/38/reviews/new"`, tendrás que usar [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
