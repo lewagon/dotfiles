@@ -120,9 +120,9 @@ rails c
 - 在`db/seeds.rb`文件，使用至少5条有效的restaurant数据记录来初始化数据库。
 - 运行 `rails db:seed` 命令来执行初始化代码。
 
-### 路由Routing / 控制器Controllers
+### 用户故事
 
-在开发网站应用的过程中，问问你自己需要哪些路由是一个非常重要的步骤。**路由应该精确模拟了产品的用户故事**。 我们在这里定义我们的最小可行性产品（Minimum Viable Product）：
+问问自己哪些用户故事将构成你的应用程序，你将需要哪些路由，这是网络应用程序构建过程中非常重要的一步。**路由应该完全反映你的产品的用户故事**。因此，让我们在这里定义我们的最小产品。(Minimum viable product)
 
 - 访客可以看到所有的restaurants列表。
 
@@ -155,7 +155,15 @@ POST "restaurants/38/reviews"
 
 我们知道这只是一个最基础的最小可行性产品，但是我们想让你理解的是**一个路由就是一个用户故事的体现**。在你的应用里，不要为所有的模型盲目地写下7个增删查改CRUD路由。这很容易让你被自己的产品搞糊涂，从而忘了你的最小可行性产品到底是什么。
 
-现在是时候实现这个产品所需要的所有路由了！
+### 筒仓式编码：路由/控制器/视图
+
+分别实现每个用户故事! 从编写路由开始（你可以看看上面的路由😉），然后编写相应的控制器动作，最后编写视图。不要同时启动多个用户故事! 一次编写一个故事，通过运行`rails s`和测试你的代码来确保所有的工作都完美。
+
+记住，你将需要为你在这个练习中使用的不同模型提供不同的控制器，你需要在终端生成它们。下面是一个[有用的提醒](https://kitt.lewagon.com/knowledge/cheatsheets/rails_commands)。
+
+``bash
+rails generate controller restaurants
+```
 
 **提示:** 你需要使用[嵌套资源](http://guides.rubyonrails.org/routing.html#nested-resources)来处理路由`GET "restaurants/38/reviews/new"`。
 
