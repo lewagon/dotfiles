@@ -123,9 +123,9 @@ rails c
 - Seed your restaurant database in `db/seeds.rb` with at least 5 valid restaurant records.
 - Run `rails db:seed` to launch the seeding script.
 
-### Routing / Controllers
+### User Stories
 
-Asking yourself what routes you need is a very important step in your web-app building process. **Routes should exactly mirror your product's user stories**. So let's define our minimal product here:
+Asking yourself what user stories will compose your application and which routes you will need is a very important step in your web-app building process. **Routes should exactly mirror your product's user stories**. So let's define our minimal product here:
 
 - A visitor can see the list of all restaurants.
 
@@ -159,7 +159,15 @@ In our MVP, a visitor cannot update / delete any restaurant or review. This is t
 
 We know it's a pretty basic MVP, but we just need you to understand that **each route is the embodiment of a user-story**. Don't just blindly write 7 CRUD routes for every model in your app. It's the best way to get confused by your own product and forget what your MVP really is.
 
-Now, it's time to implement all the routes you need to build this product!
+### Coding in Silo: Route/Controller/View
+
+Implement each user story separately! Start by writing the route (you can look at the routes above 😉), then coding the corresponding controller action and finally the view. Don't start multiple user stories at once! Code one story at a time, making sure everything works perfectly by running the `rails s` and testing your code.
+
+Remember, you will need different controllers for the different models you'll be using in this exercise and you need to generate them in the terminal. Here is a [helpful reminder](https://kitt.lewagon.com/knowledge/cheatsheets/rails_commands):
+
+```bash
+rails generate controller restaurants
+```
 
 **Hint:** to handle the route `GET "restaurants/38/reviews/new"`, you will have to use [nested resources](http://guides.rubyonrails.org/routing.html#nested-resources).
 
