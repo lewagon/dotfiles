@@ -123,9 +123,9 @@ rails c
 - Remplis la base de données de ton restaurant dans `db/seeds.rb` avec au moins 5 enregistrements de restaurant valides.
 - Exécute `rails db:seed` pour lancer le script de la seed.
 
-### Histoires d'utilisateurs
+### User stories
 
-Se demander quelles sont les histoires d'utilisateurs qui composeront votre application et quelles sont les routes dont vous aurez besoin est une étape très importante dans le processus de construction de votre application web. **Les routes doivent refléter exactement les histoires des utilisateurs de votre produit**. Définissons donc ici notre produit minimal :
+Se demander quelles sont les user stories qui composeront votre application et quelles sont les routes dont vous aurez besoin est une étape très importante dans le processus de construction de votre application web. **Les routes doivent refléter exactement les users stories de votre produit**. Définissons donc ici notre produit minimal :
 
 - Un visiteur peut voir la liste de tous les restaurants.
 
@@ -158,9 +158,9 @@ Dans notre MVP, un visiteur ne peut pas mettre à jour / supprimer un restaurant
 
 Il s'agit d'un MVP assez basique, mais tu dois juste comprendre que **chaque route incarne une story utilisateur**. Ne te contente pas de rédiger 7 routes CRUD à l'aveugle pour tous les modèles de ton application. C'est le meilleur moyen de t'embrouiller avec ton propre produit et d'oublier ce que le MVP est vraiment.
 
-### Coder en silo : Route/Controller/View
+### Coder en silo : Routeur/Controlleurs/Vues
 
-Implémentez chaque histoire d'utilisateur séparément ! Commencez par écrire la route (vous pouvez regarder les routes ci-dessus 😉 ), puis codez l'action du contrôleur correspondant et enfin la vue. Ne commencez pas plusieurs user stories en même temps ! Codez une histoire à la fois, en vous assurant que tout fonctionne parfaitement en lançant `rails s` et en testant votre code.
+Implémentez chaque user story séparément ! Commencez par écrire la route (vous pouvez regarder les routes ci-dessus 😉 ), puis codez l'action du contrôleur correspondant et enfin la vue. Ne commencez pas plusieurs user stories en même temps ! Codez une user story à la fois, en vous assurant que tout fonctionne parfaitement en lançant `rails s` et en testant votre code.
 
 Rappelez-vous que vous aurez besoin de différents contrôleurs pour les différents modèles que vous utiliserez dans cet exercice et que vous devrez les générer dans le terminal. Voici un [rappel utile] (https://kitt.lewagon.com/knowledge/cheatsheets/rails_commands) :
 
