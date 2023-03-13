@@ -13,20 +13,11 @@ Here are the **user actions** we want to implement in our app:
 
 ## Rails app generation
 
-You should already have [yarn](https://yarnpkg.com) installed. Check it with:
-
-```bash
-yarn -v
-# You should see your yarn version here
-```
-
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn) setup.
-
 **Note**: You should now be able to run these steps without this cheat sheet! Don't forget the `-d postgresql` (we will talk about this during the next session). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
+rails new rails-watch-list -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -65,25 +56,12 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Before starting to code, don't forget to setup your Rails app for Front-end, like in this morning's lecture let's add Bootstrap and its JavaScript dependencies:
-
-```bash
-yarn add bootstrap @popperjs/core
-```
-
-To add the node modules to the assets path, add this line to `config/initializers/assets.rb`:
-
-```ruby
-# config/initializers/assets.rb
-# [...]
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
-```
-
-And add the gems we're going to need:
+Before starting to code, don't forget to setup your Rails app for Front-end. Like in the lecture, let's add the gems we're going to need:
 
 ```ruby
 # Gemfile
 # [...]
+gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
@@ -99,15 +77,28 @@ Then let's download the Le Wagon's stylesheets:
 
 ```bash
 rm -rf app/assets/stylesheets
-curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip
-unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
+curl -L https://github.com/lewagon/stylesheets/archive/more-js.zip > stylesheets.zip
+unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-more-js app/assets/stylesheets
 ```
 
-Finally let's import the Boostrap JS library using Webpack:
+Finally let's import the Boostrap JS library with `importmap`:
 
+```bash
+importmap pin bootstrap
+````
+
+In `application.js`, add the following lines:
 ```js
 // app/javascript/application.js
-import "bootstrap";
+import "bootstrap"
+import "@popperjs/core"
+```
+
+And then in `manifest.js`, add the following line:
+```js
+// app/assets/config/manifest.js
+//= link popper.js
+//= link bootstrap.min.js
 ```
 
 Don't forget to `commit` and `push` your work often.
@@ -255,26 +246,8 @@ Don't forget you can have local images in the `app/assets/images` folder. Or eve
 
 Try to put the "New bookmark form" on the list page itself, not on a separate page, so you won't have to leave the list page to add a new movie! What changes in the routes? And in the controllers?
 
-### 7 - Tom Select on the movies dropdown (Optional)
-
-Let's add a JavaScript package to our Rails app! You can have a look at [our tutorial](https://kitt.lewagon.com/knowledge/tutorials/tom_select) to get inspired!
-
-To do so:
-- Generate a dedicated Stimulus controller
-- Connect this Stimulus controller to the movies dropdown `select` tag
-- Adapt one of the [basic examples](https://tom-select.js.org/examples/) code snippets to instanciate a Tom Select in the Stimulus controller
-
-### 8 - List reviews (Optional)
+### 7 - List reviews (Optional)
 
 Everyone should be able to comment and tell us what they thought of our movie collection. Let's add some reviews to our lists!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/reviews.png)
-
-### 9 - Going further
-
-- Adding a possibility to search for movies.
-- Adding [typed.js](http://www.mattboldt.com/demos/typed-js/) to have some funky title on our home page.
-- Some nice [animate on scroll](https://michalsnik.github.io/aos/) animations for our bookmarks as we scroll down a list show page.
-- Using [`star-rating.js`](https://kitt.lewagon.com/knowledge/tutorials/star_rating) to display stars instead of a normal input in the reviews form.
-
-Again, use Stimulus controllers when implementing JavaScript behavior in your app ⚠️
