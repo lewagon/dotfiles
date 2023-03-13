@@ -85,7 +85,7 @@ Finally let's import the Boostrap JS library with `importmap`:
 
 ```bash
 importmap pin bootstrap
-````
+```
 
 In `application.js`, add the following lines:
 ```js
@@ -94,7 +94,7 @@ import "bootstrap"
 import "@popperjs/core"
 ```
 
-And then in `manifest.js`, add the following line:
+And then in `manifest.js`, add the following lines:
 ```js
 // app/assets/config/manifest.js
 //= link popper.js
