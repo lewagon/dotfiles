@@ -64,7 +64,7 @@ Antes de comenzar a escribir tu código, no olvides configurar tu app Rails para
 gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
-gem "simple_form", github: "heartcombo/simple_form"
+gem "simple_form"
 gem "sassc-rails" # Uncomment this line
 ```
 
