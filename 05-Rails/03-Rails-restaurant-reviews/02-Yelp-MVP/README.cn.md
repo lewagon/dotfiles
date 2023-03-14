@@ -1,6 +1,7 @@
 ## 背景和目标
 
 本练习的目标是开发一个2个模型的Rails应用，一个restaurant模型和匿名的review模型。
+
 你可以在这里看到一个类似的例子，使用articles和comments模型，[Rails指南](http://guides.rubyonrails.org/getting_started.html#adding-a-second-model)。
 
 ## 生成Rails应用
@@ -122,9 +123,9 @@ rails c
 
 ### 用户故事
 
-问问自己哪些用户故事将构成你的应用程序，你将需要哪些路由，这是网络应用程序构建过程中非常重要的一步。**路由应该完全反映你的产品的用户故事**。因此，让我们在这里定义我们的最小产品。(Minimum viable product)
+问问自己哪些用户故事将构成你的应用程序，你将需要哪些路由，这是网络应用程序构建过程中非常重要的一步。**路由应该直接反映你的产品的用户故事**。因此，让我们定义我们的最简可行产品(Minimum viable product)：
 
-- 访客可以看到所有的restaurants列表。
+- 访客可以看到所有的restaurants（餐厅）。
 
 ```
 GET "restaurants"
@@ -155,13 +156,13 @@ POST "restaurants/38/reviews"
 
 我们知道这只是一个最基础的最小可行性产品，但是我们想让你理解的是**一个路由就是一个用户故事的体现**。在你的应用里，不要为所有的模型盲目地写下7个增删查改CRUD路由。这很容易让你被自己的产品搞糊涂，从而忘了你的最小可行性产品到底是什么。
 
-### 筒仓式编码：路由/控制器/视图
+### 模块式编程：路由/控制器/视图
 
-分别实现每个用户故事! 从编写路由开始（你可以看看上面的路由😉），然后编写相应的控制器动作，最后编写视图。不要同时启动多个用户故事! 一次编写一个故事，通过运行`rails s`和测试你的代码来确保所有的工作都完美。
+分开实现每一个用户故事！从编写路由开始（你可以看看上面的路由😉），然后编写相应的控制器（controller action），最后编写视图（view）。不要同时启动多个用户故事! 一次编写一个故事，通过运行`rails s`来测试你的代码，确保所有的功能都能完美运行。
 
-记住，你将需要为你在这个练习中使用的不同模型提供不同的控制器，你需要在终端生成它们。下面是一个[有用的提醒](https://kitt.lewagon.com/knowledge/cheatsheets/rails_commands)。
+记住，不同的模型（model）需要不同的控制器（controller）。你将需要在终端生成它们。这里有一个[小提醒](https://kitt.lewagon.com/knowledge/cheatsheets/rails_commands)：
 
-``bash
+```bash
 rails generate controller restaurants
 ```
 
