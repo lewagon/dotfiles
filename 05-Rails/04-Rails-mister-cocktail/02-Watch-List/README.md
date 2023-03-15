@@ -87,6 +87,18 @@ Finally let's import the Boostrap JS library with `importmap`:
 importmap pin bootstrap
 ```
 
+We need to update the `popper` link pinned by the command in the `importmap.rb` file, so replace this line by the following one:
+
+```ruby
+pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.6/lib/index.js" # delete this line
+```
+
+And replace it with:
+
+```ruby
+pin "@popperjs/core", to: "https://unpkg.com/@popperjs/core@2.11.2/dist/esm/index.js" # use unpkg.com as ga.jspm.io contains a broken popper package"
+```
+
 In `application.js`, add the following lines:
 ```js
 // app/javascript/application.js
