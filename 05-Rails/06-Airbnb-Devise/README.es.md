@@ -4,7 +4,7 @@ Trabajarás con tu equipo de proyecto en las próximas sesiones para crear un cl
 
 ### Demos
 
-Vas a presentar tu trabajo (en producción.¡Nada de demos en `localhost`!) durante las sesiones de **Geocoding** y **AJAX en Rails**.¡Las fechas de entrega (deadlines) son importantes!
+Vas a presentar tu trabajo (en producción.¡Nada de demos en `localhost`!) durante las sesiones de **Geocoding** y **Authorization & Pundit**.¡Las fechas de entrega (deadlines) son importantes!
 
 ### Parte I
 
@@ -61,7 +61,7 @@ Usa la plantilla minimal de Le Wagon la cual ya tiene una buena configuración d
 cd ~/code/<user.github_nickname>
 rails new \
   --database postgresql \
-  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/import-maps/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
 
@@ -85,7 +85,6 @@ Luego tus compañeros/as deben correr lo siguiente:
 
 ```bash
 bundle install
-yarn install
 rails db:create db:migrate
 ```
 

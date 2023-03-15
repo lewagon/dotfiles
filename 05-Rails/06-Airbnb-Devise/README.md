@@ -4,7 +4,7 @@ You will spend the next sessions with your Project Group working on an Airbnb cl
 
 ### Demos
 
-You will demo your work (in production, no demos on `localhost`!) during the **Geocoding** and **AJAX in Rails** sessions. Deadlines matter!
+You will demo your work (in production, no demos on `localhost`!) during the **Geocoding** and **Authorization & Pundit** sessions. Deadlines matter!
 
 ### Part I
 
@@ -32,7 +32,7 @@ Each user journey contains several **user stories**: write them down in the spre
 
 You can draw quick sketches with a pen and paper of the different screens and the rough elements they contain. This will help you visualize your user journeys. Be careful, no need to be too specific at this point! This is a sprint, you need to allocate your time and resources wisely.
 
-#### 2 - Database Scheme
+#### 2 - Database Schema
 
 Draw your database schema using [our db tool](https://kitt.lewagon.com/db/new) and **create a ticket to validate it with a teacher**. Draw only the minimum viable for your app to work. Use the right conventions (plural names for columns... etc - cf. the DB lectures).
 
@@ -57,8 +57,7 @@ Use Le Wagon's minimal template, which already has a good front-end setup:
 cd ~/code/<user.github_nickname>
 rails new \
   -d postgresql \
-  -j webpack \
-  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/import-maps/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
 
@@ -82,7 +81,6 @@ Then, the teammates should run:
 
 ```bash
 bundle install
-yarn install
 rails db:create db:migrate
 ```
 
