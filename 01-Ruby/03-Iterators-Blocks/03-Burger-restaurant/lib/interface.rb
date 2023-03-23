@@ -37,4 +37,4 @@ puts "💬 I'd like a spicy chicken with ketchup and cheddar please."
 
 
 # DO NOT remove this line, written for testing purpose
-@variables = (local_variables.collect { |v| [v, binding.local_variable_get(v)] }).to_h
+@variables = local_variables.to_h { |v| [v, binding.local_variable_get(v)] }
