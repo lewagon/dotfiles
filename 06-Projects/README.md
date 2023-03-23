@@ -22,9 +22,9 @@ During the first week, you will still have morning talks on advanced topics. Her
 
 Learn how to add real-time features out-of-the box with Rails' ActionCable.
 
-### `Building an API`
+### `From Design To Code`
 
-Learn how to build an API with Rails.
+Learn how to materialize features using JavaScript or AJAX in your projects.
 
 ### `Background Jobs with Sidekiq`
 
@@ -35,6 +35,6 @@ Take time-consuming processes (delivering emails, posting to an API, cleaning up
 Learn advanced SQL queries and tools to expose your data to non-tech members of your team.
 
 
-### `Testing in Rails`
+### `Demo Preparation`
 
-Learn how to test your code with [Rails built-in framework: Minitest](http://guides.rubyonrails.org/testing.html).
+Let's make your app shine on Demo Day!

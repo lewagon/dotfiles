@@ -16,9 +16,7 @@
 
 了解如何使用Rails的ActionCable添加即时功能。
 
-### `Building an API`
-
-学习如何使用Rails构建API。
+### `From Design To Code`
 
 ### `Background Jobs with Sidekiq`
 
@@ -28,6 +26,4 @@
 
 学习高级SQL查询和工具，向你们团队中的非技术成员公开你们的数据。
 
-### `Testing in Rails`
-
-了解如何使用[Rails 内置框架: Minitest](http://guides.rubyonrails.org/testing.html)测试代码。
+### `Demo preparation`
