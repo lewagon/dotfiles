@@ -35,22 +35,26 @@ describe "User" do
     expect(user_two.valid?).to eq false
     expect(user_two.errors.messages[:username]).to include "has already been taken"
   end
+end
 
-  it "should strip leading and trailing spaces from email before validating the data and saving to DB" do
-    if User.new(username: "bob", email: "NOT_A_VALID_EMAIL").valid?
-      fail NotImplementedError, "Please implement a format validation on email column"
+context "BONUS SECTION:" do
+  describe User do
+    it "should strip leading and trailing spaces from email before validating the data and saving to DB" do
+      if User.new(username: "bob", email: "NOT_A_VALID_EMAIL").valid?
+        fail NotImplementedError, "Please implement a format validation on email column"
+      end
+      user = User.new(username: "bob", email: "   bob@leponge.com   ")
+      expect(user.valid?).to eq(true)
+      expect(user.email).to eq("bob@leponge.com"), "You should have a `before_validation` callback to strip whitespaces"
     end
-    user = User.new(username: "bob", email: "   bob@leponge.com   ")
-    expect(user.valid?).to eq(true)
-    expect(user.email).to eq("bob@leponge.com"), "You should have a `before_validation` callback to strip whitespaces"
-  end
 
-  it "should send a welcome email to Bob on user creation [Bonus]" do
-    FakeMailer.instance.reset
-    user = User.new(username: "bob", email: "bob@lebonge.com")
-    expect { user.save }.to change { FakeMailer.instance.email_sent }.from(0).to(1)
+    it "should send a welcome email to Bob on user creation" do
+      FakeMailer.instance.reset
+      user = User.new(username: "bob", email: "bob@lebonge.com")
+      expect { user.save }.to change { FakeMailer.instance.email_sent }.from(0).to(1)
 
-    mail_recipient = FakeMailer.instance.recipient
-    expect(mail_recipient).to eq(user.email)
+      mail_recipient = FakeMailer.instance.recipient
+      expect(mail_recipient).to eq(user.email)
+    end
   end
 end
