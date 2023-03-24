@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/campuses-with-map.html) like in the lecture. For this exercise, notice we have not imported Bootstrap anywhere in the `index.html`! You will need to implement this layout in the `pages/map.css` file without using Bootstrap:
+Build a [results page with a sticky map](https://lewagon.github.io/layouts-demo/campuses-with-map.html) like in the lecture. For this exercise, notice we have not imported Bootstrap anywhere in the `index.html`! You will need to implement this layout in the `pages/cities.css` file without using Bootstrap:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/map-example.png)
 
