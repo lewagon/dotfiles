@@ -2,6 +2,15 @@
 
 是时候开发一个有3个模型的应用了！就像你猜想的那样，我们将会引入多对多关系(`n:n`)。那将是什么呢，为你自己创建一个观影清单Watch List应用。你可以创建清单，在清单里保存你喜欢的电影。
 
+下面是我们想在应用程序中实现的**用户行为**：
+- 作为一个用户，我可以看到我所有的电影列表
+- 作为一个用户，我可以创建一个电影列表
+- 作为一个用户，我可以看到一个电影列表的细节
+- 作为一个用户，我可以在电影列表中为某部电影添加书签
+- 作为一个用户，我可以删除一个书签。
+
+**注意**电影将被直接导入数据库中，所以不需要围绕 "电影 "模型实现任何用户操作。
+
 ## 生成Rails应用
 
 你应该已安装过[yarn](https://yarnpkg.com)了。确认一下：
@@ -13,7 +22,7 @@ yarn -v
 
 如果没看到的话，那请根据配置指南安装：[macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn)，[Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn)，[Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn)。
 
-**注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`-d postgresql`（明天你就知道为什么了）😉
+**注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`-d postgresql`（下一次课你就知道为什么了）😉
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -62,7 +71,7 @@ rspec spec/models                # 运行测试
 yarn add bootstrap @popperjs/core
 ```
 
-我们需要添加node modules到我们的assets路径：
+我们需要添加node modules到我们的assets路径，在`config/initializers/assets.rb`中添加下面的这行代码：
 
 ```ruby
 # config/initializers/assets.rb
@@ -78,7 +87,7 @@ Rails.application.config.assets.paths << Rails.root.join("node_modules")
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
-gem "sassc-rails" # Uncomment this line
+gem "sassc-rails" # 把这行代码取消注释
 ```
 
 ```bash
@@ -107,8 +116,7 @@ import "bootstrap";
 
 ### 1 - 模型Models
 
-和你的同伴一起在[db.lewagon.com](http://db.lewagon.com)画出数据库模式。
-我们需要三个数据库表， 电影`movies`， 清单`lists`和 书签`bookmarks`。思考这些表之间的关系和*哪一个表将会保存引用（references）*。😉
+和你的同伴一起在[db.lewagon.com](http://db.lewagon.com)画出数据库模式。我们需要三个数据库表， 电影`movies`， 清单`lists`和 书签`bookmarks`。思考这些表之间的关系和*哪一个表将会保存引用（references）*。😉
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
@@ -144,7 +152,7 @@ rspec spec/models
 - 如果一个电影（movie）被一个或一个以上的书签（bookmark）引用了，这个电影不能被删除
 - 如果要删除一个清单（list），也需要删除所有关联的书签bookmark（但是不能删除关联的电影movies，因为这些电影可能被其它清单list引用）
 
-### 2 - 初始化电影movies
+### 2 - 初始化电影数据
 
 **我们的应用不允许用户创建电影**。
 相反，我们会生成一些固定的电影供用户选择。
@@ -181,6 +189,7 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 ### 3 - 清单Lists的路由，控制器和视图
 
 **重要**
+
 不要使用`rake`命令来开发应用部分。是时候在终端里运行`rails s`了，然后在浏览器打开[http://localhost:3000/](http://localhost:3000/)。始终要这样开发：
 
 - 从**路由route**开始,
@@ -231,7 +240,7 @@ DELETE "bookmarks/25"
 
 我们需要一个`MoviesController`控制器吗?
 
-### 5 - 设计
+### 5 - 边设计边写代码
 
 开发一个非常好看的前端！和CSS好好玩一玩！😊 去 [dribbble](https://dribbble.com/) 或者 [onepagelove](https://onepagelove.com/) 找一些灵感。
 
@@ -245,13 +254,14 @@ DELETE "bookmarks/25"
 
 尝试把"新建书签bookmark的表单"放在清单list的show页面，而不是一个单独的页面。这样你就不需要离开清单list页面来添加一个新的电影了！路由会有哪些改变？控制器有哪些改变？
 
-### 7 - 电影的下拉选择框使用Select2(选做)
-我们在Rails应用里添加一个npm包！我们看看课件，如何把`select2`添加到电影的下拉选择框里。
+### 7 - 在电影下拉菜单上的汤姆选择（选做）
 
-在Vue里使用：
-- 设置Vue，创建一个Vue实例并在`el`中选中相应页面
-- 应用`select`标签
-- 使用[基本案例](https://tom-select.js.org/examples/)代码片段中的一个来在Vue中实例化一个Tom Select。
+让我们为我们的Rails应用程序添加一个JavaScript包吧 你可以看一下[我们的教程](https://kitt.lewagon.com/knowledge/tutorials/tom_select)，来获得启发！
+
+待办项：
+- 生成一个专门的Stimulus控制器
+- 将这个Stimulus控制器连接到电影的下拉`select`标签上
+- 改编一个[基本例子](https://tom-select.js.org/examples/)的代码段，在Stimulus控制器中设置一个Tom Select。
 
 ### 8 - 清单的点评(选做)
 
@@ -261,9 +271,9 @@ DELETE "bookmarks/25"
 
 ### 9 - 更进一步
 
-- 添加搜索电影的功能。
-- 使用`typed.js`在主页添加一些有趣的标题。
-- 当我们在清单list的show页面向下滚动的时候，可以使用一些用于书签bokmarks的非常好的[滚动动画](https://michalsnik.github.io/aos/)
-- 在点评reviews表单里使用[jquery-bar-rating](http://antennaio.github.io/jquery-bar-rating/) 来显示星级，而不是常规的输入框。
+- 增加了搜索电影的功能
+- 添加[typed.js](http://www.mattboldt.com/demos/typed-js/)，在我们的主页上有一些有趣的标题。
+- 为我们的书签添加一些漂亮的[下拉时的动画](https://michalsnik.github.io/aos/)动画，当我们向下滚动列表显示页面时。
+- 使用[`star-rating.js`](https://kitt.lewagon.com/knowledge/tutorials/star_rating)来显示星星，而不是评论表单中的普通输入。
 
-注意，请在你的应用中使用Vue来应用JavaScript。
+同样，在你的应用程序中实现JavaScript行为时，请使用Stimulus控制器 ⚠️
