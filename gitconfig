@@ -49,6 +49,9 @@
   side-by-side = true
   syntax-theme = GitHub
 
+[fetch]
+  prune = true
+
 [help]
   autocorrect = 1
 
@@ -59,11 +62,11 @@
   diffFilter = delta --color-only
 
 [pull]
-  rebase = false
+  rebase = i
 
 [push]
   default = simple
 
 [user]
-  email = xrosee@live.cn
+  email = xavier@xavierrosee.com
   name = Xavier Rosee

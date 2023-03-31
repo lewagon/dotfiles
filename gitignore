@@ -1,6 +1,7 @@
 # General
 log/
 *.log
+NOTES.md
 
 # Ansible
 ansible_shared_secret*

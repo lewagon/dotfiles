@@ -21,7 +21,6 @@ Plug 'junegunn/vim-emoji'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'github/copilot.vim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
