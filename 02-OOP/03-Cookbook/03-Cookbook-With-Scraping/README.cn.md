@@ -1,11 +1,9 @@
 ⚠️ 这个练习 **没有 `rake`** 。 抱歉啦😉
 
-所以现在我们想通过在网上找到食谱来增强我们的cookbook。我们将使用
-[🇫🇷 Marmiton](http://www.marmiton.org) 或 [🇬🇧 allrecipes](https://www.allrecipes.com)，因为它们的标记结构非常干净（这使它们成为好的爬虫候选者）。如果你想选择其他食谱网站，请继续！它只需要有一个 **搜索** 功能，搜索关键字中传递在[query string](https://en.wikipedia.org/wiki/Query_string) (需要VPN 🛡 ).
+现在我们想通过在网上寻找食谱来增强我们的应用。我们将使用[allrecipes](https://www.allrecipes.com)，因为它们的标记结构相当干整洁（使它们成为很好的爬虫的练习对象）。如果你想选择另一个菜谱网站，也可以！它只需要有一个**搜索**的功能，并且关键词可以在[查询字符串](https://en.wikipedia.org/wiki/Query_string)中传递。
 
 ## 设置
 
-First, let's copy paste your Cookbook's code in today's challenge `lib` folder:
 首先，将 Cookbook 的代码复制粘贴到今天的挑战的` lib` 文件夹中：
 
 ```bash
@@ -52,9 +50,9 @@ Which recipe would you like to import? (enter index)
 Importing "Strawberry slushie"...
 ```
 
-### 伪码
+### 伪代码
 
-对于这个新的 **用户操作**（因此是新的路由 _route_），我们需要：
+对于这个新的 **用户操作**（也需要新的路由 _route_），我们需要：
 
 1. 向用户请求要搜索的关键字
 2. 使用我们的关键字向菜谱网站发出HTTP请求
@@ -67,7 +65,7 @@ Importing "Strawberry slushie"...
 
 首先，让我们看看如何从Web检索信息。
 
-你可以使用 `curl` 命令在计算机上下载 HTML 文档。通过在终端中运行以下两个命令之一，将以下HTML页保存为工作目录中的 `.html` 文件：
+你可以使用 `curl` 命令在计算机上下载 HTML 文档。通过在终端中运行以下两个命令之一，将以下HTML页保存为本地工作目录中的 `.html` 文件：
 
 ```bash
 curl --silent "https://www.allrecipes.com/search?q=strawberry" > strawberry.html
@@ -77,7 +75,7 @@ curl --silent "https://www.allrecipes.com/search?q=strawberry" > strawberry.html
 
 我们之所以将页面保留在硬盘上，是因为我们需要在上面运行数百次Ruby脚本来测试代码。打开磁盘上的文件要快得多，而不是每次都通过网络调用Marmiton/allrecipes（这可能也会导致我们被列入黑名单）。
 
-### Nokogiri解析
+### 用Nokogiri解析
 
 Nokogiri是一个很酷和著名用于解析HTML文档的gem，（它也可以做其他事情！）下面是当你知道感兴趣的元素的CSS选择符后，如何使用它来解析文档。CSS选择符将在后面解释，但是它的要点是，你可以通过创建查询 `.class`来选择具有给定 `class`属性的所有元素。
 
@@ -101,15 +99,15 @@ doc = Nokogiri::HTML.parse(File.open(file), nil, 'utf-8')
 # 由你来查找相关的CSS选择符。
 ```
 
-需要可以在一个临时文件（例如，`parsing.rb`中工作）中找到正确的选择符和ruby代码，以获取要从HTML中需要提取的所有数据。你可以从用 `puts` 显示提取的信息开始。一旦你找到了所有你需要的选择符，继续在你的 cookbook 中编码操作。
+你可以在一个临时文件中工作 -- 例如`parsing.rb` -- 找到正确的选择器和Ruby代码来获得你想从HTML中提取的数据。最开始，你可以用`puts`来展示提取的信息。一旦你找到了所有你需要的选择器，那就在cookbook中写下代码吧。
 
-今天你将使用Nokogiri `.search（）` 方法，它将CSS选择符作为参数。如果你不记得语法，请看一下的这一节课[解析课](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/3/6).
+今天你将使用Nokogiri的`.search()`方法，它需要一个CSS选择器作为参数。
 
-**资源**：想深入Nokogiri吗？这是一个[好的Nokogiri爬虫指南](https://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/).
+如果你不记得语法，可以看一下这个[专门的知识点清单](https://kitt.lewagon.com/knowledge/cheatsheets/nokogiri)。
 
 ### 使用 `open uri` 获取响应HTML数据
 
-是时候用你的爬虫代码，在实时URL上使用解析代码了。（不仅仅是 `[fraise|strawberry]` ）。 使用[open uri](https://ruby-doc.org/core/stdlibs/open-uri/OpenURI.html)从给定URI获取HTML响应的库：
+现在我们来试试在URL中传一个不同的查询字符串（不仅仅是`strawberry`）。使用[open-uri](https://ruby-doc.org/core/stdlibs/open-uri/OpenURI.html)库来从一个URI中获得HTML响应：
 
 ```ruby
 require 'nokogiri'
@@ -123,14 +121,14 @@ doc = Nokogiri::HTML.parse(open(url).read, nil, 'utf-8')
 ### `控制器` / `视图` / `路由器`
 
 一旦有了这个解析逻辑，就可以在 `Controller` 中添加这个新的用户操作了。 使用上面的伪代码作为这个新方法的指南。对于第一次尝试，可以将工作解析代码直接复制粘贴到控制器中。
+
 想想 **类** 应该用来保存从web解析的信息，它是什么？
 
 试试运行你的coobook！
 
-## 加一个 `@rating` 属性到 `Recipe`
+## 加 `@rating` 属性到 `Recipe`
 
 此新属性应为：
-
 - 创建新菜谱时询问用户
 - 导入新菜谱时从web解析
 - 存储到CSV中
@@ -150,16 +148,15 @@ doc = Nokogiri::HTML.parse(open(url).read, nil, 'utf-8')
 5. [ ] Christmas crumble (5 / 5)
 ```
 
-## 加一个 `@prep_time` 属性到 `Recipe`
+## 加`@prep_time` 属性到 `Recipe`
 
 同样，这个新属性应该是：
-
 - 创建新菜谱时询问用户
 - 导入新菜谱时从web解析
 - 存储到CSV中
 - 列出菜谱时打印
 
-## （选做部分）服务
+## （选做部分）服务（Service）
 
 尝试从控制器中提取 **解析** 逻辑并将其放入[**服务对象**](https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial):
 

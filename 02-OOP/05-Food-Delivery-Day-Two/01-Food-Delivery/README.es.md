@@ -20,20 +20,20 @@ Entonces, finalmente, puedes ejecutar:
 rake
 ```
 
-Ahora continúa con tu propio código y sigue agregando funcionalidades al ruteador y haciendo que el `rake` siga saliendo verde.
+Ahora continúa con tu propio código y sigue agregando funcionalidades al router y haciendo que el `rake` siga saliendo verde.
 
 ¡Agreguemos más funcionalidades a nuestro programa de Entrega a Domicilio (Food Delivery)!
 
 Aquí están todas la **acciones de usuario** de nuestra aplicación:
 [] Como empleado, puedo iniciar sesión
 [X] Como gerente, puedo agregar un nuevo plato
-[X] Como gerente, puedo mostrar la lista de todos platos
+[X] Como gerente, puedo listar todos los platos
 [X] Como gerente, puedo agregar un nuevo cliente
-[X] Como gerente, puedo mostrar la lista de todos clientes
-[X] Como gerente, puedo agregar un nuevo pedido
-[X] Como gerente, puedo mostrar la lista de todos los pedidos no entregados
-[X] Como repartidor, puedo marcar uno de mis pedidos como entregado
-[X] Como repartidor, puedo mostrar la lista de todos mis pedidos no entregados
+[X] Como gerente, puedo listar todos los clientes
+[ ] Como gerente, puedo agregar un nuevo pedido
+[ ] Como gerente, puedo listar de todos los pedidos no entregados
+[ ] Como repartidor, puedo marcar uno de mis pedidos como entregado
+[ ] Como repartidor, puedo mostrar la lista de todos mis pedidos no entregados
 
 Por lo tanto, hay dos nuevos componentes:
 - **Employees**: empleados
@@ -43,9 +43,9 @@ Por lo tanto, hay dos nuevos componentes:
 
 ### 1.1 - Modelo de `Employee`
 
-Nuestro restaurante tiene dos tipos de empleados: **gerentes** y **repartidores**. Ambos tienen número de identificación (id), usuario y contraseña. Sin embargo, tienen privilegios diferentes dependiendo de sus roles.
+Nuestro restaurante tiene dos tipos de empleados: **gerentes** y **repartidores**. Ambos tienen número de identificación `id`, usuario (`username`) y contraseña (`password`). Sin embargo, tienen privilegios diferentes dependiendo de sus roles (`role`).
 
-Escribe el código para implementar esto y haz el crash test del modelo en `irb`. Luego testea tu código corriendo `rake employee`.
+Escribe el código para implementar esto y haz el crash test del modelo. Luego testea tu código corriendo `rake employee`.
 
 ¿Todo en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
 
@@ -54,9 +54,9 @@ Escribe el código para implementar esto y haz el crash test del modelo en `irb`
 Ahora que tenemos un modelo que representa a nuestros empleados, necesitamos un repositorio para almacenarlos.
 
 Este repositorio se inicializa con una ruta de archivo CSV. Tiene una lógica de **solo lectura** ya que solo el administrador de nuestra aplicación puede crear cuentas (no es necesario crear un método `add`). La interfaz de este repositorio permite lo siguiente:
-- Recuperar a todos los repartidores del repositorio
-- Encontrar a un empleado específico gracias a su número de identificación (id)
-- Encontrar a un empleado específico gracias a su usuario
+- Recuperar a todos los repartidores del repositorio (`all_riders`)
+- Encontrar a un empleado específico gracias a su número de identificación (`find`)
+- Encontrar a un empleado específico gracias a su usuario (`find_by_username`)
 
 Escribe el código para implementar esto y haz el crash test de tu repositorio en irb. Debes crear tu propio archivo CSV `employees.csv` dentro de la carpeta `data`. Luego testea tu código corriendo `rake employee`.
 
@@ -66,7 +66,7 @@ Escribe el código para implementar esto y haz el crash test de tu repositorio e
 
 Implementemos una lógica de **login** en nuestra aplicación.
 
-Queremos tener dos menús en el ruteador: uno que muestre la lista de tareas para los gerentes y otra que muestre las de los repartidores. También queremos direccionar la selección del empleado a la acción en el controlador correspondiente.
+Queremos tener dos menús en el router: uno que muestre la lista de tareas para los gerentes y otra que muestre las de los repartidores. También queremos direccionar la selección del empleado a la acción en el controlador correspondiente.
 
 Para ello introduciremos la noción de una **session**. A nivel del ruteador, almacenaremos al usuario logueado en una sesión.
 
@@ -103,8 +103,7 @@ ruby app.rb
 
 Nuestro restaurante toma pedidos, así que tenemos que representar lo que es un pedido.
 
-
-El pedido es lo que une a todos los elementos. Cada pedido tiene un número de identificación (id), un plato, un cliente, un empleado y un booleano `delivered` para registrar si ha sido entregado.
+El pedido es lo que une a todos los elementos. Cada pedido tiene un número de identificación (id), un plato (Meal), un cliente (Customer), un empleado (Employee) y un booleano `delivered` para registrar si ha sido entregado.
 
 Escribe el código para implementar esto y haz el crash test del modelo en `irb`. Luego testea tu código corriendo `rake order`.
 
@@ -116,9 +115,9 @@ Ahora que ya tenemos un modelo que representa a nuestros pedidos, tenemos la nec
 
 Este repositorio se inicializa con una ruta de archivo CSV, lee/escribe los pedidos del archivo CSV y los almacena en memoria. La interfaz del repositorio permite lo siguiente:
 - Agregar un nuevo pedido
-- Recuperar todos los pedidos no entregados
+- Listar todos los pedidos no entregados
 
-Ya que nuestro pedido tiene las **instancias** `meal`, `customer` y `employee`, tenemos que inicializar nuestro repositorio de pedidos, el de los platos (meals), el de los clientes (customers) y el de los empleados (employees).
+Ya que nuestro pedido tiene las **instancias** `meal`, `customer` y `employee`, también tenemos que inicializar nuestro repositorio de pedidos (orders) con el repositorio de los platos (meals), el repositorio de los clientes (customers) y el repositorio de los empleados (employees).
 
 Escribe el código para implementar esto y haz el crash test del repositorio en `irb`. Tienes que crear tu propio archivo  CSV `orders.csv` dentro de la carpeta `data`. Luego testea tu código corriendo `rake order`.
 
@@ -134,19 +133,24 @@ class OrderRepository
 end
 ```
 
+A su vez, asegurate que tu CSV de Orders guarde la informacion utilizando los siguientes headers, dado que serán necesarios para pasar los tests:
+`id, delivered, meal_id, customer_id, employee_id`
+
+
 ¿Todo en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
 
 ### 2.3 Controlador de `Order`
 
 Vayamos al controlador. Las siguientes son las **acciones de usuario** que queremos implementar:
-- Como gerente, puedo agregar un pedido
-- Como gerente, puedo mostrar la lista de todos los pedidos que no han sido entregados
-- Como repartidor, puedo marcar uno de mis pedidos como entregado
-- Como repartidor, puedo mostrar la lista de todos mis pedidos no entregados
+- Como gerente, puedo agregar un pedido (`add`)
+- Como gerente, puedo mostrar la lista de todos los pedidos que no han sido entregados (`list_undelivered_orders`)
+- Como repartidor, puedo mostrar la lista de todos mis pedidos no entregados (`list_my_orders`)
+- Como repartidor, puedo marcar uno de mis pedidos como entregado (`mark_as_delivered`)
+
 
 ¡Recuerda que el rol del controlador es delegar el trabajo a los otros componentes de nuestra aplicación (modelo, repositorio y vistas)!
 
-Comienza escribiendo el **pseudocódigo** separando cada acción de usuario en pasos básicos y delegando cada uno de ellos a un componente (modelo, repositorio, vista). Luego escribe el código correspondiente. Crea la vista y escribe su código paso por paso.
+Comienza escribiendo el **pseudocódigo** separando cada acción de usuario en pasos básicos y delegando cada uno de ellos a un componente (modelo, repositorio, vista). Luego escribe el código correspondiente para cada paso. Crea la vista y escribe su código paso por paso.
 
 Para testear el controlador, conectalo a tu aplicación instanciandolo en `app.rb` y pasándoselo al ruteador. Luego haz el crash test del código corriendo tu aplicación:
 
@@ -172,7 +176,7 @@ end
 
 **Atención** ⚠️ Dado que los **ids** no empiezan necesariamente por 1 y no son necesariamente continuos, es una **mala práctica pedir a un usuario un id**.
 
-Imaginemos que tenemos 3 meals, con id `1234`, `4242` y `987654`. **No** queremos mostrar:
+Imaginemos que tenemos 3 meals, con id `1234`, `4242` y `987654`. **No** los queremos mostrar:
 
 ```bash
 1234 - pizza

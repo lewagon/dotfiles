@@ -119,8 +119,7 @@ Don't forget to `commit` and `push` your work often.
 
 ### 1 - Models
 
-Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables
-we need are `movies`, `lists` and `bookmarks`. Think about the relations between the tables and who is storing the *references*. 😉
+Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your buddy. The tables we need are `movies`, `lists` and `bookmarks`. Think about the relations between the tables and who is storing the *references*. 😉
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
