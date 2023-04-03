@@ -44,7 +44,7 @@ Press `ENTER` to leave it empty for now. If you want to give your repository a d
 Select _Public_ and press `ENTER` so that your repository is visible by everyone.
 
 **Add a remote? (Y/n)**
-Type `Y`, then press `ENTER`. Adding a remote is going add a link to your GitHub repository in your local git repository, so you can push your code to GitHub via git.
+Type `Y`, then press `ENTER`. Adding a remote is going to add a link to your GitHub repository in your local git repository, so you can push your code to GitHub via git.
 
 **What should the new remote be called? (origin)**
 Press `ENTER` to keep the default option (origin) which is the standard name of the main remote.
