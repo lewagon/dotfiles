@@ -1,11 +1,8 @@
-# Coming soon
-Cut the first part of the Simple TO DO List challenge as a warm-up. Give the student an Object to iterate on (or an Array), give them the HTML and just make them iterate on each element to display the list.
-
 ## Background & Objectives
 
 Welcome to your first templating challenge! In this challenge, you will practice rendering HTML with JavaScript by making a static to-do list.
 
-// TODO: insert an image of static todos
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-static.png)
 
 ### Setup
 
