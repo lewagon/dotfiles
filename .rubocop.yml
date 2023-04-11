@@ -66,6 +66,8 @@ Naming/BlockForwarding:
   Enabled: false
 Style/EmptyMethod:
   Enabled: false
+Style/RedundantLineContinuation:
+  Enabled: false
 
 AllCops:
   NewCops: enable
