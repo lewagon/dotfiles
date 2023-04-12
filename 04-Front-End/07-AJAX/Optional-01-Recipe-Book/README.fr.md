@@ -22,6 +22,8 @@ Tu devrais voir un formulaire avec un champ de recherche et un bouton *Search*.
 - Un message indiquant qu'il n'y a pas de résultats doit apparaître s'il n'y a pas de recettes pour cet ingrédient.
 - Une fois une recette ajoutée dans les favoris, la recette doit apparaître dans la liste des favoris `#favourites-container` à droite.
 
+![App  boilerplate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-recipe-book-1.png)
+
 ## Search recipes
 
 ### Implémente le code de l'API
@@ -59,7 +61,9 @@ Utilise la méthode `forEach` pour itérer sur la liste des recettes, et pour ch
 
 Tu devrez maintenant voir une liste de recettes utilisant l'ingrédient que tu as saisi dans l'entrée de recherche :
 
-<!-- add screenshot -->
+NB: tu peux voir la liste des ingrédients disponibles en visitant [cette URL](https://www.themealdb.com/api/json/v1/1/list.php?i=list) directement depuis ton navigateur.
+
+![App  boilerplate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-recipe-book-2.png)
 
 ## Recette favorites
 
@@ -89,13 +93,13 @@ Tu peux maintenant ajouter la `newRecipeToAdd` à ton array `favourites`.
 
 Il ne nous reste plus qu'à cloner l'élément `template`, et insérer les données de la recette au bon endroit. Attends ! Nous avons déjà fait ça ! Tu peux réutiliser la fonction `insertRecipes` que nous avons créée précédemment, qui prend en paramètre un array de recettes et un container dans lequel insérer les recettes.
 
-<!-- add screenshot -->
+![App  boilerplate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-recipe-book-3.png)
 
 ## Notes
 
 Notre application nous permet de rechercher des recettes par ingrédient et de les ajouter à nos favoris. Un bémol toutefois : nous perdons nos favoris chaque fois que nous rechargeons la page.
 
-Pour résoudre ce problème, nous pourrions utiliser l'API [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) pour stocker nos favoris. Le `localStorage` est un objet qui permet de stocker des données dans le navigateur. Il est accessible depuis n'importe quelle page de notre application. Nous l'utiliserons dans le prochain challenge !
+Pour résoudre ce problème, nous pourrions utiliser l'API [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) pour stocker nos favoris. Le `localStorage` est un objet qui permet de stocker des données dans le navigateur. Il est accessible depuis n'importe quelle page de notre application. Mais pas de panique, nous l'utiliserons dans les challenges de la prochaine leçon !
 
 NB: Les Web-apps sont souvent composées de deux applications en réalité : une application back-end qui s'occupe de persister les données, et une application front-end qui s'occupe de l'interface utilisateur. Dans ce challenge, nous avons créé une application front-end qui s'occupe de l'interface utilisateur, et nous utilisons une API pour récupérer les données.
 
