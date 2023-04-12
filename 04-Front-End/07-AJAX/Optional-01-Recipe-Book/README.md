@@ -23,6 +23,8 @@ You should see a form with a search input.
 - Once the search works, the second part of the challenge will be to favourite the recipes you want by clicking on the bookmark icon.
 - Once bookmarked, the recipe will appear on the `#favourites-container` list.
 
+![App  boilerplate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-recipe-book-1.png)
+
 ## Search recipes
 
 ### Implement the API call
@@ -60,7 +62,9 @@ We will use the `forEach` method to iterate over the array of recipes, and for e
 
 You should see a recipe list using the ingredient you entered in the search input:
 
-<!-- add screenshot -->
+NB: you can go to [this endpoint](https://www.themealdb.com/api/json/v1/1/list.php?i=list) directly in your browser to see the full list of ingredients you can search by.
+
+![App  boilerplate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-recipe-book-2.png)
 
 ## Favourite recipes
 
@@ -92,7 +96,7 @@ Let's clone the template element, and insert the recipe data in the right place.
 
 `insertRecipes`, takes a recipe list and a container as parameters, and inserts the recipes in the container. Let's use it!
 
-<!-- add screenshot -->
+![App  boilerplate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-recipe-book-3.png)
 
 ## Notes
 
