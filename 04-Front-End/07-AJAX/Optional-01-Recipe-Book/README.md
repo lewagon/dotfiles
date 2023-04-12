@@ -84,7 +84,7 @@ For this, let's create a function `addRecipeToFavourites` as the `callback` func
 
 Once clicked, we need to retrieve all the elements of a recipe (its `idMeal`, `strMeal`, `strMealThumb`) before we store it in the `favourites` variable.
 
-We will need to pass the recipe as a parameter of this function, so we can access the data we need to display it. From the `event` you can reconstruct the recipe object:
+We will need to pass the recipe as a parameter of this function, so we can access the data we need to display it. From the `event` you can reconstruct the recipe object so we can save all its details:
 
 ```js
 const newRecipeToAdd = { idMeal: ..., strMeal: ..., strMealThumb: ... };
@@ -102,7 +102,7 @@ Let's clone the template element, and insert the recipe data in the right place.
 
 Our app enables us to search for recipes by ingredient and add them to our favourites. One caveat here is that we lose our favourites every time we reload the page.
 
-To fix this, we could use the [`localStorage` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store our favourites in the browser. We could then retrieve them when the page loads. You will learn more about `localStorage` in the next challenge!
+To fix this, we could use the [`localStorage` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store our favourites in the browser. We could then retrieve them when the page loads. But don't worry, you will learn more about `localStorage` in the next lesson!
 
 NB: Web-apps are often composed of two apps in reality: one of the back-end to store the data, and one front-end that will retrieve the data and display it with a framework. In this challenge, we created a front-end application that handles the user interface, while we are getting data from an API.
 
