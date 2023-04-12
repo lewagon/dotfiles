@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In this challenge, you will create the **same to-do list**, but this time, **with `<template>` tag**.
+In this challenge, you will create the **same to-do list**, but this time, **with the `<template>` tag**.
 
 ### Setup
 
@@ -14,7 +14,7 @@ Then, open [`localhost:8000`](http://localhost:8000) in your browser.
 
 ### Data and HTML
 
-There is a list of to-dos prepared for you in `lib/to-do-list.js` file.
+There is a list of to-dos prepared for you in the `lib/to-do-list.js` file.
 
 ```js
 const todos = [
@@ -25,7 +25,7 @@ const todos = [
 ];
 ```
 
-There is also a piece of to-do HTML, this time **in `<template>` tag**, styled with Bootstrap in `index.html` file.
+There is also a piece of to-do HTML, this time **in a `<template>` tag**, styled with Bootstrap in `index.html` file.
 
 ```html
 <template id="todoItemTemplate">
