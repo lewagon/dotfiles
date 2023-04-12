@@ -102,7 +102,7 @@ Let's clone the template element, and insert the recipe data in the right place.
 
 Our app enables us to search for recipes by ingredient and add them to our favourites. One caveat here is that we lose our favourites every time we reload the page.
 
-To fix this, we could use the [`localStorage` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store our favourites in the browser. We could then retrieve them when the page loads. But don't worry, you will learn more about `localStorage` in the next lesson!
+To fix this, we could use the [`localStorage` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store our favourites in the browser. We could then retrieve them when the page loads. But don't worry, you will learn more about `localStorage` in one of the next lesson's challenges!
 
 NB: Web-apps are often composed of two apps in reality: one of the back-end to store the data, and one front-end that will retrieve the data and display it with a framework. In this challenge, we created a front-end application that handles the user interface, while we are getting data from an API.
 
