@@ -57,4 +57,12 @@ A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/che
 <input type="checkbox" name="Checkbox 2">
 ```
 
-You can insert `checked` into the input element depending on the `done` value of each to-do.
+In JavaScript, you can set the `checked` attribute on the input element to `true` or `false`.
+
+```js
+const checkbox = document.querySelector("input[type=checkbox]")
+checkbox.checked = true; // renders a checked checkbox
+checkbox.checked = false // renders an unchecked checkbox
+```
+
+Now, your turn to set the `checked` attribute's value depending on the `done` value of each to-do.
