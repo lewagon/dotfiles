@@ -16,7 +16,9 @@ Then, open [`localhost:8000`](http://localhost:8000) in your browser.
 
 ### Data and HTML
 
-There is a list of to-dos prepared for you in `lib/to-do-list.js` file.
+In your `lib/to-do-list.js` file, you should be able to find the following two pieces of code.
+
+1. Data: an array of to-do items
 
 ```js
 const todos = [
@@ -30,7 +32,7 @@ const todos = [
 - `title`: a `string` that contains what the item is about.
 - `done`: a `boolean` that indicates whether the item is done or not.
 
-There is also a piece of to-do HTML, styled with Bootstrap in `index.html` file.
+2. Template: a piece of to-do HTML code
 
 ```html
 <div class="shadow-sm rounded px-4 py-3 mb-2 border d-flex">
