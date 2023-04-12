@@ -10,6 +10,7 @@ cask 'dbeaver-community'
 cask 'clickup'
 # cask 'clockify'
 # cask 'dash2
+cask 'devtoys'
 cask 'discord'
 cask 'drawio'
 # cask 'dropbox'
