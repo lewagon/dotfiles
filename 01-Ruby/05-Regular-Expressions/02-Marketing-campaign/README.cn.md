@@ -20,7 +20,7 @@
 - 识别电子邮件的不同部分，并编写一个正则表达式来匹配一个典型的email
 - 你自己编写一个简单的regex，没必要试图使其完美（写出一个完美的email regex是不可能的）！
 
-**警告：**正则表达式是不足以表达出能验证100%合规的电子邮件地址，详见[这个Stackoverflow的讨论](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression)以及[这个网站](https://emailregex.com/) 的阐述。在专业的环境中，我们倾向于使用外部服务，例如[Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/)或[Mailgun](https://www.mailgun.com/email-validation/) 所提供的服务，它使用了一个巨大的数据库和机器学习来判断一个地址是否正确。
+**警告：**正则表达式是不足以表达出能验证100%合规的电子邮件地址，详见[这个Stackoverflow的讨论](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression)以及[这个网站](https://uibakery.io/regex-library/email) 的阐述。在专业的环境中，我们倾向于使用外部服务，例如[Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/)或[Mailgun](https://www.mailgun.com/email-validation/) 所提供的服务，它使用了一个巨大的数据库和机器学习来判断一个地址是否正确。
 
 #### Email地址的模式
 

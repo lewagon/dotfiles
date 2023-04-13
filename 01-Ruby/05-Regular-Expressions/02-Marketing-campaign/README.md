@@ -22,7 +22,7 @@ Code the `valid?` method that returns the right boolean depending on the email's
 - Identify the different parts of the email and code a regular expression to match the pattern of a classic email
 - Code a simple regex yourself, no need to try and make it perfect (it is impossible to write a perfect regex for emails)!
 
-**Warning:** Regular expressions are not expressive enough to validate 100% of the compliant email addresses as [this Stackoverflow discussion](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) and [this website](https://emailregex.com/) illustrate. In professional environments, prefer the use of external services like the one provided by [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) or [Mailgun](https://www.mailgun.com/email-validation/) as it uses a huge database and machine learning to determine if an address is correct.
+**Warning:** Regular expressions are not expressive enough to validate 100% of the compliant email addresses as [this Stackoverflow discussion](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) and [this website](https://uibakery.io/regex-library/email) illustrate. In professional environments, prefer the use of external services like the one provided by [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) or [Mailgun](https://www.mailgun.com/email-validation/) as it uses a huge database and machine learning to determine if an address is correct.
 
 #### Pattern of an email address
 
