@@ -1,5 +1,4 @@
 ## 9 AM - 9:30 AM
-
 Students' welcoming with pastries and coffee
 
 ## 9:30 AM - 10:15 AM
@@ -37,33 +36,27 @@ Project the calendar on the screen to go through the program with the class, wee
 - It works, so at this point, **trust us** and fight for it!
 
 #### Monday (Week 1) - Setup
-
 - Special day, we'll focus on your machines setup, you'll go home with pimped workstations ready for the next 9 weeks!
 
 #### Tuesday -> Friday (Week 1) - Ruby Core
-
 - Ruby core program. Fundamentals. Elementary blocks. Scripts in 1 or 2 files, we'll run them from the terminal.
 - Fast pace, a lot of information, you might feel on the verge of exploding
 
 #### Monday -> Tuesday (Week 2) - Ruby ReBoot
-
 - We'll split the class in two groups after the morning lecture.
 - There will be a **reboot** group for those who want to have a second pass on the fundamentals
 
 #### Wednesday (Week 2) -> Wednesday (Week 3) - Building Softwares
-
 - When your program grows, you won't keep 2000 lines of code in one big file, it's impossible to maintain.
 - Instead, you'll need to **organize** your code and split it in different files.
 - That's what Software architecture is.
 - Also very hard, you'll build entire software in two days, still in the terminal, **hang on 😊**
 
 #### Thursday (Week 3) -> Tuesday (Week 4) - Database
-
 - Now that you know how to build software, you need to learn how to save **data**.
 - Database, SQL, you'll find it easier, the pace slows down a little at this point.
 
 #### Wednesday (Week 4) -> Thursday (Week 5) - Front-end
-
 - What's missing now? A proper interface. We'll replace the terminal by a web browser.
 - Front-end: HTML, CSS, Bootstrap, less painful, and more graphical, good way to express your creativity, fresh air for your minds.
 - Monday night: you'll get to pitch a product, vote for your favorite products and join a team.
@@ -71,28 +64,24 @@ Project the calendar on the screen to go through the program with the class, wee
 - At this time you'll have nice static websites online 😊
 
 #### Friday (Week 5) - Project Day
-
 - No code
 - Product day, you will prototype your ideas in team of 3 or 4 students.
 - Team up with people you'll get along with!
 - Choose **above all** a cool and interesting project (not a 10000th market place...). You are here to have fun and learn a maximum.
 
 #### Monday - Friday (Week 6) - Rails basics
-
 - One Rails app a day!
 - Assemble all the pieces of the puzzle.
 - You'll get the big picture on why we learnt all those blocks.
 - At this time you'll have real websites with a back-end deployed online.
 
 #### Monday - Friday (Week 7) - Airbnb week
-
 - Airbnb clone! (no flats allowed).
 - Team up with your project buddies.
 - Collaborate on GitHub.
 - Make mistakes you won't make again during the Project's weeks 😊
 
 #### Monday (Week 8) - Friday (Week 9) - Project Weeks
-
 - Projects!
 - Same teams as Airbnb's week
 - Make beautiful products!
@@ -100,7 +89,6 @@ Project the calendar on the screen to go through the program with the class, wee
 - Enjoy yourselves!
 
 ### Typical week overview (teacher)
-
 - We'll work everyday (from Monday to Friday), **including holidays**.
 - _Paris_ yoga lessons with our yoga teacher **Claire** (let her introduce herself) on Wednesdays (4:30 - 5:30 PM) & Fridays (12 PM - 1 PM)
   - Yoga lessons are **strongly recommended** to relax from long hours focusing on your screens
@@ -114,7 +102,6 @@ Project the calendar on the screen to go through the program with the class, wee
   - Informal, friendly talk around drinks
 
 ### Typical day overview (teacher)
-
 - **9 AM - 10:30 AM**: Morning lecture in the classroom. Quite intense. Don't be late, the lecture starts at 9 AM **sharp**, with or without you!
 - **10:30 AM - 5:00 PM**:
   - Fullstack-Challenges on Kitt (the exercises platform we'll show you later) with your buddy. Take enough time with your buddy to read the exercise's README from top to bottom, discuss it to be sure it's properly understood, and share ideas on how to complete the exercise before you start coding.
@@ -150,7 +137,6 @@ At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org
 - After this validation, students will receive 2 mails to join Le Wagon on GitHub and on Slack.
 
 ## 1 PM - 2 PM: Lunch time
-
 - Tell students to be back at 2 PM sharp for the first (short) lectures
 
 ## 2 PM - 3:15 PM
@@ -163,16 +149,16 @@ At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org
 
 3. **2pm45-3:15pm**: At the end of the git lecture, your teacher will show you the Kitt platform
 
-4. Navigation
-5. Lectures
-6. Videos
-7. Classmates
-8. Buddies
-9. Exercises (Solving the demo exercise 00-Setup/00-Demo)
-10. Tickets
-11. Flashcards
+1. Navigation
+2. Lectures
+3. Videos
+4. Classmates
+5. Buddies
+6. Exercises (Solving the demo exercise 00-Setup/00-Demo)
+7. Tickets
+8. Flashcards
 
-12. Teacher should show to the class how to push a solution on the demo challenge `00-Setup/00-Demo` (first challenge that teacher should solve and push with the class).
+4. Teacher should show to the class how to push a solution on the demo challenge `00-Setup/00-Demo` (first challenge that teacher should solve and push with the class).
 
 ## 3:15 PM - End of the day
 
