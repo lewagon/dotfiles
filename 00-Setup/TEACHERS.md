@@ -139,7 +139,7 @@ At the end of the lecture
 
 - Tell all students to start [Le Wagon's setup](https://github.com/lewagon/setup)
 - Students should click on the icon corresponding to their operating system
-- If you encounter bugs, please refer to [each OS cheatsheet](https://github.com/lewagon/setup/tree/master/docs)
+- If you encounter bugs, please refer to [common setup problems](https://lewagon.notion.site/Setup-Common-Errors-f09ad57cc4ae4a9a966b63dbf4e5620d)
 
 ### Student validation (end of morning setup)
 
