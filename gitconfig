@@ -59,3 +59,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = robducks@gmail.com
+	name = robert willcox
