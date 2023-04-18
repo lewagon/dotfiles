@@ -1,10 +1,8 @@
 ## Background & Objectives
 
-SQLite is a simple database that relies on a standalone file. You can read more on [en.wikipedia.org/wiki/SQLite](http://en.wikipedia.org/wiki/SQLite).
+SQLite is a simple database that relies on a standalone file. If you're interested, you can read more [here](http://en.wikipedia.org/wiki/SQLite).
 
-The goal of this first exercise is to use the command line or a database tool to read and query a sample database called `jukebox.sqlite` that we give you.
-
-To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewagon.com/), save it as an XML file and run `rake`!
+The goal of this first exercise is to use the command line or a database tool to read and query a sample database called `jukebox.sqlite` that we will give you. To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewagon.com/), save it as an XML file and run `rake`!
 
 ### Setup
 
