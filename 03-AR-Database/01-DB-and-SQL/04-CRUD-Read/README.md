@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-The goal of this exercise is to implement each one of the `CRUD` operations and build a copycat of [Hacker News](https://news.ycombinator.com). For those who don't know, HackerNews is a _very minimal_ social news website (with a focus on computer science & technology), where users can submit links to articles and other users can choose to "upvote" those article links.
+The goal of this and the following exercise is to implement each one of the `CRUD` operations and build a copycat of [Hacker News](https://news.ycombinator.com). For those who don't know, HackerNews is a _very minimal_ social news website (with a focus on computer science & technology), where users can submit links to articles and other users can choose to "upvote" those article links.
 
 **Note**: in this exercise, similar to the last exercise, we **give** you the `DB` global variable, so no need to instantiate a new `SQLite3::Database` yourself. Just use `DB.execute` in your code, and it'll work (but feel free to have a look at `spec/models/post_spec.rb` to see how the `DB` variable is created).
 
