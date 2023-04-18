@@ -1,18 +1,10 @@
 ## Background & Objectives
 
-Now it is time to use Ruby code to interact with the `jukebox` database. For that we need a gem called [sqlite3](http://rubygems.org/gems/sqlite3).
-
-To install the gem on your computer, run this in the terminal:
-
-```bash
-gem install sqlite3
-```
-
-The goal of this challenge is to communicate with the database **from our Ruby code**.
+Now it is time to use Ruby code to interact with the `jukebox` database. The goal of this challenge is to communicate with the database **from our Ruby code**.
 
 ## Specs
 
-👉 **IMPORTANT**: Each method takes a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. This `db` is **built by the test and passed along to the method**. No need to create one yourself **to satisfy `rake`**. Your method will look like this:
+👉 **IMPORTANT**: Each method takes a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. This `db` is **built by the test and passed along to the method. There is no need to create one yourself to satisfy `rake`**. Your method will look like this:
 
 ```ruby
 def the_method(db)
@@ -25,7 +17,7 @@ def the_method(db)
 end
 ```
 
-👉 However, to try your code with `irb` or to be able to call your methods from within the `lib/queries.rb` file, you will need to build the `db` instance yourself:
+👉 However, to try your code using `irb` or to be able to call your methods from within the `lib/queries.rb` file, you will need to build the `db` instance yourself:
 
 ```ruby
 # lib/queries.rb
@@ -35,7 +27,7 @@ rows = db.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
 ```
 
-If testing from `irb`, you can then import and call your query methods with:
+If you added the above code into your `lib/queries.rb` file and now want to try testing your code from `irb`, you can import and call your query methods with the following:
 
 ```ruby
 require_relative "lib/queries"
@@ -43,7 +35,9 @@ artist_count(db)
 # => [...]
 ```
 
-If you're running your code from within `lib/queries.rb`, after instantiating your `db` as described above, you can call your methods as normal.
+If you're running your code from within `lib/queries.rb` only, you can call your methods as normal after instantiating your `db` as described above.
+
+---
 
 Open the file `lib/queries.rb` to answer the following questions. Don't forget you can look inside the database by running `sqlite3 lib/db/jukebox.sqlite` in the Terminal or use the VS Code SQLite Extension mentioned in the previous exercise.
 

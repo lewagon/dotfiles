@@ -15,9 +15,13 @@ sqlite3 -version
 # You should see your sqlite version here
 ```
 
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite) setup.
+If you don't have it installed, you can do so by running the following in the terminal:
 
-You can open the database we provided by running:
+```bash
+gem install sqlite3
+```
+
+You can then open the database we provided by running:
 
 ```bash
 sqlite3 lib/db/jukebox.sqlite
