@@ -1,8 +1,8 @@
 ## Background & Objectives
 
-The goal of this exercise is to implement each one of the `CRUD` operations and build a copycat of [Hacker News](https://news.ycombinator.com). For those who don't know, HackerNews is a _very minimal_ social news website (with a focus on computer science & technology), where users can submit articles and other uses can "upvote" and
+The goal of this exercise is to implement each one of the `CRUD` operations and build a copycat of [Hacker News](https://news.ycombinator.com). For those who don't know, HackerNews is a _very minimal_ social news website (with a focus on computer science & technology), where users can submit links to articles and other users can choose to "upvote" those article links.
 
-**Note**: in this exercise, we **give** you the `DB` global variable, so no need to instantiate a new `SQLite3::Database` yourself. Just use `DB.execute` in your code, and it'll work (but feel free to have a look at `spec/models/post_spec.rb` to see how the `DB` variable is created).
+**Note**: in this exercise, similar to the last exercise, we **give** you the `DB` global variable, so no need to instantiate a new `SQLite3::Database` yourself. Just use `DB.execute` in your code, and it'll work (but feel free to have a look at `spec/models/post_spec.rb` to see how the `DB` variable is created).
 
 ## Tests
 
@@ -59,12 +59,12 @@ Let's use **pseudocode** to help us in breaking down the steps we'll need:
 
 ☝️ Make sure to use the global variable `DB` defined in the program, no need for you to instantiate it yourself!
 
-💡 HINT: make sure to pay attention to what **data type** you get back from the `DB.execute` method versus what data type **you need** to have inside your model. How can we make sure we end up with a Post instance?
+💡 HINT: make sure to pay attention to what **data type** you get back from the `DB.execute` method versus what data type **you need** to have inside your model. How can we make sure we end up with a `Post` instance?
 
 ##### SQL injections
-As we learned in the lecture, we also need to protect our `find` method against **SQL injections**. As a reminder, an SQL injection is a serious security issue, where an attacker can interfere with your application by means of malicious queries to the database. Potential effects are, for example, allowing an ill-intended user to access restricted data, i.e. social security numbers, credit cards, or passwords 😱. In some cases, the attacker can even change or delete data, permanently damaging the application.
+As we learned in the lecture, we also need to protect our `find` method against **SQL injections**. As a reminder, an SQL injection is a serious security issue, where an attacker can interfere with your application by means of malicious queries to the database. Potential effects are, for example, allowing an ill-intended user to access restricted data, i.e. social security numbers, credit cards, or passwords 😱. In some cases, the attacker can even change or delete data, permanently damaging the application. If you want to read more about SQL injections and see some examples, you can check out [fthis article](https://portswigger.net/web-security/sql-injection).
 
-To protect your database against SQL injections, you must never interpolate SQL queries with user data but use `?` [placeholders](http://ruby.bastardsbook.com/chapters/sql/#placeholders-sqlite-gem) instead.
+To protect your database against SQL injections, you must never interpolate SQL queries with user data but use `?` [**placeholders**](http://ruby.bastardsbook.com/chapters/sql/#placeholders-sqlite-gem) instead.
 
 ℹ️ For this exercise, to prevent SQL injections you'll need to pass _several arguments_ to the `.execute` method.
 

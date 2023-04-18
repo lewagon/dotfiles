@@ -2,9 +2,10 @@
 
 Now it is time to use Ruby code to interact with the `jukebox` database. The goal of this challenge is to communicate with the database **from our Ruby code**.
 
-## Specs
+In this challenge, you'll be working in a ruby file, `lib/queries.rb` where you'll have to complete several methods that gather specific data from the DB.
 
-👉 **IMPORTANT**: Each method takes a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. This `db` is **built by the test and passed along to the method. There is no need to create one yourself to satisfy `rake`**. Your method will look like this:
+### Setup info
+👉 **IMPORTANT**: Each method will take a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. This `db` is **built by the test and passed along to the method. There is no need to create one yourself in order to satisfy `rake`**. Your methods will look like this:
 
 ```ruby
 def the_method(db)
@@ -17,7 +18,7 @@ def the_method(db)
 end
 ```
 
-👉 However, to try your code using `irb` or to be able to call your methods from within the `lib/queries.rb` file, you will need to build the `db` instance yourself:
+👉 However, it's important to test your code!  If you want to try your code using `irb` or to be able to call your methods from within the `lib/queries.rb` file, you will need to build the `db` instance yourself:
 
 ```ruby
 # lib/queries.rb
@@ -35,9 +36,9 @@ artist_count(db)
 # => [...]
 ```
 
-If you're running your code from within `lib/queries.rb` only, you can call your methods as normal after instantiating your `db` as described above.
+If you're running your code from within `lib/queries.rb` only, you can call your methods and use `puts` or `p` to see your results as normal **after** instantiating your `db` as described above 👆.
 
----
+## Specs
 
 Open the file `lib/queries.rb` to answer the following questions. Don't forget you can look inside the database by running `sqlite3 lib/db/jukebox.sqlite` in the Terminal or use the VS Code SQLite Extension mentioned in the previous exercise.
 
