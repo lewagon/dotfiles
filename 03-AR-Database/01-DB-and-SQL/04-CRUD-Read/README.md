@@ -62,7 +62,7 @@ Let's use **pseudocode** to help us in breaking down the steps we'll need:
 💡 HINT: make sure to pay attention to what **data type** you get back from the `DB.execute` method versus what data type **you need** to have inside your model. How can we make sure we end up with a `Post` instance?
 
 ##### SQL injections
-As we learned in the lecture, we also need to protect our `find` method against **SQL injections**. As a reminder, an SQL injection is a serious security issue, where an attacker can interfere with your application by means of malicious queries to the database. Potential effects are, for example, allowing an ill-intended user to access restricted data, i.e. social security numbers, credit cards, or passwords 😱. In some cases, the attacker can even change or delete data, permanently damaging the application. If you want to read more about SQL injections and see some examples, you can check out [fthis article](https://portswigger.net/web-security/sql-injection).
+As we learned in the lecture, we also need to protect our `find` method against **SQL injections**. As a reminder, an SQL injection is a serious security issue, where an attacker can interfere with your application by means of malicious queries to the database. Potential effects are, for example, allowing an ill-intended user to access restricted data, i.e. social security numbers, credit cards, or passwords 😱. In some cases, the attacker can even change or delete data, permanently damaging the application. If you want to read more about SQL injections and see some examples, check out the _Additional Resources_ section at the bottom of this challenge.
 
 To protect your database against SQL injections, you must never interpolate SQL queries with user data but use `?` [**placeholders**](http://ruby.bastardsbook.com/chapters/sql/#placeholders-sqlite-gem) instead.
 
@@ -81,75 +81,10 @@ Again, let's use **pseudocode** to help us break down our steps:
 
 Just as in the `#find` method, we need to pay attention to what **data types** we get back from the `DB.execute` method versus what data types **we need** to have inside our model!
 
-**Refactoring**
+**Optional: Refactoring**
 
-You may notice that we end up repeating ourselves in the `#find` and `#all` methods when we need to convert our response data from the database into instances of `Post`. If you want, try refactoring this bit of code into a private method called `build_record(row)`, which takes a row of data from the database and converts it to a `Post` instance, and then use this `#build_record`
+You may notice that we end up repeating ourselves in the `#find` and `#all` methods when we need to convert our response data from the database into instances of `Post`. If you want, try refactoring this bit of code into a private method called `build_record(row)`, which takes a row of data from the database and converts it to a `Post` instance. Then use this `#build_record` method wherever you need to convert your data.
 
-### Part 3: DELETE
-
-In the next part of this exercise, we'll focus on **D**elete (the `D` in `CRUD`).
-
-To do this, we'll need the following method:
-
-### `#destroy`
-
-Implement an **instance** method `destroy` that will delete the relevant row from the database. Why is this method an instance method, and not a class method like `Post.find`' or `Post.all` 🤔? If you're not sure, try asking your buddy or a TA!
-
-Let's look at an example of how this method will be used 👇
-
-```ruby
-post = Post.find(42)  # Get the row with id 42.
-post.destroy          # TODO: get rid of that row in the database
-
-# Expected result then
-Post.find(42)
-# => nil
-```
-
-And again, let's write some pseudocode to help us:
-```ruby
-# TODO: Write the SQL query to delete a specific post from the database
-  # How do we specify the post ?
-# TODO: Use DB.execute to execute the SQL query
-```
-
-### Part 4: CREATE & UPDATE
-
-In the final part of the exercise, we'll focus on the **C**reate and the **U**pdate of `CRUD`.
-
- Why are we doing the `C` and the `U` together? It's because the process is very similar. When manipulating object instances, if we call `save` on something and it doesn't exist in our DB yet, it will get **C**reated. If it already exists, it will just get **U**pdated.
-
-### `#save`
-
-Implement an **instance** method  `save` that will create or update the relevant row in the database. Again, make sure you can answer why it is an instance method like `destroy` rather than an a class method like `Post.find`.
-
-Let's look at an example of how this method will be used 👇
-
-```ruby
-post = Post.new(title: "Awesome article")
-post.id
-# => nil (the post is not persisted yet)
-post.save  # Will persist a new record!
-post.id
-# => 1 (expected result, the database has inserted a row, store the id in memory)
-
-post.title = "Awesome article, updated"
-post.save   # Should update the existing record in the database!
-```
-
-And let's write some pseudocode to help us with the steps:
-```ruby
-# TODO: Determine if the post needs to be *created* or *updated*
-# TODO: If the post already exists:
-  # TODO: Write the SQL query to update the post in the database
-  # TODO: Use DB.execute to execute the query
-# TODO: If the post is new,
-  # TODO: Write the SQL query to add a new post to the database
-  # TODO: Use DB.execute to execute the query
-  # TODO: Update the @id of the post using data from the databse
-```
-
-💡 HINT: You may need to use [last\_insert\_row\_id](http://zetcode.com/db/sqliteruby/connect/), as we saw in the lecture 😉.
 
 ## Additional resources
 
