@@ -12,7 +12,7 @@ We also prepared a `test.rb` file for you where the `DB` global variable is crea
 
 ### Part 1: DELETE
 
-In the next part of this exercise, we'll focus on **D**elete (the `D` in `CRUD`).
+In the first part of this exercise, we'll focus on **D**elete (the `D` in `CRUD`).
 
 To do this, we'll need the following method:
 
@@ -34,15 +34,17 @@ Post.find(42)
 And again, let's write some pseudocode to help us:
 ```ruby
 # TODO: Write the SQL query to delete a specific post from the database
-  # How do we specify the post ?
+  # QUESTION: How do we specify the post ?
 # TODO: Use DB.execute to execute the SQL query
 ```
 
 ### Part 2: CREATE & UPDATE
 
-In the final part of the exercise, we'll focus on the **C**reate and the **U**pdate of `CRUD`.
+In the next part of the exercise, we'll focus on the **C**reate and the **U**pdate of `CRUD`.
 
- Why are we doing the `C` and the `U` together? It's because the process is very similar. When manipulating object instances, if we call `save` on something and it doesn't exist in our DB yet, it will get **C**reated. If it already exists, it will just get **U**pdated.
+ Why are we doing the `C` and the `U` together? It's because the process is very similar! In both scenarios, we are sending new data to the database. The only difference is whether or not the object that we are working with already exists in the database. If it does, then we are updating some values for an existing record (how do we find an existing record in the DB?). If it doesn't exist in the database yet, then we are inserting values and creating a new record.
+
+ When manipulating object instances, if we call `save` on something and it doesn't exist in our DB yet, it will get **C**reated. If it already exists, it will just get **U**pdated. 💡 HINT: what is the main difference between an existing object and a new one?
 
 ### `#save`
 
