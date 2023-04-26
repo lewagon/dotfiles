@@ -20,9 +20,14 @@
   </script>
 </head>
 <body class="bg-light">
-  <div id="app">
-    {{ message }}
-    <!-- Your code goes here -->
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-4 bg-white rounded shadow-sm p-5">
+     <h1 class="mb-3">🗒 My Todo List</h1>
+     <div id="todosContainer">
+       {{message}}
+       <!-- Your code goes here -->
+     </div>
+   </div>
   </div>
   <!-- Import your own javascript -->
   <script src="lib/to-do-list.js" type="module"></script>

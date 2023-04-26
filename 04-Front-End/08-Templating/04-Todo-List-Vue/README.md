@@ -66,12 +66,12 @@ createApp({
       message: "If you see this message in your browser, that means Vue is successfully mounted! 🙌"
     }
   }
-}).mount('#app')
+}).mount('#todosContainer')
 ```
 
 A Vue instance is already created with `createApp()` function. You will code your component inside of `createApp()`.
 
-`.mout("#app")` is called on the Vue instance. It means this Vue instance will be mounted on the HTML element that has the css selector `#app`.
+`.mout("#todosContainer")` is called on the Vue instance. It means this Vue instance will be mounted on the HTML element that has the css selector `#todosContainer`.
 
 [`data`](https://vuejs.org/api/options-state.html#data) is a component option. It returns a plain JavaScript object. The properties, like `message`, are made available in the HTML by `{{}}`.
 
@@ -114,7 +114,7 @@ createApp({
       ]
     }
   }
-}).mount('#app')
+}).mount('#todosContainer')
 ```
 </details>
 
@@ -175,7 +175,7 @@ createApp({
       console.log("Adding a todo...")
     }
   }
-}).mount('#app')
+}).mount('#todosContainer')
 ```
 </details>
 
