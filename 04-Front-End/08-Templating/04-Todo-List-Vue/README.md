@@ -97,7 +97,7 @@ You have the same to-do items in an array.
   { title: "Eat breakfast", done: true },
   { title: "Do some exercise", done: false },
   { title: "Water the plants", done: true }
-];
+]
 ```
 
 We can put this list in `data` option as initial data, and assign it to a meaningful property, like `todos` or `items`. It is important to name things in a meaningful way, so your code is readable to your future self and others.
@@ -107,8 +107,10 @@ createApp({
   data() {
     return {
       todos: [
-        { title: "Code a to-do list", done: true },
-        { title: "Code a to-do list in Vue", done: false }
+        { title: "Code a to-do list", done: false },
+        { title: "Eat breakfast", done: true },
+        { title: "Do some exercise", done: false },
+        { title: "Water the plants", done: true }
       ]
     }
   }
