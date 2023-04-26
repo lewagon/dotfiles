@@ -86,21 +86,21 @@ A Vue instance is already created with `createApp()` function. You will code you
 
 ### 1. See all the to-do items
 
-#### Data structure
+#### Data
 
 <details>
-<summary markdown='span'>Think about what a to-do item should at least contain? What kind of information?</summary>
+<summary markdown='span'>In a Vue instance, where do we put the to-do items data?</summary>
 
-- `title`: a string that contains what the item is about.
-- `done`: a boolean that indicates whether the item is done or not.
 
-A list of to-dos in `JSON` format should look like this:
+You have the same to-do items in an array.
 
 ```js
 [
-  { title: "Code a to-do list", done: true },
-  { title: "Code a to-do list in Vue", done: false }
-]
+  { title: "Code a to-do list", done: false },
+  { title: "Eat breakfast", done: true },
+  { title: "Do some exercise", done: false },
+  { title: "Water the plants", done: true }
+];
 ```
 
 We can put this list in `data` option as initial data, and assign it to a meaningful property, like `todos` or `items`. It is important to name things in a meaningful way, so your code is readable to your future self and others.
@@ -133,20 +133,6 @@ We can use a built-in directives [`v-for`](https://vuejs.org/api/built-in-direct
 
 <details>
 <summary markdown='span'>How do we bind `done` with the checkbox?</summary>
-
-The `done` boolean is represented by the checkbox.
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-checkbox.png)
-
-A [checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) is checked depending on the `checked` property.
-
-```html
-<!-- this checkbox is checked -->
-<input type="checkbox" name="Checkbox 1" checked>
-
-<!-- this checkbox is unchecked -->
-<input type="checkbox" name="Checkbox 2">
-```
 
 We can use [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) to dynamically render HTML attributes. In the checkbox's case, we can do the following:
 
