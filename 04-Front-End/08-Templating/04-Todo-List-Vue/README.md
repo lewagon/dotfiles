@@ -54,7 +54,6 @@ Let's install Vue syntax highlighter to make our code look nicer 💅
 code --install-extension Vue.volar
 ```
 
-
 ## The To-do APP
 
 ### Vue Warm Up
@@ -82,7 +81,6 @@ A Vue instance is already created with `createApp()` function. You will code you
   {{message}}
 </div>
 ```
-
 
 ### 1. See all the to-do items
 
@@ -141,6 +139,18 @@ We can use [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) to 
 ```
 </details>
 
+#### v-cloak 🧥
+
+<details>
+<summary markdown='span'>Did you notice that every time you refresh the page, there's a flash of unloaded HTML elements?</summary>
+
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/vue-un-compiled-flash.gif)
+
+That's because the HTML is not yet compiled when we refresh. We can use `v-cloak` to temporarily hide un-compiled HTML. Read [the documentation](https://vuejs.org/api/built-in-directives.html#v-cloak), and implement for your APP! Remember to **hard refresh** when you change the CSS file.
+
+That's it! Congratulations on your first Vue APP! 🥂 Move on to the optionals to try implementing **Create** and **Delete** actions!
+</details>
+
 ### 2. Add a to-do(Optional)
 
 <details>
@@ -167,7 +177,6 @@ createApp({
 }).mount('#app')
 ```
 </details>
-
 
 #### Event Binding
 
@@ -239,158 +248,4 @@ The rest of is very similar to adding a to-do. Take the advantage of [the docume
 
 💡 You can pass an argument to a method.
 💡 You have access to index in `v-for`.
-</details>
-
-#### v-cloak 🧥
-
-Did you notice that every time you refresh the page, there's a flash of unloaded HTML elements?
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/vue-un-compiled-flash.gif)
-
-That's because the HTML is not yet compiled when we refresh. We can use `v-cloak` to temporarily hide un-compiled HTML. Read [the documentation](https://vuejs.org/api/built-in-directives.html#v-cloak), and implement for your APP! Remember to **hard refresh** when you change the CSS file.
-
-
-### 5. Persist data(Optional)
-
-So far, each refresh will reset the to-do data. We can store the data in the browser with [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). `localStorage` is in ` UTF-16 string` format, so you need to turn the JavaScript object into a string (`JSON.stringify()`) when storing, and turn the string back into an object (`JSON.parse()`) when reading. Sound familiar? Yes, we have done it with Ruby before.
-
-#### LocalStorage
-
-<details>
-<summary markdown='span'>Here's how you manipulate local storage:</summary>
-
-To add data in `localStorage`, you can use `setItem()`:
-
-```js
-localStorage.setItem('myCat', 'Tom');
-```
-
-To read data from `localStorage`, you can use `getItem()`:
-
-```js
-localStorage.getItem('myCat'); // => 'Tom'
-```
-
-To see the `localStorage` in your browser, open up the inspector. For Chrome, you can find it in `Application`.
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/browser-local-storage.png)
-</details>
-
-#### Write local storage
-
-Each time `todos` property is updated, we should set `localStorage` with the newest `todos`. i.e. each time a to-do is added, deleted or updated(marked as done).
-
-<details>
-<summary markdown='span'>Where should you write the `localStorage` in the Vue instance?</summary>
-
-#### Watchers
-
-When the action that you want to do depends on a data property change, you can set up a [watchers](https://vuejs.org/guide/essentials/watchers.html#watchers) to watch for `todos` property's changes - each time it changes, you need to write `localStorage`. You will need to use the [Deep Watchers](https://vuejs.org/guide/essentials/watchers.html#deep-watchers) since `todos` is an array.
-</details>
-
-#### Read localStorage
-
-We should read from the local storage, when the APP is first loaded.
-
-<details>
-<summary markdown='span'>How do we tell our Vue instance to do so in a particular stage?</summary>
-
-##### Lifecycle Hooks
-
-Each Vue component instance goes through a series of initialization steps when it's created - for example, it needs to set up data observation, compile the template, mount the instance to the DOM, and update the DOM when data changes. Along the way, it also runs functions called lifecycle hooks, giving users the opportunity to add their own code at specific stages. See all the [lifecycle hooks](https://vuejs.org/api/options-lifecycle.html).
-
-We will read `localStorage` in [`mounted()`](https://vuejs.org/api/options-lifecycle.html).
-
-```js
-createApp({
-  data() {
-  // ...
-  },
-  methods: {
-  // ...
-  },
-  mounted() {
-    // TODO:
-    // 1. Read todos from localStorage
-    // 2. Set `this.todos` based on the data
-  }
-}).mount('#app')
-```
-</details>
-
-Congratulations! The MVP of your Vue to-do list is done! 🥳
-
-
-### Improvement: Integration with Weather API
-
-Let's make our APP fancier by adding a current weather display!
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-with-weather.png)
-
-<details>
-<summary markdown='span'>Where do we deal with API calls in a Vue component?</summary>
-
-In the [`created()`](https://vuejs.org/api/options-lifecycle.html#created) lifecycle hook! This is when `data` and `methods` are ready, but the DOM is not. Perfect stage for making API calls!
-
-```js
-createApp({
-  data() {
-  // ...
-  },
-  methods: {
-  // ...
-  },
-  created() {
-    // TODO: get user location & call weather api
-  }
-}).mount('#app')
-```
-</details>
-
-<details>
-<summary markdown='span'>Here's the detailed instructions of breaked down steps:</summary>
-
-#### 1. Get current location
-
-We can retrieve the **current location** of a user with the browser native [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition):
-
-```javascript
-navigator.geolocation.getCurrentPosition((data) => {
-  console.log(data)
-})
-```
-
-Make sure your OS and browser allow you to share the location.
-
-#### 2. Get weather information
-
-The goal of this step is to get the weather information of the current location. We will use the same [OpenWeatherMap API](https://home.openweathermap.org/) that we used a few lectures ago.
-
-<details>
-<summary markdown='span'>Here's a recap of how to use the API.</summary>
-
-Go to [OpenWeatherMap API](https://home.openweathermap.org/) and log in to your account to get your API key. You should find it [here](https://home.openweathermap.org/api_keys). You all will be creating accounts at the same time, which can create some delay in the keys activation by Open Weather. To avoid this problem, **share your API key with your buddy** to limit the number of keys to activate.
-
-You are allowed to perform 60 calls / minute for free, which should be plenty enough for this challenge.
-
-Go to [Current weather data](https://openweathermap.org/current)  to read about how to get the current weather of a location.
-</details>
-
-#### 3. Turn the weather information into an icon
-
-If you successfully retrieved the current weather, in the response, you should be able to find a string that represents the weather's icon. Read about the [weather icons](https://openweathermap.org/weather-conditions#Icon-list) and make an icon URL based on your fetched weather information.
-
-#### 4. Display it in HTML
-
-Use the icon URL with `<img>` to display it in the HTML. How do we make the icon URL accessible in the HTML? Which attribute should you bind the URL to?
-
-#### 5. Spinner
-
-You may notice that it takes time for the weather API to get the weather information. Instead of letting the icon appear abruptly, let's display a spinner when weather is still loading.
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-with-weather.gif)
-
-You can use [Bootstrap spinner](https://getbootstrap.com/docs/4.2/components/spinners/) and [`v-if` and `v-else`](https://vuejs.org/api/built-in-directives.html#v-if) to conditionally render the elemnts.
-
-That's it! Congratulations on your first Vue APP! 🥂
 </details>
