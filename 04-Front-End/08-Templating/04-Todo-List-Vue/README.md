@@ -7,9 +7,8 @@ Welcome to your first Vue challenge!
 You will learn the basics of Vue by building a to-do list APP, with which you can do the following:
 
 - See all your to-do items
-- Add a to-do item
-- Remove a to-do item
-- Mark/unmark a to-do item as done
+- Add a to-do item(Optional)
+- Remove a to-do item(Optional)
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-list-vue-user-flow.gif)
 
