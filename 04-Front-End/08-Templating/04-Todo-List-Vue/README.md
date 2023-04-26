@@ -141,7 +141,7 @@ We can use [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) to 
 ```
 </details>
 
-### 2. Add a to-do
+### 2. Add a to-do(Optional)
 
 <details>
 <summary markdown='span'>What happens when a user adds a to-do?</summary>
@@ -222,7 +222,7 @@ One thing cool about Vue is its [**reactivity**](https://vuejs.org/guide/extras/
 You may also notice that after adding a to-do, user's input stays in the input field. Considering that `v-model`'s binding is two-ways, how would you reset the input?
 </details>
 
-### 3. Delete a to-do
+### 3. Delete a to-do(Optional)
 
 First, you should make sure to add a delete button to the to-do element. You can use [Boostrap's close button](https://getbootstrap.com/docs/5.0/components/close-button/), or [fontawesome's trash icon](https://fontawesome.com/search?q=trash&o=r).
 
@@ -239,44 +239,6 @@ The rest of is very similar to adding a to-do. Take the advantage of [the docume
 
 💡 You can pass an argument to a method.
 💡 You have access to index in `v-for`.
-</details>
-
-### 4. Mark as done
-
-#### Upgrade the style
-
-When marking a to-do as done, we want not only the checkbox to be ticked, but also the text to be **crossed** and **grey**.
-
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/cross-to-do-item.png)
-
-<details>
-<summary markdown='span'>How do we dynamically render some CSS clasess based on `done`?</summary>
-
-You can do `v-bind` on `class` attribute, and pass a JavaScript object, that's made of the pairs of **class name** and **a boolean** indicating whether the class will be applied or not:
-
-```html
-<div class="container" v-bind:class="{ 'cssClassName1': true, 'cssClassName2': false }">
-  Hello
-</div>
-```
-
-generates the following HTML:
-
-
-```html
-<div class="container cssClassName1">
-  Hello
-</div>
-```
-
-Find the Boostrap classes that gray out and cross out the text. Don't reinvent the wheel!
-
-
-You may notice that checking and unchecking the to-do *doesn't* really make the text crossed and grey. Try and print the `done` property as itself in the HTML with `{{ todo.done }}` to see what it returns, and you will notice something. 👀
-
-Checking and unchecking the checkbox doesn't change `done`! 🫢
-
-Because `v-bind` is only from the Vue instance to the HTML, it doesn't know what the user changes. Let's make this mark as done real by changing `v-bind` to `v-model`.
 </details>
 
 #### v-cloak 🧥
