@@ -4,6 +4,18 @@ The goal of this exercise is to implement the remaining CRUD actions of the prev
 
 **Note**: As a reminder, in this exercise, we **give** you the `DB` global variable, so no need to instantiate a new `SQLite3::Database` yourself. Just use `DB.execute` in your code, and it'll work (but feel free to have a look at `spec/models/post_spec.rb` to see how the `DB` variable is created).
 
+## Setup
+
+First, let's copy paste your code from the previous challenge into this challenge's folder:
+
+```bash
+# make sure you're in the right directory:
+cd ~/code/<user.github_nickname>/fullstack-challenges/03-AR-Database/01-DB-and-SQL/05-CRUD-Advanced
+
+# copy your code from CRUD - Read challenge:
+cp -r ../04-CRUD-Read/app .
+```
+
 ## Tests
 
 We also prepared a `test.rb` file for you where the `DB` global variable is created the same way as in `spec/models/post_spec.rb`. Feel free to use this file to call and test your methods as you go.

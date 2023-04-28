@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now it's time for something more complex. We'll be using `JOIN` queries to read data from multiple tables. To acquire instant Jedi skills in `JOIN` queries, [read this](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) - the picture is really helpful. If you speak French, you can also [read this one](http://sql.sh/cours/jointures).
+Now it's time for practing some more complex SQL queries. We'll be using `JOIN` queries to read data from multiple tables. To acquire instant Jedi skills in `JOIN` queries, [read this](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) - the picture is really helpful. If you speak French, you can also [read this one](http://sql.sh/cours/jointures).
 
 ## Specs
 

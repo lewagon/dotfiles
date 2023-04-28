@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-The goal of this first challenge is to become familiar with database design, a **crucial** skill to make your backend maintainable, flexible and efficient. To create our databases we will be using the [SQL Designer](http://db.lewagon.com), a tool that we will use often throughout the bootcamp.
+The goal of this first challenge is to become familiar with database design, a **crucial** skill to make your backend maintainable, flexible and efficient. To create our databases we will be using the [SQL Designer](http://db.lewagon.com), a tool that we will use several times throughout the bootcamp.
 
 ## Specs
 
