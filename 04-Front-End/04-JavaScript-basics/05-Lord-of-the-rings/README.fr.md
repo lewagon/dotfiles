@@ -7,7 +7,7 @@ La première fonction `isGood` prend un type de soldat (`string`) comme paramèt
 - `isGood("Hobbits")` doit retourner `true`
 - `isGood("Uruk-hai")` doit retourner `false`
 
-La deuxième fonction `buildSoldierObject` prend un champ de bataille ou `battlefield` (`string`) comme paramètre et doit retourner un objet (`object`) JavaScript. L'objet `keys` correspondra au **type de soldat** et l'objet `values` correspondra au **nombre de soldats de ce type sur le champ de bataille**. Voici quelques exemples de strings de champ de bataille à parser (et convertir en objet) :
+La deuxième fonction `buildSoldierObject` prend un champ de bataille ou `battlefield` (`string`) comme paramètre et doit retourner un objet (`object`) JavaScript. Les **clés** de l'`Object` sont le **type de soldat** et les **valeurs** le **nombre de soldats de ce type sur le champ de bataille**. Voici quelques exemples de strings de champ de bataille à parser (et convertir en objet) :
 
 - `Elves:5,Orcs:4`
 - `Hobbits:4,Dwarves:1,Elves:1,Goblins:100,Uruk-hai:1`
@@ -45,4 +45,4 @@ La troisième fonction `whoWinsTheWar` unira tout. À partir d'un paramètre `ba
 - `Good` si les soldats du Bien sont plus nombreux que les soldats du Mal
 - `Evil` si les soldats du Mal sont plus nombreux que les soldats du Bien
 
-_N.B. : Pour cet exercice, on simplifie la guerre et on ne tient pas compte de la "valeur" de chaque type de soldat._
+_N.B. : Pour cet exercice, on simplifie la guerre et on ne tient pas compte de la valeur relative de chaque type de soldat._
