@@ -131,7 +131,7 @@ doc = Nokogiri::HTML.parse(html_content)
 
 # 3. On recherche les éléments corrects contenant le titre des articles dans notre document HTML
 doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
-  # 4. Pour chaque article trouvé, on extrait son titre et on l’imprimes
+  # 4. Pour chaque article trouvé, on extrait son titre et on l’imprime
   puts element.text.strip
 end
 ```
