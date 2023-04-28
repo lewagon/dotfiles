@@ -1,5 +1,4 @@
 require "sqlite3"
-db = SQLite3::Database.new("lib/db/jukebox.sqlite")
 
 def artist_count(db)
   # TODO: use `db` to execute an SQL query against the database.
@@ -14,7 +13,7 @@ def sorted_artists(db)
 end
 
 def love_tracks(db)
-  # TODO: return array of love songs
+  # TODO: return array of love songs' names
 end
 
 def long_tracks(db, min_length)
@@ -22,5 +21,5 @@ def long_tracks(db, min_length)
 end
 
 def albums_per_artist(db)
-  # TODO: return an array of arrays with the artist's name and the number of albums they have, sorted alphabetically
+  # TODO: return an array of arrays, each containing the artist's name and the number of albums they have, sorted alphabetically
 end
