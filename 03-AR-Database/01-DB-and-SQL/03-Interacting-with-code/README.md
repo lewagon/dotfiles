@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Now it is time to use Ruby code to interact with the `jukebox` database. The goal of this challenge is to communicate with the database **from our Ruby code**.
+Now it is time to use Ruby code to interact with the `jukebox` database from the previous exercise. The goal of this challenge is to communicate with the database **from our Ruby code**.
 
 In this challenge, you'll be working in a ruby file, `lib/queries.rb`, where you'll have to complete several methods that gather specific data from the DB.
 
@@ -42,14 +42,14 @@ If you're running your code from within `lib/queries.rb` only, you can call your
 
 Open the file `lib/queries.rb` to answer the following questions. Don't forget you can look inside the database by running `sqlite3 lib/db/jukebox.sqlite` in the Terminal or use the VS Code SQLite Extension mentioned in the previous exercise.
 
-There are seven methods to implement:
+There are six methods to implement:
 
 - How many rows does the `artists` table contain?
 - How many rows does each table contain (generic method)?
 - Return the list of all the artists and sort them by name (alphabetically). **Hint:** use the `ORDER BY` SQL filter.
 - Find all the love songs (i.e the tracks that contain "love" **anywhere** in their name). **Hint:** use the `WHERE` and `LIKE` SQL keywords.
 - Return all the tracks that are longer than a given duration and sort them. **Hint:** you can use the comparison operator `>` in SQL.
-- Return a list of every artist with their album count, sorted alphabetically  **Hint:** you'll need to `JOIN` two tables, as well as using `GROUP BY` and  `ORDER BY`!
+- Return a list of every artist with the number of albums they have, sorted alphabetically  **Hint:** you'll need to `JOIN` two tables, as well as using `GROUP BY` and  `ORDER BY`!
 
 ## Tips
 
