@@ -49,7 +49,7 @@ There are seven methods to implement:
 - Return the list of all the artists and sort them by name (alphabetically). **Hint:** use the `ORDER BY` SQL filter.
 - Find all the love songs (i.e the tracks that contain "love" **anywhere** in their name). **Hint:** use the `WHERE` and `LIKE` SQL keywords.
 - Return all the tracks that are longer than a given duration and sort them. **Hint:** you can use the comparison operator `>` in SQL.
-- List the track and album information for the tracks with names that contain a given keyword (case insensitive) **Hint:** you'll need to `JOIN` two tables to get all the information you need!
+- Return a list of every artist with their album count, sorted alphabetically  **Hint:** you'll need to `JOIN` two tables, as well as using `GROUP BY` and  `ORDER BY`!
 
 ## Tips
 

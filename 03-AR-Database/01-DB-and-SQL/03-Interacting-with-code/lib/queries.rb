@@ -23,13 +23,4 @@ end
 
 def albums_per_artist(db)
   # TODO: return an array of arrays with the artist's name and the number of albums they have, sorted alphabetically
-  query = <<~SQL
-    SELECT artists.name, COUNT(*) as album_count
-    FROM artists
-    JOIN albums ON artists.id = albums.artist_id
-    GROUP BY artists.name
-    ORDER BY artists.name
-  SQL
-
-  db.execute(query)
 end
