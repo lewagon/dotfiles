@@ -21,5 +21,5 @@ def long_tracks(db, min_length)
 end
 
 def albums_per_artist(db)
-  # TODO: return an array of arrays, each containing the artist's name and the number of albums they have, sorted alphabetically
+  # TODO: return an array of arrays, each containing the artist's name and the number of albums they have
 end
