@@ -46,7 +46,7 @@
 
 路由router负责显示用户可以执行的任务，并将用户的选择路由到匹配控制器的相应操作。 `app.rb` 文件负责要求所有必需的文件，实例化路由并执行其 `run` 方法来启动应用程序。
 
-填写 `router.rb` 和 `app.rb` 文件来实现这一点。如果你被困住了，你可以回到[Cookbook第二天](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) 并下载答案以获得一些灵感 **无需将路由器与控制器关联**，因为我们还没有。所以当用户选择任务时，只需打印 `TODO` 。
+填写 `router.rb` 和 `app.rb` 文件来实现这一点。如果你被困住了，你可以回到[Cookbook第二天](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F03-Cookbook%2F02-Cookbook) 并下载答案以获得一些灵感 **无需将路由器与控制器关联**，因为我们还没有。所以当用户选择任务时，只需打印 `TODO` 。
 
 这部分没有rake。通过在终端中运行以下命令启动应用程序：
 

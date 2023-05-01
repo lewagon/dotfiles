@@ -47,7 +47,7 @@ We haven't launched our app yet. To do this, we need a router and we need to fil
 
 The router is responsible for displaying the tasks that the user can do and routing the user's choice to the corresponding action of the matching controller. The `app.rb` file is responsible for requiring all the necessary files, instantiating a router and executing its `run` method to launch the app.
 
-Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you can go back to the [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) and download the solution to get some inspiration. **No need to instantiate the router with a controller** as we don't have it yet. Just print `TODO` for the moment when the user selects a task.
+Fill in the `router.rb` and `app.rb` files to implement this. If you're stuck, you can go back to the [Cookbook](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F03-Cookbook%2F02-Cookbook) and download the solution to get some inspiration. **No need to instantiate the router with a controller** as we don't have it yet. Just print `TODO` for the moment when the user selects a task.
 
 There is no rake for this part. Launch your app by running this command in the terminal:
 

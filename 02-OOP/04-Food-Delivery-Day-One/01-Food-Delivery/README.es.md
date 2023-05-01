@@ -48,7 +48,7 @@ Escribe el código para implementar esto y haz el crash test de tu repositorio. 
 
 El ruteador es el responsable de la visualización de las tareas que el/la usuario/a puede hacer y de direccionar sus decisiones a la acción en el controlador correspondiente. El archivo `app.rb` es el responsable de pedir los archivos necesarios, de instanciar un ruteador y de ejecutar su método `run` para correr la aplicación.
 
-Para poder implementar esto debes completar los archivos `router.rb` y `app.rb`. Si tienes algún problema y necesitas un poco de inspiración, te recomendamos regresar a [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) y descargar la solución. **No tienes que instanciar el ruteador con el controlador** ya que todavía no lo tenemos. Simplemente haz que se muestre el término `TODO` cuando el/la usuario/a selecciona una tarea.
+Para poder implementar esto debes completar los archivos `router.rb` y `app.rb`. Si tienes algún problema y necesitas un poco de inspiración, te recomendamos regresar a [Cookbook](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F03-Cookbook%2F02-Cookbook) y descargar la solución. **No tienes que instanciar el ruteador con el controlador** ya que todavía no lo tenemos. Simplemente haz que se muestre el término `TODO` cuando el/la usuario/a selecciona una tarea.
 
 No hay rake en esta parte. Corre la aplicacion ejecutando el siguiente comando en la Terminal:
 

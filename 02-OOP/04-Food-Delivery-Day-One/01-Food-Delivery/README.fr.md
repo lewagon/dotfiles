@@ -47,7 +47,7 @@ Tu n'as pas encore lancé ton application. Pour cela, tu as besoin d’un routeu
 
 Le routeur est chargé d’afficher les tâches que l’utilisateur peut effectuer et de router le choix de l’utilisateur vers la bonne action du bon contrôleur. Le fichier `app.rb` est en charge de `require` tous les fichiers nécessaires, d’instancier un routeur et d’exécuter sa méthode `run` pour lancer l’application.
 
-Remplis les fichiers `router.rb` et `app.rb` pour implémenter cela. Si tu es coincé, retourne à l’exercice [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) et télécharge la solution pour trouver de l’inspiration. **Inutile d’instancier le routeur avec un contrôleur** puisque tu n’en as pas encore. Pour le moment, contente-toi d’imprimer `TODO` quand l’utilisateur sélectionne une tâche.
+Remplis les fichiers `router.rb` et `app.rb` pour implémenter cela. Si tu es coincé, retourne à l’exercice [Cookbook](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F03-Cookbook%2F02-Cookbook) et télécharge la solution pour trouver de l’inspiration. **Inutile d’instancier le routeur avec un contrôleur** puisque tu n’en as pas encore. Pour le moment, contente-toi d’imprimer `TODO` quand l’utilisateur sélectionne une tâche.
 
 Il n’y a pas de rake pour cette partie. Lance ton application en exécutant cette commande dans le terminal :
 
