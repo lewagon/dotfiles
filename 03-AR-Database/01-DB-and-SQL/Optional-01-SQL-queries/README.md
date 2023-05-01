@@ -1,10 +1,10 @@
 ## Background & Objectives
 
-Now it's time for something more complex. We'll be using `JOIN` queries to read data from multiple tables. To acquire instant Jedi skills in `JOIN` queries, [read this](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) - the picture is really helpful. If you speak French, you can also [read this one](http://sql.sh/cours/jointures).
+Now it's time to practice some more complex SQL queries. We'll be using `JOIN` queries to read data from multiple tables. To acquire instant Jedi skills in `JOIN` queries, [read this](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) - the picture is really helpful. If you speak French, you can also [read this one](http://sql.sh/cours/jointures).
 
 ## Specs
 
-Complete the code in `join_queries.rb`. Each method takes a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. Exactly like in the previous exercise.
+Complete the code in `join_queries.rb`. Each method takes a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method (just like the "Interacting with Code" challenge).
 
 ### Detailed Tracks
 

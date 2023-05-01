@@ -1,10 +1,8 @@
 ## Background & Objectives
 
-SQLite is a simple database that relies on a standalone file. You can read more on [en.wikipedia.org/wiki/SQLite](http://en.wikipedia.org/wiki/SQLite).
+SQLite is a simple database that relies on a standalone file. If you're interested, you can read more [here](http://en.wikipedia.org/wiki/SQLite).
 
-The goal of this first exercise is to use the command line or a database tool to read and query a sample database called `jukebox.sqlite` that we give you.
-
-To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewagon.com/), save it as an XML file and run `rake`!
+The goal of this first exercise is to use the command line or a database tool to read and query a sample database called `jukebox.sqlite` that we have given you. To complete the challenge, draw the DB schema on [db.lewagon.com](http://db.lewagon.com/), save it as an XML file and run `rake`!
 
 ### Setup
 
@@ -15,9 +13,13 @@ sqlite3 -version
 # You should see your sqlite version here
 ```
 
-If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite), [Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite) or [Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite) setup.
+If you don't have it installed, you can do so by running the following in the terminal:
 
-You can open the database we provided by running:
+```bash
+gem install sqlite3
+```
+
+You can then open the database we provided by running:
 
 ```bash
 sqlite3 lib/db/jukebox.sqlite
