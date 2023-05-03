@@ -79,5 +79,6 @@
         "rubocop": true
     },
     "ruby.intellisense": "rubyLocate",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.inlineSuggest.enabled": true
 }
