@@ -136,7 +136,7 @@ We can use a built-in directives [`v-for`](https://vuejs.org/api/built-in-direct
 We can use [`v-bind`](https://vuejs.org/api/built-in-directives.html#v-bind) to dynamically render HTML attributes. In the checkbox's case, we can do the following:
 
 ```html
-<input type="checkbox" v-bind:checked="the_done_boolean_goes_here">
+<input type="checkbox" v-bind:checked="theDoneBooleanGoesHere">
 ```
 </details>
 
