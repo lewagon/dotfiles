@@ -71,7 +71,7 @@ createApp({
 
 A Vue instance is already created with `createApp()` function. You will code your component inside of `createApp()`.
 
-`.mout("#todosContainer")` is called on the Vue instance. It means this Vue instance will be mounted on the HTML element that has the css selector `#todosContainer`.
+`.mount("#todosContainer")` is called on the Vue instance. It means this Vue instance will be mounted on the HTML element that has the css selector `#todosContainer`.
 
 [`data`](https://vuejs.org/api/options-state.html#data) is a component option. It returns a plain JavaScript object. The properties, like `message`, are made available in the HTML by `{{}}`.
 
