@@ -21,5 +21,8 @@
     "node": true,
     "mocha": true,
     "browser": true
+  },
+  "globals": {
+   "Stimulus": "readonly"
   }
 }
