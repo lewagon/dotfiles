@@ -25,9 +25,9 @@ So, usually developers use what's called a **bundler** like [Webpack](https://we
 Instead, we're going to load some external scripts that will install React and process our files for us:
 
 ```html
-<script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
-<script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
-<script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
 ```
 
 The first two libraries are React itself. The third is Babel, which can process our JSX files for us. You may notice this line at the bottom of our `index.html`:
@@ -37,6 +37,8 @@ The first two libraries are React itself. The third is Babel, which can process 
 ```
 
 The `type="text/babel"` tells Babel to process our JavaScript. So, we should be all good to write JSX 💪 You may notice that we're importing our scripts slightly differently in this challenge from all the others, because this setup isn't compatible with import maps at the moment. But don't worry - it won't affect the code you'll end up writing.
+
+_[Note: This means that Babel converts our JSX into JS **inside** of the user's browser. This is inefficient because ideally we would convert everything in advance. In other words, this "lightweight" setup is perfect for the purposes of this challenge, but a real production app would require some more setup.](https://babeljs.io/docs/babel-standalone#when-not-to-use-babelstandalone)_
 
 Let's launch a local web server by running:
 
@@ -63,9 +65,6 @@ Now, the React syntax should highlight correctly.
 Have a look at the `lib/to-do-list.js` file.
 
 ```jsx
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-
 const App = () => {
   const message = "If you see this message in your browser, that means React is successfully mounted! 🙌";
 
@@ -123,13 +122,13 @@ You have the same to-do items in an array.
 
 This is data that could potentially change over time. Imagine for example that we might want to add or remove an item from our to-do items array in the future. How do we handle changing data in React?
 
-We use the [`useState`](https://react.dev/reference/react/useState) function. This is a React function, or, as React people like to call it, a "hook", that lets us define variables whose values might change over time in our app.
+We use the [`React.useState`](https://react.dev/reference/react/useState) function. This is a React function, or, as React people like to call it, a "hook", that lets us define variables whose values might change over time in our app.
 
 Let's change our `App()` function like this:
 
 ```jsx
 const App = () => {
-  const [todos, changeTodos] = useState(
+  const [todos, changeTodos] = React.useState(
     [
       { title: "Code a to-do list", done: false },
       { title: "Eat breakfast", done: true },
@@ -157,10 +156,8 @@ In React, you use `{}` whenever you want to put Javascript inside your HTML. In 
 Here's a sample of how it works:
 
 ```jsx
-import React, { useState } from 'react';
-
 function App() {
-  const [items, changeItems] = useState(['apple', 'banana', 'orange']);
+  const [items, changeItems] = React.useState(['apple', 'banana', 'orange']);
 
   return (
     <ul>
@@ -189,8 +186,6 @@ Can you use this sample code as a guide to try to figure out how you might displ
 React makes it easy to set HTML attributes in JSX syntax:
 
 ```jsx
-import React from 'react';
-
 function App() {
   const shouldBeChecked = true
 
@@ -222,12 +217,9 @@ In order to do this, we'll create a new variable `title` using the `useState` ho
 
 
 ```js
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-
 const App = () => {
-  const [todos, setTodos] = useState([]);
-  const [title, setTitle] = useState('');
+  const [todos, setTodos] = React.useState([]);
+  const [title, setTitle] = React.useState('');
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
