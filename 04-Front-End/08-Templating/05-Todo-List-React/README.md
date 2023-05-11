@@ -212,8 +212,8 @@ Can you use this principle to make your checkboxes dynamically match the value o
 <details>
 <summary markdown='span'>What happens when a user adds a to-do?</summary>
 
-1. User fills in the to-do title
-2. User clicks a button
+1. User fills in the to-do title.
+2. User clicks a button.
 3. the to-do is added and appears on the list.
 
 When the button is clicked, the React app needs to take care of getting the data and adding it to the list. We will create a Javascript function called `addTodo()` to take care of all these.
