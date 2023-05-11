@@ -292,7 +292,7 @@ For example, the below code would set our `todos` equal to an empty array `[]`:
 changeTodos([]);
 ```
 
-That would set our `todos` equal to an empty array `[]` and all the to-dos on our screen would disappear. Instead of setting it equal to an empty array, can you set it equal to a new array with all the existing todos AND the new one we want to add?
+Now, instead of setting it to an empty array, can you set it to a new array with **all the existing todos** AND **the new one we want to add**?
 </details>
 
 ### 3. Delete a to-do (Optional)
