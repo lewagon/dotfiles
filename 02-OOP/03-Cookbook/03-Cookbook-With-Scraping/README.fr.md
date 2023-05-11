@@ -52,7 +52,7 @@ Importing "Strawberry slushie"...
 
 ### Pseudo-code
 
-Pour cette nouvelle **action utilisateur** (et donc cette nouvelle **route**), on a besoin de :
+Pour cette nouvelle **action utilisateur** (et donc cette nouvelle _route_), on a besoin de :
 
 1.  demander à l’utilisateur un mot-clé à rechercher
 2.  envoyer une requête HTTP au site Web de recettes avec le mot-clé
@@ -167,7 +167,7 @@ class ScrapeAllrecipesService
  end
 
  def call
- # À FAIRE : retourner une liste de `Recipe` construites en scrapant le Web.
+    # TODO: return a list of `Recipe` built from scraping the web.
  end
 end
 ```

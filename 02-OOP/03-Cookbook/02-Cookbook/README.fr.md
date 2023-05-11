@@ -17,7 +17,7 @@ Voici les composants que nous allons implémenter :
 
 ### Modèle (model)
 
-Par chance, on a déjà défini notre classe `Recipe` dans l’exercice précédent. Maintenant, tout ce qu’il te reste à faire, c’est de la copier dans ton application de recettes. Exécute la commande suivante dans ton terminal :
+On a déjà défini notre classe `Recipe` dans l’exercice précédent. Maintenant, tout ce qu’il te reste à faire, c’est de la copier dans ton application de recettes. Exécute la commande suivante dans ton terminal :
 
 ```bash
 cp ../01-Recipe/lib/recipe.rb lib
