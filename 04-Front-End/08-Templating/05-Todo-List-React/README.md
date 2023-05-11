@@ -301,8 +301,8 @@ First, you should make sure to add a delete button to the to-do element. You can
 
 The rest of is very similar to adding a to-do. Take the advantage of [the documentation of React](https://reactjs.org/docs/getting-started.html) to implement the following steps:
 
-1. Bind an event to the delete button that triggers a method
-2. The method removes the to-do from `todos`
+1. Bind an event to the delete button that triggers a method.
+2. The method removes the to-do from `todos`.
 
 <details>
 <summary markdown='span'>Question & Hint</summary>
