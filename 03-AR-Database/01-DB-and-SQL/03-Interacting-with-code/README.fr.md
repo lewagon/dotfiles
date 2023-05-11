@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Le moment est venu d’utiliser le code Ruby pour interagir avec la base de données `jukebox`. Pour cela, on a besoin d'une gem appelée [sqlite3](http://rubygems.org/gems/sqlite3).
+Le moment est venu d’utiliser Ruby pour interagir avec la base de données `jukebox`. Pour cela, on a besoin d'une gem appelée [sqlite3](http://rubygems.org/gems/sqlite3).
 
 Pour installer la gem sur ton ordinateur, exécute la commande suivante dans le terminal :
 
@@ -8,7 +8,9 @@ Pour installer la gem sur ton ordinateur, exécute la commande suivante dans le 
 gem install sqlite3
 ```
 
-L’objectif de cet exercice est de communiquer avec la base de données **depuis le code Ruby**.
+L’objectif de cet exercice est de communiquer avec la base de données **depuis Ruby**.
+
+Dans ce challenge, tu vas travailler avec un fichier Ruby appelé `lib/queries.rb`, dans lequel tu devras compléter plusieurs méthodes pour rassembler des données précises provenant de la base de données.
 
 ## Spécifications
 
@@ -25,7 +27,7 @@ def the_method(db)
 end
 ```
 
-👉 Pour tester ton code avec `irb` (ou dans le fichier `lib/queries.rb`), tu auras besoin de créer toi-même `db`.
+👉 En revanche il est important de tester ton code ! Pour le tester avec `irb` (ou dans le fichier `lib/queries.rb`), tu auras besoin de créer toi-même une instance de `db`.
 
 ```ruby
 # lib/queries.rb
@@ -43,15 +45,20 @@ artist_count(db)
 # => [...]
 ```
 
+Si tu utilises le fichier `lib/queries` pour tester ton code, tu peux appeler tes méthodes et utiliser `puts` or `p` **après** avoir initialisé ton instance de `db`, pour voir tes résultats dans le terminal.
+
+## Specs
+
 Ouvre le fichier `lib/queries.rb` pour répondre aux questions suivantes. N’oublie pas de regarder dans la base de données en exécutant `sqlite3 lib/db/jukebox.sqlite` dans le terminal ou utilise l’un des outils mentionnés dans l’exercice précédent (SQLite Pro, SQLStudio ou SQLite Browser).
 
-Il y a cinq méthodes à implémenter :
+Il y a six méthodes à implémenter :
 
 - Combien de lignes la table `artists` contient-elle ?
 - Combien de lignes chaque table contient-elle (méthode générique) ?
-- Retourne la liste de tous les artistes classés par nom (par ordre alphabétique). **Astuce :** utilise le filtre SQL `ORDER BY`.
-- Trouve toutes les chansons d’amour (à savoir les chansons dont le titre contient le mot "love" **n'importe où**). **Astuce :** utilise les mots-clés SQL `WHERE` et `LIKE`.
-- Retourne toutes les chansons dont la durée est supérieure à une durée donnée et trie-les. **Astuce :** tu peux utiliser l’opérateur de comparaison `>` dans SQL.
+- Retourne la liste de tous les artistes classés par nom (par ordre alphabétique). **Indice :** utilise le filtre SQL `ORDER BY`.
+- Trouve toutes les chansons d’amour (à savoir les chansons dont le titre contient le mot "love" **n'importe où**). **Indice :** utilise les mots-clés SQL `WHERE` et `LIKE`.
+- Retourne toutes les chansons dont la durée est supérieure à une durée donnée et trie-les. **Indice :** tu peux utiliser l’opérateur de comparaison `>` dans SQL.
+- Retourne la liste de chaque artiste avec leur nombre d'albums. **Indice :** utilise le mot-clé SQL `JOIN`, ainsi que `GROUP BY` et `ORDER BY`.
 
 ## Conseils
 

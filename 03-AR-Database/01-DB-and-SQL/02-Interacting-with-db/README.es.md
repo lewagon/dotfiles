@@ -2,7 +2,7 @@
 
 `Sqlite` es una base de datos simple que depende de un único archivo. Puedes leer más sobre ello en [en.wikipedia.org/wiki/SQLite](http://en.wikipedia.org/wiki/SQLite).
 
-El objetivo de este primer ejercicio es usar la línea de comando para leer y hacer consultas de una base de datos de muestra que se llama `jukebox.sqlite` que te daremos.
+El objetivo de este ejercicio es usar la línea de comando para leer y hacer consultas de una base de datos de muestra que se llama `jukebox.sqlite` que te daremos.
 
 Para completar el desafío, dibuja el esquema de la base de datos en [db.lewagon.com](http://db.lewagon.com/), guárdalo como archivo XML y ejecuta `rake`!
 
