@@ -36,7 +36,7 @@ The first two libraries are React itself. The third is Babel, which can process 
 <script src="lib/to-do-list.jsx" type="text/babel"></script>
 ```
 
-The `type="text/babel"` tells Babel to process our Javascript for us. So, we should be all good to write JSX 💪 The only funky part about this setup is that, sadly, it isn't compatible with Importmaps at the moment. So, you may notice that we're importing our scripts slightly differently in this challenge from all the others. Sorry about that 😿 but it shouldn't affect the code you'll end up writing.
+The `type="text/babel"` tells Babel to process our JavaScript. So, we should be all good to write JSX 💪 You may notice that we're importing our scripts slightly differently in this challenge from all the others, because this setup isn't compatible with import maps at the moment. But don't worry - it won't affect the code you'll end up writing.
 
 Let's launch a local webserver by running:
 
