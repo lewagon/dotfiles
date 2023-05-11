@@ -44,7 +44,7 @@ Let's launch a local web server by running:
 serve
 ```
 
-Then, open [`localhost:8000`](http://localhost:8000) in your browser. If you see a message about React, then your project is set up with React
+Then, open [`localhost:8000`](http://localhost:8000) in your browser. If you see a message about React, then your project is set up with React.
 
 #### VSCode Syntax Highlighting
 
