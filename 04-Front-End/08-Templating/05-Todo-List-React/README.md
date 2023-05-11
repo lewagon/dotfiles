@@ -20,7 +20,7 @@ You will learn the basics of React by building a to-do list APP, with which you 
 
 React uses a special syntax called [JSX](https://react.dev/learn/writing-markup-with-jsx), which is a templating language that lets us easily write Javascript expressions inside of our HTML. The syntax of it does differ a little bit from standard JavaScript (we'll see this shortly!). The nice thing about this is that the syntax is fairly simple. The rough part is that _browsers can't actually read JSX files by default_. So we have to convert them to normal JS files before we can actually run them in the browser.
 
-So, usually developers use what's called a "bundler" like [webpack](https://webpack.js.org/) to process all the files and convert them into "normal" Javascript that browsers can read. This requires installing a lot of additional stuff, so we're going to avoid this complexity just for the sake of this challenge.
+So, usually developers use what's called a **bundler** like [Webpack](https://webpack.js.org/) to process all the files and convert them into "normal" JavaScript that browsers can read. This requires installing a lot of additional stuff, so we're going to avoid this complexity just for the sake of this challenge.
 
 Instead, we're going to load some external scripts that will install React and process our files for us:
 
