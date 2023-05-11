@@ -284,7 +284,9 @@ Check in your browser console, can you see the `console.log` you added in your m
 1. Construct a to-do object based on user input.
 2. Add it to the `todos` list.
 
-In React, if you just tried to change the value of `todos` like `todos = SOMETHING_DIFFERENT`, it won't work. You'll have to use the `changeTodos` function. For example, if we did:
+In React, if you just change the value of `todos` like `todos = SOMETHING_DIFFERENT`, it won't work. You'll have to use the `changeTodos` function. 
+
+For example, the below code would set our `todos` equal to an empty array `[]`:
 
 ```js
 changeTodos([]);
