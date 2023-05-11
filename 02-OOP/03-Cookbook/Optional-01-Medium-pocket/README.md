@@ -160,7 +160,7 @@ Like in the cookbook, we need a repository to **store** our posts in-memory and 
 
 Implement a `Repository` class which will act as a fake database. It should be connected to a `posts.csv` file to make our app persistent.
 
-**NB:** if you encounter a `csv invalid byte sequence in us-ascii` error while parsing the csv, this can be solved with an option passed to the `CSV.foreach` call: 
+**NB:** if you encounter a `csv invalid byte sequence in us-ascii` error while parsing the csv, this can be solved with an option passed to the `CSV.foreach` call:
 
 ```ruby
 CSV.foreach("posts.csv", encoding: 'ISO-8859-1') do |row|
@@ -183,7 +183,7 @@ For each user story, you need to code an action (an instance method) in the cont
 This is the process you need to follow for each action:
 
 - Write pseudo-code to breakdown the problem in small steps that you can easily translate in Ruby
-- Remember that each instruction having to do with the data will be delegated to the repo, and every `puts` and `gets` will be handled by the view (again, think SRP)
+- Remember that each instruction having to do with the data will be delegated to the repo, and every `puts` and `gets` will be handled by the view (again, think SRP - Single Responsibility Principle)
 - Coding your actions will make you code your `View` class and its instance methods naturally, when the necessity arises
 - Everytime there's an emerging need (we need a new method in the repo or in the model), follow the flow and code it right away
 - Test regularly your code (every 2 or 3 lines of code)
