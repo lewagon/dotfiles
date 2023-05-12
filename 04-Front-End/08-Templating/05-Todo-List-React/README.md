@@ -187,7 +187,7 @@ function App() {
 export default App;
 ```
 
-All we have to do is to use `{}` to write some Javascript as the value for `checked` on our checkbox.
+All we have to do is to use `{}` to write some JavaScript as the value for `checked` on our checkbox.
 
 Can you use this principle to make your checkboxes dynamically match the value of `done` on each checkbox?
 </details>
