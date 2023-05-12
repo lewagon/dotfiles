@@ -141,7 +141,7 @@ This code means that we will now have access to two variables: `todos`, which is
 <details>
 <summary markdown='span'>How do we dynamically render the list?</summary>
 
-In React, you use `{}` whenever you want to put Javascript inside your HTML. In normal Javascript, if we wanted to print out each element in a list, we'd need to use **iteration**. It turns out in React, you can use iteration just like in normal JS! The most common operator is the `map` function. Here's a sample:
+In React, you use `{}` whenever you want to put JavaScript inside your HTML. In vanilla JavaScript, if we wanted to print out each element in a list, we'd use **iteration**, like `forEach`. Similarly, in React,  we can use iteration too. The most common operator is the `map` function. Here's a sample:
 
 Here's a sample of how it works:
 
