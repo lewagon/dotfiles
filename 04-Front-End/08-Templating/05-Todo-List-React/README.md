@@ -166,7 +166,7 @@ This would display a list of all 3 fruits 🍎
 
 You may be wondering what the `key` means. React prefers it if you give it a unique key for each element that you iterate over. This helps it keep track if elements are added/removed, or if the order changes. It's similar to how we assign a unique ID to each record in the database. We won't worry about this too much for today💆  If you are interested, read more about [why React need keys](https://react.dev/learn/rendering-lists#why-does-react-need-keys) In this example, we will be using the index of the element in the array.
 
-Can you use this sample code as a guide to try to figure out how you might display each item in `todos` to the DOM?
+Can you use this sample code as a guide to try to figure out how you might display each item in `todos` in the DOM?
 
 #### Attribute Binding
 
