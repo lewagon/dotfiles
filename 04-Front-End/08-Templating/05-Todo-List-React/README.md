@@ -48,16 +48,6 @@ serve
 
 Then, open [`localhost:8000`](http://localhost:8000) in your browser. If you see a message about React, then your project is set up with React.
 
-#### VSCode Syntax Highlighting
-
-Let's enable the VSCode React syntax highlighter to make our code look nicer 💅
-
-First, open the `lib/to-do-list.js` file in your VSCode.
-
-Press cmd+option+K to search through all VSCode commands. Then choose "Change Language Mode". Then select "Javascript JSX (javascriptreact)".
-
-Now, the React syntax should highlight correctly.
-
 ## The To-do App
 
 ### Reach Warm Up
