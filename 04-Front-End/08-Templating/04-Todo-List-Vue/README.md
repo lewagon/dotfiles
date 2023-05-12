@@ -250,3 +250,5 @@ The rest of is very similar to adding a to-do. Take the advantage of [the docume
 💡 You can pass an argument to a method.
 💡 You have access to index in `v-for`.
 </details>
+
+Good luck!
