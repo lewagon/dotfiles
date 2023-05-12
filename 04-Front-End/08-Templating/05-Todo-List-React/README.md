@@ -83,7 +83,7 @@ Our `App()` function is where most of the code will go. It's a [component](https
 </div>
 ```
 
-This is JSX syntax. In essence you just stick `{}` characters into your HTML anytime you want to write a Javascript expression. For example, this would also work:
+This is JSX syntax. In essence you just stick `{}` into your HTML anytime you want to write a JavaScript expression. For example, this would also work:
 
 ```html
 <div id="app">
