@@ -75,7 +75,7 @@ A React instance is already created with `ReactDOM.render` function. You will co
 
 `ReactDOM.render` actually puts the results of the React code into the DOM. You won't need to change that line, as it connects the React code to the `<div id="root">` element that's already included for you in the `index.html` file.
 
-Our `App()` function is where most of the code will go. It's a "component", which, in React, is a function that returns HTML. Notice the templating code that puts the string variable `message` inside of a `<div>` like so:
+Our `App()` function is where most of the code will go. It's a [component](https://react.dev/learn/your-first-component), which, in React, is a function that returns HTML. Notice the templating code that puts the string variable `message` inside of a `<div>` like so:
 
 ```html
 <div id="app">
