@@ -112,7 +112,7 @@ You have the same to-do items in an array.
 
 This is data that could potentially change over time. For example, we might want to add or remove an item from our to-do items array in the future. How do we handle changing data in React?
 
-We use the [`React.useState`](https://react.dev/reference/react/useState) function. This is a React function, or, as React people like to call it, a "hook", that lets us define variables whose values might change over time in our app.
+We use the [`React.useState`](https://react.dev/reference/react/useState) function. This is a React function, or, as React people like to call it, a [hook](https://react.dev/reference/react), that lets us define variables whose values might change over time in our app.
 
 Let's change our `App()` function like this:
 
