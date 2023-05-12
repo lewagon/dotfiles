@@ -162,7 +162,7 @@ export default App;
 ```
 </details>
 
-This would display a list of all 3 fruit 🍎
+This would display a list of all 3 fruits 🍎
 
 You may be wondering what the `key` means. We won't worry about this too much for today 💆 but React prefers it if you give it some kind of a unique ID for each element that you iterate over. This helps it keep track if elements are added/removed, or maybe the order of the list changes over time. You can imagine that, if we were working with data in a complex application, we might already have some kind of unique ID stored on each element. But, in this example, we're just using the index of the element in the actual text of each fruit ("apple", for example), which wouldn't be totally ideal if we had two apples in our array.
 
