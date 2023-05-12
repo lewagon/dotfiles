@@ -201,7 +201,7 @@ Can you use this principle to make your checkboxes dynamically match the value o
 2. User clicks a button.
 3. the to-do is added and appears on the list.
 
-When the button is clicked, the React app needs to take care of getting the data and adding it to the list. We will create a Javascript function called `addTodo()` to take care of all these.
+When the button is clicked, the React app needs to take care of getting the data and adding it to the list. We will create a JavaScript function called `addTodo()` to take care of all these.
 
 In order to do this, we'll create a new variable `title` using the `useState` hook that will update whenever the user types in the input (using the `onChange` event).
 
