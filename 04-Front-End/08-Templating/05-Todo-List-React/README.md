@@ -52,7 +52,7 @@ Then, open [`localhost:8000`](http://localhost:8000) in your browser. If you see
 
 ### React Warm Up
 
-Have a look at the `lib/to-do-list.js` file.
+Have a look at the `lib/to-do-list.jsx` file.
 
 ```jsx
 const App = () => {
