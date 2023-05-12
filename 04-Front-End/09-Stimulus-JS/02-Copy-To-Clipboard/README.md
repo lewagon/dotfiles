@@ -4,7 +4,7 @@ In this unit, we'll be spending some time coding useful components for your futu
 
 In this challenge, you'll be coding a Copy to Clipboard component. This component will be used to copy an API key like you will find on many online services.
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/copy-to-clipboard.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/copy-to-clipboard.gif)
 
 ## Setup
 
