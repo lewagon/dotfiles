@@ -8,7 +8,7 @@ Vous allez construire une application de recherche pour filtrer les restaurants 
 
 L'objectif est d'implémenter dans `index.js` la logique de recherche, afin de filtrer par catégorie lorsqu'on clique sur "recherche".
 
-Ouvrez la page html dans votre navigateur avec:
+Ouvre la page html dans ton navigateur avec:
 
 ```bash
 serve
