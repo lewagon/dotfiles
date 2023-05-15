@@ -14,75 +14,47 @@ Dans ce challenge, tu vas construire une app Générateur de citations en utilis
 
 Nous avons besoin de React, donc nous devons importer le framework React et [React DOM](https://reactjs.org/docs/react-dom.html). Les composants React sont souvent écrits en JSX, mais comme nous n'avons pas de compilateur dans notre projet, nous allons le faire à la manière de Rails et importer [htm](https://github.com/developit/htm), qui nous permet d'écrire une syntaxe similaire à JSX en JavaScript.
 
-Dans l'en-tête de notre projet, ajoutons l'importation de ces paquets :
+Dans l'en-tête de notre projet, nous avons déjà importé ces librairies :
 
 ```html
-  <script type="importmap">
-    {
-      "imports" : {
-        "htm" : "https://cdn.esm.sh/v45/htm@3.1.0/es2021/htm.js",
-        "react" : "https://cdn.esm.sh/v45/react@17.0.2/es2021/react.js",
-        "react-dom" : "https://cdn.esm.sh/v45/react-dom@17.0.2/es2021/react-dom.js"
-      }
-    }
-  </script>
-```
-
-Nous avons déjà créé le fichier `lib/components/htm_create_element.js` pour toi. Ce fichier est une enveloppe autour du paquet `htm` que nous avons importé. Il nous permet d'utiliser la fonction `htm` pour créer des composants React avec une syntaxe similaire à JSX.
-
-Maintenant, importons ReactDOM en haut de notre fichier `index.js`, ainsi que la fonction du paquet `htm` (nous n'avons pas besoin d'importer quoi que ce soit du paquet React, car il est déjà importé dans le fichier `htm_create_element`) :
-
-```js
-import { render } from 'react-dom' ;
-import h from './components/htm_create_element.js' ;
+    <script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
 ```
 
 ## Notre premier composant
 
-Créons un fichier `App.js` dans le dossier `components`. Ce fichier contiendra notre application qui rendra notre premier composant React.
-
-Nous devons importer React et `h` en haut de notre fichier, et nous allons créer notre premier composant à rendre : un titre `h1` pour l'instant !
+Notre fichier `lib/index.jsx` est déjà prêt afin de générer un composant `App` :
 
 ```js
-import h from './htm_create_element.js' ;
+const App = () => {
+  const message = "If you see this message in your browser, that means React is successfully mounted! 🙌";
 
-export default function App() {
-  return h`<h1>Hello world</h1>`; // Ton premier composant est généré !
+  return (
+    <div id="quoteGeneratorContainer">
+      {message}
+    </div>
+  );
 }
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
 ```
 
-Pour le rendre, nous devons sélectionner l'élément `#root` dans notre fichier HTML, ce que nous ferons dans le fichier `index.js` :
-
-``js
-const rootNode = document.getElementById('root') ;
-render(h`<${App} />`, rootNode) ;
-```
-
-Nous utilisons la fonction `h` pour décrire le composant que nous voulons rendre. La dernière ligne est équivalente, en syntaxe JSX, à :
-
-```jsx
-render(<App />, rootNode) ;
-```
-
-Mais comme nous n'utilisons pas de compilateur, nous le faisons à la manière de Rails, en utilisant le paquet `htm`.
-
-Maintenant, lançons notre serveur, tu devrais voir le titre **Hello world** ! 🥳
-
+Maintenant, lançons notre serveur, tu devrais voir un message indiquant que React a été installé avec succès ! 🥳
 ## Générateur de citations
 
 Maintenant que notre application fonctionne et que notre premier petit composant a été créé, construisons le reste de notre application !
 
 ### Quote component
 
-Créons un composant `Quote.js` dans le dossier `components` qui correspondra à une citation. Ce composant sera une carte de citation, avec la citation et l'auteur. Pour créer la carte, nous utiliserons un élément `div`, un élément `p` pour la citation et un élément `span` pour l'auteur.
+Créons un composant `Quote.js` dans le fichier `lib/index.jsx` (tu devrais le placer au-dessus du composant `App`). Ce composant sera une carte de citation, avec la citation et l'auteur. Pour créer la carte, nous utiliserons un élément `div`, un élément `p` pour la citation et un élément `span` pour l'auteur.
 
 ```js
-// components/Quote.js
-import React from 'react';
-import h from './htm_create_element.js';
-
-export default function Quote() {
-  return h`
+const Quote = () => {
+  return (
     <div>
       <p>
         <span>“</span>
@@ -90,21 +62,22 @@ export default function Quote() {
         <span>“</span>
       <p/>
       <span>- Thomas Edison</span>
-    </div>`;
+    </div>`
+  );
 }
 ```
 
 ### App component
 
-A présent, modifions le composant `App.js` pour effectuer le rendu du composant `Quote`.
+A présent, modifions le composant `App` pour effectuer le rendu du composant `Quote`.
 
 ```js
-// components/App.js
-// [...]
-import Quote from './Quote.js'; // Import the component
-
-export default function App() {
-  return h`<${Quote} />`; // And render it here!
+const App = () => {
+  return (
+    <div id="quoteGeneratorContainer">
+      <Quote />
+    </div>
+  );
 }
 ```
 
@@ -113,17 +86,19 @@ Relance la page, vous devriez voir notre citation apparaître ! 🥳
 Améliorons le composant `App` pour qu'il retourne les citations et qu'il y ait un bouton pour obtenir un nouveau devis. Nous allons utiliser un élément `div` pour le conteneur, et un élément `button` pour le bouton.
 
 ```js
-// components/App.js
-export default function App() {
-  return h`
-    <div className="container">
-      <${Quote} />
-      <button className="btn btn-primary mt-3">More inspiration</button>
-    </div>`;
+const App = () => {
+  return (
+    <div id="quoteGeneratorContainer">
+      <div className="container">
+        <Quote />
+        <button className="btn btn-primary mt-3">More inspiration</button>
+      </div>
+    </div>
+  );
 }
 ```
 
-Ajoutons un peu de style à notre conteneur et à l'élément racine pour que nos citations s'affichent joliment :
+Ajoutons un peu de style (dans `style.css`) à notre conteneur et à l'élément racine pour que nos citations s'affichent joliment :
 
 ```css
 #root {
@@ -154,29 +129,29 @@ Relance la page. Notre application commence à ressembler à quelque chose 💪
 Une citation, c'est bien, mais ce serait encore mieux si nous pouvions obtenir une sélection de citations, à partir de l'API ! Nous allons utiliser la fonction `fetch` pour le faire. Nous allons créer un hook `useEffect` pour récupérer les citations lorsque le composant est monté. Nous stockerons les citations dans un état `quotes`, et nous utiliserons le hook `useState` pour le faire.
 
 **Ressources:**
-- [`useState`](https://beta.reactjs.org/reference/react/useState) permet d'ajouter une variable d'état à votre composant. Ici, nous pouvons stocker le tableau de citations, avec un tableau vide `[]` par défaut.
-- [`useEffect`](https://beta.reactjs.org/reference/react/useEffect) nous permet de sortir de React, pour utiliser un système externe, ici une API, dans notre composant.
+- [`React.useState`](https://beta.reactjs.org/reference/react/useState) permet d'ajouter une variable d'état à votre composant. Ici, nous pouvons stocker le tableau de citations, avec un tableau vide `[]` par défaut.
+- [`React.useEffect`](https://beta.reactjs.org/reference/react/useEffect) nous permet de sortir de React, pour utiliser un système externe, ici une API, dans notre composant.
 
 ```js
-// components/App.js
 // [...]
-import { useState, useEffect } from 'react'; // Don't forget this line at the top of the file
-
-export default function App() {
-  const [quotes, setQuotes] = useState([]);
+const App = () => {
+  const [quotes, setQuotes] = React.useState([]);
   console.log("Quotes: ", quotes);
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetch('https://type.fit/api/quotes')
       .then((response) => response.json())
       .then((data) => (setQuotes(data));
   }, []);
 
-  return h`
-    <div className="container">
-      <${Quote} />
-      <button className="btn btn-primary mt-3">More inspiration</button>
-    </div>`;
+  return (
+    <div id="quoteGeneratorContainer">
+      <div className="container">
+        <Quote />
+        <button className="btn btn-primary mt-3">More inspiration</button>
+      </div>
+    </div>
+  );
 }
 ```
 
@@ -185,10 +160,9 @@ Vérifie la console, tu devrais voir les citations chargées dans `Quotes` ! Ell
 Créons une fonction pour obtenir une citation aléatoire dans l'array. Nous avons déjà vu comment obtenir un nombre aléatoire en JavaScript dans le cours HTTP & API. Nous utiliserons la fonction `Math.random` pour obtenir un nombre aléatoire entre 0 et 1, et nous le multiplierons par la longueur du tableau pour obtenir un index aléatoire.
 
 ```js
-// components/App.js
 // [...]
 
-export default function App() {
+const App = () => {
   // [...]
   const getRandomQuote = (quotes) => {
     const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -196,13 +170,14 @@ export default function App() {
   };
 
   // [...]
+}
 ```
 
 Nous avons également besoin d'ajouter un `state` supplémentaire à notre application pour pouvoir définir une citation et savoir laquelle nous sommes en train d'afficher. Nous pouvons l'ajouter avec :
 
 ```js
-  const [quotes, setQuotes] = useState([]);
-  const [currentQuote, setCurrentQuote] = useState(null); // Add this line
+  const [quotes, setQuotes] = React.useState([]);
+  const [currentQuote, setCurrentQuote] = React.useState(null); // Add this line
 ```
 
 Nous avons maintenant un état `currentQuote`, qui sera `null` par défaut puisque les citations ne seront pas encore chargées.
@@ -216,11 +191,11 @@ Créons une autre fonction `getNewQuote()` qui obtiendra une citation aléatoire
   } ;
 ```
 
-Utilisons-le à partir de `useEffect`, une fois que nous aurons toutes les citations disponibles, pour avoir une citation aléatoire lorsque nous chargeons la page :
+Utilisons-le à partir de `React.useEffect`, une fois que nous aurons toutes les citations disponibles, pour avoir une citation aléatoire lorsque nous chargeons la page :
 
 ```js
 console.log("currentQuote: ", currentQuote);
-useEffect(() => {
+React.useEffect(() => {
     fetch('https://type.fit/api/quotes')
       .then((response) => response.json())
       .then((data) => {
@@ -235,15 +210,17 @@ Nous avons maintenant une citation aléatoire lorsque nous chargeons la page ! �
 Au lieu de notre citation codée en dur dans le composant `Quote`, utilisons la citation stockée dans l'état `currentQuote`.
 
 ```js
-// components/Quote.js
-// [...]
-
-export default function Quote({ quote }) {
-  return h`
+const Quote = ({ quote }) => {
+  return (
     <div className="quote">
-      <p className="quote-text">${quote.text}</p>
-      <p className="quote-author">${quote.author}</p>
-    </div>`;
+      <p className="quote-text">
+        <span>“</span>
+        {quote.text}
+        <span>“</span>
+      <p/>
+      <span className="quote-author">- ${quote.author}</span>
+    </div>
+  );
 }
 ```
 
@@ -253,13 +230,14 @@ On peut maintenant passer la citation au composant en tant que `prop`. En ReactJ
 // components/App.js
 // [...]
 
-export default function App() {
+const App = () => {
   // [...]
-  return h`
+  return (
     <div className="container">
-      <${Quote} quote=${currentQuote} />
+      <Quote quote={currentQuote} />
       <button className="btn btn-primary mt-3">More inspiration</button>
-    </div>`;
+    </div>
+  );
 }
 ```
 
@@ -268,22 +246,21 @@ Relance la page. Nous obtenons toujours une erreur, car `currentQuote` est `null
 Nous pouvons corriger cela en ajoutant une condition au composant `Quote`, pour afficher un message de chargement si la citation est `null` :
 
 ```js
-// components/Quote.js
-// [...]
-
-export default function Quote({ quote }) {
+const Quote = ({ quote }) => {
   if (quote === null) {
-    return h`<p>Loading...</p>`;
+    return <p>Loading...</p>;
   }
 
-  return h`<>
-      <p>
+  return (
+    <div className="quote">
+      <p className="quote-text">
         <span>“</span>
-        ${quote.text}
+        {quote.text}
         <span>“</span>
       <p/>
-      <span>- ${quote.author}</span>
-    </>`;
+      <span className="quote-author">- ${quote.author}</span>
+    </div>
+  );
 }
 ```
 
@@ -296,16 +273,14 @@ Comme nous avons déjà ajouté un bouton dans notre composant App, ajoutons une
 Pour cela, nous pouvons lier notre fonction `getNewQuote` existante à l'événement `onClick` du bouton :
 
 ```js
-// components/App.js
-// [...]
-
-export default function App() {
+const App = () => {
   // [...]
-  return h`
+  return (
     <div className="container">
-      <${Quote} quote=${currentQuote} />
-      <button className="btn btn-primary mt-3" onClick=${() => getNewQuote(quotes)}>More inspiration</button>
-    </div>`;
+      <Quote quote={currentQuote} />
+      <button className="btn btn-primary mt-3" onClick={() => getNewQuote(quotes)}>More inspiration</button>
+    </div>
+  );
 }
 ```
 

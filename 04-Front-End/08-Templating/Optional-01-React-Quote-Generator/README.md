@@ -24,7 +24,7 @@ In the head of our project, we already have these packages:
 
 ## Our first component
 
-Our lib/index.jsx file is already set up to render an `App` component:
+Our `lib/index.jsx` file is already set up to render an `App` component:
 
 ```js
 const App = () => {
@@ -226,7 +226,6 @@ const Quote = ({ quote }) => {
       <span className="quote-author">- ${quote.author}</span>
     </div>
   );
-}
 }
 ```
 
