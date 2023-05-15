@@ -1,5 +1,5 @@
 COMPUTER_NAME="jmschp-macbook"
-LANGUAGES=(en pt-PT pt-BR es)
+LANGUAGES=(en-US pt-PT pt-BR es)
 LOCALE="en_PT"
 MEASUREMENT_UNITS="Centimeters"
 SCREENSHOTS_FOLDER="${HOME}/Desktop"
