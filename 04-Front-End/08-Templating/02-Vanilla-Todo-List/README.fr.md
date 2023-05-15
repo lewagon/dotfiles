@@ -38,7 +38,7 @@ Tu trouveras également dans le fichier `index.html` un élément HTML **dans un
 
 ### Sélectionne le `<template>` pour générer du HTML dynamiquement
 
-A présent, tu dois sélectionner la balise `<template>` et cloner son contenu. Insére ensuite le titre au bon endroit, modifie la propriété `checked` en conséquence, et insére-le dans le conteneur `todosContainer`.
+A présent, tu dois sélectionner la balise `<template>` et cloner son contenu. Insère ensuite le titre au bon endroit, modifie la propriété `checked` en conséquence, et insère-le dans le conteneur `todosContainer`.
 
 Te souviens-tu comment sélectionner et cloner le contenu à l'intérieur de la balise template ? Voici un exemple rapide.
 

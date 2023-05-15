@@ -16,7 +16,7 @@ Ensuite, ouvre [`localhost:8000`](http://localhost:8000) dans ton navigateur.
 
 ### Données et HTML
 
-Dans ton fichier `lib/to-do-list.js`, tu devrais pouvoir trouver les deux morceaux de code suivants.
+Dans ton fichier `lib/to-do-list.js`, tu devrais trouver les deux morceaux de code suivants.
 
 1. Données : un array d'éléments de to-do
 
