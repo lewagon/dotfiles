@@ -54,7 +54,7 @@ Then, open [`localhost:8000`](http://localhost:8000) in your browser. If you see
 
 Have a look at the `lib/to-do-list.jsx` file.
 
-```jsx
+```js
 const App = () => {
   const message = "If you see this message in your browser, that means React is successfully mounted! 🙌";
 
@@ -116,7 +116,7 @@ We use the [`React.useState`](https://react.dev/reference/react/useState) functi
 
 Let's change our `App()` function like this:
 
-```jsx
+```js
 const App = () => {
   const [todos, changeTodos] = React.useState(
     [
@@ -145,7 +145,7 @@ In React, you use `{}` whenever you want to put Javascript inside your HTML. In 
 
 Here's a sample of how it works:
 
-```jsx
+```js
 function App() {
   const [items, changeItems] = React.useState(['apple', 'banana', 'orange']);
 
@@ -175,7 +175,7 @@ Can you use this sample code as a guide to try to figure out how you might displ
 
 React makes it easy to set HTML attributes in JSX syntax:
 
-```jsx
+```js
 function App() {
   const shouldBeChecked = true
 
