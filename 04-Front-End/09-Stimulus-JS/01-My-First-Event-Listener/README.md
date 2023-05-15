@@ -12,7 +12,7 @@ serve
 
 And visit `localhost:8000`. You can see we are using Bootstrap. Also, there is a big button in the `<body>`. We'll come to that in a second.
 
-To install [`Stimulus`](https://stimulus.hotwired.dev/handbook/installing), let's start with your `index.html`. As stated in the AJAX lecture, we are going to import `Stimulus` with `importmap`. 
+To install [`Stimulus`](https://stimulus.hotwired.dev/handbook/installing), let's start with your `index.html`. As stated in the AJAX lecture, we are going to import `Stimulus` with `importmap`.
 
 As a refresher, what is `importmap`? When importing many JS plugins in our code, adding many `<script>` tags can become quickly messy. `importmap` allows us to create a library to pin and import all the JS plugins we need. It's a bit like a `Gemfile` in Ruby.
 
@@ -30,6 +30,7 @@ First, you need to start by importing the `es-module-shims` to make sure that `i
 ```
 
 Once this is done, let's go to our `index.js` file. You need to import the `Stimulus` library and register a controller. The controller will be in charge of reacting to the click on the button. In this case, we'll call our controller `EventListenerController`:
+
 ```javascript
 import { Application } from "@hotwired/stimulus";
 
@@ -40,6 +41,7 @@ Stimulus.register("event-listener", EventListenerController);
 ```
 
 Then in the empty `controllers` folders, create a `event_listener_controller.js` file. This is where we'll write the code to react to the click on the button. Copy paste this in the file as a boilerplate to start with:
+
 ```javascript
 // lib/controllers/event_listener_controller.js
 import { Controller } from "@hotwired/stimulus"
@@ -59,7 +61,7 @@ Your goal is to implement some JavaScript in the `lib/controllers/event_listener
 
 - Disable the button. This can be done by adding the `.disabled` class.
 - Change the text inside the button from "Click me!" to "Bingo!"
-- Optional: the `sound.mp3` [plays in the Browser](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript)
+- Optional: the `sound.mp3` [plays in the Browser](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript) when the button is clicked
 
 The sound might not work on some browsers running on **Ubuntu**. To fix it, just run:
 
