@@ -4,7 +4,7 @@
 
 ## 详细说明
 
-您将构建一个搜索应用程序，以过滤 [The Fork API](https://the-fork-api.students.lewagon.co/) 的餐厅。
+你将编写一个搜索应用程序，用来筛选 [The Fork API](https://the-fork-api.students.lewagon.co/)里的餐厅。
 
 您的目标是在 `index.js` 中实现搜索逻辑，以便在单击搜索时可以按类别进行过滤。
 
