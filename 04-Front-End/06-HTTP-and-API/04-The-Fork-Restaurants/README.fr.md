@@ -48,7 +48,7 @@ Créons deux nouvelles fonctions pour extraire une partie de notre logique en de
 
 ## Aller plus loin
 
-Une fois que votre recherche fonctionne pour une catégorie, ajoutons la localisation afin que nous puissions rechercher à la fois par catégorie et par emplacement 🎉
+Une fois que la recherche fonctionne pour une catégorie, ajoutons la localisation afin que nous puissions rechercher à la fois par catégorie et par emplacement 🎉
 
 ```html
 <div class="text-center">
