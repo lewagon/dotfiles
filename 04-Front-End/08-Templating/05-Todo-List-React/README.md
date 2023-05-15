@@ -133,7 +133,7 @@ const App = () => {
 }
 ```
 
-This code means that we will now have access to two variables: `todos`, which is just the array of to-dos, and `changeTodos`, which is a function we could call when our array should change (for example, if we want to add or remove an element). Since we're only worrying about _reading_ our to-dos for now, not creating, editing, or deleting them, we won't use `changeTodos` much at the moment 💆
+This code means that we will now have access to two variables: `todos`, which is just the array of to-dos, and `changeTodos`, which is a function we could call when our array should change (for example, if we want to add or remove an element). Since we're only worrying about _reading_ our to-dos for now, not creating, editing, or deleting them, we won't use `changeTodos` much at the moment 😌
 </details>
 
 #### List Rendering
@@ -141,7 +141,7 @@ This code means that we will now have access to two variables: `todos`, which is
 <details>
 <summary markdown='span'>How do we dynamically render the list?</summary>
 
-In React, you use `{}` whenever you want to put Javascript inside your HTML. In normal Javascript, if we wanted to print out each element in a list, we'd need to use **iteration**. It turns out in React, you can use iteration just like in normal JS! The most common operator is the `map` function. The reason for this is that `map` returns an array (in this case of JSX elements), and JSX supports adding an array of elements to the DOM. Here's a sample:
+In React, you use `{}` whenever you want to put Javascript inside your HTML. In normal Javascript, if we wanted to print out each element in a list, we'd need to use **iteration**. It turns out in React, you can use iteration just like in normal JS! The most common operator is the `map` function. The reason for this is that `map` returns an array (in this case of JSX elements), and JSX supports adding an array of elements to the DOM.
 
 Here's a sample of how it works:
 
@@ -164,7 +164,7 @@ export default App;
 
 This would display a list of all 3 fruits 🍎
 
-You may be wondering what the `key` means. React prefers it if you give it a unique key for each element that you iterate over. This helps it keep track if elements are added/removed, or if the order changes. It's similar to how we assign a unique ID to each record in the database. We won't worry about this too much for today💆  If you are interested, read more about [why React need keys](https://react.dev/learn/rendering-lists#why-does-react-need-keys) In this example, we will be using the index of the element in the array.
+You may be wondering what the `key` means. React prefers it if you give it a unique key for each element that you iterate over. This helps it keep track if elements are added/removed, or if the order changes. It's similar to how we assign a unique ID to each record in the database. We won't worry about this too much for today💆  If you are interested, read more about [why React need keys](https://react.dev/learn/rendering-lists#why-does-react-need-keys). In this example, we will be using the index of the element in the array.
 
 Can you use this sample code as a guide to try to figure out how you might display each item in `todos` in the DOM?
 
@@ -192,7 +192,7 @@ All we have to do is to use `{}` to write some JavaScript as the value for `chec
 Can you use this principle to make your checkboxes dynamically match the value of `done` on each checkbox?
 </details>
 
-### 2. Add a to-do(Optional)
+### 2. Add a to-do (Optional)
 
 <details>
 <summary markdown='span'>What happens when a user adds a to-do?</summary>
@@ -274,7 +274,7 @@ Check in your browser console, can you see the `console.log` you added in your m
 1. Construct a to-do object based on user input.
 2. Add it to the `todos` list.
 
-In React, if you just change the value of `todos` like `todos = SOMETHING_DIFFERENT`, it won't work. You'll have to use the `changeTodos` function. 
+In React, if you just change the value of `todos` like `todos = SOMETHING_DIFFERENT`, it won't work. You'll have to use the `changeTodos` function.
 
 For example, the below code would set our `todos` equal to an empty array `[]`:
 
