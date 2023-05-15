@@ -6,7 +6,7 @@ Dans cet exercice, nous allons examiner de plus près l'API Fork que nous avons 
 
 Vous allez construire une application de recherche pour filtrer les restaurants de The Fork API.
 
-Votre objectif est d'implémenter dans index.js la logique de recherche, afin que nous puissions filtrer par catégorie lorsque vous cliquez sur recherche.
+L'objectif est d'implémenter dans `index.js` la logique de recherche, afin de filtrer par catégorie lorsqu'on clique sur "recherche".
 
 Ouvrez la page html dans votre navigateur avec:
 
