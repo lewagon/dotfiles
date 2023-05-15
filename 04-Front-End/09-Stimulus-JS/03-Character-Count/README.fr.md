@@ -20,7 +20,7 @@ Cette fois, `Stimulus` est déjà installé dans le head `index.html`.
 
 Cependant, il est important que tu continues à t'entraîner à faire la partie configuration du JavaScript toi-même. Ouvre `index.js`, importe le contrôleur Stimulus en haut et enregistre le contrôleur en bas. Tu peux nommer ce contrôleur `CharacterCountController`.
 
-Crée un fichier `character_count_controller.js` dans le dossier vide `controllers`, et copie-colle le template :
+Crée un fichier `character_count_controller.js` dans le dossier `controllers` vide, et copie-colle le template :
 
 ```javascript
 // lib/controllers/character_count_controller.js
