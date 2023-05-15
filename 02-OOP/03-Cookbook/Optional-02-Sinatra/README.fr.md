@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Les applications terminales sont cool, mais sais-tu ce qui l'est encore plus ? Les applications web ! Essayons de porter notre Cookbook vers une nouvelle application web en utilisant la gemme `sinatra`.
+Les applications dans le terminal sont cool, mais sais-tu ce qui l'est encore plus ? Les applications web ! Essayons de porter notre Cookbook vers une nouvelle application web en utilisant la gemme `sinatra`.
 
 ## Quelques mots sur Sinatra
 
