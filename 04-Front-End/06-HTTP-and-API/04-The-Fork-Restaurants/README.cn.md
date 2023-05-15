@@ -19,7 +19,7 @@ serve
 - 当我们选择一个类别并点击"搜索(Search)"时，页面**不应该**重新加载。我们的目标是在右侧显示筛选后的餐厅列表。
 - 如果没有该类别的餐厅，那我们应该看到一个告诉我们没有符合条件餐厅的信息。
 - 每次进行新的搜索时，列表应该先重置，再展示新的餐厅。
-- 您可以使用 Bootstrap 的 flush list 来显示餐厅。但是如果您喜欢，可以随意创意！
+- 你可以使用 Bootstrap的[**flush list**](https://getbootstrap.com/docs/5.2/components/list-group/#flush)来展示餐厅。但你也可以发挥自己的创意！
 
 ```html
 <div class="text-center">
