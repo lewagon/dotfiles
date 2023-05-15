@@ -1,27 +1,60 @@
 ## 背景和目标
 
-昨天，我们学习了如何选择文档对象模型(DOM)元素，如何在该元素上读取信息并更新（文字，CSS,等等). 今天我们会学习如何用	[DOM 事件](https://developer.mozilla.org/en-US/docs/Web/Events)来创建交互的网页。
+在本次挑战中，我们将仔细研究我们在讲座中看到的 Fork API。目的是更熟悉如何进行 API 请求、如何读取响应并使用响应将其插入到 HTML 中。
 
-## 详细说明
+## 规格
 
-启动你的本地网页服务器：
+您将构建一个搜索应用程序，以过滤 [The Fork API](https://the-fork-api.students.lewagon.co/) 的餐厅。
 
-```bash
-rake webpack
-```
+您的目标是在 `index.js` 中实现搜索逻辑，以便在单击搜索时可以按类别进行过滤。
 
-打开`index.html` 文件. 你可以看到我们使用的是Bootstrap. 另外，`<body>`内有一个大的按钮。
-
-你的目标是在`lib/listener.js`文件实现一些JS代码. **你需要对点击蓝色按钮做出回应** 当点击按钮的时候，我们想要:
-
-- 让按钮不可用。这个可以通过添加`.disabled`类来实现。
-- 把按钮上的字从"Click me!" 变成 "Bingo!"
-- 可选择: `sound.mp3` [在浏览器播放](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript)
-
-在一些运行**Ubuntu**的浏览器上可能没有声音。想改正的话，只需运行：
+使用以下命令在浏览器中打开 HTML 页面：
 
 ```bash
-sudo apt-get install ubuntu-restricted-extras
+serve
 ```
 
-这个练习没有测试，但是我们仍会检查你的代码样式！所以，运行`rake`.
+您将看到一个带有所有不同餐厅类别的表单。
+
+- 当我们选择一个类别并点击“搜索”时，页面不应重新加载，目标是在右侧显示过滤后的餐厅列表。
+- 如果该类别没有餐厅，我们应该看到一个指示没有结果的消息。
+- 在显示新餐厅之前，每次进行新搜索时列表都应该重置。
+- 您可以使用 Bootstrap 的 flush list 来显示餐厅。但是如果您喜欢，可以随意创意！
+
+```html
+<div class="text-center">
+  <img
+    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png"
+    alt="The Fork Challenge demo"
+    width="100%"
+  />
+</div>
+```
+
+## 阅读文档
+
+我们将使用 [The Fork API](https://the-fork-api)，因此，当我们使用新的 API 时，首先阅读文档以找到我们需要的端点并了解如何构建请求非常重要。
+
+重构
+一旦搜索按预期工作，让我们使代码更易读，避免太多的缩进级别，就像我们在前一个挑战中做的那样。
+
+让我们创建两个新函数，以从 addEventListener 回调中提取一些逻辑：
+
+- 首先是一个 insertResults 方法，它将在我们的列表中插入结果。哪些参数应该传递给它？
+- 第二个是一个 buildSearchUrl 方法，它将查找选择的类别并构建我们需要进行查询的 URL。它应返回带有搜索查询参数的 URL。
+
+最后，您的代码应易于阅读，并且不应具有超过 1 个缩进级别！
+
+## 接下来
+
+一旦您的搜索适用于类别，让我们加入位置，这样我们就可以通过类别和位置进行搜索 🎉
+
+```html
+<div class="text-center">
+  <img
+    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png"
+    alt="The Fork Challenge demo"
+    width="100%"
+  />
+</div>
+```

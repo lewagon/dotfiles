@@ -1,27 +1,61 @@
-## Contexte et objectifs
+## Contexte et Objectifs
 
-Hier, on a vu comment sélectionner un élément du DOM, lire des informations dessus et le mettre à jour (texte, CSS, etc.). Aujourd'hui, on va voir comment réagir à des [événements du DOM](https://developer.mozilla.org/en-US/docs/Web/Events) pour créer des sites Web interactifs.
+Dans ce défi, nous allons examiner de plus près l'API Fork que nous avons vue pendant la conférence. Le but est de devenir plus familier avec la réalisation de demandes d'API, la lecture de la réponse et l'utilisation de cette réponse pour l'insérer dans HTML.
 
 ## Spécifications
 
-Lance ton serveur Web local avec :
+Vous allez construire une application de recherche pour filtrer les restaurants de The Fork API.
+
+Votre objectif est d'implémenter dans index.js la logique de recherche, afin que nous puissions filtrer par catégorie lorsque vous cliquez sur recherche.
+
+Ouvrez la page html dans votre navigateur avec:
 
 ```bash
-rake webpack
+serve
 ```
 
-Ouvre le fichier `index.html`. Tu remarqueras qu'on utilise Bootstrap. Il y a aussi un gros bouton dans le corps (`<body>`).
+Vous devriez voir un formulaire avec toutes les différentes catégories de restaurants.
 
-L'objectif est de coder du JavaScript dans le fichier `lib/listener.js`. **Tu dois réagir à un clic sur le bouton bleu.** Quand on clique sur ce bouton, on veut que :
+- Lorsque nous en sélectionnons un et cliquons sur _Rechercher_, la page **ne doit pas se recharger** et l'objectif est d'afficher la liste des restaurants filtrés à droite.
+- Nous devrions voir un message indiquant qu'il n'y a pas de résultats s'il n'y a pas de restaurants pour cette catégorie.
+- La liste doit être réinitialisée à chaque nouvelle recherche avant d'afficher les nouveaux restaurants.
+- Vous pouvez utiliser la [**liste flush**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) de Bootstrap pour afficher les restaurants. Mais n'hésitez pas à être créatif si vous le souhaitez!
 
-- le bouton se désactive, ce qui peut être fait en ajoutant la classe `.disabled` ;
-- le texte du bouton passe de "Click me!" à "Bingo!".
-- Facultatif : que le son `sound.mp3` [soit joué dans le navigateur](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript)
-
-Il se peut que le son ne fonctionne pas sur certains navigateurs sous **Ubuntu**. Pour régler ce problème exécute :
-
-```bash
-sudo apt-get install ubuntu-restricted-extras
+```html
+<div class="text-center">
+  <img
+    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png"
+    alt="The Fork Challenge demo"
+    width="100%"
+  />
+</div>
 ```
 
-Il n'y a pas de tests pour cet exercice, mais on vérifiera ton style ! Lance `rake`.
+## Lire la documentation
+
+Nous utiliserons l'API Fork (https://the-fork-api.students.lewagon.co/). Comme toujours lorsque nous utilisons une nouvelle API, il est très important de lire d'abord la documentation pour trouver le **point final** dont nous avons besoin et comprendre comment construire notre requête.
+
+## Refactoring
+
+Une fois que la recherche fonctionne comme prévu, rendons le code plus lisible et évitons trop de niveaux d'indentation, comme nous l'avons fait dans le défi précédent.
+
+Créons deux nouvelles fonctions pour extraire une partie de notre logique en dehors du rappel `addEventListener` :
+
+- Tout d'abord, une méthode `insertResults` qui insérera les résultats dans notre liste. Quel paramètre doit lui être passé ?
+- Ensuite, une méthode `buildSearchUrl` qui trouvera la catégorie choisie et construira l'URL dont nous avons besoin pour effectuer notre requête. Elle doit renvoyer l'**URL avec les paramètres de recherche**.
+
+À la fin, votre code doit être facilement lisible et ne doit pas avoir plus de 1 niveau d'indentation!
+
+## Aller plus loin
+
+Une fois que votre recherche fonctionne pour une catégorie, ajoutons la localisation afin que nous puissions rechercher à la fois par catégorie et par emplacement 🎉
+
+```html
+<div class="text-center">
+  <img
+    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png"
+    alt="The Fork Challenge demo"
+    width="100%"
+  />
+</div>
+```
