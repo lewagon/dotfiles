@@ -19,7 +19,7 @@ Tu devrais voir un formulaire avec toutes les différentes catégories de restau
 - Lorsque nous en sélectionnons un et cliquons sur _Rechercher_, la page **ne doit pas se recharger** et l'objectif est d'afficher la liste des restaurants filtrés à droite.
 - Nous devrions voir un message indiquant qu'il n'y a pas de résultats s'il n'y a pas de restaurants pour cette catégorie.
 - La liste doit être réinitialisée à chaque nouvelle recherche avant d'afficher les nouveaux restaurants.
-- Vous pouvez utiliser la [**liste flush**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) de Bootstrap pour afficher les restaurants. Mais n'hésitez pas à être créatif si vous le souhaitez!
+- Tu peux utiliser la [**liste flush**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) de Bootstrap pour afficher les restaurants. Mais n'hésite pas à être créatif si tu le souhaites !
 
 ```html
 <div class="text-center">
