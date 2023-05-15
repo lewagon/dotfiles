@@ -267,7 +267,6 @@ const Quote = ({ quote }) => {
     </div>
   );
 }
-}
 ```
 
 Now reload the page, and you should see a random quote!
@@ -287,6 +286,7 @@ const App = () => {
       <button className="btn btn-primary mt-3" onClick={() => getNewQuote(quotes)}>More inspiration</button>
     </div>
   );
+}
 ```
 
 Now click on the button to see a random new quote everytime! 🚀
