@@ -21,7 +21,7 @@ Cette fois, `Stimulus` est déjà installé dans le head `index.html`.
 
 Cependant, tu dois encore t'habituer à faire la partie configuration du JavaScript toi-même. Ouvre `index.js`, importe le contrôleur Stimulus en haut et enregistre le contrôleur en bas. Tu peux nommer le contrôleur `CopyToClipboardController`.
 
-Crée un fichier `copy_to_clipboard_controller.js` dans le dossier `controllers` vide, et copie-colle le modèle :
+Crée un fichier `copy_to_clipboard_controller.js` dans le dossier `controllers` vide, et copie-colle le template :
 
 ```javascript
 // lib/controllers/event_listener_controller.js
