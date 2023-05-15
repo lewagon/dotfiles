@@ -16,14 +16,20 @@ serve
 
 You should see a form with all the different restaurant categories.
 
-- When we select one and click on *Search*, the page **should not reload** and the goal is to display the list of the filtered restaurants on the right.
+- When we select one and click on _Search_, the page **should not reload** and the goal is to display the list of the filtered restaurants on the right.
 - We should see a message indicating that there are no results in case there are no restaurants for that category.
 - The list should reset every time you make a new search before displaying the new restaurants.
 - You can use the Bootstrap [**flush list**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) to display the restaurants. But feel free to be creative if you like!
 
+```html
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png" alt="The Fork Challenge demo" width="100%">
+  <img
+    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png"
+    alt="The Fork Challenge demo"
+    width="100%"
+  />
 </div>
+```
 
 ## Read the documentation
 
@@ -44,6 +50,12 @@ At the end, your code should be easily readable and have no more than 1 indentat
 
 Once your search works for a category, let's add the location in, so we can search both by category and also by location 🎉
 
+```html
 <div class="text-center">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png" alt="The Fork Challenge demo" width="100%">
+  <img
+    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png"
+    alt="The Fork Challenge demo"
+    width="100%"
+  />
 </div>
+```
