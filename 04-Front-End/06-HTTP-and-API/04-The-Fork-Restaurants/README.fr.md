@@ -44,7 +44,7 @@ Créons deux nouvelles fonctions pour extraire une partie de notre logique en de
 - Tout d'abord, une méthode `insertResults` qui insérera les résultats dans notre liste. Quel paramètre doit lui être passé ?
 - Ensuite, une méthode `buildSearchUrl` qui trouvera la catégorie choisie et construira l'URL dont nous avons besoin pour effectuer notre requête. Elle doit renvoyer l'**URL avec les paramètres de recherche**.
 
-À la fin, votre code doit être facilement lisible et ne doit pas avoir plus de 1 niveau d'indentation!
+À la fin, ton code doit être facilement lisible et ne doit pas avoir plus d'un niveau d'indentation!
 
 ## Aller plus loin
 
