@@ -35,7 +35,6 @@ Next up is to define which attributes (if any) are **readable** and which are **
   - the `title` and `url` can be viewed and edited
   - the number of `votes` can be seen and incremented through upvoting, but should not be directly editable
 
-
 ### Part 2: READ
 In this part of the exercise, we will focus on implementing our **R**ead (the `R` in `CRUD`) actions.
 

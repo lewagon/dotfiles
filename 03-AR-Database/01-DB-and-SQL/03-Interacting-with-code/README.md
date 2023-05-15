@@ -5,6 +5,7 @@ Now it is time to use Ruby code to interact with the `jukebox` database from the
 In this challenge, you'll be working in a ruby file, `lib/queries.rb`, where you'll have to complete several methods that gather specific data from the DB.
 
 ### Setup info
+
 👉 **IMPORTANT**: Each method will take a `db` argument, which is an instance of `SQLite3::Database` on which you can call the `execute` method. This `db` is **built by the test and passed along to the method. There is no need to create one yourself in order to satisfy `rake`**. Your methods will look like this:
 
 ```ruby
