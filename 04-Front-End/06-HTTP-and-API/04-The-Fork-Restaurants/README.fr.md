@@ -14,7 +14,7 @@ Ouvre la page html dans ton navigateur avec:
 serve
 ```
 
-Vous devriez voir un formulaire avec toutes les différentes catégories de restaurants.
+Tu devrais voir un formulaire avec toutes les différentes catégories de restaurants.
 
 - Lorsque nous en sélectionnons un et cliquons sur _Rechercher_, la page **ne doit pas se recharger** et l'objectif est d'afficher la liste des restaurants filtrés à droite.
 - Nous devrions voir un message indiquant qu'il n'y a pas de résultats s'il n'y a pas de restaurants pour cette catégorie.
