@@ -243,6 +243,14 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
+_Hint: You can potentially use JavaScript's [**spread operator**](https://www.educative.io/answers/what-is-the-spread-operator-in-javascript) to help you on this part. The spread operator is useful if you want to take an existing array and generate a new array with an additional element in it. Here's a sample of the syntax:_
+
+```js
+const fruits = ['apple', 'banana', 'orange'];
+const fruitsAndVegetables = [...fruits, 'cucumber', 'pepper'];
+// the value of fruitsAndVegetables will be ['apple', 'banana', 'orange', 'cucumber', 'pepper']
+```
 </details>
 
 #### Event Binding
