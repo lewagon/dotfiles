@@ -1,6 +1,6 @@
 ## Contexte et Objectifs
 
-Dans ce défi, nous allons examiner de plus près l'API Fork que nous avons vue pendant la conférence. Le but est de devenir plus familier avec la réalisation de demandes d'API, la lecture de la réponse et l'utilisation de cette réponse pour l'insérer dans HTML.
+Dans cet exercice, nous allons examiner de plus près l'API Fork que nous avons vue pendant le cours. Le but est de devenir plus familier avec l'écriture de requêtes à des API, la lecture de la réponse et l'utilisation de cette réponse pour l'insérer dans HTML.
 
 ## Spécifications
 
