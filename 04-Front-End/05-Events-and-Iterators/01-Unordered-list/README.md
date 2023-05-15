@@ -18,7 +18,7 @@ In this challenge, we will also have 2 processes to test our code:
 
 They both test the same things but in 2 separate interfaces.
 
-Start by working with the tests in the browser. When you are done, use `rake` to test in the browser.
+Start by working with the tests in the browser. When you are done, use `rake` to test in the terminal.
 
 ## Specs
 

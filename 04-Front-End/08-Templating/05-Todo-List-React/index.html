@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>🗣️ Quote Generator</title>
+    <title>🗒 Todo List</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
@@ -10,21 +10,15 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Imported libraries go here -->
-    <script type="importmap">
-      {
-        "imports": {
-          "htm": "https://cdn.esm.sh/v45/htm@3.1.0/es2021/htm.js",
-          "react": "https://cdn.esm.sh/v45/react@17.0.2/es2021/react.js",
-          "react-dom": "https://cdn.esm.sh/v45/react-dom@17.0.2/es2021/react-dom.js"
-        }
-      }
-    </script>
+    <script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
   </head>
   <body>
     <!-- Our React components will be placed in this div. No need to write anything here -->
     <div id="root"></div>
 
     <!-- Our application code goes here -->
-    <script src="lib/index.js" type="module"></script>
+    <script src="lib/to-do-list.jsx" type="text/babel"></script>
   </body>
 </html>
