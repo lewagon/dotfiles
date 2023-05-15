@@ -2,7 +2,7 @@
 
 在本次挑战中，我们将仔细研究我们在讲座中看到的 Fork API。目的是更熟悉如何进行 API 请求、如何读取响应并使用响应将其插入到 HTML 中。
 
-## 规格
+## 详细说明
 
 您将构建一个搜索应用程序，以过滤 [The Fork API](https://the-fork-api.students.lewagon.co/) 的餐厅。
 
