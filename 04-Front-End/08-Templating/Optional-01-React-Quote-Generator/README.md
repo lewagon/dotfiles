@@ -232,7 +232,6 @@ const Quote = ({ quote }) => {
 
 and pass the quote to the component as a `prop`. In ReactJS, the `props` are a type of object where the value of attributes of a tag is stored. In our case, we will pass the `currentQuote` as a `prop` to the `Quote` component.
 
-
 ```js
 // components/App.js
 // [...]
