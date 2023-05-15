@@ -12,12 +12,12 @@ Run the server from your terminal with:
 serve
 ```
 
-And visit `localhost:8000`. You can see we are using Bootstrap. 
+And visit `localhost:8000`. You can see we are using Bootstrap.
 
-`Stimulus` is already setup in the `index.html` head. 
+`Stimulus` is already setup in the `index.html` head.
 
 However, you still need to get used to installing the JavaScript part yourself. In this challenge, we will create a separate controller for each type of chart.
-- Import and register the Stimulus Controller in `index.js`. 
+- Import and register the Stimulus Controller in `index.js`.
 - Create your controller file in the `controllers` folder and don't forget to kick-start with the Stimulus controller boilerplate.
 
 If you have trouble remembering, how about taking a peak at previous challenges?
@@ -40,6 +40,7 @@ There are 3 distinct sections in your HTML. In each, you will display each type 
 ### 2. Setup `Chart.js` with `importmap`
 
 First, let's add these 2 lines in the `importmap` list:
+
 ```html
 {
   "imports": {
@@ -53,19 +54,23 @@ First, let's add these 2 lines in the `importmap` list:
 `Chart.js` needs another dependency called `@kurkle/color` to function.
 
 Then, in your `index.js`, add these following lines at the top of your page:
+
 ```javascript
 import { Chart } from "chart.js";
 import * as Chartjs from "chart.js";
 ```
+
 These lines will import all functions from the library.
 
 And this a bit lower down the page:
+
 ```javascript
 const controllers = Object.values(Chartjs).filter(
   (chart) => chart.id !== undefined
 );
 Chart.register(...controllers);
 ```
+
 These lines load the specific functions of each type of charts.
 
 ### 3. Understand the Chart.js plugin
@@ -75,6 +80,7 @@ This is a [doughnut chart](https://www.chartjs.org/docs/latest/charts/doughnut.h
 As of 2020, according to the [INED](https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/more-men-or-women-in-the-world/), the number of men and women in the world was roughly equal, More precisely, out of 1,000 people, 504 are men (50.4%) and 496 are women (49.6%).
 
 Let's build an Object:
+
 ```javascript
 const worldPopulation = {
   "men": 504,
@@ -82,9 +88,10 @@ const worldPopulation = {
 }
 ```
 
-This Object will be used to build the `labels` and `data` arrays. In the documentation (have a look at the Setup tab below the example).
+This Object will be used to build the `labels` and `data` arrays. (have a look at the Setup tab below the example in the documentation ).
 
 Then, we need to pass some data to our instance of `Chart` later for the plugin to pick it up, like so:
+
 ```javascript
 const labels = ['Red', 'Blue', 'Yellow']
 const data = [300, 50, 100]
@@ -120,6 +127,7 @@ Make sure to attach your Stimulus controller and define the correct target to re
 Each chart will have a separate Stimulus controller. Let's call this one `DoughnutChartsController`.
 
 At the top of the page, import the `Chart.js` plugin:
+
 ```javascript
 // ...
 import { Chart } from "chart.js";
@@ -130,7 +138,7 @@ In your `connect()` method:
 - create your `Chart` instance with the right `type`, `data` and `datasets` (always keep an eye on the documentation when using external libraries)
 - pass background colors to your `datasets` for each label
 
-If needed, do some CSS to make the chart smaller.
+If needed, add some CSS to make the chart smaller.
 
 If you need anything else, have a look at the `options` alternatives.
 
@@ -141,6 +149,7 @@ For the line chart, we'll go through the same process. This time, we will implem
 Let's use this [resource](https://www.worldometers.info/world-population/world-population-by-year/).
 
 Build a `worldPopulationGrowth` Object with the following structure:
+
 ```javascript
 const worldPopulationGrowth = {
   "2020": 7794798739,
@@ -155,6 +164,7 @@ Then use this Object to build your `labels` and `data` arrays. Then, implement t
 Let's have a look at the [Wikipedia](https://en.wikipedia.org/wiki/List_of_religious_populations) page about religious populations in the world.
 
 Let's select 10 out of these and build an Object out of it:
+
 ```javascript
 const worldReligions = {
   "christianity": 2382000000,
