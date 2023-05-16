@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Le but de ce challnenge est de te familiariser avec la manipulation du DOM en utilisant JavaScript mais avec Stimulus à la place. Il s'agit d'une démonstration très simple pour te lancer avec Stimulus. Tu la reconnais sûrement du cours 😉. Essaye de le faire par toi-même.
+Le but de ce challenge est de te familiariser avec la manipulation du DOM en utilisant JavaScript mais avec Stimulus à la place. Il s'agit d'une démonstration très simple pour te lancer avec Stimulus. Tu la reconnais sûrement du cours 😉. Essaye de le faire par toi-même.
 
 ## Configuration
 
