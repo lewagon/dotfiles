@@ -223,10 +223,9 @@ const Quote = ({ quote }) => {
         {quote.text}
         <span>“</span>
       <p/>
-      <span className="quote-author">- ${quote.author}</span>
+      <span className="quote-author">- {quote.author}</span>
     </div>
   );
-}
 }
 ```
 
@@ -265,10 +264,9 @@ const Quote = ({ quote }) => {
         {quote.text}
         <span>“</span>
       <p/>
-      <span className="quote-author">- ${quote.author}</span>
+      <span className="quote-author">- {quote.author}</span>
     </div>
   );
-}
 }
 ```
 
