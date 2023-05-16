@@ -222,7 +222,7 @@ const Quote = ({ quote }) => {
         <span>“</span>
         {quote.text}
         <span>“</span>
-      <p/>
+      </p>
       <span className="quote-author">- {quote.author}</span>
     </div>
   );
@@ -263,7 +263,7 @@ const Quote = ({ quote }) => {
         <span>“</span>
         {quote.text}
         <span>“</span>
-      <p/>
+      </p>
       <span className="quote-author">- {quote.author}</span>
     </div>
   );
