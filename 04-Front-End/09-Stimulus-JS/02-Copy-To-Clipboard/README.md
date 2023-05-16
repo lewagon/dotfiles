@@ -22,6 +22,7 @@ This time, `Stimulus` is already setup in the `index.html` head.
 However, you still need to get used to doing the JavaScript setup part yourself. Open `index.js` and import the Stimulus Controller on top and register the controller at the bottom. You can name the controller `CopyToClipboardController`.
 
 Create a `copy_to_clipboard_controller.js` file in the empty `controllers` folder, copy-paste the boilerplate:
+
 ```javascript
 // lib/controllers/event_listener_controller.js
 import { Controller } from "@hotwired/stimulus"

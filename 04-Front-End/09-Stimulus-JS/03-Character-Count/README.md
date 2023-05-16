@@ -14,13 +14,14 @@ Run the server from your terminal with:
 serve
 ```
 
-And visit `localhost:8000`. You can see we are using Bootstrap. 
+And visit `localhost:8000`. You can see we are using Bootstrap.
 
-This time, `Stimulus` is already setup in the `index.html` head. 
+This time, `Stimulus` is already setup in the `index.html` head.
 
 However, you still need to get used to doing the JavaScript setup part yourself. Open `index.js` and import the Stimulus Controller on top and register the controller at the bottom. You can name the controller `CharacterCountController`.
 
 Create a `character_count_controller.js` file in the empty `controllers` folder, copy-paste the boilerplate:
+
 ```javascript
 // lib/controllers/character_count_controller.js
 import { Controller } from "@hotwired/stimulus"
@@ -61,7 +62,7 @@ Add Bootstrap classes to make it look nice if needed.
 
 ### 3. Implement the Stimulus Controller
 
-Make sure to attach your Stimulus Controller to the DOM. 
+Make sure to attach your Stimulus Controller to the DOM.
 
 We'll need to implement a `updateCounter()` method which will count and re-count the number of characters in the textarea everytime. But what event triggers the call of that method? When found, add the corresponding Stimulus `data-action` to the textarea.
 
@@ -78,5 +79,3 @@ When a user types a character in the textarea, we need to:
 ### Going further: Let's implement a character limit!
 
 Now that you have a working counter, let's add a character limit. When the user types more than 140 characters, the counter should turn red and display: `Number of charater exceeded by X characters`.
-
-

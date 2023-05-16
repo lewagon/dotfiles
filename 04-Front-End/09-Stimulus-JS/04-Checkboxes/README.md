@@ -10,9 +10,9 @@ Run the server from your terminal with:
 serve
 ```
 
-And visit `localhost:8000`. You can see we are using Bootstrap. 
+And visit `localhost:8000`. You can see we are using Bootstrap.
 
-This time, `Stimulus` is already setup in the `index.html` head. 
+This time, `Stimulus` is already setup in the `index.html` head.
 
 However, you still need to get used to doing the JavaScript setup part yourself. Open `index.js` and import the Stimulus Controller on top and register the controller at the bottom. You can name the controller `CheckAllCheckboxesController`.
 
@@ -36,7 +36,7 @@ Your goal is to implement a checkbox that will check all checkboxes at once.
 
 ### 1. Prepare your HTML
 
-This time the HTML is already provided for you. 
+This time the HTML is already provided for you.
 
 Now, let's tweak our HTML to **connect** the controller:
 - On which DOM element are you going to connect the controller?
@@ -62,7 +62,7 @@ Let's implement this Stimulus action in our HTML.
 
 Now that we're listening to the `change` checkbox event, let's code the `checkAll` method in our Stimulus controller.
 
-Notice this method takes an `event` parameter. By default the Stimulus actions call the method with an `event` object passed as argument (like the [good old `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
+Notice this method takes an `event` parameter. By default the Stimulus actions call the method with an `event` object passed as argument - like the [good old `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
 
 In this method, you will have to:
 - Check the status of the "Check All" checkbox clicked.
