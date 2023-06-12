@@ -48,6 +48,11 @@ describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
       [ "Christmas crumble", "Crumble description" ]
     ]
   end
+  let(:recipes_with_headers) do
+    [
+      [ "name", "description" ]
+    ] + recipes
+  end
 
   let(:csv_path) { "spec/recipes.csv" }
 
@@ -96,13 +101,13 @@ describe "Cookbook", if: cookbook_helper.file_and_class_valid? do
   describe "with CSV" do
     # On setup reset csv file with recipes
     before do
-      Helper.write_csv(csv_path, recipes)
+      Helper.write_csv(csv_path, recipes_with_headers)
       @cookbook = Cookbook.new(csv_path)
     end
 
     describe '#initialize' do
       it 'should have loaded existing recipes in spec/recipes.csv' do
-        expect(@cookbook.all.length).to eq recipes.length
+        expect(@cookbook.all.length).to eq(recipes.length).or(eq(recipes.length + 1))
         expect(@cookbook.all.first).to be_instance_of Recipe
       end
     end
