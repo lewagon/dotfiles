@@ -24,7 +24,7 @@ In the head of our project, we already have these packages:
 
 ## Our first component
 
-Our lib/index.jsx file is already set up to render an `App` component:
+Our `lib/index.jsx` file is already set up to render an `App` component:
 
 ```js
 const App = () => {
@@ -231,7 +231,6 @@ const Quote = ({ quote }) => {
 
 and pass the quote to the component as a `prop`. In ReactJS, the `props` are a type of object where the value of attributes of a tag is stored. In our case, we will pass the `currentQuote` as a `prop` to the `Quote` component.
 
-
 ```js
 // components/App.js
 // [...]
@@ -287,6 +286,7 @@ const App = () => {
       <button className="btn btn-primary mt-3" onClick={() => getNewQuote(quotes)}>More inspiration</button>
     </div>
   );
+}
 ```
 
 Now click on the button to see a random new quote everytime! 🚀
