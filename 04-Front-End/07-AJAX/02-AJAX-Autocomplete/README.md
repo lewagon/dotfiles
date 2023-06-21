@@ -14,7 +14,7 @@ serve
 
 There are three files you need to update:
 
-- `index.html` - the input is already in place but there are some dumb elements in the autocomplete `ul` that you can remove
+- `index.html` - the input is already in place but there are some dummy elements in the autocomplete `ul` that you can remove
 - `style.css` - add some style
 - `lib/index.js` - you'll start here from scratch!
 
