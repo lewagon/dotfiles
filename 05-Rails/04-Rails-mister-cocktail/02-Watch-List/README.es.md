@@ -13,20 +13,11 @@ Aquí están las **acciones de usuario** que queremos implementar en nuestra apl
 
 ## Creación de la app Rails app
 
-a deberías tener [yarn](https://yarnpkg.com) instalado. Compruébalo con:
-
-```bash
-yarn -v
-# You should see your yarn version here
-```
-
-Si no, vuelve a la sección correspondiente de la configuración de [macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn) o [Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn).
-
 **Nota**: ¡Ya debes poder hacer esto sin ver estos apuntes! No olvides el `-d postgresql` (hablaremos de esto mañana). 😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
+rails new rails-watch-list -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
@@ -65,25 +56,12 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 rspec spec/models                # Launch tests
 ```
 
-Antes de comenzar a escribir tu código, no olvides configurar tu app Rails para el Front-end. Tal como se mencionó en la clase de esta mañana, agrega las dependencias de Bootstrap y JavaScript
-
-```bash
-yarn add bootstrap @popperjs/core
-```
-
-Para agregar los node modules al assets path, Agrega esta línea en `config/initializers/assets.rb`:
-
-```ruby
-# config/initializers/assets.rb
-# [...]
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
-```
-
-Y agrega las gemas que vamos a necesitar:
+Antes de comenzar a escribir tu código, no olvides configurar tu app Rails para el Front-end. Tal como se mencionó en la clase de esta mañana, agrega las gemas que vamos a necesitar:
 
 ```ruby
 # Gemfile
-[...]
+# [...]
+gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
@@ -99,15 +77,29 @@ Después descarga los stylesheets de Le Wagon:
 
 ```bash
 rm -rf app/assets/stylesheets
-curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip
-unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
+curl -L https://github.com/lewagon/stylesheets/archive/more-js.zip > stylesheets.zip
+unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-more-js app/assets/stylesheets
 ```
 
-Finalmente, importa la librería Boostrap JS utilizando webpack:
+Finalmente, importa la librería Boostrap JS utilizando `importmap`:
+
+```bash
+importmap pin bootstrap
+```
+
+En `application.js`, agrega las siguientes líneas:
 
 ```js
 // app/javascript/application.js
-import 'bootstrap';
+import "bootstrap"
+import "@popperjs/core"
+```
+
+Depués de esto, agrega las siguientes líneas:
+```js
+// app/assets/config/manifest.js
+//= link popper.js
+//= link bootstrap.min.js
 ```
 
 No olvides hacer el `commit` y el `push` de tu trabajo regularmente.
@@ -255,26 +247,8 @@ No olvides que puedes tener imágenes locales en la carpeta `app/assets/images`.
 
 Intenta poner el "Formulario de nuevo bookmark" en la página de la propia lista, y no en una página por separado. ¡Así no tendrás que dejar la página de la lista para agregar una nueva película! ¿Qué cambia en las rutas y en los controladores?
 
-### 7 - Tom Select en el dropdown de las películas (Opcional)
-
-¡Agrega un paquete JavaScript a nuestra app Rails! Échale un vistazo a [nuestro tutorial](https://kitt.lewagon.com/knowledge/tutorials/tom_select)
-
-Para hacerlo:
-- Genera un controlodador de Stimulus dedicado a eso
-- Conecta este controlador Stimulus al `select` tag del dropdown de las películas
-- Adapta uno de los snipets de código de [ejemplos básicos](https://tom-select.js.org/examples/) para instanciar un Tom Select en el controlador Stimulus
-
-### 8 - Reviews de la Lista (Opcional)
+### 7 - Reviews de la Lista (Opcional)
 
 Todos deberían tener la opción de escribir comentarios y decirnos lo que piensan de nuestra selección de películas. ¡Agrega algunos reviews a tus listas!
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/reviews.png)
-
-### 9 - Yendo más lejos
-
-- Agrega la posibilidad de hacer una búsqueda de películas.
-- Agrega [typed.js](http://www.mattboldt.com/demos/typed-js/) para tener títulos divertidos en tu home page.
-- Agrega [animación con scroll](https://michalsnik.github.io/aos/) a tus bookmarks
-- Usa [`star-rating.js`](https://kitt.lewagon.com/knowledge/tutorials/star_rating) para mostrar estrellas en lugar de una entrada normal en el formulario de reviews.
-
-Te recordamos nuevamente que uses controladores Stimulus cuando implementes comportamiento JavaScript en tu aplicación ⚠️

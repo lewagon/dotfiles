@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Name Age</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-6">
+          <h1 class="my-3">Your age from your first name</h1>
+          <form id="fetch-age">
+            <div class="form-group">
+              <label for="first-name" class="form-label">Enter your first name</label>
+              <div class="d-flex">
+                <input type="text" id="first-name" class="form-control" placeholder="Élodie, Tom..." hint="">
+                <input type="submit" value="Submit" class="btn btn-primary ms-2">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 justify-content-center">
+          <p class="text-center" id="your-age">TODO: Here should be injected your age rendered by the API.</p class="text-center">
+        </div>
+      </div>
+    </div>
+
+    <script src="lib/index.js"></script>
+  </body>
+</html>

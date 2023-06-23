@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Congrats for reaching the first optional exercise of the first OOP day. We will now work on an exercise to mix sorting and comparable methods with objects.
+Congrats for reaching the first optional exercise of the first OOP block. We will now work on an exercise to mix sorting and comparable methods with objects.
 
 Suppose you have students (defined by the class `Student`) who each have an amount of money (in bills of five, ten and twenty euros). We want to be able to compare them based on their wealth.
 

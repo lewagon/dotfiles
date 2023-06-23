@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>🗒 Todo List</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon" />
+    <!-- your custom stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- bootstrap and fontawesome -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
+    />
+
+    <!-- imported libraries go here -->
+    <script type="importmap">
+      {
+        "imports": {
+          "mustachejs": "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-light">
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-4 bg-white rounded shadow-sm p-5">
+        <h1 class="mb-3">🗒 My Todo List</h1>
+        <div id="todosContainer"></div>
+      </div>
+    </div>
+    <!-- Import your own javascript -->
+    <script src="lib/to-do-list.js" type="module"></script>
+  </body>
+</html>
