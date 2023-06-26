@@ -57,7 +57,7 @@ Use Le Wagon's minimal template, which already has a good front-end setup:
 cd ~/code/<user.github_nickname>
 rails new \
   -d postgresql \
-  -m https://raw.githubusercontent.com/lewagon/rails-templates/import-maps/minimal.rb \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
 
