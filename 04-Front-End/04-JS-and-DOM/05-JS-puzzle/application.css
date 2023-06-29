@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+table {
+  width: 428px;
+  border: 10px solid black;
+  background: black;
+}
+
+tr {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+td {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 1px;
+  background: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.empty {
+  background: black;
+}

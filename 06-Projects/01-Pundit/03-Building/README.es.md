@@ -4,7 +4,7 @@ Como no todo el mundo será capaz de escribir el código del setup, ahora es el 
 ## Rails New
 En primer lugar, decide en equipo quién será el Lead developer de este proyecto. Puede ser la misma persona de tu proyecto Airbnb, o un nuevo miembro del equipo. Esa persona continuará con los siguientes pasos para configurar la aplicación.
 
-Cuando empieces tu proyecto rails, **debes** usar una de las [**Plantillas Wagon Rails**](https://github.com/lewagon/rails-templates). ¡Asegúrate de utilizar la [Plantilla de Devise](https://github.com/lewagon/rails-templates#devise) si necesitas un modelo `User`!
+Cuando empieces tu proyecto rails, **debes** usar una de las [**Plantillas Wagon Rails**](https://github.com/lewagon/rails-templates/tree/master). ¡Asegúrate de utilizar la [Plantilla de Devise](https://github.com/lewagon/rails-templates/tree/master#devise) si necesitas un modelo `User`!
 
 Una vez creada la app, crea tu repositorio de Github y añade a todos los compañeros de tu equipo como colaboradores. Consulta las [diapisitivas de la lecture de Github](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/05-Rails%2F06-Airbnb-Devise#/1/3/0) para tener una visión general del proceso.
 

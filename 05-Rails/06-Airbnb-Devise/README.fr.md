@@ -4,7 +4,7 @@ Pendant les prochaines séances, tu travailleras avec ton groupe de projet sur u
 
 ### Démos
 
-Vous ferez la démo de votre travail (en production, pas de démos sur `localhost` !) pendant les séances de **géocodage** et **AJAX dans Rails**. Faites attention aux échéances !
+Vous ferez la démo de votre travail (en production, pas de démos sur `localhost` !) pendant les séances de **Géocodage** et **Authorization & Pundit**. Faites attention aux échéances !
 
 ### Partie I
 
@@ -57,7 +57,6 @@ Utilisez le modèle minimal du Wagon, qui contient déjà une bonne configuratio
 cd ~/code/<user.github_nickname>
 rails new \
   -d postgresql \
-  -j webpack \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
@@ -82,7 +81,6 @@ Les autres membres de l'équipe devront ensuite exécuter :
 
 ```bash
 bundle install
-yarn install
 rails db:create db:migrate
 ```
 

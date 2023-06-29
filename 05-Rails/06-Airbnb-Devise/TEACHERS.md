@@ -75,7 +75,7 @@ end
 
 ## Le Wagon's minimal template (Monday afternoon)
 
-Don't let students waste time and creating their Rails app from scratch. Use our minimal template with already a front-end setup (Bootstrap, Simple Form)
+Don't let students waste time and creating their Rails app from scratch. Use our minimal template with already a front-end setup (Bootstrap, Simple Form).
 
 ```bash
 cd ~/code/<user.github_nickname>
@@ -85,9 +85,9 @@ rails new \
   APP_NAME
 ```
 
-## Intermediate demo (until Wednesday)
+## Intermediate demo (during Geocoding)
 
-For the first intermediate demo on Wednesday evening, every team should have:
+For the first intermediate demo on Geocoding day, every team should have:
 
 - A well-designed app (Bootstrap classes for form inputs and buttons, content centered in `container`, responsive grid for flat's cards, nice home page, functional navigation bar, etc.).
 - Where a user can signup/signin
@@ -98,4 +98,4 @@ For the first intermediate demo on Wednesday evening, every team should have:
 
 If you see students losing time on non-core features (edit your profile, connect with Facebook, geocode the offers, etc.) while they have not finished the core ones or have a dirty design for main pages, **it's your role to put them back on track**. You are a teacher but also a product manager this week!
 
-On the contrary, if all your teams have a very well designed app with simple core features working, they will be really motivated to keep enhancing their app and make kick-ass final demo on Friday evening.
+On the contrary, if all your teams have a very well designed app with simple core features working, they will be really motivated to keep enhancing their app and make kick-ass final demo on the last day of Airbnb.

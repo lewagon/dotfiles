@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Charts</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="application.css">
+
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@hotwired/stimulus": "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container p-5">
+      <h1 class="text-center">World Stats</h1>
+      
+      <div>
+        <h2>Gender Ratio</h2>
+        <div class="chart">
+          <canvas>
+            <!-- TODO: Display doughnut chart below -->
+          </canvas>
+        </div>
+      </div>
+
+      <div class="pt-5">
+        <h2>World Population</h2>
+        <div class="chart">
+          <canvas>
+            <!-- TODO: Display line chart below -->
+          </canvas>
+        </div>
+      </div>
+
+      <div class="pt-5">
+        <h2>Religious Communities</h2>
+        <div class="chart">
+          <canvas>
+            <!-- TODO: Display polar area chart below -->
+          </canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="lib/index.js" type="module"></script>
+  </body>
+</html>
