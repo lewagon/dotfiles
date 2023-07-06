@@ -16,6 +16,8 @@ serve
 
 ## What We're Building
 
+<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/scratchcards.gif"  width="800" height="552">
+
 Let's get ready to gamble 🎲
 
 Your task is to sell lottery scratchcards. If you open your [localhost:8000](http://localhost:8000), you should see a grid of scratchcards. But these scratchcards are blank!
