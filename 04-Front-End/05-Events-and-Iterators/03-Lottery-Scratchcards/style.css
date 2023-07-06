@@ -21,7 +21,7 @@ ul.scratchcards {
   overflow-x: hidden;
 }
 
-.scratchard {
+.scratchcard {
   min-height: 200px;
   background-color: #d68688;
   border: 1px solid #613d3e;
@@ -34,12 +34,12 @@ ul.scratchcards {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.scratchard[data-scratched="true"] {
+.scratchcard[data-scratched="true"] {
   background-color: #f2e6e9;
   border-color: #ccc;
   opacity: 0.8;
 }
 
-.amount {
+.footer {
   text-align: right;
 }
