@@ -5,6 +5,7 @@ ZSH_THEME="robbyrussell"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
 plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -34,13 +35,41 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 pyenv activate lewagon 2>/dev/null && echo "🐍 Loading 'lewagon' virtualenv"
 
-# Store your own aliases in the ~/.aliases file and load the here.
+# Store your own aliases in the ~/.aliases file and load them here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="code $@ >/dev/null 2>&1 -a"
+export PATH=$PATH:~/bin
+complete -W "$(tldr 2>/dev/null --list)" tldr
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Call `nvm use` automatically in a directory with a `.nvmrc` file
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if nvm -v &> /dev/null; then
+    local node_version="$(nvm version)"
+    local nvmrc_path="$(nvm_find_nvmrc)"
+
+    if [ -n "$nvmrc_path" ]; then
+      local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+      if [ "$nvmrc_node_version" = "N/A" ]; then
+        nvm install
+      elif [ "$nvmrc_node_version" != "$node_version" ]; then
+        nvm use --silent
+      fi
+    elif [ "$node_version" != "$(nvm version default)" ]; then
+      nvm use default
+    fi
+  fi
+}
+type -a nvm > /dev/null && add-zsh-hook chpwd load-nvmrc
+type -a nvm > /dev/null && load-nvmrc
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
