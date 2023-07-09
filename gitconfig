@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = subl -n -w  >/dev/null 2>&1
+	editor = code -n -w  >/dev/null 2>&1
 
 [alias]
   co = checkout
@@ -50,3 +50,7 @@
 [user]
 	email = magni.elian@gmail.com
 	name = Elian Magni
+[merge]
+	tool = code
+[diff]
+	tool = code
