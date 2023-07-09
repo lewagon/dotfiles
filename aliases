@@ -8,3 +8,31 @@ alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 
 # open rails console
 alias rc='bundle exec rails console'
+
+# open rails console in SANDBOX mode
+alias rcs='bundle exec rails console --sandbox'
+
+# full db reset
+alias dball='rails db:drop && rails db:create && rails db:migrate && rails db:seed'
+
+# yarn install
+alias yarninst='yarn install --checkfiles'
+
+# bundle and yarn
+alias bunya='bundle install && yarn install --checkfiles'
+
+# GIT
+alias revert1='git reset --soft HEAD~1'
+alias gd='git diff'
+
+# Test all
+alias testa='rails test:system test'
+
+# redis fix for ECONNREFUSED
+alias redisfix='redis-server --daemonize yes'
+
+# redis flush all
+alias redisflush='redis-cli FLUSHALL'
+
+# delete branches from local repository that don't exist in the remote repository
+alias gprune='git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d'
