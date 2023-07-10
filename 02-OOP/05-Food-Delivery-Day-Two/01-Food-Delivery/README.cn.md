@@ -2,7 +2,7 @@
 
 **重要提示** 👇
 
-复制昨天的代码：
+复制上一个课题的代码：
 
 ```bash
 cp -r ../../04-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # 尾随点很重要

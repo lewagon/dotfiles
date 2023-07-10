@@ -44,7 +44,7 @@ Pour récupérer et sauvegarder la donnée dans le CSV, tu vas devoir implément
 - `save_csv`, qui va sauvegarder chaque nouvelle recette dans une **nouvelle ligne** du fichier CSV
 
 
-Si tu veux te rappeler la syntaxe pour parser et stocker de la donnée dans un fichier CSV, jette un œil aux [slides du cours de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/2/3)
+Si tu veux te rappeler la syntaxe pour parser et stocker de la donnée dans un fichier CSV, jette un œil aux [slides du cours de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/2/3).
 
 ### Contrôleur (controller)
 
@@ -68,14 +68,14 @@ ruby lib/app.rb
 
 On te donne `app.rb` qui `require` le code pour instancier un `Cookbook`, un `Controller` et démarrer l’application. La boucle infinie est donnée dans le `Router`, car elle ne fait partie du MVC. Du coup, quand tu travailleras avec Rails, tu maîtriseras déjà tout ça. Sympa 😉
 
-## Quelques conseils
+## Quelques conseils
 
 Cookbook est un de nos exercices préférés, mais c'est aussi un gros challenge, qui nécessite de travailler avec beaucoup de fichiers différents ! Une fois que tu as implémenté le modèle `Recipe`, tu peux reprendre la même stratégie que pendant la lecture : essaye d'implémenter chaque parcours utilisateur un à un. Commence par ajouter une première fonctionnalité à ton app pour permettre à l'utilisateur d'ajouter une nouvelle recette. De quoi as-tu besoin pour cela ? De quelles méthodes dans le controller, la `view`, etc...?
 
 En plus de ça, n'hésite pas à t'appuyer sur deux choses :
 
-- `rake`, qui va te guider et d'aider à voir ce qu'il te reste à implémenter, donc utilise le souvent 👌
-- lancer ton application avec `ruby lib/app.rb` pour pouvoir tester toi-même tes fonctionnalités. Les messages d'erreurs vont eux aussi te guider !
+- `rake`, qui va te guider et t'aider à voir ce qu'il te reste à implémenter, donc utilise le souvent 👌
+- lance ton application avec `ruby lib/app.rb` pour pouvoir tester toi-même les fonctionnalités que tu ajoutes. Les messages d'erreurs vont eux aussi te guider !
 
 ## Lectures complémentaires
 
