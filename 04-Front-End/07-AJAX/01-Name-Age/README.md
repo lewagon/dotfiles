@@ -24,7 +24,6 @@ For example, this url will predict the age for `michael`:
 https://api.agify.io?name=michael
 ```
 
-Once the request is done, update the content of the paragraph with the `your-name` id. Try to display a message with a sentence like `You're ${data.age} years old.`
-
+Once the request is done, update the page content to show the age. The result should go in the `<p id="your-age">`. Try to display a message with a sentence like "You're 30 years old".
 
 Happy agifying!
