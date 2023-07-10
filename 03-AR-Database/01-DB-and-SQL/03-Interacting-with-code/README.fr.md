@@ -82,7 +82,7 @@ Tu remarqueras que ton éditeur de texte comprend Heredoc et que la syntaxe en s
 - [Commandes SQL](http://www.sqlcommands.net/)
 - [Cours en 🇫🇷 sur `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
-## L’extention VS Code SQLite - Exécuter des requêtes
+## L’extension VS Code SQLite - Exécuter des requêtes
 
 Cette fois, nous lancerons la commande `SQLite: New Query`. Afin de le faire, vous pouvez suivre les étapes suivantes :
 - Ouvrez votre palette de commande avec `Cmd / Ctrl + Shift + p`.
