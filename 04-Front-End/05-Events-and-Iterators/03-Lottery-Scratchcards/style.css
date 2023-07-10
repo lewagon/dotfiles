@@ -1,0 +1,45 @@
+body {
+  height: 100vh;
+}
+
+.main-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+ul.scratchcards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scratchcard {
+  min-height: 200px;
+  background-color: #d68688;
+  border: 1px solid #613d3e;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.scratchcard[data-scratched="true"] {
+  background-color: #f2e6e9;
+  border-color: #ccc;
+  opacity: 0.8;
+}
+
+.footer {
+  text-align: right;
+}

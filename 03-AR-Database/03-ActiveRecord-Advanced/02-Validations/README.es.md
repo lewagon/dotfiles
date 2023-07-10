@@ -49,7 +49,7 @@ end
 
 Lee la [Guía de callbacks de Ative Record](http://guides.rubyonrails.org/active_record_callbacks.html) para responder la última pregunta opcional.
 
-Implementa un callback para separar las partes de un email antes de su validación.
+Implementa un callback para eliminar los espacios en blanco al inicio y al final de un email antes de su validación.
 
 Implementa una retrollamada (callback) que se ejecute después de que el usuario ha sido creado para enviarle un **email de bienvenida** a la persona. Lee más sobre los [retrollamadas (callbacks) disponibles](http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks) para decidir cual usar.
 

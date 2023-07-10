@@ -75,6 +75,8 @@ But how do you access all the other checkboxes in this method? Good question!
 
 First, we have to list the targets in the controller. Which element of the DOM should be targeted as a 'checkbox'? Let's keep in mind that it'll be useful for us to select all of them and then iterate on each of them to make it marked as a checked.
 
+_Hint: Remember how in vanilla JavaScript you can either use `querySelector` or `querySelectorAll`, depending on whether you want to get only one element or an array of all matching elements back? There's a similar idea in Stimulus! If you say `this.cardTarget`, you will get back only one element with `data-my-controller-target="card"`. If you say `this.cardTargets` with an "s" in it, then you will get back an array of all the elements that have  `data-my-controller-target="card"` on them, whether there are 0 or 50 of them. [(source)](https://stimulus.hotwired.dev/reference/targets#properties)_
+
 Once you have spotted your target, let's add the target in the HTML.
 
 ### 5. Implementing the logic
