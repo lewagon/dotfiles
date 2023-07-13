@@ -58,7 +58,7 @@
   rebase = false
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [user]
 	email = c.weerakoon1932@gmail.com
 	name = Chandu Weerakoon
