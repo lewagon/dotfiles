@@ -4,7 +4,7 @@ In this challenge, you will use [Mustache.js](https://github.com/janl/mustache.j
 
 ### Setup
 
-Let's launch a local webserver by running:
+Let's launch a local web server by running:
 
 ```bash
 serve
