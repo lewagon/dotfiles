@@ -101,7 +101,7 @@ Let's put this HTML inside of a `<template>` tag in the `index.html` file (it's 
 Then, you'll want to iterate over your `recipes` (similarly to the previous challenge) and display the HTML in the `<template>` for each recipe. But, this time, let's use Mustache.js to do it. Here's an example of how to use Mustache.js to render HTML (in the JS):
 
 ```js
-# Assuming we have a `<template>` element on the page with the `id` `#myTemplate`.
+// Assuming we have a `<template>` element on the page with the `id` `#myTemplate`.
 const template = document.querySelector("#myTemplate").innerHTML
 const output = Mustache.render(template, {});
 ```
