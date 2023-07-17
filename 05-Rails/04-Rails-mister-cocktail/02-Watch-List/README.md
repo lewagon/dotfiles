@@ -123,8 +123,11 @@ Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your budd
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
+Make sure to set up the models with the right attributes, validations, and associations. Ensure that all the tests pass successfully before moving on to Parts 2 and 3 of this challenge.
+
 **Important**
-Don't use `rake` but rather:
+
+When you're ready to test your code, don't use `rake`, but rather:
 
 ```bash
 rspec spec/models
@@ -132,7 +135,6 @@ rspec spec/models
 
 to only run the model specific tests that can be found in the `spec/models` folder.
 
-Make sure to set up the models with the right attributes, validations, and associations. Ensure that all the tests pass successfully before moving on to Parts 2 and 3 of this challenge.
 
 #### Attributes
 
