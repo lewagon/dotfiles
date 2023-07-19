@@ -60,9 +60,9 @@ Et encore une fois, écrivons un peu de pseudocode pour nous aider :
 
 Dans la partie suivante de l'exercice, nous allons nous concentrer sur le **C**reate et le **U**pdate de `CRUD`.
 
- Pourquoi faisons-nous le `C` et le `U` ensemble ? Parce que le processus est très similaire ! Dans les deux cas, nous envoyons de nouvelles données à la base de données. La seule différence est de savoir si l'objet avec lequel nous travaillons existe déjà dans la base de données. Si c'est le cas, nous mettons à jour certaines valeurs d'une ligne existante (comment trouver une ligne existant dans la base de données ?) S'elle n'existe pas encore dans la base de données, nous insérons des valeurs et créons une nouvelle ligne.
+Pourquoi faisons-nous le `C` et le `U` ensemble ? Parce que le processus est très similaire ! Dans les deux cas, nous envoyons de nouvelles données à la base de données. La seule différence est de savoir si l'objet avec lequel nous travaillons existe déjà dans la base de données. Si c'est le cas, nous mettons à jour certaines valeurs d'une ligne existante (comment trouver une ligne existant dans la base de données ?) S'elle n'existe pas encore dans la base de données, nous insérons des valeurs et créons une nouvelle ligne.
 
- Lorsque nous manipulons des instances d'objets, si nous appelons `save` sur quelque chose et qu'il n'existe pas encore dans notre base de données, il sera **C**réé. S'il existe déjà, il sera simplement **U**pdated. 💡 Indice : quelle est la principale différence entre un objet existant et un objet tout neuf ?
+Lorsque nous manipulons des instances d'objets, si nous appelons `save` sur quelque chose et qu'il n'existe pas encore dans notre base de données, il sera **C**réé. S'il existe déjà, il sera simplement **U**pdated. 💡 Indice : quelle est la principale différence entre un objet existant et un objet tout neuf ?
 
 ### `#save`
 

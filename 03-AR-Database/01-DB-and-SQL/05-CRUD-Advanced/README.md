@@ -60,9 +60,9 @@ And again, let's write some pseudocode to help us:
 
 In the next part of the exercise, we'll focus on the **C**reate and the **U**pdate of `CRUD`.
 
- Why are we doing the `C` and the `U` together? It's because the process is very similar! In both scenarios, we are sending new data to the database. The only difference is whether or not the object that we are working with already exists in the database. If it does, then we are updating some values for an existing record (how do we find an existing record in the DB?). If it doesn't exist in the database yet, then we are inserting values and creating a new record.
+Why are we doing the `C` and the `U` together? It's because the process is very similar! In both scenarios, we are sending new data to the database. The only difference is whether or not the object that we are working with already exists in the database. If it does, then we are updating some values for an existing record (how do we find an existing record in the DB?). If it doesn't exist in the database yet, then we are inserting values and creating a new record.
 
- When manipulating object instances, if we call `save` on something and it doesn't exist in our DB yet, it will get **C**reated. If it already exists, it will just get **U**pdated. 💡 HINT: what is the main difference between an existing object and a brand new one?
+When manipulating object instances, if we call `save` on something and it doesn't exist in our DB yet, it will get **C**reated. If it already exists, it will just get **U**pdated. 💡 HINT: what is the main difference between an existing object and a brand new one?
 
 ### `#save`
 
