@@ -37,7 +37,7 @@ To do this, we'll need the following method:
 
 ### `#destroy`
 
-Implement an **instance** method `destroy` that will delete the relevant row from the database. Why is this method an instance method, and not a class method like `Post.find`' or `Post.all` ? 🤔 If you're not sure, try asking your buddy or a TA!
+Implement an **instance** method `destroy` that will delete the relevant row from the database. Why is this method an instance method, and not a class method like `Post.find` or `Post.all` ? 🤔 If you're not sure, try asking your buddy or a TA!
 
 Let's look at an example of how this method will be used 👇
 
@@ -85,6 +85,7 @@ post.title
 ```
 
 And let's write some pseudocode to help us with the steps:
+
 ```ruby
 # TODO: Determine if the post needs to be *created* or *updated*
 # TODO: If the post already exists:
@@ -97,4 +98,3 @@ And let's write some pseudocode to help us with the steps:
 ```
 
 💡 HINT: You may need to use [last\_insert\_row\_id](http://zetcode.com/db/sqliteruby/connect/), as we saw in the lecture 😉.
-

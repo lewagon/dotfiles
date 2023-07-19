@@ -15,7 +15,6 @@ Use the [SQL Designer](http://db.lewagon.com) to draw the `users` table with the
 
 NOTE: Remember, every table needs an `id` column!
 
-
 ### Survey database design
 
 Next up, let's continue from our `users` table to building a survey database. There are many ways to build a survey database, but let's start by building a basic system with users, questions, responses and surveys.
@@ -36,4 +35,3 @@ Let's again use the [SQL Designer](http://db.lewagon.com) to design a database s
 - Do you know what a schema is?
 - What's the relation between tables?
 - Could you draw the database scheme behind Facebook? Airbnb? Take a bit of paper and have a go!
-

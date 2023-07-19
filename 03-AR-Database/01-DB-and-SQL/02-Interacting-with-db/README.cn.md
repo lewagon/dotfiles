@@ -2,9 +2,7 @@
 
 `Sqlite`是一个简单的数据库，依赖于一个独立的文件。你可以在[en.wikipedia.org/wiki/SQLite](http://en.wikipedia.org/wiki/SQLite)上阅读更多信息。
 
-这第一个练习的目的是使用命令行来读取和查询名为`jukebox.sqlite`的样本数据库。
-
-要完成这个挑战，请在[db.lewagon.com](http://db.lewagon.com/)上绘制DB模式，将其保存为XML文件并运行`rake`!
+这第一个练习的目的是使用命令行来读取和查询名为`jukebox.sqlite`的样本数据库。要完成这个挑战，请在[db.lewagon.com](http://db.lewagon.com/)上绘制DB模式，将其保存为XML文件并运行`rake`!
 
 ### 设置
 
@@ -15,15 +13,19 @@ sqlite3 -version
 # 然后你应该看到sqlite的版本
 ```
 
-如果没有显示任何版本，那就回到专门的章节，根据指示安装。根据你的电脑选择：[macOS](https://github.com/lewagon/setup/blob/master/macos.md#sqlite)/[Windows](https://github.com/lewagon/setup/blob/master/windows.md#sqlite)/[Ubuntu](https://github.com/lewagon/setup/blob/master/ubuntu.md#sqlite)
+如果没有显示任何版本，你可以在终端跑下面的命令：
 
-你可以打开我们提供给你的数据库，对其进行一些查询:
+```bash
+gem install sqlite3
+```
+
+然后你可以用下面的命令打开我们提供给你的数据库：
 
 ```bash
 sqlite3 lib/db/jukebox.sqlite
 ```
 
-现在你在交互式的sqlite3控制台中，你可以向数据库写入你的SQL查询。你可以用`.quit`或`CTRL + D`退出sqlite3控制台。
+现在你在交互式的`sqlite3`控制台中，你可以向数据库写入你的SQL查询语句。你可以用`.quit`或`CTRL + D`退出`sqlite3`控制台。
 
 ## 工具
 
