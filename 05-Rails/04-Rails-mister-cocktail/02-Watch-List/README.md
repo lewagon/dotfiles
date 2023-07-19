@@ -123,14 +123,19 @@ Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your budd
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
+Once you've finished designing the schema, it's time to implement the models inside your app. Make sure to set them up with the right attributes, validations, and associations, using the tests as a guide together with the specifications found below. 
+
 **Important**
-Don't use `rake` but:
+
+To test your code, don't use `rake`, but rather:
 
 ```bash
 rspec spec/models
 ```
 
-to only run tests in the `spec/models` folder. Make sure they're all green before moving on to the applicative part of the challenge.
+to only run the model specific tests that can be found in the `spec/models` folder.
+
+Ensure that all the tests pass successfully before moving on to Parts 2 and 3 of this challenge.
 
 #### Attributes
 
