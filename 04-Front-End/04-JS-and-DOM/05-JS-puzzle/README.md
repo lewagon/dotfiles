@@ -55,5 +55,3 @@ Lastly, we have to check after each move if the player has won the game. “Winn
 Let’s code the `checkIfPlayerWins` function which should show an alert if the tiles are in the right order.
 
 Now you can try to solve the puzzle!
-
-
