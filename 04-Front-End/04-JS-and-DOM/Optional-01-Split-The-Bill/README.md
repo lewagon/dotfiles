@@ -1,7 +1,6 @@
 ## Background & Objectives
 
-For the first part of this exercise you need to make the tests in the browser pass. The goal is to understand
-how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
+For the first part of this exercise you need to make the tests in the browser pass. The goal is to understand how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
 Afterwards you need to change the HTML and write a new JavaScript function to display the results in the browser.
 
@@ -11,8 +10,7 @@ In this exercise, you can run your tests:
 
 ## Specs
 
-You went on a trip with a group of friends. Each one of you paid for different things (food, car, hotel, etc.), and now
-it's time to balance the books! Who owes money to the group, and who spent too much? Let's find out!
+You went on a trip with a group of friends. Each one of you paid for different things (food, car, hotel, etc.), and now it's time to balance the books! Who owes money to the group, and who spent too much? Let's find out!
 
 Suppose the group is represented with the following object:
 
@@ -26,8 +24,7 @@ const group = {
 
 It means that John spent 120€, Paul spent 30€ and Ringo spent 150€.
 
-Implement the method `splitTheBill(group)` which should return how much money the group
-should give back to each individual. In our example it should return:
+Implement the method `splitTheBill(group)` which should return how much money the group should give back to each individual. In our example it should return:
 
 ```js
 {

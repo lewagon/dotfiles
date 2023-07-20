@@ -13,12 +13,12 @@ JavaScript can be a front-end language. It means that it is executed in the brow
 To test your code in the browser, launch your program with the `serve` command and go to [http://localhost:8000](http://localhost:8000).
 
 ```bash
- serve
+serve
 ```
 
 When you open your browser, you will see a list of checks which are red. Your goal is to fix the `evenOrOdd` function so that all the checks pass. Whenever you make a change in your JS file you need to **refresh the browser** to see your code reflected.
 
-Try to put a `console.log(number)` in your `eventOrOdd` function, open your browser's console and have a look. You should see 3 results: `0`, `1` and `2`. These come from the `check` function in the `event_or_odd_examiner.js` file in the `spec` folder. 
+Try to put a `console.log(number)` in your `eventOrOdd` function, open your browser's console and have a look. You should see 3 results: `0`, `1` and `2`. These come from the `check` function in the `event_or_odd_examiner.js` file in the `spec` folder.
 
 As long as the `eventOrOdd` function is not done, the tests will be red. They will turn green once you have implemented the correct function.
 
@@ -31,7 +31,7 @@ Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Im
 
 **⚠️ Warning**: In JavaScript, you need to **explicitly** write the `return` keyword, otherwise [the function will return `undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return#Syntax)! The only exception to this rule is when you use a one-liner arrow function with [implicit return](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body).
 
- _Hint: Remember the Ruby modulo operator? It also exists in JavaScript and might be useful!_
+_Hint: Remember the Ruby modulo operator? It also exists in JavaScript and might be useful!_
 
 ## Testing with the terminal
 
@@ -49,10 +49,12 @@ node -v
 If not, go back to the dedicated section of the [macOS](https://github.com/lewagon/setup/blob/master/macos.md#nodejs), [Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#nodejs) or [Windows](https://github.com/lewagon/setup/blob/master/windows.md#nodejs) setup.
 
 If running `rake` outputs an error, you need to run:
+
 ```bash
 nvm list
 ```
 and then choose the version you have installed, for example:
+
 ```bash
 nvm use 16.15.1
 ```
