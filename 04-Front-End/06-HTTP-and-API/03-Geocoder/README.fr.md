@@ -33,7 +33,7 @@ Comme toujours quand tu récupères des données d'une API, commence par affiche
 
 Astuce : MapBox retourne les coordonnées avec la longitude d'abord, puis la latitude !
 
-### [FACULTATIF] Afficher une carte
+### (FACULTATIF) Afficher une carte
 
 Pour afficher une carte MapBox avec un marqueur à l'adresse spécifiée, on utilisera une deuxième API, l'[API JavaScript de MapBox](https://www.mapbox.com/mapbox-gl-js/api/).
 
