@@ -47,7 +47,7 @@ We will also use the `forEach` iterator to loop over arrays and manipulate or pl
 
 Let's rehearse the basics of the Web with HTTP requests / response cycles.
 
-The objective of this block is to get make sure you know how to communicate with APIs by sending them requests HTTP requests! Also, you will learn how to decipher their responses and how to manipulate the data you get back.
+The objective of this lesson is to get make sure you know how to communicate with APIs by sending them requests HTTP requests! Also, you will learn how to decipher their responses and how to manipulate the data you get back.
 
 Then, instead of the live-code it's Pitch Night! You will have 5 minutes to pitch your idea in front of the class. Have a look at `Front-End/Bootstrap/Pitch-Preparation` if you want a head-start on preparing.
 
