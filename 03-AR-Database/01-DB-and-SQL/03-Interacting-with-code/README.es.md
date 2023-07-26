@@ -1,14 +1,8 @@
 ## Contexto y Objetivos
 
-Es hora de usar código Ruby para interactuar con la base de datos `jukebox`. Para ello necesitamos la gema [sqlite3](http://rubygems.org/gems/sqlite3).
+Ahora es el momento de utilizar código Ruby para interactuar con la base de datos `jukebox` del ejercicio anterior. El objetivo de este ejercicio es comunicarse con la base de datos **desde nuestro código Ruby**.
 
-Corre el siguiente código en tu Terminal para instalarla en tu computadora:
-
-```bash
-gem install sqlite3
-```
-
-El objetivo de este desafío es comunicarse con la base de datos **por medio de código Ruby**.
+En este ejercicio trabajarás en un archivo Ruby llamado `lib/queries.rb`, donde tendrás que completar varios métodos que recopilen datos específicos de la base de datos.
 
 ## Especificaciones
 
@@ -25,7 +19,7 @@ def the_method(db)
 end
 ```
 
-👉 Para probar tu código con `irb` (o en el archivo `lib/queries.rb`) deberás crear `db` tú mismo.
+👉 Sin embardo, es importante que pruebes tu código. Para probar tu código con `irb` (o en el archivo `lib/queries.rb`) deberás crear la instancia de `db` tú mismo/a/x.
 
 ```ruby
 # ➜ 03-Interacting-with-code git:(master) ✗  irb
@@ -34,7 +28,8 @@ db = SQLite3::Database.new("lib/db/jukebox.sqlite")
 rows = db.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
 ```
-También puedes importar tu métodos:
+
+Si has añadido el código anterior a tu archivo `lib/queries.rb` y ahora quieres probar tu código desde `irb`, puedes importar y llamar a tus métodos de consulta con lo siguiente:
 
 ```ruby
 require_relative "lib/queries"
@@ -42,15 +37,21 @@ artist_count(db)
 # => [...]
 ```
 
-Abre el archivo `lib/queries.rb` para responder las siguientes preguntas. No olvides que puedes ver el interior de la base de datos corriendo `sqlite3 lib/db/jukebox.sqlite` en la Terminal o usando algunas de las herramientas que se mencionaron en el ejercicio anterior (SQLite Pro, SQLStudio o SQLite Browser).
+Si ejecutas tu código solo desde `lib/queries.rb`, puedes llamar a tus métodos y utilizar `puts` o `p` para ver los resultados como de costumbre **después** de instanciar tu variable `db` según se describe anteriormente.
 
-Estos son los cinco métodos que hay que implementar:
+## Especificaciones
+
+Abre el archivo `lib/queries.rb` para responder las siguientes preguntas. No olvides que puedes ver el interior de la base de datos corriendo `sqlite3 lib/db/jukebox.sqlite` en la Terminal o usando la VS Code SQLite Extension que se menciona en el ejercicio previo.
+
+Estos son los seis métodos que hay que implementar:
 
 -¿Cuántas filas contiene la tabla `artists`?
 -¿Cuántas filas contiene cada tabla (método genérico)?
+
 - Devuelve la lista de todos los artistas y ordenarlos por nombre (alfabéticamente). **Pista:** Usa el filtro SQL `ORDER BY`.
 - Encuentra todas las canciones de amor (e.g. las canciones que contienen la palabra "love" **en algun lado** de sus nombres. **Pista:** Usa las palabras SQL clave `WHERE` y `LIKE`.
 - Devuelve todas las canciones cuyas duraciones son mayores a un número dado y ordenalas. **Pista:** puedes usar el operador de comparación `>` en SQL.
+- Devuelve una lista de cada artista con el número de álbumes que tengan, en óden alfabético. **Pista:** tendrás que hacer un `JOIN` a dos tablas y además usar un `GROUP BY` y `ORDER BY`.
 
 ## Tips
 
@@ -71,8 +72,8 @@ rows = db.execute(query)
 
 ## Recursos
 
-* [Comandos SQL](http://www.sqlcommands.net/)
-* [Curso en 🇫🇷 sobre `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
+- [Comandos SQL](http://www.sqlcommands.net/)
+- [Curso en 🇫🇷 sobre `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
 ## Extensión SQLite de VS Code - Ejecución de queries
 
