@@ -157,8 +157,8 @@ That's it! Congratulations on your first Vue APP! 🥂 Move on to the optionals 
 <details>
 <summary markdown='span'>What happens when a user adds a to-do?</summary>
 
-1. User fills in the to-do title
-2. User clicks a button
+1. User fills in the to-do title.
+2. User clicks a button.
 3. the to-do is added and appears on the list.
 
 When the button is clicked, the Vue instance needs to take care of getting the data and adding it to the list. We will create a [method](https://vuejs.org/api/options-state.html#methods) called `addTodo()` to take care of all these.
@@ -221,7 +221,6 @@ Then we bind it to the input element in HTML.
 
 Note that every property in `data()` is accessible with `this.propertyName`. Now you can access user's input with `this.newTodo` in the Vue instance. Try it out!
 
-
 ##### Pseudo-code for addTodo()
 
 1. Construct a to-do object based on user input.
@@ -238,8 +237,8 @@ First, you should make sure to add a delete button to the to-do element. You can
 
 The rest of is very similar to adding a to-do. Take the advantage of [the documentation of Vue](https://vuejs.org/guide/introduction.html) to implement the following steps:
 
-1. Bind an event to the delete button that triggers a method
-2. The method remove the to-do from `todos`
+1. Bind an event to the delete button that triggers a method.
+2. The method remove the to-do from `todos`.
 
 <details>
 <summary markdown='span'>Question & Hint</summary>
