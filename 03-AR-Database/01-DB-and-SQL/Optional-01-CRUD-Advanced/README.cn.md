@@ -10,7 +10,7 @@
 
 ```bash
 # 确保你在正确的目录下：
-cd ~/code/<user.github_nickname>/fullstack-challenges/03-AR-Database/01-DB and-SQL/05-CRUD-Advanced
+cd ~/code/<user.github_nickname>/fullstack-challenges/03-AR-Database/01-DB-and-SQL/Optional-01-CRUD-Advanced
 
 # 从 CRUD - 读取挑战中复制代码：
 cp -r ../04-CRUD-Read/app .
