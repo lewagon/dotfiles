@@ -2,7 +2,6 @@
 
 Dans cet exercice, on va pratiquer nos compétences en API. On va commencer simple avec une requête `GET`. Ici, on utilisera l'[API Geocoding de MapBox](https://www.mapbox.com/search/). On va chercher à créer un outil dans lequel il sera possible de saisir une adresse, d'appuyer sur un bouton et d'obtenir des **coordonnées GPS** en retour ! Et pour couronner le tout, on affichera la carte.
 
-
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/mapbox_ajax_geocoder.gif" alt="MapBox Geocoding demo" width="100%">
 </div>
