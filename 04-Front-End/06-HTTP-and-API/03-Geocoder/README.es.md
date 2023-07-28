@@ -2,7 +2,6 @@
 
 En este ejercicio pondremos en práctica tus habilidades AJAX. Comenzamos con algo simple como una petición `GET`. Aquí usaremos la [API Geocoding de MapBox](https://www.mapbox.com/search/). ¡Queremos crear una herramienta donde sea posible introducir una dirección, hacer clic en un botón y recuperar las **Coordenadas GPS**! Para cerrar con broche de oro, también mostraremos el mapa.
 
-
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/mapbox_ajax_geocoder.gif" alt="MapBox Geocoding demo" width="100%">
 </div>
@@ -84,4 +83,3 @@ new mapboxgl.Marker()
 ```
 
 ¡Que disfrutes geocoding! 🌎 🌍 🌏
-
