@@ -21,21 +21,13 @@ You should see a form with all the different restaurant categories.
 - The list should reset every time you make a new search before displaying the new restaurants.
 - You can use the Bootstrap [**flush list**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) to display the restaurants. But feel free to be creative if you like!
 
-```html
-<div class="text-center">
-  <img
-    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png"
-    alt="The Fork Challenge demo"
-    width="100%"
-  />
-</div>
-```
+![The Fork Challenge demo](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png)
 
 ## Read the documentation
 
 We will use the [Fork API](https://the-fork-api.students.lewagon.co/), so as always when we use a new API, it's very important to first read the documentation to find the **endpoint we need**, and understand how to build our request.
 
-## Refactoring
+## Refactoring
 
 Once the search works as expected, let's make the code more readable and avoid too many indentation levels, like we did in the previous challenge.
 
@@ -46,16 +38,8 @@ Let's create two new functions to extract some of our logic out of the `addEvent
 
 At the end, your code should be easily readable and have no more than 1 indentation level!
 
-## Going further
+## Going further
 
 Once your search works for a category, let's add the location in, so we can search both by category and also by location 🎉
 
-```html
-<div class="text-center">
-  <img
-    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png"
-    alt="The Fork Challenge demo"
-    width="100%"
-  />
-</div>
-```
+![The Fork Challenge demo 2](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png)

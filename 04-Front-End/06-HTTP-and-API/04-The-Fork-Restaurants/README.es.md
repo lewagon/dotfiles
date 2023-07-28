@@ -21,15 +21,7 @@ Deberías ver un formulario con todas las diferentes categorías de restaurantes
 - La lista debe reiniciarse cada vez que haces una nueva búsqueda antes de mostrar los nuevos restaurantes.
 - Puedes usar el [**flush list**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) de Bootstrap para mostrar los restaurantes. ¡Pero si lo deseas, puedes ser más creativo!
 
-```html
-<div class="text-center">
-  <img
-    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png"
-    alt="The Fork Challenge demo"
-    width="100%"
-  />
-</div>
-```
+![The Fork Challenge demo](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png)
 
 ## Leer la documentación
 
@@ -50,12 +42,4 @@ Creemos dos nuevas funciones para extraer algo de nuestra lógica del callback a
 
 Cuando que la búsqueda funcione para una categoría, agreguemos la ubicación para que podamos buscar tanto por categoría como por ubicación 🎉
 
-```html
-<div class="text-center">
-  <img
-    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png"
-    alt="The Fork Challenge demo"
-    width="100%"
-  />
-</div>
-```
+![The Fork Challenge demo 2](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png)
