@@ -32,6 +32,5 @@ Take some time to think of the rules of the game. How would you start?
 If you are done with the basics, you could:
 
 - Change the images
-- Add a frame and a little yellow smiley at the top, which puts on sunglasses
-  when the game is won, or which restarts a new game when clicked on.
+- Add a frame and a little yellow smiley at the top, which puts on sunglasses when the game is won, or which restarts a new game when clicked on.
 - Add a timer

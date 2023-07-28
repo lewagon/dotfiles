@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-Let's play with Flexbox and recap today's topic: Events and Iterators!
+Let's play with Flexbox and recap this module's topic: Events and Iterators!
 
 A boilerplate is provided to get you started, containing:
 
@@ -52,5 +52,3 @@ Remember to:
 - Add event listeners to them (perfect place for Iteration) in the form of a click.
 - Code what needs to happen when the event is trigerred. How about adding `.open` and `.closed` classes?
 - The `flex-grow` attribute is proportional. An element that has `flex-grow: 2` will grow at twice the rate of an element that has `flex-grow: 1`.
-
-
