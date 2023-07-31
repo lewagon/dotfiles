@@ -278,7 +278,7 @@ const App = () => {
   return (
     <div className="container">
       <Quote quote={currentQuote} />
-      <button className="btn btn-primary mt-3" onClick={getNewQuote(quotes)}>More inspiration</button>
+      <button className="btn btn-primary mt-3" onClick={() => getNewQuote(quotes)}>More inspiration</button>
     </div>
   );
 }
