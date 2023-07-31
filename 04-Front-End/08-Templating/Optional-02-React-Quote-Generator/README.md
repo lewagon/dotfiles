@@ -17,9 +17,9 @@ We need React so we need to import the React framework and [React DOM](https://r
 In the head of our project, we already have these packages:
 
 ```html
-    <script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
-    <script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
-    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+<script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+<script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
 ```
 
 ## Our first component
@@ -61,9 +61,9 @@ const Quote = () => {
         <span>“</span>
         Genius is one percent inspiration and ninety-nine percent perspiration.
         <span>“</span>
-      <p/>
+      </p>
       <span>- Thomas Edison</span>
-    </div>`
+    </div>
   );
 }
 ```
@@ -181,8 +181,8 @@ We also need to add an extra `state` to our app to be able to set a quote and kn
 We can add it with:
 
 ```js
-  const [quotes, setQuotes] = React.useState([]);
-  const [currentQuote, setCurrentQuote] = React.useState(null); // Add this line
+const [quotes, setQuotes] = React.useState([]);
+const [currentQuote, setCurrentQuote] = React.useState(null); // Add this line
 ```
 
 We now have a state `currentQuote`, `null` by default because the quotes won't be loaded yet.
@@ -190,10 +190,10 @@ We now have a state `currentQuote`, `null` by default because the quotes won't b
 Let's create another function `getNewQuote()` that will get a random quote and set it as the current quote.
 
 ```js
-  const getNewQuote = (quotes) => {
-    const newQuote = getRandomQuote(quotes);
-    setCurrentQuote(newQuote);
-  };
+const getNewQuote = (quotes) => {
+  const newQuote = getRandomQuote(quotes);
+  setCurrentQuote(newQuote);
+};
 ```
 
 Let's use it from the `React.useEffect`, once we will have all the quotes available, to have a random quote when we load the page:
@@ -283,7 +283,7 @@ const App = () => {
   return (
     <div className="container">
       <Quote quote={currentQuote} />
-      <button className="btn btn-primary mt-3" onClick={() => getNewQuote(quotes)}>More inspiration</button>
+      <button className="btn btn-primary mt-3" onClick={getNewQuote(quotes)}>More inspiration</button>
     </div>
   );
 }

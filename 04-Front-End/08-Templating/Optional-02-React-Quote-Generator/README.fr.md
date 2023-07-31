@@ -60,9 +60,9 @@ const Quote = () => {
         <span>“</span>
         Genius is one percent inspiration and ninety-nine percent perspiration.
         <span>“</span>
-      <p/>
+      </p>
       <span>- Thomas Edison</span>
-    </div>`
+    </div>
   );
 }
 ```
@@ -176,8 +176,8 @@ const App = () => {
 Nous avons également besoin d'ajouter un `state` supplémentaire à notre application pour pouvoir définir une citation et savoir laquelle nous sommes en train d'afficher. Nous pouvons l'ajouter avec :
 
 ```js
-  const [quotes, setQuotes] = React.useState([]);
-  const [currentQuote, setCurrentQuote] = React.useState(null); // Add this line
+const [quotes, setQuotes] = React.useState([]);
+const [currentQuote, setCurrentQuote] = React.useState(null); // Add this line
 ```
 
 Nous avons maintenant un état `currentQuote`, qui sera `null` par défaut puisque les citations ne seront pas encore chargées.
@@ -185,10 +185,10 @@ Nous avons maintenant un état `currentQuote`, qui sera `null` par défaut puisq
 Créons une autre fonction `getNewQuote()` qui obtiendra une citation aléatoire et la définira comme la citation actuelle (celle qu'on voit sur la page).
 
 ```js
-  const getNewQuote = (quotes) => {
-    const newQuote = getRandomQuote(quotes) ;
-    setCurrentQuote(newQuote) ;
-  } ;
+const getNewQuote = (quotes) => {
+  const newQuote = getRandomQuote(quotes);
+  setCurrentQuote(newQuote);
+};
 ```
 
 Utilisons-le à partir de `React.useEffect`, une fois que nous aurons toutes les citations disponibles, pour avoir une citation aléatoire lorsque nous chargeons la page :
@@ -257,7 +257,7 @@ const Quote = ({ quote }) => {
         <span>“</span>
         {quote.text}
         <span>“</span>
-      <p/>
+      </p>
       <span className="quote-author">- ${quote.author}</span>
     </div>
   );
@@ -278,7 +278,7 @@ const App = () => {
   return (
     <div className="container">
       <Quote quote={currentQuote} />
-      <button className="btn btn-primary mt-3" onClick={() => getNewQuote(quotes)}>More inspiration</button>
+      <button className="btn btn-primary mt-3" onClick={getNewQuote(quotes)}>More inspiration</button>
     </div>
   );
 }
