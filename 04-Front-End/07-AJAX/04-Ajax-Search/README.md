@@ -28,7 +28,7 @@ Here is the URL structure you should use to make a request to the API:
 http://www.omdbapi.com/?s=MOVIE_TITLE&apikey=YOUR_API_KEY
 ```
 
-For example, this is what request to search for `Harry Potter` movies would look like:
+For example, this is what we would search for to find all `Harry Potter` movies:
 
 ```
 http://www.omdbapi.com/?s=Harry Potter&apikey=adf1f2d7

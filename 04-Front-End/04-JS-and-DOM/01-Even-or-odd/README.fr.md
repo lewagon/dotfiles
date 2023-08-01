@@ -16,7 +16,7 @@ Pour tester ton code dans le navigateur, lance ton programme avec la commande `s
  serve
 ```
 
-Quand tu ouvres ton navigateur, tu verras une liste de tests rouges. Ton but est de fixer la fonction `evenOrOdd` pour que tous les tests deviennent verts. Dès que tu fais un changement dans ton code, tu dois rafrachir la page pour voir les résultats.
+Quand tu ouvres ton navigateur, tu verras une liste de tests rouges. Ton but est de fixer la fonction `evenOrOdd` pour que tous les tests deviennent verts. Dès que tu fais un changement dans ton code, tu dois rafraîchir la page pour voir les résultats.
 
 Essaye de rajouter un `console.log(number)` dans la fonction `evenOrOdd`, ouvre la console de ton navigateur et regarde ce qui s'affiche. Tu devrais voir 3 valeurs : `0`, `1` et `2`. Ces résults viennent de la fonction `check` dans le fichier `event_or_odd_examiner.js` dans le dossier `spec`.
 
@@ -39,10 +39,10 @@ Lance `rake` pour vérifier le style et l'exactitude de ta fonction !
 
 Le deuxième processus pour tester ton code est de lancer les tests dans le terminal. On va utiliser notre fameuse commande `rake` pour lancer les tests.
 
-Pour ça, on utilisera [Node.js](https://nodejs.org/en/), pour exécuter du JavaScript dans le terminal. 
+Pour ça, on utilisera [Node.js](https://nodejs.org/en/), pour exécuter du JavaScript dans le terminal.
 
 Tu devrais déjà avoir Node.js installé sur ton ordinateur avec une version supérieure à `10`. Vérifie en tapant:
-  
+
 ```bash
 node -v
 # Tu devrais voir la version de node ici

@@ -2,7 +2,6 @@
 
 In this exercise, we'll practise our API skills. Let's start simple with a `GET` request. Here we'll use the [MapBox Geocoding API](https://www.mapbox.com/search/). We want to build a tool where we can input an address, hit a button, and get the **GPS Coordinates** back! For the cherry on top, we'll display the map as well.
 
-
 <div class="text-center">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/mapbox_ajax_geocoder.gif" alt="MapBox Geocoding demo" width="100%">
 </div>
@@ -50,7 +49,6 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 ```html
 <div id="map" style="height: 300px; width: 600px"></div>
 ```
-
 
 To easily build the map and add a marker to it, we'll add [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/install/).
 To display a map in your `#map` HTML element with Mapbox GL JS, you will have to add these lines in your `index.html`.

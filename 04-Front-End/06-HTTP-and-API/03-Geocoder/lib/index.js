@@ -1,6 +1,4 @@
-// TODO: Call the Weather API when the form is submitted
-
-// TODO: Create a function to get the weather info
+// TODO: Create a function to get the coordinates from an address and display a map with a marker on it
 const showMap = (userInput) => {
   // TODO: Construct the URL (with apiKey & userInput) and make the fetch request to the mapbox API
   const url = `...`;
@@ -22,4 +20,3 @@ const showMap = (userInput) => {
 // - Prevents the default form submission behavior
 // - Get the user input
 // - Calls the showMap function with the user input as an argument
-
