@@ -25,9 +25,9 @@ So, usually developers use what's called a **bundler** like [Webpack](https://we
 Instead, we're going to load some external scripts that will install React and process our files for us:
 
 ```html
-    <script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
-    <script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
-    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+<script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+<script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
 ```
 
 The first two libraries are React itself. The third is Babel, which can process our JSX files for us. You may notice this line at the bottom of our `index.html`:
@@ -199,7 +199,7 @@ Can you use this principle to make your checkboxes dynamically match the value o
 
 1. User fills in the to-do title.
 2. User clicks a button.
-3. the to-do is added and appears on the list.
+3. The to-do is added and appears on the list.
 
 When the button is clicked, the React app needs to take care of getting the data and adding it to the list. We will create a JavaScript function called `addTodo()` to take care of all these.
 
