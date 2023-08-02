@@ -1,6 +1,6 @@
 ## 背景和目标
 
-是时候开发一个有3个模型的应用了！就像你猜想的那样，我们将会引入多对多关系(`n:n`)。那将是什么呢，为你自己创建一个观影清单Watch List应用。你可以创建清单，在清单里保存你喜欢的电影。
+是时候开发一个有3个模型的应用了！就像你猜想的那样，我们将会引入多对多关系(`N:Ns`)。那将是什么呢，为你自己创建一个观影清单Watch List应用。你可以创建清单，在清单里保存你喜欢的电影。
 
 下面是我们想在应用程序中实现的**用户行为**：
 - 作为一个用户，我可以看到我所有的电影列表
@@ -13,30 +13,21 @@
 
 ## 生成Rails应用
 
-你应该已安装过[yarn](https://yarnpkg.com)了。确认一下：
-
-```bash
-yarn -v
-# 你应该能看到你的yarn版本
-```
-
-如果没看到的话，那请根据配置指南安装：[macOS](https://github.com/lewagon/setup/blob/master/macos.md#yarn)，[Linux](https://github.com/lewagon/setup/blob/master/ubuntu.md#yarn)，[Windows](https://github.com/lewagon/setup/blob/master/windows.md#yarn)。
-
 **注意**: 下面的步骤你应该已经熟记于心了。今天别忘了加上`-d postgresql`（下一次课你就知道为什么了）😉
 
 ```bash
 cd ~/code/<user.github_nickname>
-rails new rails-watch-list -j webpack -d postgresql --skip-action-mailbox -T
+rails new rails-watch-list -d postgresql --skip-action-mailbox -T
 cd rails-watch-list
 ```
 
-我们要给这个新的rails应用创建postgresql数据库。
+然后我们需要为这个新的rails应用创建postgresql数据库。
 
 ```bash
 rails db:create
 ```
 
-我们需要设置git，在GitHub上创建一个代码仓库，并且把我们的项目代码推送过去。
+让我们设置git，在GitHub上创建一个仓库并推送我们初始的APP。
 
 ```bash
 git add .
@@ -45,7 +36,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-我们导入老师写好的spec以便来`rake`我们的进度。
+导入老师的spec来`rake`我们的进度。
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
@@ -58,36 +49,23 @@ git add .
 git commit -m "Prepare rails app with external specs"
 ```
 
-你可以测试你的代码：
+你可以通过下面的命令来测试你的代码：
 
 ```bash
-rails db:migrate RAILS_ENV=test  # 如果你已经添加了数据库迁移
-rspec spec/models                # 运行测试
+rails db:migrate RAILS_ENV=test  # If you added a migration
+rspec spec/models                # Launch tests
 ```
 
-开始写代码之前，不要忘了设置Rails应用的前端。就像早上的课程里那样，设置Bootstrap和它的JavaScript依赖。
-
-```bash
-yarn add bootstrap @popperjs/core
-```
-
-我们需要添加node modules到我们的assets路径，在`config/initializers/assets.rb`中添加下面的这行代码：
-
-```ruby
-# config/initializers/assets.rb
-# [...]
-Rails.application.config.assets.paths << Rails.root.join("node_modules")
-```
-
-添加我们要用到的gem：
+在开始编码之前，不要忘记为前端设置Rails应用。就像在讲座中一样，让我们添加我们需要的gems：
 
 ```ruby
 # Gemfile
 # [...]
+gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
-gem "sassc-rails" # 把这行代码取消注释
+gem "sassc-rails" # Uncomment this line
 ```
 
 ```bash
@@ -95,22 +73,49 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 
-然后下载Le Wagon的样式表:
+然后让我们下载Le Wagon的样式表：
 
 ```bash
 rm -rf app/assets/stylesheets
-curl -L https://github.com/lewagon/stylesheets/archive/master.zip > stylesheets.zip
-unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets
+curl -L https://github.com/lewagon/stylesheets/archive/more-js.zip > stylesheets.zip
+unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-more-js app/assets/stylesheets
 ```
 
-最后我们需要用webpack导入Boostrap JS库：
+最后让我们使用`importmap`导入Boostrap JS库：
+
+```bash
+importmap pin bootstrap
+```
+
+我们需要更新`importmap.rb`文件中的命令固定的`popper`链接，所以用下面的命令替换这一行：
+
+```ruby
+pin "@popperjs/core", to: "https://ga.jspm.io/npm:@popperjs/core@2.11.6/lib/index.js" # 删掉这一行
+```
+
+然后把这一行粘上去：
+
+```ruby
+pin "@popperjs/core", to: "https://unpkg.com/@popperjs/core@2.11.2/dist/esm/index.js" # use unpkg.com as ga.jspm.io contains a broken popper package"
+```
+
+在`application.js`中，添加以下行：
 
 ```js
 // app/javascript/application.js
-import "bootstrap";
+import "bootstrap"
+import "@popperjs/core"
 ```
 
-不要忘了经常`commit`和`push`你的代码。
+然后在`manifest.js`中，添加以下行：
+
+```js
+// app/assets/config/manifest.js
+//= link popper.js
+//= link bootstrap.min.js
+```
+
+不要忘记经常`commit`和`push`你的代码！
 
 ## 详细说明Specs
 
@@ -120,14 +125,19 @@ import "bootstrap";
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
+一旦你完成了数据库设计，就是时候在你的应用中实现模型了。确保使用测试和下面的规范来设置正确的属性，验证和关联。
+
 **重要**
-不要运行`rake`命令，而是运行:
+
+测试的时候，不要运行`rake`命令，而是运行:
 
 ```bash
 rspec spec/models
 ```
 
-这个命令只跑`spec/models`文件夹里的测试。在继续开发练习的应用性部分之前确保这些测试都通过了（是绿色的）。
+这个命令只跑`spec/models`文件夹里的测试，这些测试只是关于模型的。
+
+在继续开发练习的应用性部分之前确保这些测试都通过了（是绿色的）。
 
 #### 属性
 
@@ -201,6 +211,7 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 你觉得你已经完成了**整个**挑战，运行`rake`命令确保开发的应用满足了详细说明里的所有要求。
 
 **功能**
+
 再次强调，要开发路由，你必须要对应用的功能有一个非常明确的认识。以下是功能列表：
 
 - 用户可以看到所有的清单lists
@@ -254,26 +265,8 @@ DELETE "bookmarks/25"
 
 尝试把"新建书签bookmark的表单"放在清单list的show页面，而不是一个单独的页面。这样你就不需要离开清单list页面来添加一个新的电影了！路由会有哪些改变？控制器有哪些改变？
 
-### 7 - 在电影下拉菜单上的汤姆选择（选做）
-
-让我们为我们的Rails应用程序添加一个JavaScript包吧 你可以看一下[我们的教程](https://kitt.lewagon.com/knowledge/tutorials/tom_select)，来获得启发！
-
-待办项：
-- 生成一个专门的Stimulus控制器
-- 将这个Stimulus控制器连接到电影的下拉`select`标签上
-- 改编一个[基本例子](https://tom-select.js.org/examples/)的代码段，在Stimulus控制器中设置一个Tom Select。
-
-### 8 - 清单的点评(选做)
+### 7 - 列出点评(选做)
 
 任何用户都可以对我们的电影收藏做评价（告诉我们他们的想法）。给我们的清单添加一些点评reviews！
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/reviews.png)
-
-### 9 - 更进一步
-
-- 增加了搜索电影的功能
-- 添加[typed.js](http://www.mattboldt.com/demos/typed-js/)，在我们的主页上有一些有趣的标题。
-- 为我们的书签添加一些漂亮的[下拉时的动画](https://michalsnik.github.io/aos/)动画，当我们向下滚动列表显示页面时。
-- 使用[`star-rating.js`](https://kitt.lewagon.com/knowledge/tutorials/star_rating)来显示星星，而不是评论表单中的普通输入。
-
-同样，在你的应用程序中实现JavaScript行为时，请使用Stimulus控制器 ⚠️
