@@ -114,7 +114,7 @@ new Chart(this.element, {
 });
 ```
 
-En se basant sur notre objet `WorldPopulation`, comment construire un tableau `labels` contenant `"men"` et `"woman"` et un second tableau `data` contenant `504` et `496` ?
+En se basant sur notre objet `WorldPopulation`, comment construire un tableau `labels` contenant `"men"` et `"women"` et un second tableau `data` contenant `504` et `496` ?
 
 Jette un coup d'œil aux méthodes existantes sur les objets JavaScript comme `Object.keys()` dans les [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) pour te donner une idée de la façon de créer des tableaux basés sur un Objet.
 

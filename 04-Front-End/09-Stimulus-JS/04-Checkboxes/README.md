@@ -17,6 +17,7 @@ This time, `Stimulus` is already setup in the `index.html` head.
 However, you still need to get used to doing the JavaScript setup part yourself. Open `index.js` and import the Stimulus Controller on top and register the controller at the bottom. You can name the controller `CheckAllCheckboxesController`.
 
 Create a `check_all_checkboxes_controller.js` file in the empty `controllers` folder, copy-paste the boilerplate:
+
 ```javascript
 // lib/controllers/check_all_checkboxes_controller.js
 import { Controller } from "@hotwired/stimulus"
@@ -65,9 +66,9 @@ Now that we're listening to the `change` checkbox event, let's code the `checkAl
 Notice this method takes an `event` parameter. By default the Stimulus actions call the method with an `event` object passed as argument - like the [good old `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
 
 In this method, you will have to:
-- Check the status of the "Check All" checkbox clicked.
-- If it's checked, then, let's check all the other checkboxes
-- If it isn't checked, then, let's uncheck all the other checkboxes
+- Check the status of the "Check All" checkbox when it's clicked.
+- If it's checked, then, let's check all the other checkboxes.
+- If it isn't checked, then, let's uncheck all the other checkboxes.
 
 But how do you access all the other checkboxes in this method? Good question!
 
@@ -84,13 +85,13 @@ Once you have spotted your target, let's add the target in the HTML.
 After implementing the targets, let's go back to our `#checkAll` method.
 
 Here is what we have to do:
-- Check the status of the "Check All" checkbox clicked.
-- If it's checked, then, let's iterate over all the checkbox targets, and change their `checked` property to `true`
-- If it isn't checked, then, let's iterate over all the checkbox targets, and change their `checked` property to `false`
+- Check the status of the "Check All" checkbox when it's clicked.
+- If it's checked, then, let's iterate over all the checkbox targets, and change their `checked` property to `true`.
+- If it isn't checked, then, let's iterate over all the checkbox targets, and change their `checked` property to `false`.
 
 You've got everything in hand to tackle the rest of this challenge.
 
-Remember to try the behaviour of your Stimulus controller in the Browser (test manually), and feel free to add `console.log` to understand what you're dealing with in the `checkAll` methods
+Remember to try the behaviour of your Stimulus controller in the Browser (test manually), and feel free to add `console.log` to understand what you're dealing with in the `checkAll` methods.
 
 Your turn!
 

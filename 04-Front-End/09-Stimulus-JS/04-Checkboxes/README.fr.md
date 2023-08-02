@@ -67,7 +67,7 @@ Tu remarqueras que cette méthode prend un paramètre `event`. Par défaut, les 
 
 Dans cette méthode, tu vas devoir :
 - Vérifier le statut de la case à cocher "Check All".
-- Si elle est cochée, alors vérifions toutes les autres cases à cocher
+- Si elle est cochée, alors vérifions toutes les autres cases à cocher.
 - Si elle n'est pas cochée, alors décochons toutes les autres cases.
 
 Mais comment accéder à toutes les autres cases à cocher dans cette méthode ? Bonne question !
@@ -84,8 +84,8 @@ Après avoir implémenté les cibles, retournons à notre méthode `#checkAll`.
 
 Voici ce que nous devons faire :
 - Vérifier le statut de la case à cocher "Check All".
-- Si elle est cochée, alors itérons sur toutes les cibles de la case à cocher, et changeons leur propriété `checked` en `true`
-- Si elle n'est pas cochée, alors itérons sur toutes les cibles de cases à cocher, et changeons leur propriété `checked` en `false`
+- Si elle est cochée, alors itérons sur toutes les cibles de la case à cocher, et changeons leur propriété `checked` en `true`.
+- Si elle n'est pas cochée, alors itérons sur toutes les cibles de cases à cocher, et changeons leur propriété `checked` en `false`.
 
 Tu as maintenant tout en main pour relever le reste de ce challenge !
 

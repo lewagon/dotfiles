@@ -60,8 +60,8 @@ Essaie de faire un `console.log` depuis la méthode connect. Si tu le vois dans 
 Ton objectif est de mettre en œuvre du code JavaScript dans le fichier `lib/controllers/event_listener_controller.js`. **Tu dois réagir au clic sur le bouton bleu**. Lorsqu'il est cliqué, le contrôleur déclenchera une fonction `disable()` qui effectuera les actions suivantes :
 
 - Désactiver le bouton. Cela peut être fait en ajoutant la classe `.disabled`.
-- Changer le texte à l'intérieur du bouton de "Click me!" à "Bingo!"
-- Optionnel : le fichier `sound.mp3` [se joue dans le navigateur](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript) lorsque le bouton est cliqué
+- Changer le texte à l'intérieur du bouton de "Click me!" à "Bingo!".
+- Optionnel : le fichier `sound.mp3` [se joue dans le navigateur](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript) lorsque le bouton est cliqué.
 
 Le son peut ne pas fonctionner sur certains navigateurs s'exécutant sous **Ubuntu**. Pour le résoudre, exécute simplement la commande suivante :
 
