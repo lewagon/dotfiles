@@ -26,9 +26,9 @@ Généralement, les développeurs utilisent ce qu'on appelle un **bundler** comm
 À la place, nous allons charger quelques scripts externes qui installeront React et traiteront nos fichiers pour nous :
 
 ```html
-    <script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
-    <script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
-    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="application/javascript" src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+<script type="application/javascript" src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+<script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
 ```
 
 Les deux premières bibliothèques correspondent à React. La troisième est Babel, qui peut traiter nos fichiers JSX pour nous. Tu remarqueras peut-être cette ligne en bas de notre `index.html` :

@@ -49,7 +49,7 @@ You'll be able to tell that this works if, in your browser, the balance goes dow
 
 It wouldn't be gambling if the user knew how much they'd win for each scratchcard! So, where is this information hidden?
 
-If you take a look at the HTML, you'll notice that each scratchard looks like this:
+If you take a look at the HTML, you'll notice that each scratchcard looks like this:
 
 ```html
 <li class="scratchard" data-amount="5" data-scratched="false"></li>
