@@ -222,6 +222,11 @@ if [ -f '/home/xavierosee/.google-cloud-sdk/completion.bash.inc' ]; then . '/hom
 # Enable shell command completion for dbt
 [ -f ~/.dbt-completion.bash ] && source ~/.dbt-completion.bash
 
+# Enable shell command completion for git
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 # Enable PATH for Flutter
 if [ -d "$HOME/workspace/xavierosee/flutter/bin" ] ; then
     PATH="$HOME/workspace/xavierosee/flutter/bin:$PATH"
