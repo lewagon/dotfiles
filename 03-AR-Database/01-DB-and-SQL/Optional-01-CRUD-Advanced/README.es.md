@@ -1,18 +1,18 @@
 ## Antecedentes y objetivos
 
-El objetivo de este ejercicio es implementar las acciones CRUD restantes del desafío anterior.
+El objetivo de este ejercicio es implementar las acciones CRUD restantes del ejercicio anterior.
 
 **Nota**: Como recordatorio, en este ejercicio te **entregamos** la variable global `DB`, por lo que no es necesario que instancies una nueva `SQLite3::Database` por tu cuenta. Solo usa `DB.execute` en tu código, y funcionará (pero siéntete libre de revisar `spec/models/post_spec.rb` para ver cómo se crea la variable `DB`).
 
 ## Configuración
 
-Primero, copiemos y peguemos tu código del desafío anterior en la carpeta de este desafío:
+Primero, copiemos y peguemos tu código del ejercicio anterior en la carpeta de este ejercicio:
 
 ```bash
 # asegúrate de estar en el directorio correcto:
 cd ~/code/<user.github_nickname>/fullstack-challenges/03-AR-Database/01-DB-and-SQL/Optional-01-CRUD-Advanced
 
-# copia tu código del desafío CRUD - Read:
+# copia tu código del ejercicio CRUD - Read:
 cp -r ../04-CRUD-Read/app .
 ```
 
@@ -26,7 +26,7 @@ También hemos preparado un archivo `test.rb` para ti, donde se crea la variable
 
 Al igual que en el último ejercicio, debemos asegurarnos de proteger nuestras bases de datos contra las inyecciones de SQL. Esto significa que nunca debemos interpolar consultas SQL con datos de usuario, sino usar `?` [**placeholders**](http://ruby.bastardsbook.com/chapters/sql/#placeholders-sqlite-gem) en su lugar.
 
-ℹ️ Para ambas partes de este ejercicio, para prevenir las inyecciones de SQL deberás pasar _varios argumentos_ al método `.execute`. Recuerda consultar las diapositivas de la clase (o el último desafío) para recordar cómo se hace esto.
+ℹ️ Para ambas partes de este ejercicio, para prevenir las inyecciones de SQL deberás pasar _varios argumentos_ al método `.execute`. Recuerda consultar las diapositivas de la clase (o el último ejercicio) para recordar cómo se hace esto.
 
 ### Parte 1: DELETE
 
