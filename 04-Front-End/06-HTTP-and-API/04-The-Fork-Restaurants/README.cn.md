@@ -21,15 +21,7 @@ serve
 - 每次进行新的搜索时，列表应该先重置，再展示新的餐厅。
 - 你可以使用 Bootstrap的[**flush list**](https://getbootstrap.com/docs/5.2/components/list-group/#flush)来展示餐厅。但你也可以发挥自己的创意！
 
-```html
-<div class="text-center">
-  <img
-    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png"
-    alt="The Fork Challenge demo"
-    width="100%"
-  />
-</div>
-```
+![The Fork Challenge demo](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png)
 
 ## 阅读文档
 
@@ -50,12 +42,4 @@ serve
 
 当搜索类别的功能完成后，你可以加入地理位置，这样我们就可以通过类别和位置进行搜索 🎉
 
-```html
-<div class="text-center">
-  <img
-    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png"
-    alt="The Fork Challenge demo"
-    width="100%"
-  />
-</div>
-```
+![The Fork Challenge demo 2](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png)

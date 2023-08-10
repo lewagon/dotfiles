@@ -16,7 +16,7 @@ Luego abre [`localhost:8000`](http://localhost:8000) en tu navegador favorito.
 
 Deberías ver los países que han ganado las copas mundiales de fútbol FIFA en un lista no ordenada
 
-¡El objetivo del desafío es seleccionar la de Francia `<li>` 🇫🇷!
+¡El objetivo del ejercicio es seleccionar la de Francia `<li>` 🇫🇷!
 
 La manera más fácil y simple es seleccionar un elemento del DOM **con un `id`**.
 
@@ -25,4 +25,4 @@ La manera más fácil y simple es seleccionar un elemento del DOM **con un `id`*
 
 ¡Que disfrutes el ejercicio! 🎣
 
-**N.B.:** ¡En este desafío los resultados del test se muestran directamente en el navegador!¡Cuando veas `Congratulations!` puedes hacer el `add`, `commit`, `push` y avanzar al desafío siguiente! También puedes usar `rake` para comprobar tu estilo.
+**N.B.:** ¡En este ejercicio los resultados del test se muestran directamente en el navegador!¡Cuando veas `Congratulations!` puedes hacer el `add`, `commit`, `push` y avanzar al desafío siguiente! También puedes usar `rake` para comprobar tu estilo.

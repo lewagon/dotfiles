@@ -4,7 +4,7 @@ Dans cet exercice, nous allons examiner de plus près l'API Fork que nous avons 
 
 ## Spécifications
 
-Vous allez construire une application de recherche pour filtrer les restaurants de The Fork API.
+Vous allez construire une application de recherche pour filtrer les restaurants de [The Fork API](https://the-fork-api.students.lewagon.co/).
 
 L'objectif est d'implémenter dans `index.js` la logique de recherche, afin de filtrer par catégorie lorsqu'on clique sur "recherche".
 
@@ -21,19 +21,11 @@ Tu devrais voir un formulaire avec toutes les différentes catégories de restau
 - La liste doit être réinitialisée à chaque nouvelle recherche avant d'afficher les nouveaux restaurants.
 - Tu peux utiliser la [**liste flush**](https://getbootstrap.com/docs/5.2/components/list-group/#flush) de Bootstrap pour afficher les restaurants. Mais n'hésite pas à être créatif si tu le souhaites !
 
-```html
-<div class="text-center">
-  <img
-    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png"
-    alt="The Fork Challenge demo"
-    width="100%"
-  />
-</div>
-```
+![The Fork Challenge demo](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-1.png)
 
 ## Lire la documentation
 
-Nous utiliserons l'API Fork (https://the-fork-api.students.lewagon.co/). Comme toujours lorsque nous utilisons une nouvelle API, il est très important de lire d'abord la documentation pour trouver le **point final** dont nous avons besoin et comprendre comment construire notre requête.
+Nous utiliserons l'[API Fork](https://the-fork-api.students.lewagon.co/). Comme toujours lorsque nous utilisons une nouvelle API, il est très important de lire d'abord la documentation pour trouver le **point final** dont nous avons besoin et comprendre comment construire notre requête.
 
 ## Refactoring
 
@@ -50,12 +42,4 @@ Créons deux nouvelles fonctions pour extraire une partie de notre logique en de
 
 Une fois que la recherche fonctionne pour une catégorie, ajoutons la localisation afin que nous puissions rechercher à la fois par catégorie et par emplacement 🎉
 
-```html
-<div class="text-center">
-  <img
-    src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png"
-    alt="The Fork Challenge demo"
-    width="100%"
-  />
-</div>
-```
+![The Fork Challenge demo 2](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/the-fork-challenge-2.png)

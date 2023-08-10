@@ -16,7 +16,7 @@ Pour tester ton code dans le navigateur, lance ton programme avec la commande `s
  serve
 ```
 
-Quand tu ouvres ton navigateur, tu verras une liste de tests rouges. Ton but est de fixer la fonction `evenOrOdd` pour que tous les tests deviennent verts. Dès que tu fais un changement dans ton code, tu dois rafrachir la page pour voir les résultats.
+Quand tu ouvres ton navigateur, tu verras une liste de tests rouges. Ton but est de fixer la fonction `evenOrOdd` pour que tous les tests deviennent verts. Dès que tu fais un changement dans ton code, tu dois rafraîchir la page pour voir les résultats.
 
 Essaye de rajouter un `console.log(number)` dans la fonction `evenOrOdd`, ouvre la console de ton navigateur et regarde ce qui s'affiche. Tu devrais voir 3 valeurs : `0`, `1` et `2`. Ces résults viennent de la fonction `check` dans le fichier `event_or_odd_examiner.js` dans le dossier `spec`.
 

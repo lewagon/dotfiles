@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-Let's play with Flexbox and recap today's topic: Events and Iterators!
+Let's play with Flexbox and recap this module's topic: Events and Iterators!
 
 A boilerplate is provided to get you started, containing:
 

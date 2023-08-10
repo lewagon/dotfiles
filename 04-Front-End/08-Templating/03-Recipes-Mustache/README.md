@@ -2,7 +2,7 @@
 
 In this challenge, you will use [Mustache.js](https://github.com/janl/mustache.js) to create an application for chefs to view various recipes.
 
-### Setup
+## Setup
 
 Let's launch a local web server by running:
 
@@ -101,12 +101,12 @@ Let's put this HTML inside of a `<template>` tag in the `index.html` file (it's 
 Then, you'll want to iterate over your `recipes` (similarly to the previous challenge) and display the HTML in the `<template>` for each recipe. But, this time, let's use Mustache.js to do it. Here's an example of how to use Mustache.js to render HTML (in the JS):
 
 ```js
-// Assuming we have a `<template>` element on the page with the `id` `#myTemplate`.
+// Assuming we have a `<template>` element on the page with the `id` `#myTemplate`:
 const template = document.querySelector("#myTemplate").innerHTML
 const output = Mustache.render(template, {});
 ```
 
-#### Making the Fields Dynamic
+### Making the Fields Dynamic
 
 But now all our recipes will say "Croissant" since we hard-coded that part 😿 So, let's make it dynamic! In a Mustache template, you can make a part of the template dynamic by using...mustaches in the HTML 👨 like this:
 
@@ -143,3 +143,5 @@ const output = Mustache.render(template, { musicians: ["Britney Spears", "Christ
 ```
 
 The `{{.}}` placeholder represents each item in the `musicians` array, and it will be replaced with the corresponding value during rendering.
+
+Enjoy!
