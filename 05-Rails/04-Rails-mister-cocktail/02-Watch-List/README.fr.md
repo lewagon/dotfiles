@@ -96,6 +96,7 @@ import "@popperjs/core"
 ```
 
 Puis dans `manifest.js`, on va ajouter les lignes suivantes :
+
 ```js
 // app/assets/config/manifest.js
 //= link popper.js
@@ -194,6 +195,7 @@ Une fois que ta fonctionnalité est prête (et a l'air de fonctionner), passe à
 Une fois que tu as terminé **tout** le challenge, utilise `rake` pour t'assurer qu'il répond aux spécifications.
 
 **Fonctionnalités**
+
 Une fois encore, tu dois avoir une idée précise des fonctionnalités de ton application pour créer tes routes. Voici la liste des fonctionnalités :
 
 - Un utilisateur peut voir toutes les listes

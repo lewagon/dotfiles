@@ -1,7 +1,6 @@
 ## Background & Objectives
 
-For the first part of this exercise you need to make the tests in the browser pass. The goal is to understand
-how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
+For the first part of this exercise you need to make the tests in the browser pass. The goal is to understand how to manipulate a JavaScript [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
 Afterwards you need to change the HTML and write a new JavaScript function to display the results in the browser.
 

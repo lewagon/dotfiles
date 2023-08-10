@@ -31,7 +31,7 @@ Commençons par un algorithme très simple. Ouvre le fichier `lib/even_or_odd.js
 
 **⚠️ Attention** : En JavaScript, tu dois **explicitement** écrire le mot-clé `return`, sinon [la fonction retournera `undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return#Syntax) ! Il n'existe qu'une seule exception à cette règle : quand tu utilises une fonction arrow à une ligne avec [retour implicite](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body).
 
- _Astuce : Tu te souviens de l'opérateur Ruby modulo ? Il existe aussi en JavaScript et pourrait être utile !_
+_Astuce : Tu te souviens de l'opérateur Ruby modulo ? Il existe aussi en JavaScript et pourrait être utile !_
 
 Lance `rake` pour vérifier le style et l'exactitude de ta fonction !
 

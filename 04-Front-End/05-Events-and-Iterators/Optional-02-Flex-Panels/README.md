@@ -48,7 +48,7 @@ We want to bring into view the hidden words whenever the corresponding panel is 
 
 Remember to:
 
-- Select the correct HTML elements
+- Select the correct HTML elements.
 - Add event listeners to them (perfect place for Iteration) in the form of a click.
 - Code what needs to happen when the event is trigerred. How about adding `.open` and `.closed` classes?
 - The `flex-grow` attribute is proportional. An element that has `flex-grow: 2` will grow at twice the rate of an element that has `flex-grow: 1`.

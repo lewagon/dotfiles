@@ -34,7 +34,7 @@ When you fetch data from an API, start by `console.log()`ing what you get back f
 
 Hint: Mapbox returns coordinates with longitude first, and latitude second!
 
-### [OPTIONAL] Displaying a map
+### (OPTIONAL) Displaying a map
 
 To display a MapBox Map with a marker at the specified address, we'll use a second API, the [MapBox JavaScript API](https://www.mapbox.com/mapbox-gl-js/api/).
 
@@ -51,6 +51,7 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 ```
 
 To easily build the map and add a marker to it, we'll add [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/install/).
+
 To display a map in your `#map` HTML element with Mapbox GL JS, you will have to add these lines in your `index.html`.
 
 ```html

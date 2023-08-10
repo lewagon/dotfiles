@@ -100,6 +100,7 @@ pin "@popperjs/core", to: "https://unpkg.com/@popperjs/core@2.11.2/dist/esm/inde
 ```
 
 In `application.js`, add the following lines:
+
 ```js
 // app/javascript/application.js
 import "bootstrap"
@@ -107,6 +108,7 @@ import "@popperjs/core"
 ```
 
 And then in `manifest.js`, add the following lines:
+
 ```js
 // app/assets/config/manifest.js
 //= link popper.js
@@ -123,7 +125,7 @@ Go to [db.lewagon.com](http://db.lewagon.com) and draw the schema with your budd
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/watch-list/db.png)
 
-Once you've finished designing the schema, it's time to implement the models inside your app. Make sure to set them up with the right attributes, validations, and associations, using the tests as a guide together with the specifications found below. 
+Once you've finished designing the schema, it's time to implement the models inside your app. Make sure to set them up with the right attributes, validations, and associations, using the tests as a guide together with the specifications found below.
 
 **Important**
 
@@ -209,6 +211,7 @@ When your feature is done (and looks good), move on to the next one and repeat t
 When you think you're done with the **whole** challenge, use `rake` to make sure it satisfies the specs.
 
 **Features**
+
 Once again, you must have a precise idea of the features of your app in order to build your routes. Here is the list of features:
 
 - A user can see all the lists

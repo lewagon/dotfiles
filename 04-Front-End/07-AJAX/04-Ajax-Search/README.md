@@ -1,7 +1,6 @@
 ## Background & Objectives
 
-In this challenge you will play with [OMDb API](https://www.omdbapi.com/) (The Open Movie Database).
-This API will allow you to retrieve information about movies from a keyword.
+In this challenge you will play with [OMDb API](https://www.omdbapi.com/) (The Open Movie Database). This API will allow you to retrieve information about movies from a keyword.
 
 In this exercise, you'll have to implement a `GET` request to OMDb API in order to retrieve information about movies you're looking for and implement a callback to inject a card for each movie in the DOM.
 

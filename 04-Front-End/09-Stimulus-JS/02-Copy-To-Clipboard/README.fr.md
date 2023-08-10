@@ -14,8 +14,7 @@ Lance le serveur depuis ton terminal avec :
 serve
 ```
 
-Et visite `localhost:8000`. Tu peux y voir un formulaire avec un champ en lecture seule contenant une clé API et un bouton permettant à l'utilisateur de la copier facilement.
-Ta mission est d'implémenter la fonctionnalité de copie dans le presse-papier.
+Et visite `localhost:8000`. Tu peux y voir un formulaire avec un champ en lecture seule contenant une clé API et un bouton permettant à l'utilisateur de la copier facilement. Ta mission est d'implémenter la fonctionnalité de copie dans le presse-papier.
 
 Cette fois, `Stimulus` est déjà installé dans le head `index.html`.
 
@@ -45,6 +44,7 @@ Une fois que tu as cliqué sur le bouton *Copy to Clipboard*, tu peux utiliser `
 ### 1. Inspecter le HTML existant
 
 Le HTML fourni contient un champ avec des attributs intéressants. L'attribut `value` est déjà défini pour contenir une clé API par défaut au chargement de la page.
+
 L'attribut `readonly` garantit que personne ne pourra modifier le texte existant ou introduire une faute de frappe.
 
 ### 2. Implémenter le contrôleur Stimulus

@@ -60,8 +60,8 @@ Try to `console.log` something from the connect method. If you see it in the con
 Your goal is to implement some JavaScript in the `lib/controllers/event_listener_controller.js` file. **You should react to the click on the blue button.** When clicked, the controller will trigger a `disable()` function which will:
 
 - Disable the button. This can be done by adding the `.disabled` class.
-- Change the text inside the button from "Click me!" to "Bingo!"
-- Optional: the `sound.mp3` [plays in the Browser](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript) when the button is clicked
+- Change the text inside the button from "Click me!" to "Bingo!".
+- Optional: the `sound.mp3` [plays in the Browser](https://stackoverflow.com/questions/9419263/playing-audio-with-javascript) when the button is clicked.
 
 The sound might not work on some browsers running on **Ubuntu**. To fix it, just run:
 
