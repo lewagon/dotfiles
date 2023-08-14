@@ -51,4 +51,4 @@ You should code a `/tracks/:id` page displaying all the track info, and if you h
 you can have a look at a video embed API service like youtube to also throw in a video on
 that page.
 
-When you've finished, use [`ngrok`](https://github.com/lewagon/sinatra-101/blob/master/README.md#share-with-the-world) to share your work on Slack 👌
+When you've finished, use [`ngrok`](https://github.com/lewagon/sinatra-101#share-with-the-world) to share your work on Slack 👌

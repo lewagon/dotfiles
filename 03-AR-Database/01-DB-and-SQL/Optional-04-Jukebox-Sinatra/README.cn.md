@@ -49,4 +49,4 @@ Sinatra就是我们所说的网页"微框架"。它基本上是一个微型Rails
 
 你应该编写一个`/tracks/:id`页面，显示所有的曲目信息，如果你有时间的话，你可以看看像youtube这样的视频嵌入API服务，也可以在该页面上投放一个视频。
 
-完成后，使用[`ngrok`](https://github.com/lewagon/sinatra-101/blob/master/README.md#share-with-the-world)在Slack上分享你的作品 👌
+完成后，使用[`ngrok`](https://github.com/lewagon/sinatra-101#share-with-the-world)在Slack上分享你的作品 👌

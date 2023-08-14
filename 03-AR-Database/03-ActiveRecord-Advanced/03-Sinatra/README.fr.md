@@ -110,10 +110,4 @@ Il n’y a pas de test pour cet exercice ; `rake` exécutera simplement Rubocop
 
 ### Partage
 
-N’hésite pas à partager ton travail sur Slack avec [`ngrok`](https://ngrok.com/). Installe `ngrok` (avec `brew install --cask ngrok` ou [manuellement pour Ubuntu](https://ngrok.com/download)), et exécute-le dans une autre fenêtre.
-
-```bash
-ngrok http 4567
-```
-
-Vérifie que ton URL est publique (`*.ngrok.com`) pour la partager avec tout le monde !
+Quand tu as fini, utilise [`ngrok`](https://github.com/lewagon/sinatra-101#share-with-the-world) pour lancer un serveur que tu pourras partager sur Slack! 👌
