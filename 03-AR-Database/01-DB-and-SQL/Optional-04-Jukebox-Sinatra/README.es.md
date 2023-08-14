@@ -48,4 +48,4 @@ Deberías ser redireccionado a la página de una canción al hacer clic en su no
 ### Página de la canción
 Escribe el código de la página `/tracks/:id` para mostrar toda la información de la canción y si te sobra tiempo puedes usar un servicio API de video como YouTube para agregar un video a la página.
 
-Cuando hayas terminado, usa [`ngrok`](https://github.com/lewagon/sinatra-101/blob/master/README.md#share-with-the-world) para compartir tu trabajo en Slack 👌.
+Cuando hayas terminado, usa [`ngrok`](https://github.com/lewagon/sinatra-101#share-with-the-world) para compartir tu trabajo en Slack 👌.

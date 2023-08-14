@@ -111,10 +111,4 @@ end
 
 ### 分享
 
-欢迎在Slack上用[`ngrok`]（https://ngrok.com/ ）分享你的作品。安装`ngrok`（用`brew install --cask ngrok`或[手动安装Ubuntu](https://ngrok.com/download)），并在另一个窗口运行它。
-
-```bash
-ngrok http 4567
-```
-
-确保你的URL是公开的(`*.ngrok.com`)，这样你就可以和大家分享了!
+完成后，使用[`ngrok`](https://github.com/lewagon/sinatra-101#share-with-the-world)在Slack上分享你的作品 👌
