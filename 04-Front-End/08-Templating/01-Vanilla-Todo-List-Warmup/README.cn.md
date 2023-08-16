@@ -2,6 +2,8 @@
 
 欢迎来到你的第一个Templating挑战！在这个挑战中，你将通过制作一个静态的待办事项列表来练习使用JavaScript渲染HTML。
 
+**🛑 在这个挑战中不要使用 `<template>` 标签。这是下一个挑战。但你可以在这里使用字符串插值。**
+
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-static.png)
 
 ### 设置

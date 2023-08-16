@@ -2,6 +2,8 @@
 
 ¡Bienvenido a tu primer ejercicio de plantillas! En este desafío, practicarás la renderización de HTML con JavaScript creando una lista de tareas estática.
 
+**🛑 No uses la etiqueta `<template>` en este ejercicio. Ese es el próximo ejercicio. Sin embargo, puedes utilizar la interpolación de cadenas de texto aquí.**
+
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-static.png)
 
 ### Configuración
