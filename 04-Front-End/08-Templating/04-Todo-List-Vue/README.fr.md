@@ -87,7 +87,7 @@ Une instance Vue est déjà créée avec la fonction `createApp()`. Tu vas coder
 #### Données
 
 <details>
-<summary markdown='span'>Dans une instance Vue, où placer les données des to-do ?
+<summary markdown='span'>Dans une instance Vue, où placer les données des to-do ?</summary>
 
 Tu as les mêmes éléments de tâches dans un array :
 
