@@ -2,6 +2,8 @@
 
 Welcome to your first templating challenge! In this challenge, you will practice rendering HTML with JavaScript by making a static to-do list.
 
+**🛑 Do not use a `<template>` tag in this challenge. That's the next challenge. You are welcome, however, to use string interpolation here.**
+
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-static.png)
 
 ### Setup
@@ -32,7 +34,7 @@ const todos = [
 - `title`: a `string` that contains what the item is about.
 - `done`: a `boolean` that indicates whether the item is done or not.
 
-2. Template: a piece of to-do HTML code
+2. Design: a piece of to-do HTML code
 
 ```html
 <div class="shadow-sm rounded px-4 py-3 mb-2 border d-flex">

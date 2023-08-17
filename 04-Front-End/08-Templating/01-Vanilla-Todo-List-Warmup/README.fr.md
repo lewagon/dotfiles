@@ -2,6 +2,8 @@
 
 Bienvenue à votre premier challenge de templating ! Dans ce challenge, tu vas t'entraîner à générer du HTML avec JavaScript en créant une to-do liste.
 
+**🛑 N'utilise pas de balise `<template>` dans ce challenge, tu le feras dans le prochain. En revanche, libre à toi d'utiliser une interpolation ici.**
+
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/to-do-static.png)
 
 ### Configuration
