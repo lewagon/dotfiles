@@ -1,3 +1,13 @@
+## Day Validation Guidelines
+By day end, every team should have:
+- Written 5 to 10 user stories (week backlog)
+- Designed their Data Model
+- Chosen their routes
+- Drawn their app mockups
+- Created their Github repo & invited all its members
+- Pushed to their Github repo the first version of their app (rails new), make sure they used Le Wagon's minimal template
+- Deployed their app onto Heroku
+
 ## Validation Guidelines (Monday morning)
 
 Here are some instructions for validating DB and routes when kick-starting project on Monday morning. Note that students work on a Airbnb-like so they can replace `flats` by any other table of `offers` (e.g. renting `boats`, `cats`, `gardens`, etc.).
@@ -99,3 +109,9 @@ For the first intermediate demo on Geocoding day, every team should have:
 If you see students losing time on non-core features (edit your profile, connect with Facebook, geocode the offers, etc.) while they have not finished the core ones or have a dirty design for main pages, **it's your role to put them back on track**. You are a teacher but also a product manager this week!
 
 On the contrary, if all your teams have a very well designed app with simple core features working, they will be really motivated to keep enhancing their app and make kick-ass final demo on the last day of Airbnb.
+
+## Final demo (during Authorization & Pundit)
+
+For the final demo, share the [demo day presentation guidelines](https://kitt.lewagon.com/camps/1319/challenges?path=06-Projects%2F05-Build-an-API%2F01-Intermediate-demo).
+
+Students should strive to follow these rules so they can be well-prepared for the demo day presentation.
