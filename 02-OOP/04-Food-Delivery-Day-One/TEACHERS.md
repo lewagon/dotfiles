@@ -31,7 +31,7 @@ Then add two new models to your diagram: appointments and doctors. Add these to 
 You should make a good introduction for the food delivery:
 
 - It will last 2 blocks
-- Do a demo of what they should program (in the `fullstack-solutions` repo, launch `ruby app.rb`)
+- Do a demo of what they should program (in your solution, launch `ruby app.rb`)
 - Explain there will be a logged in access
 - Explain that they will have several models, controllers and views
 - Explain that for each model, there is one controller and one view (but start by the model)
