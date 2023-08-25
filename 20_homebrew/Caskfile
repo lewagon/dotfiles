@@ -8,6 +8,7 @@ tap 'homebrew/cask-drivers'
 # cask 'adobe-acrobat-reader'
 cask 'dbeaver-community'
 cask 'clickup'
+cask 'cyberduck'
 # cask 'clockify'
 # cask 'dash2
 cask 'devtoys'
