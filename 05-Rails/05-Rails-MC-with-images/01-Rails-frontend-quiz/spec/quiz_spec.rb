@@ -16,7 +16,7 @@ describe "quiz" do
 
   describe "#add_a_npm_package" do
     it "should return the correct answer" do
-      expect(add_a_npm_package).to eq('yarn add sweetalert')
+      expect(add_a_npm_package).to eq('importmap pin sweetalert')
     end
   end
 end
