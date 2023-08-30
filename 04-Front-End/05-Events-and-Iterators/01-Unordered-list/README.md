@@ -24,18 +24,28 @@ Start by working with the tests in the browser. When you are done, use `rake` to
 
 ### List item generator
 
-Implement first the `listItem` function which takes one `content` parameter (of type `String`) and returns the `<li>` tag with its content:
+Implement first the `listItem(content)` function which takes one `content` parameter (of type `String`) and returns the `<li>` tag with its content:
 
 ```js
 listItem('milk');
 // => '<li class="list-group-item">milk</li>'
+
+listItem('bread');
+// => '<li class="list-group-item">bread</li>
+
+listItem('butter');
+// => '<li class="list-group-item">butter</li>
 ```
 
 Make sure you use [ES6 template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) and not concatenation (not the modern way to do this in JavaScript).
 
+💡 Note that `content` is a parameter to the function `listItem`. You don't need to worry about what the content will be; just accept for now that it will get passed in as an argument when the function is called.
+
+_You don't need to worry about calling the function in this section, only defining it. That step will come later._
+
 ### Unordered list generator
 
-When the `listItem` function passes all the tests, go on and code the `unorderedList` function which takes one `items` parameter (`Array`) and returns the whole `<ul>`'s HTML:
+When the `listItem` function passes all the tests, go on and code the `unorderedList(items)` function which takes one `items` parameter (`Array`) and returns the whole `<ul>`'s HTML:
 
 ```js
 > console.log(unorderedList(['milk', 'butter', 'bread']));
@@ -44,13 +54,26 @@ When the `listItem` function passes all the tests, go on and code the `unordered
 //   <li class="list-group-item">butter</li>
 //   <li class="list-group-item">bread</li>
 // </ul>
+
+> console.log(unorderedList(['apple', 'strawberry', 'orange']));
+// <ul class="list-group">
+//   <li class="list-group-item">apple</li>
+//   <li class="list-group-item">strawberry</li>
+//   <li class="list-group-item">orange</li>
+// </ul>
 ```
 
 **Just this once**, we won't mind if the indentation in the generated string isn't perfect!
 
+💡 Note that `items` is a parameter to the function `unorderedList`. Similarly, to the previous section, you shouldn't worry about providing the actual list. Your function should work with any array when it's called.
+
+_You don't need to worry about calling the function in this section, only defining it. That step will come later._
+
 ### Display the list
 
-Now, call your `unorderedList` function to generate the HTML of the groceries list and display it in the `#list` element of the `index.html` page.
+🚀 Now, it's time to **call our function**.
+
+Call your `unorderedList` function to generate the HTML of the groceries list and display it in the `#list` element of the `index.html` page.
 
 The groceries list should look as follows:
 ```js
