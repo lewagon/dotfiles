@@ -65,10 +65,10 @@ rails db:migrate RAILS_ENV=test  # If you added a migration
 Luego verás que testear tu código será tan simple como con el viejo'
 
 ```bash
-rake
+rspec
 ```
 
-Si tienes problemas corriendo `rake`, tal vez tengas que correr `bin/rake`. Eso significa que tu `$PATH` no contiene la carpeta `./bin`. Esto lo puedes arreglar en los zshrc de tus dotfiles (lee [nuestra configuración por defecto](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18)).
+Si tienes problemas corriendo `rspec`, tal vez tengas que correr `bin/rspec`. Eso significa que tu `$PATH` no contiene la carpeta `./bin`. Esto lo puedes arreglar en los zshrc de tus dotfiles (lee [nuestra configuración por defecto](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18)).
 
 ## Especificaciones
 

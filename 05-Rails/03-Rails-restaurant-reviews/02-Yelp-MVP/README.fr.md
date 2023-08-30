@@ -69,7 +69,7 @@ Ensuite, tester ton code est aussi simple qu'avec la bonne vieille commande
 rspec
 ```
 
-Si tu as du mal à lancer `rake`, tu auras peut-être besoin d'exécuter `bin/rake`. Cela signifie que ton `$PATH` ne contient pas le dossier `./bin` ; tu peux corriger cela dans le fichier zshrc des répertoires cachés (consulte [notre configuration par défaut](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))
+Si tu as du mal à lancer `rspec`, tu auras peut-être besoin d'exécuter `bin/rspec`. Cela signifie que ton `$PATH` ne contient pas le dossier `./bin` ; tu peux corriger cela dans le fichier zshrc des répertoires cachés (consulte [notre configuration par défaut](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))
 
 ## Spécifications
 
