@@ -23,7 +23,7 @@ Cependant, tu dois encore t'habituer à faire la partie configuration du JavaScr
 Crée un fichier `copy_to_clipboard_controller.js` dans le dossier `controllers` vide, et copie-colle le template :
 
 ```javascript
-// lib/controllers/event_listener_controller.js
+// lib/controllers/copy_to_clipboard_controller.js
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {

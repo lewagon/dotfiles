@@ -24,7 +24,7 @@ Sin embargo, aún necesitas encargarte de configurar la parte de JavaScript tú 
 Crea un archivo `copy_to_clipboard_controller.js` en la carpeta vacía `controllers` y copia el siguiente código:
 
 ```javascript
-// lib/controllers/event_listener_controller.js
+// lib/controllers/copy_to_clipboard_controller.js
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {

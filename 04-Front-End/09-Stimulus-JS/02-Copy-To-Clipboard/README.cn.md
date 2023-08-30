@@ -23,7 +23,7 @@ serve
 在空的`controllers`文件夹中创建一个`copy_to_clipboard_controller.js`文件，复制粘贴模板：
 
 ```javascript
-// lib/controllers/event_listener_controller.js
+// lib/controllers/copy_to_clipboard_controller.js
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {

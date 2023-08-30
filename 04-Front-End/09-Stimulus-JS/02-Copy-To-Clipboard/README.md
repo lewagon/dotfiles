@@ -23,7 +23,7 @@ However, you still need to get used to doing the JavaScript setup part yourself.
 Create a `copy_to_clipboard_controller.js` file in the empty `controllers` folder, copy-paste the boilerplate:
 
 ```javascript
-// lib/controllers/event_listener_controller.js
+// lib/controllers/copy_to_clipboard_controller.js
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
