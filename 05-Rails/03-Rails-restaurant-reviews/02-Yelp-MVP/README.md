@@ -69,7 +69,7 @@ Then testing your code is as simple as usual with a good ol'
 rspec
 ```
 
-If you have trouble running `rake`, you may need to run `bin/rake`. It means that your `$PATH` does not contain the `./bin` folder, something you can fix in your dotfiles' zshrc (see [our default conf](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))
+If you have trouble running `rspec`, you may need to run `bin/rspec`. It means that your `$PATH` does not contain the `./bin` folder, something you can fix in your dotfiles' zshrc (see [our default conf](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))
 
 ## Specs
 

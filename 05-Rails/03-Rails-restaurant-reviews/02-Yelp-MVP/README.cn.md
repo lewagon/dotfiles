@@ -67,7 +67,7 @@ rails db:migrate RAILS_ENV=test  # 添加了一个数据库迁移之后运行
 ```bash
 rspec
 ```
-如果运行`rake`不顺利的话，你需要运行`bin/rake`。这意味着你的环境变量`$PATH`没有包含`./bin` 文件夹，你可以通过dotfiles的zshrc来修复这个问题(查看[我们的默认配置](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))。
+如果运行`rspec`不顺利的话，你需要运行`bin/rspec`。这意味着你的环境变量`$PATH`没有包含`./bin` 文件夹，你可以通过dotfiles的zshrc来修复这个问题(查看[我们的默认配置](https://github.com/lewagon/dotfiles/blob/master/zshrc#L16-L18))。
 
 ## 详细说明
 
