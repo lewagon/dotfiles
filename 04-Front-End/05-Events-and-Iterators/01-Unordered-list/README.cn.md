@@ -39,7 +39,7 @@ listItem('butter');
 
 确保使用[ES6模板文字](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)而不是字符串串接（这不是现代写JavaScript的方法）。
 
-💡 请注意，`content` 是`listItem` 函数的参数。你不需要担心内容是什么；现在只需接受在调用函数时它将作为参数传递进来。
+💡 请注意，`content` 是`listItem` 函数的参数。你不需要担心内容是什么；现在你只需接知道它将作为参数传递进来就可以了。
 
 _在这一部分，你无需担心调用函数，只需定义它。调用函数的步骤将稍后进行。_
 
