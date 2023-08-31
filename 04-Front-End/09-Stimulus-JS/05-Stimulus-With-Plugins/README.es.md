@@ -29,9 +29,9 @@ Importaremos el complemento `Chart.js` con `importmap`.
 
 Luego, utilizaremos el complemento para implementar 3 tipos diferentes de gráficos en el ejercicio:
 
-- un [gráfico de donut (doughnut)](https://www.chartjs.org/docs/latest/es/charts/doughnut.html)
-- un [gráfico de línea (line)](https://www.chartjs.org/docs/latest/es/charts/line.html)
-- un [gráfico radar](https://www.chartjs.org/docs/latest/es/charts/radar.html)
+- un [gráfico de donut (doughnut)](https://www.chartjs.org/docs/latest/charts/doughnut.html)
+- un [gráfico de línea (line)](https://www.chartjs.org/docs/latest/charts/line.html)
+- un [gráfico radar](https://www.chartjs.org/docs/latest/charts/radar.html)
 
 Echa un vistazo a la documentación para comprender cómo funciona cada tipo.
 
