@@ -19,7 +19,7 @@
   # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 
-  m = checkout main
+  m = !git fetch origin main && git checkout main
 
   # Removes a file from the index
   unstage = reset HEAD --

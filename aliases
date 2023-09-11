@@ -21,7 +21,7 @@ alias gp="git push"
 alias gcmsg="git commit -m"
 alias gco="git checkout"
 alias gcm="git checkout main"
-alias glg="git lg"
+alias glg="git lg -20"
 alias ga="git add"
 alias gaa="git add --all"
 alias gap="git add --patch"
@@ -39,3 +39,6 @@ alias whquery="bq query --use_legacy_sql=false"
 
 # tmux
 alias ta="~/workspace/xavierosee/dotfiles/bin/tat"
+
+# molecule
+alias molecule="~/workspace/mentionapp/ansible/molecule/config/bash_wrapper"
