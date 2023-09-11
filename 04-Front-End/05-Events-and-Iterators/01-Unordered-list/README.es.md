@@ -29,9 +29,20 @@ Implementa la primera función `listItem` la cual toma el parámetro `content` (
 ```js
 listItem('milk');
 // => '<li class="list-group-item">milk</li>'
+
+listItem('bread');
+// => '<li class="list-group-item">bread</li>
+
+listItem('butter');
+// => '<li class="list-group-item">butter</li>
 ```
 
 Asegúrate de usar las plantilla literales ES6 ([ES6 Template literals])(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) en lugar de la concatenación (ya que no es la manera moderna de hacer esto en JavaScript).
+
+💡 Observa que `content`es un parámetro de la función `listItem` No necesitas preocuparte por lo que será el contenido; simplemente acepta por ahora que se pasará como argumento cuando se llame a la función.
+
+_No necesitas preocuparte por llamar a la función en esta sección, solo definirla. Eso vendrá más adelante._
+
 
 ### Generador de lista no ordenada
 
@@ -44,11 +55,24 @@ Cuando la función `listItem` pase todos los tests, escribe el código de la fun
 //   <li class="list-group-item">butter</li>
 //   <li class="list-group-item">bread</li>
 // </ul>
+
+> console.log(unorderedList(['apple', 'strawberry', 'orange']));
+// <ul class="list-group">
+//   <li class="list-group-item">apple</li>
+//   <li class="list-group-item">strawberry</li>
+//   <li class="list-group-item">orange</li>
+// </ul>
 ```
 
 **Solo por esta vez**: ¡no nos importa si la tabulación no es perfecta!
 
+💡 Observa que `items` es un parámetro de la función `unorderedList`. De manera similar a la sección anterior, no debes preocuparte por proporcionar la lista real. Tu función debería funcionar con cualquier arreglo cuando se llame.
+
+_No necesitas preocuparte por llamar a la función en esta sección, solo definirla. Eso vendrá más adelante_
+
 ### Mostrar la lista
+
+🚀 Ahora es el momento de llamar a nuestra función.
 
 Ahora, llamá a tu función `unorderedList` para generar el código HTML de la lista de compras y mostralo en el elemento `#list` de la página `index.html`.
 

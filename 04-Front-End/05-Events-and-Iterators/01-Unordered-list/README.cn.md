@@ -29,9 +29,19 @@ serve
 ```js
 listItem('milk');
 // => '<li class="list-group-item">milk</li>'
+
+listItem('bread');
+// => '<li class="list-group-item">bread</li>
+
+listItem('butter');
+// => '<li class="list-group-item">butter</li>
 ```
 
 确保使用[ES6模板文字](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)而不是字符串串接（这不是现代写JavaScript的方法）。
+
+💡 请注意，`content` 是`listItem` 函数的参数。你不需要担心内容是什么；现在你只需接知道它将作为参数传递进来就可以了。
+
+_在这一部分，你无需担心调用函数，只需定义它。调用函数的步骤将稍后进行。_
 
 ### 无序列表生成器
 
@@ -44,11 +54,24 @@ listItem('milk');
 //   <li class="list-group-item">butter</li>
 //   <li class="list-group-item">bread</li>
 // </ul>
+
+> console.log(unorderedList(['apple', 'strawberry', 'orange']));
+// <ul class="list-group">
+//   <li class="list-group-item">apple</li>
+//   <li class="list-group-item">strawberry</li>
+//   <li class="list-group-item">orange</li>
+// </ul>
 ```
 
 如果生成的字符串的缩进格式不是完美的，也没关系。不过**仅此一次哦！**
 
+💡 注意，`items`是`unorderedList`函数的参数。类似于之前的部分，你不必担心提供实际的列表。当函数被调用时，你的函数可以处理任何数组。
+
+_在这一部分，你无需担心调用函数，只需定义它。调用函数的步骤将稍后进行。_
+
 ### 显示列表
+
+🚀 现在是调用我们的函数的时候了。
 
 现在，调用你的`unorderedList`函数来生成杂货清单的HTML，并在`index.html`页面的`#list`元素中显示它。
 
