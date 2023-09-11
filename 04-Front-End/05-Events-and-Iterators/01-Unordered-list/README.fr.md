@@ -39,9 +39,9 @@ listItem('butter');
 
 Assure-toi d'utiliser les [template literals ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) au lieu de la concaténation (qui n'est pas la méthode moderne à utiliser en JavaScript).
 
-💡 Remarque que `content`est un paramètre de la fonction `listItem` Tu n'as pas besoin de te préoccuper de ce que sera le contenu ; accepte simplement pour l'instant qu'il sera transmis en tant qu'argument lorsque la fonction sera appelée.
+💡 Tu remarqueras que `content` est un paramètre de la fonction `listItem`. Tu n'as pas besoin de te préoccuper de ce que sera le contenu : pour le moment, rappelle toi simplement qu'il sera transmis en tant qu'argument lorsque la fonction sera appelée.
 
-_Tu n'as pas besoin de te préoccuper d'appeler la fonction dans cette section, seulement de la définir. Cette étape viendra plus tard._
+_Tu n'as pas besoin d'appeler la fonction dans cette section, seulement de la définir. Cette étape viendra plus tard._
 
 ### Générateur de liste non ordonnée
 
@@ -65,17 +65,18 @@ Une fois que la fonction `listItem` a passé tous les tests, code la fonction `u
 
 **Pour cette fois**, ce n'est pas grave si l'indentation n'est pas parfaite !
 
-💡 Remarque que `items`est un paramètre de la fonction `unorderedList` De manière similaire à la section précédente, tu ne devrais pas te préoccuper de fournir la liste réelle. Ta fonction devrait fonctionner avec n'importe quel tableau lorsqu'elle est appelée.
+💡 Encore une fois, tu remarqueras que `items` est un paramètre de la fonction `unorderedList`. Comme dans la fonction précédente, tu n'as pas besoin de fournir la liste réelle. Ta fonction devrait fonctionner avec n'importe quel tableau lorsqu'elle est appelée.
 
-_Tu n'as pas besoin de te préoccuper d'appeler la fonction dans cette section, seulement de la définir. Cette étape viendra plus tard._
+_Tu n'as pas besoin d'appeler la fonction dans cette section, seulement de la définir. Cette étape viendra plus tard._
 
 ### Afficher la liste
 
-🚀 Maintenant, il est temps d'appeler notre fonction.
+🚀 Il est temps d'appeler notre fonction !
 
 Maintenant, appelle ta fonction `unorderedList` pour générer le HTML de la liste de courses et affiche-le dans l'élément `#list` de la page `index.html`.
 
 La liste de courses devrait ressembler à ceci :
+
 ```js
 const groceries = ['milk', 'butter', 'bread'];
 ```
