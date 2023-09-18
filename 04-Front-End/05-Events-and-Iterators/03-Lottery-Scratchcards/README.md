@@ -62,7 +62,7 @@ So, how can we access this data attribute from JavaScript? **You'll want to use 
 ```js
 // if we have in our HTML: <div id="hotel" data-name="Azure Ocean"></div>
 
-const hotel = document.querySelector("hotel");
+const hotel = document.querySelector("#hotel");
 console.log(hotel.dataset.name);
 // will print out Azure Ocean
 ```
