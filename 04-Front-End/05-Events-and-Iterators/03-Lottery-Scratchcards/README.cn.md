@@ -62,7 +62,7 @@ serve
 ```js
 // 如果我们在HTML中有：<div id="hotel" data-name="Azure Ocean"></div>
 
-const hotel = document.querySelector("hotel");
+const hotel = document.querySelector("#hotel");
 console.log(hotel.dataset.name);
 // 这将打印出Azure Ocean
 ```

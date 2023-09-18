@@ -62,7 +62,7 @@ Alors, comment pouvons-nous accéder à cet attribut de données depuis JavaScri
 ```js
 // si tu as dans ton HTML : <div id="hotel" data-name="Azure Ocean"></div>
 
-const hotel = document.querySelector("hotel");
+const hotel = document.querySelector("#hotel");
 console.log(hotel.dataset.name);
 // et cela affichera : Azure Ocean
 ```
