@@ -17,8 +17,7 @@ Then open [`localhost:8000`](http://localhost:8000) in your browser.
 
 ## Specs
 
-For this challenge we are using a new JavaScript concept: an event listener. You will learn more about event listeners in the next lecture so for now it has been written for you in the challenge.
-How does it work? We want to execute our JavaScript code only when a specific event happens, not directly on page load (which is what we have done until now). In our case, we want to move our empty tile only when we click on another tile, otherwise nothing should happen. We can do this by adding the following code:
+💡 For this challenge we are using a new JavaScript concept: an event listener. You will learn more about event listeners in the next lecture so for now it the code as been written for your in the challenge at the end of the `puzzle.js` file:
 
 ```js
 tiles.forEach((tile) => {
@@ -31,7 +30,16 @@ tiles.forEach((tile) => {
 });
 ```
 
-Don't change this code at the end of your file, you only need to code the functions which are inside.
+❗ Don't change this code.
+
+What does this code do? Let's break it down line by line:
+
+1. `tiles.forEach((tile) => {`: This is an iteration, similar to `#each` in Ruby. There are many tiles on the screen, and we want the same behavior on all of them. So, the code in the `{}` will be run for each tile on the screen.
+2. `tile.addEventListener('click', () => {`: Up to now, our code has always run on _page load_, but that's not the behavior we want in this case. This line makes the browser wait to execute the code _until the user clicks_. So, anything inside of the `{}` is code that will only run when the user clicks on a tile. This is called an **event listener**.
+3. `if (canMove(tile)) {`: The `canMove(tile)` function should return `true` or `false` so that the rest only runs if the function returns `true`.
+4. `moveTile(tile)` and `checkIfPlayerWins()` are functions that you will write soon (keep reading 👇).
+
+Your goal in order to make everything work is to write the `canMove(tile)`, `moveTile(tile)`, and `checkIfPlayerWins()` functions (in each place where you should add code, there's a comment with "TODO" written in it).
 
 ## Check if the tile can move
 
