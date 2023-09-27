@@ -35,6 +35,12 @@ Project the calendar on the screen to go through the program with the class, wee
 - Just hold on, stay motivated and trust us: 13,000+ former students have experienced the program
 - It works, so at this point, **trust us** and fight for it!
 
+#### Artificial Intelligence - ANOTHER DISCLAIMER
+
+- Don't use any AI tools (ChatGPT, GitHub Copilot, etc.) until the Airbnb project. **Trust the process; we will teach you how to use them at the right moment.**
+- The reality is that AI tools are quite good at solving introductory coding problems. But you will not learn if you copy and paste their answers. These challenges are designed to teach you to code; you have to solve them yourself to learn. If you don't, your understanding will suffer.
+- When we get to Airbnb and Project Weeks, we will teach you how to use AI tools effectively. Since you will be building projects that _you designed yourselves_, AI tools won't be smart enough to give you the answer. They'll only be able to help you along at this point, much like a virtual TA.
+
 #### Monday (Week 1) - Setup
 - Special day, we'll focus on your machines setup, you'll go home with pimped workstations ready for the next 9 weeks!
 
@@ -79,6 +85,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - Airbnb clone! (no flats allowed).
 - Team up with your project buddies.
 - Collaborate on GitHub.
+- Use AI tools to help you code.
 - Make mistakes you won't make again during the Project's weeks 😊
 
 #### Monday (Week 8) - Friday (Week 9) - Project Weeks
