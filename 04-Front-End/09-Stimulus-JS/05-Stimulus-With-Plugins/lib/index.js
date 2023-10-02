@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import { Application } from "@hotwired/stimulus";
 // TODO: Import Chartjs external library
 
