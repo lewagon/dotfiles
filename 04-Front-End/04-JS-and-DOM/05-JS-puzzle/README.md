@@ -17,7 +17,7 @@ Then open [`localhost:8000`](http://localhost:8000) in your browser.
 
 ## Specs
 
-💡 For this challenge we are using a new JavaScript concept: an event listener. You will learn more about event listeners in the next lecture so for now it the code as been written for your in the challenge at the end of the `puzzle.js` file:
+💡 For this challenge we are using a new JavaScript concept: an event listener. You will learn more about event listeners in the next lecture so for now it the code as been written for you in the challenge at the end of the `puzzle.js` file:
 
 ```js
 tiles.forEach((tile) => {
