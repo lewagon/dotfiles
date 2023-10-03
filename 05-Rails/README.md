@@ -16,11 +16,11 @@ Here comes our old friend Active Record again! **One of the most important Rails
 
 Today you will add a second model to a Rails app by building a two model clone of Yelp, with restaurants and reviews. The morning lecture is about going **Beyond CRUD** with advanced routing and validations in Rails.
 
-### `04 Rails front-end`
+### `04 Rails Assets`
 
-Learn the best setup for implementing Bootstrap SASS + front-end libraries, and switch from `form_with` to `simple_form_for` using Simple Form Bootstrap config.
+Learn the best setup for implementing Bootstrap SCSS + front-end libraries, and switch from `form_with` to `simple_form_for` using Simple Form Bootstrap config.
 
-Learn about the asset pipeline and webpacker.
+Learn about the asset pipeline.
 
 For the exercises, you'll start a two-day build of a watch list app, with 3 models `Movie`, `Bookmark`, and `List`.
 You will have to follow the front-end setup carefully to work on a nice-looking app.

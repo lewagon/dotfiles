@@ -16,11 +16,11 @@ Et revoilà ce bon vieux Active Record ! **C'est l'un des cours les plus importa
 
 Aujourd'hui, tu ajouteras un deuxième modèle à une application Rails en créant un clone à deux modèles de Yelp, avec des restaurants et des avis. Le cours du matin abordera la construction de routes avancées et les validations dans Rails **au-delà du CRUD**.
 
-### `04 Front-end Rails`
+### `04 Rails assets`
 
-Tu découvriras la meilleure configuration pour utiliser Bootstrap SASS + des librairies front-end, et comment passer de `form_with` à `simple_form_for` en utilisant la configuration Simple Form de Bootstrap.
+Tu découvriras la meilleure configuration pour utiliser Bootstrap SASS, et comment passer de `form_with` à `simple_form_for` en utilisant la configuration Simple Form de Bootstrap.
 
-Tu découvriras l'asset pipeline (pipeline d'actifs) et webpacker.
+Tu découvriras l'asset pipeline (pipeline d'actifs).
 
 Pour les exercices, tu commenceras un projet de création d'une application de films à voir sur deux jours, avec 3 modèles `Movie`, `Bookmark`, et `List`.
 Tu devras suivre attentivement la configuration front-end pour créer une application attrayante.

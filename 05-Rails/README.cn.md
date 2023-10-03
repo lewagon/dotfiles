@@ -16,11 +16,11 @@ At last, Rails!
 
 今天，你会在Rails应用程序添加第二个模型，创建一个拥有两个模型的Yelp克隆。应用里包括餐馆和评论模型。上午的讲座是关于**超越CRUD**，在Rails中使用高级路由和验证。
 
-### `04 Rails前端`
+### `04 Rails Assets`
 
-了解实现Bootstrap SASS和前端库的最佳设置，并使用Simple Form Bootstrap设置将`form_with`切换到`simple_form_for`。
+了解实现Bootstrap SASS的最佳设置，并使用Simple Form Bootstrap设置将`form_with`切换到`simple_form_for`。
 
-了解asset pipeline和webpacker。
+了解asset pipeline。
 
 你的练习是在两天内构建watch list应用程序。应用需要包含3个模型：`电影`，`书签`和`列表`(`Movie`, `Bookmark`, `List`)。
 你必重视前端工作，做出一个好看的应用程序。
