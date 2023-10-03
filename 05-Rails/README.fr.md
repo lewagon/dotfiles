@@ -32,7 +32,7 @@ Le cours du matin se divise en deux parties :
 
 **Chargement d'images** : On hébergera des images sur [Cloudinary](http://cloudinary.com/) en utilisant [ActiveStorage](https://guides.rubyonrails.org/v6.0.1/active_storage_overview.html). Le cours t'expliquera aussi comment obtenir tes clés API en utilisant la gem [dotenv](https://github.com/bkeepers/dotenv). **Écoute attentivement si tu ne veux pas qu'on te vole tes coordonnées bancaires sur Github.**
 
-Et, ce sera **l'heure du dernier quiz** ! Ne sois pas triste ! 😢
+Puis ce sera **l'heure du dernier quiz** ! Ne sois pas triste ! 😢
 
 On vérifiera que tu as bien compris toutes les notions clés de Rails.
 
