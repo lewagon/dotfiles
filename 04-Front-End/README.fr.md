@@ -43,13 +43,13 @@ Maintenant que nous avons appris la syntaxe, découvrons le plein potentiel de J
 
 Nous utiliserons également l'itérateur `forEach` pour boucler sur les tableaux et manipuler ou jouer avec le DOM.
 
+Ensuite, au lieu du live-code, c'est Pitch Night ! Tu auras 5 minutes pour pitcher ton idée devant la classe. Jette un coup d'œil à `Front-End/Bootstrap/Pitch-Preparation` si tu veux une longueur d'avance sur la préparation.
+
 ## `06 HTTP & API`
 
 Révisons les bases du Web avec les cycles de requêtes / réponses HTTP.
 
 L'objectif de ce bloc est de s'assurer que tu sais comment communiquer avec les API en leur envoyant des requêtes HTTP ! De plus, tu apprendras à décrypter leurs réponses et à manipuler les données que tu récupères.
-
-Ensuite, au lieu du live-code, c'est Pitch Night ! Tu auras 5 minutes pour pitcher ton idée devant la classe. Jette un coup d'œil à `Front-End/Bootstrap/Pitch-Preparation` si tu veux une longueur d'avance sur la préparation.
 
 ## `07 AJAX`
 
