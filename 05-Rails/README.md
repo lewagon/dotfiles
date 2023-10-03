@@ -43,7 +43,7 @@ We'll take a step back and check you've grasped all the core notions of Rails.
 - First demo at the halfway point - If a full-time bootcamp, on Wednesday (5pm)
 - **Official demo on the last day!** If a full-time bootcamp, on Friday! (5pm)
 
-**No live-code for this week, except on the first day.** But you still have morning lecture at 9am on cool topics. So get up early! Here is an overview of what will be covered:
+**No live-code for this week, except on the first block.** But you still have morning lecture at 9am on cool topics. So get up early! Here is an overview of what will be covered:
 
 ### `06 Devise`
 
