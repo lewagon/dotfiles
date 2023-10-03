@@ -20,7 +20,7 @@ Aujourd'hui, tu ajouteras un deuxième modèle à une application Rails en créa
 
 Tu découvriras la meilleure configuration pour utiliser Bootstrap SASS, et comment passer de `form_with` à `simple_form_for` en utilisant la configuration Simple Form de Bootstrap.
 
-Tu découvriras l'asset pipeline (pipeline d'actifs).
+Tu découvriras également l'asset pipeline (pipeline d'actifs).
 
 Pour les exercices, tu commenceras un projet de création d'une application de films à voir sur deux jours, avec 3 modèles `Movie`, `Bookmark`, et `List`.
 Tu devras suivre attentivement la configuration front-end pour créer une application attrayante.
