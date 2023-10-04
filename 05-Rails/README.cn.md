@@ -16,11 +16,11 @@ At last, Rails!
 
 今天，你会在Rails应用程序添加第二个模型，创建一个拥有两个模型的Yelp克隆。应用里包括餐馆和评论模型。上午的讲座是关于**超越CRUD**，在Rails中使用高级路由和验证。
 
-### `04 Rails前端`
+### `04 Rails Assets`
 
-了解实现Bootstrap SASS和前端库的最佳设置，并使用Simple Form Bootstrap设置将`form_with`切换到`simple_form_for`。
+了解实现Bootstrap SASS的最佳设置，并使用Simple Form Bootstrap设置将`form_with`切换到`simple_form_for`。
 
-了解asset pipeline和webpacker。
+了解asset pipeline。
 
 你的练习是在两天内构建watch list应用程序。应用需要包含3个模型：`电影`，`书签`和`列表`(`Movie`, `Bookmark`, `List`)。
 你必重视前端工作，做出一个好看的应用程序。
@@ -32,7 +32,7 @@ At last, Rails!
 
 **图片上传**：我们将在[Cloudinary]上上传图片(http://cloudinary.com/)，使用[ActiveStorage](https://guides.rubyonrails.org/v6.0.1/active_storage_overview.html). 本课程还解释了如何使用[dotenv]保护API密钥(https://github.com/bkeepers/dotenv)gem。**请仔细听,避免在Github上泄漏你的银行信息。**
 
-周五下午2点，**测验时间**！你的最后一个测试！不要难过呦😢
+**测验时间**！你的最后一个测试！不要难过呦😢
 
 我们后退一步，检查你是否掌握了Rails的所有核心概念。
 
@@ -52,9 +52,8 @@ At last, Rails!
 - 使用[Devise]gem进行身份认证(https://github.com/plataformatec/devise)。
 - 使用git和Github的协作技术。您将了解在开发团队中工作如何使用“branches”和“pull requests”。这个系统非常重要，接下来在你开发项目中你会每天遇到，所以要注意。
 
-### `07 Pundit`
-
-接下来，我们将教你如何在Rails应用程序中处理**授权**，并确保只有餐厅创建者才能更改或删除它！
+### 07 JavaScript 在 Rails 中
+学习如何使用 Stimulus 和 `importmap` 在 Rails 中实现新的 JavaScript 功能，并使用第三方库。
 
 ### `08 地理编码`
 
@@ -66,9 +65,9 @@ At last, Rails!
 
 今天的讲座涵盖了搜索主题，从使用Active Record的search 101到ElasticSearch或Algolia等更强大的解决方案。
 
-### `10 Airbnb Rails中的Ajax`
+### `10 Pundit`
 
-你一旦了解了CRUD并能够快速地重新创建rails scaffold，就可以使用AJAX添加一些额外的“魔法”了。你可以在不刷新页面的情况下与服务器对接（在帖子中添加新评论/点击星级/从列表中删除某些内容等）
+接下来，我们将教你如何在Rails应用程序中处理**授权**，并确保只有餐厅创建者才能更改或删除它！
 
 ### 项目准备 (周末)
 

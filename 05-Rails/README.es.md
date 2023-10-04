@@ -16,11 +16,11 @@ En el primer día verás el flujo estándar de Rails `ruta > controlador > vista
 
 Hoy agregaremos un segundo modelo de aplicación Rails creando un clon de dos modelos de Yelp con restaurantes y reviews. La clase matinal es sobre **ir más allá de CRUD** con ruteo avanzado y validaciones en Rails.
 
-### `04 Front-end en Rails`
+### `04 Rails Assets`
 
-Aprenderás la mejor forma de implementar Bootstrap SASS + librerías front-end y a pasar de `form_with` a `simple_form_for` usando la configuración de Simple Form de Bootstrap.
+Aprenderás la mejor forma de implementar Bootstrap SASS y a pasar de `form_with` a `simple_form_for` usando la configuración de Simple Form de Bootstrap.
 
-Aprenderás sobre el asset pipeline y webpacker.
+Aprenderás sobre el asset pipeline.
 
 En cuanto a los ejercicios, comenzarás con la creación de una app de cócteles que tomará dos días. Dicha app tendrá 3 modelos `Cocktail`, `Ingredient` y `Dose`. Tendrás que:
 - seguir la configuración front-end detenidamente para poder crear una app que luzca bien.
@@ -32,7 +32,7 @@ La clase (lecture) de esta mañana tiene 2 partes:
 
 **Carga de Imágenes**: Vamos a alojar las imágenes en [Cloudinary](http://cloudinary.com/), usando [ActiveStorage](https://guides.rubyonrails.org/v6.0.1/active_storage_overview.html). El curso también incluye como asegurar tus API keys usando la gema [dotenv](https://github.com/bkeepers/dotenv). **Presta mucha atención si no quieres que te roben datos bancarios en Github.**
 
-El viernes a las 2 p.m. es ¡**el último quiz**! No te pongas triste 😢
+Y hay ¡**el último quiz**! No te pongas triste 😢
 
 Miraremos hacia atrás para comprobar que hayas entendido los fundamentos de Rails.
 
@@ -52,9 +52,9 @@ Clase matinal en 2 partes:
 - Autenticación (authentication) con la gema [Devise](https://github.com/plataformatec/devise).
 - Técnicas de colaboración con git y Github. Descubrirás cómo trabajar en un equipo de desarrollo usando `branches` y `pull requests`. Es un sistema que usarás en cada proyecto de desarrollo que hagas, así que ¡presta atención!
 
-### `07 Pundit`
+### 07 JavaScript en Rails
 
-Después de Devise te enseñaremos cómo manejar la autorización (**authorization**) en tu app Rails y así asegurarnos de que ¡solo el creador del restaurante puede hacer actualizaciones o destruirlo!
+Aprenderás cómo utilizar Stimulus y `importmap` para implementar nuevas características de JavaScript y utilizar bibliotecas externas en Rails.
 
 ### `08 Geocoding`
 
@@ -66,9 +66,11 @@ Luego a las 5 p.m. cada grupo hará una demostración de su versión/clon de Air
 
 Esta clase es sobre búsquedas. Abarca desde search 101 usando Active Record a soluciones más robustas como ElasticSearch o Algolia.
 
-### `10 Airbnb Ajax en Rails`
+### `10 Pundit`
 
-Una vez que entiendas CRUD y puedas recrear un scaffold de Rails rápidamente será hora de agregar detalles mágicos usando AJAX. Podrás hablar con el servidor sin recargar la página (agregando nuevos comentarios a los posts / haciendo clic en estrellas de ratings / removiendo cosas de una lista, etc.).
+Después de Devise te enseñaremos cómo manejar la autorización (**authorization**) en tu app Rails y así asegurarnos de que ¡solo el creador del restaurante puede hacer actualizaciones o destruirlo!
+
+
 
 ### Preparación de Proyectos (fin de semana)
 
