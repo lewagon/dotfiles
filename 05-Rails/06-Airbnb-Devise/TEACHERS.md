@@ -112,6 +112,6 @@ On the contrary, if all your teams have a very well designed app with simple cor
 
 ## Final demo (during Authorization & Pundit)
 
-For the final demo, share the [demo day presentation guidelines](https://kitt.lewagon.com/camps/1319/challenges?path=06-Projects%2F05-Build-an-API%2F01-Intermediate-demo).
+For the final demo, share the [demo day presentation guidelines](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=06-Projects%2F05-Build-an-API%2F01-Intermediate-demo).
 
 Students should strive to follow these rules so they can be well-prepared for the demo day presentation.
