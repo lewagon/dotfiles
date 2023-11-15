@@ -232,3 +232,6 @@ if [ -d "$HOME/workspace/xavierosee/flutter/bin" ] ; then
     PATH="$HOME/workspace/xavierosee/flutter/bin:$PATH"
 fi
 export ANDROID_HOME=$HOME/Library/Android/sdk
+
+# Enable Terraform autocompletion
+complete -o nospace -C /usr/local/bin/terraform terraform
