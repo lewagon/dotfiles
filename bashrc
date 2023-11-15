@@ -131,83 +131,48 @@ fi
 # Adds, Mods, Deletes etc are displayed from the current dir down
 # (IE 'git status .' vs 'git status')
 #
+
 function my_prompt_command {
-  if type -p __git_ps1; then
+  # Determine the current git branch, if any.
+  if type -p __git_ps1 &> /dev/null; then
     local git_branch=$(__git_ps1 | tr -d '()')
   else
     local git_branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')
   fi
 
-  # Basic command prompt to use when not in a git repo directory.
+  # Set the basic command prompt.
   PS1="\n\u@\h:\[\e[1;36m\]\w\[\e[0m\]"
 
-  if [ -n "$git_branch" ] && [ -n "$(which perl)" ] ; then
-    local proj_dir=$(pwd | sed 's/.*\/proj\///')
-    local proj_top_dir=$(echo $proj_dir | sed 's/\/.*//')
-    local proj_subdir=$(echo $proj_dir | perl -pe 's|.+?/||')
-    # TODO: Call 'git status' only once.
-    #local untracked_files=$(git ls-files --other --exclude-standard 2> /dev/null  | wc -l)
-    local untracked_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?\?\? ' 2> /dev/null)
-    local added_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?A ' 2> /dev/null)
-    local modified_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?M ' 2> /dev/null)
-    local deleted_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?D ' 2> /dev/null)
-    local renamed_files=$(git status . --porcelain 2> /dev/null | grep -Ec '^ ?R ' 2> /dev/null)
+  if [ -n "$git_branch" ]; then
+    # Gather git status information.
+    local git_status=$(git status . --porcelain 2> /dev/null)
 
-    # Delimiter to distinguish from other output.
-    # PS1="________________________________________________________________________________"
+    # Calculate file statuses.
+    local untracked_files=$(echo "$git_status" | grep -c '^\?\?')
+    local added_files=$(echo "$git_status" | grep -c '^A ')
+    local modified_files=$(echo "$git_status" | grep -c '^ M')
+    local deleted_files=$(echo "$git_status" | grep -c '^ D')
+    local renamed_files=$(echo "$git_status" | grep -c '^R ')
 
-    # Git user.name <user.email>
-    # PS1="${PS1}\n\[\e[1;38m\]$(git config user.name) <$(git config user.email)>\[\e[0m\]"
-    
-    # Project dir (assumes you have all your git repos in a proj dir.
-    # PS1="[\e[1;35m\]${proj_top_dir}\[\e[0m\]"
-    # if [ "${proj_top_dir}" != "${proj_subdir}" ]; then
-    #   PS1="${PS1}\[\e[1;36m\]/${proj_subdir}\[\e[0m\]"
-    # fi
+    # Append file status information to the prompt.
+    [[ $untracked_files -gt 0 ]] && PS1="${PS1} ?\[\e[1;39m\]${untracked_files}\[\e[0m\]"
+    [[ $added_files -gt 0 ]] && PS1="${PS1} +\[\e[1;32m\]${added_files}\[\e[0m\]"
+    [[ $modified_files -gt 0 ]] && PS1="${PS1} *\[\e[1;34m\]${modified_files}\[\e[0m\]"
+    [[ $renamed_files -gt 0 ]] && PS1="${PS1} ^\[\e[1;36m\]${renamed_files}\[\e[0m\]"
+    [[ $deleted_files -gt 0 ]] && PS1="${PS1} -\[\e[1;31m\]${deleted_files}\[\e[0m\]"
 
-    # Untracked files
-    if [ $untracked_files -gt 0 ]; then
-        PS1="${PS1} ?\[\e[1;39m\]${untracked_files}\[\e[0m\]"
-    fi
-
-    # Added files
-    if [ $added_files -gt 0 ]; then
-        PS1="${PS1} +\[\e[1;32m\]${added_files}\[\e[0m\]"
-    fi
-
-    # Modified files
-    if [ $modified_files -gt 0 ]; then
-      PS1="${PS1} *\[\e[1;34m\]${modified_files}\[\e[0m\]"
-    fi
-
-    # Renamed files
-    if [ $renamed_files -gt 0 ]; then
-      PS1="${PS1} ^\[\e[1;36m\]${renamed_files}\[\e[0m\]"
-    fi
-
-    # Deleted files
-    if [ $deleted_files -gt 0 ]; then
-      PS1="${PS1} -\[\e[1;31m\]${deleted_files}\[\e[0m\]"
-    fi
-
-    # Branch
-    branch_dirname=$(dirname $git_branch)
-    if [ $branch_dirname = "." ]; then
-        branch_dirname=
-    else
-        branch_dirname=${branch_dirname}/
-    fi
-    PS1="${PS1} ${branch_dirname}\[\e[0;35m\]$(basename ${git_branch})\[\e[0m\]"
-
-
+    # Append git branch information to the prompt.
+    local branch_name=$(basename "$git_branch")
+    [[ -n "$branch_name" ]] && PS1="${PS1} \[\e[0;35m\]${branch_name}\[\e[0m\]"
   fi
 
-  # Just the command prompt character(s) and pyenv virtualenv
-  python_version=$(python --version | awk '{print $2}')
-  pyenv_name="$(pyenv version-name) ${python_version}"
+  # Append Python environment information.
+  local python_version=$(python --version 2>&1 | awk '{print $2}')
+  local pyenv_name="$(pyenv version-name 2> /dev/null) ${python_version}"
   PS1="${PS1}\n\[\e[1;32m\](${pyenv_name}) ->\[\e[0m\] "
 }
 
+# Assign the function to PROMPT_COMMAND.
 PROMPT_COMMAND=my_prompt_command
 
 

@@ -7,6 +7,7 @@
   d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
+  pf = push --force-with-lease
 
   # Clean merged branches
   sweep = !git branch --merged main | grep -v 'main$' | xargs git branch -d && git remote prune origin
