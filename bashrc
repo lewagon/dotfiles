@@ -148,11 +148,11 @@ function my_prompt_command {
     local git_status=$(git status . --porcelain 2> /dev/null)
 
     # Calculate file statuses.
-    local untracked_files=$(echo "$git_status" | grep -c '^\?\?')
-    local added_files=$(echo "$git_status" | grep -c '^A ')
-    local modified_files=$(echo "$git_status" | grep -c '^ M')
-    local deleted_files=$(echo "$git_status" | grep -c '^ D')
-    local renamed_files=$(echo "$git_status" | grep -c '^R ')
+    local untracked_files=$(echo "$git_status" | awk '/^\?\?/{count++} END {print count+0}')
+    local added_files=$(echo "$git_status" | awk '/^A/{count++} END {print count+0}')
+    local modified_files=$(echo "$git_status" | awk '/^M/{count++} END {print count+0}')
+    local deleted_files=$(echo "$git_status" | awk '/^D/{count++} END {print count+0}')
+    local renamed_files=$(echo "$git_status" | awk '/^R/{count++} END {print count+0}')
 
     # Append file status information to the prompt.
     [[ $untracked_files -gt 0 ]] && PS1="${PS1} ?\[\e[1;39m\]${untracked_files}\[\e[0m\]"
