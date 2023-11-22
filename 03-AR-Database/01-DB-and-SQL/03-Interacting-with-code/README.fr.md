@@ -79,7 +79,7 @@ Tu remarqueras que ton éditeur de texte comprend Heredoc et que la syntaxe en s
 
 ## Ressources
 
-- [Commandes SQL](http://www.sqlcommands.net/)
+- [Commandes SQL](https://www.codecademy.com/article/sql-commands)
 - [Cours en 🇫🇷 sur `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
 ## L’extension VS Code SQLite - Exécuter des requêtes

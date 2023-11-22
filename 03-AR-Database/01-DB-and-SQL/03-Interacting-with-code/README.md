@@ -72,7 +72,7 @@ You'll notice that your text editor understands Heredoc and the syntax highlight
 
 ## Resources
 
-* [SQL Commands](http://www.sqlcommands.net/)
+* [SQL Commands](https://www.codecademy.com/article/sql-commands)
 * [Course in 🇫🇷 about `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
 ## VS Code SQLite extension - Executing queries
