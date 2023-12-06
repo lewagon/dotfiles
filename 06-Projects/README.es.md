@@ -16,9 +16,9 @@ Seguirás teniendo charlas matinales sobre temas avanzados. Aquí hay una muestr
 
 Aprenderás cómo agregar funcionalidades de tiempo real y originales con ActionCable de Rails.
 
-### `Creación de una API`
+### `From Design to Code`
 
-Aprenderás cómo crear una API con Rails.
+Aprenderás cómo implementar features utilizando JavaScript o AJAX en tus proyectos futuros.
 
 ### `Background Jobs con Sidekiq`
 
@@ -29,7 +29,6 @@ Saca los procesos que consumen mucho tiempo (envío de emails, hacer posts a una
 Aprenderás cómo hacer consultas SQL avanzadas y herramientas para exponer datos a miembros de tu equipo sin formación técnica.
 
 
-### `Testing en Rails`
+### `API en Rails`
 
-Aprenderás cómo testear tu código con [el framework integrado de Rails: Minitest](http://guides.rubyonrails.org/testing.html).
-
+Aprenderás cómo utilizar la API de OpenAI en Rails.

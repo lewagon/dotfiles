@@ -26,4 +26,6 @@
 
 学习高级SQL查询和工具，向你们团队中的非技术成员公开你们的数据。
 
-### `Demo preparation`
+### `AI in Rails`
+
+学习如何在Rails中使用OpenAI API。

@@ -35,6 +35,6 @@ Take time-consuming processes (delivering emails, posting to an API, cleaning up
 Learn advanced SQL queries and tools to expose your data to non-tech members of your team.
 
 
-### `Demo Preparation`
+### `AI in Rails`
 
-Let's make your app shine on Demo Day!
+Learn how to use the OpenAI API in Rails.
