@@ -72,7 +72,7 @@ rows = db.execute(query)
 
 ## 资源
 
-* [SQL命令](http://www.sqlcommands.net/)
+* [SQL命令](https://www.codecademy.com/article/sql-commands)
 * [关于`SELECT`的课程](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
 ## VS Code SQLite 插件 - 执行查询

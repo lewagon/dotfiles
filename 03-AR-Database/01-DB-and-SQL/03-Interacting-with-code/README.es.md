@@ -72,7 +72,7 @@ rows = db.execute(query)
 
 ## Recursos
 
-- [Comandos SQL](http://www.sqlcommands.net/)
+- [Comandos SQL](https://www.codecademy.com/article/sql-commands)
 - [Curso en 🇫🇷 sobre `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
 ## Extensión SQLite de VS Code - Ejecución de queries
