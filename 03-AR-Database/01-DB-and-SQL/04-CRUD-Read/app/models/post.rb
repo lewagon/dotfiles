@@ -2,7 +2,7 @@
 # No need to create it, you can just use it!
 
 class Post
-  def initialize(data)
+  def initialize(attributes = {})
     # TODO
   end
 
