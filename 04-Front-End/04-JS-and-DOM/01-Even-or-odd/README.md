@@ -18,9 +18,9 @@ serve
 
 When you open your browser, you will see a list of checks which are red. Your goal is to fix the `evenOrOdd` function so that all the checks pass. Whenever you make a change in your JS file you need to **refresh the browser** to see your code reflected.
 
-Try to put a `console.log(number)` in your `eventOrOdd` function, open your browser's console and have a look. You should see 3 results: `0`, `1` and `2`. These come from the `check` function in the `event_or_odd_examiner.js` file in the `spec` folder.
+Try to put a `console.log(number)` in your `evenOrOdd` function, open your browser's console and have a look. You should see 3 results: `0`, `1` and `2`. These come from the `check` function in the `event_or_odd_examiner.js` file in the `spec` folder.
 
-As long as the `eventOrOdd` function is not done, the tests will be red. They will turn green once you have implemented the correct function.
+As long as the `evenOrOdd` function is not done, the tests will be red. They will turn green once you have implemented the correct function.
 
 ## Specs
 
