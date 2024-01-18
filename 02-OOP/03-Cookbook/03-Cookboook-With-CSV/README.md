@@ -44,6 +44,25 @@ First, let's start off with loading the CSV. When do we need to load the data th
 
 Currently our `#initialize` method takes no argument. Let's update it to take on argument, a `String` that indicates the file path of the CSV to open. So, it should look like `initialize(csv_file_path)`. This means that, to initialize a new `Cookbook` instance, you'll have to pass in a valid file path like: `my_cookbook = Cookbook.new('lib/recipes.csv')`.
 
+***
+
+**Important**: Since we changed the number of arguments that the `#initialize` takes, that will affect our `app.rb` file. That file currently should have a line like:
+
+```rb
+cookbook   = Cookbook.new
+```
+
+Please change this line (you can copy and paste) to:
+
+```rb
+csv_file   = File.join(__dir__, 'recipes.csv')
+cookbook   = Cookbook.new(csv_file)
+```
+
+Now, the `Cookbook` instance will be receive the path to the `lib/recipes.csv` file as its argument 📊
+
+***
+
 Then, let's update the `#initialize` to load the recipes from the CSV file. For example, if the CSV file has 5 lines in it, the `@recipes` array should have 5 `Recipe` instances.
 
 Then let's refactor. This code may take a few lines, so it would be nice to write it in a private `#load_csv` method and then to call that method in the `#initialize`.
