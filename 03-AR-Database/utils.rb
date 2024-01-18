@@ -4,7 +4,7 @@ class FullStackChallengesUtils
     ActiveRecord::Migration.verbose = true
     version = ENV["VERSION"]&.to_i
     args = [ActiveRecord::Migrator.migrations_paths]
-    args << ActiveRecord::SchemaMigration if ActiveRecord.version.to_s >= "6.0.0"
+    args << ActiveRecord::SchemaMigration if ActiveRecord.version.to_s >= "6.0.0" && ActiveRecord.version.to_s < "7.1"
     ActiveRecord::MigrationContext.new(*args).migrate(version)
     db_namespace["schema:dump"].invoke
   end
@@ -13,7 +13,7 @@ class FullStackChallengesUtils
     ActiveRecord::Migration.verbose = false
     ActiveRecord::Migrator.migrations_paths = [File.join(folder, '../db/migrate')]
     args = [ActiveRecord::Migrator.migrations_paths]
-    args << ActiveRecord::SchemaMigration if ActiveRecord.version.to_s >= "6.0.0"
+    args << ActiveRecord::SchemaMigration if ActiveRecord.version.to_s >= "6.0.0" && ActiveRecord.version.to_s < "7.1"
     ActiveRecord::MigrationContext.new(*args).migrate(version)
   end
 end
