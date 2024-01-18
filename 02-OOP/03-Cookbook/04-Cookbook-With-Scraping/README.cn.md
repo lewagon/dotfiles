@@ -8,10 +8,10 @@
 
 ```bash
 # 确保你在正确的目录中
-cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cookbook-With-Scraping
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/04-Cookbook-With-Scraping
 
 # 将你的代码从Cookbook的第一个练习中复制过来
-cp -r ../02-Cookbook/lib .
+cp -r ../03-Cookbook-With-CSV/lib .
 ```
 
 在开始之前，运行粘贴好的Cookbook，确保当天的用户操作（list / add / remove）正常运行！
