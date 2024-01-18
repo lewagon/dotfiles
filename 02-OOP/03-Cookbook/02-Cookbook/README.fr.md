@@ -29,22 +29,17 @@ Cette commande copie le fichier `recipe.rb` de l’exercice précédent dans le 
 
 Tu as maintenant besoin d’une structure pour les recettes de l’utilisateur. On n’a pas encore de vraie base de données, alors on va utiliser une classe se comportant comme telle (comme vu pendant le cours).
 
-Quand un programme Ruby se ferme, on perd toutes les données stockées dans des variables. Si on veut récupérer ces données la prochaine fois qu’on exécute le programme, on doit les rendre persistantes et les stocker sur le disque dur. Pour cela, on va utiliser un fichier CSV ! Ce fichier est vide pour le moment ; tu ajouteras tes propres recettes plus tard via l’application.
+Quand un programme Ruby se ferme, on perd toutes les données stockées dans des variables. Si on veut récupérer ces données la prochaine fois qu’on exécute le programme, on doit les rendre persistantes et les stocker sur le disque dur.
 
 Dans le cadre de cet exercice, le repository stocke les recettes ajoutées par l’utilisateur. En d’autres termes, il **est** le **livre de recettes**. Nomme la classe `Cookbook` pour écrire du code explicite et qui a du sens, mais garde à l’esprit qu’il s’agit du **repository** du diagramme du cours !
 
 Implémente la classe `Cookbook` avec 4 méthodes :
-- `initialize(csv_file_path)`, qui charge les recettes `Recipe` existantes à partir du fichier CSV
+- `initialize`, qui charge les recettes `Recipe` existantes.
 - `all`, qui retourne toutes les recettes
 - `create(recipe)`, qui crée une recette et l'ajoute au livre de recettes
 - `destroy(recipe_index)`, qui supprime une recette du cookbook
 
-Pour récupérer et sauvegarder la donnée dans le CSV, tu vas devoir implémenter deux méthodes **privées** :
-- `load_csv`, qui va récupérer les données du CSV pour les ajouter à ton application
-- `save_csv`, qui va sauvegarder chaque nouvelle recette dans une **nouvelle ligne** du fichier CSV
-
-
-Si tu veux te rappeler la syntaxe pour parser et stocker de la donnée dans un fichier CSV, jette un œil aux [slides du cours de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/2/3).
+_Note : Quand un programme Ruby se termine, on perd toutes les données stockées dans les variables. Ton Cookbook se "vide" à chaque fois que le processus Terminal se ferme. Pas de panique, on résoudra ce problème dans le prochain défi._
 
 ### Contrôleur (controller)
 

@@ -29,21 +29,15 @@ cp ../01-Recipe/lib/recipe.rb lib
 
 我们现在需要一个结构来存储用户的食谱。因为我们还没有一个合适的数据库，所以我们将使用一个充当数据库的类（正如我们在讲座中看到的）。
 
-当Ruby程序退出时，我们会丢失存储在变量中的所有数据。如果我们想在下次运行程序时索回数据，我们需要在硬盘上持久保存它们。我们会用CSV文件来实现！这个文件是空的，因为挑战是去通过应用程序添加你自己的食谱。
+当Ruby程序退出时，我们会丢失存储在变量中的所有数据。如果我们想在下次运行程序时索回数据，我们需要在硬盘上持久保存它们。
 
 在这个挑战中，存储库存储用户添加的食谱。换句话说，它 **就是** **cookbook**。让我们将库存储类命名为 `Cookbook` ，以编写显式且有意义的代码，但请记住，它是今天上午图表中的 **存储库** ！
 
 在 `Cookbook` 类中添加4种方法：
-- `initialize(csv_file_path)` 从CSV文件加载现有的 `Recipe`
+- `initialize` 有的 `Recipe`
 - `all` 返回所有的食谱
 - `create(recipe)` 加了一个新的食谱到cookbook
 - `destroy(recipe_index)` 从cookbook中删除一个食谱
-
-为了加载和存储 CSV 中的数据，我们将实现 2 个**私有（private）**方法：
-- `load_csv`，用于将CSV文件中的现有数据加载到我们的应用程序中
-- `save_csv`，将新食谱作为**新的一行**添加到 CSV 文件中
-
-如果你想复习关于如何解析和存储CSV文件中的数据的语法，可以看看[解析课的幻灯片](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/2/3)
 
 ### 控制器
 
@@ -52,6 +46,8 @@ cp ../01-Recipe/lib/recipe.rb lib
 - `list` （列出）所有的食谱
 - `add` （增加）一个新的食谱
 - `remove` （删除）一个现有食谱
+
+_注意： 当一个 Ruby 程序退出时，我们会丢失所有存储在变量中的数据。这意味着每次终端进程退出时，你的 Cookbook 将会被"清空"。不过，这没有关系，我们将在下一个挑战中解决这个问题，所以请不要担心。_
 
 ### 视图
 

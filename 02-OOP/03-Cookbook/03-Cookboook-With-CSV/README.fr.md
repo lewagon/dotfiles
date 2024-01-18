@@ -1,84 +1,101 @@
 ## Contexte et objectifs
 
-Tu vas maintenant coder une application Cookbook qui gère des recettes.
+Notre objectif dans cet exercice est d'améliorer notre livre de recettes existant codé lors de l'exercice précédent en sauvegardant nos recettes dans un fichier CSV. De cette façon, lorsque nous quittons et redémarrons notre application dans le Terminal, nos recettes seront toujours sauvegardées sur notre ordinateur.
 
-L’idée est simple : tu adores cuisiner, mais tu as besoin de te souvenir de toutes les recettes que tu aimes. Voici ton livre de recettes ! Il conservera une liste de tes recettes et te permettra de les lister (`list`), d’en ajouter de nouvelles (`add`) et d’en supprimer d’autres (`remove`).
+Si vous souhaitez vous souvenir de la syntaxe pour analyser et stocker des données dans un fichier CSV, consultez [les diapositives du cours sur l'analyse](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/2/3)
 
-Tu construiras cette app en utilisant le pattern **MVC**, également utilisé dans Rails :
-- Modèle : quel est l’objet de base que tu souhaites manipuler ?
-- Vue : c’est l’endroit où on **affiche les informations** à l’utilisateur (`puts`) et où on lui **demande des informations** (`gets`)
-- Contrôleur : il récupérera et stockera les données du modèle, et indiquera à la vue si elle doit montrer des données à l’utilisateur ou en obtenir
+N'oubliez pas qu'un fichier CSV est essentiellement un tableur Excel avec un format très simple dans lequel les lignes sont séparées par des sauts de ligne `↵` et les colonnes sont séparées par des virgules `,`. Voici un exemple du fichier CSV utilisé pour les tests `rake` de cet exercice :
 
-Avec une feuille et un crayon, commence par identifier tes composants et leurs responsabilités !
-
-## Spécifications
-
-Voici les composants que nous allons implémenter :
-
-### Modèle (model)
-
-On a déjà défini notre classe `Recipe` dans l’exercice précédent. Maintenant, tout ce qu’il te reste à faire, c’est de la copier dans ton application de recettes. Exécute la commande suivante dans ton terminal :
-
-```bash
-cp ../01-Recipe/lib/recipe.rb lib
+```csv
+Crumpets,Description des crumpets
+Petit-déjeuner haricots et bacon,Description des haricots
+Pudding aux prunes,Description du pudding
+Tarte aux pommes,Description de la tarte aux pommes
+Crumble de Noël,Description du crumble
 ```
 
-Cette commande copie le fichier `recipe.rb` de l’exercice précédent dans le dossier `lib` de l’application.
+Dans quel fichier doit-on effectuer la sauvegarde/chargement ? 🤔 Notre fichier CSV doit stocker un tableur qui répertorie _toutes_ les recettes de notre application. Et il se trouve qu'il existe un fichier dont la responsabilité est de gérer le stockage de toutes nos instances de `Recipe`. Oui, c'est le `Cookbook`, notre **référentiel**. Donc, le seul fichier que nous allons modifier dans cet exercice est `lib/cookbook.rb`.
 
-### Dépôt (repository)
+## Configuration
 
-Tu as maintenant besoin d’une structure pour les recettes de l’utilisateur. On n’a pas encore de vraie base de données, alors on va utiliser une classe se comportant comme telle (comme vu pendant le cours).
+Tout d'abord, copions-collons le code de votre livre de recettes dans le dossier `lib` de cet exercice :
 
-Quand un programme Ruby se ferme, on perd toutes les données stockées dans des variables. Si on veut récupérer ces données la prochaine fois qu’on exécute le programme, on doit les rendre persistantes et les stocker sur le disque dur. Pour cela, on va utiliser un fichier CSV ! Ce fichier est vide pour le moment ; tu ajouteras tes propres recettes plus tard via l’application.
+```bash
+# assurez-vous d'être dans le bon répertoire
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cookbook-With-CSV
 
-Dans le cadre de cet exercice, le repository stocke les recettes ajoutées par l’utilisateur. En d’autres termes, il **est** le **livre de recettes**. Nomme la classe `Cookbook` pour écrire du code explicite et qui a du sens, mais garde à l’esprit qu’il s’agit du **repository** du diagramme du cours !
+# copiez votre code depuis l'exercice Cookbook Challenge 2
+cp -r ../02-Cookbook/lib .
+```
 
-Implémente la classe `Cookbook` avec 4 méthodes :
-- `initialize(csv_file_path)`, qui charge les recettes `Recipe` existantes à partir du fichier CSV
-- `all`, qui retourne toutes les recettes
-- `create(recipe)`, qui crée une recette et l'ajoute au livre de recettes
-- `destroy(recipe_index)`, qui supprime une recette du cookbook
-
-Pour récupérer et sauvegarder la donnée dans le CSV, tu vas devoir implémenter deux méthodes **privées** :
-- `load_csv`, qui va récupérer les données du CSV pour les ajouter à ton application
-- `save_csv`, qui va sauvegarder chaque nouvelle recette dans une **nouvelle ligne** du fichier CSV
-
-
-Si tu veux te rappeler la syntaxe pour parser et stocker de la donnée dans un fichier CSV, jette un œil aux [slides du cours de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/2/3).
-
-### Contrôleur (controller)
-
-Le contrôleur rassemblera les données du cookbook pour les transmettre à la vue. Il demandera également à la vue des informations pour créer de nouvelles recettes. Voici les méthodes à implémenter :
-- `initialize(cookbook)` prend une instance de `Cookbook` comme argument.
-- `list` fait une liste de toutes les recettes
-- `add` ajoute une nouvelle recette
-- `remove` supprime une recette existante
-
-### Vue (view)
-
-La vue est responsable de tous les `puts` et `gets` de ton MVC. Fais bien attention à ce que ces mots n’apparaissent nulle part ailleurs ! (sauf peut-être pour débugger)
-
-### Tout assembler
-
-Une fois que tu es prêt, teste ton programme avec :
+Avant de commencer, exécutez le code que vous venez d'importer pour vous assurer que les actions d'utilisateur implémentées (liste/ajout/suppression) fonctionnent toujours !
 
 ```bash
 ruby lib/app.rb
 ```
 
-On te donne `app.rb` qui `require` le code pour instancier un `Cookbook`, un `Controller` et démarrer l’application. La boucle infinie est donnée dans le `Router`, car elle ne fait partie du MVC. Du coup, quand tu travailleras avec Rails, tu maîtriseras déjà tout ça. Sympa 😉
+## Spécifications
 
-## Quelques conseils
+### Analyse
 
-Cookbook est un de nos exercices préférés, mais c'est aussi un gros challenge, qui nécessite de travailler avec beaucoup de fichiers différents ! Une fois que tu as implémenté le modèle `Recipe`, tu peux reprendre la même stratégie que pendant la lecture : essaye d'implémenter chaque parcours utilisateur un à un. Commence par ajouter une première fonctionnalité à ton app pour permettre à l'utilisateur d'ajouter une nouvelle recette. De quoi as-tu besoin pour cela ? De quelles méthodes dans le controller, la `view`, etc...?
+Lorsqu'un programme Ruby se termine, nous perdons toutes les données que nous avons stockées dans les variables. Si nous voulons récupérer les données la prochaine fois que nous exécutons le programme, nous devons les persister sur le disque dur. Nous utiliserons un fichier CSV pour cela ! Le fichier CSV est vide à ce stade de l'exercice, vous ajouterez vos propres recettes plus tard via l'application.
 
-En plus de ça, n'hésite pas à t'appuyer sur deux choses :
+Commencez par charger le CSV. Quand devons-nous charger les données qui y sont stockées ? Lorsque vous démarrez l'application 🚀 Et avons-nous déjà un endroit dans notre `Coookbook` qui s'exécute  au démarrage de l'application ? C'est exact, la méthode `#initialize`.
 
-- `rake`, qui va te guider et t'aider à voir ce qu'il te reste à implémenter, donc utilise le souvent 👌
-- lance ton application avec `ruby lib/app.rb` pour pouvoir tester toi-même les fonctionnalités que tu ajoutes. Les messages d'erreurs vont eux aussi te guider !
+Actuellement, notre méthode `#initialize` ne prend aucun argument. Mettons à jour cette méthode pour qu'elle prenne un argument, une chaîne de texte (`String`) qui indique le chemin d'accès au fichier CSV à ouvrir. Elle devrait donc ressembler à `initialize(csv_file_path)`. Cela signifie que pour initialiser une nouvelle instance de `Cookbook`, vous devrez passer un chemin d'accès valide au fichier, par exemple : `my_cookbook = Cookbook.new('lib/recipes.csv')`.
 
-## Lectures complémentaires
+***
 
-Les concepts suivants sont également importants dans l’architecture logicielle :
-- [Principe de responsabilité unique](https://fr.wikipedia.org/wiki/Principe_de_responsabilit%C3%A9_unique)
-- [Séparation des préoccupations](https://fr.wikipedia.org/wiki/S%C3%A9paration_des_pr%C3%A9occupations)
+**Important** : Étant donné que nous avons modifié le nombre d'arguments que prend `#initialize`, cela aura un impact sur notre fichier `app.rb`. Actuellement, ce fichier devrait comporter une ligne comme celle-ci :
+
+```rb
+cookbook   = Cookbook.new
+```
+
+Changez cette ligne (vous pouvez la copier et la coller) par :
+
+```rb
+csv_file   = File.join(__dir__, 'recipes.csv')
+cookbook   = Cookbook.new(csv_file)
+```
+
+Maintenant, l'instance `Cookbook` recevra le chemin d'accès au fichier `lib/recipes.csv` en tant qu'argument 📊
+
+***
+
+Ensuite, mettons à jour la méthode `#initialize` pour charger les recettes à partir du fichier CSV. Par exemple, si le fichier CSV contient 5 lignes, le tableau `@recipes` doit contenir 5 instances de `Recipe`.
+
+Ensuite, réorganisons le code. Comme il peut occuper plusieurs lignes, il serait préférable de l'écrire dans une méthode privée `#load_csv` que nous pourrons ensuite appeler dans la méthode `#initialize`.
+
+### Stockage
+
+Quand devons-nous enregistrer les modifications dans notre fichier CSV ? Lorsque les recettes du `Cookbook` changent 🌈 Cela signifie soit :
+
+1. lorsqu'une nouvelle recette est ajoutée ;
+2. lorsqu'une recette est supprimée.
+
+Écrivons donc une nouvelle méthode privée `#save_csv` qui enregistre toutes les instances de `Recipe` dans le tableau `@recipes` dans notre fichier CSV. Donc, s'il y a 6 instances de `Recipe` dans le tableau `@recipes`, le fichier CSV devrait contenir 6 lignes lorsqu'il est mis à jour.
+
+_Remarque : lorsque vous enregistrez le fichier CSV, vous écrasez entièrement le fichier. Donc, même si une recette était déjà stockée préalablement dans le fichier CSV, elle devra être stockée à nouveau chaque fois que le fichier est écrasé._
+
+Ensuite, vous voudrez examiner le `Cookbook` pour trouver tous les endroits où une recette est ajoutée ou supprimée, puis vous voudrez appeler la méthode `#save_csv` à ces endroits.
+
+#### Résumé
+
+Mettez à jour la méthode existante du `Cookbook` :
+-  `initialize(csv_file_path)`, qui charge les `Recipe` existantes à partir du CSV.
+
+Pour charger et stocker les données dans le CSV, nous allons implémenter 2 méthodes **privées** :
+-  `load_csv`, qui charge les données existantes du fichier CSV dans notre application. Nous l'appellerons dans la méthode `#initialize`.
+-  `save_csv`, qui ajoute les nouvelles recettes comme **nouvelles lignes** dans notre fichier CSV. Nous l'appellerons chaque fois que nous ajoutons ou supprimons une recette du `Cookbook`.
+
+## Test
+
+Pour vérifier si cela fonctionne, exécutez :
+
+```bash
+ruby lib/app.rb
+```
+
+Ensuite, essayez d'ajouter une nouvelle recette au livre de recettes, puis quittez l'application. Ensuite, exécutez `ruby lib/app.rb` à nouveau. Cette recette devrait réapparaître (parce qu'elle a été stockée lorsque vous l'avez ajoutée et analysée lorsque vous avez rouvert l'application) 💾
+
