@@ -59,7 +59,7 @@ csv_file   = File.join(__dir__, 'recipes.csv')
 cookbook   = Cookbook.new(csv_file)
 ```
 
-Now, the `Cookbook` instance will be receive the path to the `lib/recipes.csv` file as its argument 📊
+Now, the `Cookbook` instance will receive the path to the `lib/recipes.csv` file as its argument 📊
 
 ***
 
