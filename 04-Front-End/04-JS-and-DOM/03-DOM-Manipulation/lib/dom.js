@@ -28,7 +28,7 @@ const borisesEmail = getEmail();
 
 
 
-// Ex 4. Add the .blue CSS class to the th elements
+// Ex 4. Add the .blue CSS class to the tr element inside of the table header (<thead>)
 
 
 
@@ -46,14 +46,14 @@ const teamCountBeforeAddition = teamCount();
 
 
 
-// Ex 7. Write some code to sum all points given to all teams
-//       Make the function summarizePoints() return it
-const summarizePoints = () => {
-  // TODO: return the sum
+// Ex 7. Write some code to get the points for the first team
+//       (Rugby Club Toulonnais)
+const firstTeamPoints = () => {
+  // TODO: return the points
 };
 
 
-// Ex 8. Change the background color of all `<th>` cells to #DDF4FF
+// Ex 8. Change the background color of the tr element inside of the table header (<thead>) to #DDF4FF
 
 
 
