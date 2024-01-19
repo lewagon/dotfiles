@@ -115,7 +115,7 @@ Time to implement the `GamesController#score` logic. Do we have all the informat
 
 We want to handle three scenarios:
 
-1. The word can be built out of the original grid ❌
+1. The word can't be built out of the original grid ❌
 2. The word is valid according to the grid, but is not a valid English word ❌
 3. The word is valid according to the grid and is an English word ✅
 
