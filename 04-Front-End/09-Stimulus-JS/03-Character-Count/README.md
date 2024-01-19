@@ -41,7 +41,7 @@ Your goal is to implement a counter that counts the number of characters in the 
 
 ### 1. Imagine the concept
 
-Now that you have a basic setup, think about the concept of the component. What is the purpose of this component? How will you code it? Take a piece of paper and draw your component. It could like like this:
+Now that you have a basic setup, think about the concept of the component. What is the purpose of this component? How will you code it? Take a piece of paper and draw your component. It could look like this:
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/tutorials/character_counter/character-counter-mockup.png)
 
