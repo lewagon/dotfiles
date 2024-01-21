@@ -100,9 +100,10 @@ autocmd FileType sql setlocal shiftwidth=4 tabstop=4
 
 
 " Keybindings Section
-let mapleader = ","
-nnoremap <space> za
-nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+nnoremap <tab> za
+nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
