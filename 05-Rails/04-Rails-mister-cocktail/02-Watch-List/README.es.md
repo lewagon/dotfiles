@@ -102,6 +102,20 @@ Depués de esto, agrega las siguientes líneas:
 //= link bootstrap.min.js
 ```
 
+Y finalmente en `config/importmap.rb`:
+
+```rb
+# config/importmap.rb
+
+# replace these lines:
+# pin "bootstrap" # @5.3.2
+# pin "@popperjs/core", to: "@popperjs--core.js" # @2.11.8
+
+# with this:
+pin "bootstrap", to: "bootstrap.min.js", preload: true
+pin "@popperjs/core", to: "popper.js", preload: true
+```
+
 No olvides hacer el `commit` y el `push` de tu trabajo regularmente.
 
 ## Especificaciones
