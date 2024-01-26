@@ -115,6 +115,20 @@ import "@popperjs/core"
 //= link bootstrap.min.js
 ```
 
+以下是最终在 `config/importmap.rb` 文件中的部分内容：
+
+```rb
+# config/importmap.rb
+
+# 将以下行替换为：
+# pin "bootstrap" # @5.3.2
+# pin "@popperjs/core", to: "@popperjs--core.js" # @2.11.8
+
+# 使用以下内容替换：
+pin "bootstrap", to: "bootstrap.min.js", preload: true
+pin "@popperjs/core", to: "popper.js", preload: true
+```
+
 不要忘记经常`commit`和`push`你的代码！
 
 ## 详细说明Specs
