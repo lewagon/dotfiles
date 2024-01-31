@@ -14,9 +14,11 @@ We'll continue working on yesterday's code, so go back to your folder:
 cd ~/code/<user.github_nickname>/rails-watch-list
 ```
 
-If you generated the rails app **without** the `-d` flag, we need to manually migrate this Rails app to Postgresql for Heroku. You can check if the app is configured with Postgresql if you have the `pg` gem in the Gemfile.
+### Database Setup
 
-If you need to change the app to Postgresql, open your Gemfile, find the `sqlite` line. **Replace** it with:
+If you followed the commands yesterday, your database should already be correctly set up to deploy to Heroku 🚀
+
+Let's check to make sure. Please open the `Gemfile`. Do you have this 👇 line in there?
 
 ```ruby
 # Gemfile
@@ -24,6 +26,12 @@ If you need to change the app to Postgresql, open your Gemfile, find the `sqlite
 gem "pg"
 ```
 
+✅ If yes, continue on to the next section (First Deployment).
+
+❌ If no, we'll need to change some configuration files. Please follow the instructions under the "Change DB to Postgres" disclosure section here:
+
+<details>
+<summary markdown='span'>Change DB to Postgres</summary>
 Open the `config/database.yml` file, **delete** everything in it and replace it with:
 
 ```yaml
@@ -48,6 +56,7 @@ rails db:create
 rails db:migrate
 rails db:seed
 ```
+</details>
 
 ### First Deployment
 
@@ -55,9 +64,9 @@ Go back to the lecture and follow the step to deploy your app in production on H
 
 ### Image Upload
 
-We are getting our `movies` posters from our seeds and thanks to the [TMDB API](https://developers.themoviedb.org/3) but one movie poster doesn't represent what an entire list is about, so the goal is to **add a picture** to the `List` model, so that each list will be better illustrated.
+We are already getting our `Movie` instances' posters from our seeds and thanks to the [TMDB API](https://developers.themoviedb.org/3). But it's not possible to do the same thing with the `List` model, since the user creates lists themself and may want to upload different images (that may not have anything to do with the movies in that list). So, the goal is to **add a user-uploaded picture** to the `List` model, so that each list will be better illustrated.
 
-The user should be able to upload an image that will then be displayed on the `index` view of `List` as a thumbnail/cover. On the `show` view of a `List`, the same image should be displayed, but bigger, followed by the movies that have been saved to it!
+The user should be able to upload an image that will then be displayed on the `#index` view of `List` as a thumbnail/cover. On the `#show` view of a `List`, the same image should be displayed, but bigger, followed by the movies that have been saved to it!
 
 Even though it's a simple app, try your best to make something beautiful using Bootstrap, a few nice font, and all your creativity 🎨😊🎨
 
