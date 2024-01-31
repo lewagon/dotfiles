@@ -32,8 +32,8 @@ end
 ```ruby
 # lib/queries.rb
 require "sqlite3"
-db = SQLite3::Database.new("lib/db/jukebox.sqlite")
-rows = db.execute("SELECT * FROM artists LIMIT 3")
+DB = SQLite3::Database.new("lib/db/jukebox.sqlite")
+rows = DB.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
 ```
 
@@ -41,11 +41,11 @@ Tu peux ensuite importer tes méthodes de requête avec :
 
 ```ruby
 require_relative "lib/queries"
-artist_count(db)
+artist_count(DB)
 # => [...]
 ```
 
-Si tu utilises le fichier `lib/queries` pour tester ton code, tu peux appeler tes méthodes et utiliser `puts` or `p` **après** avoir initialisé ton instance de `db`, pour voir tes résultats dans le terminal.
+Si tu utilises le fichier `lib/queries` pour tester ton code, tu peux appeler tes méthodes et utiliser `puts` or `p` **après** avoir initialisé ton instance de `DB`, pour voir tes résultats dans le terminal.
 
 ## Specs
 
