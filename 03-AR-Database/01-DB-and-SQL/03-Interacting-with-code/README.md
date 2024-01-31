@@ -24,20 +24,22 @@ end
 ```ruby
 # lib/queries.rb
 require "sqlite3"
-db = SQLite3::Database.new("lib/db/jukebox.sqlite")
-rows = db.execute("SELECT * FROM artists LIMIT 3")
+DB = SQLite3::Database.new("lib/DB/jukebox.sqlite")
+rows = DB.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
 ```
+
+_NOTE: `DB` is capitalized because it is defined as a "constant", which is a variable that does not change value. We do this so that we can import it into other files with `require_relative`._
 
 If you added the above code into your `lib/queries.rb` file and now want to try testing your code from `irb`, you can import and call your query methods with the following:
 
 ```ruby
 require_relative "lib/queries"
-artist_count(db)
+artist_count(DB)
 # => [...]
 ```
 
-If you're running your code from within `lib/queries.rb` only, you can call your methods and use `puts` or `p` to see your results as normal **after** instantiating your `db` as described above.
+If you're running your code from within `lib/queries.rb` only, you can call your methods and use `puts` or `p` to see your results as normal **after** instantiating your `DB` as described above.
 
 ## Specs
 
