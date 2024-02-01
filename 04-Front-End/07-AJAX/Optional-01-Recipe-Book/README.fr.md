@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-Dans ce challenge, nous allons récupérer des données depuis une API et s'entraîner à les afficher grâce à un élément `template` que nous avons vu durant la lecture.
+Dans ce challenge, nous allons récupérer des données depuis une API et s'entraîner à les afficher grâce à HTML.
 
 ## Spécifications
 
@@ -37,27 +37,27 @@ Pour cela, tu vas devoir utiliser la méthode `fetch` pour faire une requête HT
 ### Affiche les recettes
 
 Maintenant que nous avons les résultats, nous allons les afficher dans la liste `#recipes-container`.
-Comme dans la lecture, ajoutons d'abord un élément `template ` dans le HTML avec la structure suivante :
-
-```html
-<template id="recipe-template">
-  <div class="col-5">
-    <div class="card my-2 position-relative">
-      <i class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"></i>
-      <img src="" class="card-img-top" alt="">
-      <div class="card-body d-flex">
-        <h6 class="card-title">Recipe Title</h6>
-      </div>
-    </div>
-  </div>
-</template>
-```
 
 Nous allons ensuite créer une fonction `insertRecipes` qui va nous permettre d'insérer les recettes dans le DOM. Quel(s) paramètres devront nous lui passer ?
 
 Crées la fonction avec deux paramètres : `recipes` et `container`. `recipes` sera un array contenant les recettes et `container` sera le container dans lequel nous allons insérer les recettes.
 
-Utilise la méthode `forEach` pour itérer sur la liste des recettes, et pour chacune, tu vas cloner l'élément `template`, et insérer les données de la recette au bon endroit. A toi de jouer ! (indice : n'hésite pas à regarder les notes du cours pour voir comment nous avons utilisé et cloné l'élément `template`!)
+Utilise la méthode `forEach` pour itérer sur la liste des recettes, et pour chacune, tu vas insérer les données de la recette au bon endroit.
+
+
+La fonction `insertRecipes` devrait ajouter le code HTML suivant au DOM pour chaque recette (bien sûr, avec les titres et les images personnalisés pour chaque recette) :
+
+```html
+<div class="col-5">
+  <div class="card my-2 position-relative">
+    <i class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"></i>
+    <img src="INSERT RECIPE IMAGE URL HERE" class="card-img-top" alt="">
+    <div class="card-body d-flex">
+      <h6 class="card-title">INSERT RECIPE TITLE HERE</h6>
+    </div>
+  </div>
+</div>
+```
 
 Tu devrez maintenant voir une liste de recettes utilisant l'ingrédient que tu as saisi dans l'entrée de recherche :
 
@@ -91,7 +91,7 @@ const newRecipeToAdd = { idMeal: ..., strMeal: ..., strMealThumb: ... };
 
 Tu peux maintenant ajouter la `newRecipeToAdd` à ton array `favourites`.
 
-Il ne nous reste plus qu'à cloner l'élément `template`, et insérer les données de la recette au bon endroit. Attends ! Nous avons déjà fait ça ! Tu peux réutiliser la fonction `insertRecipes` que nous avons créée précédemment, qui prend en paramètre un array de recettes et un container dans lequel insérer les recettes.
+Il ne nous reste plus qu'à insérer les données de la recette au bon endroit. Attends ! Nous avons déjà fait ça ! Tu peux réutiliser la fonction `insertRecipes` que nous avons créée précédemment, qui prend en paramètre un array de recettes et un container dans lequel insérer les recettes.
 
 ![App  boilerplate](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/ajax-recipe-book-3.png)
 
