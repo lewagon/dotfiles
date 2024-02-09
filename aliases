@@ -2,8 +2,51 @@
 alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
-# Quickly serve the current directory as HTTP
-alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
+### VS Code
+alias c='code .'
 
-# NOTE: On Q3 2021, Le Wagon decided to change the Web Dev curriculum default text editor
-alias stt="echo 'Launching VS Code instead of Sublime Text... (cf ~/.aliases)' && code ."
+### Docker
+alias dc='docker compose'
+alias dce='docker compose exec'
+
+### Github
+alias glpr='git log --pretty=format:"%h - %an, %ar : %s"'
+alias glop='git log --pretty=oneline'
+
+### Jupyter
+alias jn='jupyter notebook'
+alias jl='jupyter lab'
+
+### Path in readable format
+alias path='echo $PATH | tr : \\n'
+
+### Google Chrome
+alias gchr='google-chrome'
+
+### Rust and Cargo
+alias crun='cargo run'
+alias cchk='cargo check'
+
+### Draw on the screen
+alias draw='gromit-mpx'
+
+### Wagon DE
+alias gvm-start='gcloud compute instances start wagon-data-eng-vm-lorcanrae --zone=europe-west1-b'
+alias gvm-stop='gcloud compute instances stop wagon-data-eng-vm-lorcanrae'
+alias gvm-list='gcloud compute instances list'
+
+
+### Set docker vars
+alias set_docker_vars='PROJECT="wagon-data-bootcamp-347311" \
+IMAGE="ci-cd-example" \
+REGION="europe-west1" \
+DOCKER_REPO_NAME="ci-cd-example" \
+TAG="0.1" \
+IMAGE_URI=${REGION}-docker.pkg.dev/${PROJECT}/${DOCKER_REPO_NAME}/${IMAGE}:${TAG}'
+
+alias check_docker_vars='echo $PROJECT && \
+echo $IMAGE && \
+echo $REGION && \
+echo $DOCKER_REPO_NAME && \
+echo $TAG && \
+echo $IMAGE_URI'
