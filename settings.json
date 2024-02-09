@@ -19,7 +19,7 @@
     ],
     "editor.showFoldingControls": "always",
     "editor.snippetSuggestions": "top",
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "emmet.includeLanguages":
     {
         "erb": "html"
@@ -54,14 +54,14 @@
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude":
     {
-        "**/audits/**": true,
-        "**/coverage/**": true,
-        "**/log/**": true,
-        "**/node_modules/**": true,
-        "**/tmp/**": true,
-        "**/vendor/**": true
+      "**/audits/**": true,
+      "**/coverage/**": true,
+      "**/log/**": true,
+      "**/node_modules/**": true,
+      "**/tmp/**": true,
+      "**/vendor/**": true,
+      "**/.pyenv/versions/**": true
     },
-    "git.enabled": false,
     "python.defaultInterpreterPath": "~/.pyenv/shims/python",
     "python.formatting.provider": "yapf",
     "python.terminal.activateEnvironment": false,
@@ -75,5 +75,41 @@
     "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
     "workbench.settings.useSplitJSON": true,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDragAndDrop": false,
+    // Jupyter settings
+    "jupyter.runStartupCommands": [
+      "%load_ext autoreload",
+      "%autoreload 2"
+    ],
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.cursorBlinking": "smooth",
+    "git.openRepositoryInParentFolders": "never",
+    "jupyter.askForKernelRestart": false,
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "bash",
+        "icon": "terminal-bash"
+      },
+      "zsh": {
+        "path": "zsh"
+      },
+      "fish": {
+        "path": "fish"
+      },
+      "tmux": {
+        "path": "tmux",
+        "icon": "terminal-tmux"
+      },
+      "pwsh": {
+        "path": "pwsh",
+        "icon": "terminal-powershell"
+      },
+      "zsh (2)": {
+        "path": "/usr/bin/zsh"
+      }
+    },
+    "terminal.integrated.cursorStyle": "line",
+    "notebook.output.scrolling": true
 }
