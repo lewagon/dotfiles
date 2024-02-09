@@ -9,5 +9,15 @@
     "key": "cmd+shift+v",
     "command": "pasteAndIndent.action",
     "when": "editorTextFocus && !editorReadonly"
-  }
+  },
+  {
+    "key": "ctrl+alt+n",  // you could use     "key": "ctrl+`",  if you wish
+    "command": "workbench.action.closePanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
 ]
