@@ -1,0 +1,6 @@
+name: Generate Kitt Preview Link
+
+on: pull_request
+jobs:
+  comment:
+    uses: lewagon/.github/.github/workflows/content-preview-kitt.yml@main
