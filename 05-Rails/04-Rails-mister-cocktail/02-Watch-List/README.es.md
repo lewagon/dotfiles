@@ -36,7 +36,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Importa las especificaciones del profesor para monitorear nuestro progreso con `rake`.
+Importa las especificaciones del profesor para monitorear nuestro progreso con `rspec`. **Nota: vas a utilizar `rspec` en lugar de `rake` en este ejercicio.**
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
@@ -197,7 +197,7 @@ Para entender cómo obtener imágenes de las películas de la API, asegúrate de
 ### 3 - Ruta, Controlador, Vistas para las Listas
 
 **Importante**
-No utilices `rake` para escribir el código de la parte aplicativa. Abre un `rails s` desde tu terminal y abre un navegador en [http://localhost:3000/](http://localhost:3000/). Siempre escribe código en silo:
+No utilices `rspec` para escribir el código de la parte aplicativa. Abre un `rails s` desde tu terminal y abre un navegador en [http://localhost:3000/](http://localhost:3000/). Siempre escribe código en silo:
 
 - comienza con la **ruta**,
 - luego empieza a escribir el código del **controlador**,
@@ -205,7 +205,7 @@ No utilices `rake` para escribir el código de la parte aplicativa. Abre un `rai
 
 Cuando termines tu feature (y se vea bien), ¡comienza a trabajar en la siguiente y repite el procedimiento!
 
-Cuando pienses que hayas terminado **todo** el desafío, usa `rake` para asegurarte que cumples con las especificaciones.
+Cuando pienses que hayas terminado **todo** el desafío, usa `rspec` para asegurarte que cumples con las especificaciones.
 
 **Features**
 Te recordamos nuevamente que debes tener una idea precisa de las features de tu app para crear las rutas. Aquí tienes la lista que las necesitas:
