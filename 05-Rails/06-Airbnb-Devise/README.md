@@ -94,6 +94,18 @@ git push heroku master
 heroku run rails db:migrate
 ```
 
+### 5. Kanban Board
+
+A [Kanban board](https://en.wikipedia.org/wiki/Kanban_board) is an agile project management tool designed to help visualize work, track progress, and maximize efficiency (or flow). There are many different resources out there ([Trello](https://trello.com/), [Github Projects](https://github.com/features/project-management/), [Notion](https://www.notion.so/), just to name a few).
+
+We've prepared three drafts for you to start from if you choose Trello, Github Projects or Notion, but feel free to use another tool if you are more familiar with it:
+
+1. Trello Draft - Make a copy of [this Trello Board](https://trello.com/b/WB3fRTj2) (menu > more options > copy board > board name for your project). Then add all team members to the board and start importing all your user stories and tasks (order by priority).
+
+2. Github Projects Draft - To set up your kanban board on Github, you'll need to have the repository created already and to have all the collaborators added. Then, a team member can use [this board](https://github.com/users/tonipanacek/projects/1) as the basis for your project board. Follow the instructions [here](https://docs.github.com/en/github/managing-your-work-on-github/copying-a-project-board) to see how to copy and add the board to your own project's repository. Two things to note: Github doesn't copy over the cards from the original board, so you'll have to add them yourself. Feel free to copy/paste the cards to get you going, or just start from scratch. Second, Github uses markdown syntax for text formatting like headings, font style, and checkboxes. It's not required, but can be nice to add formatting to your cards. You can read more about it [here](https://guides.github.com/features/mastering-markdown/).
+
+3. Notion Draft - Make a copy of [this Notion page](https://www.notion.so/lewagon/Project-Weeks-a3961a7da7324637bea441832becb3ad) by selecting the `Duplicate` option in the navbar. Then add all team members to the board (by clicking `Share` and then inviting them by email) and start importing all your user stories and tasks, ordering by priority. The top right section of the page should house all your relevant app links. The ones there should be used as a guide for which ones you'll need to include but unfortunately you can't edit these, so you'll have to recreate them yourself with the correct links. Follow [this guide](https://www.notion.so/Web-bookmarks-00b4add1fc96477d8aa70e65e02ec4da) for getting the `Web bookmarks` added correctly. If you're new to Notion, feel free to check out [this page](https://www.notion.so/Help-Support-e040febf70a94950b8620e6f00005004) to learn more and become a Notion-expert in no-time 💯
+
 From this point you can start splitting the tasks. **Spend time on the setup, because everything will be simpler if you do it correctly at the beginning**.
 
 ### Some guidelines for project management
