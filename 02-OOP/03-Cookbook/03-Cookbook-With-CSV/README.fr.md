@@ -40,7 +40,7 @@ ruby lib/app.rb
 
 Lorsqu'un programme Ruby se termine, nous perdons toutes les données que nous avons stockées dans les variables. Si nous voulons récupérer les données la prochaine fois que nous exécutons le programme, nous devons les persister sur le disque dur. Nous utiliserons un fichier CSV pour cela ! Le fichier CSV est vide à ce stade de l'exercice, vous ajouterez vos propres recettes plus tard via l'application.
 
-Commencez par charger le CSV. Quand devons-nous charger les données qui y sont stockées ? Lorsque vous démarrez l'application 🚀 Et avons-nous déjà un endroit dans notre `Coookbook` qui s'exécute  au démarrage de l'application ? C'est exact, la méthode `#initialize`.
+Commencez par charger le CSV. Quand devons-nous charger les données qui y sont stockées ? Lorsque vous démarrez l'application 🚀 Et avons-nous déjà un endroit dans notre `Cookbook` qui s'exécute  au démarrage de l'application ? C'est exact, la méthode `#initialize`.
 
 Actuellement, notre méthode `#initialize` ne prend aucun argument. Mettons à jour cette méthode pour qu'elle prenne un argument, une chaîne de texte (`String`) qui indique le chemin d'accès au fichier CSV à ouvrir. Elle devrait donc ressembler à `initialize(csv_file_path)`. Cela signifie que pour initialiser une nouvelle instance de `Cookbook`, vous devrez passer un chemin d'accès valide au fichier, par exemple : `my_cookbook = Cookbook.new('lib/recipes.csv')`.
 
