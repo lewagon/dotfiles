@@ -36,7 +36,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-导入老师的spec来`rake`我们的进度。
+导入老师的spec来`rspec`我们的进度。
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
@@ -113,6 +113,20 @@ import "@popperjs/core"
 // app/assets/config/manifest.js
 //= link popper.js
 //= link bootstrap.min.js
+```
+
+以下是最终在 `config/importmap.rb` 文件中的部分内容：
+
+```rb
+# config/importmap.rb
+
+# 将以下行替换为：
+# pin "bootstrap" # @5.3.2
+# pin "@popperjs/core", to: "@popperjs--core.js" # @2.11.8
+
+# 使用以下内容替换：
+pin "bootstrap", to: "bootstrap.min.js", preload: true
+pin "@popperjs/core", to: "popper.js", preload: true
 ```
 
 不要忘记经常`commit`和`push`你的代码！
@@ -200,7 +214,7 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 **重要**
 
-不要使用`rake`命令来开发应用部分。是时候在终端里运行`rails s`了，然后在浏览器打开[http://localhost:3000/](http://localhost:3000/)。始终要这样开发：
+不要使用`rspec`命令来开发应用部分。是时候在终端里运行`rails s`了，然后在浏览器打开[http://localhost:3000/](http://localhost:3000/)。始终要这样开发：
 
 - 从**路由route**开始,
 - 然后再是**控制器controller**,
@@ -208,7 +222,7 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 一个功能已经开发好了（而且前端页面看起来也很好），重复以上流程，继续开发下一个功能！
 
-你觉得你已经完成了**整个**挑战，运行`rake`命令确保开发的应用满足了详细说明里的所有要求。
+你觉得你已经完成了**整个**挑战，运行`rspec`命令确保开发的应用满足了详细说明里的所有要求。
 
 **功能**
 

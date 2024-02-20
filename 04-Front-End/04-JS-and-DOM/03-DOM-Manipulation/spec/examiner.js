@@ -1,4 +1,4 @@
-const runChallenges = (email, teamCount, sum) => {
+const runChallenges = (email, teamCount, points) => {
   let EXERCISE_NUMBER = 1;
 
   const addSuccess = () => {
@@ -35,20 +35,20 @@ const runChallenges = (email, teamCount, sum) => {
     }
   }
 
-  const check = (email, teamCount, sum) => {
+  const check = (email, teamCount, points) => {
     assertEqual(email, "boris@lewagon.org");
     assertNotEqual(document.getElementById("email").value, "boris@lewagon.org");
     assertEqual(document.getElementById("email-hint").innerHTML, "<strong>This is my email now</strong>");
-    assertEqual(document.querySelectorAll('th.blue').length, 3);
+    assertEqual(document.querySelectorAll('tr.blue').length, 1);
     assertEqual(teamCount, 14);
     assertEqual(document.querySelectorAll('tbody > tr').length, 15);
-    assertEqual(sum(), 859);
-    assertEqual(Array.from(document.querySelectorAll('th')).map(element => element.style.backgroundColor).toString(), ["rgb(221, 244, 255)", "rgb(221, 244, 255)", "rgb(221, 244, 255)"].toString());
+    assertEqual(points, 77);
+    assertEqual(document.querySelector('thead tr').style.backgroundColor.toString(), "rgb(221, 244, 255)");
     assertEqual(document.getElementsByTagName('label').length, 0);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    check(email, teamCount, sum);
+    check(email, teamCount, points);
   });
 }
 
