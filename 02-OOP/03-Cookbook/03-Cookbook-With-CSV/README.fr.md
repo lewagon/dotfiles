@@ -28,7 +28,7 @@ cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cook
 cp -r ../02-Cookbook/lib .
 ```
 
-Avant de commencer, exécutez le code que vous venez d'importer pour vous assurer que les actions d'utilisateur implémentées (liste/ajout/suppression) fonctionnent toujours !
+Avant de commencer, exécutez le code que vous venez d'importer pour vous assurer que les actions utilisateurs implémentées (liste/ajout/suppression) fonctionnent toujours !
 
 ```bash
 ruby lib/app.rb
