@@ -29,5 +29,5 @@ end
 ## 进一步的建议和资源
 
 - 所有的类上都有一个[`send`](http://stackoverflow.com/questions/3337285/what-does-send-do-in-ruby)方法。
-- 你可以用[`instance_variable_set`](http://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_set)动态地设置一个实例变量。
-- 你可以用[`instance_variable_get`](http://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_get)动态地读取一个实例变量。
+- 你可以用[`instance_variable_set`](http://ruby-doc.org/core-3.1.2/Object.html#method-i-instance_variable_set)动态地设置一个实例变量。
+- 你可以用[`instance_variable_get`](http://ruby-doc.org/core-3.1.2/Object.html#method-i-instance_variable_get)动态地读取一个实例变量。

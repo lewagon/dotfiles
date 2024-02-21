@@ -8,4 +8,4 @@ Supongamos que tienes estudiantes (definidos por la clase `Student`) quienes tie
 
 - Cuando inicies a un `Student`, debes pasar 4 argumentos que representen al nombre del/de la alumno/a y el número de billetes que posee (de cinco, de diez y de veinte).
 - Implementa el método de instancia `wealth` en `Student`
-- Implementa [Comparable](https://ruby-doc.org/core-2.7.5/Comparable.html) en este método para que sea posible comparar 2 estudiantes y ordenar un arreglo `Array` de alumnos. Puedes leer más sobre el operador de nave espacial (spaceship operator en inglés) `<=>` y sobre objetos de ordenamiento [aquí](http://stackoverflow.com/a/28014514).
+- Implementa [Comparable](https://ruby-doc.org/core-3.1.2/Comparable.html) en este método para que sea posible comparar 2 estudiantes y ordenar un arreglo `Array` de alumnos. Puedes leer más sobre el operador de nave espacial (spaceship operator en inglés) `<=>` y sobre objetos de ordenamiento [aquí](http://stackoverflow.com/a/28014514).

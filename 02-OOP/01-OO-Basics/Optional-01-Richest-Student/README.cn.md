@@ -8,4 +8,4 @@
 
 -初始化 `Student` 时，应传递4个参数，表示学生姓名和他们拥有的钞票数量（5、10和20）
 -在 `Student` 上实现 `wealth` 实例方法
--实施 [比较](https://ruby-doc.org/core-2.7.5/Comparable.html)在这个方法中，以达到可以比较两个学生，并对一组学生进行排序。你可以[在这里](http://stackoverflow.com/a/28014514)阅读更多关于太空船操作符 `<=>` 和排序对象的信息。
+-实施 [比较](https://ruby-doc.org/core-3.1.2/Comparable.html)在这个方法中，以达到可以比较两个学生，并对一组学生进行排序。你可以[在这里](http://stackoverflow.com/a/28014514)阅读更多关于太空船操作符 `<=>` 和排序对象的信息。
