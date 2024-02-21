@@ -1,6 +1,6 @@
 ## 背景和目标
 
-在这个练习中，我们将从API中检索数据，并练习使用我们在讲座中看到的`template`元素来显示它。
+在这个练习中，我们将从API中检索数据。
 
 ## 详细参数
 
@@ -37,27 +37,27 @@ serve
 
 ### 显示结果
 
-现在我们有了结果，让我们在`#recipes-container`列表中显示它们。首先让我们在HTML中创建一个具有以下结构的模板元素：
-
-```html
-<template id="recipe-template">
-  <div class="col-5">
-    <div class="card my-2 position-relative">
-      <i class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"></i>
-      <img src="" class="card-img-top" alt="">
-      <div class="card-body d-flex">
-        <h6 class="card-title">Recipe Title</h6>
-      </div>
-    </div>
-  </div>
-</template>
-```
+现在我们有了结果，让我们在`#recipes-container`列表中显示它们。
 
 然后，让我们创建一个函数`insertRecipes`，它将在我们的列表中插入结果。它应该传递哪些参数？
 
 让我们使用两个参数创建函数：`recipes`，`container`。第一个参数将是我们从API获取的食谱数组，第二个参数将是我们想要插入食谱的容器。
 
-我们将使用`forEach`方法遍历食谱数组，对于每个食谱，我们将克隆模板元素，并将食谱数据插入到正确的位置。轮到你了！（提示：检查讲座笔记以查看如何克隆模板元素）
+我们将使用`forEach`方法遍历食谱数组，对于每个食谱，我们将克隆模板元素，并将食谱数据插入到正确的位置。轮到你了！
+
+`insertRecipes` 应该为每个菜谱将以下HTML添加到DOM中（当然，每个菜谱的标题和图片都应该进行自定义）：
+
+```html
+<div class="col-5">
+  <div class="card my-2 position-relative">
+    <i class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"></i>
+    <img src="INSERT RECIPE IMAGE URL HERE" class="card-img-top" alt="">
+    <div class="card-body d-flex">
+      <h6 class="card-title">INSERT RECIPE TITLE HERE</h6>
+    </div>
+  </div>
+</div>
+```
 
 你应该看到一个使用你在搜索输入中输入的成分的食谱列表：
 

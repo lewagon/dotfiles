@@ -1,6 +1,6 @@
 ## Antecedentes y objetivos
 
-En este ejercicio, recuperaremos datos de una API y practicaremos mostrarlos con un elemento `template` que vimos durante la clase.
+En este ejercicio, recuperaremos datos de una API y practicaremos mostrarlos con HTML.
 
 ## Especificaciones
 
@@ -18,7 +18,7 @@ serve
 
 Deberías ver un formulario con un campo de búsqueda.
 
-- Cuando ingresamos un ingrediente, la página **no debería recargarse** y mostraremos cada receta en la lista `#recipes-container`, utilizando un elemento `template`.
+- Cuando ingresamos un ingrediente, la página **no debería recargarse** y mostraremos cada receta en la lista `#recipes-container`.
 - Deberíamos ver un mensaje que indique que no hay resultados en caso de que no haya recetas que utilicen ese ingrediente.
 - Una vez que la búsqueda funcione, la segunda parte del desafío será marcar como favoritas las recetas que desees haciendo clic en el ícono de marcador de posición.
 - Una vez marcadas como favoritas, las recetas aparecerán en la lista `#favourites-container`.
@@ -38,29 +38,26 @@ Deberías utilizar `fetch` y `console.log(data)` para ver la respuesta de la API
 ### Mostrar los resultados
 
 Ahora que tenemos los resultados, vamos a mostrarlos en la lista `#recipes-container`.
-Primero, creemos un elemento `template` en el HTML con la siguiente estructura:
-
-```html
-<template id="recipe-template">
-  <div class="col-5">
-    <div class="card my-2 position-relative">
-      <i
-        class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"
-      ></i>
-      <img src="" class="card-img-top" alt="" />
-      <div class="card-body d-flex">
-        <h6 class="card-title">Recipe Title</h6>
-      </div>
-    </div>
-  </div>
-</template>
-```
 
 Luego, creemos una función `insertRecipes` que insertará los resultados en nuestra lista. ¿Qué parámetro(s) debería recibir?
 
 Creemos la función con dos parámetros: `recipes` y `container`. El primero será el array de recetas que obtenemos de la API, y el segundo será el contenedor donde queremos insertar las recetas.
 
-Utilizaremos el método `forEach` para iterar sobre el array de recetas y, para cada receta, clonaremos el elemento `template` e insertaremos los datos de la receta en el lugar correcto. ¡Es tu turno! (pista: revisa las notas de clase para ver cómo clonamos el elemento `template`)
+Utilizaremos el método `forEach` para iterar sobre el array de recetas y, para cada receta, e insertaremos los datos de la receta en el lugar correcto.
+
+El método `insertRecipes` debe añadir el HTML siguiente al DOM para cada receta (por supuesto con los títulos y imágenes correctos para cada receta).
+
+```html
+<div class="col-5">
+  <div class="card my-2 position-relative">
+    <i class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"></i>
+    <img src="INSERT RECIPE IMAGE URL HERE" class="card-img-top" alt="">
+    <div class="card-body d-flex">
+      <h6 class="card-title">INSERT RECIPE TITLE HERE</h6>
+    </div>
+  </div>
+</div>
+```
 
 Deberías ver una lista de recetas utilizando el ingrediente que ingresaste en el campo de búsqueda:
 
@@ -94,7 +91,7 @@ const newRecipeToAdd = { idMeal: ..., strMeal: ..., strMealThumb: ... };
 
 A continuación, podemos agregar este objeto de receta a la variable `favourites`.
 
-Clonemos el elemento `template` e insertemos los datos de la receta en el lugar correcto. ¡Espera! ¡Ya tenemos un método que hace exactamente eso!
+Insertemos los datos de la receta en el lugar correcto. ¡Espera! ¡Ya tenemos un método que hace exactamente eso!
 
 `insertRecipes` toma una lista de recetas y un contenedor como parámetros, e inserta las recetas en el contenedor. ¡Usemoslo!
 

@@ -10,7 +10,7 @@ Pour cela, tu vas devoir implémenter une requête `GET` sur l'API agify. Tu vas
 
 Comme d'habitude, lance ton server avec `serve` depuis ton terminal et va sur `localhost:8000`.
 
-Dans ton fichier `index.html`, tu dois coder dans la fonction `displayAge()` une requête `GET` sur l'API agify, en utilisant `fetch`. La logique pour capturer et stocker le `firstName` est déjà implémentée, tu peux donc te concentrer sur la requête ajax.
+Dans le fichier `lib/index.js`, tu dois coder dans la fonction `displayAge()` une requête `GET` sur l'API agify, en utilisant `fetch`. La logique pour capturer et stocker le `firstName` est déjà implémentée, tu peux donc te concentrer sur la requête ajax.
 
 Tu dois utiliser l'url suivante pour faire la requête à l'API :
 

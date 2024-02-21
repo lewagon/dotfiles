@@ -12,6 +12,7 @@ def create_db
 end
 
 def drop_db
+  ActiveRecord::Base.remove_connection
   `rm -rf #{db_path}`
 end
 
