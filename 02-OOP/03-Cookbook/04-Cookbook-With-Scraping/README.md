@@ -4,17 +4,17 @@ Our goal in this challenge is to enhance our existing cookbook, coded in the pre
 
 ## Setup
 
-First, let's copy paste your Cookbook's code in this challenge `lib` folder:
+First, let's copy paste your Cookbook's code to this challenge's `lib` folder:
 
 ```bash
 # make sure you're in the right directory
-cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cookbook-With-Scraping
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/04-Cookbook-With-Scraping
 
 # copy your code from Cookbook Challenge 2
-cp -r ../02-Cookbook/lib .
+cp -r ../03-Cookbook-With-CSV/lib .
 ```
 
-Before starting, run the code you've just imported to make sure that implemented user actions (list / add / remove) are working!
+Before starting, run the code you've just imported to make sure that the implemented user actions (list / add / remove) are still working!
 
 ```bash
 ruby lib/app.rb

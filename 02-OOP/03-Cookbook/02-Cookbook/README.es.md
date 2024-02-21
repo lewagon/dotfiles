@@ -26,19 +26,18 @@ Esto quiere decir que copias el archivo `recipe.rb` del ejercicio anterior en la
 
 ### Repositorio
 
-Ahora necesitamos una estructura para almacenar las recetas del usuario. Aún no tenemos una base de datos propiamente dicha, así que usaremos una clase que actúa como una (como lo vimos en clase). Al usar un programa Ruby perdemos toda la información que almacenamos en las variables. Si queremos recuperar la información la próxima vez que corramos el programa, debemos persistir los datos en el disco duro. ¡Usaremos un archivo CSV para eso! El archivo está vacío a esta altura del desafío. Luego le agregarás tus propias recetas a través de la aplicación.
-
-Si quieres recordar la sintaxis sobre el parsing y storing en un archivo CSV, echa un vistazo a [las diapositivas de parsing](https://kitt.lewagon.com/camps/<user.batch_slug>/lectures/content/lectures/ruby/06-parsing-storing-data/index.html?title=Parsing+%26+Storing+Data#/2/3)
+Ahora necesitamos una estructura para almacenar las recetas del usuario. Aún no tenemos una base de datos propiamente dicha, así que usaremos una clase que actúa como una (como lo vimos en clase). Al usar un programa Ruby perdemos toda la información que almacenamos en las variables. Si queremos recuperar la información la próxima vez que corramos el programa, debemos persistir los datos en el disco duro.
 
 En el contexto de este desafío, el repositorio almacena las recetas que han sido agregadas por el usuario. En otras palabras, **es** el **recetaro**. Nombremos la clase `Cookbook` para escribir código explícito y significativo, pero ¡recuerda que es el **repositorio** del diagrama de esta mañana!
 
 Implementa la clase `Cookbook` con 4 métodos:
 
-- `initialize(csv_file_path)` que carga el `Recipe` existente desde el CSV
+- `initialize` que carga los `Recipe` existentes.
 - `all` el cual devuelve todas las recetas
 - `create(recipe)` que crea una receta y la añade al recetario
 - `destroy(recipe_index)` el cual borra una receta del recetario
 
+Nota: Cuando un programa Ruby finaliza, perdemos todos los datos que almacenamos en las variables. Esto significa que tu libro de recetas se va a "borrar" cada vez que el proceso de Terminal se cierre. No te preocupes. Vamos a solver este problema en el próximo ejercicio.
 
 ### Controlador
 

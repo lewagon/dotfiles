@@ -28,7 +28,8 @@ describe "Controller", unless: cookbook_helper.file_and_class_valid? do
 end
 
 describe "Controller", if: cookbook_helper.file_and_class_valid? do
-  let(:cookbook) { Cookbook.new }
+  let(:csv_path) { "spec/recipes.csv" }
+  let(:cookbook) { Cookbook.new(csv_path) }
   let(:controller) { Controller.new(cookbook) }
 
   describe '#initialize' do
