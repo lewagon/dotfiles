@@ -29,5 +29,5 @@ Tu ne dois **pas écrire** de code dans les classes `Post` et `User` ! Cette con
 ## Suggestions et ressources
 
 - Il y a une méthode [`send`](http://stackoverflow.com/questions/3337285/what-does-send-do-in-ruby) sur toutes les classes.
-- Tu peux dynamiquement définir une variable d'instance avec [`instance_variable_set`](http://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_set)
-- Tu peux dynamiquement lire une variable d'instance avec [`instance_variable_get`](http://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_get)
+- Tu peux dynamiquement définir une variable d'instance avec [`instance_variable_set`](http://ruby-doc.org/core-3.1.2/Object.html#method-i-instance_variable_set)
+- Tu peux dynamiquement lire une variable d'instance avec [`instance_variable_get`](http://ruby-doc.org/core-3.1.2/Object.html#method-i-instance_variable_get)
