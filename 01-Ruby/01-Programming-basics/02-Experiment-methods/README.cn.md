@@ -23,7 +23,7 @@ IRB是Ruby的一个交互式编程环境[REPL](https://zh.wikipedia.org/wiki/读
 
 ## 详细说明
 
-找到并填入正确的[字符串类](http://ruby-doc.org/core-2.5.3/String.html)、[整数类](http://ruby-doc.org/core-2.5.3/Integer.html )，以及[数组类](http://ruby-doc.org/core-2.5.3/Array.html)的Ruby方法（methods），以使测试通过。
+找到并填入正确的[字符串类](http://ruby-doc.org/core-3.1.2/String.html)、[整数类](http://ruby-doc.org/core-3.1.2/Integer.html )，以及[数组类](http://ruby-doc.org/core-3.1.2/Array.html)的Ruby方法（methods），以使测试通过。
 
 编程就是聪明地知道如何以及在哪里找到你需要的信息！通常，最困难的步骤就是向谷歌提出正确的问题。请使用以下的网站来找到这个挑战中所需的方法（methods）：
 
