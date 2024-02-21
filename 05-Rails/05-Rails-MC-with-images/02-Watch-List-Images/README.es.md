@@ -14,16 +14,25 @@ Continuaremos trabajando en el código de ayer así que ya puedes regresar a tu 
 cd ~/code/<user.github_nickname>/rails-watch-list
 ```
 
-Si generaste la app rails **sin** el flag `--database`, debes hacer la migración de la Rails app a Postgresql para heroku manualmente. Puedes comprobar si la app está configurada con postgresql si tienes la gema `pg` en el gemfile.
+### Configuración de la Base de Datos
 
-Si necesitas cambiar la app a postgres, abre tu Gemfile, busca la línea `sqlite` y **reemplázala** con lo siguiente:
+Si seguiste los comandos ayer, tu base de datos ya debería estar configurada correctamente para desplegar en Heroku 🚀
+
+Vamos a verificar para asegurarnos. Por favor abre el `Gemfile`. ¿Tienes esta línea abajo? 
 
 ```ruby
 # Gemfile
+[...]
 gem "pg"
 ```
 
-Abre el archivo `config/database.yml`, **borra** todo lo que tenga y reemplazalo con lo siguiente:
+✅ Si sí, continúa a la siguiente sección (Primer Despliegue).
+
+❌ Si no, necesitaremos cambiar algunos archivos de configuración. Por favor sigue las instrucciones bajo la sección de divulgación "Cambiar DB a Postgres" aquí:
+
+<details>
+<summary markdown='span'>Cambiar DB a Postgres</summary>
+Abre el archivo `config/database.yml`, **borra** todo y reemplázalo con:
 
 ```yaml
 default: &default
@@ -40,13 +49,14 @@ test:
   database: rails-watch-list_test
 ```
 
-Abre tu terminal y corre lo siguiente:
+Abre tu terminal y ejecuta:
 
 ```bash
 rails db:create
 rails db:migrate
 rails db:seed
 ```
+</details>
 
 ### Primer Deployment
 
