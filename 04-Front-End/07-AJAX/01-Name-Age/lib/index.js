@@ -1,11 +1,11 @@
 const agifyApiUrl = "https://api.agify.io/"
 
-const displayAge = (event) => {
+const displayDefinition = (event) => {
   event.preventDefault();
-  const firstName = document.getElementById("first-name").value;
+  const word = document.getElementById("word").value;
   // TODO: Display your age with an AJAX call instead of the console.log()
-  console.log(firstName);
+  console.log(word);
 }
 
-const form = document.getElementById("fetch-age");
-form.addEventListener("submit", displayAge);
+const form = document.getElementById("fetch-word");
+form.addEventListener("submit", displayDefinition);
