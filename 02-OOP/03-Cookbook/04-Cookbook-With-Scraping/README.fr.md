@@ -8,10 +8,10 @@ Commence par copier-coller le code de ton Cookbook dans le dossier `lib` de l’
 
 ```bash
 # vérifie que tu es dans le bon répertoire
-cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/03-Cookbook-With-Scraping
+cd ~/code/<user.github_nickname>/fullstack-challenges/02-OOP/03-Cookbook/04-Cookbook-With-Scraping
 
 # copie ton code de l’exercice 2 de Cookbook
-cp -r ../02-Cookbook/lib .
+cp -r ../03-Cookbook-With-CSV/lib .
 ```
 
 Avant de commencer, exécute le code que tu as récupéré pour vérifier que les actions utilisateur implémentées (list / add / remove) fonctionnent bien !

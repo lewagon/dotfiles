@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-To better understand `yield`, let's try to reimplement the [`Enumerable#map`](https://ruby-doc.org/core-2.5.3/Enumerable.html#method-i-map) method without actually using it.
+To better understand `yield`, let's try to reimplement the [`Enumerable#map`](https://ruby-doc.org/core-3.1.2/Enumerable.html#method-i-map) method without actually using it.
 
 
 ## Specs

@@ -33,5 +33,5 @@ will help you discover Ruby awesomeness.
 ## Further suggestions & resources
 
 - There is a [`send`](http://stackoverflow.com/questions/3337285/what-does-send-do-in-ruby) method on all classes.
-- You can dynamically set an instance variable with [`instance_variable_set`](http://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_set)
-- You can dynamically read an instance variable with [`instance_variable_get`](http://ruby-doc.org/core-2.5.3/Object.html#method-i-instance_variable_get)
+- You can dynamically set an instance variable with [`instance_variable_set`](http://ruby-doc.org/core-3.1.2/Object.html#method-i-instance_variable_set)
+- You can dynamically read an instance variable with [`instance_variable_get`](http://ruby-doc.org/core-3.1.2/Object.html#method-i-instance_variable_get)
