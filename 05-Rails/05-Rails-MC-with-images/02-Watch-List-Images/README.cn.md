@@ -28,7 +28,7 @@ gem "pg"
 
 ✅ 如果有，继续到下一部分（首次部署）。
 
-❌ 如果没有，我们需要修改一些配置文件。请按照这里“将DB更改为Postgres”披露部分下的说明操作：
+❌ 如果没有，我们需要修改一些配置文件。请展开下面“将DB更改为Postgres”，按照里面的说明操作：
 
 <details>
 <summary markdown='span'>将DB更改为Postgres</summary>
