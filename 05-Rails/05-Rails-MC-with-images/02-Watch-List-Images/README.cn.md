@@ -18,7 +18,7 @@ cd ~/code/<user.github_nickname>/rails-watch-list
 
 如果你昨天按照指令操作，你的数据库应该已经正确设置好可以部署到Heroku 🚀
 
-让我们来检查一下以确保。请打开 `Gemfile` 文件。你在里面有这行吗？
+让我们来检查一下。请打开 `Gemfile` 文件。你在里面有这行吗？
 
 ```ruby
 # Gemfile
