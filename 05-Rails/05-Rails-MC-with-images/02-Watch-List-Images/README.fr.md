@@ -12,11 +12,11 @@ Si tu as suivi les commandes hier, ta base de données devrait déjà être corr
 
 Vérifions pour être sûrs. Ouvre le `Gemfile`. As-tu cette ligne ci-dessous ?
 
-````ruby
+```ruby
 # Gemfile
 [...]
 gem "pg"
-````
+```
 
 ✅ Si oui, passe à la prochaine section (Premier Déploiement).
 
@@ -26,7 +26,7 @@ gem "pg"
 <summary markdown='span'>Changer DB à Postgres</summary>
 Ouvre le fichier `config/database.yml`, **supprime** tout et remplace-le par :
 
-````yaml
+```yaml
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -39,15 +39,15 @@ development:
 test:
   <<: *default
   database: rails-watch-list_test
-````
+```
 
 Ouvre ton terminal et lance :
 
-````bash
+```bash
 rails db:create
 rails db:migrate
 rails db:seed
-````
+```
 </details>
 
 ### Configuration
