@@ -18,7 +18,7 @@ cd ~/code/<user.github_nickname>/rails-watch-list
 
 如果你昨天按照指令操作，你的数据库应该已经正确设置好可以部署到Heroku 🚀
 
-让我们来检查一下以确保。请打开 `Gemfile` 文件。你在里面有这行吗？
+让我们来检查一下。请打开 `Gemfile` 文件。你在里面有这行吗？
 
 ```ruby
 # Gemfile
@@ -28,7 +28,7 @@ gem "pg"
 
 ✅ 如果有，继续到下一部分（首次部署）。
 
-❌ 如果没有，我们需要修改一些配置文件。请按照这里“将DB更改为Postgres”披露部分下的说明操作：
+❌ 如果没有，我们需要修改一些配置文件。请展开下面“将DB更改为Postgres”，按照里面的说明操作：
 
 <details>
 <summary markdown='span'>将DB更改为Postgres</summary>
