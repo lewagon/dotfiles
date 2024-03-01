@@ -191,6 +191,9 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # Enable subpixel font rendering on non-Apple LCDs
 # defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
+# Disable font smoothing
+defaults -currentHost write -g AppleFontSmoothing -int 0
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
