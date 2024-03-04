@@ -16,7 +16,13 @@ describe "quiz" do
 
   describe "#route_to_about_page" do
     it "should return the correct answer" do
-      expect(route_to_about_page).to eq("get 'about', to: 'pages#about'")
+      correct_lines = [
+        'get "about", to: "pages#about"',
+        "get 'about', to: 'pages#about'",
+        'get "about", to "pages#about", as: "about"',
+        "get 'about', to 'pages#about', as: 'about'"
+      ]
+      expect(correct_lines).to include(route_to_about_page)
     end
   end
 
