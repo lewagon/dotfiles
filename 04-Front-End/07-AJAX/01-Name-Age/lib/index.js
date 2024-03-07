@@ -1,4 +1,4 @@
-const agifyApiUrl = "https://api.agify.io/"
+const apiUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 
 const displayDefinition = (event) => {
   event.preventDefault();
