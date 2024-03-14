@@ -19,6 +19,8 @@ The `lib/interface.rb` file contains a program to interact with a user. Try it n
 ruby lib/interface.rb
 ```
 
+Your program should then ask you to type your first, middle, and last name into  the terminal.
+
 Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `Hello, Boris Alexandre Papillard!`.
 
 - **constraint**: of course, your `interface.rb` program should use the `compute_name` method defined in the other file.
