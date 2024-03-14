@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Mustache from "mustachejs";
 
 const recipes = [
@@ -21,6 +22,6 @@ const recipes = [
     ingredients: ["fish", "shellfish", "tomatoes", "fennel", "onions", "garlic", "saffron"],
     difficulty: 10
   }
-]
+];
 
 // TODO: Your code goes below:
