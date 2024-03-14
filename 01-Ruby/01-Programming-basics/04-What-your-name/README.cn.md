@@ -19,6 +19,8 @@
 ruby lib/interface.rb
 ```
 
+你的程序应该随后要求你在终端输入你的名字、中间名和姓氏。
+
 接下来, 假设你已经先后输入了“Boris”，“Alexandre”，以及“Papillard”，程序应该打印出这样的信息`Hello, Boris Alexandre Papillard!`。
 
 * **约束条件**：当然，你的`interface.rb`程序必须用到在另一个文件中定义的`compute_name`方法。

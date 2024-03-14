@@ -20,6 +20,8 @@ El archivo  `lib/interface.rb` contiene un programa para interactuar con el/la u
 ruby lib/interface.rb
 ```
 
+Tu programa debería pedirte a escribir tu nombre de pila, nombre segundo, y apellido en la terminal.
+
 Después, asumiendo que pusiste “Boris” y luego “Alexandre” y finalmente “Papillard”, el programa imprimirá un mensaje personalizado como el siguiente: `Hello, Boris Alexandre Papillard!`.
 
 * **Limitación**: tu programa `interface.rb` deberá usar el método `compute_name` en el otro archivo, por supuesto.

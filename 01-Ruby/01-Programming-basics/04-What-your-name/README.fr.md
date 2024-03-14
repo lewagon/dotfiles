@@ -19,6 +19,8 @@ Le fichier `lib/interface.rb` contient un programme pour interagir avec un utili
 ruby lib/interface.rb
 ```
 
+Ton programme devrait ensuite te demander d'entrer ton prénom, deuxième prénom et nom de famille dans le terminal.
+
 En supposant que tu as saisi "Boris", puis "Alexandre" et enfin "Papillard", le programme doit imprimer un message personnalisé ressemblant à `Hello, Boris Alexandre Papillard!`.
 
 - **contrainte** : ton programme `interface.rb` doit bien entendu utiliser la méthode `compute_name` définie dans l’autre fichier.
