@@ -36,7 +36,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Let's import the teacher's spec to be able to `rake` our progress.
+Let's import the teacher's spec to be able to `rspec` our progress. **Note: You will use the `rspec` command instead of the `rake` command to run the tests for this challenge.**
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
@@ -202,7 +202,7 @@ To understand how to get the movie images from the API, make sure to carefully r
 
 **Important**
 
-Don't use `rake` to code the applicative part. It's time to launch a `rails s` in your terminal and open a browser at [http://localhost:3000/](http://localhost:3000/). Always code in silo:
+Don't use `rspec` to code the applicative part. It's time to launch a `rails s` in your terminal and open a browser at [http://localhost:3000/](http://localhost:3000/). Always code in silo:
 
 - start with the **route**,
 - then start coding the **controller**,
@@ -210,7 +210,7 @@ Don't use `rake` to code the applicative part. It's time to launch a `rails s` i
 
 When your feature is done (and looks good), move on to the next one and repeat the process!
 
-When you think you're done with the **whole** challenge, use `rake` to make sure it satisfies the specs.
+When you think you're done with the **whole** challenge, use `rspec` to make sure it satisfies the specs.
 
 **Features**
 

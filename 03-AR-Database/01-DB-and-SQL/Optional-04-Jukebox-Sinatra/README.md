@@ -1,7 +1,7 @@
 ## Background & Objectives
 
 We'd like to build a small [Sinatra](http://www.sinatrarb.com/) web application to display all the information from that Jukebox Database you've been using in some of the day's challenges.
-There is a rake for this exercise that will test your sinatra app. Just launch it with the usual `rake` command.
+There is a rake for this exercise that will test your sinatra app. Launch it with the `bundle exec rake` command.
 
 ## Setup
 

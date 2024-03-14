@@ -1,6 +1,6 @@
 ## 背景与目标
 
-为了更好地理解`yield`，让我们试着重新实现[`Enumerable#map`](https://ruby-doc.org/core-2.5.3/Enumerable.html#method-i-map)方法，而不是直接使用它。
+为了更好地理解`yield`，让我们试着重新实现[`Enumerable#map`](https://ruby-doc.org/core-3.1.2/Enumerable.html#method-i-map)方法，而不是直接使用它。
 
 
 ## 详细说明

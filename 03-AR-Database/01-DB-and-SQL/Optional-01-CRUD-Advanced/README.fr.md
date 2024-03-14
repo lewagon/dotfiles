@@ -10,7 +10,7 @@ Tout d'abord, copions et collons le code du challenge précédent dans le dossie
 
 ```bash
 # assure-toi d'être dans le bon répertoire :
-cd ~/code/<user.github_nickname>/fullstack-challenges/03-AR-Database/01-DB-and-SQL/05-CRUD-Advanced
+cd ~/code/<user.github_nickname>/fullstack-challenges/03-AR-Database/01-DB-and-SQL/Optional-01-CRUD-Advanced
 
 # copie ton code du challenge CRUD - Read :
 cp -r ../04-CRUD-Read/app .

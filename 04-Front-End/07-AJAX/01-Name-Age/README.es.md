@@ -1,29 +1,29 @@
-## Antecedentes y objetivos
+## Antecedentes y Objetivos
 
-En este ejercicio jugarás con la [API de agify](https://agify.io/). Esta API te permitirá predecir tu edad basándose en tu primer nombre.
+En este ejercicio jugarás con la [API del Diccionario Libre](https://dictionaryapi.dev/). Esta API te permitirá obtener definiciones para una palabra en particular.
 
-Para lograrlo, deberás implementar una solicitud `GET` a la API de agify para recuperar la edad predicha y mostrarla en el DOM.
-
-![Gif resaltado](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/your-age-from-your-name.gif)
+Para hacer eso, tendrás que implementar una solicitud `GET` a la API para recuperar la definición de la palabra y mostrarla en el DOM.
 
 ## Especificaciones
 
 Como de costumbre, inicia tu servidor con `serve` en la terminal y ve a `localhost:8000`.
 
-En el archivo `lib/index.js`, implementa la solicitud `GET` a la API de agify utilizando `fetch` en la función `displayAge()`. La lógica para capturar y almacenar el `firstName` ya está implementada, por lo que puedes centrarte en la solicitud AJAX.
+En el archivo `lib/index.js`, implementa la solicitud `GET` a la API usando `fetch` en la función `displayDefinition()`. La lógica para capturar y almacenar la `word` ya está implementada, por lo que puedes concentrarte en la solicitud AJAX.
 
 Debes utilizar la siguiente URL para hacer la solicitud a la API:
 
 ```
-https://api.agify.io?name=EL_PRIMER_NOMBRE
+https://api.dictionaryapi.dev/api/v2/entries/en/PALABRA
 ```
 
-Por ejemplo, esta URL predecirá la edad de `michael`:
+Por ejemplo, esta URL obtendrá definiciones para la palabra "gato":
 
 ```
-https://api.agify.io?name=michael
+https://api.dictionaryapi.dev/api/v2/entries/en/cat
 ```
 
-Una vez que se haya completado la solicitud, actualiza el contenido de la página para mostrar la edad. El resultado debe ir en `<p id="your-age">`. Intenta mostrar un mensaje con una frase como "Tienes 30 años".
+La API te dará muchas definiciones diferentes para la palabra. No te preocupes, tu objetivo es **solo mostrar la primera definición**. Para encontrarla, deberás prestar mucha atención a la estructura de los datos que la API te devuelve 🤔 ¿Qué es un `Array`; qué es un `Object`; cuáles son las claves y valores?
 
-¡Feliz agify!
+Una vez completada la solicitud, actualiza el contenido de la página para mostrar la definición. El resultado debe ir en el `<p id="definition">`.
+
+¡Feliz definición!

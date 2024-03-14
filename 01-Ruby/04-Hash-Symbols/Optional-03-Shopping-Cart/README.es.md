@@ -35,4 +35,4 @@ Adicional:
 
 ## Sugerencias y recursos adicionales
 
-* ¡Échale un vistazo a los métodos en la [documentación de Enumerable](http://ruby-doc.org/core-2.5.3/Enumerable.html)!
+* ¡Échale un vistazo a los métodos en la [documentación de Enumerable](http://ruby-doc.org/core-3.1.2/Enumerable.html)!

@@ -1,12 +1,12 @@
 ## Contexto y Objetivos
 
-La [clase `Array`](https://ruby-doc.org/core-2.7.5/Array.html) es una de las estructuras principales para resguardar y acceder a información en Ruby (la otra es [Hash](https://ruby-doc.org/core-2.7.5/Hash.html), la cual veremos mañana).
+La [clase `Array`](https://ruby-doc.org/core-3.1.2/Array.html) es una de las estructuras principales para resguardar y acceder a información en Ruby (la otra es [Hash](https://ruby-doc.org/core-3.1.2/Hash.html), la cual veremos mañana).
 
 Un array se ordena de modo que se pueda acceder por su **index** (índice). Este ejercicio te ayudará a entender cómo crear un array, como guardar datos en él, y finalmente cómo recuperarlos usando el index. Recuerda que los índices de los arrays empiezan en `0`, y no `1`.
 
 A menudo se les pide a los/as programadores/as que ordenen cosas. Por eso debes leer sobre [algoritmos de ordenamiento](http://en.wikipedia.org/wiki/Sorting_algorithm).
 
-Esperemos que la documentación de Ruby te proporcione distintas maneras de ordenar un [Enumerable](http://ruby-doc.org/core-2.5.3/Enumerable.html). `Array` es una forma de `Enumerable`, así que puedes usar todos los métodos referenciados en la página de `Enumerable` en la documentación siempre y cuando uses un `Array`, porque `Array` **incluye** el módulo `Enumerable`.
+Esperemos que la documentación de Ruby te proporcione distintas maneras de ordenar un [Enumerable](http://ruby-doc.org/core-3.1.2/Enumerable.html). `Array` es una forma de `Enumerable`, así que puedes usar todos los métodos referenciados en la página de `Enumerable` en la documentación siempre y cuando uses un `Array`, porque `Array` **incluye** el módulo `Enumerable`.
 
 ## Especificaciones
 

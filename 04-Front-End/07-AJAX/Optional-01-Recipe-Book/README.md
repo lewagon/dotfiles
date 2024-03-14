@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-In this challenge, we'll retrieve data from an API and practice displaying it with a `template` element that we saw during the lecture.
+In this challenge, we'll retrieve data from an API and practice displaying it with HTML in DOM.
 
 ## Specs
 
@@ -18,7 +18,7 @@ serve
 
 You should see a form with a search input.
 
-- When we enter an ingredient, the page **should not reload** and we will display each recipe in the `#recipes-container` list, using a template element.
+- When we enter an ingredient, the page **should not reload** and we will display each recipe in the `#recipes-container` list, using some HTML.
 - We should see a message indicating that there are no results in case there are no recipes using that ingredient.
 - Once the search works, the second part of the challenge will be to favourite the recipes you want by clicking on the bookmark icon.
 - Once bookmarked, the recipe will appear on the `#favourites-container` list.
@@ -38,27 +38,27 @@ You should use fetch and `console.log(data)` to see the response from the API.
 ### Display the results
 
 Now that we have the results, let's display them in the `#recipes-container` list.
-Let's first create in the HTML a template element with the following structure:
-
-```html
-<template id="recipe-template">
-  <div class="col-5">
-    <div class="card my-2 position-relative">
-      <i class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"></i>
-      <img src="" class="card-img-top" alt="">
-      <div class="card-body d-flex">
-        <h6 class="card-title">Recipe Title</h6>
-      </div>
-    </div>
-  </div>
-</template>
-```
 
 Then, let's create a function `insertRecipes` that will insert the results in our list. Which parameter(s) should be passed to it?
 
 Let's create the function with two parameters: `recipes`, `container`. The first one will be the array of recipes we get from the API, and the second one will be the container where we want to insert the recipes.
 
-We will use the `forEach` method to iterate over the array of recipes, and for each recipe, we will clone the template element, and insert the recipe data in the right place. Your turn! (hint: check the lecture notes to see how we cloned the template element)
+We will use the `forEach` method to iterate over the array of recipes, and for each recipe, we will generate some HTML (as a string), and insert the recipe data in the right place.
+
+The `insertRecipes` should add the following HTML to the DOM for each recipe (of course, with the titles and images customized for each recipe):The `insertRecipes` should add the following HTML to the DOM for each recipe (of course, with the titles and images customized for each recipe):
+
+
+```html
+<div class="col-5">
+  <div class="card my-2 position-relative">
+    <i class="fa-solid fa-bookmark text-danger ms-2 position-absolute top-0 end-0 p-2 fs-4"></i>
+    <img src="INSERT RECIPE IMAGE URL HERE" class="card-img-top" alt="">
+    <div class="card-body d-flex">
+      <h6 class="card-title">INSERT RECIPE TITLE HERE</h6>
+    </div>
+  </div>
+</div>
+```
 
 You should see a recipe list using the ingredient you entered in the search input:
 
@@ -92,7 +92,7 @@ const newRecipeToAdd = { idMeal: ..., strMeal: ..., strMealThumb: ... };
 
 We can then push this recipe object into the `favourites` variable.
 
-Let's clone the template element, and insert the recipe data in the right place. Wait! We already have a method that does exactly that!
+Let's insert the recipe data as HTML in the right place. Wait! We already have a method that does exactly that!
 
 `insertRecipes`, takes a recipe list and a container as parameters, and inserts the recipes in the container. Let's use it!
 

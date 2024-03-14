@@ -1,7 +1,7 @@
 ## Contexte et objectifs
 
 Nous souhaitons construire une petite application web [Sinatra](http://www.sinatrarb.com/) pour afficher toutes les informations de la base de données Jukebox que tu as utilisée dans certains des challenges de la journée.
-Tu peux utiliser `rake` pour tester ton application Sinatra. Lance-le avec la commande habituelle `rake`.
+Tu peux utiliser `rake` pour tester ton application Sinatra. Lance-le avec la commande `bundle exec rake`.
 
 ## Mise en place
 

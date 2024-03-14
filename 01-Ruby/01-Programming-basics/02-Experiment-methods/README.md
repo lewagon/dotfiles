@@ -25,7 +25,7 @@ In Ruby, everything (text, an integer, a floating number, an array...) is an obj
 
 ## Specs
 
-Find the right Ruby methods of the [String class](http://ruby-doc.org/core-2.5.3/String.html), the [Integer class](http://ruby-doc.org/core-2.5.3/Integer.html), and the [Array class](http://ruby-doc.org/core-2.5.3/Array.html) to plug in and make the tests pass.
+Find the right Ruby methods of the [String class](http://ruby-doc.org/core-3.1.2/String.html), the [Integer class](http://ruby-doc.org/core-3.1.2/Integer.html), and the [Array class](http://ruby-doc.org/core-3.1.2/Array.html) to plug in and make the tests pass.
 
 Code is all about being smart and knowing how and where to look for the info you need! Often, the most difficult step is to ask google the right question. To find the methods you'll need for this challenge, use:
 

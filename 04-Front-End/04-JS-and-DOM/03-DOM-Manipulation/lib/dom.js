@@ -52,6 +52,9 @@ const firstTeamPoints = () => {
   // TODO: return the points
 };
 
+// /!\ DO NOT CHANGE THIS LINE - TEST PURPOSES
+const points = firstTeamPoints();
+
 
 // Ex 8. Change the background color of the tr element inside of the table header (<thead>) to #DDF4FF
 
@@ -63,4 +66,4 @@ const firstTeamPoints = () => {
 
 
 // Checking exercise answers. DO NOT MODIFY THIS LINE
-runChallenges(borisesEmail, teamCountBeforeAddition, summarizePoints);
+runChallenges(borisesEmail, teamCountBeforeAddition, points);

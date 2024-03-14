@@ -56,7 +56,7 @@ AGE_OF_STUDENTS = {
 }
 ```
 
-阅读有关[哈希（Hashes）](https://ruby-doc.org/core-2.7.5/Hash.html)的文档。
+阅读有关[哈希（Hashes）](https://ruby-doc.org/core-3.1.2/Hash.html)的文档。
 你将总是会用到它们，所以和它们交个朋友吧 😊
 
 **在这个练习中，为了简单起见，使用`字符串（Strings）`而不是`符号（Symbols）`作为你的键**
