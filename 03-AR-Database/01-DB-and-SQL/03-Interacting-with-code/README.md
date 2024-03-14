@@ -24,7 +24,7 @@ end
 ```ruby
 # lib/queries.rb
 require "sqlite3"
-DB = SQLite3::Database.new("lib/db/jukebox.sqlite")
+DB = SQLite3::Database.new(File.join(File.dirname(__FILE__), 'db/jukebox.sqlite'))
 rows = DB.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
 ```
