@@ -187,8 +187,8 @@ Los endpoints de la API te piden que crees una cuenta de usuario y generes una A
 A continuación te explicamos cómo funciona:
 
 1. La API dirá: usa `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>`
-2. Lo que deberás hacer es reemplazar esta parte de la url `https://api.themoviedb.org/3` por `http://tmdb.lewagon.com`
-3. Practica [aquí](http://tmdb.lewagon.com/movie/top_rated)
+2. Lo que deberás hacer es reemplazar esta parte de la url `https://api.themoviedb.org/3?api_key=<your_api_key>` por `https://tmdb.lewagon.com`. Por ejemplo, `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>` será `https://tmdb.lewagon.com/movie/top_rated`.
+3. Practica [aquí](https://tmdb.lewagon.com/movie/top_rated)
 
 **Imágenes de las Películas**
 

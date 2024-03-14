@@ -203,8 +203,8 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 如何使用:
 
 1. API要求使用：`https://api.themoviedb.org/3/movie/top_rated?api_key=<你的API密钥>`
-2. 你要做的是使用`http://tmdb.lewagon.com`来替换链接里的`https://api.themoviedb.org/3`
-3. 在[这里](http://tmdb.lewagon.com/movie/top_rated)试一下
+2. 你要做的是使用`https://tmdb.lewagon.com`来替换链接里的`https://api.themoviedb.org/3`
+3. 在[这里](https://tmdb.lewagon.com/movie/top_rated)试一下
 
 **电影的图片Movie Images**
 

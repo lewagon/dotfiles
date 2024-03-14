@@ -188,8 +188,8 @@ Les endpoints de l'API nécessitent que tu t'inscrives et génères une clé API
 Voici comment ça fonctionne :
 
 1. L'API indique : utilise `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>`.
-2. Remplace cette partie de l'URL `https://api.themoviedb.org/3` par `http://tmdb.lewagon.com`.
-3. Tu peux [essayer ici](http://tmdb.lewagon.com/movie/top_rated).
+2. Remplace cette partie de l'URL `https://api.themoviedb.org/3?api_key=<your_api_key>` par `https://tmdb.lewagon.com`. Par example, `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>` serait `https://tmdb.lewagon.com/movie/top_rated`.
+3. Tu peux [essayer ici](https://tmdb.lewagon.com/movie/top_rated).
 
 **Images de films**
 
