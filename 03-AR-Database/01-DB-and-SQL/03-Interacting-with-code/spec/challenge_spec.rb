@@ -227,6 +227,11 @@ describe 'Queries methods' do
       tracks.each { |t| expect(result).to include(t) }
     end
 
+    it 'should not be vulnerable to sql injection' do
+      hacked = long_tracks(db, '0 AND name = "Secrets" LIMIT 1; --') == ["Secrets"]
+      expect(hacked).to eq(false)
+    end
+
     it 'returns tracks sorted by length' do
       tracks = [
                                         "Hero",

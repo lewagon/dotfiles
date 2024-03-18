@@ -5,7 +5,7 @@ class BonusFormatter < RSpec::Core::Formatters::DocumentationFormatter
 
   def dump_summary(notification)
     output.puts BONUS if notification.failure_count.zero?
-    super notification
+    super(notification)
   end
 end
 

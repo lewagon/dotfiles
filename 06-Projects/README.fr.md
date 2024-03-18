@@ -22,9 +22,9 @@ La première semaine, il y aura encore des conférences le matin sur des sujets 
 
 Apprends à ajouter en temps réel des fonctionnalités « prêtes à l'emploi » avec ActionCable de Rails.
 
-### `Créer une API`
+### `From Design to Code`
 
-Apprends à créer une API avec Rails.
+Apprends à matérialiser les fonctionnalités en utilisant JavaScript ou AJAX dans tes projets.
 
 ### `Tâches de fond avec Sidekiq`
 
@@ -34,6 +34,6 @@ Apprends à créer une API avec Rails.
 
 Découvre les outils et requêtes SQL avancés qui te permettent d'exposer tes données aux non-techs de ton équipe.
 
-### `Tester dans Rails`
+### `AI dans Rails`
 
-Apprends à tester ton code avec le [framework intégré à Rails : Minitest](http://guides.rubyonrails.org/testing.html).
+Apprends à utiliser l'API OpenAI dans Rails.

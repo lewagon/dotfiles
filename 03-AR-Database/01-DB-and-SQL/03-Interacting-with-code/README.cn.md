@@ -24,8 +24,8 @@ end
 ```ruby
 # ➜ 03-Interacting-with-code git:(master) ✗ irb
 require "sqlite3"
-db = SQLite3::Database.new("lib/db/jukebox.sqlite")
-rows = db.execute("SELECT * FROM artists LIMIT 3")
+DB = SQLite3::Database.new(File.join(File.dirname(__FILE__), 'db/jukebox.sqlite'))
+rows = DB.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"] ]
 ```
 
@@ -33,11 +33,11 @@ rows = db.execute("SELECT * FROM artists LIMIT 3")
 
 ```ruby
 require_relative "lib/queries"
-artist_count(db)
+artist_count(DB)
 # => [...]
 ```
 
-如果你只在 `lib/queries.rb` 中运行代码，你可以调用方法，并使用 `puts` 或 `p` 查看结果，在如上所述实例化`db`**之后**。
+如果你只在 `lib/queries.rb` 中运行代码，你可以调用方法，并使用 `puts` 或 `p` 查看结果，在如上所述实例化`DB`**之后**。
 
 ## 详细说明
 
@@ -72,7 +72,7 @@ rows = db.execute(query)
 
 ## 资源
 
-* [SQL命令](http://www.sqlcommands.net/)
+* [SQL命令](https://www.codecademy.com/article/sql-commands)
 * [关于`SELECT`的课程](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
 ## VS Code SQLite 插件 - 执行查询

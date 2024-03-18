@@ -25,7 +25,7 @@ Dans Ruby, tout (une chaîne de caractères, un nombre entier ou décimal, un ta
 
 ## Spécifications
 
-Trouve les bonnes méthodes Ruby dan [la classe String](http://ruby-doc.org/core-2.5.3/String.html), [la classe Integer](http://ruby-doc.org/core-2.5.3/Integer.html) et [la classe Array](http://ruby-doc.org/core-2.5.3/Array.html) à utiliser pour faire passer les tests en vert.
+Trouve les bonnes méthodes Ruby dan [la classe String](http://ruby-doc.org/core-3.1.2/String.html), [la classe Integer](http://ruby-doc.org/core-3.1.2/Integer.html) et [la classe Array](http://ruby-doc.org/core-3.1.2/Array.html) à utiliser pour faire passer les tests en vert.
 
 Coder implique d’être malin et de savoir où et comment chercher l’info dont tu as besoin ! Souvent, le plus difficile est de bien formuler la question que tu poses à Google. Pour trouver les méthodes utiles à ce challenge, utilise :
 

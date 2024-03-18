@@ -38,10 +38,11 @@ Hint: Mapbox returns coordinates with longitude first, and latitude second!
 
 To display a MapBox Map with a marker at the specified address, we'll use a second API, the [MapBox JavaScript API](https://www.mapbox.com/mapbox-gl-js/api/).
 
-To use it, add this line in the `head` of your HTML file, so you can use MapBox's stylesheet for your map:
+To use it, add these lines in the `head` of your HTML file, so you can use MapBox's JavaScript and CSS for your map:
 
 ```html
-<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet">
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
 ```
 
 To add a map, you'll need an empty supporting HTML element. For instance:
@@ -51,13 +52,6 @@ To add a map, you'll need an empty supporting HTML element. For instance:
 ```
 
 To easily build the map and add a marker to it, we'll add [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/install/).
-
-To display a map in your `#map` HTML element with Mapbox GL JS, you will have to add these lines in your `index.html`.
-
-```html
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
-```
 
 And then display a map:
 

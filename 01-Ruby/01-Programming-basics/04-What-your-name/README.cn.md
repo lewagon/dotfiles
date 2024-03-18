@@ -19,6 +19,8 @@
 ruby lib/interface.rb
 ```
 
+你的程序应该随后要求你在终端输入你的名字、中间名和姓氏。
+
 接下来, 假设你已经先后输入了“Boris”，“Alexandre”，以及“Papillard”，程序应该打印出这样的信息`Hello, Boris Alexandre Papillard!`。
 
 * **约束条件**：当然，你的`interface.rb`程序必须用到在另一个文件中定义的`compute_name`方法。
@@ -41,6 +43,6 @@ ruby lib/interface.rb
 
 ## 进一步的建议 & 资源
 
-* 为了在终端中得到用户的输入/回答，你应该使用[gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html)。 你还将需要对结果字符串使用[chomp](https://ruby-doc.org/core-2.5.3/String.html#method-i-chomp)。
-* 要想在终端中输出一个问题，你应该使用[puts](https://ruby-doc.org/core-2.7.5/IO.html#method-i-puts)。
+* 为了在终端中得到用户的输入/回答，你应该使用[gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html)。 你还将需要对结果字符串使用[chomp](https://ruby-doc.org/core-3.1.2/String.html#method-i-chomp)。
+* 要想在终端中输出一个问题，你应该使用[puts](https://ruby-doc.org/core-3.1.2/IO.html#method-i-puts)。
 

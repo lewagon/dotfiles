@@ -2,5 +2,17 @@
 # No need to create it, you can just use it!
 
 class Post
-  # TODO
+  def initialize(attributes = {})
+    # TODO
+  end
+
+  def self.find(id)
+    DB.results_as_hash = true
+    # TODO
+  end
+
+  def self.all
+    DB.results_as_hash = true
+    # TODO
+  end
 end

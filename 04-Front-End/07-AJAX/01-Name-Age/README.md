@@ -1,29 +1,29 @@
 ## Background & Objectives
 
-In this challenge you will play with [agify API](https://agify.io/). This API will allow you to predict your age based on your first name.
+In this challenge you will play with the [Free Dictionary API](https://dictionaryapi.dev/). This API will allow you to fetch definitions for a particular word.
 
-To do that, you'll have to implement a `GET` request to the `agify API` in order to retrieve the predicted age and display it in the DOM.
-
-![Highlights Gif](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/your-age-from-your-name.gif)
+To do that, you'll have to implement a `GET` request to the API in order to retrieve the definition of the word and display it in the DOM.
 
 ## Specs
 
 As usual, launch your server with `serve` in the terminal and go to `localhost:8000`.
 
-In the `lib/index.js` file, implement the `GET` request to agify API using `fetch` in the `displayAge()` function. The logic to capture and store the `firstName` is already implemented, so that you can focus on the ajax request.
+In the `lib/index.js` file, implement the `GET` request to the API using `fetch` in the `displayDefinition()` function. The logic to capture and store the `word` is already implemented, so that you can focus on the AJAX request.
 
-You should use the following url to make the request to the API:
-
-```
-https://api.agify.io?name=THE_FIRST_NAME
-```
-
-For example, this url will predict the age for `michael`:
+You should use the following URL to make the request to the API:
 
 ```
-https://api.agify.io?name=michael
+https://api.dictionaryapi.dev/api/v2/entries/en/WORD
 ```
 
-Once the request is done, update the page content to show the age. The result should go in the `<p id="your-age">`. Try to display a message with a sentence like "You're 30 years old".
+For example, this URL will fetch definitions for the word "cat":
 
-Happy agifying!
+```
+https://api.dictionaryapi.dev/api/v2/entries/en/cat
+```
+
+The API will give you many different definitions for the word. Don't worry, your goal is **only to display the very first definition**. In order to find this, you will want to pay close attention to the structure of the data that the API gives you back 🤔 What is an `Array`; what is an `Object`; what are the keys and values?
+
+Once the request is done, update the page content to show the definition. The result should go in the `<p id="definition">`.
+
+Happy defining!

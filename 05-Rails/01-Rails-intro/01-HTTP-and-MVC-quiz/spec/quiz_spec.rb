@@ -3,7 +3,7 @@ require 'quiz'
 describe 'quiz' do
   describe '#http_stands_for' do
     it 'returns the correct answer' do
-      expect(http_stands_for).to eq('Hyper-Text Transfer Protocol')
+      expect(http_stands_for).to match(/Hyper-?\s?[tT]ext Transfer Protocol/)
     end
   end
 

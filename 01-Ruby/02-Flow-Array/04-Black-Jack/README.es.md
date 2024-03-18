@@ -68,5 +68,5 @@ You beat the bank! You win.
 
 ## Recomendaciones y recursos adicionales
 
-- Tal vez quieras utilizar la [clase Random](https://ruby-doc.org/core-2.7.5/Random.html).
+- Tal vez quieras utilizar la [clase Random](https://ruby-doc.org/core-3.1.2/Random.html).
 - Cuando ejecutes bucles (loops) necesitas una condición para detener el juego en cierto momento.

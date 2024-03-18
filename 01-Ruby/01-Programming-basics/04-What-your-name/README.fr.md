@@ -19,6 +19,8 @@ Le fichier `lib/interface.rb` contient un programme pour interagir avec un utili
 ruby lib/interface.rb
 ```
 
+Ton programme devrait ensuite te demander d'entrer ton prénom, deuxième prénom et nom de famille dans le terminal.
+
 En supposant que tu as saisi "Boris", puis "Alexandre" et enfin "Papillard", le programme doit imprimer un message personnalisé ressemblant à `Hello, Boris Alexandre Papillard!`.
 
 - **contrainte** : ton programme `interface.rb` doit bien entendu utiliser la méthode `compute_name` définie dans l’autre fichier.
@@ -47,6 +49,6 @@ Pose-toi encore une fois ces questions et assure-toi d’être capable de répon
 
 ## Suggestions et ressources complémentaires
 
-- Pour obtenir une réponse ou des données de l’utilisateur depuis le terminal, tu dois utiliser la méthode [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). Tu auras également besoin de [chomp](https://ruby-doc.org/core-2.5.3/String.html#method-i-chomp) la string obtenue
-- Pour imprimer une question sur le terminal, tu dois utiliser la méthode [puts](https://ruby-doc.org/core-2.7.5/IO.html#method-i-puts)
+- Pour obtenir une réponse ou des données de l’utilisateur depuis le terminal, tu dois utiliser la méthode [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). Tu auras également besoin de [chomp](https://ruby-doc.org/core-3.1.2/String.html#method-i-chomp) la string obtenue
+- Pour imprimer une question sur le terminal, tu dois utiliser la méthode [puts](https://ruby-doc.org/core-3.1.2/IO.html#method-i-puts)
 

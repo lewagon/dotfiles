@@ -50,6 +50,30 @@ Let's implement these scenarios with the following methods:
 
 Implement a **class** method `find(id)` on the `Post` class that takes an integer as an argument (the post id) and returns an instance of `Post`.
 
+---
+
+**Important:** The first line of your method should be this:
+
+```rb
+DB.results_as_hash = true
+```
+
+By default, when you query the database with a `SELECT` query, the `sqlite3` gem will give you something back like this:
+
+```rb
+[[1, "Why cats are awesome", "www.google.com", 10], ...]
+```
+
+This format is a little bit confusing, right? You'd have to remember that for each `row`, `row[0]` is the id, `row[1]` is the title, and so on. Wouldn't it be nicer if we could just ask for the id, instead of needing to remember that it's the first item in the array? Well, we can by having`sqlite3` give us back a `Hash` by saying `DB.results_as_hash = true`. Then, we'd get something back like:
+
+```rb
+[{ "id" => 1, "title" => Why cats are awesome", "url" => "www.google.com", "votes" => 10}, ...]
+```
+
+So, for each `row`, we could access `row["id"]` or `row["title"]` and don't have to think about confusing `Array` structures anymore 💪
+
+---
+
 Let's use **pseudocode** to help us in breaking down the steps we'll need:
 
 ```ruby
@@ -73,6 +97,12 @@ To protect your database against SQL injections, you must never interpolate SQL 
 #### `#all`
 
 Next, implement a **class** method `all` on the `Post` class which takes no argument and will return an array containing every `Post` instance our database has.
+
+**Important:** The first line of your method should be this, like we did with `#find`:
+
+```rb
+DB.results_as_hash = true
+```
 
 Again, let's use **pseudocode** to help us break down our steps:
 

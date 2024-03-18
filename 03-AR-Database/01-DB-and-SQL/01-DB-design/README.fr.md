@@ -11,7 +11,7 @@ Commençons par créer une table pour stocker les utilisateurs. La table doit co
 - Last name
 - Email
 
-Utilise le [SQL Designer] (http://db.lewagon.com) pour ajouter la table `users` avec les colonnes spécifiées ci-dessus. Pour vérifier ta solution, clique sur "Save / Load", puis "Save XML", copiez/collez le code XML généré dans `lib/users.xml`. Tu peux ensuite utiliser `rake` pour vérifier ta solution.
+Utilise le [SQL Designer](http://db.lewagon.com) pour ajouter la table `users` avec les colonnes spécifiées ci-dessus. Pour vérifier ta solution, clique sur "Save / Load", puis "Save XML", copiez/collez le code XML généré dans `lib/users.xml`. Tu peux ensuite utiliser `rake` pour vérifier ta solution.
 
 NOTE : Rappelle-toi que chaque table a besoin d'une colonne `id` !
 
@@ -28,7 +28,7 @@ Voici les exigences de notre système :
 
 ### Design du schéma
 
-Utilisons à nouveau le [SQL Designer] (http://db.lewagon.com) pour concevoir un schéma de base de données pour une application d'enquête qui répond aux exigences ci-dessus. Pour vérifier ta solution, clique sur "Save / Load", puis "Save XML", copie/colle le code XML généré dans `lib/survey.xml`. Tu peux ensuite utiliser `rake` pour vérifier ta solution.
+Utilisons à nouveau le [SQL Designer](http://db.lewagon.com) pour concevoir un schéma de base de données pour une application d'enquête qui répond aux exigences ci-dessus. Pour vérifier ta solution, clique sur "Save / Load", puis "Save XML", copie/colle le code XML généré dans `lib/survey.xml`. Tu peux ensuite utiliser `rake` pour vérifier ta solution.
 
 ## Points clés de l'apprentissage
 

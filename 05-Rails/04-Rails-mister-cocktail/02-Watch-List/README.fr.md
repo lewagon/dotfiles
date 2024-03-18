@@ -36,7 +36,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-On va importer les spécifications du prof pour évaluer notre progression avec `rake`.
+On va importer les spécifications du prof pour évaluer notre progression avec `rspec`. Note: Tu utiliseras la commande `rspec` au lieu de la commande `rake` pour exécuter les tests de ce défi.
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
@@ -101,6 +101,20 @@ Puis dans `manifest.js`, on va ajouter les lignes suivantes :
 // app/assets/config/manifest.js
 //= link popper.js
 //= link bootstrap.min.js
+```
+
+Enfin, en `config/importmap.rb`:
+
+```rb
+# config/importmap.rb
+
+# replace these lines:
+# pin "bootstrap" # @5.3.2
+# pin "@popperjs/core", to: "@popperjs--core.js" # @2.11.8
+
+# with this:
+pin "bootstrap", to: "bootstrap.min.js", preload: true
+pin "@popperjs/core", to: "popper.js", preload: true
 ```
 
 N'oublie pas de versionner (`commit`) et pousser (`push`) régulièrement ton travail.
@@ -174,8 +188,8 @@ Les endpoints de l'API nécessitent que tu t'inscrives et génères une clé API
 Voici comment ça fonctionne :
 
 1. L'API indique : utilise `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>`.
-2. Remplace cette partie de l'URL `https://api.themoviedb.org/3` par `http://tmdb.lewagon.com`.
-3. Tu peux [essayer ici](http://tmdb.lewagon.com/movie/top_rated).
+2. Remplace cette partie de l'URL `https://api.themoviedb.org/3?api_key=<your_api_key>` par `https://tmdb.lewagon.com`. Par example, `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>` serait `https://tmdb.lewagon.com/movie/top_rated`.
+3. Tu peux [essayer ici](https://tmdb.lewagon.com/movie/top_rated).
 
 **Images de films**
 
@@ -184,7 +198,7 @@ Pour comprendre comment obtenir les images de films de l'API, lis attentivement 
 ### 3 - Routes, contrôleur et vues pour les listes
 
 **Important**
-N'utilise pas `rake` pour coder la partie applicative. On va maintenant lancer `rails s` dans le terminal et ouvrir un navigateur sur [http://localhost:3000/](http://localhost:3000/). Rédige toujours ton code en silos :
+N'utilise pas `rspec` pour coder la partie applicative. On va maintenant lancer `rails s` dans le terminal et ouvrir un navigateur sur [http://localhost:3000/](http://localhost:3000/). Rédige toujours ton code en silos :
 
 - Commence par la **route**,
 - puis code le **contrôleur**,
@@ -192,7 +206,7 @@ N'utilise pas `rake` pour coder la partie applicative. On va maintenant lancer `
 
 Une fois que ta fonctionnalité est prête (et a l'air de fonctionner), passe à la suivante. Et ainsi de suite !
 
-Une fois que tu as terminé **tout** le challenge, utilise `rake` pour t'assurer qu'il répond aux spécifications.
+Une fois que tu as terminé **tout** le challenge, utilise `rspec` pour t'assurer qu'il répond aux spécifications.
 
 **Fonctionnalités**
 

@@ -39,3 +39,12 @@ Connnections                  ttl     opn     rt1     rt5     p50     p90
 You can then access your localhost from the addresses that it's being forwarded to. It's usually better to take the `https` rather than `http`. Send this URL to yourself over Slack or a messenger app, and then voilà! You can now see your localhost views on your mobile browser.
 
 Note: every time you close and then restart an ngrok tunnel, you'll get a new forwarding address. As it can be a pain to resend the address to yourself every time, it's usually a good idea to just leave ngrok running in a terminal window until you no longer need it.
+
+In your Rails project, you may need to add the following to your `config/environments/development.rb` file to allow accessing your `rails server` from ngrok:
+
+```rb
+# config/environments/development.rb
+config.hosts << /.*\.ngrok\.io$/
+```
+
+(Please restart your `rails server` after adding.)

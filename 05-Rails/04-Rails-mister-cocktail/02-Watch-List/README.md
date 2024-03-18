@@ -36,7 +36,7 @@ gh repo create --public --source=.
 git push origin master
 ```
 
-Let's import the teacher's spec to be able to `rake` our progress.
+Let's import the teacher's spec to be able to `rspec` our progress. **Note: You will use the `rspec` command instead of the `rake` command to run the tests for this challenge.**
 
 ```bash
 echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
@@ -101,6 +101,20 @@ And then in `manifest.js`, add the following lines:
 // app/assets/config/manifest.js
 //= link popper.js
 //= link bootstrap.min.js
+```
+
+And finally in `config/importmap.rb`:
+
+```rb
+# config/importmap.rb
+
+# replace these lines:
+# pin "bootstrap" # @5.3.2
+# pin "@popperjs/core", to: "@popperjs--core.js" # @2.11.8
+
+# with this:
+pin "bootstrap", to: "bootstrap.min.js", preload: true
+pin "@popperjs/core", to: "popper.js", preload: true
 ```
 
 Don't forget to `commit` and `push` your work often.
@@ -177,8 +191,8 @@ The endpoints of the API requires you to sign up and generate an API key. Since 
 Here's how it works:
 
 1. the API would say: use `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>`
-2. What you should do is replace this part of the url `https://api.themoviedb.org/3` by `http://tmdb.lewagon.com`
-3. You can [try it here](http://tmdb.lewagon.com/movie/top_rated)
+2. What you should do is replace this part of the url `https://api.themoviedb.org/3?api_key=<your_api_key>` by `https://tmdb.lewagon.com`. For example, `https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>` would become `https://tmdb.lewagon.com/movie/top_rated`.
+3. You can [try it here](https://tmdb.lewagon.com/movie/top_rated)
 
 **Movie Images**
 
@@ -188,7 +202,7 @@ To understand how to get the movie images from the API, make sure to carefully r
 
 **Important**
 
-Don't use `rake` to code the applicative part. It's time to launch a `rails s` in your terminal and open a browser at [http://localhost:3000/](http://localhost:3000/). Always code in silo:
+Don't use `rspec` to code the applicative part. It's time to launch a `rails s` in your terminal and open a browser at [http://localhost:3000/](http://localhost:3000/). Always code in silo:
 
 - start with the **route**,
 - then start coding the **controller**,
@@ -196,7 +210,7 @@ Don't use `rake` to code the applicative part. It's time to launch a `rails s` i
 
 When your feature is done (and looks good), move on to the next one and repeat the process!
 
-When you think you're done with the **whole** challenge, use `rake` to make sure it satisfies the specs.
+When you think you're done with the **whole** challenge, use `rspec` to make sure it satisfies the specs.
 
 **Features**
 

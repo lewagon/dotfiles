@@ -6,17 +6,11 @@ Aujourd'hui, on a **trois objectifs** :
 2. Ajouter la fonctionnalité pour charger des images
 3. Un quiz Rails !
 
-### Configuration
+### Configuration de la Base de Données
 
-Tu vas continuer à travailler sur le code d'hier. Retourne dans ton dossier :
+Si tu as suivi les commandes hier, ta base de données devrait déjà être correctement configurée pour le déploiement sur Heroku 🚀
 
-```bash
-cd ~/code/<user.github_nickname>/rails-watch-list
-```
-
-Si tu as généré l'application Rails **sans** l'option `-d`, tu vas devoir migrer manuellement cette application Rails vers Postgresql pour Heroku. Tu peux vérifier que l'application est configurée avec Postgresql si la gem `pg` se trouve dans ton fichier de gems.
-
-Si tu as besoin de modifier l'application pour Postgresql, ouvre ton fichier Gemfile et trouve la ligne `sqlite`. **Remplace**-la par :
+Vérifions pour être sûrs. Ouvre le `Gemfile`. As-tu cette ligne ci-dessous ?
 
 ```ruby
 # Gemfile
@@ -24,7 +18,13 @@ Si tu as besoin de modifier l'application pour Postgresql, ouvre ton fichier Gem
 gem "pg"
 ```
 
-Ouvre le fichier `config/database.yml`, **supprime** tout son contenu et remplace-le par ce qui suit :
+✅ Si oui, passe à la prochaine section (Premier Déploiement).
+
+❌ Si non, nous devrons modifier quelques fichiers de configuration. Suis les instructions sous la section de divulgation "Changer DB à Postgres" ici :
+
+<details>
+<summary markdown='span'>Changer DB à Postgres</summary>
+Ouvre le fichier `config/database.yml`, **supprime** tout et remplace-le par :
 
 ```yaml
 default: &default
@@ -41,12 +41,21 @@ test:
   database: rails-watch-list_test
 ```
 
-Ouvre ton terminal et exécute :
+Ouvre ton terminal et lance :
 
 ```bash
 rails db:create
 rails db:migrate
 rails db:seed
+```
+</details>
+
+### Configuration
+
+Tu vas continuer à travailler sur le code d'hier. Retourne dans ton dossier :
+
+```bash
+cd ~/code/<user.github_nickname>/rails-watch-list
 ```
 
 ### Premier déploiement

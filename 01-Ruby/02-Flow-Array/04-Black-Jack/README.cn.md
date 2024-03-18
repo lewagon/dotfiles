@@ -69,5 +69,5 @@ You beat the bank! You win.
 
 ## 进一步建议 & 资源
 
-- 你可以用[随机类（Random class）](http://www.ruby-doc.orgcore-2.5.3/Random.html)。
+- 你可以用[随机类（Random class）](http://www.ruby-doc.orgcore-3.1.2/Random.html)。
 - 当循环时，你需要一个可以使游戏停下来的条件。

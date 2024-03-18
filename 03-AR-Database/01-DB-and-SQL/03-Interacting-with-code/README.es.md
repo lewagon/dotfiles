@@ -24,8 +24,8 @@ end
 ```ruby
 # ➜ 03-Interacting-with-code git:(master) ✗  irb
 require "sqlite3"
-db = SQLite3::Database.new("lib/db/jukebox.sqlite")
-rows = db.execute("SELECT * FROM artists LIMIT 3")
+DB = SQLite3::Database.new(File.join(File.dirname(__FILE__), 'db/jukebox.sqlite'))
+rows = DB.execute("SELECT * FROM artists LIMIT 3")
 # => [[1, "AC/DC"], [2, "Accept"], [3, "Aerosmith"]]
 ```
 
@@ -33,11 +33,11 @@ Si has añadido el código anterior a tu archivo `lib/queries.rb` y ahora quiere
 
 ```ruby
 require_relative "lib/queries"
-artist_count(db)
+artist_count(DB)
 # => [...]
 ```
 
-Si ejecutas tu código solo desde `lib/queries.rb`, puedes llamar a tus métodos y utilizar `puts` o `p` para ver los resultados como de costumbre **después** de instanciar tu variable `db` según se describe anteriormente.
+Si ejecutas tu código solo desde `lib/queries.rb`, puedes llamar a tus métodos y utilizar `puts` o `p` para ver los resultados como de costumbre **después** de instanciar tu variable `DB` según se describe anteriormente.
 
 ## Especificaciones
 
@@ -72,7 +72,7 @@ rows = db.execute(query)
 
 ## Recursos
 
-- [Comandos SQL](http://www.sqlcommands.net/)
+- [Comandos SQL](https://www.codecademy.com/article/sql-commands)
 - [Curso en 🇫🇷 sobre `SELECT`](http://sqlpro.developpez.com/cours/sqlaz/select/#L3.4)
 
 ## Extensión SQLite de VS Code - Ejecución de queries

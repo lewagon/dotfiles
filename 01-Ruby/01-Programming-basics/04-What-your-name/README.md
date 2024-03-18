@@ -19,6 +19,8 @@ The `lib/interface.rb` file contains a program to interact with a user. Try it n
 ruby lib/interface.rb
 ```
 
+Your program should then ask you to type your first, middle, and last name into  the terminal.
+
 Then, assuming you have entered "Boris" then "Alexandre" and finally "Papillard", the program should print a custom message like `Hello, Boris Alexandre Papillard!`.
 
 - **constraint**: of course, your `interface.rb` program should use the `compute_name` method defined in the other file.
@@ -47,5 +49,5 @@ Again, ask yourself these questions and make sure you can answer all of them:
 
 ## Further suggestions & resources
 
-- To get a user input or answer from the terminal you should use [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). You will also need to [chomp](https://ruby-doc.org/core-2.5.3/String.html#method-i-chomp) the resulting string
-- To print a question in the terminal, you should use [puts](https://ruby-doc.org/core-2.7.5/IO.html#method-i-puts)
+- To get a user input or answer from the terminal you should use [gets](http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html). You will also need to [chomp](https://ruby-doc.org/core-3.1.2/String.html#method-i-chomp) the resulting string
+- To print a question in the terminal, you should use [puts](https://ruby-doc.org/core-3.1.2/IO.html#method-i-puts)

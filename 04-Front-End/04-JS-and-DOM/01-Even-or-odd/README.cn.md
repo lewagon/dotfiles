@@ -18,9 +18,9 @@ serve
 
 打开浏览器后，你会看到一个红色框的检查列表。你的目标是修正`evenOrOdd`函数，使所有检查都能通过。每当你对JS文件进行修改时，都需要**刷新浏览器**，以便看到你的代码改变反映出来。
 
-请尝试在`eventOrOdd`函数中加入`console.log(number)`，打开浏览器的控制台（console）并查看。你应该会看到3个结果： `0`、`1`、`2`。这些结果来自 `spec`文件夹中`event_or_odd_examiner.js`文件中的`check`函数。
+请尝试在`evenOrOdd`函数中加入`console.log(number)`，打开浏览器的控制台（console）并查看。你应该会看到3个结果： `0`、`1`、`2`。这些结果来自 `spec`文件夹中`event_or_odd_examiner.js`文件中的`check`函数。
 
-只要`eventOrOdd`函数没有完成，测试就会显示为红色。一旦执行了正确的函数，它们就会变成绿色。
+只要`evenOrOdd`函数没有完成，测试就会显示为红色。一旦执行了正确的函数，它们就会变成绿色。
 
 ## 详细参数
 

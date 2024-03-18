@@ -33,4 +33,4 @@ As an extra, improve the `cart_to_s` method so that instead of returning somethi
 
 ## Further suggestions & resources
 
-* Have a look at the methods from the [Enumerable doc](http://ruby-doc.org/core-2.5.3/Enumerable.html)!
+* Have a look at the methods from the [Enumerable doc](http://ruby-doc.org/core-3.1.2/Enumerable.html)!
