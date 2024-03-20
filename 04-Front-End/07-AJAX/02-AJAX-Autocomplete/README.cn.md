@@ -38,3 +38,5 @@ etc.
 当你从API接收到JSON时，你的任务就是用建议来更新`ul#results`列表！
 
 当你实现了基本的行为，不要犹豫去尝试把`ul#results` 变得 🎨 非常好看 🎨 😋
+
+![Animated gif of final goal, showing a list of auto sugesstions that pop up while typing.](https://raw.githubusercontent.com/lewagon/fullstack-images/3a1b80803f1fa3fc59b79530101847d852d21170/frontend/autocomplete.gif)

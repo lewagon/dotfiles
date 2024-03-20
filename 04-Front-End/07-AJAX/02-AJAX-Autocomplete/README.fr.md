@@ -38,3 +38,5 @@ etc.
 Quand tu recevras le JSON de l'API, ton travail sera de mettre à jour la liste `ul#results` avec des suggestions !
 
 Une fois que tu as le comportement de base, n'hésite pas à améliorer l'aspect de la liste  `ul#results` 🎨 🎨 😋
+
+![Animated gif of final goal, showing a list of auto sugesstions that pop up while typing.](https://raw.githubusercontent.com/lewagon/fullstack-images/3a1b80803f1fa3fc59b79530101847d852d21170/frontend/autocomplete.gif)
