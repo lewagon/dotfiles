@@ -3,7 +3,7 @@ require 'open3'
 describe "#beer_song" do
   def run_beer_song(beer_count)
     result = ""
-    Open3.popen2("ruby ./lib/beer_song.rb #{beer_count}") do |i, o, th|
+    Open3.popen2("ruby ./lib/interface.rb #{beer_count}") do |i, o, th|
       i.close
 
       result = o.read

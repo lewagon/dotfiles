@@ -4,8 +4,10 @@ Escribe el código de un programa que imprima las letras de una canción [99 Bot
 
 Tomará como argumento el número inicial de botellas dado a través de línea de comando al ejecutar el programa. El programa deberá funcionar de la siguiente manera:
 
+Deberías definir tu método `#beer_song(beer_start_count)` en `lib/beer_song.rb`. Luego, debes ejecutar el programa corriendo `lib/interface.rb`.
+
 ```bash
-ruby lib/beer_song.rb 5
+ruby lib/interface.rb 5
 
 5 bottles of beer on the wall, 5 bottles of beer!
 Take one down, pass it around, 4 bottles of beer on the wall!

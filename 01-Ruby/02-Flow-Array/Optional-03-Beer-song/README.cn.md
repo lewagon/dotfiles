@@ -4,8 +4,10 @@
 
 它将以开始的瓶子数量作为参数，在程序执行时给出一个命令行。这个程序应该这种方式运行：
 
+你应该在`lib/beer_song.rb`中定义你的`#beer_song(beer_start_count)`方法。然后，你应该通过运行`lib/interface.rb`来运行程序。
+
 ```bash
-ruby lib/beer_song.rb 5
+ruby lib/interface.rb 5
 
 5 bottles of beer on the wall, 5 bottles of beer!
 Take one down, pass it around, 4 bottles of beer on the wall!
