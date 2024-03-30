@@ -55,3 +55,5 @@
   rebase = false
 [credential]
 	username = samrjenkins
+[init]
+	defaultBranch = main
