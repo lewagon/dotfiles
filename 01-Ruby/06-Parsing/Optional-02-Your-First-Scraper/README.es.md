@@ -36,6 +36,6 @@ El método `search` toma un [selector CSS](https://developer.mozilla.org/en-US/d
 
 ## Especificaciones
 
-Queremos hacer scraping de **antiguedades** en [craigslist](https://craigslist.org/) para una ciudad dada. Abre `lib/scraper.rb` e implementa el método `scrape_craiglist_antiques`. Deberá **devolver** un arreglo (`Array`) de las antigüedades que se encontraron en la página.
+Queremos hacer scraping de **recetas** en [recipes.lewagon.com](https://recipes.lewagon.com/) para una búsqueda dada. Abre `lib/scraper.rb` e implementa el método `scrape_recipes`. Deberá **devolver** un arreglo (`Array`) de las antigüedades que se encontraron en la página.
 
-Este método debería hacer el scraping correctamente en ciudades como Londres y Nueva York. Por ende `scrape_craiglist_antiques("london")` y `scrape_craiglist_antiques("newyork")` deben arrojar resultados. Responde la siguiente pregunta: ¿Son iguales los urls craigslist de todas las ciudades?
+Este método debería hacer el scraping correctamente en búsquedas como Londres y Nueva York. Por ende `scrape_recipes("chocolate")` y `scrape_recipes("peanut")` deben arrojar resultados. Responde la siguiente pregunta: ¿Son iguales los urls de todas las búsquedas?

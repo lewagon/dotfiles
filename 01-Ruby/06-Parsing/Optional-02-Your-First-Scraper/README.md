@@ -40,9 +40,9 @@ The `search` method takes a [CSS selector](https://developer.mozilla.org/en-US/d
 
 ## Specs
 
-We would like to scrape **antiques** listed on [craigslist](https://craigslist.org/) for a given city. Open the `lib/scraper.rb` and implement the `scrape_craiglist_antiques` method. It should **return** an `Array` of antiques found on the website.
+We would like to scrape the **recipes** listed on [recipes.lewagon.com](https://recipes.lewagon.com/) for a given search term. Open the `lib/scraper.rb` and implement the `scrape_recipes` method. It should **return** an `Array` of recipes found on the website.
 
-This method should scrape successfully for London and New York. Therefore `scrape_craiglist_antiques("london")` and `scrape_craiglist_antiques("newyork")` should all return results. Are the craiglist urls for all the cities the same?
+This method should scrape successfully for a search. Therefore `scrape_recipes("chocolate")` and `scrape_recipes("peanut")` should all return results. Are the craiglist urls for all the cities the same?
 
 ### Going further
 
