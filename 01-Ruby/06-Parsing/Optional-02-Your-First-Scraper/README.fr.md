@@ -42,7 +42,7 @@ La méthode `search` prend un [sélecteur CSS](https://developer.mozilla.org/fr/
 
 Nous aimerions scraper les **recettes** répertoriées sur [recipes.lewagon.com](https://recipes.lewagon.com/) pour un terme de recherche donné. Ouvre le fichier `lib/scraper.rb` et implémente la méthode `scrape_recipes`. Elle devrait **retourner** un tableau de recettes trouvées sur le site web.
 
-Cette méthode devrait scraper avec succès pour une recherche. Ainsi, `scrape_recipes("chocolat")` et `scrape_recipes("cacahuète")` devraient tous deux retourner des résultats. Les URL de craigslist pour toutes les villes sont-elles les mêmes ?
+Cette méthode devrait scraper avec succès pour une recherche. Ainsi, `scrape_recipes("chocolat")` et `scrape_recipes("cacahuète")` devraient tous deux retourner des résultats. Les URL de recettes pour toutes les recherches sont-elles les mêmes ?
 
 ### Aller plus loin
 

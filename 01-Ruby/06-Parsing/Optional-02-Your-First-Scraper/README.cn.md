@@ -42,7 +42,7 @@ end
 
 我们想要爬取[recipes.lewagon.com](https://recipes.lewagon.com/)上列出的**食谱**，用于给定的搜索词。打开`lib/scraper.rb`，并实现`scrape_recipes`方法。它应该**返回**在网站上找到的食谱数组。
 
-这个方法应该能够成功地爬取搜索结果。因此，`scrape_recipes("巧克力")`和`scrape_recipes("花生")`都应该返回结果。所有城市的craigslist网址都相同吗？
+这个方法应该能够成功地爬取搜索结果。因此，`scrape_recipes("巧克力")`和`scrape_recipes("花生")`都应该返回结果。所有城市的recipe网址都相同吗？
 
 ### 进一步探讨
 
