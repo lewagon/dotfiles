@@ -18,7 +18,7 @@ if (typeof window === "object") {
     // TODO: call unorderedList() passing the right element
     // TODO: display the list in the browser
   });
-};
+}
 
 runChallenges(listItem, unorderedList); // Do not remove.
 export { listItem, unorderedList };
