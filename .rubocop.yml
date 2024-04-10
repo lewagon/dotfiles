@@ -66,6 +66,14 @@ Naming/BlockForwarding:
   Enabled: false
 Style/EmptyMethod:
   Enabled: false
+# disable Style/MapIntoArray if rubocop version is greater than or equal to 1.63
+# it was added in version 1.63, so disabling it raises an error in lower versions
+<% require "rubocop" %>
+<% rubocop_version = Gem.loaded_specs['rubocop'].version  %>
+<% if rubocop_version >= "1.63.0" %>
+Style/MapIntoArray:
+  Enabled: false
+<% end %>
 
 AllCops:
   NewCops: enable
