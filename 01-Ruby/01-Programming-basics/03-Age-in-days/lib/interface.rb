@@ -1,4 +1,5 @@
 # rubocop:disable Lint/UselessAssignment
+# TODO: ^ delete this comment after finishing the challenge, because rubocop will complain about it
 
 # This "require_relative" line loads your own "age_in_days.rb" file. Notice the
 # "_relative" suffix: the given path is relative to the location of the file
@@ -25,3 +26,4 @@ calculated_age = 0
 puts "You are #{calculated_age} days old... phew!"
 
 # rubocop:enable Lint/UselessAssignment
+# TODO: ^ delete this comment after finishing the challenge, because rubocop will complain about it
