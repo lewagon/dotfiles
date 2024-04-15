@@ -47,6 +47,12 @@ development:
 test:
   <<: *default
   database: rails-watch-list_test
+
+production:
+  <<: *default
+  database: rails_watch_list_production
+  username: rails_watch_list
+  password: <%= ENV["RAILS_WATCH_LIST_DATABASE_PASSWORD"] %>
 ```
 
 Open your terminal and run:
