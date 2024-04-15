@@ -1,6 +1,6 @@
 require "open-uri"
 require "nokogiri"
 
-def scrape_craiglist_antiques(city)
-  # TODO: return an array of Antiques found of Craigslist for this `city`.
+def scrape_recipes(search)
+  # TODO: return an array of recipes found of the website for this `search`.
 end
