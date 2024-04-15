@@ -75,7 +75,7 @@ describe "#run_game" do
     expect(quick[:score] > slow[:score]).to eq true
   end
 
-  it "should allow success when answer has repetitive letters" do
+  it "should allow success when answer has has a repeated letter but the grid also has this letter the same number of times" do
     expect(repetitive[:score] > 0).to eq true
   end
 
