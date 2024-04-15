@@ -41,5 +41,7 @@ puts calories_counter(orders)
 ## Enseignements clés
 
 - Comment récupérer une valeur stockée dans un `Array` à l’intérieur d’un `Hash` ?
+
+Imagine que nous construisons une application pour un zoo:
 - Quelle structure de données utiliserais-tu pour stocker des noms d’animaux, triés par ordre alphabétique ?
 - Quelle structure de données utiliserais-tu pour stocker des noms d’animaux et leurs couleurs ?
