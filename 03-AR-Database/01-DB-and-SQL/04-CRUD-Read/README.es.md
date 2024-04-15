@@ -51,6 +51,12 @@ Implementemos estos escenarios con los siguientes métodos:
 
 Implementa un método de **clase** `find(id)` en la clase `Post` que tome un entero como argumento (la id de la publicación) y devuelva una instancia de `Post`.
 
+**Importante**: La primera línea de tu método debe ser esta:
+
+```rb
+DB.results_as_hash = true
+```
+
 Utilicemos **pseudocódigo** para ayudarnos a descomponer los pasos que necesitaremos:
 
 ```ruby
