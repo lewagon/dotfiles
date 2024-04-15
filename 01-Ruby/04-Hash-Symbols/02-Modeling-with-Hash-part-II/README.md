@@ -41,5 +41,7 @@ puts calories_counter(orders)
 ## Key learning points
 
 - How do you retrieve a value stored in an `Array` within a `Hash`?
+
+Imagine we're building an application for a zoo:
 - Which data structure would you use to store animal names, alphabetically sorted?
 - Which data structure would you use to store animal names and colors?
