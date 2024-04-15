@@ -49,6 +49,12 @@ Implémentons ces scénarios avec les méthodes suivantes :
 
 Implémenter une méthode **classe** `find(id)` sur la classe `Post` qui prend un `integer` comme argument (l'identifiant du message) et retourne une instance de `Post`.
 
+**Important** : La première ligne de ta méthode doit être celle-c:
+
+```rb
+DB.results_as_hash = true
+```
+
 Utilisons du **pseudocode** pour nous aider à décomposer les étapes dont nous aurons besoin :
 
 ```ruby
