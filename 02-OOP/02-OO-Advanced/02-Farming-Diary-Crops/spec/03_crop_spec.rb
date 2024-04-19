@@ -72,7 +72,7 @@ describe "Inheritance", if: crop_helper.file_and_class_valid? do
     end
 
     it 'should define specific methods' do
-      expect(Corn.instance_methods(false)).to include(:water!)
+      expect(Corn.instance_methods).to include(:water!)
     end
   end
 
@@ -87,7 +87,7 @@ describe "Inheritance", if: crop_helper.file_and_class_valid? do
     end
 
     it 'should define specific methods' do
-      expect(Rice.instance_methods(false)).to include(:water!)
+      expect(Rice.instance_methods).to include(:water!)
       expect(Rice.instance_methods(false)).to include(:transplant!)
     end
   end
