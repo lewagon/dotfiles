@@ -14,14 +14,16 @@
   editor = code --wait
 
 [alias]
+  lt = log --oneline --decorate --graph --all --abbrev-commit
+  s = status
+  a = add
+  c = commit
+  cm = commit -m
   co = checkout
-  st = status -sb
-  br = branch
-  ci = commit
-  fo = fetch origin
-  d = !git --no-pager diff
-  dt  = difftool
-  stat = !git --no-pager diff --stat
+  cob = checkout -b
+  del = branch -D
+  br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
 
   # Set remotes/origin/HEAD -> defaultBranch (copied from https://stackoverflow.com/a/67672350/14870317)
   remoteSetHead = remote set-head origin --auto
@@ -49,16 +51,17 @@
   autocorrect = 1
 
 [push]
-	default = simple
+  default = simple
 
-[branch "master"]
+[branch "main"]
   mergeoptions = --no-edit
 
 [pull]
-  rebase = false
+  rebase = true
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
+
 [user]
 	email = hinnerk.kuennen@gmail.com
-	name = Hinnerk Kuennen
+	name = Hinnerk Künnen
