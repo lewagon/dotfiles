@@ -27,7 +27,7 @@ Implémente une classe `OrangeTree` qui modélise la vie d’un oranger (sa nais
 - Un oranger produit 100 oranges par an une fois qu'il a strictement plus de 5 ans.
 - Un oranger produit 200 oranges par an une fois qu'il a plus de 10 ans.
 - Un oranger ne produit plus de fruit une fois qu'il a 15 ans.
-- Tu dois pouvoir cueillir **un seul fruit** de l'oranger en appelant la méthode d'instance `pick_a_fruit!` (mais seulement s'il en reste).
+- Tu dois pouvoir cueillir **un seul fruit** de l'oranger en appelant la méthode d'instance `#pick_a_fruit!` (mais seulement s'il en reste).
 - À la fin de chaque année, les fruits qui n'ont pas été cueillis tombent de l'oranger.
 - Tu dois pouvoir obtenir le nombre de fruits restant sur l'oranger.
 

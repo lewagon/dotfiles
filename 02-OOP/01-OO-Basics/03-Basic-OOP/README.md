@@ -27,7 +27,7 @@ Implement an `OrangeTree` class that models the life of an orange tree (its birt
 - An orange tree produces 100 fruits a year once it is strictly more than 5 years old.
 - The tree produces 200 fruits a year once it reaches 10 years old.
 - The tree stops producing fruits once it reaches 15 years old.
-- You should be able to pick **a single fruit** from the tree by calling the `pick_a_fruit!` instance method on it (but only if there are some left).
+- You should be able to pick **a single fruit** from the tree by calling the `#pick_a_fruit!` instance method on it (but only if there are some left).
 - At the end of each year, the oranges which have not been picked will fall off.
 - You should be able to find out how many fruits are left hanging on the tree.
 

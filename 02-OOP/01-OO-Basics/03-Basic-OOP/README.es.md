@@ -27,7 +27,7 @@ Implementa la clase `OrangeTree` la cual modela la vida de un árbol de naranja 
 - Un árbol de naranja da 100 frutas al año a partir de los 5 años.
 - El árbol da 200 frutas al año a partir de los 10 años.
 - El árbol deja de dar frutas cuando llega a los 15 años.
-- Se debe poder seleccionar **una sola fruta** del árbol al llamar al método de instancia `pick_a_fruit!` en el árbol (pero solo si todavía tiene frutas).
+- Se debe poder seleccionar **una sola fruta** del árbol al llamar al método de instancia `#pick_a_fruit!` en el árbol (pero solo si todavía tiene frutas).
 - Al final del año las naranjas que no se recogieron caerán del árbol.
 - Se debe poder saber cuántas frutas quedan colgando del árbol.
 
