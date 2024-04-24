@@ -17,10 +17,6 @@ Return a `String` with the right command to create a new rails app called `watch
 
 Return a `String` of what you have to add to `application.html.erb` if you want to import the JavaScript file `application.js` that is inside of `app/javascript`.
 
-### Question 3
-
-Return a `String` with the command to type in the terminal to add the npm package `sweetalert` to your rails app.
-
 ## Key learning points
 
 - How to make a new rails app with webpack.

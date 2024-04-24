@@ -13,10 +13,4 @@ describe "quiz" do
       expect(correct_answers).to include(modern_javascript)
     end
   end
-
-  describe "#add_a_npm_package" do
-    it "should return the correct answer" do
-      expect(add_a_npm_package).to eq('importmap pin sweetalert')
-    end
-  end
 end

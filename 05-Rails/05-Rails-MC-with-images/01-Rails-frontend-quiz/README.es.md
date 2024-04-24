@@ -15,10 +15,6 @@ Devuelve una cadena de caracteres (`String`) con el comando adecuado para crear 
 
 Devuelve una cadena de caracteres (`String`) de lo que debes agregar en `application.html.erb` si quieres importar el archivo JavaScript `application.js` que está dentro de `app/javascript`.
 
-### Pregunta 3
-
-Devuelve una cadena de caracteres (`String`) con el comando que se debe escribir en la Terminal para agregar el paquete npm `sweetalert` a la app Rails.
-
 ## Puntos clave de aprendizaje
 
 - Cómo hacer una nueva app Rails con webpack.
