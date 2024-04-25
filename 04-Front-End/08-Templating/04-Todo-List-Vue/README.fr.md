@@ -154,6 +154,8 @@ Voilà, c'est fait ! Félicitations pour ta première application Vue ! 🥂 Mai
 
 ### 2. Ajouter une tâche (optionnel)
 
+Tout d'abord, tu devrais ajouter un nouveau bouton qui dit "Ajouter une tâche". N'hésite pas à utiliser les classes Bootstrap pour cela et le styliser à ta guise.
+
 <details>
 <summary markdown='span'>Que se passe-t-il lorsqu'un utilisateur ajoute une tâche ? </summary>
 

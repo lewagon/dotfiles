@@ -154,6 +154,8 @@ That's it! Congratulations on your first Vue APP! 🥂 Move on to the optionals 
 
 ### 2. Add a to-do(Optional)
 
+First, you should add a new button that says "Add To-do". Feel free to use Bootstrap classes for this and style it as you please.
+
 <details>
 <summary markdown='span'>What happens when a user adds a to-do?</summary>
 
