@@ -16,10 +16,6 @@
 
 假设要导入 `app/javascript` 中的javascript文件 `application.js`，返回一个必须添加到 `application.html.erb` 的 `String`。
 
-### 问题 3
-
-返回一个 `String` 并在终端中输入命令，将npm包 `sweetalert` 添加到你的rails应用程序中。
-
 ## 学习要点
 
 - 如何使用webpack创建新的Rails应用程序。

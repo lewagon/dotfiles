@@ -15,10 +15,6 @@ Retourne une `String` avec la bonne commande pour créer une nouvelle applicatio
 
 Retourne une `String` de ce que tu dois ajouter à `application.html.erb` si tu veux importer le fichier JavaScript `application.js` qui se trouve dans `app/javascript`.
 
-### Question 3
-
-Retourne une `String` avec la commande à taper dans le terminal pour ajouter le paquet npm `sweetalert` à ton application Rails.
-
 ## Apprentissages clés
 
 - Comment créer une nouvelle application Rails avec webpack ?
