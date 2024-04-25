@@ -45,7 +45,9 @@ Implement your `#to_s` method, which also needs to call your partial IBAN method
 
 ### Withdraw and Deposit
 
-Implement `#withdraw` and `#deposit`. Both of these methods should call the private `#add_transaction` method (which is also called in the `#initialize`). Each method should return a message like "You've just withdrawn/deposited XXX euros". Remember that a withdraw is just a negative deposit 😉
+Implement `#withdraw` and `#deposit`. Both of these methods should call the private `#add_transaction(amount)` method (which is also called in the `#initialize`). Each method should return a message like "You've just withdrawn/deposited XXX euros". Remember that a withdraw is just a negative deposit 😉
+
+_Note: The `amount` argument to `#add_transaction(amount)` should be an `Integer` (it should not be a `Transaction`)._
 
 ### Transactions history
 
