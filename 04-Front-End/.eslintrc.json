@@ -14,7 +14,9 @@
     "class-methods-use-this": "off",
     "import/prefer-default-export": "off",
     "prefer-destructuring": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off"
   },
   "env": {
     "node": true,
