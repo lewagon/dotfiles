@@ -1,10 +1,12 @@
-// TODO: Create a function to get the coordinates from an address and display a map with a marker on it
+// TODO: Create a function to get the coordinates
+// from an address and display a map with a marker on it
 const showMap = (userInput) => {
-  // TODO: Construct the URL (with apiKey & userInput) and make the fetch request to the mapbox API
+  // TODO: Construct the URL (with apiKey & userInput)
+  // and make the fetch request to the mapbox API
   const url = `...`;
 
   fetch(url)
-    .then((response) => response.json())
+    .then(response => response.json())
     .then((data) => {
       console.log(data);
       // TODO: Insert the info into the DOM

@@ -56,7 +56,8 @@ const firstTeamPoints = () => {
 const points = firstTeamPoints();
 
 
-// Ex 8. Change the background color of the tr element inside of the table header (<thead>) to #DDF4FF
+// Ex 8. Change the background color of the tr element inside of the
+// table header (<thead>) to #DDF4FF
 
 
 

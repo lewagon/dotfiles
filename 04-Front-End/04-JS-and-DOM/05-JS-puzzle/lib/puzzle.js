@@ -3,7 +3,7 @@ const tiles = document.querySelectorAll('td');
 
 const canMove = (tile) => {
   // TODO: Check if a tile has an empty neighbour
-}
+};
 
 const moveTile = (element) => {
   // TOOD: Move the tile
