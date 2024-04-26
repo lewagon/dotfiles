@@ -47,6 +47,8 @@ Implémente ta méthode `#to_s`, qui doit aussi appeler ta méthode d’IBAN par
 
 Implémente `#withdraw` et `#deposit`. Ces deux méthodes doivent appeler la méthode privée `#add_transaction` (également appelée dans la méthode `#initialize`). Chaque méthode doit retourner un message du type « You’ve just withdrawn/deposited XXX euros » (Tu viens de retirer/déposer XXX euros). Souviens-toi qu’un retrait est simplement un dépôt négatif 😉
 
+_Note : L'argument `amount` de `#add_transaction(amount)` doit être un `Integer` (ce ne doit pas être une `Transaction`)._
+
 ### Historique des transactions
 
 Tu dois maintenant implémenter la méthode `#transactions_history`. Cette méthode prend un hash avec le mot de passe comme paramètre (par exemple, `{ password: 'yoko' }`), qui est un paramètre facultatif. En l'absence de paramètre, elle prend un hash vide (c’est ce que signifie la notation `args = {}`). Ta méthode d’historique des transactions doit :

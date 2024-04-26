@@ -49,6 +49,8 @@ puts account
 
 实现 `#withdraw` 和 `#deposit`。 这两种方法都应该调用 private  `#add_transaction` 方法 (也在`#initialize`中调用)。 每个方法都应该返回一条消息，比如 “你刚刚提取/存入了XXX欧元” 。记住，取款其实只是负存款 😉
 
+_备注：`#add_transaction(amount)`的`amount`参数应为`整数`（不应为`Transaction`）。_
+
 ### 交易记录
 
 现在你已实现一个`#transactions_history` 方法。此方法将密码哈希作为参数（例如`{ password: 'yoko' }`)，它是一个可选参数，如果未提供，则设置为空哈希值（这是表示 `args = {}`）。你的交易记录需要：
