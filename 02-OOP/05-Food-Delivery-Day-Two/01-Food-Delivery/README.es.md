@@ -142,7 +142,7 @@ A su vez, asegurate que tu CSV de Orders guarde la informacion utilizando los si
 ### 2.3 Controlador de `Order`
 
 Vayamos al controlador. Las siguientes son las **acciones de usuario** que queremos implementar:
-- Como gerente, puedo agregar un pedido (`add`)
+- Como gerente, puedo agregar un pedido (`add`) *(pista: los pedidos solo son asignados a repartidores)*
 - Como gerente, puedo mostrar la lista de todos los pedidos que no han sido entregados (`list_undelivered_orders`)
 - Como repartidor, puedo mostrar la lista de todos mis pedidos no entregados (`list_my_orders`)
 - Como repartidor, puedo marcar uno de mis pedidos como entregado (`mark_as_delivered`)
