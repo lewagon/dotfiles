@@ -18,7 +18,7 @@ serve
 
 ### 地理编码
 
-首先，你需要创建一个MapBox账户并获得一个API密钥（注册是免费的！）然后，阅读[MapBox Geocoding API文档](https://docs.mhttps://docs.mapbox.com/api/search/geocoding/)。它归结为使用地址作为查询字符串参数进行HTTP `GET`请求。
+首先，你需要创建一个MapBox账户并获得一个API密钥（注册是免费的！）然后，阅读[MapBox Geocoding API文档](https://docs.mapbox.com/api/search/geocoding/)。它归结为使用地址作为查询字符串参数进行HTTP `GET`请求。
 
 ```javascript
 'https://api.mapbox.com/search/geocode/v6/forward?q=Los%20Angeles&access_token=YOUR-API-KEY'
