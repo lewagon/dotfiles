@@ -21,7 +21,7 @@ serve
 首先，你需要创建一个MapBox账户并获得一个API密钥（注册是免费的！）然后，阅读[MapBox Geocoding API文档](https://docs.mapbox.com/api/search/geocoding/)。它归结为使用地址作为查询字符串参数进行HTTP `GET`请求。
 
 ```javascript
-'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=YOUR-API-KEY'
+'https://api.mapbox.com/search/geocode/v6/forward?q=Los%20Angeles&access_token=YOUR-API-KEY'
 ```
 
 注意：对MapBox API的请求将需要你的API密钥作为请求中的参数之一。等你创建了一个账户并登录了，你可以在[账户页面](https://www.mapbox.com/account/)上找到你的密钥。
