@@ -19,7 +19,7 @@ serve
 Pour commencer, tu vas devoir créer un compte MapBox et obtenir une clé d'API (l'inscription est gratuite !). Lis ensuite la [documentation sur l'API Geocoding de MapBox](https://docs.mapbox.com/api/search/geocoding/). Tout se résumera à une requête HTTP `GET` avec une adresse comme paramètre de string de la requête.
 
 ```javascript
-'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=YOUR-API-KEY'
+'https://api.mapbox.com/search/geocode/v6/forward?q=Los%20Angeles&access_token=YOUR-API-KEY'
 ```
 
 REMARQUE : La requête à l'API Mapbox aura besoin de ta clé API comme paramètre. Tu trouveras ta clé sur ton [compte](https://www.mapbox.com/account/) une fois que tu te seras inscrit et connecté.
