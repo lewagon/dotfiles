@@ -144,7 +144,7 @@ const App = () => {
   React.useEffect(() => {
     fetch('https://type.fit/api/quotes')
       .then((response) => response.json())
-      .then((data) => (setQuotes(data));
+      .then((data) => setQuotes(data));
   }, []);
 
   return (
