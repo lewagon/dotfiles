@@ -141,7 +141,7 @@ Tout est vert ? Parfait ! Le moment est venu de faire `git add`, `commit` et `
 ### 2.3 - Contrôleur des commandes (orders controller)
 
 On va passer au contrôleur. Voici les **actions utilisateur** que l'on veut implémenter :
-- En tant que gérant, je peux ajouter une nouvelle commande (`add`)
+- En tant que gérant, je peux ajouter une nouvelle commande (`add`) *(indice : les commandes ne sont assignées qu'à des livreurs)*
 - En tant que gérant, je peux lister toutes les commandes non livrées (`list_undelivered_orders`)
 - En tant que livreur, je peux lister toutes mes commandes non livrées (`list_my_orders`)
 - En tant que livreur, je peux marquer l’une de mes commandes non encore livrée comme livrée (`mark_as_delivered`)

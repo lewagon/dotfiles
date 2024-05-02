@@ -135,7 +135,7 @@ end
 
 让我们转到控制器controller。下面是我们要实现的 **用户操作**：
 
-- 作为经理manager，我可以添加新订单order
+- 作为经理manager，我可以添加新订单order *(提示：订单只分配给送货员)*
 - 作为经理manager，我可以列出所有未交货的订单orders
 - 作为一名骑手rider，我可以将我的一个订单order标记为已交付
 - 作为一名骑手rider，我列出了所有未送达的订单orders
