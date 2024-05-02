@@ -77,6 +77,8 @@ ruby app.rb
 
 Make sure your two meal user actions work before moving on to the next feature.
 
+📝 **Note:** There is no specific `rake` for the views in this challenge (unlike the models and controllers). This is because there are many different ways to display the relevant information, and no one way is the "correct" way. So feel free to think a bit artistically 🧑‍🎨 about what your views should show. But, you'll want to make sure they work properly by running `ruby app.rb` and seeing if the application functions well and is easy to use.
+
 All green? Good! Time to `git add`, `commit` and `push`.
 
 ## 2 - Customers
