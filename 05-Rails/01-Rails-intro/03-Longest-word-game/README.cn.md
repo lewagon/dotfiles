@@ -119,7 +119,7 @@ Processing by GamesController#score as HTML
 2. 从网格来说，是一个正确的单词，但不是一个正确的英语单词
 3. 从网格来说，是一个正确的单词，而且也是一个正确的英语单词
 
-(你可以使用这个[API](https://wagon-dictionary.herokuapp.com/) 来检查一个单词是不是正确的。)
+(你可以使用这个[API](https://dictionary.lewagon.com/) 来检查一个单词是不是正确的。)
 
 在结果的底部，添加一个`link_to`链接来返回新游戏页面。
 

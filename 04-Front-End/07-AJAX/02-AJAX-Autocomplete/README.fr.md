@@ -21,17 +21,17 @@ Trois fichiers doivent être mis à jour :
 Pour obtenir des suggestions, tu peux utiliser l'API suivante :
 
 ```bash
-GET https://wagon-dictionary.herokuapp.com/autocomplete/:stem
+GET https://dictionary.lewagon.com/autocomplete/:stem
 ```
 
 Ici, tu vas remplacer `:stem` par les caractères saisis par l'utilisateur. Dès que l'utilisateur saisira un nouveau caractère (`keyup`, par exemple ?), tu déclencheras un nouvel appel AJAX. Si tu examines ton onglet "Réseau" dans l'inspecteur Chrome, tu devrais voir quelque chose comme ce qui suit :
 
 ```bash
-https://wagon-dictionary.herokuapp.com/autocomplete/u
-https://wagon-dictionary.herokuapp.com/autocomplete/un
-https://wagon-dictionary.herokuapp.com/autocomplete/und
-https://wagon-dictionary.herokuapp.com/autocomplete/unde
-https://wagon-dictionary.herokuapp.com/autocomplete/under
+https://dictionary.lewagon.com/autocomplete/u
+https://dictionary.lewagon.com/autocomplete/un
+https://dictionary.lewagon.com/autocomplete/und
+https://dictionary.lewagon.com/autocomplete/unde
+https://dictionary.lewagon.com/autocomplete/under
 etc.
 ```
 

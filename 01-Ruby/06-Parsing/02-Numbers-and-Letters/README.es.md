@@ -33,7 +33,7 @@ Message: Well Done!
 
 **Limitaciones**:
 
-- Usarás el Diccionario API de Le Wagon. Veamos lo que recibimos de la API cuando suministramos una [palabra inglesa correcta](https://wagon-dictionary.herokuapp.com/apple)  y una [incorrecta](https://wagon-dictionary.herokuapp.com/zzzz). Presta atención a la estructura de la URL.
+- Usarás el Diccionario API de Le Wagon. Veamos lo que recibimos de la API cuando suministramos una [palabra inglesa correcta](https://dictionary.lewagon.com/apple)  y una [incorrecta](https://dictionary.lewagon.com/zzzz). Presta atención a la estructura de la URL.
 Tu cuadrícula debe ser aleatoria y también debe poder recibir los mismos caracteres varias veces.
 - Asegúrate de validar que **1)** tu palabra realmente sea una palabra inglesa y **2)** que cada letra de tu palabra esté en la cuadrícula (recuerda que sólo puedes usar las letras una sola vez).
 - Si la palabra no es válida o no está en la cuadrícula, el puntaje será 0 (y deberá estar acompañado por un mensaje para el/la jugador/a explicando porque no obtuvo ningún puntaje).

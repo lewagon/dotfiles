@@ -21,17 +21,17 @@ serve
 你可以使用以下API获得建议：
 
 ```bash
-GET https://wagon-dictionary.herokuapp.com/autocomplete/:stem
+GET https://dictionary.lewagon.com/autocomplete/:stem
 ```
 
 在这里，你会把`:stem`替换成用户输入的字符。一旦用户输入一个新字符 (或许试试 `keyup`?), 你会触发一个新的AJAX调用。如果你查看Chrome Inspector中的“网络”选项栏，你会看到如下内容：
 
 ```bash
-https://wagon-dictionary.herokuapp.com/autocomplete/u
-https://wagon-dictionary.herokuapp.com/autocomplete/un
-https://wagon-dictionary.herokuapp.com/autocomplete/und
-https://wagon-dictionary.herokuapp.com/autocomplete/unde
-https://wagon-dictionary.herokuapp.com/autocomplete/under
+https://dictionary.lewagon.com/autocomplete/u
+https://dictionary.lewagon.com/autocomplete/un
+https://dictionary.lewagon.com/autocomplete/und
+https://dictionary.lewagon.com/autocomplete/unde
+https://dictionary.lewagon.com/autocomplete/under
 etc.
 ```
 
