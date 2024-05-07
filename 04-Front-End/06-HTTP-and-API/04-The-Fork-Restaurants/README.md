@@ -4,7 +4,7 @@ In this challenge, we'll take a closer look at the Fork API that we saw during t
 
 ## Specs
 
-You will build a search app to filter the restaurants of [The Fork API](https://the-fork-api.students.lewagon.co/).
+You will build a search app to filter the restaurants of [The Fork API](https://the-fork.api.lewagon.com/).
 
 Your goal is to implement in `index.js` the search logic, so we can filter by category when you click on search.
 
@@ -25,7 +25,7 @@ You should see a form with all the different restaurant categories.
 
 ## Read the documentation
 
-We will use the [Fork API](https://the-fork-api.students.lewagon.co/), so as always when we use a new API, it's very important to first read the documentation to find the **endpoint we need**, and understand how to build our request.
+We will use the [Fork API](https://the-fork.api.lewagon.com/), so as always when we use a new API, it's very important to first read the documentation to find the **endpoint we need**, and understand how to build our request.
 
 ## Refactoring
 

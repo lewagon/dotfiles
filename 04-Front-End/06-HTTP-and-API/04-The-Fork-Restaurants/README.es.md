@@ -4,7 +4,7 @@ En este ejercicio, examinaremos más de cerca la Fork API que vimos durante la c
 
 ## Especificaciones
 
-Construirás una aplicación de búsqueda para filtrar los restaurantes de [The Fork API](https://the-fork-api.students.lewagon.co/).
+Construirás una aplicación de búsqueda para filtrar los restaurantes de [The Fork API](https://the-fork.api.lewagon.com/).
 
 Tu objetivo es implementar en `index.js` la lógica de búsqueda, para que podamos filtrar por categoría al hacer clic en "Search".
 
