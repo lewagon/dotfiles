@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-On veut créer un Wiki anonyme (comme [celui-ci](https://wagon-wikinimous.herokuapp.com)), où tout le monde peut créer un nouvel article ou mettre à jour un article existant.
+On veut créer un Wiki anonyme (comme [celui-ci](https://wikinimous.lewagon.com)), où tout le monde peut créer un nouvel article ou mettre à jour un article existant.
 
 Tu n'utiliseras pas `rake` ici. Et ne crée pas ton application Rails dans `fullstack-challenges` ⛔️
 
@@ -46,7 +46,7 @@ Génère ton contrôleur et code les 7 actions CRUD par défaut pour lister, aff
 
 Tu peux maintenant utiliser directement le raccourci `resources` dans tes routes.
 
-Jette un œil à l'[application en ligne](https://wagon-wikinimous.herokuapp.com) pour voir à quoi elle devrait ressembler. 😉
+Jette un œil à l'[application en ligne](https://wikinimous.lewagon.com) pour voir à quoi elle devrait ressembler. 😉
 
 ### 4 - Front-end
 

@@ -1,6 +1,6 @@
 ## 背景和目标
 
-我们想开发一个匿名的维基网站(就像 [这个](https://wagon-wikinimous.herokuapp.com))，任何人都可以创建新文章或者更新现有的文章。
+我们想开发一个匿名的维基网站(就像 [这个](https://wikinimous.lewagon.com))，任何人都可以创建新文章或者更新现有的文章。
 
 现在没有`rake`了，所以不要在`fullstack-challenges`里面创建你的Rails应用⛔
 
@@ -48,7 +48,7 @@ rails db:seed
 
 你现在可以在路由里直接使用`resources` 快捷方法。
 
-看一下这个[应用](https://wagon-wikinimous.herokuapp.com)来看看我们的应用应该开发成什么样子。😉
+看一下这个[应用](https://wikinimous.lewagon.com)来看看我们的应用应该开发成什么样子。😉
 
 ### 4 - 前端（选做）
 
