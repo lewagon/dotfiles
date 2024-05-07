@@ -1,0 +1,37 @@
+# Get External IP / local IPs
+alias ip="curl ipinfo.io/ip"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+
+# Quickly serve the current directory as HTTP
+alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
+
+# Personnal aliases
+alias set-alias="nvim ~/code/dotfiles/aliases"
+
+alias pretto="cd ~/code/pretto"
+alias zou="cd ~/code/pretto/apps/zou"
+alias api="cd ~/code/pretto/apps/api"
+alias salesforce="cd ~/code/pretto/apps/salesforce"
+alias sidekiq-ui="cd ~/code/pretto-scripts/scripts/sidekiq-ui"
+alias proto="cd ~/code/pretto/apps/proto"
+
+alias nvim-conf="nvim ~/.config/nvim"
+alias gst="git status"
+alias ga="git add"
+alias gap="git add -p"
+alias gco="git checkout"
+alias gcom="git commit -m"
+alias gb="git branch"
+alias cleanbranches="git branch | grep -v "master" | xargs git branch -D"
+alias pip=pip3
+alias gen-apikey="openssl rand -hex 32"
+
+alias sf-prod="sfdx force:config:set defaultusername=tech+salesforce@pretto.fr"
+alias sf-preprod="sfdx force:config:set defaultusername=tech+salesforce@pretto.fr.preprod"
+alias sf-dev="sfdx force:config:set defaultusername=tech+salesforce@pretto.fr.dev"
+
+alias api-console="heroku run 'bundle exec bin/rails c -- --nomultiline' -a pretto-api"
+
+alias dataloader="/Users/francoishameau/code/dataloader/launch.sh"
+alias sf-debug="sfdx force:apex:log:tail --color | grep USER_DEBUG"
