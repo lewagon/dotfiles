@@ -16,7 +16,7 @@ sqlite3 -version
 If you don't have it installed, you can do so by running the following in the terminal:
 
 ```bash
-gem install sqlite3
+gem install sqlite3 -v '< 2.0'
 ```
 
 You can then open the database we provided by running:
