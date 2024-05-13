@@ -17,7 +17,7 @@ sqlite3 --version
 Si ce n’est pas le cas, tu peux l’installer en exécutant dans ton terminal :
 
 ```bash
-gem install sqlite3
+gem install sqlite3 -v '< 2.0'
 ```
 
 Tu peux ouvrir la base de données fournie en exécutant :  pour lui adresser des requêtes :

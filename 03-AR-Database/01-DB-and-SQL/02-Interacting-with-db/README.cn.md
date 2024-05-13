@@ -16,7 +16,7 @@ sqlite3 -version
 如果没有显示任何版本，你可以在终端跑下面的命令：
 
 ```bash
-gem install sqlite3
+gem install sqlite3 -v '< 2.0'
 ```
 
 然后你可以用下面的命令打开我们提供给你的数据库：
