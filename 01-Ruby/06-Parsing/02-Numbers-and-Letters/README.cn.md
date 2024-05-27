@@ -33,7 +33,7 @@ Message: Well Done!
 
 **约束条件**：
 
-- 你将使用Wagon Dictionary API。让我们看看，当我们提交一个[正确的英文单词](https://wagon-dictionary.herokuapp.com/apple) 和一个[错误的单词](https://wagon-dictionary.herokuapp.com/zzzz)时，我们会从API中得到什么信息。注意URL的结构。
+- 你将使用Wagon Dictionary API。让我们看看，当我们提交一个[正确的英文单词](https://dictionary.lewagon.com/apple) 和一个[错误的单词](https://dictionary.lewagon.com/zzzz)时，我们会从API中得到什么信息。注意URL的结构。
 - 你的字母网格必须是随机。有可能会出现相同的字母。
 - 一定要验证**1）**你的单词确实是一个英文单词，以及**2）**你的单词中的每个字母都出现在字母网格中（记住，每个字母只能使用一次）。
 - 如果该单词无效或者不在网格中，得分将为0（并附上一条消息，告诉玩家他们为什么没有得分）。

@@ -119,7 +119,7 @@ On veut maîtriser trois scénarios :
 2. Le mot est valide d'après la grille, mais ce n'est pas un mot anglais valide.
 3. Le mot est valide d'après la grille et est un mot anglais valide.
 
-(Tu peux utiliser [cette API](https://wagon-dictionary.herokuapp.com/) pour vérifier si un mot est valide.)
+(Tu peux utiliser [cette API](https://dictionary.lewagon.com/) pour vérifier si un mot est valide.)
 
 En bas des résultats, ajoute un lien (`link_to`) pour retourner à la page d'une nouvelle partie.
 

@@ -5,7 +5,7 @@ Le moment est venu d’utiliser Ruby pour interagir avec la base de données `ju
 Pour installer la gem sur ton ordinateur, exécute la commande suivante dans le terminal :
 
 ```bash
-gem install sqlite3
+gem install sqlite3 -v '< 2.0'
 ```
 
 L’objectif de cet exercice est de communiquer avec la base de données **depuis Ruby**.

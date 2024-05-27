@@ -31,7 +31,7 @@ Message: Well Done!
 Cet exercice te permettra d’accéder à une API Web et de parser les données JSON retournées par cette API !
 
 **Contraintes** :
-- Tu devras utiliser l’API Wagon Dictionary. Voyons voir ce que l’on obtient de l’API lorsqu’on envoie un [mot anglais correct](https://wagon-dictionary.herokuapp.com/apple) et un [mot incorrect](https://wagon-dictionary.herokuapp.com/zzzz). Fais attention à la structure de l’URL.
+- Tu devras utiliser l’API Wagon Dictionary. Voyons voir ce que l’on obtient de l’API lorsqu’on envoie un [mot anglais correct](https://dictionary.lewagon.com/apple) et un [mot incorrect](https://dictionary.lewagon.com/zzzz). Fais attention à la structure de l’URL.
 - Ta grille doit être une grille aléatoire où il est possible d’intégrer les mêmes caractères plusieurs fois.
 - Pense à vérifier que **1)** ton mot est un vrai mot anglais, et **2)** que toutes les lettres de ton mot apparaissent dans ta grille (souviens-toi que tu ne peux utiliser chaque lettre qu’une seule fois).
 - Si le mot n’est pas valide ou ne figure pas dans ta grille, le score sera de 0 (et devra s’accompagner d’un message au joueur expliquant pourquoi il n’a marqué aucun point).

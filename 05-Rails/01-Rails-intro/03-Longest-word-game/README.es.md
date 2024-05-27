@@ -119,7 +119,7 @@ Queremos manejar tres escenarios:
 2. La palabra es válida de acuerdo a la cuadrícula (grid) pero no es una palabra en ingles válida
 3. La palabra es válida de acuerdo a la cuadrícula (grid) y .es una palabra en inglés válida
 
-(Puedes usar [esta API](https://wagon-dictionary.herokuapp.com/) para comprobar que la palabra sea válida.)
+(Puedes usar [esta API](https://dictionary.lewagon.com/) para comprobar que la palabra sea válida.)
 
 En la parte inferior de los resultados, agrega un `link_to` para regresar a la página New game.
 

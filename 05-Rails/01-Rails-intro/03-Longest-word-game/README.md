@@ -119,7 +119,7 @@ We want to handle three scenarios:
 2. The word is valid according to the grid, but is not a valid English word ❌
 3. The word is valid according to the grid and is an English word ✅
 
-(You can use [this API](https://wagon-dictionary.herokuapp.com/) to check if a word is valid.)
+(You can use [this API](https://dictionary.lewagon.com/) to check if a word is valid.)
 
 At the bottom of the results, add a `link_to` to go back to the New game page.
 

@@ -78,6 +78,8 @@ ruby app.rb
 
 Asegurate que las dos acciones de usuarios para platos funcionen bien antes de pasar a la siguiente funcionalidad.
 
+📝 **Nota:** En este ejercicio (a diferencia de los modelos y los controladores), no hay un `rake` específico para las vistas. Esto se debe a que hay muchas formas diferentes de mostrar la información relevante y no hay una única manera "correcta". Así que siéntete libre de pensar de manera artística 🧑‍🎨 en lo que deberían mostrar tus vistas. Pero asegúrate de que funcionen correctamente ejecutando `ruby app.rb` y comprobando si la aplicación funciona bien y es fácil de usar.
+
 ¿Todo está en verde? ¡OK! Es hora de hacer `git add`, `commit` y `push`.
 
 ## 2 - Clientes

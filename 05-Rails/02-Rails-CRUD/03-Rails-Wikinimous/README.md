@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-We want to build an anonymous wiki (like [this one](https://wagon-wikinimous.herokuapp.com)) where anyone can create a new article or update an existing one.
+We want to build an anonymous wiki (like [this one](https://wikinimous.lewagon.com)) where anyone can create a new article or update an existing one.
 
 There is no `rake` here, and do not create your Rails app in `fullstack-challenges` ⛔️
 
@@ -46,7 +46,7 @@ Generate your controller, and implement all 7 CRUD default actions to list, show
 
 You can now directly use the `resources` shortcut in your routes.
 
-Have a look at the [live app](https://wagon-wikinimous.herokuapp.com) to see what it should look like. 😉
+Have a look at the [live app](https://wikinimous.lewagon.com) to see what it should look like. 😉
 
 ### 4 - Front-end
 

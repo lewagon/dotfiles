@@ -77,6 +77,8 @@ ruby app.rb
 
 Vérifie que les deux actions utilisateur sur les repas fonctionnent avant de passer à la fonction suivante.
 
+📝 **Note:** Dans cet exercice (contrairement aux modèles et aux contrôleurs), il n'y a pas de `rake` spécifique pour les vues. Cela est dû au fait qu'il existe de nombreuses façons différentes d'afficher les informations pertinentes et qu'il n'y a pas de seule manière "correcte". N'hésitez donc pas à penser de manière artistique 🧑‍🎨 à ce que vos vues devraient montrer. Mais assurez-vous qu'elles fonctionnent correctement en exécutant `ruby app.rb` et en vérifiant si l'application fonctionne bien et est facile à utiliser.
+
 Tout est vert ? Parfait ! Le moment est venu de `git add`, `commit` et `push`.
 
 ## 2 - Clients (customers)

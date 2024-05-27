@@ -141,7 +141,7 @@ All green? Good! Time to `git add`, `commit` and `push`.
 ### 2.3 - Orders controller
 
 Let's move to the controller. Here are the **user actions** we want to implement:
-- As a manager, I can `add` a new order
+- As a manager, I can `add` a new order *(hint: orders are only assigned to riders)*
 - As a manager, I can `list_undelivered_orders`
 - As a rider, I `list_my_orders` to list all my undelivered orders
 - As a rider, I can `mark_as_delivered` one of my undelivered orders

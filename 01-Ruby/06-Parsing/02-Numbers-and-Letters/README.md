@@ -31,7 +31,7 @@ Message: Well Done!
 This challenge will let you access a web-API, and parse JSON data returned by this API!
 
 **Constraints**:
-- You will use the Wagon Dictionary API. Let's have a look at what we get back from the API when we submit a [correct English word](https://wagon-dictionary.herokuapp.com/apple) and a [wrong one](https://wagon-dictionary.herokuapp.com/zzzz). Pay attention to the structure of the URL.
+- You will use the Wagon Dictionary API. Let's have a look at what we get back from the API when we submit a [correct English word](https://dictionary.lewagon.com/apple) and a [wrong one](https://dictionary.lewagon.com/zzzz). Pay attention to the structure of the URL.
 - Your grid must be a random grid where it's possible to embed the same characters multiple times.
 - Make sure you are validating that **1)** your word is an actual English word, and **2)** that every letter in your word appears in the grid (remember you can only use each letter once).
 - If the word is not valid or is not in the grid, the score will be 0 (and should be accompanied by a message to the player explaining why they didn't score any points).
