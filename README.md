@@ -59,14 +59,25 @@ source 20_homebrew/homebrew.sh
 
 Run `oh-my-zsh.sh` to install [Oh My Zsh](https://ohmyz.sh/) with theme Powerlevel10k, and some plugins.
 
-[Zsh](https://www.zsh.org/)
-
 - Theme:
   - [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme
-- External plugins:
+- Plugins:
+  - asdf
+  - aws
+  - brew
+  - bundler
+  - gcloud
+  - git
+  - gh
+  - heroku
+  - kubectl
+  - npm
+  - rails
+  - yarn
+  - history-substring-search
+- External plugings:
   - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-  - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
-  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ```sh
 source 30_oh-my-zsh/oh-my-zsh.sh
