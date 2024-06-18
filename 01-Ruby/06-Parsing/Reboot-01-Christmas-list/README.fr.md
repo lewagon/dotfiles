@@ -8,6 +8,8 @@ te prendre la journée. 🎁
 Comme hier, commence par écrire le pseudo-code en groupe en live-code
  💻.
 
+ _Remarque : L'utilisateur peut ajouter le cadeau **qu'il souhaite**. Il n'est pas nécessaire de faire une liste fixe de cadeaux possibles._
+
 ## Pseudo-code
 
 Commençons par réfléchir ensemble au **pseudo-code** :

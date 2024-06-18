@@ -1,8 +1,12 @@
 ## Guidelines
 
-Winter is coming ⛄⛄⛄. We want to build a program to handle our gift list, mark items as bought and eventually find some inspiration from an external website like Etsy. This challenge should take you all day. 🎁
+Winter is coming ⛄⛄⛄. Let's build an app to keep track of our list of Christmas gifts we want to buy. 
+
+We want to build a program to handle our gift list, mark items as bought and eventually find some inspiration from an external website like Etsy. This challenge should take you all day. 🎁
 
 Like yesterday, start off by writing the pseudo-code in the group as a live-code 💻.
+
+_Note: The user can add **any** gift they want. There's no need to make a fixed list of possible gifts or anything of that sort._
 
 ## Pseudo-code
 

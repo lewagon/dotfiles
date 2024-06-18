@@ -156,6 +156,8 @@ Eso se debe a que el HTML aún no se ha compilado cuando actualizamos. Podemos u
 
 ### 2. Agregar una tarea (opcional)
 
+Primero, deberías agregar un nuevo botón que diga "Agregar Tarea". Puedes usar clases de Bootstrap para esto y darle estilo como desees.
+
 <details>
 <summary markdown='span'>¿Qué sucede cuando un usuario agrega una tarea?</summary>
 

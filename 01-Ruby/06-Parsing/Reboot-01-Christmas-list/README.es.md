@@ -4,6 +4,8 @@ Ya va a llegar el invierno ⛄⛄⛄. Queremos crear un programa que maneje nues
 
 Tal como hiciste ayer, empieza escribiendo el pseudocódigo en el grupo como una sesión de live-code 💻.
 
+_Nota: El usuario puede agregar **cualquier** regalo que desee. No es necesario hacer una lista fija de regalos posibles ni nada por el estilo._
+
 ## Pseudocódigo
 
 Primero lo primero. Hagamos una tormenta de ideas juntos para generar el pseudocódigo:
