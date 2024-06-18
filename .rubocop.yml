@@ -30,6 +30,8 @@ Style/SymbolProc:
   Enabled: false
 Metrics/AbcSize:
   Enabled: false
+Style/SuperArguments:
+  Enabled: false
 Style/MutableConstant:
   Enabled: false
 Style/SignalException:
