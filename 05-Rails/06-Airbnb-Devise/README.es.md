@@ -94,6 +94,7 @@ Inclusive si solo es un esqueleto de la app, es importante hacer el deploy en He
 
 ```bash
 heroku create airbnb-<user.lower_github_nickname> --region=REPLACE_WITH_REGION # (eu, us, or any region available in `heroku regions` list)
+heroku config:set WEB_CONCURRENCY=1 # fixes temporary Heroku bug
 git push heroku master
 heroku run rails db:migrate
 ```
