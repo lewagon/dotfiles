@@ -34,7 +34,7 @@ Quand un programme Ruby se ferme, on perd toutes les données stockées dans des
 Dans le cadre de cet exercice, le repository stocke les recettes ajoutées par l’utilisateur. En d’autres termes, il **est** le **livre de recettes**. Nomme la classe `Cookbook` pour écrire du code explicite et qui a du sens, mais garde à l’esprit qu’il s’agit du **repository** du diagramme du cours !
 
 Implémente la classe `Cookbook` avec 4 méthodes :
-- `initialize`, qui charge les recettes `Recipe` existantes.
+- `initialize`, qui crée un `Array` vide pour stocker tes instances de `Recipe`
 - `all`, qui retourne toutes les recettes
 - `create(recipe)`, qui crée une recette et l'ajoute au livre de recettes
 - `destroy(recipe_index)`, qui supprime une recette du cookbook
