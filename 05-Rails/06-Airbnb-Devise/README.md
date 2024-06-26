@@ -90,6 +90,7 @@ Even if it's just a skeleton app, it's important to deploy on Heroku **from day 
 
 ```bash
 heroku create airbnb-<user.lower_github_nickname> --region=REPLACE_WITH_REGION # (eu, us, or any region available in `heroku regions` list)
+heroku config:set WEB_CONCURRENCY=1 # fixes temporary Heroku bug
 git push heroku master
 heroku run rails db:migrate
 ```
