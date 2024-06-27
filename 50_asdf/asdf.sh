@@ -10,6 +10,8 @@ asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 
 asdf plugin add python
 
+asdf plugin add rust
+
 asdf plugin add asdf-alias
 
 asdf install
