@@ -8,8 +8,6 @@ We want to build a simple Airbnb clone (like [this one](https://rails-simple-air
 - As a user, I can edit the details of a flat if I made a mistake
 - As a user, I can delete a flat from the website, in case I don't want to rent it anymore
 
-There is no `rake` for this challenge. How will we test our code? 🤔 By running the server and checking the website in the browser! 🚀
-
 ## Rails app generation
 
 Create a new Rails app in your GitHub nickname folder:
@@ -28,6 +26,7 @@ bundle install
 git submodule add git@github.com:lewagon/rails-simple-airbnb-specs.git spec
 git add .
 git commit -m "Prepare rails app with external specs"
+rspec # to run the tests
 ```
 
 ## Front-end setup

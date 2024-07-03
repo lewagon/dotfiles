@@ -8,8 +8,6 @@
 - 做为用户，如果我不小心输入了错误的信息，我可以修改公寓的详细信息
 - 做为用户，一旦我不想继续出租了，我可以从网站删除一个公寓
 
-在这个挑战里没有`rake`指令了。
-
 ## 生成一个Rails应用
 
 在你Github用户名的文件夹里创建一个Rails应用：
@@ -22,6 +20,13 @@ git add .
 git commit -m "rails new"
 gh repo create --public --source=.
 git push origin master
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
+bundle install
+git submodule add git@github.com:lewagon/rails-simple-airbnb-specs.git spec
+git add .
+git commit -m "Prepare rails app with external specs"
+rspec # to run the tests
 ```
 
 ## 前端设置
@@ -65,6 +70,20 @@ gem "simple_form"
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
+```
+
+### 测试你的代码
+
+每当你向应用程序添加迁移（例如，在 `rails g model ...` 后），不要忘记在我们规范中使用的**测试数据库**上运行迁移：
+
+```bash
+rails db:migrate RAILS_ENV=test  # 如果你添加了迁移
+```
+
+然后使用以下命令测试你的代码：
+
+```bash
+rspec
 ```
 
 ## 详细说明
