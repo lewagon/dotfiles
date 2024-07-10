@@ -13,7 +13,7 @@ describe "#roman_to_integer" do
     expect(roman_to_integer('MCMLXXXIX')).to eq(1989)
   end
 
-  it "should work for empty string" do
+  it "should work for an empty string" do
     expect(roman_to_integer('')).to eq(0)
   end
 
