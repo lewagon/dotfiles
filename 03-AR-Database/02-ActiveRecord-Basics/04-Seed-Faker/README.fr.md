@@ -28,7 +28,7 @@ Tu peux ensuite exécuter ce fichier en exécutant dans ton terminal :
 rake db:seed
 ```
 
-### Faux de données
+### Données de test avec `faker`
 
 Lorsque tu sèmes des données dans ta base de données, tu souhaites peut-être qu'elles ressemblent à de vraies données utilisateur sans avoir à trouver l'inspiration et à les écrire toi-même. Dans ce cas, tu peux utiliser la gemme [faker](https://github.com/faker-ruby/faker) pour générer des données fausses. Installons-la :
 
