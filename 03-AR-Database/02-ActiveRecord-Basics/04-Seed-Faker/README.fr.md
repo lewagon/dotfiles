@@ -55,7 +55,7 @@ Voici une commande utile pour `supprimer` ta base de données, la `recréer`, `m
 rake db:drop db:create db:migrate db:seed
 ```
 
-Une fois que tu as réinitialisé ta base de données, tu peux interroger ta base de données dans une `console rake`, par exemple avec :
+Une fois que tu as réinitialisé ta base de données, tu peux interroger ta base de données dans une `rake console`, par exemple avec :
 
 ```ruby
 Post.all
