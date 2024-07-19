@@ -45,7 +45,7 @@ require "faker"
 Post.create(title: Faker::Music.band, url: Faker::Sports::Football.player, votes: 2)
 ```
 
-Explore la [documentation de la gemme faker](https://github.com/faker-ruby/faker) pour trouver les modules appropriés pour générer des données qui semblent réelles.
+Explore la [documentation de la gem `faker`](https://github.com/faker-ruby/faker) pour trouver les modules appropriés parmis les nombreux proposés.
 
 ### Réinitialisation de ta base de données
 
