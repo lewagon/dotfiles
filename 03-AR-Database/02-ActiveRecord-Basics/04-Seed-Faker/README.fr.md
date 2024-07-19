@@ -49,7 +49,7 @@ Explore la [documentation de la gem `faker`](https://github.com/faker-ruby/faker
 
 ### Réinitialisation de ta base de données
 
-Voici une commande utile pour `supprimer` ta base de données, la `recréer`, `migrer` le schéma et la `semer`. Cela te fera gagner beaucoup de temps lors de la construction de ta seed, et tu l'utiliseras beaucoup lors des semaines de projet, alors habitue-toi !
+Voici une commande utile pour **supprimer** ta base de données, la **recréer**, **migrer** le schéma et la **_seed_**. Cela te fera gagner beaucoup de temps et tu l'utiliseras beaucoup lors des semaines de projet, c'est le moment de s'entraîner !
 
 ```bash
 rake db:drop db:create db:migrate db:seed
