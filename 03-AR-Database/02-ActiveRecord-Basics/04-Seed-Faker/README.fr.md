@@ -1,30 +1,66 @@
-## Contexte et objectifs
+## Contexte & Objectifs
 
-Maintenant que tu connais bien les migrations et les modèles, on va passer à un scénario concret. Comment vérifier que ta base de données fonctionne si tu n’as aucune **donnée** ? Pour cela, on a besoin de créer de la donnée que l’on pourra utiliser pour amorcer la base de données. C’est ce qu’on appelle une `seed`.
+Maintenant que tu es familier avec les migrations et les modèles, il est temps pour un scénario de la vie réelle. Comment testes-tu si ta base de données fonctionne, si tu n'as pas de **données** ? Pour ce faire, nous devons créer un tas de données que nous pouvons utiliser pour initialiser notre base de données. Cela s'appelle une `seed`.
 
-## Configuration
+### Alimenter ta base de données
 
-On utilisera la gem [`faker`](https://github.com/stympy/faker) pour générer les attributs `Post`. Mais tu dois d’abord l’installer :
+Pour ajouter des données après la création d'une base de données, tu peux commencer par remplir le fichier `db/seeds.rb` avec quelques commandes Ruby que tu aimerais exécuter. Par exemple, si tu veux créer 3 publications :
+
+```ruby
+# db/seeds.rb
+Post.create(title: "Ma première publication", url: "https://www.blog.com/ma-premiere-publication", votes: 13)
+Post.create(title: "Ma deuxième publication", url: "https://www.blog.com/ma-deuxieme-publication", votes: 42)
+Post.create(title: "Ma troisième publication", url: "https://www.blog.com/ma-troisieme-publication", votes: 128)
+```
+
+Ou si tu veux en créer 10 :
+
+```ruby
+# db/seeds.rb
+10.times do |i|
+  Post.create(title: "Ma publication numéro #{i}")
+end
+```
+
+Tu peux ensuite exécuter ce fichier en exécutant dans ton terminal :
+
+```bash
+rake db:seed
+```
+
+### Faux de données
+
+Lorsque tu sèmes des données dans ta base de données, tu souhaites peut-être qu'elles ressemblent à de vraies données utilisateur sans avoir à trouver l'inspiration et à les écrire toi-même. Dans ce cas, tu peux utiliser la gemme [faker](https://github.com/stympy/faker) pour générer des données fausses. Installons-la :
 
 ```bash
 gem install faker
 ```
 
-Voici une commande utile pour supprimer (`drop`) ta base de données, la recréer (`create`), migrer le schéma (`migrate`) et créer quelques données (`seed`) dans la base. Cela te fera gagner du temps tout en te permettant de développer ta seed, et tu t’en serviras beaucoup pendant les projets, alors commence à t’habituer !
+Tu peux ensuite l'utiliser dans ton fichier `db/seeds.rb` :
+
+```ruby
+# db/seeds.rb
+require "faker"
+
+Post.create(title: Faker::Music.band, url: Faker::Sports::Football.player, votes: 2)
+```
+
+Explore la [documentation de la gemme faker](https://github.com/faker-ruby/faker) pour trouver les modules appropriés pour générer des données qui semblent réelles.
+
+### Réinitialisation de ta base de données
+
+Voici une commande utile pour `supprimer` ta base de données, la `recréer`, `migrer` le schéma et la `semer`. Cela te fera gagner beaucoup de temps lors de la construction de ta seed, et tu l'utiliseras beaucoup lors des semaines de projet, alors habitue-toi !
 
 ```bash
 rake db:drop db:create db:migrate db:seed
 ```
 
-Une fois que tu a géré ta seed, tu peux regarder les lignes que tu viens d’insérer avec `rake db:seed` en utilisant les requêtes SQL traditionnelles :
+Une fois que tu as réinitialisé ta base de données, tu peux interroger ta base de données dans une `console rake`, par exemple avec :
 
-```bash
-sqlite3 db/development.sqlite3
-sqlite> .mode columns
-sqlite> .headers on
-sqlite> SELECT * FROM posts;
+```ruby
+Post.all
 ```
 
 ## Spécifications
 
-Ouvre le fichier `db/seeds.rb` et écris du code pour insérer 100 posts, en utilisant les fausses données générées par la gem [`faker`](https://github.com/stympy/faker). Il y a tout un tas d’options faker amusantes, fais preuve de créativité 😊. Jette un œil [ici](https://github.com/stympy/faker#faker) !
+Ouvre le fichier `db/seeds.rb` et écris du code pour insérer 100 publications, en utilisant des données fausses générées par la gemme [`faker`](https://github.com/stympy/faker). Il y a plein d'options amusantes de faker là-dedans, alors sois créatif 😊. Jette un œil [ici](https://github.com/stympy/faker#faker)!
