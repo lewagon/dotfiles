@@ -32,7 +32,7 @@ rake db:seed
 
 ### Falsificación ("faking") de datos
 
-Cuando siembras datos en tu base de datos, es posible que desees que parezca datos de usuario reales sin tener que encontrar inspiración y escribirlo tú mismo. En este caso, puedes usar el gem [faker](https://github.com/stympy/faker) para generar datos falsos. Vamos a instalarlo:
+Cuando siembras datos en tu base de datos, es posible que desees que parezca datos de usuario reales sin tener que encontrar inspiración y escribirlo tú mismo. En este caso, puedes usar el gem [faker](https://github.com/faker-ruby/faker) para generar datos falsos. Vamos a instalarlo:
 
 ```bash
 gem install faker
@@ -65,4 +65,4 @@ Post.all
 
 ## Especificaciones
 
-Abre el archivo `db/seeds.rb` y escribe algo de código para insertar 100 publicaciones, utilizando datos falsos generados por el gem [`faker`](https://github.com/stympy/faker). Hay un montón de divertidas opciones de faker allí, ¡así que sé creativo 😊! Echa un vistazo [aquí](https://github.com/stympy/faker#faker)!
+Abre el archivo `db/seeds.rb` y escribe algo de código para insertar 100 publicaciones, utilizando datos falsos generados por el gem [`faker`](https://github.com/faker-ruby/faker). Hay un montón de divertidas opciones de faker allí, ¡así que sé creativo 😊! Echa un vistazo [aquí](https://github.com/faker-ruby/faker#faker)!
