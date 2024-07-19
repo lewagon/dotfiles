@@ -63,4 +63,4 @@ Post.all
 
 ## Spécifications
 
-Ouvre le fichier `db/seeds.rb` et écris du code pour insérer 100 publications, en utilisant des données fausses générées par la gemme [`faker`](https://github.com/faker-ruby/faker). Il y a plein d'options amusantes de faker là-dedans, alors sois créatif 😊. Jette un œil [ici](https://github.com/faker-ruby/faker#faker)!
+Ouvre le fichier `db/seeds.rb` et écris du code pour insérer 100 publications, en utilisant des données fausses générées par la gem [`faker`](https://github.com/faker-ruby/faker). Il y a plein d'options amusantes de faker là-dedans, alors sois créatif 😊.
