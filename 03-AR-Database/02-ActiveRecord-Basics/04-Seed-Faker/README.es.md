@@ -1,10 +1,12 @@
-## Antecedentes y Objetivos
+## Contexto y Objetivos
 
-Ahora que estás familiarizado con las migraciones y los modelos, es hora de un escenario de la vida real. ¿Cómo pruebas si tu base de datos funciona, si no tienes ningún **dato**? Para hacer esto, necesitamos crear un montón de datos que podamos usar para arrancar nuestra base de datos. Se llama una `semilla`.
+Ya que estás familiarizado con migraciones y modelos, es hora de un escenario realista.
+¿Cómo compruebas que tu base de datos funciona si no tienes **datos**?
+Para hacer eso debemos crear un montón de datos que podamos usar para arrancar nuestra base de datos. Esto se llama `seeds`.
 
-### Sembrando tu base de datos
+### Seeding tu base de datos
 
-Para agregar algunos datos después de crear una base de datos, puedes comenzar llenando el archivo `db/seeds.rb` con algunos comandos de Ruby que te gustaría ejecutar. Por ejemplo, si deseas crear 3 publicaciones:
+Para agregar algunos datos después de crear una base de datos, puedes comenzar llenando el archivo `db/seeds.rb` con algunos comandos de Ruby. Por ejemplo, si deseas crear 3 publicaciones:
 
 ```ruby
 # db/seeds.rb
@@ -28,9 +30,9 @@ Luego puedes ejecutar este archivo en tu terminal:
 rake db:seed
 ```
 
-### Falsificación de datos
+### Falsificación ("faking") de datos
 
-Cuando siembras datos en tu base de datos, es posible que desees que parezca datos de usuario reales sin la molestia de encontrar inspiración y escribirlo tú mismo. En este caso, puedes usar la gema [faker](https://github.com/stympy/faker) para generar datos falsos. Vamos a instalarlo:
+Cuando siembras datos en tu base de datos, es posible que desees que parezca datos de usuario reales sin tener que encontrar inspiración y escribirlo tú mismo. En este caso, puedes usar el gem [faker](https://github.com/stympy/faker) para generar datos falsos. Vamos a instalarlo:
 
 ```bash
 gem install faker
@@ -49,13 +51,13 @@ Explora la [documentación de la gema faker](https://github.com/faker-ruby/faker
 
 ### Restableciendo tu base de datos
 
-Aquí tienes un comando útil para `eliminar` tu base de datos, `recrearla`, `migrar` el esquema y `sembrarla`. Te ahorrará mucho tiempo al construir tu semilla, y lo usarás mucho en las semanas de proyecto, ¡así que acostúmbrate!
+Aquí tienes un comando útil `drop` para eliminar tu base de datos, `create` para recrearla, `migrate` para migrar el esquema y `seed` para sembrarla. Te ahorrará mucho tiempo al construir tu semilla, y lo usarás mucho en las semanas de proyecto, ¡así que te vas a acostumbrar!
 
 ```bash
 rake db:drop db:create db:migrate db:seed
 ```
 
-Una vez que hayas restablecido tu base de datos, puedes consultar tu base de datos en una `consola rake`, por ejemplo, con:
+Una vez que hayas restablecido tu base de datos, puedes consultar tu base de datos en una `rake console`, por ejemplo, con:
 
 ```ruby
 Post.all
@@ -63,4 +65,4 @@ Post.all
 
 ## Especificaciones
 
-Abre el archivo `db/seeds.rb` y escribe algo de código para insertar 100 publicaciones, utilizando datos falsos generados por la gema [`faker`](https://github.com/stympy/faker). Hay un montón de divertidas opciones de faker allí, ¡así que sé creativo 😊! Echa un vistazo [aquí](https://github.com/stympy/faker#faker)!
+Abre el archivo `db/seeds.rb` y escribe algo de código para insertar 100 publicaciones, utilizando datos falsos generados por el gem [`faker`](https://github.com/stympy/faker). Hay un montón de divertidas opciones de faker allí, ¡así que sé creativo 😊! Echa un vistazo [aquí](https://github.com/stympy/faker#faker)!
