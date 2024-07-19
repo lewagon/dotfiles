@@ -28,7 +28,7 @@ Tu peux ensuite exécuter ce fichier en exécutant dans ton terminal :
 rake db:seed
 ```
 
-### Faux de données
+### Données de test avec `faker`
 
 Lorsque tu sèmes des données dans ta base de données, tu souhaites peut-être qu'elles ressemblent à de vraies données utilisateur sans avoir à trouver l'inspiration et à les écrire toi-même. Dans ce cas, tu peux utiliser la gemme [faker](https://github.com/faker-ruby/faker) pour générer des données fausses. Installons-la :
 
@@ -45,17 +45,17 @@ require "faker"
 Post.create(title: Faker::Music.band, url: Faker::Sports::Football.player, votes: 2)
 ```
 
-Explore la [documentation de la gemme faker](https://github.com/faker-ruby/faker) pour trouver les modules appropriés pour générer des données qui semblent réelles.
+Explore la [documentation de la gem `faker`](https://github.com/faker-ruby/faker) pour trouver les modules appropriés parmis les nombreux proposés.
 
 ### Réinitialisation de ta base de données
 
-Voici une commande utile pour `supprimer` ta base de données, la `recréer`, `migrer` le schéma et la `semer`. Cela te fera gagner beaucoup de temps lors de la construction de ta seed, et tu l'utiliseras beaucoup lors des semaines de projet, alors habitue-toi !
+Voici une commande utile pour **supprimer** ta base de données, la **recréer**, **migrer** le schéma et la **_seed_**. Cela te fera gagner beaucoup de temps et tu l'utiliseras beaucoup lors des semaines de projet, c'est le moment de s'entraîner !
 
 ```bash
 rake db:drop db:create db:migrate db:seed
 ```
 
-Une fois que tu as réinitialisé ta base de données, tu peux interroger ta base de données dans une `console rake`, par exemple avec :
+Une fois que tu as réinitialisé ta base de données, tu peux interroger ta base de données dans une `rake console`, par exemple avec :
 
 ```ruby
 Post.all
