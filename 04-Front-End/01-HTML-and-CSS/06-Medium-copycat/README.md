@@ -12,7 +12,7 @@ touch medium-article/index.html
 touch medium-article/style.css
 ```
 
-No need for an images folder this time as we will use placeholders from [unsplash](https://source.unsplash.com/) instead.
+No need for an images folder this time as we will use placeholders from [LoremFlickr](https://loremflickr.com/) instead.
 
 ## Specs
 

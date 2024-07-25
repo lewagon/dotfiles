@@ -12,7 +12,7 @@ touch medium-article/index.html
 touch medium-article/style.css
 ```
 
-Cette fois-ci, inutile de créer un dossier avec les images, car on va utiliser les images de [unsplash](https://source.unsplash.com/) à la place.
+Cette fois-ci, inutile de créer un dossier avec les images, car on va utiliser les images de [LoremFlickr](https://loremflickr.com/) à la place.
 
 ## Spécifications
 
