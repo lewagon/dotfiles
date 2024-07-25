@@ -1,6 +1,6 @@
 ## 指引
 
-冬天来了 ⛄⛄⛄。我们想要构建一个程序，用来处理我们的礼物清单，标记已经买好的东西，并最终找从外部网站到一些灵感，例如Esty。这个挑战应该会花去你一整天的时间。🎁
+冬天来了 ⛄⛄⛄。我们想要构建一个程序，用来处理我们的礼物清单，标记已经买好的东西，并最终找从外部网站到一些灵感，例如Etsy。这个挑战应该会花去你一整天的时间。🎁
 
 像昨天那样，首先以现场编码 💻的方式在小组中写下伪代码。
 
@@ -81,16 +81,18 @@ ruby interface.rb
 
 同样，**和你的老师进行讨论**
 
-##步骤4 - 在Esty上找到灵感 🎁🎁🎁🎁
+##步骤4 - 在Etsy上找到灵感 🎁🎁🎁🎁
 
-你想不出要为圣诞节买什么，想从[Etsy](https://www.etsy.com)上面获取灵感。
-在你的菜单上增加一个`idea`行动（除了“列表”，“添加”，“删除”和“标记”行动之外）。以下是该行动的工作方式：
+你对圣诞节的想法已经用尽，想从互联网上找到灵感。
+今天，我们将使用 ["Letsy"](https://letsy.lewagon.com/) 这个虚假的 Etsy 版本来找一些礼物的想法。
+不幸的是，我们无法直接爬取 [Etsy](https://www.etsy.com)，因为他们有强大的反爬虫系统。但是你可以在解决方案视频中看到如何做到这一点的示例。
 
+在你的菜单中添加一个新的动作 `想法`（除了 `列表`、`添加`、`删除` 和 `标记` 动作）。以下是这个动作的工作方式：
 
 ```bash
-What are you looking for on Etsy?
+What are you looking for?
 > Jeans
-Here are Etsy results for "Jeans":
+Here are results for "Jeans":
 1 - Levis Blue Jeans
 2 - Vintage Jeans
 3 - Cargo Jeans Pants
@@ -101,52 +103,26 @@ Pick one to add to your list (give the number)
 "Vintage Jeans" added to your wishlist
 ```
 
-对于爬虫，这里是一个入门脚本，帮助你提取数据：
-_免责声明：为了避免Etsy封禁IP，我们不会实时爬取Etsy的实时数据，但是我们将下载一个html页面并在本地进行爬取_
+对于爬虫，这是一个起始脚本，可以帮助你提取数据：
 
-
-```bash
-# 在你工作目录里下载爬取的页面
-curl -H "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"  https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR > results.html
-# 得到HTML文件的路径
-pwd
-```
 ```ruby
 # lib/scraper.rb
-require 'nokogiri'
-
-filepath = "/path/to/the/HTML/file.html"
-# 1. 我们拿到了HTML页面内容
-html_content = File.open(filepath)
-# 2. 我们从这个文件构建了一个 Nokogiri 文档
-doc = Nokogiri::HTML.parse(html_content)
-
-# 3. 我们在HTML文档中搜索包含这个项目标题的正确的元素
-doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
-  # 4. 对于每个找到的元素，我们提取它的标题并打印出来
-  puts element.text.strip
-end
-```
-一旦你的爬虫在你的本地文件`results.html`上正常工作，你就可以让它连接到Esty关于任何关键词的结果页，并爬取在线页面：
-
-```ruby
 require 'open-uri'
 require 'nokogiri'
 
-puts "What are you searching on Etsy?"
-article = gets.chomp
-
-# 1. 多亏了open-uri，我们得到了HTNML页面内容
-html_content = URI.open("https://www.etsy.com/search?q=#{article}", "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0").read
-# 2. 我们从这个文件构建了一个 Nokogiri 文档
+url = "THE_URL_FROM_THE_INTERNET_YOU_WANT_TO_SCRAPE"
+# 1. We get the HTML page content
+html_content = URI.open(url).read
+# 2. We build a Nokogiri document from this file
 doc = Nokogiri::HTML.parse(html_content)
 
-# 3. 我们在HTML文档中搜索包含这个项目标题的正确的元素
-doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
-  # 4. 对于每个找到的元素，我们提取它的标题并打印出来
+# 3. We search for the correct elements containing the items' title in our HTML doc
+doc.search('.CSS_CLASS_YOU_FIND_ON_THE_PAGE').each do |element|
+  # 4. For each item found, we extract its title and print it
   puts element.text.strip
 end
 ```
+
 - 你可以更改这个脚本，让它爬取另一个网站
 - 另外，你不仅可以抓取名称，还可以抓取其他信息（例如商品的价格）。
 
