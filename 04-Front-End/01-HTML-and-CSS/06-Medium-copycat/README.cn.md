@@ -12,7 +12,7 @@ touch medium-article/index.html
 touch medium-article/style.css
 ```
 
-这次不需要图片文件夹，因为我们将使用[unsplash](https://source.unsplash.com/)的占位符（placeholders）代替。
+这次不需要图片文件夹，因为我们将使用[LoremFlickr](https://loremflickr.com/)的占位符（placeholders）代替。
 
 ## 详细说明
 
