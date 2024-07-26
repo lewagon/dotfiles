@@ -132,7 +132,7 @@ The view should loop over these to display them, like in the screenshot below. L
 
 Remember that to create a flat, we will need two routes. One route is there to display the new flat form, and another one is there to handle the `POST` request generated when submitting this form. Try to use directly the `form_with` helper in your view, and make the form look nice!
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/new.png)
 
 ### 6 - As a user, I can see detailed information of a given flat
 
