@@ -22,6 +22,13 @@ git add .
 git commit -m "rails new"
 gh repo create --public --source=.
 git push origin master
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
+bundle install
+git submodule add git@github.com:lewagon/rails-simple-airbnb-specs.git spec
+git add .
+git commit -m "Prepare rails app with external specs"
+rspec # to run the tests
 ```
 
 ## Configuration front-end
@@ -65,6 +72,20 @@ Puis exécute :
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
+```
+
+### Tester ton code
+
+Chaque fois que tu ajoutes des migrations à ton application (par exemple, après un `rails g model ...`), n'oublie pas d'exécuter également les migrations **sur la base de données de test** que nous utilisons dans nos spécifications :
+
+```bash
+rails db:migrate RAILS_ENV=test  # Si tu as ajouté une migration
+```
+
+Ensuite, teste ton code avec :
+
+```bash
+rspec
 ```
 
 ## Spécifications
