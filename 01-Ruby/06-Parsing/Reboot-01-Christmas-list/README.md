@@ -82,15 +82,18 @@ ruby interface.rb
 
 Again, **discuss with your teacher**
 
-## Step 4 - Find ideas on Etsy 🎁🎁🎁🎁
+## Step 4 - Find ideas from the internet 🎁🎁🎁🎁
 
-You are out of ideas for Christmas and you want to find inspiration from [Etsy](https://www.etsy.com).
+You are out of ideas for Christmas and you want to find inspiration from the internet.
+Today, we'll use scrape ["Letsy"](https://letsy.lewagon.com/), a fake version of Etsy, to find some gift ideas.
+Unfortunately, we can't scrape [Etsy](https://www.etsy.com) directly because they have a strong anti-scraping system. But you can see an example of how to do this later in the solution video.
+
 Add a new action `idea` to your menu (additionally to the `list`, `add`, `delete` and `mark` actions). Here is how this action could work:
 
 ```bash
-What are you looking for on Etsy?
+What are you looking for?
 > Jeans
-Here are Etsy results for "Jeans":
+Here are results for "Jeans":
 1 - Levis Blue Jeans
 2 - Vintage Jeans
 3 - Cargo Jeans Pants
@@ -103,51 +106,25 @@ Pick one to add to your list (give the number)
 
 For the scraper, here is a starting script to help you extract the data:
 
-_Disclaimer: to prevent ip banishment from Etsy, we won't scrape Etsy in real time but we will download a html page and scrape it locally_
-
-```bash
-# Download the page to be scraped inside your working directory
-curl -H "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"  https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR > results.html
-# get the path to the HTML file
-pwd
-```
 ```ruby
 # lib/scraper.rb
-require 'nokogiri'
-
-filepath = "/path/to/the/HTML/file.html"
-# 1. We get the HTML page content
-html_content = File.open(filepath)
-# 2. We build a Nokogiri document from this file
-doc = Nokogiri::HTML.parse(html_content)
-
-# 3. We search for the correct elements containing the items' title in our HTML doc
-doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
-  # 4. For each item found, we extract its title and print it
-  puts element.text.strip
-end
-```
-
-Once your scraper works on your `results.html` local file, update it to connect to Etsy's results page for any keywords and scrape the online page:
-
-```ruby
 require 'open-uri'
 require 'nokogiri'
 
-puts "What are you searching on Etsy?"
-article = gets.chomp
-
-# 1. We get the HTML page content thanks to open-uri
-html_content = URI.open("https://www.etsy.com/search?q=#{article}", "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0").read
+url = "THE_URL_FROM_THE_INTERNET_YOU_WANT_TO_SCRAPE"
+# 1. We get the HTML page content
+html_content = URI.open(url).read
 # 2. We build a Nokogiri document from this file
 doc = Nokogiri::HTML.parse(html_content)
 
 # 3. We search for the correct elements containing the items' title in our HTML doc
-doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
+doc.search('.CSS_CLASS_YOU_FIND_ON_THE_PAGE').each do |element|
   # 4. For each item found, we extract its title and print it
   puts element.text.strip
 end
 ```
+
+_Note there's some text in ALL_CAPS there that you need to replace with the correct values._
 
 - Feel free to scrape another website adapting this script.
 - What kind of data structure should your scraper return?

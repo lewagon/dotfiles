@@ -89,15 +89,16 @@ Encore une fois, **parles-en avec ton/ta prof**
 
 ## Étape 4 - Trouver des idées sur Etsy 🎁🎁🎁🎁
 
-Tu es à court d’idées pour Noël et tu aimerais trouver l’inspiration sur
-[Etsy](https://www.etsy.com). Ajoute une nouvelle action `idea` à ton
-menu (en plus des actions `list`, `add`, `delete` et `mark`). Voici
-comment cette action peut fonctionner :
+Tu es à court d'idées pour Noël et tu veux trouver de l'inspiration sur internet.
+Aujourd'hui, nous allons scraper ["Letsy"](https://letsy.lewagon.com/), une version fictive d'Etsy, pour trouver des idées de cadeaux.
+Malheureusement, nous ne pouvons pas scraper [Etsy](https://www.etsy.com) directement car ils ont un système anti-scraping puissant. Mais tu peux voir un exemple de comment faire cela plus tard dans la vidéo de solution.
+
+Ajoute une nouvelle action `idée` à ton menu (en plus des actions `liste`, `ajouter`, `supprimer` et `marquer`). Voici comment cette action pourrait fonctionner :
 
 ```bash
-What are you looking for on Etsy?
+What are you looking for?
 > Jeans
-Here are Etsy results for "Jeans":
+Here are results for "Jeans":
 1 - Levis Blue Jeans
 2 - Vintage Jeans
 3 - Cargo Jeans Pants
@@ -108,62 +109,29 @@ Pick one to add to your list (give the number)
 "Vintage Jeans" added to your wishlist
 ```
 
-Voici un premier script pour t’aider à scraper (extraire les données) :
-
-*Attention : pour éviter que notre IP soit bannie sur Etsy, on ne va pas
-scraper Etsy en temps réel ; on téléchargera une page html pour la
-scraper en local*
-
-```bash
-# Télécharge la page à scraper dans ton répertoire de travail
-curl -H "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"  https://www.etsy.com/search?q=THE_ARTICLE_YOUR_ARE_LOOKING_FOR > results.html
-# obtiens le chemin vers le fichier HTML
-pwd
-```
+Pour le scraper, voici un script de départ pour t'aider à extraire les données :
 
 ```ruby
 # lib/scraper.rb
-require 'nokogiri'
-
-filepath = "/path/to/the/HTML/file.html"
-# 1. On obtient le contenu de la page HTML
-html_content = File.open(filepath)
-# 2. On crée un document Nokogiri à partir de ce fichier
-doc = Nokogiri::HTML.parse(html_content)
-
-# 3. On recherche les éléments corrects contenant le titre des articles dans notre document HTML
-doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
-  # 4. Pour chaque article trouvé, on extrait son titre et on l’imprime
-  puts element.text.strip
-end
-```
-
-Une fois que tu as réussi à scraper le fichier local `results.html`,
-actualise ton outil pour le connecter à la page de résultats d’Etsy et
-scraper la page en ligne :
-
-```ruby
 require 'open-uri'
 require 'nokogiri'
 
-puts "What are you searching on Etsy?"
-article = gets.chomp
-
-# 1. We get the HTML page content thanks to open-uri
-html_content = URI.open("https://www.etsy.com/search?q=#{article}", "User-Agent" => "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0").read
+url = "THE_URL_FROM_THE_INTERNET_YOU_WANT_TO_SCRAPE"
+# 1. We get the HTML page content
+html_content = URI.open(url).read
 # 2. We build a Nokogiri document from this file
 doc = Nokogiri::HTML.parse(html_content)
 
 # 3. We search for the correct elements containing the items' title in our HTML doc
-doc.search('.v2-listing-card__info .v2-listing-card__title').each do |element|
+doc.search('.CSS_CLASS_YOU_FIND_ON_THE_PAGE').each do |element|
   # 4. For each item found, we extract its title and print it
   puts element.text.strip
 end
 ```
 
 - N’hésite pas à scraper un autre site Web en adaptant ce script.
-- Tu peux aussi scraper d’autres informations en dehors du nom de
-    l’article (par exemple son prix).
+- Tu peux aussi scraper d’autres informations en dehors du nom de l’article (par exemple son prix).
+
 
 ## [FACULTATIF] Enregistre les cadeaux dans un fichier CSV 🎁🎁🎁🎁🎁
 
