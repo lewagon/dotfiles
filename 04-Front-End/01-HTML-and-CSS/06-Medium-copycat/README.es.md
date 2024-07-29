@@ -12,7 +12,7 @@ touch medium-article/index.html
 touch medium-article/style.css
 ```
 
-Esta vez no será necesario crear una carpeta de imágenes ya que vamos a usar marcadores (placeholders) de [Unsplash](https://source.unsplash.com/).
+Esta vez no será necesario crear una carpeta de imágenes ya que vamos a usar marcadores (placeholders) de [LoremFlickr](https://loremflickr.com/).
 
 ## Especificaciones
 
