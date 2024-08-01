@@ -1,14 +1,12 @@
 ## Background & Objectives
 
-We want to build a simple airbnb clone (like [this one](https://rails-simple-airbnb.herokuapp.com)). These should be all the user stories of our app:
+We want to build a simple Airbnb clone (like [this one](https://rails-simple-airbnb.herokuapp.com)). These should be all the user stories of our app:
 
 - As a user, I can see all the available flats on our website
 - As a user, I can post a flat to the website, specifying its name and address
 - As a user, I can see detailed information of a given flat
 - As a user, I can edit the details of a flat if I made a mistake
 - As a user, I can delete a flat from the website, in case I don't want to rent it anymore
-
-There is no `rake` for this challenge.
 
 ## Rails app generation
 
@@ -22,13 +20,20 @@ git add .
 git commit -m "rails new"
 gh repo create --public --source=.
 git push origin master
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
+bundle install
+git submodule add git@github.com:lewagon/rails-simple-airbnb-specs.git spec
+git add .
+git commit -m "Prepare rails app with external specs"
+rspec # to run the tests
 ```
 
 ## Front-end setup
 
 ### Bootstrap stylesheets
 
-Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap stylesheets to your Rails app by copy-pasting the link tag in the `head` of the `application.html.erb` layout:
+Following [the documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/#css), install Bootstrap's stylesheets to your Rails app by copy-pasting the link tag in the `head` of the `application.html.erb` layout:
 
 ```erb
 <!-- app/views/layouts/application.html.erb -->
@@ -65,6 +70,20 @@ Then run:
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
+```
+
+### Testing your code
+
+Whenever you add migrations to your app (e.g. after a `rails g model ...`), don't forget to also run the migrations **on the test database** we use in our specs:
+
+```bash
+rails db:migrate RAILS_ENV=test  # If you added a migration
+```
+
+Then test your code with:
+
+```bash
+rspec
 ```
 
 ## Specs
@@ -105,7 +124,7 @@ Do you remember why we use `.create!` instead of just `.create`? Ask around if y
 
 Let's add the correct action in our `FlatsController` (hint: it's `index` 😉). The action in the controller should fetch all flats in our database (we have Active Record for that!) and pass in onto the view.
 
-The view should loop over these to display them, like in the screenshot below. Let start designing right from the begining. You can use [font awesome](https://fontawesome.com/search?m=free) for icons.
+The view should loop over these to display them, like in the screenshot below. Let start designing right from the beginning. You can use [Font Awesome](https://fontawesome.com/search?m=free) for icons.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png)
 
@@ -125,7 +144,7 @@ Let's also update the `index.html.erb` view with the `link_to` helper to build t
 
 ### 7 - As a user, I can edit the details of a flat
 
-We can also add the posibility to edit a flat, to remove typos after creating a flat. What about refactoring our `new.html.erb` form into a partial?
+We can also add the possibility to edit a flat, to remove typos after creating a flat. What about refactoring our `new.html.erb` form into a partial?
 
 Don't forget to update the `index.html.erb` and `show.html.erb` with the new edit flat links!
 
@@ -139,9 +158,9 @@ Once again, let's update all our view to put in this destroy link.
 
 ### 9 - Adding `picture_url` to the flat model (Optional)
 
-Let's add a picture url attribute to the flat model (just storing a string of a picture url). Let update our new and edit forms to allow the user to specify a flat picture to be displayed throughout the website. We can also update our index and show pages with the new picture.
+Let's add a picture url attribute to the flat model (just storing a string of a picture url from the internet). Let update our new and edit forms to allow the user to specify a flat picture to be displayed throughout the website. We can also update our index and show pages with the new picture.
 
-For your seed, you can find nice images of houses on [unsplash](https://unsplash.com/search/photos/house).
+For your seed, you can find nice images of houses on [Unsplash](https://unsplash.com/search/photos/house).
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show_2.png)
 
@@ -152,7 +171,7 @@ For your seed, you can find nice images of houses on [unsplash](https://unsplash
 Let's try to add a search bar to be able to filter flats in the index to find the perfect flat!
 
 - How can we find what the user is searching for?
-- What active record method can we use to build a simple search engine? This can get you started `@flats = Flat.where("name LIKE '%garden%'")`, make sure you understand this statement before going any further.
+- What ActiveRecord method can we use to build a simple search engine? This can get you started `@flats = Flat.where("name LIKE '%garden%'")`, make sure you understand this statement before going any further.
 - How can we make sure the page still works like a traditional index, even if the user isn't searching anything?
 - How can we make sure the input is prefilled with the search query once the user searched?
 
