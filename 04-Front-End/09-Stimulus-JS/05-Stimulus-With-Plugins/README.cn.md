@@ -45,8 +45,8 @@ Then, we will use the plugin to implement 3 different types of charts in the cha
 - 一个[环形图](https://www.chartjs.org/docs/latest/charts/doughnut.html)
 - a [line chart](https://www.chartjs.org/docs/latest/charts/line.html)
 - 一个[折线图](https://www.chartjs.org/docs/latest/charts/line.html)
-- a [radar chart](https://www.chartjs.org/docs/latest/charts/radar.html)
-- 一个[雷达图](https://www.chartjs.org/docs/latest/charts/radar.html)
+- a [polar chart](https://www.chartjs.org/docs/latest/charts/polar.html)
+- 一个[雷达图](https://www.chartjs.org/docs/latest/charts/polar.html)
 
 Have a look at the documentation to understand how each type work.
 看看文档，了解每种类型的工作原理。
