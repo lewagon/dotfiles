@@ -31,7 +31,7 @@ Luego, utilizaremos el complemento para implementar 3 tipos diferentes de gráfi
 
 - un [gráfico de donut (doughnut)](https://www.chartjs.org/docs/latest/charts/doughnut.html)
 - un [gráfico de línea (line)](https://www.chartjs.org/docs/latest/charts/line.html)
-- un [gráfico radar](https://www.chartjs.org/docs/latest/charts/radar.html)
+- un [gráfico polar](https://www.chartjs.org/docs/latest/charts/polar.html)
 
 Echa un vistazo a la documentación para comprender cómo funciona cada tipo.
 

@@ -78,4 +78,4 @@ When a user types a character in the textarea, we need to:
 
 ### Going further: Let's implement a character limit!
 
-Now that you have a working counter, let's add a character limit. When the user types more than 140 characters, the counter should turn red and display: `Number of charater exceeded by X characters`.
+Now that you have a working counter, let's add a character limit. When the user types more than 140 characters, the counter should turn red and display: `Number of characters exceeded by X characters`.
