@@ -12,6 +12,6 @@ asdf plugin add python
 
 asdf plugin add rust
 
-asdf plugin add asdf-alias
+asdf plugin add alias
 
 asdf install
