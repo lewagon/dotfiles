@@ -45,6 +45,7 @@ In your Rails project, you may need to add the following to your `config/environ
 ```rb
 # config/environments/development.rb
 config.hosts << /.*\.ngrok\.io$/
+config.hosts << /.*\.ngrok-free\.app$/
 ```
 
 (Please restart your `rails server` after adding.)
