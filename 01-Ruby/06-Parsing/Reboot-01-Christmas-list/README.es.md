@@ -112,7 +112,7 @@ require 'nokogiri'
 
 url = "THE_URL_FROM_THE_INTERNET_YOU_WANT_TO_SCRAPE"
 # 1. We get the HTML page content
-html_content = URI.open(url).read
+html_content = URI.parse(url).read
 # 2. We build a Nokogiri document from this file
 doc = Nokogiri::HTML.parse(html_content)
 
