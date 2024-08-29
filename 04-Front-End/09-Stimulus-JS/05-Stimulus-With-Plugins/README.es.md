@@ -1,6 +1,6 @@
 ## Antecedentes y objetivos
 
-Cuando creas una aplicación, es posible que necesites mostrar algunos datos con gráficos. Para ello, generalmente usamos la biblioteca [_Chart.js_](https://www.chartjs.org/docs/latest/es/).
+Cuando creas una aplicación, es posible que necesites mostrar algunos datos con gráficos. Para ello, generalmente usamos la biblioteca [_Chart.js_](https://www.chartjs.org/docs/latest).
 
 Divirtámonos un poco y mostremos algunas estadísticas mundiales (proporción de género, población año tras año, comunidades religiosas en el mundo).
 
@@ -75,7 +75,7 @@ Estas líneas cargan las funciones específicas de cada tipo de gráfico.
 
 Este es un [gráfico de donut (doughnut)](https://www.chartjs.org/docs/latest/es/charts/doughnut.html). Lo utilizaremos para representar la proporción de género a nivel mundial.
 
-Según el [INED](https://www.ined.fr/es/todo-sobre-poblacion/fichas-de-datos-demograficos/preguntas-frecuentes/hay-mas-hombres-o-mujeres-en-el-mundo/), a partir de 2020, el número de hombres y mujeres en el mundo era aproximadamente igual. Más precisamente, de cada 1,000 personas, 504 son hombres (50.4%) y 496 son mujeres (49.6%).
+Según el [INED](https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/more-men-or-women-in-the-world/), a partir de 2020, el número de hombres y mujeres en el mundo era aproximadamente igual. Más precisamente, de cada 1,000 personas, 504 son hombres (50.4%) y 496 son mujeres (49.6%).
 
 Construyamos un objeto:
 
