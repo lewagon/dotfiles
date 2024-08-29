@@ -57,7 +57,7 @@ Una vez hecho esto, piensa en el pseudocódigo para el método `copy()`. ¿Qué 
 
 ### 3. Implementa el método `copy()`
 
-Deberás utilizar la [API de Portapapeles](https://developer.mozilla.org/es/docs/Web/API/Clipboard). Echa un vistazo a la documentación, ¿qué método de la API necesitas utilizar?
+Deberás utilizar la [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard). Echa un vistazo a la documentación, ¿qué método de la API necesitas utilizar?
 
 ¿Qué sucede cuando hacemos clic en el botón (observa el gif de arriba)?
 

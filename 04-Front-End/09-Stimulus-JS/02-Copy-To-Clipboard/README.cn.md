@@ -57,7 +57,7 @@ export default class extends Controller {
 
 ### 3. 实现`copy()`方法
 
-你需要使用[Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard)。看一下文档，你需要使用API的哪个方法？
+你需要使用[Clipboard API](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard)。看一下文档，你需要使用API的哪个方法？
 
 当我们点击按钮时会发生什么（看一下上面的gif）：
 
