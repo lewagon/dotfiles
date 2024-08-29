@@ -11,7 +11,7 @@ brew install --cask ngrok
 Instalación para Ubuntu/WSL:
 
 ```zsh
-sudo wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz -O - | sudo tar xz -C /usr/local/bin
+sudo wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz  -O - | sudo tar xz -C /usr/local/bin
 ```
 
 Si necesitas instalarlo manualmente, puedes descargarlo [aquí](https://ngrok.com/download).
@@ -39,3 +39,15 @@ Connnections                  ttl     opn     rt1     rt5     p50     p90
 Luego podrás acceder a tu host local desde las direcciones a las que se reenvía. Por lo general, es mejor tomar `https` en lugar de `http`. Envíate esta URL a ti mismo a través de Slack o una aplicación de mensajería, ¡y listo! Ahora puedes ver tus vistas de localhost en tu navegador móvil.
 
 Nota: cada vez que cierres y luego reinicies un túnel ngrok, obtendrás una nueva dirección de reenvío. por lo general es una buena idea dejar ngrok ejecutándose en una ventana de terminal hasta que ya no lo necesites. Te lo decimos porque es incómodo tener que reenviarse la dirección una y otra vez.
+
+---
+
+En tu proyecto de Rails, es posible que necesites agregar lo siguiente a tu archivo `config/environments/development.rb` para permitir acceder a tu `rails server` desde ngrok:
+
+```rb
+# config/environments/development.rb
+config.hosts << /.*\.ngrok\.io$/
+config.hosts << /.*\.ngrok-free\.app$/
+```
+
+(No te olvides a reiniciar tu `rails server` después de agregarlo.)
