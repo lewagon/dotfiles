@@ -39,3 +39,15 @@ Connnections                  ttl     opn     rt1     rt5     p50     p90
 Tu pourras ensuite accéder à ton hôte local depuis les adresses vers lesquelles il est redirigé. Il est généralement préférable de prendre l'adresse `https` que `http`. Envoie-toi cette URL sur Slack ou une application de messagerie, et voilà ! Tu peux désormais afficher les vues de ton hôte local sur ton navigateur mobile.
 
 Remarque : à chaque fois que tu fermes puis redémarres un tunnel ngrok, tu obtiens une nouvelle adresse de redirection. Il peut être pénible d'avoir à te renvoyer l'adresse à chaque fois ; une bonne idée consiste généralement à laisser ngrok s'exécuter dans une fenêtre du terminal jusqu'à ce que tu n'en aies plus besoin.
+
+---
+
+Dans ton projet Rails, tu pourrais avoir besoin d'ajouter ce qui suit à ton fichier `config/environments/development.rb` pour permettre l'accès à ton `rails server` depuis ngrok :
+
+```rb
+# config/environments/development.rb
+config.hosts << /.*\.ngrok\.io$/
+config.hosts << /.*\.ngrok-free\.app$/
+```
+
+(N'oublie pas de redémarrer ton `rails server` après l'ajout.)
