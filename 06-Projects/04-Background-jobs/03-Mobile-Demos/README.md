@@ -11,7 +11,7 @@ brew install --cask ngrok
 Installation for Ubuntu/WSL:
 
 ```zsh
-sudo wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz -O - | sudo tar xz -C /usr/local/bin
+sudo wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz  -O - | sudo tar xz -C /usr/local/bin
 ```
 
 If you need to install it manually, you can download it [here](https://ngrok.com/download).
@@ -40,11 +40,14 @@ You can then access your localhost from the addresses that it's being forwarded 
 
 Note: every time you close and then restart an ngrok tunnel, you'll get a new forwarding address. As it can be a pain to resend the address to yourself every time, it's usually a good idea to just leave ngrok running in a terminal window until you no longer need it.
 
+---
+
 In your Rails project, you may need to add the following to your `config/environments/development.rb` file to allow accessing your `rails server` from ngrok:
 
 ```rb
 # config/environments/development.rb
 config.hosts << /.*\.ngrok\.io$/
+config.hosts << /.*\.ngrok-free\.app$/
 ```
 
 (Please restart your `rails server` after adding.)
