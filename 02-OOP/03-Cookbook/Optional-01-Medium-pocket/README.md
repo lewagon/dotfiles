@@ -212,7 +212,7 @@ ruby lib/test.rb
 
 ```ruby
 USER_AGENT = "Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
-html_content = URI.open(url, "User-Agent" => USER_AGENT).read
+html_content = URI.parse(url, "User-Agent" => USER_AGENT).read
 ```
 
 ### Router
