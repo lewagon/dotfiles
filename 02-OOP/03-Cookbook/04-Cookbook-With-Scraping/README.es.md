@@ -113,7 +113,7 @@ Es hora de usar tu código de parseo en una URL en línea con consultas diferent
 require "nokogiri"
 require "open-uri"
 url = "http://the_url_here"
-doc = Nokogiri::HTML.parse(URI.open(url).read, nil, "utf-8")
+doc = Nokogiri::HTML.parse(URI.parse(url).read, nil, "utf-8")
 
 # Rest of the code
 ```
