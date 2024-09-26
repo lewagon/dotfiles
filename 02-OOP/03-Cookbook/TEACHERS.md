@@ -46,9 +46,9 @@
   - Emerging need: how do we display tasks in the terminal?
 - Class to display/ fetch data to/ from user? **View**
   - State? None! There’s nothing to characterise a View! Only behavior.
-  - Behavior? `#display(tasks)` # array of Task INSTANCES
+  - Behavior? `#display_list(tasks)` # array of Task INSTANCES
   - Code [class](https://github.com/lewagon/oop-todolist/blob/master/lib/tasks_view.rb)
-  - Test in `irb`: `view.display(repo.all)`
+  - Test in `irb`: `view.display_list(repo.all)`
     - Necessity to add `#all` in our `Repository` class
     - Necessity to add `attr_reader :description` in our `Task` class
   - Good. But we're still far from launching `ruby app.rb` and typing 1, 2, 3…
@@ -65,7 +65,7 @@
     - Necessity to define `@repo` and `@view`
     - Necessity to define `Repository#all`
   - Create `test.rb` file to test
-  - Improve `View#display(tasks)` with `“[x]” : “[ ]”`
+  - Improve `View#display_list(tasks)` with `“[x]” : “[ ]”`
   - Add `#done?` in `Task`
   - Test => OK
 
@@ -75,7 +75,7 @@
     - Create new task with description
     - Store it in `@repo`
   - Code
-    - Necessity to code `View#ask_user_for_description`
+    - Necessity to code `View#ask_for_description`
   - Add `controller.add` in `test.rb`
   - Test => OK
 
@@ -87,8 +87,8 @@
     - Mark task as done
   - Code
     - Refacto private `Controller#display` with the 2 steps from `#list`
-    - Necessity to enhance `View#display(tasks)` with indices
-    - Code `View#ask_user_for_index`
+    - Necessity to enhance `View#display_list(tasks)` with indices
+    - Code `View#ask_for_index`
     - Necessity to code `Repository#find(index)`
   - Add action in `test.rb`
   - Test => OK
