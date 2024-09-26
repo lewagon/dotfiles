@@ -4,7 +4,7 @@ Encore du React dans ce challenge !
 
 [React](https://reactjs.org/) est une bibliothèque JavaScript permettant de construire des interfaces utilisateur. C'est une bibliothèque très populaire, utilisée par Facebook, Instagram, Netflix, Airbnb, et bien d'autres entreprises. Les apps React sont constituées de composants : un morceau d'interface utilisateur qui a sa propre logique et sa propre apparence.
 
-Dans ce challenge, tu vas construire une app Générateur de citations en utilisant les citations de cette [API](https://type.fit/api/quotes). Vous apprendrez à :
+Dans ce challenge, tu vas construire une app Générateur de citations en utilisant les citations de cette [API](https://florinbobis-quotes-net.hf.space/swagger/index.html). Vous apprendrez à :
 
 - Importer et utiliser React dans notre projet
 - Créer un composant React
@@ -139,7 +139,7 @@ const App = () => {
   console.log("Quotes: ", quotes);
 
   React.useEffect(() => {
-    fetch('https://type.fit/api/quotes')
+    fetch('https://florinbobis-quotes-net.hf.space/quotes')
       .then((response) => response.json())
       .then((data) => setQuotes(data));
   }, []);
@@ -196,7 +196,7 @@ Utilisons-le à partir de `React.useEffect`, une fois que nous aurons toutes les
 ```js
 console.log("currentQuote: ", currentQuote);
 React.useEffect(() => {
-    fetch('https://type.fit/api/quotes')
+    fetch('https://florinbobis-quotes-net.hf.space/quotes')
       .then((response) => response.json())
       .then((data) => {
         setQuotes(data);
