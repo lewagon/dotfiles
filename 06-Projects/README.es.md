@@ -12,23 +12,22 @@ Buena suerte. Verás que todo saldrá genial. Aquí están los puntos importante
 
 Seguirás teniendo charlas matinales sobre temas avanzados. Aquí hay una muestra:
 
+### `AI en Rails`
+
+Aprenderás cómo utilizar la API de OpenAI en Rails.
+
+### `Hotwire`
+
+Aprende a construir rápidamente funciones AJAX con Turbo Frames.
+
 ### `WebSocket y ActionCable`
 
-Aprenderás cómo agregar funcionalidades de tiempo real y originales con ActionCable de Rails.
-
-### `From Design to Code`
-
-Aprenderás cómo implementar features utilizando JavaScript o AJAX en tus proyectos futuros.
+Aprenderás cómo agregar funcionalidades de tiempo real y originales con ActionCable de Rails y Turbo Streams de Hotwire.
 
 ### `Background Jobs con Sidekiq`
 
 Saca los procesos que consumen mucho tiempo (envío de emails, hacer posts a una API, limpieza, etc.) fuera del controladorusando [Active Job](http://edgeguides.rubyonrails.org/active_job_basics.html).
 
-### `Bases de datos (DB) Avanzadas`
+### `AI Chatbots y RAG`
 
-Aprenderás cómo hacer consultas SQL avanzadas y herramientas para exponer datos a miembros de tu equipo sin formación técnica.
-
-
-### `API en Rails`
-
-Aprenderás cómo utilizar la API de OpenAI en Rails.
+Aprende a construir un chatbot utilizando la Generación Aumentada por Recuperación para que el chatbot responda basado en el contexto de la base de datos de la aplicación.
