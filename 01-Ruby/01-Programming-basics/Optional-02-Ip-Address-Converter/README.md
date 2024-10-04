@@ -5,10 +5,8 @@ Here is another code kata for the fastest among you. We want to manipulate numbe
 You might have already seen some IPv4 addresses, for instance `192.168.0.1`, or `173.194.40.200`. To get an IP address from a domain name, you can use the `host` command. For instance:
 
 ```bash
-host www.lewagon.com
+host www.google.com
 ```
-
-You'll see that `www.lewagon.com` is aliased to a domain on Heroku, which is mapped to a specific address.
 
 Now you may want to discover your own IP address? Your computer has a local address given by the WiFi router, and you can get it typing `ips` in your terminal. If you want to determine what the Public IP Address of this Wifi router is, the one shared between you and other students, you can use the following command:
 
@@ -52,56 +50,56 @@ So a 32-bit ip address would be:
 
 Example:
 
-If we take `37.160.113.170`. We have to start with the first 8-bit : `37`. Can I susbstract `128` from `37`? No, so we assign  `0` to `128`.
+If we take `37.160.113.170`. We have to start with the first 8-bit : `37`. Can I subtract `128` from `37`? No, so we assign  `0` to `128`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |
 ```
 
-Can I substract `64` from `37`? No, so we assign `0` to `64`.
+Can I subtract `64` from `37`? No, so we assign `0` to `64`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0
 ```
 
-Can I substract `32` from `37`? Yes, so we assign `1` to `32` and our remainder is now `5`.
+Can I subtract `32` from `37`? Yes, so we assign `1` to `32` and our remainder is now `5`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |
 ```
 
-Can I substract `16` from `5`? No, so we assign `0` to `16`.
+Can I subtract `16` from `5`? No, so we assign `0` to `16`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |   0 |
 ```
 
-Can I substract `8` from `5`? No, so we assign `0` to `8`.
+Can I subtract `8` from `5`? No, so we assign `0` to `8`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |  0  |  0  |
 ```
 
-Can I substract `4` from `5`? Yes, so we assign `1` to `4` and our remainder is now `1`.
+Can I subtract `4` from `5`? Yes, so we assign `1` to `4` and our remainder is now `1`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |  0  |  0  |  1  |
 ```
 
-Can I substract `2` from `1`? No, so we assign `0` to `2`.
+Can I subtract `2` from `1`? No, so we assign `0` to `2`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
  0  |  0  |   1 |  0  |  0  |  1  |  0  |
 ```
 
-Can I substract `1` from `1`? Yes, so we assign `1` to `1` and our remainder is `0`.
+Can I subtract `1` from `1`? Yes, so we assign `1` to `1` and our remainder is `0`.
 
 ```ruby
 128 |  64 |  32 |  16 |  8  |  4  |  2  |  1  |
@@ -118,7 +116,7 @@ Remove the `.` to get `00100101101000000111000110101010` and apply our method to
 
 So ```631271850``` is the decimal number for the ip address ```37.160.113.170```.
 
-The goal of your code is to  have 2 methods, one to transform an ip to a number and one to tranform a number to an ip address.
+The goal of your code is to  have 2 methods, one to transform an ip to a number and one to transform a number to an ip address.
 
 ```ruby
 ip_to_num("37.160.113.170")

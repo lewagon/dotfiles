@@ -4,7 +4,7 @@
 
 [React](https://reactjs.org/) es una biblioteca de JavaScript para construir interfaces de usuario. Es una biblioteca muy popular, utilizada por Facebook, Instagram, Netflix, Airbnb y muchas otras empresas. Las aplicaciones de React están compuestas por componentes: una pieza de la interfaz de usuario que tiene su propia lógica y apariencia.
 
-En este ejercicio, construirás una aplicación Generadora de Citas utilizando las citas de esta [API](https://type.fit/api/quotes). Aprenderás cómo:
+En este ejercicio, construirás una aplicación Generadora de Citas utilizando las citas de esta [API](https://florinbobis-quotes-net.hf.space/swagger/index.html). Aprenderás cómo:
 
 - Importar y utilizar React en nuestro proyecto
 - Crear un componente de React
@@ -147,7 +147,7 @@ const App = () => {
   console.log("Citas: ", quotes);
 
   React.useEffect(() => {
-    fetch('https://type.fit/api/quotes')
+    fetch('https://florinbobis-quotes-net.hf.space/quotes')
       .then((response) => response.json())
       .then((data) => setQuotes(data));
   }, []);
@@ -202,7 +202,7 @@ Utilicémoslo desde `React.useEffect`, una vez que tengamos todas las citas disp
 ```js
 console.log("currentQuote: ", currentQuote);
 React.useEffect(() => {
-  fetch("https://type.fit/api/quotes")
+  fetch('https://florinbobis-quotes-net.hf.space/quotes')
     .then((response) => response.json())
     .then((data) => {
       setQuotes(data);
