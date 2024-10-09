@@ -1,0 +1,10 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost:"
+    },
+    {
+      "pattern": "^https://github.com/lewagon/"
+    }
+  ]
+}
