@@ -31,7 +31,7 @@ describe "`valid_brackets?` with different types of brackets" do
     expect(valid_brackets?("{hello}([world]) ({})")).to eq true
   end
 
-  it "returns false if provided with right amount of balenced brackets but in wrong order" do
+  it "returns false if provided with right amount of balanced brackets but in wrong order" do
     expect(valid_brackets?("[(])")).to eq false
   end
 end

@@ -18,23 +18,22 @@ Before anything, let's make sure you kick-off your project the best possible way
 
 During the first week, you will still have morning talks on advanced topics. Here is the program for morning lectures:
 
+### `AI in Rails`
+
+Learn how to use the OpenAI API in Rails.
+
+### `Hotwire`
+
+Learn how to build AJAX features _fast_ with Turbo Frames.
+
 ### `WebSocket & ActionCable`
 
-Learn how to add real-time features out-of-the box with Rails' ActionCable.
-
-### `From Design To Code`
-
-Learn how to materialize features using JavaScript or AJAX in your projects.
+Learn how to add real-time features out-of-the box with Rails' ActionCable and Hotwire's Turbo Streams.
 
 ### `Background Jobs with Sidekiq`
 
 Take time-consuming processes (delivering emails, posting to an API, cleaning up, etc.) out of the controller using [Active Job](http://edgeguides.rubyonrails.org/active_job_basics.html).
 
-### `DB Advanced`
+### `AI Chatbots and RAG`
 
-Learn advanced SQL queries and tools to expose your data to non-tech members of your team.
-
-
-### `AI in Rails`
-
-Learn how to use the OpenAI API in Rails.
+Learn how to build a chatbot using Retrieval Augmented Generation to have the chatbot respond based on the context of the application's database.

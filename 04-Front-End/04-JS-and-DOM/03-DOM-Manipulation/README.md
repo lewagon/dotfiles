@@ -1,8 +1,8 @@
 ## Background & Objectives
 
-The goal of this exercise is to dynamically manipulate a web page using what you learnt about selectors during the CSS module.
+The goal of this exercise is to use your knowledge of CSS selectors to dynamically manipulate a web page using JavaScript.
 
-We refer to this as manipulating the [Document Object Model](http://en.wikipedia.org/wiki/Document_Object_Model) (DOM), which is **the in-memory representation of the HTML built by the browser**. Think of it like a family tree: the root node, its children, its grandchildren, etc. On that tree, you can then:
+We refer to this as manipulating the [Document Object Model](http://en.wikipedia.org/wiki/Document_Object_Model) (DOM), which is **the in-memory representation of the HTML built by the browser**. Think of it like a family tree. It starts with the same base, the grandparents. Then there's a generation of parents. Then the children and grandchildren, etc. It will keep spreading out over time. Each person in this family tree, or point in the tree structure, is called a "node". On that tree, you can:
 
 - Traverse the DOM to read specific nodes
 - Remove nodes
@@ -12,16 +12,16 @@ Remember that you have to refresh the page every time you make a change.
 
 ## Specs
 
-Open the `lib/dom.js` file, you will find a list of challenges to complete.
+Open the `lib/dom.js` file, you will find a list of challenges to complete that are explained in code comments.
 
-To test your code, open a new terminal and run this command:
+Then, open a new terminal and run this command:
 
 ```bash
 serve
 ```
 
-Then open [`localhost:8000`](http://localhost:8000) in your browser.
+(Leave this server running while you work on this challenge.)
 
-Change some code in the `lib/dom.js`, as soon as you save in your text editor, reload the page in the browser.
+Then open [`localhost:8000`](http://localhost:8000) in your browser. You should see the tests (in red). Your goal is to make them all pass by completing the challenges in the `lib/dom.js` file and make them turn green!
 
-Your goal is to make all tests green!
+Each time you change some code in the `lib/dom.js`, as soon as you save in your text editor, reload the page in the browser. This is how you will see your changes reflected.

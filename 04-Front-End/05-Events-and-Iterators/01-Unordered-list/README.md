@@ -24,7 +24,7 @@ Start by working with the tests in the browser. When you are done, use `rake` to
 
 ### List item generator
 
-Implement first the `listItem(content)` function which takes one `content` parameter (of type `String`) and returns the `<li>` tag with its content:
+First, implement a `listItem(content)` function that takes one parameter, `content` (of type `String`) and returns an `<li>` tag as a `String` like this:
 
 ```js
 listItem('milk');

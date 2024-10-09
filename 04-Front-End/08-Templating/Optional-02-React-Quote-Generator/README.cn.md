@@ -4,7 +4,7 @@
 
 [React](https://reactjs.org/) 是一个用于构建用户界面的JavaScript库。它是一个非常流行的库，被Facebook、Instagram、Netflix、Airbnb和许多其他公司使用。React应用程序由组件组成：一个具有自己的逻辑和外观的UI片段。
 
-在这个挑战中，你会建立一个使用这个[API](https://type.fit/api/quotes)的名言生成器应用程序。你将学习如何：
+在这个挑战中，你会建立一个使用这个[API](https://florinbobis-quotes-net.hf.space/swagger/index.html)的名言生成器应用程序。你将学习如何：
 
 - 在我们的项目中导入和使用React
 - 创建一个React组件
@@ -142,7 +142,7 @@ const App = () => {
   console.log("Quotes: ", quotes);
 
   React.useEffect(() => {
-    fetch('https://type.fit/api/quotes')
+    fetch('https://florinbobis-quotes-net.hf.space/quotes')
       .then((response) => response.json())
       .then((data) => setQuotes(data));
   }, []);
@@ -201,7 +201,7 @@ const getNewQuote = (quotes) => {
 ```js
 console.log("currentQuote: ", currentQuote);
 React.useEffect(() => {
-    fetch('https://type.fit/api/quotes')
+    fetch('https://florinbobis-quotes-net.hf.space/quotes')
       .then((response) => response.json())
       .then((data) => {
         setQuotes(data);

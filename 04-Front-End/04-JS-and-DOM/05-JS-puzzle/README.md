@@ -17,7 +17,7 @@ Then open [`localhost:8000`](http://localhost:8000) in your browser.
 
 ## Specs
 
-💡 For this challenge we are using a new JavaScript concept: an event listener. You will learn more about event listeners in the next lecture so for now it the code as been written for you in the challenge at the end of the `puzzle.js` file:
+💡 In this challenge we are going to use a new JavaScript concept: event listeners. You haven't actually learned about event listeners yet (that's the next lecture). But the basic idea is that they can let you trigger code when the user interacts with the page in a specific way. In this case, we're going to listen for when the user clicks on a tile. Because you don't know this syntax yet, you can rely on the code already given to you at the end of the `puzzle.js` file:
 
 ```js
 tiles.forEach((tile) => {

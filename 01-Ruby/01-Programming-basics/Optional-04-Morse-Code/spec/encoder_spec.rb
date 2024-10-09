@@ -18,7 +18,7 @@ describe "encoder" do
     expect(encode("hi all")).to eq(".... ..|.- .-.. .-..")
   end
 
-  it "should remove punctation like commas (,) or single quotes (')" do
+  it "should remove punctuation like commas (,) or single quotes (')" do
     expect(encode("hello, world")).to eq(".... . .-.. .-.. ---|.-- --- .-. .-.. -..")
   end
 
