@@ -2,16 +2,16 @@
 
 Think about the Gmail inbox interface. Do you need to refresh the page for new mail to show up? The answer is **no** of course! Sites like Gmail periodically fetch new emails and add them to the top of the list. So it's adding new content to the _DOM_ **after** the initial page load.
 
-In this challenge, we will have 2 processes to test our code:
+In this challenge, you can test your code in two different ways:
 - In the browser
 - In the terminal
 
 ## Specs
 
-We haven't seen AJAX yet, so we'll simulate email fetching for now. We have given you a skeleton in `lib/inbox.js` to get you started.
+If we were building a real email client, we would use AJAX to fetch actual data for new emails. We don't know AJAX yet, so we'll simulate email fetching for now. Basically, that means we'll use random numbers 🙈 We have given you a skeleton in `lib/inbox.js` to get you started.
 
-- Implement the method `hasNewMessage()` that has a 20% probability of returning `true` (the rest of the time, it returns `false`).
-- Implement the method `newMessage()` which should return a random object (i.e. a new email) with `subject` and `sender` keys. For instance:
+- Implement a method `hasNewMessage()` that returns a `Boolean` (`true` or `false`). It should have a 20% probability of returning `true` (the rest of the time, it should return `false`).
+- Implement the method `newMessage()` which should return an object with keys `subject` and `sender`. This is the structure of a new email. The values for the `subject` and `sender` should be strings, but since we don't actually have an email service back-end, you can pick whatever you want there. It's also OK if it returns the same `subject` and `sender` each time, for now. For example:
 
 ```js
 {
@@ -37,7 +37,7 @@ serve
 
 and go to [localhost:8000](http://localhost:8000).
 
-If you `console.log` in the `hasNewMessage()` method, you should see the function being called 1000 times. Why? It comes from the test files from `inbox_examiner.js` line 43!
+If you `console.log` in the `hasNewMessage()` method, you should see the function being called 1000 times. Why? It comes from the test files from `inbox_examiner.js` line 43! This is why we want to make it only return `true` 20% of the time.
 
 ## Tasks
 
