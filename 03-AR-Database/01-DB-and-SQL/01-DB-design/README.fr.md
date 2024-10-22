@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-L'objectif de ce premier défi est de se familiariser avec la conception de bases de données, une compétence **cruciale** pour rendre votre backend maintenable, flexible et efficace. Pour créer nos bases de données, nous utiliserons le [SQL Designer] (http://db.lewagon.com), un outil que nous utiliserons plusieurs fois au cours du bootcamp.
+L'objectif de ce premier défi est de se familiariser avec la conception de bases de données, une compétence **cruciale** pour rendre votre backend maintenable, flexible et efficace. Pour créer nos bases de données, nous utiliserons le [SQL Designer](http://db.lewagon.com), un outil que nous utiliserons plusieurs fois au cours du bootcamp.
 
 ## Specs
 
