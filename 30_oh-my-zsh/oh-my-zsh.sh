@@ -3,7 +3,6 @@
 sudo -v
 
 echo "Installing Oh My Zsh"
-# To install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "Done"
 
@@ -12,5 +11,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 echo "Done"
 
-echo "Please restart the terminal and folllow the Powerlevel10k configuration wizard or use your on config file"
+echo "Please restart the terminal"
 exit
