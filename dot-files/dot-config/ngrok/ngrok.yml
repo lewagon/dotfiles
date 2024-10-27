@@ -1,0 +1,12 @@
+version: "3"
+agent:
+  authtoken: [REDACTED] #gitignoreSecret
+endpoints:
+  - name: localhost80
+    url: https://horse-workable-bluebird.ngrok-free.app
+    upstream:
+      url: 80
+  - name: localhost3000
+    url: https://horse-workable-bluebird.ngrok-free.app
+    upstream:
+      url: 3000

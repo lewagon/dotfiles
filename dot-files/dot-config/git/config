@@ -1,0 +1,52 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Miguel Hargreaves Pimenta
+	email = jmiguelpimenta@icloud.com
+	signingkey = 7002813E67B2B7D0B02531A77416220F7444E470
+
+[github]
+	user = jmschp
+
+[core]
+	autocrlf = input
+	excludesfile = ~/.config/git/ignore
+	pager = less -FRSX
+	# filemode = false
+	# trustctime = false
+	# untrackedCache = true
+	ignorecase = false
+
+[init]
+	defaultBranch = main
+
+[credential]
+	helper = osxkeychain
+
+[diff]
+  tool = vscode
+
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+  tool = vscode
+
+[mergetool "vscode"]
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	program = /opt/homebrew/bin/gpg
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+
+[filter "gitignoreSecret"]
+	clean = "sed 's/^\\(.*\\)\\([:=]\\)\\s*\\(.*\\) #gitignoreSecret$/\\1\\2 [REDACTED] #gitignoreSecret/'"
+	smudge = cat
+	required = true

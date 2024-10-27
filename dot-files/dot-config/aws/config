@@ -1,0 +1,6 @@
+[default]
+output = json
+[profile arqshoah]
+region = us-east-1
+[profile legado]
+region = us-east-1
