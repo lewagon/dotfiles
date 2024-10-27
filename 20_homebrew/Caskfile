@@ -1,11 +1,11 @@
 # Caskfile list packages cask
 
 cask 'arduino-ide'
-cask 'dbeaver-community'
-cask 'clickup'
 cask 'chatgpt'
+cask 'clickup'
 cask 'cursor'
 cask 'cyberduck'
+cask 'dbeaver-community'
 cask 'devtoys'
 cask 'discord'
 cask 'docker'
