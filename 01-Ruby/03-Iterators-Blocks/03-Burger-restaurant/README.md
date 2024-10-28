@@ -67,7 +67,7 @@ Open `interface.rb`, a list of orders are waiting to be filled. Write down the i
 
 #### A little help with your first block
 
-One of your customers asked for a bigger portion of fish. Transform your classical burger into a bigger burger for him, write a block to transform the string to uppercase:
+One of your customers asked for a bigger portion of fish. Transform your classical burger into a bigger burger for them; write a block to transform the string to uppercase:
  1. Call the method `burger` with "fish", "mayo" and "salad", **all lowercase letters**, and store the result in the variable `bigger_burger`.
  2. Append a block (side note in our story) with the custom instructions:
  	- it takes a string as an argument

@@ -36,7 +36,7 @@ We add the flag `--skip-active-storage` & `--skip-action-mailbox` to skip the in
 **Objective**: We will implement a simple Rails application with 2 pages:
 
 1. First page is a form with an input, where a user can type a question to ask the Coach
-1. After submitting the form, the user is redirected to another page where she/he will see her/his question and the coach answer.
+1. After submitting the form, the user is redirected to another page where they will see their question and the coach's answer.
 
 That's it!
 
@@ -123,7 +123,7 @@ Time to implement the logic in the `answer` action (second step of the user jour
 
 And make sure you refresh your page frequently in your browser to let Rails' execution flow drive your development!
 
-The `answer.html.erb` will display the question you ask your coach as well as his answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
+The `answer.html.erb` will display the question you ask your coach as well as the coach's answer. The controller will need to read the question from `params` and compute an instance variable `@answer` for the view to display. Here are two requests that you should be able to handle:
 
 - [localhost:3000/answer?question=hello](http://localhost:3000/answer?question=hello)
 - [localhost:3000/answer?question=what time is it?](http://localhost:3000/answer?question=what time is it?)

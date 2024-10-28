@@ -10,7 +10,7 @@ You are meeting a French entrepreneur who tells you "I've this great idea: I wan
 
 ### Write the pseudo-code
 
-Pseudocode is primarily used to communicate the essence of an algorithm without getting bogged down in language-specific syntax. A good programmer can take well-written pseudocode and translate it into functional code in the language of his/her choice.
+Pseudocode is primarily used to communicate the essence of an algorithm without getting bogged down in language-specific syntax. A good programmer can take well-written pseudocode and translate it into functional code in the language of their choice.
 
 - Write the pseudo-code for you louchebem translator.
 - Start small with a program that can only translate a single french word in louchebem
