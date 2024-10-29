@@ -14,7 +14,7 @@ export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle/plugins"
 # ASDF XDG Base Directory
 export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/.asdfrc"
 export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
-export ASDF_GEM_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/gem/.default-gems"
+export ASDF_GEM_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/asdf/.default-gems"
 export ASDF_NODEJS_AUTO_ENABLE_COREPACK="true"
 
 # AWS CLI XDG Base Directory
