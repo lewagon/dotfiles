@@ -18,9 +18,9 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # System preferences                                                          #
 ###############################################################################
 
-################################
+#################################
 # General > Language and Region #
-################################
+#################################
 
 # First day of the week (Monday)
 if [[ $(defaults read -globalDomain AppleFirstWeekday) ]]; then
@@ -29,9 +29,16 @@ else
   defaults write -globalDomain AppleFirstWeekday -dict gregorian -int 2
 fi
 
-################################
+#################################
+# Control Center                #
+#################################
+
+# Menu Bar Only > Siri > Show in menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool true
+
+#################################
 # Dock & Desktop               #
-################################
+#################################
 
 # Dock > Minimize windows into application icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -64,9 +71,9 @@ defaults write com.apple.dock mru-spaces -bool false
 # Mission control > Group windows by application
 defaults write com.apple.dock expose-group-apps -bool true
 
-################################
+#################################
 # Keyboard                     #
-################################
+#################################
 
 # Keyboard > Delay until repeat
 defaults write -globalDomain KeyRepeat -int 2
