@@ -1,7 +1,7 @@
 ## Contexte et objectifs
 
 Construisons un puzzle! 🧩
-Une fois que tu auras déplacer toutes les pièces du puzzle pour ordonner les nombres dans le bon ordre, tu recevras une notification t'indiquant que tu as gagné le jeu.
+Une fois que tu auras déplacé toutes les pièces du puzzle pour ordonner les nombres dans le bon ordre, tu recevras une notification t'indiquant que tu as gagné le jeu.
 
 ![js-puzzle](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/js_puzzle.gif)
 
