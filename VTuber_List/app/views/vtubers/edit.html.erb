@@ -1,0 +1,28 @@
+<div class="container col-12 col-lg-6">
+  <% if !(user_signed_in? && current_user.role == "admin") %>
+    <%= render "shared/unauthorized" %>
+  <% else %>
+    <h2>Edit VTuber</h2>
+    <%= simple_form_for(@vtuber) do |f| %>
+      <%= f.input :name %>
+      <%= f.association :agency, collection: @agencies %>
+      <%= f.input :gender, collection: ["female", "male"] %>
+      <%= f.input :birthday, discard_year: true, discard_time: true %>
+      <%= f.input :debut_date, start_year: 2000 %>
+      <%= f.input :description, as: :text %>
+      <%= f.input :main_language %>
+      <%= f.input :yt_channel, label: "YouTube channel" %>
+      <%= f.input :twitch_channel %>
+      <%= f.input :active, as: :boolean %>
+      <%= f.input :thumbnail, as: :file %>
+      <%= f.input :vertical_picture, as: :file %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
+
+      <%#= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <div class="form-actions">
+        <%= f.button :submit, class:"btn-create" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,36 @@
+<div class="container col-6">
+  <%#= link_to "Go back", :back %>
+  <div style="position: relative;">
+    <% if user_signed_in? && current_user.role == "admin" %>
+      <div class="edit-button"><%= link_to "Edit Agency info", edit_agency_path %></div>
+    <% end %>
+    <h2><%= @agency.name %></h2>
+    <% if @agency.name != "Indie" %>
+      <p style="margin-bottom: 5px;">Country: <%= @agency.location %></p>
+    <% end %>
+    <% if @agency.has_website? %>
+      <%= link_to "Website", @agency.website, target: :blank %>
+    <% end %>
+    <% if @agency.has_yt_channel? %>
+      <h4><%= link_to @agency.yt_channel, target: :blank do %>
+          <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
+        <% end %></h4>
+    <% end %>
+    <% if !@agency.active %>
+      <p><%= @agency.name %> is not active.</p>
+    <% end %>
+    <p style="margin-bottom: 5px;"><%= @agency.description %></p>
+    <% if !@vtubers %>
+      <p>This database has no VTubers from this agency.</p>
+    <% else %>
+      <% if @agency.name == "Indie" %>
+        <p><span class="search-result-number"><%= @vtubers.length %></span> indie VTubers in this database.</p>
+      <% elsif @vtubers.length == 1 %>
+        <p><span class="search-result-number">1</span> VTuber from this agency in this database.</p>
+      <% else %>
+        <p><span class="search-result-number"><%= @vtubers.length %></span> VTubers from this agency in this database.</p>
+      <% end %>
+      <%= render "shared/vtuber_grid_display", vtubers: @vtubers %>
+    <% end %>
+    </div>
+</div>

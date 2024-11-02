@@ -1,0 +1,13 @@
+<div class="container col-12 col-lg-6">
+  <% if !(user_signed_in? && current_user == @list.user) %>
+    <%= render "shared/unauthorized" %>
+  <% else %>
+    <h2>Rename List</h2>
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name %>
+      <div class="form-actions">
+        <%= f.button :submit, class:"btn btn-info my-3" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

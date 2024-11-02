@@ -1,0 +1,41 @@
+<div class="container col-6">
+  <h2><%= @user.username %>'s Profile</h2>
+  <p><%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+  <% if user_signed_in? && current_user == @user && current_user.role == "admin" %>
+    <h4>Admin only</h4>
+    <%= link_to "Add VTuber Entry", new_vtuber_path, class: "main-button" %>
+    <%= link_to "Add Agency Entry", new_agency_path, class: "main-button" %>
+  <% end %>
+
+  <% if @lists.empty? %>
+    <h5>This user has no lists</h5>
+  <% else %>
+    <% @lists.each do |list| %>
+      <div class="home-list-card">
+        <div class="home-list-vtuber-row">
+
+          <% list.get_vtuber_row.each do |vtuber| %>
+            <div class="home-vtuber-card">
+              <div class="vtuber-card-pic">
+                  <%= render "shared/vtuber_picture", vtuber: vtuber %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="home-list-name">
+          <h4><%= list.name %></h4>
+        </div>
+        <div class="home-list-count">
+          <p><i class="fa-solid fa-chalkboard-user" style="color: #ffffff;"></i> <%= list.vtuber_markers.length %></p>
+        </div>
+
+
+        <%= link_to list do %>
+          <div class="click-box">
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

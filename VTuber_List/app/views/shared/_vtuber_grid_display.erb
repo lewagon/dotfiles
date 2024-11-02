@@ -1,0 +1,28 @@
+<div class="list-cards">
+    <% @vtubers.each do |vtuber| %>
+      <div class="vtuber-card" data-controller="zoom-in">
+        <div class="vtuber-card-pic" data-zoom-in-target="image">
+          <%= render "shared/vtuber_picture", vtuber: vtuber %>
+        </div>
+        <div class="vtuber-card-body" data-action="mouseover->zoom-in#zoom_in mouseout->zoom-in#zoom_out">
+          <p><%= vtuber.name %></p>
+          <%= link_to vtuber_path(vtuber) do %>
+            <div class="click-box">
+            </div>
+          <% end %>
+          <div class="vtuber-card-footer">
+            <% if vtuber.has_yt_channel? %>
+              <%= link_to vtuber.yt_channel, target: :blank do %>
+                <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
+              <% end %>
+            <% end %>
+            <% if vtuber.has_twitch_channel? %>
+              <%= link_to vtuber.twitch_channel, target: :blank do %>
+                <i class="fa-brands fa-twitch" style="color: #7d52ff;"></i>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>

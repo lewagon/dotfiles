@@ -1,0 +1,12 @@
+<div class="container page-container col-6">
+  <h4>You searched for <span class="tag-button"><%= @tag.name %></span></h4>
+  <% if !@vtubers %>
+    <p>No VTubers matched your search</p>
+  <% elsif @vtubers.length == 1 %>
+    <p><span class="search-result-number">1</span> search result</p>
+    <%= render "shared/vtuber_grid_display", vtubers: @vtubers %>
+  <% else %>
+    <p><span class="search-result-number"><%= @vtubers.length %></span> search results</p>
+    <%= render "shared/vtuber_grid_display", vtubers: @vtubers %>
+  <% end %>
+</div>

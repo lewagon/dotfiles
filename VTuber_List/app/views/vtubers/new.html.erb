@@ -1,0 +1,28 @@
+<div class="container col-6">
+<% if !(user_signed_in? && current_user.role == "admin") %>
+    <%= render "shared/unauthorized" %>
+  <% else %>
+    <h2>Make New VTuber Entry</h2>
+    <%= simple_form_for(@vtuber) do |f| %>
+      <%= f.input :name %>
+      <%= f.association :agency, collection: @agencies %>
+      <p><%= f.radio_button :gender, 'female' %> Female
+      <%= f.radio_button :gender, 'male' %> Male</p>
+      <%= f.input :birthday, discard_year: true, discard_time: true %>
+      <%= f.input :debut_date %>
+      <%= f.input :description, as: :text %>
+      <%= f.input :main_language %>
+      <%= f.input :yt_channel, label: "YouTube channel" %>
+      <%= f.input :twitch_channel %>
+      <%= f.input :photo_url %>
+      <%= f.input :active, as: :boolean %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
+
+      <%#= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <div class="form-actions">
+        <%= f.button :submit, class:"btn btn-info my-3" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

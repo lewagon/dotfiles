@@ -1,0 +1,95 @@
+<div class="container col-12 col-lg-12" style="width: 100%">
+  <nav class="navbar navbar-expand-lg">
+    <div class="navbar-container" data-controller="dropdown">
+      <div class="navbar-logo">
+        <%= link_to "VTuber List", :home, class: "navbar-logo" %>
+      </div>
+
+      <div class="navbar-search">
+        <div class="navbar-searchbar">
+          <%= form_with url: vtubers_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form",
+              placeholder: "Look for a VTuber"
+              %>
+            <%= submit_tag "Search", name: "", class:"search-button" %>
+          <% end %>
+        </div>
+        <div class="search-buttons">
+          <%= link_to agencies_path do %>
+            <span class="main-button"><i class="fa-solid fa-building"></i> Search by agency</span>
+          <% end %>
+          <%= link_to tags_path do %>
+            <span class="main-button"><i class="fa-solid fa-hashtag"></i> Search by tag</span>
+          <% end %>
+          <%= link_to :random do %>
+            <span class="main-button"><i class="fa-solid fa-dice"></i> Get random VTubers</span>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="navbar-user">
+        <% if user_signed_in? %>
+          <div class="username">
+            <%= link_to user_path(current_user) do %>
+              <i class="fa-solid fa-user-large"></i>
+              <%= current_user.username %>
+            <% end %>
+          </div>
+          <div style="align-self: flex-end;">
+            <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "main-button" %>
+          </div>
+        <% else %>
+          <%= link_to "Log in", new_user_session_path, class: "main-button" %>
+        <% end %>
+      </div>
+
+      <div class="navbar-button">
+        <button class="navbar-toggler" type="button" data-action="click->dropdown#toggle">
+          <span class="navbar-toggler-icon toggle-button"></span>
+        </button>
+      </div>
+
+
+      <div class="navbar-dropdown-menu dropdown-hidden d-none" data-dropdown-target="menu">
+        <div class="dropdown-user">
+          <% if user_signed_in? %>
+            <div class="username">
+              <%= link_to user_path(current_user) do %>
+                <i class="fa-solid fa-user-large"></i>
+                <%= current_user.username %>
+              <% end %>
+            </div>
+            <div style="align-self: flex-end;">
+              <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "main-button" %>
+            </div>
+          <% else %>
+            <%= link_to "Log in", new_user_session_path, class: "main-button" %>
+          <% end %>
+        </div>
+        <div class="dropdown-searchbar">
+          <%= form_with url: vtubers_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form",
+              placeholder: "Look for a VTuber"
+              %>
+            <%= submit_tag "Search", name: "", class:"search-button" %>
+          <% end %>
+        </div>
+        <%= link_to agencies_path do %>
+          <span class="main-button"><i class="fa-solid fa-building"></i> Search by agency</span>
+        <% end %>
+        <%= link_to tags_path do %>
+          <span class="main-button"><i class="fa-solid fa-hashtag"></i> Search by tag</span>
+        <% end %>
+        <%= link_to :random do %>
+          <span class="main-button"><i class="fa-solid fa-dice"></i> Get random VTubers</span>
+        <% end %>
+
+      </div>
+
+    </div>
+  </nav>
+</div>

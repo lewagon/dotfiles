@@ -1,0 +1,245 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
+
+
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+@import "pages/lists";
+@import "pages/vtuber_show";
+
+@import "pages/about";
+
+@import "components/button";
+
+
+// .vtuber-card {
+//   // border: 3px, black;
+//   // width: 100%;
+//   // box-shadow: 0 5px 5px 0 rgp(0,0,0,0.5);
+//   margin: 5px;
+//   border: 1px solid black;
+//   border-radius: 10px;
+//   background-color: var(--white);
+//   padding: 24px;
+// }
+
+body {
+  // background: linear-gradient(0deg, #ffa3d1 0%, #ffffff 100%);
+  background-image: url("block_background 1.png");
+  height: 100vh;
+  // width: 100vh;
+  background-size: cover;
+  background-repeat: repeat;
+  // background-attachment: fixed;
+
+}
+
+h1 {
+  font-size: 2.7rem;;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.container {
+  background-color: white;
+  padding-bottom: 1.1rem;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  // height: 100%;
+  // padding: 1rem 0 1rem 0;
+}
+
+.logo {
+  text-decoration: none;
+  font-family: 'Patrick Hand';
+}
+
+.vtuber-pic {
+  width: 200px;
+}
+
+.search-result-number {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.click-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.click-box:hover {
+  // background-color: rgba(0,0,0,0.5);
+  // transition: all 0.5s;
+}
+
+.container-2 {
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .container-2 {
+    padding: 0 24px;
+  }
+}
+
+.card {
+//   max-width: 384px;
+//   position: relative;
+//   border: 1px solid black;
+//   border-radius: 20px;
+//   background-color: var(--white);
+//   padding: 24px;
+}
+
+.card::before {
+  // content: '';
+  // width: 100%;
+  // height: 100%;
+  // position: absolute;
+  // top: 8px;
+  // left: 8px;
+  // background-color: #000000;
+  // z-index: -2;
+  // border-radius: inherit;
+  // opacity: 0;
+  // transition: all 0.5s;
+}
+
+.card:hover::before {
+  // opacity: 0;
+}
+
+.card::after {
+  // content: '';
+  // width: 100%;
+  // height: 100%;
+  // position: absolute;
+  // top: 14px;
+  // left: 14px;
+  // background-color: #000000;
+  // z-index: -1;
+  // border-radius: inherit;
+  // opacity: 0;
+  // transition: all 0.5s;
+}
+
+.card:hover::after {
+  // opacity: 1;
+}
+
+.card .card-img {
+  // border-radius: 10px;
+  // margin-bottom: 24px;
+}
+
+.badge-group {
+  margin-left: 5px;
+}
+
+// .badge-group > span {
+//   padding: 4px 12px;
+//   background-color: var(--primary);
+//   border-radius: 4px;
+//   font-size: var(--text-4);
+// }
+
+@media (max-width: 576px) {
+  .badge-group > span {
+    font-size: var(--text-5);
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.card-birthday {
+
+}
+
+.card-content .date {
+  // font-size: var(--text-4);
+}
+
+@media (max-width: 576px) {
+  .card-content .date {
+    font-size: var(--text-5);
+  }
+}
+
+.card-content .title {
+  // font-size: var(--text-1);
+  // transition: all 0.5s;
+  // cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .card-content .title {
+    font-size: var(--text-2);
+  }
+}
+
+// .card:hover .title {
+//   color: var(--primary);
+// }
+
+// .card-content .text {
+//   font-size: var(--text-3);
+//   color: var(--gray-500)
+// }
+
+@media (max-width: 576px) {
+  .card-content .text {
+    font-size: var(--text-4);
+  }
+}
+
+/* footer */
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-footer img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.card-footer .user {
+  // font-size: var(--text-4);
+}

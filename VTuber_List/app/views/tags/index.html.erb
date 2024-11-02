@@ -1,0 +1,6 @@
+<div class="container col-6">
+  <h2 style="margin-bottom: 10px;">Tags</h2>
+  <% @tags.each do |tag| %>
+    <p><span class="tag-button"><%= link_to tag.name, tag_path(tag) %></span> (<%= tag.vtuber_count %>)</p>
+    <% end %>
+</div>

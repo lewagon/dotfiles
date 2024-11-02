@@ -1,0 +1,86 @@
+.main-button {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  // margin-bottom: 0.5rem;
+}
+.main button a {
+  margin-bottom: 0.5rem;
+}
+
+.btn:hover {
+  transition: none;
+}
+
+.main-button:hover {
+  // background-color: $vtuber-purple;
+  color: $vtuber-purple;
+  // text-decoration: underline;
+  // transition: all 0.5s;
+}
+.main-button:active {
+  color: black;
+}
+
+.tag-button {
+  padding: 0 8px 0 8px;
+  margin: 1px;
+  color: white;
+  border-radius: 15px;
+  background-color: #0d21a1;
+  display: inline-block;
+  // text-decoration: none;
+}
+
+.tag-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.tag-button:hover {
+  background-color: #0d21a1;
+}
+
+.agency-button {
+  padding: 0px 8px 0px 8px;
+  margin: 1px;
+  // color: white;
+  border-radius: 15px;
+  background-color: #843285;
+  display: inline-block;
+}
+
+.agency-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.agency-button:hover {
+  background-color: #843285;
+}
+
+.submit-button {
+  color: white;
+  background-color: $vtuber-purple;
+}
+.submit-button:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  transition: all 0.5s;
+}
+
+.btn-create {
+  background-color: $vtuber-purple;
+}
+.btn-create:hover {
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+.edit-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

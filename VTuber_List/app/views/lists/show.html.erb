@@ -1,0 +1,25 @@
+<div class="container col-12 col-lg-8" data-controller="delete-button">
+  <div class="list-show-header">
+    <h2><%= @list.name %></h2>
+  </div>
+  <div>
+    <div class="list-show-subheader">
+      <p>Made by <%= @list.user.username %></p>
+      <div class="list-show-delete">
+      <%= link_to list_path(@list),
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" },
+        class: "main-button" do
+        %>
+          <i class="fa-solid fa-eraser"></i> Delete this list
+        <% end %>
+        <a class="main-button noselect" data-action="click->delete-button#trigger"><i class="fa-solid fa-square-xmark"></i> Remove a VTuber</a>
+      </div>
+    </div>
+  <div class="list-cards">
+    <% if @list.get_vtubers.empty? %>
+      <p>There are no VTubers in this list</p>
+    <% else %>
+      <%= render "shared/list_display", list: @list %>
+    <% end %>
+  </div>
+</div>

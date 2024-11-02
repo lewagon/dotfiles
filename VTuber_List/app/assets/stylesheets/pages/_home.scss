@@ -1,0 +1,120 @@
+// Specific CSS for your home-page
+.home-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.home-top-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.your-lists-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.home-list-vtuber-row {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white;
+
+
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-gap: 6px;
+  // justify-items: center;
+}
+
+.home-list-vtuber-row:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0);
+}
+
+.home-list-card {
+  height: 200px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin: 5px 0 5px 0;
+  position: relative;
+  // text-align: center;
+  background-color: white;
+
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: $vtuber-purple;
+    transition: all 0.5s ease;
+  }
+}
+
+.home-list-name {
+  // display: flex;
+  position: absolute;
+  top: 10px;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  // box-shadow: 0 15px 15px rgba(0,0,0,0.3);
+  color: white;
+  padding: 6px;
+
+}
+
+.home-list-count {
+  position: absolute;
+  bottom: 10px;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  color: white;
+  padding: 6px;
+}
+
+.home-list-name p {
+  margin-bottom: 0.0rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.home-list-name h4 {
+  margin-bottom: 0.1rem;
+  font-weight: bold;
+}
+
+.home-list-count p {
+  margin-bottom: 0.0rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.home-list-count h4 {
+  margin-bottom: 0.1rem;
+  font-weight: bold;
+}
+
+.home-vtuber-pic {
+
+}
+
+.home-vtuber-card {
+  // background-size: cover;
+  // background-position: center;
+  position: relative;
+  text-align: center;
+
+
+  height: 180px;
+  width: 20%px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // border-radius: 5px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  overflow: hidden;
+}

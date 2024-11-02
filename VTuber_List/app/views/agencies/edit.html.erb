@@ -1,0 +1,20 @@
+<div class="container col-12 col-lg-6">
+  <% if !(user_signed_in? && current_user.role == "admin") %>
+    <%= render "shared/unauthorized" %>
+  <% else %>
+    <h2>Edit Agency</h2>
+    <%= simple_form_for(@agency) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :location %>
+      <%= f.input :website %>
+      <%= f.input :yt_channel, label: "YouTube channel" %>
+      <%= f.input :description %>
+      <%= f.input :active, as: :boolean %>
+
+      <%#= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <div class="form-actions">
+        <%= f.button :submit, class:"btn-create" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,36 @@
+
+<div class="container col-12 col-lg-8">
+  <h2>You searched for random VTubers</h2>
+      <div class="list-cards">
+      <% @vtubers.each do |vtuber| %>
+        <div class="vtuber-card" data-controller="zoom-in">
+
+          <div class="vtuber-card-pic" data-zoom-in-target="image">
+            <%= render "shared/vtuber_picture", vtuber: vtuber %>
+          </div>
+
+          <div class="vtuber-card-body" data-action="mouseover->zoom-in#zoom_in mouseout->zoom-in#zoom_out">
+            <p><%= vtuber.name %></p>
+            <%= link_to vtuber_path(vtuber) do %>
+              <div class="click-box">
+              </div>
+            <% end %>
+            <div class="vtuber-card-footer">
+              <% if vtuber.yt_channel && vtuber.yt_channel != "" %>
+                <%= link_to vtuber.yt_channel, target: :blank do %>
+                  <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
+                <% end %>
+              <% end %>
+              <% if vtuber.twitch_channel && vtuber.twitch_channel != "" %>
+                <%= link_to vtuber.twitch_channel, target: :blank do %>
+                  <i class="fa-brands fa-twitch" style="color: #7d52ff;"></i>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+
+
+        </div>
+      <% end %>
+    </div>
+</div>

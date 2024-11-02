@@ -1,0 +1,79 @@
+.about-top {
+  height: 180px;
+  width: 100%;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 0;
+  margin: 0 0 5px 0;
+  position: relative;
+  background-color: white;
+  text-align: center;
+  // vertical-align: middle;
+
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+
+  display: flex;
+  justify-content: center;
+  // height: 100%;
+  // width: 100%;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // background-color: white;
+
+  h2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    // transform: translate(-50%, -50%);
+    vertical-align: middle;
+
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    font-weight: bold;
+    text-shadow: 3px 5px 5px rgba(0,0,0,0.7);
+    margin-bottom: 0;
+  }
+}
+
+.about-top-gradient {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+
+  height: 100%;
+  width: 100%;
+
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+}
+
+.about-top-text {
+
+
+  // align-self: flex-end;
+}
+
+.about-vtuber-card {
+  // background-size: cover;
+  // background-position: center;
+  position: relative;
+
+
+  height: 180px;
+  width: 20%px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // border-radius: 5px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  overflow: hidden;
+}

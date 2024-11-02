@@ -1,0 +1,52 @@
+<div class="container col-12 col-lg-6">
+  <div class="home-top">
+    <h1 style="font-family: 'Patrick Hand';">VTuber List</h1>
+
+    <div class="home-top-links">
+
+    </div>
+  </div>
+  <div class="your-lists-header">
+    <h2><strong>Your lists</strong></h2>
+    <% if user_signed_in? %>
+      <%= link_to new_list_path do %>
+        <span class="main-button"><i class="fa-solid fa-file-circle-plus" style="align-self: center;"></i> Make a new list</span>
+      <% end %>
+    <% end %>
+  </div>
+
+  <% if !user_signed_in? %>
+    <h5>Log in to make a list!</h5>
+  <% elsif @lists.empty? %>
+    <h5>You don't have any lists yet</h5>
+  <% else %>
+
+    <% @lists.each do |list| %>
+      <div class="home-list-card">
+        <div class="home-list-vtuber-row">
+
+          <% list.get_vtuber_row.each do |vtuber| %>
+            <div class="home-vtuber-card">
+              <div class="vtuber-card-pic">
+                  <%= render "shared/vtuber_picture", vtuber: vtuber %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="home-list-name">
+          <h4><%= list.name %></h4>
+        </div>
+        <div class="home-list-count">
+          <p><i class="fa-solid fa-chalkboard-user" style="color: #ffffff;"></i> <%= list.vtuber_markers.length %></p>
+        </div>
+
+
+        <%= link_to list do %>
+          <div class="click-box">
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

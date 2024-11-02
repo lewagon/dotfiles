@@ -1,0 +1,12 @@
+<div class="container col-6">
+  <h2 style="margin-bottom: 10px;">Agencies</h2>
+    <% @agencies.each do |agency| %>
+      <%# <div class="agency"> %>
+        <p><span class="agency-button"><%= link_to agency.name, agency_path(agency) %></span> (<%= agency.vtuber_count %>)</p>
+        <% vtubers = Vtuber.where(agency: agency).order(name: :asc) %>
+        <% if vtubers != [] %>
+          <%#= render "shared/vtuber_picture", vtuber: vtubers.sample %>
+        <% end %>
+      <%# </div> %>
+    <% end %>
+</div>

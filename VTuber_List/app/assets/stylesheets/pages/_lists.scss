@@ -1,0 +1,249 @@
+.list-page{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.list-show-header {
+  display: flex;
+  justify-content: space-between;
+  // align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+.list-show-delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.list-show-delete p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.list-show-delete a {
+  cursor: pointer;
+}
+
+.list-cards {
+  display: flex;
+  flex-wrap: wrap;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-gap: 6px;
+  justify-content: center;
+}
+
+.list-card-image {
+  width: 180px;
+  height: 100%;
+}
+
+.vtuber-card {
+  // background-size: cover;
+  // background-position: center;
+  position: relative;
+  text-align: center;
+
+  height: 180px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // border-radius: 5px;
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.2);
+  // border: 1px solid gray;
+
+  overflow: hidden;
+  margin: 0 10px 10px 10px;
+}
+
+.list-show-subheader {
+  display: flex;
+  justify-content: space-between;
+}
+.vtuber-delete {
+  position: absolute;
+  font-size: 2rem;
+  top: 0;
+  right: 0;
+  // transform: translate(-50%, -50%);
+  z-index: 1;
+
+}
+.vtuber-delete a {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.vtuber-delete i {
+  color: black;
+  // background-color: white;
+}
+.vtuber-delete:hover i {
+  // background-color: black;
+  // color: rgb(0, 0, 0);
+  // transition: all 0.5s
+}
+
+
+
+@media (max-width: 776px) {
+  .vtuber-card {
+    margin: 0 3px 10px 3px;
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vtuber-card {
+    margin: 0 3px 10px 3px;
+    height: 165px;
+    width: 165px;
+  }
+
+}
+
+.default-picture {
+  margin: 0;
+  line-height: 99%;
+  position: relative;
+  text-align: center;
+
+  background-color: $vtuber-purple;
+  width: 360px;
+  height: 100%;
+
+  // background-image: url("dessert-on-a-plate.jpg");
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+  }
+}
+.default-picture p:hover {
+  opacity: 0;
+}
+
+.vtuber-card-pic {
+  height: 200px;
+  display: flex;
+  align-items: center;
+
+  transform: scale(1.0);
+  transition: all 0.5s;
+}
+
+.vtuber-card:hover {
+  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+  // transition: 0.5s ease;
+}
+
+.vtuber-card-pic:hover {
+  // transform: scale(1.2);
+  // transition: transform 0.3s ease-in-out;
+  // height: 120%;
+  // width: 120%;
+  // // display: flex;
+  // // justify-content: center;
+  // // align-items: center;
+  // transition: 0.5s ease;
+}
+.vtuber-pic:hover {
+  // transform: scale(1.2);
+}
+
+.vtuber-card-body {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 99%;
+
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::before {
+    opacity:0;
+  }
+}
+
+.vtuber-card-body p {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  text-decoration: none;
+  margin-bottom: 0;
+  // position: absolute;
+  // bottom: 50%;
+  // left: 50%;
+  // top: 25%;
+  // right: 25%
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+}
+
+.vtuber-card-body i {
+  text-shadow: 0 0 20px rgba(255,255,255, 1);
+  border-radius: 50%;
+  padding: 3px;
+
+  &:hover {
+    // text-shadow: 0 0 10px rgba(255,255,255, 1);
+  background-color: white;
+  transition: all 0.5s ease;
+  }
+}
+
+.vtuber-card-pic:hover {
+  // transform: scale(1.2);
+  // transition: 0.5s ease;
+}
+.zoom-in {
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+}
+// .vtuber-card-body:hover::after {
+//   opacity: 0;
+// }
+
+
+.vtuber-card-footer {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

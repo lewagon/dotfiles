@@ -1,0 +1,95 @@
+<div class="container col-12 col-lg-6">
+  <%#= link_to "Go back", :back %>
+  <div style="position: relative;">
+  <% if user_signed_in? && current_user.role == "admin" %>
+    <div class="edit-button"><%= link_to "Edit VTuber info", edit_vtuber_path %></div>
+  <% end %>
+  <div class="vtuber-show-container">
+      <div class="vtuber-show-picture-card">
+
+        <% if @vtuber.vertical_picture.attached? %>
+          <%= cl_image_tag @vtuber.vertical_picture.key, class: "vtuber-tall-picture" %>
+
+        <% elsif @vtuber.photo_url %>
+          <%= image_tag @vtuber.photo_url, class: "vtuber-tall-picture" %>
+        <% end %>
+        <%#= image_tag @vtuber.photo_url, class: "vtuber-pic" if @vtuber.photo_url %>
+      </div>
+
+      <div class="vtuber-show-body">
+        <div class="badge-group">
+          <h3><span class="fw-bold show-card-name"><%= @vtuber.name %></span></h3>
+          <% if @vtuber.has_jp_name? %>
+            <h5><span class="show-card-name"><%= @vtuber.jp_name %></span></h5>
+          <% end %>
+          <h3>
+          <% if @vtuber.has_yt_channel?  %>
+            <%= link_to @vtuber.yt_channel, target: :blank do %>
+              <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
+            <% end %>
+          <% end %>
+          <% if @vtuber.has_twitch_channel? %>
+            <%= link_to @vtuber.twitch_channel, target: :blank do %>
+              <i class="fa-brands fa-twitch" style="color: #7d52ff;"></i>
+            <% end %>
+          <% end %>
+          </h3>
+        </div>
+        <div class="vtuber-show-card-content">
+          <p><span class="btn agency-button"><%= link_to @vtuber.agency.name, agency_path(@vtuber.agency) %></span></p>
+          <div class="vtuber-show-card-info">
+            <table>
+              <tr>
+                <td><strong>Gender:</strong></td>
+                <td><%= @vtuber.gender.capitalize %></td>
+              </tr>
+              <tr>
+                <td><strong>Main language:</strong></td>
+                <td><%= @vtuber.main_language %></td>
+              </tr>
+              <tr>
+                <td><strong>Birthday:</strong></td>
+                <td><%= @vtuber.get_birthday %></td>
+              </tr>
+              <tr>
+                <td><strong>Debut date:</strong></td>
+                <td><%= @vtuber.get_debut_date %></td>
+              </tr>
+            </table>
+              <% if !@vtuber.active %>
+                <p><%= @vtuber.name %> is not active.</p>
+              <% end %>
+          </div>
+          <p style="white-space: pre-line;"><%= @vtuber.description %></p>
+        </div>
+      </div>
+    </div>
+    <div class="vtuber-show-footer">
+      <div class="vtuber-show-tags">
+        <h4>Tags</h4>
+        <% @vtuber.tags.each do |tag| %>
+          <span class="btn tag-button"><%= link_to tag.name, tag_path(tag) %></span>
+        <% end %>
+        </div>
+      </div>
+      <div class="vtuber-show-add" style="width: 50%;">
+        <% if !user_signed_in? %>
+          <h5><%= link_to "Log in", new_user_session_path, class: "main-button" %> to add this VTuber to a list</h5>
+        <% elsif @lists.empty? %>
+          <h5><%= link_to "Make a new list", new_list_path, class: "main-button" %> to add this VTuber</h5>
+        <% else %>
+          <h4>Add this VTuber to a list</h4>
+          <div>
+            <%= simple_form_for @marker do |f| %>
+              <%= f.hidden_field :vtuber_id, value: Vtuber.find(params[:id]).id %>
+              <%= f.association :list, collection: @lists %>
+              <div class="form-actions">
+              <%= f.button :submit, value: "Add VTuber", class: "btn submit-button" %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

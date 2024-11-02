@@ -1,0 +1,34 @@
+
+<div class="container col-12 col-lg-6">
+  <div class="about-top">
+
+    <% if @vtubers.length == 10 %>
+      <% @vtubers[0,5].each do |vtuber| %>
+        <div class="about-vtuber-card">
+          <div class="vtuber-card-pic">
+              <%= cl_image_tag vtuber.thumbnail.key, crop: :thumb, gravity: :face, class: "vtuber-pic" %>
+          </div>
+        </div>
+      <% end %>
+      <br>
+      <% @vtubers[5,5].each do |vtuber| %>
+        <div class="about-vtuber-card">
+          <div class="vtuber-card-pic">
+              <%= cl_image_tag vtuber.thumbnail.key, crop: :thumb, gravity: :face, class: "vtuber-pic" %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+      <h2>Welcome to VTuber List</h2>
+
+  </div>
+  <div class="about-body">
+    <p>Hi, I'm Candy Tee, and I made VTuber List because I like VTubers.<br><br>
+    I like them so much, I keep getting recommended streams from random VTubers every time I go on YouTube, and I compulsively add them to one of my playlists.<br><br>
+    Eventually, I had so many VTubers saved, I forgot which ones I already saved, and every time I thought something like, "Who's that one Chinese VTuber with the sick cover of I Beg You?", I had to dig through all of my playlists just to look for that one VTuber (I never found that Chinese VTuber again, by the way).
+    That's when I thought, "Screw it, I'll just make a web app for this." And that's how I made this website.<br><br>
+    Make lists of your favorite VTubers, or VTubers that you found by coincidence and want to check out later. Or, you can make dumb lists about whatever.<br><br>
+    Discover new VTubers. Share your lists with your friends so that you can support your oshis and your friends can find out about your oshis and roast your trash taste.</p>
+  </div>
+</div>

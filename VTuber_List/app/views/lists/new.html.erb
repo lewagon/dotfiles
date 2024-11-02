@@ -1,0 +1,13 @@
+<div class="container col-6">
+  <% if !user_signed_in? %>
+    <%= render "shared/unauthorized" %>
+  <% else %>
+    <h2>Make New VTuber List</h2>
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name %>
+      <div class="form-actions">
+        <%= f.button :submit, class:"btn-create" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

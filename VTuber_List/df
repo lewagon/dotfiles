@@ -1,0 +1,341 @@
+[33mcommit b08f36f64728a416447f4b527ecc2dfb21c04ff0[m[33m ([m[1;36mHEAD -> [m[1;32mdropdown[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sat Sep 28 00:58:48 2024 +0900
+
+    seeds
+
+[33mcommit fd6bd16826279fd6e061548393d609b8ef2a2c1b[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Thu Sep 26 00:27:55 2024 +0900
+
+    seeds
+
+[33mcommit 4b9ddb67c7bd03d88e32607c4562e4acf07aa87a[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Wed Sep 25 02:07:39 2024 +0900
+
+    images centered in about page
+
+[33mcommit 6604f93753ef2cad7becf7ddf122636f27173e1e[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Wed Sep 25 01:21:30 2024 +0900
+
+    navbar
+
+[33mcommit 4ee9d57f09ae0d08d3fc5cac24122b0b5d9f8dc8[m[33m ([m[1;31morigin/dropdown[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Tue Sep 24 20:29:57 2024 +0900
+
+    vtuber show form
+
+[33mcommit 18cef76311d3f3409e4dbcd21bb2d5f391da021e[m[33m ([m[1;31morigin/about[m[33m, [m[1;32mabout[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Tue Sep 24 01:22:26 2024 +0900
+
+    seeds
+
+[33mcommit 86077ade2c9944107ca58641538b6648a75d4382[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Mon Sep 23 22:51:59 2024 +0900
+
+    page permissions
+
+[33mcommit e49bc8c5745f9150b68b2d29fb863eebbbb0d2f9[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Mon Sep 23 16:47:54 2024 +0900
+
+    added seeds
+
+[33mcommit d4345c51bb770a13633c64a823475978efa6eadf[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 22 17:29:28 2024 +0900
+
+    made about page
+
+[33mcommit d9b5b33d86f800cb23e19f9c9181394201ea87e3[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 22 15:59:02 2024 +0900
+
+    moved delete list/vtuber buttons
+
+[33mcommit 8ab316eb73a9cac87461954fda6a055e34b939c8[m[33m ([m[1;31morigin/animation-fix[m[33m, [m[1;32manimation-fix[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 22 10:12:11 2024 +0900
+
+    seeds
+
+[33mcommit d98c6f0dc06e71e3875bc92c41f88bba7b60679b[m[33m ([m[1;32mvtuber-delete[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 22 03:24:12 2024 +0900
+
+    Javascript
+
+[33mcommit 9b4d124991ab32baf5975e856d3d755b15813b9d[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 22 02:51:56 2024 +0900
+
+    zoom Javascript
+
+[33mcommit 127efb1cb6ed39d88939c03bd3f05390c63efb57[m[33m ([m[1;31morigin/vtuber-delete[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sat Sep 21 23:05:11 2024 +0900
+
+    added background, only user's own lists can be selected in VTuber show
+
+[33mcommit 205bcfa27524427cda911837fa6ed11f13248240[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sat Sep 21 16:55:28 2024 +0900
+
+    user check on home page
+
+[33mcommit 575301f8f5e7dd538688237a8e35aae7522c58f3[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sat Sep 21 15:51:51 2024 +0900
+
+    VTuber cards are not clickable when delete button is triggered
+
+[33mcommit f9f7cfbf70102934fa75b82d08a9202d3eda6dae[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sat Sep 21 03:42:26 2024 +0900
+
+    delete buttons can be triggered
+
+[33mcommit 4f02bef69ef11611b79e2f904341a33891aa4972[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Fri Sep 20 20:33:08 2024 +0900
+
+    VTubers can be removed from lists
+
+[33mcommit 0203706671fe830558ed0248dc9e8054d0236735[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Fri Sep 20 20:23:20 2024 +0900
+
+    delete button added
+
+[33mcommit 52c86381c5ec4c5b89d3bcd667ac029cce618dff[m[33m ([m[1;31morigin/seeds[m[33m, [m[1;32mseeds[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Fri Sep 20 01:21:08 2024 +0900
+
+    check login before adding VTuber to list
+
+[33mcommit 9341d08321bfd395e1a015ce8acd53c5f625b9c8[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Fri Sep 20 01:10:42 2024 +0900
+
+    JP name is displayed in VTuber show
+
+[33mcommit 05df0f8ad6ac37910d2200bc8a5bcee397b2d5b6[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Thu Sep 19 23:32:22 2024 +0900
+
+    vtuber batch 2 seeds
+
+[33mcommit 1e9ff2905f0ce2c261a75221684804f40ce50c38[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Thu Sep 19 11:50:25 2024 +0900
+
+    tags seeds file created
+
+[33mcommit 2336d7a7379dfef74bbae8dd4a5f0ff33d804534[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Thu Sep 19 02:50:25 2024 +0900
+
+    new seed file
+
+[33mcommit e571aad88dcf94e0cdbc80e40e8c040e1ad6591f[m[33m ([m[1;31morigin/active-record[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Thu Sep 19 02:33:37 2024 +0900
+
+    vtuber show css
+
+[33mcommit 3a60f3a29fe3a75426e5123b1d5d281045627cfe[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Wed Sep 18 16:06:58 2024 +0900
+
+    separate seeds file for images
+
+[33mcommit 698584a89f1f27816671f6f2b5bbb80daf79881e[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Wed Sep 18 09:44:16 2024 +0900
+
+    multiples seed files
+
+[33mcommit 8d49c39d60a5b5b09874fb60c89f477c92103bee[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Wed Sep 18 02:25:29 2024 +0900
+
+    thumbnail and vertical pictures can be seeded
+
+[33mcommit 33a71c04b8dc79241ac587026194c3bf458d95d9[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Tue Sep 17 19:59:36 2024 +0900
+
+    css
+
+[33mcommit 4059da5bfac13d8b0cca44caf7ad20c78f488585[m[33m ([m[1;31morigin/vtuber-show[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Tue Sep 17 16:28:43 2024 +0900
+
+    list edit
+
+[33mcommit 6516e38a01c26abc453fc5bbf715fbcf77f3e45c[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Tue Sep 17 13:08:25 2024 +0900
+
+    home and list show header flexbox
+
+[33mcommit 0cd97cdf0699667459c4899508185103213c1b1b[m[33m ([m[1;31morigin/home-vtuber-row[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Tue Sep 17 02:10:34 2024 +0900
+
+    navbar and list show css
+
+[33mcommit d5bc76855e859d95320247bd3faf32454275095c[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Mon Sep 16 01:11:24 2024 +0900
+
+    home vtuber rows can display less than five VTubers, no repeats
+
+[33mcommit cfd6554ed6fcbb26acf2eebc6b4ffdd303533de2[m[33m ([m[1;31morigin/list-new[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Mon Sep 16 00:31:54 2024 +0900
+
+    button css
+
+[33mcommit 8492d735b9f79232d262c49219946481eca98b96[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 15 15:47:46 2024 +0900
+
+    user can now add new list
+
+[33mcommit 030295a230a6046fc5b0605f101ed89c1fa5e51e[m[33m ([m[1;31morigin/css[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 15 10:00:39 2024 +0900
+
+    home css
+
+[33mcommit b18ee72ff5e576433e005b4229a5ccbf1fa8cfbe[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 15 02:14:42 2024 +0900
+
+    home css
+
+[33mcommit 4a7c8612951192755b533ab70aca87a2e7a4acd7[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Fri Sep 13 22:31:51 2024 +0900
+
+    agency index, tag index
+
+[33mcommit 1e6092a3f08480d842ee0da56112d91bd1d34cfe[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Fri Sep 13 14:12:15 2024 +0900
+
+    seeds, date format
+
+[33mcommit 01407b10ba1b892662fba06020d6db268e5d0c46[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Fri Sep 13 02:31:50 2024 +0900
+
+    CSS, list show order
+
+[33mcommit 338c1cce3e0a4806acc573a346cf597ec5c50a3c[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Thu Sep 12 19:42:45 2024 +0900
+
+    tag links added to VTuber show
+
+[33mcommit a8dbadae58a590ef2f2118a7219bc0bd82f7b164[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Thu Sep 12 13:14:20 2024 +0900
+
+    tag show
+
+[33mcommit 3c4c1f240db18ee328375192564ddd770e007b65[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Wed Sep 11 00:30:41 2024 +0900
+
+    add tag method
+
+[33mcommit 27ea7c13775574a90e9b735b81bdf00e3f2e2423[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Tue Sep 10 16:10:43 2024 +0900
+
+    seeds
+
+[33mcommit 67a8cd24c92fcae14260969dc44034d84f6df564[m
+Merge: 14c7734 c7d78d1
+Author: Sunjun Hwang <64548537+Junichoco@users.noreply.github.com>
+Date:   Thu Sep 5 15:50:09 2024 +0900
+
+    Merge pull request #2 from Junichoco/devise
+    
+    Devise
+
+[33mcommit c7d78d1ffe62fd9bbae5ac17fd13bb6ce92d2a14[m[33m ([m[1;31morigin/devise[m[33m)[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Thu Sep 5 15:49:22 2024 +0900
+
+    devise works
+
+[33mcommit eaaa50601c5e086f437501b3b692d7d768ddf553[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Mon Sep 2 19:43:15 2024 +0900
+
+    tags and locations
+
+[33mcommit 14c7734b93191c3ab9071cb58d78322a44004ab8[m
+Merge: b8b3756 83c4291
+Author: Sunjun Hwang <64548537+Junichoco@users.noreply.github.com>
+Date:   Mon Sep 2 12:51:31 2024 +0900
+
+    Merge pull request #1 from Junichoco/devise
+    
+    Devise
+
+[33mcommit 83c42911ddd1662496d7e18bdf1bac54c23ce1f9[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Mon Sep 2 12:48:07 2024 +0900
+
+    added readme
+
+[33mcommit e522b865f3c38f8a040eb04d89f4ff2bb67c642d[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sun Sep 1 14:18:22 2024 +0900
+
+    Add dotenv-rails
+
+[33mcommit 2285b013431a6990bc0db7e441ba343e32d47ca6[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sat Aug 31 16:02:27 2024 +0900
+
+    list display css
+
+[33mcommit 49d7492f8f4b47864c252bfce65ddad45837ed4b[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Fri Aug 30 16:26:22 2024 +0900
+
+    add vtuber works
+
+[33mcommit c97bb11f3b96d4cd49522f1e7be73e1067102517[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Wed Aug 28 16:59:25 2024 +0900
+
+    works
+
+[33mcommit b8b3756d29f3905c706055171750bcc82319734e[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Tue Aug 27 08:54:17 2024 +0900
+
+    start
+
+[33mcommit 43d1ab19fea779e8aedf39b74ba165a7380007ae[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sat Aug 10 12:08:24 2024 +0900
+
+    added migrations
+
+[33mcommit 2f17e465e105fdef2fa71ac27dce7ff6b7f93932[m
+Author: Sunjun Hwang <sunjun.software@gmail.com>
+Date:   Sat Aug 10 11:55:34 2024 +0900
+
+    Initial commit with minimal template from https://github.com/lewagon/rails-templates

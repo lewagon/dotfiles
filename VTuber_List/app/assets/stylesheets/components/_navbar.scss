@@ -1,0 +1,133 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.navbar-logo {
+  display: inline-block;
+}
+.navbar-container {
+  width: 100%;
+  // padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  font-family: 'Patrick Hand';
+  font-size: 2rem;
+  color: black;
+}
+.navbar-logo:hover {
+  color: $vtuber-purple;
+}
+
+@media (max-width: 576px) {
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+}
+
+.navbar-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.navbar-search-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-button {
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 5%;
+}
+.navbar-collapse {
+
+}
+
+.navbar-searchbar {
+  line-height: 1rem;
+}
+.search-button {
+  // height: 1rem;
+  line-height: rem;
+  background-color: black;
+  color: white;
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+.search-button:hover {
+  background-color: $vtuber-purple;
+  // transition: all 0.5s;
+}
+
+.navbar-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: center;
+
+  a{
+    text-decoration: bold;
+    color: black;
+  }
+}
+.navbar-username {
+  display: inline-block;
+
+}
+
+.navbar-search-user {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-dropdown-menu {
+  width: 100%;
+  background-color: beige;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid;
+
+  position: absolute;
+  top: 4rem;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.dropdown-hidden {
+  display: none;
+}
+.dropdown-user a {
+  text-decoration: bold;
+  color: black;
+}
+@media (max-width: 767px) {
+  .navbar-search-user {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-button {
+    display: block;
+  }
+  .navbar-search {
+    display: none;
+  }
+  .navbar-user {
+    display: none;
+  }
+  .dropdown-hidden {
+    display: flex;
+  }
+}

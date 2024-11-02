@@ -1,0 +1,32 @@
+<% list.vtuber_markers.order(id: :asc).each do |marker| %>
+  <div class="vtuber-card" data-controller="zoom-in">
+    <div class="vtuber-delete d-none" data-delete-button-target="button">
+      <%= link_to vtuber_marker_path(marker),
+        data: { turbo_method: :delete, turbo_confirm: "Delete this VTuber from this list?" } do %>
+          <i class="fa-solid fa-square-xmark"></i>
+        <% end %>
+    </div>
+    <div class="vtuber-card-pic" data-zoom-in-target="image">
+        <%= render "shared/vtuber_picture", vtuber: marker.vtuber %>
+    </div>
+    <div class="vtuber-card-body" data-action="mouseover->zoom-in#zoom_in mouseout->zoom-in#zoom_out">
+      <p><%= marker.vtuber.name %></p>
+      <%= link_to vtuber_path(marker.vtuber) do %>
+        <div class="click-box" data-delete-button-target="link">
+        </div>
+      <% end %>
+      <div class="vtuber-card-footer" data-delete-button-target="link">
+        <% if marker.vtuber.has_yt_channel? %>
+          <%= link_to marker.vtuber.yt_channel, target: :blank do %>
+            <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
+          <% end %>
+        <% end %>
+        <% if marker.vtuber.has_twitch_channel? %>
+          <%= link_to marker.vtuber.twitch_channel, target: :blank do %>
+            <i class="fa-brands fa-twitch" style="color: #7d52ff;"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
