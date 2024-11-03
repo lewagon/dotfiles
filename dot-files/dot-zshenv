@@ -28,6 +28,11 @@ export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle/plugins"
 # GnuPG XDG Base Directory
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
+# NPM XDG Base Directory
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/config"
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR/npm"
+
 # Zsh XDG Base Directory
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_STATE_HOME/zsh/zsh_history"
