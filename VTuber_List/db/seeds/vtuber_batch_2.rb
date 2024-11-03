@@ -1507,8 +1507,8 @@ require_relative "agency_names"
     twitch_channel: "https://twitch.tv/noshime_mena"
   },
   {
-    name: "Rica",
-    jp_name: "利香",
+    name: "Hanamiya Rica",
+    jp_name: "花宮利香",
     description: "A vampire VTuber. Formerly Yozora Mel from Hololive.",
     agency: @indie,
     gender: "female",
@@ -1563,8 +1563,84 @@ require_relative "agency_names"
     gender: "female",
     main_language: "Japanese",
     yt_channel: "https://www.youtube.com/@CecilCh"
+  },
+  {
+    name: "Sasaki Saku",
+    jp_name: "笹木咲",
+    description: "An 11th grade high schooler who loves video games and aquariums.",
+    agency: @niji,
+    gender: "female",
+    main_language: "Japanese",
+    birthday: "2020/11/11",
+    debut_date: "2018/07/07",
+    yt_channel: "https://www.youtube.com/@SasakiSaku"
+  },
+  {
+    name: "Shiina Yuika",
+    jp_name: "椎名唯華",
+    description: "A 10th grade high schooler with a Kansai dialect who loves video games and is secretly a supernaturalist.",
+    agency: @niji,
+    gender: "female",
+    main_language: "Japanese",
+    birthday: "2020/04/17",
+    debut_date: "2018/08/01",
+    yt_channel: "https://www.youtube.com/channel/UC_4tXjqecqox5Uc05ncxpxg"
+  },
+  {
+    name: "Koaku Mayo",
+    jp_name: "恋惡まよ",
+    description: "A little devil who was banished from the netherworld because her powers were too weak.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@koakumayo"
+  },
+  {
+    name: "Chudoku Hera",
+    jp_name: "中毒へら",
+    description: "A menhera VTuber who sometimes does webcam streams.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@ChudokuHera"
+  },
+  {
+    name: "Uichi Maho",
+    jp_name: "羽壱まほ",
+    description: "No description available.",
+    agency: @vjidai,
+    gender: "female",
+    main_language: "Japanese",
+    birthday: "2020/06/28",
+    yt_channel: "https://www.youtube.com/@uichimaho"
+  },
+  {
+    name: "Kousaka Mayu",
+    jp_name: "香坂まゆ",
+    description: "The student council president of Sakura Gakuen.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@mayu_02_25"
+  },
+  {
+    name: "apriella",
+    description: "A VTuber and singer who also does IRL content.",
+    agency: @indie,
+    gender: "female",
+    main_language: "English",
+    yt_channel: "https://www.youtube.com/@apriella_",
+    twitch_channel: "twitch.tv/apriella"
+  },
+  {
+    name: "Konkon Tamashii",
+    jp_name: "魂〃たましぃ",
+    description: "No description available.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@__3soul"
   }
-
 ].each do |vtuber|
   if !Vtuber.find_by_name(vtuber[:name])
     puts "#{vtuber[:name]} created" if Vtuber.create!(vtuber)

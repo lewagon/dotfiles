@@ -1,10 +1,14 @@
 <% if vtuber.thumbnail.attached? %>
-  <%= cl_image_tag vtuber.thumbnail.key, crop: :thumb, gravity: :face, class: "vtuber-pic" %>
+  <div class="vtuber-card-pic" data-zoom-in-target="image">
+    <%= cl_image_tag vtuber.thumbnail.key, crop: :thumb, gravity: :face, class: "vtuber-pic" %>
+  </div>
 <% elsif vtuber.photo_url && vtuber.photo_url != ""%>
-  <%= image_tag vtuber.photo_url, class: "vtuber-pic" %>
+  <div class="vtuber-card-pic" data-zoom-in-target="image">
+    <%= image_tag vtuber.photo_url, class: "vtuber-pic" %>
+  </div>
 <% else %>
   <div class="default-picture">
-    <p data-zoom-in-target="name"><%= vtuber.name %></p>
+    <p><%= vtuber.name %></p>
   </div>
 
 <% end %>

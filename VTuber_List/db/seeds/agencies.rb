@@ -228,6 +228,13 @@
     description: "A parallel artist production agency.",
     location: "Japan",
     website: "https://parareal.jp/"
+  },
+  {
+    name: "Vjidai",
+    description: "No description available.",
+    location: "Japan",
+    website: "https://vjidai.com/",
+    yt_channel: "https://www.youtube.com/@vjidai"
   }
 
 ].each do |agency|

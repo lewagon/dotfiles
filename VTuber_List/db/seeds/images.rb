@@ -14,7 +14,7 @@ images = [
   { name: "Mori Calliope", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726638300/Mori_Calliope_Portrait_xy8t3l.webp", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1728191229/Mori-Calliope_pr-img_02_ve4j1n.png"},
   { name: "Gavis Bettel", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1727833402/bettel_thumb_onlsaa.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1727833403/bettel_lzjzar.png"},
   { name: "Minato Aqua", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726638300/Minato_Aqua_Portrait_zhgxz9.webp", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1728191305/Minato-Aqua_kpcucm.png"},
-  { name: "Axel Syrios", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726640061/axel_thumb_2_viqdel.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1728191567/Axel_nwffxe.png"},
+  { name: "Axel Syrios", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730648418/axel_thumb_3_khxi7i.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1728191567/Axel_nwffxe.png"},
   { name: "KAF", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726639294/kaf_thumb_m57i5z.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1728191608/kaf_kevuio.png"},
   { name: "Phoebe Chan", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726673208/phoebe_thumb_dbarum.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726675426/phoebe_2_pizxvf.jpg"},
   { name: "Lottie Shinju", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726759317/lottie_thumb_qszmjt.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726759689/lottie_uberkm.png"},
@@ -160,7 +160,11 @@ images = [
   { name: "Sakurane Kotori", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1729128841/sakurane_thumb_rnmwdu.jpg", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1729128842/sakurane_kotori_uzqia2.jpg"},
   { name: "Tokusari Kukuri", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1729171301/kukuri_thumb_dzkg1u.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1729171300/tokusari_xrtei1.png"},
   { name: "Kugumi Rui", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1729171649/kugumi_rui_thumb_tgo2ti.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1729171650/kugumi_rui_ycvavt.jpg"},
-  { name: "Yuuki Sakuna", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730129046/sakuna_thumb_bh1k47.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730129047/Sakuna_2_ozqgxg.png"}
+  { name: "Yuuki Sakuna", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730129046/sakuna_thumb_bh1k47.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730129047/Sakuna_2_ozqgxg.png"},
+  { name: "Sasaki Saku", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730591319/saku_thumb_pvjpxs.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730591319/saku_3_uezeph.png"},
+  { name: "Shiina Yuika", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730591727/yuika_thumb_se2cwe.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730591726/yuika_3_domjkp.png"},
+  { name: "Uichi Maho", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730594774/maho_thumb_e6ycjj.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730594774/maho_ixd6hq.jpg"},
+  { name: "Ami Amami", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726589164/development/dn64agp889fwsfa5ky9z4tl5tgj4.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730633553/ami_2_tx82pa.png"}
 ]
 
 puts "Thumbnails"

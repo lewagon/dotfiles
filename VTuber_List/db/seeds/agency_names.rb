@@ -34,3 +34,5 @@
 @hasunosora = Agency.find_by_name("Hasunosora Girls' High School Idol Club")
 @mugendai = Agency.find_by_name("Mugendai MewType")
 @himehina = Agency.find_by_name("HIMEHINA")
+@niji = Agency.find_by_name("Nijisanji")
+@vjidai = Agency.find_by_name("Vjidai")

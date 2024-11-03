@@ -6,9 +6,9 @@
           <i class="fa-solid fa-square-xmark"></i>
         <% end %>
     </div>
-    <div class="vtuber-card-pic" data-zoom-in-target="image">
+
         <%= render "shared/vtuber_picture", vtuber: marker.vtuber %>
-    </div>
+
     <div class="vtuber-card-body" data-action="mouseover->zoom-in#zoom_in mouseout->zoom-in#zoom_out">
       <p><%= marker.vtuber.name %></p>
       <%= link_to vtuber_path(marker.vtuber) do %>

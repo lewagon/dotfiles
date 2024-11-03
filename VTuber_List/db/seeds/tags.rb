@@ -138,6 +138,10 @@ end
   {
     name: "Rica",
     tags: ["singer", "ASMR"]
+  },
+  {
+    name: "Kousaka Mayu",
+    tags: ["cooking"]
   }
 
 ].each do |hash|
