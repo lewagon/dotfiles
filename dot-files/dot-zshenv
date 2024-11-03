@@ -6,11 +6,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_DATA_DIRS="/usr/local/share/:/usr/share/:/opt/homebrew/share"
 export XDG_RUNTIME_DIR="$HOME/.local/runtime"
 
-# Bundler XDG Base Directory
-export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
-export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle/config"
-export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle/plugins"
-
 # ASDF XDG Base Directory
 export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/asdfrc"
 export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
@@ -24,6 +19,14 @@ export AWS_CLI_HISTORY_FILE="$XDG_DATA_HOME/aws/history"
 export AWS_CREDENTIALS_FILE="$XDG_DATA_HOME/aws/credentials"
 # export AWS_WEB_IDENTITY_TOKEN_FILE="$XDG_DATA_HOME/aws/token"
 export AWS_SHARED_CREDENTIALS_FILE="$AWS_CREDENTIALS_FILE"
+
+# Bundler XDG Base Directory
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle/config"
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle/plugins"
+
+# GnuPG XDG Base Directory
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # Zsh XDG Base Directory
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
