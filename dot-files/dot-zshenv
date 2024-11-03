@@ -30,10 +30,10 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_STATE_HOME/zsh/zsh_history"
 export SHELL_SESSION_DIR="$XDG_STATE_HOME/zsh/sessions"
 
-export EDITOR="cursor --wait"
+export EDITOR="code --wait"
 export RUBY_CONFIGURE_OPTS="--enable-yjit"
-export THOR_MERGE="cursor --wait --merge"
-export THOR_DIFF="cursor --wait --diff"
+export THOR_MERGE="code --wait --merge"
+export THOR_DIFF="code --wait --diff"
 
 # Git debugging
 # export GIT_CURL_VERBOSE=/Users/a0830202/git.log
