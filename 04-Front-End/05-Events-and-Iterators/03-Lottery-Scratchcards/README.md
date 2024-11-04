@@ -52,7 +52,7 @@ It wouldn't be gambling if the user knew how much they'd win for each scratchcar
 If you take a look at the HTML, you'll notice that each scratchcard looks like this:
 
 ```html
-<li class="scratchard" data-amount="5" data-scratched="false"></li>
+<li class="scratchcard" data-amount="5" data-scratched="false"></li>
 ```
 
 The key detail is the `data-amount="5"`. This card would win us 5€ 🎉
@@ -84,14 +84,14 @@ The only problem is that, right now, you can click the same scratchcard more tha
 If you take a look back at the HTML, you'll notice:
 
 ```html
-<li class="scratchard" data-amount="5" data-scratched="false"></li>
+<li class="scratchcard" data-amount="5" data-scratched="false"></li>
 ```
 
 There's also a `data-scratched="false"` property on there that we haven't used yet. You can have as many data attributes on one HTML element as you want (as long as they have different names), so it's no issue to use both `data-amount` and `data-scratched` here.
 
 Here are your tasks:
 
-1. When the user clicks on a scratchard, can you set its `data-scratched` attribute so that `data-scratched="true"`? _Hint: If you do this correctly, the CSS is already set up so that you'll notice the card will turn lighter when you click on it._
+1. When the user clicks on a scratchcard, can you set its `data-scratched` attribute so that `data-scratched="true"`? _Hint: If you do this correctly, the CSS is already set up so that you'll notice the card will turn lighter when you click on it._
 2. If the user tries to click on the same card more than one time, can you make it so that it doesn't let them buy it again?
 
 ## Showing the Amount Won on the Card
