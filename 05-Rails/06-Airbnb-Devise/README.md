@@ -47,7 +47,7 @@ Create a ticket to validate them with a teacher. All good? Time for the `rails n
 
 ### Part II
 
-Before splitting the tasks among the team, set your project up together. The **lead developer** (and only him/her) should:
+Before splitting the tasks among the team, set your project up together. The **lead developer** (and only they) should:
 
 #### 1. Create the Rails project with a Postgres config
 

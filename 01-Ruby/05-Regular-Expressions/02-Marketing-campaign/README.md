@@ -2,7 +2,7 @@
 
 Emails are the lifeblood of any SaaS (software as a service) business, it is super important to know how to manipulate them programmatically.
 
-On most websites, they are the keys to create an account. If the email is misspelled, the user won't be able to retrieve his password. Also, as a marketer's point of view, you need to communicate with your users and maintain your contact database a reliable dataset of valid emails.
+On most websites, they are the keys to create an account. If the email is misspelled, the user won't be able to retrieve their password. Also, as a marketer's point of view, you need to communicate with your users and maintain your contact database a reliable dataset of valid emails.
 
 ## Story
 

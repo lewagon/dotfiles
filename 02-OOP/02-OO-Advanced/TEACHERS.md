@@ -418,7 +418,7 @@ aladdin_castle = Castle.new("The magical Sultan palace", 410, 520, 'Aladdin')
 aladdin_castle.ownership_details # => "The magical sultan palace is ruled by Aladdin"
 aladdin_castle.butler.clean_castle # => "The magical sultan palace is cleaned!"
 ```
-As you see, here we need `self` in `Castlet#initialize` in order to build a Butler who is aware of the Castle she/he works for!
+As you see, here we need `self` in `Castlet#initialize` in order to build a Butler who is aware of the Castle they work for!
 
 As a key takeway, self represents the ceiling he is inside of, if its ceiling is a class, it represents the class, if it is inside of an instance method it represents the instance(mandatory or not)
 

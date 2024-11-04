@@ -138,7 +138,7 @@ Once again, also update the show view to put in this destroy button.
 
 ### 9 - Adding Comments  (Optional)
 
-Let's add an API endpoint to create comments from the stories controller (storing the story of the comment as the story the endpoint belongs to). Lets update our show page with a button to allow the user to add a comment with his/her name and picture to be displayed next to the comment. We can also add a new page in the front-end for a form that will use this create comments endpoint.
+Let's add an API endpoint to create comments from the stories controller (storing the story of the comment as the story the endpoint belongs to). Lets update our show page with a button to allow the user to add a comment with their name and picture to be displayed next to the comment. We can also add a new page in the front-end for a form that will use this create comments endpoint.
 
 For your routes, think about using nested routes to specifiy the story the new comment belongs to.
 

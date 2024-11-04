@@ -12,7 +12,7 @@ Before the standup:
 - Then, when ready, please ping or add the TA to your slack call so you can start the Standup meeting.
 
 During the standup:
-- The Project Lead should share his/her screen with the Kanban board & App opened
+- The Project Lead should share their screen with the Kanban board & App opened
 - Previous day's recap: round table with everyone's actual completed tasks
 - Today's program: round table for which features/page you will work on today
 - Address every technical concern or difficulties
