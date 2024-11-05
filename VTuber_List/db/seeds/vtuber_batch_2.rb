@@ -1640,6 +1640,109 @@ require_relative "agency_names"
     gender: "female",
     main_language: "Japanese",
     yt_channel: "https://www.youtube.com/@__3soul"
+  },
+  {
+    name: "Asakura Anko",
+    jp_name: "朝倉杏子",
+    description: "A 17-year-old member of Blitz Wing, a sublabel of RIOT MUSIC.",
+    agency: @riot,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/channel/UCbbiAbKAOszYbezcIYD4R3Q"
+  },
+  {
+    name: "Tabino Sora",
+    jp_name: "旅野そら",
+    description: "A cooking hunter aiming to be the number 1 super idol cooking hunter.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@tabino_sora_"
+  },
+  {
+    name: "Sakurami Mao",
+    jp_name: "桜巳マオ",
+    description: "A half-human, half-snake god VTuber.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@sakuramimao/streams"
+  },
+  {
+    name: "Mikagura Suzume",
+    jp_name: "御神楽すずめ",
+    description: "No description available.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@suzume_mikagura",
+    twitch_channel: "https://twitch.tv/suzume_mikagura"
+  },
+  {
+    name: "Takanashi Hotori",
+    jp_name: "小鳥遊ほとり",
+    description: "An antlered VTuber, illustrator, and fujoshi.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@takanashi_hotori"
+  },
+  {
+    name: "Inaba Haneru",
+    jp_name: "因幡はねる",
+    description: "No description available.",
+    agency: @nanashi,
+    gender: "female",
+    main_language: "Japanese",
+    debut_date: "2018/06/09",
+    yt_channel: "https://www.youtube.com/@Inaba_Haneru"
+  },
+  {
+    name: "Suzumi Nemo",
+    jp_name: "涼海ネモ",
+    description: "No description available.",
+    agency: @nanashi,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@Nemo_Suzumi"
+  },
+  {
+    name: "Musubime Yui",
+    jp_name: "結目ユイ",
+    description: "No description available.",
+    agency: @indie,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@musubimeyui"
+  },
+  {
+    name: "Manase Yua",
+    jp_name: "真名瀬ゆあ",
+    description: "No description available.",
+    agency: @problu,
+    gender: "female",
+    main_language: "Japanese",
+    yt_channel: "https://www.youtube.com/@yua_manase"
+  },
+  {
+    name: "Hinamori Rabi",
+    jp_name: "雛森菈比",
+    description: "No description available.",
+    agency: @silva,
+    gender: "female",
+    main_language: "Chinese",
+    yt_channel: "https://www.youtube.com/@HinamoriRABI",
+    twitch_channel: "https://twitch.tv/hinamorirabi/about"
+  },
+  {
+    name: "Asumi Inori",
+    jp_name: "明澄祈",
+    description: "No description available.",
+    agency: @indie,
+    gender: "neutral",
+    main_language: "Japanese",
+    birthday: "2020/12/07",
+    yt_channel: "https://www.youtube.com/@Inori_Asumi"
   }
 ].each do |vtuber|
   if !Vtuber.find_by_name(vtuber[:name])

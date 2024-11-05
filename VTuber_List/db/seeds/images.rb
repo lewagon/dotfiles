@@ -164,7 +164,9 @@ images = [
   { name: "Sasaki Saku", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730591319/saku_thumb_pvjpxs.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730591319/saku_3_uezeph.png"},
   { name: "Shiina Yuika", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730591727/yuika_thumb_se2cwe.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730591726/yuika_3_domjkp.png"},
   { name: "Uichi Maho", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730594774/maho_thumb_e6ycjj.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730594774/maho_ixd6hq.jpg"},
-  { name: "Ami Amami", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726589164/development/dn64agp889fwsfa5ky9z4tl5tgj4.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730633553/ami_2_tx82pa.png"}
+  { name: "Ami Amami", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1726589164/development/dn64agp889fwsfa5ky9z4tl5tgj4.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730633553/ami_2_tx82pa.png"},
+  { name: "Tabino Sora", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730759966/tabino_thumb_u4pbcf.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730759966/tabino_gylyaa.jpg"},
+  { name: "Asumi Inori", thumb: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730765235/inori_thumb_tmu4rm.png", vert: "https://res.cloudinary.com/dpvghmrgw/image/upload/v1730765235/asumi_inori_d5euth.jpg"}
 ]
 
 puts "Thumbnails"

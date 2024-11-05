@@ -36,3 +36,6 @@
 @himehina = Agency.find_by_name("HIMEHINA")
 @niji = Agency.find_by_name("Nijisanji")
 @vjidai = Agency.find_by_name("Vjidai")
+@nanashi = Agency.find_by_name("774inc.")
+@problu = Agency.find_by_name("ProjectBLUE")
+@silva = Agency.find_by_name("SilvaLive")

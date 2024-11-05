@@ -6,7 +6,7 @@
     <%= simple_form_for(@vtuber) do |f| %>
       <%= f.input :name %>
       <%= f.association :agency, collection: @agencies %>
-      <%= f.input :gender, collection: ["female", "male"] %>
+      <%= f.input :gender, collection: ["female", "male", "neutral"] %>
       <%= f.input :birthday, discard_year: true, discard_time: true %>
       <%= f.input :debut_date, start_year: 2000 %>
       <%= f.input :description, as: :text %>

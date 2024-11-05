@@ -235,6 +235,24 @@
     location: "Japan",
     website: "https://vjidai.com/",
     yt_channel: "https://www.youtube.com/@vjidai"
+  },
+  {
+    name: "774inc.",
+    description: "Pronounced \"Nanashi Inc.\"",
+    location: "Japan",
+    website: "https://www.774.ai/",
+    yt_channel: "https://www.youtube.com/@774inc_official"
+  },
+  {
+    name: "ProjectBLUE",
+    description: "The VTuber production branch of ProjectBLUE Inc.",
+    location: "Japan",
+    website: "https://puroburu.com/",
+  },
+  {
+    name: "SilvaLive",
+    description: "No description available.",
+    location: "Taiwan"
   }
 
 ].each do |agency|
