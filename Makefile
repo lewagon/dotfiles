@@ -177,5 +177,5 @@ test-aws-credentials:
 
 test-gpg:
 	@echo "Testing GPG keys"
-	@[[ -d "$(HOME)/.gnupg" && -O "$(HOME)/.gnupg" && -r "$(HOME)/.gnupg" && -w "$(HOME)/.gnupg" && -x "$(HOME)/.gnupg" ]]
+	@[[ -d "$(XDG_DATA_HOME)/gnupg" && -O "$(XDG_DATA_HOME)/gnupg" && -r "$(XDG_DATA_HOME)/gnupg" && -w "$(XDG_DATA_HOME)/gnupg" && -x "$(XDG_DATA_HOME)/gnupg" ]]
 	@echo "Done"
