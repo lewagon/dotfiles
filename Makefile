@@ -5,7 +5,7 @@ export XDG_STATE_HOME = $(HOME)/.local/state
 export XDG_DATA_DIRS = "/usr/local/share/:/usr/share/:/opt/homebrew/share"
 export XDG_RUNTIME_DIR = "$(HOME)/.local/runtime"
 
-all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf aws_credentials_arqshoah aws_credentials_legado gpg_keys
+all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf-plugins asdf aws_credentials gpg_keys
 
 sudo:
 ifndef CI
@@ -54,31 +54,43 @@ stow:
 	@/opt/homebrew/bin/stow --target=$(HOME) --dotfiles --verbose=1 --no-folding --adopt dot-files
 	@echo "Done"
 
-asdf:
-	@echo "Installing asdf plugins"
+asdf: asdf-plugins asdf-nodejs asdf-python asdf-rust asdf-ruby
+
+asdf-plugins:
+	@echo "Adding asdf-alias plugin"
 	@/opt/homebrew/bin/asdf plugin-add alias
 	@/opt/homebrew/bin/asdf plugin-add nodejs
 	@/opt/homebrew/bin/asdf plugin-add python
 	@/opt/homebrew/bin/asdf plugin-add rust
 	@/opt/homebrew/bin/asdf plugin-add ruby
+	@echo "Done"
 
+asdf-nodejs:
 	@echo "Installing nodejs $$(/opt/homebrew/bin/asdf latest nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available))"
 	@/opt/homebrew/bin/asdf global nodejs $$(/opt/homebrew/bin/asdf latest nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available))
 	@/opt/homebrew/bin/asdf install nodejs
+	@echo "Done"
 
+asdf-python:
 	@echo "Installing python $$(/opt/homebrew/bin/asdf latest python) and 2.7.18"
 	@/opt/homebrew/bin/asdf global python $$(/opt/homebrew/bin/asdf latest python) 2.7.18
 	@/opt/homebrew/bin/asdf install python
 	@/opt/homebrew/bin/asdf install python
+	@echo "Done"
 
+asdf-rust:
 	@echo "Installing rust $$(/opt/homebrew/bin/asdf latest rust)"
 	@/opt/homebrew/bin/asdf global rust $$(/opt/homebrew/bin/asdf latest rust)
 	@/opt/homebrew/bin/asdf install rust
+	@echo "Done"
 
+asdf-ruby:
 	@echo "Installing ruby $$(/opt/homebrew/bin/asdf latest ruby)"
 	@/opt/homebrew/bin/asdf global ruby $$(/opt/homebrew/bin/asdf latest ruby)
 	@/opt/homebrew/bin/asdf install ruby
 	@echo "Done"
+
+aws_credentials: aws_credentials_arqshoah aws_credentials_legado
 
 aws_credentials_arqshoah:
 	@echo "Configuring AWS credentials for Arqshoah"
