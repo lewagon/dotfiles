@@ -51,7 +51,7 @@ ohmyzsh_plugins:
 
 stow:
 	@echo "Installing dotfiles"
-	@/opt/homebrew/bin/stow --target=$(HOME) --dotfiles --verbose=1 --no-folding --adopt dot-files
+	@stow --target=$(HOME) --dotfiles --verbose=1 --no-folding --adopt dot-files
 	@echo "Done"
 
 asdf: asdf-plugins asdf-nodejs asdf-python asdf-rust asdf-ruby
