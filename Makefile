@@ -26,14 +26,17 @@ xdg_specs:
 brew:
 	@echo "Installing Homebrew"
 	@/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	@echo "Done"
 
 	@echo "Installing Brew formulae"
 	@/opt/homebrew/bin/brew bundle --no-lock --file=homebrew/Brewfile
 	@echo "Done"
 
+ifndef CI
 	@echo "Installing Brew casks"
 	@/opt/homebrew/bin/brew bundle --no-lock --file=homebrew/Caskfile
 	@echo "Done"
+endif
 
 ohmyzsh:
 	@echo "Installing Oh My Zsh"
@@ -53,28 +56,28 @@ stow:
 
 asdf:
 	@echo "Installing asdf plugins"
-	@asdf plugin add alias
-	@asdf plugin add nodejs
-	@asdf plugin add python
-	@asdf plugin add rust
-	@asdf plugin add ruby
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add alias
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add nodejs
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add python
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add rust
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add ruby
 
 	@echo "Installing nodejs"
-	@asdf install $$(asdf nodejs resolve lts --latest-available)
-	@asdf global nodejs $$(asdf nodejs resolve lts --latest-available)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install $$(asdf nodejs resolve lts --latest-available)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf global nodejs $$(asdf nodejs resolve lts --latest-available)
 
 	@echo "Installing python"
-	@asdf install python $$(asdf latest python)
-	@asdf install python 2.7.18
-	@asdf global python $$(asdf latest python) 2.7.18
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install python $$(asdf latest python)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install python 2.7.18
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf global python $$(asdf latest python) 2.7.18
 
 	@echo "Installing rust"
-	@asdf install rust $$(asdf latest rust)
-	@asdf global rust $$(asdf latest rust)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install rust $$(asdf latest rust)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf global rust $$(asdf latest rust)
 
 	@echo "Installing ruby"
-	@asdf install ruby $$(asdf latest ruby)
-	@asdf global ruby $$(asdf latest ruby)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install ruby $$(asdf latest ruby)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf global ruby $$(asdf latest ruby)
 	@echo "Done"
 
 aws_credentials_arqshoah:
