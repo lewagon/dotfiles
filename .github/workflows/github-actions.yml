@@ -1,6 +1,9 @@
 name: Test dotfiles
 run-name: "${{ github.actor }} is testing dotfiles on:\n${{ github.sha }} 🚀"
 on: [push]
+env:
+  aws_access_key_id: fake_aws_access_key_id
+  aws_secret_access_key: fake_aws_secret_access_key
 jobs:
   dotfiles-install:
     runs-on: macos-latest
