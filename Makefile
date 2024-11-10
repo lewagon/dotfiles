@@ -130,7 +130,8 @@ gpg_keys:
 	@find ~/.gnupg -type f -exec chmod 600 {} \;
 	@find ~/.gnupg -type d -exec chmod 700 {} \;
 ifndef CI
-	@/opt/homebrew/bin/gpg --import-options restore --import ~/.gnupg/jmschp_private.gpg
+	@read -rp "Enter path to GPG key backup: " path_to_gpg_key; \
+	/opt/homebrew/bin/gpg --import-options restore --import $$path_to_gpg_key
 endif
 	@echo "Done"
 
