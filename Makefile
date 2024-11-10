@@ -63,7 +63,7 @@ asdf:
 	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add ruby
 
 	@echo "Installing nodejs"
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf install $$(asdf nodejs resolve lts --latest-available)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install nodejs $$(asdf nodejs resolve lts --latest-available)
 	@/opt/homebrew/opt/asdf/libexec/bin/asdf global nodejs $$(asdf nodejs resolve lts --latest-available)
 
 	@echo "Installing python"
