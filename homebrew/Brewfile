@@ -1,7 +1,6 @@
 # Brewfile list packages brew
 
 tap 'mongodb/brew'
-tap 'ngrok/ngrok'
 
 brew 'asdf'
 brew 'aws-elasticbeanstalk'
@@ -20,7 +19,6 @@ brew 'mackup'
 brew 'make'
 brew 'memcached'
 brew 'mongodb-community'
-brew 'ngrok'
 brew 'openssl'
 brew 'readline'
 brew 'tor'
