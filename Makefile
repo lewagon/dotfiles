@@ -62,8 +62,8 @@ asdf:
 	@/opt/homebrew/bin/asdf plugin-add rust
 	@/opt/homebrew/bin/asdf plugin-add ruby
 
-	@echo "Installing nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available)"
-	@/opt/homebrew/bin/asdf global nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available)
+	@echo "Installing nodejs $$(/opt/homebrew/bin/asdf latest nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available))"
+	@/opt/homebrew/bin/asdf global nodejs $$(/opt/homebrew/bin/asdf latest nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available))
 	@/opt/homebrew/bin/asdf install nodejs
 
 	@echo "Installing python $$(/opt/homebrew/bin/asdf latest python) and 2.7.18"
