@@ -13,4 +13,4 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Run Makefile file
-        run: make
+        run: make -k
