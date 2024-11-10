@@ -117,8 +117,8 @@ aws_credentials_legado:
 
 gpg_keys:
 	@echo "Setup GPG keys"
-	@mkdir -p ~/.gnupg
-	@chown -R $$(whoami) ~/.gnupg/
+	@mkdir -p "$(XDG_DATA_HOME)/gnupg"
+	@chown -R $$(whoami) "$(XDG_DATA_HOME)/gnupg"
 	@find ~/.gnupg -type f -exec chmod 600 {} \;
 	@find ~/.gnupg -type d -exec chmod 700 {} \;
 ifndef CI
