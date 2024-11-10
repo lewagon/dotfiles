@@ -56,28 +56,28 @@ stow:
 
 asdf:
 	@echo "Installing asdf plugins"
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add alias
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add nodejs
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add python
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add rust
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin add ruby
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin-add alias
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin-add nodejs
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin-add python
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin-add rust
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf plugin-add ruby
 
-	@echo "Installing nodejs"
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf install nodejs $$(asdf nodejs resolve lts --latest-available)
+	@echo "Installing nodejs $$(asdf nodejs resolve lts --latest-available)"
 	@/opt/homebrew/opt/asdf/libexec/bin/asdf global nodejs $$(asdf nodejs resolve lts --latest-available)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install nodejs
 
-	@echo "Installing python"
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf install python $$(asdf latest python)
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf install python 2.7.18
+	@echo "Installing python $$(asdf latest python) and 2.7.18"
 	@/opt/homebrew/opt/asdf/libexec/bin/asdf global python $$(asdf latest python) 2.7.18
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install python
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install python
 
-	@echo "Installing rust"
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf install rust $$(asdf latest rust)
+	@echo "Installing rust $$(asdf latest rust)"
 	@/opt/homebrew/opt/asdf/libexec/bin/asdf global rust $$(asdf latest rust)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install rust
 
-	@echo "Installing ruby"
-	@/opt/homebrew/opt/asdf/libexec/bin/asdf install ruby $$(asdf latest ruby)
+	@echo "Installing ruby $$(asdf latest ruby)"
 	@/opt/homebrew/opt/asdf/libexec/bin/asdf global ruby $$(asdf latest ruby)
+	@/opt/homebrew/opt/asdf/libexec/bin/asdf install ruby
 	@echo "Done"
 
 aws_credentials_arqshoah:
