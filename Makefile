@@ -58,36 +58,37 @@ asdf: asdf-plugins asdf-nodejs asdf-python asdf-rust asdf-ruby
 
 asdf-plugins:
 	@echo "Adding asdf-alias plugin"
-	@/opt/homebrew/bin/asdf plugin-add alias
-	@/opt/homebrew/bin/asdf plugin-add nodejs
-	@/opt/homebrew/bin/asdf plugin-add python
-	@/opt/homebrew/bin/asdf plugin-add rust
-	@/opt/homebrew/bin/asdf plugin-add ruby
+	@asdf plugin-add alias
+	@asdf plugin-add nodejs
+	@asdf plugin-add python
+	@asdf plugin-add rust
+	@asdf plugin-add ruby
+	asdf info
 	@echo "Done"
 
 asdf-nodejs:
-	@echo "Installing nodejs $$(/opt/homebrew/bin/asdf latest nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available))"
-	@/opt/homebrew/bin/asdf global nodejs $$(/opt/homebrew/bin/asdf latest nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available))
-	@/opt/homebrew/bin/asdf install nodejs $$(/opt/homebrew/bin/asdf latest nodejs $$(/opt/homebrew/bin/asdf nodejs resolve lts --latest-available))
+	@echo "Installing nodejs $$(asdf latest nodejs $$(asdf nodejs resolve lts --latest-available))"
+	@asdf global nodejs $$(asdf latest nodejs $$(asdf nodejs resolve lts --latest-available))
+	@asdf install nodejs $$(asdf latest nodejs $$(asdf nodejs resolve lts --latest-available))
 	@echo "Done"
 
 asdf-python:
-	@echo "Installing python $$(/opt/homebrew/bin/asdf latest python) and 2.7.18"
-	@/opt/homebrew/bin/asdf global python $$(/opt/homebrew/bin/asdf latest python) 2.7.18
-	@/opt/homebrew/bin/asdf install python 2.7.18
-	@/opt/homebrew/bin/asdf install python $$(/opt/homebrew/bin/asdf latest python)
+	@echo "Installing python $$(asdf latest python) and 2.7.18"
+	@asdf global python $$(asdf latest python) 2.7.18
+	@asdf install python 2.7.18
+	@asdf install python $$(asdf latest python)
 	@echo "Done"
 
 asdf-rust:
-	@echo "Installing rust $$(/opt/homebrew/bin/asdf latest rust)"
-	@/opt/homebrew/bin/asdf global rust $$(/opt/homebrew/bin/asdf latest rust)
-	@/opt/homebrew/bin/asdf install rust $$(/opt/homebrew/bin/asdf latest rust)
+	@echo "Installing rust $$(asdf latest rust)"
+	@asdf global rust $$(asdf latest rust)
+	@asdf install rust $$(asdf latest rust)
 	@echo "Done"
 
 asdf-ruby:
-	@echo "Installing ruby $$(/opt/homebrew/bin/asdf latest ruby)"
-	@/opt/homebrew/bin/asdf global ruby $$(/opt/homebrew/bin/asdf latest ruby)
-	@/opt/homebrew/bin/asdf install ruby $$(/opt/homebrew/bin/asdf latest ruby)
+	@echo "Installing ruby $$(asdf latest ruby)"
+	@asdf global ruby $$(asdf latest ruby)
+	@asdf install ruby $$(asdf latest ruby)
 	@echo "Done"
 
 aws_credentials: aws_credentials_arqshoah aws_credentials_legado
