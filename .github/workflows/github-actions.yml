@@ -1,5 +1,5 @@
 name: Test dotfiles
-run-name: "${{ github.actor }} is testing dotfiles on:\n${{ github.sha }} 🚀"
+run-name: "${{ github.actor }} is testing dotfiles 🚀"
 on: [push]
 env:
   aws_access_key_id: fake_aws_access_key_id
