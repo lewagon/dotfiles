@@ -73,26 +73,34 @@ asdf-plugins:
 asdf-nodejs:
 	@echo "Installing nodejs $$(asdf latest nodejs $$(asdf nodejs resolve lts --latest-available))"
 	@asdf global nodejs $$(asdf latest nodejs $$(asdf nodejs resolve lts --latest-available))
+ifndef CI
 	@asdf install nodejs $$(asdf latest nodejs $$(asdf nodejs resolve lts --latest-available))
+endif
 	@echo "Done"
 
 asdf-python:
 	@echo "Installing python $$(asdf latest python) and 2.7.18"
 	@asdf global python $$(asdf latest python) 2.7.18
+ifndef CI
 	@asdf install python 2.7.18
 	@asdf install python $$(asdf latest python)
+endif
 	@echo "Done"
 
 asdf-rust:
 	@echo "Installing rust $$(asdf latest rust)"
 	@asdf global rust $$(asdf latest rust)
+ifndef Ci
 	@asdf install rust $$(asdf latest rust)
+endif
 	@echo "Done"
 
 asdf-ruby:
 	@echo "Installing ruby $$(asdf latest ruby)"
 	@asdf global ruby $$(asdf latest ruby)
+ifndef Ci
 	@asdf install ruby $$(asdf latest ruby)
+endif
 	@echo "Done"
 
 aws_credentials: aws_credentials_arqshoah aws_credentials_legado
