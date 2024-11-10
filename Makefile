@@ -21,6 +21,7 @@ xdg_specs:
 	@mkdir -p "$(HOME)/.local/state"
 	@mkdir -p "$(HOME)/.local/runtime"
 	@chmod 0700 "$(HOME)/.local/runtime"
+	@source "./dot-files/dot-zshenv"
 	@echo "Done"
 
 brew: brew-install brew-formulae brew-casks
@@ -56,7 +57,6 @@ ohmyzsh_plugins:
 stow:
 	@echo "Installing dotfiles"
 	@/opt/homebrew/bin/stow --target=$(HOME) --dotfiles --verbose=1 --no-folding --adopt dot-files
-	@source $(HOME)/.zshenv
 	@echo "Done"
 
 asdf: asdf-plugins asdf-nodejs asdf-python asdf-rust asdf-ruby
