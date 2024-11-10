@@ -2,8 +2,6 @@ name: Test dotfiles
 run-name: "${{ github.actor }} is testing dotfiles 🚀"
 on: [push]
 env:
-  ACTIONS_RUNNER_DEBUG: true
-  ACTIONS_STEP_DEBUG: true
   aws_access_key_id: fake_aws_access_key_id
   aws_secret_access_key: fake_aws_secret_access_key
 jobs:
