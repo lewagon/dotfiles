@@ -23,15 +23,19 @@ xdg_specs:
 	@chmod 0700 "$(HOME)/.local/runtime"
 	@echo "Done"
 
-brew:
+brew: brew-install brew-formulae brew-casks
+
+brew-install:
 	@echo "Installing Homebrew"
 	@/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	@echo "Done"
 
+brew-formulae:
 	@echo "Installing Brew formulae"
 	@/opt/homebrew/bin/brew bundle --no-lock --file=homebrew/Brewfile
 	@echo "Done"
 
+brew-casks:
 ifndef CI
 	@echo "Installing Brew casks"
 	@/opt/homebrew/bin/brew bundle --no-lock --file=homebrew/Caskfile
