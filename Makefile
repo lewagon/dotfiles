@@ -139,3 +139,46 @@ macos:
 	@echo "Configuring macOS"
 	@./macos.sh
 	@echo "Done"
+
+# Tests
+
+test-all: test-xdg_specs test-stow test-asdf-tools test-aws-credentials test-gpg
+
+test-xdg_specs:
+	@echo "Testing XDG Base Directory Specification"
+	@test -d "$(HOME)/.cache"
+	@test -d "$(HOME)/.config"
+	@test -d "$(HOME)/.local/share"
+	@test -d "$(HOME)/.local/state"
+	@test -d "$(HOME)/.local/runtime"
+	@test -d "$(HOME)/.local/runtime"
+	@echo "Done"
+
+test-stow:
+	@echo "Testing dotfiles"
+	@test -h "$(XDG_CONFIG_HOME)/asdf/asdfrc"
+	@test -h "$(XDG_CONFIG_HOME)/asdf/default-gems"
+	@test -h "$(XDG_CONFIG_HOME)/aws/config"
+	@test -h "$(XDG_CONFIG_HOME)/git/config"
+	@test -h "$(XDG_CONFIG_HOME)/git/ignore"
+	@test -h "$(XDG_CONFIG_HOME)/ngrok/ngrok.yml"
+	@test -h "$(XDG_CONFIG_HOME)/zsh/.zshrc"
+	@test -h "$(XDG_CONFIG_HOME)/zsh/.zlogin"
+	@test -h "$(HOME)/.zshenv"
+	@test -h "$(HOME)/.oh-my-zsh/custom/themes/robbyrussell-custom.zsh-theme"
+	@echo "Done"
+
+test-asdf-tools:
+	@echo "Testing asdf tool versions"
+	@[[ -f "$(HOME)/.tool-versions" && -n "$(HOME)/.tool-versions" ]]
+	@echo "Done"
+
+test-aws-credentials:
+	@echo "Testing AWS credentials"
+	@[[ -f "$(XDG_DATA_HOME)/aws/credentials" && -n "$(XDG_DATA_HOME)/aws/credentials" ]]
+	@echo "Done"
+
+test-gpg:
+	@echo "Testing GPG keys"
+	@[[ -d "$(HOME)/.gnupg" && -O "$(HOME)/.gnupg" && -r "$(HOME)/.gnupg" && -w "$(HOME)/.gnupg" && -x "$(HOME)/.gnupg" ]]
+	@echo "Done"
