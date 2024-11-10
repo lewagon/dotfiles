@@ -4,13 +4,14 @@ on: [push]
 env:
   aws_access_key_id: fake_aws_access_key_id
   aws_secret_access_key: fake_aws_secret_access_key
+defaults:
+  run:
+    shell: zsh {0}
 jobs:
   dotfiles-install:
     runs-on: macos-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Set Zsh as default shell
-        run: chsh -s /bin/zsh
       - name: Run Makefile file
         run: make -k
