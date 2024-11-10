@@ -104,7 +104,7 @@ gpg_keys:
 	@find ~/.gnupg -type f -exec chmod 600 {} \;
 	@find ~/.gnupg -type d -exec chmod 700 {} \;
 ifndef CI
-	@gpg --import-options restore --import ~/.gnupg/jmschp_private.gpg
+	@/opt/homebrew/bin/gpg --import-options restore --import ~/.gnupg/jmschp_private.gpg
 endif
 	@echo "Done"
 
