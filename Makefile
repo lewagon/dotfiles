@@ -79,19 +79,19 @@ asdf-nodejs:
 asdf-python:
 	@echo "Installing python $$(/opt/homebrew/bin/asdf latest python) and 2.7.18"
 	@/opt/homebrew/bin/asdf install python 2.7.18
-	@/opt/homebrew/bin/asdf install python $$(/opt/homebrew/bin/asdf latest python)
+	@/opt/homebrew/bin/asdf install python latest
 	@/opt/homebrew/bin/asdf global python $$(/opt/homebrew/bin/asdf latest python) 2.7.18
 	@echo "Done"
 
 asdf-rust:
 	@echo "Installing rust $$(/opt/homebrew/bin/asdf latest rust)"
-	@/opt/homebrew/bin/asdf install rust $$(/opt/homebrew/bin/asdf latest rust)
+	@/opt/homebrew/bin/asdf install rust latest
 	@/opt/homebrew/bin/asdf global rust $$(/opt/homebrew/bin/asdf latest rust)
 	@echo "Done"
 
 asdf-ruby:
 	@echo "Installing ruby $$(/opt/homebrew/bin/asdf latest ruby)"
-	@/opt/homebrew/bin/asdf install ruby $$(/opt/homebrew/bin/asdf latest ruby)
+	@/opt/homebrew/bin/asdf install ruby latest
 	@/opt/homebrew/bin/asdf global ruby $$(/opt/homebrew/bin/asdf latest ruby)
 	@echo "Done"
 
