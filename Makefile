@@ -167,6 +167,8 @@ test-asdf-tools:
 
 test-aws-credentials:
 	@echo "Testing AWS credentials"
+	@echo $(XDG_DATA_HOME)
+	@cat "$(XDG_DATA_HOME)/aws/credentials"
 	@[[ -f "$(XDG_DATA_HOME)/aws/credentials" && -n "$(XDG_DATA_HOME)/aws/credentials" ]]
 	@echo "Done"
 
