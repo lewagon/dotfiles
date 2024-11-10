@@ -10,9 +10,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Display the path
-        run: echo $ZSH_NAME $ZSH_VERSION
-        shell: zsh {0}
       - name: Run Makefile file
         run: make
         shell: zsh {0}
