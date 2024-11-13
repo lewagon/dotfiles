@@ -164,7 +164,7 @@ Implémentez chaque user story séparément ! Commencez par écrire la route (vo
 
 Rappelez-vous que vous aurez besoin de différents contrôleurs pour les différents modèles que vous utiliserez dans cet exercice et que vous devrez les générer dans le terminal. Voici un [rappel utile] (https://kitt.lewagon.com/knowledge/cheatsheets/rails_commands) :
 
-``bash
+```bash
 rails generate controller restaurants
 ```
 
