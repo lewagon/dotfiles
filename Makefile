@@ -5,7 +5,7 @@ export XDG_STATE_HOME = $(HOME)/.local/state
 export XDG_DATA_DIRS = "/usr/local/share/:/usr/share/:/opt/homebrew/share"
 export XDG_RUNTIME_DIR = "$(HOME)/.local/runtime"
 
-SHELL := /bin/zsh
+SHELL:=/bin/zsh
 
 all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf aws_credentials gpg_keys
 
@@ -23,6 +23,7 @@ xdg_specs:
 	@mkdir -p "$(HOME)/.local/state"
 	@mkdir -p "$(HOME)/.local/runtime"
 	@chmod 0700 "$(HOME)/.local/runtime"
+	@cp ./dot-files/dot-zshenv "$(HOME)/.zshenv"
 	@echo "Done"
 
 brew: brew-install brew-formulae brew-casks
