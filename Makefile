@@ -1,5 +1,3 @@
-# SHELL = /bin/zsh
-
 export XDG_CACHE_HOME = $(HOME)/.cache
 export XDG_CONFIG_HOME = $(HOME)/.config
 export XDG_DATA_HOME = $(HOME)/.local/share
@@ -119,10 +117,11 @@ aws_credentials_legado:
 
 gpg_keys:
 	@echo "Setup GPG keys"
-	@mkdir -p "$(XDG_DATA_HOME)/gnupg"
-	@chown -R $$(whoami) "$(XDG_DATA_HOME)/gnupg"
-	@find ~/.gnupg -type f -exec chmod 600 {} \;
-	@find ~/.gnupg -type d -exec chmod 700 {} \;
+	echo $$ASDF_CONFIG_FILE
+	@mkdir -p $$GNUPGHOME
+	@chown -R $$(whoami) $$GNUPGHOME
+	@find $$GNUPGHOME -type f -exec chmod 600 {} \;
+	@find $$GNUPGHOME -type d -exec chmod 700 {} \;
 ifndef CI
 	@read -rp "Enter path to GPG key backup: " path_to_gpg_key; \
 	/opt/homebrew/bin/gpg --import-options restore --import $$path_to_gpg_key
