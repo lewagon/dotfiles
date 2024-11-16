@@ -7,7 +7,7 @@ export XDG_STATE_HOME = $(HOME)/.local/state
 export XDG_DATA_DIRS = "/usr/local/share/:/usr/share/:/opt/homebrew/share"
 export XDG_RUNTIME_DIR = "$(HOME)/.local/runtime"
 
-all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf-plugins asdf aws_credentials gpg_keys
+all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf aws_credentials gpg_keys
 
 sudo:
 ifndef CI
