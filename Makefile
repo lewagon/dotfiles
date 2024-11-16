@@ -1,17 +1,9 @@
-export XDG_CACHE_HOME = $(HOME)/.cache
-export XDG_CONFIG_HOME = $(HOME)/.config
-export XDG_DATA_HOME = $(HOME)/.local/share
-export XDG_STATE_HOME = $(HOME)/.local/state
-export XDG_DATA_DIRS = "/usr/local/share/:/usr/share/:/opt/homebrew/share"
-export XDG_RUNTIME_DIR = "$(HOME)/.local/runtime"
-
 SHELL:=/bin/zsh
 
 all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf aws_credentials gpg_keys
 
 sudo:
-	type -a zsh
-	cp ./dot-files/dot-zshenv "$(HOME)/.zshenv"
+	@echo $(XDG_CONFIG_HOME)
 ifndef CI
 	sudo -v
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
