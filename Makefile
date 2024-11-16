@@ -5,6 +5,8 @@ export XDG_STATE_HOME = $(HOME)/.local/state
 export XDG_DATA_DIRS = "/usr/local/share/:/usr/share/:/opt/homebrew/share"
 export XDG_RUNTIME_DIR = "$(HOME)/.local/runtime"
 
+SHELL := /bin/zsh
+
 all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf aws_credentials gpg_keys
 
 sudo:
@@ -21,7 +23,6 @@ xdg_specs:
 	@mkdir -p "$(HOME)/.local/state"
 	@mkdir -p "$(HOME)/.local/runtime"
 	@chmod 0700 "$(HOME)/.local/runtime"
-	@source "./dot-files/dot-zshenv"
 	@echo "Done"
 
 brew: brew-install brew-formulae brew-casks
@@ -117,11 +118,11 @@ aws_credentials_legado:
 
 gpg_keys:
 	@echo "Setup GPG keys"
-	echo $$ASDF_CONFIG_FILE
-	@mkdir -p $$GNUPGHOME
-	@chown -R $$(whoami) $$GNUPGHOME
-	@find $$GNUPGHOME -type f -exec chmod 600 {} \;
-	@find $$GNUPGHOME -type d -exec chmod 700 {} \;
+	echo $(ASDF_CONFIG_FILE)
+	@mkdir -p $(GNUPGHOME)
+	@chown -R $(whoami) $(GNUPGHOME)
+	@find $(GNUPGHOME) -type f -exec chmod 600 {} \;
+	@find $(GNUPGHOME) -type d -exec chmod 700 {} \;
 ifndef CI
 	@read -rp "Enter path to GPG key backup: " path_to_gpg_key; \
 	/opt/homebrew/bin/gpg --import-options restore --import $$path_to_gpg_key
