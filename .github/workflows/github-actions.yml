@@ -18,7 +18,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
         with:
-          path: /../../../../code/dotfiles
+          #     /Users/runner/work/dotfiles/dotfiles
+          path: ../../../code/dotfiles
       - name: Set ENV file .zshenv
         run: |
           cp ./dotfiles/dot-zshenv ~/.zshenv
