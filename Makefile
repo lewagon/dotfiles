@@ -10,6 +10,8 @@ SHELL:=/bin/zsh
 all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf aws_credentials gpg_keys
 
 sudo:
+	type -a zsh
+	cp ./dot-files/dot-zshenv "$(HOME)/.zshenv"
 ifndef CI
 	sudo -v
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -23,7 +25,6 @@ xdg_specs:
 	@mkdir -p "$(HOME)/.local/state"
 	@mkdir -p "$(HOME)/.local/runtime"
 	@chmod 0700 "$(HOME)/.local/runtime"
-	@cp ./dot-files/dot-zshenv "$(HOME)/.zshenv"
 	@echo "Done"
 
 brew: brew-install brew-formulae brew-casks
@@ -119,7 +120,6 @@ aws_credentials_legado:
 
 gpg_keys:
 	@echo "Setup GPG keys"
-	echo $(ASDF_CONFIG_FILE)
 	@mkdir -p $(GNUPGHOME)
 	@chown -R $(whoami) $(GNUPGHOME)
 	@find $(GNUPGHOME) -type f -exec chmod 600 {} \;
