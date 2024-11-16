@@ -14,14 +14,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Set ENV file .zshenv
-        run: |
-          cp dot-files/dot-zshenv ~/.zshenv
+        run: cp dot-files/dot-zshenv ~/.zshenv
         shell: zsh -e {0}
       - name: Run Makefile file
-        run: |
-          make
+        run: make
         shell: zsh -e {0}
       - name: Test make results
-        run: |
-          make test-all
+        run: make test-all
         shell: zsh -e {0}
