@@ -16,8 +16,8 @@ jobs:
       - name: Run Makefile file
         run: |
           make
-        shell: zsh {0}
+        shell: zsh -e {0}
       - name: Test make results
         run: |
           make test-all
-        shell: zsh {0}
+        shell: zsh -e {0}
