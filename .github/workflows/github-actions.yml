@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: Set ENV file .zshenv
         run: |
+          pwd
           cp dot-files/dot-zshenv ~/.zshenv
         shell: zsh -e {0}
       - name: Check out repository code
