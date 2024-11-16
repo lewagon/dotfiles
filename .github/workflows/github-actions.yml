@@ -14,8 +14,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Run Makefile file
-        run: make
+        run: |
+          make
         shell: zsh {0}
       - name: Test make results
-        run: make test-all
+        run: |
+          make test-all
         shell: zsh {0}
