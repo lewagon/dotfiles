@@ -4,7 +4,6 @@ all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf aws_credentials gpg_k
 
 sudo:
 	@echo $(XDG_CONFIG_HOME)
-	pwd
 ifndef CI
 	sudo -v
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &

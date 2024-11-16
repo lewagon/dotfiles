@@ -11,27 +11,17 @@ jobs:
   dotfiles-install:
     runs-on: macos-latest
     steps:
-      - name: Create code directory
-        run: |
-          mkdir -p ~/code
-        shell: zsh -e {0}
-      - name: Check out repository code
-        uses: actions/checkout@v4
-        with:
-          #     /Users/runner/work/dotfiles/dotfiles
-          path: ../../../code/dotfiles
       - name: Set ENV file .zshenv
         run: |
           cp ./dotfiles/dot-zshenv ~/.zshenv
-        working-directory: ~/code/dotfiles
         shell: zsh -e {0}
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - name: Run Makefile file
         run: |
           make
         shell: zsh -e {0}
-        working-directory: ~/code/dotfiles
       - name: Test make results
         run: |
           make test-all
         shell: zsh -e {0}
-        working-directory: ~/code/dotfiles
