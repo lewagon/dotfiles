@@ -112,9 +112,8 @@ aws_credentials_legado:
 
 gpg_keys:
 	@echo "Setup GPG keys"
-	echo $(GNUPGHOME)
 	@mkdir -p $(GNUPGHOME)
-	@chown -R $(whoami) $(GNUPGHOME)
+	@chown -R $$(whoami) $(GNUPGHOME)
 	@find $(GNUPGHOME) -type f -exec chmod 600 {} \;
 	@find $(GNUPGHOME) -type d -exec chmod 700 {} \;
 ifndef CI
