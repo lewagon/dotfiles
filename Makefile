@@ -29,7 +29,7 @@ brew: brew-install brew-formulae brew-casks
 
 brew-install:
 	@echo "Installing Homebrew"
-	@/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	@NONINTERACTIVE=1 /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	@echo "Done"
 
 brew-formulae:
