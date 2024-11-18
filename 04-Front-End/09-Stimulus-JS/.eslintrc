@@ -1,0 +1,6 @@
+{
+    "globals": {
+        "Stimulus": "writable" // or "writable"
+    }
+}
+
