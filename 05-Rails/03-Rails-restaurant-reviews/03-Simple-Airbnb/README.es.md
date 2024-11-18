@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Queremos crear un clon simple de Airbnb (como [este](https://rails-simple-airbnb.herokuapp.com)). Estas deben ser las únicas user stories de nuestra app:
+Queremos crear un clon simple de Airbnb (como [este](https://rails-simple-airbnb.lewagon.com)). Estas deben ser las únicas user stories de nuestra app:
 
 - Como usuario, puedo ver la lista de todos los apartamentos disponibles en nuestra página web.
 - Como usuario, puedo publicar un apartamento en la página web especificando su nombre y dirección

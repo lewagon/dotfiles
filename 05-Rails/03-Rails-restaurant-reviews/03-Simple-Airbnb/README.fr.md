@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-On veut créer un clone simple d'Airbnb (comme [celui-ci](https://rails-simple-airbnb.herokuapp.com)). Les stories utilisateurs de ton application doivent être les suivantes :
+On veut créer un clone simple d'Airbnb (comme [celui-ci](https://rails-simple-airbnb.lewagon.com)). Les stories utilisateurs de ton application doivent être les suivantes :
 
 - En tant qu'utilisateur, je peux voir tous les appartements disponibles sur notre site Web
 - En tant qu'utilisateur, je peux poster un appartement sur le site Web, en précisant son nom et son adresse

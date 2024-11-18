@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-We want to build a simple Airbnb clone (like [this one](https://rails-simple-airbnb.herokuapp.com)). These should be all the user stories of our app:
+We want to build a simple Airbnb clone (like [this one](https://rails-simple-airbnb.lewagon.com)). These should be all the user stories of our app:
 
 - As a user, I can see all the available flats on our website
 - As a user, I can post a flat to the website, specifying its name and address
