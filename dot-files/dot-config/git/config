@@ -10,6 +10,7 @@
 [core]
 	autocrlf = input
 	excludesfile = ~/.config/git/ignore
+	pager = ""
 	# pager = less -FRSX
 	# filemode = false
 	# trustctime = false
