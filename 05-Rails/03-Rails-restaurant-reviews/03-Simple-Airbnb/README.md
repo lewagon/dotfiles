@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-We want to build a simple Airbnb clone (like [this one](https://rails-simple-airbnb.herokuapp.com)). These should be all the user stories of our app:
+We want to build a simple Airbnb clone (like [this one](https://rails-simple-airbnb.lewagon.com)). These should be all the user stories of our app:
 
 - As a user, I can see all the available flats on our website
 - As a user, I can post a flat to the website, specifying its name and address
@@ -130,7 +130,7 @@ The view should loop over these to display them, like in the screenshot below. L
 
 ### 5 - As a user, I can add a flat
 
-Remember that to create a flat, we will need two routes. One route is there to display the new flat form, and another one is there to handle the `POST` request generated when submitting this form. Try to use directly the `form_with` helper in your view, and make the form look nice!
+Remember that to create a flat, we will need two routes. One route is there to display the new flat form, and another one is there to handle the `POST` request generated when submitting this form. Let's use `simple_form` to help us make the form.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/new.png)
 

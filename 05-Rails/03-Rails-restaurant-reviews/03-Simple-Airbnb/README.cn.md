@@ -1,6 +1,6 @@
 ## 背景和目标
 
-我们将要开发一个简单的类似于爱彼迎airbnb的克隆版应用，(就像[这个](https://rails-simple-airbnb.herokuapp.com))。这是我们应用的所有的用户故事：
+我们将要开发一个简单的类似于爱彼迎airbnb的克隆版应用，(就像[这个](https://rails-simple-airbnb.lewagon.com))。这是我们应用的所有的用户故事：
 
 - 做为用户，我可以在网站浏览所有的公寓
 - 做为用户，我可以在网站发布一个公寓，指定公寓的名字和地址
@@ -131,7 +131,7 @@ Flat.create!(
 
 ### 5 - 做为用户，我可以添加一个公寓
 
-一定要记得，我们需要两个路由来创建一个公寓。一个路由是用来显示添加新公寓的表单，另外一个路由是用来处理提交表单时产生的`POST` 请求。尝试在视图里直接使用`form_with`帮助方法，而且要让表单好看一些。
+一定要记得，我们需要两个路由来创建一个公寓。一个路由是用来显示添加新公寓的表单，另外一个路由是用来处理提交表单时产生的`POST` 请求。尝试在视图里直接使用`simple_form`帮助方法，而且要让表单好看一些。
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/new.png)
 

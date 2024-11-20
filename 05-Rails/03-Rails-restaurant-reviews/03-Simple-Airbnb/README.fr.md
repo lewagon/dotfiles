@@ -1,6 +1,6 @@
 ## Contexte et objectifs
 
-On veut créer un clone simple d'Airbnb (comme [celui-ci](https://rails-simple-airbnb.herokuapp.com)). Les stories utilisateurs de ton application doivent être les suivantes :
+On veut créer un clone simple d'Airbnb (comme [celui-ci](https://rails-simple-airbnb.lewagon.com)). Les stories utilisateurs de ton application doivent être les suivantes :
 
 - En tant qu'utilisateur, je peux voir tous les appartements disponibles sur notre site Web
 - En tant qu'utilisateur, je peux poster un appartement sur le site Web, en précisant son nom et son adresse
@@ -132,7 +132,7 @@ La vue doit faire une boucle dessus pour les afficher, comme sur la capture d'é
 
 ### 5 - En tant qu'utilisateur, je peux ajouter un appartement
 
-Souviens-toi que pour créer un appartement, on a besoin de deux routes. Une route sert à afficher le formulaire du nouvel appartement, l'autre à gérer la requête `POST` générée à l'envoi du formulaire. Essaie d'utiliser directement l'objet d'aide `form_with` dans ta vue et de créer un joli formulaire !
+Souviens-toi que pour créer un appartement, on a besoin de deux routes. Une route sert à afficher le formulaire du nouvel appartement, l'autre à gérer la requête `POST` générée à l'envoi du formulaire. Essaie d'utiliser directement l'objet d'aide `simple_form` dans ta vue et de créer un joli formulaire !
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/new.png)
 

@@ -9,7 +9,7 @@ describe "quiz" do
 
   describe "#modern_javascript" do
     it "should return the correct answer" do
-      correct_answers = ["javascript_include_tag 'application'", "<%= javascript_include_tag 'application' %>", 'javascript_include_tag "application"', '<%= javascript_include_tag "application" %>']
+      correct_answers = ["javascript_importmap_tags 'application'", "<%= javascript_importmap_tags 'application' %>", 'javascript_importmap_tags "application"', '<%= javascript_importmap_tags "application" %>']
       expect(correct_answers).to include(modern_javascript)
     end
   end

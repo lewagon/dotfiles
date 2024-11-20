@@ -1,5 +1,5 @@
 ## Background and Objectives
-Back to our Farm diary. After all the great work you did building the classes, let's reward our efforts by building a game on top of it! Let's build an interface where the player is a farmer who manages his/her crops and animals, and see the farm evolve thanks to an illustration we provide.
+Back to our Farm diary. After all the great work you did building the classes, let's reward our efforts by building a game on top of it! Let's build an interface where the player is a farmer who manages their crops and animals, and see the farm evolve thanks to an illustration we provide.
 
 You will learn how to build an interface using an infinite loop!
 

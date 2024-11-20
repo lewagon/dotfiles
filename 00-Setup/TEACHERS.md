@@ -139,7 +139,7 @@ At the end of the lecture
 
 At the end of the setup, students will signin on [Kitt](https://kitt.lewagon.org/onboarding) and complete their profile. Then:
 
-- Manager should approve them on his Slack channel
+- Manager should approve them on their Slack channel
 - Manager should **check that students belong to their batch before approving them**. Sometimes, several cities start the same day, and students may choose the wrong batch.
 - After this validation, students will receive 2 mails to join Le Wagon on GitHub and on Slack.
 

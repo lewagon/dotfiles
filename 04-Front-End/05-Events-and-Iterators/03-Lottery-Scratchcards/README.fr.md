@@ -52,7 +52,7 @@ Tu pourras voir que ça marche si, dans ton navigateur, le solde descend de 10�
 Si tu regardes le HTML, tu remarqueras que chaque ticket ressemble à ça :
 
 ```html
-<li class="scratchard" data-amount="5" data-scratched="false"></li>
+<li class="scratchcard" data-amount="5" data-scratched="false"></li>
 ```
 
 Le détail clé est le `data-amount="5"`. Ce ticket nous ferait gagner 5€ 🎉
@@ -84,7 +84,7 @@ Le seul problème est que, pour l'instant, tu peux cliquer plusieurs fois sur le
 Si tu regardes le HTML tu remarqueras :
 
 ```html
-<li class="scratchard" data-amount="5" data-scratched="false"></li>
+<li class="scratchcard" data-amount="5" data-scratched="false"></li>
 ```
 
 Il y a aussi un `data-scratched="false"` que nous n'avons pas encore utilisé. Tu peux avoir autant d'attributs de données que tu veux sur un élément HTML (tant qu'ils ont des noms différents), donc ce n'est pas un problème d'utiliser à la fois `data-amount` et `data-scratched` ici.
