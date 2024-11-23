@@ -3,7 +3,6 @@ SHELL:=/bin/zsh
 all: sudo xdg_specs brew ohmyzsh ohmyzsh_plugins stow asdf aws_credentials gpg_keys
 
 sudo:
-	@echo $(XDG_CONFIG_HOME)
 ifndef CI
 	sudo -v
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -22,9 +21,12 @@ xdg_specs:
 brew: brew-install brew-formulae brew-casks
 
 brew-install:
+# Skip if running in CI because Homebrew is already installed in macos-latest image
+ifndef CI
 	@echo "Installing Homebrew"
-	@NONINTERACTIVE=1 /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	@echo "Done"
+endif
 
 brew-formulae:
 	@echo "Installing Brew formulae"
