@@ -30,7 +30,7 @@ endif
 
 brew-formulae:
 	@echo "Installing Brew formulae"
-	@/opt/homebrew/bin/brew bundle --no-lock --file=homebrew/Brewfile
+	@-/opt/homebrew/bin/brew bundle --no-lock --file=homebrew/Brewfile
 	@echo "Done"
 
 brew-casks:
