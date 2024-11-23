@@ -9,7 +9,7 @@ env:
   aws_secret_access_key: fake_aws_secret_access_key
 jobs:
   dotfiles-install:
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
