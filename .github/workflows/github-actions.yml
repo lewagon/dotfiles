@@ -1,5 +1,5 @@
 name: Test dotfiles
-run-name: "${{ github.actor }} is testing dotfiles 🚀"
+run-name: ${{ github.actor }} is testing dotfiles 🚀
 on: [push]
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -7,6 +7,9 @@ concurrency:
 env:
   aws_access_key_id: fake_aws_access_key_id
   aws_secret_access_key: fake_aws_secret_access_key
+defaults:
+  run:
+    shell: zsh -e {0}
 jobs:
   dotfiles-install:
     runs-on: macos-15
@@ -15,10 +18,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Set ENV file .zshenv
         run: cp dot-files/dot-zshenv ~/.zshenv
-        shell: zsh -e {0}
       - name: Run Makefile file
         run: make
-        shell: zsh -e {0}
       - name: Test make results
         run: make test-all
-        shell: zsh -e {0}
