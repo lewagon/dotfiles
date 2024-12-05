@@ -91,8 +91,8 @@ Dans `application.js`, on va ajouter les lignes suivantes :
 
 ```js
 // app/javascript/application.js
-import "bootstrap"
 import "@popperjs/core"
+import "bootstrap"
 ```
 
 Puis dans `manifest.js`, on va ajouter les lignes suivantes :
