@@ -53,6 +53,29 @@ Now let's implement the simple actions (`list`, `add`, `delete`).
 
 **Discuss that with your teacher before you start each action.**
 
+```bash
+ruby interface.rb
+
+> Welcome to your Christmas gift list
+> Which action [list|add|delete|quit]?
+> list
+> 1 - sockets
+> 2 - ruby book
+> 3 - macbook pro
+> Which action [list|add|delete|quit]?
+> add
+> What gift would you like to add?
+> lewagon socks
+> "lewagon socks" was added to your Christmas gift list
+> Which action [list|add|delete|quit]?
+> Which item would you like to delete (give the number)?
+> 1
+> "sockets" was deleted from your Christmas gift list
+> Which action [list|add|delete|quit]?
+> quit
+> Goodbye
+```
+
 ## Step 3 - Mark an item as bought 🎁🎁🎁
 
 We want to be able to mark any item as bought:
