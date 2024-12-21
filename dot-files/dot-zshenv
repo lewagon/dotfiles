@@ -34,12 +34,13 @@ export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR/npm"
 
 # Zsh XDG Base Directory
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$XDG_STATE_HOME/zsh/zsh_history"
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export SHELL_SESSION_DIR="$XDG_STATE_HOME/zsh/sessions"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 export EDITOR="code --wait"
-export PAGER="less --chop-long-lines --no-init --quit-if-one-screen --RAW-CONTROL-CHARS"
+export PAGER="less"
+export LESS="--chop-long-lines --no-init --quit-if-one-screen --RAW-CONTROL-CHARS"
 export RUBY_CONFIGURE_OPTS="--enable-yjit"
 export THOR_MERGE="code --wait --merge"
 export THOR_DIFF="code --wait --diff"

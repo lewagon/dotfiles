@@ -129,3 +129,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Completion files: Use XDG dirs
+[ -d "$XDG_CACHE_HOME/zsh" ] || mkdir -p "$XDG_CACHE_HOME/zsh"
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION

@@ -1,0 +1,24 @@
+name: Test dotfiles
+run-name: ${{ github.actor }} is testing dotfiles 🚀
+on: [push]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  aws_access_key_id: fake_aws_access_key_id
+  aws_secret_access_key: fake_aws_secret_access_key
+defaults:
+  run:
+    shell: zsh -e {0}
+jobs:
+  dotfiles-install:
+    runs-on: macos-15
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Set ENV file .zshenv
+        run: cp dot-files/dot-zshenv ~/.zshenv
+      - name: Run Makefile file
+        run: make
+      - name: Test make results
+        run: make test-all

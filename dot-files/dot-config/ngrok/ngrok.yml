@@ -10,3 +10,7 @@ endpoints:
     url: https://horse-workable-bluebird.ngrok-free.app
     upstream:
       url: 3000
+  - name: localhost8080
+    url: https://horse-workable-bluebird.ngrok-free.app
+    upstream:
+      url: 8080
