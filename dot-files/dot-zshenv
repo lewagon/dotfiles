@@ -32,7 +32,6 @@ export MACHINE_STORAGE_PATH="$XDG_DATA_HOME/docker-machine"
 # GnuPG XDG Base Directory
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
-
 # Node XDG Base Directory
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 
