@@ -2,8 +2,6 @@
 
 [![Test dotfiles](https://github.com/jmschp/dotfiles/actions/workflows/github-actions.yml/badge.svg)](https://github.com/jmschp/dotfiles/actions/workflows/github-actions.yml)
 
-First clone the repository with:
-
 ## Installation
 
 ### MacOS configuration System update
@@ -15,7 +13,7 @@ After updating macOS, usually its necessary to restart. Then run `xcode-select -
 ### Clone the repo
 
 ```zsh
-git clone https://github.com/jmschp/dotfiles.git ~/code/dotfiles & cd code/dotfiles
+git clone https://github.com/jmschp/dotfiles.git ~/code/dotfiles && cd ~/code/dotfiles
 ```
 
 ### Run the Make file
