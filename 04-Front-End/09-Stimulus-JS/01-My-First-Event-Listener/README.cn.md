@@ -36,7 +36,7 @@ import { Application } from "@hotwired/stimulus";
 
 import EventListenerController from "./controllers/event_listener_controller.js";
 
-Stimulus = Application.start();
+window.Stimulus = Application.start();
 Stimulus.register("event-listener", EventListenerController);
 ```
 
