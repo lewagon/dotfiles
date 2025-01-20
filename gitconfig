@@ -59,3 +59,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = gautier@de-mauroy.fr
+	name = Gautier de MAUROY
