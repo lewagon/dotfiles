@@ -44,7 +44,7 @@ Ensuite, dans le dossier vide `controllers`, crée un fichier `event_listener_co
 
 ```javascript
 // lib/controllers/event_listener_controller.js
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   connect() {
