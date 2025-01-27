@@ -13,13 +13,13 @@ Dans le fichier `lib/index.js`, mets en œuvre la requête `GET` vers l'API en u
 Tu dois utiliser l'URL suivante pour faire la requête vers l'API :
 
 ```
-https://api.dictionaryapi.dev/api/v2/entries/fr/MOT
+https://api.dictionaryapi.dev/api/v2/entries/en/MOT
 ```
 
 Par exemple, cette URL récupèrera les définitions du mot "chat" :
 
 ```
-https://api.dictionaryapi.dev/api/v2/entries/fr/chat
+https://api.dictionaryapi.dev/api/v2/entries/en/chat
 ```
 
 L'API te fournira de nombreuses définitions différentes pour le mot. Ne t'inquiète pas, ton objectif est **uniquement d'afficher la toute première définition**. Pour cela, tu devras faire attention à la structure des données renvoyées par l'API 🤔 Qu'est-ce qu'un `Array` ; qu'est-ce qu'un `Object` ; quelles sont les clés et valeurs ?
