@@ -13,7 +13,7 @@
 你应该使用以下URL向API发起请求：
 
 %%%
-https://api.dictionaryapi.dev/api/v2/entries/en/单词
+https://api.dictionaryapi.dev/api/v2/entries/en/WORD
 %%%
 
 例如，这个URL将为词语“猫”获取定义：
