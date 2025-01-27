@@ -1,5 +1,3 @@
-# rubocop:disable Style/RedundantInitialize
-
 class Dessert
   def initialize(name, calories)
   end
@@ -15,5 +13,3 @@ class JellyBean < Dessert
   def initialize(name, calories, flavor)
   end
 end
-
-# rubocop:enable Style/RedundantInitialize
