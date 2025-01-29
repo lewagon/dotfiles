@@ -85,3 +85,7 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 # Theos Aliases
 
 alias la="ls -al"
+alias gip="git push"
+alias gic="git commit -m"
+alias gis="git status"
+alias gia="git add ."

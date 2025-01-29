@@ -56,7 +56,6 @@
         "**/tmp/**": true,
         "**/vendor/**": true
     },
-    "git.enabled": false,
     "notebook.diff.ignoreMetadata": true,
     "notebook.lineNumbers": "on",
     "notebook.markup.fontSize": 13,
@@ -85,4 +84,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.panel.defaultLocation": "right",
     "parallels-desktop.extension.path": "/Users/theodrak/.parallels-desktop-vscode",
+    "parallels-desktop.brew.path": "/opt/homebrew/bin/brew",
+    "parallels-desktop.git.path": "/opt/homebrew/bin/git",
+    "parallels-desktop.prlctl.path": "/usr/local/bin/prlctl",
 }
