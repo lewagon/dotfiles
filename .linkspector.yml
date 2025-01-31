@@ -11,6 +11,7 @@ ignorePatterns:
   - pattern: 'openai.com'
   - pattern: 'https://mp.weixin.qq.com'
   - pattern: 'https://kitt.lewagon.com/'
+  - pattern: 'https://kitt.lewagon.org/onboarding'
   - pattern: '.*kitt.lewagon.com.*'
   - pattern: '\<user.github_nickname\>'
   - pattern: 'https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/'
@@ -34,6 +35,7 @@ excludedFiles:
   - 01-Ruby/05-Regular-Expressions/02-Marketing-campaign/README.cn.md
   - 01-Ruby/03-Iterators-Blocks/03-Burger-restaurant/README.cn.md
   - 01-Ruby/02-Flow-Array/04-Black-Jack/README.cn.md
+  - 00-Setup/TEACHERS.cn.md
 aliveStatusCodes:
   - 200
   - 201
