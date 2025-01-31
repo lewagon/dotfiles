@@ -11,12 +11,38 @@ ignorePatterns:
   - pattern: 'openai.com'
   - pattern: 'https://mp.weixin.qq.com'
   - pattern: 'https://kitt.lewagon.com/'
-  - pattern: 'https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3'
+  - pattern: '.*kitt.lewagon.com.*'
+  - pattern: '\<user.github_nickname\>'
+  - pattern: 'https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/'
 excludedDirs:
   - 04-Front-End/node_modules
   - 04-Front-End/11-WX-MP-Frontend
+excludedFiles:
+  - 06-Projects/01-Pundit/README.cn.md
+  - 05-Rails/README.cn.md
+  - 05-Rails/06-Vue-Airbnb-Devise/README.cn.md
+  - 04-Front-End/10-Product-Design-Sprint/01-Schedule/README.cn.md
+  - 04-Front-End/06-HTTP-and-API/04-The-Fork-Restaurants/README.cn.md
+  - 04-Front-End/06-HTTP-and-API/05-Weather/README.cn.md
+  - 04-Front-End/03-Bootstrap/Optional-02-Accessibility/README.cn.md
+  - 02-OOP/02-OO-Advanced/02-Farming-Diary-Crops/README.cn.md
+  - 02-OOP/02-OO-Advanced/Optional-02-Gosu-Game/README.cn.md
+  - 02-OOP/04-Food-Delivery-Day-One/Optional-01-Medium-pocket-part-two/README.cn.md
+  - 01-Ruby/06-Parsing/Optional-02-Your-First-Scraper/README.cn.md
+  - 01-Ruby/05-Regular-Expressions/04-Double-Rainbow/README.cn.md
+  - 01-Ruby/05-Regular-Expressions/02-Marketing-campaign/README.cn.md
+  - 01-Ruby/03-Iterators-Blocks/03-Burger-restaurant/README.cn.md
+  - 01-Ruby/02-Flow-Array/04-Black-Jack/README.cn.md
 aliveStatusCodes:
   - 200
   - 201
   - 204
   - 206
+# httpHeaders:
+#   - urls:
+#       - 'https://github.com/'
+#       - 'https://guides.github.com/'
+#       - 'https://help.github.com/'
+#       - 'https://docs.github.com/'
+#     headers:
+#       Accept-Encoding: 'zstd, br, gzip, deflate'
