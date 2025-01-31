@@ -55,7 +55,7 @@ Estos son los seis métodos que hay que implementar:
 
 ## Tips
 
-Las consultas SQL suelen ser bastante largas, particularmente cuando comienzas a usar `WHERE` y `JOIN`. En Ruby, puedes usar la sintaxis [HEREDOC](https://zaiste.net/heredoc_in_ruby/) para escribir cadenas de texto (strings) de **multiples líneas**:
+Las consultas SQL suelen ser bastante largas, particularmente cuando comienzas a usar `WHERE` y `JOIN`. En Ruby, puedes usar la sintaxis [HEREDOC](https://www.rubyguides.com/2018/11/ruby-heredoc/) para escribir cadenas de texto (strings) de **multiples líneas**:
 
 ```ruby
 # Find the first 3 artists with the letter `Z` in their name.
