@@ -71,7 +71,7 @@ El área (`textarea`) para comentarios en la página está delineada con un bord
 
 1. Haz clic en el botón de la barra de herramientas desplegable de dispositivos (**Toggle device toolbar**) que se encuentra en el panel de herramientas de desarrollador (developers tools).
 1. Selecciona la vista de móvil. Tu página se verá más pequeña de lo normal. Así es cómo los dispositivos móviles muestran contenido web: ellos renderizan una pantalla más ancha y con zoom de pantalla alejado. Esto es intencional porque la mayoría de las páginas web están optimizadas para pantallas horizontales.
-1. En `index.html`, forza el [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) para que se considere que el tamaño del dispositivo sea el mismo que el del la pantalla de tu página. Agrega las metaetiquetas (metatags) necesarias en el `<head>`.
+1. En `index.html`, forza el [viewport](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) para que se considere que el tamaño del dispositivo sea el mismo que el del la pantalla de tu página. Agrega las metaetiquetas (metatags) necesarias en el `<head>`.
 <details>
 <summary markdown='span'>View solution</summary>
 
