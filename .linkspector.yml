@@ -14,6 +14,7 @@ ignorePatterns:
   - pattern: '.*kitt.lewagon.com.*'
   - pattern: '\<user.github_nickname\>'
   - pattern: 'https://web-dev-challenge-lewagon-image.oss-cn-shanghai.aliyuncs.com/'
+  - pattern: '^https://www.etsy.com$'
 excludedDirs:
   - 04-Front-End/node_modules
   - 04-Front-End/11-WX-MP-Frontend
