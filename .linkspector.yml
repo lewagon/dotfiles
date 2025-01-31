@@ -1,13 +1,15 @@
+dirs:
+  - .
+useGitIgnore: true
 ignorePatterns:
   - pattern: 'http://localhost:'
   - pattern: 'https://github.com/lewagon/'
   - pattern: 'https://www.github.com/lewagon/'
-  - pattern: 'www.domainexemple.xyz'
+  - pattern: www.domainexemple.xyz
   - pattern: 'https://regexr.com/'
   - pattern: 'https://www.cloudflare.com/'
-  - pattern: 'openai.com'
+  - pattern: openai.com
   - pattern: 'https://mp.weixin.qq.com'
-useGitIgnore: true
 excludedDirs:
   - 04-Front-End/node_modules
 aliveStatusCodes:
@@ -15,11 +17,3 @@ aliveStatusCodes:
   - 201
   - 204
   - 206
-# httpHeaders:
-#   - urls:
-#       - 'https://github.com/'
-#       - 'https://guides.github.com/'
-#       - 'https://help.github.com/'
-#       - 'https://docs.github.com/'
-#     headers:
-#       Accept-Encoding: 'zstd, br, gzip, deflate'
