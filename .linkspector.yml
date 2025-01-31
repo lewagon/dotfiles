@@ -5,13 +5,16 @@ ignorePatterns:
   - pattern: 'http://localhost:'
   - pattern: 'https://github.com/lewagon/'
   - pattern: 'https://www.github.com/lewagon/'
-  - pattern: www.domainexemple.xyz
+  - pattern: 'www.domainexemple.xyz'
   - pattern: 'https://regexr.com/'
   - pattern: 'https://www.cloudflare.com/'
-  - pattern: openai.com
+  - pattern: 'openai.com'
   - pattern: 'https://mp.weixin.qq.com'
+  - pattern: 'https://kitt.lewagon.com/'
+  - pattern: 'https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3'
 excludedDirs:
   - 04-Front-End/node_modules
+  - 04-Front-End/11-WX-MP-Frontend
 aliveStatusCodes:
   - 200
   - 201
