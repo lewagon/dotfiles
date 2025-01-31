@@ -41,7 +41,7 @@ Queremos mover la casilla en el callback, pero primero debemos verificar si la c
 Implementemos la función `canMove` para verificar si una casilla tiene un espacio vacío junto a ella.
 Esta función debería tomar 1 parámetro: la casilla en sí.
 
-Para verificar si una casilla tiene un espacio vacío junto a ella, puede que desees consultas las propiedades [cellIndex](http://help.dottoro.com/ljputote.php) y [rowIndex](https://developer.mozilla.org/es/docs/Web/API/HTMLTableRowElement/rowIndex) para calcular la posición de la casilla.
+Para verificar si una casilla tiene un espacio vacío junto a ella, puede que desees consultas las propiedades [cellIndex](http://help.dottoro.com/ljputote.php) y [rowIndex](https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/rowIndex) para calcular la posición de la casilla.
 ¡Ten cuidado si necesitas llamar a estos métodos en un elemento `tr` o `td`!
 
 ## Mover la casilla
