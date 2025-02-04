@@ -12,11 +12,8 @@ const injectMap = (lng, lat) => {
   // - Add a marker to the map at the coordinates
 };
 
-const showMapAndCoordinates = (event) => {
-  event.preventDefault();
-  // TODO #3 Get the user input
-  const coordinates = "";
-  // TODO #4: Construct the URL (with apiKey & userInput)
+const showMapAndCoordinates = (userInput) => {
+  // TODO #3: Construct the URL (with apiKey & userInput)
   // and make the fetch request to the mapbox API
   const url = ``;
 
@@ -24,7 +21,7 @@ const showMapAndCoordinates = (event) => {
     .then(response => response.json())
     .then((data) => {
       console.log(data);
-      // TODO #5: Extract the coordinates from the parsed JSON response (longitude, latitude)
+      // TODO #4: Extract the coordinates from the parsed JSON response (longitude, latitude)
       // Use these coordinates to call the displayCoordinates and injectMap functions
     });
 };
@@ -35,5 +32,5 @@ const showMapAndCoordinates = (event) => {
 // TODO #1: Select the form element
 // TODO #2: Add event listener to the form that:
 // - Prevents the default form submission behavior
-// - Get the user input
-// - Calls the showMapAndCoordinates function with the event (from the event listener) as an argument
+// - Gets the user input
+// - Calls the showMapAndCoordinates function with the userInput (it should be a string!) as an argument
