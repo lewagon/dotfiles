@@ -1,13 +1,13 @@
 const TOKEN = "your-token-here";
 
 const displayCoordinates = (longitude, latitude) => {
-  // TODO #7: Insert the coordinates into the DOM
+  // TODO #6: Insert the coordinates into the DOM
   // - Extract the coordinates from the parsed JSON response (lang, lat)
   // - Display the coordinates in the element where the coordinates will be displayed
 };
 
 const injectMap = (lng, lat) => {
-  // TODO #6: Create the map
+  // TODO #5: Create the map
   // - Create a map using the Mapbox API
   // - Add a marker to the map at the coordinates
 };
