@@ -162,7 +162,7 @@ Encore une fois, mets à jour toute ta vue pour ajouter ce lien de suppression.
 
 On va ajouter un attribut URL d'image au modèle d'appartement (simplement en stockant une string avec l'URL d'une image). On va mettre à jour nos formulaires de création et de modification afin de permettre à l'utilisateur de spécifier l'image d'un appartement à afficher sur le site Web. On peut également mettre à jour nos pages d'index et de show avec la nouvelle image.
 
-Pour ta seed, tu peux trouver de jolies images de maisons sur [unsplash](https://unsplash.com/search/photos/house).
+Pour ta seed, tu peux trouver de jolies images de maisons sur [unsplash](https://unsplash.com/s/photos/house).
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show_2.png)
 

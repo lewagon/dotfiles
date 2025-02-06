@@ -162,7 +162,7 @@ Flat.create!(
 我们在公寓模型添加一个图片链接地址的属性（仅需要保存图片链接地址的字符串）。更新我们的新建公寓表单和编辑公寓表单，让用户可以指定用来显示在网站上的公寓的图片。我们也可以更新我们的index和show页面来显示这个图片。
 
 
-你可以在这里找到精美的公寓图片[unsplash](https://unsplash.com/search/photos/house)。
+你可以在这里找到精美的公寓图片[unsplash](https://unsplash.com/s/photos/house)。
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show_2.png)
 
