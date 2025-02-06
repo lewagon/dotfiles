@@ -14,7 +14,7 @@ On a préparé trois drafts pour t'aider à démarrer si tu choisis Trello, Gith
 
 Pour rendre ton MVP plus légitime, personnalise ton nom de domaine au lieu d'utiliser l'URL gratuite `.herokuapp.com`. On te recommande d'utiliser [Namecheap](https://www.namecheap.com/) pour acheter ton nom de domaine. Suis [ce guide](https://www.lewagon.com/blog/buying-a-domain-on-namecheap-and-pointing-it-to-heroku) pour acheter et configurer ton nom de domaine, puis [ce guide](https://www.lewagon.com/blog/setting-up-a-free-ssl-certificate-on-heroku) pour configurer ton certificat SSL.
 
-Le Wagon est un partenaire officiel de GitHub depuis 2015 et, grâce à ce partenariat, tu peux accéder au [Github Student Developer Pack](https://education.github.com/pack). Retrouve toutes les infos [ici](https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3). Namecheap a une [offre spéciale](https://education.github.com/pack?sort=popularity&tag=Domains) s'il s'agit d'un nom de domaine de premier niveau `.me`.
+Le Wagon est un partenaire officiel de GitHub depuis 2015 et, grâce à ce partenariat, tu peux accéder au [Github Student Developer Pack](https://education.github.com/pack). Retrouve toutes les infos [ici](https://kitt.lewagon.com/redeem_github_student_developer_pack). Namecheap a une [offre spéciale](https://education.github.com/pack?sort=popularity&tag=Domains) s'il s'agit d'un nom de domaine de premier niveau `.me`.
 
 ### Chaîne Slack d'équipe
 

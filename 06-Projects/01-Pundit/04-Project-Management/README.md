@@ -14,7 +14,7 @@ We've prepared three drafts for you to start from if you choose Trello, Github P
 
 Having a custom domain name will make your MVP seem much more legit than using the free `.herokuapp.com` url. We recommend using [Namecheap](https://www.namecheap.com/) to buy your domain name. Please follow [this guide](https://www.lewagon.com/blog/buying-a-domain-on-namecheap-and-pointing-it-to-heroku) to purchase and setup your custom domain. Then follow [this guide](https://www.lewagon.com/blog/setting-up-a-free-ssl-certificate-on-heroku) to setup your SSL certificate.
 
-Please note that Le Wagon is an official partner of GitHub since 2015. Hence, our partnership allows you to redeem an access to the [Github Student Developer Pack](https://education.github.com/pack). You can find all the info [here](https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3). There is a [special offer](https://education.github.com/pack?sort=popularity&tag=Domains) for Namecheap if the domain name registers with a `.me` TLD.
+Please note that Le Wagon is an official partner of GitHub since 2015. Hence, our partnership allows you to redeem an access to the [Github Student Developer Pack](https://education.github.com/pack). You can find all the info [here](https://kitt.lewagon.com/redeem_github_student_developer_pack). There is a [special offer](https://education.github.com/pack?sort=popularity&tag=Domains) for Namecheap if the domain name registers with a `.me` TLD.
 
 
 ### Team Slack Channel

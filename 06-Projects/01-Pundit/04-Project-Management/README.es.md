@@ -14,7 +14,7 @@ Hemos preparado tres borradores para que comiences independientemente si eliges 
 ### Nombre de dominio
 Tener un nombre de dominio personalizado hará que tu MVP parezca mucho más legítimo que usar la URL gratuita `.herokuapp.com`. Recomendamos usar [Namecheap](https://www.namecheap.com/) para comprar tu nombre de dominio. Sigue [esta guía](https://www.lewagon.com/blog/buying-a-domain-on-namecheap-and-pointing-it-to-heroku) para comprar y configurar tu dominio personalizado. Luego sigue [esta guía](https://www.lewagon.com/blog/setting-up-a-free-ssl-certificate-on-heroku) para configurar tu certificado SSL.
 
-Ten en cuenta que Le Wagon es un socio oficial de GitHub desde el 2015. Por lo tanto, nuestra asociación te permite canjear un acceso al [Paquete de Desarrollo para Estudiantes de Github](https://education.github.com/pack). Encontrarás toda la información [aquí](https://www.notion.so/lewagon/GitHub-Student-Developer-Pack-cc73194095034af1a0db32628b729bc3). Hay una [oferta especial](https://education.github.com/pack?sort=popularity&tag=Domains) para Namecheap si el nombre de dominio se registra con un TLD `.me`.
+Ten en cuenta que Le Wagon es un socio oficial de GitHub desde el 2015. Por lo tanto, nuestra asociación te permite canjear un acceso al [Paquete de Desarrollo para Estudiantes de Github](https://education.github.com/pack). Encontrarás toda la información [aquí](https://kitt.lewagon.com/redeem_github_student_developer_pack). Hay una [oferta especial](https://education.github.com/pack?sort=popularity&tag=Domains) para Namecheap si el nombre de dominio se registra con un TLD `.me`.
 
 
 ### Canal del Equipo en Slack
