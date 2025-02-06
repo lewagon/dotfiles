@@ -10,21 +10,21 @@ Ouvre ton terminal et exécute :
 
 ### macOS
 
-%%%bash
+```bash
 brew update
 brew install sdl2
 gem install gosu
-%%%
+```
 
 ### Linux
 
-%%%bash
+```bash
 sudo apt-get update
 sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev\
   libpango1.0-dev libgl1-mesa-dev libfreeimage-dev libopenal-dev\
   libsndfile-dev libmpg123-dev
 gem install gosu
-%%%
+```
 
 ## Snake
 
@@ -45,20 +45,20 @@ Codons le bon vieux jeu **Snake**. Les contrôles sont simples : touches fléch�
 
 Ouvre un terminal et exécute :
 
-%%%bash
+```bash
 touch lib/game.rb
 touch lib/snake.rb
 touch lib/food.rb
 curl https://themushroomkingdom.net/sounds/wav/smb/smb_bump.wav > lib/start.wav
 curl https://themushroomkingdom.net/sounds/wav/smb/smb_coin.wav > lib/eat.wav
 code .
-%%%
+```
 
 Nous allons lancer le jeu avec :
 
-%%%bash
+```bash
 ruby lib/game.rb
-%%%
+```
 
 ## Aller plus loin
 
