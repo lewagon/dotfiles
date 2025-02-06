@@ -30,7 +30,6 @@ gem install gosu
 
 Codons le bon vieux jeu **Snake**. Les contrôles sont simples : touches fléchées. L'objectif est de grandir en mangeant de la nourriture et de rester en vie (ne touche pas les bords de la fenêtre !).
 
-![](http://g.recordit.co/Wu3KJw9Jd1.gif)
 ![Jouer au jeu gosu en déplaçant les touches fléchées pour manger de la nourriture](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/gosu.gif)
 
 ## Spécifications

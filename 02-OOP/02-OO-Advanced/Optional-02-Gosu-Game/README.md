@@ -30,7 +30,6 @@ gem install gosu
 
 Let's code the good ol' game **Snake** game. Controls are easy: arrow keys. The goal is to grow by eating food and stay alive (do not hit window borders!).
 
-![](http://g.recordit.co/Wu3KJw9Jd1.gif)
 ![Playing the gosu game by moving the arrow keys to eat food](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/gosu.gif)
 
 ## Specs
