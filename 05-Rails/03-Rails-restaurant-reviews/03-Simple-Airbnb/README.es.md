@@ -161,7 +161,7 @@ Una vez más, actualiza toda nuestra vista para poner este enlace de supresión.
 
 Agrega un atributo url de imagen al modelo flat (solo para almacenar un string de la url de una imagen). Actualiza los formularios de creación y actualización para permitirle al usuario especificar una imagen del apartamento que será mostrado en la página web. También puedes actualizar las páginas index y show con la nueva imagen.
 
-Te recomendamos usar [Unsplash](https://unsplash.com/search/photos/house) para alimentar tu seed con buenas imágenes de viviendas.
+Te recomendamos usar [Unsplash](https://unsplash.com/s/photos/house) para alimentar tu seed con buenas imágenes de viviendas.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show_2.png).
 

@@ -160,7 +160,7 @@ Once again, let's update all our view to put in this destroy link.
 
 Let's add a picture url attribute to the flat model (just storing a string of a picture url from the internet). Let update our new and edit forms to allow the user to specify a flat picture to be displayed throughout the website. We can also update our index and show pages with the new picture.
 
-For your seed, you can find nice images of houses on [Unsplash](https://unsplash.com/search/photos/house).
+For your seed, you can find nice images of houses on [Unsplash](https://unsplash.com/s/photos/house).
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show_2.png)
 

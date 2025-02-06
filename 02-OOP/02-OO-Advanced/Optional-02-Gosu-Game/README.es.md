@@ -30,7 +30,7 @@ gem install gosu
 
 Escribamos el código del clásico juego **Snake**. Los controles son fáciles: las teclas de flechas en tu teclado. El objetivo es crecer comiendo y sobreviviendo (¡no toques los bordes de la ventana!)
 
-![](http://g.recordit.co/Wu3KJw9Jd1.gif)
+![Jugando el juego de Snake](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/gosu.gif)
 
 ## Especificaciones
 

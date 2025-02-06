@@ -233,7 +233,7 @@ Install [Accessibility Insights](https://accessibilityinsights.io) to run an aud
 
 - ["Accessibility" on developers.google](https://developers.google.com/web/fundamentals/accessibility/)
 - ["Accessible to all" on web.dev](https://web.dev/accessible/)
-- ["The POUR Methodology" on Adobe's blog](https://theblog.adobe.com/design-with-accessibility-in-mind-the-pour-methodology/)
+- ["The POUR Methodology" on Adobe's blog](https://blog.adobe.com/en/publish/2017/11/24/design-with-accessibility-in-mind-the-pour-methodology)
 - [The a11y project](https://www.a11yproject.com/)
 - ["A11ycasts with Rob Dodson" on Youtube](https://www.youtube.com/watch?v=HtTyRajRuyY&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 - [How visually impaired people navigate the web](https://uxdesign.cc/how-visually-impaired-people-navigate-the-web-7f9eab9d9c37)

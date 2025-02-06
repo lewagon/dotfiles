@@ -215,7 +215,7 @@ Instala [Accessibility Insights](https://accessibilityinsights.io) para correr l
 
 - ["Accessibility" en developers.google](https://developers.google.com/web/fundamentals/accessibility/)
 - ["Accessible to all" en web.dev](https://web.dev/accessible/)
-- ["The POUR Methodology" en el blog de Adobe](https://theblog.adobe.com/design-with-accessibility-in-mind-the-pour-methodology/)
+- ["The POUR Methodology" en el blog de Adobe](https://blog.adobe.com/en/publish/2017/11/24/design-with-accessibility-in-mind-the-pour-methodology)
 - [El proyecto a11y](https://www.a11yproject.com/)
 - ["A11ycasts con Rob Dodson" en Youtube](https://www.youtube.com/watch?v=HtTyRajRuyY&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 - [Cómo las personas con impedimentos visuales navegas la web](https://uxdesign.cc/how-visually-impaired-people-navigate-the-web-7f9eab9d9c37)
