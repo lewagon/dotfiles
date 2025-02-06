@@ -1,4 +1,4 @@
-:warning: **Avertissement !** Cet ejercicio _ne fonctionne pas_ sur Windows, passe-le si tu utilises ce système d'exploitation (ou fais équipe avec quelqu'un sur macOS / Linux).
+:warning: **Avertissement !** Cet exercice _ne fonctionne pas_ sur Windows, fais équipe avec quelqu'un sur macOS / Linux si tu souhaites le faire.
 
 ## Contexte & Objectifs
 
