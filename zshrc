@@ -82,10 +82,30 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
 # Theos Aliases
 
-alias la="ls -al"
+alias la="ls -a"
 alias gip="git push"
 alias gic="git commit -m"
 alias gis="git status"
 alias gia="git add ."
+alias lwu="git pull upstream master -X ours"
+# ---- Eza (better ls) -----
+alias ls="eza --icons=always"
+
+# ---- Zoxide (better cd) ----
+eval "$(zoxide init zsh)"
+alias cd="z"

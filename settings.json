@@ -87,4 +87,7 @@
     "parallels-desktop.brew.path": "/opt/homebrew/bin/brew",
     "parallels-desktop.git.path": "/opt/homebrew/bin/git",
     "parallels-desktop.prlctl.path": "/usr/local/bin/prlctl",
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
