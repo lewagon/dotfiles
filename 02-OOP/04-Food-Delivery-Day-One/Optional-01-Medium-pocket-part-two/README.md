@@ -136,7 +136,7 @@ Make sure it still works, and move on to the next user story.
 
 **List authors**
 
-Phew, the hardest part is behind us. This one is an easy one. We want to list authors, so let's code an `AuthorsController`.
+Phew, the hardest part is behind us. This one is an easier one. We want to list authors, so let's code an `AuthorsController`.
 
 It will need to access the author repo and an authors view. The view must display authors names and associated unread posts in an indexed list:
 
@@ -147,7 +147,7 @@ It will need to access the author repo and an authors view. The view must displa
 
 **List authors posts**
 
-Our work on the models should make this one pretty easy. We can access all posts from an author thanks to the `posts` getter. Write the pseudo-code to breakdown the problem in small steps, test and move on to the last feature.
+Our work on the models should make this one easier. We can access all posts from an author thanks to the `posts` getter. Write the pseudo-code to breakdown the problem in small steps, test and move on to the last feature.
 
 **See author's details**
 

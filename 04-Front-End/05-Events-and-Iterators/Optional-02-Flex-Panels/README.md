@@ -28,7 +28,7 @@ Whenever we click on a panel it should expand and reveal the full text like this
 
 ### Styling with FlexBox
 
-We have a simple HTML structure with panels. Each panel has a background image and some text in it separated in 3 paragraph elements.
+We have an HTML structure with panels. Each panel has a background image and some text in it separated in 3 paragraph elements.
 
 It looks quite strange at first, so our first step is making it prettier. How do we place the pictures side by side? [Flexbox](https://kitt.lewagon.com/knowledge/cheatsheets/flexbox) is your friend in this styling part of the exercise. The page needs to look like this before moving onto the JavaScript part of the exercise:
 

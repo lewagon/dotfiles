@@ -2,7 +2,7 @@
 
 You are now going to code a Cookbook application that manages recipes.
 
-The idea is quite simple: you love cooking, but you need to remember all the recipes you like. This is your cookbook! It'll keep a list of your recipes, allowing you to `list` them, `add` new recipes and `remove` others.
+The idea is this: you love cooking, but you need to remember all the recipes you like. This is your cookbook! It'll keep a list of your recipes, allowing you to `list` them, `add` new recipes and `remove` others.
 
 You will build this app using the MVC **pattern** (also used in Rails):
 - Model: what is the basic object you want to manipulate?

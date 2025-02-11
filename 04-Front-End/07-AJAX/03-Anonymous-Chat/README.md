@@ -42,7 +42,7 @@ Here is a sample message:
 
 Time to take part to the chat and post your own messages!
 
-The form `#comment-form` has two inputs (`#your-message` and `#your-name`). Start by coding a simple script to  retrieve the input values. At first, you can just `console.log()` the values to make sure everything works as expected. This is a basic DOM exercise, no AJAX involved yet!
+The form `#comment-form` has two inputs (`#your-message` and `#your-name`). Start by coding a script to  retrieve the input values. At first, you can just `console.log()` the values to make sure everything works as expected. This is a basic DOM exercise, no AJAX involved yet!
 
 **Hint**: You'll have to prevent the default behavior of the form submission (using the `preventDefault()` method).
 

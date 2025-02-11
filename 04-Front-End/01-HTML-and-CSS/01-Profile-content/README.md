@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-A simple challenge to manipulate basic HTML tags and create a profile card with headers, text, lists, and images.
+A challenge to manipulate basic HTML tags and create a profile card with headers, text, lists, and images.
 
 ## Setup
 
@@ -27,7 +27,7 @@ serve
 
 ## Specs
 
-Build a simple HTML profile page with the following elements (use the right HTML tags):
+Build an HTML profile page with the following elements (use the right HTML tags):
 
 - an image of yourself
 - a header and sub-header with your name and your job title (you can put programmer now 💻)
