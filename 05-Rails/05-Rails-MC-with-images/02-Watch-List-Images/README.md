@@ -74,7 +74,7 @@ We are already getting our `Movie` instances' posters from our seeds and thanks 
 
 The user should be able to upload an image that will then be displayed on the `#index` view of `List` as a thumbnail/cover. On the `#show` view of a `List`, the same image should be displayed, but bigger, followed by the movies that have been saved to it!
 
-Try your best to make something beautiful using Bootstrap, a few nice font, and all your creativity 🎨😊🎨
+Try your best to make something beautiful using Bootstrap, a few nice fonts, and all your creativity 🎨😊🎨
 
 **Hint**: You can always build on top of [Le Wagon UI Kit](https://uikit.lewagon.com/)
 
