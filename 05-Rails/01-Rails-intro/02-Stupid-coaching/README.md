@@ -33,7 +33,7 @@ git push origin master
 
 We add the flag `--skip-active-storage` & `--skip-action-mailbox` to skip the installation of [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html) & [Action Mailbox](https://guides.rubyonrails.org/action_mailbox_basics.html) which are two parts of Rails we don't need for now.
 
-**Objective**: We will implement a simple Rails application with 2 pages:
+**Objective**: We will implement a minimal Rails application with 2 pages:
 
 1. First page is a form with an input, where a user can type a question to ask the Coach
 1. After submitting the form, the user is redirected to another page where they will see their question and the coach's answer.
@@ -67,7 +67,7 @@ We want to display a page with a `<form>` to our users at [localhost:3000/ask](h
 
 **Route**
 
-Write a simple route to serve the `GET /ask` HTTP request to the `ask` action of the questions controller. As a reminder, here is the pattern of a route coded in Rails:
+Write a route to serve the `GET /ask` HTTP request to the `ask` action of the questions controller. As a reminder, here is the pattern of a route coded in Rails:
 
 ```ruby
 verb "url", to: "controller#action"

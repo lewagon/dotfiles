@@ -2,7 +2,7 @@
 
 A **getter** is a method that **requests** information from our instance variable. A **setter** is a method that **changes** information in our instance variable.
 
-In this exercise, we are going to implement a simple vending machine (`VendingMachine` Ruby class) where a user can buy snacks for a given price. The user can go to the machine, insert some coins and then press a "Buy" button.
+In this exercise, we are going to implement a vending machine (`VendingMachine` Ruby class) where a user can buy snacks for a given price. The user can go to the machine, insert some coins and then press a "Buy" button.
 
 ## Specs
 

@@ -63,7 +63,7 @@ Whenever you add migrations to your app (e.g. after a `rails g model ...`), don'
 rails db:migrate RAILS_ENV=test  # If you added a migration
 ```
 
-Then testing your code is as simple as usual with a good ol'
+Then you can test your code with:
 
 ```bash
 rspec
@@ -82,7 +82,7 @@ If you have trouble running `rspec`, you may need to run `bin/rspec`. It means t
 
 Make sure you think twice before choosing the data type, it might not always be your first guess!
 
-**Question**: Can you draw this simple schema at [db.lewagon.com](http://db.lewagon.com)? Discuss with your buddy.
+**Question**: Can you draw this schema at [db.lewagon.com](http://db.lewagon.com)? Discuss with your buddy.
 
 #### Validation
 

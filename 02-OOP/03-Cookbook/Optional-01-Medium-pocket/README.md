@@ -208,7 +208,7 @@ Then test with:
 ruby lib/test.rb
 ```
 
-**Hint**: if you encounter a `403 Forbidden Bots (OpenURI::HTTPError)` while scraping, there's an easy way around by specifying a `User-Agent` in the **headers** of your HTTP request. Here's an example using `open-uri`:
+**Hint**: if you encounter a `403 Forbidden Bots (OpenURI::HTTPError)` while scraping, there's a way around it by specifying a `User-Agent` in the **headers** of your HTTP request. Here's an example using `open-uri`:
 
 ```ruby
 USER_AGENT = "Mozilla/5.0 (Windows NT x.y; rv:10.0) Gecko/20100101 Firefox/10.0"

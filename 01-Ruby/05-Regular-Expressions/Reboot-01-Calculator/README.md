@@ -1,6 +1,6 @@
 ## Background and Objectives
 
-We will build a simple calculator capable of handling the 4 basic operations (`+`, `-` , `*`, `/`). The program will ask the user for two numbers and one of the four operators in order to be able to perform a simple calculation and display the result to the user.
+We will build a calculator capable of handling the 4 basic operations (`+`, `-` , `*`, `/`). The program will ask the user for two numbers and one of the four operators in order to be able to perform a calculation and display the result to the user.
 
 ## Guidelines
 
@@ -27,11 +27,11 @@ Always kickstart a challenge altogether with the teacher and write the *pseudo-c
 # 5. etc.
 ```
 
-**Writing the pseudo-code is 80% of the job!** Then translating english into Ruby is really the easy part. Adopt this pseudo-code methodology for **every** challenge of the Reboot session.
+**Writing the pseudo-code is 80% of the job!** Then translating English into Ruby is the more routine part. Adopt this pseudo-code methodology for **every** challenge of the Reboot session.
 
 ## Step 1 - Dumb calculator
 
-Build a simple calculator with a command-line UI:
+Build a calculator with a command-line UI:
 
 - First handling only additions
 - Then all operations (mutliplications, subtractions, divisions).

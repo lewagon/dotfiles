@@ -238,7 +238,7 @@ POST "lists"
 ### 4 - Routing, Controller, Views for bookmarks
 
 - A user can add a new bookmark (movie/list pair) to an existing list
-- Checkout `simple_form` [docs](https://github.com/heartcombo/simple_form#associations) about `f.association` to easily create a select dropdown for our list of movies.
+- Check out `simple_form` [docs](https://github.com/heartcombo/simple_form#associations) about `f.association` to easily create a select dropdown for our list of movies.
 
 ```
 GET "lists/42/bookmarks/new"

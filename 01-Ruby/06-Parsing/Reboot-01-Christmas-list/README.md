@@ -46,7 +46,7 @@ ruby interface.rb
 
 ## Step 2 - List, Add, Delete 🎁🎁
 
-Now let's implement the simple actions (`list`, `add`, `delete`).
+Now let's implement the actions (`list`, `add`, `delete`).
 
 - How do you model your `gift_list`?
 - Do you use a hash? An array?

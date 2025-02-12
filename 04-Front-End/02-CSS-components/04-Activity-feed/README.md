@@ -9,7 +9,7 @@ But first, **read all the instructions**!
 
 ## Tab design
 
-Tabs are pretty easy to design. The HTML looks like this:
+Tabs are pretty fun to design. The HTML looks like this:
 
 ```html
 <div class="tabs">

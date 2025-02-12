@@ -18,7 +18,7 @@ You will learn the basics of React by building a to-do list APP, with which you 
 
 #### React
 
-React uses a special syntax called [JSX](https://react.dev/learn/writing-markup-with-jsx), which is a templating language that lets us easily write Javascript expressions inside of our HTML. The syntax of it does differ a little bit from standard JavaScript (we'll see this shortly!). The nice thing about this is that the syntax is fairly simple. The rough part is that _browsers can't actually read JSX files by default_. So we have to convert them to normal JS files before we can actually run them in the browser.
+React uses a special syntax called [JSX](https://react.dev/learn/writing-markup-with-jsx), which is a templating language that lets us easily write Javascript expressions inside of our HTML. The syntax of it does differ a little bit from standard JavaScript (we'll see this shortly!). The nice thing about this is that the syntax is fairly readable. The rough part is that _browsers can't actually read JSX files by default_. So we have to convert them to normal JS files before we can actually run them in the browser.
 
 So, usually developers use what's called a **bundler** like [Webpack](https://webpack.js.org/) to process all the files and convert them into "normal" JavaScript that browsers can read. This requires installing a lot of additional stuff, so we're going to avoid this complexity just for the sake of this challenge.
 
@@ -173,7 +173,7 @@ Can you use this sample code as a guide to try to figure out how you might displ
 <details>
 <summary markdown='span'>How do we bind `done` with the checkbox?</summary>
 
-React makes it easy to set HTML attributes in JSX syntax:
+React lets you set HTML attributes in JSX syntax:
 
 ```js
 function App() {
