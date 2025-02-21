@@ -90,4 +90,8 @@
     "[json]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "git.openRepositoryInParentFolders": "always",
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
