@@ -1,3 +1,4 @@
+# Lewagon Aliases
 # Get External IP / Internet Speed
 alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
@@ -9,3 +10,26 @@ alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
 alias stt="echo 'Launching VS Code instead of Sublime Text... (cf ~/.aliases)' && code ."
 
 
+# Theos Aliases
+# Terminal aliases
+alias la="ls -a"
+alias cl="clear"
+alias al="nvim /Users/theodrak/.aliases"
+
+# --- Le Wagon updates
+alias cdl="cd /Users/theodrak/code/theodrak/fullstack-challenges"
+alias lwu="git pull upstream master -X ours"
+
+# --- Git Shortcuts
+alias gip="git push"
+alias gic="git commit -m"
+alias gis="git status"
+alias gia="git add ."
+
+# ---- Eza (better ls) -----
+alias ls="eza --icons=always"
+
+
+# ---- Zoxide (better cd) ----
+eval "$(zoxide init zsh)"
+alias cd="z"

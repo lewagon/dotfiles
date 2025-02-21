@@ -95,17 +95,5 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
-# Theos Aliases
-
-alias la="ls -a"
-alias gip="git push"
-alias gic="git commit -m"
-alias gis="git status"
-alias gia="git add ."
-alias lwu="git pull upstream master -X ours"
-# ---- Eza (better ls) -----
-alias ls="eza --icons=always"
-
-# ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
-alias cd="z"
+# ALIASES - Place all aliases in the alias file
+# /Users/theodrak/code/theodrak/dotfiles/aliases
