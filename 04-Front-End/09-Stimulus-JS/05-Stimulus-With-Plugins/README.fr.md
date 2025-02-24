@@ -79,7 +79,7 @@ Ces lignes [chargent toutes les fonctions pour chaque type de graphique que Char
 
 Voici un [diagramme en forme de beignet](https://www.chartjs.org/docs/latest/charts/doughnut.html). Nous allons l'utiliser pour représenter le ratio hommes-femmes dans le monde.
 
-En 2020, selon l'[INED](https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/more-men-or-women-in-the-world/), le nombre d'hommes et de femmes dans le monde était à peu près égal. Plus précisément, sur 1 000 personnes, 504 sont des hommes (50,4 `) et 496 sont des femmes (49,6 `).
+En 2020, selon l'[INED](https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/more-men-or-women-in-the-world/), le nombre d'hommes et de femmes dans le monde était à peu près égal. Plus précisément, sur 1 000 personnes, 504 sont des hommes (50,4 %) et 496 sont des femmes (49,6 %).
 
 Construisons un Objet JavaScript pour représenter ces données :
 
