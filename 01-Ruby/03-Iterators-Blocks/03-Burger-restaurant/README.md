@@ -11,7 +11,7 @@ On this journey, you're about to open a **burger restaurant**, from the kitchen 
 
 ### Step 1: Basic burger
 
-Let's start by coding a simple `burger` method which takes 3 parameters, patty, sauce and topping, and returns the burger as an array of strings. For instance:
+Let's start by coding a `burger` method which takes 3 parameters, patty, sauce and topping, and returns the burger as an array of strings. For instance:
 
 ```ruby
 burger("steak", "ketchup", "onions")

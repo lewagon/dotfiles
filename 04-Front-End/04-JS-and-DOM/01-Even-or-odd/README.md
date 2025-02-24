@@ -24,7 +24,7 @@ As long as the `evenOrOdd` function is not done, the tests will be red. They wil
 
 ## Specs
 
-Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `Number`) and returns a `String`:
+Let's start with an algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `Number`) and returns a `String`:
 
 - `"even"` if the number is even (0, 2, 4, etc.)
 - `"odd"` if the number is odd (1, 3, 5, etc.)

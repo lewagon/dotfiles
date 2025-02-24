@@ -6,7 +6,7 @@ Time to learn about relational databases, discover the different relationships b
 
 ## `02 Active Record Basics`
 
-Active Record is a powerful Ruby library to connect your object to a database. Active Record is one of the core library in Rails. Discover how an Active Record model is magically linked to a table thanks to a simple **naming convention**. That's Active Record magic!
+Active Record is a powerful Ruby library to connect your object to a database. Active Record is one of the core library in Rails. Discover how an Active Record model is magically linked to a table thanks to a **naming convention**. That's Active Record magic!
 
 ## `03 Associations & Validations`
 

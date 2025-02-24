@@ -42,7 +42,7 @@ You can use [styles](https://help.figma.com/hc/en-us/articles/360039820134-Manag
 
 ### Create your first component
 
-Now it's time to create your first component. Let's begin with an easy one, **the main title**.
+Now it's time to create your first component. Let's begin with a smaller one, **the main title**.
 
 Select the text tool, and create a title with a size of `48px` in `bold`. When it's done, don't forget to click on the **create component** button at the top of your workspace. **It's really important to do that** If you forget about it you will not find this component in the assets tab during the wireframe creation.
 
