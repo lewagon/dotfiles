@@ -169,10 +169,10 @@ Para el gráfico de línea, seguiremos el mismo proceso. Esta vez, implementarem
 
 Utilicemos esta [recurso](https://www.worldometers.info/world-population/world-population-by-year/).
 
-Crea un objeto `crecimientoPoblacionMundial` con la siguiente estructura:
+Crea un objeto `worldPopulation` con la siguiente estructura:
 
 ```javascript
-const crecimientoPoblacionMundial = {
+const worldPopulation = {
   2020: 7794798739,
   // ahora te toca completar el resto del objeto hasta 2010
 };
@@ -187,7 +187,7 @@ Echemos un vistazo a la página de [Wikipedia](https://en.wikipedia.org/wiki/Lis
 Seleccionemos 10 de ellos y construyamos un objeto:
 
 ```javascript
-const religionesMundiales = {
+const worldReligions = {
   cristianismo: 2382000000,
   // ahora te toca completar el resto del objeto
 };
