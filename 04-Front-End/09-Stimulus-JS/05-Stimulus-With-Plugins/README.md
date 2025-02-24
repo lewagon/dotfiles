@@ -14,7 +14,7 @@ serve
 
 And visit `localhost:8000`.
 
-Boostratp is already installed, and `Stimulus` is already setup in the `index.html` head.
+Bootstrap is already installed, and `Stimulus` is already setup in the `index.html` head.
 
 However, you will still need to install `Chart.js` yourself in the next step. And, we will be creating **3 separate Stimulus controller files** in `lib/controllers/` to handle each type of chart. For each one, you will need to:
 

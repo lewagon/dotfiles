@@ -18,8 +18,8 @@ Y visita `localhost:8000`. Verás que estamos usando Bootstrap.
 
 Sin embargo, aún necesitas encargarte de instalar la parte de JavaScript tú mismo. En este ejercicio, crearemos un controlador separado para cada tipo de gráfico.
 
-- Importa y registra el controlador de Stimulus en `index.js`.
-- Crea tu archivo de controlador en la carpeta `controllers` y no olvides comenzar con el boilerplate del controlador de Stimulus.
+-  Importa y registra el controlador de Stimulus en `index.js`.
+-  Crea tu archivo de controlador en la carpeta `controllers` y no olvides comenzar con el boilerplate del controlador de Stimulus.
 
 Si tienes problemas para recordarlo, ¿qué tal si echas un vistazo a ejercicios anteriores?
 
@@ -29,9 +29,9 @@ Importaremos el complemento `Chart.js` con `importmap`.
 
 Luego, utilizaremos el complemento para implementar 3 tipos diferentes de gráficos en el ejercicio:
 
-- un [gráfico de donut (doughnut)](https://www.chartjs.org/docs/latest/charts/doughnut.html)
-- un [gráfico de línea (line)](https://www.chartjs.org/docs/latest/charts/line.html)
-- un [gráfico polar](https://www.chartjs.org/docs/latest/charts/polar.html)
+-  un [gráfico de donut (doughnut)](https://www.chartjs.org/docs/latest/charts/doughnut.html)
+-  un [gráfico de línea (line)](https://www.chartjs.org/docs/latest/charts/line.html)
+-  un [gráfico polar](https://www.chartjs.org/docs/latest/charts/polar.html)
 
 Echa un vistazo a la documentación para comprender cómo funciona cada tipo.
 
@@ -55,7 +55,7 @@ Luego, en tu `index.js`, agrega las siguientes líneas al principio de tu págin
 
 ```javascript
 import { Chart } from "chart.js";
-import \* as Chartjs from "chart.js";
+import * as Chartjs from "chart.js";
 ```
 
 Estas líneas importarán todas las funciones de la biblioteca.
@@ -75,7 +75,7 @@ Estas líneas cargan las funciones específicas de cada tipo de gráfico.
 
 Este es un [gráfico de donut (doughnut)](https://www.chartjs.org/docs/latest/charts/doughnut.html). Lo utilizaremos para representar la proporción de género a nivel mundial.
 
-Según el [INED](https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/more-men-or-women-in-the-world/), a partir de 2020, el número de hombres y mujeres en el mundo era aproximadamente igual. Más precisamente, de cada 1,000 personas, 504 son hombres (50.4%) y 496 son mujeres (49.6%).
+Según el [INED](https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/more-men-or-women-in-the-world/), a partir de 2020, el número de hombres y mujeres en el mundo era aproximadamente igual. Más precisamente, de cada 1,000 personas, 504 son hombres (50.4`) y 496 son mujeres (49.6`).
 
 Construyamos un objeto:
 
@@ -135,9 +135,9 @@ import { Chart } from "chart.js";
 
 En tu método `connect()`:
 
-- crea tus 2 arrays `labels` y `data`
-- crea tu instancia de `Chart` con el `type`, los `data` y los `datasets` correctos (siempre consulta la documentación al usar bibliotecas externas)
-- pasa colores de fondo a tus `datasets` para cada etiqueta
+-  crea tus 2 arrays `labels` y `data`
+-  crea tu instancia de `Chart` con el `type`, los `data` y los `datasets` correctos (siempre consulta la documentación al usar bibliotecas externas)
+-  pasa colores de fondo a tus `datasets` para cada etiqueta
 
 Si es necesario, agrega un poco de CSS para reducir el tamaño del gráfico.
 

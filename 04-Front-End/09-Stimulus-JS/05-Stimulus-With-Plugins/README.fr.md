@@ -16,20 +16,20 @@ Et visite `localhost:8000`. Tu peux voir que nous utilisons Bootstrap.
 
 `Stimulus` est déjà installé dans le head `index.html`.
 
-Cependant, il est important que tu continues à t'entraîner à faire la partie configuration du JavaScript toi-même. Dans ce challenge, nous allons créer un contrôleur séparé pour chaque type de graphique.
-- Importe et enregistre le contrôleur Stimulus dans `index.js`.
-- Créé ton fichier de contrôleur dans le dossier `controllers` et n'oublie pas d'y ajouter le template de contrôleur Stimulus.
+Cependant, il est important que tu continues à t'entraîner à faire la partie configuration du JavaScript toi-même. Dans cet exercice, nous allons créer un contrôleur séparé pour chaque type de graphique.
+-  Importe et enregistre le contrôleur Stimulus dans `index.js`.
+-  Créé ton fichier de contrôleur dans le dossier `controllers` et n'oublie pas d'y ajouter le template de contrôleur Stimulus.
 
-Si tu as du mal à t'en souvenir, n'hésite pas à jeter un coup d'œil aux challenges précédents.
+Si tu as du mal à t'en souvenir, n'hésite pas à jeter un coup d'œil aux exercices précédents.
 
 ##  Spécifications
 
 Nous allons importer le plugin `Chart.js` avec `importmap`.
 
-Ensuite, nous utiliserons le plugin pour implémenter 3 types de graphiques différents dans le challenge :
-- un [diagramme en forme de beignet](https://www.chartjs.org/docs/latest/charts/doughnut.html)
-- un [graphique linéaire](https://www.chartjs.org/docs/latest/charts/line.html)
-- un [graphique polar](https://www.chartjs.org/docs/latest/charts/polar.html)
+Ensuite, nous utiliserons le plugin pour implémenter 3 types de graphiques différents dans l'exercice :
+-  un [diagramme en forme de beignet](https://www.chartjs.org/docs/latest/charts/doughnut.html)
+-  un [graphique linéaire](https://www.chartjs.org/docs/latest/charts/line.html)
+-  un [graphique polar](https://www.chartjs.org/docs/latest/charts/polar.html)
 
 Regarde la documentation pour comprendre comment chaque type fonctionne.
 
@@ -77,7 +77,7 @@ Ces lignes chargent les fonctions spécifiques de chaque type de graphique.
 
 Voici un [diagramme en forme de beignet](https://www.chartjs.org/docs/latest/charts/doughnut.html). Nous allons l'utiliser pour représenter le ratio hommes-femmes dans le monde.
 
-En 2020, selon l'[INED](https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/more-men-or-women-in-the-world/), le nombre d'hommes et de femmes dans le monde était à peu près égal. Plus précisément, sur 1 000 personnes, 504 sont des hommes (50,4 %) et 496 sont des femmes (49,6 %).
+En 2020, selon l'[INED](https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/more-men-or-women-in-the-world/), le nombre d'hommes et de femmes dans le monde était à peu près égal. Plus précisément, sur 1 000 personnes, 504 sont des hommes (50,4 `) et 496 sont des femmes (49,6 `).
 
 Construisons un Objet :
 
@@ -134,9 +134,9 @@ import { Chart } from "chart.js" ;
 ```
 
 Dans votre méthode `connect()` :
-- créé tes 2 tableaux `labels` et `data`.
-- créé ton instance `Chart` avec les bons `type`, `data` et `datasets` (garde toujours un oeil sur la documentation lorsque tu utilises des librairies externes)
-- passe des couleurs de fond à tes `datasets` pour chaque étiquette
+-  créé tes 2 tableaux `labels` et `data`.
+-  créé ton instance `Chart` avec les bons `type`, `data` et `datasets` (garde toujours un oeil sur la documentation lorsque tu utilises des librairies externes)
+-  passe des couleurs de fond à tes `datasets` pour chaque étiquette
 
 Si nécessaire, ajoute un peu de CSS pour réduire la taille du graphique.
 
@@ -153,7 +153,7 @@ Construisons un objet `worldPopulationGrowth` avec la structure suivante :
 ```javascript
 const worldPopulationGrowth = {
   "2020": 7794798739,
-  // your turn now to fill the rest of the object until 2010
+  // maintenant c'est à toi de compléter le reste de l'objet jusqu'en 2010
 }
 ```
 
@@ -167,9 +167,9 @@ Sélectionnons 10 d'entre elles et construisons un objet à partir de celles-ci 
 
 ```javascript
 const worldReligions = {
-  "christianity" : 2382000000,
-  // your turn now to fill the rest of the object until 2010
+  "christianity": 2382000000,
+  // maintenant c'est à toi de compléter le reste de l'objet
 }
 ```
 
-Ensuite, réutilisons la même logique que précédemment pour implémenter la carte des zones polaires.
+Ensuite, réutilisons la même logique que précédemment pour implémenter le graphique de l'aire polaire.
