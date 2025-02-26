@@ -42,7 +42,7 @@ Project the calendar on the screen to go through the program with the class, wee
 - When we get to Airbnb and Project Weeks, we will teach you how to use AI tools effectively. Since you will be building projects that _you designed yourselves_, AI tools won't be smart enough to give you the answer. They'll only be able to help you along at this point, much like a virtual TA.
 
 #### Monday (Week 1) - Setup
-- Special day, we'll focus on your machines setup, you'll go home with pimped workstations ready for the next 9 weeks!
+- Special day, we'll focus on your machines setup, you'll go home with configured workstations ready for the next 9 weeks!
 
 #### Tuesday -> Friday (Week 1) - Ruby Core
 - Ruby core program. Fundamentals. Elementary blocks. Scripts in 1 or 2 files, we'll run them from the terminal.
