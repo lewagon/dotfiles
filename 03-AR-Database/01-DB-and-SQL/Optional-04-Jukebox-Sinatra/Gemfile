@@ -9,5 +9,5 @@ gem "rspec"
 gem "rubocop"
 gem "sinatra"
 gem "sinatra-contrib"
-gem "sqlite3"
+gem "sqlite3", '~> 1.7.3'
 gem "thin"

@@ -77,7 +77,7 @@ The comment `textarea` in the page is outlined with a pink border to point out a
 
 1. In the developers tools, click on the **Toggle device toolbar** button
 1. Choose a mobile preset. Your page appears smaller than expected and shrunk. This is a consequence of how mobiles display web content: they render at a bigger width and zoom out the whole page. It is intentional because most websites are optimised for horizontal screens.
-1. In `index.html`, force the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) to consider the device size as the width of your page. Add the necessary meta tag in `<head>`.
+1. In `index.html`, force the [viewport](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) to consider the device size as the width of your page. Add the necessary meta tag in `<head>`.
 <details>
 <summary markdown='span'>View solution</summary>
 
@@ -233,7 +233,7 @@ Install [Accessibility Insights](https://accessibilityinsights.io) to run an aud
 
 - ["Accessibility" on developers.google](https://developers.google.com/web/fundamentals/accessibility/)
 - ["Accessible to all" on web.dev](https://web.dev/accessible/)
-- ["The POUR Methodology" on Adobe's blog](https://theblog.adobe.com/design-with-accessibility-in-mind-the-pour-methodology/)
+- ["The POUR Methodology" on Adobe's blog](https://blog.adobe.com/en/publish/2017/11/24/design-with-accessibility-in-mind-the-pour-methodology)
 - [The a11y project](https://www.a11yproject.com/)
 - ["A11ycasts with Rob Dodson" on Youtube](https://www.youtube.com/watch?v=HtTyRajRuyY&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 - [How visually impaired people navigate the web](https://uxdesign.cc/how-visually-impaired-people-navigate-the-web-7f9eab9d9c37)

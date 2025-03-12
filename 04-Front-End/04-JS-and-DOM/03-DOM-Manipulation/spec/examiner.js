@@ -18,10 +18,10 @@ const runChallenges = (email, teamCount, points) => {
   const assertEqual = (actual, expected) => {
     if (actual === expected) {
       addSuccess();
-    } else if (typeof expected === "number") {
+    } else if (typeof actual === "number") {
       addError(`Expected ${expected}, got ${actual}`);
     } else {
-      addError(`Expected "${expected}", got "${actual}"`);
+      addError(`Expected ${expected}, got "${actual}"`);
     }
   }
 

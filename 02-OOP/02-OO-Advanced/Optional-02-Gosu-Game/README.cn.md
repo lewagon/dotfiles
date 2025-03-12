@@ -28,7 +28,7 @@ gem install gosu
 ## 蛇
 
 让我们编写一个好的游戏 **贪吃蛇** 游戏。控制很简单： 箭头键。我们的目标是通过吃食物来生长并保持活力（不要撞到窗口的边缘！）。
-![](http://g.recordit.co/Wu3KJw9Jd1.gif)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/oop/gosu.gif)
 
 ## 详细说明
 

@@ -49,7 +49,7 @@ Tutorial in 🇫🇷
 
 #### Design resources
 
-- **Fonts**: download and install `.ttf` fonts from [Google fonts](https://fonts.google.com/) or [getthefont](https://www.getthefont.com/)
+- **Fonts**: download and install `.ttf` fonts from [Google fonts](https://fonts.google.com/)
 - **Colors**: find them on [Color Hunt](https://colorhunt.co/) or use a color picker like [Colorzilla](http://www.colorzilla.com/)
 - **Pictures**: you can use [unsplash](https://unsplash.com/)
 - **Icons**: download and use [Nucleo app](https://nucleoapp.com/) for utility icons

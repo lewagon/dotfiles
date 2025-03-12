@@ -52,7 +52,7 @@ some_number = some_number * 2
 - What's the difference between defining a method and calling a method?
 - Where do we define methods in this program? Where do we call them?
 - What's the return value of a method?
-- What is the simple Ruby convention for a method's return?
+- What is the Ruby convention for a method's return?
 
 ### Extra
 

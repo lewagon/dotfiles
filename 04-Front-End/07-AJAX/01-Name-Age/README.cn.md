@@ -13,13 +13,13 @@
 你应该使用以下URL向API发起请求：
 
 %%%
-https://api.dictionaryapi.dev/api/v2/entries/zh/单词
+https://api.dictionaryapi.dev/api/v2/entries/en/WORD
 %%%
 
 例如，这个URL将为词语“猫”获取定义：
 
 %%%
-https://api.dictionaryapi.dev/api/v2/entries/zh/cat
+https://api.dictionaryapi.dev/api/v2/entries/en/cat
 %%%
 
 这个API将为你提供许多不同的词语定义。不用担心，你的目标是**只显示第一个定义**。为了找到这个定义，你需要仔细关注API返回数据的结构 🤔 什么是`数组`；什么是`对象`；什么是键和值？

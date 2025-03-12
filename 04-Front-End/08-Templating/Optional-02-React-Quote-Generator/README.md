@@ -4,7 +4,7 @@ More React in this challenge!
 
 [React](https://reactjs.org/) is a JavaScript library for building user interfaces. It is a very popular library, used by Facebook, Instagram, Netflix, Airbnb, and many other companies. React apps are made out of components: a piece of UI that has its own logic and appearance.
 
-In this challenge, you will build a Quote Generator app using the quotes of this [API](https://type.fit/api/quotes). You will learn how to:
+In this challenge, you will build a Quote Generator app using the quotes of this [API](https://github.com/lukePeavey/quotable?tab=readme-ov-file). You will learn how to:
 
 - Import and use React in our project
 - Create a React component
@@ -142,7 +142,7 @@ const App = () => {
   console.log("Quotes: ", quotes);
 
   React.useEffect(() => {
-    fetch('https://type.fit/api/quotes')
+    fetch('https://api.quotable.io/quotes')
       .then((response) => response.json())
       .then((data) => setQuotes(data));
   }, []);
@@ -201,7 +201,7 @@ Let's use it from the `React.useEffect`, once we will have all the quotes availa
 ```js
 console.log("currentQuote: ", currentQuote);
 React.useEffect(() => {
-    fetch('https://type.fit/api/quotes')
+    fetch('https://api.quotable.io/quotes')
       .then((response) => response.json())
       .then((data) => {
         setQuotes(data);

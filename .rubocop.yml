@@ -43,7 +43,7 @@ Lint/MissingSuper:
 Style/MissingRespondToMissing:
   Enabled: false
 Security/Open:
-  Enabled: false
+  Enabled: true
 Bundler/OrderedGems:
   Enabled: false
 Style/HashEachMethods:

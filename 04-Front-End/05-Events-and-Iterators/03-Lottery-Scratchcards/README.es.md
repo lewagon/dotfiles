@@ -52,7 +52,7 @@ Podrás comprobar que esto funciona si, en tu navegador, el balance disminuye en
 Si observas el HTML, notarás que cada tarjeta de rasca y gana se ve así:
 
 ```html
-<li class="scratchard" data-amount="5" data-scratched="false"></li>
+<li class="scratchcard" data-amount="5" data-scratched="false"></li>
 ```
 
 El detalle clave es `data-amount="5"`. Esta tarjeta nos haría ganar 5€ 🎉
@@ -84,7 +84,7 @@ El único problema es que, en este momento, ¡puedes hacer clic en la misma tarj
 Si vuelves a mirar el HTML, notarás:
 
 ```html
-<li class="scratchard" data-amount="5" data-scratched="false"></li>
+<li class="scratchcard" data-amount="5" data-scratched="false"></li>
 ```
 
 También hay una propiedad `data-scratched="false"` que aún no hemos utilizado. Puedes tener tantos atributos de datos como desees en un elemento HTML (siempre que tengan nombres diferentes), por lo que no hay problema en utilizar tanto `data-amount` como `data-scratched` aquí.

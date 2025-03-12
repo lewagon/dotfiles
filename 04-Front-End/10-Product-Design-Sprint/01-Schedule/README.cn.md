@@ -48,7 +48,7 @@
 
 #### 设计资源
 
-- **字体**: 从[Google fonts](https://fonts.google.com/) (需要VPN 🛡 )或[getthefont](https://www.getthefont.com/)下载并安装 `.ttf` 字体。
+- **字体**: 从[Google fonts](https://fonts.google.com/) (需要VPN 🛡 )下载并安装 `.ttf` 字体。
 - **颜色**: 在[Color Hunt](https://colorhunt.co/)上找或者使用像[Colorzilla](http://www.colorzilla.com/)这样的颜色选择器。
 - **图片**: 你可以使用 [unsplash](https://unsplash.com/)
 - **图标**: 下载并使用 [Nucleo app](https://nucleoapp.com/)实用工具图标

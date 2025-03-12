@@ -77,7 +77,7 @@ serve
 
 1. 在开发者工具中，点击**切换设备工具栏[Toggle device toolbar]**按钮。
 2. 选择一个移动预设(mobile preset)。你的页面看起来比预期的要小，而且缩小了。这是手机显示网页内容方式的结果：它们以更大的宽度呈现，并将整个页面放大。这是有意为之，因为大多数网站都是针对水平屏幕进行优化的。
-3. 在`index.html`中，强制[viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)将设备尺寸视为页面的宽度。在`<head>`中添加必要的meta标签。
+3. 在`index.html`中，强制[viewport](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag)将设备尺寸视为页面的宽度。在`<head>`中添加必要的meta标签。
 
 <details>
 <summary markdown='span'>查看解决方案</summary>
@@ -233,7 +233,7 @@ Lighthouse是一个审计工具，用于测试可访问性和其他方面。你�
 
 - [developer.google上的"无障碍"](https://developers.google.com/web/fundamentals/accessibility/)
 - ["Accessible to all" on web.dev](https://web.dev/accessible/)
-- [Adobe博客上的"The POUR Methodology"](https://theblog.adobe.com/design-with-accessibility-in-mind-the-pour-methodology/)
+- [Adobe博客上的"The POUR Methodology"](https://blog.adobe.com/en/publish/2017/11/24/design-with-accessibility-in-mind-the-pour-methodology)
 - [a11y项目](https://www.a11yproject.com/)
 - ["A11ycasts with Rob Dodson" on Youtube](https://www.youtube.com/watch?v=HtTyRajRuyY&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 - [视障人士如何浏览网络](https://uxdesign.cc/how-visually-impaired-people-navigate-the-web-7f9eab9d9c37)

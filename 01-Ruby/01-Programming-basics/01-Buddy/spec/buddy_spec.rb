@@ -17,7 +17,7 @@ describe "#today_my_buddys_github_nickname_is" do
     expect(buddy).not_to eq("")
 
     require "open-uri"
-    expect { URI.open("https://github.com/#{buddy}").read }.not_to raise_error,
+    expect { URI.parse("https://github.com/#{buddy}").read }.not_to raise_error,
       "The buddy '#{buddy}' you returned is not a valid GitHub nickname (check case)"
   end
 end

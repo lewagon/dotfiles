@@ -14,7 +14,7 @@ Ensuite, tu peux exécuter le code Ruby suivant :
 require 'open-uri'
 require 'nokogiri'
 
-html_content = URI.open('https://www.etsy.com/search?q=wallet').read
+html_content = URI.parse('https://www.etsy.com/search?q=wallet').read
 doc = Nokogiri::HTML.parse(html_content)
 
 doc.search('.wt-grid .v2-listing-card__info .v2-listing-card__title').each_with_index do |element, index|
@@ -26,7 +26,7 @@ Si tu lances ce code, il affichera tous les portefeuilles trouvés sur la premi�
 
 Comment ça a marché ?
 
-La méthode `search` prend un [sélecteur CSS](https://developer.mozilla.org/fr/docs/Web/Guide/CSS/Getting_started/Selectors) et recherche tous les éléments HTML de la page qui correspondent. Ici, nous sélectionnons les éléments en utilisant 3 classes car la [source HTML](https://support.mozilla.org/fr/questions/873324) ressemble à ceci :
+La méthode `search` prend un [sélecteur CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors) et recherche tous les éléments HTML de la page qui correspondent. Ici, nous sélectionnons les éléments en utilisant 3 classes car la [source HTML](https://support.mozilla.org/fr/questions/873324) ressemble à ceci :
 
 ```html
 <div class="wt-grid">

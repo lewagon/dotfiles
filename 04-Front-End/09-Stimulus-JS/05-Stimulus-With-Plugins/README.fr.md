@@ -29,7 +29,7 @@ Nous allons importer le plugin `Chart.js` avec `importmap`.
 Ensuite, nous utiliserons le plugin pour implémenter 3 types de graphiques différents dans le challenge :
 - un [diagramme en forme de beignet](https://www.chartjs.org/docs/latest/charts/doughnut.html)
 - un [graphique linéaire](https://www.chartjs.org/docs/latest/charts/line.html)
-- un [graphique radar](https://www.chartjs.org/docs/latest/charts/radar.html)
+- un [graphique polar](https://www.chartjs.org/docs/latest/charts/polar.html)
 
 Regarde la documentation pour comprendre comment chaque type fonctionne.
 

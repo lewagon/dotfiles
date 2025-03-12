@@ -52,7 +52,7 @@ serve
 如果你看一下HTML，你会注意到每张刮刮卡看起来像这样：
 
 ```html
-<li class="scratchard" data-amount="5" data-scratched="false"></li>
+<li class="scratchcard" data-amount="5" data-scratched="false"></li>
 ```
 
 关键细节是`data-amount="5"`。这张卡会赢得我们5元 🎉
@@ -84,7 +84,7 @@ console.log(hotel.dataset.name);
 如果你再看一下HTML，你会注意到：
 
 ```html
-<li class="scratchard" data-amount="5" data-scratched="false"></li>
+<li class="scratchcard" data-amount="5" data-scratched="false"></li>
 ```
 
 还有一个`data-scratched="false"`属性，我们还没有用过。你可以在一个HTML元素上有很多个数据属性（只要它们的名称不同），所以在这里使用`data-amount`和`data-scratched`是没有问题的。

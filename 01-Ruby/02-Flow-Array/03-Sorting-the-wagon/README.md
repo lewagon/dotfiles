@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-The [`Array` class](https://ruby-doc.org/core-3.1.2/Array.html) is one of the two main structures used to store and access data in Ruby (the other being [Hash](https://ruby-doc.org/core-3.1.2/Hash.html), which we'll see tomorrow).
+The [`Array` class](https://ruby-doc.org/core-3.1.2/Array.html) is one of the two main structures used to store and access data in Ruby (the other being [Hash](https://ruby-doc.org/core-3.1.2/Hash.html), which we'll see in the next session).
 
 An array is ordered, so each element can be accessed by its **index**. This exercise will help you understand how to create an array, how to store data in it, and finally, how to retrieve that data using the index. Remember, array indexes start at `0`, not `1`.
 

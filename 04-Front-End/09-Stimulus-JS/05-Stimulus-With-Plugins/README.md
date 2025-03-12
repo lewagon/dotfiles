@@ -29,7 +29,7 @@ We will import the `Chart.js` plugin with `importmap`.
 Then, we will use the plugin to implement 3 different types of charts in the challenge:
 - a [doughnut chart](https://www.chartjs.org/docs/latest/charts/doughnut.html)
 - a [line chart](https://www.chartjs.org/docs/latest/charts/line.html)
-- a [radar chart](https://www.chartjs.org/docs/latest/charts/radar.html)
+- a [polar chart](https://www.chartjs.org/docs/latest/charts/polar.html)
 
 Have a look at the documentation to understand how each type work.
 

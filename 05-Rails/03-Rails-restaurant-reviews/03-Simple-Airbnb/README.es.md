@@ -1,6 +1,6 @@
 ## Contexto y Objetivos
 
-Queremos crear un clon simple de Airbnb (como [este](https://rails-simple-airbnb.herokuapp.com)). Estas deben ser las únicas user stories de nuestra app:
+Queremos crear un clon simple de Airbnb (como [este](https://rails-simple-airbnb.lewagon.com)). Estas deben ser las únicas user stories de nuestra app:
 
 - Como usuario, puedo ver la lista de todos los apartamentos disponibles en nuestra página web.
 - Como usuario, puedo publicar un apartamento en la página web especificando su nombre y dirección
@@ -23,6 +23,13 @@ git add .
 git commit -m "rails new"
 gh repo create --public --source=.
 git push origin master
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
+bundle install
+git submodule add git@github.com:lewagon/rails-simple-airbnb-specs.git spec
+git add .
+git commit -m "Prepare rails app with external specs"
+rspec # to run the tests
 ```
 
 ## Configuración del Front-end
@@ -66,6 +73,20 @@ Luego ejecuta esto:
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
+```
+
+### Probar tu código
+
+Siempre que añadas migraciones a tu aplicación (por ejemplo, después de ejecutar `rails g model ...`), no olvides ejecutar también las migraciones **en la base de datos de pruebas** que usamos en nuestras especificaciones:
+
+```bash
+rails db:migrate RAILS_ENV=test  # Si agregaste una migración
+```
+
+Luego prueba tu código con:
+
+```bash
+rspec
 ```
 
 ## Especificaciones
@@ -112,9 +133,9 @@ La lista debe hacer un bucle sobre ellas y mostrarlas como se muestra en la capt
 
 ### 5 - Como usuario, puedo publicar un apartamento
 
-Recuerda que para crear un apartamento se necesitan dos rutas. Una de ellas muestra el formulario de creación y la otra maneja la petición `POST` que se genera cuando se envía el formulario. Intenta usar el helper `form_with` directamente en la vista y ¡haz que se vea bien!
+Recuerda que para crear un apartamento se necesitan dos rutas. Una de ellas muestra el formulario de creación y la otra maneja la petición `POST` que se genera cuando se envía el formulario. Intenta usar el helper `simple_form` directamente en la vista y ¡haz que se vea bien!
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png).
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/new.png).
 
 ### 6 - Como usuario, puedo ver información detallada de un apartamento dado
 
@@ -140,7 +161,7 @@ Una vez más, actualiza toda nuestra vista para poner este enlace de supresión.
 
 Agrega un atributo url de imagen al modelo flat (solo para almacenar un string de la url de una imagen). Actualiza los formularios de creación y actualización para permitirle al usuario especificar una imagen del apartamento que será mostrado en la página web. También puedes actualizar las páginas index y show con la nueva imagen.
 
-Te recomendamos usar [Unsplash](https://unsplash.com/search/photos/house) para alimentar tu seed con buenas imágenes de viviendas.
+Te recomendamos usar [Unsplash](https://unsplash.com/s/photos/house) para alimentar tu seed con buenas imágenes de viviendas.
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show_2.png).
 

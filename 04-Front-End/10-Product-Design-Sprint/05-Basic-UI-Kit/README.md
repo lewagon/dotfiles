@@ -38,15 +38,21 @@ When all the squares are done, select each square and save each one color as you
 
 ![Create personal color palette](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_greyscale_color_palette.gif)
 
+You can use [styles](https://help.figma.com/hc/en-us/articles/360039820134-Manage-and-share-styles) to help save colors.
+
 ### Create your first component
 
-Now it's time to create your first component. Let's begin with an easy one, **the main title**.
+Now it's time to create your first component. Let's begin with a smaller one, **the main title**.
 
 Select the text tool, and create a title with a size of `48px` in `bold`. When it's done, don't forget to click on the **create component** button at the top of your workspace. **It's really important to do that** If you forget about it you will not find this component in the assets tab during the wireframe creation.
 
 Here is an example of what you have to do:
 
 ![Component creation on Figma](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_basic_ui_kit_component_creation.gif)
+
+You can use [text styles](https://help.figma.com/hc/en-us/articles/360039957034-Create-and-apply-text-styles) to help save consistent font/size combinations.
+
+![Figma text styles](https://raw.githubusercontent.com/lewagon/fullstack-images/master/frontend/pds_figma_text_styles.png)
 
 ### Create all the basic components
 

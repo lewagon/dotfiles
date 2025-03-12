@@ -37,14 +37,14 @@ import { Application } from "@hotwired/stimulus";
 import EventListenerController from "./controllers/event_listener_controller.js";
 
 window.Stimulus = Application.start();
-window.Stimulus.register("event-listener", EventListenerController);
+Stimulus.register("event-listener", EventListenerController);
 ```
 
 然后在空的`controllers`文件夹中创建一个`event_listener_controller.js`文件。这是我们将写的代码来对按钮的点击做出反应的地方。将这个复制粘贴到文件中作为一个模板来开始：
 
 ```javascript
 // lib/controllers/event_listener_controller.js
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   connect() {

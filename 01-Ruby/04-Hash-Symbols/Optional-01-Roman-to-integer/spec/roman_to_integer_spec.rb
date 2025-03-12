@@ -13,4 +13,12 @@ describe "#roman_to_integer" do
     expect(roman_to_integer('MCMLXXXIX')).to eq(1989)
   end
 
+  it "should work for an empty string" do
+    expect(roman_to_integer('')).to eq(0)
+  end
+
+  it "should work for invalid letters" do
+    expect(roman_to_integer('A')).to eq(0)
+    expect(roman_to_integer('Z')).to eq(0)
+  end
 end

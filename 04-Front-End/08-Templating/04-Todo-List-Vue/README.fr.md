@@ -121,7 +121,7 @@ createApp({
 #### Rendu de la liste
 
 <details>
-<summary markdown='span'>Comment générer dynamiquement la liste ?
+<summary markdown='span'>Comment générer dynamiquement la liste ?</summary>
 
 Nous pouvons utiliser une directive intégrée [`v-for`] (https://vuejs.org/api/built-in-directives.html#v-for). C'est comme `.each` en Ruby. Lis la documentation, et écris ton code dans `index.html` pour générer ta liste de to-dos en te basant sur `todos`.
 

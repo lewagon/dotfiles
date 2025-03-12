@@ -18,7 +18,7 @@
 
 ### String
 
-1. Explain simple or double quotes syntax
+1. Explain single or double quotes syntax
 2. Show interpolation with double quotes
 3. Convert strings to integer with `to_i`
 

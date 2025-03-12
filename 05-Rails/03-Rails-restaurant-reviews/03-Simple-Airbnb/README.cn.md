@@ -1,14 +1,12 @@
 ## 背景和目标
 
-我们将要开发一个简单的类似于爱彼迎airbnb的克隆版应用，(就像[这个](https://rails-simple-airbnb.herokuapp.com))。这是我们应用的所有的用户故事：
+我们将要开发一个简单的类似于爱彼迎airbnb的克隆版应用，(就像[这个](https://rails-simple-airbnb.lewagon.com))。这是我们应用的所有的用户故事：
 
 - 做为用户，我可以在网站浏览所有的公寓
 - 做为用户，我可以在网站发布一个公寓，指定公寓的名字和地址
 - 做为用户，我可以查看一个公寓的详细信息
 - 做为用户，如果我不小心输入了错误的信息，我可以修改公寓的详细信息
 - 做为用户，一旦我不想继续出租了，我可以从网站删除一个公寓
-
-在这个挑战里没有`rake`指令了。
 
 ## 生成一个Rails应用
 
@@ -22,6 +20,13 @@ git add .
 git commit -m "rails new"
 gh repo create --public --source=.
 git push origin master
+echo "gem 'rspec-rails', group: [ :test ]" >> Gemfile
+echo "gem 'rails-controller-testing', group: [ :test ]" >> Gemfile
+bundle install
+git submodule add git@github.com:lewagon/rails-simple-airbnb-specs.git spec
+git add .
+git commit -m "Prepare rails app with external specs"
+rspec # to run the tests
 ```
 
 ## 前端设置
@@ -65,6 +70,20 @@ gem "simple_form"
 ```bash
 bundle install
 rails generate simple_form:install --bootstrap
+```
+
+### 测试你的代码
+
+每当你向应用程序添加迁移（例如，在 `rails g model ...` 后），不要忘记在我们规范中使用的**测试数据库**上运行迁移：
+
+```bash
+rails db:migrate RAILS_ENV=test  # 如果你添加了迁移
+```
+
+然后使用以下命令测试你的代码：
+
+```bash
+rspec
 ```
 
 ## 详细说明
@@ -112,9 +131,9 @@ Flat.create!(
 
 ### 5 - 做为用户，我可以添加一个公寓
 
-一定要记得，我们需要两个路由来创建一个公寓。一个路由是用来显示添加新公寓的表单，另外一个路由是用来处理提交表单时产生的`POST` 请求。尝试在视图里直接使用`form_with`帮助方法，而且要让表单好看一些。
+一定要记得，我们需要两个路由来创建一个公寓。一个路由是用来显示添加新公寓的表单，另外一个路由是用来处理提交表单时产生的`POST` 请求。尝试在视图里直接使用`simple_form`帮助方法，而且要让表单好看一些。
 
-![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/index.png)
+![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/new.png)
 
 ### 6 - 做为用户，我可以查看一个公寓的详细信息
 
@@ -143,7 +162,7 @@ Flat.create!(
 我们在公寓模型添加一个图片链接地址的属性（仅需要保存图片链接地址的字符串）。更新我们的新建公寓表单和编辑公寓表单，让用户可以指定用来显示在网站上的公寓的图片。我们也可以更新我们的index和show页面来显示这个图片。
 
 
-你可以在这里找到精美的公寓图片[unsplash](https://unsplash.com/search/photos/house)。
+你可以在这里找到精美的公寓图片[unsplash](https://unsplash.com/s/photos/house)。
 
 ![](https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/simple-airbnb/show_2.png)
 

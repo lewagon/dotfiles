@@ -8,11 +8,18 @@
 # irb> "foo".object_id
 
 def are_identical_symbols_same_objects?
-  # TODO: Answer the question by making this method to return true or false
+  # Are two symbols with the same value the same object? (In other words, is :foo the same object as :foo?)
+  # TODO: Answer the question by returning true or false in this method
+  # NOTE: You should just return true or false. You don't need to do any comparison
+  # or check if the symbols are the same. Just return true if they are the same object
+  # and false if they are not. It's a quiz question.
 end
 
 def are_identical_strings_same_objects?
-  # TODO: Answer the question by making this method to return true or false
+  # Are two strings with the same value the same object? (In other words, is "foo" the same object as "foo"?)
+  # TODO: Answer the question by returning true or false in this method
+  # NOTE: You should also just return true or false. You don't need to do any comparison or logic.
+  # Just return true if they are the same object and false if they are not. It's a quiz question.
 end
 
 

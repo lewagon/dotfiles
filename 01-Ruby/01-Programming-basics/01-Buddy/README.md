@@ -1,5 +1,5 @@
 ## Background & Objectives
-Let's start with a simple challenge to start the day :)
+Let's start with a short challenge to start the day :)
 
 ## Specs
 

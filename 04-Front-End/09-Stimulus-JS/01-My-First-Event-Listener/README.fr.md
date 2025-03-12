@@ -37,14 +37,14 @@ import { Application } from "@hotwired/stimulus";
 import EventListenerController from "./controllers/event_listener_controller.js";
 
 window.Stimulus = Application.start();
-window.Stimulus.register("event-listener", EventListenerController);
+Stimulus.register("event-listener", EventListenerController);
 ```
 
 Ensuite, dans le dossier vide `controllers`, crée un fichier `event_listener_controller.js`. C'est là que nous écrirons le code pour réagir au clic sur le bouton. Copie-colle ce template dans le fichier comme point de départ :
 
 ```javascript
 // lib/controllers/event_listener_controller.js
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   connect() {

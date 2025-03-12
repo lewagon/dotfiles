@@ -2,7 +2,7 @@
 
 Emails are the lifeblood of any SaaS (software as a service) business, it is super important to know how to manipulate them programmatically.
 
-On most websites, they are the keys to create an account. If the email is misspelled, the user won't be able to retrieve his password. Also, as a marketer's point of view, you need to communicate with your users and maintain your contact database a reliable dataset of valid emails.
+On most websites, they are the keys to create an account. If the email is misspelled, the user won't be able to retrieve their password. Also, as a marketer's point of view, you need to communicate with your users and maintain your contact database a reliable dataset of valid emails.
 
 ## Story
 
@@ -20,7 +20,7 @@ Your landing page is ready. You want to make sure the visitors submit a valid em
 
 Code the `valid?` method that returns the right boolean depending on the email's validity:
 - Identify the different parts of the email and code a regular expression to match the pattern of a classic email
-- Code a simple regex yourself, no need to try and make it perfect (it is impossible to write a perfect regex for emails)!
+- Code a short regex yourself, no need to try and make it perfect (it is impossible to write a perfect regex for emails)!
 
 **Warning:** Regular expressions are not expressive enough to validate 100% of the compliant email addresses as [this Stackoverflow discussion](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression) and [this website](https://uibakery.io/regex-library/email) illustrate. In professional environments, prefer the use of external services like the one provided by [Sendgrid](https://sendgrid.com/solutions/email-api/email-address-validation-api/) or [Mailgun](https://www.mailgun.com/email-validation/) as it uses a huge database and machine learning to determine if an address is correct.
 

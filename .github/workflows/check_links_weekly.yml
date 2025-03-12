@@ -1,0 +1,19 @@
+name: Check Markdown links weekly
+
+on:
+  schedule:
+  # Run every Sunday at 9:00 AM
+  - cron: "0 9 * * 0"
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    name: runner / linkspector
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run linkspector
+        uses: umbrelladocs/action-linkspector@v1
+        with:
+          reporter: local
+          fail_level: any

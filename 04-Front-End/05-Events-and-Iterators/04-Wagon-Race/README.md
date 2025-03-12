@@ -1,6 +1,6 @@
 ## Background & Objectives
 
-Let's create a JavaScript game: the Wagon Race 🏎. It's a simple game where you use your keyboard to make a Wagon move forward. Each player will move their Wagon by tapping a key (e.g. `Q` for player one, `P` for player two)
+Let's create a JavaScript game: the Wagon Race 🏎. It's a game where you use your keyboard to make a Wagon move forward. Each player will move their Wagon by tapping a key (e.g. `Q` for player one, `P` for player two)
 
 The goal here is to learn more about JavaScript, the DOM, and asynchronous event handling.
 
@@ -22,7 +22,7 @@ Open the `index.html` in your browser.
 
 #### HTML
 
-You will start by building a simple two-player board in HTML. There are a few different ways of doing it, but here's one example:
+You will start by building a two-player board in HTML. There are a few different ways of doing it, but here's one example:
 
 ```html
 <table class="racer-table">
@@ -70,7 +70,7 @@ It's always a good idea to do as much work as possible using smart HTML markup a
 
 #### JavaScript
 
-Write all your code in `lib/wagon_race.js`. We need a way for JavaScript to update the board state. Create simple JavaScript functions that update a player's position. Again, there are several ways to do the same thing. One example below:
+Write all your code in `lib/wagon_race.js`. We need a way for JavaScript to update the board state. Create JavaScript functions that update a player's position. Again, there are several ways to do the same thing. One example below:
 
 - Remove the `active` class on the current player's `td` and add that class to the next `td`.
 - Keep track of the "index" of each player in the table and increase it.

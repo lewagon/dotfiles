@@ -1,13 +1,13 @@
 ## Background and Objectives
 
-A more advanced challenge now, where you will have to use notions that we haven't covered yet (conditional and looping structures). Don't panic, **we'll see these concepts tomorrow**. Try to go step-by-step and ask yourself what you are trying to accomplish in your program before writing some code.
+A more advanced challenge now, where you will have to use notions that we haven't covered yet (conditional and looping structures). Don't panic, **we'll see these concepts in the next session**. Try to go step-by-step and ask yourself what you are trying to accomplish in your program before writing some code.
 
 In this exercise, we will create your own personal coach.
 Unfortunately though, the coach is a little stupid and can only exhibit the following behavior:
 
-1. If you don't **ask** her/him something, but just **tell** her/him something (e.g. `"I met a girl last night"`), she/he will just answer back `"I don't care, get dressed and go to work!"`
-2. If you ask her/him something (e.g. `"Can I eat some pizza?"`), she/he won't be of much help either and she/he will tell you `"Silly question, get dressed and go to work!"`
-3. The **only** way to get rid of her/him is to tell her/him what she/he wants to hear: `"I am going to work right now!"`.
+1. If you don't **ask** the coach something but just **tell** them something (e.g. `"I met a girl last night"`), the coach will just answer back `"I don't care, get dressed and go to work!"`
+2. If you ask the coach something (e.g. `"Can I eat some pizza?"`), the coach won't be of much help either and will tell you `"Silly question, get dressed and go to work!"`
+3. The **only** way to get rid of the coach is to tell them what they want to hear: `"I am going to work right now!"`.
 
 Let's make a comparison between the **real world** and the **code world** on this exercise.
 
@@ -60,7 +60,7 @@ Now let's implement an enhanced version of the coach, with the method `coach_ans
 ### Interactive Program
 
 - Write the code for the interface that lets you talk to your coach via the terminal.
-- **constraint**: This program should **"loop"**. Your coach should answer your message and wait for your next one until you decide to get rid of him. Use a `while..end` or `until..end` structure for that purpose.
+- **constraint**: This program should **"loop"**. Your coach should answer your message and wait for your next one until you decide to get rid of them. Use a `while..end` or `until..end` structure for that purpose.
 
 If you're getting stuck in an **infinite loop**, just hit `Ctrl` + `C`! It will kill the process.
 

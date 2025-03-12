@@ -44,7 +44,7 @@ Si haces un `console.log` en el método `hasNewMessage()`, deberías ver cómo s
 
 - Implementa el método `appendMessageToDom(message)` que toma como parámetro un objeto con las claves `subject` (asunto) y `sender` (remitente), y agrega una nueva línea para este mensaje en el marcado HTML. Inspecciona el archivo `index.html` para encontrar ejemplos de filas `unread` (no leído) y `read` (leído).
 - Luego, vamos a unirlo todo. Como puedes ver al final del archivo, el método `refresh` se llama cada `1000` milisegundos. Implementa tu método `hasNewMessage()` y, si hay un nuevo mensaje, agrégalo (`newMessage()`) en la parte superior de la bandeja de entrada (`appendMessageToDom(message)`). Recuerda actualizar el contador en el título `h1`.
-- (Opcional) [Actualiza el título del documento](https://developer.mozilla.org/es/docs/Web/API/Document/title) para que el contador de mensajes no leídos aparezca en el título de la pestaña, ¡como en una bandeja de entrada real!
+- (Opcional) [Actualiza el título del documento](https://developer.mozilla.org/en-US/docs/Web/API/Document/title) para que el contador de mensajes no leídos aparezca en el título de la pestaña, ¡como en una bandeja de entrada real!
 
 ## Rake en tu terminal
 

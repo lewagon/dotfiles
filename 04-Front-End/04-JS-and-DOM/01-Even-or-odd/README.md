@@ -1,14 +1,14 @@
 ## Background & Objectives
 
-Today is your first day of JavaScript. The goal of this first day is for you to realize that it's a programming language, like Ruby. It has variables, functions, conditions, loops, etc. Additionally, you can also select and manipulate elements from the DOM with JavaScript.
+Welcome to your first day of JavaScript! 🎉 JavaScript is a programming language, just like Ruby. So, today, the goal is for you to get comfortable with the basics, like variables, functions, conditions, loops, etc. You'll also learn how to select and manipulate elements from the DOM with JavaScript.
 
-In this challenge, we will have 2 processes to test our code:
-- In the browser
-- In the terminal
+In today's challenges, you will test your code in two different ways:
+- In the browser (by clicking around on the page and checking if things work as expected or you see any errors in the console)
+- In the terminal (by running tests with the `rake` command)
 
 ## Coding with your browser
 
-JavaScript can be a front-end language. It means that it is executed in the browser. We will use the `console.log` function to print some values in the terminal.
+One of the special superpowers of JavaScript is that browsers can execute JavaScript code. Browsers can't run Ruby, for example. Let's try using `console.log` (the equivalent to `puts` in Ruby) and see if it prints in the browser's console.
 
 To test your code in the browser, launch your program with the `serve` command and go to [http://localhost:8000](http://localhost:8000).
 
@@ -24,7 +24,7 @@ As long as the `evenOrOdd` function is not done, the tests will be red. They wil
 
 ## Specs
 
-Let's start with a very simple algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `number`) and returns a `string`:
+Let's start with an algorithm. Open the `lib/even_or_odd.js` file. Implement the `evenOrOdd` function which takes one parameter `number` (of type `Number`) and returns a `String`:
 
 - `"even"` if the number is even (0, 2, 4, etc.)
 - `"odd"` if the number is odd (1, 3, 5, etc.)
@@ -35,7 +35,7 @@ _Hint: Remember the Ruby modulo operator? It also exists in JavaScript and might
 
 ## Testing with the terminal
 
-The second process to test our code is in the terminal. We'll use our beloved `rake` command to run the tests.
+The second way to test our code is in the terminal. We'll use our beloved `rake` command to run the tests.
 
 For that, we'll use [Node.js](https://nodejs.org/en/) to execute some JavaScript directly in our terminal.
 

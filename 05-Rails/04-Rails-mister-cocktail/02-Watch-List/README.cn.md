@@ -103,8 +103,8 @@ pin "@popperjs/core", to: "https://unpkg.com/@popperjs/core@2.11.2/dist/esm/inde
 
 ```js
 // app/javascript/application.js
-import "bootstrap"
 import "@popperjs/core"
+import "bootstrap"
 ```
 
 然后在`manifest.js`中，添加以下行：

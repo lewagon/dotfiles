@@ -48,7 +48,7 @@ Tutorial en 🇫🇷
 
 #### Recursos de diseño
 
-- **Fuentes**: descarga e instala fuentes `.ttf` de [Google fonts](https://fonts.google.com/) o [getthefont](https://www.getthefont.com/)
+- **Fuentes**: descarga e instala fuentes `.ttf` de [Google fonts](https://fonts.google.com/)
 - **Colores**: Encuentralos en [Color Hunt](https://colorhunt.co/) o usa una herramienta de  selección de colores (color picker) como [Colorzilla](http://www.colorzilla.com/)
 - **Imágenes**: puedes usar [unsplash](https://unsplash.com/)
 - **Iconos**: descarga y usa [Nucleo app](https://nucleoapp.com/) para iconos

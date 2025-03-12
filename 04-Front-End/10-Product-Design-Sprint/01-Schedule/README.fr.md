@@ -49,7 +49,7 @@ Tutoriel en 🇫🇷
 
 #### Ressources de design
 
-- **Polices** : Télécharge et installe des polices `.ttf` de [Google Fonts](https://fonts.google.com/) ou [getthefont](https://www.getthefont.com/)
+- **Polices** : Télécharge et installe des polices `.ttf` de [Google Fonts](https://fonts.google.com/)
 - **Couleurs** : Trouve-les sur [Color Hunt](https://colorhunt.co/) ou utilise un outil de gestion des couleurs comme [Colorzilla](http://www.colorzilla.com/)
 - **Images** : Tu peux utiliser [unsplash](https://unsplash.com/)
 - **Icônes** : Télécharge et utilise l'[application Nucleo](https://nucleoapp.com/) pour les icônes

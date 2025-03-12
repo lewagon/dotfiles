@@ -31,7 +31,7 @@ Can you see more than just your `posts` table? That's Active Record internal plu
 
 ### 2. Migration to update a table
 
-Go back to the lecture and read the [Active Record Migration documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). It shows how easy it is to perform migrations on Rails. But we haven't got to Rails yet ;) so we'll have to create our migration files manually.
+Go back to the lecture and read the [Active Record Migration documentation](http://api.rubyonrails.org/classes/ActiveRecord/Migration.html). It shows how easy it will be to generate migrations in Rails. But we haven't got to Rails yet ;) so we'll have to create our migration files manually.
 
 Use the task `rake db:timestamp` to get a correct timestamp for your migration file name. Write a new migration in a new file `db/migrate/` to add a new column to the `posts` table.
 
