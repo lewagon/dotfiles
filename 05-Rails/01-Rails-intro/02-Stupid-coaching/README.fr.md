@@ -295,4 +295,4 @@ Exécute ensuite `bundle install`. Dans ton code, tu n'as qu'à écrire ce qui s
 take_screenshot
 ```
 
-Cela prendra des captures d'écran dans le navigateur _Headless Chrome_, qui seront stockées dans le dossier `tmp/screenshots`.
+Cela prendra des captures d'écran dans le navigateur _Headless Chrome_, qui seront stockées dans le dossier `tmp/capybara`.
