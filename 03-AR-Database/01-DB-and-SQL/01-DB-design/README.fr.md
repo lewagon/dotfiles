@@ -17,7 +17,7 @@ NOTE : Rappelle-toi que chaque table a besoin d'une colonne `id` !
 
 ### Design de la base de données de surveys
 
-Continuons à partir de notre table `users` pour construire une base de données `surveys`. Il existe de nombreuses façons de construire une base de données d'enquête et de sondages, mais commençons par construire un système de base avec des utilisateurs, des questions, des réponses et des enquêtes.
+Continuons à partir de notre table `users` pour construire une base de données `surveys`. Il existe de nombreuses façons de construire une base de données d'enquête et de sondages, mais commençons par les exigences suivantes.
 
 Voici les exigences de notre système :
 - L'application gère plusieurs `users` (que nous avons déjà).

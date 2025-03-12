@@ -18,7 +18,7 @@ NOTA: Recuerda que cada tabla necesita una columna `id`.
 
 ### Diseño de la base de datos para una encuesta
 
-Continuemos desde nuestra tabla `users` y construyamos una base de datos para una encuesta. Hay muchas formas de construir una base de datos para una encuesta, pero comencemos con un sistema básico que incluya usuarios, preguntas, respuestas y encuestas.
+Continuemos desde nuestra tabla `users` y construyamos una base de datos para una encuesta. Hay muchas formas de construir una base de datos para una encuesta, pero comencemos con los siguientes requisitos.
 
 Estos son los requisitos de nuestro sistema:
 
