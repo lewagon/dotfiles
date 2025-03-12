@@ -17,7 +17,7 @@ NOTE: Remember, every table needs an `id` column!
 
 ### Survey database design
 
-Next up, let's continue from our `users` table to building a survey database. There are many ways to build a survey database, but let's start by building a basic system with users, questions, responses and surveys.
+Next up, let's continue from our `users` table to building a survey database. There are many ways to build a survey database, but let's start with the following requirements.
 
 Here are the requirements of our system:
 - The application manages several `users` (which we already have)
