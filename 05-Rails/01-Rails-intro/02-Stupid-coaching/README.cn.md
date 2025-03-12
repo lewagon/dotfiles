@@ -320,4 +320,4 @@ end
 ```bash
 take_screenshot
 ```
-这行代码运行之后，将会在无头Chrome浏览器里自动截屏。截屏文件会被保存在`tmp/screenshots`文件夹。
+这行代码运行之后，将会在无头Chrome浏览器里自动截屏。截屏文件会被保存在`tmp/capybara`文件夹。
