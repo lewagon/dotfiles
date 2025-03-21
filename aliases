@@ -18,6 +18,8 @@ alias al="nvim /Users/theodrak/.aliases"
 
 # --- Le Wagon updates
 alias cdl="cd /Users/theodrak/code/theodrak/fullstack-challenges"
+alias cde="cd /Users/theodrak/code/theodrak/exercises"
+alias cdt="cd /Users/theodrak/code/theodrak/teamprojects/closetcrashers"
 alias lwu="git pull upstream master -X ours"
 
 # --- Git Shortcuts
@@ -26,6 +28,11 @@ alias gic="git commit -m"
 alias gis="git status"
 alias gia="git add ."
 
+alias ghrpub="gh repo create --source=. --public"
+alias ghrpriv="gh repo create --source=. --private"
+alias giinit="git init -b main"
+alias lg="LazyGit"
+
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
 
@@ -33,3 +40,4 @@ alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
+

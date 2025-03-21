@@ -11,6 +11,7 @@ return {
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
 				svelte = { "prettier" },
+				eruby = { "erb_format", "prettier" },
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },

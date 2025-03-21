@@ -97,3 +97,13 @@ setopt hist_verify
 
 # ALIASES - Place all aliases in the alias file
 # /Users/theodrak/code/theodrak/dotfiles/aliases
+
+# Kills all the postgres instances
+killdb () {
+    if [ -z "$1" ]
+    then
+        echo "Usage: killdb YourAppName"
+    else
+        ps -ef | grep --color postgres | grep --color "$1" | awk '{print $2}' | xargs -r kill -9
+    fi
+}

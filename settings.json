@@ -94,4 +94,31 @@
     "[html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "rubyLsp.linters": [
+
+      "rubocop"
+    ],
+    "[erb]": {
+
+      "editor.defaultFormatter": "Shopify.ruby-lsp"
+    },
+    "workbench.settings.applyToAllProfiles": [
+      "rubyLsp.formatter"
+    ],
+    "rubyLsp.rubyVersionManager": {
+      "identifier": "auto"
+    },
+      // All of these settings are scoped only to the Ruby language
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp", // Use the Ruby LSP as the default formatter
+    "editor.formatOnSave": true, // Format files automatically when saving
+    "editor.tabSize": 2, // Use 2 spaces for indentation
+    "editor.insertSpaces": true, // Use spaces and not tabs for indentation
+    "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+    "editor.formatOnType": true, // Enable formatting while typing
+  },
+  "github.copilot.advanced": {
+    "authProvider": "github"
+  }
+
 }
