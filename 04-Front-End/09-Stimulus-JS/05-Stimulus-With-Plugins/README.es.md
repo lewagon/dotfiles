@@ -152,6 +152,18 @@ En la parte superior de la página, importa el complemento `Chart.js`:
 import { Chart } from "chart.js";
 ```
 
+En la definición de la clase, puedes definir tu objeto `worldPopulation`:
+
+```javascript
+// lib/controllers/doughnut_charts_controller.js
+export default class extends Controller {
+  worldPopulation = {
+    // [...]
+    };
+```
+
+Que significa que puedes referirte a él dentro de cualquier método que definas con `this.worldPopulation`.
+
 En tu método `connect()`:
 -  crea tus 2 arrays `labels` y `data`
 -  crea tu instancia de `Chart` con el `type`, `data` y `datasets` correctos (siempre consulta la documentación al usar bibliotecas externas)
@@ -182,13 +194,13 @@ Luego, utiliza este objeto para construir tus arrays `labels` y `data`. Luego, i
 
 ### 6. Implementa el gráfico de área polar
 
-Echemos un vistazo a la página de [Wikipedia](https://en.wikipedia.org/wiki/List_of_religious_populations) sobre poblaciones religiosas en el mundo.
+Echemos un vistazo a la [página](https://worldstatistics.net/the-largest-religions-in-the-world-2025/) sobre poblaciones religiosas en el mundo.
 
 Seleccionemos 10 de ellos y construyamos un objeto:
 
 ```javascript
 const worldReligions = {
-  cristianismo: 2382000000,
+  christianity: 2437876925,
   // ahora te toca completar el resto del objeto
 };
 ```
