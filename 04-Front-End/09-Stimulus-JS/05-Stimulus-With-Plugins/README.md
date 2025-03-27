@@ -156,6 +156,20 @@ At the top of the file, import the `Chart.js` plugin:
 import { Chart } from "chart.js";
 ```
 
+Inside the `class` definition, you can define your `worldPopulation` object:
+
+```javascript
+// lib/controllers/doughnut_charts_controller.js
+export default class extends Controller {
+  worldPopulation = {
+    // [...]
+  };
+}
+```
+
+Which means you can refer to it inside any methods you define with `this.worldPopulation`.
+
+
 In your `connect()` method:
 - create your `labels` and `data` arrays
 - create your `Chart` instance with the right `type`, `data` and `datasets` (always keep an eye on the documentation when using external libraries)
@@ -188,13 +202,13 @@ Then use this Object to build your `labels` and `data` arrays. Then, implement t
 
 ### 6. Implement the polar area chart
 
-Let's have a look at the [Wikipedia](https://en.wikipedia.org/wiki/List_of_religious_populations) page about religious populations in the world.
+Let's have a look at the [stats](https://worldstatistics.net/the-largest-religions-in-the-world-2025/) page about religious populations in the world.
 
 Let's select 10 out of these and build an Object out of it:
 
 ```javascript
 const worldReligions = {
-  "christianity": 2382000000,
+  "christianity": 2437876925,
   // your turn now to fill the rest of the object until 2010
 }
 ```
