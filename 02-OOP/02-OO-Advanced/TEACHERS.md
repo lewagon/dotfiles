@@ -2,66 +2,58 @@
 
 So on the previous block you've had your first introduction to Object Oriented Programming. These are big steps in your web development career. Before we continue on that path, let's do a recap to make sure you understand the concepts.
 
-Let's create a House class:
+Let's create a `Wizard` class:
 
-- As a first step we need to create the file, and filename should match class name: `house.rb`:
+- As a first step we need to create the file, and filename should match class name: `wizard.rb`:
 
 ```ruby
-# house.rb
-class House
+# wizard.rb
+class Wizard
 end
 ```
 
 - Let's define the "constructor", the method which is going to be executed when we build objects. In Ruby this method is called `initialize`:
 
 ```ruby
-def initialize(name, width, length)
+def initialize(name, health)
   @name = name
-  @width = width
-  @length = length
+  @health = health
 end
 ```
 
 - Now let's create a new instance of this class:
 
 ```ruby
-country_side_house = House.new("My blue house", 500, 400)
-p my_country_side_house #=> ?????
+merlin = Wizard.new("Merlin", 400)
+p merlin #=> ?????
 ```
 
-- What if you want to print out the name, width and length of the house, how would you do that? You will have to create a getter for that or otherwise you can't access it:
+- What if you want to print out the name & health of the wizard, how would you do that? You will have to create a getter for that or otherwise you can't access it:
 
 ```ruby
 def name
   return @name
 end
 
-def width
-  return @width
-end
-
-def length
-  return @length
+def health
+  return @health
 end
 ```
 
 - As you can see this is really annoying, if we have to do this for our 3 instance variables, it's just too much work and time consuming. Good for us there are some special methods we can use in Ruby to prevent us from having to define our own getters and setters all the time. The `attr_methods`. Let's use it:
 
 ```ruby
-class House
-  attr_reader :name, :width, :length
-
-  def initialize(name, width, length)
+class Wizard
+  attr_reader :name, :health
+  def initialize(name, health)
     @name = name
-    @width = width
-    @length = length
+    @health = health
   end
 end
 
-my_country_side_house = House.new("My blue house", 500, 400)
-p my_country_side_house.name
-p my_country_side_house.length
-p my_country_side_house.width
+merlin = Wizard.new("Merlin", 400)
+merlin.name #=> "Merlin"
+merlin.health #=> 400
 ```
 
 ## Lecture
@@ -72,69 +64,51 @@ Now time to move on to the real content of the lecture. We'll see three importan
 - Class methods
 - Self
 
-Imagine you had three classes, each one to create a different type of building. Make sure you create 3 files to show the students about the `require_relative` concept again.
+Imagine you had three classes, each one to create a different type of character. Make sure you create 3 files to show the students about the `require_relative` concept again.
 
 ```ruby
-# house.rb  
-class House
+# wizard.rb  
+class Wizard
 end
 ```
 
 ```ruby
-# skyscraper.rb
-class Skyscraper
+# warrior.rb
+class Warrior
 end
 ```
 
-```ruby
-# castle.rb
-class Castle
-end
-```
-
-- They share some properties. They all have a `name`, a `width` and a `length`. For every building we have a way to calculate the floor area. You can create 3 files and repeat 3 times the same thing to show them the power of inheritance later and the DRY principle.
+- They share some properties. They all have a `name`  and a `health`. For every character, we can calculate their total power. You can create 2 files and repeat 2 times the same thing to show them the power of inheritance later and the DRY principle.
 
 ```ruby
-class House
-  attr_reader :name, :width, :length
-  def initialize(name, width, length)
+class Wizard
+  attr_reader :name, :health
+  def initialize(name, health)
     @name = name
-    @width, @length = width, length
+    @health = health
   end
 
-  def floor_area
-    @width * @length
+  def total_power
+    @health * 1.5
   end
 end
 
-class Skyscraper
-  attr_reader :name, :width, :length
-  def initialize(name, width, length)
+class Warrior
+  attr_reader :name, :health
+  def initialize(name, health)
     @name = name
-    @width, @length = width, length
+    @health = health
   end
 
-  def floor_area
-    @width * @length
-  end
-end
-
-class Castle
-  attr_reader :name, :width, :length
-  def initialize(name, width, length)
-    @name = name
-    @width, @length = width, length
-  end
-
-  def floor_area
-    @width * @length
+  def total_power
+    @health * 1.5
   end
 end
 ```
 
 ### First chapter: Inheritance
 
-- Wow, lots of duplicated code here... let's respect the principle Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class. We can make our classes inherit from a more generic SuperClass/ParentClass called Building. The syntax of inheritance is pretty simple:
+- Wow, lots of duplicated code here... let's respect the principle Don't Repeat Yourself. Let's apply the concept of inheritance and put all common parts in the parent class. We can make our classes inherit from a more generic SuperClass/ParentClass called `Character`. The syntax of inheritance is pretty simple:
 
 ```ruby
 class SuperClass
@@ -145,90 +119,82 @@ end
 ```
 
 ```ruby 
-# building.rb
-class Building
-  attr_reader :name, :width, :length
-
-  def initialize(name, width, length)
+# character.rb
+class Character
+  attr_reader :name, :health
+  def initialize(name, health)
     @name = name
-    @width, @length = width, length
+    @health = health
   end
 
-  def floor_area
-    @width * @length
+  def total_power
+    @health * 1.5
   end
 end
 ```
 ```ruby 
-# house.rb
-require_relative "building" # don't forget the require_relative 'building' here
+# wizard.rb
+require_relative "character" # don't forget the require_relative 'character' here
 
-class House < Building
+class Wizard < Character
 end
 
-some_house = House.new("White House", 26, 51)
-some_house.name #=> "White House"
-some_house.floor_area #=> 1326
+merlin = Wizard.new("Merlin", 400)
+merlin.name #=> "Merlin"
+merlin.health #=> 400
 ```
 
 ```ruby 
-# skyscraper.rb
-require_relative "building"
+# wizard.rb
+require_relative "character"
 
-class Skyscraper < Building
+class Wizard < Character
 end
 
-some_skyscraper = Skyscraper.new("Empire State Building", 50, 60)
-some_skyscraper.name #=> "Empire State Building"
-some_skyscraper.floor_area #=> 3000
+athena = Wizard.new("Athena", 300)
+athena.total_power #=> 450
 ```
 
-```ruby
-# castle.rb
-require_relative "building"
-
-class Castle < Building
-end
-
-some_castle = Castle.new("Tower of London", 32, 35)
-some_castle.name #=> "Tower of London"
-some_castle.floor_area #=> 1120
-```
-
-- Let's add some behavior to our classes and play with it. Only a castle may have a butler, so it's a specific behavior.
+- Let's add some behavior to our classes and play with it. Only a wizard can cast a spell. Let's add a method `cast_spell?` to the Wizard class:
 
 ```ruby
-class Castle < Building
-  attr_accessor :butler
-
-  def has_a_butler?
-    @butler != nil
+class Wizard < Character
+  def can_cast_spell?
+    return true # All wizards can cast spells
   end
 end
 
-some_castle = Castle.new("Chambord", 156, 117)
-some_castle.has_a_butler? # => false
-some_castle.butler = "George"
-some_castle.has_a_butler? # => true
+merlin = Wizard.new("Merlin", 400)
+merlin.can_cast_spell? #=> true
 
-some_house = House.new("White House", 26, 51)
-some_house.has_a_butler? #=> Undefined method `has_a_butler?`
+athena = Warrior.new("Athena", 300)
+athena.can_cast_spell? #=> Undefined method `can_cast_spell?`
+```
+
+```ruby
+class Warrior < Character
+  def can_cast_spell?
+    return false # No warrior can cast spells
+  end
+end
+
+athena = Warrior.new("Athena", 300)
+athena.can_cast_spell? #=> false
 ```
 
 #### `super` keyword
 
-We all know that a Castle in usually bigger than a House (bigger floor_area). How can we make sure that this behavior is translated into code? We need to change an inherited method. This can be done with the `super` keyword, which calls the parent's method with the same name. Now, let's refacto our classes using `super` keyword:
+We all know that a Warrior is more powerful than a Wizard (bigger total_power). How can we make sure that this behavior is translated into code? We need to change an inherited method. This can be done with the `super` keyword, which calls the parent's method with the same name. Now, let's refactor our classes using `super` keyword:
 
 ```ruby
-class Castle < Building
-  # A castle always has a garden of 300 sq. m
-  def floor_area
-    super + 300  # `super` calls `floor_area` of `Building`
+class Warrior < Character
+  def total_power
+    # @health * 1.5 * 2 can be refactored to:
+    super * 2  # `super` calls `total_power` of `Character`
   end
 end
-
-some_castle = Castle.new("Tower of London", 32, 35)
-some_castle.floor_area # => 1420
+athena = Warrior.new("Athena", 300)
+athena.total_power #=> 900
 ```
 
 As you see, `super` is making a call to the method with the same name in the parent class.
@@ -248,26 +214,26 @@ As you see, `super` is making a call to the method with the same name in the par
 - A class is used to create instances using the `new` method
 
 ```ruby
-# castle.rb
-class Castle # This is a class Castle
+# wizard.rb
+class Wizard # This is a class Wizard
 end
-my_castle = Castle.new("Tower of London", 32, 35) # This is an instance of the Castle class
+merlin = Wizard.new("Merlin", 400) # This is an instance of the class Wizard
 ```
 
 Instance Methods
 ```ruby
-class Castle < Building
-  def has_a_butler?
-    @butler != nil
+class Merlin < Character
+  def can_cast_spell?
+    return true
   end
 end
 
-# The has_a_butler? method is an instance method
-# We can call the instance method has_a_butler? on a single Castle instance
-p my_castle.has_a_butler? #=> false
+# The can_cast_spell? method is an instance method
+# We can call the instance method can_cast_spell? on a single Wizard instance
+p wizard.can_cast_spell? #=> true
 
-# We cannot call the instance method has_a_butler on the Castle class directly
-p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
+# We cannot call the instance `method can_cast_spell?` on the `Wizard` class directly
+p Wizard.can_cast_spell? #=> Undefined method `can_cast_spell?` for Wizard
 ```
 
 - Instance methods are called on instances
@@ -276,12 +242,12 @@ p Castle.has_a_butler? #=> Undefined method `has_a_butler?` for Castle
 What are class methods?
 
 - The are called on the class directly.
-- `Castle.categories`
+- `Wizard.spells`
 
 ```ruby
-class Castle < Building
-  def self.categories
-    return ["Medieval", "Norman", "Ancient"]
+class Wizard < Character
+  def self.spells
+    return ["Fireball", "Magic Missile", "Lightning Bolt"]
   end
 end
 ```
@@ -290,26 +256,31 @@ end
 - You can't call class methods on instances!
 
 ```ruby 
-some_castle = Castle.new("Tower of London", 32, 35)
-some_castle.categories #=> Undefined method `categories`
+merlin = Wizard.new("Merlin", 400)
+merlin.spells #=> Undefined method `spells` for #<Wizard:0x00007f8b1b0b3b10>
 ```
 
 When to create class methods and why?
 
 ```ruby 
-class House < Building
+class Wizard < Character
   # [...]
 end
 
-def self.price_per_square_meter(city)
-  case city
-  when "Paris" then 9000
-  when "Brussels" then 3000
-  else raise Exception.new("No data for #{city}")
+def self.spell_details(spell)
+  case spell
+  when "Fireball"
+    return "A ball of fire that crisps the competition"
+  when "Magic Missile"
+    return "A missile of magic that never misses its target"
+  when "Lightning Bolt"
+    return "A bolt of lightning that strikes the target"
+  else
+    return "Unknown spell"
   end
 end
 
-puts House.price_per_square_meter("Paris") # => 9000
+puts Wizard.spell_details("Fireball") #=> "A ball of fire that crisps the competition"
 ```
 - In a nutshell, You create a class method if it does not need/is not relevant to a single instance. You will use class methods more than you define them.
 
@@ -339,8 +310,8 @@ As you see, `self` represent the class itself in this context. But put inside an
 
 - Inside a class definition - To define Class methods.
 ```ruby
-class House
-  def self.price_per_square_meter(city)
+class Wizard
+  def self.spell_details(spell)
     # [...]
   end
 end
@@ -350,76 +321,55 @@ end
 
 Self is not mandatory:
 ```ruby
-class Skyscraper < Building
+class Wizard
+  # [...]
 
-  def initialize(name, width, length, height)
-    super(name, width, length)
-    @height = height
-  end 
+  def introduce
+    return "Hi, my name is #{@name} and I am a #{self.battle_rank} wizard"
+  end
 
-  def type_of_owner
-    if @height > 50
-      "this #{self.capitalized_name} is a skyscraper for Spider-Man."
+  def battle_rank
+    if @health > 100
+      "legendary"
+    elsif @health > 80
+      "seasoned"
+    elsif @health > 50
+      "intermediate"
     else
-      "this #{self.capitalized_name} is a skyscraper for beginners"
+      "novice"
     end
   end
-
-  def capitalized_name
-    @name.capitalize
-  end
 end
-
-nyc_skyscraper = Skyscraper.new("empire State Building", 30, 60, 381)
-nyc_skyscraper.type_of_owner # => "This Empire State Building is a skyscrapper for Spider-Man."
 ```
 
 When do we actually need it explicitly? Let's now see the case in which Self is mandatory
 ```ruby
-class Butler
-  def initialize(castle)
-    @castle = castle # We want @castle to store an instance of Castle.
-  end
+class Warrior < Character
+  # [...]
+  attr_reader :wizard
 
-  def clean_castle
-    puts "#{@castle.name} is cleaned!"
-  end
-end
-
-class Castle < Building
-  attr_reader :butler, :ruler
-
-  def initialize(name, width, length, ruler)
-    super(name, width, length)
-    @ruler = ruler
-    @butler = Butler.new(???) # We need to pass the current instance of Castle
+  def join_forces(wizard)
+    @wizard = wizard
+    @wizard.warrior = self # if this warrior instance is athena, then this will set the wizard's warrior to athena
   end
 end
 
-class Castle < Building
-  attr_reader :butler, :ruler
+class Wizard < Character
+  # [...]
+  attr_reader :warrior
 
-  def initialize(name, width, length, ruler)
-    super(name, width, length)
-    @ruler = ruler
-    @butler = Butler.new(self)
-  end
-
-  def ownership_details
-    "#{@name} is ruled by #{ruler_name}"
-  end
-
-  def ruler_name
-    @ruler.capitalize
+  def banish_demons
+    return "Finished banishing demons with the help of #{self.warrior.name}"
   end
 end
 
-aladdin_castle = Castle.new("The magical Sultan palace", 410, 520, 'Aladdin')
-aladdin_castle.ownership_details # => "The magical sultan palace is ruled by Aladdin"
-aladdin_castle.butler.clean_castle # => "The magical sultan palace is cleaned!"
+athena = Warrior.new("Athena", 300)
+merlin = Wizard.new("Merlin", 400)
+puts athena.join_forces(merlin)
+puts merlin.banish_demons
 ```
-As you see, here we need `self` in `Castlet#initialize` in order to build a Butler who is aware of the Castle they work for!
+As you see, here we need `self` in `Warrior#join_forces` in order to set the warrior of the wizard to the warrior instance. If we don't use `self`, we can't access the warrior instance of the wizard.
 
-As a key takeway, self represents the ceiling he is inside of, if its ceiling is a class, it represents the class, if it is inside of an instance method it represents the instance(mandatory or not)
+As a key takeway, `self` represents the instance it is inside of, if its ceiling is a class, it represents the class, if it is inside of an instance method it represents the instance(mandatory or not)
 
 
