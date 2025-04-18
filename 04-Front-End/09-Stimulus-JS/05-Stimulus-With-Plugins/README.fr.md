@@ -150,6 +150,19 @@ En haut de la page, importe le plugin `Chart.js` :
 import { Chart } from "chart.js";
 ```
 
+Dans la définition de la classe, tu peux définir ton objet `worldPopulation` :
+
+```javascript
+// lib/controllers/doughnut_charts_controller.js
+export default class extends Controller {
+  worldPopulation = {
+    // [...]
+  };
+}
+```
+
+Ce qui signifie que tu peux te référer à lui dans toutes les méthodes que tu définis avec `this.worldPopulation`.
+
 Dans ta méthode `connect()` :
 -  crée tes 2 tableaux `labels` et `data`
 -  crée ton instance `Chart` avec le bon `type`, `data` et `datasets` (garde toujours un œil sur la documentation lorsque tu utilises des bibliothèques externes)
@@ -182,13 +195,13 @@ Ensuite, utilise cet objet pour construire tes tableaux `labels` et `data`. Ensu
 
 ### 6. Implémenter le graphique de l'aire polaire
 
-Jetons un coup d'œil à la page [Wikipedia](https://en.wikipedia.org/wiki/List_of_religious_populations) sur les populations religieuses dans le monde.
+Jetons un coup d'œil à la [page](https://worldstatistics.net/the-largest-religions-in-the-world-2025/) sur les populations religieuses dans le monde.
 
 Sélectionnons 10 d'entre elles et construisons un objet à partir de celles-ci :
 
 ```javascript
 const worldReligions = {
-  "christianity": 2382000000,
+  "christianity": 2437876925,
   // maintenant c'est à toi de compléter le reste de l'objet
 }
 ```
