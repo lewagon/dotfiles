@@ -1,0 +1,11 @@
+.divider {
+  width: 100%;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.app-container {
+  width: 700px;
+  margin: auto;
+}
+
