@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+    <script src="javascript/lib.js" defer></script>
+  </head>
+  <body>
+    <div class="header" id="top">
+    </div>
+    <div class="main">
+      <h1>Accessibility Guidelines</h1>
+      <div class="title" id="introduction">Introduction</div>
+      <div class="content">The W3C created guidelines to help developpers build accessible apps. It's a set of four topics, labeled as the POUR principles. They describe the main philosophy behind accessibility and are completed with best practices and typical cases.</div>
+      <div class="content">This page sumarizes the essence of each principle, completed with one example each time. You can read the detailed version on the W3C website: <a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/">click here</a>.</div>
+      <img src="images/pour.svg">
+      <div class="title" id="pour">The POUR principles</div>
+      <div class="subtitle">P for Perceivable</div>
+      <img src="images/perceivable.svg">
+      <div class="content">Create content that can be perceived by different senses. For example, use "alt" attributes in image tags to describe the scene. Images are part of the content, make it available for other senses than sight.</div>
+      <div class="subtitle">O for Operable</div>
+      <img src="images/operable.svg">
+      <div class="content">Ensure that the user interface can be operated through a variety of tools, not only the mouse. For example, make sure that the user can navigate with a keyboard or an eyetracker.</div>
+      <div class="subtitle">U for Understandable</div>
+      <img src="images/understandable.svg">
+      <div class="content">Be clear and avoid confusion, make all the interactions predictable. For example, guide the user to correct the errors in a form.</div>
+      <div class="subtitle">R for Robust</div>
+      <img src="images/robust.svg">
+      <div class="content">Maximize compatibility with a wide range of assistive technologie tools. For example, use title tags from h1 to h6 to structure the page content, screen readers ofter option to sumarize the squeletton of the page.</div>
+      <div class="title" id="feedback">Leave a comment</div>
+      <form action="#">
+        <p>Do you plan to code with accessibility in mind?</p>
+        <input type="radio" name="explanations" id="yes"> Yes
+        <input type="radio" name="explanations" id="no"> No
+        <p>What will you prioritize?</p>
+        <input type="checkbox" name="subjects" id="styling">
+        <label for="styling">Styling</label>
+        <input type="checkbox" name="subjects" id="semantics">
+        <label for="semantics">Semantics</label>
+        <input type="checkbox" name="subjects" id="focus">
+        <label for="focus">Focus</label>
+        <label for="zoom">What zoom scale will you test?</label>
+        <input type="text" name="zoom" id="zoom">
+        <label for="when">What is the best time to integrate accessibility?</label>
+        <select name="when" id="when">
+          <option value="0">During design</option>
+          <option value="1">During the prototyping steps</option>
+          <option value="2">At the end of the project</option>
+        </select>
+        <label for="comment">Comment</label>
+        <textarea name="comment" id="comment" cols="30" rows="10" class="error"></textarea>
+        <input type="submit">
+      </form>
+    </div>
+    <div class="footer">
+      <a href="#top" class="to-top"></a>
+    </div>
+    <nav class="close">
+      <button class="toggle-nav"></button>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#pour">The POUR principles</a></li>
+        <li><a href="#feedback">Leave a comment</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

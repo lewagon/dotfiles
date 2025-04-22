@@ -1,0 +1,20 @@
+/*Importing fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;500;700");
+
+/* Importing all components file */
+@import url("components/button.css");
+
+/* General for fonts and colors */
+body {
+  margin: 100px;
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3 {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.text-center {
+  text-align: center;
+}

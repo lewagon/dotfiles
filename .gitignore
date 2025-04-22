@@ -1,0 +1,7 @@
+.DS_Store
+*.psd
+Gemfile.lock
+news.sqlite3
+*.vscode/
+# ignore zone identifier files that can be created by Windows
+*:Zone.Identifier

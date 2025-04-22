@@ -1,0 +1,264 @@
+mskog/visual-studio-code-plugins-for-ruby-2096,Visual Studio Code plugins for Ruby and Rails,"A quick list of all the plugins I use for Ruby on Rails development.
+
+You will need this for syntax support and such so this is a must have.
+
+This one is a must have. It will enable ""Go to definition"" in Ruby for all classes, modules and methods. It also has context-aware code completion and documentation. Extremely handy. If you only choose one of the plugins on this list(except for the Ruby one) then make it this one. It is quite something!
+
+If you use Rubocop then this extension will let your format your code using Rubocop. This is highly recommended as it will enforce a consistent style in your code. Especially if you are working in a team.
+
+Pro tip: If you use Spring then you can use spring-commands-rubocop to make a binstub for Rubocop and then it will run much faster. You will need to set the ""ruby.rubocop.executePath"" setting in VSCode to ""bin/"" for this to work properly.
+
+If you are using the default Rails way of organizing directories and such then this plugin can make navigating your application a breeze. You can use it to quickly navigate between controller actions, model, views and even specs.
+
+This will enable the use of ""Go to definition"" in VSCode for view partials. Very handy for quickly navigating through a complex view structure.
+
+This is a simple extension that will open the latest migration in your application. I use it all the time so it is absolutely worth having.
+
+If you use RSpec then this is a handy extension. It will make it very easy to add focus: true to your specs to run only that spec.
+
+Quickly toggle ERB tags in your views. Will save you quite a bit of typing.
+
+Syntax support for Haml.
+
+This uses the haml-lint gem to help you make your Haml code clean and consistent.
+
+Add end automatically to methods and statements.
+
+If you use the Dash documentation browser for Mac then you can use this extension to quickly jump to the documentation for any class or method.
+
+Quickly jump to the open file on GitHub.
+
+This will copy the relative path of any file as defined by the project root. Great for doing things like running a specific spec and such.
+
+Will add intellisense for any CSS class in your project, even those defined in external style sheets like Bootstrap.
+
+No-nonsense formatter for HTML, CSS, JavaScript and more. It is opinionated and does not allow for much configuration. It is perfect if you want something simple and don't want to fiddle with configuration files.
+
+Another formatter. This one is a ""meta formatter"" that uses other formatters. You can thus use Prettier for CSS and something else for HTML, all managed by Unibeautify. This is also the only formatter that I know of that does a decent job of handling ERB templates. Use the Pretty diff formatter for ERB templates and you will have a pretty good time.
+
+Vim
+This will essentially turn VSCode into VIM for editing. I gave this a shot and didn't look back. It might take you a couple of weeks to get proficient with it but after that you'll be golden. This is in my opinion an excellent plugin and it will make you a lot more efficient. Check out this article for a very good introduction to this plugin.
+
+There you go! Those are all my plugins for Ruby on Rails development. Did I miss one? Let me know on Twitter!",Magnus Skog,true
+molly_struve/level-up-your-ruby-skillz-working-with-arrays-hnn,Level Up Your Ruby Skillz: Working With Arrays,"When I first started out, there was a senior engineer that I worked with who was a wizard when it came to working with arrays. He taught me all the best tricks to writing succinct and clean code when it came to dealing with arrays. Here are the methods that I find the most useful and I think are good to have in your Ruby toolbox right from the start.
+
+If you want to jump straight to the code without the explanations checkout the cheatsheet at the bottom! 
+
+
+
+Before we dive into some of the fancier methods above, we first need to start with the most basic, each. each will call a block once for every given element in an array. When it is done, it will return the original array. That last part is key and is easy to forget. Even those of us who have been working with Ruby for a while sometimes forget it. Here is an example. 
+
+That code will produce the following result when run in a console. NOTE: In the example below and those that follow, irb simply means I am in a Ruby console. 
+
+For each number in our array we printed ""hi"" plus that number. Then, after we have finished traversing the entire array, our original array is returned.
+
+Keep in mind, I am using the do/end block notation above, but you can also use the bracket syntax for your block which is shown below.
+
+As you can see, regardless of syntax, the result is the same. I am going to continue to use the do/end syntax throughout this guide because I think it makes the code and logic easier to understand. With that said, all of these methods will work with the bracket syntax as well.
+
+
+
+In the early days, when I was new to Ruby, every time I wanted to build an array I did something like this:
+
+I quickly learned there was a better way, and that is by using map. map returns a new array with the results of executing the block once for every element in your original array. Here is an example:
+
+We add 2 to every number in our original array and then group those results up into a new array, which is returned. Now our code is a bit cleaner and more compact.  
+
+
+
+map is great for collecting a set of results, but what happens when you want to map over nested arrays? That is when flat_map comes in handy. If you find yourself with a set of nested arrays then you might want to checkout flat_map. For example, say you have code like this with a couple of nested arrays.
+
+We get a single level array, which is what we wanted, but how could we tighten this up? Let's try using map.
+
+Hmmm, that is not quite what we want. We want a flat, single level array and map is creating a nested one. In order to flatten that nested array we can use flat_map. 
+
+flat_map works similar to map in that it collects the results from your block into an array, but as a bonus, it will flatten it. Under the hood, flat_map is concatenating all of the inner arrays into a single one. Using flat_map returns that single level array we wanted. 
+
+
+
+Similar to the map example, when I was starting out, if I wanted to conditionally select elements from an array, for example, choose all the even numbers, I would do something like this:
+
+It works, but there is an even more succinct way, and that is by using select. select returns an array containing all elements for which the given block returns a true value. This means we can rewrite our above block of code like this!
+
+
+
+Now we are going to kick it up a notch. What if instead of wanting all the even numbers back from an array, you only want the first even number that you find? For that you can use detect. detect will return the first entry for which your block evaluates to true. So if we run a similar block of code as above, but replace select with detect, you can see we get back only the first even number. 
+
+One important thing to note here is that we are now returning a number(our entry) and NOT an array.
+
+But what happens if our block never evaluates to true? What if there are no even numbers in our array? In that case, detect will return nil.
+
+To summarize, detect will return the first entry your block evaluates to true for OR it will return nil if no entry evaluates to true for your block.
+
+
+
+Now let's look at the inverse of select, which is reject. reject will return all entries for which your block evaluates FALSE. So instead of doing this:
+
+We can simplify the above code and do something like this instead:
+
+This time we will return each number which is not even, so those where number.even? returns false.
+
+
+
+We have just seen two ways we can filter through arrays in Ruby using select and reject. But what if you want to straight up separate your single array into two arrays, one for even numbers and one for odd numbers? One way to accomplish this is by doing:
+
+But, there is an even better way, you can use partition! Hold on to your seats for this one. partition will return TWO arrays, the first containing the elements of the original array for which the block evaluated true and the second containing the rest. This means we can take what we wrote above and simplify it to: 
+
+As you can see, partition will return two arrays, one with even numbers, and one for odd numbers. If we want to assign our even and odd variables all we have to do is
+
+However, as you can probably guess, there is an even better way! We can eliminate that single result variable altogether and write something like this
+
+This syntax is going to automatically assign the first array to even and the second array to odd. You can use this array assignment syntax anytime you are dealing with nested arrays. Here is an example of how you can breakup 3 arrays.
+
+
+
+count for the most part is pretty self explanatory, by default, it will count the number of elements in your array.
+
+But, did you know it can do so much more? For starters, can pass count an argument. If you pass count an argument, it will count the number of times that argument occurs in your array. 
+
+You can also pass count a block!😲When passed a block, count will return the count for the number of entries that block evaluates to true for. 
+
+Every number that is odd in our array was counted and the result returned was 4.
+
+
+
+Last but not least, I want to talk about traversing an array with an index. Often when we want to keep track of where we are in an array of elements we will do something like this.
+
+However, there is a better way! You can use with_index with each, or any of the methods I listed above, to help you keep track of where you are in an array. Here are some examples of how you can use it. (REMEMBER: Array indexes start at 0 😃)
+
+In this example we are simply iterating over our array and printing out the index for each element.
+
+In this example, we are combining the index with the letter in our array to form a new array using the map method.
+
+This example is a little trickier. Here we are using our index to help us select the element in our array that is at index equal to 2. In this case, that element is ""c"".
+
+
+
+The last tidbit of knowledge I want to leave you with is that any of the methods above that return an array(all except count and detect), you can chain together. For these examples I am going to use bracket notation because I think it's easier to read chaining methods from left to right rather than up and down. 
+
+For example, you can do this:
+
+Let's break down what is happening here given what we learned above. 
+1) map is going to add 2 to each of our array elements and return [3, 4, 5, 6]
+2) select will select only the even numbers from that array and return [4, 6] 
+3) reject will remove any number equal to 6 which leaves us with [4]
+4) Our final map will prepend ""hi"" to that 4 and return [""hi 4""]
+
+
+Congrats, you made it all the way to the end! Hopefully, you find these array methods useful as you are writing your Ruby code. If anything is unclear, PLEASE let me know in the comments. This is my first time writing a tutorial so I welcome any and all feedback 🤗
+
+
+If you would like all of these code examples without the lengthy explanations checkout this cheatsheet that @lukewduncan
+ graciously put together!",Molly Struve,false
+molly_struve/level-up-your-ruby-skillz-working-with-hashes-4bid,Level Up Your Ruby Skillz: Working With Hashes,"Last week I tackled Ruby arrays and shared some of the methods I find the most useful for working with them. This week I want to talk about HASHES! Before I dive head first into my favorite methods, I want to give a quick summary of what a hash is in Ruby and how it works. The definition of a Hash straight from the docs themselves:
+
+A Hash is a dictionary-like collection(If you are a Java person, think maps) of unique keys and their values. Also called associative arrays(honestly, I have never heard this before but 🤷), they are similar to Arrays, but where an Array uses integers as its index, a Hash allows you to use any object type.
+
+One of the keys(pun intended 😉) in that definition is that a Hash allows you to use any object type as your index. Most people when they think of a Hash think of this.
+
+But hashes can be so much more in Ruby! For example, all of these are Hashes.
+
+Any object type your heart desires can be a Hash key. Now that we have the semantics and the definition down, let's get to the methods!
+
+NOTE: Just like in the array tutorial, if you see irb in the code snippets that means I am working in a Ruby console. Also, I made a code CHEAT SHEET if you want the code without all the explanations.
+
+
+
+One of the most valuable things you can do with a hash is iterate over it. One of the easiest ways to loop over a hash is to use each. I don't know about you, but when I started out using Ruby, my hash each statements looked like this.
+
+Here, I am executing my each method the same way I did for my arrays. The difference now is that pair is an array itself. The first element is my key and the second element is my value. NOTE: After executing the block for each of our key/value pairs, the original hash that we iterated over is returned. 
+
+The above way works, but there is an even slicker way, you can separate that pair by passing two arguments to your block. This means you can rewrite the above like this:
+
+Now we have two separate variables, one representing the key and one representing the value. 
+
+
+
+But what if we don't want all the keys and values? What if we just want the keys or just want the values? There are methods for each of those! 
+
+Notice, that once again, regardless if we use each_key or each_value, we still get the original hash back after we are done iterating over it. 
+
+
+
+Let's say you just want an array of the keys or you just want an array of the values from a hash. To do this, you can use keys or values. Both will return an array of the keys or values for a given hash. 
+
+
+
+Another couple of pretty straight forward methods are the key and value predicates. If you want to know if a key or a value exists in a Hash then you can use key? or value?. 
+
+This is pretty straightforward, but there are a couple of nuances I want to point out. For starters, when you are looking for a key, you have to make sure you are looking for the proper datatype. For example, if you have a hash with symbol keys, searching for a string will return false. 
+
+Make sure the datatype you are searching for matches the datatype of your keys or values. 
+
+
+
+Now we know how we can check if we have a specific key or value, but what if we want to actually look up the value for a key? Well, there is always the standard way to do it and this is what I learned first. 
+
+Simple and easy. If the key is there, we return its value. If the key is not there we return nil. But what if we have some more complicated logic? For example, what if we want to return the key's value OR, if the key does not exist, we want to return some default, like 0? With what we know so far we could do this
+
+It works, but it is a pretty decent chunk of code to get it done. Instead, we can replace that large chunk of code with one simple method, fetch. fetch has a lot of options and behaviors so lets unpack each, one at a time. 
+
+1) fetch with NO arguments will return the value if it is present. If the value is not present, fetch will raise an error. This is great if you want to raise an error when a key cannot be found.
+
+2) fetch WITH arguments will return the value if it is present, just like before. Here is where it gets slick and can help us out with our original use case, if you pass fetch an argument and the key is not present, it will return the argument! 🔥
+
+
+
+fetch works great when you have a single level hash and want to return a value from it using a key. But what if you have several nested hashes? For example
+
+Normally to get the value of c you would want to do
+
+which would traverse your nested hashes and return your value. But what if you are not sure whether all those levels are present? For example, let's say you are working with an API to get user data. Sometimes you find the user you are looking for and get this back.
+
+Other times, you don't find the user you want and you get this back,
+
+In this case, we can't just assume we have the user information, because if we don't have the user information, we will end up raising an error.
+
+To avoid this, we could do
+
+This ensures if we have the user data, we return the first name. If we don't have the data, then we return nil. Turns out, we can avoid ALL of this by using dig. dig extracts the nested value specified by a sequence of key objects. However, if any one of those nested keys do not exist, it will return nil. 🎉
+
+dig is great when you want to traverse a hash but are not sure what its structure might be. It allows you to work with a hash without worrying about handling a bunch of errors or doing a bunch of present? checks using if/else blocks.
+
+
+
+Now we are going to kick it up a notch. What if we have a hash where all the keys are symbols, but we want to change them all to strings? In the early days we would do this.
+
+It works, but you guessed it, now there is a better way. That better way is transform_keys. transform_keys allows you to iterate over a hash and will return a new hash. The new hash keys will be the result from executing the block for each of the original keys.
+
+IMPORTANT transform_keys(above) and transform_values(below) are only available in Ruby 2.5 and above. If you get the following error, then you are likely working with a version of Ruby below 2.5 NoMethodError: undefined methodtransform_keysfor {:a=>1, :b=>2, :c=>3}:Hash
+
+
+
+transform_values works the exact same way as transform_keys, except it allows you to update the values. When it is done executing your block, it will return a new hash with the new set of values.
+
+
+
+Now we are going to get into some familiar territory if you read my first array tutorial. Just like for arrays, you can use select for hashes! select for a hash works basically the same as an array, it returns a new hash with the key/value pairs that your block evaluated true for. 
+
+
+
+Let's say you have a hash and you just want back a specific set of keys and their values. You could do something like this
+
+But Ruby has a simpler way and that is by using slice. slice will return a hash with only the keys you request via your arguments. What we have above can be simplified to
+
+
+
+Back we go again to familiar array territory. reject for a hash works the same way it does for an array. reject will return a new hash consisting of all the key/value pairs for which your block returns false.
+
+
+
+Last, but not least, we need to cover chaining. Any of the methods above that return a hash, you can chain together. For these examples I am going to use bracket notation because I think it's easier to read chaining methods from left to right, rather than up and down. 
+
+Here is an example of chaining some of the above methods together.
+
+Let's break down what is happening here given what we learned above. 
+1) transform_keys changes each of the hash's keys to a string and returns { ""a"" => 1, ""b"" => 2, ""c"" => 3 , ""d"" => 4}
+2) slice will select only keys ""a"" and ""b"" and their values and return { ""a"" => 1, ""b"" => 2 } 
+3) reject will remove any key/value pair where the value is equal to 2, that leaves us with { ""a"" => 1 }
+4) Our final transform_values will change our hash's values into a string with ""hi"" and our number following it. The final result is {""a""=>""hi 1""}
+
+
+You made it to the end!!! Hopefully you are feeling a little more comfortable with Ruby hashes now and have a couple more methods in your toolbox that you can use. If you have any questions or anything needs clarification please don't hesitate to drop a question in the comments! 
+
+If you want a quick reference for these methods I made a handy cheat sheet with just the code from each example.  ",Molly Struve,false

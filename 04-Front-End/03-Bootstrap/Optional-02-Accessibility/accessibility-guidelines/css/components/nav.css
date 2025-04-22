@@ -1,0 +1,73 @@
+/* TODO: toggle visibility on `nav ul` */
+
+nav ul {
+
+}
+
+nav.close ul {
+
+}
+
+
+
+nav {
+  background-color: #151515;
+  font-size: 0.88rem;
+  position: fixed;
+  width: 244px;
+  height: 208px;
+  margin: 0;
+  padding: 0px 10px;
+  border: 1px solid #e5e5e5;
+  top: 80px;
+  z-index: 10;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0px 0px 15px 0px rgba(14,0,0,0.05);
+  left: 0px;
+  transition: left 0.5s ease;
+}
+
+nav.close {
+  left: -208px;
+}
+
+nav a, nav a:hover, nav a:visited, nav a:active {
+  color: white;
+  display: inline-block;
+  width: 100%;
+  line-height: 17px;
+  padding: 13px 20px 13px 20px;
+  border-radius: 4px;
+}
+
+nav a:hover, nav a:active, nav a:visited {
+  background-color: #2d2d2d;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  margin: 40px 44px 0 auto;
+}
+
+
+.toggle-nav {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  width: 36px;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2012%2019%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20style%3D%22fill%3A%23FFFFFF%3B%22%20d%3D%22M0.9%2C16.9c0-0.4%2C0.1-0.7%2C0.4-1l6.3-6.3L1.3%2C3.3c-0.6-0.6-0.5-1.5%2C0-2c0.6-0.6%2C1.5-0.5%2C2%2C0l7.2%2C7.3%09c0.5%2C0.6%2C0.5%2C1.4%2C0%2C2l-7.2%2C7.3c-0.6%2C0.6-1.4%2C0.6-2%2C0C1.1%2C17.7%2C0.9%2C17.3%2C0.9%2C16.9z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 19px;
+  transform: scaleX(-1);
+  transition: transform 0.6s ease;
+}
+
+nav.close .toggle-nav {
+  transform: scaleX(1);
+}

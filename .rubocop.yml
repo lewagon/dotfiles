@@ -1,0 +1,86 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/ConditionalAssignment:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Layout/LineLength:
+  Max: 120
+Lint/UnusedMethodArgument:
+  Enabled: false
+Layout/EmptyLines:
+  Enabled: false
+Style/RedundantReturn:
+  Enabled: false
+Style/SelfAssignment:
+  Enabled: false
+Style/SafeNavigation:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/WordArray:
+  Enabled: false
+Style/SymbolProc:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Style/SuperArguments:
+  Enabled: false
+Style/MutableConstant:
+  Enabled: false
+Style/SignalException:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Lint/MissingSuper:
+  Enabled: false
+Style/MissingRespondToMissing:
+  Enabled: false
+Security/Open:
+  Enabled: true
+Bundler/OrderedGems:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
+Lint/RaiseException:
+  Enabled: false
+Lint/StructNewOverride:
+  Enabled: false
+Style/ExplicitBlockArgument:
+  Enabled: false
+Style/OptionalBooleanParameter:
+  Enabled: false
+Lint/EmptyClass:
+  Enabled: false
+Lint/EmptyFile:
+  Enabled: false
+Naming/BlockForwarding:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
+# disable Style/MapIntoArray if rubocop version is greater than or equal to 1.63
+# it was added in version 1.63, so disabling it raises an error in lower versions
+<% require "rubocop" %>
+<% rubocop_version = Gem.loaded_specs['rubocop'].version  %>
+<% if rubocop_version >= "1.63.0" %>
+Style/MapIntoArray:
+  Enabled: false
+<% end %>
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1
+  Exclude:
+    - '**/Rakefile'
+    - '**/spec/**/*'
+    - '**/db/schema.rb'

@@ -1,0 +1,16 @@
+name: Check Markdown links on change
+
+on: [pull_request]
+
+jobs:
+  check-links:
+    name: runner / linkspector
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run linkspector
+        uses: umbrelladocs/action-linkspector@v1
+        with:
+          reporter: github-pr-review
+          filter_mode: added
+          fail_level: any

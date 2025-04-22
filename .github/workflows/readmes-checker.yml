@@ -1,0 +1,24 @@
+name: Readmes Checker
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [synchronize, opened]
+jobs:
+  readmes-checker:
+    if: ${{ github.repository_owner == 'lewagon' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install requirements
+        run: |
+          pip install -U pip
+          pip install git+https://${{ secrets.USERNAME }}:${{ secrets.TOKEN }}@github.com/lewagon/utils.git#subdirectory=readmes_checker
+      - name: Run Readmes Checker
+        run: |
+          python -m readmes_checker.check .

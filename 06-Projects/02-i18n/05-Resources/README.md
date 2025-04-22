@@ -1,0 +1,3 @@
+- Some of your schemas may have more advanced relationships and foreign keys than we saw during Airbnb week. For example, a table that needs to store two instances (foreign keys) from another table (most often the `User` table). In this case you'll need to use something called `aliases`. Learn how to implement this with [a guide](https://kitt.lewagon.com/knowledge/cheatsheets/active_record_advanced) on advanced Active Record.
+- Make sure to authorize your user actions with [Pundit](https://kitt.lewagon.com/knowledge/cheatsheets/pundit)
+- Start building out your front-end by grabbing components from the [Le Wagon UI Kit](https://uikit.lewagon.com/documentation) and customize them to your own design.

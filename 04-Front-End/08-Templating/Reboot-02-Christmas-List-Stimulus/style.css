@@ -1,0 +1,22 @@
+.divider {
+  width: 100%;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  margin: 36px 0;
+}
+
+.gift-item {
+  cursor: pointer;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.app-container {
+  width: 700px;
+  margin: auto;
+}
+
+.gift-form {
+  margin-top: 20px;
+}

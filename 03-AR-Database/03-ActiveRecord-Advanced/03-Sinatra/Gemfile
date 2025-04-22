@@ -1,0 +1,10 @@
+source "https://rubygems.org"
+
+gem "binding_of_caller"
+gem "faker"
+gem "pry-byebug"
+gem "sinatra"
+gem "sinatra-contrib"
+gem "thin"
+gem 'activerecord', '~> 7.1.3.2'
+gem 'sqlite3', '~> 1.7.3'

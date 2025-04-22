@@ -1,0 +1,44 @@
+{
+  "name": "@ungap/promise-all-settled",
+  "version": "1.1.2",
+  "description": "A cross platform Promise.allSettled polyfill",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "unpkg": "min.js",
+  "scripts": {
+    "build": "npm run cjs && npm run esm && npm run min && npm run test && npm run size",
+    "cjs": "cp index.js cjs/ && echo 'module.exports = allSettled;' >> cjs/index.js",
+    "esm": "cp index.js esm/ && echo 'export default allSettled;' >> esm/index.js",
+    "min": "uglifyjs index.js --support-ie8 --comments=/^!/ -c -m -o min.js",
+    "size": "cat index.js | wc -c && cat min.js | wc -c && gzip -c9 min.js | wc -c && cat min.js | brotli | wc -c",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc node test/index.js"
+  },
+  "keywords": [
+    "Promise",
+    "allSettled",
+    "polyfill",
+    "utility",
+    "ungap"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "nyc": "^15.0.1",
+    "uglify-js": "^3.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ungap/promise-all-settled.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ungap/promise-all-settled/issues"
+  },
+  "homepage": "https://github.com/ungap/promise-all-settled#readme",
+  "type": "module",
+  "exports": {
+    "import": "./esm/index.js",
+    "default": "./cjs/index.js"
+  }
+}

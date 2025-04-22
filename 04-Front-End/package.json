@@ -1,0 +1,21 @@
+{
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@babel/core": "7.8",
+    "@babel/eslint-parser": "^7.15.0",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.0.4",
+    "@hotwired/stimulus": "^3.0.1",
+    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
+    "chai": "^4.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^8.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "type": "module"
+}
