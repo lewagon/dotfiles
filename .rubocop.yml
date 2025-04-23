@@ -68,6 +68,8 @@ Naming/BlockForwarding:
   Enabled: false
 Style/EmptyMethod:
   Enabled: false
+Style/Next:
+  Enabled: false
 # disable Style/MapIntoArray if rubocop version is greater than or equal to 1.63
 # it was added in version 1.63, so disabling it raises an error in lower versions
 <% require "rubocop" %>
