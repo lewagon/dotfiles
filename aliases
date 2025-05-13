@@ -19,7 +19,11 @@ alias al="nvim /Users/theodrak/.aliases"
 # --- Le Wagon updates
 alias cdl="cd /Users/theodrak/code/theodrak/fullstack-challenges"
 alias cde="cd /Users/theodrak/code/theodrak/exercises"
-alias cdt="cd /Users/theodrak/code/theodrak/teamprojects/closetcrashers"
+alias cdp="cd /Users/theodrak/code/theodrak/teamprojects/crypto-tracker"
+alias cdt="cd /Users/theodrak/code/theodrak/teamprojects"
+alias cda="cd ~/code/theodrak/sass/aspiron"
+alias cdf="cd ~/code/theodrak/sass/sass_rails_8_book"
+alias cdr="cd ~/code/theodrak/rails-investigations"
 alias lwu="git pull upstream master -X ours"
 
 # --- Git Shortcuts
@@ -28,8 +32,8 @@ alias gic="git commit -m"
 alias gis="git status"
 alias gia="git add ."
 
-alias ghrpub="gh repo create --source=. --public"
-alias ghrpriv="gh repo create --source=. --private"
+alias ghrpu="gh repo create --source=. --public"
+alias ghrpr="gh repo create --source=. --private"
 alias giinit="git init -b main"
 alias lg="LazyGit"
 

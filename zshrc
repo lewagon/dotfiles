@@ -107,3 +107,7 @@ killdb () {
         ps -ef | grep --color postgres | grep --color "$1" | awk '{print $2}' | xargs -r kill -9
     fi
 }
+eval "$(/Users/theodrak/.local/bin/mise activate zsh)"
+export PATH="/opt/homebrew/bin:$PATH"
+eval "$(~/.local/bin/mise activate)"
+. "/Users/theodrak/.deno/env"
