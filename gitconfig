@@ -47,7 +47,7 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = cesarlewagon@gmail.com
+	email = quirinocesar@gmail.com
 	name = Cesar Quirino
 [filter "lfs"]
 	process = git-lfs filter-process
