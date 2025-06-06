@@ -58,7 +58,7 @@
   rebase = false
 
 [init]
-  defaultBranch = master
+	defaultBranch = main
 [user]
 	email = gjspieth@gmail.com
 	name = Georgina Spieth

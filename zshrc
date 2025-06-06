@@ -21,10 +21,6 @@ unalias lt # we need `lt` for https://github.com/localtunnel/localtunnel
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
-# Load pyenv (to manage your Python versions)
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv version-name)]'
-
 # Load nvm (to manage your node versions)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -68,5 +64,18 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR=code
 export EDITOR=code
 
-# Set ipdb as the default Python debugger
-export PYTHONBREAKPOINT=ipdb.set_trace
+
+# Set JAVA_HOME environment variable
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+
+# Set Maven environment variable
+export M2_HOME=~/apache-maven-3.9.9
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+
+# Set IntelliJ path
+export PATH="/Applications/IntelliJ IDEA CE.app/Contents/MacOS:$PATH"
+
+
+export PATH="/usr/local/bin:$PATH"

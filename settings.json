@@ -56,7 +56,6 @@
         "**/tmp/**": true,
         "**/vendor/**": true
     },
-    "git.enabled": false,
     "notebook.diff.ignoreMetadata": true,
     "notebook.lineNumbers": "on",
     "notebook.markup.fontSize": 13,
@@ -71,13 +70,29 @@
         "rubocop": true
     },
     "telemetry.telemetryLevel": "off",
-    "window.restoreWindows": "none",
-    "window.newWindowDimensions": "maximized",
+    "window.newWindowDimensions": "fullscreen",
     "workbench.editor.enablePreview": true,
     "workbench.iconTheme": "vscode-great-icons",
-    "workbench.settings.editor": "json",
     "workbench.settings.openDefaultSettings": true,
-    "workbench.settings.useSplitJSON": true,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.panel.defaultLocation": "right",
+    "vscode-pets.theme": "forest",
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": 1,
+    "git.autofetch": true,
+    "window.titleBarStyle": "native",
+    "window.restoreFullscreen": true,
+    "java.test.config": {
+
+
+    },
+    "vscode-pets.petSize": "small",
+    "vscode-pets.petType": "fox",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.port": 0,
+    "remote.SSH.defaultExtensions": [
+      "gitpod.gitpod-remote-ssh"
+    ],
+    "remote.SSH.remotePlatform": {
+      "*.gitpod.io": "linux"
+    },
 }
