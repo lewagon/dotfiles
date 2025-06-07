@@ -1,0 +1,55 @@
+[1mdiff --git a/install.sh b/install.sh[m
+[1mindex e4f524e..ef106d8 100755[m
+[1m--- a/install.sh[m
+[1m+++ b/install.sh[m
+[36m@@ -23,7 +23,7 @@[m [msymlink() {[m
+ [m
+ # For all files `$name` in the present folder except `*.sh`, `README.md`, `settings.json`,[m
+ # and `config`, backup the target file located at `~/.$name` and symlink `$name` to `~/.$name`[m
+[31m-for name in aliases gitconfig irbrc rspec zprofile zshrc; do[m
+[32m+[m[32mfor name in aliases gitconfig irbrc pryrc rspec zprofile zshrc; do[m
+   if [ ! -d "$name" ]; then[m
+     target="$HOME/.$name"[m
+     backup $target[m
+[1mdiff --git a/pryrc b/pryrc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b0ca2d5[m
+[1m--- /dev/null[m
+[1m+++ b/pryrc[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m# https://github.com/pry/pry/tree/master/lib/pry[m
+[32m+[m
+[32m+[m[32mif defined?(Rails)[m
+[32m+[m[32m  short_env_name_options = {[m
+[32m+[m[32m    'development' => 'dev',[m
+[32m+[m[32m    'production'  => 'prod'[m
+[32m+[m[32m  }[m[41m [m
+[32m+[m[32m  app_name = Rails.application.class.module_parent_name.underscore.dasherize[m
+[32m+[m[32m  env_name = short_env_name_options.fetch(Rails.env) { Rails.env }[m
+[32m+[m[32m  description = 'Prompt has to match the rails app name'[m
+[32m+[m[32melse[m
+[32m+[m[32m  current_directory = Dir.pwd.split('/').last.to_s[m
+[32m+[m[32m  description = 'Prompt has to match the current directory name'[m
+[32m+[m[32mend[m
+[32m+[m
+[32m+[m[32m# https://github.com/pry/pry/blob/master/lib/pry/prompt.rb[m
+[32m+[m[32mPry::Prompt.add(:current_app) do |context, nesting, pry_instance, sep|[m
+[32m+[m[32m  format([m
+[32m+[m[32m    '[%<in_count>s] %<current_app>s(%<context>s)%<nesting>s%<separator>s ',[m
+[32m+[m[32m    in_count: pry_instance.input_ring.count,[m
+[32m+[m[32m    current_app: app_name || current_directory,[m
+[32m+[m[32m    context: env_name || Pry.view_clip(context),[m
+[32m+[m[32m    nesting: (nesting > 0 ? ":#{nesting}" : ''),[m
+[32m+[m[32m    separator: sep[m
+[32m+[m[32m  )[m
+[32m+[m[32mend[m
+[32m+[m
+[32m+[m[32mprompt = Pry::Prompt[:current_app][m
+[32m+[m[32mprocs = [[m
+[32m+[m[32m  proc { |*args| prompt.wait_proc.call(*args).to_s },[m
+[32m+[m[32m  proc { |*args| prompt.incomplete_proc.call(*args).to_s }[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m[32mPry.config.prompt = Pry::Prompt.new([m
+[32m+[m[32m  'custom_app_prompt', description, procs[m
+[32m+[m[32m)[m

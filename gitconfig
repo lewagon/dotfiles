@@ -59,3 +59,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = gambettanicola@gmail.com
+	name = nicola gambetta
