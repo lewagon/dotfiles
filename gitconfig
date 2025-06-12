@@ -12,6 +12,7 @@
 [core]
   pager = less -FRSX
   editor = code --wait
+	excludesfile = ~/.gitignore_global
 
 [alias]
   co = checkout
@@ -22,6 +23,8 @@
   d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
+  last = log -1 HEAD
+  visual = !gitk
 
   # Set remotes/origin/HEAD -> defaultBranch (copied from https://stackoverflow.com/a/67672350/14870317)
   remoteSetHead = remote set-head origin --auto
