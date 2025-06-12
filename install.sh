@@ -23,7 +23,7 @@ symlink() {
 
 # For all files `$name` in the present folder except `*.sh`, `README.md`, `settings.json`,
 # and `config`, backup the target file located at `~/.$name` and symlink `$name` to `~/.$name`
-for name in aliases gitconfig irbrc pryrc rspec zprofile zshrc; do
+for name in aliases gitconfig irbrc pryrc rspec zprofile zshrc p10k; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
     backup $target
@@ -36,9 +36,11 @@ CURRENT_DIR=`pwd`
 ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
 mkdir -p "$ZSH_PLUGINS_DIR" && cd "$ZSH_PLUGINS_DIR"
 if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
-  echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
+  echo "-----> Installing zsh plugins..."
   git clone https://github.com/zsh-users/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting
+  git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git fast-syntax-highlighting
+  git clone https://github.com/MichaelAquilina/zsh-you-should-use.git you-should-use
 fi
 cd "$CURRENT_DIR"
 
@@ -61,11 +63,22 @@ for name in settings.json keybindings.json; do
   symlink $PWD/$name $target
 done
 
+# Ajout du lien pour gitignore_global
+if [ ! -e "$HOME/.gitignore_global" ]; then
+  echo "-----> Symlinking your new .gitignore_global"
+  ln -s $PWD/.gitignore_global $HOME/.gitignore_global
+fi
+
 # Symlink SSH config file to the present `config` file for macOS and add SSH passphrase to the keychain
 if [[ `uname` =~ "Darwin" ]]; then
   target=~/.ssh/config
   backup $target
   symlink $PWD/config $target
+  # Copier la clé publique si elle n'existe pas
+  if [ ! -f ~/.ssh/id_ed25519.pub ]; then
+    cp $PWD/id_ed25519.pub ~/.ssh/id_ed25519.pub
+    chmod 644 ~/.ssh/id_ed25519.pub
+  fi
   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 fi
 
