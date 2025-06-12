@@ -9,6 +9,7 @@ chsh -s $(which zsh)
 # Oh My Zsh + Powerlevel10k
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
 
 ## 📁 2. Configuration SSH
 ```bash
@@ -36,6 +37,7 @@ chmod +x install.sh git_setup.sh
 ```bash
 chmod +x install_vscode_and_extensions.sh
 ./install_vscode_and_extensions.sh
+```
 
 ## 🐍 5. Environnements dev
 ```bash
@@ -54,7 +56,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 sudo apt install docker.io docker-compose -y
 sudo usermod -aG docker $USER
 echo "⚠️  LOGOUT/LOGIN requis pour permissions Docker"
+```
 
+## 🎨 6. Polices et finalisation
+```bash
 # Installation des polices Nerd Fonts (nécessaires pour Powerlevel10k)
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Meslo.zip
 unzip Meslo.zip -d ~/.local/share/fonts/
@@ -63,13 +68,8 @@ fc-cache -fv
 # PhpStorm (alias 'pst' dans votre zshrc)
 sudo snap install phpstorm --classic
 
-# Autres outils selon vos besoins
-sudo apt install tilix         # Terminal alternatif
-sudo apt install tree         # Navigation fichiers
-sudo apt install htop         # Monitoring système
-
-
-## ✅ 6. Vérifications
+## ✅ 7. Vérifications
+```bash
 # Test des commandes
 which git && echo "✅ Git OK"
 which code && echo "✅ VS Code OK"
