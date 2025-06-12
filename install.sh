@@ -69,6 +69,10 @@ if [ ! -e "$HOME/.gitignore_global" ]; then
   ln -s $PWD/.gitignore_global $HOME/.gitignore_global
 fi
 
+# Configure Git to use the global gitignore
+git config --global core.excludesfile ~/.gitignore_global
+echo "-----> Configured Git to use global gitignore"
+
 # Symlink SSH config file to the present `config` file for macOS and add SSH passphrase to the keychain
 if [[ `uname` =~ "Darwin" ]]; then
   target=~/.ssh/config
