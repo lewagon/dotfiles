@@ -11,10 +11,19 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases fast-syntax-highlighting history-substring-search zsh-autosuggestions you-should-use autojump fzf)
+plugins=(git gitfast last-working-dir common-aliases fast-syntax-highlighting history-substring-search zsh-autosuggestions you-should-use autojump fzf vscode composer)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
+
+# Add aapt to the path for Android development
+if [[ `uname` =~ "Darwin" ]]; then
+  # macOS
+  export PATH="${HOME}/Library/Android/sdk/build-tools/36.0.0:${PATH}"
+else
+  # Linux
+  export PATH="${HOME}/Android/Sdk/build-tools/36.0.0:${PATH}"
+fi
 
 # Disable warning about insecure completion-dependent directories
 ZSH_DISABLE_COMPFIX=true
@@ -85,3 +94,16 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/gautierdemauroy/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+test -e /Users/gautierdemauroy/.iterm2_shell_integration.zsh && source /Users/gautierdemauroy/.iterm2_shell_integration.zsh || true
+
+# Enable Docker BuildKit
+export COMPOSE_BAKE=true
+
+# Un alias pour raccourcir le mot-clé phpstorm
+alias pst="phpstorm"
