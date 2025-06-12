@@ -9,5 +9,9 @@
     "key": "cmd+shift+v",
     "command": "pasteAndIndent.action",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+space shift+cmd+space",
+    "command": "editor.action.inlineSuggest.trigger"
   }
 ]
