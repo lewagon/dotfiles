@@ -26,8 +26,6 @@ unalias rm
 
 # Custom functions & PATH tweaks
 
-# 1. Open files or folders in the Cursor IDE
-c() { open -a "Cursor" "$@"; }  # defines `c` to launch the Cursor app with given file/dir
 
 # 2. rbenv (Ruby version manager)
 export PATH="${HOME}/.rbenv/bin:${PATH}"           # add rbenv’s bin to PATH
@@ -65,5 +63,4 @@ export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bi
 # 10. Zsh syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # enable real-time syntax coloring
 
-# 11. Reload shortcut
-alias reload='source ~/.zshrc'  # one-word command to re-source your config
+

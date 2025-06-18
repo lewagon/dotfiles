@@ -181,6 +181,8 @@ alias resig='git rm -r --cached .; git add .; git commit -m "fixed untracked fil
 
 
 #LOCAL
+# 11. Reload shortcut
+alias reload='source ~/.zshrc'  # one-word command to re-source your config
 
 # Show alias file content in terminal
 alias al='cat /Users/ces/code/AzCez/dotfiles/aliases'
@@ -198,6 +200,8 @@ alias icloud='cd /Users/ces/Library/Mobile\ Documents/com~apple~CloudDocs'
 # go to mobeetravel folder in cloud
 alias mt='cd /Users/ces/Library/Mobile\ Documents/com~apple~CloudDocs/code/Mobeetravel'
 
+# 1. Open files or folders in the Cursor IDE
+# c() { open -a "Cursor" "$@"; }  # defines `c` to launch the Cursor app with given file/dir
 
 #ZSH test
 
