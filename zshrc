@@ -1,3 +1,8 @@
+# current file path: /Users/ces/code/AzCez/dotfiles/zshrc
+
+#reload  source ~/.zshrc
+
+
 ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
@@ -12,6 +17,11 @@ export HOMEBREW_NO_ANALYTICS=1
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
+
+# Open files or folders in the Cursor IDE
+c() {
+  open -a "Cursor" "$@"
+}
 
 # Load rbenv if installed (To manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
@@ -72,3 +82,4 @@ source /usr/local/share/antigen/antigen.zsh #https://github.com/zsh-users/antige
 # Other Antigen bundles
 antigen bundle paulirish/git-open #https://github.com/paulirish/git-open
 
+export PATH="/usr/local/opt/node@18/bin:$PATH"

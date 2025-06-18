@@ -47,8 +47,8 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = cesarlewagon@gmail.com
-	name = Cesar Quirino
+	email = 51090306+AzCez@users.noreply.github.com
+	name = AzCez
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -56,3 +56,5 @@
 	smudge = git-lfs smudge -- %f
 [init]
 	defaultBranch = main
+[http]
+	postBuffer = 524288000

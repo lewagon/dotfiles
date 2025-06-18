@@ -6,7 +6,7 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 
 
- 
+
 #Python
 
 
@@ -86,9 +86,9 @@ alias hrc='heroku run rails c --app chateaupass'
 alias hlogs='heroku logs --tail --app chateaupass'
 
 
-# GIT 
+# GIT
 
-# remove .git 
+# remove .git
 alias rmgit='rm -rf .git'
 
 #git create repo + ignore DS_Store
@@ -101,6 +101,8 @@ alias nocom='ga;comthis "generic commit either for test purpose or just lasy..."
 alias ds=' find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch;echo .DS_Store >> .gitignore;git add .gitignore;git commit -m ".DS_Store banished!";git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 
+# one-line git log with 24h date+time
+alias lo="git log --abbrev-commit --pretty=format:'%h %ad %s' --date=format-local:'%Y-%m-%d %H:%M'"
 
 
 #git remote remove origin
@@ -153,16 +155,16 @@ function cg() {
      gst
  }
 
-# git status then git add . then git status 
+# git status then git add . then git status
 function gsa() {
     gst
-    ga 
+    ga
     gst
 }
 
 
 #git checkout master
-alias gcm='git checkout master'
+alias gcm='git checkout main'
 
 #git checkout branch
 alias gcb='git checkout'
@@ -181,20 +183,20 @@ alias resig='git rm -r --cached .; git add .; git commit -m "fixed untracked fil
 #LOCAL
 
 # Show alias file content in terminal
-alias al='cat /Users/cez/code/AzCez/dotfiles/aliases'
+alias al='cat /Users/ces/code/AzCez/dotfiles/aliases'
 
 # open in visual studio
 alias vsc='open . -a "Visual Studio Code"'
 
-# go to Local to CODE folder 
-alias codef='cd /Users/cez/code'
+# go to Local to CODE folder
+alias codef='cd /Users/ces/code'
 
 
 # go to code folder in cloud
-alias icloud='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias icloud='cd /Users/ces/Library/Mobile\ Documents/com~apple~CloudDocs'
 
 # go to mobeetravel folder in cloud
-alias mt='cd /Users/cez/Library/Mobile\ Documents/com~apple~CloudDocs/code/Mobeetravel'
+alias mt='cd /Users/ces/Library/Mobile\ Documents/com~apple~CloudDocs/code/Mobeetravel'
 
 
 #ZSH test
