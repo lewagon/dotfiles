@@ -187,6 +187,9 @@ alias reload='source ~/.zshrc'  # one-word command to re-source your config
 # Show alias file content in terminal
 alias al='cat /Users/ces/code/AzCez/dotfiles/aliases'
 
+# Open your dotfiles in VS Code with:
+alias dotfiles='code /Users/ces/code/AzCez/dotfiles'
+
 # open in visual studio
 alias vsc='open . -a "Visual Studio Code"'
 
