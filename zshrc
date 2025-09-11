@@ -1,71 +1,72 @@
-# path to your Oh-My-Zsh installation
 ZSH=$HOME/.oh-my-zsh
 
-# choose a theme
+# You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
 
-# only Oh-My-Zsh plugins you want
-plugins=(
-  git
-  gitfast
-  last-working-dir
-  common-aliases
-  sublime
-  history-substring-search
-  git-open
-)
+# Useful oh-my-zsh plugins for Le Wagon bootcamps
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search)
 
-# macOS-only: disable Homebrew analytics
+# (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
 
-# load Oh-My-Zsh
+# Disable warning about insecure completion-dependent directories
+ZSH_DISABLE_COMPFIX=true
+
+# Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
+unalias rm # No interactive rm by default (brought by plugins/common-aliases)
+unalias lt # we need `lt` for https://github.com/localtunnel/localtunnel
 
-# drop interactive rm alias from common-aliases
-unalias rm
+# Load rbenv if installed (to manage your Ruby versions)
+export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
+type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
-# Custom functions & PATH tweaks
+# Load pyenv (to manage your Python versions)
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
+# Load nvm (to manage your node versions)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# 2. rbenv (Ruby version manager)
-export PATH="${HOME}/.rbenv/bin:${PATH}"           # add rbenv’s bin to PATH
-type -a rbenv >/dev/null && eval "$(rbenv init -)" # initialize rbenv shims & autocompletion if installed
+# Call `nvm use` automatically in a directory with a `.nvmrc` file
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if nvm -v &> /dev/null; then
+    local node_version="$(nvm version)"
+    local nvmrc_path="$(nvm_find_nvmrc)"
 
-# 3. pyenv (Python version manager)
-export PATH="${HOME}/.pyenv/bin:${PATH}"                                              # add pyenv’s bin to PATH
-type -a pyenv >/dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" # initialize pyenv and its virtualenv plugin
+    if [ -n "$nvmrc_path" ]; then
+      local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-# 4. nvm (Node version manager)
-export NVM_DIR="$HOME/.nvm"                                  # point NVM_DIR to your nvm installation
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # load nvm if present
-[ -s "/usr/local/opt/nvm/bash_completion" ] && . "/usr/local/opt/nvm/bash_completion"  # load nvm bash_completion
+      if [ "$nvmrc_node_version" = "N/A" ]; then
+        nvm install
+      elif [ "$nvmrc_node_version" != "$node_version" ]; then
+        nvm use --silent
+      fi
+    elif [ "$node_version" != "$(nvm version default)" ]; then
+      nvm use default --silent
+    fi
+  fi
+}
+type -a nvm > /dev/null && add-zsh-hook chpwd load-nvmrc
+type -a nvm > /dev/null && load-nvmrc
 
-# 5. Local project bin folders & sbin
-export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"  # prioritize project-local scripts and Homebrew sbin
+# Rails and Ruby uses the local `bin` folder to store binstubs.
+# So instead of running `bin/rails` like the doc says, just run `rails`
+# Same for `./node_modules/.bin` and nodejs
+export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
-# 6. User-defined aliases
-[[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"  # load personal aliases if the file exists
+# Store your own aliases in the ~/.aliases file and load the here.
+[[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
-# 7. Locale settings
-export LANG=en_US.UTF-8   # set default language encoding
-export LC_ALL=en_US.UTF-8 # set all locale categories to UTF-8
+# Encoding stuff for the terminal
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-# 8. Go language setup
-export GOPATH=$HOME/golang                                 # workspace for Go projects
-export GOROOT=/usr/local/opt/go/libexec                    # Go installation root
-export GOBIN=$GOPATH/bin                                   # install Go binaries here
-export PATH=$PATH:$GOPATH:$GOROOT/bin                      # add Go paths to PATH
+export BUNDLER_EDITOR=code
+export EDITOR=code
 
-# 9. RVM (Ruby Version Manager) & Bundler editor
-export PATH="$PATH:$HOME/.rvm/bin"                                           # add RVM to PATH
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"  # use Sublime Text to edit Gemfile conflicts
-
-# 10. Zsh syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # enable real-time syntax coloring
-
-
-alias krs="echo \"Killing Rails server...\" && pkill -f \"rails server\" && echo \"✅ Rails server killed\""
-alias kvs="echo \"Killing Vite server on port 3036...\" && lsof -ti:3036 | xargs kill -9 2>/dev/null; pkill -f \"vite\" 2>/dev/null; pkill -f \"npm exec vite\" 2>/dev/null; echo \"✅ Vite server killed\""
-alias crs="echo \"=== SERVER STATUS CHECK ===\" && echo \"\" && (if lsof -i :3000 >/dev/null 2>&1; then echo \"✅ Rails server (port 3000): Running locally on IPv4 & IPv6 (localhost only). PID \$(lsof -ti :3000 | head -1).\"; else echo \"❌ Rails server (port 3000): Not running\"; fi) && echo \"\" && (if lsof -i :3036 >/dev/null 2>&1; then echo \"✅ Vite dev server (port 3036): Running and listening on all interfaces (*). PID \$(lsof -ti :3036 | head -1).\"; else echo \"❌ Vite dev server (port 3036): Not running\"; fi) && echo \"\" && echo \"Related processes:\" && ps aux | grep -E \"(npm exec vite|ruby_lsp_rails)\" | grep -v grep | while read line; do pid=\$(echo \$line | awk \"{print \$2}\"); cmd=\$(echo \$line | awk \"{for(i=11;i<=NF;i++) printf \"%s \", \$i}\"); if echo \"\$cmd\" | grep -q \"npm exec vite\"; then echo \"  📦 npm exec vite helper, PID \$pid.\"; elif echo \"\$cmd\" | grep -q \"ruby_lsp_rails\"; then echo \"  �� ruby_lsp_rails language server, PID \$pid.\"; fi; done && echo \"\" && echo \"🌐 Access URLs:\" && echo \"  Rails: http://localhost:3000\" && echo \"  Vite:  http://localhost:3036\""
-alias rvs="npx vite --port 3037"
-alias rds="echo '🚀 Starting Rails and Vite servers...' && bin/rails s & bin/vite dev & echo '✅ Both servers started! Rails: http://localhost:3000, Vite: http://localhost:3036'"
+# Set ipdb as the default Python debugger
+export PYTHONBREAKPOINT=ipdb.set_trace
