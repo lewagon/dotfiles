@@ -1,3 +1,9 @@
+# ----
+# Custom aliases
+# Rails + npm workflow: see ./dev.sh and README-dev.md for full docs
+# Key commands: dev (both), devs (status), devk (stop)
+# ----
+#
 # Get External IP / local IPs
 alias ip="curl ipinfo.io/ip"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
