@@ -45,6 +45,34 @@ alias s7='rails s -p 7000'
 alias s8='rails s -p 8000'
 
 
+# Rails + npm Development Aliases
+# Make sure dev.sh is executable: chmod +x dev.sh
+
+# Development script aliases
+alias dev-rails='./dev.sh rails'
+alias dev-npm='./dev.sh npm'
+alias dev-both='./dev.sh both'
+alias dev-build='./dev.sh build'
+alias dev-watch='./dev.sh watch'
+alias dev-stop='./dev.sh stop'
+alias dev-status='./dev.sh status'
+
+# Quick development shortcuts
+alias dev='./dev.sh both'  # Start both Rails and npm watch
+alias devs='./dev.sh status'  # Show status
+alias devk='./dev.sh stop'  # Kill all processes
+
+# Enhanced Rails server aliases (building on your existing ones)
+alias s3dev='RAILS_PORT=3000 ./dev.sh rails'
+alias s4dev='RAILS_PORT=4000 ./dev.sh rails'
+alias s5dev='RAILS_PORT=5000 ./dev.sh rails'
+
+# Enhanced npm aliases
+alias npm-dev='./dev.sh npm'
+alias npm-build='./dev.sh build'
+alias npm-watch='./dev.sh watch'
+
+
 # Webpack compile
 alias wpc='webpack-dev-server'
 

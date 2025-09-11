@@ -37,6 +37,13 @@
 
   # Removes a file from the index
   unstage = reset HEAD --
+	pr = !/Users/ces/code/AzCez/finance_app/scripts/quick_pr.sh
+	pr-main = !/Users/ces/code/AzCez/finance_app/scripts/quick_pr.sh main
+	pr-develop = !/Users/ces/code/AzCez/finance_app/scripts/quick_pr.sh develop
+	pr-check = !/Users/ces/code/AzCez/finance_app/scripts/auto_pr_merge.sh --check-only
+	pr-auto = !/Users/ces/code/AzCez/finance_app/scripts/auto_pr_merge.sh --yes
+	destroy-seeds = !/Users/ces/code/AzCez/finance_app/scripts/destroy_seeds.sh
+	destroy-seeds-yes = !/Users/ces/code/AzCez/finance_app/scripts/destroy_seeds.sh --yes
 
 [help]
   autocorrect = 1
