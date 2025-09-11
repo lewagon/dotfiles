@@ -79,6 +79,13 @@ alias wpc='webpack-dev-server'
 #open ngrok
 Alias ngrok='./ngrok'
 
+# Rails/Vite server management (moved from zshrc to keep upstream zshrc clean)
+# Note: we keep existing `rds` for rails db:seed; do not reuse that name here.
+alias krs="echo 'Killing Rails server...' && pkill -f 'rails server' 2>/dev/null && echo '✅ Rails server killed' || echo 'ℹ️ Rails server not running'"
+alias kvs="echo 'Killing Vite server on port 3036...' && (lsof -ti:3036 | xargs kill -9 2>/dev/null || true); pkill -f 'vite' 2>/dev/null; pkill -f 'npm exec vite' 2>/dev/null; echo '✅ Vite server killed'"
+alias crs="echo '=== SERVER STATUS CHECK ==='; echo; if lsof -i :3000 >/dev/null 2>&1; then echo '✅ Rails (3000): running (PID '$(lsof -ti :3000 | head -1)')'; else echo '❌ Rails (3000): not running'; fi; echo; if lsof -i :3036 >/dev/null 2>&1; then echo '✅ Vite (3036): running (PID '$(lsof -ti :3036 | head -1)')'; else echo '❌ Vite (3036): not running'; fi; echo; echo 'URLs:'; echo '  Rails: http://localhost:3000'; echo '  Vite:  http://localhost:3036'"
+alias rvs="npx vite --port 3037"
+
 # Ruby
 
 alias ru='ruby cd \"${fileDirname}\"\u000D'
