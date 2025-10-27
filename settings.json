@@ -1,128 +1,119 @@
 {
-    "[python]": {
-        "editor.bracketPairColorization.enabled": false,
-        "editor.guides.bracketPairs": false,
-        "editor.tabSize": 4
-    },
-    "editor.bracketPairColorization.enabled": true,
-    "editor.detectIndentation": false,
-    "editor.fontSize": 14,
-    "editor.guides.bracketPairs": true,
-    "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderControlCharacters": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "editor.showFoldingControls": "always",
-    "editor.snippetSuggestions": "top",
-    "editor.tabSize": 2,
-    "emmet.includeLanguages": {
-        "erb": "html"
-    },
-    "emmet.showSuggestionsAsSnippets": true,
-    "emmet.triggerExpansionOnTab": true,
-    "explorer.confirmDelete": false,
-    "files.exclude": {
-        "__pycache__": true,
-        "_site": true,
-        ".asset-cache": true,
-        ".bundle": true,
-        ".ipynb_checkpoints": true,
-        ".pytest_cache": true,
-        ".sass-cache": true,
-        ".svn": true,
-        "**/.DS_Store": true,
-        "**/.egg-info": true,
-        "**/.git": true,
-        "build": true,
-        "coverage": true,
-        "dist": true,
-        "log": true,
-        "node_modules": true,
-        "public/packs": true,
-        "tmp": true
-    },
-    "files.hotExit": "off",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "files.watcherExclude": {
-        "**/audits/**": true,
-        "**/coverage/**": true,
-        "**/log/**": true,
-        "**/node_modules/**": true,
-        "**/tmp/**": true,
-        "**/vendor/**": true
-    },
-    "notebook.diff.ignoreMetadata": true,
-    "notebook.lineNumbers": "on",
-    "notebook.markup.fontSize": 13,
-    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
-    "python.formatting.provider": "yapf",
-    "python.languageServer": "Pylance",
-    "python.linting.enabled": false,
-    "python.linting.flake8Enabled": false,
-    "python.linting.pylintEnabled": false,
-    "python.terminal.activateEnvironment": false,
-    "ruby.lint": {
-        "rubocop": true
-    },
-    "search.exclude": {
-      // Inherits all glob patterns from the `files.exclude` setting.
-      "**/.venv": true
-    },
-    "telemetry.telemetryLevel": "off",
-    "window.restoreWindows": "none",
-    "window.newWindowDimensions": "maximized",
-    "workbench.editor.enablePreview": true,
-    "workbench.iconTheme": "vscode-great-icons",
-    "workbench.settings.editor": "json",
-    "workbench.settings.openDefaultSettings": true,
-    "workbench.settings.useSplitJSON": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.panel.defaultLocation": "right",
-    "parallels-desktop.extension.path": "/Users/theodrak/.parallels-desktop-vscode",
-    "parallels-desktop.brew.path": "/opt/homebrew/bin/brew",
-    "parallels-desktop.git.path": "/opt/homebrew/bin/git",
-    "parallels-desktop.prlctl.path": "/usr/local/bin/prlctl",
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "git.openRepositoryInParentFolders": "always",
-    "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "rubyLsp.linters": [
-
-      "rubocop"
-    ],
-    "[erb]": {
-
-      "editor.defaultFormatter": "Shopify.ruby-lsp"
-    },
-    "workbench.settings.applyToAllProfiles": [
-      "rubyLsp.formatter"
-    ],
-    "rubyLsp.rubyVersionManager": {
-      "identifier": "auto"
-    },
-      // All of these settings are scoped only to the Ruby language
+  "[python]": {
+    "editor.bracketPairColorization.enabled": false,
+    "editor.guides.bracketPairs": false,
+    "editor.tabSize": 4
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.detectIndentation": false,
+  "editor.fontSize": 14,
+  "editor.guides.bracketPairs": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderControlCharacters": true,
+  "editor.rulers": [80, 120],
+  "editor.showFoldingControls": "always",
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "explorer.confirmDelete": false,
+  "files.exclude": {
+    "__pycache__": true,
+    "_site": true,
+    ".asset-cache": true,
+    ".bundle": true,
+    ".ipynb_checkpoints": true,
+    ".pytest_cache": true,
+    ".sass-cache": true,
+    ".svn": true,
+    "**/.DS_Store": true,
+    "**/.egg-info": true,
+    "**/.git": true,
+    "build": true,
+    "coverage": true,
+    "dist": true,
+    "log": true,
+    "node_modules": true,
+    "public/packs": true,
+    "tmp": true
+  },
+  "files.hotExit": "off",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/audits/**": true,
+    "**/coverage/**": true,
+    "**/log/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/vendor/**": true
+  },
+  "notebook.diff.ignoreMetadata": true,
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 13,
+  "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+  "python.formatting.provider": "yapf",
+  "python.languageServer": "Pylance",
+  "python.linting.enabled": false,
+  "python.linting.flake8Enabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.terminal.activateEnvironment": false,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "search.exclude": {
+    // Inherits all glob patterns from the `files.exclude` setting.
+    "**/.venv": true
+  },
+  "telemetry.telemetryLevel": "off",
+  "window.restoreWindows": "none",
+  "window.newWindowDimensions": "maximized",
+  "workbench.editor.enablePreview": true,
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.settings.editor": "json",
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.settings.useSplitJSON": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.panel.defaultLocation": "right",
+  "parallels-desktop.extension.path": "/Users/theodrak/.parallels-desktop-vscode",
+  "parallels-desktop.brew.path": "/opt/homebrew/bin/brew",
+  "parallels-desktop.git.path": "/opt/homebrew/bin/git",
+  "parallels-desktop.prlctl.path": "/usr/local/bin/prlctl",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "rubyLsp.linters": ["rubocop"],
+  "[erb]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  "workbench.settings.applyToAllProfiles": ["rubyLsp.formatter"],
+  "rubyLsp.rubyVersionManager": {
+    "miseExecutablePath": "",
+    "identifier": "mise"
+  },
+  // All of these settings are scoped only to the Ruby language
   "[ruby]": {
     "editor.defaultFormatter": "Shopify.ruby-lsp", // Use the Ruby LSP as the default formatter
     "editor.formatOnSave": true, // Format files automatically when saving
     "editor.tabSize": 2, // Use 2 spaces for indentation
     "editor.insertSpaces": true, // Use spaces and not tabs for indentation
     "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
-    "editor.formatOnType": true, // Enable formatting while typing
+    "editor.formatOnType": true // Enable formatting while typing
   },
   "github.copilot.advanced": {
     "authProvider": "github"
   },
-  "workbench.colorTheme": "Tokyo Night Moon",
+  "workbench.colorTheme": "Pine Theme Blue",
   "workbench.colorCustomizations": {
-
     "activityBar.background": "#1A1B26",
     "activityBar.foreground": "#ff7802",
     "activityBarBadge.background": "#e5a064",
@@ -144,29 +135,77 @@
     // "tab.unfocusedInactiveModifiedBorder": "#ffffff",
     "editorGroup.border": "#4e5264",
     "tab.unfocusedActiveBackground": "#353647",
-    "gitDecoration.modifiedResourceForeground": "#ff7802",
+    "gitDecoration.modifiedResourceForeground": "#ff7802"
     // "editorOverviewRuler.modifiedForeground": "#ff7802",
     // "editorOverviewRuler.addedForeground": "#ff7802",
     // "editorGutter.modifiedBackground": "#ff7802",
-      },
-    "accessibility.dimUnfocused.enabled": true,
-    "accessibility.dimUnfocused.opacity": 1,
-    "bootstrapIntelliSense": {
-      "enable": true,
-      "bsVersion": "5.3.3",
-      "useLocalFile": false,
-      "cssFilePath": "",
-      "languageSupport": []
-    },
-    "diffEditor.ignoreTrimWhitespace": true,
-    "chat.agent.enabled": true,
-    "tailwind-fold.foldStyle": "QUOTES",
-    "tailwind-fold.unfoldIfLineSelected": true,
-    "tailwind-fold-rails.foldStyle": "QUOTES",
-    "tailwind-fold-rails.unfoldIfLineSelected": true,
-    "tailwind-fold.autoFold": false,
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "workbench.sideBar.location": "right",
-    "tailwind-fold-rails.autoFold": true,
-    "parallels-desktop.devops-service.path": "/Users/theodrak/.parallels-desktop-vscode/tools/prldevops"
+  },
+  "accessibility.dimUnfocused.enabled": true,
+  "accessibility.dimUnfocused.opacity": 1,
+  "bootstrapIntelliSense": {
+    "enable": true,
+    "bsVersion": "5.3.3",
+    "useLocalFile": false,
+    "cssFilePath": "",
+    "languageSupport": []
+  },
+  "diffEditor.ignoreTrimWhitespace": true,
+  "chat.agent.enabled": true,
+  "tailwind-fold.foldStyle": "QUOTES",
+  "tailwind-fold.unfoldIfLineSelected": true,
+  "tailwind-fold-rails.foldStyle": "QUOTES",
+  "tailwind-fold-rails.unfoldIfLineSelected": true,
+  "tailwind-fold.autoFold": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "tailwind-fold-rails.autoFold": true,
+  "parallels-desktop.devops-service.path": "/Users/theodrak/.parallels-desktop-vscode/tools/prldevops",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.csv": "default",
+    "*.xlsx": "default",
+    "*.sqlite3": "default"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "signatureHelp": true,
+    "typeHierarchy": true
+  },
+  "workbench.sideBar.location": "right",
+  "continue.enableConsole": true,
+  "continue.enableQuickActions": true,
+  "github.copilot.chat.localeOverride": "en",
+  "languageServerHerb.linter.excludedRules": [
+    "parser-no-errors",
+    "html-tag-name-lowercase"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    "\\bclass:\\s*'([^']*)'",
+    "\\bclass:\\s*\"([^\"]*)\""
+  ],
+  "tailwindCSS.includeLanguages": {
+    "html.erb": "html"
+  },
+  "editor.formatOnSave": true
 }

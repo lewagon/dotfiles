@@ -12,6 +12,7 @@
 [core]
   pager = delta
   editor = code --wait
+	excludesfile = /Users/theodrak/.gitignore_global
 
 [alias]
   co = checkout
@@ -64,7 +65,7 @@
   rebase = false
 
 [init]
-  defaultBranch = master
+	defaultBranch = main
 
 [user]
 	email = theo@gemjungle.com
