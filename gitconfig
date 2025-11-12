@@ -51,11 +51,11 @@
 [push]
   default = simple
 
-[branch "master"]
+[branch "main"]
   mergeoptions = --no-edit
 
 [pull]
   rebase = false
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
