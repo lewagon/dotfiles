@@ -70,3 +70,9 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# Enable direnv
+eval "$(direnv hook zsh)"
+
+# Created by `pipx` on 2025-11-17 10:26:51
+export PATH="$PATH:/Users/kevinrobert/.local/bin"
