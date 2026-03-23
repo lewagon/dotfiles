@@ -1,6 +1,6 @@
 # Jamie's Mac Development Environment Setup Guide
 
-This guide will walk you through setting up any new Mac computer as your perfect development environment. It's based on the Le Wagon bootcamp setup, customized for your needs as a product manager who occasionally works with code.
+This guide will walk you through setting up any new Mac computer as your perfect development environment. It's based on the Le Wagon bootcamp setup, customized for your needs as a product manager who can be technical — with an AI-first workflow built around Cursor and Claude Code.
 
 **Important:** Follow each step in order. Don't skip ahead, as some steps depend on previous ones being completed.
 
@@ -16,18 +16,20 @@ This guide will walk you through setting up any new Mac computer as your perfect
 6. [Git and GitHub CLI](#git-and-github-cli)
 7. [Oh My Zsh (Beautiful Terminal)](#oh-my-zsh-beautiful-terminal)
 8. [Your Dotfiles (Personal Configuration)](#your-dotfiles-personal-configuration)
-9. [Visual Studio Code](#visual-studio-code)
-10. [Node.js (Optional)](#nodejs-optional)
-11. [Ruby (Optional)](#ruby-optional)
-12. [PostgreSQL (Optional)](#postgresql-optional)
-13. [macOS Settings](#macos-settings)
-14. [Verification](#verification)
+9. [Cursor (Code Editor)](#cursor-code-editor)
+10. [Claude Code (AI Assistant)](#claude-code-ai-assistant)
+11. [Node.js (Optional)](#nodejs-optional)
+12. [Ruby (Optional)](#ruby-optional)
+13. [PostgreSQL (Optional)](#postgresql-optional)
+14. [macOS Settings](#macos-settings)
+15. [Verification](#verification)
 
 ---
 
 ## Before You Start
 
 ### What You'll Need
+
 - A Mac computer (this guide is for macOS only)
 - An internet connection
 - About 1-2 hours of time
@@ -78,12 +80,15 @@ A white or black window will open - this is your Terminal.
 
 **What is a "command"?**
 A command is text you type into the Terminal, then press `Enter` to run it. For example:
+
 ```bash
 echo "Hello World"
 ```
+
 This command tells the computer to print "Hello World" on the screen.
 
 **What does "copy-paste" mean in Terminal?**
+
 - To **copy** from this guide: Select the text and press `Cmd + C`
 - To **paste** into Terminal: Press `Cmd + V`
 
@@ -105,14 +110,17 @@ xcode-select --install
 ```
 
 **What will happen:**
+
 - If you see a popup window, click "Install" and wait for it to finish (this can take 5-10 minutes)
 - If you see the message `command line tools are already installed`, that's great - move on to the next section
 
 **If you get an error:**
 If you see "Xcode is not currently available from the Software Update server", run this command:
+
 ```bash
 sudo softwareupdate --clear-catalog
 ```
+
 Then try the install command again.
 
 ---
@@ -130,11 +138,12 @@ Copy-paste this entire command into Terminal and press `Enter`:
 ```
 
 **What will happen:**
+
 1. It will ask you to press `Enter` to continue - press `Enter`
 2. It will ask for your Mac password - type it (remember, nothing will appear as you type) and press `Enter`
 3. Wait for the installation to complete (this can take several minutes)
 
-### Step 2: Add Homebrew to Your PATH (Important!)
+### Step 2: Add Homebrew to Your PATH
 
 After installation, you might see a warning message with "Next steps". If your Mac has an Apple Silicon chip (M1, M2, M3, etc.), you **must** run these two commands:
 
@@ -149,6 +158,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ### Step 3: Verify Homebrew is Working
 
 Run this command:
+
 ```bash
 brew --version
 ```
@@ -162,6 +172,7 @@ brew update
 ```
 
 **If you get an error about `/usr/local must be writable`**, run this command first, then try `brew update` again:
+
 ```bash
 sudo chown -R $USER:admin /usr/local
 ```
@@ -187,6 +198,7 @@ brew upgrade jq || brew install jq
 ```
 
 **What these tools do:**
+
 - `git` - Version control system (tracks changes to your files)
 - `gh` - GitHub's official command-line tool
 - `wget` - Downloads files from the internet
@@ -209,25 +221,18 @@ gh auth login -s 'user:email' -w --git-protocol ssh
 **What will happen - follow these prompts:**
 
 1. **"What account do you want to log into?"** - Select `GitHub.com` using arrow keys, press `Enter`
+1. **"What is your preferred protocol for Git operations?"** - Select `SSH`, press `Enter`
+1. **"Generate a new SSH key to add to your GitHub account?"** - Press `Enter` for Yes
+1. **"Enter a passphrase for your new SSH key"** - Type a password you'll remember (this protects your SSH key), press `Enter`
+1. **"Title for your SSH key"** - Just press `Enter` to accept the default
+1. **You'll see a one-time code** like `ABCD-1234` - Copy this code!
+1. **Press `Enter`** - Your browser will open to GitHub
+1. **In your browser:**
 
-2. **"What is your preferred protocol for Git operations?"** - Select `SSH`, press `Enter`
-
-3. **"Generate a new SSH key to add to your GitHub account?"** - Press `Enter` for Yes
-
-4. **"Enter a passphrase for your new SSH key"** - Type a password you'll remember (this protects your SSH key), press `Enter`
-
-5. **"Title for your SSH key"** - Just press `Enter` to accept the default
-
-6. **You'll see a one-time code** like `ABCD-1234` - Copy this code!
-
-7. **Press `Enter`** - Your browser will open to GitHub
-
-8. **In your browser:**
    - Paste the code you copied
    - Click "Continue"
    - Click "Authorize github"
-
-9. **Return to Terminal** and press `Enter`
+1. **Return to Terminal** and press `Enter`
 
 ### Step 2: Verify You're Logged In
 
@@ -250,6 +255,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 **What will happen:**
+
 - If asked "Do you want to change your default shell to zsh?", type `Y` and press `Enter`
 - Your Terminal prompt will change to look colorful with a `~` and `%` or `$`
 
@@ -313,9 +319,11 @@ zsh install.sh
 ```
 
 **What this does:**
+
 - Creates "symbolic links" (shortcuts) from your home folder to your dotfiles
 - This means changes you make to your dotfiles will automatically apply
 - Installs useful Zsh plugins
+- Sets up Claude Code configuration (CLAUDE.md)
 
 ### Step 7: Set Up Your Git Identity
 
@@ -324,6 +332,7 @@ zsh git_setup.sh
 ```
 
 **What will happen:**
+
 1. It will ask for your name - type your full name (e.g., "Jamie Dujardin"), press `Enter`
 2. It will ask for your email - use the email associated with your GitHub account, press `Enter`
 
@@ -345,62 +354,122 @@ Your Terminal should now have your personal configuration loaded!
 
 ---
 
-## Visual Studio Code
+## Cursor (Code Editor)
 
-VS Code is a powerful, free code editor that you'll use for viewing and editing files.
+Cursor is an AI-native code editor built on VS Code. It has all the same features but with AI built in, and we use it alongside Claude Code as the primary way to work.
 
-### Step 1: Install VS Code
-
-```bash
-brew install --cask visual-studio-code
-```
-
-### Step 2: Launch VS Code
+### Step 1: Install Cursor
 
 ```bash
-code
+brew install --cask cursor
 ```
 
-A VS Code window should open. If it does, VS Code is installed correctly!
+### Step 2: Launch Cursor
 
-### Step 3: Enable 'code' Command in Terminal (If Needed)
+```bash
+cursor
+```
 
-If the `code` command doesn't work:
-1. Open VS Code manually (from Applications folder)
-2. Press `Cmd + Shift + P` to open the Command Palette
+A Cursor window should open. If it does, Cursor is installed correctly!
+
+### Step 3: Enable 'cursor' Command in Terminal (If Needed)
+
+If the `cursor` command doesn't work:
+
+1. Open Cursor manually (from Applications folder)
+2. Press `Cmd + K` to open the Command Palette (or `Cmd + Shift + P` if this is a fresh install)
 3. Type "shell command"
-4. Click "Shell Command: Install 'code' command in PATH"
+4. Click "Shell Command: Install 'cursor' command in PATH"
 
-### Step 4: Install Useful Extensions
+### Step 4: Install Extensions
 
-Copy-paste each command one at a time:
+We keep extensions minimal — only what's actually useful day-to-day:
 
 ```bash
-code --install-extension ms-vscode.sublime-keybindings
+cursor --install-extension monokai.theme-monokai-pro-vscode
 ```
 
 ```bash
-code --install-extension emmanuelbeziat.vscode-great-icons
+cursor --install-extension esbenp.prettier-vscode
 ```
 
 ```bash
-code --install-extension github.github-vscode-theme
+cursor --install-extension jonathan-yeung.mark-sharp
 ```
 
 ```bash
-code --install-extension MS-vsliveshare.vsliveshare
-```
-
-```bash
-code --install-extension dbaeumer.vscode-eslint
+cursor --install-extension mechatroner.rainbow-csv
 ```
 
 **What these extensions do:**
-- **Sublime Keybindings** - Familiar keyboard shortcuts
-- **Great Icons** - Pretty file icons in the sidebar
-- **GitHub Theme** - Nice color theme
-- **Live Share** - Share your code with others in real-time
-- **ESLint** - Highlights JavaScript errors
+
+- **Monokai Pro** — Icon theme for the sidebar (Monokai Pro Icons)
+- **Prettier** — Automatic code formatting
+- **Mark Sharp** — Rich markdown editing (toggle with `Shift+Cmd+V`)
+- **Rainbow CSV** — Color-coded CSV file viewing
+
+### Step 5: Configure Settings
+
+Open Cursor settings (`Cmd + ,`) and switch to JSON mode. Set the following:
+
+```json
+{
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.colorTheme": "Cursor Light",
+    "window.autoDetectColorScheme": true,
+    "chat.disableAIFeatures": true,
+    "cursor.cpp.enablePartialAccepts": true
+}
+```
+
+**What these settings do:**
+
+- **Monokai Pro Icons** — clean file icons in the sidebar
+- **Cursor Light theme** with automatic dark mode detection — matches your Mac's appearance
+- **AI chat disabled** — we use Claude Code instead of Cursor's built-in chat, keeping things simple with one AI interface
+
+### Step 6: Set Up Keyboard Shortcuts
+
+These shortcuts are designed to feel like a consumer app rather than a traditional code editor. `Cmd+K` opens the command palette (like Slack, Linear, and other modern apps) and `Cmd+O` opens files (like Finder). Claude Code is always one shortcut away.
+
+Open keyboard shortcuts JSON: `Cmd + K` → type "keyboard shortcuts json" → press `Enter`.
+
+The full keybindings file is maintained in this repository. The key shortcuts to know are:
+
+| Shortcut           | Action                                      |
+| ------------------ | ------------------------------------------- |
+| `Cmd+K`            | Command Palette (replaces `Cmd+Shift+P`)    |
+| `Cmd+O`            | Quick Open / file search (replaces `Cmd+P`) |
+| `Cmd+J`            | Open Claude Code (primary)                  |
+| `Shift+Cmd+J`      | Open Claude Code (editor view)              |
+| `Cmd+I`            | Cursor Agent / Composer                     |
+| `Alt+Cmd+S`        | Toggle sidebar                              |
+| `Shift+Cmd+,`      | AI Settings                                 |
+| `Alt+Cmd+←/→`      | Focus editor group left/right               |
+| `Shift+Cmd+←/→`    | Move editor group left/right                |
+| `Ctrl+Alt+Cmd+←/→` | Reorder tabs within a group                 |
+| `Shift+Cmd+V`      | Toggle markdown preview (Mark Sharp)        |
+
+**Why these changes?** As a product manager, you spend more time navigating files and talking to AI than writing code. These shortcuts put AI front and center (`Cmd+J`) and use familiar patterns from consumer apps you already use daily.
+
+---
+
+## Claude Code (AI Assistant)
+
+Claude Code is an AI coding assistant that runs directly inside Cursor's panel. It's the primary way you interact with AI in this setup — Cursor's built-in AI chat is disabled in favor of Claude Code for a simpler, more powerful experience.
+
+### What's Already Configured
+
+Your dotfiles installer (`install.sh`) sets up Claude Code's configuration automatically, including:
+
+- **Plan mode** as the default — Claude explains what it will do before making changes
+- **Claude Opus** as the model
+- **Ctrl+Enter** to send messages (prevents accidental sends)
+- **Panel location** — Claude Code lives in the bottom panel
+
+### MCP Server Configuration
+
+For detailed setup of MCP servers (like Craft Docs integration), see the `claude/claude-setup.md` file in this dotfiles repository.
 
 ---
 
@@ -528,16 +597,6 @@ You should see a `postgres=#` prompt. Type `\q` and press `Enter` to exit.
 
 These settings make your Mac more developer-friendly.
 
-### Keyboard Speed
-
-Faster key repeat makes coding more efficient:
-
-1. Click the Apple menu () in the top-left corner
-2. Click "System Settings..."
-3. Click "Keyboard"
-4. Set "Key repeat rate" to the fastest (far right)
-5. Set "Delay until repeat" to the shortest (far right)
-
 ### Security Settings
 
 Protect your computer:
@@ -545,41 +604,15 @@ Protect your computer:
 1. Go to  > System Settings... > Lock Screen
 2. Set "Require password after screen saver begins" to "5 seconds" or "Immediately"
 
-### Hot Corners (Quick Lock)
+### Hot Corners
 
-Set up a quick way to lock your screen:
+Set up mouse-based navigation for when you're not using the keyboard:
 
 1. Go to  > System Settings... > Desktop & Dock
 2. Scroll down and click "Hot Corners..."
-3. Set one corner (I recommend bottom-right) to "Lock Screen"
+3. Set the bottom-left corner to "Mission Control"
 
-Now moving your mouse to that corner will lock your computer!
-
-### Terminal Appearance
-
-Make your Terminal easier on the eyes:
-
-1. Open Terminal
-2. Go to Terminal > Settings (or Preferences)
-3. Click "Profiles" in the sidebar
-4. Select "Pro" theme
-5. Click "Default" at the bottom to make it your default
-
-In the "Window" tab, set:
-- Columns: 200
-- Rows: 50
-
-Quit and restart Terminal to see the changes.
-
-### Pin Apps to Your Dock
-
-Right-click on any app icon in the Dock and choose Options > Keep in Dock.
-
-Recommended apps to pin:
-- Terminal
-- VS Code
-- Finder
-- Your web browser
+Now moving your mouse to the bottom-left corner will show all your open windows — useful for quick visual navigation.
 
 ---
 
@@ -592,6 +625,7 @@ Let's make sure everything is working!
 ```bash
 git --version
 ```
+
 Should show: `git version 2.x.x`
 
 ### Check GitHub CLI
@@ -599,6 +633,7 @@ Should show: `git version 2.x.x`
 ```bash
 gh auth status
 ```
+
 Should show: `Logged in to github.com as YOUR_USERNAME`
 
 ### Check Homebrew
@@ -606,13 +641,15 @@ Should show: `Logged in to github.com as YOUR_USERNAME`
 ```bash
 brew --version
 ```
+
 Should show: `Homebrew 4.x.x`
 
-### Check VS Code
+### Check Cursor
 
 ```bash
-code --version
+cursor --version
 ```
+
 Should show a version number
 
 ### Check Node (if installed)
@@ -620,6 +657,7 @@ Should show a version number
 ```bash
 node -v
 ```
+
 Should show: `v20.x.x`
 
 ### Check Ruby (if installed)
@@ -627,6 +665,7 @@ Should show: `v20.x.x`
 ```bash
 ruby -v
 ```
+
 Should show: `ruby 3.3.x`
 
 ---
@@ -635,19 +674,19 @@ Should show: `ruby 3.3.x`
 
 Here are some commands you'll use often:
 
-| Command | What It Does |
-|---------|--------------|
-| `cd ~/code` | Go to your code folder |
-| `cd ..` | Go up one folder |
-| `ls` | List files in current folder |
-| `ls -la` | List all files including hidden ones |
-| `pwd` | Show current folder path |
-| `code .` | Open current folder in VS Code |
-| `git status` | See what files have changed |
-| `git pull` | Get latest changes from GitHub |
-| `git push` | Upload your changes to GitHub |
-| `brew update` | Update Homebrew |
-| `brew upgrade` | Upgrade installed packages |
+| Command        | What It Does                         |
+| -------------- | ------------------------------------ |
+| `cd ~/code`    | Go to your code folder               |
+| `cd ..`        | Go up one folder                     |
+| `ls`           | List files in current folder         |
+| `ls -la`       | List all files including hidden ones |
+| `pwd`          | Show current folder path             |
+| `cursor .`     | Open current folder in Cursor        |
+| `git status`   | See what files have changed          |
+| `git pull`     | Get latest changes from GitHub       |
+| `git push`     | Upload your changes to GitHub        |
+| `brew update`  | Update Homebrew                      |
+| `brew upgrade` | Upgrade installed packages           |
 
 ---
 
@@ -656,25 +695,31 @@ Here are some commands you'll use often:
 ### "Command not found" Errors
 
 If you see "command not found" for something you just installed, try:
+
 ```bash
 exec zsh
 ```
+
 This reloads your terminal configuration.
 
 ### Permission Errors
 
 If you see "Permission denied" errors, you might need to use `sudo`:
+
 ```bash
 sudo [your command]
 ```
+
 Then enter your Mac password.
 
 ### Homebrew Issues
 
 If Homebrew is acting up:
+
 ```bash
 brew doctor
 ```
+
 This will tell you what's wrong and often how to fix it.
 
 ### Need to Start Over?
@@ -695,12 +740,13 @@ brew update && brew upgrade
 
 ## Congratulations!
 
-Your Mac is now set up as a development environment! You have:
+Your Mac is now set up with an AI-first development environment! You have:
 
 - A beautiful, powerful Terminal with Oh My Zsh
 - Git and GitHub CLI for version control
-- VS Code for editing code
+- Cursor as your code editor with consumer-friendly shortcuts
+- Claude Code as your AI assistant, front and center
 - Your personal dotfiles configuration
 - Homebrew for installing future tools
 
-Happy coding!
+Happy building!
