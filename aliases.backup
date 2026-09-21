@@ -32,10 +32,6 @@ alias kp='npx kill-port' #<PortNumber>
 #List running server
 alias wsr='lsof -nP +c 15 | grep LISTEN'
 
-# AI Factory Docker Compose alias
-# Usage: dl up, dl down, dl ps, dl logs, etc.
-alias dl='/Users/ces/code/AzCez/dotfiles/scripts/ai_factory/dl'
-
 # Server port 3000
 alias s3='rails s'
 
@@ -283,13 +279,7 @@ function vnc() {
 # Development Server Aliases
 alias rds="$HOME/code/AzCez/dotfiles/scripts/rds.sh"  # Start both Rails and Vite servers
 alias crs="$HOME/code/AzCez/dotfiles/scripts/crs.sh"  # Check server status
-alias krs="$HOME/code/AzCez/dotfiles/scripts/krs.sh"  # Kill Rails server only
-alias kvs="$HOME/code/AzCez/dotfiles/scripts/kvs.sh"  # Kill Vite server only
+alias krs="echo "Killing Rails server on port 3000..." && lsof -ti:3000 | xargs kill -9 2>/dev/null; pkill -f "rails" 2>/dev/null; pkill -f "puma" 2>/dev/null; pkill -f "bundle exec rails" 2>/dev/null; echo "✅ Rails server killed""  # Kill Rails server only
+alias kvs="echo "Killing Vite server on port 3036..." && lsof -ti:3036 | xargs kill -9 2>/dev/null; pkill -f "vite" 2>/dev/null; pkill -f "npm exec vite" 2>/dev/null; echo "✅ Vite server killed""  # Kill Vite server only
 alias rvs="$HOME/code/AzCez/dotfiles/scripts/rvs.sh"  # Start just Vite server
 alias kas="$HOME/code/AzCez/dotfiles/scripts/kas.sh"  # Kill all servers
-
-# Log tail aliases
-alias trs='tail -f /tmp/rails.log'        # Rails server logs
-alias tvs='tail -f /tmp/vite.log'         # Vite server logs
-alias trdsdok='docker logs -f'            # Redis (Docker) logs (usage: trdsdok <redis_name>)
-alias tsk='tail -f log/sidekiq.log'       # Sidekiq logs

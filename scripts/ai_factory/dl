@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# AI Factory Docker Compose wrapper script
+# This script calls the actual ./bin/dl script from the AI Factory project directory
+
+AIFACTORY_PATH="/Users/ces/code/deepdocs_code/aifactory"
+
+if [ ! -d "$AIFACTORY_PATH" ]; then
+    echo "Error: AI Factory directory not found at $AIFACTORY_PATH"
+    exit 1
+fi
+
+if [ ! -f "$AIFACTORY_PATH/bin/dl" ]; then
+    echo "Error: ./bin/dl script not found in $AIFACTORY_PATH"
+    exit 1
+fi
+
+# Change to the AI Factory directory and run the dl script with all arguments
+cd "$AIFACTORY_PATH" && ./bin/dl "$@"

@@ -44,6 +44,7 @@
 
   # Removes a file from the index
   unstage = reset HEAD --
+	open = !/Users/ces/.oh-my-zsh/custom/plugins/git-open/git-open
 
 [help]
   autocorrect = 1
@@ -59,3 +60,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	name = AzCez
+	email = AzCez@users.noreply.github.com
