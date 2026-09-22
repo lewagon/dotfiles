@@ -52,11 +52,11 @@
   default = simple
   autoSetupRemote = true
 
-[branch "master"]
+[branch "main"]
   mergeoptions = --no-edit
 
 [pull]
   rebase = false
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
