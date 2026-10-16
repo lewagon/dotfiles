@@ -50,6 +50,7 @@
 
 [push]
   default = simple
+  autoSetupRemote = true
 
 [branch "master"]
   mergeoptions = --no-edit

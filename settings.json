@@ -60,13 +60,13 @@
     "notebook.diff.ignoreMetadata": true,
     "notebook.lineNumbers": "on",
     "notebook.markup.fontSize": 13,
-    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+    "python.defaultInterpreterPath": "~/.lewagon/venvs/lewagon/bin/python",
     "python.formatting.provider": "yapf",
     "python.languageServer": "Pylance",
     "python.linting.enabled": false,
     "python.linting.flake8Enabled": false,
     "python.linting.pylintEnabled": false,
-    "python.terminal.activateEnvironment": false,
+    "python.terminal.activateEnvironment": true,
     "ruby.lint": {
         "rubocop": true
     },

@@ -6,6 +6,12 @@ ZSH_THEME="robbyrussell"
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
 plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search ssh-agent)
 
+# Add the omz ssh-agent plugin for WSL / Linux only (macOS handles this through Keychain in ~/.ssh/config)
+case "$(uname -s)" in
+  Darwin) ;;
+  Linux)  plugins+=('ssh-agent') ;;
+esac
+
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -22,8 +28,9 @@ export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (to manage your Python versions)
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='[🐍 $(pyenv version-name)]'
+# Uncomment the next lines if you still run a pyenv based setup
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+# type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
 # Load nvm (to manage your node versions)
 export NVM_DIR="$HOME/.nvm"
@@ -70,3 +77,14 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# Activate the Le Wagon Python venv and update the prompt
+LW_VENV="$HOME/.lewagon/venvs/lewagon"
+if [ -e $LW_VENV ]; then
+  export VIRTUAL_ENV_DISABLE_PROMPT=1
+  source $LW_VENV/bin/activate
+  RPROMPT+='[🐍 $VIRTUAL_ENV_PROMPT]'
+fi
+
+# Hook direnv but only if direnv is installed
+if (( $+commands[direnv] )); then eval "$(direnv hook zsh)"; fi
