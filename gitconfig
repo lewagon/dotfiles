@@ -60,3 +60,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = ismaelod13@gmail.com
+	name = Ismael Ortiz
