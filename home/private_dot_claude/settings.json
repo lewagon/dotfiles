@@ -41,6 +41,11 @@
     "figma@claude-plugins-official": true,
     "slack@claude-plugins-official": true
   },
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
   "outputStyle": "Learning",
   "tui": "fullscreen",
   "theme": "auto",
