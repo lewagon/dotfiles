@@ -4,7 +4,7 @@ description: Turns a finished plan into a GitHub Epic with parent-linked sub-iss
 when_to_use: Fire at the moment planning ends and building would start. Triggers are OpenSpec propose finished (/opsx:propose, /opsx:ff, /opsx:continue reaching apply-ready), SpecKit tasks finished (/speckit.tasks or /speckit.analyze done, tasks.md exists), and a Claude Code plan session approved via plan mode. Also "who should work on this", "what order should we build this in", "file these as issues", "set up the board for this change".
 compatibility: Claude Code only, needs git, gh and a local project checkout
 metadata:
-  version: 1.2.0
+  version: 1.3.0
 ---
 
 # Change → GitHub Epic
@@ -114,33 +114,81 @@ that ownership mapping needs manual input.
 
 ### 1. Draft the epic
 
-The epic is the single top-level artifact — its body should contain the
-full picture, not just scope and intent. Compose it from the outputs of
-steps 2–5 below, structured as:
+Read `references/epic-writing.md` first. It holds the body template, the
+mapping from OpenSpec, SpecKit and plan inputs to each section, the slicing
+rules and a quality checklist.
 
-- **Title:** must contain the word "Epic", in the form `Epic: <change name in plain language>` (not the kebab-case folder name). Sub-issues never use the word "Epic".
-- **Summary:** scope and intent from `proposal.md`, condensed to a few sentences
-- **Out of scope:** carried over from `proposal.md` if present
-- **Issue checklist:** every issue from step 2, as a linked checklist item
-- **Roadmap:** the wave breakdown from step 4, embedded directly in the epic body
-- **Dependencies:** the issue-to-issue dependency map from step 3
-- **Resource mapping:** the ownership assignments from step 5
+The epic is the parent issue for one deliverable outcome. It leads with why
+and when it is done, links to the spec instead of copying it, and carries
+what only GitHub can hold: order, ownership and project state. Compose it
+from steps 2–5, in this order:
 
-The epic is not just a header issue that links out to separate planning
-docs — it should be readable top to bottom as the single place the team
-goes to understand what's being built, in what order, by whom, without
-needing to open every linked issue first.
+- **Title:** `Epic: <change name in plain language>` (not the kebab-case folder name). Sub-issues never use the word "Epic".
+- **Goal:** the problem or opportunity and why now, in one or two sentences (OpenSpec "Why", SpecKit story value, or the plan's goal)
+- **Done when:** two to five measurable exit criteria, each checkable by a test, command or observation (SpecKit `SC-xxx` and Independent Tests, OpenSpec delta-spec scenarios). If the source has none, say so; never invent one.
+- **Scope:** in and out, from the source
+- **Source of truth:** the path to the change, spec or plan, and the source type
+- **Roadmap:** the wave table from step 4, with owner and "needs" columns (this carries the dependency map from step 3 in readable form)
+- **Risks and open questions:** only real ones from the source; omit if none
+- **Project automation:** enabled and disabled workflows
+
+Do not write a checkbox list of the sub-issues into the body. GitHub's
+native sub-issue progress on the parent and in the project shows completion
+and stays correct, while a hand-kept list drifts.
+
+**Sizing check before drafting.** Count the issues and estimate effort
+first, because it decides whether an epic is the right shape at all.
+
+- **Under about three issues or a few days: ask first.** Stop before
+  writing the full epic and put one short question to the user: "This is
+  about N tasks (hours of work). An epic with one sub-issue is more
+  structure than it needs. Do you want (a) a single issue with the tasks
+  as a checklist, or (b) the full epic anyway?" Wait for the answer. On
+  (b), continue as normal. On (a), draft one issue (Goal, Done when and
+  Source of truth in a short body, the task checklist, acceptance
+  criteria) and go straight to "Present and stop". The user asked for an
+  epic, so never decide this for them and never refuse.
+- **More than about fifteen issues or several quarters:** propose
+  splitting into several epics, one per deliverable outcome, in the
+  Sizing line of the draft, and still draft the epic so the user can
+  compare.
+- **Otherwise:** no question, just the one-line result.
+
+Whatever the result, it becomes the first line of the draft (see the
+Output format), above the epic, not in the Notes section.
+
+The epic should be readable top to bottom as the single place the team goes
+to understand what is being built, why, in what order and by whom, without
+opening every linked issue first.
 
 ### 2. Convert tasks into issues
 
-Walk `tasks.md` top to bottom. Group related sub-tasks into a single issue
-where they represent one reviewable unit of work; don't create one issue
-per checklist line if the checklist is already a natural sequence within
-one task. Each issue should include:
+Walk `tasks.md` top to bottom, but do not copy its section headings into
+issues. In OpenSpec those headings are usually layers (data, rendering,
+UI), and a layer ships nothing a user can check until every layer is done.
+Cut by outcome instead (full rules in `references/epic-writing.md` §4):
+
+- **One issue per spec requirement or user story.** Map each OpenSpec
+  delta-spec requirement and each SpecKit user story to one issue, and put
+  the tasks that deliver it in that issue, whichever `tasks.md` section they
+  sit in. Show the mapping in the draft.
+- **Enabler issues are allowed, but named.** Shared setup that several
+  slices need (a migration, a token helper) is its own issue, titled as an
+  enabler and saying which slices it unblocks. Do not create an enabler
+  per layer of one slice.
+- **Fall back to `tasks.md` grouping** only when there is no requirement or
+  story to map to (plan sessions, or tasks outside any requirement such as
+  cleanup). Group related sub-tasks into one reviewable unit, and don't
+  create one issue per checklist line.
+
+Each issue should include:
 
 - A title derived from the task
-- Acceptance criteria pulled from the corresponding delta spec scenario,
-  if one exists
+- Acceptance criteria pulled from the corresponding spec scenarios (OpenSpec
+  WHEN/THEN, SpecKit Given/When/Then), so the issue is done when its
+  scenarios pass. Cut issues by outcome (a SpecKit user story, an OpenSpec
+  capability), not by layer, and keep the test task ahead of the
+  implementation task in the checklist.
 - A reference back to the source (the OpenSpec change folder, the SpecKit
   `specs/<NNN-name>/` folder, or the saved plan file), so reviewers can
   trace the issue to where it came from
@@ -153,9 +201,12 @@ one task. Each issue should include:
 - **Parent** (always): the epic. The epic itself is the only issue without one.
 - **Blocked by / blocking** (when a dependency from step 3 exists).
 - **Relates to** (when applicable): issues in the same domain that share
-  files or context but have no technical ordering. GitHub has no native
-  "relates to" link, so write `Related: #n` in the issue body, which
-  creates a cross-reference both ways.
+  files or context but have no technical ordering. GitHub has a native
+  "Relates to" relationship (generally available since 2026-09-25), set
+  with the GraphQL `addRelatesTo` mutation because `gh` has no flag for it
+  (see "Creating the epic and issues in GitHub"). If that call fails, fall
+  back to `Related: #n` in the issue body, which still cross-references
+  both ways, and say so in the draft.
 
 ### 3. Identify dependencies
 
@@ -190,8 +241,9 @@ judgment call (priority, effort, due dates) — see Explicit boundaries.
 
 ### 6. Present and stop
 
-Output the full epic — with the issue checklist, roadmap, dependencies,
-and resource mapping all embedded in its body as described in step 1 —
+Output the full epic — with goal, done-when criteria, scope, roadmap
+(carrying dependencies and owners) and project automation in its body as
+described in step 1 —
 as a single reviewable block. **Do not create anything in GitHub yet.**
 End the turn here and wait for explicit confirmation on:
 
@@ -203,6 +255,16 @@ End the turn here and wait for explicit confirmation on:
 Only after explicit confirmation, proceed to create the epic and issues
 in GitHub as described below.
 
+**Carry open Notes into the epic.** The draft's Notes section is for
+review and is never written to GitHub, so a flag left only there is lost
+once the epic exists. Before creating, go through Notes: anything the user
+resolved or accepted as is drops out; anything still open (a dependency
+that stays a guess, an acceptance criterion inferred rather than sourced,
+a spec requirement with no task, an unassigned owner the user chose to
+leave) moves into the epic's "Risks and open questions", one line each,
+so the next reader sees what was never settled. Resolved items are not
+carried over, and neither is the Sizing line, which is a review aid.
+
 ## Output format
 
 Present the draft in this structure so it's easy to scan and approve or
@@ -210,30 +272,41 @@ correct piece by piece. Note that everything nests inside the epic —
 there is no separate top-level roadmap or resource section:
 
 ```markdown
+**Sizing:** <N issues from M tasks, effort in days or weeks; "normal epic range", "small: single issue offered" or "large: split proposed">
+
 ## Epic: <title>
-<summary>
 
-**Out of scope:** ...
+### Goal
+<why, one or two sentences>
 
-### Issues
-- [ ] #1 <title> — parent: epic — blocked by: none — relates to: none
-      Acceptance criteria: ...
-- [ ] #2 <title> — parent: epic — blocked by: #1 — relates to: #3
-      Acceptance criteria: ...
+### Done when
+- [ ] <measurable criterion> (source: SC-001)
+
+### Scope
+**In:** ... **Out:** ...
+
+### Source of truth
+<path> — <OpenSpec | SpecKit | Plan session>
+
+### Roadmap
+| Wave | Issue | Owner | Needs |
+|---|---|---|---|
+| 1 (parallel) | #1 <title> | <owner or "unassigned"> | none |
+| 2 | #2 <title> | unassigned | #1 |
+
+### Risks and open questions
+- ...
 
 ### Project automation
 Enabled workflows: ... Disabled: ... (what happens automatically vs by hand)
 
-### Roadmap
-**Wave 1 (parallel)**
-- #1 → <owner or "unassigned">
-
-**Wave 2**
-- #2 → <owner or "unassigned"> (depends on: #1)
-
-### Notes
-- Flag any unassigned issues or guessed dependencies here.
+### Notes (in the draft only, not the issue body)
+- Unassigned issues, guessed dependencies, criteria inferred rather than sourced.
+  Review only: whatever is still open after confirmation moves into the epic's "Risks and open questions".
 ```
+
+Each sub-issue is shown beneath the epic with its title, parent, blocked-by,
+`Related:` links and acceptance criteria, as in step 2.
 
 ## Creating the epic and issues in GitHub
 
@@ -248,6 +321,15 @@ relationship features rather than tracking structure only in prose:
   dependency map from step 3 as real tracked relationships.
 - `gh issue create -p "<project title>"` (or `--project`) adds the issue
   to the target project in the same call.
+- "Relates to" has no `gh` flag. Once both issues exist, look up their
+  node ids (`gh issue view <n> --json id --jq .id`) and call
+  `gh api graphql -f query='mutation($a:ID!,$b:ID!){addRelatesTo(input:{issueId:$a,relatedIssueId:$b}){clientMutationId}}' -f a=<id> -f b=<id>`
+  for the first pair only. Read both issues back (`Issue.relatesTo` via
+  `gh api graphql`) to see whether the link shows on both sides; if it
+  does, one call per pair is enough, otherwise add the reverse call. Then
+  do the rest. On any error use the `Related: #n` fallback.
+- GitHub allows at most 50 links per relationship type per issue (blocked
+  by, blocking). Split an issue that would exceed that.
 
 **Creation order matters.** The epic has no parent and must be created
 first. Each sub-issue can then set `--parent` to the epic's number.
@@ -290,8 +372,10 @@ pointing at the epic, which must exist first. Resolve this in two passes:
 create the epic first with a placeholder note in place of the
 issue/roadmap/dependency sections (e.g. "sub-issues and roadmap to be
 filled in once created"), create all sub-issues against it, then
-`gh issue edit <epic-number>` to rewrite the body with the real checklist,
-roadmap, and dependency sections per the Output format template.
+`gh issue edit <epic-number>` to rewrite the body with the real issue
+numbers in the Roadmap table, per the Output format template. The Goal,
+Done when, Scope and Source sections can go in at creation; only the
+Roadmap needs the second pass.
 
 **Custom project fields.** Check what fields the target project has (e.g.
 `gh project field-list <n> --owner <owner>`) and what a newly added item
@@ -328,6 +412,9 @@ create calls, and report each as pass or fail with the numbers:
   Priority, Effort and due dates are untouched. Report what the workflows
   actually did.
 - **Title:** the epic's title contains "Epic".
+- **Epic body:** it has Goal, Done when and Source of truth; every Roadmap
+  row names a real issue number that is a sub-issue of the epic; and no
+  placeholder text is left. Read the body back with `gh issue view`.
 
 Report the epic URL and each issue's URL/number back to the user; if
 anything failed to create or link, say so explicitly rather than
