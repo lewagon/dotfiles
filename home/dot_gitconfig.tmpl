@@ -68,7 +68,7 @@
 [init]
 	defaultBranch = main
 [user]
-	email = yves@yowfactor.com
+	email = {{ .emailPersonal }}
 	name = Y-O-W
 [credential "https://github.com"]
 	helper = 
@@ -78,3 +78,6 @@
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://git.heroku.com"]
 	helper = !heroku git:credentials
+
+[includeIf "gitdir:~/Developer/work/muhlertdigitalgmbh/"]
+	path = ~/.gitconfig-muhlert

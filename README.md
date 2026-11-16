@@ -18,8 +18,9 @@ root (set by `.chezmoiroot`); the repo is expected at `~/Developer/personal/dotf
    brew install chezmoi
    chezmoi init --apply --source ~/Developer/personal/dotfiles
    ```
-   You're prompted once for your 42 login and email. They're stored in
-   `~/.config/chezmoi/chezmoi.toml` and rendered into `.vimrc`, never committed.
+   You're prompted once for your 42 login and email, your personal email and your Muhlert Digital
+   email. They're stored in `~/.config/chezmoi/chezmoi.toml` and rendered into `.vimrc`,
+   `.gitconfig` and `.gitconfig-muhlert`, never committed.
 4. Do the [manual steps](#manual-steps).
 
 `apply` writes the dotfiles, installs oh-my-zsh and its plugins, runs `brew bundle` on
@@ -55,7 +56,7 @@ git pull --rebase && chezmoi apply   # 4. take changes from other machines
 | Source (under `home/`) | Target |
 |---|---|
 | `dot_zshrc`, `dot_zprofile`, `dot_aliases` | shell config, login env, aliases |
-| `dot_gitconfig`, `dot_gitignore_global` | git config, global ignore |
+| `dot_gitconfig.tmpl`, `dot_gitconfig-muhlert.tmpl`, `dot_gitignore_global` | git config, per-org commit email for `~/Developer/work/muhlertdigitalgmbh/` via `includeIf` (emails from chezmoi data), global ignore |
 | `dot_irbrc`, `dot_pryrc`, `dot_rspec` | IRB, Pry, RSpec |
 | `dot_vimrc.tmpl`, `dot_vim/plugin/stdheader.vim` | Vim (42 Norm) and 42 header plugin; login/email from chezmoi data |
 | `dot_Brewfile`, `dot_ruby-version` | Homebrew snapshot, pinned rbenv Ruby |

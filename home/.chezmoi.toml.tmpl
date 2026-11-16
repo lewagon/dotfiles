@@ -1,6 +1,8 @@
-{{- /* Prompted once on `chezmoi init`; kept out of the public repo. Used by dot_vimrc.tmpl. */ -}}
+{{- /* Prompted once on `chezmoi init`; kept out of the public repo. Used by dot_vimrc.tmpl, dot_gitconfig.tmpl and dot_gitconfig-muhlert.tmpl. */ -}}
 sourceDir = {{ joinPath .chezmoi.homeDir "Developer" "personal" "dotfiles" | quote }}
 
 [data]
     user42 = {{ promptStringOnce . "user42" "42 login (for the stdheader.vim plugin)" | quote }}
     mail42 = {{ promptStringOnce . "mail42" "42 email (for the stdheader.vim plugin)" | quote }}
+    emailPersonal = {{ promptStringOnce . "emailPersonal" "Personal email (git commits, dot_gitconfig.tmpl)" | quote }}
+    emailMuhlert = {{ promptStringOnce . "emailMuhlert" "Muhlert Digital email (git commits under work/muhlertdigitalgmbh, dot_gitconfig-muhlert.tmpl)" | quote }}
