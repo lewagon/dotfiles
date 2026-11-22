@@ -73,6 +73,11 @@
 	event = commit-msg
 	command = ~/.git-hooks/strip-ai-trailers
 
+# Blocks pushes to main/master, but only in repos with `git config --local agent.protectMain true`.
+[hook "protect-main"]
+	event = pre-push
+	command = ~/.git-hooks/protect-main
+
 [user]
 	email = {{ .emailPersonal }}
 	name = Y-O-W

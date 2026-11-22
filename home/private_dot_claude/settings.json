@@ -1,6 +1,14 @@
 {
   "permissions": {
-    "defaultMode": "default"
+    "defaultMode": "default",
+    "deny": [
+      "Bash(git push * main)",
+      "Bash(git push * main *)",
+      "Bash(git push *:main)",
+      "Bash(git push * master)",
+      "Bash(git push * master *)",
+      "Bash(git push *:master)"
+    ]
   },
   "model": "sonnet",
   "hooks": {

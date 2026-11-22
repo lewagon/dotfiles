@@ -1,0 +1,29 @@
+#!/bin/sh
+# pre-push hook: refuse pushes to main/master in repos that opted in.
+#
+# Registered globally in ~/.gitconfig as a config-based hook (git >= 2.54):
+#
+#   [hook "protect-main"]
+#     event = pre-push
+#     command = ~/.git-hooks/protect-main
+#
+# Opt-in per repo, so repos that legitimately push to main (e.g. the obsidian backup) keep working:
+#
+#   git config --local agent.protectMain true
+#
+# Why: GitHub Free cannot enforce branch protection on private repos. This is the local substitute;
+# it is advisory, because `git push --no-verify` skips it. Public repos use a server-side ruleset.
+# Git passes "<local ref> <local sha> <remote ref> <remote sha>" per ref on stdin.
+
+[ "$(git config --type=bool --get agent.protectMain 2>/dev/null)" = "true" ] || exit 0
+
+while read -r _local_ref _local_sha remote_ref _remote_sha; do
+  case "$remote_ref" in
+    refs/heads/main|refs/heads/master)
+      echo "protect-main: push to ${remote_ref#refs/heads/} blocked (agent.protectMain=true)." >&2
+      echo "Use a feature branch + 'gh pr create'. A human can override with --no-verify." >&2
+      exit 1
+      ;;
+  esac
+done
+exit 0
