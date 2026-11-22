@@ -1,0 +1,26 @@
+#!/bin/sh
+# commit-msg hook: strip AI co-author trailers from the commit message.
+#
+# Registered globally in ~/.gitconfig as a config-based hook (git >= 2.54):
+#
+#   [hook "strip-ai-trailers"]
+#     event = commit-msg
+#     command = ~/.git-hooks/strip-ai-trailers
+#
+# Git passes the path of the message file as $1. Config hooks run in addition to a repo's own
+# .git/hooks/commit-msg, so nothing needs chaining and core.hooksPath stays unset.
+#
+# Why: Claude Code's `attribution.commit = ""` only changes what the model is *offered*; it does
+# not scrub a message the model writes itself. Human co-authors are kept.
+# `git commit --no-verify` skips this hook.
+
+msg="$1"
+[ -n "$msg" ] && [ -f "$msg" ] || exit 0
+
+tmp="$(mktemp)" || exit 0
+grep -v -i -E '^[[:space:]]*Co-Authored-By:.*(Claude|Anthropic|noreply@anthropic\.com)' "$msg" \
+  | grep -v -E '^[[:space:]]*(🤖 )?Generated with \[?Claude' > "$tmp"
+# Drop trailing blank lines left behind by removed trailers.
+awk '{ l[NR] = $0 } END { n = NR; while (n > 0 && l[n] ~ /^[[:space:]]*$/) n--; for (i = 1; i <= n; i++) print l[i] }' "$tmp" > "$msg"
+rm -f "$tmp"
+exit 0

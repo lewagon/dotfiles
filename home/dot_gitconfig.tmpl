@@ -67,6 +67,12 @@
 
 [init]
 	defaultBranch = main
+
+# Config-based hook (git >= 2.54): runs in addition to a repo's own .git/hooks/commit-msg.
+[hook "strip-ai-trailers"]
+	event = commit-msg
+	command = ~/.git-hooks/strip-ai-trailers
+
 [user]
 	email = {{ .emailPersonal }}
 	name = Y-O-W

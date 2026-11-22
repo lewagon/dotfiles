@@ -57,6 +57,7 @@ git pull --rebase && chezmoi apply   # 4. take changes from other machines
 |---|---|
 | `dot_zshrc`, `dot_zprofile`, `dot_aliases` | shell config, login env, aliases |
 | `dot_gitconfig.tmpl`, `dot_gitconfig-muhlert.tmpl`, `dot_gitignore_global` | git config, per-org commit email for `~/Developer/work/muhlertdigitalgmbh/` via `includeIf` (emails from chezmoi data), global ignore |
+| `dot_git-hooks/executable_strip-ai-trailers` | Global `commit-msg` hook that strips AI co-author trailers, registered in `dot_gitconfig.tmpl`, see [Git hooks](#git-hooks) |
 | `dot_irbrc`, `dot_pryrc`, `dot_rspec` | IRB, Pry, RSpec |
 | `dot_vimrc.tmpl`, `dot_vim/plugin/stdheader.vim` | Vim (42 Norm) and 42 header plugin; login/email from chezmoi data |
 | `dot_Brewfile`, `dot_ruby-version` | Homebrew snapshot, pinned rbenv Ruby |
@@ -71,6 +72,30 @@ Outside `home/` and not managed: `bin/`, `vendor/`, `README.md`, `LICENSE`.
 Untracked on purpose: `~/.claude/skills/synced/`, `~/.claude/plugins/synced/` (Claude's own caches),
 and runtime state in `~/.claude/` (`projects/`, `cache/`, `history.jsonl`, …).
 `home/.chezmoiignore` skips `.DS_Store` and `__pycache__`.
+
+### Git hooks
+
+A config-based hook (git >= 2.54) in `home/dot_gitconfig.tmpl` runs `~/.git-hooks/strip-ai-trailers`
+(`home/dot_git-hooks/executable_strip-ai-trailers`) on every `commit-msg`:
+
+```gitconfig
+[hook "strip-ai-trailers"]
+	event = commit-msg
+	command = ~/.git-hooks/strip-ai-trailers
+```
+
+It strips `Co-Authored-By:` lines that mention Claude or Anthropic, and "Generated with Claude"
+lines. Human co-authors are kept. Claude Code's `attribution.commit = ""` only changes what the
+model is offered; it does not scrub a message the model writes itself, so this is the enforcement
+for every tool that commits.
+
+Why not `core.hooksPath`: it *replaces* a repo's `.git/hooks` instead of adding to it, which needs a
+dispatcher and a symlink per hook name to keep repo hooks working. Config-based hooks run in
+addition to the repo's own hooks, so `core.hooksPath` stays unset and nothing needs chaining.
+
+Limits: needs git >= 2.54 (an older git ignores the `[hook]` section silently),
+`git commit --no-verify` skips it, and only new commits are affected. To add another global hook,
+add a script under `home/dot_git-hooks/` and another `[hook "<name>"]` block with its `event`.
 
 ### Skills
 
